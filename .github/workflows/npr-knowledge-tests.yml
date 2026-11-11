@@ -1,0 +1,35 @@
+name: NPR - knowledge boundary tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rpg_engine/knowledge_gate.py"
+      - "tests/test_knowledge_gate.py"
+      - "campaigns/shiki/KNOWLEDGE_POLICY.json"
+      - ".github/workflows/npr-knowledge-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  epistemic-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Entire NPR regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Verify protected-topic policy format
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          policy = json.loads(Path('campaigns/shiki/KNOWLEDGE_POLICY.json').read_text(encoding='utf-8'))
+          assert policy['format'] == 'NPR-KNOWLEDGE-POLICY/1'
+          assert all(v['triggers'] for v in policy['topics'].values())
+          print('POLICY_OK', len(policy['topics']))
+          PY
