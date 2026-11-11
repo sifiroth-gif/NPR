@@ -14,10 +14,13 @@ from pathlib import Path
 
 from rpg_engine import Campaign
 from rpg_engine.knowledge_gate import KnowledgeLeak, validate_scene
+from rpg_engine.combat import validate_frame, assess_attempt, apply_outcome, outcome_world_event
 from campaigns.shiki.maintenance.stage_turn import main as stage_turn_main
 
 ROOT = Path(__file__).resolve().parents[3]
 POLICY = ROOT / "campaigns" / "shiki" / "KNOWLEDGE_POLICY.json"
+LORE = ROOT / "campaigns" / "shiki" / "lore.json"
+COMBAT_REVIEW_FORMAT = "NPR-COMBAT-REVIEW/1"
 
 
 def _grounded_excerpt(text: str, value, label: str):
@@ -48,6 +51,68 @@ def _check_new_acquisitions(turn: dict):
                 )
 
 
+
+def _combat_review(game: Campaign, turn: dict, review: dict, final_text: str):
+    """Causal, source- and ownership-bound gate for a live combat response."""
+    spec = review.get("combat_review")
+    if review["p0"]["combat_present"] is False:
+        if spec is not None:
+            raise KnowledgeLeak("Combat review for a scene marked noncombat")
+        return
+    if not isinstance(spec, dict) or spec.get("format") != COMBAT_REVIEW_FORMAT:
+        raise KnowledgeLeak("P0 live combat requires a structured combat_review")
+    frame = spec.get("frame")
+    validate_frame(frame)
+    if frame["player_id"] != "shiki":
+        raise KnowledgeLeak("Combat frame must preserve Shiki as player-controlled")
+    established = json.loads(LORE.read_text(encoding="utf-8"))["protagonist"]["stats_out_of_5"]
+    aliases = {"shunshin": "shunshin_no_jutsu", "zero_genome": "zero_genome_mastery"}
+    for name, value in frame["actors"]["shiki"]["skills"].items():
+        canonical = established.get(aliases.get(name, name))
+        if canonical is None or value > canonical:
+            raise KnowledgeLeak(f"Shiki skill {name} exceeds verified lore")
+    previous = game.world(audience="gm", subject="combat:"+frame["id"])["facts"]
+    saved = next((f["value"] for f in previous if f["name"] == "frame"), None)
+    if saved is not None and saved != frame:
+        raise KnowledgeLeak("Combat frame changed from persisted state without outcome")
+    _grounded_excerpt(final_text, spec.get("tactical_excerpt"), "combat geometry and observation")
+    attempts = spec.get("attempts")
+    if not isinstance(attempts, list) or len(attempts) > 30:
+        raise KnowledgeLeak("Combat attempts must be a bounded ordered list")
+    attempts_by_id = {}
+    for action in attempts:
+        assessed = assess_attempt(frame, action)
+        if assessed["id"] in attempts_by_id:
+            raise KnowledgeLeak("Duplicate combat attempt ID")
+        attempts_by_id[assessed["id"]] = action
+        if action["actor"] == "shiki":
+            if action["source"]["ref"] not in turn.get("player_input", ""):
+                raise KnowledgeLeak("Shiki combat action absent from actual player input")
+    outcomes = spec.get("outcomes", [])
+    if not isinstance(outcomes, list) or len(outcomes) > len(attempts):
+        raise KnowledgeLeak("Combat outcomes need matching attempts, not invented attacks")
+    projected = frame
+    resolved = set()
+    for result in outcomes:
+        action_id = result.get("attempt_id")
+        if action_id not in attempts_by_id or action_id in resolved:
+            raise KnowledgeLeak("Outcome lacks unique declared combat action")
+        resolved.add(action_id)
+        if result.get("resolution") not in ("clear_causality", "reserved_roll"):
+            raise KnowledgeLeak("Combat result needs causal explanation or reserved RNG")
+        if result["resolution"] == "reserved_roll":
+            pending = game.context(audience="gm", recent=0)["pending"]
+            checks = [] if pending is None else pending.get("rolls", [])
+            if not any(c["check_id"] == result.get("check_id") for c in checks):
+                raise KnowledgeLeak("Unreserved combat RNG roll cannot be narrated")
+        projected = apply_outcome(projected, result)
+    if outcomes:
+        expected = outcome_world_event(
+            projected, event_id=spec.get("world_event_id"),
+            at=turn["at"], summary=spec.get("event_summary"))
+        if expected not in turn.get("events", []):
+            raise KnowledgeLeak("Combat outcome must be included as private persisted world event")
+
 def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     envelope = json.loads(envelope_path.read_text(encoding="utf-8"))
     if envelope.get("format") != "NPR-SHIKI-REVIEWED-TURN/1":
@@ -59,7 +124,9 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
     game = Campaign(state_dir / "campaign.sqlite")
     checked = game.verify()
-    expected_revision = checked["revision"] + int(bool(checked["pending"]))
+    pending_start = game.context(audience="gm", recent=0)["pending"]
+    previous_draft = bool(pending_start and "packet" in pending_start)
+    expected_revision = checked["revision"] + int(previous_draft)
     if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != expected_revision:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
     _check_new_acquisitions(turn)
@@ -68,9 +135,9 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
         raise KnowledgeLeak("Missing exact final draft")
     with tempfile.TemporaryDirectory(prefix="npr-reviewed-turn-") as tmp:
         tmp = Path(tmp)
-        if checked["pending"]:
+        if previous_draft:
             previous = turn.get("confirm_previous")
-            pending = game.context(audience="gm", recent=0)["pending"]
+            pending = pending_start
             if (not isinstance(previous, dict) or previous.get("turn_id") != pending["turn_id"]
                     or previous.get("draft_sha") != pending["draft_sha"]):
                 raise KnowledgeLeak("Previous prepared response must have been shown and confirmed")
@@ -78,10 +145,13 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
             shutil.copyfile(state_dir / "campaign.sqlite", corrected)
             game = Campaign(corrected)
             game.confirm(previous["turn_id"], previous["draft_sha"])
+        elif pending_start and pending_start["turn_id"] != turn.get("id"):
+            raise KnowledgeLeak("Reserved RNG belongs to a different combat turn")
         if turn.get("expected_revision") != game.verify()["revision"]:
             raise KnowledgeLeak("Reviewed scene is based on the wrong revision")
         ready = validate_scene(game, final_text, review, policy)
         _p0_review(final_text, review, has_dialogue=ready["lines_checked"] > 0)
+        _combat_review(game, turn, review, final_text)
         packet = tmp / "turn.json"
         packet.write_text(json.dumps(turn, ensure_ascii=False, indent=2), encoding="utf-8")
         stage_turn_main(state_dir, packet, output_dir)
