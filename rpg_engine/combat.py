@@ -25,6 +25,7 @@ RESOURCES = ("ready", "strained", "low", "depleted")
 SEVERITY = {"minor", "moderate", "severe", "critical"}
 RESULTS = {"success", "partial", "failure"}
 PHASES = {"physical", "genjutsu", "ninjutsu", "medical", "sensory"}
+MUNDANE_WEAPONS = {"senbon", "kunai", "shuriken", "wire"}
 
 
 class CombatContractError(ValueError):
@@ -213,11 +214,11 @@ def assess_attempt(frame, attempt):
         current_distance = math.dist(actor["position_m"], goal)
     if technique == "chakra_scalpel" and kind == "attack" and ability not in ("taijutsu", "chakra_scalpel"):
         raise CombatContractError("chakra scalpel contact requires grounded hand-to-hand skill")
-    if technique and actor["chakra"] == "depleted":
+    chakra_technique = technique is not None and technique not in MUNDANE_WEAPONS
+    if chakra_technique and actor["chakra"] == "depleted":
         raise CombatContractError("depleted chakra does not sustain a chakra technique")
-    if technique:
-        if attempt.get("chakra_cost") not in ("minor", "moderate", "major"):
-            raise CombatContractError("chakra technique requires an explicit qualitative cost")
+    if chakra_technique and attempt.get("chakra_cost") not in ("minor", "moderate", "major"):
+        raise CombatContractError("chakra technique requires an explicit qualitative cost")
     if kind in ("move", "attack", "defend") and attempt.get("stamina_cost") not in ("none", "minor", "moderate", "major"):
         raise CombatContractError("physical action must acknowledge stamina cost")
 
