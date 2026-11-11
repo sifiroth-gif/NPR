@@ -141,16 +141,49 @@ def validate_operation(op, at):
 
 
 def validate_event(event):
-    fields(event, ("id", "at", "summary", "visibility"), ("operations", "based_on"),
-           label="event")
+    fields(event, ("id", "at", "summary", "visibility"),
+           ("operations", "based_on", "witnesses", "knowledge_routes"), label="event")
     id_value(event["id"], "event id")
     at = time_value(event["at"], "event at")
     text_value(event["summary"], "event summary", 4000)
     visibility(event["visibility"])
     for source in sequence(event.get("based_on", []), "event based_on", 30):
         id_value(source, "source event id")
+    witnesses = set()
+    for actor in sequence(event.get("witnesses", []), "event witnesses", 100):
+        id_value(actor, "event witness")
+        if actor in witnesses:
+            raise ValueError("duplicate event witness")
+        witnesses.add(actor)
+    routes = {}
+    for route in sequence(event.get("knowledge_routes", []), "event knowledge_routes", 100):
+        fields(route, ("actor", "via", "source"), ("source_actor",),
+               label="event knowledge route")
+        actor = id_value(route["actor"], "knowledge recipient")
+        if route["via"] not in ("reported", "document", "inferred"):
+            raise ValueError("invalid knowledge route")
+        text_value(route["source"], "knowledge source", 1000)
+        if "source_actor" in route:
+            id_value(route["source_actor"], "knowledge reporter")
+        if actor in routes:
+            raise ValueError("duplicate personal knowledge route")
+        routes[actor] = route
     for op in sequence(event.get("operations", []), "event operations", 1000):
         validate_operation(op, at)
+        if op["op"] != "set_belief":
+            continue
+        # Legacy events without provenance metadata remain readable.
+        # New Shiki drafts require annotations through prepare_reviewed_turn.
+        if not ("witnesses" in event or "knowledge_routes" in event):
+            continue
+        actor = op["actor"]
+        if op["evidence"] == "witnessed":
+            if actor not in witnesses:
+                raise ValueError("direct NPC belief requires named witness")
+        elif actor not in witnesses and actor not in routes:
+            raise ValueError("NPC belief requires witness or explicit information route")
+        elif actor in routes and routes[actor]["via"] != op["evidence"]:
+            raise ValueError("knowledge route disagrees with belief evidence")
 
 
 SCHEMA = """
