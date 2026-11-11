@@ -32,8 +32,11 @@ class ReviewedPreparationTests(unittest.TestCase):
     def envelope(self, *, line="Пойдём.", speaker="Рэн", presence=None, body=None):
         presence = presence or "При появлении Шики часовой отвёл взгляд и расправил плечи."
         body = body or "В пальцах Рэна появилась короткая нервная дрожь."
+        impact = ("Рэн отступил от Шики на полшага, когда тот без единой лишней эмоции замолчал."
+                  if speaker == "Рэн" else
+                  "Аки прервала движение именно из-за неподвижного взгляда Шики и осторожно отложила оружие.")
         text = ("**Дата:** 1 июля 1278 года\n**Время:** 11:00\n**День:** понедельник\n"
-                "**Место:** гостиница\n\n"+presence+"\n"+body+
+                "**Место:** гостиница\n\n"+presence+"\n"+body+"\n"+impact+
                 "\n\n**"+speaker+":** — "+line)
         return {
             "format":"NPR-SHIKI-REVIEWED-TURN/1",
@@ -45,6 +48,8 @@ class ReviewedPreparationTests(unittest.TestCase):
                 "format":"NPR-NPC-KNOWLEDGE-PREFLIGHT/1",
                 "lines":[{"actor":"ren" if speaker=="Рэн" else "aki", "text":line, "claims":[]}],
                 "p0":{"shiki_presence":presence,"conversation_body_language":body,
+                      "npc_reactions_to_shiki":[{"actor":"ren" if speaker=="Рэн" else "aki",
+                                                  "excerpt":impact}],
                       "combat_present":False}
             }
         }
@@ -103,6 +108,33 @@ class ReviewedPreparationTests(unittest.TestCase):
         x = self.envelope()
         x["knowledge_review"]["p0"]["conversation_body_language"] = "Нет никаких наблюдений за телом Рэна."
         with self.assertRaisesRegex(KnowledgeLeak, "conversation body language"):
+            self.run_envelope(x)
+
+    def test_dialogue_rejects_missing_shiki_specific_npc_response(self):
+        x = self.envelope()
+        del x["knowledge_review"]["p0"]["npc_reactions_to_shiki"]
+        with self.assertRaisesRegex(KnowledgeLeak, "Shiki-specific NPC reactions"):
+            self.run_envelope(x)
+
+    def test_dialogue_rejects_same_excerpt_as_generic_presence(self):
+        x = self.envelope()
+        x["knowledge_review"]["p0"]["npc_reactions_to_shiki"][0]["excerpt"] = (
+            x["knowledge_review"]["p0"]["shiki_presence"])
+        with self.assertRaisesRegex(KnowledgeLeak, "distinct passages"):
+            self.run_envelope(x)
+
+    def test_dialogue_rejects_npc_response_not_in_visible_prose(self):
+        x = self.envelope()
+        x["knowledge_review"]["p0"]["npc_reactions_to_shiki"][0]["excerpt"] = (
+            "Рэн содрогнулся, когда Шики сделал нечто, чего вообще не было в сцене.")
+        with self.assertRaisesRegex(KnowledgeLeak, "Shiki-specific NPC response"):
+            self.run_envelope(x)
+
+    def test_two_npc_dialogue_requires_individual_responses(self):
+        x = self.envelope()
+        x["turn"]["text"] += "\\n\\n**Аки:** — Поняла."
+        x["knowledge_review"]["lines"].append({"actor":"aki","text":"Поняла.","claims":[]})
+        with self.assertRaisesRegex(KnowledgeLeak, "distinct NPC reactions"):
             self.run_envelope(x)
 
 
