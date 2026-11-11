@@ -62,12 +62,16 @@ class SourceAcquisitionTests(unittest.TestCase):
                 }]}, POLICY)
 
     def test_report_needs_personal_information_route(self):
-        with self.assertRaisesRegex(ValueError, "requires witness or explicit information route"):
+        with self.assertRaisesRegex(ValueError, "requires an explicit information route"):
             self.run_event(actor="aki",evidence="reported",witnesses=["ren"])
         self.assertEqual(self.game.verify()["revision"], 0)
         ev = self.run_event(actor="aki",evidence="reported",witnesses=["ren"],
             routes=[{"actor":"aki","via":"reported","source":"Ren told Aki directly."}])
         self.assertEqual(ev["knowledge_routes"][0]["actor"], "aki")
+
+    def test_reported_knowledge_cannot_be_just_a_witness_without_message_route(self):
+        with self.assertRaisesRegex(ValueError, "requires an explicit information route"):
+            self.run_event(actor="aki", evidence="reported", witnesses=["aki"])
 
     def test_wrong_route_evidence_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "disagrees with belief evidence"):
