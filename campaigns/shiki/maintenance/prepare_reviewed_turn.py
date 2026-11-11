@@ -49,7 +49,8 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
     game = Campaign(state_dir / "campaign.sqlite")
     checked = game.verify()
-    if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != checked["revision"]:
+    expected_revision = checked["revision"] + int(bool(checked["pending"]))
+    if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != expected_revision:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
     final_text = turn.get("text")
     if not isinstance(final_text, str):
