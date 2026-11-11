@@ -1,0 +1,81 @@
+{
+  "format": "NPR-KNOWLEDGE-POLICY/1",
+  "campaign": "naruto-shiki",
+  "principle": "Known to GM/player is not known to NPC. Wording of unsigned narration and unverified rumors does not automatically update actor memory.",
+  "speakers": {
+    "Хаясэ Рэн": "ren",
+    "Рэн": "ren",
+    "Мидзухара Аки": "aki",
+    "Аки": "aki",
+    "Курода Масанори": "kuroda",
+    "Курода": "kuroda",
+    "Хасэгава Итиро": "registration_officer",
+    "Итиро": "registration_officer",
+    "Анко Митараши": "anko",
+    "Анко": "anko",
+    "Морино Ибики": "ibiki",
+    "Ибики": "ibiki",
+    "Кабуто Якуши": "kabuto",
+    "Кабуто": "kabuto",
+    "Орочимару": "orochimaru",
+    "Хаясэ Тосэ": "kusa_leader",
+    "Хозяин гостиницы": "hotel_owner",
+    "Хозяин": "hotel_owner",
+    "Тюнин": "leaf_guard",
+    "Патрульный": "leaf_guard"
+  },
+  "topics": {
+    "exam.stage2.scrolls": {
+      "triggers": [
+        "свитк",
+        "свитков"
+      ],
+      "source_requirement": "Official Anko announcement or explicitly sourced prior knowledge. Shiki, Ren and Aki have heard only Stage 2 time, place and threat, not scroll mechanics as of 2 July 06:08.",
+      "corrective_example": "Недопустимо: Аки — «у какой команды нужный нам свиток» before official rules.",
+      "notes": "The GM arc plan contains two scrolls but is GM_only and has no NPC knowledge effect."
+    },
+    "shiki.city.beam_rescue": {
+      "triggers": [
+        "балк",
+        "мио",
+        "балкой"
+      ],
+      "source_requirement": "Ren and Aki were purchasing supplies and did not witness the beam hitting Shiki or the rescue of Mio. NPC must learn from explicit Shiki speech, witnessed event or sourced report before stating it as fact.",
+      "corrective_example": "Недопустимо: Рэн — «наш медик снова получил балкой по плечу» after only hotel events.",
+      "notes": "Aki may independently notice signs of an injury/healing, but cannot infer the specific cause beam."
+    },
+    "shiki.secret.zero_genome": {
+      "triggers": [
+        "нулевой геном",
+        "нулевого генома"
+      ],
+      "source_requirement": "Shiki's kekkei genkai internal mechanism is GM/player knowledge; Ren and Aki may only comment on directly seen effects, without naming unknown technique.",
+      "notes": "Do not publish hidden ability through NPC dialogue simply because they witnessed healing without hand seals."
+    },
+    "orochimaru.current_operation": {
+      "triggers": [
+        "план орочимару",
+        "по приказу орочимару",
+        "операции орочимару"
+      ],
+      "source_requirement": "The GM knows Orochimaru's plan, not the exam participants. Source-bound acquisition required."
+    }
+  },
+  "general_rule": "For all other substantive memory-based NPC dialogue claims, the GM must register a topic and actor-specific acquisition or make explicitly uncertain speculation. The trigger set catches recurring high-impact leaks, not every semantic contradiction.",
+  "retcons": [
+    {
+      "source_turn": "assistant response 1 July 19:06",
+      "actor": "aki",
+      "invalid_line": "По крайней мере пока не выясним, у какой команды нужный нам свиток.",
+      "corrected_state": "Не канон как известное правило: механика свитков ещё не объявлена персонажам."
+    },
+    {
+      "source_turn": "assistant response 1 July 19:06",
+      "actor": "ren",
+      "invalid_line": "А ещё мне бы не хотелось, чтобы наш медик снова получил балкой по плечу.",
+      "corrected_state": "Рэн не видел уличного инцидента и не получил известия о балке; этой реплики не было в корректной непрерывности."
+    }
+  ],
+  "effective_from": "1 July 1278, before continuing 2 July 06:08",
+  "created_on": "2026-11-11"
+}
