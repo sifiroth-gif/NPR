@@ -111,12 +111,12 @@ def _combat_review(game: Campaign, turn: dict, review: dict, final_text: str):
                 if definition["mechanic"] != "combat-band-v1":
                     raise ValueError("noncombat roll")
                 roll_value = contract["result"]["total"]
-                resolved = next(
+                rolled_result = next(
                     b["result"] for b in definition["bands"]
                     if b["low"] <= roll_value <= b["high"])
             except (ValueError, TypeError, KeyError, StopIteration):
                 raise KnowledgeLeak("Combat RNG has no locked probability contract")
-            if resolved != result["result"]:
+            if rolled_result != result["result"]:
                 raise KnowledgeLeak("Combat result contradicts the reserved roll")
         projected = apply_outcome(projected, result)
     if outcomes or saved is None:
