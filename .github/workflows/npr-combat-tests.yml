@@ -1,0 +1,29 @@
+name: NPR combat - causal mechanics and scene review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rpg_engine/combat.py"
+      - "rpg_engine/engine.py"
+      - "campaigns/shiki/maintenance/prepare_reviewed_turn.py"
+      - "tests/test_combat.py"
+      - "tests/test_prepare_reviewed_turn.py"
+      - "tests/test_combat_review.py"
+      - "campaigns/shiki/COMBAT_PROTOCOL.md"
+      - ".github/workflows/npr-combat-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  combat-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: NPR full regression suite
+        run: python -m unittest discover -s tests -v
