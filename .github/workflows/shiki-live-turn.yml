@@ -6,6 +6,9 @@ on:
     paths:
       - ".github/workflows/shiki-live-turn.yml"
       - "campaigns/shiki/maintenance/reviewed_live_turn.json"
+      - "campaigns/shiki/maintenance/prepare_reviewed_turn.py"
+      - "rpg_engine/knowledge_gate.py"
+      - "tests/test_prepare_reviewed_turn.py"
   workflow_dispatch:
 
 permissions:
