@@ -161,11 +161,12 @@ def validate_scene(game: Campaign, draft: str, review: dict, policy: dict) -> di
                 errors.append(f"Line {index}: duplicate topic {topic}")
                 continue
             claimed.add(topic)
-            errors.extend(f"Line {index}: {x}" for x in _reasons(
-                game, actor, {**claim, "utterance":actual["text"]}, protected, ledger.get(topic)
-            ))
+            if actor != policy.get("player_actor"):
+                errors.extend(f"Line {index}: {x}" for x in _reasons(
+                    game, actor, {**claim, "utterance":actual["text"]}, protected, ledger.get(topic)
+                ))
         for topic, rule in protected.items():
-            if _topic_matches(actual["text"], rule) and topic not in claimed:
+            if actor != policy.get("player_actor") and _topic_matches(actual["text"], rule) and topic not in claimed:
                 errors.append(f"Line {index}: {actor} mentions protected {topic} without actor-scoped evidence review")
         seen[actor] += 1
     if errors:
