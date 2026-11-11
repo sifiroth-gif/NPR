@@ -7,6 +7,7 @@ before forwarding the original turn to stage_turn.main.
 from __future__ import annotations
 
 import json
+import shutil
 import sys
 import tempfile
 from pathlib import Path
@@ -50,15 +51,26 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     checked = game.verify()
     if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != checked["revision"]:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
-    if checked["pending"]:
-        raise KnowledgeLeak("Pending response must be explicitly reconciled before new preflight")
     final_text = turn.get("text")
     if not isinstance(final_text, str):
         raise KnowledgeLeak("Missing exact final draft")
-    ready = validate_scene(game, final_text, review, policy)
-    _p0_review(final_text, review, has_dialogue=ready["lines_checked"] > 0)
     with tempfile.TemporaryDirectory(prefix="npr-reviewed-turn-") as tmp:
-        packet = Path(tmp) / "turn.json"
+        tmp = Path(tmp)
+        if checked["pending"]:
+            previous = turn.get("confirm_previous")
+            pending = game.context(audience="gm", recent=0)["pending"]
+            if (not isinstance(previous, dict) or previous.get("turn_id") != pending["turn_id"]
+                    or previous.get("draft_sha") != pending["draft_sha"]):
+                raise KnowledgeLeak("Previous prepared response must have been shown and confirmed")
+            corrected = tmp / "knowledge-baseline.sqlite"
+            shutil.copyfile(state_dir / "campaign.sqlite", corrected)
+            game = Campaign(corrected)
+            game.confirm(previous["turn_id"], previous["draft_sha"])
+        if turn.get("expected_revision") != game.verify()["revision"]:
+            raise KnowledgeLeak("Reviewed scene is based on the wrong revision")
+        ready = validate_scene(game, final_text, review, policy)
+        _p0_review(final_text, review, has_dialogue=ready["lines_checked"] > 0)
+        packet = tmp / "turn.json"
         packet.write_text(json.dumps(turn, ensure_ascii=False, indent=2), encoding="utf-8")
         stage_turn_main(state_dir, packet, output_dir)
     print("SCENE_KNOWLEDGE_READY", ready["lines_checked"], "NPC dialogue lines")
