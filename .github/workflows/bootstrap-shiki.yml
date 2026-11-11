@@ -1,0 +1,69 @@
+name: Bootstrap Shiki RPG campaign
+on:
+  push:
+    branches:
+      - game-state/shiki
+    paths:
+      - .github/workflows/bootstrap-shiki.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  initialize:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout campaign branch
+        uses: actions/checkout@v4
+        with:
+          ref: game-state/shiki
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check engine tests
+        run: python -m unittest discover -s tests -q
+      - name: Initialize and verify, preserving the unpublished opening as a pending turn
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -e campaign.sqlite ] || [ -e state.json ]; then
+            echo "Campaign state already exists; refusing to overwrite."
+            exit 1
+          fi
+          python -m rpg_engine --db working.sqlite init bootstrap/shiki-campaign.json
+          python -m rpg_engine --db working.sqlite prepare bootstrap/shiki-opening.json
+          python -m rpg_engine --db working.sqlite verify
+          python -m rpg_engine --db working.sqlite checkpoint campaign.sqlite
+          python -m rpg_engine --db campaign.sqlite verify
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from rpg_engine import Campaign
+          from rpg_engine.engine import file_sha256
+          from rpg_engine.git_state import FORMAT
+
+          db = Path("campaign.sqlite")
+          game = Campaign(db)
+          verified = game.verify()
+          assert verified["campaign_id"] == "naruto-shiki", verified
+          assert verified["revision"] == 0 and verified["pending"] is True, verified
+          pending = game.context(audience="gm")["pending"]
+          assert pending and pending["turn_id"] == "opening.001", pending
+          manifest = {"format": FORMAT, **verified, "sha256": file_sha256(db)}
+          Path("state.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print("BOOTSTRAP_VERIFIED:", json.dumps(manifest, ensure_ascii=False))
+          print("PENDING_DRAFT_SHA:", pending["draft_sha"])
+          PY
+      - name: Publish checked campaign state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f campaign.sqlite state.json
+          git commit -m "Initialize verified Shiki campaign with pending opening scene"
+          git push origin HEAD:refs/heads/game-state/shiki
