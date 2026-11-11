@@ -33,8 +33,9 @@ def fact(subject: str, name: str, value, visibility: str = "player_known"):
             "value": value, "visibility": visibility}
 
 
-def compile_setup(lore: dict, roster: dict, session: dict) -> dict:
+def compile_setup(lore: dict, roster: dict, session: dict, ontology: dict) -> dict:
     assert lore["campaign_id"] == "naruto-shiki"
+    assert ontology["schema"] == "naruto-shiki-world-ontology/1"
     assert roster["schema"] == "naruto-shiki-roster/1"
     cards = roster["cards"]
     ids = [c["id"] for c in cards]
@@ -46,11 +47,21 @@ def compile_setup(lore: dict, roster: dict, session: dict) -> dict:
     p = lore["protagonist"]
     assert p["age"] == 15 and p["affiliation"] == "Кусагакуре"
     assert sum(p["training_percent"].values()) == 100
+    assert p["stats_out_of_5"]["taijutsu"] == 1.5
+    assert p["stats_out_of_5"]["shunshin_no_jutsu"] == 3.5
+    assert p["movement"]["mastery_out_of_5"] == ontology["movement"]["shiki_skill_out_of_5"]
+    assert any("Шуншин" in s for s in p["skills"]["learned"])
     rules = {"canon_policy": lore["canon_policy"],
              "hero": {k: p[k] for k in (
                  "name", "age", "affiliation", "rank", "status", "physical", "unease",
                  "psychological_baseline", "natures", "stats_out_of_5",
-                 "training_percent", "equipment", "skills", "zero_genome")},
+                 "training_percent", "equipment", "skills", "zero_genome", "movement")},
+             "world_ontology": {
+                 "schema": ontology["schema"],
+                 "axioms": ontology["principles"],
+                 "movement": ontology["movement"],
+                 "excluded": ontology["exclusions"],
+                 "open_questions": ontology["open_questions"]},
              "narration": "Строгое следование campaigns/shiki/GM_PROTOCOL.md. "
                           "Дата, время, день и место в начале каждой новой сцены. "
                           "Все реплики подписаны. Слова и действия игрока литературно "
@@ -80,6 +91,13 @@ def compile_setup(lore: dict, roster: dict, session: dict) -> dict:
             "father": "akihiro", "mother": "nao", "medical_teacher": "seina",
             "teammates": ["ren", "aki"], "field_commander": "kusa_leader"}),
         fact("world", "setting", lore["canon_policy"]["setting"]),
+        fact("world", "ontology", {
+            "schema": ontology["schema"],
+            "axioms": ontology["principles"],
+            "movement": ontology["movement"],
+            "excluded": ontology["exclusions"],
+            "open_questions": ontology["open_questions"]}),
+        fact("shiki", "movement", p["movement"]),
         fact("exam", "stage", {"phase": "допуск к письменному экзамену",
                                "location": session["start"]["location"],
                                "start_time": session["start"]["time"]}),
@@ -123,8 +141,9 @@ def build(output: Path):
             raise FileExistsError(f"Refusing to overwrite existing build: {output / file}")
     lore = read_json(HERE / "lore.json")
     roster = read_json(HERE / "roster.json")
+    ontology = read_json(HERE / "ontology.json")
     session = read_json(HERE / "sessions" / "SESSION_001.json")
-    setup = compile_setup(lore, roster, session)
+    setup = compile_setup(lore, roster, session, ontology)
 
     with tempfile.TemporaryDirectory(prefix="npr-shiki-bootstrap-") as tmp:
         local = Path(tmp) / "working.sqlite"
@@ -146,6 +165,8 @@ def build(output: Path):
     assert pending["draft_sha"] == draft["draft_sha"]
     assert pending["packet"]["text"] == session["opening_turn"]["text"]
     assert len(check.world(audience="gm")["npcs"]) == len(roster["cards"])
+    assert any(x["name"] == "ontology" for x in check.world(audience="gm")["facts"])
+    assert any(x["name"] == "movement" for x in check.world(audience="gm")["facts"])
     assert not ctx["recent"], "The opening must remain UNCONFIRMED until shown in chat"
     manifest = {"format": FORMAT, **check.verify(), "sha256": file_sha256(db)}
     (output / "state.json").write_text(
