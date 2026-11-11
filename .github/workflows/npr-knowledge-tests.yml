@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "rpg_engine/knowledge_gate.py"
+      - "rpg_engine/combat.py"
+      - "tests/test_combat.py"
+      - "campaigns/shiki/COMBAT_PROTOCOL.md"
       - "tests/test_knowledge_gate.py"
       - "tests/test_prepare_reviewed_turn.py"
       - "tests/test_knowledge_acquisition.py"
