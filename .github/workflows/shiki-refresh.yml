@@ -1,0 +1,87 @@
+name: Verify and publish approved Shiki campaign
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'campaigns/shiki/**'
+      - '.github/workflows/shiki-refresh.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shiki-preplay-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  prepare-campaign:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main engine and lore
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run engine unit tests
+        run: python -m unittest discover -s tests -q
+      - name: Build verified SQLite from approved 55 NPC cards and opening
+        run: python campaigns/shiki/bootstrap.py --output "${RUNNER_TEMP}/shiki-output"
+      - name: Fetch and guard current remote campaign
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "${RUNNER_TEMP}/shiki-state" refs/remotes/origin/game-state/shiki
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from rpg_engine import Campaign
+          from rpg_engine.engine import file_sha256
+          from rpg_engine.git_state import FORMAT
+          import os
+
+          old = Path(os.environ["RUNNER_TEMP"]) / "shiki-state"
+          current = Campaign(old / "campaign.sqlite")
+          info = current.verify()
+          manifest = json.loads((old / "state.json").read_text(encoding="utf-8"))
+          assert manifest == {"format": FORMAT, **info,
+                              "sha256": file_sha256(old / "campaign.sqlite")}, (
+                              "Existing checkpoint manifest does not match verified SQLite")
+          ctx = current.context(audience="gm")
+          assert (info["campaign_id"] == "naruto-shiki" and info["revision"] == 0
+                  and info["pending"] and not ctx["recent"]), (
+                      "Already started campaign: refusing to reset/replace played state")
+          assert ctx["pending"]["turn_id"] == "opening.001", (
+              "Unexpected opening draft: intervention required")
+          print("OLD_UNPLAYED_STATE_VERIFIED", info)
+          new = Path(os.environ["RUNNER_TEMP"]) / "shiki-output"
+          next_db = Campaign(new / "campaign.sqlite")
+          next_info = next_db.verify()
+          assert next_info["revision"] == 0 and next_info["pending"]
+          assert next_info["campaign_id"] == info["campaign_id"]
+          next_manifest = json.loads((new / "state.json").read_text(encoding="utf-8"))
+          assert next_manifest == {"format": FORMAT, **next_info,
+                                  "sha256": file_sha256(new / "campaign.sqlite")}
+          print("NEW_STATE_VERIFIED", next_info)
+          PY
+      - name: Publish replacement before first confirmed scene
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="${RUNNER_TEMP}/shiki-state"
+          cp "${RUNNER_TEMP}/shiki-output/campaign.sqlite" "$state/campaign.sqlite"
+          cp "${RUNNER_TEMP}/shiki-output/state.json" "$state/state.json"
+          cd "$state"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f campaign.sqlite state.json
+          git commit -m "Canonize approved Shiki lore, 55 NPC cards, and session 1 pending scene"
+          git push origin HEAD:refs/heads/game-state/shiki
+          echo "PUBLISHED_HEAD=$(git rev-parse HEAD)"
