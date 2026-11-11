@@ -132,7 +132,7 @@ class ReviewedPreparationTests(unittest.TestCase):
 
     def test_two_npc_dialogue_requires_individual_responses(self):
         x = self.envelope()
-        x["turn"]["text"] += "\\n\\n**Аки:** — Поняла."
+        x["turn"]["text"] += "\n\n**Аки:** — Поняла."
         x["knowledge_review"]["lines"].append({"actor":"aki","text":"Поняла.","claims":[]})
         with self.assertRaisesRegex(KnowledgeLeak, "distinct NPC reactions"):
             self.run_envelope(x)
