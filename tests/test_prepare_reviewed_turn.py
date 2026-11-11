@@ -70,6 +70,29 @@ class ReviewedPreparationTests(unittest.TestCase):
             self.run_envelope(x)
         self.assertFalse((self.root / "output").exists())
 
+    def test_prepared_previous_draft_is_checked_then_confirmed(self):
+        prior = {
+            "id":"prev","expected_revision":0,"at":START,"location":"Inn",
+            "player_input":"#осматриваюсь#",
+            "text":"Предыдущая сцена без NPC диалога.","events":[],
+        }
+        receipt = self.game.prepare(prior)
+        manifest = {"format":FORMAT, **self.game.verify(),
+                    "sha256":file_sha256(self.state / "campaign.sqlite")}
+        (self.state / "state.json").write_text(
+            json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+        envelope = self.envelope()
+        envelope["turn"]["id"] = "next"
+        envelope["turn"]["expected_revision"] = 1
+        envelope["turn"]["confirm_previous"] = {
+            "turn_id":"prev", "draft_sha":receipt["draft_sha"]}
+        output = self.run_envelope(envelope)
+        final = output.verify()
+        self.assertEqual(final["revision"], 1)
+        self.assertTrue(final["pending"])
+        self.assertEqual(output.context(audience="gm")["pending"]["turn_id"], "next")
+        self.assertEqual(self.game.verify()["revision"], 0)
+
     def test_shiki_presence_cannot_be_omitted(self):
         x = self.envelope()
         x["knowledge_review"]["p0"]["shiki_presence"] = "Несуществующая психологическая реакция."
