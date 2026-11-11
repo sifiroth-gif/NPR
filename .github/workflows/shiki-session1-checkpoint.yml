@@ -1,0 +1,69 @@
+name: Recover played Shiki session 1 into SQLite
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "campaigns/shiki/maintenance/replay_session001.py"
+      - ".github/workflows/shiki-session1-checkpoint.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shiki-session1-recovery
+  cancel-in-progress: false
+
+jobs:
+  checkpoint:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main engine, source and recovery script
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run engine unit tests
+        run: python -m unittest discover -s tests -q
+
+      - name: Fetch existing campaign state without replacing it
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-state" refs/remotes/origin/game-state/shiki
+
+      - name: Replay already published session and verify checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m campaigns.shiki.maintenance.replay_session001 \
+            "$RUNNER_TEMP/shiki-state" "$RUNNER_TEMP/shiki-checkpoint"
+
+      - name: Publish verified binary database and manifest to game-state/shiki
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-state"
+          cp "$RUNNER_TEMP/shiki-checkpoint/campaign.sqlite" "$state/campaign.sqlite"
+          cp "$RUNNER_TEMP/shiki-checkpoint/state.json" "$state/state.json"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f campaign.sqlite state.json
+          git -C "$state" commit -m "Record Shiki session 1 played events, medical incident and classroom entry"
+          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-state.json"
+          cmp "$RUNNER_TEMP/remote-state.json" "$RUNNER_TEMP/shiki-checkpoint/state.json"
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-campaign.sqlite"
+          cmp "$RUNNER_TEMP/remote-campaign.sqlite" "$RUNNER_TEMP/shiki-checkpoint/campaign.sqlite"
+          echo "PUBLISHED_AND_BYTE_VERIFIED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
