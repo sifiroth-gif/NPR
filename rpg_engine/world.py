@@ -180,6 +180,11 @@ def validate_event(event):
         if op["evidence"] == "witnessed":
             if actor not in witnesses:
                 raise ValueError("direct NPC belief requires named witness")
+        elif op["evidence"] in ("reported", "document"):
+            if actor not in routes:
+                raise ValueError("reported/document NPC belief requires an explicit information route")
+            if routes[actor]["via"] != op["evidence"]:
+                raise ValueError("knowledge route disagrees with belief evidence")
         elif actor not in witnesses and actor not in routes:
             raise ValueError("NPC belief requires witness or explicit information route")
         elif actor in routes and routes[actor]["via"] != op["evidence"]:
