@@ -28,7 +28,38 @@ When information is witnessed, told, read or plausibly inferred, record **indivi
 `exam.stage2.scrolls`, `shiki.city.beam_rescue`, `shiki.secret.zero_genome`, `orochimaru.current_operation` (high-risk policy topics);
 plus situational topics such as `exam.registration_restored` and `hotel.intrusion_seen`.
 
-Attach the `source_event` through the engine's world operation; `evidence` is one of `witnessed`, `reported`, `document`, `inferred`, `uncertain`; `certainty` one of `certain`, `probable`, `uncertain`. The operator must additionally check the event narrative, actual witnesses, time, access, and later contradictions. **Do not write fabricated source events to make a planned dialogue valid.** The current engine records `source_event` but does not mechanically prove a character attended it.
+Attach the `source_event` through the engine's world operation; `evidence` is one of `witnessed`, `reported`, `document`, `inferred`, `uncertain`; `certainty` one of `certain`, `probable`, `uncertain`. The operator must additionally check the event narrative, actual witnesses, time, access, and later contradictions. **Do not write fabricated source events to make a planned dialogue valid.** New source-annotated events now validate each actor's documented witness or report/document route. Historical legacy events without that metadata still require operator review.
+
+
+### Explicit acquisition provenance for new events
+
+In addition to `set_belief`, **new** NPR events may carry `witnesses` (stable actor IDs with direct first-hand access) and `knowledge_routes` (a named recipient and credible personal source of a report/document/inference). The event validator rejects actor-source mismatches, and `journal.details` preserves provenance for scene review. Old events remain readable; they are legacy/manual attestations and do not retroactively gain witnesses.
+
+Example of a **synthetic, not played** report:
+
+```json
+{
+  "id": "sample.message",
+  "at": "0001-07-02T07:00:00",
+  "summary": "Ведущий инструктажа вслух объяснил участникам правила.",
+  "visibility": "player_known",
+  "witnesses": ["aki", "ren", "shiki"],
+  "knowledge_routes": [
+    {"actor": "aki", "via": "reported", "source_actor": "anko", "source": "публично услышанный инструктаж Анко"},
+    {"actor": "ren", "via": "reported", "source_actor": "anko", "source": "публично услышанный инструктаж Анко"}
+  ],
+  "operations": [
+    {"op": "set_belief", "actor": "aki", "topic": "exam.stage2.scrolls",
+     "belief": "Нужны определённые свитки", "evidence": "reported",
+     "certainty": "certain", "visibility": "gm_only"},
+    {"op": "set_belief", "actor": "ren", "topic": "exam.stage2.scrolls",
+     "belief": "Нужны определённые свитки", "evidence": "reported",
+     "certainty": "certain", "visibility": "gm_only"}
+  ]
+}
+```
+
+The source event shown above is **only an example**: at current rev31 it has NOT happened; do not import it into the campaign. A new live scene that grants knowledge without its own `witnesses` or `knowledge_routes` is rejected by the Shiki reviewed-turn pipeline. `reported` and `document` claims require an explicit matching route; mere presence at a location is not enough. `witnessed` requires the named personal witness. This adaptation mirrors the witness-checking principle of `Bleach-RPG-/world_autonomy.py`.
 
 ## Pre-scene rule: actor-first
 
@@ -36,7 +67,7 @@ Attach the `source_event` through the engine's world operation; `evidence` is on
 2. For each important NPC reply, ask: **what exactly is this character using, and where/when/how did they learn it?** Verify their `world --audience gm --subject <actor>` / personal beliefs. If the only source is the player's perspective or GM-only arc plan, they cannot state it. They may sincerely but incorrectly infer an answer from an actually witnessed clue, with appropriate uncertainty.
 3. Check if proposed assertions contradict the context of other NPCs. The actor could be deceptive, but a deliberate lie has its own goal and must not be a hidden route for GM metaknowledge.
 4. Apply `campaigns/shiki/SCENE_PREP_PRIORITY.md` P0: physiological/body-language observations in **all conversations and battles**, psychological presence of Shiki in **every** scene. Observed physical signals are not guaranteed truth about thoughts.
-5. In the **final** exact draft, run the source-bound audit `rpg_engine.knowledge_gate`. It recognizes signed dialogue, requires a reviewed line for every NPC utterance and matches protected high-impact keywords using `campaigns/shiki/KNOWLEDGE_POLICY.json`. A protected assertion requires a personally recorded belief and verified event. It rejects unsupported certainty, inconsistent review lines, missing speaker mapping, and cross-actor knowledge transfer.
+5. In the **final** exact draft, run the source-bound audit `rpg_engine.knowledge_gate`. It recognizes signed dialogue, requires a reviewed line for every NPC utterance and matches protected high-impact keywords using `campaigns/shiki/KNOWLEDGE_POLICY.json`. A protected assertion requires a personally recorded belief and verified event. It rejects unsupported certainty, inconsistent review lines, missing speaker mapping, and cross-actor knowledge transfer; an invented leading question also needs a personally sourced premise.
 6. Review nonprotected claims semantically as well: trigger lists are a **regression tripwire, not a mind-reading language model**. For a newly important secret, add a protected topic. Never use an invented belief to defeat the check.
 
 ## Verified future-turn pipeline
