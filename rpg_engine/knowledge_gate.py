@@ -53,9 +53,23 @@ def _verified_source(game: Campaign, belief: dict) -> bool:
     if not isinstance(src, str) or not src:
         return False
     try:
-        game.entry("event", src, audience="gm")
+        event = game.entry("event", src, audience="gm")
     except ValueError:
         return False
+    # If the original event has explicit acquisition metadata, ensure the
+    # specific recipient has an actual witness/message route. Older source
+    # events lack these fields; retain backward compatibility but mark their
+    # provenance as legacy/manual in the GM protocol.
+    if "witnesses" in event or "knowledge_routes" in event:
+        actor = belief.get("actor")
+        witnesses = set(event.get("witnesses", ()))
+        routes = {r["actor"]:r for r in event.get("knowledge_routes", ())}
+        evidence = belief.get("evidence")
+        if evidence == "witnessed":
+            return actor in witnesses
+        if actor in routes:
+            return routes[actor]["via"] == evidence
+        return actor in witnesses
     return True
 
 
