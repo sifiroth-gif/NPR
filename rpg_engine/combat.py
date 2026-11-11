@@ -58,7 +58,12 @@ def _nonempty(value, label):
 def _position(value, label):
     if not isinstance(value, list) or len(value) != 2:
         raise CombatContractError(f"{label} must be a 2D position in meters")
-    return [_number(item, label) for item in value]
+    result = []
+    for coordinate in value:
+        if type(coordinate) not in (int, float) or not math.isfinite(coordinate):
+            raise CombatContractError(f"{label} coordinates must be finite")
+        result.append(float(coordinate))
+    return result
 
 
 def _injuries(body, label):
@@ -98,7 +103,7 @@ def validate_frame(frame):
             raise CombatContractError("actor mobility not established")
         if data.get("chakra") not in RESOURCES or data.get("stamina") not in RESOURCES:
             raise CombatContractError("chakra/stamina must be explicit qualitative resource bands")
-        perceived = data.get("perceives", [])
+        perceived = data.get("perceives")
         if not isinstance(perceived, list) or any(not isinstance(x, str) for x in perceived):
             raise CombatContractError("perceives must be a list of actor IDs")
         skills = _dict(data.get("skills"), "skills")
@@ -197,6 +202,10 @@ def assess_attempt(frame, attempt):
                 "target outside current reach; resolve movement separately before attack")
         if attempt.get("path_clear") is not True:
             raise CombatContractError("attack path is not confirmed clear")
+        if target not in actor["perceives"] and not attempt.get("blind_target_basis"):
+            raise CombatContractError("specific attack target not perceived; explain blind aiming")
+        if attempt.get("blind_target_basis") is not None:
+            _nonempty(attempt["blind_target_basis"], "blind target evidence")
     if kind == "move":
         goal = _position(attempt.get("destination_m"), "destination_m")
         if attempt.get("path_clear") is not True:
@@ -206,6 +215,11 @@ def assess_attempt(frame, attempt):
         raise CombatContractError("chakra scalpel contact requires grounded hand-to-hand skill")
     if technique and actor["chakra"] == "depleted":
         raise CombatContractError("depleted chakra does not sustain a chakra technique")
+    if technique:
+        if attempt.get("chakra_cost") not in ("minor", "moderate", "major"):
+            raise CombatContractError("chakra technique requires an explicit qualitative cost")
+    if kind in ("move", "attack", "defend") and attempt.get("stamina_cost") not in ("none", "minor", "moderate", "major"):
+        raise CombatContractError("physical action must acknowledge stamina cost")
 
     target_state = frame["actors"].get(target)
     reaction = "none"
