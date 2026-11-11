@@ -1,0 +1,66 @@
+name: NPR Quick Save - Verified Shiki catch-up
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-fast-catchup.yml"
+      - "campaigns/shiki/maintenance/played_catchup_2026-11-11.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  append-played:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout core engine and replay input
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run all NPR tests including fast-save tests
+        run: python -m unittest discover -s tests -q
+      - name: Restore existing game-state branch exactly
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-before" refs/remotes/origin/game-state/shiki
+          git rev-parse refs/remotes/origin/game-state/shiki > "$RUNNER_TEMP/expected-head"
+      - name: Replay all visible turns; verify full SQLite backup once
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m rpg_engine.quick_save \
+            "$RUNNER_TEMP/shiki-before" \
+            campaigns/shiki/maintenance/played_catchup_2026-11-11.json \
+            "$RUNNER_TEMP/shiki-fast-out"
+      - name: Atomically commit and publish checked binary checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp "$RUNNER_TEMP/shiki-fast-out/campaign.sqlite" "$RUNNER_TEMP/shiki-before/campaign.sqlite"
+          cp "$RUNNER_TEMP/shiki-fast-out/state.json" "$RUNNER_TEMP/shiki-before/state.json"
+          git -C "$RUNNER_TEMP/shiki-before" config user.name "github-actions[bot]"
+          git -C "$RUNNER_TEMP/shiki-before" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$RUNNER_TEMP/shiki-before" add -f campaign.sqlite state.json
+          git -C "$RUNNER_TEMP/shiki-before" commit -m "Quick-save Shiki session 1 through Mio rescue, preserve campaign instance"
+          git -C "$RUNNER_TEMP/shiki-before" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-state.json"
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-campaign.sqlite"
+          cmp "$RUNNER_TEMP/remote-state.json" "$RUNNER_TEMP/shiki-fast-out/state.json"
+          cmp "$RUNNER_TEMP/remote-campaign.sqlite" "$RUNNER_TEMP/shiki-fast-out/campaign.sqlite"
+          python -m rpg_engine --db "$RUNNER_TEMP/remote-campaign.sqlite" verify
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
