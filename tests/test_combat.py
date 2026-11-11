@@ -65,7 +65,7 @@ class CombatMechanicsTests(unittest.TestCase):
         frame = scene()
         self.assertEqual(validate_frame(frame), frame)
         self.assertEqual(distance_m(frame,"shiki","enemy"),3)
-        frame["actors"]["enemy"]["position_m"]=[-4,-3]
+        frame["actors"]["enemy"]["position_m"]=[-4,0]
         self.assertAlmostEqual(distance_m(frame,"shiki","enemy"),3)
 
     def test_attack_preflight_only_never_applies_hit_or_death(self):
