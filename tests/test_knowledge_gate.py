@@ -12,7 +12,7 @@ START = "2001-07-01T18:00:00"
 POLICY = {
     "speakers": {"Рэн": "ren", "Аки": "aki"},
     "topics": {
-        "exam.scrolls": {"triggers": ["свитк"]},
+        "exam.scrolls": {"triggers": ["свит"]},
         "shiki.beam": {"triggers": ["балк"]},
     },
 }
