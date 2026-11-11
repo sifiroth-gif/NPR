@@ -231,17 +231,28 @@ def assess_attempt(frame, attempt):
             reaction = "not_yet_detected"
         elif target_state.get("ready_at_ms", frame["at_ms"]) >= started + duration:
             reaction = "already_committed"
-        elif target_state.get("reaction_min_ms") is None:
+        elif target_state.get("reaction_min_ms") is None or attempt.get("cue_onset_ms") is None:
+            # Even seeing the attacker is not equivalent to detecting the
+            # attack before its wind-up/weapon release.
             reaction = "uncertain_no_grounded_timing"
-        elif target_state["reaction_min_ms"] <= duration:
-            reaction = "possible_not_guaranteed"
         else:
-            reaction = "too_late_given_observed_window"
+            cue_onset = _int(attempt["cue_onset_ms"], "cue_onset_ms")
+            if cue_onset > duration:
+                raise CombatContractError("cue cannot be detected after action end")
+            usable_window = duration - cue_onset
+            if target_state["reaction_min_ms"] <= usable_window:
+                reaction = "possible_not_guaranteed"
+            else:
+                reaction = "too_late_given_observed_window"
 
     return {
         "format":"NPR-COMBAT-PREFLIGHT/1","id":attempt["id"],
         "actor":who,"kind":kind,"start_ms":started,"end_ms":started+duration,
-        "measured_distance_m":None if current_distance is None else round(current_distance, 4),
+        "measured_distance_m":(
+            None if (current_distance is None or (target is not None
+                     and target not in actor["perceives"]))
+            else round(current_distance, 4)
+        ),
         "reaction_window":reaction,
         "outcome":"UNRESOLVED — player and NPC actions and chance remain causal",
         "note":"No automatic hit, dodge, knockout, paralysis, healing or player decision",
