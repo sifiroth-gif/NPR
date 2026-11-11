@@ -187,10 +187,14 @@ def apply_event(con, event, *, player_id, revision, session):
     for source in event.get("based_on", []):
         if journal_entry(con, "event", source) is None:
             raise ValueError(f"unknown source event: {source}")
+    provenance = {"based_on": event.get("based_on", []),
+                  "operations": event.get("operations", [])}
+    for key in ("witnesses", "knowledge_routes"):
+        if key in event:
+            provenance[key] = event[key]
     append_entry(con, entry_id=event["id"], kind="event", revision=revision, session=session,
                  at=event["at"], visibility=event["visibility"], body=event["summary"],
-                 details={"based_on": event.get("based_on", []),
-                          "operations": event.get("operations", [])})
+                 details=provenance)
     world.apply_operations(con, event, player_id)
 
 
