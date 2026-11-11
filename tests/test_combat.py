@@ -48,7 +48,7 @@ def attempt(*, actor_id="shiki", kind="attack", technique="senbon",
     ans={
         "format":ATTEMPT_FORMAT,"id":"s01.action.1","actor":actor_id,
         "kind":kind,"intent":"Попытаться нарушить хватку противника",
-        "start_ms":0,"duration_ms":duration_ms,
+        "start_ms":0,"duration_ms":duration_ms,"cue_onset_ms":0,
         "source":{"kind":"player_declaration" if actor_id=="shiki" else "npc_intention",
                   "ref":"player #бросаю сенбон#" if actor_id=="shiki" else "confirmed enemy goal"},
         "target":distance_target,"ability":ability,"technique":technique,
@@ -113,6 +113,14 @@ class CombatMechanicsTests(unittest.TestCase):
         result=assess_attempt(frame,attempt(duration_ms=25))
         self.assertEqual(result["reaction_window"],
                          "too_late_given_observed_window")
+
+    def test_reaction_uses_actual_cue_not_entire_action_duration(self):
+        a=attempt(duration_ms=250,cue_onset_ms=175)
+        self.assertEqual(assess_attempt(scene(),a)["reaction_window"],
+                         "too_late_given_observed_window")
+        a.pop("cue_onset_ms")
+        self.assertEqual(assess_attempt(scene(),a)["reaction_window"],
+                         "uncertain_no_grounded_timing")
 
     def test_no_automatic_perception_of_hidden_target(self):
         frame=scene()
