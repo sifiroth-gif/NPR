@@ -1,19 +1,18 @@
-name: Prepare Shiki visible RPG turn
+name: Prepare Shiki visible RPG turn - knowledge reviewed
 
 on:
   push:
     branches: [main]
     paths:
       - ".github/workflows/shiki-live-turn.yml"
-      - "campaigns/shiki/maintenance/stage_turn.py"
-      - "campaigns/shiki/maintenance/live_turn.json"
+      - "campaigns/shiki/maintenance/reviewed_live_turn.json"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: shiki-live-turn-prepare
+  group: npr-shiki-game-state-write
   cancel-in-progress: false
 
 jobs:
@@ -29,21 +28,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Run full engine and epistemic regression tests
+        run: python -m unittest discover -s tests -q
+      - name: Detect new reviewed draft
+        id: detect
+        shell: bash
+        run: |
+          if [[ -f campaigns/shiki/maintenance/reviewed_live_turn.json ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No new reviewed turn; tests only. Never reuse old live_turn.json."
+          fi
       - name: Restore current live game-state branch
+        if: steps.detect.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
           git worktree add --detach "$RUNNER_TEMP/shiki-state" refs/remotes/origin/game-state/shiki
-      - name: Prepare exact turn, verify, and checkpoint
+      - name: Gate exact prose on per-NPC evidence and P0, then prepare and verify
+        if: steps.detect.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          python -m campaigns.shiki.maintenance.stage_turn \
+          python -m campaigns.shiki.maintenance.prepare_reviewed_turn \
             "$RUNNER_TEMP/shiki-state" \
-            campaigns/shiki/maintenance/live_turn.json \
+            campaigns/shiki/maintenance/reviewed_live_turn.json \
             "$RUNNER_TEMP/shiki-output"
-      - name: Publish and verify exact restored bytes
+      - name: Publish source-bound draft and verify remote bytes
+        if: steps.detect.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -52,11 +66,12 @@ jobs:
           git -C "$RUNNER_TEMP/shiki-state" config user.name "github-actions[bot]"
           git -C "$RUNNER_TEMP/shiki-state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C "$RUNNER_TEMP/shiki-state" add -f campaign.sqlite state.json
-          git -C "$RUNNER_TEMP/shiki-state" commit -m "Prepare Shiki live turn with verified pending draft"
+          git -C "$RUNNER_TEMP/shiki-state" commit -m "Prepare Shiki reviewed live turn"
           git -C "$RUNNER_TEMP/shiki-state" push origin HEAD:refs/heads/game-state/shiki
           git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
           git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/verify-state.json"
           git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/verify-campaign.sqlite"
           cmp "$RUNNER_TEMP/verify-state.json" "$RUNNER_TEMP/shiki-output/state.json"
           cmp "$RUNNER_TEMP/verify-campaign.sqlite" "$RUNNER_TEMP/shiki-output/campaign.sqlite"
+          python -m rpg_engine --db "$RUNNER_TEMP/verify-campaign.sqlite" verify
           echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
