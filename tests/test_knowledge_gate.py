@@ -72,6 +72,14 @@ class ActorKnowledgeTests(unittest.TestCase):
                 {"topic":"shiki.beam","stance":"assert"}
             ]), POLICY)
 
+    def test_topic_as_leading_question_still_requires_personal_source(self):
+        # A GM must not bypass the leak guard by changing a confident line into a leading question.
+        question = "А у какой команды находится нужный нам свиток?"
+        with self.assertRaisesRegex(KnowledgeLeak, "no personal belief"):
+            validate_scene(self.game, "**Аки:** — "+question,
+                           text_review("aki", question, [
+                               {"topic":"exam.scrolls","stance":"question"}]), POLICY)
+
     def test_actor_scoped_report_allows_only_its_real_recipient(self):
         self.acquired("ren", "shiki.beam")
         line = "Ты получил балкой по плечу."
