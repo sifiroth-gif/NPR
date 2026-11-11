@@ -86,6 +86,13 @@ class CombatScenePipelineTests(unittest.TestCase):
         turn={"id":"test.combat.01","expected_revision":0,"at":AT,
               "location":"Лес смерти, поляна","player_input":"#метаю сенбон#",
               "text":PROSE,"events":[]}
+        # The first combat frame must be persisted even before any wound:
+        # otherwise the next turn could silently shift positions.
+        combat_review = review["combat_review"]
+        combat_review["world_event_id"] = "fight.initial.frame"
+        combat_review["event_summary"] = "Исходная геометрия и состояние участников"
+        turn["events"].append(outcome_world_event(frame(),event_id="fight.initial.frame",
+            at=AT,summary="Исходная геометрия и состояние участников"))
         return {"format":"NPR-SHIKI-REVIEWED-TURN/1","turn":turn,
                 "knowledge_review":review}
 
@@ -128,13 +135,14 @@ class CombatScenePipelineTests(unittest.TestCase):
                      "forearm":{"severity":"minor","mechanism":"укол сенбона",
                                 "functions_lost":["ослаблен хват"]}}}]}
         e["knowledge_review"]["combat_review"]["outcomes"]=[outcome]
+        # The existing first-frame event is not an outcome event.
         with self.assertRaisesRegex(KnowledgeLeak,"private persisted world event"):
             self.run_review(e)
         e["knowledge_review"]["combat_review"]["world_event_id"]="fight.world.1"
         e["knowledge_review"]["combat_review"]["event_summary"]="Нервный укол правого предплечья в ходе боя"
         projected=apply_outcome(frame(),outcome)
-        e["turn"]["events"].append(outcome_world_event(projected,event_id="fight.world.1",
-            at=AT,summary="Нервный укол правого предплечья в ходе боя"))
+        e["turn"]["events"] = [outcome_world_event(projected,event_id="fight.world.1",
+            at=AT,summary="Нервный укол правого предплечья в ходе боя")]
         result=self.run_review(e)
         self.assertEqual(result.verify()["revision"],0)
         self.assertTrue(result.verify()["pending"])
@@ -162,8 +170,8 @@ class CombatScenePipelineTests(unittest.TestCase):
         c=e["knowledge_review"]["combat_review"]
         c["world_event_id"]="rng.world"
         c["event_summary"]="Исполнение проверенной случайной развилки"
-        e["turn"]["events"].append(outcome_world_event(projected,event_id="rng.world",
-            at=AT,summary="Исполнение проверенной случайной развилки"))
+        e["turn"]["events"] = [outcome_world_event(projected,event_id="rng.world",
+            at=AT,summary="Исполнение проверенной случайной развилки")]
         self.assertTrue(self.run_review(e).verify()["pending"])
 
 
