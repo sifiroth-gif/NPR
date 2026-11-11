@@ -74,9 +74,16 @@ def _reasons(game: Campaign, actor: str, item: dict, protected: dict,
     if stance not in ("assert", "report", "suspect", "question", "deny"):
         return [f"{actor}: invalid epistemic stance for {topic!r}"]
     utterance = item["utterance"]
+    # A suspiciously specific QUESTION can leak hidden GM information too.
+    # Even conjecture needs a personal evidential hook, not future plot notes.
+    if source is None:
+        errors.append(f"{actor}: no personal belief/source for {topic}; GM lore is not NPC knowledge")
+        return errors
     if stance == "question":
         if "?" not in utterance:
             errors.append(f"{actor}: question stance without question mark for {topic}")
+        if not _verified_source(game, source):
+            errors.append(f"{actor}: question about {topic} lacks verified personal source")
         return errors
     if stance == "suspect" and not (
         "?" in utterance or any(term in _norm(utterance) for term in UNCERTAINTY)
@@ -85,14 +92,6 @@ def _reasons(game: Campaign, actor: str, item: dict, protected: dict,
         return errors
     if stance == "deny" and "не" not in _norm(utterance):
         errors.append(f"{actor}: a denial must be explicit for {topic}")
-        return errors
-    if stance == "suspect" and source is None:
-        # One may raise a sourced possibility from observed evidence, but not
-        # magically conjecture a hidden operational detail.
-        errors.append(f"{actor}: hypothetical detail {topic} needs a personal observation")
-        return errors
-    if source is None:
-        errors.append(f"{actor}: no personal belief/source for {topic}; GM lore is not NPC knowledge")
         return errors
     if not _verified_source(game, source):
         errors.append(f"{actor}: belief {topic} lacks a verified event source")
