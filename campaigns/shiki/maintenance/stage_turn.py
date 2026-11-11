@@ -40,7 +40,12 @@ def main(state_dir: Path, packet_path: Path, out_dir: Path):
             raise RuntimeError("Prior prepared text or hash changed unexpectedly")
         game.confirm(previous["turn_id"], previous["draft_sha"])
     elif initial["pending"] is not None:
-        raise RuntimeError("Pending draft exists and no explicit prior receipt was supplied")
+        # An already-reserved RNG roll is not a published draft. It belongs
+        # to the exact same turn, and prepare must reuse it without rerolling.
+        pending = initial["pending"]
+        if ("packet" in pending or pending["turn_id"] != next_packet["id"]
+                or pending["base_revision"] != next_packet["expected_revision"]):
+            raise RuntimeError("Prior prepared draft exists; publication receipt required")
     current = game.verify()
     if next_packet["expected_revision"] != current["revision"]:
         raise RuntimeError("Revision conflict with target packet")
