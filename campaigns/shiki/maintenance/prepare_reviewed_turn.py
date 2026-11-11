@@ -119,7 +119,9 @@ def _combat_review(game: Campaign, turn: dict, review: dict, final_text: str):
             if resolved != result["result"]:
                 raise KnowledgeLeak("Combat result contradicts the reserved roll")
         projected = apply_outcome(projected, result)
-    if outcomes:
+    if outcomes or saved is None:
+        # First contact is a causal snapshot too; otherwise an enemy could
+        # silently shift before the next player declaration.
         if not spec.get("world_event_id") or not spec.get("event_summary"):
             raise KnowledgeLeak("Combat outcome must be included as private persisted world event")
         expected = outcome_world_event(
