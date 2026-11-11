@@ -38,6 +38,16 @@ def _p0_review(text: str, review: dict, *, has_dialogue: bool):
         raise KnowledgeLeak("P0 combat_present must be true/false")
 
 
+def _check_new_acquisitions(turn: dict):
+    for event in turn.get("events", []):
+        if any(op.get("op") == "set_belief" for op in event.get("operations", [])):
+            if "witnesses" not in event and "knowledge_routes" not in event:
+                raise KnowledgeLeak(
+                    "New NPC knowledge requires witnesses or explicit knowledge_routes "
+                    "inside the source event (not GM context)"
+                )
+
+
 def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     envelope = json.loads(envelope_path.read_text(encoding="utf-8"))
     if envelope.get("format") != "NPR-SHIKI-REVIEWED-TURN/1":
@@ -52,6 +62,7 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     expected_revision = checked["revision"] + int(bool(checked["pending"]))
     if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != expected_revision:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
+    _check_new_acquisitions(turn)
     final_text = turn.get("text")
     if not isinstance(final_text, str):
         raise KnowledgeLeak("Missing exact final draft")
