@@ -106,8 +106,8 @@ def validate_scene(game: Campaign, draft: str, review: dict, policy: dict) -> di
     """Fail closed on tracked high-risk claims and the completeness of review.
 
     The review is GM-only, and every dialogue line gets one annotated row.
-    A protected claim requires a source-bound actor belief (or an explicit
-    question/denial). Source status is *belief*, not objective truth.
+    Any protected mention, including pointed questions and speculation, needs
+    actor-specific provenance. Source status is *belief*, not objective truth.
     The review is not semantic parsing: false classifications are a GM error.
     """
     if not isinstance(review, dict) or review.get("format") != FORMAT:
