@@ -34,7 +34,37 @@ def _p0_review(text: str, review: dict, *, has_dialogue: bool):
         raise KnowledgeLeak("Missing P0 scene preflight")
     _grounded_excerpt(text, p0.get("shiki_presence"), "Shiki psychological presence")
     if has_dialogue:
-        _grounded_excerpt(text, p0.get("conversation_body_language"), "conversation body language")
+        body = p0.get("conversation_body_language")
+        presence = p0.get("shiki_presence")
+        _grounded_excerpt(text, body, "conversation body language")
+        # An isolated gesture is not evidence of Shiki's personal effect on NPCs.
+        # Require a distinct, text-grounded, actor-attributed psychological response.
+        reactions = p0.get("npc_reactions_to_shiki")
+        if not isinstance(reactions, list) or not reactions:
+            raise KnowledgeLeak("P0 Shiki-specific NPC reactions: required for dialogue")
+        dialogue_actors = {
+            line.get("actor") for line in review.get("lines", [])
+            if isinstance(line, dict) and isinstance(line.get("actor"), str)
+        }
+        seen = set()
+        excerpts = [presence, body]
+        for reaction in reactions:
+            if not isinstance(reaction, dict) or not isinstance(reaction.get("actor"), str):
+                raise KnowledgeLeak("P0 Shiki-specific NPC reactions: missing actor")
+            actor = reaction["actor"]
+            if not actor or actor in seen or (dialogue_actors and actor not in dialogue_actors):
+                raise KnowledgeLeak("P0 Shiki-specific NPC reactions: duplicate or unsourced actor")
+            excerpt = reaction.get("excerpt")
+            _grounded_excerpt(text, excerpt, f"Shiki-specific NPC response of {actor}")
+            if any(
+                other and (excerpt in other or other in excerpt)
+                for other in excerpts
+            ):
+                raise KnowledgeLeak("P0 Shiki-specific NPC reactions must use distinct passages")
+            seen.add(actor)
+            excerpts.append(excerpt)
+        if len(dialogue_actors) > 1 and len(seen) < 2:
+            raise KnowledgeLeak("P0 distinct NPC reactions required for multiple dialogue actors")
     if p0.get("combat_present") is True:
         _grounded_excerpt(text, p0.get("combat_body_language"), "combat body language BEFORE resolution")
     elif p0.get("combat_present") is not False:
