@@ -1,10 +1,5 @@
 name: Verify and publish approved Shiki campaign
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'campaigns/shiki/**'
-      - '.github/workflows/shiki-refresh.yml'
   workflow_dispatch:
 
 permissions:
