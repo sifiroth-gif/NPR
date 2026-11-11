@@ -38,7 +38,7 @@ def attempt():
     return {"format":ATTEMPT_FORMAT,"id":"fight.01","actor":"shiki",
             "source":{"kind":"player_declaration","ref":"#метаю сенбон#"},
             "intent":"Сбить хватку противника", "kind":"attack",
-            "start_ms":0,"duration_ms":250,"target":"enemy",
+            "start_ms":0,"duration_ms":250,"cue_onset_ms":0,"target":"enemy",
             "technique":"senbon","ability":"sensory",
             "reach_m":6,"path_clear":True,"stamina_cost":"minor"}
 
