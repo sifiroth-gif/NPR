@@ -1,0 +1,62 @@
+name: Prepare Shiki visible RPG turn
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-live-turn.yml"
+      - "campaigns/shiki/maintenance/stage_turn.py"
+      - "campaigns/shiki/maintenance/live_turn.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shiki-live-turn-prepare
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore current live game-state branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-state" refs/remotes/origin/game-state/shiki
+      - name: Prepare exact turn, verify, and checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m campaigns.shiki.maintenance.stage_turn \
+            "$RUNNER_TEMP/shiki-state" \
+            campaigns/shiki/maintenance/live_turn.json \
+            "$RUNNER_TEMP/shiki-output"
+      - name: Publish and verify exact restored bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp "$RUNNER_TEMP/shiki-output/campaign.sqlite" "$RUNNER_TEMP/shiki-state/campaign.sqlite"
+          cp "$RUNNER_TEMP/shiki-output/state.json" "$RUNNER_TEMP/shiki-state/state.json"
+          git -C "$RUNNER_TEMP/shiki-state" config user.name "github-actions[bot]"
+          git -C "$RUNNER_TEMP/shiki-state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$RUNNER_TEMP/shiki-state" add -f campaign.sqlite state.json
+          git -C "$RUNNER_TEMP/shiki-state" commit -m "Prepare Shiki live turn with verified pending draft"
+          git -C "$RUNNER_TEMP/shiki-state" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/verify-state.json"
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/verify-campaign.sqlite"
+          cmp "$RUNNER_TEMP/verify-state.json" "$RUNNER_TEMP/shiki-output/state.json"
+          cmp "$RUNNER_TEMP/verify-campaign.sqlite" "$RUNNER_TEMP/shiki-output/campaign.sqlite"
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
