@@ -1,0 +1,103 @@
+name: Shiki - full current-save and architecture compatibility audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-current-state-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: npr-shiki-readonly-audit
+  cancel-in-progress: false
+
+jobs:
+  verify-current-campaign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest NPR engine
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore latest private Shiki save read-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          mkdir -p "$RUNNER_TEMP/shiki-readonly"
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/shiki-readonly/campaign.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/shiki-readonly/state.json"
+          echo "STATE_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
+      - name: Compare manifest SHA and verified SQLite identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from rpg_engine.quick_save import verify_state
+          root = Path(os.environ["RUNNER_TEMP"]) / "shiki-readonly"
+          game, status = verify_state(root)
+          assert status["campaign_id"] == "naruto-shiki"
+          assert status["revision"] == 68, status
+          assert status["at"] == "0001-07-02T14:53:00", status
+          assert not status["pending"]
+          print("CURRENT_STATE_VERIFIED", status)
+          PY
+      - name: Replay and audit entire saved journal under newest architecture
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki-readonly/campaign.sqlite" verify --full
+      - name: Verify tower events, hard retcons and personal NPC knowledge
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m campaigns.shiki.maintenance.verify_tower_checkpoint \
+            "$RUNNER_TEMP/shiki-readonly" \
+            campaigns/shiki/maintenance/played_catchup_2026-11-12_tower.json
+      - name: Exercise the long-campaign preparation, memory, search and world scheduling
+        shell: bash
+        run: |
+          set -euo pipefail
+          db="$RUNNER_TEMP/shiki-readonly/campaign.sqlite"
+          python -m rpg_engine --db "$db" gm-packet --mode handoff > "$RUNNER_TEMP/gm-packet.json"
+          python -m rpg_engine --db "$db" gm-packet --mode scene --actor aki --actor ren > "$RUNNER_TEMP/scene-packet.json"
+          python -m rpg_engine --db "$db" memory --key shiki.tower.gaara.continuity --audience gm > "$RUNNER_TEMP/reviewed-memory.json"
+          python -m rpg_engine --db "$db" memory --actor gaara --audience gm > "$RUNNER_TEMP/gaara-knowledge.json"
+          python -m rpg_engine --db "$db" recall "Гаара" --audience gm --limit 3 > "$RUNNER_TEMP/recalled.json"
+          python -m rpg_engine --db "$db" world-queue 0001-07-02T16:00:00 > "$RUNNER_TEMP/queue.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          handoff = json.loads((root/'gm-packet.json').read_text())
+          scene = json.loads((root/'scene-packet.json').read_text())
+          memory = json.loads((root/'reviewed-memory.json').read_text())
+          queue = json.loads((root/'queue.json').read_text())
+          assert handoff['confirmed']['revision'] == 68
+          assert handoff['confirmed']['pending'] is None
+          assert scene['confirmed']['at'] == '0001-07-02T14:53:00'
+          assert memory and memory[0]['key'] == 'shiki.tower.gaara.continuity'
+          assert queue is not None
+          print('ARCHITECTURE_COMPATIBILITY_READY', {
+            'revision': 68, 'handoff': handoff['heading'],
+            'source_memory': memory[0]['source_event'],
+            'next_actors': [p['id'] for p in scene['actors']]
+          })
+          PY
+      - name: Ensure read-only audit did not change checkpoint files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite | cmp - "$RUNNER_TEMP/shiki-readonly/campaign.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json | cmp - "$RUNNER_TEMP/shiki-readonly/state.json"
+          echo "CHECKPOINT_IMMUTABLE_AND_VALID"
