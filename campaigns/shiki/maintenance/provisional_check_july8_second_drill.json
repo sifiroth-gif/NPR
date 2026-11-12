@@ -1,0 +1,26 @@
+{
+  "format": "NPR-SHIKI-PROVISIONAL-RANDOM-CHECKS/1",
+  "at": "0001-07-08T06:33:00",
+  "turn": "s01.098",
+  "player_input": "#действую в рамках советов Кабуто#",
+  "status": "Provisional precommitted deterministic SHA256 d20, not an engine Campaign.roll; active SQLite is behind played chat. Do not claim engine roll or verified sqlite update.",
+  "rule": "1+(big-endian first 8 bytes of SHA256('naruto-shiki|0001-07-08T06:33:00|'+check_id) mod 20)",
+  "checks": [
+    {
+      "id": "s01.098.commitment_read",
+      "d20": 2,
+      "interpretation": "Shiki initially misreads Kabuto leftward weight shift as full commitment, but it was a probing setup."
+    },
+    {
+      "id": "s01.098.evasion",
+      "d20": 19,
+      "interpretation": "Shiki quickly adjusts after first error, successfully avoids next real contact using the tutor's rear-support cue."
+    },
+    {
+      "id": "s01.098.kabuto_faint",
+      "d20": 14,
+      "interpretation": "Kabuto's first feint works, then he demonstrates the underlying correction, no injury."
+    }
+  ],
+  "scene_scope": "Controlled taijutsu diagnostic, multiple repetitions of already-authorized Shiki training; no unauthorized speech/motives, no definite instruction agreement for spying/genetics."
+}
