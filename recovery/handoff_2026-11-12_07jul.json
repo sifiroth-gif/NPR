@@ -1,0 +1,59 @@
+{
+  "format": "NPR-CAMPAIGN-RECOVERY-HANDOFF/1",
+  "campaign_id": "naruto-shiki",
+  "date_saved_real": "2026-11-12",
+  "source_branch": "game-state/shiki",
+  "confirmed_sqlite": {
+    "revision": 68,
+    "at": "0001-07-02T14:53:00",
+    "file": "campaign.sqlite",
+    "manifest": "state.json",
+    "checksum_expected": "b3ea2848e2a2f8571e2f2cb2bb1a291b47bd373f7345a6950b84a0258370e502"
+  },
+  "played_after_sqlite": {
+    "last_time": "0001-07-07T10:43:00",
+    "last_location": "Конохагакуре, гостиница, комната 214",
+    "reconstructed_packet": "recovery/played_catchup_2026-11-12_exam_to_hotel.json",
+    "source_main_commit": "9a4973d340962462995dd40e68858aefa98a87f7",
+    "number_of_turns": 20,
+    "target_revision": 88,
+    "already_played_in_chat": true,
+    "not_yet_confirmed_in_remote_sqlite": true
+  },
+  "current_player_position": "Шики с Аки и Рэном в гостинице, номер 214. Шики предложил привлечь наставника, вопрос написать Кирисаве Сэйне остаётся за игроком; дальнейших добровольных действий нет.",
+  "world": {
+    "exam_preliminary_completed": true,
+    "qualified_shiki": true,
+    "qualified_aki": true,
+    "ren_eliminated": true,
+    "shiki_opponent": "Рок Ли",
+    "aki_opponent": "Гаара",
+    "finals_date": "0001-08-07",
+    "ren_injury": "левое плечо, нужен медосмотр",
+    "aki_injury": "укус предплечья, обработан медицинской чакрой",
+    "npc_agency": "другие NPC автономны"
+  },
+  "canon_correction": {
+    "direct_user_source": "2026-11-12 user OOC",
+    "target": "Рэн: «И видел, что произошло в лесу»",
+    "corrected": "Рэн не наблюдал действия Гаары в Лесу смерти; он наблюдал столкновение Шики с дождевиками и бой Гаары с Хинатой на арене.",
+    "rules": [
+      "campaigns/shiki/SCENE_PREP_PRIORITY.md P0-11",
+      "campaigns/shiki/KNOWLEDGE_POLICY.json episode_scopes",
+      "campaigns/shiki/continuity/NPC_WITNESS_MATRIX_JULY_1278.json",
+      "rpg_engine/referent_guard.py"
+    ],
+    "require_episode_id": true
+  },
+  "publication": {
+    "github_action_workflow": ".github/workflows/shiki-save-july7-2026.yml",
+    "requested": "new checked SQLite snapshot revision 88",
+    "status": "not_verified_in_remote_state.json",
+    "do_not_claim_confirmed": true
+  },
+  "next_actions": [
+    "Check latest game-state/shiki/state.json and verify matching SQLite. If rev68, run already prepared replay via quick_save in runner and commit SQLite+manifest atomically; do not reinitialize.",
+    "Before next narrative turn apply latest P0-11 and consider player OOC retcon, do not replay erroneous Ren claim.",
+    "Do not pretend recent chat replay is verbatim source; reconstruction marked in each turn."
+  ]
+}
