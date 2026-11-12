@@ -1,0 +1,55 @@
+{
+  "schema": "NPR-SHIKI-PROVISIONAL-ROLL/1",
+  "scene_range": "0001-07-15T06:00:00/0001-07-21T21:00:00",
+  "source_player_input": "Мастеру: Дальше формируем ещё неделю. Давай так ориентир 4 из 5 по всем направлениям к концу месяца",
+  "campaign_status": "Played timeline is ahead of game-state/shiki SQLite; this is an immutable provisional scene-planning record and NOT an engine Campaign.roll receipt.",
+  "mechanism": "FNV-1a 32-bit over stable UTF-16 code units for salt+check_id; 1+(hash%20); no rerolls on continuing this sequence",
+  "predeclared_thresholds": [
+    {
+      "id": "w2.taijutsu-commitment",
+      "scale": "1-5 setback;6-12 unstable;13-20 verified repeated movement gains",
+      "roll": 20
+    },
+    {
+      "id": "w2.shunshin-brake",
+      "scale": "1-7 bottleneck;8-14 mixed;15-20 clear sustained stability",
+      "roll": 17
+    },
+    {
+      "id": "w2.chakra-contact",
+      "scale": "1-5 unstable;6-12 intermittent;13-20 reliable non-injurious control",
+      "roll": 2
+    },
+    {
+      "id": "w2.neurology",
+      "scale": "1-4 mistaken model;5-13 practical comprehension;14-20 breakthrough in integration",
+      "roll": 13
+    },
+    {
+      "id": "w2.genetics",
+      "scale": "1-7 limitations of sources;8-15 valid conceptual progress;16-20 significant discovery",
+      "roll": 11
+    },
+    {
+      "id": "w2.stealth-observation",
+      "scale": "1-6 noticed;7-13 partly successful;14-20 clear success",
+      "roll": 3
+    },
+    {
+      "id": "w2.kabuto-schedule",
+      "scale": "1-4 unavailable;5-14 selective sessions;15-20 significant additional mentor time",
+      "roll": 13
+    },
+    {
+      "id": "w2.aki-training-response",
+      "scale": "1-5 ominous rejection or forced constraint;6-14 routine reply;15-20 useful support",
+      "roll": 7
+    },
+    {
+      "id": "w2.world-complication",
+      "scale": "1-4 meaningful complication;5-12 mild incident;13-20 quiet week",
+      "roll": 8
+    }
+  ],
+  "notes": "No forced revelation of Zero Genome to Aki/Ren/other observers. Kabuto saw healing July14, not hidden mechanism. User has authorized routine Shiki training. Check actual consequences with next scene and don't pre-canonize future unplayed decisions."
+}
