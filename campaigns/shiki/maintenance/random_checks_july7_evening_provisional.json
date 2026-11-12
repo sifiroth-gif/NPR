@@ -1,0 +1,31 @@
+{
+  "format": "NPR-SHIKI-PROVISIONAL-RANDOM-CHECKS/1",
+  "campaign_id": "naruto-shiki",
+  "scene_date": "0001-07-07",
+  "purpose": "Random incidental checks for player declaration: return to hotel and rest.",
+  "status": "rolled outside SQLite because the remote active game-state/shiki SQLite save is still at rev68 0001-07-02T14:53:00; replay must honor these rolled outcomes and must not reroll once confirmed.",
+  "checks": [
+    {
+      "id": "s01.094.route-incidental",
+      "notation": "1d20",
+      "result": 3,
+      "band": "1-4 complication, 5-14 neutral, 15-20 favourable",
+      "outcome": "unexpected street obstruction from medical evacuation, delays journey; no forced player action"
+    },
+    {
+      "id": "s01.094.team-evening",
+      "notation": "1d20",
+      "result": 1,
+      "band": "1-2 serious autonomous local incident, 3-7 minor event, 8-20 uneventful",
+      "outcome": "an unattended charcoal brazier catches bedding in occupied room near Kusa hotel lodging; smoke spreads overnight"
+    },
+    {
+      "id": "s01.094.npc-delivery",
+      "notation": "1d20",
+      "result": 1,
+      "band": "1-4 poor response, 5-14 normal, 15-20 excellent",
+      "outcome": "stairwell near fire initially blocked by frightened guests; hotel staff delayed, team members move on their own to address danger"
+    }
+  ],
+  "continuity": "Do not claim these are engine-seeded draws. Before future official replay, keep source user text, incident, exact check IDs and outcome, or record exception in checkpoint. Player owns Shiki's response at first meaningful decision."
+}
