@@ -1,0 +1,105 @@
+{
+  "format": "NPR-SHIKI-WITNESS-MATRIX/1",
+  "authority": "direct_player_correction_2026-11-12",
+  "use": "Strict evidence-scoped NPC speech. A witnessed event is not an adjacent event at the same location. Distinguish negative witness from uncertain knowledge.",
+  "episodes": {
+    "shiki.rain_genin.forest_encounter": {
+      "at": "0001-07-02",
+      "place": "Полигон 44, Лес смерти",
+      "verified_witnesses": [
+        "shiki",
+        "ren"
+      ],
+      "partial_witnesses": [
+        "aki"
+      ],
+      "unverified_witnesses": [
+        "gaara",
+        "kiba",
+        "kabuto"
+      ],
+      "limits": "Ren personally witnessed the final Rain genin declare surrender while restrained; Aki did not personally witness the final kill. Do not give Aki the surrendered detail without report."
+    },
+    "gaara.forest_death_actions": {
+      "at": "0001-07-02",
+      "place": "Полигон 44, иные участки Леса смерти",
+      "verified_witnesses": [
+        "gaara",
+        "temari",
+        "kankuro"
+      ],
+      "known_non_witnesses": [
+        "shiki",
+        "ren",
+        "aki"
+      ],
+      "indirect_knowledge_possible": "Arrival at the tower; hearsay; later testimony, if it actually occurs",
+      "limits": "No member of Shiki's team watched Gaara fight or kill in the forest. Mere knowledge of 97-minute arrival or violent reputation does not make anyone an eyewitness."
+    },
+    "gaara.hinata.prelim": {
+      "at": "0001-07-07T07:52:00",
+      "place": "Коноха, центральная башня, арена",
+      "verified_witnesses": [
+        "shiki",
+        "ren",
+        "aki"
+      ],
+      "limits": "Ren personally watched Gaara injure Hinata and the official stoppage. He may draw inferences about Gaara's ability or brutality only from the arena bout."
+    },
+    "gaara.shiki.cafeteria": {
+      "at": "0001-07-02T14:48:00",
+      "place": "Центральная башня, столовая",
+      "verified_witnesses": [
+        "shiki",
+        "ren",
+        "aki"
+      ],
+      "limits": "The question 'When you kill someone, do you feel you exist?' was Gaara speaking to Shiki; it is NOT a confession that Gaara himself only feels alive when killing. Infer with uncertainty."
+    },
+    "mio.beam.rescue": {
+      "at": "0001-07-01",
+      "place": "Коноха, улица",
+      "verified_witnesses": [
+        "shiki"
+      ],
+      "known_non_witnesses": [
+        "ren",
+        "aki"
+      ],
+      "limits": "Neither Ren nor Aki saw the beam rescue; later reliable report must be explicit."
+    },
+    "shiki.yoroi.medical_dialogue": {
+      "at": "0001-07-07T07:33:00",
+      "place": "Центральная башня, медицинское крыло",
+      "verified_witnesses": [
+        "shiki",
+        "yoroi",
+        "medical_staff"
+      ],
+      "known_non_witnesses": [
+        "kabuto",
+        "ren",
+        "aki"
+      ],
+      "limits": "Kabuto saw Shiki go to the wing, not the content of his conversation with the surgeon; his guess remains conjecture."
+    }
+  },
+  "corrected_historical_line": {
+    "speaker": "ren",
+    "at": "0001-07-07T09:55:00",
+    "quote": "Я видел, что этот Гаара сделал с Хинатой. И видел, что произошло в лесу.",
+    "ambiguous_referent": "Gaara's violent behavior in forest",
+    "rejected_meaning": "Ren personally saw Gaara fight in the Forest of Death",
+    "permitted_meaning": "Ren saw Gaara vs Hinata and separately witnessed Shiki vs Rain genin; do not blend these into personal observation of Gaara in forest.",
+    "retcon_scope": "Historical assistant text remains in chat source, but the implication about Gaara's forest battle is noncanonical. No invented new speech for Ren; future scenes use corrected knowledge."
+  },
+  "require_check": [
+    "Who personally observed exactly this event?",
+    "Is this event different from an adjacent one in the same forest, exam, or medical wing?",
+    "What is the referent of this/it/him/there/in the forest?",
+    "Does a reference to the previous conversation subject falsely imply witnessing a different event?",
+    "If indirect, identify who reported, when and with which wording; no report by inference alone.",
+    "If no source, phrase as speculation without fake eyewitness authority, or omit."
+  ],
+  "provenance": "User OOC correction 'видел, что произошло в лесу. Нет не видел. Просачивание знаний. Протокол проверки просачивания усилить и сохранись' (2026-11-12)."
+}
