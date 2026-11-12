@@ -1,0 +1,62 @@
+{
+  "schema": "NPR-SHIKI-PROVISIONAL-CHECKS/1",
+  "source": "Player user: Дальше неделя. Week 3 July22-28, 1278",
+  "turn": "s01.origin.week3",
+  "calendar": "0001-07-22/0001-07-28",
+  "stable_hash": "FNV-1a 32-bit UTF-16 over string npr|shiki|0001-07-22..28|origin-week3| + check ID; result 1+(unsigned_mod20)",
+  "engine_status": "Provisional OFFLINE determinism; active game-state SQLite behind July21; not engine-authoritative",
+  "recorded_before_visible_scene": true,
+  "checks": [
+    {
+      "id": "s01.w3.tai_defense",
+      "d20": 1,
+      "threshold": "1-5 stalls,6-10 partial,11-17 strong,18-20 remarkable"
+    },
+    {
+      "id": "s01.w3.shunshin_chain",
+      "d20": 6,
+      "threshold": "1-5 setback,6-12 unstable,13-20 consolidation"
+    },
+    {
+      "id": "s01.w3.scalpel_precision",
+      "d20": 7,
+      "threshold": "1-5 setback,6-11 partial,12-18 stable trained,19-20 remarkable"
+    },
+    {
+      "id": "s01.w3.observation_stealth",
+      "d20": 4,
+      "threshold": "1-5 detected,6-11 partial,12-18 improvement,19-20 notable"
+    },
+    {
+      "id": "s01.w3.neuro_study",
+      "d20": 17,
+      "threshold": "1-5 inadequate,6-11 theoretical,12-20 practice-grounded"
+    },
+    {
+      "id": "s01.w3.genetics_zero",
+      "d20": 3,
+      "threshold": "1-6 no new meaningful learned action,7-14 targeted advance,15-20 verified expanded control"
+    },
+    {
+      "id": "s01.w3.kabuto_autonomy",
+      "d20": 7,
+      "threshold": "1-4 cancels most,5-12 limited,13-20 several sessions"
+    },
+    {
+      "id": "s01.w3.aki_gaara_prep",
+      "d20": 8,
+      "threshold": "1-6 dangerous failure,7-14 partial gains,15-20 effective insight"
+    },
+    {
+      "id": "s01.w3.ren_rehab",
+      "d20": 4,
+      "threshold": "1-5 exacerbation,6-14 improving under restrictions,15-20 cleared for modest controlled spar"
+    },
+    {
+      "id": "s01.w3.world_tick",
+      "d20": 8,
+      "threshold": "1-4 major separate event,5-13 actionable social encounter,14-20 background progress"
+    }
+  ],
+  "role_boundaries": "Player previously delegated routine training and study only. No new Shiki speech/desire/biological sample/secret sharing; NPCs know only perceived events. Week ends on consequential request, not automatic acceptance."
+}
