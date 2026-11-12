@@ -62,7 +62,7 @@
       "source_requirement": "The GM knows Orochimaru's plan, not the exam participants. Source-bound acquisition required."
     }
   },
-  "general_rule": "For all other substantive memory-based NPC dialogue claims, the GM must register a topic and actor-specific acquisition or make explicitly uncertain speculation. The trigger set catches recurring high-impact leaks, not every semantic contradiction.",
+  "general_rule": "Semantic source validation P0-11 now requires explicit event/episode identity, referent resolution across clauses, and actor-specific witness route; topical keyword triggers remain a regression fallback, not a substitute. Source list in witness_matrix_reference.",
   "retcons": [
     {
       "source_turn": "assistant response 1 July 19:06",
@@ -75,9 +75,113 @@
       "actor": "ren",
       "invalid_line": "А ещё мне бы не хотелось, чтобы наш медик снова получил балкой по плечу.",
       "corrected_state": "Рэн не видел уличного инцидента и не получил известия о балке; этой реплики не было в корректной непрерывности."
+    },
+    {
+      "source_turn": "GM response 7 July 1278 09:55 in dialogue about Gaara",
+      "actor": "ren",
+      "invalid_line": "И видел, что произошло в лесу.",
+      "invalid_interpretation": "Ren personally witnessed what Gaara did in the Forest of Death.",
+      "corrected_state": "Рэн не видел действий Гаары в Лесу смерти. Он лично видел действия Шики с командой Дождя и бой Гаары с Хинатой на арене; эти три эпизода имеют разные источники и нельзя переносить свидетельство между ними.",
+      "authority": "direct_player_2026-11-12",
+      "source_ref": "user OOC 'видел, что произошло в лесу. Нет не видел. Просачивание знаний. Протокол проверки просачивания усилить и сохранись'"
     }
   ],
   "effective_from": "1 July 1278, before continuing 2 July 06:08",
   "created_on": "2026-11-11",
-  "player_actor": "shiki"
+  "player_actor": "shiki",
+  "witness_matrix_reference": "continuity/NPC_WITNESS_MATRIX_JULY_1278.json",
+  "referent_preflight": {
+    "version": "NPR-REFERENT-PREFLIGHT/1",
+    "required_fields": [
+      "actor",
+      "exact_quote",
+      "episode_id",
+      "referent_entity",
+      "knowledge_type",
+      "source_event",
+      "context_focus_entity"
+    ],
+    "principle": "Resolve implicit pronouns and witness verbs to an exact event and the current conversation topic; actor's participation in a different event at the same location never supplies eyewitness authority. Even quotes absent from protected keyword triggers need semantic audit.",
+    "modes": [
+      "witnessed",
+      "reported",
+      "document",
+      "inferred",
+      "unknown"
+    ],
+    "mandatory_for": [
+      "Witness statements in NPC dialogue/narration",
+      "Ambiguous 'в лесу','там','он','что произошло','это' after named person",
+      "Hidden plans, medical observations and previously unseen actions",
+      "Apparent knowledge of offscreen conversations"
+    ],
+    "fail_closed": "No source -> no unqualified witnessed claim; no referent -> specify referent or decline factual assertion; do not fabricate reports"
+  },
+  "episode_scopes": {
+    "gaara.forest_death_actions": {
+      "focus_entity": "gaara",
+      "witnessed_by": [
+        "gaara",
+        "temari",
+        "kankuro"
+      ],
+      "known_non_witnesses": [
+        "ren",
+        "aki",
+        "shiki"
+      ],
+      "allowed_source_kinds": [
+        "reported",
+        "inferred",
+        "unknown"
+      ],
+      "source": "continuity/NPC_WITNESS_MATRIX_JULY_1278.json"
+    },
+    "shiki.rain_genin.forest_encounter": {
+      "focus_entity": "shiki",
+      "witnessed_by": [
+        "shiki",
+        "ren"
+      ],
+      "partial_witnesses": [
+        "aki"
+      ],
+      "known_non_witnesses": [
+        "gaara"
+      ],
+      "source": "continuity/NPC_WITNESS_MATRIX_JULY_1278.json"
+    },
+    "gaara.hinata.prelim": {
+      "focus_entity": "gaara",
+      "witnessed_by": [
+        "shiki",
+        "ren",
+        "aki",
+        "kabuto"
+      ],
+      "source": "user-visible preliminary battle 7 July 1278"
+    },
+    "gaara.shiki.cafeteria": {
+      "focus_entity": "gaara",
+      "witnessed_by": [
+        "shiki",
+        "aki",
+        "ren"
+      ],
+      "source": "SQLite event s01.066.01, confirmed in earlier branch"
+    },
+    "shiki.yoroi.medical_dialogue": {
+      "focus_entity": "shiki",
+      "known_non_witnesses": [
+        "kabuto",
+        "ren",
+        "aki"
+      ],
+      "witnessed_by": [
+        "shiki",
+        "yoroi"
+      ],
+      "source": "user-visible medical wing, 7 July"
+    }
+  }
 }
