@@ -40,7 +40,10 @@ def check(state_dir: Path, request_path: Path) -> dict:
     manifest = json.loads((state_dir / "state.json").read_text(encoding="utf-8"))
     game = Campaign(state_dir / "campaign.sqlite")
     verified = game.verify()
-    assert verified["revision"] == 67 and not verified["pending"]
+    assert verified["revision"] in (67, 68) and not verified["pending"]
+    if verified["revision"] == 68:
+        review = game.entry("event", "shiki.architecture-baseline.067", audience="gm")
+        assert review["revision"] == 68 and review["at"] == cursor and review.get("review_sha")
     assert verified["at"] == cursor and verified["session"] == 1
     assert manifest == {"format": "text-rpg-git-state/1", **verified,
                         "sha256": file_sha256(state_dir / "campaign.sqlite")}

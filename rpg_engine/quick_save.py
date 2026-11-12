@@ -14,11 +14,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 from pathlib import Path
 
 from .engine import Campaign, file_sha256
 from .git_state import FORMAT
+from .preparation import packet as gm_packet
 
 REQUEST_FORMAT = "NPR-QUICK-SAVE/1"
 MAX_BATCH = 100
@@ -93,8 +93,8 @@ def process_request(source: Path, request: dict, output: Path) -> dict:
         if output.exists():
             raise FileExistsError(output)
         output.mkdir(parents=True)
-        context = game.context(audience="gm", recent=3)
-        next_process = context.get("next_process")
+        preparation = gm_packet(game, mode="handoff")
+        context = preparation["confirmed"]
         report = {
             "format": REQUEST_FORMAT, "mode": "handoff",
             "campaign_id": current["campaign_id"],
@@ -104,8 +104,9 @@ def process_request(source: Path, request: dict, output: Path) -> dict:
             "at": current["at"],
             "location": context["location"],
             "pending": context.get("pending"),
-            "recent": context["recent"],
-            "next_process": next_process,
+            "recent": game.context(audience="gm", recent=3)["recent"],
+            "next_process": preparation["world"]["next"],
+            "scene_context": preparation,
             "note": request.get("note", ""),
         }
         (output / "handoff.json").write_text(
@@ -132,12 +133,14 @@ def process_request(source: Path, request: dict, output: Path) -> dict:
         raise FileExistsError(output)
     output.mkdir(parents=True)
     working = output / "_working.sqlite"
-    shutil.copyfile(source / "campaign.sqlite", working)
+    snapshot = game.checkpoint(working)
+    if any(snapshot[key] != current[key] for key in ("instance", "revision", "generation")):
+        raise ValueError("source checkpoint changed during the copy")
     target = Campaign(working)
     initial = target.context(audience="gm", recent=0)
     if mode == "append":
         _observed_previous(target, initial["pending"], request.get("observed_pending"))
-        current_rev = target.verify()["revision"]
+        current_rev = target.context(recent=0)["revision"]
         for packet in turns:
             if packet.get("input_mode", "in_character") == "ooc":
                 raise ValueError("Meta instruction is not a played turn")
@@ -145,9 +148,11 @@ def process_request(source: Path, request: dict, output: Path) -> dict:
                 raise ValueError(f"Nonsequential packet {packet.get('id')!r}")
             if not packet.get("player_input"):
                 raise ValueError("No player statement/source to replay")
-            # Never misrepresent a retrospective summary as verbatim GM response.
+            # Legacy imports used the marker alone. Exact observed turns need
+            # explicit status and retain the original bytes without decoration.
             if not packet.get("text", "").startswith("[Восстановление из сыгранного диалога]"):
-                raise ValueError("Catch-up turn must identify reconstructed narration")
+                if packet.get("source_status") != "exact" or not packet.get("source_ref"):
+                    raise ValueError("Catch-up turn must identify reconstructed narration or its exact source")
             receipt = target.prepare(packet)
             if receipt["status"] != "prepared" or receipt["text"] != packet["text"]:
                 raise ValueError("Draft unexpectedly differs from recovered text")

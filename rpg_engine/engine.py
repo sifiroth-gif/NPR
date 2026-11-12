@@ -11,11 +11,11 @@ import secrets
 import sqlite3
 import tempfile
 
-from . import rng, world
+from . import autonomy, continuity, rng, world
 from .history import fts_expression
 
 APPLICATION_ID = 0x52504745
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 OOC = re.compile(r"^\s*(?:мастеру|ведущему|ooc|gm)\s*:", re.IGNORECASE)
 
 SCHEMA = """
@@ -116,7 +116,7 @@ def revision_value(value):
 
 def turn_value(packet):
     world.fields(packet, ("id", "expected_revision", "at", "location", "player_input", "text"),
-                 ("events", "input_mode"), label="turn")
+                 ("events", "input_mode", "scene", "source_ref", "source_status"), label="turn")
     world.id_value(packet["id"], "turn id")
     revision_value(packet["expected_revision"])
     world.time_value(packet["at"], "turn at")
@@ -130,6 +130,27 @@ def turn_value(packet):
         raise ValueError("unknown input_mode")
     if mode == "ooc" or (mode == "auto" and OOC.match(player_input)):
         raise ValueError("answer out-of-character messages outside the played journal")
+    if "source_ref" in packet:
+        world.text_value(packet["source_ref"], "turn source", 1000)
+    if "source_status" in packet:
+        if packet["source_status"] not in ("exact", "reconstructed") or "source_ref" not in packet:
+            raise ValueError("turn source status requires an exact or reconstructed source reference")
+        marker = packet["text"].startswith("[Восстановление из сыгранного диалога]")
+        if marker != (packet["source_status"] == "reconstructed"):
+            raise ValueError("turn reconstruction marker and source status disagree")
+    if "scene" in packet:
+        scene = world.fields(packet["scene"], ("id", "actors", "beat"), ("focus",), label="scene")
+        world.id_value(scene["id"], "scene id")
+        actors = world.sequence(scene["actors"], "scene actors", 40)
+        for actor in actors:
+            world.id_value(actor, "scene actor")
+        if len(set(actors)) != len(actors):
+            raise ValueError("scene actors must be unique")
+        if scene["beat"] not in ("routine", "character", "discovery", "decision",
+                                "conflict", "consequence", "transition", "combat"):
+            raise ValueError("unknown scene beat")
+        if "focus" in scene:
+            world.text_value(scene["focus"], "scene focus", 500)
     for event in world.sequence(packet.get("events", []), "turn events", 1000):
         world.validate_event(event)
 
@@ -174,22 +195,24 @@ def journal_entry(con, kind, entry_id):
 
 def append_entry(con, *, entry_id, kind, revision, session, at, visibility, body,
                  details, player_input=""):
-    con.execute("""INSERT INTO journal
+    row = con.execute("""INSERT INTO journal
                    (id, kind, revision, session, at, visibility, body, details, player_input)
                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 (entry_id, kind, revision, session, at, visibility, body, world.canonical(details),
                  player_input))
+    if continuity.available(con):
+        continuity.index_entry(con, row.lastrowid, kind, details)
 
 
 def apply_event(con, event, *, player_id, revision, session):
     if journal_entry(con, "event", event["id"]) is not None:
         raise ConflictError(f"event id already used: {event['id']}")
-    for source in event.get("based_on", []):
+    for source in (*event.get("based_on", []), *event.get("supersedes", [])):
         if journal_entry(con, "event", source) is None:
             raise ValueError(f"unknown source event: {source}")
     provenance = {"based_on": event.get("based_on", []),
                   "operations": event.get("operations", [])}
-    for key in ("witnesses", "knowledge_routes"):
+    for key in ("witnesses", "knowledge_routes", "source_ref", "supersedes"):
         if key in event:
             provenance[key] = event[key]
     append_entry(con, entry_id=event["id"], kind="event", revision=revision, session=session,
@@ -209,15 +232,22 @@ def apply_turn_events(con, current, packet):
     if packet["at"] < cursor:
         raise ValueError("the scene clock cannot move backwards")
     player_id = json.loads(current["setup_json"])["player"]["id"]
+    scene = packet.get("scene")
     for at, events in groupby(packet.get("events", []), key=lambda event: event["at"]):
         if not cursor <= at <= packet["at"]:
             raise ValueError("events must be chronological and inside the turn's time window")
         require_clear_time(con, at)
         for event in events:
+            if any("window_resolved_by" in op for op in event.get("operations", [])) and not packet["player_input"].strip():
+                raise ValueError("an NPC outcome after a player window requires the player's reply")
             apply_event(con, event, player_id=player_id, revision=current["revision"] + 1,
                         session=current["session"])
         cursor = at
     require_clear_time(con, packet["at"])
+    if scene:
+        for actor in scene["actors"]:
+            if actor != player_id and not con.execute("SELECT 1 FROM npcs WHERE id=?", (actor,)).fetchone():
+                raise ValueError(f"unknown scene actor: {actor}")
 
 
 def reserve_turn(con, turn_id, expected):
@@ -255,7 +285,12 @@ def public_entry(row, audience):
     item["text"] = row["body"]
     if row["kind"] == "turn":
         item["player_input"] = row["player_input"]
-        item["location"] = json.loads(row["details"])["location"]
+        details = json.loads(row["details"])
+        item["location"] = details["location"]
+        item["source_status"] = details.get("source_status", "reconstructed" if
+            row["body"].startswith("[Восстановление из сыгранного диалога]") else "recorded")
+        if audience == "gm":
+            item.update({key: details[key] for key in ("scene", "source_ref") if key in details})
     elif audience == "gm":
         item.update(json.loads(row["details"]))
         item["visibility"] = row["visibility"]
@@ -292,7 +327,8 @@ class Campaign:
         with new_database(game.path) as temporary:
             with closing(connect(temporary, write=True)) as con, con:
                 con.executescript(f"PRAGMA application_id = {APPLICATION_ID}; "
-                                  f"PRAGMA user_version = {SCHEMA_VERSION};\n" + SCHEMA + world.SCHEMA)
+                                  f"PRAGMA user_version = {SCHEMA_VERSION};\n" + SCHEMA + world.SCHEMA
+                                  + continuity.SCHEMA + autonomy.SCHEMA)
                 con.execute("INSERT INTO campaign VALUES (1, ?, ?, 0, 0, 1, ?, ?)",
                             (world.canonical(public), secrets.token_bytes(32), at, location))
                 con.execute("INSERT INTO sessions VALUES (1, 0, ?, ?)", (at, location))
@@ -305,10 +341,19 @@ class Campaign:
     @contextmanager
     def connection(self, *, write=False):
         with closing(connect(self.path, write=write)) as con, con:
-            if (con.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
-                    or con.execute("PRAGMA user_version").fetchone()[0] != SCHEMA_VERSION):
+            if con.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID:
                 raise ValueError("unsupported campaign database or schema")
             con.execute("BEGIN IMMEDIATE" if write else "BEGIN")
+            version = con.execute("PRAGMA user_version").fetchone()[0]
+            if version not in (1, SCHEMA_VERSION):
+                raise ValueError("unsupported campaign database or schema")
+            if write and version == 1:
+                # executescript would commit the caller's transaction.
+                for statement in (continuity.SCHEMA + autonomy.SCHEMA).split(";"):
+                    if statement.strip():
+                        con.execute(statement)
+                continuity.migrate_history(con)
+                con.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
             yield con
 
     def roll(self, *, turn_id, expected_revision, check_id, count=1, sides=20, modifier=0, purpose=""):
@@ -405,6 +450,8 @@ class Campaign:
             revision = current["revision"] + 1
             details = {"location": packet["location"], "packet_sha": world.sha_json(packet),
                        "draft_sha": draft_sha, "input_mode": packet.get("input_mode", "auto")}
+            details.update({key: packet[key] for key in ("scene", "source_ref", "source_status")
+                            if key in packet})
             append_entry(con, entry_id=turn_id, kind="turn", revision=revision,
                          session=current["session"], at=packet["at"], visibility="player_known",
                          body=packet["text"], details=details, player_input=packet["player_input"])
@@ -436,19 +483,54 @@ class Campaign:
         audience_value(audience)
         limit_value(recent, 0, 50)
         with self.connection() as con:
+            return self.read_context(con, audience=audience, recent=recent)
+
+    def read_context(self, con, *, audience, recent):
+        current = state(con)
+        recent_turns = con.execute("SELECT * FROM journal WHERE kind = 'turn' ORDER BY seq DESC LIMIT ?",
+                                   (recent,)).fetchall()
+        context = {"campaign": json.loads(current["setup_json"]), "revision": current["revision"],
+                   "session": current["session"], "at": current["at"], "location": current["location"],
+                   "recent": [public_entry(row, audience) for row in reversed(recent_turns)]}
+        if audience == "gm":
+            next_process = con.execute("""SELECT id, owner, goal, due_at FROM processes
+                                          WHERE status = 'active' ORDER BY due_at, id LIMIT 1""").fetchone()
+            context["next_process"] = dict(next_process) if next_process is not None else None
+            pending = con.execute("SELECT * FROM pending").fetchone()
+            context["pending"] = self._pending_context(con, pending)
+        return context
+
+    def record_review(self, event, expected_revision):
+        """Record a sourced correction, plan, or memory without adding fictional dialogue."""
+        revision_value(expected_revision)
+        world.validate_event(event)
+        if not event.get("source_ref"):
+            raise ValueError("review requires a primary source reference")
+        allowed = ("remember", "assert_state", "set_fact", "delete_fact", "configure_process")
+        if any(op["op"] not in allowed for op in event.get("operations", [])):
+            raise ValueError("apply played consequences and knowledge through a game turn")
+        digest = world.sha_json(event)
+        with self.connection(write=True) as con:
+            previous = journal_entry(con, "event", event["id"])
+            if previous is not None:
+                if json.loads(previous["details"]).get("review_sha") != digest:
+                    raise ConflictError("review id already used with different content")
+                return {"id": event["id"], "revision": previous["revision"], "sha256": digest}
             current = state(con)
-            recent_turns = con.execute("SELECT * FROM journal WHERE kind = 'turn' ORDER BY seq DESC LIMIT ?",
-                                       (recent,)).fetchall()
-            context = {"campaign": json.loads(current["setup_json"]), "revision": current["revision"],
-                       "session": current["session"], "at": current["at"], "location": current["location"],
-                       "recent": [public_entry(row, audience) for row in reversed(recent_turns)]}
-            if audience == "gm":
-                next_process = con.execute("""SELECT id, owner, goal, due_at FROM processes
-                                              WHERE status = 'active' ORDER BY due_at, id LIMIT 1""").fetchone()
-                context["next_process"] = dict(next_process) if next_process is not None else None
-                pending = con.execute("SELECT * FROM pending").fetchone()
-                context["pending"] = self._pending_context(con, pending)
-            return context
+            require_revision(current, expected_revision)
+            if con.execute("SELECT 1 FROM pending").fetchone():
+                raise ConflictError("resolve the working turn before applying a correction")
+            if event["at"] != current["at"]:
+                raise ValueError("a review is entered at the current scene time")
+            revision = expected_revision + 1
+            apply_event(con, event, player_id=json.loads(current["setup_json"])["player"]["id"],
+                        revision=revision, session=current["session"])
+            row = journal_entry(con, "event", event["id"])
+            details = {**json.loads(row["details"]), "review_sha": digest}
+            con.execute("UPDATE journal SET details=? WHERE seq=?",
+                        (world.canonical(details), row["seq"]))
+            con.execute("UPDATE campaign SET revision=?, generation=generation+1", (revision,))
+            return {"id": event["id"], "revision": revision, "sha256": digest}
 
     @staticmethod
     def _pending_context(con, pending):

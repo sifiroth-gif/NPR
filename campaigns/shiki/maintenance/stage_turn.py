@@ -32,12 +32,14 @@ def main(state_dir: Path, packet_path: Path, out_dir: Path):
     working_path = out_dir / "working.sqlite"
     shutil.copyfile(state_file, working_path)
     game = Campaign(working_path)
-    initial = game.context(audience="gm")
+    initial = game.context(audience="gm", recent=0)
     if previous:
         if (initial["pending"] is None or
             initial["pending"]["turn_id"] != previous.get("turn_id") or
             initial["pending"].get("draft_sha") != previous.get("draft_sha")):
             raise RuntimeError("Prior prepared text or hash changed unexpectedly")
+        if "observed_text" in previous and previous["observed_text"] != initial["pending"]["packet"]["text"]:
+            raise RuntimeError("Prior published text differs from the draft")
         game.confirm(previous["turn_id"], previous["draft_sha"])
     elif initial["pending"] is not None:
         # An already-reserved RNG roll is not a published draft. It belongs
@@ -56,7 +58,7 @@ def main(state_dir: Path, packet_path: Path, out_dir: Path):
     if (checked["revision"] != current["revision"] or not checked["pending"] or
         checked["instance"] != state_before["instance"]):
         raise RuntimeError("Unexpected prepared state")
-    prepared_ctx = game.context(audience="gm")
+    prepared_ctx = game.context(audience="gm", recent=0)
     if (prepared_ctx["pending"]["turn_id"] != next_packet["id"] or
         prepared_ctx["pending"]["draft_sha"] != receipt["draft_sha"] or
         prepared_ctx["pending"]["packet"] != next_packet):

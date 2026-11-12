@@ -105,6 +105,27 @@ OP_FIELDS = {
 
 def validate_operation(op, at):
     kind = op.get("op") if isinstance(op, dict) else None
+    if kind == "remember":
+        from .continuity import validate_note
+        return validate_note(op)
+    if kind == "assert_state":
+        from .autonomy import validate_guard
+        fields(op, ("op", "guard"), label=kind)
+        return validate_guard(op["guard"])
+    if kind in ("configure_process", "take_process_step"):
+        from .autonomy import validate_operation
+        return validate_operation(op)
+    if kind in ("schedule_message", "deliver_message"):
+        from .autonomy import validate_message
+        return validate_message(op, at)
+    if kind == "update_npc":
+        fields(op, ("op", "id", "previous", "changes"), label=kind)
+        id_value(op["id"], "NPC id")
+        id_value(op["previous"], "prior NPC source")
+        if not isinstance(op["changes"], dict) or not op["changes"]:
+            raise ValueError("NPC change needs a nonempty set of profile fields")
+        json_value(op["changes"])
+        return
     if not isinstance(kind, str) or kind not in OP_FIELDS:
         raise ValueError(f"unknown world operation: {kind!r}")
     fields(op, ("op", *OP_FIELDS[kind]), label=kind)
@@ -142,11 +163,20 @@ def validate_operation(op, at):
 
 def validate_event(event):
     fields(event, ("id", "at", "summary", "visibility"),
-           ("operations", "based_on", "witnesses", "knowledge_routes"), label="event")
+           ("operations", "based_on", "witnesses", "knowledge_routes", "source_ref", "supersedes"),
+           label="event")
     id_value(event["id"], "event id")
     at = time_value(event["at"], "event at")
     text_value(event["summary"], "event summary", 4000)
     visibility(event["visibility"])
+    if "source_ref" in event:
+        text_value(event["source_ref"], "primary source reference", 1000)
+    if "supersedes" in event:
+        if not event.get("source_ref"):
+            raise ValueError("a correction requires a primary source reference")
+        superseded = sequence(event["supersedes"], "superseded events", 30)
+        for source in superseded:
+            id_value(source, "superseded event id")
     for source in sequence(event.get("based_on", []), "event based_on", 30):
         id_value(source, "source event id")
     witnesses = set()
@@ -232,12 +262,38 @@ CREATE INDEX active_due ON processes(due_at, id) WHERE status = 'active';
 """
 
 
-def apply_operations(con, event, player_id):
+def apply_operations(con, event, player_id, *, process_step=False):
     """Apply validated operations inside the caller's transaction."""
     event_id = event["id"]
     for op in event.get("operations", []):
         kind = op["op"]
-        if kind == "upsert_npc":
+        if kind == "remember":
+            from .continuity import apply_note
+            apply_note(con, op, event_id)
+        elif kind == "assert_state":
+            from .autonomy import matches
+            if not matches(con, op["guard"]):
+                raise ValueError("declared fact or belief disagrees with current state")
+        elif kind in ("configure_process", "take_process_step"):
+            from . import autonomy
+            if kind == "configure_process":
+                autonomy.configure(con, op, event)
+            else:
+                autonomy.take_step(con, op, event, player_id)
+        elif kind in ("schedule_message", "deliver_message"):
+            from . import autonomy
+            if kind == "schedule_message":
+                autonomy.schedule_message(con, op, event, player_id)
+            else:
+                autonomy.deliver_message(con, op, event, player_id)
+        elif kind == "update_npc":
+            row = con.execute("SELECT profile_json,source_event FROM npcs WHERE id=?", (op["id"],)).fetchone()
+            if row is None or row["source_event"] != op["previous"] or not event.get("based_on"):
+                raise ValueError("NPC change requires its current profile and confirmed experience")
+            profile = {**json.loads(row["profile_json"]), **op["changes"]}
+            con.execute("UPDATE npcs SET profile_json=?,source_event=? WHERE id=?",
+                        (json_value(profile), event_id, op["id"]))
+        elif kind == "upsert_npc":
             npc = op["npc"]
             if npc["id"] == player_id:
                 raise ValueError("the player character cannot become an NPC")
@@ -277,12 +333,16 @@ def apply_operations(con, event, player_id):
                         (op["id"], op["owner"], op["goal"], event["at"], op["due_at"],
                          op["visibility"], op["notes"], event_id))
         elif kind == "reschedule_process":
+            require_process_step(con, op["id"], process_step)
             cursor = con.execute("""UPDATE processes SET due_at = ?, notes = ?, source_event = ?,
                                     visibility = CASE WHEN ? = 'gm_only' THEN 'gm_only' ELSE visibility END
                                     WHERE id = ? AND status = 'active'""",
                                  (op["due_at"], op["notes"], event_id, event["visibility"], op["id"]))
             require_row(cursor, f"no active process {op['id']} to reschedule")
         else:
+            # Explicit intervention can cancel a scheduled action. Its planned
+            # effects can only be applied through take_process_step.
+            require_process_step(con, op["id"], process_step, cancel=op["status"] == "cancelled")
             cursor = con.execute("""UPDATE processes SET status = ?, outcome_json = ?, source_event = ?,
                                     visibility = CASE WHEN ? = 'gm_only' THEN 'gm_only' ELSE visibility END
                                     WHERE id = ? AND status = 'active'""",
@@ -294,6 +354,14 @@ def apply_operations(con, event, player_id):
 def require_row(cursor, message):
     if cursor.rowcount != 1:
         raise ValueError(message)
+
+
+def require_process_step(con, process_id, from_plan, *, cancel=False):
+    if not from_plan and con.execute("PRAGMA user_version").fetchone()[0] >= 2:
+        if con.execute("SELECT 1 FROM messages WHERE id=?", (process_id,)).fetchone():
+            raise ValueError("delivery outcome must use its recorded message")
+        if not cancel and con.execute("SELECT 1 FROM process_plans WHERE id=?", (process_id,)).fetchone():
+            raise ValueError("planned process requires a source-bound NPC decision")
 
 
 def due_before(con, at):

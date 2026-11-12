@@ -176,6 +176,10 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     expected_revision = checked["revision"] + int(previous_draft)
     if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != expected_revision:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
+    basis = envelope.get("scene_basis")
+    if basis is not None and basis != {"instance": checked["instance"],
+                                      "revision": expected_revision}:
+        raise KnowledgeLeak("Scene context belongs to another campaign or revision")
     _check_new_acquisitions(turn)
     final_text = turn.get("text")
     if not isinstance(final_text, str):
@@ -188,6 +192,8 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
             if (not isinstance(previous, dict) or previous.get("turn_id") != pending["turn_id"]
                     or previous.get("draft_sha") != pending["draft_sha"]):
                 raise KnowledgeLeak("Previous prepared response must have been shown and confirmed")
+            if "observed_text" in previous and previous["observed_text"] != pending["packet"]["text"]:
+                raise KnowledgeLeak("Previously displayed text differs from the exact pending draft")
             corrected = tmp / "knowledge-baseline.sqlite"
             shutil.copyfile(state_dir / "campaign.sqlite", corrected)
             game = Campaign(corrected)

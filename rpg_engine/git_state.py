@@ -16,6 +16,36 @@ DATABASE = "campaign.sqlite"
 MANIFEST = "state.json"
 
 
+def export_directory(game, directory):
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=False)
+    snapshot = game.checkpoint(directory / DATABASE)
+    snapshot.pop("path")
+    manifest = {"format": FORMAT, **snapshot}
+    (directory / MANIFEST).write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+                                      encoding="utf-8")
+    return manifest
+
+
+def require_prefix(previous, updated):
+    """Reject diverging confirmed sources and rerolled checks even with a higher revision."""
+    with Campaign(previous).connection() as before, Campaign(updated).connection() as after:
+        for table, order in (("journal", "seq"), ("sessions", "number")):
+            last = before.execute(f"SELECT max({order}) FROM {table}").fetchone()[0]
+            if last is None:
+                continue
+            old = before.execute(f"SELECT * FROM {table} ORDER BY {order}")
+            new = after.execute(f"SELECT * FROM {table} WHERE {order}<=? ORDER BY {order}", (last,))
+            for left, right in zip(old, new, strict=True):
+                if tuple(left) != tuple(right):
+                    raise ConflictError(f"confirmed {table} diverged from the remote checkpoint")
+        for old in before.execute("SELECT * FROM rolls"):
+            new = after.execute("SELECT * FROM rolls WHERE turn_id=? AND check_id=?",
+                                (old["turn_id"], old["check_id"])).fetchone()
+            if new is None or tuple(new) != tuple(old):
+                raise ConflictError("a persisted RNG check changed or disappeared")
+
+
 def git(root, *args, data=None):
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
     result = subprocess.run(["git", "-C", str(root), *args], input=data,
@@ -109,6 +139,8 @@ def save(game, remote, branch, expected):
                                  or manifest["revision"] < previous["revision"]
                                  or manifest["generation"] <= previous["generation"]):
             raise ConflictError("snapshot is from a different campaign or is older than remote state")
+        if head is not None:
+            require_prefix(root / ".git" / "previous.sqlite", root / DATABASE)
 
         (root / MANIFEST).write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
                                      encoding="utf-8")
