@@ -1,0 +1,25 @@
+{
+  "format": "NPR-SHIKI-PROVISIONAL-RANDOM-CHECKS/1",
+  "scene_at": "0001-07-08T06:31:09",
+  "source_player_input": "#жду становлюсь в позу из которой смогу уйти в любую сторону, жду пока остановить мышцы будет менее выгодно что бы менять траекторию, уклонение в последний момент#",
+  "status": "provisional_deterministic_SHA256_1d20_not_campaign_SQLite_engine_roll; SQLite branch still lagging",
+  "seed_rule": "first 8 bytes SHA256('naruto-shiki|0001-07-08T06:31:09|'+check_id) as big-endian integer modulo 20 plus 1",
+  "checks": [
+    {
+      "id": "s01.097.read_momentum",
+      "result": 15,
+      "outcome": "Shiki correctly sees leading step and the initial commitment of Kabuto's right arm."
+    },
+    {
+      "id": "s01.097.last_instant_evasion",
+      "result": 5,
+      "outcome": "Shiki's delayed sidestep is insufficient to escape a controlled close-range palm."
+    },
+    {
+      "id": "s01.097.kabuto_midcourse_adjustment",
+      "result": 19,
+      "outcome": "Kabuto's better taijutsu, held reserves, and correction secure harmless touch to left shoulder after Shiki begins evade."
+    }
+  ],
+  "scope": "Only initial right-hand contact touch, no actual damage and no further attacks. Shiki's proposed guard/anticipation is honored. Do not reroll results during reconstruction; no fictitious engine-seeded receipt."
+}
