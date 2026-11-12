@@ -138,6 +138,45 @@
           "summary": "Шики держит четыре сенбона скрытно, без атаки; гендзюцу не применено. Раненый Кэйдзи просит лечения, Коноха не преграждает путь.",
           "operations": [
             {
+              "op": "upsert_npc",
+              "npc": {
+                "id": "takeru",
+                "name": "Такэру",
+                "profile": {
+                  "village": "Конохагакуре",
+                  "role": "генин, на втором этапе у башни 2 июля",
+                  "observed": "насторожен, прикрывает раненого Кэйдзи; команда имеет свиток Неба",
+                  "knowledge_boundary": "не знает боя Шики в лесу и его мотивов без сообщения"
+                }
+              }
+            },
+            {
+              "op": "upsert_npc",
+              "npc": {
+                "id": "keiji",
+                "name": "Кэйдзи",
+                "profile": {
+                  "village": "Конохагакуре",
+                  "role": "генин у башни",
+                  "observed": "повреждение наружной боковой связки левого колена; добровольно согласился на осмотр Шики",
+                  "knowledge_boundary": "знает о проведённом лечении, не знает боёв Шики до встречи"
+                }
+              }
+            },
+            {
+              "op": "upsert_npc",
+              "npc": {
+                "id": "haru",
+                "name": "Хару",
+                "profile": {
+                  "village": "Конохагакуре",
+                  "role": "генин у башни",
+                  "observed": "готовил аптечку для Кэйдзи; посредничал между товарищами",
+                  "knowledge_boundary": "не знает событий за пределами личного наблюдения"
+                }
+              }
+            },
+            {
               "op": "set_fact",
               "subject": "shiki",
               "name": "genjutsu_scope_correction",
@@ -273,8 +312,9 @@
           "visibility": "player_known",
           "witnesses": [
             "shiki",
-            "aki",
-            "ren"
+            "takeru",
+            "keiji",
+            "haru"
           ]
         }
       ]
@@ -323,8 +363,9 @@
           "visibility": "player_known",
           "witnesses": [
             "shiki",
-            "aki",
-            "ren"
+            "takeru",
+            "keiji",
+            "haru"
           ]
         }
       ]
@@ -393,8 +434,9 @@
           "visibility": "player_known",
           "witnesses": [
             "shiki",
-            "aki",
-            "ren"
+            "takeru",
+            "keiji",
+            "haru"
           ]
         }
       ]
@@ -736,9 +778,7 @@
           ],
           "visibility": "player_known",
           "witnesses": [
-            "shiki",
-            "aki",
-            "ren"
+            "shiki"
           ]
         }
       ]
@@ -804,9 +844,7 @@
           ],
           "visibility": "player_known",
           "witnesses": [
-            "shiki",
-            "aki",
-            "ren"
+            "shiki"
           ]
         }
       ]
