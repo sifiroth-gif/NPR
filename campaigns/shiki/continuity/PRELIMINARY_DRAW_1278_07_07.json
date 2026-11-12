@@ -3,8 +3,8 @@
   "event": "Chunin Exams, Konoha preliminaries",
   "campaign": "naruto-shiki",
   "date": "0001-07-07",
-  "seed_process": "First two already played/announced in conversation; remaining 19 were shuffled once using Python random.Random with seed `NPR:Shiki:1278-07-07:07:50:round-prelim:after-two-pairs` (Python stdlib MT shuffle), before narrative outcomes. Fixture ordering fixed; no canonical results forced.",
-  "draw_method": "first two previously fixed in played narration, other nine pairs and bye from one deterministic seeded shuffle; remaining pair list is private until announced in world",
+  "seed_process": "CORRECTED PROVENANCE 2026-11-12: the fixture array was selected by GM and committed before the subsequent fights were narrated. No random.Random shuffle was actually performed, despite the earlier text claiming one. This correction does not alter any pair.",
+  "draw_method": "GM-authored fixed preliminary draw, announced in sequence in world; NOT a verified external/random uniform draw. No post-result reshuffling.",
   "participants_at_start": 23,
   "withdrawn_before_draw": [
     "kabuto"
@@ -118,5 +118,6 @@
     "The random shuffle changes canonical matchups and may have lethal or politically important consequences. Do not predetermine winners solely to match Naruto.",
     "One bye (Sasuke) is a random consequence, not favoritism by master; in-story NPCs may suspect manipulation without proof.",
     "This is fixture planning, NOT confirmed results or current SQLite state. Finish and record combat outcomes causally."
-  ]
+  ],
+  "provenance_correction": "Explicitly retract previous nonexistent deterministic seeded shuffle; pair order remains binding as already authored. Player accepts noncanonical consequences (2026-11-12)."
 }
