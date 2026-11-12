@@ -15,6 +15,7 @@ from collections import Counter
 from pathlib import Path
 
 from .engine import Campaign
+from .referent_guard import scoped_errors
 
 FORMAT = "NPR-NPC-KNOWLEDGE-PREFLIGHT/1"
 DIALOGUE = re.compile(r"^\s*\*\*(.+?):\*\*\s*[—–-]\s*(.*?)\s*$")
@@ -182,6 +183,9 @@ def validate_scene(game: Campaign, draft: str, review: dict, policy: dict) -> di
             if actor != policy.get("player_actor") and _topic_matches(actual["text"], rule) and topic not in claimed:
                 errors.append(f"Line {index}: {actor} mentions protected {topic} without actor-scoped evidence review")
         seen[actor] += 1
+    # P0-11: eyewitness references must resolve to a specific witnessed event,
+    # not merely a forest, location or preceding protagonist.
+    errors.extend(scoped_errors(dialogue, raw, policy, review.get("scene_focus_entity")))
     if errors:
         raise KnowledgeLeak("; ".join(errors))
     return {"status":"ready", "lines_checked":len(dialogue),
