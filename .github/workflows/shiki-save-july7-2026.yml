@@ -1,0 +1,91 @@
+name: NPR Shiki - Source Verified July 7 Checkpoint
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-save-july7-2026.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  checkpoint-july7:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout engine and historical source-bound packet
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Engine regression tests
+        run: python -m unittest discover -s tests -q
+      - name: Retrieve existing private state - never initialize
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-before-july7" refs/remotes/origin/game-state/shiki
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki-before-july7/campaign.sqlite" verify
+          python - <<'PY'
+          import json, os, pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])/"shiki-before-july7"/"state.json"
+          j=json.loads(p.read_text())
+          assert j["revision"]==68 and j["at"]=="0001-07-02T14:53:00" and not j["pending"], j
+          PY
+      - name: Replay exactly published scenes to 7 July hotel
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m rpg_engine.quick_save \
+            "$RUNNER_TEMP/shiki-before-july7" \
+            campaigns/shiki/maintenance/played_catchup_2026-11-12_exam_to_hotel.json \
+            "$RUNNER_TEMP/shiki-after-july7"
+      - name: Readback and verify chronology, witnessed distinctions and source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$RUNNER_TEMP/shiki-after-july7" <<'PY'
+          import json, pathlib, sys
+          from rpg_engine.engine import Campaign, file_sha256
+          d=pathlib.Path(sys.argv[1]); s=json.loads((d/"state.json").read_text())
+          c=Campaign(d/"campaign.sqlite"); v=c.verify()
+          assert v["revision"]==88 and not v["pending"] and v["at"]=="0001-07-07T10:43:00",v
+          assert s["revision"]==v["revision"] and s["sha256"]==file_sha256(d/"campaign.sqlite")
+          rec=c.entry("turn","s01.088",audience="gm")
+          assert "в отель" in rec["player_input"] and "Лесу смерти" in rec["text"]
+          ren=c.world(audience="gm",subject="npc.ren")["facts"]
+          values={f["name"]:f["value"] for f in ren}
+          assert values["gaara_forest_personal_witness"] is False,values
+          assert values["shiki_rain_forest_personal_witness"] is True,values
+          assert values["gaara_hinata_prelim_personal_witness"] is True,values
+          print("CHECKPOINT_OK",v["revision"],v["at"],s["sha256"])
+          PY
+      - name: One atomic commit of checked SQLite and state manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp "$RUNNER_TEMP/shiki-after-july7/campaign.sqlite" "$RUNNER_TEMP/shiki-before-july7/campaign.sqlite"
+          cp "$RUNNER_TEMP/shiki-after-july7/state.json" "$RUNNER_TEMP/shiki-before-july7/state.json"
+          git -C "$RUNNER_TEMP/shiki-before-july7" config user.name "github-actions[bot]"
+          git -C "$RUNNER_TEMP/shiki-before-july7" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$RUNNER_TEMP/shiki-before-july7" add -f campaign.sqlite state.json
+          git -C "$RUNNER_TEMP/shiki-before-july7" commit -m "Checkpoint Shiki July 7 10:43, restore 20 source-bound turns and fix forest witness"
+          git -C "$RUNNER_TEMP/shiki-before-july7" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-state.json"
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-campaign.sqlite"
+          cmp "$RUNNER_TEMP/remote-state.json" "$RUNNER_TEMP/shiki-after-july7/state.json"
+          cmp "$RUNNER_TEMP/remote-campaign.sqlite" "$RUNNER_TEMP/shiki-after-july7/campaign.sqlite"
+          python -m rpg_engine --db "$RUNNER_TEMP/remote-campaign.sqlite" verify
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
