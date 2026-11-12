@@ -1,0 +1,122 @@
+{
+  "schema": "npr-preliminary-draw/1",
+  "event": "Chunin Exams, Konoha preliminaries",
+  "campaign": "naruto-shiki",
+  "date": "0001-07-07",
+  "seed_process": "First two already played/announced in conversation; remaining 19 were shuffled once using Python random.Random with seed `NPR:Shiki:1278-07-07:07:50:round-prelim:after-two-pairs` (Python stdlib MT shuffle), before narrative outcomes. Fixture ordering fixed; no canonical results forced.",
+  "draw_method": "first two previously fixed in played narration, other nine pairs and bye from one deterministic seeded shuffle; remaining pair list is private until announced in world",
+  "participants_at_start": 23,
+  "withdrawn_before_draw": [
+    "kabuto"
+  ],
+  "matches": [
+    {
+      "index": 1,
+      "participants": [
+        "shiki",
+        "yoroi"
+      ],
+      "status": "finished_shiki_won",
+      "outcome": "shiki"
+    },
+    {
+      "index": 2,
+      "participants": [
+        "tenten",
+        "misumi"
+      ],
+      "status": "finished_result_pending_confirmation_in_next_scene",
+      "outcome": null
+    },
+    {
+      "index": 3,
+      "participants": [
+        "hinata",
+        "gaara"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 4,
+      "participants": [
+        "zaku",
+        "shikamaru"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 5,
+      "participants": [
+        "dosu",
+        "kin"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 6,
+      "participants": [
+        "lee",
+        "kankuro"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 7,
+      "participants": [
+        "shino",
+        "choji"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 8,
+      "participants": [
+        "neji",
+        "sakura"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 9,
+      "participants": [
+        "aki",
+        "kiba"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 10,
+      "participants": [
+        "ino",
+        "temari"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    },
+    {
+      "index": 11,
+      "participants": [
+        "ren",
+        "naruto"
+      ],
+      "status": "not_yet_resolved",
+      "outcome": null
+    }
+  ],
+  "bye": "sasuke",
+  "coherence_notes": [
+    "First fight Shiki vs Yoroi, Yoroi defeated and hospitalized.",
+    "Second fight took place 07:25–07:50 while Shiki was in medical wing/engaged with Kabuto; prior narration established a winner, not participants. Resolve as Tenten vs Misumi, with an independent outcome.",
+    "Third fight starts ~07:50; Hinata vs Gaara now in progress by 07:52 when Shiki starts observing.",
+    "The random shuffle changes canonical matchups and may have lethal or politically important consequences. Do not predetermine winners solely to match Naruto.",
+    "One bye (Sasuke) is a random consequence, not favoritism by master; in-story NPCs may suspect manipulation without proof.",
+    "This is fixture planning, NOT confirmed results or current SQLite state. Finish and record combat outcomes causally."
+  ]
+}
