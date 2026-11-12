@@ -8,6 +8,7 @@ from pathlib import Path
 from . import autonomy, continuity, world
 from .engine import limit_value, state
 from .history import recall, source_excerpt
+from .transcripts import SOURCE_FIELD
 
 MODES = ("focus", "scene", "montage", "combat", "handoff")
 WEEKDAYS = ("понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье")
@@ -82,7 +83,7 @@ def _actors(con, head, chosen, seed):
     return list(actors)[:8], "recent witnesses; confirm who is still present"
 
 
-def _plan(pack_path, pack, head):
+def _plan(pack_path, pack, head, *, handoff=False):
     if pack_path is None or "session_files" not in pack:
         return None
     rel = pack["session_files"].format(session=head["session"])
@@ -92,17 +93,21 @@ def _plan(pack_path, pack, head):
     data = json.loads(plan.read_text(encoding="utf-8"))
     current_plan = data.get("current_situations", {})
     use_current = current_plan.get("from_revision", head["revision"] + 1) <= head["revision"]
-    return {"source": rel, "status": "planning material", "title": data.get("title"),
-            "objective": (current_plan["objective"] if use_current else
-                          data.get("session_objective", data.get("objective", data.get("logline")))),
-            "situations": (current_plan["situations"] if use_current else
-                           data.get("potential_situations", []))[:6]}
+    result = {"source": rel, "status": "planning material", "title": data.get("title"),
+              "objective": (current_plan["objective"] if use_current else
+                            data.get("session_objective", data.get("objective", data.get("logline"))))}
+    if handoff:
+        result.update(start=data.get("start"), closure=data.get("closure"))
+    else:
+        result["situations"] = (current_plan["situations"] if use_current else
+                                data.get("potential_situations", []))[:6]
+    return result
 
 
 def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=None, pack_path=None):
     if mode not in MODES:
         raise ValueError("unknown scene preparation mode")
-    recent = (2 if mode == "focus" else 3) if recent is None else recent
+    recent = {"focus": 2, "handoff": 1}.get(mode, 3) if recent is None else recent
     limit_value(recent, 1, 8)
     if len(actors) > 10 or len(queries) > 4:
         raise ValueError("select at most 10 actors and 4 history questions")
@@ -135,19 +140,34 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
                 for actor in actor_ids if actor != player_id]
         if any(npc is None for npc in npcs):
             raise ValueError("scene context contains an unknown NPC")
+        if npcs and pack_path and (relative := pack.get("npc_portrayal_file")):
+            path = (pack_path.parent / relative).resolve()
+            if not path.is_relative_to(pack_path.parent.resolve()):
+                raise ValueError("NPC portrayal file is outside its campaign")
+            portrayals = json.loads(path.read_text(encoding="utf-8"))
+            for npc in npcs:
+                if npc["id"] in portrayals:
+                    npc["portrayal"] = portrayals[npc["id"]]
         scopes = (player_id, *actor_ids)
         active = autonomy.queue(con, at=head["at"], until=target)
+        compact = mode in ("focus", "handoff")
         recent_turns = [
             {**{k: t[k] for k in ("id", "at", "location", "session", "revision", "source_status")},
              "source_ref": t.get("source_ref"),
-             "player": source_excerpt(t["player_input"], width=280 if mode == "focus" else 550),
-             "gm": source_excerpt(t["text"], width=440 if mode == "focus" else 1100),
+             "player": source_excerpt(t["player_input"], width=280 if compact else 550),
+             "gm": source_excerpt(t["text"], width=440 if compact else 1100),
              "scene": t.get("scene")}
             for t in head.pop("recent")
         ]
-        # Latest played response and pending draft are available in full on handoff.
+        # Working drafts must be exact. For a long played turn, resume from its
+        # final beat and leave the full entry available by its stable ID.
         if mode == "handoff":
             last = game.read_context(con, audience="gm", recent=1)["recent"]
+            if last and len(last[0]["text"]) > 840:
+                turn = last[0]
+                text = turn.pop("text")
+                turn["tail"] = source_excerpt(text, bounds=(len(text) - 840, len(text)))
+                turn["lookup"] = f"entry turn {turn['id']} --audience gm"
             head["last_confirmed_turn"] = last[0] if last else None
         if head.get("pending") and mode != "handoff":
             # Prepare/confirm uses the exact pending text; exposing it separately
@@ -162,8 +182,9 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
             if row:
                 pinned.append({**spec, "value": json.loads(row[0]), "source_event": row[1]})
         current_events = []
-        for row in con.execute("""SELECT id,at,body,visibility FROM journal
-                                 WHERE kind='event' AND revision=? ORDER BY seq DESC LIMIT 5""",
+        for row in con.execute(f"""SELECT id,at,body,visibility FROM journal
+                                 WHERE kind='event' AND revision=?
+                                 AND NOT COALESCE(({SOURCE_FIELD}),0) ORDER BY seq DESC LIMIT 5""",
                                (recent_turns[-1]["revision"] if recent_turns else head["revision"],)):
             current_events.append({"id": row["id"], "at": row["at"], "visibility": row["visibility"],
                                    "summary": source_excerpt(row["body"], width=850)})
@@ -180,7 +201,7 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
                 head["at"], head["location"], pack.get("calendar")),
             "actors_source": actor_source, "actors": npcs, "recent_turns": recent_turns,
             "latest_events": current_events, "corrections": repairs, "campaign_anchors": source_anchors,
-            "pinned_facts": pinned, "memory": continuity.notes(con, subjects=scopes, limit=10),
+            "pinned_facts": pinned, "memory": continuity.notes(con, subjects=scopes, limit=4 if compact else 10),
             "world": active, "rules": pack.get("rules", []),
             "pacing": {"review_due": bool(active["due"]), "past_due": any(
                 x["due_at"] < head["at"] for x in active["due"]),
@@ -189,5 +210,5 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
             "recall": [recall(con, query=query, limit=5) for query in queries],
         }
         if mode in ("scene", "montage", "handoff"):
-            result["session_plan"] = _plan(pack_path, pack, head)
+            result["session_plan"] = _plan(pack_path, pack, head, handoff=mode == "handoff")
         return result

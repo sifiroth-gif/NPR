@@ -124,6 +124,7 @@ def index_entry(con, seq, kind, details):
     if kind == "turn":
         entities.update(details.get("scene", {}).get("actors", []))
     else:
+        entities.update(details.get("transcript", {}).get("entities", []))
         entities.update(details.get("witnesses", []))
         for route in details.get("knowledge_routes", []):
             entities.update(route[key] for key in ("actor", "source_actor") if key in route)

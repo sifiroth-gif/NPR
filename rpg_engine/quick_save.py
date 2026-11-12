@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 
 from .engine import Campaign, file_sha256
-from .git_state import FORMAT
+from .git_state import FORMAT, write_transport
 from .preparation import packet as gm_packet
 
 REQUEST_FORMAT = "NPR-QUICK-SAVE/1"
@@ -76,6 +76,7 @@ def _snapshot(game: Campaign, output: Path) -> dict:
     manifest = {"format": FORMAT, **result, "sha256": file_sha256(db)}
     (output / "state.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_transport(output, manifest)
     return manifest
 
 
@@ -104,7 +105,7 @@ def process_request(source: Path, request: dict, output: Path) -> dict:
             "at": current["at"],
             "location": context["location"],
             "pending": context.get("pending"),
-            "recent": game.context(audience="gm", recent=3)["recent"],
+            "recent": preparation["recent_turns"],
             "next_process": preparation["world"]["next"],
             "scene_context": preparation,
             "note": request.get("note", ""),

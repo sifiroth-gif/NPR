@@ -4,7 +4,7 @@ from contextlib import closing
 import json
 import sqlite3
 
-from . import autonomy, continuity, rng, world
+from . import autonomy, continuity, rng, transcripts, world
 from .engine import SCHEMA, SCHEMA_VERSION, state
 
 
@@ -33,6 +33,7 @@ def audit(game):
             replay.execute("INSERT INTO sessions VALUES (?, ?, ?, ?)", tuple(row))
         at, location, revision, session = setup["start_at"], setup["location"], 0, 1
         events_by_revision, turns, reviews = {}, {}, {}
+        transcript_sessions = set()
         for row in con.execute("SELECT * FROM journal ORDER BY seq"):
             values = dict(row)
             columns = ",".join(values)
@@ -40,6 +41,11 @@ def audit(game):
             replay.execute(f"INSERT INTO journal ({columns}) VALUES ({placeholders})", tuple(values.values()))
             details = json.loads(row["details"])
             continuity.index_entry(replay, row["seq"], row["kind"], details)
+            if "transcript" in details:
+                if row["kind"] != "event":
+                    raise ValueError("transcript must be indexed as a source event")
+                transcript_sessions.add(row["session"])
+                continue
             if row["kind"] == "event":
                 event = {k: v for k, v in details.items() if k != "review_sha"}
                 event.update({"id": row["id"], "at": row["at"], "summary": row["body"],
@@ -101,6 +107,12 @@ def audit(game):
                 if (start is None or start["number"] != receipt["session"] + 1
                         or world.sha(export_session(con, receipt["session"])) != receipt["sha256"]):
                     raise ValueError("closed session has an invalid export receipt")
+                number = receipt["session"]
+                if number in transcript_sessions:
+                    transcripts.audit(con, number, receipt["revision"], sessions[number - 1]["at"], start["at"])
+                    transcript_sessions.remove(number)
+        if transcript_sessions:
+            raise ValueError("transcript has no corresponding closed session")
         checks = 0
         pending = con.execute("SELECT id,base_revision FROM pending").fetchone()
         for row in con.execute("SELECT * FROM rolls"):

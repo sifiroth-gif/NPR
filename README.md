@@ -75,7 +75,7 @@ python -m rpg_engine roll --turn t001 --revision 0 --check listen --sides 20 --p
 
 - `search "поисковые слова" --audience gm` ищет по подтверждённому тексту и вводу игрока. `entry turn <id>` или `entry event <id>` открывает исходную запись. Поиск по умолчанию показывает доступную игроку историю.
 - `checkpoint next-chat.sqlite` делает согласованную копию SQLite вместе с рабочим черновиком и бросками. `python -m rpg_engine --db next-chat.sqlite verify` проверяет копию, после чего можно открыть её через `context`.
-- `next-session --revision <n>` начинает новую сессию в текущей сцене. Подтверждённый журнал уже хранит точный текст, поэтому закрытие сессии использует ту же базу.
+- `close-session archive/session-001.md --revision <n>` экспортирует сыгранное и открывает следующую сессию в подтверждённой сцене. Если первоисточник — очищенный экспорт, передайте его проверенные дословные диапазоны через `--transcript`. Архив индексируется в той же транзакции. См. [порядок перехода](docs/LONG_CAMPAIGN.md).
 
 ### Хранение кампании в приватном Git
 
@@ -85,6 +85,8 @@ python -m rpg_engine roll --turn t001 --revision 0 --check listen --sides 20 --p
 python -m rpg_engine git-save --remote git@github.com:sifiroth-gif/NPR.git --branch game-state/my-game --expected new
 python -m rpg_engine --db restored.sqlite git-load --remote git@github.com:sifiroth-gif/NPR.git --branch game-state/my-game
 ```
+
+Для доступа через файловое подключение GitHub крупный снимок дублируется сжатыми частями в `recovery/sqlite/`. Возьмите `state.json`, `parts.json` и все указанные части из одного коммита, сохраняя пути, затем выполните `python -m rpg_engine --db restored.sqlite restore-state <папка>`. Команда сверяет SHA-256 и манифест.
 
 Для последующих публикаций укажите `--expected <head>` из последней загрузки или публикации этой копии. Движок проверяет идентичность кампании, поколение сохранения и SHA-256 базы. При конфликте откройте актуальную ветку в новой локальной копии и сверьте рабочие ходы перед продолжением. Для переноса ожидающего ответа вместе с бросками сначала опубликуйте текущее состояние в приватной ветке.
 

@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 from rpg_engine import Campaign
 from rpg_engine.engine import file_sha256
-from rpg_engine.git_state import FORMAT
+from rpg_engine.git_state import FORMAT, write_transport
 
 def main(state_dir: Path, packet_path: Path, out_dir: Path):
     state_file = state_dir / "campaign.sqlite"
@@ -71,6 +71,7 @@ def main(state_dir: Path, packet_path: Path, out_dir: Path):
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    write_transport(out_dir, output)
     print("PREPARED_TURN", next_packet["id"])
     print("PREPARED_DRAFT_SHA", receipt["draft_sha"])
     print("EXPECTED_REVISION", state_after["revision"])

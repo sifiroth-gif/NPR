@@ -61,6 +61,38 @@ class GitStateTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "state branch"):
                 git_state.save(resumed, str(remote), "main", "new")
 
+    def test_save_keeps_archive_and_refreshes_connector_transport(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(git_state, "TRANSPORT_LIMIT", 1), \
+                patch.object(git_state, "PART_SIZE", 700), patch.dict(os.environ, {
+                    "GIT_AUTHOR_NAME": "RPG Test", "GIT_AUTHOR_EMAIL": "rpg-test@example.invalid",
+                    "GIT_COMMITTER_NAME": "RPG Test", "GIT_COMMITTER_EMAIL": "rpg-test@example.invalid",
+                }):
+            root = Path(temp)
+            remote = root / "remote.git"
+            git_state.git(root, "init", "--bare", str(remote))
+            branch = "game-state/test"
+            at = "2026-01-01T12:00:00"
+            game = Campaign.create(root / "local.sqlite", {
+                "id": "test", "title": "Test", "start_at": at, "location": "Gate",
+                "player": {"id": "pc", "name": "Player"},
+            })
+            git_state.save(game, str(remote), branch, "new")
+            checkout = root / "checkout"
+            git_state.git(root, "clone", "--branch", branch, str(remote), str(checkout))
+            (checkout / "session-001.md").write_text("Verbatim archive.\n")
+            git_state.git(checkout, "add", "session-001.md")
+            git_state.git(checkout, "commit", "-m", "Store archived session")
+            git_state.git(checkout, "push", "origin", branch)
+            head = git_state.git(checkout, "rev-parse", "HEAD").decode().strip()
+            old = git_state.restore_transport(checkout, root / "connector-before.sqlite")
+            game.next_session(0)
+            saved = git_state.save(game, str(remote), branch, head)
+            git_state.git(checkout, "pull", "--ff-only")
+            self.assertEqual((checkout / "session-001.md").read_text(), "Verbatim archive.\n")
+            restored = git_state.restore_transport(checkout, root / "connector-after.sqlite")
+            self.assertNotEqual(restored["sha256"], old["sha256"])
+            self.assertEqual(restored["sha256"], saved["sha256"])
+
 
 if __name__ == "__main__":
     unittest.main()

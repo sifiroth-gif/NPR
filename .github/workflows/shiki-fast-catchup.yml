@@ -61,6 +61,12 @@ jobs:
           cp "$RUNNER_TEMP/shiki-fast-out/state.json" "$RUNNER_TEMP/shiki-before/state.json"
           git -C "$RUNNER_TEMP/shiki-before" config user.name "github-actions[bot]"
           git -C "$RUNNER_TEMP/shiki-before" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$RUNNER_TEMP/shiki-before" rm -r --ignore-unmatch -- recovery/sqlite
+          if [[ -d "$RUNNER_TEMP/shiki-fast-out"/recovery/sqlite ]]; then
+            mkdir -p "$RUNNER_TEMP/shiki-before"/recovery
+            cp -r "$RUNNER_TEMP/shiki-fast-out"/recovery/sqlite "$RUNNER_TEMP/shiki-before"/recovery/
+            git -C "$RUNNER_TEMP/shiki-before" add -f -- recovery/sqlite
+          fi
           git -C "$RUNNER_TEMP/shiki-before" add -f campaign.sqlite state.json
           git -C "$RUNNER_TEMP/shiki-before" commit -m "Quick-save Shiki tower canon through 14:53, verify 21 played turns and actor knowledge"
           git -C "$RUNNER_TEMP/shiki-before" push origin HEAD:refs/heads/game-state/shiki

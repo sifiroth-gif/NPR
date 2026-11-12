@@ -3,6 +3,8 @@
 import json
 import re
 
+from .transcripts import PREFERRED_HISTORY
+
 TOKEN = re.compile(r"[^\W_]+", re.UNICODE)
 
 
@@ -70,7 +72,7 @@ def _conditions(con, *, audience, entities, session, since, until, include_super
     if not native and entities:
         _legacy_entities(con)
     linked = native or bool(entities)
-    where, params = [], []
+    where, params = [PREFERRED_HISTORY], []
     if audience == "player":
         where.append("j.visibility='player_known'")
     for column, operator, value in (("session", "=", session), ("at", ">=", since), ("at", "<=", until)):
@@ -167,6 +169,8 @@ def recall(con, *, query, audience="gm", entities=(), session=None, since=None, 
                 "[Восстановление из сыгранного диалога]") else "recorded"),
             "passage": source_excerpt(row["body"], query), "based_on": neighbours(True),
             "consequences": neighbours(False)})
+        if "transcript" in details:
+            result["transcript"] = details["transcript"]
         if row["kind"] == "turn" and row["player_input"]:
             result["player_passage"] = source_excerpt(row["player_input"], query, width=260)
         if semantic is not None and seq in semantic:

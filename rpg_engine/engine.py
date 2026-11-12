@@ -12,7 +12,8 @@ import sqlite3
 import tempfile
 
 from . import autonomy, continuity, rng, world
-from .history import fts_expression
+from .history import fts_expression, source_excerpt
+from .transcripts import PREFERRED_HISTORY
 
 APPLICATION_ID = 0x52504745
 SCHEMA_VERSION = 2
@@ -294,6 +295,10 @@ def public_entry(row, audience):
     elif audience == "gm":
         item.update(json.loads(row["details"]))
         item["visibility"] = row["visibility"]
+    else:
+        details = json.loads(row["details"])
+        if "transcript" in details:
+            item.update(source_status="exact", transcript=details["transcript"])
     return item
 
 
@@ -607,9 +612,14 @@ class Campaign:
         visible = " AND j.visibility = 'player_known'" if audience == "player" else ""
         with self.connection() as con:
             rows = con.execute(f"""SELECT j.* FROM history_fts JOIN journal j ON j.seq = history_fts.rowid
-                                   WHERE history_fts MATCH ?{visible}
-                                   ORDER BY bm25(history_fts), j.seq DESC LIMIT ?""", (match, limit))
-            return [public_entry(row, audience) for row in rows]
+                                   WHERE history_fts MATCH ?{visible} AND {PREFERRED_HISTORY}
+                                   ORDER BY json_type(j.details,'$.transcript') IS NULL,
+                                            bm25(history_fts), j.seq DESC LIMIT ?""", (match, limit))
+            results = [public_entry(row, audience) for row in rows]
+            for result in results:
+                if "transcript" in result:
+                    result["excerpt"] = source_excerpt(result.pop("text"), query, width=520)
+            return results
 
     def verify(self):
         with self.connection() as con:

@@ -67,6 +67,31 @@ class LongCampaign(unittest.TestCase):
         self.assertEqual(self.game.entry("turn", "one")["text"], "Точный ответ.  ")
         self.assertEqual(verification.audit(self.game)["revision"], 2)
 
+    def test_close_with_transcript_preserves_sources_and_turn_receipts(self):
+        self.turn("one", text="Прежнее описание кромки. Техническая реплика.")
+        transcript = {
+            "format": "npr-session-transcript/1", "session": 1, "source": "example:export",
+            "source_sha256": "0" * 64,
+            "passages": [{"role": "gm", "at": START, "text": "У кромки лежала игла.  ",
+                          "ranges": [[7, 1, 7, 25]], "entities": ["guard"]}],
+        }
+        destination = self.root / "s1.md"
+        receipt = sessions.close(self.game, 1, destination, transcript)
+        self.assertEqual(receipt, sessions.close(self.game, 1, destination, transcript))
+        self.assertEqual(self.game.search("Техническая реплика"), [])
+        source = self.game.search("игла")[0]
+        self.assertEqual(source["id"], "transcript.s1.1")
+        self.assertEqual(source["transcript"]["ranges"], [[7, 1, 7, 25]])
+        self.assertEqual(self.game.entry("event", source["id"])["text"], transcript["passages"][0]["text"])
+        self.assertIn("Техническая", self.game.entry("turn", "one")["text"])
+        with self.game.connection() as con:
+            result = recall(con, query="игла", entities=("guard",), session=1)
+        self.assertEqual(result["matches"][0]["source_status"], "exact")
+        self.assertEqual(verification.audit(self.game)["session"], 2)
+        changed = {**transcript, "source": "other:export"}
+        with self.assertRaisesRegex(ValueError, "different transcript"):
+            sessions.close(self.game, 1, destination, changed)
+
     def test_review_supersession_and_search_visibility(self):
         old = event("old-account", [], summary="Первоначальный вариант о снежной дороге")
         self.turn("one", events=[old])

@@ -68,6 +68,12 @@ jobs:
           cp "$RUNNER_TEMP/shiki-output/state.json" "$RUNNER_TEMP/shiki-state/state.json"
           git -C "$RUNNER_TEMP/shiki-state" config user.name "github-actions[bot]"
           git -C "$RUNNER_TEMP/shiki-state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$RUNNER_TEMP/shiki-state" rm -r --ignore-unmatch -- recovery/sqlite
+          if [[ -d "$RUNNER_TEMP/shiki-output"/recovery/sqlite ]]; then
+            mkdir -p "$RUNNER_TEMP/shiki-state"/recovery
+            cp -r "$RUNNER_TEMP/shiki-output"/recovery/sqlite "$RUNNER_TEMP/shiki-state"/recovery/
+            git -C "$RUNNER_TEMP/shiki-state" add -f -- recovery/sqlite
+          fi
           git -C "$RUNNER_TEMP/shiki-state" add -f campaign.sqlite state.json
           git -C "$RUNNER_TEMP/shiki-state" commit -m "Prepare Shiki reviewed live turn"
           git -C "$RUNNER_TEMP/shiki-state" push origin HEAD:refs/heads/game-state/shiki

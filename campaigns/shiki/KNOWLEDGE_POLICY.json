@@ -24,7 +24,13 @@
     "Тюнин": "leaf_guard",
     "Патрульный": "leaf_guard",
     "Мугами Шики": "shiki",
-    "Шики": "shiki"
+    "Шики": "shiki",
+    "Рок Ли": "lee",
+    "Ли": "lee",
+    "Хасэгава": "registration_officer",
+    "Якуши Кабуто": "kabuto",
+    "Накамура Михо": "exam_commission_secretary_nakamura",
+    "Накамура": "exam_commission_secretary_nakamura"
   },
   "topics": {
     "exam.stage2.scrolls": {
@@ -50,7 +56,7 @@
         "нулевой геном",
         "нулевого генома"
       ],
-      "source_requirement": "Shiki's kekkei genkai internal mechanism is GM/player knowledge; Ren and Aki may only comment on directly seen effects, without naming unknown technique.",
+      "source_requirement": "On 21 July Kabuto heard Shiki name and explain the ability and saw the pigmentation demonstration. The full potential, assimilation of other DNA, and independent clinical verification remain open. Aki and Ren know only observed effects.",
       "notes": "Do not publish hidden ability through NPC dialogue simply because they witnessed healing without hand seals."
     },
     "orochimaru.current_operation": {
@@ -60,6 +66,16 @@
         "операции орочимару"
       ],
       "source_requirement": "The GM knows Orochimaru's plan, not the exam participants. Source-bound acquisition required."
+    },
+    "shiki.kabuto.training_agreement": {
+      "triggers": [
+        "тренировка с кабуто",
+        "тренируется с кабуто",
+        "тренировку с кабуто",
+        "тренировки с кабуто",
+        "занятия с кабуто"
+      ],
+      "source_requirement": "Private agreement known to its participants. Aki and Ren know Shiki wanted to meet him. General observations of training do not establish a Kabuto appointment."
     }
   },
   "general_rule": "Semantic source validation P0-11 now requires explicit event/episode identity, referent resolution across clauses, and actor-specific witness route; topical keyword triggers remain a regression fallback, not a substitute. Source list in witness_matrix_reference.",
@@ -84,6 +100,13 @@
       "corrected_state": "Рэн не видел действий Гаары в Лесу смерти. Он лично видел действия Шики с командой Дождя и бой Гаары с Хинатой на арене; эти три эпизода имеют разные источники и нельзя переносить свидетельство между ними.",
       "authority": "direct_player_2026-11-12",
       "source_ref": "user OOC 'видел, что произошло в лесу. Нет не видел. Просачивание знаний. Протокол проверки просачивания усилить и сохранись'"
+    },
+    {
+      "source_turn": "7 July 1278, 22:51, White Heron",
+      "actor": "aki",
+      "invalid_line": "Завтра у Шики тренировка с Кабуто.",
+      "corrected_state": "Аки не получила сведения о результате личной встречи. Реплика и ответ Рэна отозваны.",
+      "source_ref": "Session 1 export L21892–21917"
     }
   ],
   "effective_from": "1 July 1278, before continuing 2 July 06:08",

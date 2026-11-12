@@ -28,7 +28,7 @@ def _grounded_excerpt(text: str, value, label: str):
         raise KnowledgeLeak(f"P0 {label}: exact, substantive excerpt absent from final draft")
 
 
-def _p0_review(text: str, review: dict, *, has_dialogue: bool):
+def _p0_review(text: str, review: dict, *, has_dialogue: bool, require_all_actors: bool = False):
     p0 = review.get("p0")
     if not isinstance(p0, dict):
         raise KnowledgeLeak("Missing P0 scene preflight")
@@ -44,7 +44,7 @@ def _p0_review(text: str, review: dict, *, has_dialogue: bool):
             raise KnowledgeLeak("P0 Shiki-specific NPC reactions: required for dialogue")
         dialogue_actors = {
             line.get("actor") for line in review.get("lines", [])
-            if isinstance(line, dict) and isinstance(line.get("actor"), str)
+            if isinstance(line, dict) and isinstance(line.get("actor"), str) and line["actor"] != "shiki"
         }
         seen = set()
         excerpts = [presence, body]
@@ -65,6 +65,8 @@ def _p0_review(text: str, review: dict, *, has_dialogue: bool):
             excerpts.append(excerpt)
         if len(dialogue_actors) > 1 and len(seen) < 2:
             raise KnowledgeLeak("P0 distinct NPC reactions required for multiple dialogue actors")
+        if require_all_actors and dialogue_actors - seen:
+            raise KnowledgeLeak("P0 each speaking NPC requires a distinct, text-grounded reaction")
     if p0.get("combat_present") is True:
         _grounded_excerpt(text, p0.get("combat_body_language"), "combat body language BEFORE resolution")
     elif p0.get("combat_present") is not False:
@@ -96,6 +98,10 @@ def _combat_review(game: Campaign, turn: dict, review: dict, final_text: str):
     if frame["player_id"] != "shiki":
         raise KnowledgeLeak("Combat frame must preserve Shiki as player-controlled")
     established = json.loads(LORE.read_text(encoding="utf-8"))["protagonist"]["stats_out_of_5"]
+    current = next((f["value"] for f in game.world(audience="gm", subject="shiki")["facts"]
+                    if f["name"] == "skills_current"), {})
+    established.update({name: value for name, value in current.items()
+                        if type(value) in (float, int) and 0 <= value <= 5})
     aliases = {"shunshin": "shunshin_no_jutsu", "zero_genome": "zero_genome_mastery"}
     for name, value in frame["actors"]["shiki"]["skills"].items():
         canonical = established.get(aliases.get(name, name))
@@ -177,8 +183,8 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
     if checked["campaign_id"] != "naruto-shiki" or turn.get("expected_revision") != expected_revision:
         raise KnowledgeLeak("Preflight not aligned with live Shiki checkpoint")
     basis = envelope.get("scene_basis")
-    if basis is not None and basis != {"instance": checked["instance"],
-                                      "revision": expected_revision}:
+    expected_basis = {"instance": checked["instance"], "revision": expected_revision}
+    if (basis is not None or checked["session"] >= 2) and basis != expected_basis:
         raise KnowledgeLeak("Scene context belongs to another campaign or revision")
     _check_new_acquisitions(turn)
     final_text = turn.get("text")
@@ -203,7 +209,8 @@ def main(state_dir: Path, envelope_path: Path, output_dir: Path):
         if turn.get("expected_revision") != game.verify()["revision"]:
             raise KnowledgeLeak("Reviewed scene is based on the wrong revision")
         ready = validate_scene(game, final_text, review, policy)
-        _p0_review(final_text, review, has_dialogue=ready["lines_checked"] > 0)
+        _p0_review(final_text, review, has_dialogue=any(actor != "shiki" for actor in ready["actor_lines"]),
+                   require_all_actors=checked["session"] >= 2)
         _combat_review(game, turn, review, final_text)
         packet = tmp / "turn.json"
         packet.write_text(json.dumps(turn, ensure_ascii=False, indent=2), encoding="utf-8")

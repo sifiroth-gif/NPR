@@ -109,12 +109,15 @@ def parser():
     checkpoint.add_argument("destination", type=Path)
     export_state = sub.add_parser("export-state", help="make a verified campaign.sqlite and state.json pair")
     export_state.add_argument("destination", type=Path)
+    restore_state = sub.add_parser("restore-state", help="restore a verified SQLite snapshot from its transport parts")
+    restore_state.add_argument("directory", type=Path)
 
     session = sub.add_parser("next-session", help="open the next session at the current scene")
     session.add_argument("--revision", type=int, required=True)
     close = sub.add_parser("close-session", help="export the played dialogue and open the next session")
     close.add_argument("export", type=Path)
     close.add_argument("--revision", type=int, required=True)
+    close.add_argument("--transcript", type=Path, help="reviewed verbatim source passages")
     export = sub.add_parser("export-session", help="export a past or ongoing session without closing it")
     export.add_argument("destination", type=Path)
     export.add_argument("--session", type=int, required=True)
@@ -219,10 +222,13 @@ def run(args):
             return game.checkpoint(args.destination)
         case "export-state":
             return git_state.export_directory(game, args.destination)
+        case "restore-state":
+            return git_state.restore_transport(args.directory, args.db)
         case "next-session":
             return game.next_session(args.revision)
         case "close-session":
-            return sessions.close(game, args.revision, args.export)
+            transcript = read_json(args.transcript) if args.transcript else None
+            return sessions.close(game, args.revision, args.export, transcript)
         case "export-session":
             with game.connection() as con:
                 data = sessions.export_session(con, args.session)
