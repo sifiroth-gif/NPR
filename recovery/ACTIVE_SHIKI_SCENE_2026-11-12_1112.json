@@ -1,0 +1,101 @@
+{
+  "schema": "NPR-ACTIVE-HANDOFF/1",
+  "campaign_id": "naruto-shiki",
+  "branch": "game-state/shiki",
+  "session": 2,
+  "latest_chat_utc_date": "2026-11-12",
+  "in_game_time": "0001-08-07T11:12:00",
+  "day": "Среда",
+  "location": "Конохагакуре, трибуна участников главной арены",
+  "game_status": "open; next player turn can observe or act, no current Shiki attack or speech pending",
+  "direct_player_last_turn": "Да #возвращаюсь на трибуну и сохранись#",
+  "shiki_current": {
+    "where": "трибуна участников",
+    "health": "visible no new injuries after surrender; mild previous sensory effects from fight with Dosu not independently rechecked; don't invent lasting problems",
+    "tournament": "out after voluntary semifinal forfeit vs Gaara; wins vs Rock Lee and Dosu Kinuta",
+    "relationships": {
+      "gaara": "Gaara asked whether Shiki feels existence when killing. Shiki answered: «я существую всегда» and then «Да», then surrendered without a fight; Gaara disturbed, expects killing as existential confirmation but not private mind-reading beyond scene.",
+      "lee": "Lee lost to Shiki using proprioception genjutsu and trip wire and chakra scalpel at neck. He respects Shiki, is unsettled by techniques, concerned for Aki and Shiki.",
+      "kabuto": "Shiki says he is sole witness of irregular Grass team exchanges and asks Kabuto not to kill his teammates; private conversation held 09:35; Kabuto says no intention personally, no spy confession.",
+      "aki": "Aki conscious in medical wing after loss to Gaara, undisplaced fibula fracture and incomplete tibial fissure with soft-tissue crushing; blood flow preserved; under observation for swelling/compartment syndrome. She asked Shiki not to seek revenge for her.",
+      "ren": "with Aki, vigilant, left shoulder injury in earlier prelims."
+    }
+  },
+  "results_to_date": {
+    "first_round": [
+      [
+        "Аки",
+        "Гаара",
+        "Гаара"
+      ],
+      [
+        "Шики",
+        "Рок Ли",
+        "Шики"
+      ],
+      [
+        "Тэнтэн",
+        "Нэдзи",
+        "Нэдзи"
+      ],
+      [
+        "Темари",
+        "Наруто",
+        "Темари"
+      ]
+    ],
+    "quarterfinal": [
+      [
+        "Шики",
+        "Досу",
+        "Шики"
+      ],
+      [
+        "Гаара",
+        "Шикамару",
+        "Гаара"
+      ],
+      [
+        "Нэдзи",
+        "Шино",
+        "Нэдзи"
+      ],
+      [
+        "Темари",
+        "Саске",
+        "Саске"
+      ]
+    ],
+    "semifinal": [
+      [
+        "Шики",
+        "Гаара",
+        "Гаара (Shiki voluntary concession before fight)"
+      ],
+      [
+        "Нэдзи",
+        "Саске",
+        "not yet fought"
+      ]
+    ],
+    "final": [
+      [
+        "Гаара",
+        "winner Neji/Sasuke",
+        "pending"
+      ]
+    ]
+  },
+  "next_event": "11:12 Genma called Neji Hyuga and Sasuke Uchiha to prepare for second semifinal; both rose from opposite sides of stands. Match not started. Player Shiki is spectator, retains complete agency.",
+  "key_corrections": [
+    "First session draw never Naruto versus Neji. Correct pairs Temari–Naruto, Shiki–Lee, Aki–Gaara, Tenten–Neji. Original source first session 1278-07-07 09:38.",
+    "Tenten–Neji occurred 09:23-09:31 while Shiki in medical wing, Neji won.",
+    "No additional Shiki decision after returning to stands and saying «Да».",
+    "Gaara original question was whether killing makes one feel existent, NOT why one exists."
+  ],
+  "preservation": {
+    "human_readable": "All chat scenes and this handoff preserved as UTF-8 files in branch. Most recent full scene campaigns/shiki/continuity/SESSION_002_SHIKI_RETURNS_AFTER_FORFEIT_2026-11-12.json.",
+    "main_sqlite": "NOT updated. state.json last verified revision 85, generation 168, at 0001-07-28T18:18:00; engine journal preparation and confirmation still required to rebuild later S2 play, no false claim of binary checkpoint.",
+    "priority": "Direct player canon > approved first-session draw > played events > GM planning and contradicted narratives. No refighting or undoing already-played choices."
+  }
+}
