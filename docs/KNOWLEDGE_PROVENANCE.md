@@ -109,3 +109,11 @@ The other repository's 3-act FTS/embedding reranking, dynamic event graph over d
 ## Limitation
 
 This gate is an **explicit-source and regression guard**, not perfect automatic semantic verification of arbitrary Russian dialogue. It can catch unsourced registered topics and omitted audit lines. It cannot prove that every `claims: []` line is truly innocuous or that the original GM-authored source event was credible. Therefore source review remains an obligatory GM task. A green test suite is not proof of literary quality or full narrative consistency.
+
+## 12. Scope-of-knowledge — эпизод важнее места (прямой реткон игрока 12.11.2026)
+
+Свидетель должен быть связан с **точным предметом** высказывания, а не просто с общим местом события. Два боя в Лесу смерти — разные эпизоды с разными множествами свидетелей. До реплики, содержащей «я видел», «что произошло», «в лесу», «там», «он», проверять ближайший референт разговора, конкретный `episode_id`, непосредственную видимость и `source_event`. Если в разговоре обсуждается Гаара, личное свидетельство Рэна о смерти шиноби Дождя не даёт ему права заявлять, что он видел, что Гаара делал в лесу. Если референт неоднозначен и не может быть подтверждён, формулировать конкретнее или отказать в заявлении, не приписывать знание.
+
+Для каждого значимого заявления о персональном знании — audit record: `actor, quote, topic, event_id, witnessed|reported|inferred|unknown, source_event, recent_discussion_referent, scope_match`. `witnessed` требует наблюдения **того же события**. `reported` требует действительно переданного сообщения, `inferred` — наблюдаемой предпосылки и маркера неуверенности, `unknown` запрещает фактологическое утверждение. Авторское повествование о знании проверять так же строго, как диалог; `claims: []` не освобождает от смыслового аудита.
+
+Применять `campaigns/shiki/continuity/NPC_WITNESS_MATRIX_JULY_1278.json` и его явные `known_non_witnesses`. Исправление 12.11.2026 аннулирует лишь ошибочную импликацию личного наблюдения Рэном **Гаары в лесу**, но не реальное свидетельство Рэна об убийстве сдавшегося дождевика Шики и не увиденное Реном с галереи нападение Гаары на Хинату.
