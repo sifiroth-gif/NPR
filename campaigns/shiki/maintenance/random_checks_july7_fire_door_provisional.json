@@ -1,0 +1,32 @@
+{
+  "format": "NPR-SHIKI-PROVISIONAL-RANDOM-CHECKS/1",
+  "campaign_id": "naruto-shiki",
+  "scene_at": "0001-07-07T21:52:40",
+  "turn_id": "s01.095",
+  "source_player_input": "#использую нулевой геном для нивелирования воздействия угарного газа это простая реакция Шики должен был ее знать её чакра скальпелем и силой пытаюсь открыть дверь в комнату#",
+  "status": "provisional_offline_deterministic_SHA256_1d20_not_campaign_SQLite_engine_roll",
+  "seed_rule": "integer from first 8 bytes of SHA256('naruto-shiki|2026-11-12|0001-07-07T21:52:40|'+check_id) modulo 20 plus 1",
+  "checks": [
+    {
+      "id": "s01.095.zero_genome_co_compensation",
+      "d20": 19,
+      "outcome": "Shiki precisely controls learned ventilation/circulation and transient oxygen-use prioritization; reduces immediate functional deterioration, but does NOT neutralize CO or make smoke safe. Novel full CO elimination cannot be treated as already learned."
+    },
+    {
+      "id": "s01.095.door_216_forced_entry",
+      "d20": 20,
+      "outcome": "Focused chakra scalpel and physical force split and deform weakened door frame/latch; entry to room possible."
+    },
+    {
+      "id": "s01.095.flash_after_open",
+      "d20": 15,
+      "outcome": "Hot smoke rolls out and flame intensifies, but no instant room flashover at this instant; room hazardous with rapidly progressing fire. Child under bed still alive, distressed."
+    }
+  ],
+  "constraints": [
+    "Anatomy and physiology: CO binds hemoglobin strongly, requiring elimination and oxygen; boosting control is temporary compensation not magic antidote.",
+    "Shiki owns next decision; do not carry infant out on player's behalf.",
+    "Continuity: mother at door has burns; Aki and Ren departed toward west, don't teleport them here.",
+    "In further SQLite retroactive replay, do not claim these checks were made through the campaign seeded engine."
+  ]
+}
