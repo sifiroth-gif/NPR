@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/shiki-fast-catchup.yml"
-      - "campaigns/shiki/maintenance/played_catchup_2026-11-12.json"
+      - "campaigns/shiki/maintenance/played_catchup_2026-11-12_tower.json"
   workflow_dispatch:
 
 permissions:
@@ -44,8 +44,15 @@ jobs:
           set -euo pipefail
           python -m rpg_engine.quick_save \
             "$RUNNER_TEMP/shiki-before" \
-            campaigns/shiki/maintenance/played_catchup_2026-11-12.json \
+            campaigns/shiki/maintenance/played_catchup_2026-11-12_tower.json \
             "$RUNNER_TEMP/shiki-fast-out"
+      - name: Verify scene continuity and actor-knowledge invariants in fresh checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m campaigns.shiki.maintenance.verify_tower_checkpoint \
+            "$RUNNER_TEMP/shiki-fast-out" \
+            campaigns/shiki/maintenance/played_catchup_2026-11-12_tower.json
       - name: Atomically commit and publish checked binary checkpoint
         shell: bash
         run: |
@@ -55,7 +62,7 @@ jobs:
           git -C "$RUNNER_TEMP/shiki-before" config user.name "github-actions[bot]"
           git -C "$RUNNER_TEMP/shiki-before" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C "$RUNNER_TEMP/shiki-before" add -f campaign.sqlite state.json
-          git -C "$RUNNER_TEMP/shiki-before" commit -m "Quick-save Shiki forest exam through 08:57, preserve campaign instance"
+          git -C "$RUNNER_TEMP/shiki-before" commit -m "Quick-save Shiki tower canon through 14:53, verify 21 played turns and actor knowledge"
           git -C "$RUNNER_TEMP/shiki-before" push origin HEAD:refs/heads/game-state/shiki
           git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
           git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-state.json"
