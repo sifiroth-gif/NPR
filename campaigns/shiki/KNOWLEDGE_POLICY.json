@@ -93,13 +93,11 @@
   "referent_preflight": {
     "version": "NPR-REFERENT-PREFLIGHT/1",
     "required_fields": [
-      "actor",
-      "exact_quote",
-      "episode_id",
-      "referent_entity",
-      "knowledge_type",
-      "source_event",
-      "context_focus_entity"
+      "knowledge_review.scene_focus_entity",
+      "knowledge_review.lines[].referent_audit[].quote",
+      "knowledge_review.lines[].referent_audit[].episode_id",
+      "knowledge_review.lines[].referent_audit[].knowledge_type",
+      "knowledge_review.lines[].referent_audit[].source_event"
     ],
     "principle": "Resolve implicit pronouns and witness verbs to an exact event and the current conversation topic; actor's participation in a different event at the same location never supplies eyewitness authority. Even quotes absent from protected keyword triggers need semantic audit.",
     "modes": [
@@ -115,7 +113,9 @@
       "Hidden plans, medical observations and previously unseen actions",
       "Apparent knowledge of offscreen conversations"
     ],
-    "fail_closed": "No source -> no unqualified witnessed claim; no referent -> specify referent or decline factual assertion; do not fabricate reports"
+    "fail_closed": "No source -> no unqualified witnessed claim; no referent -> specify referent or decline factual assertion; do not fabricate reports",
+    "contract": "Each signed NPC dialogue sentence with positive 'видел/видели/наблюдал/слышал' must have a same-position referent_audit row whose quote equals the entire sentence. Global knowledge_review.scene_focus_entity is required for ambiguous deictic references. Episode scope must match conversation focus unless the sentence explicitly names a different event subject. The actor must be listed as an eyewitness of the event and must not occur in known_non_witnesses.",
+    "sentence_scope": "Split on sentence-final punctuation; one row per witness clause, not one per dialogue line. Explicit switch of entity only accepted when named in the same clause."
   },
   "episode_scopes": {
     "gaara.forest_death_actions": {
