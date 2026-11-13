@@ -1,0 +1,53 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-COURIER-DOCUMENT/1",
+  "game_at": "0006-09-22T20:13:00",
+  "world_year": 1283,
+  "user_exact": "Хорошо, лекарство которое ему вводится отправили на экспертизу? #встаю, выхожу из комнаты, посыльному пристально глядя на него# вы стоите и не дергаетесь #протягиваю руку Куроде# дайте документы",
+  "player_speech_exact_meaning": [
+    "Хорошо. Лекарство, которое ему вводится, отправили на экспертизу?",
+    "Вы стоите и не дёргаетесь.",
+    "Дайте документы."
+  ],
+  "player_actions": [
+    "Shiki stands up, exits adjacent meditation room into ICU security corridor, closely stares at male courier.",
+    "Orders courier to stand still and not make sudden movements.",
+    "Extends hand to Kuroda asking for suspect transfer documents, receives and examines them as delivered. Shiki does not strike/attack/search/interrogate patient, claim personal emotion, or leave hospital."
+  ],
+  "timeline": [
+    {
+      "at": "20:12:08",
+      "actor": "Kazama Ritsu",
+      "visible": "Ritsu confirms SMALL sterile aliquot of UNIDENTIFIED continuous IV medicine was sent to hospital laboratory for identification and potential effect on neuromuscular transmission; results NOT available. Main infusion remains running UNINTERRUPTED, a spare dose remains supervised and NOT administered. Ritsu would require clinical justification before additional dosing. Med group autonomously monitors ventilation."
+    },
+    {
+      "at": "20:12:10–20:12:30",
+      "actor": "Shiki, courier, Kuroda",
+      "visible": "Player-controlled Shiki rises from meditation and comes to ICU outer corridor, sharply watches waiting short male courier in gray admin uniform with ID badge, orders 'Вы стоите и не дёргаетесь'. Courier is visibly frightened, fingers tremble and gaze can't remain fixed, but obeys and stays with arms down. Kuroda stays close to his own weapon, maintains exit control, no violence or magical fear compulsion assumed. Shiki asks 'Дайте документы', stretches hand to Kuroda; Kuroda places ORIGINAL documents into clear evidence sleeve, time and courier identity logged, hands them to Shiki."
+    },
+    {
+      "at": "20:12:30–20:13:00",
+      "actor": "Shiki, Ritsu, Kuroda",
+      "visible": "Two-page physical paper apparent Kusa medical-administration urgent patient transfer order, document number EXACT КМУ-19/472, dated 1283-09-22, purported issued at EXACT 18:42 (BEFORE hospital admission at18:56). Sent from Kusa Central Hospital to 'Исследовательский корпус № 3', reason special medical observation, receiving physician NOT named, breathing support arrangements missing, official signature unreadable. Second sheet asserts 'Специальное лекарственное сопровождение при переводе не требуется'. Ritsu notes if followed literally, dangerous risk of withdrawal from unknown infusion and no respiratory support. Kuroda remarks predated admission alone not proof of forgery, but hospital registry has NO such number, which is serious. Apparent stamp is not proven counterfeit or genuine."
+    },
+    {
+      "at": "20:13:00",
+      "actor": "Courier, Kuroda and hospital team",
+      "visible": "When Kuroda asks who gave him case, courier claims unknown WOMAN in DARK uniform wearing medical-administration pass gave case at internal COURIER ROOM, says she instructed that if ward refused transfer, return case and do not revisit. These are courier's unverified statements; courier not confirmed complicit and remains in Kusa security custody without active resistance. Kuroda instructs officer to inspect courier room log and identify described woman, submit photocopy to internal security, maintain security, guard entrance. Ritsu reiterates NO patient transfer without established authority, named receiving clinician and safe respiration/drug provision. Medical nurse confirms patient stable, ventilator and unknown IV still functioning. Patient not further interrogated and no new attack."
+    }
+  ],
+  "current": {
+    "location": "Страна Травы, Центральный госпиталь Кусагакуре, закрытая реанимация, внешний коридор охраны",
+    "time": "20:13",
+    "shiki": "20-year-old full Kusa Jonin, uninjured. After ~40min chakra-restoring meditation, now stands outer secured ICU corridor holding original 2-page unregistered transfer order in protective transparent evidence cover handed over by security Kuroda at user request. No further Shiki speech or actions. Chakra significant recovery but not complete.",
+    "patient": "Conscious ~25 male unknown identity with severe generalized and respiratory muscle weakness in guarded ICU on stationary ventilatory support; circulation stable; unidentified continuous IV medicine ongoing, backup dose retained not used, small medicine sample submitted for lab identification with results PENDING. Eye yes/no communication method ready but no questions asked, IV not disconnected, no transfer permitted. Left wrist six-pit cuff four dark, recent separate puncture under investigation.",
+    "ritsu": "Senior med shinobi Kazama Ritsu left shoulder wound bandaged, in corridor; confirms sample sent but no assay result, refuses unsafe unauthorized transfer, ready for patient care.",
+    "kuroda": "Kusa internal security chief Курода Масаки ~35 with right-ear scar, maintains 2 guards at inner ward; gave original suspect document in transparent evidence sleeve to Shiki, established receipt record, requested courier office logs and woman identification, forwards copy to internal security. ANBU referral under review, no deployment confirmed.",
+    "courier": "Unknown man in gray hospital courier uniform with badge, frightened/trembling under Shiki stare but remains still on command, not attacking. Claims woman in dark uniform with medical admin pass handed order case at courier room and told him to retrieve it if refused; this is UNVERIFIED witness statement. Held for identity and source check.",
+    "order": "Physical two-page apparent Kusa medical admin transfer instruction EXACT ref КМУ-19/472 dated 1283-09-22 alleged time18:42; hospital admission18:56. Requests immediate move of unidentified man from Kusa Central Hospital to Research Building №3 'special observation'. Receiving physician/ventilation and justified treatment details missing; second sheet 'Специальное лекарственное сопровождение при переводе не требуется'. Signature illegible, apparent seal not independently authenticated. Hospital medical-administration registry cannot find document reference number. Order NOT acted upon.",
+    "detainees": "5 captured armed opponents alive and in Kusa custody, 9 detained caravan persons also referred for questioning, Tiyo escorted/guarded near pump; no all interrogations completed and no sworn admissions reported. Ivovy post under Jun guards M4/032 biological specimen cylinder with main thermal self-destruct disabled, cooling unstable, secondary mechanisms unknown.",
+    "gate": "20:13 user can further inspect original order/fuінjutsu signature, question courier or talk with Ritsu/guard, decide next. DO NOT autonomously make Shiki do more. NPCs can progress their own records search. Hospital patient stable/no attack yet.",
+    "atmosphere": "Calm oppressive clinical danger rather than invented immediate combat; serious chain-of-custody and risk of treatment cessation, personalized courier anxiety, Ritsu clinical refusal, Kuroda security protocol."
+  },
+  "epistemics": "Hypothesis that hostile conspirators forged order or sought to kill patient NOT proven. Premature issue time may be pre-planning or legitimate preauthorization; missing registry strongest contradiction. Courier statement of dark uniform woman unverified. No new lab data nor prisoner confession.",
+  "technical": "Narrative text canonical GitHub source + recovery checkpoint only; old game SQLite last validated rev85 in 1278 is not synchronized; no official engine prepare/confirm/verify."
+}
