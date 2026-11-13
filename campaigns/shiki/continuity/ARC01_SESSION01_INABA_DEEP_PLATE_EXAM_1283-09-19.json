@@ -1,0 +1,60 @@
+{
+  "schema": "NPR-ARC01-S01-PLATE-DEEP-FORENSICS/1",
+  "world_at": "0006-09-19T12:06:00",
+  "world_year": 1283,
+  "player_input": "Странно что его так просто отпустили. #исследую пластину так что бы получить максимально много информации#",
+  "player_speech": "Странно, что его так просто отпустили.",
+  "player_action": "Shiki thoroughly investigates Inaba medical tag using nondestructive optical and ordinary laboratory methods, controlled very-low-strength chakra sensing after initial passive tests, and extracts a minimal microresidue from fourth notch. Avoids activating any unknown fuinjutsu circuit, sends no external signal/records request.",
+  "location": "Кусагакуре, центральный лазарет, изолированная диагностическая палата",
+  "chronology": [
+    {
+      "at": "0006-09-19T11:17:00",
+      "event": "Inaba reacts to Shiki remark: claims first six months after surgery remained confined indoors, then transferred to another clinic with yard, later released with money and medicine conditional on controls. Once he attempted to deviate from assigned route, was refused weekly drugs at another medical stop. Patient claims supervisors somehow knew where he traveled; unknown if actual surveillance. Seina records as patient's testimony, not proven."
+    },
+    {
+      "at": "0006-09-19T11:30:00",
+      "event": "Optical/metallurgical examination of plate M-4 / 031 (5x3cm, ~2mm): nickel-copper-rich alloy under protective finish, regular machine-engraved lettering, serial production likely. Four wave-like strokes resembling but NOT matching official Kiri motif engraved later with different tool. Six standardized edge notches, four filled dark polymer with different application characteristics at fourth. Their meaning undetermined."
+    },
+    {
+      "at": "0006-09-19T11:43:00",
+      "event": "Precautionary chakra micro-sensing reveals fine deliberately conductive inset paths under plate protective layer forming central contour around M-4/031, six peripheral cells and high-residual-conductance contact around tether hole. Looks like passive fuinjutsu tag/readable ID, no observable active chakra source or remote transmission under low passive scan. Unknown stronger activation and exact format. Inaba volunteers clue: physicians placed plate into plate-size ring recessed reader which unlocked medication drawer. This is patient's anecdote consistent with passive access key."
+    },
+    {
+      "at": "0006-09-19T11:52:00",
+      "event": "Raking light and depth analysis reveals earlier partially erased under-surface engraving: 'R-031 / 4', 'T.C. — [unreadable]', 'Серия: 17'. Potential but unproven overlap of '17' with old Kusa 'К-17' consultant record; no letter K on plate, DO NOT treat as same network automatically. R could mean recipient but unproved. Seina questions what '4' labels."
+    },
+    {
+      "at": "0006-09-19T12:00:00",
+      "event": "Micro-sample from exposed fourth notch analyzed: dark polymer carries organic constituent with protein-binding potential; too little to identify as immunosuppressant, biological marker or reader reagent. Seina stores in sealed vial and plans compare with genuine drug residue if obtained. Patient claims last physician said next monitoring would be 'заключительным', and 'После следующего контроля решим, нужен ли ты нам дальше', making him visibly afraid."
+    },
+    {
+      "at": "0006-09-19T12:06:00",
+      "event": "Seina notes no transmitter detected, tag may identify holder when presented to matched reader. Original plate intact, fourth-notch microsample sealed. She asks Shiki conceptually who controls readers. Patient asks if operators can locate him; Seina only says no active transmitter observed, not proof of absence of outside surveillance. Tissue histology and cell compatibility results still pending."
+    }
+  ],
+  "verified_object": {
+    "label": "М-4 / 031; РЕЦИПИЕНТ; Контроль: 7 суток; Сложная тканевая трансплантация; Экстренное обращение: медицинский узел М-4",
+    "metal": "Nickel-copper-rich corrosion-resistant production alloy, protective finish, mechanically engraved in series",
+    "second_mark": "Four later-added angled/wave strokes, resembling Kiri but not official Kirigakure symbol; provenance unknown",
+    "hidden": "R-031 / 4 ; T.C. — [unreadable]; Серия: 17",
+    "notches": "Six standardized cells, four dark-polymer filled; fourth differing from first three, reason unknown",
+    "seal": "Passive chakra-conductive interlayer with central ID and six peripheral cells and wear contact near lanyard hole; compatible with key/reader system, not proven simple record storage, no signal detected",
+    "chem": "Trace organic polymer with protein-binding constituent, specific compound undetermined",
+    "limitations": "No proven K-17 link, specific foreign institution, active tracking, false death mechanism, donor identity, specific medications or release motive."
+  },
+  "inaba_testimony": "Patient says not freely released initially: controlled indoor treatment first six months, transfer to new location, later clinic discharge with medicines tied to recurring visits and prescribed route, attempted travel deviation led to medication denial, does not know if followed. Tag used in a metal ring reader to dispense medicine. Last doctor said next review would determine if still 'needed'; unreliable until corroborated.",
+  "visible_npcs": {
+    "seina": "In room, takes notes and assists physical/lab assessment, remains rigorous and protective of patient confidentiality; keeps tiny sample in sealed vial. No offscreen omniscience.",
+    "inaba": "In room, frightened and protective of graft, allowed plate handling and sampled fourth notch; asks about tracking. Left hand working, right hand ischemic dysfunction persists."
+  },
+  "pending": [
+    "Full tissue biopsy histology and genotypic comparisons",
+    "Any true original graft operative record or immunosuppressive drug name",
+    "Who built/operates physical compatible reader; no automatic contact with Kiri clinics",
+    "Whether 17 series coincides with old consultant K-17",
+    "True nature of clinic control over Inaba, how it monitored his route",
+    "Whether Kusa public health and Kiri/Sound/Orochimaru links have causal evidence"
+  ],
+  "player_pov": "Only Shiki's direct inspection, patient spoken testimony and Seina present observations, no offscreen flashbacks. No further Shiki dialogue, treatment or activating unknown seal.",
+  "sqlite_status": "Text GitHub continuity only. Core SQLite remains stale rev85 from 1278 Jul."
+}
