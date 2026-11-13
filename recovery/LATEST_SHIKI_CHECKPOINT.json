@@ -2,26 +2,25 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-22T17:42:00",
+  "game_at": "0006-09-22T17:54:00",
   "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-22-1742-ivovy-medical-exam",
-  "latest_player_command": "Дзюн всех задержать до выяснения обстоятельств, груз официально задержан по причине несоответствия провозным документам. Тие отойдите #тщательный осмотр пациента без чакры ему# не двигайтесь в вашем положении это опасно",
+  "checkpoint_id": "shiki-1283-09-22-1754-ivovy-medical-evac-called",
+  "latest_player_command": "Дзюн срочное сообщение в деревню, нужно организовать доставку пациента в госпиталь #пациенту# я вижу что вы пытаетесь что-то сказать. Не сейчас. Сначала ваша жизнь а не разговоры. #дзюну# также тие под контролем должна отправится с нами. #пациенту# мы вернём сейчас крышку для поддержания температуры, не переживайте. #даю команду вернуть контейнер в исходное состояние#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Страна Травы, восточная застава Ивовый брод, таможенная площадка, открытый четвёртый контейнер второй повозки",
-    "time": "17:42",
+    "location": "Страна Травы, застава Ивовый брод, вторая повозка Северного тростника",
+    "time": "17:54",
     "world_year": 1283,
-    "shiki": "20-year-old full Kusa Jonin. Ordered Jun temporarily to detain caravan and its 10 people for manifest discrepancies, asked Tiyo step back, instructed patient to lie still, then performed close conventional medical exam WITHOUT using chakra. No treatment, drug removal, neurological special intervention, threats, other lines or inner thoughts have been declared.",
-    "jun": "Нагасэ Дзюн, local Kusa Chunin, ordered guard of six escorts/three drivers/Tiyo, inventoried surrendered weapons, closed exit, requests backup from south post. At open patient case he asks Shiki for medically safe handling plan; not all detainees criminally charged.",
-    "tiyo": "Минасэ Тиё, ~30 medical coordinator, now two steps back under Kusa guard. Strong fear and wariness of Shiki unreadable face (personal psychological response, not aura or genjutsu). Says terminating unnamed IV infusion could induce progressive skeletal/respiratory muscle failure; says she knows dose but not drug identity. Claims unverified, her motives unproven.",
-    "unidentified_patient": "Awake ~25 male in open concealed medical case, limited motor ability, responsive with eyes but cannot speak clearly. BP98/62, pulse118, RR24 shallow, SpO2 93% while oxygen by soft face mask. Mild sweat, muscle wasting, weak neck/shoulder and breathing effort, threat of respiratory muscle failure; no definitive cause. Fresh 8cm sutured right forearm wound plus two fixed subcutaneous structures unknown purpose. Left wrist metal bracelet six indentations four dark filled like but not proved same as Inaba tag. IV line in left arm connected to slow-dose pump, colorless unlabelled solution, finite small reservoir, still running. No diagnosis/rejection/identity established.",
-    "caravan": "3-wagon Северный тростник, Konoha-sealed transit letter unverified, declared 4 medical containers but one contains live undeclared patient. Temporary local lawful detention and customs hold in place for six guards, three drivers, woman Tiyo. No combat, weapons surrendered, outside support on way but not yet on site.",
-    "setting": "Wet mud, cool rain and fog at border post. User's requested Shiki psychological impact described individually via NPC body language: Tiyo anxious, one guard tense, some relieved, Jun pragmatic; not supernatural.",
-    "immediate_gate": "17:42. Patient medically fragile with low oxygen saturation despite mask and possible respiratory muscle weakness. Unknown IV infusion currently continuing; risks if continued and if stopped; Tiyo insists maintaining but cannot name formulation. Need player decision re stabilization, oxygen/airway support, testing/monitoring, questioning and controlled transport. No further Shiki action auto-resolved."
+    "shiki": "20yo Kusa jonin medical expert. Ordered urgent village hospital evacuation, specified Tiyo under guard must accompany him and patient, reassured unidentified male and ordered transport case returned to thermostatic position. No medical chakra, unrequested medical treatment, other Shiki words or thoughts played. Transport to village not commenced yet.",
+    "jun": "Kusa Chunin Nagase Jun relayed highest-priority medical support and hospital confirmed acceptance, equipped medical team dispatched but not arrived. South outpost backup now supports holding 10 caravan persons and inventorying weapons/evidence. Tiyo is to travel under guard with Shiki/patient, other 9 stay checkpoint. One guard had a sealed communication scroll secured for legal examination, unopened.",
+    "patient": "Unknown conscious male ~25 with profound generalized and respiratory muscle weakness, poor spontaneous shallow breathing, O2 93–94% with supplemental oxygen, pulse 118, BP98/62, RR24, fresh 8cm right forearm incision/subcutaneous anomalies, 6-cell bracelet left wrist four dark. Unknown unlabelled slow IV infusion continues unchanged, Tiyo says its discontinuation can cause respiratory paralysis (unverified). Original transport container carefully returned to closed thermal mode after checking patent gas inlet and exhaust, oxygen tubing and external access, viewing port available, not airtight. Patient visibly responds to Shiki composed demeanor, tears and watches him; cannot speak intelligibly.",
+    "tiyo": "Minase Tiyo med coordinator, scared but cooperating under local guard near container. She says she has been assigned to same transport routes for 8 months, with ELEVEN such transfers of living people, prohibited from learning patient names. Claim unverified; independent concerns for patient appear genuine but culpability unknown. Stays with medical group to hospital per Shiki explicit order.",
+    "procedural": "Customs transport from Fire Country, Konoha attachment stamp still unverified; in cargo 4th insulated case held living undeclared person. Material and accompanying 9 people remain on Kusa side under legal temporary hold. Seized communication scroll unopened. Hospital dispatch accepted and mobilized, no ETA supplied or arrived. No offscreen NPC cutaway shown.",
+    "medical_gate": "17:54. Waiting equipped medical evac group, current patient weak, breaths shallow but not worsening immediately, O2 93-94% on mask. Unknown infusion active and not adjusted. Shiki may pursue questioning Tiyo or manage care now; no additional involuntary action."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -82,7 +81,10 @@
     "22 Sep 1283 Ivovy Brod Kusa: Northern tower Shiki, Jun; licensed Северный тростник convoy arrived 3 wagons/6 guards/3 drivers/1 docs escort, suspected wagon2 heavier/four horses, knocking inside, paper has Konoha red stamp unverified, inspection ongoing. Shiki has not acted further.",
     "22 Sep 1283 Ivovy Brod: full lawful inspection revealed UNDECLARED live male ~25 in 4th case of wagon2, mask/straps, fresh right arm surgical stitches, 6-cell wrist bracelet with four filled dark. He tapped wall; no diagnosis or identity. Minase Tiyo claims protected medical transport; legal cargo manifest omits patient, Konoha seal unverified. Shiki next action pending.",
     "22 Sep 1283 Ivovy Brod: Shiki personally detained 10 caravan occupants/cargo temporarily, no actual charges. Strange live passenger with right forearm 8cm fresh surgical scar, two firm subdermal masses, limited limb/respiratory strength. SpO2 93% ON O2, HR118, BP98/62, RR24 shallow. Requires time-sensitive medical disposition.",
-    "Unknown transparent IV fluid delivered by pump to patient left arm, claims by Minase Tiyo it prevents progressive respiratory muscle failure; both abrupt stop and blind continuation carry risks. Shiki has not stopped or changed it, has not used chakra."
+    "Unknown transparent IV fluid delivered by pump to patient left arm, claims by Minase Tiyo it prevents progressive respiratory muscle failure; both abrupt stop and blind continuation carry risks. Shiki has not stopped or changed it, has not used chakra.",
+    "22 Sep 1283 17:54 border: Shiki ordered emergency Kusa hospital respiratory-support evacuation and guarded Tiyo accompaniment; medical team dispatch acknowledged, yet to arrive. Case restored to thermal/ventilated transport mode, O2 mask and unnamed IV maintained.",
+    "Minase Tiyo told Shiki that over her 8 months on patient-transport duty, ELEVEN such consignments included people whose names couriers are instructed not to ask. Testimony unverified.",
+    "Border officers secured a sealed communication scroll from one caravan escort, unopened, could be ordinary trading comms. Medical transit forms include Konoha-marked stamp unverified."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -130,7 +132,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_AT_SECURITY_OFFICE_1283-09-22.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_RECON_1283-09-22.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_FULL_INSPECTION_1283-09-22.json",
-    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_DETAIN_AND_NONCHAKRA_PATIENT_EXAM_1283-09-22.json"
+    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_DETAIN_AND_NONCHAKRA_PATIENT_EXAM_1283-09-22.json",
+    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_URGENT_MEDICAL_EVAC_1283-09-22.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -138,17 +141,17 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "All recent 1283 scenes stored as GitHub verified text continuity. Binary SQLite remains last verified old revision85 July 1278 and is not synchronized; no latest engine verify/prepare/confirm."
+    "warning": "Private GitHub narrative text and checkpoint current/verified; original binary SQLite engine still last verified rev85 July1278, not synchronized and no recent prepare/confirm/verify execution."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
-    "text_checkpoint": "readback-verified",
+    "text_checkpoint": "verified-readback",
     "postskip_chronicle": "readback-verified",
     "character_sheet": "readback-verified",
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_DETAIN_AND_NONCHAKRA_PATIENT_EXAM_1283-09-22.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_URGENT_MEDICAL_EVAC_1283-09-22.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
