@@ -2,23 +2,23 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-08-10T10:40:00",
-  "game_date": "Суббота, 10 августа 1278 года",
+  "game_at": "0001-08-23T11:49:00",
+  "game_date": "Пятница, 23 августа 1278 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-08-10-1040",
-  "latest_player_command": "Нет",
+  "checkpoint_id": "shiki-s2-1278-08-23-1149",
+  "latest_player_command": "Дальше темп не теряй это все ещё ориджин",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Коноха, временная резиденция иностранных делегаций",
-    "time": "10:40",
-    "shiki": "Staying with the Kusa trio, no new medical/combat action. Previously gave Ibiki an unequivocal 'Нет' to observations on suspicious second Grass team, hiding earlier personally witnessed five Kabuto-team glances/hand signal. This remains secret from Ibiki and Tose; no explicit motive stated.",
-    "aki": "Nonambulatory, immobilized lower leg fracture, wheelchair access and medical escort available; still alert.",
-    "ren": "Healthy incl fully recovered shoulder, with team and protective of Aki.",
-    "tose": "Kusa team leader, has Konoha notice of confidential secure evening call with Kusa command about registration discrepancy of second Grass team. Expects Shiki's rank under commission review, promotion not confirmed.",
-    "exam": "Konoha closed commission may evaluate candidates despite Hokage death; Shiki two wins and voluntary semifinal forfeit and hospital defense to be reviewed, no rank changes yet."
+    "location": "Кусагакуре, комната команды в управлении шиноби",
+    "time": "11:49",
+    "shiki": "15, promoted to Chunin 23 Aug 09:10 by Kusa; new post 6 mission announced. Stands/sits unspecified with Tose, Aki and Ren. No answer to woman at door.",
+    "aki": "Genin, left shin fractures, still nonambulatory, early healing",
+    "ren": "Genin, old shoulder healed, both arms fully functional",
+    "tose": "Established Kusa jonin, concerned first assignment surprisingly fast, demands check mission roster",
+    "op_officer": "Unknown female operations officer behind closed door has come to collect newly promoted Chunin Shiki, has not opened door."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -47,7 +47,9 @@
     "Ibiki inquiry into unauthorized second Grass team and if/what Shiki reveals of Kabuto observed signals.",
     "Shiki replied 'Нет' to Ibiki about second team; Kabuto signals remain only known to Shiki and Kabuto as prior disclosed.",
     "Kusa authority evening secure call planned on 10 Aug after 10:40, not yet taken place.",
-    "Exam promotion review unresolved."
+    "Exam promotion review unresolved.",
+    "Forged second Kusa team stamp officially destroyed 6 months earlier; one dead-for-2-years person's identity used, registrar missing Aug22.",
+    "First Chunin mission to abandoned border medical post no 6, assigned senior commander to be identified."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -73,7 +75,8 @@
     "recovery/s2_2026-11-13_evacuated_to_central_medical_tose_1313_unconfirmed.json",
     "recovery/s2_2026-11-13_shiki_tose_authorized_dialogue_new_wounded_1320.json",
     "recovery/s2_2026-11-13_timeline_invasion_end_ibiki_kusa_documents_1509.json",
-    "recovery/s2_2026-11-13_shiki_answers_ibiki_no_delegation_montage_1040.json"
+    "recovery/s2_2026-11-13_shiki_answers_ibiki_no_delegation_montage_1040.json",
+    "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -81,7 +84,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "SQLite database remains outdated rev85; only GitHub text checkpoints represent narrated sessions past 28 July."
+    "warning": "Main SQLite is still stale revision 85; this handoff text is NOT engine confirmation."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -89,5 +92,12 @@
     "latest_verbatim": "verified_readback",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "recovery/s2_2026-11-13_shiki_answers_ibiki_no_delegation_montage_1040.json"
+  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json",
+  "rank_update": {
+    "person": "Мугами Шики",
+    "from": "генин",
+    "to": "тюнин",
+    "effective": "0001-08-23T09:10:00",
+    "issuer": "Kusagakure review board"
+  }
 }
