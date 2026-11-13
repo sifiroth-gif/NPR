@@ -2,28 +2,30 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-22T21:20:52",
+  "game_at": "0006-09-22T21:21:40",
   "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-22-212052-hirano-personal-c17-claim",
-  "latest_player_command": "Угнетение дихания и прочие перечисленные симптомы вызывает лекарство или оно купирует эти симптомы? И зачем дают работникам? Вы принимали? Если да, дайте субъективную оценку физиологических изменений после введения",
+  "checkpoint_id": "shiki-1283-09-22-212140-s17-spare-dosing-hirano",
+  "latest_player_command": "#встаю зная расположение отсека с запасом препарата извлекаю его# дозировки? Сколько вводят пациенту, сколько ввели вам Хирано?",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, заброшенный медицинский Исследовательский корпус №3, наружный двор у запертого контейнера",
-    "time": "21:20:52",
-    "world_year": 1283,
-    "shiki": "20yo elite Kusa jonin and medic, uninjured, at still-CLOSED wheeled teen medical life support case by bound medic Mei. User explicitly questions whether infusion S-17 CAUSED or RELIEVES respiratory/motor paralysis; why it is given to workers, whether Mei used it and direct subjective effects. No other Shiki action or statement, no case examination/opening/medical intervention or self-assimilation disclosure. Speed main combat strength, chakra strongly restored after long meditation.",
-    "mei": "Аракава Мэй bound near trolley, awake GCS15 with probable concussion and memory gap after Shiki jaw strike; jaw soreness substantially treated by Shiki earlier, no concussion cure. Says she never observed 'recipient six' BEFORE S17 first exposure; can NOT determine if S17 therapy, suppresses complication, withdrawal dependence, or itself contributes to motor/respiratory weakness. On infusion patients stable; separate patient died after interruption but cause unproved. To her knowledge S17 NOT administered routinely to healthy EMPLOYEES, she herself NEVER TOOK IT and has NO first-person effects. Knows maintenance technician Хирано once CLAIMED personal injection restored old injured left-hand movement and painless control, later cramps; she did NOT witness dosing or confirm identity.",
-    "hirano": "Gray-coat masked male equipment tech captured alive by Nori/Genta, scar neck, now sitting bound under Kusa guards ~6m from Shiki. Heard Mei describe his alleged S17 self-exposure and angrily says 'Мэй. Закрой рот', Nori stops intimidation. Present left ring finger has impaired extension seen when he moves restrained hand, then hides it. Says HE EXPERIENCED brief restored movement of arm disabled six years previously after supposed drug injection then involuntary movements of that hand; asks not to repeat experiment on him. Personal experience is unverified testimony and actual agent/time/dose unknown; cannot conclude S17 neuro-regenerative or poison. He explicitly offers Shiki direct question and physical history. No medical exam yet.",
-    "case": "CLOSED medically supported wheeled metal box before Shiki, presumed alive ~16yo male short dark hair, weak chest motion, six-hole metal wrist plaque, external ventilatory valve + IV connector, active compressor and infusion from research building. Mei alleged designation 'recipient six' and severe skeletal/respiratory weakness; maintenance logs confirm apparatus. No Shiki access/opening, continue operation until portable med support arrives; Nori has called hospital medical team, not arrived.",
-    "nori": "Хаясэ Нори female Kusa internal security field commander pale RIGHT cheek scar, all three research-corpus adversaries captured alive (Mei, armed male, technician Hirano). Senior officer enforces separate orderly statements, no forced experiment. Her security team maintains compressor/pump and staffing; equipment log has four missing pages. Genta sensor assists. Guards protect teenager.",
-    "wagon": "South Kusa patrol found abandoned unmarked wagon without horses or escorts by old river sluice with TWO unopened long box cases, audible apparatus. Mei says two living people inside before cargo left Research Building3 ~20:52, patrol has NOT verified. Reinforcements/medical assistance coming, no invented life support timer.",
-    "hospital": "Earlier unknown adult patient awake eye-communicative with severe motor/vent weakness still guarded in Kusa Central Hospital ICU on assisted mechanical ventilation and unidentified continuous IV drug, early peptide containing assay but no full ID; reserve dose unused, Ritsu lead and Kuroda strengthened six posts. ANBU referral under review. No new attack.",
-    "evidence": "Original suspicious transfer directive №КМУ-19/472 sealed in Kuroda forensic custody (scraped number, replaced second page, no registry record); woman who delivered to courier room not identified as Mei. M4/032 cold specimen secured by Nagase Jun at border, thermal main seal deactivated cooling issue not resolved. Other five attackers Kusa custody and 9 caravan detainees.",
-    "next_gate": "21:20:52: Hirano offers his first-person subjective neurological account of supposed S17 injection and has observable stiff left ring finger, still bound under guard ~6m from Shiki. Mei denies personal use; causal purpose of drug unknown. Shiki can question Hirano, medically investigate, safeguard teen case, react to two abandoned cases by river or otherwise. No automated Shiki words or action."
+    "time": "21:21:40",
+    "location": "Кусагакуре, двор закрытого Исследовательского корпуса №3",
+    "shiki": "20yo elite Kusa jonin standing immediately beside CLOSED medical case; physically holds SEALED reserve 20mL S17 ampoule from separate outer cooled service compartment after voluntarily removing it WITHOUT interrupting active support. He asked about boy's and Hirano's actual dosage. No new response to Hirano, no injection, no lab analysis or self-assimilation disclosure; combat core speed, rested chakra with residual tiredness.",
+    "ampoule": "ONE sealed dark-glass cool-sleeved ampoule marked 'С-17 / Р-06', volume 20 мл, lot 41-К, storage +2..+6°C, active pharmaceutical concentration NOT listed; Shiki holds it now, no chain-of-custody handover yet, possible evidence and life-saving reserve, no analysis performed.",
+    "mei": "Bound awake female support medic Аракава Мэй, GCS15 with possible concussion, jaw healed soft tissues. Says teen receiver six currently getting S17 at 4 mL/hour continuously, increased from 3 mL/hour yesterday evening on doctors order. S17 strength unknown, volume rate does not mean mass active dose. She did NOT take S17 personally, no first-hand effects.",
+    "hirano": "Tall slender masked technician with old neck scar, detained by Nori Kusa guards and bound ~6m from Shiki. Claims 2 mL single IV injection of labeled S17 THREE WEEKS before, in right arm from UNKNOWN masked male medic; claimed transitory return of old impaired left-hand mobility and touch after ~30sec, lasted hours, then tingling/spasm/involuntary motions, ~3 days later baseline hand impairment returned. His ring finger is presently stiff, cause uncertain and injection/truth uncorroborated. He asks Shiki whether damage could be repaired, no reply yet.",
+    "case": "Narrow wheeled steel medical container STILL CLOSED, suspected live male teen~16 'реципиент шесть' with severe motor/respiratory weakness (Mei history), 6-notch wrist cuff, dependent on working stationed compressor ventilator and IV pump with unknown S17. Separate external reserve access used by Shiki, active IV/vent lines intact; exact drug concentration and boy genetics unknown.",
+    "medics": "Kusa med rescue group with portable ventilator and separate infusion gear just arrived at compound around21:21:35, preparing medically safe transition, NO transfer or opening yet. Nori independent security captain requests original S17 ampoule be logged as evidence without removing access for patient's care; doesn't take ampoule from Shiki automatically.",
+    "nori": "Security captain Hayase Nori with right cheek scar overseeing 3 detained alive site opponents (Mei, Hirano and broad swordsman), guarded working plant; technical log missing 4 pages, no recent shutdown. Medical team arrives on her call.",
+    "wagon": "Second SOUTH RIVER SLUICE abandoned wagon found by Kusa patrol with TWO uninspected humming long closed cases after alleged two living people loaded; under guard with reinforcement/medics heading, no new independent confirmation of status or power.",
+    "hospital": "First adult with severe motor and breathing weakness in secured Kusa Central Hospital ICU conscious eye communication, on assisted ventilation and separate unknown continuous IV, Ritsu medical care, Kuroda 6 guards, spare prior separate dose there unused, lab only preliminary peptide organic fraction. ANBU referral pending.",
+    "other": "Original altered hospital transfer order KМУ-19/472 in Kuroda forensic custody; woman courier source not proven Mei. M4/032 biology vessel under Jun at border, unresolved cold and hidden mechanisms.",
+    "gate": "21:21:40 Shiki now holds S17 reserve ampoule, Hirano asks whether his motor function can be repaired, medics preparing portable life support, teen case remains CLOSED; user chooses next Shiki action/speech. No automatic pass of ampoule, use/injection, treatment, decision to pursue wagon.",
+    "world_year": 1283
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -136,7 +138,9 @@
     "Mei reports TWO other allegedly alive patients in similar life-support cases left compound ~20:52 on unmarked southbound wagon, air circuits checked by her, destination unknown. Kusa patrol follows route but has not reported; veracity independent verification needed. Adult hospital patient guarded and stable, no new assault.",
     "1283-09-22 21:20:10: Mei claims IV stabilizer С-17 consists electrolyte-glucose carrier + secret peptide/protein active component; exact molecule/assay unknown. Her patient ~16 'реципиент шесть' eyes responsive, profound motor+respiratory weakness on connected ventilator and drip; chart allegedly says 'соматическая интеграция донорского клеточного материала' and 'поддержание приобретённой функции', no proof genetic assimilation or donor ID. Boy case CLOSED, working, Nori arranging mobile ventilator.",
     "1283-09-22 21:20:10: Kusa south patrol FOUND abandoned unmarked WAGON at old river sluice, two LONG CLOSED CASES still present with machinery noise, no horses/escorts; Mei testified TWO patients were alive before loading, independently UNVERIFIED. Patrol guarding and extra team en route, unknown backup power duration. User Shiki has not yet left research site.",
-    "22 Sep 1283 21:20:52: Shiki directly asked whether S17 causes or relieves paralysis, why it is given employees, and Mei personal symptoms. Mei says baseline before S17 unknown, worsening after cessation doesn't prove benefit vs dependence/induced harm, staff NOT routinely dosed, she herself NEVER took S17. Captured technician Hirano ~6m away claims secret personal injection produced brief restoration of old injured hand mobility and later involuntary movements/cramps, visibly imperfect left ring-finger extension; unverified exposure/causal effects, denies repeat experimental dosing. Potential direct questioning gate."
+    "22 Sep 1283 21:20:52: Shiki directly asked whether S17 causes or relieves paralysis, why it is given employees, and Mei personal symptoms. Mei says baseline before S17 unknown, worsening after cessation doesn't prove benefit vs dependence/induced harm, staff NOT routinely dosed, she herself NEVER took S17. Captured technician Hirano ~6m away claims secret personal injection produced brief restoration of old injured hand mobility and later involuntary movements/cramps, visibly imperfect left ring-finger extension; unverified exposure/causal effects, denies repeat experimental dosing. Potential direct questioning gate.",
+    "1283-09-22 21:21:40: Shiki opened EXTERNAL spare service drawer on closed teen life-support case WITHOUT interrupting pump/ventilation, removed one cold-sealed DARK-GLASS S17 ampoule marked С-17/Р-06, 20mL, lot41-К, +2 to+6C, no active concentration. Still personally holds sealed ampoule. Mei says recipient6 infusion currently 4mL/hr since yesterday, before 3mL/hr; unknown mg/mL. Hirano alleges 2mL once IV THREE WEEKS AGO by unknown male, brief restoration of left hand then tingling/spasms/involuntary movement, baseline partial paresis returned ~3d later; unverified. Hirano asks Shiki if repair possible, no player answer.",
+    "1283-09-22 21:21:40: qualified Kusa med unit arrived Research Building3 with portable ventilator and independent infusion device, preparing equipment but teen case not yet opened or transferred. Other two abandoned closed cases remain guarded at south river sluice, occupancies not checked. Nori requests evidence chain for spare but Shiki has not handed it off."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -209,7 +213,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_WOMAN_NEURO_EXAM_NORI_CAPTURE_1283-09-22_211852.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_MEI_JAW_HEALING_MEDICAL_CONTAINERS_1283-09-22_211915.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_MEI_INFUSION_SOMATIC_INTEGRATION_WAGON_1283-09-22_212010.json",
-    "campaigns/shiki/continuity/ARC01_SESSION02_C17_CAUSE_VS_TREATMENT_HIRANO_CLAIM_1283-09-22_212052.json"
+    "campaigns/shiki/continuity/ARC01_SESSION02_C17_CAUSE_VS_TREATMENT_HIRANO_CLAIM_1283-09-22_212052.json",
+    "campaigns/shiki/continuity/ARC01_SESSION02_C17_SPARE_EXTRACTION_DOSING_HIRANO_1283-09-22_212140.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -217,7 +222,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Private GitHub 1283 narrative text source and recovery checkpoint saved/readback verified. Binary SQLite was last confirmed rev85 in year1278 Jul and remains UNSYNCHRONIZED; official engine prepare/confirm not performed."
+    "warning": "Text continuity and checkpoint saved/readback-verified. Legacy binary SQLite last proven rev85 1278-Jul and not synchronized to 1283; formal engine prepare/confirm not used."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -227,7 +232,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_C17_CAUSE_VS_TREATMENT_HIRANO_CLAIM_1283-09-22_212052.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_C17_SPARE_EXTRACTION_DOSING_HIRANO_1283-09-22_212140.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
