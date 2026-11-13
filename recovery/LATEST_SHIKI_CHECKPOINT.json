@@ -2,24 +2,23 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-08-07T13:20:00",
-  "game_date": "Среда, 7 августа 1278 года",
+  "game_at": "0001-08-09T15:11:00",
+  "game_date": "Пятница, 9 августа 1278 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-08-07-1320",
-  "latest_player_command": "Сохранение",
+  "checkpoint_id": "shiki-s2-1278-08-09-1511",
+  "latest_player_command": "Дальше по игре, можешь форсировать",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Конохагакуре, подземный центральный госпитальный блок",
-    "time": "13:20",
-    "shiki": "With Aki, Ren, Tose. Not injured during evacuation; residual prior symptoms not proven. No current action declared. Has clear view to incoming chest-trauma Konoha jonin. Can help if player chooses, but Konoha medics are already treating.",
-    "aki": "Awake, nonambulatory, left leg immobilized: undisplaced fibular fracture and incomplete tibial fissure from Gaara; swollen, foot perfusion preserved, monitor sensory change and compartment risk. On cot.",
-    "ren": "Fully healed left shoulder from July; no restrictions. Collected team gear, helps guard and care, now at hospital with team.",
-    "tose": "Established Kusa team jonin Asumaga Tose is with team, heard Shiki's report on medical defense, agreed to defer ethical questions until safety; commander orders to remain and not join Leaf invasion combat without orders.",
-    "stricken_konoha_jonin": "New unnamed Leaf jonin just carried in at 13:20 with penetrating thoracic injury and asymmetrical rapid shallow breathing; emergency Leaf medics treating, outcome undetermined.",
-    "security": "Konoha guards central medical block, west stands reportedly retaken, Hokage lodge purple barrier persists, invasion ongoing elsewhere."
+    "location": "Коноха. Центральный госпитальный блок. Палата команды Кусагакуре",
+    "time": "15:11",
+    "shiki": "With commander Tose, teammates Aki and Ren; Leaf examiner Morino Ibiki is questioning trio about irregular second Kusa team; Shiki not yet replied, no action declared. His personally witnessed Kabuto exchanges with unknown Kusa team not divulged.",
+    "aki": "Patient with immobilized left leg and stable perfusion, alert, can talk. No new injury.",
+    "ren": "Healthy, shoulder healed; has argued lack of evidence of second team involvement.",
+    "tose": "Kusa jonin, knows first team, not personally second; guards his genin and awaits answer to Ibiki.",
+    "ibiki": "Leaf interrogator asks if anyone personally noticed unusual behavior in second Kusa team before disappearance; knows registration anomalies but not Shiki-Kabuto secrets."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -44,7 +43,8 @@
     "Kabuto previously seen entering restricted stadium corridors; no confirmed current location.",
     "First two Sound ambushers at medical wing critically injured but confirmed death unknown; Tose awaiting report.",
     "Neji and Dosu's latest medical outcomes unresolved.",
-    "Young Leaf jonin with severe chest injury at 13:20 under active med care; Shiki has not volunteered to help."
+    "Young Leaf jonin with severe chest injury at 13:20 under active med care; Shiki has not volunteered to help.",
+    "Ibiki inquiry into unauthorized second Grass team and if/what Shiki reveals of Kabuto observed signals."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -68,7 +68,8 @@
     "recovery/s2_2026-11-13_scalpel_cuts_net_ren_evacuates_guards_122430_unconfirmed.json",
     "recovery/ACTIVE_SHIKI_SCENE_2026-11-13_1237_KONOHA_RELIEF.json",
     "recovery/s2_2026-11-13_evacuated_to_central_medical_tose_1313_unconfirmed.json",
-    "recovery/s2_2026-11-13_shiki_tose_authorized_dialogue_new_wounded_1320.json"
+    "recovery/s2_2026-11-13_shiki_tose_authorized_dialogue_new_wounded_1320.json",
+    "recovery/s2_2026-11-13_timeline_invasion_end_ibiki_kusa_documents_1509.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -76,12 +77,13 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Not updated to current scenes, do NOT claim engine prepare/confirm, verify or full SQLite save."
+    "warning": "SQLite NOT updated; current narrative is 9 Aug 15:11, database still rev 85 as last checked."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
     "text_checkpoint": "verified_on_readback_after_write",
     "latest_verbatim": "verified_readback",
     "binary_sqlite": "STALE"
-  }
+  },
+  "latest_source_path": "recovery/s2_2026-11-13_timeline_invasion_end_ibiki_kusa_documents_1509.json"
 }
