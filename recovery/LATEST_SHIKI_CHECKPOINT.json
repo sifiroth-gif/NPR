@@ -1,0 +1,87 @@
+{
+  "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
+  "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
+  "timestamp_recorded": "2026-11-13",
+  "game_at": "0001-08-07T13:20:00",
+  "game_date": "Среда, 7 августа 1278 года",
+  "campaign_id": "naruto-shiki",
+  "branch": "game-state/shiki",
+  "session": 2,
+  "checkpoint_id": "shiki-s2-1278-08-07-1320",
+  "latest_player_command": "Сохранение",
+  "last_in_game_player_turn": "#ответь за меня мастер#",
+  "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
+  "scene": {
+    "location": "Конохагакуре, подземный центральный госпитальный блок",
+    "time": "13:20",
+    "shiki": "With Aki, Ren, Tose. Not injured during evacuation; residual prior symptoms not proven. No current action declared. Has clear view to incoming chest-trauma Konoha jonin. Can help if player chooses, but Konoha medics are already treating.",
+    "aki": "Awake, nonambulatory, left leg immobilized: undisplaced fibular fracture and incomplete tibial fissure from Gaara; swollen, foot perfusion preserved, monitor sensory change and compartment risk. On cot.",
+    "ren": "Fully healed left shoulder from July; no restrictions. Collected team gear, helps guard and care, now at hospital with team.",
+    "tose": "Established Kusa team jonin Asumaga Tose is with team, heard Shiki's report on medical defense, agreed to defer ethical questions until safety; commander orders to remain and not join Leaf invasion combat without orders.",
+    "stricken_konoha_jonin": "New unnamed Leaf jonin just carried in at 13:20 with penetrating thoracic injury and asymmetrical rapid shallow breathing; emergency Leaf medics treating, outcome undetermined.",
+    "security": "Konoha guards central medical block, west stands reportedly retaken, Hokage lodge purple barrier persists, invasion ongoing elsewhere."
+  },
+  "major_timeline": [
+    "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
+    "Shiki voluntarily surrendered to Gaara before any attack. Original Gaara July question was «Когда ты убиваешь человека, ты чувствуешь, что существуешь?» Shiki replied «Я существую всегда» and then «Да», without revealing motives.",
+    "Gaara won final against Neji; Neji seriously injured in legs and unconscious when sent for med care; no confirmed long-term prognosis.",
+    "Konoha invasion by Sound and possible Sand; Hokage vs impostor Kazekage identified as Orochimaru within purple barrier at arena.",
+    "Shiki broke mass-sleep genjutsu via Kai, Shunshin and chakra scalpel incapacitated two Sound shinobi trying to seal medical passage; fatal intent stated but deaths not confirmed. Does not pursue retreating infiltrators.",
+    "Ren and medics evacuated real bleeding guard; Shiki cut chakra-thread trap with chakra scalpels. Another hidden accomplice escaped, cylinder dropped near entrance. Leaf jonin Asuma Sarutobi and Kurenai Yuhi took over security; Kakashi and Might Guy fought elsewhere.",
+    "Shiki participated in evacuating initial six injured plus one freshly rescued guard. All reached central block. He was explicitly permitted to speak for himself to Tose in one conversation only; verbatim transcript attached.",
+    "Tose checked Sound attackers' status, no confirmation of their survival/death, refused to report assumed deaths."
+  ],
+  "continuity_priority": [
+    "Player action, explicit correction > approved character cards and established lore > played dialogue and consequences > GM planning and mere rumors.",
+    "Shiki's voluntary actions and thoughts belong exclusively to user except single authorized dialogue turn shown in transcript.",
+    "Ren's old shoulder injury HEALED by August, all later mentions of limitation from July are retconned.",
+    "NPC names should be selected from established roster, no repetitive generic 'Морита' or other identity duplicates. Asumaga Tose of Kusa is NOT Asuma Sarutobi of Konoha.",
+    "Chunin promotion has NOT been decided, tournament champion Gaara alone doesn't imply promotion."
+  ],
+  "open_threads": [
+    "Konoha invasion outcome, fate of Hokage and Orochimaru, role of Sand and Sound.",
+    "Team safety, evacuation policy for non-Konoha shinobi and Aki's medical prognosis.",
+    "Kabuto previously seen entering restricted stadium corridors; no confirmed current location.",
+    "First two Sound ambushers at medical wing critically injured but confirmed death unknown; Tose awaiting report.",
+    "Neji and Dosu's latest medical outcomes unresolved.",
+    "Young Leaf jonin with severe chest injury at 13:20 under active med care; Shiki has not volunteered to help."
+  ],
+  "chronological_sources": [
+    "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
+    "campaigns/shiki/continuity/SESSION_002_TENTEN_NEJI_MISSED_BOUT_2026-11-12.json",
+    "recovery/s2_2026-11-12_gaara_shikamaru_and_dosu_call_unconfirmed.json",
+    "recovery/s2_2026-11-12_shiki_enters_dosu_quarterfinal_unconfirmed.json",
+    "recovery/s2_2026-11-12_shiki_dosu_zero_genome_shunshin_senbon_unconfirmed.json",
+    "recovery/s2_2026-11-12_shiki_wins_dosu_quarterfinal_unconfirmed.json",
+    "recovery/s2_2026-11-12_shiki_reports_dosu_nerve_effects_unconfirmed.json",
+    "recovery/s2_2026-11-12_neji_shino_quarterfinal_shiki_stands_unconfirmed.json",
+    "recovery/s2_2026-11-12_sasuke_temari_result_gaara_semi_call_unconfirmed.json",
+    "campaigns/shiki/continuity/SESSION_002_SHIKI_FORFEIT_GAARA_SEMIFINAL_2026-11-12.json",
+    "campaigns/shiki/continuity/SESSION_002_SHIKI_RETURNS_AFTER_FORFEIT_2026-11-12.json",
+    "recovery/s2_2026-11-12_neji_wins_sasuke_semifinal_kabuto_leaves_unconfirmed.json",
+    "recovery/s2_2026-11-13_gaara_wins_final_west_stadium_security_unconfirmed.json",
+    "recovery/s2_2026-11-13_invasion_begins_medical_corridor_1216_unconfirmed.json",
+    "recovery/s2_2026-11-13_shiki_kai_shunshin_two_sound_medical_door_1216_unconfirmed.json",
+    "recovery/s2_2026-11-13_shiki_infirmary_defensive_posture_unverified_guards_1224.json",
+    "campaigns/shiki/continuity/SESSION_002_REN_SHOULDER_HEALED_AND_SCAN_2026-11-13.json",
+    "recovery/s2_2026-11-13_shiki_opens_door_chakra_thread_net_122423_unconfirmed.json",
+    "recovery/s2_2026-11-13_scalpel_cuts_net_ren_evacuates_guards_122430_unconfirmed.json",
+    "recovery/ACTIVE_SHIKI_SCENE_2026-11-13_1237_KONOHA_RELIEF.json",
+    "recovery/s2_2026-11-13_evacuated_to_central_medical_tose_1313_unconfirmed.json",
+    "recovery/s2_2026-11-13_shiki_tose_authorized_dialogue_new_wounded_1320.json"
+  ],
+  "previous_sqlite": {
+    "state_json": "state.json",
+    "last_verified_revision": 85,
+    "session": 2,
+    "at": "0001-07-28T18:18:00",
+    "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
+    "warning": "Not updated to current scenes, do NOT claim engine prepare/confirm, verify or full SQLite save."
+  },
+  "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
+  "status": {
+    "text_checkpoint": "verified_on_readback_after_write",
+    "latest_verbatim": "verified_readback",
+    "binary_sqlite": "STALE"
+  }
+}
