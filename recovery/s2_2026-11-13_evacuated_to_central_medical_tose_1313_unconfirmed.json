@@ -1,0 +1,57 @@
+{
+  "schema": "NPR-S2-CONTINUITY-RECOVERY/1",
+  "campaign": "naruto-shiki",
+  "branch": "game-state/shiki",
+  "session": 2,
+  "player_input": "#эвакуируюсь со всеми из мед блока#",
+  "authority": "Player declares evacuation along with everyone from hospital wing. No further words, medical procedures, fighting or decisions by Shiki.",
+  "scene_date": "1278-08-07",
+  "scene_end": "13:13",
+  "chronology": [
+    {
+      "time": "12:38",
+      "where": "west arena hospital wing",
+      "event": "Konoha staff organize escorted evacuation through secured lower medical tunnel. Aki nonambulatory, immobilized left lower leg; Ren collects team belongings, both shoulders fully healed. Shiki joins everyone in evacuation. Initial six patients plus newly rescued hemorrhaging Konoha guard evacuate."
+    },
+    {
+      "time": "12:42",
+      "where": "lower service tunnel",
+      "event": "Evacuees navigate narrow, shaking tunnel with escort of Konoha shinobi. Pass other wounded. No attack on convoy; Shiki does not act beyond escorted evacuation."
+    },
+    {
+      "time": "12:49",
+      "where": "central underground medical block",
+      "event": "All seven patients and team arrive, none left behind. Konoha guard with major thigh bleeding taken to surgical care alive but critical; other pelvic injury patient immobilized; Aki given cot in protected area. Aki's foot warm with circulation intact, some reduction in lateral foot sensitivity, increasing edema requires monitoring; fractures remain stable and no weight bearing allowed. Ren surveys exits on own initiative."
+    },
+    {
+      "time": "13:03",
+      "where": "central hospital block",
+      "event": "Konoha wounded shinobi reports western stands retaken and main stairs in Leaf control. Purple barrier around Hokage lodge remains, attackers elsewhere in village. This is report not absolute proof of whole-village state."
+    },
+    {
+      "time": "13:11",
+      "where": "central hospital block",
+      "event": "Team leader Asumaga Tose (established roster id kusa_leader, NOT Asuma Sarutobi) arrives with torn cloak and facial scratch, relieved all three are alive, confirms invasion appears involving Sound and perhaps Sand, says foreigners are not allowed to depart yet and will not move wounded Aki through battle. He learned Shiki surrendered semifinal and held hospital wing, asks Shiki his account of two critically injured attackers near original hospital wing for his own understanding, declines to force Ren to speak first."
+    },
+    {
+      "time": "13:13",
+      "where": "central hospital block",
+      "event": "Aki being watched by medics, Ren fully healthy except no new established injuries, Tose with team waits for Shiki's response; fighting elsewhere ongoing, underground med block under Leaf guard."
+    }
+  ],
+  "open_state": {
+    "shiki": "present in central medical block, evacuated as requested, no new actions or reply to Tose",
+    "ren": "with team, collecting equipment and watching exits; shoulder healed",
+    "aki": "on cot, left leg immobilized stable nondisplaced fibula fracture plus tibia fissure, circulation intact, monitor swelling and sensation",
+    "tose": "team leader present, awaits Shiki account of western hospital defense",
+    "security": "Konoha controls central block and reportedly western arena exits; invasion not over",
+    "kabuto": "last known moving through restricted stadium corridor; status and aims not established",
+    "gaara": "last seen leaving after winning final, did not engage Shiki; current whereabouts unknown",
+    "neji": "was unconscious with leg injury after final, taken to urgent care by Konoha; further prognosis unspecified"
+  },
+  "source_player_corrections": [
+    "Ren's former shoulder injury from July is fully healed by August, no impairment.",
+    "Named Konoha NPC act independently, respect roster and no arbitrary repeat NPC names."
+  ],
+  "persistence": "GitHub UTF-8 recovery checkpoint only. Main SQLite state.json previously verified revision 85 not updated, transcript completeness not guaranteed."
+}
