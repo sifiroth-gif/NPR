@@ -296,5 +296,21 @@
     ],
     "source_private": "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
     "applied": true
-  }
+  },
+  "gm_rule_updates": [
+    {
+      "rule_id": "shiki-p0-molecular-detail-2026-11-13",
+      "recorded_at_real_date": "2026-11-13",
+      "kind": "OOC GM rule, NO game-world time advance",
+      "source": "Direct player correction: «Мастеру: зафиксируй в правилах мне нужны максимально полные описания в том числе и названия веществ или групп веществ названия рецепторов. В общем не общие описания а конкретные»",
+      "canonical_code_branch": "main",
+      "paths": [
+        "campaigns/shiki/MEDICAL_MOLECULAR_DETAIL_PROTOCOL.md",
+        "campaigns/shiki/GM_PROTOCOL.md",
+        "campaigns/shiki/SCENE_PACK.json",
+        "AGENTS.md"
+      ],
+      "contents": "When analyzing medicines/poisons/physiology/Zero Genome, specify actual named molecules/classes, known or candidate receptor names/subtypes, ion channels, transporters, enzymes, mediators, cascades, anatomical basis and explicit cause-effect/time course; deep detail for requested research; mark observed vs inferred vs hypothetical vs unknown. 20yo Shiki had 5 more years of Zero Genome mastery and could already voluntarily alter own physiology at15. Do not invent unsupported exact chemistry or auto-act for Shiki, keep lab uncertainty. No game action/revision or canonical scene time change."
+    }
+  ]
 }
