@@ -1,0 +1,75 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-CLINICAL-DETENTION/1",
+  "game_at": "0006-09-22T17:42:00",
+  "world_year": 1283,
+  "user_exact": "Дзюн всех задержать до выяснения обстоятельств, груз официально задержан по причине несоответствия провозным документам. Тие отойдите #тщательный осмотр пациента без чакры ему# не двигайтесь в вашем положении это опасно",
+  "scene": "Страна Травы, восточная застава Ивовый брод, вторая повозка Северного тростника, открытый 4-й контейнер",
+  "player_declared": {
+    "speech": [
+      "Дзюн, всех задержать до выяснения обстоятельств. Груз официально задержан по причине несоответствия провозным документам.",
+      "Тиё, отойдите.",
+      "Не двигайтесь. В вашем положении это опасно."
+    ],
+    "actions": [
+      "Instructs Jun to temporarily detain all 10 persons in caravan group and hold cargo for declared-manifest discrepancy",
+      "Directs Tiyo away from patient",
+      "Carefully performs close ordinary non-chakra medical examination of conscious restrained young male found in 4th container"
+    ],
+    "prohibition": "No applied medical chakra, no automatic Shiki diagnosis/medication administration/disconnection, no combat and no other Shiki words, feelings, aims or voluntary actions."
+  },
+  "chronology": [
+    {
+      "at": "17:34–17:35",
+      "visible": "Jun obeys detention order with Kusa team. Six escorts, three drivers, one medical/document coordinator Tiyo held on scene for verification, separated under guard; weapons collected and logged, exit blocked, reinforcement requested from south post. Not yet declared convicted or criminally arrested solely on suspicion. Broken-nose escort briefly holds sword hilt, then disarms under pressure; one driver complains about damaged commerce. Another glances toward patient. Jun emphasizes medical personnel must not remove life-support equipment."
+    },
+    {
+      "at": "17:35",
+      "visible": "Shiki says Tiyo should step back. Her reaction to pale silver-haired Jonin with incongruously controlled face: scans for emotional signals, tenses, obeys two-step withdrawal; the guard with broken nose is alarmed and frustrated; Jun keeps pragmatic command, others react individually. This unease is NON-magical, not genjutsu or compelled obedience."
+    },
+    {
+      "at": "17:36",
+      "visible": "Shiki tells patient not to move and starts ABC-ish exam. Patient conscious, attentive and following with eyes, restrained but weak. Oxygen face mask provides supplemental oxygen (not mechanical ventilator), own respiratory effort shallow. Field measurements: HR 118/min, BP 98/62 mmHg, respiratory rate 24 shallow/min, SpO2 93% WHILE receiving supplemental oxygen. Thin, diaphoretic, pale, marked shoulder-girdle muscle wasting. Pupils symmetric/reactive, no major consciousness loss, poor sustained voluntary neck/shoulder strength. Shallow chest excursions with weak intercostal contribution suggest respiratory-muscle compromise, not final diagnosis."
+    },
+    {
+      "at": "17:38",
+      "visible": "Right forearm longitudinal fresh sutured incision ~8cm with mild edema/no obvious pus, estimated days old but not certain. Two fixed firm subcutaneous masses near tendon courses, not normal anatomic elements; could be implant/reconstructive graft, cannot name biological donor without evidence. Left wrist metal bracelet encircles wrist over padding, six recesses four dark filled, similar but not proven identical to Inaba tag. Bracelet cannot be removed by simple slide and Shiki does not remove it."
+    },
+    {
+      "at": "17:40",
+      "visible": "Small dosage pump in case side compartment connected through tubing to left-arm IV catheter, dispensing unlabelled transparent drug/fluid via a small glass reservoir. Reservoir appears limited and slow infusion set; identity unknown. Jun asks whether safe to disconnect patient for transportation. Tiyo loudly interjects 'Нет! Если прекратить введение, мышцы начнут отказывать. Сначала руки, затем дыхание. Я видела это раньше.' Under questioning says she knows dosing instructions but not compound name. Her claim is a source, NOT objectively confirmed. Abrupt discontinuation and continuation of unknown medicine both carry risk."
+    },
+    {
+      "at": "17:42",
+      "visible": "Patient cannot manage intelligible speech despite visible mouth movements/exhalation, appears attentive and responsive with eye tracking. Slight left hand flex, strap friction erythema on wrists not proof of abduction. Breathing increases upon hearing medicine discussion. Jun says border post authorized temporary detention, backup incoming, lacks equipment for hours of patient care, advises Tiyo remain guarded nearby because she may understand infusion. Patient needs urgent medically organized respiratory monitoring / safe transport, no actual intervention yet."
+    }
+  ],
+  "patient_state": {
+    "age_appearance": "~25, identity unknown",
+    "consciousness": "Awake and visually engaged, no speech, pupils equal/reactive",
+    "vitals": "Pulse 118/min, BP 98/62mmHg, respiratory rate 24 shallow/min, SpO2 93% on supplemental mask oxygen",
+    "clinical": "Respiratory muscle compromise suspected, severe shoulder-neck weakness/wasting, right forearm surgical lesion, two fixed firm subcutaneous structures, left wrist six-cell bracelet; exact diagnosis/etiology unknown",
+    "equipment": "Soft oxygen mask (spontaneous breathing), left-arm IV catheter attached to pumping unlabelled clear solution from finite reservoir in container",
+    "risk": "Potential respiratory failure with limited field equipment, monitor urgently; unknown medication importance neither proven nor dismissible; moving without respiratory support risk",
+    "permission": "Player instructed patient to remain still and did non-chakra exam. Patient not forcibly moved, infused, de-restrained or treated with medical chakra."
+  },
+  "participants": {
+    "shiki": "20yo Kusa full Jonin medical ninja, close bedside of opened case, no chakra use.",
+    "jun": "Kusa local Chunin near wagon; coordinated detainees and weapons, has guard and reinforcements arriving, respects Shiki medical skills; wants decision on care/disposition.",
+    "tiyo": "Medical transport coordinator under guard 2 steps away. Afraid and particularly alarmed by drug shutdown; says unlabelled solution sustains muscles/breathing, claims to know delivery regimen but not identity.",
+    "escorts": "6 disarmed and temporarily held; some tense, one guard with broken nose previously almost reached sword. No actual violence.",
+    "drivers": "3 temporarily held under observation, one vocal protest.",
+    "kusa_officers": "4 originally near court plus arriving south support not yet on site; local command aids legal temporary detention."
+  },
+  "evidentiary_limits": [
+    "Living undeclared patient in medical reagent container substantiates serious customs breach, not proven kidnapping.",
+    "Tiyo's emergency statement about unnamed drug is her own claim, not validated pharmacology; no automatic guaranteed clinical mechanism.",
+    "The right forearm subcutaneous structures are not proved donor implants, grafts or chakra machinery.",
+    "Wrist six-cell marking parallels Inaba tag but no definitive shared identity or serial registration proven.",
+    "Konoha approval paper remains unverified; no proof Konoha authority sanctioned hidden patient.",
+    "Shiki's psychological effect is an ordinary unsettling incongruity in expression and body language; NPC reactions diverse.",
+    "The clinical exam is conventional, uses no Shiki chakra or automatic intervention.",
+    "Shiki's POV only; no offscreen scenes."
+  ],
+  "next_gate": "1283-09-22 17:42. Shiki beside awake medically unstable unidentified male in 4th case, oxygen running, unknown IV infusion continuing, Tiyo nearby under guard, Jun asks for safe medical direction. Cargo and all 10 entourage held locally pending verification, no combat. Player to decide urgent medical support, interrogation, testing, summons or other.",
+  "sqlite_warning": "GitHub text canon only, binary engine remains last known rev85 from Jul1278, not independently verified as current."
+}
