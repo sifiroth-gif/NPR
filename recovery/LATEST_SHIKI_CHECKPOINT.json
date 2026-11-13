@@ -2,27 +2,25 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-22T21:36:22",
+  "game_at": "0006-09-22T22:12:00",
   "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-22-213622-nori-independent-and-plain-receptor-terms",
-  "latest_player_command": "Мне нужно отойти, справитесь без меня?",
+  "checkpoint_id": "shiki-1283-09-22-221200-secret-laboratory-arrival",
+  "latest_player_command": "#максисально скрытно отправляюсь в свою тайную лабораторию#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "time": "21:36:22",
+    "time": "22:12:00",
     "world_year": 1283,
-    "location": "Кусагакуре, исследовательский корпус №3, внутренний двор, у бригады эвакуации",
-    "shiki": "Elite Kusa jonin in courtyard, finished full self Zero Genome clearance of S17 at21:33:42, no retained drug effects, only chakra expenditure from medical technique, original covert Haku Hyoton/Hozuki partial hydration intact. Correct single self-test used 0.5mL labelled S17 + 10mL injectable diluent (NOT 5mL). Asked Nori 'Мне нужно отойти, справитесь без меня?' and is still physically at Research Building3. Has NOT chosen where to go, traveled away, treated other patients, or given other orders. Combat core speed, high medical/ninjutsu expertise.",
-    "nori": "Hayase Nori female security captain scar RIGHT cheek confidently says Kusa team can manage 3 captured suspects, recipient6 transfer, two south-sluice patients, sealing building and searching project director; will contact Shiki if his particular scientific expertise becomes necessary. Frees courtyard passage, still autonomously in command.",
-    "teen": "Male 16-ish recipient6 alive on portable assisted ventilation and continuous original infusion after medical extraction from opened case, eye-responsive, profound paralysis, under Kusa qualified medics preparing guarded transport to Central Kusa Hospital; not yet shown departure.",
-    "sluice": "Independent southern med teams maintain alive adult male and critically ill young female on portable ventilation/IV after abandoned wagon capture; young woman's recent decline arrested but fragile, no new report or deaths.",
-    "hospital": "Other older male patient in Kusa Central Hospital ICU alive, conscious via eyes, motor/respiratory weak on assisted ventilation and unknown IV, Ritsu/Kuroda security; chemistry test pending, no results or staff identity confessions.",
-    "detainees": "All 3 Research Building3 adversaries captured alive: Mei bound with probable concussion and jaw-treated, tech Hirano with left finger impairment and claimed previous 2mL IV S17, broad swordsman detained. Nori organizes separate interviews/secure evidence collection.",
-    "evidence": "Original suspect transfer directive КМУ-19/472 forensic Kuroda custody. Shiki's unconfirmed 2-class peptide hypothesis preserved verbatim and courier DISPATCHED to hospital lab, no confirmation of actual result. Project note in Nori hand says 'Реципиент 06 — постинтеграционная поддержка. Статус адаптации: нестабильная. Продолжение С-17: обязательное до решения руководителя проекта'. Another S17 vial from research case opened for Shiki self-test, leftovers ~19.5mL protected by medics for lab, not guaranteed sterile. Jun still guarding cold specimen M4/032 at Ivovy Brod.",
-    "gate": "21:36:22. Nori explicitly confirms her forces can manage independently, Shiki remains free in courtyard to choose to depart and where, stay, or ask more; no auto move. OOC terminology rule updated in main code with no in-world consequence."
+    "location": "Private SECRET laboratory in old limestone water-catchment gallery, northwest wooded hills outside Kusagakure",
+    "shiki": "Elite 20yo Kusa jonin, now in established secret remote laboratory after maximal-stelth transit. No pursuers or entry anomalies observed; did not reveal location to anyone. Prior single S17 self-test 0.5mL labelled stock + 10mL injection diluent was fully eliminated through voluntary Zero Genome at21:33:42; no residual drug effects, only finite chakra spent. Primary fighting style physical speed; used stealth rather than explosive Shunshin. No lab research, rest, equipment work, correspondence or sample collection initiated.",
+    "laboratory": "Existing separate clandestine lab from five-year research history, first geographically situated this scene in disused NW limestone wooded-hill catchment gallery behind concealed roots/stone, old engineering masonry, private signs/seals unchanged. Microscope, centrifuge, medical tools, glassware, records, basic cooled biological specimens. Haku tissue lineage research and Hozuki partial hydration project records privately kept apart. No extra NPC permitted inside, no exposure. Equipment allows routine medical microanalysis, NOT automatically full unknown peptide structural ID.",
+    "nori": "Captain Hayase Nori managing three detained Research Building3 opponents (Mei, Hirano, broad swordsman), source scene independently allowing Shiki departure. No one from her security detail sent after him; continues patient transfer, evidence sealing, director hunt. Shiki not told of further updates while alone.",
+    "patients": "Teen 'recipient six' alive, profound weakness on mobile ventilation and uninterrupted infusion ready to transfer from ResearchBuilding3 to hospital as last verified ~21:36; two additional patients adult man and seriously ill young woman under mobile breathing support at south river sluice, female deterioration halted per last report; older adult still in secured Kusa Central Hospital ICU. No fresh status invented.",
+    "evidence": "Shiki hypothesis of S17 two-class neuroactive peptide mix dispatched to hospital chemical lab with no results/receipt known to Shiki, original S17 opened reserve ~19.5mL still with Kusa medic as cold evidence, not in Shiki lab. Forged-looking transfer order held by Kuroda. M4/032 biological cold specimen Jun secures at border.",
+    "next_gate": "22:12 inside secret laboratory, alone. User controls any research, study, experiments, rest, contacts or departure. Do not autonomously use samples or perform Shiki actions. Outside NPCs act independently, news requires actual messages."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -150,7 +148,8 @@
     "CRITICAL RETROACTIVE DIRECT PLAYER CORRECTION (1283-09-22 21:26:40): Shiki's ONLY intravenous self-trial at21:21:40 was 0.5mL labelled S17 in TEN (10) mL injectable diluent, giving ~10.5mL mixed solution, NOT FIVE (5) mL diluent as earlier erroneous narrative. Earlier messages describing 5mL are superseded by later player correction. Higher drug concentrations NOT tested. Total S17 source amount unchanged 0.5mL. See latest canonical source for exact wording.",
     "1283-09-22 21:33:42 after 7min uninterrupted expert Zero Genome self-regulation, Shiki attained COMPLETE functional and active biochemical clearance of S17 from HIS OWN body, no bound or free active fractions, no residual neuromuscular/cardiac/respiratory/water/ionic effects; secret Haku Hyoton and partial Hozuki abilities unchanged; only ordinary chakra technique exertion remains. Not an antidote for others, exact peptide formula still unknown. Nori and medics left personal vicinity at Shiki request but guarded perimeter.",
     "1283-09-22 21:36:10 Research Building3: Medics safely connected teen recipient6 to portable ventilator and continuous original IV BEFORE opening case; confirmed alive, eye-responsive, very weak and old bilateral forearm and chest scars, ready for secured evacuation. Two live subjects at southern sluice (adult male, young female) medically connected independently; female deterioration halted but still critical, no deaths. Nori found partial project paper stating 'Реципиент 06 — постинтеграционная поддержка. Статус адаптации: нестабильная. Продолжение С-17: обязательное до решения руководителя проекта', lab evidence not mechanism proof. Shiki heard report, no extra action.",
-    "1283-09-22 21:36:22: Shiki asked Nori 'Мне нужно отойти, справитесь без меня?' Nori accepted independent supervision of all 3 prisoners, medical transfer recipient6, two supported patients at sluice, building evidence and director search; offers Shiki contact if necessary. Shiki HAS NOT LEFT courtyard or assigned destination. New P0 rule: explain receptor, subunit, channel and enzyme in common Russian names or function before Latin/letter codes; user learns physiology in play, with full expert specificity maintained."
+    "1283-09-22 21:36:22: Shiki asked Nori 'Мне нужно отойти, справитесь без меня?' Nori accepted independent supervision of all 3 prisoners, medical transfer recipient6, two supported patients at sluice, building evidence and director search; offers Shiki contact if necessary. Shiki HAS NOT LEFT courtyard or assigned destination. New P0 rule: explain receptor, subunit, channel and enzyme in common Russian names or function before Latin/letter codes; user learns physiology in play, with full expert specificity maintained.",
+    "1283-09-22 22:12 Shiki made a MAX-STEALTH departure from ResearchBuilding3, traveled through drainage paths/woods, arrived alone in long-established secret lab NW wooded-hill disused limestone catchment gallery. No observed pursuer or trespass. Lab has clinical tools, microscope, centrifuge, cool stores and 5-year Zero Genome records; Haku/Hozuki origins secret. NO S17 sample brought and no lab work yet. Nori independently runs guarded patient transfers and detainee investigation, no new report to Shiki. Location card in campaigns/shiki/locations/SECRET_LAB_NW_CATCHMENT_1283.json."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -230,7 +229,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ZERO_GENOME_C17_TARGETS_CLEARANCE_1283-09-22_212551.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_C17_BIOCHEMICAL_HYPOTHESIS_DISPATCH_1283-09-22_212640.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_FULL_C17_CLEARANCE_AND_PATIENTS_TRANSFER_1283-09-22_213610.json",
-    "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ASKS_TO_LEAVE_AND_P0_RECEPTOR_CLARITY_1283-09-22_213622.json"
+    "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ASKS_TO_LEAVE_AND_P0_RECEPTOR_CLARITY_1283-09-22_213622.json",
+    "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_STEALTH_RETURN_SECRET_LAB_1283-09-22_221200.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -238,7 +238,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "GitHub 1283 narrative source + checkpoint confirmed by readback; historical engine SQLite last verified rev85 in 1278-Jul, not synchronized to current played events. No official prepare/confirm or engine verify executed for scene."
+    "warning": "Private GitHub current scene, location card and recovery checkpoint readback verified; underlying SQLite remains stale rev85 year1278, no 1283 engine prepare/confirm."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -248,7 +248,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ASKS_TO_LEAVE_AND_P0_RECEPTOR_CLARITY_1283-09-22_213622.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_STEALTH_RETURN_SECRET_LAB_1283-09-22_221200.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
@@ -325,5 +325,6 @@
       ],
       "contents": "All scientific/medical/biochemical explanations should identify exact substance, receptor/channel/enzyme and subunits to the extent established, BUT introduce each new technical entity using common Russian name or immediate plain function/location explanation, not unglossed nomenclature. Teach player physiology in context: what receptor binds, what each functional part/subunit contributes, causal effect on tissue and symptoms. Then append international abbreviation if useful. Keep unknown biochemical target as hypothesis, not fabricated fact. Do not diminish Shiki knowledge. Applies campaign only; OOC does not advance game time."
     }
-  ]
+  ],
+  "location_card_reference": "campaigns/shiki/locations/SECRET_LAB_NW_CATCHMENT_1283.json"
 }
