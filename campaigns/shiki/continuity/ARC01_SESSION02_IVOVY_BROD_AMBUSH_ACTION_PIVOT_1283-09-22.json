@@ -1,0 +1,77 @@
+{
+  "schema": "NPR-ARC1-S2-ACTION-PIVOT-AMBUSH/1",
+  "world_at": "0006-09-22T17:57:05",
+  "subsecond_ms": 500,
+  "world_year": 1283,
+  "location": "Страна Травы, восточная застава Ивовый брод, таможенная площадка, у второй повозки",
+  "player_ooc_exact": "Мастеру: внеси поправки в инструкции, я хочу больше экшена, не готов играть в детектив, расследование Окей, но должен быть экшен и продолжи сцену",
+  "meta_applied": "Gameplay pacing corrected: action-first dark Naruto combat, fewer procedural investigative scenes, paperwork handled by autonomous NPCs. Active scene advances from medical evac waiting to an external hostile raid with concrete reaction window. No implied Shiki player response or thoughts.",
+  "instruction_updates_verified": [
+    "main:AGENTS.md",
+    "main:campaigns/shiki/GM_PROTOCOL.md",
+    "main:campaigns/shiki/SCENE_PACK.json",
+    "game-state/shiki:campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json"
+  ],
+  "timeline": [
+    {
+      "game_time": "17:54–17:57",
+      "player_known": "Weather worsens: rain, thick fog. 9 caravan detentions remain at Kusa customs yard, Tiyo under guard near closed, oxygen-vented thermal medical case. Patient conscious and weak, unknown IV infusion and oxygen ongoing. Jun receives medical team departure acknowledgment, but responders have not arrived."
+    },
+    {
+      "game_time": "17:57:03",
+      "player_known": "An object whistles out from waterside willows, hits signal awning support, triggers explosive tag/shock, splinter injury to Kusa guard's LEFT LOWER LEG. Guard alive/conscious, blood into mud. Horse of second wagon panics/rears. Jun instantly orders cover; he moves to counter threat without waiting for Shiki."
+    },
+    {
+      "game_time": "17:57:04",
+      "player_known": "HOSTILE_1 male humanoid shinobi, lower face masked, no headband, dark light armor/coat, approximately 29m from Shiki amid willow roots on river-facing edge. Wide stable stance, hand seals, raises coherent moving SURFACE-WATER wave from nearby river, aiming at wheels of wagon2. Jun throws shuriken; opponent ducks behind willow trunk, shuriken hits wood. Water wave will reach wagon wheels in approximately 1–2 seconds. Exact technique, faction and identity NOT known."
+    },
+    {
+      "game_time": "17:57:05",
+      "player_known": "HOSTILE_2 shinobi woman, dark fighting clothing, hair tightly tied, previously hidden behind barrels approximately 14m to Shiki's LEFT, launches THREE wired barbed kunai toward TRANSPORT CONTAINER mounting and bed frame; third line close to EXTERNAL oxygen delivery access panel. Remaining interception window fractions of a second. Her glance notes Shiki's unusual facial calm, prepares pivot/escape step by rotating left foot; she does not magically freeze and does not know Shiki secrets. No injury to patient or puncture of oxygen line YET."
+    },
+    {
+      "game_time": "17:57:05.5",
+      "player_known": "Minase Tiyo screams 'НЕТ! ТАМ ПОДАЧА КИСЛОРОДА!' under guard. Detained broken-nose escort uses disruption to try to reach confiscated weapons, tackles Kusa guard; another guard engages and both fall in mud. Jun gives order 'ДЕРЖИТЕ ЗАДЕРЖАННЫХ! НЕ ДАЙТЕ ИМ ВЫЙТИ К ВОРОТАМ!' Bedside medical monitor emits audible signal but NOT alarm yet. No medics arrived."
+    }
+  ],
+  "verbatim_npc_quotes": [
+    [
+      "Дзюн",
+      "Медицинская группа выдвинулась. Мы подготовим площадку для передачи пациента."
+    ],
+    [
+      "Дзюн",
+      "НАПАДЕНИЕ! К УКРЫТИЯМ!"
+    ],
+    [
+      "Дзюн",
+      "СУЙТОН! ОТ ПОВОЗОК!"
+    ],
+    [
+      "Минасэ Тиё",
+      "НЕТ! ТАМ ПОДАЧА КИСЛОРОДА!"
+    ],
+    [
+      "Дзюн",
+      "ДЕРЖИТЕ ЗАДЕРЖАННЫХ! НЕ ДАЙТЕ ИМ ВЫЙТИ К ВОРОТАМ!"
+    ]
+  ],
+  "immediate_combat_frame": {
+    "game_time": "17:57:05.5",
+    "player_actor": "Мугами Шики",
+    "actor_position": "On Kusa customs court ~2m from patient thermal case near wagon2, free to act",
+    "actor_rank": "20yo Kusa full jonin, exceptional speed/medical/sensing in current 1283 sheet; no chakra attack/defense yet activated; player controls all action",
+    "enemy_1": "Masked shinobi at willow roots 29m from Shiki near river, hand-sealing Suiton surface-water wave, willow trunk cover; 1–2 seconds before wave impacts wagon wheels; Jun shuriken missed/hit tree",
+    "enemy_2": "Female shinobi behind barrels 14m from Shiki LEFT, three wired barbed kunai already airborne aimed case mounting/frame and near oxygen coupler, contact in fractions of a second if unimpeded. She braces left foot to evade next attack, anticipates counter; no unknown special technique revealed.",
+    "jun": "Kusa Chunin about 5m to Shiki RIGHT; already engages Enemy1 independently, leading guard positioning",
+    "tiyo": "7m from Shiki, under guard; visible sharp alarm for breathing line; no weapon",
+    "detainees": "9 held at ~18m near customs shed; broken-nose male tried to break loose, tackled and physically struggling with Kusa guards; no weapons secured by him yet",
+    "patient": "Conscious unable to speak, weak respiratory musculature, inside closed ventilated thermal case, O2 mask and IV running, monitor sounds but no emergency alarm. Case and oxygen line UNHIT as of last narrated instant.",
+    "wounded": "One Kusa guard with splinter injury of lower LEFT leg from explosive; conscious and bleeding, no death, no Shiki care yet",
+    "weather": "Heavy rain, fog, mud, river and canal, horses startled",
+    "tactical_gate": "Stop BEFORE impact of three kunai or water wave to allow Shiki meaningful immediate choice. Narrower window for kunai than water wave. No forced Shiki defenses, attacks or thoughts.",
+    "no_spoiler": "Attackers' employer, motive, exact strength, potential third party, Naruto village/faction affiliations remain private and unproven to Shiki. External ambush is already objectively observed; don't retcon as paperwork drama."
+  },
+  "exact_user_ownership": "No dialogue, attack, movement, analysis, emotion, protective technique or voluntary combat response assigned to Shiki. Attackers and other NPCs act autonomously, with limited POV.",
+  "procedural": "No RNG rolled. Narrative source is a GitHub text continuity event, not an engine prepare/confirm/verify; SQLite binary still known stale rev85 1278 Jul28."
+}
