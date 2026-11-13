@@ -1,0 +1,60 @@
+{
+  "schema": "NPR-ARC1-S1-NPC-TESTIMONY/1",
+  "campaign": "naruto-shiki",
+  "world_at": "0006-09-19T07:52:00",
+  "player_input": "Как вышло что умерший человек сейчас находится живым тут и рассказывает про подсадку чужеродной ткани?",
+  "interpretation": "In-game Shiki asks Inaba directly how a person officially recorded dead can be here speaking about foreign tissue. Do not infer his motives/feelings.",
+  "event": {
+    "location": "Кусагакуре, центральный лазарет, изолированная диагностическая палата",
+    "player_said": "Как вышло, что умерший человек сейчас находится живым тут и рассказывает про подсадку чужеродной ткани?",
+    "npc_testimony_source": "Inaba Shigeru, first-person claimed recollections and hearsay, patient alive and medically coherent; full identity and parts of account unverified",
+    "inaba_reports": [
+      "In 1280 accompanied medicine convoy, attacked on pass, penetrating injury in left flank/chest and right arm trapped/crushed under wagon. One escort said he was unlikely to survive, then Inaba lost consciousness.",
+      "Awoke in windowless treatment room and was told nine days had passed, but cannot independently verify elapsed period. Chest sutured, own right hand still attached but neurologically damaged, fingers darkened during subsequent weeks.",
+      "Unknown male surgeon apparently ~40 tall, speech accent from Country of Water, wore left glove even while dining; proposed replacing unsalvageable right hand with another, did not provide donor identity and answered 'Теперь твоя'.",
+      "Patient says he gave or was made to give paperwork consent when extremely weak and could scarcely hold spoon; during months after supposed transplant learned how to control/feel new right hand.",
+      "Unknown delivered medicine packet every seven days, helped contain spasms/pain; deliveries stopped six weeks before Sep19 1283. Finger ischemia, pain, motor weakness have worsened since.",
+      "Operators warned him 'Не обращайся в официальные больницы. По документам тебя больше нет', leading him to avoid official treatment for three years; patient now wants help and fears losing the hand."
+    ],
+    "seina_behavior": "Seina notes that death certificate allegedly said he died at place of treatment, with no surgery, and that Inaba's story if true would imply erroneous death declaration, falsified identity or deliberate false death papers. Remains careful not to endorse story as proof. She insists clinically test pathology and consent; does not assume full-hand transplant is verified.",
+    "visible_physiology": "Inaba holds right hand with left, transient blanching followed by cyanotic shade of ring finger, trembling, unequal finger motion. Earlier standard exam captured reduced capillary perfusion, patchy sensation/proprioception and wrist circumferential scar.",
+    "dialogue_relevant": [
+      [
+        "Шики",
+        "Как вышло, что умерший человек сейчас находится живым тут и рассказывает про подсадку чужеродной ткани?"
+      ],
+      [
+        "Инаба",
+        "Потому что я не умер. А вот почему кто-то решил, что я должен числиться мёртвым… это вы у них спросите."
+      ],
+      [
+        "Инаба",
+        "На бумаге, наверное, подписывал. Я тогда едва мог держать ложку."
+      ],
+      [
+        "Инаба",
+        "Он сказал: «Теперь твоя»."
+      ],
+      [
+        "Инаба",
+        "Шесть недель назад перестали приходить."
+      ],
+      [
+        "Инаба",
+        "«Не обращайся в официальные больницы. По документам тебя больше нет»."
+      ],
+      [
+        "Сэйна",
+        "Я говорю, что мы будем проверять. И лечить установленную патологию, независимо от того, кто оформил ваши документы."
+      ]
+    ],
+    "certainty_rules": [
+      "Firsthand wounds, present clinical symptoms and documents physically read by Shiki distinguishable from Inaba's hearsay and unreliably dated recollections.",
+      "Neither medical consent validity, actual donor, country of surgeon, death certificate fraud, whole hand transplant, nor genetic/old-archive connection has been objectively confirmed.",
+      "Do not introduce Kabuto, Orochimaru, Kiri archiving, or private Shiki gene assimilation as established from patient's report."
+    ],
+    "stop": "07:52. Inaba awaits Shiki next exam/medical decision; no chakra, treatment, transfer or additional player speech declared."
+  },
+  "pov": "Only the scene in Shiki's personal presence narrated. Elsewhere NPC plans and thoughts GM-only.",
+  "database": "Private GitHub text continuity, existing SQLite rev85 not brought current."
+}
