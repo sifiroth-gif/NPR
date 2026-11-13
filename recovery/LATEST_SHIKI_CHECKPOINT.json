@@ -2,27 +2,26 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-22T18:11:17",
+  "game_at": "0006-09-22T18:11:21",
   "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-22-181117-m4-032-thermal-seal",
-  "latest_player_command": "Да, но сейчас в приоритете пациент. Его в госпиталь введение не прекращать. Есть еще одна порция лекарства. Если без него ухудшение, используйте, но отправьте порцию на анализ. По куноичи, я перерезал ей нервы, жизни ничего не угрожает, терапия возможна. Эту дверцу вскрываем.",
+  "checkpoint_id": "shiki-1283-09-22-181121-m4-032-circuit-broken",
+  "latest_player_command": "#попытка обезвредить печать направленным чакра воздействием#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре/Страна Травы, восточная застава Ивовый брод, третья повозка, под фальшивым настилом",
-    "time": "18:11:17",
+    "location": "Кусагакуре, восточная застава Ивовый брод, третья повозка, вскрытый скрытый отсек",
+    "time": "18:11:21",
     "world_year": 1283,
-    "shiki": "20yo Kusa full jonin, ~3m from opened concealed hatch wagon3. Explicitly prioritized urgent hospital transport patient WITHOUT stopping IV, spare reserve conditional on deterioration, a tiny aliquot ordered for laboratory analysis; told medics captured kunoichi's motor nerves cut, she is alive and therapy may be possible; explicitly ordered M4/032 hatch opened. Shiki has NOT performed rescue or defuse yet, no medical treatment or additional thought/words.",
-    "patient": "Original conscious anonym adult with severe neuromuscular respiration weakness left checkpoint ~18:08–18:11 on guarded Kusa evacuation with Kusa medical team lead Kazama Ritsu; at last on supplemental oxygen SpO2 94%, unknown ongoing IV drug still running. Single spare sealed dose located in insulated frame, tiny aseptic aliquot sealed for lab, remaining reserved for worsening. Tiyo accompanies under guards as Shiki ordered; no hospital arrival yet.",
-    "kunoichi": "Enemy woman alive, motor paralysis of limbs caused by Shiki chakra scalpel, sensation she reports intact; guarded local medical observation and second medevac requested. Ritsu refused to guarantee complete recovery, life stable currently.",
-    "jun": "Nagase Jun, Kusa Chunin and border lead, about 5m from wagon3 hatch, right chest pain/rib impact; supervising opening and ordered everyone away when seal activated.",
-    "guards": "Two local Kusa guards at wagon3 hatch: #1 sleeve snagged on metal bolt near raised door, #2 reaches to pull him free, both 0–0.5m from trap. Earlier guard left shin splinter injury remains from raid.",
-    "hatch": "Wagon3 concealed iron hatch labeled М-4 / 032 was successfully opened on Shiki's explicit order, revealing cold sealed compartment containing ~80cm metal cylinder (contents UNKNOWN) and two med-nickel cards labeled 'М-4 / 032 / РЕЦИПИЕНТ' and 'М-4 / 032 / КОНТРОЛЬНЫЙ ОБРАЗЕЦ', third slot empty. When opened, internal red fuuinjutsu markings under black lacquer on lid begin traveling to a thermal self-destruction seal underneath cylinder. Visible chakra circuit about to close in ~1 second, could heat/blow out enclosed compartment. No detonation yet.",
-    "other": "Captured masked male under Kusa guard alive with left shoulder hurt, right hand motor dysfunction; 9 merchant travelers detained, Tiyo gone with primary patient. Rain, puddles, cargo and weapons secured. Factions behind assault unknown.",
-    "next_gate": "IMMEDIATE 18:11:17. ~1sec until thermal self-destruction seal active in wagon3 open hatch, two Kusa guards endangered, possible evidence/cylinder destruction. Shiki ~3m, player chooses rescue/defuse/interference/withdrawal/other, no auto action. Current campaign priority action-first tactical Naruto, NPC independent, psychological body language details."
+    "shiki": "Age20 elite Kusa Jonin ~3m from hatch, just used precision remote directed chakra interference on exposed fuel-line of active red fuuinjutsu (user requested attempt). Broke primary power feed within 1 sec, prevented explosion, left evidence intact. Significant chakra expenditure after previous action battles. Shiki has not opened cylinder, removed it, offered further orders or medically treated burned guard. No assigned inner state.",
+    "jun": "Nagase Jun local Kusa Chunin with right rib pain commands perimeter, experienced chakra circuit disarm and slightly unsettled by Shiki's still face; asks whether to seize cylinder now or call specialized seal examiner. Does not force choice.",
+    "border_guards": "Guard1 trapped sleeve at hatch got LEFT FOREARM superficial partial thickness burn from brief steam/thermal arc, alive and can move; guard2 autonomously cut sleeve with kunai and pulled companion out; guard2 unhurt.",
+    "hatch": "Third wagon opened hidden cold compartment marked M-4 / 032. Primary red thermal destruction seal circuit shorted/broken from Shiki fine chakra interference; blackened script, heat steam puff instead of full overpressure explosion. Container cylinder ~80cm intact, with label MEDICAL CONTAINER М-4/032 / BIOLOGICAL MATERIAL / SERIES17 / CRYOGENIC. Through fogged viewing glass: small sealed ampoules and UNKNOWN tissue sample in holder; donor/recipient labels engraved on its end 'ДОНОР: 032-D' and 'РЕЦИПИЕНТ: 032-R'. Identities or tissue type NOT confirmed. Cooling system unstable, other protection untested. Do not automatically touch/open/remove.",
+    "patient": "Earlier unnamed live patient from wagon2 left under Kusa med team lead Kazama Ritsu with guarded Minase Tiyo, oxygen feeding through reserve line, SpO2 ~94 at last sight and unknown slow IV ongoing; backup dose kept with them, small aliquot taken for urgent lab analysis. No hospital arrival confirmed.",
+    "other": "Two attackers captured and under Kusa guard alive (kunoichi quadrilimb motor deficit, masked male left shoulder/right-hand deficit), 9 trade group people held. One earlier guard left shin injury, Jun right rib injury. Rain, fog, cargo secured. Unknown antagonists and foreign ties.",
+    "next_gate": "18:11:21. User chooses cylinder handling, call seal specialists or other. Primary self-destruct disabled but unstable cooling and unverified further protections risk to evidence."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -98,7 +97,9 @@
     "Wagon3 hidden iron hatch beneath double floor marked EXACT М-4/032, discovered but not opened. Medic asks Shiki whether to open; Inaba had plate М-4/031, potential series link unproven.",
     "22 Sep 1283 at 18:11:17 wagon3 M-4/032 hatch OPENED, two cards Recipient/Control Sample and unknown closed 80cm cylinder inside, AFTER opening red fuinjutsu thermal destruction seal starts, ~1sec until closing, two guards <0.5m in immediate danger. Shiki ~3m, no intervention yet.",
     "Primary patient departed border on guarded med evacuation with Tiyo, oxygen SpO2 94% last, unknown IV continues, spare dose majority retained with tiny sample sealed for analysis; has NOT arrived hospital yet.",
-    "Captured enemy kunoichi motor paralysis persists; current medics cannot promise restoration, second evac needed. River attacker captured alive and held."
+    "Captured enemy kunoichi motor paralysis persists; current medics cannot promise restoration, second evac needed. River attacker captured alive and held.",
+    "22 Sep 1283 18:11:21: Shiki successfully broke primary feed of thermal self-destruction M-4/032 seal by directed chakra at 3m, prevented big blast, one guard burned left forearm, both saved. Cylinder remains intact not opened, cooling unstable, secondary seals unknown. Marked donor 032-D recipient 032-R, biological sample / Series17.",
+    "Shiki spent precision chakra disruption after 1283 combat; ample chakra but drained from Water Dragon + 2 Shunshin+Raiton/scalpel."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -152,7 +153,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_SHIKI_KUNAI_WATER_DRAGON_1283-09-22.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_SHUNSHIN_RAITO_TANTO_NERVE_DISABLE_1283-09-22.json",
     "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_CHASE_CAPTURE_AND_HIDDEN_COMPARTMENT_1283-09-22.json",
-    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_M4_032_THERMAL_TRAP_1283-09-22.json"
+    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_M4_032_THERMAL_TRAP_1283-09-22.json",
+    "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_CHakra_seal_interference_1283-09-22.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -160,7 +162,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Text source+checkpoint on private GitHub readback verified. Engine binary SQLite still old rev85 July1278 and NOT synchronized; recent 1283 turn no prepare/confirm/verify."
+    "warning": "GitHub text event and checkpoint current/verified, binary SQLite remains last confirmed rev85 July1278, no prepare/confirm/verify latest turn."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -170,7 +172,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_M4_032_THERMAL_TRAP_1283-09-22.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_IVOVY_BROD_CHakra_seal_interference_1283-09-22.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
