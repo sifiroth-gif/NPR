@@ -1,0 +1,252 @@
+{
+  "schema": "NPR-SHIKI-ARC-PLAN/2",
+  "access": "GM_ONLY on private campaign branch; no premature spoilers in play",
+  "title": "Чужая ткань",
+  "status": "PREPARED_NOT_STARTED",
+  "session_target": 20,
+  "session_range": "16-24 if organically needed",
+  "source": "User requested self-designed 20-session main arc after ~5-year leap but stopped the leap explicitly before execution",
+  "skip_gate": "Do not advance 1278-09-19T17:54 to 1283 until player explicitly authorizes. Shiki currently age 15, Chunin, not 20.",
+  "premise": "Years after Konoha invasion, border medicine and public safety clash over covert graft research. A network saved some people while exploiting others. Old tissue-compatibility registry is evidence and leverage, not proof Shiki's anomaly was engineered.",
+  "setting_rules": [
+    "No Otsutsuki/Kaguya, godlike city-destroying abilities, infinite chakra or guaranteed DNA assimilation",
+    "Physiological treatments take time and have consequences; Shiki's Zero Genome self-limited by mastery",
+    "NPC autonomy, independent motives, bounded knowledge, witness-gated acquisition; NEVER show offscreen GM-only scenes as player-known",
+    "Causal branching: player agency, no forced Shiki thoughts, speech, consent, life choices or moral stance"
+  ],
+  "people_and_independent_interests": [
+    {
+      "id": "seina",
+      "goal": "Defend patients and confidentiality, expose misuse even when damaging institution",
+      "limit": "She cannot read minds or confirm genetic origin without samples/evidence"
+    },
+    {
+      "id": "ren",
+      "goal": "Independent operational career and proof he is more than Shiki's subordinate",
+      "limit": "He has his own command and takes risks"
+    },
+    {
+      "id": "aki",
+      "goal": "Develop forensic traps and research reputation while choosing her own work",
+      "limit": "She cannot be automatically recruited or made a hostage"
+    },
+    {
+      "id": "kusa_leader",
+      "goal": "Protect team's future and village without surrendering his principles",
+      "limit": "Can be removed, challenged or die if world events actually cause it"
+    },
+    {
+      "id": "kusa_ops_tatsumori_izumi",
+      "goal": "Find auth fraud and original research beneficiaries",
+      "limit": "Cannot know Kabuto private discussion, institutional superiors may obstruct"
+    },
+    {
+      "id": "kabuto",
+      "goal": "Independent research and intelligence, may manipulate or retreat rather than seek Shiki",
+      "limit": "No guaranteed personal confrontation, his letter may contain lies"
+    }
+  ],
+  "factions": [
+    {
+      "id": "border_care",
+      "goal": "Keep medicine accessible, including to marginal communities",
+      "tradeoff": "Secrecy sometimes protects patients"
+    },
+    {
+      "id": "kusa_security",
+      "goal": "Protect border and institutional continuity",
+      "tradeoff": "Oversight and legitimacy vs urgency"
+    },
+    {
+      "id": "clandestine_graft_trade",
+      "goal": "Distribute valuable therapeutic knowledge, control supply",
+      "tradeoff": "Mixed beneficent, mercenary and coercive participants"
+    },
+    {
+      "id": "orochimaru_kabuto_vector",
+      "goal": "Study biological responses and pursue independent political opportunities",
+      "tradeoff": "Not every crime or missing person belongs to them"
+    }
+  ],
+  "story_sections": [
+    {
+      "act": 1,
+      "label": "Рана в документах",
+      "sessions": [
+        {
+          "session": 1,
+          "title": "Деревня, которая помнит иначе",
+          "catalyst": "After authorized skip Shiki personally discovers contradictory medical records; Seina guards clinical privacy",
+          "decision_gate": "choose inquiry or prioritize other service",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 2,
+          "title": "Живой покойник",
+          "catalyst": "A patient officially listed dead reappears with treatment scars; local guards want custody",
+          "decision_gate": "decide how to approach patient rights and identity",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 3,
+          "title": "Цена диагноза",
+          "catalyst": "Medical records reveal mixed legitimate care and illicit tissue work; oversight impedes access",
+          "decision_gate": "determine what tests, treatment and reports to request",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 4,
+          "title": "Тропа, которой не было",
+          "catalyst": "A border supply convoy vanishes on its own mission; Ren pursues own orders independently",
+          "decision_gate": "whether Shiki coordinates with Ren's separate duties",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 5,
+          "title": "Карантин под дождём",
+          "catalyst": "A district imposes medical controls while scarce supplies run out; officials disagree",
+          "decision_gate": "resolve evidence-based civilian crisis, first phase consequences",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "label": "Сеть швов",
+      "sessions": [
+        {
+          "session": 6,
+          "title": "Шов",
+          "catalyst": "Supply trails lead toward covert graft service supplying both refugees and armed clients",
+          "decision_gate": "how to confront illegal care civilians depend on",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 7,
+          "title": "Первый устойчивый",
+          "catalyst": "Possible trace of stable subject no.1 from the old 37-sample registry; identity uncertain",
+          "decision_gate": "whom to trust for evidence, no Shiki origin retcon",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 8,
+          "title": "Аки без поручения",
+          "catalyst": "Aki has her own career, mission and risky conclusion, independent of Shiki",
+          "decision_gate": "whether to share information or cooperate",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 9,
+          "title": "Чужая консультация",
+          "catalyst": "Unverified Kabuto-linked medical advice reaches local practitioners",
+          "decision_gate": "investigate, ignore or test its provenance",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 10,
+          "title": "Тень служебной печати",
+          "catalyst": "Falsified administrative order threatens security officials and patients",
+          "decision_gate": "political exposure vs operational confidentiality",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "label": "Должность и тело",
+      "sessions": [
+        {
+          "session": 11,
+          "title": "Анатомия допроса",
+          "catalyst": "Key captive needs medical care before reliable testimony; officers want answers",
+          "decision_gate": "patient capacity, confidentiality, immediate threat",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 12,
+          "title": "Врач под чужим именем",
+          "catalyst": "An impersonator exploits fragmented cross-border records",
+          "decision_gate": "forensic search or tactical response",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 13,
+          "title": "Командовать живыми",
+          "catalyst": "Crisis creates disputed team authority; no automatic Shiki promotion beyond Chunin",
+          "decision_gate": "whether accept specific mission command and terms",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 14,
+          "title": "Один из тридцати семи",
+          "catalyst": "A potential historical research subject appears with independent wishes",
+          "decision_gate": "respect right to refuse investigation",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 15,
+          "title": "Война маленьких деревень",
+          "catalyst": "Border patrol politics turn medical routes into armed conflict",
+          "decision_gate": "limited alliance, protection and mission consequences",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "label": "Те, кто остаются живыми",
+      "sessions": [
+        {
+          "session": 16,
+          "title": "Неудачное лечение",
+          "catalyst": "Experimental support technique partly helps but has bounded lasting harm",
+          "decision_gate": "medical uncertainty and consent vs tactical demands",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 17,
+          "title": "Тот, кто хранит список",
+          "catalyst": "Archive custody conflict; K-17 identity can be proven only through sources",
+          "decision_gate": "who keeps records and patients protected",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 18,
+          "title": "Без обещания встречи",
+          "catalyst": "Kabuto may make offer or send intermediary depending his independent clocks",
+          "decision_gate": "response optional; avoid guaranteed confrontation",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 19,
+          "title": "Своим людям",
+          "catalyst": "Aki, Ren, Tose, Seina have competing commitments and independent decisions",
+          "decision_gate": "personal trust and resource priorities",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        },
+        {
+          "session": 20,
+          "title": "Закрыть швы",
+          "catalyst": "Central research-trafficking conflict must resolve to concrete outcome",
+          "decision_gate": "close main lines; choose among consequences not forced victory",
+          "mode": "Player chooses, NPC world moves autonomously, outcomes not predetermined"
+        }
+      ]
+    }
+  ],
+  "hidden_clocks": [
+    "patient survival, consent and testimonies",
+    "medical supply network expansion vs disruption",
+    "Kusa security inquiry and internal false orders",
+    "Kabuto's separate agenda independent of Shiki",
+    "team members' careers and relationships after 5 years"
+  ],
+  "advancement_rules": [
+    "After the player explicitly starts timeskip, determine real 5-year NPC changes via continuity and independent clocks, not authorial convenience",
+    "Respect standing player training plan 35% taijutsu/scalpel, 25% Suiton, 20% Raiton, 20% medicine/Zero Genome as contingent routine; no automatic high mastery or techniques",
+    "Known early canon: Ren left shoulder recovered in Aug 1278, Aki healing fibula/tibia by Sept, Shiki promoted 23 Aug 1278",
+    "No proof Shiki was one of 37 old trial cases, or that Kabuto has his blood, or that recipient K-17 is Kabuto",
+    "Every arc act resolves at least one real issue with consequences; main arc reaches concrete playable ending around session 20"
+  ],
+  "pre_skip_anchor": "Thursday 19 Sep 1278 17:54, Seina office: Kabuto-attributed letter witnessed, childhood medical entry confirmed; Shiki has not responded. Skip currently stopped."
+}
