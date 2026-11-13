@@ -162,6 +162,46 @@
       "rank": "S/secret",
       "effect": "Selective transient liquid-like reorganization of own skin, fascia and muscle for partial cut mitigation or escape",
       "limits": "Cannot liquefy brain/entire body; electricity, dehydration and overload dangerous"
+    },
+    {
+      "id": "raiton_weapon_channel",
+      "name": "Райтон: Заряженное оружие",
+      "discipline": "Райтон / вооружение",
+      "rank": "A",
+      "effect": "Вводит электрическую чакру в удерживаемый кунай, сенбоны или клинок: повышает поражающее действие при контакте, может вызвать кратковременное нарушение мышечной проводимости. Работает с выбранным оружием в руках или до его броска.",
+      "limits": "Не превращает любой металл в неисчерпаемую батарею; требует совместимости материала, постоянной концентрации и безопасной изоляции рукояти; сильная электрозащита или диэлектрики снижают эффективность."
+    },
+    {
+      "id": "suiton_water_clone",
+      "name": "Суйтон: Водяной клон",
+      "discipline": "Суйтон / разведка",
+      "rank": "B",
+      "effect": "Создаёт физического водяного двойника для ложного манёвра, наблюдения, отвлечения и ограниченного взаимодействия с предметами.",
+      "limits": "Требует воды и чакры; слабее оригинала, повреждается и рассеивается под сильным воздействием; не создаёт второго полного резерва навыков."
+    },
+    {
+      "id": "suiton_water_prison",
+      "name": "Суйтон: Водяная тюрьма",
+      "discipline": "Суйтон / удержание",
+      "rank": "B",
+      "effect": "Заключает цель в устойчивый объём воды, ограничивая движение и дыхание; при достаточной подготовке удерживает физически сильных шиноби.",
+      "limits": "Требует запаса воды и удержания чакрой, часто контакта/сосредоточенного контроля; цель может прорваться силой, чакрой или поддержкой извне."
+    },
+    {
+      "id": "suiton_water_dragon",
+      "name": "Суйтон: Водяной дракон",
+      "discipline": "Суйтон / дальнее мощное поражение",
+      "rank": "A",
+      "effect": "Формирует из достаточного водного источника массивный управляемый поток в образе дракона для сильного ударного воздействия и разрушения укреплений.",
+      "limits": "Не работает в сухой местности без дополнительной воды; большая стоимость чакры, сложная траектория и подготовка, противник может уклониться или развеять потоком."
+    },
+    {
+      "id": "hyoton_thousand_ice_needles",
+      "name": "Хёотон: Тысяча ледяных игл",
+      "discipline": "Хёотон / массовое точное поражение",
+      "rank": "A",
+      "effect": "Создаёт плотный рой ледяных сенбонов из воды или влажного воздуха и выпускает его с нескольких направлений; при подготовке использует туман и ледяные зеркала как опорные точки.",
+      "limits": "Число 'тысяча' обозначает высокий масштаб, фактическое количество определяется доступной влагой, чакрой и временем формирования; сильная защита, нагрев или площадь уклонения снижают урон."
     }
   ],
   "covert_operational_skills": [
@@ -190,18 +230,17 @@
     "No genetic assimilation or technique may be extrapolated into godlike invulnerability."
   ],
   "effective_world_year": 1283,
-  "technique_catalogue_count": 7,
-  "playable_quick_reference": "Exactly seven separately named player-facing techniques. All routine healing, diagnosis, sensing, chakra masking, Suiton/Raiton water/projectile manipulations and intelligence skills are general capabilities or variations of the seven, not separate names the user must memorize. User can describe intent and GM maps to capabilities. Do NOT introduce many further technique names.",
+  "technique_catalogue_count": 12,
+  "playable_quick_reference": "Core seven original techniques plus FIVE user-requested explicit additions, total twelve named capabilities. Do not invent many more technique names; the game permits natural action descriptions without memorizing names. Raiton Charged Weapon and Living Thread are related but distinct: sustained weapon electrification vs routed lightning discharge.",
   "additional_unnamed_capabilities": [
     "field surgery and stabilization",
     "advanced sensory mapping",
     "covert chakra signature and physiological masking",
     "general Suiton/Fuuton/Raiton elemental manipulation",
-    "water decoys and needles as derivatives of Suiton",
     "basic ice defensive and projectile forms as derivatives of Hyoton",
     "slow long-term private somatic genome assimilation research",
     "forensics, covert access, counter-surveillance and coded sources"
   ],
-  "canon_note": "Player explicitly requested brief card and accepted seven abilities. Full character breadth remains; names are limited to seven. Ice Mirrors achieved via Haku lineage, not by inherited memory of exact Haku execution.",
+  "canon_note": "Direct user correction 13 Nov 2026 adds weapon Raiton channeling, Water Clone, Water Prison, Water Dragon, Thousand Ice Needles as techniques ALREADY MASTERED during the past five-year training, not newly learned in 1283 or automatically performed now.",
   "engine_date_note": "NPR internal year 0001 corresponds 1278; 1283 is 0006. World-year dates kept in effective_world_year and rank_history.world_year."
 }
