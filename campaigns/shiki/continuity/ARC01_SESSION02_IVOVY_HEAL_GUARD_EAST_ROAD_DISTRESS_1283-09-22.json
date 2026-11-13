@@ -1,0 +1,46 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-HEAL-AND-SIGNAL/1",
+  "game_at": "0006-09-22T18:12:43",
+  "world_year": 1283,
+  "input_exact": "Безумное, дзюн, вы хотели бы взрыв? #подхожу к раненому и чакрой исцеляю ожоги#",
+  "player_declared": {
+    "speech": "Безумное, Дзюн? Вы хотели бы взрыв?",
+    "actions": [
+      "Approaches burned Kusa guard by wagon3",
+      "Uses medical ninjutsu chakra deliberately to heal guard's left forearm burns"
+    ],
+    "not_done": "Shiki does not decide how to handle cylinder, does not travel to east road or choose combat/defense before player response."
+  },
+  "timeline": [
+    {
+      "at": "18:11:21–18:11:30",
+      "event": "Jun responds in gruff dry voice to Shiki's rebuke that he did not want an explosion or dead subordinates but a fine line separates rescue from disrupting unknown active seal with one's own chakra. His right rib injury hurts when breathing. He acknowledges he owes gratitude; individual complex body language and discomfort at Shiki's composure, not magical fear."
+    },
+    {
+      "at": "18:11:30–18:12",
+      "event": "Burned Kusa guard identified Савада Кэй, ~23yo short dark hair, was trapped by jacket and superficial partial thickness thermal injury ~6cm on LEFT forearm, alive and no major deep tissue damage. Shiki approached and deliberately used green medical chakra to promote partial thickness burn skin repair: blisters resolved, new intact pink epithelial barrier, inflammation/pain much reduced, sensation and movement preserved, residual tenderness possible. No scar/prognosis certainty beyond described superficial burn. Kэй thanks him, initially apprehensive of calm clinical transition from deadly seal to healing; Jun makes dry joke about hanging sleeves on traps, moment of tension release."
+    },
+    {
+      "at": "18:12",
+      "event": "Jun autonomously orders wagon3 and M-4/032 cylinder isolated and guarded, no hands on internal mounts, instructs his team to summon seal experts. Cylinder remains in cold unstable chamber; inner samples, secondary defenses and any link to current medevac not proven. Captured enemies remain alive and held; locals still wounded from earlier except healed guard1 forearm."
+    },
+    {
+      "at": "18:12:35–18:12:43",
+      "event": "TWO red signal flares rise over trees near east road where medical evacuation with conscious respiratory-weak male, lead medic Kazama Ritsu and guarded Tiyo departed. Jun knows local Kusa two-red code signifies armed attack/request immediate assistance, but does not know if flare is objectively from that same medical convoy yet. Watchtower observer using optic sees smoke and movement by old mill roughly 1.5km east. Two muffled bangs and white dust cloud seen/heard near route. Enemy identities/numbers/factions unknown, no player-known scene at convoy. Jun says Kusa reserve will take time to muster and Shiki has open route. Player stops at meaningful action choice; not forced to rescue or leave evidence."
+    }
+  ],
+  "visible_scene": {
+    "place": "Kusa eastern customs post Ivovy Brod, next to guarded third wagon M-4/032",
+    "time": "18:12:43",
+    "shiki": "20yo full Kusa Jonin at checkpoint after healing Kei's forearm with medical chakra, physically uninjured, combat capable though chakra already spent significantly in past water dragon, two Shunshin bursts, Raiton and chakra scalpel, seal disruption and recent burn healing. He has not chosen to travel or attack after flare.",
+    "jun": "Nagase Jun, Kusa Chunin, right thoracic bruise/pain, personally recognizes 2 red flares as armed assault/need support; orders local reserve and perimeter, unsure whether specifically med group attacked. Dryly critical yet grateful toward Shiki, subtle unease at his controlled face.",
+    "kei": "Sawada Kei ~23 Kusa border shinobi whose left forearm partial thickness burn has been medically healed to intact pink skin, preserved hand/arm function, slight remaining tenderness. Personally thanks Shiki.",
+    "third_wagon": "Opened hidden hatch M-4/032 with 80cm sample cylinder closed, primary thermal destruction fuuinjutsu disabled by Shiki, inner cold system unstable and possible unexamined seals, no tampering by NPC. At Kusa customs under guards and expert summons.",
+    "medical_evac": "Went east ~18:08–18:11 from checkpoint with severe neuromuscular respiratory compromised but conscious adult, oxygen line bypassed/spO2 94% last seen, unlabeled IV running, reserve dose largely retained and tiny sample sealed for lab, 4 Kusa med shinobi under Kazama Ritsu and guarded Tiyo. 2-red distress from near mill 1.5km on route but source not positively identified by Shiki; actual attack not viewed directly.",
+    "hostile": "No known identity, motive or number for potential attackers by old mill. Heard 2 distant bangs, saw smoke and flare only, do not show private enemy actions.",
+    "other": "Female captured attacker quadrilimb motor paralysis remains under guard, masked male from river caught and guarded, nine caravan crew detained, other Kusa guard has older splinter left leg injury, Jun right ribs, now healed Kei. Nothing auto-resolved offscreen."
+  },
+  "knowledge_policy": "Shiki knows only his directly witnessed/heard events, including Jun's code interpretation and watchtower's optical report; do NOT assert that medical patient definitely captured/harmed or identities attackers before seen.",
+  "player_agency": "No Shiki move to east road, no forced thought/feelings. NPCs move independently; current player decision to pursue danger, stay and protect evidence, or other.",
+  "mechanism": "No stable RNG engine dice, only GitHub text continuity; binary SQLite still stale rev85 July1278, not synced."
+}
