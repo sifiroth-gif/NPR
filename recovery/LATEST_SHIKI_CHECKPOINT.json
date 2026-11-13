@@ -2,22 +2,22 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-19T07:23:00",
+  "game_at": "0006-09-19T07:25:00",
   "game_date": "Вторник, 19 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-timeskip-1283-09-19-0723-arc01",
-  "latest_player_command": "Да, ты прописал, я не увидел. Прости что прервал",
+  "checkpoint_id": "shiki-1283-09-19-0725-arc01-12-jutsu",
+  "latest_player_command": "Мастеру: Добавь ещё в репертуар, проведение райтон чакры через оружие, водяной клон, водяная тюрьма, водяной дракон и дзюцу тысячи ледяных игл. И вопрос этот сюжет имеет связи с миром Наруто или это какой-то персональный сюжет?",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
     "location": "Кусагакуре, центральный лазарет, изолированная диагностическая комната",
-    "time": "07:23",
+    "time": "07:25",
     "world_year": 1283,
-    "shiki": "20-year-old full Jonin, elite Shunshin and medicine, secret Hyoton from Haku and partial Hozuki somatic adaptation; arrived at Seina's clinical request, patient present; no new diagnosis/treatment without user declaration. Sharingan not yet acquired.",
-    "seina": "Now 37, senior medical mentor, aware of unusual baseline and Kabuto sample refusal only; no confirmed knowledge of secret gene assimilation; asked Shiki to inspect anomalous visiting patient, mindful of consent and clinic safety.",
-    "patient": "Iнаба Сигэру (provisional name on Kusa file), appears ~32, medically seeking help; old 1280 death record under that name. Identity unverified; no assumption of resurrection. Arrived voluntarily at Seina's clinic and is capable of agreeing or refusing examination.",
+    "shiki": "20 y.o. full Kusa Jonin, in Seina's isolated room with Inaba Shigeru patient, has not yet examined or answered the man. 12 user-approved named jutsu, two secret genetic integrations, medium-range Sharingan objective. Only senses personally accessible information.",
+    "seina": "37-year-old clinical mentor, waiting for Shiki assessment, aware of his public skills and childhood syndrome but no proof of secret assimilations.",
+    "patient": "Inaba Shigeru, claimed age 32, matching 1280 death photo on file, muscle spasms / uneven finger activation; asks whether medical treatment is possible. Identity unverified; no examination yet.",
     "aki": "~20, healed lower-leg fracture; experienced Tokubetsu Jonin specializing trap craft and counter-intrusion. Autonomous, not automatically present.",
     "ren": "~21, fully healed shoulder; experienced Tokubetsu Jonin close assault squad leader, independent commands and ambitions. Not automatically present.",
     "tose": "Veteran Kusa Jonin and operational supervisor, concerned with rank obligations not unconditional loyalty, absent from clinic unless called.",
@@ -45,14 +45,15 @@
   "continuity_priority": [
     "Player alone controls Shiki speech, voluntary action and inner thoughts (except explicitly authorized older Aug7 answer). Five-year intensive training and covert research are explicitly authorized.",
     "POV hard gate: Shiki has no knowledge of offscreen NPC scenes absent direct witnessed, told, sensed or document source. Do not narrate omniscient offscreen intercuts.",
-    "Seven named core techniques only, despite versatile general skills; user need not track additional names. Use character sheet file.",
     "Shiki age 20, full Jonin from 1283-05-15; not automatically Kage or immune to rules. Five-year leap now completed.",
     "Secret genetic assimilation #1: authentic preserved sample of deceased Haku obtained covertly from Water Country archives in 1280, successful Hyoton March1281; no living Haku harmed. #2: archived deceased Hozuki tissue sample obtained and partial hydratation by Aug1282. Not publicly known.",
     "Shunshin speed comparable to or above Shisui in isolated burst on clear lines, not general Sharingan reflex/teleport/invulnerability.",
     "Sharingan medium-term aim only, no eye acquired. Old 37-sample program does not imply Shiki is subject no1 or Kabuto has Shiki specimen.",
     "Ren's old 1278 shoulder completely healed, no impairment ever reintroduced. Aki 1278 leg injury healed over years, now active autonomous specialist.",
     "Stable NPC roster, no duplicate filler names. Senior mentor Seina with unique voice and real medical ethics; no all-NPC knowledge leakage.",
-    "Live story must reflect mature five-year political and personal consequences, not a frozen Konoha exam era."
+    "Live story must reflect mature five-year political and personal consequences, not a frozen Konoha exam era.",
+    "Exactly 12 named core techniques: original seven plus Raiton weapon channel, Suiton Water Clone, Water Prison, Water Dragon and Hyoton Thousand Ice Needles; extra unnamed field medical skills remain.",
+    "Naruto universe remains organically active through Konoha, Mist, Sand, Sound, Akatsuki and Uchiha. Offscreen events are NOT known to Shiki; only relevant witnessed/reported evidence."
   ],
   "open_threads": [
     "Who copied Shiki childhood medical records before 1278, and whether Kabuto's personal claims in letter were truthful.",
@@ -98,7 +99,8 @@
     "campaigns/shiki/continuity/SESSION_002_KABUTO_LETTER_PRE_FIVE_YEAR_SKIP_2026-11-13.json",
     "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
     "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-    "campaigns/shiki/continuity/SHIKI_FIVE_YEAR_SKIP_1278_1283_2026-11-13.json"
+    "campaigns/shiki/continuity/SHIKI_FIVE_YEAR_SKIP_1278_1283_2026-11-13.json",
+    "campaigns/shiki/continuity/SHIKI_1283_FIVE_TECHNIQUES_NARUTO_WORLD_INTEGRATION_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -106,7 +108,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "IMPORTANT: state.json still main SQLite revision 85 at 0001-07-28T18:18:00, NOT updated after narrated years; this is GitHub text-only recovery. Do not claim full engine state save or verify."
+    "warning": "SQLite state still rev85 on last verification, NOT engine prepared/confirmed; text checkpoint only."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -116,7 +118,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/SHIKI_FIVE_YEAR_SKIP_1278_1283_2026-11-13.json",
+  "latest_source_path": "campaigns/shiki/continuity/SHIKI_1283_FIVE_TECHNIQUES_NARUTO_WORLD_INTEGRATION_2026-11-13.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
@@ -132,7 +134,16 @@
     "skip_years": 5,
     "game_timeline_status": "EXECUTED_1283",
     "phase": "ACT_ONE_SESSION_ONE_READY",
-    "no_spoilers": true
+    "no_spoilers": true,
+    "naruto_world_factions_explicit": [
+      "Konoha",
+      "Kirigakure",
+      "Sunagakure",
+      "Otogakure",
+      "Akatsuki",
+      "Uchiha"
+    ],
+    "world_links": "All 20 planned sessions have active autonomous Naruto-world links; GM-only plan file holds details, no forced cameos; personal POV hard gate."
   },
   "pov_policy_file": "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md",
   "world_date": "1283-09-19",
@@ -141,5 +152,5 @@
   "arc_session_total": 20,
   "session_note": "Prose arc 1/20 begins; main NPR SQLite still records session 2 and rev85. The text checkpoint is not an engine close-session or binary save.",
   "character_sheet_path": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-  "quick_reference_techniques": 7
+  "quick_reference_techniques": 12
 }
