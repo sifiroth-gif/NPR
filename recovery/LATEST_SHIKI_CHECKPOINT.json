@@ -2,24 +2,24 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-09-09T16:12:00",
-  "game_date": "Понедельник, 9 сентября 1278 года",
+  "game_at": "0001-09-19T17:54:00",
+  "game_date": "Четверг, 19 сентября 1278 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-09-09-1612",
-  "latest_player_command": "Да, но я не передавал образец",
+  "checkpoint_id": "shiki-s2-1278-09-19-1754-PRE-FIVE-YEAR-SKIP",
+  "latest_player_command": "Не переноси, остановись перед таймскипом",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, кабинет оперативной службы (сцена между Тосэ и Идзуми, Шики там не присутствует)",
-    "time": "16:12",
-    "shiki": "No action chosen after candid private answer to mentor Seina 3 Sep that Kabuto asked for his sample and he did not provide it. Currently in Kusa village; exact player location unspecified. First chunin mission to post 6 officially completed successfully.",
-    "seina": "Privately knows Shiki did not give Kabuto sample, investigating compromised medical archives. Confidentiality preserved.",
-    "tose": "Receives Izumi report and will be informed of reopened investigation only on new clues. Does not know Seina private Kabuto blood question/answer.",
-    "izumi": "New lead legacy consultant code K-17 unverified identity; ex research director dead of unknown cause; investigation ongoing independently.",
-    "aki": "Still recovering fracture, medical restrictions continue, no sudden recovery established.",
-    "ren": "Genin, completely recovered shoulder, no special role in case"
+    "location": "Кусагакуре, центральный лазарет, личный кабинет Кирисавы Сэйны",
+    "time": "17:54",
+    "shiki": "15-year-old Chunin, personally present and has just been shown Kabuto-attributed letter and old childhood medical record. Has not replied or performed further voluntary action. No time skip has happened.",
+    "seina": "Medical mentor, present. Independently verified childhood record from Shiki's seventh year verbatim including unusual medical shorthand; urges caution, concerned privacy violation. Knows Shiki refused Kabuto voluntary blood sample; has not told unrelated people.",
+    "physical_evidence": "Original age-seven patient record states atypical low tissue temperature, accelerated wound closure with unusual inflammation response; letter duplicates unique shorthand. Indicates source of private childhood data escaped clinic; does not establish genetic sample taken.",
+    "kabuto_message": "Claims he knew Shiki's childhood physiological anomaly before meeting Shiki at Chunin exam, acknowledges blood refusal and five glances, references old 37/6/1 registry, hints he was not first to be interested. All unverified letter statements remain claims.",
+    "others": "Tose leads Kusa team and first Shiki Chunin mission marked successful; Izumi continues separate investigation, uncertain links. Aki recovering broken shin, limited movement with medical support. Ren healthy shoulders, independently trying to take harder missions.",
+    "immediate_player_gate": "Reply/act in Seina's office, or request starting a five-year time skip when ready; do not automatically speak for Shiki or start the skip."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -29,44 +29,33 @@
     "Shiki broke mass-sleep genjutsu via Kai, Shunshin and chakra scalpel incapacitated two Sound shinobi trying to seal medical passage; fatal intent stated but deaths not confirmed. Does not pursue retreating infiltrators.",
     "Ren and medics evacuated real bleeding guard; Shiki cut chakra-thread trap with chakra scalpels. Another hidden accomplice escaped, cylinder dropped near entrance. Leaf jonin Asuma Sarutobi and Kurenai Yuhi took over security; Kakashi and Might Guy fought elsewhere.",
     "Shiki participated in evacuating initial six injured plus one freshly rescued guard. All reached central block. He was explicitly permitted to speak for himself to Tose in one conversation only; verbatim transcript attached.",
-    "Tose checked Sound attackers' status, no confirmation of their survival/death, refused to report assumed deaths."
+    "Tose checked Sound attackers' status, no confirmation of their survival/death, refused to report assumed deaths.",
+    "23 Aug 1278 Shiki promoted to Chunin by Kusagakure after Konoha recommendation.",
+    "24 Aug 1278 Post 6 mission successful: Shiki medically stabilized and saved archival witness Minagi; biological registry 37 samples, 6 repeat observations, 1 stable case. Kusa archive tampering and false pre-promotion Shiki assignment uncovered.",
+    "3 Sep 1278 Shiki privately confirmed to Seina that Kabuto requested blood/tissue sample; he voluntarily provided no sample.",
+    "19 Sep 1278 Kabuto-attributed personalized letter delivered and shown to Shiki by Seina. His original age-seven medical card matches private shorthand quote; Kabuto claims prior knowledge of Shiki's physiology. None of this proves Kabuto possessed Shiki's DNA or controlled Post 6."
   ],
   "continuity_priority": [
-    "Player action, explicit correction > approved character cards and established lore > played dialogue and consequences > GM planning and mere rumors.",
-    "Shiki's voluntary actions and thoughts belong exclusively to user except single authorized dialogue turn shown in transcript.",
-    "Ren's old shoulder injury HEALED by August, all later mentions of limitation from July are retconned.",
-    "NPC names should be selected from established roster, no repetitive generic 'Морита' or other identity duplicates. Asumaga Tose of Kusa is NOT Asuma Sarutobi of Konoha.",
-    "Chunin promotion has NOT been decided, tournament champion Gaara alone doesn't imply promotion."
+    "Direct user instruction and later corrections take priority, followed by approved character card and played canonical world events.",
+    "Exclusive player control of Shiki's speech, thoughts, voluntary choices; authorized single Aug7 dialogue exception ended.",
+    "Direct POV rule as of 13 Nov 2026: Shiki only knows events personally witnessed/read/heard/sensed with a plausible source. No narrated offscreen scene is automatically knowledge for Shiki.",
+    "No player-visible cinematic cutaways without Shiki; independent NPC actions remain GM-only until learned by Shiki through actual sources.",
+    "Ren's old shoulder injury fully healed by Aug 1278.",
+    "NPC identity policy: stable identities from roster, no repeating generic names; Asumaga Tose of Kusa is distinct from Asuma Sarutobi of Konoha.",
+    "Shiki officially promoted to Chunin Aug 23 1278, not merely recommended.",
+    "Shiki gave Ibiki the answer 'Нет' to observations of second Grass team in Aug 9; Kabuto private hand signals not revealed.",
+    "Kabuto sample request/refusal known to Shiki and Seina, no voluntary tissue handed over, no evidence obtained by others.",
+    "Old 37/6/1 registry does NOT prove Shiki was participant or has experimental origin.",
+    "The prospective five-year jump is strictly STOPPED. Do not process future elapsed years until explicit player command."
   ],
   "open_threads": [
-    "Konoha invasion outcome, fate of Hokage and Orochimaru, role of Sand and Sound.",
-    "Team safety, evacuation policy for non-Konoha shinobi and Aki's medical prognosis.",
-    "Kabuto previously seen entering restricted stadium corridors; no confirmed current location.",
-    "First two Sound ambushers at medical wing critically injured but confirmed death unknown; Tose awaiting report.",
-    "Neji and Dosu's latest medical outcomes unresolved.",
-    "Young Leaf jonin with severe chest injury at 13:20 under active med care; Shiki has not volunteered to help.",
-    "Ibiki inquiry into unauthorized second Grass team and if/what Shiki reveals of Kabuto observed signals.",
-    "Shiki replied 'Нет' to Ibiki about second team; Kabuto signals remain only known to Shiki and Kabuto as prior disclosed.",
-    "Kusa authority evening secure call planned on 10 Aug after 10:40, not yet taken place.",
-    "Exam promotion review unresolved.",
-    "Forged second Kusa team stamp officially destroyed 6 months earlier; one dead-for-2-years person's identity used, registrar missing Aug22.",
-    "First Chunin mission to abandoned border medical post no 6, assigned senior commander to be identified.",
-    "Critical captive at post 6 needs immediate first assessment; suspect destroying records in adjacent room.",
-    "Izumi finds Shiki was assigned at 07:50 before 09:10 Chunin promotion; who nominated him unknown.",
-    "Minagi recovery and further testimony",
-    "Identities of post 6 saboteur and possibly accomplices, connection to Orochimaru/Kabuto",
-    "Unknown recipient beginning with К from damaged documents, do not guess",
-    "Who assigned Shiki before his promotion and why",
-    "Actual contents and custodians of old compatibility register",
-    "Do not have others learn Shiki Zero Genome or private Kabuto exchange without evidence",
-    "Seina privately asks whether Kabuto requested Shiki blood/tissue sample; player decision on disclosure pending.",
-    "Investigators uncovered forged 07:50 task assignment targeting Shiki medical ability; original authorized clerk deceased, recipient secret via post 6 communications.",
-    "One reproducible tissue-adaptation case from old registry, patient's name absent and Shiki's inclusion unproven.",
-    "K-17 unidentified consultant code on legacy medical request; do not equate it with Kabuto or partial 'К[...]' burned paper without evidence.",
-    "Former program director found dead Sept8 cause undetermined, possibly natural or foul play, no proof.",
-    "Funding and beneficiaries of old compatibility experiments, one stable case subject still unknown.",
-    "No evidence Shiki is listed in experiment roster, or that anyone obtained his sample.",
-    "Potential future Kabuto/Orochimaru plotline preserved while immediate Post 6 mission finished."
+    "Kabuto-attributed letter authenticity and truthfulness beyond independently verified childhood medical quote; he claims prior knowledge and hints at older watchers.",
+    "Private childhood medical records accessed or copied outside clinic, leak and custodians unknown.",
+    "K-17 recipient identity remains unproven; one older research subject with stable result from old 37/6/1 registry unidentified.",
+    "Forgeries involving second Kusa examination team, obsolete stamp, internal appointment and deaths in archive chain remain partially unresolved under Izumi's independent investigation.",
+    "Kabuto's role in second Kusa team, Orochimaru invasion, Post 6 and future plans remain disputed; he has no confirmed tissue specimen from Shiki.",
+    "Aki continues recovering fracture, Ren seeks assignments, Tose/Shiki rank dynamics evolve; NPC autonomy during any future 5-year skip must be processed only after user authorizes.",
+    "The GM-only twenty-session postskip main arc is prepared but NOT STARTED."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -97,7 +86,10 @@
     "campaigns/shiki/continuity/SESSION_002_BORDER_MEDICAL_POST6_2026-11-13.json",
     "campaigns/shiki/continuity/SESSION_002_POST6_SHIKI_TREATS_MINAGI_2026-11-13.json",
     "campaigns/shiki/continuity/SESSION_002_ORIGIN_RESEARCH_REGISTRY_KABUTO_2026-11-13.json",
-    "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json"
+    "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json",
+    "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md",
+    "campaigns/shiki/continuity/SESSION_002_KABUTO_LETTER_PRE_FIVE_YEAR_SKIP_2026-11-13.json",
+    "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -105,20 +97,32 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Still text checkpoint only; SQLite rev85 not updated, no verify/prepare/confirm claimed."
+    "warning": "Main state.json remains rev85 at 1278-07-28T18:18:00 on last check; narrative continuity through Sep19 exists as text files; SQLite verify/prepare/confirm NOT run for this turn."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
-    "text_checkpoint": "verified_on_readback_after_write",
-    "latest_verbatim": "verified_readback",
+    "text_checkpoint": "readback-verified after write",
+    "source_letter": "readback-verified",
+    "future_plan": "prepared-not-started",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json",
+  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_KABUTO_LETTER_PRE_FIVE_YEAR_SKIP_2026-11-13.json",
   "rank_update": {
     "person": "Мугами Шики",
     "from": "генин",
     "to": "тюнин",
     "effective": "0001-08-23T09:10:00",
-    "issuer": "Kusagakure review board"
-  }
+    "issuer": "Кусагакуре",
+    "state": "effective"
+  },
+  "future_arc": {
+    "name": "Чужая ткань",
+    "file": "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
+    "target_sessions": 20,
+    "skip_years_requested": 5,
+    "game_timeline_status": "PAUSED_IN_1278",
+    "start_condition": "explicit player command to time skip",
+    "no_spoilers": true
+  },
+  "pov_policy_file": "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md"
 }
