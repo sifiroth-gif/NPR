@@ -2,24 +2,25 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-22T09:13:00",
+  "game_at": "0006-09-22T09:51:00",
   "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-22-0913-izumi-summons",
-  "latest_player_command": "Тогда буду ждать вызова. А пока пожалуй оставлю вас #иду домой#",
+  "checkpoint_id": "shiki-1283-09-22-0951-izumi-briefing-ivovy-brod",
+  "latest_player_command": "#иду в штаб#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, порог дома Мугами Шики",
-    "time": "09:13",
+    "location": "Кусагакуре, штаб управления безопасности, третий кабинет",
+    "time": "09:51",
     "world_year": 1283,
-    "shiki": "Age20 Kusa full Jonin, left Seina and Izumi Sept19 16:08 and went home on explicit instruction. Sept22 at door has been handed official summons from Izumi to appear by 10:00 at Kusa Security office 3. Has not yet decided attendance or spoken to courier. No invented private actions or emotions.",
-    "courier": "Young Kusa official security dispatch courier in wet uniform waits briefly at the door, says she is only required to ensure personal delivery; no response required.",
-    "summons": "From Tatsumori Izumi case 19-Т/1283, appear today Sep22 by 10:00 Kusa security office 3; attached personal note says distinct genetic profile in right hand skin vs patient control tissue consistent with foreign donor tissue; volume of transplant and donor unknown. Shiraha Motoe acknowledged her signature on 1280 incident report but asserts she signed MISSING not DEAD; unverified claim. Izumi has concrete operational proposal, undisclosed until meeting.",
-    "patient": "Inaba remains under clinical care of Seina; Shiki has not received confirmation of rejection, exact drug, prognosis or DNA donor identity. No outward communication to foreign agency inferred.",
-    "izumi": "Independent head investigator of internal official Kusa case. Sent Shiki official summons, patient identity protected as far as known. No private or offscreen Izumi scenes visible."
+    "shiki": "Shiki, 20yo full Kusa jonin, voluntarily traveled from home to Izumi security HQ for 10am summons. Has not yet accepted/refused proposed operation or spoken further.",
+    "izumi": "Tatsumori Izumi, Kusa officer investigating internal case 19-Т/1283. Directly reports lab confirmed dissimilar genetic profiles in Inaba right-hand sample vs his native tissue (actual donor tissue). Shiraha says she signed MISSING not DEAD report; still unverified. Customs records Kusa show a commercial carrier 'Северный тростник' with wave slash logo resembling but not proven same as tag, incoming Kusa-side border shipment.",
+    "convoy": "Licensed firm Северный тростник, 3 wagons, 6 escorts, 4 sealed containers allegedly medical reagents, scheduled at Ivovy Brod Kusa border crossing 17:00–19:00 Sep22, manifests list Fire Country as dispatch origin, deeper source not known; no wrongdoing proven.",
+    "offer": "Izumi offers formal discretionary jonin command of lawful covert Kusa-side observation/medical cargo identification, no foreign crossing or arbitrary arrest; alternatively Shiki can remain archival/medical consultant while Izumi uses separate operatives. Neither selected by player.",
+    "seina": "At hospital in charge of patient care, no private Shiki bio enhancements known. Inaba right-hand genetic donor tissue confirmed; extent, disease/rejection, donor identity and meds unknown.",
+    "knowledge": "Only direct Izumi briefing and papers shown. No other NPC offscreen scene shown. Strong Naruto-world ties remain future contingent, not proven by merchant logo."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -74,7 +75,9 @@
     "Deputy Kusa security chief sent foreign-jurisdiction reminder quickly; potential procedural restriction or interference, intent unproven.",
     "22 Sep 1283: Izumi official summons for 10:00 in Kusa Security office 3, has undisclosed operational proposal.",
     "Clinic genotyping comparing right-hand skin and control tissue shows two genetic profiles (consistent with foreign graft); extent and donor unknown, histology unresolved.",
-    "Shiraha Motoe says signed missing-person report, although 1280 certificate states dead; her account not yet proven."
+    "Shiraha Motoe says signed missing-person report, although 1280 certificate states dead; her account not yet proven.",
+    "22 Sep 1283 field lead: lawfully declared medical cargo from Fire Country through Kusa eastern Ivovy Brod 17-19h; carrier Северный тростник uses 4 wave mark similar but not proven same as M-4 medical tag; covert reconnaissance option needs Shiki acceptance.",
+    "Seina's genetic comparison of Inaba right-hand biopsy and native sample confirms genetically distinct donor tissue; whole hand transplant, donor and rejection uncertain."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -118,7 +121,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_MEDICAL_PLATE_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_DEEP_PLATE_EXAM_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json",
-    "campaigns/shiki/continuity/ARC01_SESSION01_TO_02_SHIKI_HOME_OFFICIAL_SUMMONS_1283-09-22.json"
+    "campaigns/shiki/continuity/ARC01_SESSION01_TO_02_SHIKI_HOME_OFFICIAL_SUMMONS_1283-09-22.json",
+    "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_AT_SECURITY_OFFICE_1283-09-22.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -126,7 +130,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Text checkpoint and chronology recorded in GitHub branch; main SQLite last verified rev85 on 1278 Jul28, no newer engine verify/prepare/confirm."
+    "warning": "Binary SQLite last validated rev85 July1278 is stale; current narrative is saved as verified text continuity and recovery checkpoint only; engine prepare/confirm/verify not done."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -136,7 +140,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_TO_02_SHIKI_HOME_OFFICIAL_SUMMONS_1283-09-22.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_AT_SECURITY_OFFICE_1283-09-22.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
