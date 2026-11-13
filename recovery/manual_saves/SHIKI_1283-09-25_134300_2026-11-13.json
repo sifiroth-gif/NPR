@@ -1,0 +1,100 @@
+{
+  "format": "NPR-SHIKI-MANUAL-TEXT-SAVE/1",
+  "campaign": "naruto-shiki",
+  "save_requested_on": "2026-11-13",
+  "saved_branch": "game-state/shiki",
+  "session": 2,
+  "game_at": "0006-09-25T13:43:00",
+  "game_date": "Понедельник, 25 сентября 1283 года",
+  "game_place": "Дом Мугами Шики, Кусагакуре",
+  "type": "Immutable audit-verified TEXT backup/handoff for current 1283 scene, NOT engine SQLite checkpoint. Does not alter gameplay time or perform game action.",
+  "canonical_checkpoints": {
+    "recovery": {
+      "path": "recovery/LATEST_SHIKI_CHECKPOINT.json",
+      "blob_sha_before_manual_save": "c64a6a9eab09dd74b25bf0713756bf4085ced550"
+    },
+    "latest_turn": {
+      "path": "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_READS_S17_RESULTS_NORI_REPORT_1283-09-25_134300.json",
+      "blob_sha": "b39df52fdec071d0d89cff9a29bea730eb8c614e",
+      "player_input_verbatim": "#ознакамливаюсь с результатами#",
+      "docs": [
+        {
+          "id": "S17_PRELIM_LAB_REPORT_1283_09_25",
+          "from": "Кусагакуре Центральный госпиталь, химико-медицинская лаборатория, руководитель и второй специалист signed",
+          "written": "1283-09-25 08:15"
+        },
+        {
+          "id": "NORI_SECURITY_REPORT_1283_09_24",
+          "from": "Hayase Nori, Kusa Internal Security captain",
+          "written": "1283-09-24 18:40"
+        }
+      ]
+    },
+    "current_character": {
+      "path": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+      "blob_sha": "5ce77434369a25583d64a0e0f1b9653f91662448",
+      "level": "20-year-old elite Kusa jonin; age-20 abilities in character sheet; five-year mastery"
+    },
+    "scene_source_count": 83,
+    "scene_source_paths_tail": [
+      "campaigns/shiki/continuity/ARC01_SESSION02_GUARDED_ICU_MEDITATION_TRANSFER_ORDER_1283-09-22.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_ICU_COURIER_DOCUMENT_INSPECTION_1283-09-22_2013.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_COURIER_ORDER_FORENSIC_AUTHENTICITY_1283-09-22_201340.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_HOSPITAL_COURIER_SLIP_ADMISSION_1283-09-22_201410.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_HOSPITAL_MEDITATION_CORPUS3_LEAD_1283-09-22_2104.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_RESEARCH_CORPUS3_ENTRY_AMBUSH_1283-09-22_211749.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_SHIKI_FAST_SUITON_STRIKE_1283-09-22_211752.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_TIED_WOMAN_AWAKE_1283-09-22_211812.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_WOMAN_NEURO_EXAM_NORI_CAPTURE_1283-09-22_211852.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_MEI_JAW_HEALING_MEDICAL_CONTAINERS_1283-09-22_211915.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_CORPUS3_MEI_INFUSION_SOMATIC_INTEGRATION_WAGON_1283-09-22_212010.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_C17_CAUSE_VS_TREATMENT_HIRANO_CLAIM_1283-09-22_212052.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_C17_SPARE_EXTRACTION_DOSING_HIRANO_1283-09-22_212140.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_SELF_TEST_C17_ZERO_GENOME_1283-09-22_212214.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_S17_EXTENDED_PHYSIOLOGY_1283-09-22_212325.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ZERO_GENOME_C17_TARGETS_CLEARANCE_1283-09-22_212551.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_C17_BIOCHEMICAL_HYPOTHESIS_DISPATCH_1283-09-22_212640.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_FULL_C17_CLEARANCE_AND_PATIENTS_TRANSFER_1283-09-22_213610.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ASKS_TO_LEAVE_AND_P0_RECEPTOR_CLARITY_1283-09-22_213622.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_STEALTH_RETURN_SECRET_LAB_1283-09-22_221200.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_ZERO_GENOME_NATIVE_DNA_HYOTON_HYDRATION_1283-09-23_023100.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_FULL_BODY_GENOME_DUAL_TRAIT_BALANCE_1283-09-25_041600.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_FULL_CHAKRA_RESTORE_STEALTH_HOME_1283-09-25_133100.json",
+      "campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_READS_S17_RESULTS_NORI_REPORT_1283-09-25_134300.json"
+    ]
+  },
+  "invariants": {
+    "location": "Shiki own home in Kusa, not secret lab",
+    "shiki_actions": "Only the two previously sealed letters were opened/read, no extra speech/travel/treatment; his NEXT voluntary move belongs to player.",
+    "current_power": "Full chakra; some normal sleep debt and fatigue. Full own nuclear somatic genome carries both Hyoton and limited Hozuki hydration, tissue-specific expression balanced, inherited within own cell lineages; germline precursors edited but future offspring expression untested, mastered ability limits unchanged. Secret to NPCs.",
+    "secrets": "Lab location and genetic sources Haku, Hozuki unknown to Nori/Mei/Hirano/Kuroda. No Sharingan obtained. Shiki's S17 drug entirely cleared Sept22, single dose 0.5mL S17 stock+10mL diluent.",
+    "disclosed_s17": "First clinical report from 25Sep08:15 prelim separates bioactive peptide S17-A (muscle nicotinic acetylcholine receptor-associated postsynaptic prolonged response and functional block) and S17-B (intracellular calcium rises even when nAChR blocked; functional RyR1/SERCA1 axis). Exact molecular identities and direct bindings NOT proven; two patient samples have different fraction ratios, reason unproven. Shiki hypothesis functionally supported, 'drug never helps' remains unproven.",
+    "disclosed_security": "Hayase Nori's report written 24Sep18:40 confirms all three later rescued subjects alive at Central Hospital (young female critical) then, plus initial adult patient. 3 suspects captive on report date, Hirano claims hid part of missing log. Reconstructed registry at least eight recipients; four unaccounted for (2 transferred unknown location; 2 crossed out fate unknown). Different medical/security ledgers hint organized coverup; no identified director or confirmed collusion.",
+    "documents": "Both envelopes NOW OPEN AND READ and remain at home, no reply/action issued.",
+    "provenance": "Narrative evidence as dated written reports, no fresh patient status inferred on current 25Sep13:43; NPC knowledge scoped.",
+    "story_threads": "8 clinical recipients, 4 missing, medical S17 fractionation unresolved identity, false transfer orders, hidden logs, project boss, Inaba foreign graft/meds, Kusa covert operations, historic Kabuto medical records, separate M-4/032 specimen, Shiki future Sharingan research (no eye yet). Do not railroad Shiki."
+  },
+  "engine": {
+    "state_json": {
+      "path": "state.json",
+      "revision": 85,
+      "game_at": "0001-07-28T18:18:00",
+      "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e"
+    },
+    "sqlite_parts": {
+      "path": "recovery/sqlite/parts.json",
+      "parts": 2,
+      "database_sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e"
+    },
+    "consistency": "Engine SQLite is HISTORIC, in-game July 1278 rev85, while manual text/game continuity is Sept1283. Do not claim SQLite verify current scene or update state.json revision without actual DB replay and SHA verification. Source files and text checkpoint are recovery authority until official SQLite is rebuilt.",
+    "recovery_procedure": "Use LATEST_SHIKI_CHECKPOINT.json first; verify latest_turn and character card at the recorded paths; follow chronological_sources (83 history paths) for continuity and late corrections, most recent event has precedence; do not use stale engine SQLite time as current state; keep full player control. To sync engine, reconstruct old confirmed journal and every intervening 1283 event with exact published text then execute real prepare/confirm, verify and publish a new state.json/database snapshot. It has NOT been done."
+  },
+  "verification_assertions": [
+    "latest turn game_at equals recovery point",
+    "latest player input #ознакамливаюсь с результатами#",
+    "current sheet contains 25 Sep full genome completion",
+    "latest reports have two documents",
+    "engine state.json rev85 dated July 1278 flagged stale"
+  ],
+  "no_time_advance": true
+}
