@@ -2,24 +2,27 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-09-19T17:54:00",
-  "game_date": "Четверг, 19 сентября 1278 года",
+  "game_at": "0006-09-19T07:23:00",
+  "game_date": "Вторник, 19 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-09-19-1754-PRE-FIVE-YEAR-SKIP",
-  "latest_player_command": "Не переноси, остановись перед таймскипом",
+  "checkpoint_id": "shiki-timeskip-1283-09-19-0723-arc01",
+  "latest_player_command": "Да, ты прописал, я не увидел. Прости что прервал",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, центральный лазарет, личный кабинет Кирисавы Сэйны",
-    "time": "17:54",
-    "shiki": "15-year-old Chunin, personally present and has just been shown Kabuto-attributed letter and old childhood medical record. Has not replied or performed further voluntary action. No time skip has happened.",
-    "seina": "Medical mentor, present. Independently verified childhood record from Shiki's seventh year verbatim including unusual medical shorthand; urges caution, concerned privacy violation. Knows Shiki refused Kabuto voluntary blood sample; has not told unrelated people.",
-    "physical_evidence": "Original age-seven patient record states atypical low tissue temperature, accelerated wound closure with unusual inflammation response; letter duplicates unique shorthand. Indicates source of private childhood data escaped clinic; does not establish genetic sample taken.",
-    "kabuto_message": "Claims he knew Shiki's childhood physiological anomaly before meeting Shiki at Chunin exam, acknowledges blood refusal and five glances, references old 37/6/1 registry, hints he was not first to be interested. All unverified letter statements remain claims.",
-    "others": "Tose leads Kusa team and first Shiki Chunin mission marked successful; Izumi continues separate investigation, uncertain links. Aki recovering broken shin, limited movement with medical support. Ren healthy shoulders, independently trying to take harder missions.",
-    "immediate_player_gate": "Reply/act in Seina's office, or request starting a five-year time skip when ready; do not automatically speak for Shiki or start the skip."
+    "location": "Кусагакуре, центральный лазарет, изолированная диагностическая комната",
+    "time": "07:23",
+    "world_year": 1283,
+    "shiki": "20-year-old full Jonin, elite Shunshin and medicine, secret Hyoton from Haku and partial Hozuki somatic adaptation; arrived at Seina's clinical request, patient present; no new diagnosis/treatment without user declaration. Sharingan not yet acquired.",
+    "seina": "Now 37, senior medical mentor, aware of unusual baseline and Kabuto sample refusal only; no confirmed knowledge of secret gene assimilation; asked Shiki to inspect anomalous visiting patient, mindful of consent and clinic safety.",
+    "patient": "Iнаба Сигэру (provisional name on Kusa file), appears ~32, medically seeking help; old 1280 death record under that name. Identity unverified; no assumption of resurrection. Arrived voluntarily at Seina's clinic and is capable of agreeing or refusing examination.",
+    "aki": "~20, healed lower-leg fracture; experienced Tokubetsu Jonin specializing trap craft and counter-intrusion. Autonomous, not automatically present.",
+    "ren": "~21, fully healed shoulder; experienced Tokubetsu Jonin close assault squad leader, independent commands and ambitions. Not automatically present.",
+    "tose": "Veteran Kusa Jonin and operational supervisor, concerned with rank obligations not unconditional loyalty, absent from clinic unless called.",
+    "kusa": "Public sees very fast medically skilled Jonin with mixed trust/reputation. No official proof of Ice Release or Hozuki. Missions: 68 completed over five years, incl 2 S with teams.",
+    "time_skip_status": "EXECUTED for five years, 1278-09-19 -> 1283-09-19. Main postskip main arc 1/20 active."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -33,29 +36,33 @@
     "23 Aug 1278 Shiki promoted to Chunin by Kusagakure after Konoha recommendation.",
     "24 Aug 1278 Post 6 mission successful: Shiki medically stabilized and saved archival witness Minagi; biological registry 37 samples, 6 repeat observations, 1 stable case. Kusa archive tampering and false pre-promotion Shiki assignment uncovered.",
     "3 Sep 1278 Shiki privately confirmed to Seina that Kabuto requested blood/tissue sample; he voluntarily provided no sample.",
-    "19 Sep 1278 Kabuto-attributed personalized letter delivered and shown to Shiki by Seina. His original age-seven medical card matches private shorthand quote; Kabuto claims prior knowledge of Shiki's physiology. None of this proves Kabuto possessed Shiki's DNA or controlled Post 6."
+    "19 Sep 1278 Kabuto-attributed personalized letter delivered and shown to Shiki by Seina. His original age-seven medical card matches private shorthand quote; Kabuto claims prior knowledge of Shiki's physiology. None of this proves Kabuto possessed Shiki's DNA or controlled Post 6.",
+    "September 1278–September 1283: five-year player-authorized timeskip and extraordinary skill growth, official 68 completed missions, two successful secret somatic gene assimilations Haku Hyoton (March 1281) and limited Hozuki hydration (August 1282).",
+    "21 Nov 1281 Shiki appointed Tokubetsu Jonin specializing medical reconnaissance. 15 May 1283 appointed full Jonin.",
+    "September 1283 Shiki elite S+ Body Flicker speed Shisui-level or above at straight prepared burst, not teleport; exactly 7 primary named techniques.",
+    "Medium-term Sharingan is only a research objective: not obtained or activated."
   ],
   "continuity_priority": [
-    "Direct user instruction and later corrections take priority, followed by approved character card and played canonical world events.",
-    "Exclusive player control of Shiki's speech, thoughts, voluntary choices; authorized single Aug7 dialogue exception ended.",
-    "Direct POV rule as of 13 Nov 2026: Shiki only knows events personally witnessed/read/heard/sensed with a plausible source. No narrated offscreen scene is automatically knowledge for Shiki.",
-    "No player-visible cinematic cutaways without Shiki; independent NPC actions remain GM-only until learned by Shiki through actual sources.",
-    "Ren's old shoulder injury fully healed by Aug 1278.",
-    "NPC identity policy: stable identities from roster, no repeating generic names; Asumaga Tose of Kusa is distinct from Asuma Sarutobi of Konoha.",
-    "Shiki officially promoted to Chunin Aug 23 1278, not merely recommended.",
-    "Shiki gave Ibiki the answer 'Нет' to observations of second Grass team in Aug 9; Kabuto private hand signals not revealed.",
-    "Kabuto sample request/refusal known to Shiki and Seina, no voluntary tissue handed over, no evidence obtained by others.",
-    "Old 37/6/1 registry does NOT prove Shiki was participant or has experimental origin.",
-    "The prospective five-year jump is strictly STOPPED. Do not process future elapsed years until explicit player command."
+    "Player alone controls Shiki speech, voluntary action and inner thoughts (except explicitly authorized older Aug7 answer). Five-year intensive training and covert research are explicitly authorized.",
+    "POV hard gate: Shiki has no knowledge of offscreen NPC scenes absent direct witnessed, told, sensed or document source. Do not narrate omniscient offscreen intercuts.",
+    "Seven named core techniques only, despite versatile general skills; user need not track additional names. Use character sheet file.",
+    "Shiki age 20, full Jonin from 1283-05-15; not automatically Kage or immune to rules. Five-year leap now completed.",
+    "Secret genetic assimilation #1: authentic preserved sample of deceased Haku obtained covertly from Water Country archives in 1280, successful Hyoton March1281; no living Haku harmed. #2: archived deceased Hozuki tissue sample obtained and partial hydratation by Aug1282. Not publicly known.",
+    "Shunshin speed comparable to or above Shisui in isolated burst on clear lines, not general Sharingan reflex/teleport/invulnerability.",
+    "Sharingan medium-term aim only, no eye acquired. Old 37-sample program does not imply Shiki is subject no1 or Kabuto has Shiki specimen.",
+    "Ren's old 1278 shoulder completely healed, no impairment ever reintroduced. Aki 1278 leg injury healed over years, now active autonomous specialist.",
+    "Stable NPC roster, no duplicate filler names. Senior mentor Seina with unique voice and real medical ethics; no all-NPC knowledge leakage.",
+    "Live story must reflect mature five-year political and personal consequences, not a frozen Konoha exam era."
   ],
   "open_threads": [
-    "Kabuto-attributed letter authenticity and truthfulness beyond independently verified childhood medical quote; he claims prior knowledge and hints at older watchers.",
-    "Private childhood medical records accessed or copied outside clinic, leak and custodians unknown.",
-    "K-17 recipient identity remains unproven; one older research subject with stable result from old 37/6/1 registry unidentified.",
-    "Forgeries involving second Kusa examination team, obsolete stamp, internal appointment and deaths in archive chain remain partially unresolved under Izumi's independent investigation.",
-    "Kabuto's role in second Kusa team, Orochimaru invasion, Post 6 and future plans remain disputed; he has no confirmed tissue specimen from Shiki.",
-    "Aki continues recovering fracture, Ren seeks assignments, Tose/Shiki rank dynamics evolve; NPC autonomy during any future 5-year skip must be processed only after user authorizes.",
-    "The GM-only twenty-session postskip main arc is prepared but NOT STARTED."
+    "Who copied Shiki childhood medical records before 1278, and whether Kabuto's personal claims in letter were truthful.",
+    "K-17 old Kusa medical archive access recipient and one stable subject among 37, identity unproven.",
+    "Post6 personnel and funds / medical trade network with autonomous participants, not all Kabuto-owned.",
+    "Effects of Shiki's two secret somatic assimilations, possibility of exposure or tissue instability.",
+    "Shiki's unfulfilled Sharingan research goal.",
+    "Living patient appears to match 1280 death record; identity unknown, needs clinical approach at start of main arc.",
+    "Relationship with Seina, Aki, Ren, Tose shaped by independent careers, not predetermined.",
+    "20-session main arc starts on first player choice in new clinical scene; GM-only plan active."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -89,7 +96,9 @@
     "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json",
     "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md",
     "campaigns/shiki/continuity/SESSION_002_KABUTO_LETTER_PRE_FIVE_YEAR_SKIP_2026-11-13.json",
-    "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json"
+    "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
+    "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+    "campaigns/shiki/continuity/SHIKI_FIVE_YEAR_SKIP_1278_1283_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -97,32 +106,40 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Main state.json remains rev85 at 1278-07-28T18:18:00 on last check; narrative continuity through Sep19 exists as text files; SQLite verify/prepare/confirm NOT run for this turn."
+    "warning": "IMPORTANT: state.json still main SQLite revision 85 at 0001-07-28T18:18:00, NOT updated after narrated years; this is GitHub text-only recovery. Do not claim full engine state save or verify."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
-    "text_checkpoint": "readback-verified after write",
-    "source_letter": "readback-verified",
-    "future_plan": "prepared-not-started",
+    "text_checkpoint": "readback-verified-after-write",
+    "postskip_chronicle": "readback-verified",
+    "character_sheet": "readback-verified",
+    "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_KABUTO_LETTER_PRE_FIVE_YEAR_SKIP_2026-11-13.json",
+  "latest_source_path": "campaigns/shiki/continuity/SHIKI_FIVE_YEAR_SKIP_1278_1283_2026-11-13.json",
   "rank_update": {
     "person": "Мугами Шики",
-    "from": "генин",
-    "to": "тюнин",
-    "effective": "0001-08-23T09:10:00",
-    "issuer": "Кусагакуре",
-    "state": "effective"
+    "rank": "дзёнин",
+    "previous": "токубэцу-дзёнин (1281-11-21), тюнин (1278-08-23)",
+    "effective": "0006-05-15T15:00:00",
+    "world_year": 1283,
+    "issuer": "Кусагакуре"
   },
   "future_arc": {
     "name": "Чужая ткань",
     "file": "campaigns/shiki/plans/POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
     "target_sessions": 20,
-    "skip_years_requested": 5,
-    "game_timeline_status": "PAUSED_IN_1278",
-    "start_condition": "explicit player command to time skip",
+    "skip_years": 5,
+    "game_timeline_status": "EXECUTED_1283",
+    "phase": "ACT_ONE_SESSION_ONE_READY",
     "no_spoilers": true
   },
-  "pov_policy_file": "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md"
+  "pov_policy_file": "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md",
+  "world_date": "1283-09-19",
+  "last_player_substantive_instruction": "5-year jump 1278->1283, major growth, secret Haku Ice Release and Hozuki tissue adaptation, Shunshin at Shisui level or above, Sharingan research, public ranks, mission history, stealth and espionage, keep only seven core named techniques.",
+  "arc_session": 1,
+  "arc_session_total": 20,
+  "session_note": "Prose arc 1/20 begins; main NPR SQLite still records session 2 and rev85. The text checkpoint is not an engine close-session or binary save.",
+  "character_sheet_path": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+  "quick_reference_techniques": 7
 }
