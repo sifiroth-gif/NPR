@@ -2,22 +2,24 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-09-03T09:19:00",
-  "game_date": "Вторник, 3 сентября 1278 года",
+  "game_at": "0001-09-09T16:12:00",
+  "game_date": "Понедельник, 9 сентября 1278 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-09-03-0919",
-  "latest_player_command": "Мастеру: давай дальше",
+  "checkpoint_id": "shiki-s2-1278-09-09-1612",
+  "latest_player_command": "Да, но я не передавал образец",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, кабинет наставницы Кирисавы Сэйны, центральный лазарет",
-    "time": "09:19",
-    "shiki": "New Chunin, summoned to Seina's office for private question. His dialogue not yet declared. Has previously refused Kabuto blood sample request (secret).",
-    "seina": "Medical mentor knows old register of biologic plasticity, 37 samples/1 stable, documentation that named Kabuto involved through old records, and that unnamed operative deliberately sent Shiki on mission. She asks «Кабуто пытался получить у тебя образец крови или других тканей?» She does not know answer.",
-    "tose_izumi": "Investigating authorization fraud and old document transfers autonomously; not present in Seina's office, not aware of Shiki private Kabuto blood refusal.",
-    "timeline": "Much origin investigation resolved to Kusa archive network, Kabuto medical research link suspected with a name, exact identity/role and unknown selective appointment issuer still open."
+    "location": "Кусагакуре, кабинет оперативной службы (сцена между Тосэ и Идзуми, Шики там не присутствует)",
+    "time": "16:12",
+    "shiki": "No action chosen after candid private answer to mentor Seina 3 Sep that Kabuto asked for his sample and he did not provide it. Currently in Kusa village; exact player location unspecified. First chunin mission to post 6 officially completed successfully.",
+    "seina": "Privately knows Shiki did not give Kabuto sample, investigating compromised medical archives. Confidentiality preserved.",
+    "tose": "Receives Izumi report and will be informed of reopened investigation only on new clues. Does not know Seina private Kabuto blood question/answer.",
+    "izumi": "New lead legacy consultant code K-17 unverified identity; ex research director dead of unknown cause; investigation ongoing independently.",
+    "aki": "Still recovering fracture, medical restrictions continue, no sudden recovery established.",
+    "ren": "Genin, completely recovered shoulder, no special role in case"
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -59,7 +61,12 @@
     "Do not have others learn Shiki Zero Genome or private Kabuto exchange without evidence",
     "Seina privately asks whether Kabuto requested Shiki blood/tissue sample; player decision on disclosure pending.",
     "Investigators uncovered forged 07:50 task assignment targeting Shiki medical ability; original authorized clerk deceased, recipient secret via post 6 communications.",
-    "One reproducible tissue-adaptation case from old registry, patient's name absent and Shiki's inclusion unproven."
+    "One reproducible tissue-adaptation case from old registry, patient's name absent and Shiki's inclusion unproven.",
+    "K-17 unidentified consultant code on legacy medical request; do not equate it with Kabuto or partial 'К[...]' burned paper without evidence.",
+    "Former program director found dead Sept8 cause undetermined, possibly natural or foul play, no proof.",
+    "Funding and beneficiaries of old compatibility experiments, one stable case subject still unknown.",
+    "No evidence Shiki is listed in experiment roster, or that anyone obtained his sample.",
+    "Potential future Kabuto/Orochimaru plotline preserved while immediate Post 6 mission finished."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -89,7 +96,8 @@
     "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json",
     "campaigns/shiki/continuity/SESSION_002_BORDER_MEDICAL_POST6_2026-11-13.json",
     "campaigns/shiki/continuity/SESSION_002_POST6_SHIKI_TREATS_MINAGI_2026-11-13.json",
-    "campaigns/shiki/continuity/SESSION_002_ORIGIN_RESEARCH_REGISTRY_KABUTO_2026-11-13.json"
+    "campaigns/shiki/continuity/SESSION_002_ORIGIN_RESEARCH_REGISTRY_KABUTO_2026-11-13.json",
+    "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -97,7 +105,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Main SQLite still last verified revision 85 at July 28, textual continuity only beyond this."
+    "warning": "Still text checkpoint only; SQLite rev85 not updated, no verify/prepare/confirm claimed."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -105,7 +113,7 @@
     "latest_verbatim": "verified_readback",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_ORIGIN_RESEARCH_REGISTRY_KABUTO_2026-11-13.json",
+  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_SEINA_BLOOD_REFUSAL_K17_RESEARCH_TRACE_2026-11-13.json",
   "rank_update": {
     "person": "Мугами Шики",
     "from": "генин",
