@@ -1,0 +1,64 @@
+{
+  "schema": "NPR-ARC1-S2-MEDEVAC/1",
+  "world_at": "0006-09-22T17:54:00",
+  "world_year": 1283,
+  "player_exact": "Дзюн срочное сообщение в деревню, нужно организовать доставку пациента в госпиталь #пациенту# я вижу что вы пытаетесь что-то сказать. Не сейчас. Сначала ваша жизнь а не разговоры. #дзюну# также тие под контролем должна отправится с нами. #пациенту# мы вернём сейчас крышку для поддержания температуры, не переживайте. #даю команду вернуть контейнер в исходное состояние#",
+  "player_speech": [
+    "Дзюн, срочное сообщение в деревню. Нужно организовать доставку пациента в госпиталь.",
+    "Я вижу, что вы пытаетесь что-то сказать. Не сейчас. Сначала ваша жизнь, а не разговоры.",
+    "Дзюн, также Тиё под контролем должна отправиться с нами.",
+    "Мы вернём сейчас крышку для поддержания температуры. Не переживайте."
+  ],
+  "player_actions": [
+    "Orders urgent village-hospital summons and medical evacuation",
+    "Instructs patient to avoid speech/physical stress and reassures him",
+    "Directs Jun to bring Tiyo with medical transfer under Kusa guard",
+    "Commands container return to original transport thermal setting"
+  ],
+  "timeline": [
+    {
+      "at": "17:42",
+      "where": "Second wagon, Kusa customs yard",
+      "event": "Jun obeys Shiki's urgent request, sends urgent highest-priority medical dispatch for adult male, conscious, severe neuromuscular weakness with shallow breathing, low SpO2 93% while oxygen supplied. Request respiratory support-equipped evacuation team. He does not automatically send Shiki to any place or act for him."
+    },
+    {
+      "at": "17:44",
+      "where": "Near medical case",
+      "event": "Patient attempts to speak, Shiki tells him not now, preserving life primary. Patient visually fixes on Shiki's unsettling controlled face, stops speaking effort, shows visible tears without assigned emotional interpretation. Tiyo obeys guarded conveyance decision but anxiously offers advice about pump/oxygen circuits; Jun allows her to remain under observation, says she cannot switch medical equipment herself. Broken-nose escort appears tense, glances toward Tiyo and Shiki, Jun orders escort held separately to avoid contact."
+    },
+    {
+      "at": "17:46",
+      "where": "Second wagon",
+      "event": "By Shiki's order Kusa officers return container to ORIGINAL transport mode. Critically before lid sealed: Tiyo under guard identifies air intake/outlet, local medic checks oxygen line and ventilatory exhaust port/valves for clearance, leaves unlabelled IV running unchanged. Container closure leaves functioning oxygen delivery/airflow and medical connections, not airtight suffocation. Thermal regulator re-engages. Monitoring via viewing panel SpO2 93->94%, RR remains high; no abrupt deterioration immediately. No additional medical chakra or player action."
+    },
+    {
+      "at": "17:51",
+      "where": "Kusa border checkpoint",
+      "event": "Secure station relay confirms Kusa Central Hospital RECEIVED medical emergency, dispatches equipped team for breathing support and litter transfer. On-scene Jun relays unknown IV agent and patient current function, staff require supplemental oxygen continuation and all known drug information. MEDICAL TEAM HAS NOT YET ARRIVED. South-post reinforcements support detention and evidence collection. The 10 convoy persons remain legally held at checkpoint; seized weapons inventoried. Med patient, Shiki and Tiyo with guards planned for hospital; others/cargo remain checkpoint pending investigation."
+    },
+    {
+      "at": "17:52",
+      "where": "Border checkpoint",
+      "event": "South patrol reports one guard carrying sealed official communication scroll, not opened and no proven attempted communication; will be handled by investigator/protocol. It may be routine or alert network, unknown."
+    },
+    {
+      "at": "17:54",
+      "where": "Beside closed container",
+      "event": "With case closed, awake male visible through viewing port watches Shiki, weak finger motion, no more knocking. Tiyo, under guard, unexpectedly volunteers: she does not know patient name, told not to ask; he is not first person she transported, she has been on the route 8 months and claims eleven transfers. No corroboration yet, content and number of others unknown. Jun asks how many, Tiyo states 11 and stops, biting inside cheek. Medics still en route. Await player response or arrival through time advance if user indicates."
+    }
+  ],
+  "current": {
+    "time": "17:54",
+    "place": "Kusa side Ivovy Brod customs court next to second wagon and sealed fourth medical transport container",
+    "shiki": "20yo medically elite Kusa Jonin, directly ordered urgent transport/guarded Tiyo accompaniment/return to closed thermostatic container. Has not spoken beyond four cited lines, not used medical chakra, treated patient or authorized interrogation. Likely accompanies transfer 'с нами'; transfer not yet occurred.",
+    "jun": "Local Kusa Chunin coordinated medical call and lawful evidence detention. Controlling escorts and guards, protects patient, professional reaction to Shiki, aware Tiyo's new claim. Backup from south station present.",
+    "patient": "Undocumented male ~25 conscious, profound limb and respiratory muscle weakness; HR118, BP98/62, RR24, O2 saturation 93-94% ON oxygen, left-arm unknown IV via slow pump continuing, fresh right forearm wound, left 6-cell wrist bracelet 4 dark. In closed thermostatic gas-vented case with viewing port and external medical connections. High-risk respiratory case requiring qualified evacuation. No identity/med drug known. Does not yet speak intelligibly.",
+    "tiyo": "Medical transport coordinator Minase Tiyo, voluntarily says herself 8 months on route, 11 transport jobs involving living patients, their names withheld. Under guard slated to accompany patient/Shiki to Kusa hospital. She cannot identify drug, afraid of its interruption and patient mortality; cooperation does not prove innocence. Psychological effect of Shiki personally unsettling, not mindcontrol.",
+    "detainees": "Six escorts, three drivers and Tiyo =10 persons held temporarily as part of customs/forensic case, 9 stay checkpoint; Tiyo under guard to hospital. Weapon inventory recorded. Communication scroll from one escort sealed, seizure logged, unopened, purpose unknown.",
+    "care": "Unknown infusion NOT adjusted/stopped. Ventilation/oxygen connections verified unobstructed before replacement of thermal lid. Patient not moved yet. Hospital dispatch acknowledged, arrival future, don't invent immediate arrival.",
+    "legal": "Living undeclared patient in fourth container, mismatch with cargo manifest; legitimate basis for stop and urgent safeguarding; guilt of each individual not established.",
+    "open": "Inaba medical tag marks similar to patient's bracelet (6 compartments 4 dark) and chest/hand graft suspicion, no proven common origin. Konoha seal transit attachment remains unverified. Tiyo says 11 prior live-patient transfers; no verified records yet."
+  },
+  "rules": "Strict Shiki POV. NPCs autonomous and psychologically differentiated. Maintain anatomy/oxygen/ventilation and unknown-drug risk. No offscreen scenes shown. Do not assign Shiki involuntary actions.",
+  "sqlite": "GitHub text continuity only, binary SQLite still last known rev85, Jul1278."
+}
