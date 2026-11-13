@@ -2,25 +2,26 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-19T12:06:00",
+  "game_at": "0006-09-19T16:07:00",
   "game_date": "Вторник, 19 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-19-1206-arc01-tag-deep-exam",
-  "latest_player_command": "Странно что его так просто отпустили. #исследую пластину так что бы получить максимально много информации#",
+  "checkpoint_id": "shiki-1283-09-19-1607-official-inquiry-19T",
+  "latest_player_command": "Надо запускать официальное расследование",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, центральный лазарет, изолированная диагностическая палата",
-    "time": "12:06",
+    "location": "Кусагакуре, центральный лазарет, диагностический кабинет",
+    "time": "16:07",
     "world_year": 1283,
-    "shiki": "20 y.o. Kusa Jonin; said 'Странно, что его так просто отпустили' and conducted full tag examination with low-strength chakra sensing, no activation. No other speech, mission authorization, treatment or research choices assumed. Has seen full tag engravings and observed passive conductor.",
-    "seina": "Present clinical mentor, kept micro-sample of fourth tag notch, aware of patient fears and limited corroboration. Histology, genetic comparison remain pending. Suggested need to identify compatible readers without tracing patient through official queries.",
-    "inaba": "Self-identified graft patient; right hand poor finger perfusion. Claims he was confined months then released under conditional medicine and constrained travel, possible unknown tracking. Describes doctors using recessed metal ring reader to open drug drawer. Fears external discovery, asks whether tag can locate him.",
-    "plate": "M-4/031 front, 'R-031/4 ; T.C. [unreadable] ; Серия:17' hidden, later-added four waves not same as Kiri emblem, six edge cells four polymer filled, central passive chakra conductor. No active transmitter detected under low scan, reader compatible, no activation. Possible '17' coincidence with K-17, unproven.",
-    "lab": "Fourth notch sample protein-binding residue unknown type sealed; tissue histology and donor comparison pending. CBC anemia, nonspecific inflammation, minor renal issue, impaired right digit microcirculation.",
-    "next_gate": "Await Shiki decisions on reader lead, additional clinic test, patient protection or questioning. No external contacts authorized automatically."
+    "shiki": "20-year-old Kusa Jonin. Player said 'Надо запускать официальное расследование', triggering formal internal notification. Did not invent Shiki further statements, inner life or actions. Official case registered in Kusa. Any outward investigative missions or patient treatment choice awaits player.",
+    "seina": "Experienced doctor, guarded consent and chain of custody, kept original M-4/031 tag and samples; Inaba tissue results still pending, hand perfusion being monitored. Not privy to Shiki gene research.",
+    "inaba": "Protected witness who agrees to local investigation but fears clinic network and forbids foreign external requests. Suspected graft, poor distal flow, pending analysis; no proved donor/identity.",
+    "izumi": "Tatsumori Izumi (Kusa security) officially opened 19-Т/1283, privately reported to Shiki and Seina: 1280 death certificate says corpse passed to escort unit but register has no confirmed receiving entry, medical examiner didn't verify body. Witness Shiraha Motoe currently western border, records ordered preserved and interview planned; second witness unlocated. Izumi works autonomously and does not know Shiki private genetics.",
+    "authority": "Deputy Kusa security chief sent jurisdiction reminder foreign inquiries require village leadership. No evidence it is intentional obstruction; internal case open.",
+    "plate": "M-4/031 front, R-031/4 T.C. Series 17 hidden, passive fuinjutsu tag and four dark-filled of six notches. Not activated, original remains clinic.",
+    "next_gate": "At 16:07 near Seina/Izumi; patient in hospital, official criminal inquiry open. Choose Shiki participation, clinical diagnosis or another action."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -69,7 +70,10 @@
     "Hand's small-vessel blood flow and digits 4–5 at risk; prompt monitoring necessary, large arteries remain patent.",
     "Inaba's medical tag M-4 / 031, 7 day monitoring, presumed tissue transplant; four wave-like strokes may suggest Kiri but unproven, six edge notches 4 dark-filled unknown. Inaba rejects traceable official inquiry and should retain patient consent.",
     "Tag 'R-031/4, T.C. unreadable, Series 17', passive chakra reader circuit, six cells four filled and polymer trace. No transmitter observed, external reader location unknown; no evidence K-17 consultant same as tag series.",
-    "Inaba claims conditional release and controlled access to weekly meds, a travel route limit, and last clinic 'final review'; claims uncorroborated."
+    "Inaba claims conditional release and controlled access to weekly meds, a travel route limit, and last clinic 'final review'; claims uncorroborated.",
+    "Official Kusa investigation 19-Т/1283 opened 1283-09-19 13:34 by Tatsumori Izumi; Shiki initiator. Inaba protected local witness, no external Kiri inquiry.",
+    "Death certificate 16 Nov 1280 has corpse-handoff claim but official receiving ledger blank; signatory Shiraha Motoe at western border for questioning; no proof intent to forge.",
+    "Deputy Kusa security chief sent foreign-jurisdiction reminder quickly; potential procedural restriction or interference, intent unproven."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -111,7 +115,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_EXPLAINS_FALSE_DEATH_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_SAMPLING_AND_METAL_PLATE_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_MEDICAL_PLATE_1283-09-19.json",
-    "campaigns/shiki/continuity/ARC01_SESSION01_INABA_DEEP_PLATE_EXAM_1283-09-19.json"
+    "campaigns/shiki/continuity/ARC01_SESSION01_INABA_DEEP_PLATE_EXAM_1283-09-19.json",
+    "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -119,17 +124,17 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Text continuity checked, but SQLite base still stale rev85 as last known; no game engine verify/prepare/confirm run."
+    "warning": "Latest narrative recovered via verified GitHub continuity files. Binary SQLite remains last known rev85 (1278 Jul28), not synchronized; no prepare/confirm/verify run for this narrative turn."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
-    "text_checkpoint": "verified-on-readback",
+    "text_checkpoint": "readback-verified",
     "postskip_chronicle": "readback-verified",
     "character_sheet": "readback-verified",
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_INABA_DEEP_PLATE_EXAM_1283-09-19.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
