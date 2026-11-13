@@ -1,0 +1,52 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-M4-032-TRAP/1",
+  "game_at": "0006-09-22T18:11:17",
+  "world_year": 1283,
+  "last_player_exact": "Да, но сейчас в приоритете пациент. Его в госпиталь введение не прекращать. Есть еще одна порция лекарства. Если без него ухудшение, используйте, но отправьте порцию на анализ. По куноичи, я перерезал ей нервы, жизни ничего не угрожает, терапия возможна. Эту дверцу вскрываем.",
+  "player_actions": [
+    "Shiki makes patient transport/continuity of unidentified IV infusion first priority; notes one reserve dose and authorizes its use only if patient's situation worsens, with a portion sent for analysis.",
+    "Shiki informs medics he cut/motor-disrupted kunoichi's nerves, no imminent fatal threat apparent and neurological rehabilitation possible; her eventual recovery is not guaranteed.",
+    "Shiki explicitly authorizes opening the concealed third-wagon metal hatch M-4/032. Does not automatically use chakra, intervene in trap, approach with equipment or decide what to save afterward."
+  ],
+  "timeflow": [
+    {
+      "at": "18:04–18:08",
+      "event": "Medical evacuation team lead names herself Кадзама Рицу (Kusa female chief medic). Shiki orders continuous existing unidentified IV infusion and patient transfer, hold spare reserve dose conditional on deterioration; Ritsu and Tiyo under guard locate single backup reservoir in wagon2 case. They aseptically extract only a small sealed aliquot for urgent clinical analysis and retain majority of dose with patient, do not give it preemptively. Ritsu says airway/ventilation support may be needed, oxygen alone insufficient if respiratory muscle output fails. Transport frame placed on equipped emergency stretcher. Patient conscious, SpO2~94% on oxygen, tachycardia to124 during movement, no further recognized collapse. Tiyo under guard of two Kusa shinobi accompanies patient on evacuation. By 18:11 they have departed customs yard toward Kusa hospital, not yet arrived."
+    },
+    {
+      "at": "18:08",
+      "event": "Shiki tells Ritsu he has deliberately cut/motor-disrupted hostile kunoichi limb nerves, believes life not under threat and treatment possible. Ritsu checks awake woman, breathing/pulse stable and sensation preserved, but no purposeful limb control. NPC kunoichi hears everything, says 'Возможна…' and protests 'Я здесь.' Ritsu cautions restoration cannot be promised, applies nonrestrictive protective limb fixation to prevent injury, leaves under local medic guard for second medical transport. No automatic regeneration, no permanent paralysis prognosis fixed."
+    },
+    {
+      "at": "18:11",
+      "event": "Shiki orders concealed third wagon hatch M-4/032 opened. Jun (right rib injury but commanding independently) assigns two Kusa border men; they remove false flooring, inspect for obvious wires/seals, see none, work three sprung metal lock bolts with small tool. Open narrow metal cover, cold dry air escapes. Inside compact cold chamber a metal sealed cylinder ~80cm, holder with 3 tag slots one empty, two med-nickel cards: 'М-4 / 032 / РЕЦИПИЕНТ' and 'М-4 / 032 / КОНТРОЛЬНЫЙ ОБРАЗЕЦ'. Direct physical association of third wagon hatch with M4-series registry now seen; contents of sealed cylinder unknown; exact connection to Inaba no definitive source confirmed."
+    },
+    {
+      "at": "18:11:16–17",
+      "event": "When hatch raised, small metallic click; dark lacquer over inside of lid exposes red seal-script markings linked to bolt/lock mechanism, and chakra travels toward fuuinjutsu layer under 80cm cylinder. First Kusa border guard sleeve catches a latch; second border guard tries to pull him from reach, Jun shouts retreat. Shiki from ~3m visually senses/recognizes fast charging thermal destruction seal due elite knowledge/observation; possible pressure burst in enclosed chamber, no actual blast yet. Seal is already triggered, approx 1 second until closing. Two Kusa guards in immediate danger and contents may be destroyed. User must decide any intervention; no auto Shiki movement or defense."
+    }
+  ],
+  "current": {
+    "time": "18:11:17",
+    "place": "Ivovy Brod Kusa customs checkpoint; third wagon concealed floor under open metal hatch",
+    "shiki": "Full Kusa Jonin present ~3m from activated M4/032 chamber; no post-open defensive action yet, no spoken dialogue beyond user messages. Chakra significant earlier cost, ample remaining. Strong high-speed Shunshin and medical chakra and Raiton/Suiton capabilities per 1283 sheet, but no automatic success against unknown fuinjutsu.",
+    "jun": "Nagase Jun Kusa Chunin about 5m from open hatch, right rib injury from masked enemy Suiton, shouts guards to get away, can't freely sprint due pain.",
+    "local_guard1": "At metal hatch 0-0.5m, sleeve caught on latch, at risk of heat/blast.",
+    "local_guard2": "Near guard1, trying to pull him away, at risk of heat/blast.",
+    "m4_032": "Concealed open third-wagon hatch with cold chamber, 80cm sealed cylinder, two cards M-4 / 032 Recipient and Control Sample, one empty holder; chamber contents not known. Chakra fuuinjutsu under cylinder activating thermal destruction after opening; physical risks from heat/pressure.",
+    "patient": "Original adult male anonymous respiratory weakness transported out under Kusa hospital team (~18:08–18:11), at last O2 sat ~94% with oxygen and unknown IV ongoing, Tiyo under close guard, one sterile small aliquot reserve for lab and majority reserve with patient; hospital arrival not yet seen.",
+    "kunoichi": "Captured enemy woman alive, motor paralysis of 4 limbs after Shiki peripheral nerve cut/disruption, sensation intact, awaiting guarded separate medical evacuation; full neurological recovery unknown.",
+    "masked_male": "Captured man from river alive with injured left shoulder, right-hand deficit, restrained under guard; no new confessions.",
+    "other": "Remaining nine trade persons held at checkpoint. One guard prior splinter left shin injury and Jun chest injury; equipment and cargo held; medical evacuation has departed with primary patient and Tiyo.",
+    "danger_gate": "~1 second until red seal circuit under m4/032 cylinder closes. Trap thermal destruction, pressure blowout possible, two local guards close. It has NOT yet detonated. Shiki player chooses response; no forced intervention."
+  },
+  "canon_guardrails": [
+    "Player Shiki medical declarations are claims/orders, NPC clinician independently judges precautions and uncertainty.",
+    "The reserve dose is finite; sample aliquot tiny and sealed for analysis, remaining dose kept for potentially life-saving use, not automatically administered.",
+    "Tiyo remains guarded, not exonerated; patient has not reached hospital.",
+    "Opening hatch was user authorization and successfully occurred before trap activation; thermal fuinjutsu red script became visible AFTER opening, so initial inspection did not automatically detect it.",
+    "No patient is invented inside M4/032 cylinder and no knowledge of its contents is shown.",
+    "P0: Shiki thoughts/emotions/extra actions remain solely player-owned; NPC autonomous; dramatic action-forward tempo with credible physical timing.",
+    "No engine RNG/prepare/confirm, narrative saved as private GitHub text continuity; binary SQLite last verified rev85 in 1278, not synchronized."
+  ]
+}
