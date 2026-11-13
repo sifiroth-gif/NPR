@@ -2,23 +2,24 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-19T11:09:00",
+  "game_at": "0006-09-19T11:17:00",
   "game_date": "Вторник, 19 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-19-1109-arc01-inaba-sampling",
-  "latest_player_command": "Инаба, надо брать анализы. Кровь разные участки, биопсию, думаю костный мозг и сравнивать с ранними записями. Но если он три года прожил и имуннетет не сожрал все, значит ткани большей степенью прижились, даже если все три года он на иммуносупрессии #мастеру: по медицине корректируй, я не медик и сохранись#",
+  "checkpoint_id": "shiki-1283-09-19-1117-arc01-inaba-metal-plate",
+  "latest_player_command": "#осмотр пластины#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
     "location": "Кусагакуре, центральный лазарет, изолированная диагностическая палата",
-    "time": "11:09",
+    "time": "11:17",
     "world_year": 1283,
-    "shiki": "20-year-old Kusa Jonin, proposed tests and immunosuppression interpretation to Inaba, no chakra used. Seina corrected sampling: blood vs epithelial and skin tissue, bone marrow deferred. Patient gave informed permission for limited skin biopsies, venous blood and buccal swab. Shiki has not personally seen the metal plate yet; may choose next action.",
-    "inaba": "Self-identified Inaba Shigeru, male apparently alive after erroneous/forged 1280 certificate, patient says right hand transplanted. Right digits 4/5 poor microvascular perfusion and sensory/motor deficits. Anemia, nonspecific inflammation, mild renal impairment; comparative skin histology/genotype pending. Says a metal plate was provided for clinic identification, hidden inside seam of travel jacket next to chair; has not pulled out or shown it. Worried old doctors may track him.",
-    "seina": "37-year-old experienced Kusa mentor; maintains medical supervision and patient consent, corrected claims: 3 yrs preserved hand does not prove immune tolerance on immunosuppression. Evaluates vascular risk, pending tissue analysis, seeks surgical records. No knowledge of Shiki secret genetic integrations.",
-    "other": "No independent confirmation of Inaba identity, donor, graft source, document fraud, medicine, or Kabuto/Sound/Kiri plot. No Shiki chakra diagnostic used."
+    "shiki": "Full 20-year-old Kusa Jonin, has examined Inaba's numbered medical tag by normal visible methods, no chakra and no further spoken dialogue. Plate rests in front of him on clean napkin.",
+    "seina": "Present. She opened patient jacket seam, observed plate, notes official Kiri query would leave trace, respects Inaba denial of external disclosure, offers to examine object's composition/markings and locally search records.",
+    "inaba": "Awake, cold weak right hand with patchy capillary flow and neurological deficits, suspected foreign graft; pending tissue comparison. He says tag twice was used at different medical posts to get weekly medicine, later warned to hide it. Refuses official external inquiry and asks not to disclose location.",
+    "plate": "Gray metal ~5x3cm 2mm. Front МЕДИЦИНСКИЙ РЕЕСТР / М-4 / 031 / РЕЦИПИЕНТ / Контроль: 7 суток. Reverse Сложная тканевая трансплантация / Экстренное обращение: медицинский узел М-4. Worn lanyard hole; near edge four slanted waves vaguely Kirigakure-like but not exact official icon; six tiny edge notches four with dark hardened substance, function unknown. No patient name. No scan or authentication yet.",
+    "world": "Narrate only Shiki POV with direct source and honest uncertainty. Shiki already knows entire observed inscription and patient disclosure. No NPC offscreen scenes shown."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -64,7 +65,8 @@
     "Inaba's claim: 1280 convoy assault, mysterious 9-day recovery, unofficial hand transplant, 3-year clandestine weekly medicines, 6-week lapse, alleged country-of-Water accented surgeon with left glove. Independent verification pending.",
     "Inaba hinted at a medical identification metal plate concealed in the inner jacket seam, inscriptions and provenance NOT YET KNOWN.",
     "Tissue histology and donor/recipient cellular comparison pending; reject unproven graft tolerance or true genotype match as fact.",
-    "Hand's small-vessel blood flow and digits 4–5 at risk; prompt monitoring necessary, large arteries remain patent."
+    "Hand's small-vessel blood flow and digits 4–5 at risk; prompt monitoring necessary, large arteries remain patent.",
+    "Inaba's medical tag M-4 / 031, 7 day monitoring, presumed tissue transplant; four wave-like strokes may suggest Kiri but unproven, six edge notches 4 dark-filled unknown. Inaba rejects traceable official inquiry and should retain patient consent."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -104,7 +106,8 @@
     "campaigns/shiki/continuity/SHIKI_1283_FIVE_TECHNIQUES_NARUTO_WORLD_INTEGRATION_2026-11-13.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_PHYSICAL_EXAM_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_EXPLAINS_FALSE_DEATH_1283-09-19.json",
-    "campaigns/shiki/continuity/ARC01_SESSION01_INABA_SAMPLING_AND_METAL_PLATE_1283-09-19.json"
+    "campaigns/shiki/continuity/ARC01_SESSION01_INABA_SAMPLING_AND_METAL_PLATE_1283-09-19.json",
+    "campaigns/shiki/continuity/ARC01_SESSION01_INABA_MEDICAL_PLATE_1283-09-19.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -112,7 +115,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Text-only checkpoint as of Sep 19 1283; main SQLite rev85 remains stale, verify/prepare/confirm NOT run."
+    "warning": "SQLite not current: last verified rev85 at July 1278, text GitHub checkpoint only. No prepare/confirm."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -122,7 +125,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_INABA_SAMPLING_AND_METAL_PLATE_1283-09-19.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_INABA_MEDICAL_PLATE_1283-09-19.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
