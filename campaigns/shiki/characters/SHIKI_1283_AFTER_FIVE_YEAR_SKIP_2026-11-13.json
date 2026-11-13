@@ -110,178 +110,58 @@
     {
       "id": "shunshin_nulevaya_stupen",
       "name": "Шуншин: Нулевая ступень",
-      "class": "movement",
+      "discipline": "Movement",
       "rank": "S+",
-      "effect": "Extremely fast single burst over traversable physical line, including deceleration into stable stance",
-      "limits": "Not teleport; poor footing/obstacles, sound and muscle strain."
-    },
-    {
-      "id": "shunshin_tri_ispolneniya",
-      "name": "Шуншин: Три исчезновения",
-      "class": "movement",
-      "rank": "A/S",
-      "effect": "Preplanned 2-3 chained bursts changing angle with false visual timing",
-      "limits": "Strong expense; can be predicted via chakra sensory / Sharingan observation."
+      "effect": "Extreme real burst mobility up to 25-35m on clear known route; not teleportation; three or four high-output bursts before fatigue",
+      "limits": "Needs line, footing and body inertia; trained sensory perception can predict"
     },
     {
       "id": "scalpel_tishina",
-      "name": "Медицинский скальпель: Тихий разрез",
-      "class": "medical taijutsu",
+      "name": "Чакровый скальпель: Тихий разрез",
+      "discipline": "Medical taijutsu",
       "rank": "A",
-      "effect": "Subcentimetre controlled contact incision of muscle/tendon/peripheral nerve under movement, capable of nonlethal disablement or fatal injury depending target",
-      "limits": "Requires contact and reach, armor/chakra defences resist; not a distance slash."
-    },
-    {
-      "id": "scalpel_neural_lock",
-      "name": "Нейроблокада",
-      "class": "medical",
-      "rank": "A",
-      "effect": "Temporary targeted local sensorimotor interference via direct touch, with medical feedback",
-      "limits": "Needs precision, stability; not universal paralysis or mind control."
-    },
-    {
-      "id": "water_fog",
-      "name": "Суйтон: Безмолвная завеса",
-      "class": "water ninjutsu",
-      "rank": "B",
-      "effect": "Low-visibility moisture curtain which masks coordinated movement and alters acoustic cues",
-      "limits": "Wind and powerful sensory counter."
-    },
-    {
-      "id": "water_prison",
-      "name": "Суйтон: Водяная тюрьма",
-      "class": "water ninjutsu",
-      "rank": "B",
-      "effect": "Confines an accessible target within concentrated water",
-      "limits": "Large water supply, maintenance, countermeasures and immobilization pressure."
-    },
-    {
-      "id": "water_senbon",
-      "name": "Суйтон: Тысяча игл",
-      "class": "water ninjutsu",
-      "rank": "A",
-      "effect": "Precise multi-projectile condensed water senbon in wet surroundings",
-      "limits": "High projectile count reduces individual penetration/accuracy."
-    },
-    {
-      "id": "water_clone",
-      "name": "Суйтон: Водяной двойник",
-      "class": "water ninjutsu",
-      "rank": "B",
-      "effect": "Short-lived physical water decoy used with reconnaissance and burst angles",
-      "limits": "Limited endurance, can be dispersed."
-    },
-    {
-      "id": "lightning_wire",
-      "name": "Райтон: Живая нить",
-      "class": "lightning",
-      "rank": "A",
-      "effect": "Conduction along prepared senbon/wires or wet channel to disrupt local muscle response",
-      "limits": "Requires channel and careful insulation from own water forms and allies."
-    },
-    {
-      "id": "lightning_reflex",
-      "name": "Райтон: Проводимость",
-      "class": "lightning/internal support",
-      "rank": "A",
-      "effect": "Short burst of chakra-assisted proprioceptive and muscular recruitment synchronized with Shunshin",
-      "limits": "Costly, risks misfire and transient neuromuscular exhaustion, not reaction omniscience."
-    },
-    {
-      "id": "wind_shear",
-      "name": "Футон: Сдвиг",
-      "class": "wind",
-      "rank": "B",
-      "effect": "Short blast to alter projectile path, stabilize ice formation and reposition fog",
-      "limits": "Weaker against high-grade broad wind and fully braced foes."
-    },
-    {
-      "id": "ice_glass",
-      "name": "Хёотон: Белая гладь",
-      "class": "ice",
-      "rank": "A",
-      "effect": "Ice surfaces/walls condensed from available water or moisture; can block or deflect projectiles, form footholds",
-      "limits": "Requires chakra+water, vulnerable strong heat/force, no infinite area."
-    },
-    {
-      "id": "ice_needle",
-      "name": "Хёотон: Стеклянные иглы",
-      "class": "ice",
-      "rank": "A",
-      "effect": "Multiple hard ice needles with fine trajectory and thermal profile control",
-      "limits": "Ice projectile can fracture, armor/area ninjutsu counters."
-    },
-    {
-      "id": "ice_mirrors",
-      "name": "Хёотон: Четыре отражения",
-      "class": "ice/movement",
-      "rank": "A/S",
-      "effect": "Own researched 2–4 reflective ice planes form quick Shunshin waypoints and visually confusing angles, partly informed by knowledge Haku had mirror skill; DOES NOT automatically copy Haku's exact Demonic Mirroring Ice Crystals",
-      "limits": "Needs setup/near moisture and body momentum, chakra drain, not literal reflective teleport."
-    },
-    {
-      "id": "ice_frost",
-      "name": "Хёотон: Морозный шов",
-      "class": "ice/medical sabotage",
-      "rank": "A",
-      "effect": "Freezes external water film on surfaces/equipment or briefly fixes exposed fabric/weapons, not instant freezes blood in protected body",
-      "limits": "Needs accessible moisture and temperature, heated/energized counter."
-    },
-    {
-      "id": "hozuki_partial",
-      "name": "Нулевой Геном: Текучая ткань",
-      "class": "genetic/defense",
-      "rank": "S (secret)",
-      "effect": "Localized reversible partial hydration/softening in selected own tissues; can decrease some shallow cutting damage or escape restrained limb",
-      "limits": "No liquefaction of brain/bones/whole body; vulnerable electricity, dehydration and sudden external force."
-    },
-    {
-      "id": "zero_genome_tuning",
-      "name": "Нулевой Геном: Перепись ткани",
-      "class": "genetic research",
-      "rank": "S (secret)",
-      "effect": "Slow controlled somatic integration, selection and regulation of compatible donor segments in own tissues",
-      "limits": "Takes months/years, nonzero rejection/tumor/autoimmunity risk; cannot activate unknown doujutsu from eye contact."
-    },
-    {
-      "id": "zero_genome_hide",
-      "name": "Зеркальная гладь: Нулевая метка",
-      "class": "stealth",
-      "rank": "A/S (secret)",
-      "effect": "Suppresses unusual chakra and basic physiological cues for short infiltration phases; alternate cover physiology",
-      "limits": "Not invisibility, trained sensory experts and chakra interference can detect."
+      "effect": "Precise contact interference with muscle, tendon, peripheral nerves and vessels",
+      "limits": "Needs contact; defenses, movement and armor can resist"
     },
     {
       "id": "genjutsu_step",
       "name": "Гендзюцу: Чужой шаг",
-      "class": "yin perception",
+      "discipline": "Yin genjutsu",
       "rank": "A",
-      "effect": "Briefly distorts enemy sense of limb position and movement timing by direct illusion anchor",
-      "limits": "Strong chakra control, kai, external disruption can break."
+      "effect": "Distorts enemy proprioception, balance and distance judgments",
+      "limits": "Strong focus, chakra kai, pain or outside disruption can break"
     },
     {
-      "id": "genjutsu_no_sound",
-      "name": "Гендзюцу: Глухая глубина",
-      "class": "yin perception",
-      "rank": "A",
-      "effect": "Temporarily misaligns acoustic and vestibular perception to create delayed responses",
-      "limits": "Not absolute deafening; sensory ninja can resist."
+      "id": "water_fog",
+      "name": "Суйтон: Безмолвная завеса",
+      "discipline": "Suiton",
+      "rank": "B",
+      "effect": "Dense water mist for cover, acoustic deception and concealed maneuver",
+      "limits": "Wind, drought and skilled sensors limit effectiveness"
     },
     {
-      "id": "sensor_pulse",
-      "name": "Сенсорика: Пульсовая карта",
-      "class": "sensory/medical",
+      "id": "lightning_wire",
+      "name": "Райтон: Живая нить",
+      "discipline": "Raiton",
       "rank": "A",
-      "effect": "Combines chakra sensing and visible physiological cues to distinguish active signatures, severe distress and nearby chakra suppression",
-      "limits": "No mind reading; barrier/false signature and obstructed medical scans degrade."
+      "effect": "Channels electrical strike through senbon, wire or prepared wet path to disrupt muscles",
+      "limits": "Needs channel, safe isolation; may endanger self/ally with shared water"
     },
     {
-      "id": "medical_restore",
-      "name": "Медицинское ниндзюцу: Тканевая стабилизация",
-      "class": "medical",
-      "rank": "A/S",
-      "effect": "Field surgery support, hemostasis, deep tissue repair and neural rehabilitation, within biological limits",
-      "limits": "Does not restore major blood loss instantly, revive dead or unconditionally regrow limbs."
+      "id": "ice_mirrors",
+      "name": "Хёотон: Ледяные зеркала",
+      "discipline": "Hyoton",
+      "rank": "S",
+      "effect": "Forms ice mirror/surface array enabling near-instantaneous high-speed reflection-path movement and deceptive attack vectors",
+      "limits": "Needs water and fast chakra control, high expenditure, cannot jump through solid obstacles, Raiton/heat can counter"
+    },
+    {
+      "id": "hozuki_partial",
+      "name": "Нулевой Геном: Текучая ткань",
+      "discipline": "Somatic adaptation",
+      "rank": "S/secret",
+      "effect": "Selective transient liquid-like reorganization of own skin, fascia and muscle for partial cut mitigation or escape",
+      "limits": "Cannot liquefy brain/entire body; electricity, dehydration and overload dangerous"
     }
   ],
   "covert_operational_skills": [
@@ -310,5 +190,17 @@
     "No genetic assimilation or technique may be extrapolated into godlike invulnerability."
   ],
   "effective_world_year": 1283,
-  "technique_catalogue_count": 22
+  "technique_catalogue_count": 7,
+  "playable_quick_reference": "Exactly seven separately named player-facing techniques. All routine healing, diagnosis, sensing, chakra masking, Suiton/Raiton water/projectile manipulations and intelligence skills are general capabilities or variations of the seven, not separate names the user must memorize. User can describe intent and GM maps to capabilities. Do NOT introduce many further technique names.",
+  "additional_unnamed_capabilities": [
+    "field surgery and stabilization",
+    "advanced sensory mapping",
+    "covert chakra signature and physiological masking",
+    "general Suiton/Fuuton/Raiton elemental manipulation",
+    "water decoys and needles as derivatives of Suiton",
+    "basic ice defensive and projectile forms as derivatives of Hyoton",
+    "slow long-term private somatic genome assimilation research",
+    "forensics, covert access, counter-surveillance and coded sources"
+  ],
+  "canon_note": "Player explicitly requested brief card and accepted seven abilities. Full character breadth remains; names are limited to seven. Ice Mirrors achieved via Haku lineage, not by inherited memory of exact Haku execution."
 }
