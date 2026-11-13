@@ -1,0 +1,63 @@
+{
+  "schema": "NPR-S2-EVENT-RECOVERY/1",
+  "campaign_id": "naruto-shiki",
+  "session": 2,
+  "source_player_input": "#диагностика и стабилизация пациента, после извлечение его из подпола наверх, лечение#",
+  "player_action_authority": "Shiki makes clinical assessment and stabilization of found critically ill witness Minagi Daisuke, arranges lifting him from underfloor hiding place with helpers, and continues treatment. Shiki has NOT made any new speech, agreed to release records, volunteered for follow-up, or otherwise declared any extra actions.",
+  "timeline": [
+    {
+      "at": "0001-08-24T07:28:00",
+      "event": "Chunin medic Shiki examines presumed archivist Minagi. Shallow breathing ~7 per minute, rapid weak carotid pulse, cold clammy skin, constricted but reactive pupils. Medical chakra diagnostic assessment detects deep penetrating wound at left lower costal edge through muscle and small vessels, without spleen or peritoneal penetration; continued minor hemorrhage and blood loss, dehydration; unexplained drug-related suppression of neuromuscular signaling and respiration. Exact toxic agent not identified via chakra."
+    },
+    {
+      "at": "0001-08-24T07:31:00",
+      "event": "Shiki uses medical chakra to arrest muscle-vessel bleeding, approximate deep tissue margins, monitor patient and provide ventilatory support with field kit. No magical instant blood replacement, drug effect remains. Patient's weak rapid pulse stops deteriorating, still in danger. Meanwhile sound of violent struggle in adjacent archive."
+    },
+    {
+      "at": "0001-08-24T07:36:00",
+      "event": "Izumi returns with one security escort suffering a forearm burn; announces saboteur detained alive, some archival records burned. Izumi and guards lift Minagi through hatch on rigid stretcher with spinal and wound protection. Shiki continues treatment at accessible table with controlled field resuscitation, sealed IV solutions and medical chakra repair. At 08:04 witness begins consistent deep spontaneous breaths; still needs observation and full blood restoration."
+    },
+    {
+      "at": "0001-08-24T08:17:00",
+      "event": "Archives saboteur held alive, civilian traveler clothes without village protector, two fingers broken during weapon disarmament by Izumi. Selective burning of archive materials. Partial rescued document title 'РЕЕСТР БИОЛОГИЧЕСКОЙ СОВМЕСТИМОСТИ', legible numbers: Образцы 37, Повторные наблюдения 6, Стабильные результаты 1, partial «Передача копии — подразделение [...]», «Получатель — К[...]». Full names/dates NOT verified; do NOT automatically identify recipient as Kabuto. Captive says 'Всё равно поздно. Вы даже не знаете, что нашли.' refuses further explanation."
+    },
+    {
+      "at": "0001-08-24T09:42:00",
+      "event": "Minagi regains consciousness briefly; panics at word «управление». Under Izumi's short inquiry while medically weak says seal was merely means to get access to records, they sought list of people whose tissue changes and organism does not reject foreign tissue, list compiled at medical post many years before the exam. No named perpetrator, direct Kabuto/Orochimaru link or Shiki's inclusion in list confirmed. Izumi stops questions due renewed shallow breathing. Shiki has not voiced questions."
+    },
+    {
+      "at": "0001-08-24T11:20:00",
+      "event": "Reserve detail secured Post 6. Izumi escorts wounded Minagi and arrested saboteur separately back to village; seized partial archive leaves packaged, two ampoules found on captive with drug class similar to that inducing Minagi's hypoventilation but exact composition unverified. Izumi learns Shiki appointment Aug23 at 07:50 occurred by internal authority channel but original authorization absent from central log; suspicious insider access possible, exact author/intent unknown."
+    },
+    {
+      "at": "0001-08-24T12:05:00",
+      "event": "Back at Kusagakure central infirmary. Minagi arrives alive, still in critical but stable condition, transferred to established medical mentor Kirisawa Seina for further diagnosis and care. Captive under separate guard. Izumi tells team leader Asumaga Tose about old biological registry, missing staff, and unexplained pre-promotion Shiki assignment; investigation ongoing, no conclusively established Kabuto/Orochimaru or insider motivation."
+    }
+  ],
+  "current_time": "0001-08-24T12:05:00",
+  "current_location": "Кусагакуре. Центральный лазарет.",
+  "npc_states": {
+    "shiki": "Physically back at lазарет after fulfilling player clinical actions, has not yet spoken nor chosen further investigation, newly promoted chunin.",
+    "minagi": "Found alive, left lower flank surgical wound stabilized, circulation still needs restoration, drug-induced weak breathing improving, with Seina care at Kusa hospital. Witness knows existence of tissue-compatibility roster, may be frightened of Kusa operations office.",
+    "izumi": "Kusa special jonin mission leader, captured saboteur alive, her escort forearm burned, evidence retained, suspicious of operations channel compromised. No proven conspiracy participants.",
+    "tose": "Kusa team leader, learns from Izumi about missing appointment record and old registry, likely concerned about being manipulated.",
+    "saboteur": "Unidentified man in civilian clothes, captured alive with broken fingers, refuses to talk; found with two similar-class sedative/drug ampoules.",
+    "seina": "Experienced medical chunin and Shiki mentor receiving stabilized Minagi for further treatment."
+  },
+  "clues": [
+    "A historic Kusagakure biological compatibility registry existed, 37 samples, 6 reobservations, 1 stable result; document fragment has recipient 'К[...]', NOT identified.",
+    "Some people on list reportedly biologically remodel tissue and do not reject foreign tissue. Minagi's words, NOT proof of specific subject or genetic mechanism.",
+    "Second fake Kusa team used official obsolete seal to access records, link between specific perpetrators and post still under investigation.",
+    "Shiki was tasked for first mission via privileged internal operations channel before promotion (07:50 vs 09:10), appointing individual not verified.",
+    "Medical procedure left drug-induced respiratory depression and bleeding in captive, partially selective file destruction."
+  ],
+  "open_threads": [
+    "Minagi recovery and further testimony",
+    "Identities of post 6 saboteur and possibly accomplices, connection to Orochimaru/Kabuto",
+    "Unknown recipient beginning with К from damaged documents, do not guess",
+    "Who assigned Shiki before his promotion and why",
+    "Actual contents and custodians of old compatibility register",
+    "Do not have others learn Shiki Zero Genome or private Kabuto exchange without evidence"
+  ],
+  "last_base_sqlite": "state.json rev 85 at July 28 18:18 still stale; this is confirmed GitHub text snapshot only."
+}
