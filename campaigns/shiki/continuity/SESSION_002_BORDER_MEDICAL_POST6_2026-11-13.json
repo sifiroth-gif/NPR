@@ -1,0 +1,66 @@
+{
+  "schema": "NPR-S2-MISSION-EVENT/1",
+  "campaign": "naruto-shiki",
+  "branch": "game-state/shiki",
+  "session": 2,
+  "player_text": "Тогда давай это расследование, но в ускоренном темпе. По игре: иду на брифинг",
+  "player_authorization": "Proceed to briefing and accelerate routine deployment into first field investigation; no invented speech or autonomous clinical choices by Shiki.",
+  "played_at": "0001-08-24T07:28:00",
+  "chronology": [
+    {
+      "at": "0001-08-23T12:06:00",
+      "event": "Shiki goes to briefing in Kusa operations room 3 with Kusa commander Asumaga Tose present. New mission commander Tatsumori Izumi, special jonin age ~37 short hair, old damaged nail on right index finger, guarded professional manner, proposes small detail: herself, Shiki as medical/biological evaluator, and two unnamed security shinobi. Post 6 closed 3 years ago, last inspection previous autumn, recent signs of human use. Missing registrar Minagi Daisuke age 44 sought write-off logs for medical stamp stationery on former post just before disappearance. Seal used by bogus Grass team supposedly destroyed 6 months before, provenance still disputed. Izumi notes Shiki assigned to mission at 07:50 Aug 23 before his 09:10 promotion, appointment apparently preselected by someone unknown. Tose suspicious but no proof trap. Izumi wants evidence of medical procedures vs experimental protocols and living witnesses; prefers not to initiate combat."
+    },
+    {
+      "at": "0001-08-24T06:35:00",
+      "event": "Expedited routine deployment to abandoned post 6 in Kusagakure borderlands. Damp forest two buildings, store and well. Four sets of shoe tracks by entrance, one person's right leg apparently supported due abnormal weight distribution; no detected open exterior traps or fresh retreat tracks from outer sweep."
+    },
+    {
+      "at": "0001-08-24T06:58:00",
+      "event": "Surgical room: 4 metal tables, one recently washed, human hair fragments, bloodstained cloth, two empty drug ampoules with removed or destroyed labels, straps around head/trunk/limbs with stronger right wrist restraint. Izumi infers likely restrained medical patient/procedure, consent not established. No scan or analysis automatically performed by Shiki."
+    },
+    {
+      "at": "0001-08-24T07:26:00",
+      "event": "Found recently boarded hidden hatch beneath storage crates, inside critically injured adult man resembling missing registrar Minagi Daisuke, bound wrists, left torso bloodstains, shallow and infrequent breathing, barely responsive, said «Не… печать… они искали… Список… Врач…» then unconscious. Izumi checks pulse, says alive but urgent stabilization, calls on Shiki to assess and stabilize, offers escort; whether prisoner is definitely Minagi not yet clinically proven, though responsive to name. Small circular medical mark at wrist alongside three older parallel scars, purpose unknown."
+    },
+    {
+      "at": "0001-08-24T07:28:00",
+      "event": "Separate sound of object and tearing paper in adjacent records office, smoke appears below door, someone destroying records. Izumi and two security shinobi move to intercept autonomous suspect and retrieve archives, ordering formation; leaves Shiki with critically ill man at open hatch. No Shiki treatment declared yet; player free to choose immediate clinical actions. Two simultaneous threats occur but teams divided by NPC initiative."
+    }
+  ],
+  "npc_identities": [
+    {
+      "id": "kusa_ops_tatsumori_izumi",
+      "name": "Тацумори Идзуми",
+      "village": "Кусагакуре",
+      "role": "токубэцу-дзёнин, командир медицинско-оперативной проверки поста № 6",
+      "age": "около 37",
+      "appearance": "Коротко остриженные волосы, старое повреждение ногтя правого указательного пальца, сдержанная физическая экономность",
+      "speech": "Коротко, причинно, без риторики",
+      "capabilities": "оперативная разведка и безопасность ограниченной группы, сбор следов, первичная помощь",
+      "limits": "не медик уровня Сэйны и Шики; не знает истоков исчезновения Минаги, не может доказать мотив внезапного назначения Шики",
+      "goal": "найти пропавшего сотрудника, сохранить вещественные доказательства, выяснить кто оформил необычно раннее назначение Шики, сохранить свою группу",
+      "knowledge": "Знает про позднюю регистрацию второй Kusa команды и спорную печать. НЕ знает о пяти взглядах Кабуто/команды или частном обещании Шики Кабуто",
+      "status": "Active at adjacent archive room with two unnamed escorts"
+    },
+    {
+      "id": "kusa_archivist_minagi_daisuke",
+      "name": "Минаги Дайсукэ",
+      "age": 44,
+      "village": "Кусагакуре",
+      "role": "сотрудник регистрационного архива, пропал 22 августа",
+      "appearance": "Тощий, кровь на левой стороне одежды, связан, поверхностное дыхание, рубцы на запястье",
+      "status": "Found alive but severely weakened, intermittently conscious, now unconscious at 07:28; likely said name on being addressed but identity still to verify",
+      "knowledge": "Potential witness to what conspirators sought ('список') and medical procedures. Too weak to give reliable interview now."
+    }
+  ],
+  "state": {
+    "player": "Shiki at storage room open underfloor hatch by critically ill man. No automatic stabilization, scanning or speaking applied; Shiki action window NOW. No immediate attacker in same room seen.",
+    "mission": "Investigate medical post No 6, under Izumi. First day on site, not concluded.",
+    "guards": "Izumi + 2 Kusa escorts heading to smoke and document destruction in adjacent archive, no fight resolution yet.",
+    "clues": "four track sets and assisted gait, recent surgical preparations, missing drug labels, heavy restraints, circular mark and 3 scars near captive wrist, captive utterance 'Не печать, они искали список, врач'; identity and links unverified",
+    "time": "0001-08-24T07:28:00"
+  },
+  "continuity": "Shiki promoted to Chunin 23 Aug 09:10. No declared acceptance speech or patient treatment; mission routine transfer under established order consistent with user's requested fast investigation. Ren healed shoulder, Aki remains non-ambulatory at home. Do not treat coincidences as proof of Kabuto/Orochimaru, or invent their locations.",
+  "sql": "UTF-8 continuity only, engine base sqlite rev85 remains stale"
+}
