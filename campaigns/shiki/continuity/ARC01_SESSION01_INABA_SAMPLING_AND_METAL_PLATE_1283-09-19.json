@@ -1,0 +1,47 @@
+{
+  "format": "NPR-SHIKI-SCENE/1",
+  "campaign": "naruto-shiki",
+  "session": "postskip-arc1-session1",
+  "world_at": "0006-09-19T11:09:00",
+  "world_date": "1283-09-19",
+  "location": "Кусагакуре, центральный лазарет, изолированная диагностическая палата",
+  "player_verbatim": "Инаба, надо брать анализы. Кровь разные участки, биопсию, думаю костный мозг и сравнивать с ранними записями. Но если он три года прожил и имуннетет не сожрал все, значит ткани большей степенью прижились, даже если все три года он на иммуносупрессии #мастеру: по медицине корректируй, я не медик и сохранись#",
+  "player_in_world_speech": "Инаба, надо брать анализы. Кровь из разных участков, биопсию, думаю, костный мозг. И сравнивать с ранними записями. Но если вы три года прожили и иммунитет не уничтожил чужеродные ткани, значит, они в значительной степени прижились. Даже если всё это время вы принимали иммунодепрессанты.",
+  "actions_requested": "Shiki proposes comprehensive biological/genetic testing and comparison with early records; diagnostic work delegated to cooperative clinic with medical correction from Seina. No further Shiki acts, thoughts or medically invasive intervention without patient consent.",
+  "chronology": [
+    {
+      "at": "0006-09-19T07:52:00",
+      "event": "Inaba hears Shiki's proposed tests, becomes anxious when marrow sampling mentioned. Seina explains that venous blood from different sites reflects common circulation and is not optimal to prove hand donor origin. Comparative buccal epithelial swab/venous blood, native skin and probable graft skin are more informative. Bone marrow aspirate/biopsy deferred as too invasive and not initially indicated; could assess hematopoietic chimerism only if evidence warrants. Three years of graft survival with chronic immunosuppression does NOT establish immune tolerance; late rejection after discontinuation remains possible, as do neuropathy, infection, ischemia."
+    },
+    {
+      "at": "0006-09-19T08:03:00",
+      "event": "Ordinary non-chakra vascular examination shows brachial/ulnar/radial major bloodflow intact but reduced small-vessel perfusion to IV and V digits on right hand, consistent with delayed capillary refill; no evidence of complete acute arterial occlusion. Prompt vascular assessment and serial monitoring warranted."
+    },
+    {
+      "at": "0006-09-19T08:18:00",
+      "event": "Inaba voluntarily consents to venous blood tests, buccal epithelial swab and two limited small skin biopsies after risks discussed: right hand dorsal skin away from most poorly perfused region and own left forearm skin for comparison. Seina and staff use ordinary instruments, local anesthesia and sterile dressings; NO chakra used by Shiki or Seina. Biopsy graft wound has relatively weak bleeding, possible impaired perfusion but no proof of origin. CBC, renal and liver function, inflammatory markers/infection work-up ordered. Patient fears transfer of samples to clandestine surgeon; Seina promises controlled clinical records subject to applicable lawful basis, not absolutist secrecy."
+    },
+    {
+      "at": "0006-09-19T11:06:00",
+      "event": "Preliminary ordinary lab results: mild-moderate anemia, normal range white blood cells, modestly high inflammatory markers, mild renal function deviation requiring retest, no significant liver function change. Large arteries patent, small-vessel perfusion compromised. Skin histology and cellular-origin comparative tests PENDING. Neither rejection nor infection nor foreign donor genotype confirmed."
+    },
+    {
+      "at": "0006-09-19T11:09:00",
+      "event": "While clinicians discuss needing old operative and drug records, Inaba reports he has a small METAL PLATE given after his last examination as identification for medical posts if staff stop recognizing him. He says it is concealed in the inner seam of his traveling jacket on adjacent chair. He touches seam but does NOT yet retrieve the plate. Seina asks about it, patient looks toward Shiki and door. This is an offered clue from patient, not a revealed inscription or known provenance."
+    }
+  ],
+  "npc_knowledge": {
+    "shiki": "Knows own proposed clinical work, ordinary tests, actual objective perfusion abnormalities, initial limited labs, pending pathology, and Inaba's personally reported metal plate. Has not read plate, not learned its markings or identity.",
+    "seina": "Present; corrects testing strategy and follows patient consent, concerned about graft vasculopathy and immunologic rejection, cannot identify either yet. Seeks original surgical and medicine records. Does not know Shiki's secret assimilations.",
+    "inaba": "Conscious and frightened of prior clandestine clinic, gives patient consent for limited blood and comparative skin testing after explanation, reports metal plate in coat, worries records may reach past doctors."
+  },
+  "medical_guardrails": [
+    "Blood taken from multiple venous sites does not usually distinguish donor tissue DNA; assess patient host blood/buccal and transplanted skin via comparative cellular markers.",
+    "Marrow biopsy not routine for an isolated hand graft in absence of additional suspicion of hematopoietic chimerism.",
+    "Three-year allograft survival on drug therapy is compatible with immunosuppression; does NOT show tolerance. Six weeks without medication can permit delayed acute/chronic immune injury. Nonrejection causes remain plausible.",
+    "Cold cyanotic digits and 4-second capillary refill prompt vascular urgency and close monitoring; no unwarranted wait for genetics or careless graft biopsy without assessing safe site.",
+    "No definitive graft donor, who forged death, surgeon, external villain or Kabuto link established."
+  ],
+  "scene_gate": "11:09 19 Sep 1283, Inaba indicates a hidden metal plate in inner seam of jacket; neither Shiki nor clinicians have seen inscription. Await player's choice, no automatic retrieval or examination.",
+  "branch_storage": "Private GitHub text recovery; SQLite engine still stale rev85 and not checked during this turn."
+}
