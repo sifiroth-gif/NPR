@@ -2,26 +2,24 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0006-09-19T16:07:00",
-  "game_date": "Вторник, 19 сентября 1283 года",
+  "game_at": "0006-09-22T09:13:00",
+  "game_date": "Пятница, 22 сентября 1283 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-1283-09-19-1607-official-inquiry-19T",
-  "latest_player_command": "Надо запускать официальное расследование",
+  "checkpoint_id": "shiki-1283-09-22-0913-izumi-summons",
+  "latest_player_command": "Тогда буду ждать вызова. А пока пожалуй оставлю вас #иду домой#",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, центральный лазарет, диагностический кабинет",
-    "time": "16:07",
+    "location": "Кусагакуре, порог дома Мугами Шики",
+    "time": "09:13",
     "world_year": 1283,
-    "shiki": "20-year-old Kusa Jonin. Player said 'Надо запускать официальное расследование', triggering formal internal notification. Did not invent Shiki further statements, inner life or actions. Official case registered in Kusa. Any outward investigative missions or patient treatment choice awaits player.",
-    "seina": "Experienced doctor, guarded consent and chain of custody, kept original M-4/031 tag and samples; Inaba tissue results still pending, hand perfusion being monitored. Not privy to Shiki gene research.",
-    "inaba": "Protected witness who agrees to local investigation but fears clinic network and forbids foreign external requests. Suspected graft, poor distal flow, pending analysis; no proved donor/identity.",
-    "izumi": "Tatsumori Izumi (Kusa security) officially opened 19-Т/1283, privately reported to Shiki and Seina: 1280 death certificate says corpse passed to escort unit but register has no confirmed receiving entry, medical examiner didn't verify body. Witness Shiraha Motoe currently western border, records ordered preserved and interview planned; second witness unlocated. Izumi works autonomously and does not know Shiki private genetics.",
-    "authority": "Deputy Kusa security chief sent jurisdiction reminder foreign inquiries require village leadership. No evidence it is intentional obstruction; internal case open.",
-    "plate": "M-4/031 front, R-031/4 T.C. Series 17 hidden, passive fuinjutsu tag and four dark-filled of six notches. Not activated, original remains clinic.",
-    "next_gate": "At 16:07 near Seina/Izumi; patient in hospital, official criminal inquiry open. Choose Shiki participation, clinical diagnosis or another action."
+    "shiki": "Age20 Kusa full Jonin, left Seina and Izumi Sept19 16:08 and went home on explicit instruction. Sept22 at door has been handed official summons from Izumi to appear by 10:00 at Kusa Security office 3. Has not yet decided attendance or spoken to courier. No invented private actions or emotions.",
+    "courier": "Young Kusa official security dispatch courier in wet uniform waits briefly at the door, says she is only required to ensure personal delivery; no response required.",
+    "summons": "From Tatsumori Izumi case 19-Т/1283, appear today Sep22 by 10:00 Kusa security office 3; attached personal note says distinct genetic profile in right hand skin vs patient control tissue consistent with foreign donor tissue; volume of transplant and donor unknown. Shiraha Motoe acknowledged her signature on 1280 incident report but asserts she signed MISSING not DEAD; unverified claim. Izumi has concrete operational proposal, undisclosed until meeting.",
+    "patient": "Inaba remains under clinical care of Seina; Shiki has not received confirmation of rejection, exact drug, prognosis or DNA donor identity. No outward communication to foreign agency inferred.",
+    "izumi": "Independent head investigator of internal official Kusa case. Sent Shiki official summons, patient identity protected as far as known. No private or offscreen Izumi scenes visible."
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -73,7 +71,10 @@
     "Inaba claims conditional release and controlled access to weekly meds, a travel route limit, and last clinic 'final review'; claims uncorroborated.",
     "Official Kusa investigation 19-Т/1283 opened 1283-09-19 13:34 by Tatsumori Izumi; Shiki initiator. Inaba protected local witness, no external Kiri inquiry.",
     "Death certificate 16 Nov 1280 has corpse-handoff claim but official receiving ledger blank; signatory Shiraha Motoe at western border for questioning; no proof intent to forge.",
-    "Deputy Kusa security chief sent foreign-jurisdiction reminder quickly; potential procedural restriction or interference, intent unproven."
+    "Deputy Kusa security chief sent foreign-jurisdiction reminder quickly; potential procedural restriction or interference, intent unproven.",
+    "22 Sep 1283: Izumi official summons for 10:00 in Kusa Security office 3, has undisclosed operational proposal.",
+    "Clinic genotyping comparing right-hand skin and control tissue shows two genetic profiles (consistent with foreign graft); extent and donor unknown, histology unresolved.",
+    "Shiraha Motoe says signed missing-person report, although 1280 certificate states dead; her account not yet proven."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -116,7 +117,8 @@
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_SAMPLING_AND_METAL_PLATE_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_MEDICAL_PLATE_1283-09-19.json",
     "campaigns/shiki/continuity/ARC01_SESSION01_INABA_DEEP_PLATE_EXAM_1283-09-19.json",
-    "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json"
+    "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json",
+    "campaigns/shiki/continuity/ARC01_SESSION01_TO_02_SHIKI_HOME_OFFICIAL_SUMMONS_1283-09-22.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -124,7 +126,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Latest narrative recovered via verified GitHub continuity files. Binary SQLite remains last known rev85 (1278 Jul28), not synchronized; no prepare/confirm/verify run for this narrative turn."
+    "warning": "Text checkpoint and chronology recorded in GitHub branch; main SQLite last verified rev85 on 1278 Jul28, no newer engine verify/prepare/confirm."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -134,7 +136,7 @@
     "arc": "active",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_OFFICIAL_INVESTIGATION_OPENED_1283-09-19.json",
+  "latest_source_path": "campaigns/shiki/continuity/ARC01_SESSION01_TO_02_SHIKI_HOME_OFFICIAL_SUMMONS_1283-09-22.json",
   "rank_update": {
     "person": "Мугами Шики",
     "rank": "дзёнин",
@@ -162,7 +164,7 @@
     "world_links": "All 20 planned sessions have active autonomous Naruto-world links; GM-only plan file holds details, no forced cameos; personal POV hard gate."
   },
   "pov_policy_file": "campaigns/shiki/continuity/POV_KNOWLEDGE_GATE_AFTER_ORIGIN_2026-11-13.md",
-  "world_date": "1283-09-19",
+  "world_date": "1283-09-22",
   "last_player_substantive_instruction": "5-year jump 1278->1283, major growth, secret Haku Ice Release and Hozuki tissue adaptation, Shunshin at Shisui level or above, Sharingan research, public ranks, mission history, stealth and espionage, keep only seven core named techniques.",
   "arc_session": 1,
   "arc_session_total": 20,
