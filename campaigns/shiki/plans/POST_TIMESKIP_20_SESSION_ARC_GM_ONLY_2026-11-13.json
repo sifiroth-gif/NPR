@@ -2,11 +2,11 @@
   "schema": "NPR-SHIKI-ARC-PLAN/2",
   "access": "GM_ONLY on private campaign branch; no premature spoilers in play",
   "title": "Чужая ткань",
-  "status": "PREPARED_NOT_STARTED",
+  "status": "ACT_ONE_SESSION_ONE_READY",
   "session_target": 20,
   "session_range": "16-24 if organically needed",
   "source": "User requested self-designed 20-session main arc after ~5-year leap but stopped the leap explicitly before execution",
-  "skip_gate": "Do not advance 1278-09-19T17:54 to 1283 until player explicitly authorizes. Shiki currently age 15, Chunin, not 20.",
+  "skip_gate": "Authorized in direct player instruction: five-year time skip executed from 1278-09-19 to 1283-09-19. Stop at first personally observed event 1283-09-19 07:23 in Kusa hospital.",
   "premise": "Years after Konoha invasion, border medicine and public safety clash over covert graft research. A network saved some people while exploiting others. Old tissue-compatibility registry is evidence and leverage, not proof Shiki's anomaly was engineered.",
   "setting_rules": [
     "No Otsutsuki/Kaguya, godlike city-destroying abilities, infinite chakra or guaranteed DNA assimilation",
@@ -248,5 +248,12 @@
     "No proof Shiki was one of 37 old trial cases, or that Kabuto has his blood, or that recipient K-17 is Kabuto",
     "Every arc act resolves at least one real issue with consequences; main arc reaches concrete playable ending around session 20"
   ],
-  "pre_skip_anchor": "Thursday 19 Sep 1278 17:54, Seina office: Kabuto-attributed letter witnessed, childhood medical entry confirmed; Shiki has not responded. Skip currently stopped."
+  "pre_skip_anchor": "Thursday 19 Sep 1278 17:54, Seina office: Kabuto-attributed letter witnessed, childhood medical entry confirmed; Shiki has not responded. Skip currently stopped.",
+  "current_session": 1,
+  "total_sessions": 20,
+  "start_after_skip": "1283-09-19T07:23:00",
+  "skill_reference": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+  "pov_rule": "Only Shiki direct observed/sourced events narrated, offscreen faction clock secret, avoid GM omniscient cutaways",
+  "branching": "No guaranteed victim, no preassigned player choices. World progresses autonomously as Shiki investigates or refuses.",
+  "source_time_skip": "Player direct authorization 2026-11-13, five years with extraordinary training and two secret assimilations"
 }
