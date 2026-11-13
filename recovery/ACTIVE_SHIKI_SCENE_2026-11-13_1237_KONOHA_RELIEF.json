@@ -1,0 +1,74 @@
+{
+  "schema": "NPR-S2-ACTIVE-HANDOFF/1",
+  "campaign_id": "naruto-shiki",
+  "session": 2,
+  "branch": "game-state/shiki",
+  "source_player_text": "Я буду удерживать проход, надеюсь лист позаботится о том что бы мы тут не сдохли #вообще на трибунах точно был Гай и думаю другие именные ниндзя конохи. И ещё имена. Просто случайно собирай иероглифы. В этой игре нет но Морита на моей памяти уже 10#",
+  "player_action": "Shiki voluntarily decides to hold the medical-wing entrance, declares in dialogue «Я буду удерживать проход, надеюсь, Лист позаботится о том, чтобы мы тут не сдохли». Does not chase retreating enemy or make further voluntary actions.",
+  "direct_player_gm_corrections": [
+    "Might Guy was indeed present at tournament as established in already-played events. Other named capable Konoha ninja must act autonomously and must not disappear while two Kusa genin defend medical wing.",
+    "Avoid repetitive common filler surnames such as Морита, and random name invention; read campaigns/shiki/roster.json and NPC_IDENTITY_POLICY.md in main; reuse known stable identities. Apparent outside guard claiming 'commander Morita' at 12:24 was a claim and not established as a newly registered character."
+  ],
+  "observed_canonical_npcs": [
+    {
+      "id": "gai",
+      "name": "Майто Гай",
+      "context": "already present stadium, accompanied injured Neji to central surgery then returns to western battle"
+    },
+    {
+      "id": "kakashi",
+      "name": "Какаши Хатакэ",
+      "context": "responds in central spectator section, protects waking civilians"
+    },
+    {
+      "id": "asuma",
+      "name": "Асума Сарутоби",
+      "context": "comes down west gallery, fights attackers, leads medical corridor relief"
+    },
+    {
+      "id": "kurenai",
+      "name": "Курэнай Юхи",
+      "context": "counter-genjutsu and traps Sound ninja, clears side staircase"
+    },
+    {
+      "id": "ren",
+      "name": "Хаясэ Рэн",
+      "context": "Shiki teammate, completely healed old shoulder injury; helped injured Leaf guard, arranges team equipment; resists condescension"
+    },
+    {
+      "id": "aki",
+      "name": "Мидзухара Аки",
+      "context": "Shiki teammate injured in Gaara match, leg fracture and fissure, non-ambulatory, conscious and speaks her mind"
+    }
+  ],
+  "montage": [
+    {
+      "at": "12:24:31",
+      "event": "Shiki holds exterior medical doorway, does not pursue. Sound net user withdraws down staircase with hidden ally, not confirmed neutralized; dropped chakra cylinder remains outside, security must check it."
+    },
+    {
+      "at": "12:26",
+      "event": "Asuma and Kurenai are actively fighting infiltrators in western gallery; Kurenai uses visual genjutsu, Asuma close combat. They hear medical-alert request and route to wing."
+    },
+    {
+      "at": "12:28",
+      "event": "Asuma and Kurenai arrive at western medical transition; identify Shiki by roster/tournament, Asuma inspects discarded net trap but does not touch; Kurenai secures staircase. Medical nurse reports 6 initial patients + 1 severely bleeding but bleeding partially controlled Konoha guard."
+    },
+    {
+      "at": "12:31",
+      "event": "At different parts of stadium Kakashi protects spectators from Sound attackers, Guy after bringing Neji for urgent central medical care returns to western defense and fights attackers. Not directly visible to Shiki from corridor: omniscient intercut."
+    },
+    {
+      "at": "12:35",
+      "event": "Evacuation group, with medics, arrives under Asuma guard through secured lower medical tunnel. Six original patients, including Aki and another patient who cannot walk, plus recently rescued Konoha guard will be evacuated to central hospital wing. Battle elsewhere still ongoing."
+    },
+    {
+      "at": "12:37",
+      "event": "Aki being prepared on stretcher in room, Ren gathers team equipment and keeps personal belongings safe. Konoha shinobi hold medical passage, Asuma goes to other endangered area. Purple barrier over Kage's box persists. Shiki still at medical entry unless next user acts."
+    }
+  ],
+  "at": "0001-08-07T12:37:00",
+  "location": "Конохагакуре — западное медицинское крыло / защищённый переход",
+  "active_choices": "Shiki no longer must personally hold medical corridor. May accompany injured team, inquire about situation, or act elsewhere, solely by player decision. Do not automatically move Shiki.",
+  "sqlite_status": "Main state.json stays revision 85 at 0001-07-28T18:18:00. This is durable GitHub text snapshot, not verified SQLite journal/prepare-confirm."
+}
