@@ -1,0 +1,58 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-CHASE-CAPTURE/1",
+  "game_at": "0006-09-22T18:04:00",
+  "world_year": 1283,
+  "source_player_exact": "Тиё разрешаю сделать все что бы пациент выжил. Ответственность беру на себя #погоня с помощью шуншина, обездвиживание и доставка к посту#",
+  "player_speech": "Тиё, разрешаю сделать всё, чтобы пациент выжил. Ответственность беру на себя.",
+  "player_actions": [
+    "Delegates medically necessary stabilizing intervention to escorted Tiyo, explicitly assumes responsibility for authorizing her assistance (does not adjudicate her guilt or give her legal immunity).",
+    "Pursues masked river shinobi with Shunshin, tries to immobilize alive, brings subdued enemy back to checkpoint. No other player-directed action or speech."
+  ],
+  "chronology": [
+    {
+      "at": "17:57:10–17:57:12",
+      "actor": "Tiyo, local border medic, guarding Kusa officer",
+      "visible": "Tiyo chooses to save patient's life, bypasses damaged external gas coupler with spare oxygen bottle and verified gas line, without shutting or changing unnamed IV pump. Saturation briefly reads 91%, improves to 94% after oxygen feed restoration. Patient conscious; Tiyo and local medic note supplemental oxygen alone does not guarantee adequate ventilation given respiratory muscle weakness, requires equipped transport and monitoring. No full cure."
+    },
+    {
+      "at": "17:57:10.4–17:57:11.5",
+      "actor": "Shiki and masked escaping enemy",
+      "visible": "Shiki activates another Shunshin Nulevaya Stupen to pursue enemy ~33m across muddy route amid smoke and willow river roots; physical movement requires deceleration/last steps once visibility impaired, not instant teleport. Enemy wounded left shoulder prepares one-legged push/dive into river, reacts too late to Shiki speed, withdraws kunai with right hand, stabs low to stop pursuit. Shiki closes using declared immobilization objective, deflects/controls weapon arm; enemy loses kunai and tries to drop into water. Shiki keeps him grounded, contacts with chakra scalpel causing right-hand motor conduction impairment, restrains arms with field ninja wire, also binds legs to prevent immediate escape. Enemy remains alive and breathing, distressed, earlier left shoulder bruised and right hand function impaired, no successful escape. Player did not authorize killing or torture; no further speech assigned to Shiki."
+    },
+    {
+      "at": "17:57:11–17:58",
+      "actor": "Masked hostile, Shiki",
+      "visible": "Enemy looks at Shiki's emotionally unreadable face after speed encounter, shocked and afraid but not magically compelled. Says 'Кто… ты такой?' and 'Нам говорили… один дзёнин. Один. Не говорили, что такой.' This is enemy's firsthand speech, evidence he was briefed about one jonin but no established source or employer. Shiki conveys secured enemy to Kusa border station ~50m, without deciding to question or execute."
+    },
+    {
+      "at": "17:58",
+      "actor": "Jun, Kusa guards, wounded kunoichi",
+      "visible": "Shiki brings captured masked male alive, local Kusa guard unsettled by brief chase and quick capture. Jun with right chest impact bruise orders both captured attackers checked for explosive tags/poisons/communications, under guard. Kunoichi remains awake quadriparetic/functional motor paralysis after previous precise arm/leg peripheral nerve injury; she says 'Чувствую. Я всё чувствую. Просто не могу пошевелить.' She needs hospital neurological assessment; no guarantee reversible damage."
+    },
+    {
+      "at": "18:03",
+      "actor": "Medical evacuation response",
+      "visible": "Four Kusa medical shinobi arrive at Ivovy Brod with portable respiratory support and patient transfer equipment. Female team lead hears Tiyo case summary: conscious spontaneously but weakly breathing patient, reserve external oxygen feed active, O2 sat94%, unlabelled IV continuing. She requests Shiki med expertise on unknown infusion risk; does not override Shiki decision. Patient not yet moved to hospital."
+    },
+    {
+      "at": "18:04",
+      "actor": "Medical worker inspecting third wagon",
+      "visible": "While making transport room, medic discovers previously unseen false floor/secured iron hatch in THIRD wagon behind first-pass medical packing, engraved exactly M-4 / 032. Earlier initial visual inspection missed concealed hatch, no full dismantling or inspection yet. Med worker directly asks Shiki whether it should be opened. Contents unknown, label may relate to 031 series but no proof; wagon2 patient still requires care, attack aftermath ongoing. Stop for Shiki decision."
+    }
+  ],
+  "current_scene": {
+    "place": "Страна Травы, Ивовый брод, таможенная площадка, caravans",
+    "time": "18:04",
+    "shiki": "20-year-old Kusa Jonin, uninjured, now returned to border station with alive masked assailant restrained. Has used prior A Water Dragon, lightning tanto/nerve scalpel, TWO high-output Shunshin in overall battle (one vs female, one chasing river male), and scalpel to subdue male. Not automatically opening wagon3 hatch or initiating additional clinical actions.",
+    "masked_male": "Masked unknown ninja, alive restrained under guard, wounded left shoulder, right hand motor control temporarily disrupted after chakra scalpel contact and arms/legs bound; quoted one-jonin briefing but his sources unknown. Can speak, breathing independent.",
+    "female_hostile": "Previous kunoichi lying alive under guard, paralyzed arms/legs by motor nerve injury, sensation in limbs preserved by her testimony, potential long-term injury and distress; no healing yet.",
+    "jun": "Kusa Chunin Nagase Jun with right chest side impact, still commands border, guards both prisoners, demands checking for traps. Other guard left shin splinter-wounded. Ten caravan travelers held including guarded Tiyo while patient transport prepared.",
+    "tiyo": "Minaсэ Tiyo under armed Kusa guard, acted competently on patient's external oxygen bypass after Shiki explicit emergency medical authorization, unknown IV untouched. Says previous 11 living-patient transports in 8 months, no proof of full organization; not automatically exonerated.",
+    "patient": "Unknown conscious ~25yo in closed thermal case with supplemental oxygen external bypass restoring SpO2 ~94%; weak spontaneous breathing persists, cannot comfortably speak. Unlabelled IV still running. 4-person medical evac team on site to prepare respiratory-capable transfer, not yet departed.",
+    "wagon3": "Iron hatch under false floor behind medical packages newly noticed, engraved M-4 / 032, sealed and not yet opened. Contents and potential threats unknown; Shiki must choose whether to inspect or delegate/delay.",
+    "location": "Rainy wet east Kusa customs yard with cargo wagons, river to west/east site, smoke dispersing, defeated enemies under guard.",
+    "hard_rules": "Only Shiki direct known details; Shiki owns all voluntary dialogue, choices; NPC autonomy and individualized psychological responses; preserve risk of medical respiratory failure. No speculative links as facts."
+  },
+  "mechanics": "Chase and capture adjudicated on current sheet shunshin5.5, taijutsu4.5, medical chakra5 vs impaired enemy and terrain. No formal RNG executed; engine SQLite still stale rev85 in 1278 and no prepare/confirm. Narrative event in private GitHub verified text continuity.",
+  "next_gate": "18:04 Shiki has returned with restrained second attacker and sees medic discover hatch on wagon3 M-4 / 032 while patient medevac team preparing oxygen/unknown IV transport; medic asks whether to open hatch. Open hatch risks trap; player decides response."
+}
