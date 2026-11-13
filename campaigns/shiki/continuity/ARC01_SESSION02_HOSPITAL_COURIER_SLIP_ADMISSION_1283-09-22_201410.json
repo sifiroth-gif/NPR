@@ -1,0 +1,47 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-COURIER-SLIP/1",
+  "game_at": "0006-09-22T20:14:10",
+  "world_year": 1283,
+  "source_player_exact": "Документы на отдельную экспертизу #посыльному# поправьте меня я вроде бы ничего не говорил про исправления?",
+  "player_speech": [
+    "Документы — на отдельную экспертизу.",
+    "Поправьте меня, я вроде бы ничего не говорил про исправления?"
+  ],
+  "player_actions": "Shiki directs separate independent forensic examination of original suspect hospital transfer paperwork and directly points out courier's earlier spontaneously defensive statement 'Я ничего не исправлял. Он уже был таким', although Shiki had not told him about alterations. Shiki still holds original two-page order in protective evidence sleeve, has not personally handed original to guards, chased suspect, attacked/detained courier beyond existing security measures, or decided next response.",
+  "timeline": [
+    {
+      "at": "20:13:40–20:13:45",
+      "actor": "Shiki and Kuroda",
+      "visible": "Shiki orders separate document forensic examination. Kuroda independently organizes sealed evidence bag and transfer protocol and intends to examine paper/ink/embossed stamp/abrasion separately from medical office registry, to avoid insider tampering; places packet and protocol by Shiki. Original papers REMAIN IN SHIKI'S HANDS in current moment, pending explicit handover; no automatic player movement."
+    },
+    {
+      "at": "20:13:45–54",
+      "actor": "Shiki and courier",
+      "visible": "Shiki questions courier 'Поправьте меня, я вроде бы ничего не говорил про исправления?' referring to courier's own earlier 'Я ничего не исправлял. Он уже был таким.' Courier freezes, looks between Shiki and document, visibly frightened and remembers his own slip. Admits 'Нет. Вы не говорили.'"
+    },
+    {
+      "at": "20:13:54–20:14:07",
+      "actor": "Courier under questioning from Kuroda",
+      "visible": "Courier claims he personally saw the dark-uniform woman in hospital courier room standing over opened papers on desk, using small metal blade to scrape something from paper. He asked if order was damaged, she said clerical number correction needed so recipient accepts it; courier did NOT see original digits, woman covered number by hand when he approached. Courier admits he failed to disclose this, fearing he would be accused, says she showed medical-admin pass and told him all authorized. He says he was not told transport concerned sick patient; all claims remain his unverified testimony. Courier has not attacked, attempted escape or been tortured. Body language nervous and ashamed, knee softening, sits under guard."
+    },
+    {
+      "at": "20:14:07–10",
+      "actor": "Kuroda, guard, Ritsu",
+      "visible": "Kuroda orders room desk preserved/examined for metal scraping tool, paper dust, ink traces with chain-of-custody, classifies courier as witness to document alteration (not adjudged guilty). Kazama Ritsu, shoulder still bandaged, appears from patient room, confirms patient presently stable under ventilation and ongoing unknown IV, requests corridor remain quiet; Kuroda agrees. Security continues searching for woman with altered temporary badge near north stairs, not captured or positively identified yet. Hospital lab assay not yet available; ANBU request still pending."
+    }
+  ],
+  "current": {
+    "location": "Kusagakure Central Hospital, secured ICU outer corridor",
+    "time": "20:14:10",
+    "shiki": "20yo elite Kusa Jonin, uninjured and meaningfully rested after earlier meditation, standing at Kuroda's outer corridor security station. Intentionally orders separate forensic exam of suspicious patient transfer pages, pointedly confronts courier's unsolicited knowledge of alterations. Still HOLDING ORIGINAL two-page directive in clear evidence cover; sealed evidence bag/protocol on table ready for handover, Shiki has not yet physically surrendered it. No involuntary Shiki words, actions, thought or mood.",
+    "courier": "Unnamed gray-uniform hospital messenger under Kuroda security, now admits he knew about correction because he personally saw dark-uniform woman scraping paper with small metal blade on courier room desk prior to delivery. Woman claimed correcting clerical number; courier never actually saw former number. His statements UNVERIFIED until trace evidence/independent corroboration. His claim of not knowing patient at stake unverified. Frightened, seated compliantly; no hostility proved.",
+    "document": "Suspect Kusa med admin transfer order EXACT КМУ-19/472, issuer time 18:42 prior to hospital arrival18:56, absent in official registry. First-page watermark and embossed stamp plausible real paper; registration 472 shows mechanical erasure and new ink, time 18:42 same ink; second page mismatching paper and perforation and has unsupported discontinuation of special drug support and faint indentation '… / 031', not established M4/031. Original still in Shiki's possession pending separate forensic lab transfer.",
+    "kuroda": "Kusa internal security chief Kuroda Masaki with scar below right ear, two armed guards on ward door, prepares evidence handoff and orders courier room desk protected for forensic trace inspection, maintains courier custody for formal interview, search for badge-holder underway. No ANBU deployment yet.",
+    "ritsu": "Kazama Ritsu Kusa senior medical shinobi in corridor, bandaged left shoulder, requests quiet, assures patient stable, guarded ICU care uninterrupted. Lab drug assay still pending.",
+    "patient": "Severely weak conscious unknown male ~25, stable circulation and assisted artificial respiration, ongoing unknown IV, reserve dose unused and assay sample at lab, yes/no eye communication possible, under locked ward protection. No attack or relocation.",
+    "other": "5 armed assailants held alive by Kusa, 9 detained caravan persons, guarded Tiyo near pump. At Ivovy Brod M-4/032 cold bio cylinder under Jun, no news. Missing woman dark uniform with temporary medical-admin badge sighted earlier near north staff stairs, identity/whereabouts not confirmed.",
+    "gate": "20:14:10. Shiki may give original for evidence examination, ask further about woman/identification, go guard patient, ask Kuroda to detain courier etc. No automatic Shiki next action. Courier witness details actionable but need corroboration."
+  },
+  "truth_guard": "Courier witnessed paper scraping by his testimony only; not automatically proven he was innocent. Kuroda understands this as corroborating suspect paper alterations, not proof who authored all aspects/second page or whether order's embossed seal real.",
+  "engine": "GitHub text canon after confirmed readback only, SQLite engine old rev85 1278 and not yet synchronized; no RNG/prepare/confirm in this turn."
+}
