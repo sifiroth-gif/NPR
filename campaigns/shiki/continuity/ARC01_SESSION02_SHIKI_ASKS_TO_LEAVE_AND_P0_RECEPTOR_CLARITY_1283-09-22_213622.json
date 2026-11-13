@@ -1,0 +1,37 @@
+{
+  "schema": "NPR-SHIKI-ARC01-S02-EXIT-PERMISSION-AND-OOC-P0-TERMS/1",
+  "game_at": "0006-09-22T21:36:22",
+  "player_verbatim": "Мне нужно отойти, справитесь без меня? Мастеру: рецепторы и субъединицы не по номенклатуре, а обычными названиями, либо с пояснениями что за рецептор и что за субъединица. Заодно и подтяну свои знания",
+  "player_utterance": "Мне нужно отойти, справитесь без меня?",
+  "player_actions": "Shiki asks Nori whether she and Kusa medical/security personnel can continue independently if he steps aside. He has NOT actually departed the courtyard, named a destination or ordered any new action; no additional internal thoughts, techniques or voluntary movement imposed.",
+  "npc_response": {
+    "nori": "Hayase Nori, Kusa internal security captain scar right cheek, accepts responsibility without hesitation, says 'Да. Справимся.' with pragmatic confidence and mild irritation at any implication her trained people cannot manage, enumerates three guarded detainees, recipient6 medically supported transfer, two subjects at south sluice cared for, site sealed/logs seized, project director pursued. Says if information requiring Shiki's specialized knowledge appears she will send a message; otherwise she and her team independently handle the operation. Frees passage. No implied personal permission requirement to leave.",
+    "other": "Medics continue fastening portable ventilation and IV equipment to teenager's transport apparatus, keeping lines at appropriate level, while Kusa security keeps guards. No new successful evacuation or outside delivery presumed in these seconds.",
+    "time": "21:36:10–21:36:22"
+  },
+  "ooc_direct_rule": {
+    "source": "Later direct GM correction, 2026-11-13, after extensive-detail P0 request",
+    "original": "Мастеру: рецепторы и субъединицы не по номенклатуре, а обычными названиями, либо с пояснениями что за рецептор и что за субъединица. Заодно и подтяну свои знания",
+    "instruction": "All scientific/medical/biochemical explanations should identify exact substance, receptor/channel/enzyme and subunits to the extent established, BUT introduce each new technical entity using common Russian name or immediate plain function/location explanation, not unglossed nomenclature. Teach player physiology in context: what receptor binds, what each functional part/subunit contributes, causal effect on tissue and symptoms. Then append international abbreviation if useful. Keep unknown biochemical target as hypothesis, not fabricated fact. Do not diminish Shiki knowledge. Applies campaign only; OOC does not advance game time.",
+    "updated_code_main": [
+      "campaigns/shiki/MEDICAL_MOLECULAR_DETAIL_PROTOCOL.md §1а",
+      "AGENTS.md",
+      "campaigns/shiki/GM_PROTOCOL.md",
+      "campaigns/shiki/SCENE_PACK.json"
+    ]
+  },
+  "scene": {
+    "time": "21:36:22",
+    "world_year": 1283,
+    "location": "Кусагакуре, исследовательский корпус №3, внутренний двор, у бригады эвакуации",
+    "shiki": "Elite Kusa jonin in courtyard, finished full self Zero Genome clearance of S17 at21:33:42, no retained drug effects, only chakra expenditure from medical technique, original covert Haku Hyoton/Hozuki partial hydration intact. Correct single self-test used 0.5mL labelled S17 + 10mL injectable diluent (NOT 5mL). Asked Nori 'Мне нужно отойти, справитесь без меня?' and is still physically at Research Building3. Has NOT chosen where to go, traveled away, treated other patients, or given other orders. Combat core speed, high medical/ninjutsu expertise.",
+    "nori": "Hayase Nori female security captain scar RIGHT cheek confidently says Kusa team can manage 3 captured suspects, recipient6 transfer, two south-sluice patients, sealing building and searching project director; will contact Shiki if his particular scientific expertise becomes necessary. Frees courtyard passage, still autonomously in command.",
+    "teen": "Male 16-ish recipient6 alive on portable assisted ventilation and continuous original infusion after medical extraction from opened case, eye-responsive, profound paralysis, under Kusa qualified medics preparing guarded transport to Central Kusa Hospital; not yet shown departure.",
+    "sluice": "Independent southern med teams maintain alive adult male and critically ill young female on portable ventilation/IV after abandoned wagon capture; young woman's recent decline arrested but fragile, no new report or deaths.",
+    "hospital": "Other older male patient in Kusa Central Hospital ICU alive, conscious via eyes, motor/respiratory weak on assisted ventilation and unknown IV, Ritsu/Kuroda security; chemistry test pending, no results or staff identity confessions.",
+    "detainees": "All 3 Research Building3 adversaries captured alive: Mei bound with probable concussion and jaw-treated, tech Hirano with left finger impairment and claimed previous 2mL IV S17, broad swordsman detained. Nori organizes separate interviews/secure evidence collection.",
+    "evidence": "Original suspect transfer directive КМУ-19/472 forensic Kuroda custody. Shiki's unconfirmed 2-class peptide hypothesis preserved verbatim and courier DISPATCHED to hospital lab, no confirmation of actual result. Project note in Nori hand says 'Реципиент 06 — постинтеграционная поддержка. Статус адаптации: нестабильная. Продолжение С-17: обязательное до решения руководителя проекта'. Another S17 vial from research case opened for Shiki self-test, leftovers ~19.5mL protected by medics for lab, not guaranteed sterile. Jun still guarding cold specimen M4/032 at Ivovy Brod.",
+    "gate": "21:36:22. Nori explicitly confirms her forces can manage independently, Shiki remains free in courtyard to choose to depart and where, stay, or ask more; no auto move. OOC terminology rule updated in main code with no in-world consequence."
+  },
+  "technical": "This 1283 episode preserved as GitHub source and recovery checkpoint; official SQLite last confirmed rev85 in year1278-Jul is stale, no 1283 engine prepare/confirm or verify."
+}
