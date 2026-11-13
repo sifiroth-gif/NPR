@@ -2,23 +2,23 @@
   "format": "NPR-CAMPAIGN-RECOVERY-CHECKPOINT/2",
   "description": "Durable text checkpoint and context handoff, with full latest verbatim fragment, world state and reference paths; explicitly NOT a SQLite database checkpoint.",
   "timestamp_recorded": "2026-11-13",
-  "game_at": "0001-08-23T11:49:00",
-  "game_date": "Пятница, 23 августа 1278 года",
+  "game_at": "0001-08-24T07:28:00",
+  "game_date": "Суббота, 24 августа 1278 года",
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
   "session": 2,
-  "checkpoint_id": "shiki-s2-1278-08-23-1149",
-  "latest_player_command": "Дальше темп не теряй это все ещё ориджин",
+  "checkpoint_id": "shiki-s2-1278-08-24-0728",
+  "latest_player_command": "Тогда давай это расследование, но в ускоренном темпе. По игре: иду на брифинг",
   "last_in_game_player_turn": "#ответь за меня мастер#",
   "latest_exact_transcript_path": "recovery/transcripts/SESSION_002_1278-08-07_1313-1320_VERBATIM.md",
   "scene": {
-    "location": "Кусагакуре, комната команды в управлении шиноби",
-    "time": "11:49",
-    "shiki": "15, promoted to Chunin 23 Aug 09:10 by Kusa; new post 6 mission announced. Stands/sits unspecified with Tose, Aki and Ren. No answer to woman at door.",
-    "aki": "Genin, left shin fractures, still nonambulatory, early healing",
-    "ren": "Genin, old shoulder healed, both arms fully functional",
-    "tose": "Established Kusa jonin, concerned first assignment surprisingly fast, demands check mission roster",
-    "op_officer": "Unknown female operations officer behind closed door has come to collect newly promoted Chunin Shiki, has not opened door."
+    "location": "Кусагакуре, заброшенный пограничный медицинский пост № 6, склад, открытый люк",
+    "time": "07:28",
+    "shiki": "Newly promoted Chunin Shiki, medical specialist, alone with critically injured captive at open hatch. Has not performed scan or stabilization yet.",
+    "izumi": "Tatsumori Izumi, Kusa tokubetsu jonin mission leader, takes two security ninjas to separate archive with smoke and tearing paper, autonomous NPC action.",
+    "witness": "Likely missing registrar Minagi Daisuke, critically injured, shallow infrequent breathing and blood on left side, wrist tied, now unconscious after «Не печать… они искали… список… врач…». Needs immediate medical stabilization.",
+    "mission": "Evidence of restraints, removed vial labels, old disused post recently occupied; no proof of Kabuto connection yet",
+    "team": "Ren and Aki remain in Kusagakure, not on this mission"
   },
   "major_timeline": [
     "Shiki defeated Rock Lee and Dosu in tournament; Dosu unconscious with severe cervical soft-tissue injury and possible concussion, death not established.",
@@ -49,7 +49,9 @@
     "Kusa authority evening secure call planned on 10 Aug after 10:40, not yet taken place.",
     "Exam promotion review unresolved.",
     "Forged second Kusa team stamp officially destroyed 6 months earlier; one dead-for-2-years person's identity used, registrar missing Aug22.",
-    "First Chunin mission to abandoned border medical post no 6, assigned senior commander to be identified."
+    "First Chunin mission to abandoned border medical post no 6, assigned senior commander to be identified.",
+    "Critical captive at post 6 needs immediate first assessment; suspect destroying records in adjacent room.",
+    "Izumi finds Shiki was assigned at 07:50 before 09:10 Chunin promotion; who nominated him unknown."
   ],
   "chronological_sources": [
     "campaigns/shiki/continuity/SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json",
@@ -76,7 +78,8 @@
     "recovery/s2_2026-11-13_shiki_tose_authorized_dialogue_new_wounded_1320.json",
     "recovery/s2_2026-11-13_timeline_invasion_end_ibiki_kusa_documents_1509.json",
     "recovery/s2_2026-11-13_shiki_answers_ibiki_no_delegation_montage_1040.json",
-    "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json"
+    "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json",
+    "campaigns/shiki/continuity/SESSION_002_BORDER_MEDICAL_POST6_2026-11-13.json"
   ],
   "previous_sqlite": {
     "state_json": "state.json",
@@ -84,7 +87,7 @@
     "session": 2,
     "at": "0001-07-28T18:18:00",
     "sha256": "7903a57874be26ab9717a2978e0649da3f59c4241dfa383885190f24bd5f706e",
-    "warning": "Main SQLite is still stale revision 85; this handoff text is NOT engine confirmation."
+    "warning": "Main SQLite remains rev 85, check engine restoration separately. GitHub handoff updated only."
   },
   "restoration": "Read this file and the verbatim transcript at latest_exact_transcript_path; for older precise facts open source files by path. Rebuild/verify SQLite only from original same-commit database and the authoritative played source material, preserving uncertainty and not manufacturing verbatim missing transcripts.",
   "status": {
@@ -92,7 +95,7 @@
     "latest_verbatim": "verified_readback",
     "binary_sqlite": "STALE"
   },
-  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_ORIGIN_POST_EXAM_PROMOTION_2026-11-13.json",
+  "latest_source_path": "campaigns/shiki/continuity/SESSION_002_BORDER_MEDICAL_POST6_2026-11-13.json",
   "rank_update": {
     "person": "Мугами Шики",
     "from": "генин",
