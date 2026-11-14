@@ -499,9 +499,10 @@ class Campaign:
         current = state(con)
         recent_turns = con.execute("SELECT * FROM journal WHERE kind = 'turn' ORDER BY seq DESC LIMIT ?",
                                    (recent,)).fetchall()
+        archive_cache = {}
         context = {"campaign": json.loads(current["setup_json"]), "revision": current["revision"],
                    "session": current["session"], "at": current["at"], "location": current["location"],
-                   "recent": [public_entry(compaction.recover(con, row), audience)
+                   "recent": [public_entry(compaction.recover(con, row, cache=archive_cache), audience)
                               for row in reversed(recent_turns)]}
         if audience == "gm":
             next_process = con.execute("""SELECT id, owner, goal, due_at FROM processes
@@ -630,7 +631,9 @@ class Campaign:
                     unique.add(result["seq"])
                 if len(rows) == limit:
                     break
-            results = [public_entry(compaction.recover(con, row), audience) for row in rows]
+            archive_cache = {}
+            results = [public_entry(compaction.recover(con, row, cache=archive_cache), audience)
+                       for row in rows]
             for result in results:
                 if "transcript" in result:
                     result["excerpt"] = source_excerpt(result.pop("text"), query, width=520)
