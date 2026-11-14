@@ -616,11 +616,20 @@ class Campaign:
         match = fts_expression(query, mode)
         visible = " AND j.visibility = 'player_known'" if audience == "player" else ""
         with self.connection() as con:
-            rows = con.execute(f"""SELECT j.* FROM history_fts JOIN journal j ON j.seq = history_fts.rowid
+            ordinary = list(con.execute(f"""SELECT j.* FROM history_fts JOIN journal j ON j.seq = history_fts.rowid
                                    WHERE history_fts MATCH ?{visible} AND {PREFERRED_HISTORY}
                                    ORDER BY json_type(j.details,'$.transcript') IS NULL,
-                                            bm25(history_fts), j.seq DESC LIMIT ?""", (match, limit))
-            results = [public_entry(row, audience) for row in rows]
+                                            bm25(history_fts), j.seq DESC LIMIT ?""", (match, limit)))
+            archived = compaction.source_rows(con, match,
+                predicate=f"1=1{visible} AND {PREFERRED_HISTORY}", limit=limit)
+            unique, rows = set(), []
+            for result in (*ordinary, *archived):
+                if result["seq"] not in unique:
+                    rows.append(result)
+                    unique.add(result["seq"])
+                if len(rows) == limit:
+                    break
+            results = [public_entry(compaction.recover(con, row), audience) for row in rows]
             for result in results:
                 if "transcript" in result:
                     result["excerpt"] = source_excerpt(result.pop("text"), query, width=520)
