@@ -156,8 +156,9 @@ def recall(con, *, query, audience="gm", entities=(), session=None, since=None, 
                 channels.setdefault(seq, []).append("semantic")
     selected = sorted(candidates, key=lambda seq: (ranks[seq], seq), reverse=True)[:limit]
     results = []
+    archive_cache = {}
     for seq in selected:
-        row = compaction.recover(con, candidates[seq])
+        row = compaction.recover(con, candidates[seq], cache=archive_cache)
         details = json.loads(row["details"])
         def neighbours(inbound):
             if not linked:
