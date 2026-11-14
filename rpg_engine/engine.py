@@ -361,7 +361,9 @@ class Campaign:
                 continuity.migrate_history(con)
                 con.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
             if write:
-                con.execute(compaction.SCHEMA.strip())
+                for statement in compaction.SCHEMA.strip().split(';'):
+                    if statement.strip():
+                        con.execute(statement)
             yield con
 
     def roll(self, *, turn_id, expected_revision, check_id, count=1, sides=20, modifier=0, purpose=""):
