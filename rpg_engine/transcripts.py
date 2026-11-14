@@ -74,8 +74,10 @@ def index(con, transcript, revision):
 
 
 def rows(con, session):
-    return list(con.execute(f"SELECT * FROM journal WHERE session=? AND kind='event' AND {SOURCE_FIELD} "
+    from . import compaction
+    rows = list(con.execute(f"SELECT * FROM journal WHERE session=? AND kind='event' AND {SOURCE_FIELD} "
                             "ORDER BY seq", (session,)))
+    return compaction.recover_session(con, rows, session)
 
 
 def audit(con, session, revision, start, end):
