@@ -41,7 +41,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python campaigns/shiki/maintenance/recover_session2_20261114.py "$RUNNER_TEMP/shiki-recovery-worktree"
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session2_20261114.py "$RUNNER_TEMP/shiki-recovery-worktree"
       - name: Full journal, facts, sources, knowledge and process audit
         shell: bash
         run: |
