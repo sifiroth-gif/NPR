@@ -105,6 +105,8 @@ def parser():
 
     verify = sub.add_parser("verify", help="verify the database and any pending draft")
     verify.add_argument("--full", action="store_true")
+    compact = sub.add_parser("compact-history", help="lossless compression of only closed-session journal bodies")
+    compact.add_argument("--through", type=int, help="last closed session number")
     checkpoint = sub.add_parser("checkpoint", help="write a consistent, resumable SQLite copy")
     checkpoint.add_argument("destination", type=Path)
     export_state = sub.add_parser("export-state", help="make a verified campaign.sqlite and state.json pair")
@@ -218,6 +220,9 @@ def run(args):
             return game.entry(args.kind, args.id, audience=args.audience)
         case "verify":
             return verification.audit(game) if args.full else game.verify()
+        case "compact-history":
+            from . import compaction
+            return compaction.compact_game(game, through=args.through)
         case "checkpoint":
             return game.checkpoint(args.destination)
         case "export-state":
