@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import tempfile
 
-from . import continuity, transcripts, world
+from . import continuity, transcripts, world, compaction
 from .engine import ConflictError, require_revision, revision_value, state
 
 
@@ -25,9 +25,10 @@ def export_session(con, number):
             speaker = "Игрок" if source["role"] == "player" else "Ведущий"
             sections.append(f"**{speaker}**\n\n{row['body']}")
         return ("\n\n".join(sections) + "\n").encode("utf-8")
-    for row in con.execute("""
+    turn_rows = list(con.execute("""
         SELECT * FROM journal WHERE session=? AND kind='turn' ORDER BY seq
-    """, (number,)):
+    """, (number,)))
+    for row in compaction.recover_session(con, turn_rows, number):
         place = json.loads(row["details"])["location"]
         sections.append(f"## {row['at']} · {place} · {row['id']}\n\n"
                         f"**Игрок**\n\n{row['player_input']}\n\n**Ведущий**\n\n{row['body']}")
@@ -84,6 +85,15 @@ def close(game, expected, destination, transcript=None):
                         (number + 1, expected + 1, current["at"], current["location"]))
             con.execute("UPDATE campaign SET revision=?, session=?, generation=generation+1",
                         (expected + 1, number + 1))
+        if not receipt:
+            from pathlib import Path
+            export_path = Path(destination)
+            try:
+                source_path = str(export_path.resolve().relative_to(game.path.parent.resolve()))
+            except ValueError:
+                source_path = str(export_path.resolve())
+            compaction.compact(con, number, archive_path=source_path,
+                               archive_sha256=digest)
         return {"closed": number, "next_session": number + 1, "revision": expected + 1,
                 "export": str(destination), "sha256": digest,
                 "continuity": continuity.notes(con, limit=10)}
