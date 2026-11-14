@@ -154,7 +154,7 @@
   ],
   "status": {
     "text_checkpoint": "secondary_scene_mirror",
-    "binary_sqlite": "VERIFIED_CURRENT_1283_rev217",
+    "binary_sqlite": "VERIFIED_CURRENT_1283_rev217_COMPACT",
     "arc": "session3_open"
   },
   "previous_sqlite": {
@@ -196,11 +196,16 @@
     "session": 3,
     "at": "0006-09-26T09:28:19",
     "pending": false,
-    "sha256": "5565b63ff86c9138798cfd851f890b4db063df6f64ad0430c4845d7fe013a28a",
+    "sha256": "dab4bac09ef17a70cfeac1e6cdc708cef1e929065cabc59bb1dc0291d5baab1d",
     "verified_full": true,
     "published_head": "f0e2dfeae74239da762f43b77b15cfa2d47b3deb",
     "source": "archive/session-002-source.md",
-    "archive": "archive/session-002.md"
+    "archive": "archive/session-002.md",
+    "compacted_closed_sessions": [
+      1,
+      2
+    ],
+    "compaction_codec": "npr-closed-journal-zlib/1"
   },
   "canonical_priority": "Verified state.json + campaign.sqlite at latest Git HEAD control the active session; this text checkpoint is a scene mirror only."
 }
