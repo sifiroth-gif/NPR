@@ -1,0 +1,119 @@
+name: Shiki closed-session journal compaction, 100-session safe
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-compact-journal.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  compact:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test exact history, replay, NPC cognition, search and source receipts
+        run: python -m unittest discover -s tests -v
+      - name: Checkout existing private binary state without resetting gameplay
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-compact" refs/remotes/origin/game-state/shiki
+      - name: Inspect actual database footprints and source checksums
+        run: |
+          python - <<'PY'
+          import os,sqlite3
+          from pathlib import Path
+          from rpg_engine import Campaign,sessions
+          from rpg_engine.engine import file_sha256
+          p=Path(os.environ["RUNNER_TEMP"])/"shiki-compact"
+          g=Campaign(p/"campaign.sqlite")
+          assert g.verify()["revision"]==217 and g.verify()["session"]==3 and not g.verify()["pending"]
+          print("BEFORE_SIZE",g.path.stat().st_size)
+          with g.connection() as c:
+              for row in c.execute("SELECT session,sha256 FROM session_exports ORDER BY session"):
+                  n=row["session"]
+                  path=p/"archive"/f"session-{n:03}.md"
+                  generated=sessions.export_session(c,n)
+                  print("SESSION_ARCHIVE",n,"generated",len(generated),"file",path.stat().st_size if path.exists() else "missing",
+                      "receipt",row["sha256"],"generated_sha",__import__("hashlib").sha256(generated).hexdigest(),
+                      "file_sha",file_sha256(path) if path.exists() else "missing")
+              try:
+                  for row in c.execute("SELECT name, SUM(pgsize) FROM dbstat GROUP BY name ORDER BY SUM(pgsize) DESC LIMIT 18"):
+                      print("PAGES",row[0],row[1])
+              except sqlite3.Error as exc: print("DBSTAT_UNAVAILABLE",exc)
+          PY
+      - name: Compact verified closed sessions and rebuild short + token-only history indexes
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-compact"
+          python -m rpg_engine --db "$state/campaign.sqlite" compact-history --through 2
+          python -m rpg_engine --db "$state/campaign.sqlite" verify --full
+          python - <<'PY'
+          import json,os,sqlite3
+          from pathlib import Path
+          from rpg_engine import Campaign,compaction,sessions,verification,git_state
+          from rpg_engine.engine import file_sha256
+          p=Path(os.environ["RUNNER_TEMP"])/"shiki-compact"
+          g=Campaign(p/"campaign.sqlite")
+          with g.connection() as c:
+              print("ARCHIVE_CHECKS",compaction.audit(c,p))
+              old=c.execute("SELECT count(*) FROM journal WHERE session<3 AND kind='turn'").fetchone()[0]
+              active=c.execute("SELECT count(*) FROM journal WHERE session=3").fetchone()[0]
+              assert old>=1 and active==0
+              for n in (1,2):
+                  file=p/"archive"/f"session-{n:03}.md"
+                  stored=c.execute("SELECT sha256 FROM session_exports WHERE session=?",(n,)).fetchone()[0]
+                  assert file_sha256(file)==stored
+                  assert __import__('hashlib').sha256(sessions.export_session(c,n)).hexdigest()==stored
+          hit=g.entry("turn","s2.played.153",audience="gm")
+          assert "В-7" in hit["text"] and "Нори" in hit["text"]
+          with sqlite3.connect(g.path) as con: con.execute("VACUUM")
+          verified=verification.audit(g)
+          manifest={"format":git_state.FORMAT,**g.verify(),"sha256":file_sha256(g.path)}
+          assert manifest["revision"]==217 and manifest["session"]==3
+          (p/"state.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+          git_state.write_transport(p,manifest)
+          textpath=p/"recovery/LATEST_SHIKI_CHECKPOINT.json"
+          current=json.loads(textpath.read_text())
+          current["current_sqlite"]["sha256"]=manifest["sha256"]
+          current["current_sqlite"]["compacted_closed_sessions"]=[1,2]
+          current["current_sqlite"]["compaction_codec"]="npr-closed-journal-zlib/1"
+          current["status"]["binary_sqlite"]="VERIFIED_CURRENT_1283_rev217_COMPACT"
+          current["updated_at"]="2026-11-14"
+          textpath.write_text(json.dumps(current,ensure_ascii=False,indent=2)+"\n")
+          print("AFTER_SIZE",g.path.stat().st_size)
+          print("FULL_AUDIT",verified)
+          print("COMPACT_MANIFEST",manifest)
+          assert git_state.verify_manifest(manifest,g.path)
+          PY
+      - name: Publish only if compaction and full audit succeeded
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-compact"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f campaign.sqlite state.json
+          git -C "$state" add -A -- recovery/sqlite recovery/LATEST_SHIKI_CHECKPOINT.json
+          git -C "$state" commit -m "shiki: compact old journal text; preserve full history and open S3"
+          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/verified-remote.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/verified-remote-state.json"
+          cmp "$RUNNER_TEMP/verified-remote.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/verified-remote-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/verified-remote.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
