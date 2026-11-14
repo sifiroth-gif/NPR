@@ -501,7 +501,8 @@ class Campaign:
                                    (recent,)).fetchall()
         context = {"campaign": json.loads(current["setup_json"]), "revision": current["revision"],
                    "session": current["session"], "at": current["at"], "location": current["location"],
-                   "recent": [public_entry(row, audience) for row in reversed(recent_turns)]}
+                   "recent": [public_entry(compaction.recover(con, row), audience)
+                              for row in reversed(recent_turns)]}
         if audience == "gm":
             next_process = con.execute("""SELECT id, owner, goal, due_at FROM processes
                                           WHERE status = 'active' ORDER BY due_at, id LIMIT 1""").fetchone()
