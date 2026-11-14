@@ -4,7 +4,7 @@ from contextlib import closing
 import json
 import sqlite3
 
-from . import autonomy, continuity, rng, transcripts, world
+from . import autonomy, continuity, rng, transcripts, world, compaction
 from .engine import SCHEMA, SCHEMA_VERSION, state
 
 
@@ -113,6 +113,7 @@ def audit(game):
                     transcript_sessions.remove(number)
         if transcript_sessions:
             raise ValueError("transcript has no corresponding closed session")
+        archived = compaction.audit(con)
         checks = 0
         pending = con.execute("SELECT id,base_revision FROM pending").fetchone()
         for row in con.execute("SELECT * FROM rolls"):
@@ -129,4 +130,4 @@ def audit(game):
             con.backup(index_copy)
             index_copy.execute("INSERT INTO history_fts(history_fts,rank) VALUES ('integrity-check',1)")
         return {**verified, "full_audit": True, "turns": len(turns), "events": sum(
-            len(items) for items in events_by_revision.values()), "rolls": checks}
+            len(items) for items in events_by_revision.values()), "rolls": checks, "compacted_sessions": len(archived)}
