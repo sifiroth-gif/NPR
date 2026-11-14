@@ -180,7 +180,7 @@ def audit(con, game_dir=None):
             recover_row(row,source)
             # The full-source term index must point to every compressed entry.
             if searchable(con):
-                term=next(iter(re.findall(r"[^\\W_]+",source["body"]+" "+source["player_input"])),None)
+                term=next(iter(re.findall(r"[^\W_]+",source["body"]+" "+source["player_input"])),None)
                 if term and not con.execute("SELECT 1 FROM archived_words_fts WHERE rowid=? AND archived_words_fts MATCH ?",(seq,'"'+term+'"')).fetchone():
                     raise ValueError("archived fulltext index missing source token")
         if game_dir is not None:
