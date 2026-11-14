@@ -25,7 +25,8 @@ class JournalCompactionTests(unittest.TestCase):
         r=self.game.prepare(p);self.game.confirm(turn,r["draft_sha"])
 
     def test_closed_session_exact_hydration_and_audit(self):
-        long=("Здесь важная история. "+("Обычная фраза и реакция NPC. "*200)
+        long=("Здесь важная история. "+("Обычная фраза и реакция NPC. "*100)
+              +" УНИКАЛЬНЫЙМАРКЕРСЕРЕДИНЫ "+("Обычная фраза и реакция NPC. "*100)
               +"Причинная развязка с редким словом ИНДИКАТОР.")
         self.play("one",long,"#посмотреть на печать#")
         out=self.root/"archive"/"session-001.md"
@@ -34,6 +35,10 @@ class JournalCompactionTests(unittest.TestCase):
         self.assertEqual(result["next_session"],2)
         self.assertEqual(self.game.entry("turn","one"),before)
         self.assertTrue(self.game.search("история"))
+        # The word is absent from both short synopsis and closing tail, but
+        # contentless archive FTS must still lead to the exact original source.
+        self.assertEqual(self.game.search("УНИКАЛЬНЫЙМАРКЕРСЕРЕДИНЫ")[0]["id"],"one")
+        self.assertEqual(self.game.context(recent=1)["recent"][-1]["text"],long)
         self.assertTrue(verification.audit(self.game)["full_audit"])
         with self.game.connection() as con:
             self.assertLess(len(con.execute("SELECT body FROM journal WHERE id='one'").fetchone()[0]),500)
