@@ -4,6 +4,7 @@ import json
 import re
 
 from .transcripts import PREFERRED_HISTORY
+from . import compaction
 
 TOKEN = re.compile(r"[^\W_]+", re.UNICODE)
 
@@ -137,6 +138,10 @@ def recall(con, *, query, audience="gm", entities=(), session=None, since=None, 
                 ORDER BY bm25(history_fts, 1.0, 0.8),j.seq DESC LIMIT ?
             """, (expression, *params, size))
             add(rows, name, weight)
+            extra = compaction.source_rows(con, expression, predicate=condition,
+                                           params=params, limit=size, correction=correction)
+            if extra:
+                add(extra, "archive_" + name, weight * 0.85)
     if entities:
         add(con.execute(f"""SELECT j.*, {correction} AS superseded_by FROM journal j
                            WHERE {condition} ORDER BY j.seq DESC LIMIT ?""",
@@ -152,7 +157,7 @@ def recall(con, *, query, audience="gm", entities=(), session=None, since=None, 
     selected = sorted(candidates, key=lambda seq: (ranks[seq], seq), reverse=True)[:limit]
     results = []
     for seq in selected:
-        row = candidates[seq]
+        row = compaction.recover(con, candidates[seq])
         details = json.loads(row["details"])
         def neighbours(inbound):
             if not linked:
