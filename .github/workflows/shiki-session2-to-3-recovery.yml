@@ -1,0 +1,81 @@
+name: Shiki session 2 to 3 source-bound SQLite recovery
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-session2-to-3-recovery.yml"
+      - "campaigns/shiki/maintenance/recover_session2_20261114.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  replay:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout main engine and verified recovery script
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Install Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch current real campaign state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-recovery-worktree" refs/remotes/origin/game-state/shiki
+          git rev-parse refs/remotes/origin/game-state/shiki > "$RUNNER_TEMP/source-head"
+      - name: Replay reviewed dialogue onto existing binary database
+        shell: bash
+        run: |
+          set -euo pipefail
+          python campaigns/shiki/maintenance/recover_session2_20261114.py "$RUNNER_TEMP/shiki-recovery-worktree"
+      - name: Full journal, facts, sources, knowledge and process audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-recovery-worktree"
+          python -m rpg_engine --db "$state/campaign.sqlite" verify --full
+          python -m rpg_engine --db "$state/campaign.sqlite" gm-packet --mode handoff > "$RUNNER_TEMP/confirmed-handoff.json"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from rpg_engine.engine import Campaign,file_sha256
+          state=Path(os.environ['RUNNER_TEMP'])/'shiki-recovery-worktree'
+          m=json.loads((state/'state.json').read_text())
+          assert m['revision']>85 and m['session']==3 and m['at']=='0006-09-26T09:28:19'
+          assert m['sha256']==file_sha256(state/'campaign.sqlite')
+          packet=json.loads((Path(os.environ['RUNNER_TEMP'])/'confirmed-handoff.json').read_text())
+          assert packet['confirmed']['session']==3
+          print('FULL_VERIFIED',m)
+          PY
+      - name: Publish completed SQLite and updated manifest without overwriting concurrent data
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-recovery-worktree"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f campaign.sqlite state.json
+          git -C "$state" add -A -- archive/session-002.md recovery/sqlite
+          git -C "$state" commit -m "Canonize played Shiki session II in SQLite; archive transcript; open session III"
+          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-campaign.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-state.json"
+          cmp "$RUNNER_TEMP/remote-campaign.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/remote-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/remote-campaign.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
