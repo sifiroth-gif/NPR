@@ -14,6 +14,39 @@ MODES = ("focus", "scene", "montage", "combat", "handoff")
 WEEKDAYS = ("понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье")
 
 
+
+def psychological_presence_contract(campaign_id, npcs):
+    """Non-optional GM scene cue for Shiki; independent of prose generation.
+
+    This is a preparation-level contract rather than a lexical prose validator:
+    phrases in a response cannot prove a psychologically credible reaction.
+    """
+    if campaign_id != "naruto-shiki":
+        return None
+    return {
+        "priority": "P0",
+        "required": True,
+        "trigger": "Whenever Shiki appears, speaks or acts in another NPC's perception",
+        "instruction": (
+            "Show a DISTINCT, knowledge-bound psychological response through each "
+            "relevant NPC's gaze, breathing, posture, chosen distance, voice and "
+            "decisions. Relate it causally to Shiki's actual behavior, ability, "
+            "reputation and their individual relationship. A hostile or wary NPC "
+            "may resist, lie or exploit him. No uniform awe, no mind-reading Shiki, "
+            "no repeated grief motifs or mechanical reaction lists."
+        ),
+        "actors": [
+            {"id": npc["id"], "name": npc["name"],
+             "cue": "Use this NPC's own profile/portrayal/beliefs and visible behavior"}
+            for npc in npcs
+        ],
+        "empty_cast_warning": (
+            "No active NPCs were resolved; identify any visible or speaking NPC "
+            "before narrating their response."
+        ) if not npcs else None,
+    }
+
+
 def _head(game, con, recent):
     current = state(con)
     context = game.read_context(con, audience="gm", recent=recent)
@@ -209,6 +242,9 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
                 "focus": (recent_turns[-1].get("scene") or {}).get("focus") if recent_turns else None},
             "recall": [recall(con, query=query, limit=5) for query in queries],
         }
+        presence = psychological_presence_contract(head["campaign"]["id"], npcs)
+        if presence is not None:
+            result["npc_psychological_presence"] = presence
         if mode in ("scene", "montage", "handoff"):
             result["session_plan"] = _plan(pack_path, pack, head, handoff=mode == "handoff")
         return result
