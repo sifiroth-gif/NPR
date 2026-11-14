@@ -25,6 +25,9 @@ CREATE TABLE IF NOT EXISTS archived_journals (
     export_sha256 TEXT NOT NULL,
     archive_path TEXT NOT NULL
 );
+CREATE VIRTUAL TABLE IF NOT EXISTS archived_words_fts USING fts5(
+    words, content='', detail=none, tokenize='unicode61'
+);
 """
 
 def exists(con):
@@ -99,7 +102,9 @@ def compact(con, session, *, archive_path, archive_sha256):
     if not isinstance(session, int) or session < 1:
         raise ValueError("invalid compact session")
     if not exists(con):
-        con.execute(SCHEMA.strip())
+        for command in SCHEMA.strip().split(";"):
+            if command.strip():
+                con.execute(command)
     prior = con.execute("SELECT session,row_count,original_bytes FROM archived_journals WHERE session=?",
                         (session,)).fetchone()
     if prior:
@@ -131,6 +136,8 @@ def compact(con, session, *, archive_path, archive_sha256):
                 (session,FORMAT,packed,_utf8sha(plain),len(plain),len(affected),
                  archive_sha256,archive_path))
     for row in affected:
+        con.execute("INSERT INTO archived_words_fts(rowid,words) VALUES (?,?)",
+                    (row["seq"],row["body"]+" "+row["player_input"]))
         b,p=surrogate(row["body"],row["player_input"])
         con.execute("UPDATE journal SET body=?,player_input=? WHERE seq=?",(b,p,row["seq"]))
     # Reindex from the short, still searchable journal surfaces; no full transcripts.
@@ -138,6 +145,21 @@ def compact(con, session, *, archive_path, archive_sha256):
     return {"session":session,"already_compacted":False,"entries":len(affected),
             "original_bytes":len(plain),"packed_bytes":len(packed),
             "search_mode":"short_surrogate_with_exact_entry_hydration"}
+
+def searchable(con):
+    return (exists(con) and con.execute(
+        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='archived_words_fts'"
+    ).fetchone() is not None)
+
+def source_rows(con, expression, *, predicate, params=(), limit=40, correction=None):
+    """Exact full-source inverted-index lookup without loading any old prose."""
+    if not searchable(con):
+        return []
+    extra = f", {correction} AS superseded_by" if correction else ""
+    return list(con.execute(f"""SELECT j.*{extra} FROM archived_words_fts
+        JOIN journal j ON j.seq=archived_words_fts.rowid
+        WHERE archived_words_fts MATCH ? AND {predicate}
+        ORDER BY j.seq DESC LIMIT ?""", (expression, *params, limit)))
 
 def audit(con, game_dir=None):
     if not exists(con):
@@ -156,6 +178,11 @@ def audit(con, game_dir=None):
             if row is None:
                 raise ValueError("archived journal references missing row")
             recover_row(row,source)
+            # The full-source term index must point to every compressed entry.
+            if searchable(con):
+                term=next(iter(re.findall(r"[^\\W_]+",source["body"]+" "+source["player_input"])),None)
+                if term and not con.execute("SELECT 1 FROM archived_words_fts WHERE rowid=? AND archived_words_fts MATCH ?",(seq,'"'+term+'"')).fetchone():
+                    raise ValueError("archived fulltext index missing source token")
         if game_dir is not None:
             from pathlib import Path
             path=Path(head["archive_path"])
