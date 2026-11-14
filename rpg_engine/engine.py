@@ -14,6 +14,7 @@ import tempfile
 from . import autonomy, continuity, rng, world
 from .history import fts_expression, source_excerpt
 from .transcripts import PREFERRED_HISTORY
+from . import compaction
 
 APPLICATION_ID = 0x52504745
 SCHEMA_VERSION = 2
@@ -333,7 +334,7 @@ class Campaign:
             with closing(connect(temporary, write=True)) as con, con:
                 con.executescript(f"PRAGMA application_id = {APPLICATION_ID}; "
                                   f"PRAGMA user_version = {SCHEMA_VERSION};\n" + SCHEMA + world.SCHEMA
-                                  + continuity.SCHEMA + autonomy.SCHEMA)
+                                  + continuity.SCHEMA + autonomy.SCHEMA + compaction.SCHEMA)
                 con.execute("INSERT INTO campaign VALUES (1, ?, ?, 0, 0, 1, ?, ?)",
                             (world.canonical(public), secrets.token_bytes(32), at, location))
                 con.execute("INSERT INTO sessions VALUES (1, 0, ?, ?)", (at, location))
@@ -359,6 +360,8 @@ class Campaign:
                         con.execute(statement)
                 continuity.migrate_history(con)
                 con.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
+            if write:
+                con.execute(compaction.SCHEMA.strip())
             yield con
 
     def roll(self, *, turn_id, expected_revision, check_id, count=1, sides=20, modifier=0, purpose=""):
@@ -601,7 +604,7 @@ class Campaign:
             row = journal_entry(con, kind, entry_id)
             if row is None or (audience == "player" and row["visibility"] != "player_known"):
                 raise ValueError("journal entry is unavailable")
-            return public_entry(row, audience)
+            return public_entry(compaction.recover(con, row), audience)
 
     def search(self, query, *, audience="player", limit=10, mode="all"):
         audience_value(audience)
