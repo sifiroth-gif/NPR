@@ -2,12 +2,16 @@
   "schema": "shiki-session-plan/1",
   "session": 3,
   "title": "Северный коллектор: цена В-7",
-  "status": "prepared_from_reviewed_source_not_committed_sqlite",
+  "status": "ready_confirmed_in_sqlite",
   "source": {
     "chat_sha256": "17379d3b0cc6dbefdbc2816ca7ac22ea9353138451d237800186139bb820e614",
-    "git_head_read": "63e4da661c1508f1af870edf18d2180cf0250a01",
-    "sqlite_revision": 85,
-    "imported_to_sqlite": false
+    "git_head_read": "f0e2dfeae74239da762f43b77b15cfa2d47b3deb",
+    "sqlite_revision": 217,
+    "imported_to_sqlite": true,
+    "session_closed": 2,
+    "next_session_open": 3,
+    "verified_full": true,
+    "sqlite_sha256": "5565b63ff86c9138798cfd851f890b4db063df6f64ad0430c4845d7fe013a28a"
   },
   "start": {
     "engine_at": "0006-09-26T09:28:19",
@@ -74,5 +78,5 @@
     "POST_TIMESKIP_20_SESSION_ARC_GM_ONLY_2026-11-13.json",
     "SESSION_002_FINAL_BRACKET_CORRECTION_2026-11-12.json"
   ],
-  "closure": "В первую очередь согласовать реплей сессии II поверх действующего SQLite; не запускать init и не продвигать сцену до ответа игрока."
+  "closure": "Session II imported and closed in verified SQLite revision 217; begin Session III at 0006-09-26T09:28:19 without moving time or acting as Shiki. Consult gm-packet handoff and original source for details."
 }
