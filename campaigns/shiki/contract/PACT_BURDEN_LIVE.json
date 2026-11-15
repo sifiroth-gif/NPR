@@ -2,18 +2,47 @@
   "schema": "NPR-SHIKI-PACT-BURDEN-LIVE/1.0",
   "campaign": "naruto-shiki",
   "bound_at": "0007-09-27T06:30:19",
-  "last_at": "0007-09-27T15:02:00",
-  "value": 0.2665,
-  "stage": 0,
-  "time_growth_total": 0.2665,
-  "technique_growth_total": 0,
-  "event_ids": [],
-  "events": [],
+  "last_at": "0006-09-29T02:29:00",
+  "value": 9.3743,
+  "stage": 1,
+  "time_growth_total": 1.3743,
+  "technique_growth_total": 8,
+  "event_ids": [
+    "s04.text.008:genetic_bridge_activation",
+    "s04.text.009:shiton_attempt",
+    "s04.text.009:byoton_attempt"
+  ],
+  "events": [
+    {
+      "event_id": "s04.text.008:genetic_bridge_activation",
+      "at": "0006-09-29T02:18:00",
+      "event_type": "genetic_bridge_activation",
+      "school": "shared",
+      "points": 6.5,
+      "source": "Direct player canon: ex vivo autologous gene-graft activation in Shiki's LEFT forearm, unlocked genuine demonic natures"
+    },
+    {
+      "event_id": "s04.text.009:shiton_attempt",
+      "at": "0006-09-29T02:26:00",
+      "event_type": "attempt",
+      "school": "shiton",
+      "points": 0.6,
+      "source": "Directed necrotic effect upon isolated cord via foreign bridge, first unmastered Shiton attempt"
+    },
+    {
+      "event_id": "s04.text.009:byoton_attempt",
+      "at": "0006-09-29T02:26:00",
+      "event_type": "attempt",
+      "school": "byoton",
+      "points": 0.9,
+      "source": "Directed disordered growth upon cord, first unmastered Byoton attempt"
+    }
+  ],
   "mastered_shiton": [],
   "mastered_byoton": [],
-  "physical_phenotype": "Seven interrupted black rings with dense branching black roots on INNER RIGHT FOREARM only; at stage0 NO other pact symptoms, NO unusual pact scent, NO skin-contact disease.",
+  "physical_phenotype": "Stage1: Right inner forearm black seven-ring roots and subtle nearby superficial vessel darkening, initial faint close-proximity scent like rain/metal/damp stone; gradual course ONLY. No lesions, inflammation, necrosis, tumors, imposed sickness or loss of speed/skill/strength. Skin-to-skin pathological transmission not active at this stage.",
   "passive_direct_bare_skin_transmission_active": false,
   "visibility": "gm_only",
-  "last_source": "1283-09-27 14:58->15:02 Sekido interview and own bureau rescue report. Four minutes game time, no forbidden-school usage.",
+  "last_source": "User latest correction S4-010 and canonical special genomic bridge S4-008 plus real first Shiton/Byoton attempts S4-009; retroactive corrections remove GM invented Shiki self-pathologies",
   "replay_warning": "Live SQLite rev217 is behind current textual checkpoint; commit this rule/state in GitHub but do not claim current SQLite changed; synchronize at intersession replay."
 }
