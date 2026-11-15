@@ -47,9 +47,19 @@ def stem(token):
 
 def key_terms(value, *, expand=False):
     terms = set(stem(x) for x in words(value))
-    if expand and len(terms & {stem(x) for x in RESEARCH}) >= 2:
+    if expand and _research_hits(terms) >= 2:
         terms |= {stem(x) for x in RESEARCH}
     return terms
+
+
+def _overlap(a, b):
+    return {q for q in b if any(q == t or
+            (len(q) >= 5 and len(t) >= 5 and
+             (q.startswith(t[:5]) or t.startswith(q[:5]))) for t in a)}
+
+
+def _research_hits(terms):
+    return len(_overlap(terms, {stem(x) for x in RESEARCH}))
 
 
 def _sections(value, prefix="", depth=0):
@@ -155,13 +165,13 @@ def _authority(doc):
 
 def _score(section, doc, query, *, topical):
     terms = set(section["terms"])
-    common = terms & query
+    common = _overlap(terms, query)
     if not common:
         return 0.0
     paths = key_terms(doc["source"] + " " + section["field"])
     direct = len(common)
     # Mandatory source relevance should outrank generic long prose.
-    return (direct / (len(query) ** 0.5) + 1.4 * len(paths & query)
+    return (direct / (len(query) ** 0.5) + 1.4 * len(_overlap(paths, query))
             + (1.1 if topical and section["field"].startswith(("capabilities", "equipment",
               "gen_assimilation", "zero_genome", "current", "source")) else 0)
             + _authority(doc))
@@ -178,7 +188,7 @@ def _query_parts(action, location, actors):
             chunks.append(("actor", str(actor)[:180]))
     # Research provenance must be checked even when the player did not write
     # 'my secret laboratory' explicitly. This is a retrieval hint, not lore.
-    if len(key_terms(action) & {stem(x) for x in RESEARCH}) >= 2:
+    if _research_hits(key_terms(action)) >= 2:
         chunks.append(("research_capability", "исследования генетика ДНК оборудование лаборатория способности"))
     return chunks[:9]
 
