@@ -3,9 +3,10 @@
 import datetime as dt
 import hashlib
 import json
+import os
 from pathlib import Path
 
-from . import autonomy, continuity, world
+from . import autonomy, continuity, world, scene_memory
 from .engine import limit_value, state
 from .history import recall, source_excerpt
 from .transcripts import SOURCE_FIELD
@@ -153,7 +154,7 @@ def _plan(pack_path, pack, head, *, handoff=False):
     return result
 
 
-def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=None, pack_path=None):
+def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=None, pack_path=None, player_action=None):
     if mode not in MODES:
         raise ValueError("unknown scene preparation mode")
     recent = {"focus": 2, "handoff": 1}.get(mode, 3) if recent is None else recent
@@ -285,4 +286,14 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
                 }
         if mode in ("scene", "montage", "handoff"):
             result["session_plan"] = _plan(pack_path, pack, head, handoff=mode == "handoff")
+        # Mandatory: recall runs on EVERY packet, not only when --query was supplied.
+        # A newer private state worktree overrides packaged historical sources.
+        source_root = Path(os.environ.get("NPR_CAMPAIGN_STATE_DIR",
+                                        Path(__file__).resolve().parents[1]))
+        campaign_slug = pack_path.parent.name if pack_path else head["campaign"]["id"].split("-")[-1]
+        result["scene_memory"] = scene_memory.preflight(
+            action=player_action if player_action is not None else (
+                recent_turns[-1]["player"]["text"] if recent_turns else ""),
+            location=head["location"], actors=[npc["name"] for npc in npcs],
+            root=source_root, campaign=campaign_slug, con=con, limit=8)
         return result
