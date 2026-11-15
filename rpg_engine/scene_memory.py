@@ -24,7 +24,7 @@ STOP = frozenset(("и а но или не ни же бы на за в во к к
 RESEARCH = ("геном генет днк секвен биопс клет ткан наслед хромосом "
             "лаборатор оборуд образц препарат материал исслед").split()
 MAX_SOURCE = 240_000
-MAX_FILES = 600
+MAX_FILES = 10000
 MAX_SECTIONS = 4000
 
 # Small concept-level bilingual bridge for mixed Russian player input and
@@ -381,8 +381,8 @@ def compact_live_index(root, state_dir):
     for doc in data["documents"]:
         all_terms = Counter(t for section in doc["sections"] for t in section["terms"])
         anchor_terms = key_terms(doc["source"] + " " + doc["title"])
-        common = list(anchor_terms) + [t for t, _ in all_terms.most_common(100)]
-        keys = list(dict.fromkeys(common))[:115]
+        common = sorted(anchor_terms) + [t for t, _ in all_terms.most_common(48)]
+        keys = list(dict.fromkeys(common))[:60]
         def field_priority(s):
             f = s["field"]
             if f.startswith(("capabilities", "equipment_inventory", "privacy",
@@ -394,11 +394,11 @@ def compact_live_index(root, state_dir):
                 return 1
             return 0
         sections = sorted(doc["sections"], key=field_priority, reverse=True)
-        preview = [{"field": x["field"], "text": x["excerpt"][:260]}
-                   for x in sections[:4]]
+        preview = [{"field": x["field"], "text": x["excerpt"][:195]}
+                   for x in sections[:3]]
         records.append({"source": doc["source"], "sha256": doc["sha256"],
                         "title": doc["title"], "terms": keys, "preview": preview,
-                        "links": doc["links"][:10],
+                        "links": doc["links"][:6],
                         "weight": _authority(doc), "status": "source_candidate_only"})
     live = hot.get("story_compass", {})
     return {"schema": "npr-github-scene-memory/1", "campaign": data["campaign"],
