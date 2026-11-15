@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-29T02:26:00",
+    "at": "0006-09-29T02:29:00",
     "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
-    "turn": "s04.text.009"
+    "turn": "s04.text.010"
   },
   "documents": [
     {
@@ -1540,7 +1540,7 @@
           "text": "NPR-SHIKI-FORBIDDEN-ARTS/1.0"
         }
       ],
-      "sha256": "35fb8fa3e02b9ce113d1647a4cc82274a411534965a981823c4317d3ddd382bb",
+      "sha256": "3ae75cd2f73a73043c06eee8d72f81a78848d484752bcec39ded92cb698b51a4",
       "source": "campaigns/shiki/characters/UTSURO_FORBIDDEN_ARTS_1283_09_27.json",
       "status": "source_candidate_only",
       "terms": [
@@ -7167,19 +7167,19 @@
       "links": [],
       "preview": [
         {
-          "field": "last_source",
-          "text": "1283-09-27 14:58->15:02 Sekido interview and own bureau rescue report. Four minutes game time, no forbidden-school usage."
+          "field": "events[0].source",
+          "text": "Direct player canon: ex vivo autologous gene-graft activation in Shiki's LEFT forearm, unlocked genuine demonic natures"
         },
         {
-          "field": "schema",
-          "text": "NPR-SHIKI-PACT-BURDEN-LIVE/1.0"
+          "field": "events[1].source",
+          "text": "Directed necrotic effect upon isolated cord via foreign bridge, first unmastered Shiton attempt"
         },
         {
-          "field": "campaign",
-          "text": "naruto-shiki"
+          "field": "events[2].source",
+          "text": "Directed disordered growth upon cord, first unmastered Byoton attempt"
         }
       ],
-      "sha256": "0f388b83421a1d1e85ffce45860b5bac23fb54cac635bf49f064153b9bb00abf",
+      "sha256": "e6a90757cf310307a962af28b73457e2e924a572b886cae68b90f301ecec6e05",
       "source": "campaigns/shiki/contract/PACT_BURDEN_LIVE.json",
       "status": "source_candidate_only",
       "terms": [
@@ -7190,47 +7190,47 @@
         "live",
         "pact",
         "shiki",
-        "0007",
-        "last",
-        "2665",
+        "events",
+        "event",
+        "attempt",
+        "s04",
+        "text",
+        "bridge",
+        "009",
+        "shiton",
+        "byoton",
+        "0006",
+        "29t02",
+        "activation",
+        "source",
         "growth",
-        "time",
+        "008",
+        "genetic",
+        "ids",
+        "type",
+        "school",
+        "points",
+        "first",
+        "last",
+        "3743",
+        "stage",
         "total",
+        "direct",
+        "forearm",
+        "cord",
+        "directed",
+        "unmastered",
+        "upon",
+        "active",
+        "not",
         "only",
         "skin",
+        "this",
+        "transmission",
         "npr",
         "schema",
         "campaign",
-        "naruto",
-        "27t06",
-        "bound",
-        "27t15",
-        "value",
-        "stage",
-        "technique",
-        "black",
-        "branching",
-        "contact",
-        "dense",
-        "disease",
-        "forearm",
-        "inner",
-        "interrupted",
-        "other",
-        "phenotype",
-        "physical",
-        "right",
-        "rings",
-        "roots",
-        "scent",
-        "seven",
-        "stage0",
-        "symptoms",
-        "unusual",
-        "active",
-        "bare",
-        "direct",
-        "false"
+        "naruto"
       ],
       "title": "PACT BURDEN LIVE",
       "weight": 1.0
@@ -7253,7 +7253,7 @@
           "text": "Спящий"
         }
       ],
-      "sha256": "2be82f312cab14103b99d083a67e6c08c6dcbf9bb66812d1144b44bb47d1cb43",
+      "sha256": "616affb65ce3bcd7d285e0bdbd9c1bd4b53284ac67f390edb6c907f58302548d",
       "source": "campaigns/shiki/contract/PROGRESSION_RULES.json",
       "status": "source_candidate_only",
       "terms": [
@@ -7263,48 +7263,48 @@
         "progression",
         "rules",
         "shiki",
+        "2026",
         "scale",
         "thresholds",
         "trigger",
-        "2026",
         "event",
         "scent",
         "types",
-        "reference",
-        "points",
-        "stage",
         "only",
+        "points",
+        "reference",
+        "stage",
+        "player",
+        "not",
         "cast",
         "manifestation",
         "stages",
+        "latest",
         "forbidden",
-        "not",
         "technique",
-        "never",
         "pact",
-        "real",
         "shiton",
-        "agency",
-        "timing",
-        "description",
+        "never",
+        "real",
+        "correction",
         "byoton",
         "skin",
-        "olfactory",
         "time",
+        "description",
+        "agency",
+        "timing",
+        "010",
+        "s04",
         "use",
+        "olfactory",
+        "scene",
         "projection",
         "smell",
+        "direct",
         "actual",
-        "scene",
         "learned",
         "label",
-        "still",
-        "blood",
-        "direct",
-        "player",
-        "chakra",
-        "practice",
-        "mastery"
+        "contact"
       ],
       "title": "PROGRESSION RULES",
       "weight": 1.0
@@ -7602,25 +7602,18 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "474b10680c44ddde04548529f846ad01aa2876f0daafe07da45215b77d7f8349",
+  "hot_sha256": "044ebb29e59f80fb2ced549c375d82d9d0c48cf3050ef7cfe2cfc60d5b3f347b",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "backlash": "Left forearm few tiny necrotic epidermal patches and inflammatory swelling, Zero Genome limits; unusual faint odor, additional branches visible in right-arm permanent seal, accelerated pact side effect course; no fever/airborne infection/skin-to-skin contagion yet.",
-      "new_canon": "Direct player states foreign implanted DNA unlocks Shiki's capacity to wield Shiton and Byoton; this supersedes historical assumption only Utsuro uses and Shiki has no access; no automatically learned named techniques.",
-      "outcome": "Shiki reverse-directed own chakra through altered left forearm into isolated black cord, causing localized necrosis (Shiton) followed by pathological tissue growth (Byoton), no free mastery or remote perfect control.",
-      "time": "0006-09-29T02:26:00",
-      "ward": "Reverse pulse reached Seventh Ward, Sayu left arm transient spasm; Utsuro shielded seal, detected adversarial remote will, has no location or genetic knowledge."
+      "at": "0006-09-29T02:29:00",
+      "blood": "Utsuro sealed blood sample Ш remains unanalyzed",
+      "burden": "One-time foreign gene bridge +6.5, first two demonic efforts +0.6/+0.9 and passive stage1; not public to NPC; no skin contagion",
+      "correction": "User directly removes all pathological own-body adverse effects from S4-009; gradual appearance/odor/late contact hazard only",
+      "sayu": "Utsuro left temporary bone support of patient's life-sustaining seal in ward, time-limited; patient alive and autonomous",
+      "summoning": "Shiki uses fresh own blood on RIGHT forearm tattoo, hand signs, chakra; Utsuro physically summoned inside Shiki secret lab, now aware of place/equipment"
     },
     "recent": [
-      {
-        "at": "0006-09-28T06:48:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Исправлено: Шики сам проводит сравнительное секвенирование шести проб в собственной секретной генетической лаборатории; первоначальная внешняя лаборатория и лаборантка — неканон.",
-        "supersedes_commit": "2720e61bcdca163bfc8529b2284af1c7b3bf125f",
-        "turn_id": "s04.text.004",
-        "version": 2
-      },
       {
         "at": "0006-09-28T10:26:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7650,9 +7643,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "По прямой поздней поправке игрока внедрённая чужая ДНК открыла Шики практический начальный доступ к Ситону и Бётону и ускорила побочные эффекты договора. Обратное воздействие на чёрный тяж дало некроз и патологический рост, откат — локальный очаг на левом предплечье и новые корни печати справа. Саю в Седьмой палате испытала судорогу, Уцуро удержал печать и заметил внешнее воздействие, но не узнал тайной лаборатории. Именные дзюцу не изучены.",
         "turn_id": "s04.text.009"
+      },
+      {
+        "at": "0006-09-29T02:29:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Позднее исправление пользователя исключило придуманные ведущим некроз/припухлость и любые патологические побочные поражения самого Шики. Допустимы стадийные запах, худоба, бледность, тёмные сосуды и позднее контактное действие. Шики выполнил призыв Уцуро свежей кровью на правой печати, знаками и чакрой. Уцуро появился физически в тайной лаборатории, оставив Саю на временной опоре в Седьмой палате; знает существование лаборатории и видел образцы, подробные генетические секреты не раскрыты.",
+        "turn_id": "s04.text.010"
       }
     ],
-    "story": "S04-009 Fri 29 Sep 1283 02:26. Direct latest player canonical correction: the previously implanted foreign tissue-linked gene FRAGMENT DID unlock Shiki's first REAL intrinsic low-control channels to demonic SHITON (death/necrosis) and BYOTON (disease/pathological proliferation), overriding previous 'no forbidden schools available' mechanics; advanced named Utsuro jutsu remain unlearned. Shiki attempted reverse-direction influence on retained black tendon via his modified LEFT forearm; achieved limited necrosis and counter-proliferation in cord, but transmitted through network to distant Seventh Ward causing Sayu temporary left-arm spasm; Utsuro stabilized life seal, noticed opposing will in conduit but knows neither secret lab location nor DNA experimentation. Side effects as new consequence: focal skin necrosis/inflammatory swelling left forearm controlled spatially via Zero Genome, abnormal odor stage1 (not airborne infection), new thin roots to tattoo RIGHT forearm, accelerated preexisting pact burden; occult transformation has started earlier than prior progression. No dangerous skin touch contagion yet; all old explicit limitations on transmission intact, no NPC revelation of genetic secret, no city-scale power. Keep continuity next turn, NPCs autonomous. Canon says true demonic school accessible now due implanted receptor and pact coupling; not merely future possibility. No instant whole-body powers, no perfection, not automatically master Utsuro moves."
+    "story": "S04-010 Fri 29Sep1283 02:29: Direct player OOC correction removes ALL previously GM-imposed Shiki pathologic self-side effects (necrotic epidermis, inflammatory swollen forearm) from S04-009; only staged approved gauntness/pallor/dark veins/scent and later bare-skin-to-skin risk stage5 (currently OFF). Genome bridge accelerated first stage1 (~9.37) with very faint scent and right wrist vascular shadows; physical stats intact. Player performed Kuchiyose blood on RIGHT inner forearm seven-ring seal + hand signs + chakra. Utsuro was stabilizing Sayu in Seventh Ward and autonomously erected temporary bone supports before PHYSICALLY summoning to Shiki PRIVATE NW laboratory, leaving Sayu alive but on short-duration backup; Utsuro has now SEEN the lab, tools, samples/screens yet not read secret notes or identified donor genetics, and senses Shiki affected cord and latent demonic powers. Utsuro demands why he was summoned and notes he has little time to leave Sayu supported. Utsuro blood tube marked Ш untouched. Shiki has access to basic Shiton and Byoton from implant but named techniques unlearned. Utsuro autonomously awaiting response, does not control Shiki."
   },
   "schema": "npr-github-scene-memory/1"
 }
