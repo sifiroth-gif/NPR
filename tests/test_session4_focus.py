@@ -35,6 +35,7 @@ class FourthSessionFocus(unittest.TestCase):
         p=preparation.packet(self.game,mode="focus",actors=("utsuro","sayu"),pack_path=PACK)
         self.assertEqual(p["confirmed"]["session"],4)
         self.assertIn("1283",p["heading"])
+        self.assertTrue(p["heading"].startswith("среда,"), p["heading"])
         self.assertIn("Седьмая",p["heading"])
         self.assertEqual(p["scene_spine"]["source"],"sessions/SESSION_004.json")
         self.assertIn("Седьмой",p["scene_spine"]["objective"])
@@ -56,6 +57,15 @@ class FourthSessionFocus(unittest.TestCase):
         self.assertEqual(handoff["session_plan"]["source"],"sessions/SESSION_004.json")
         self.assertEqual(handoff["confirmed"]["at"],AT)
         self.assertNotIn("scene_spine",handoff)
+
+    def test_era_calendar_preserves_pre_skip_weekday(self):
+        pack=json.loads(PACK.read_text())
+        self.assertTrue(preparation.heading(
+            "0001-07-28T18:18:00","полигон",pack["calendar"]).startswith("воскресенье,"))
+        self.assertTrue(preparation.heading(
+            "0006-09-26T09:28:19","коллектор",pack["calendar"]).startswith("вторник,"))
+        self.assertTrue(preparation.heading(
+            "0006-09-27T22:05:34","палата",pack["calendar"]).startswith("среда,"))
 
     def test_sourced_presence_cannot_imply_secret_lab_analysis(self):
         cues=preparation.psychological_presence_contract("naruto-shiki", [
