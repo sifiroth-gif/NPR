@@ -193,5 +193,14 @@
     "mastery": "No Shiton/Byoton combat technique learned merely by contract. Appearance changes do not imply weakness or stat loss. Extraordinary medicine/Zero Genome competence preserved.",
     "visibility": "NPCs including Hase and Kashiva have zero evidence of skin-transmission risk at present; do not narrate their precaution or fear about infectious skin for this reason. Existing dark tattoo may draw ordinary suspicion.",
     "reconciliation": "Any prior summaries stating 'risk active from pact' or that gloves alone prevented current infection are superseded: gloves are safe indeed, BUT they were unnecessary to prevent contract-related disease at 06:38–06:42 because no disease-contact ability manifested yet. Other normal glove hygiene remains valid."
+  },
+  "pact_progression_2026_11_15": {
+    "priority": "LATEST DIRECT USER INSTRUCTION 2026-11-15: permanent side effects MUST progressively develop; mastering/practicing/casting Shiton or Byoton accelerates accumulation, Byoton is somewhat more potent. Contract activation alone is NO mastery and NOT early contagion.",
+    "rules_file": "campaigns/shiki/contract/PROGRESSION_RULES.json",
+    "live_tracker": "campaigns/shiki/contract/PACT_BURDEN_LIVE.json",
+    "calculator": "campaigns/shiki/contract/progression.py",
+    "baseline": "binding 27Sep1283 06:30:19, at14:39 SAME DAY currently ~0.2545/100, stage0. Tattoo only, no paleness/gauntness/dark veins beyond usual physical baseline and NO transmission; first sign stage1 at8 points.",
+    "mandatory_hook": "Before EVERY GM game turn whose in-world clock advances, calculate passive +0.75 points per in-game DAY prorated by seconds using live state, then add actual chakra-driven attempts/practice/mastery/casts by unique event IDs. Do not add for reading/OOC. Persist both tracker and narrative checkpoint consistently; if tools unavailable, mark pending instead of claiming persisted.",
+    "constraints": "All earlier approved bans remain: no fever, abnormal heat, odors, taste/pain loss, psychological control, skin hazards before stage5 78. Only DIRECT living bare skin against bare skin at stage5+, never barrier/air/fomite. Roots on neck/trunk later but NEVER face. No loss of stats or Zero Genome skill, no free new jutsu."
   }
 }
