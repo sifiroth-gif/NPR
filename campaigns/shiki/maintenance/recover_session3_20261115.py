@@ -306,7 +306,7 @@ def main(root):
             or verified["session"]!=3 or verified["revision"]!=217
             or verified["at"]!="0006-09-26T09:28:19" or verified["pending"]
             or manifest["sha256"]!=START_SHA):
-        raise ValueError("unexpected input SQLite version; refusing to replace live campaign")
+        raise ValueError("unexpected input SQLite version; refusing to replace live campaign: "+json.dumps({"verified":verified,"manifest":manifest,"manifest_expected":{"format":git_state.FORMAT,**verified,"sha256":file_sha256(game.path)},"expected_sha":START_SHA},ensure_ascii=False))
     game.checkpoint(root/"recovery-before-s3.sqlite")
     at=verified["at"];location="Кусагакуре, северный коллектор старого водоотвода"
     play_rows=[];receipts=[];index=[]
