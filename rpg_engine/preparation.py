@@ -15,7 +15,7 @@ WEEKDAYS = ("понедельник", "вторник", "среда", "четв�
 
 
 
-def psychological_presence_contract(campaign_id, npcs):
+def psychological_presence_contract(campaign_id, npcs, latest_player_input=''):
     """Non-optional GM scene cue for Shiki; independent of prose generation.
 
     This is a preparation-level contract rather than a lexical prose validator:
@@ -35,9 +35,15 @@ def psychological_presence_contract(campaign_id, npcs):
             "may resist, lie or exploit him. No uniform awe, no mind-reading Shiki, "
             "no repeated grief motifs or mechanical reaction lists."
         ),
+        "latest_player_input": latest_player_input[:210],
         "actors": [
             {"id": npc["id"], "name": npc["name"],
-             "cue": "Use this NPC's own profile/portrayal/beliefs and visible behavior"}
+             "cue": "Use individual source-bound goals/beliefs, not public GM omniscience",
+             "known_topics": [item["topic"] for item in npc.get("current_beliefs", [])][:3],
+             "known_source_events": [item["source_event"] for item in npc.get("current_beliefs", [])][:3],
+             "independent_aim": npc.get("profile", {}).get("goal",
+                                npc.get("profile", {}).get("goals",
+                                npc.get("profile", {}).get("independent_actions")))}
             for npc in npcs
         ],
         "empty_cast_warning": (
@@ -71,7 +77,8 @@ def _profile(con, actor, latest, *, detailed):
     if npc is None:
         return None
     profile = json.loads(npc["profile_json"])
-    compact = ("speech", "goals", "relations", "independent_actions")
+    compact = ("role", "voice", "speech", "goal", "goals", "constraint",
+               "knowledge_limits", "relations", "independent_actions", "autonomy")
     info = {"id": actor, "name": npc["name"], "source_event": npc["source_event"],
             "profile": profile if detailed else {key: profile[key] for key in compact if key in profile}}
     if detailed:
@@ -235,16 +242,38 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
             "actors_source": actor_source, "actors": npcs, "recent_turns": recent_turns,
             "latest_events": current_events, "corrections": repairs, "campaign_anchors": source_anchors,
             "pinned_facts": pinned, "memory": continuity.notes(con, subjects=scopes, limit=4 if compact else 10),
-            "world": active, "rules": pack.get("rules", []),
+            "world": active, "rules": (pack.get("fast_rules", pack.get("rules", []))
+                                       if mode == "focus" else pack.get("rules", [])),
             "pacing": {"review_due": bool(active["due"]), "past_due": any(
                 x["due_at"] < head["at"] for x in active["due"]),
                 "routine_run": len(last_beats) >= 3 and all(b == "routine" for b in last_beats[-3:]),
                 "focus": (recent_turns[-1].get("scene") or {}).get("focus") if recent_turns else None},
             "recall": [recall(con, query=query, limit=5) for query in queries],
         }
-        presence = psychological_presence_contract(head["campaign"]["id"], npcs)
+        presence = psychological_presence_contract(head["campaign"]["id"], npcs,
+                  recent_turns[-1]["player"]["text"] if recent_turns else "")
         if presence is not None:
             result["npc_psychological_presence"] = presence
+        if mode == "focus":
+            # The old focus mode omitted the active plan entirely. Over a long
+            # text-only session this caused the main plot to disappear from
+            # operational attention. Include a *bounded* spine, not the entire plan.
+            active_plan = _plan(pack_path, pack, head)
+            if active_plan:
+                result["scene_spine"] = {
+                    "source": active_plan["source"],
+                    "objective": active_plan.get("objective"),
+                    "next_causes": [
+                        {"id": beat.get("id"), "cause": beat.get("cause", beat.get("conflict")),
+                         "stop": beat.get("stop")}
+                        for beat in active_plan.get("situations", [])[:2]
+                        if isinstance(beat, dict)
+                    ],
+                    "scene_advance_rule": (
+                        "Resolve a causal consequence or new concrete pressure; "
+                        "never ask a character to repeat information already confirmed. "
+                        "Protect the player's significant choice.")
+                }
         if mode in ("scene", "montage", "handoff"):
             result["session_plan"] = _plan(pack_path, pack, head, handoff=mode == "handoff")
         return result
