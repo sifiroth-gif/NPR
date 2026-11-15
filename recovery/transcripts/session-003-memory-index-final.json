@@ -1,0 +1,393 @@
+{
+  "format": "NPR-SHIKI-SOURCE-AWARE-MEMORY/1",
+  "branch": "game-state/shiki",
+  "created_real": "2026-11-15",
+  "game_last": "0007-09-27T22:05:34",
+  "latest_canonical_turn": "s03.text.085",
+  "sqlite_verified_through": "rev217, 26Sep1283 opening of session3; TEXT FALLBACK after that, full SQLite replay unverified",
+  "source_priority": [
+    "player_latest_correction",
+    "played_original_player_input+exact_GM_turn_except_voided",
+    "approved_character_and_setting",
+    "gm_private_plans_only_gm"
+  ],
+  "stable_source_files": {
+    "session1": "archive/session-001.md",
+    "session2": "archive/session-002-index.json",
+    "session2_full_source": "archive/session-002-source.md",
+    "session3_early": "recovery/fast_turns/s03.text.063.json through s03.text.069.json, revised 068 source explicitly flagged",
+    "session3_late": "recovery/SESSION_003_RECOVERED_TEXT_070_085.json",
+    "current_hot": "recovery/FAST_SCENE.json"
+  },
+  "legacy_turn_sources": [
+    {
+      "id": "s03.text.063",
+      "path": "recovery/fast_turns/s03.text.063.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.064",
+      "path": "recovery/fast_turns/s03.text.064.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.065",
+      "path": "recovery/fast_turns/s03.text.065.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.066",
+      "path": "recovery/fast_turns/s03.text.066.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.067",
+      "path": "recovery/fast_turns/s03.text.067.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.068",
+      "path": "recovery/fast_turns/s03.text.068.json",
+      "status": "draft_superseded_by_rev1"
+    },
+    {
+      "id": "s03.text.069",
+      "path": "recovery/fast_turns/s03.text.069.json",
+      "status": "source_present"
+    },
+    {
+      "id": "s03.text.068@rev1",
+      "path": "recovery/fast_turns/s03.text.068.rev1.json",
+      "status": "corrected_before_publication"
+    }
+  ],
+  "turn_index": [
+    {
+      "id": "s03.text.070",
+      "at": "0007-09-27T15:48:00",
+      "canonical": true,
+      "entry": 0,
+      "commit": "34e01ef4b1455ae58d5846c447a9310767c22dbe",
+      "player_input": "Касива, он не выходил. Вы что видели что-то другое?",
+      "summary": "Shiki explicitly corrects Kashiva: Utsuro never left portal, asks whether she saw something else. Kashiva admits she saw SAME event and previous question was badly worded; doesn't ask redundant binary questions"
+    },
+    {
+      "id": "s03.text.071",
+      "at": "0007-09-27T15:50:00",
+      "canonical": true,
+      "entry": 1,
+      "commit": "56d91b031653743245c930029978ad728928ccdd",
+      "player_input": "Что значит нижний госпиталь знаете?",
+      "summary": "Shiki asks Kashiva meaning of Lower Hospital. Kashiva explains from personally copied old archive classifications: LOWER HOSPITAL was separate now-defunct medical INSTITUTION, not Central Hospital floor; 'Seven"
+    },
+    {
+      "id": "s03.text.072",
+      "at": "0007-09-27T16:08:00",
+      "canonical": true,
+      "entry": 2,
+      "commit": "0135494e765974538988546bae4157f5df50223d",
+      "player_input": "Да уж. То есть у меня теперь контракт призыва с кем-то кто когда-то видимо существовал. Прекрасно. Спасибо. #мастеру: затягиваешь, давай дальше по игре#",
+      "summary": "Shiki dryly thanks Kashiva about summoning contract with someone from past, no specified movement; OOC user urges immediate pacing. Kashiva succinctly replies Utsuro currently exists, independently arranges to "
+    },
+    {
+      "id": "s03.text.073",
+      "at": "0007-09-27T16:34:00",
+      "canonical": true,
+      "entry": 3,
+      "commit": "ad0d61a8fadc3f5e6fb8916beacbef3afabd86fb",
+      "player_input": "Ладно. Работайте господа. А я пойду....#возвращаюсь домой#",
+      "summary": "Shiki tells people they may continue and explicitly returns HOME from Hase's residence (16:08-16:34); Kashiva autonomously continues care for Hase and sealed note for Sekido. At exterior of Shiki's home, subord"
+    },
+    {
+      "id": "s03.text.074",
+      "at": "0007-09-27T16:53:00",
+      "canonical": true,
+      "entry": 4,
+      "commit": "f5c7c2d47eb7edcffa143a24818ee2389121fdce",
+      "player_input": "Дальше по игре. Я пошел выяснять что происходит, везде ты мне дал кучу блоков и ничего в замен. Шики не дознаватель не хотелось бы опять превращать игру в 1000 листов допросов",
+      "summary": "User expressly leaves home for active main-case situation and objects to investigative Q&A and lack of agency; Shiki travels from outside home 16:34 to western sanitation line at16:53. Independent captain Nori "
+    },
+    {
+      "id": "s03.text.075",
+      "at": "0007-09-27T16:55:00",
+      "canonical": true,
+      "entry": 5,
+      "commit": "e36738df9cc9c946ee5f24c7e5ed7b44a906095f",
+      "player_input": "#шуншин к тому кто каталку везёт, убить и резко назад лечить разрыв сосудов#",
+      "summary": "Shiki player orders Shunshin to captor22m away, kill, immediate Shunshin return to injured Kusa shinobi ~8m right from original entry and heal vessels. Kills fartuched captor with precisely positioned medical c"
+    },
+    {
+      "id": "s03.text.076",
+      "at": "0007-09-27T16:55:12",
+      "canonical": true,
+      "entry": 6,
+      "commit": "5f2d1b9325fa955fdf28a1c54340f738d5f9a074",
+      "player_input": "#туда максимально быстро что бы не дать запечатать вход, если нужно убиваем или калечим#",
+      "summary": "At16:55 Shiki explicitly charges as fast as possible to prevent lower shaft sealing, willing to maim/kill if needed. Shunshin from wounded guard position to top of shaft and lower 4m service bridge (no forced i"
+    },
+    {
+      "id": "s03.text.077",
+      "at": "0007-09-27T16:58:00",
+      "canonical": true,
+      "entry": 7,
+      "commit": "6471640e7a18dc73c8dab1b01777e37bbc23b481",
+      "player_input": "#нц попытаемся стабилизировать 04#",
+      "summary": "User instructs Shiki to stabilize S17/04, initiates emergency medical rescue. At16:55:12 Shiki crawls under 70cm shutter, goes 6m to seated S17/04, identifies pronounced upper airway obstruction from swelling o"
+    },
+    {
+      "id": "s03.text.078",
+      "at": "0007-09-27T17:19:00",
+      "canonical": true,
+      "entry": 8,
+      "commit": "682d421a22b533d3e8db03f1a467f94be9f576ef",
+      "player_input": "Дальше по игре  можешь управлять шики",
+      "summary": "User explicitly authorizes GM temporarily to control Shiki voluntary actions/speech, superseding prior exclusive PC agency until user revokes; no required checkin. At16:58 Shiki chooses pursue main S17 suspects"
+    },
+    {
+      "id": "s03.text.079",
+      "at": "0007-09-27T17:24:00",
+      "canonical": true,
+      "entry": 9,
+      "commit": "84e941aa7c53995568dafeb201923fc6ec105955",
+      "player_input": "Капитан, слышали когда-нибудь имя Уцуро?",
+      "summary": "Player Shiki expressly asks captain Nori whether she has ever heard name Utsuro at17:19 old pump station. She truthfully says NO: name not known to her personally among medics nor in S17 investigation, no acces"
+    },
+    {
+      "id": "s03.text.080",
+      "at": "0007-09-27T21:03:00",
+      "canonical": true,
+      "entry": 10,
+      "commit": "32e4f0dcf6e75d612d0e2d74443d101230652912",
+      "player_input": "Быстро информация доходит хах. Спасибо капитан. #дальше по инре#",
+      "summary": "At17:24 Shiki player sarcastically says 'Быстро информация доходит хах. Спасибо капитан.' and directs proceed game; previous explicit GM control Shiki permission remains. Nori replies wryly information arrives "
+    },
+    {
+      "id": "s03.text.081@void",
+      "at": "0007-09-27T23:08:00",
+      "canonical": false,
+      "entry": 11,
+      "commit": "10ab3bccaacc7799465e5bcc2b2874c9a8bf3fb1",
+      "player_input": "Нужно быть внимательнее. \nПо игре: Шики идёт разбираться с историе й уцуро. Эту ветку нужно закончить и приступить к изучению новых техник",
+      "summary": "Direct user directive in-game Shiki goes to resolve Utsuro plot and start learning new techniques, delegated GM control still on. From Central Hospital 21:03 Shiki returns own protected home at21:34, correctly "
+    },
+    {
+      "id": "s03.text.081",
+      "at": "0007-09-27T22:03:00",
+      "canonical": true,
+      "entry": 12,
+      "commit": "85cd7204d423b8662cdba771cf1af81c4a13a59b",
+      "player_input": "Давай",
+      "summary": "User 'Давай' resumes player-intended direct investigation of Utsuro after prior s03.text.081 (GM forced reveal) voided; canonical s03.text.080 at21:03. Previous explicit limited delegation to GM Shiki voluntary"
+    },
+    {
+      "id": "s03.text.082",
+      "at": "0007-09-27T22:05:00",
+      "canonical": true,
+      "entry": 13,
+      "commit": "a5fc7ffff50af4cde797d9d6c8877b56db218e41",
+      "player_input": "Болезнь и смерть. Это вы так не лечите #обследование чакрой руки женщины, таккни то вообще живые и мастеру: я давал жуткие техники этих стихий и чего все такие добрые до блевоты#",
+      "summary": "Player Shiki speaks to Utsuro 'Болезнь и смерть. Это вы так не лечите', uses ordinary diagnostic medical chakra to assess whether living seventh ward woman's LEFT arm tissues alive. OOC user correctly admonishe"
+    },
+    {
+      "id": "s03.text.083",
+      "at": "0007-09-27T22:05:18",
+      "canonical": true,
+      "entry": 14,
+      "commit": "25f5ed8fff95191af37a38def805e4311f0e7df9",
+      "player_input": "Как вос зовут? #к женжине#",
+      "summary": "User Shiki asks awake female lower ward patient's NAME. She autonomously replies MIZUNO SAYU (Мидзуно Саю), says mother used that name, hospital listed 'seventh support'/'material', 28 when she arrived; years e"
+    },
+    {
+      "id": "s03.text.084",
+      "at": "0007-09-27T22:05:27",
+      "canonical": true,
+      "entry": 15,
+      "commit": "12122d7dac5bd7a4b9d36d15535ce058791947a0",
+      "player_input": "Магами Шики. Я не знаю что тут происходит, если бы были на моем столе, я бы рекомендовал ампутацию",
+      "summary": "User Shiki explicitly introduces himself as 'Магами Шики' (exact spelling used, not retcon legal character name Мугами) and tells patient Sayu he doesn't understand full mechanism, would recommend AMPUTATION of"
+    },
+    {
+      "id": "s03.text.085",
+      "at": "0007-09-27T22:05:34",
+      "canonical": true,
+      "entry": 16,
+      "commit": "e51c930b29b2fcd1fb58c9efb0a866617cd997a4",
+      "player_input": "Уцуро ты исследовал мою кровь?",
+      "summary": "Player Shiki asked Utsuro directly whether he studied Shiki's blood. Utsuro states unequivocally NO: blood drop on summoning scroll only gave contractual signature/name and call link; no biological/genomic/sour"
+    }
+  ],
+  "high_value_memory": [
+    {
+      "topic": "kaneda_ryo_memory",
+      "source": [
+        "recovery/fast_turns/s03.text.063.json"
+      ],
+      "fact": "Player directly stated Shiki DOES NOT REMEMBER incident involving Kaneda Ryo from 1277. Never assign recovered memory, grief, firsthand details to Shiki.",
+      "status": "player_statement",
+      "known_to": [
+        "Shiki knows he does not recall; Sekido was directly told in s03.text.063"
+      ]
+    },
+    {
+      "topic": "kashiva_archive_warning",
+      "source": [
+        "recovery/fast_turns/s03.text.068.rev1.json",
+        "s03.text.069",
+        "s03.text.070",
+        "s03.text.071"
+      ],
+      "fact": "Kashiva knew only Utsuro name and old warning/containment categorization, witnessed moving relief and Utsuro blocking its emergence, not proof of human/demon ontology or patient details.",
+      "status": "played",
+      "known_to": [
+        "Kashiva witnessed limited portal details; Shiki heard her; Sekido only reports actually delivered"
+      ]
+    },
+    {
+      "topic": "scroll_swap",
+      "source": [
+        "s03.text.072"
+      ],
+      "fact": "Suda Minako admitted replacing archive scroll to draw any medic into a ward; Tamura rescued, original A117 returned; Suda detained, not automatically convicted. S17 NOT connected by evidence.",
+      "status": "played",
+      "known_to": [
+        "Sekido and archive staff; Shiki heard delivered report"
+      ]
+    },
+    {
+      "topic": "S17_missing_persons",
+      "source": [
+        "s03.text.073",
+        "s03.text.074",
+        "s03.text.075",
+        "s03.text.076",
+        "s03.text.077",
+        "s03.text.078",
+        "s03.text.080"
+      ],
+      "fact": "Four recipients accounted one previously DEAD unspecified index, S17/02 female and /03 female and /04 male live under hospital observation; 6 sealed ampoules and notes seized from pump, criminal site closed but sponsors/biology unknown.",
+      "status": "played",
+      "known_to": [
+        "Shiki from personal rescue and Nori briefing; Nori and her squad based on mission; lab specialists limited submitted samples"
+      ]
+    },
+    {
+      "topic": "dzhiro_medical_outcome",
+      "source": [
+        "s03.text.078",
+        "s03.text.079",
+        "s03.text.080"
+      ],
+      "fact": "Dzhiro Nori subordinate chest pierced by steel hook causing right hemopneumothorax and pulmonary artery injury; survived surgery but remained critical on ventilatory assistance + transfusion as of21:03. No guaranteed survival, no death.",
+      "status": "played",
+      "known_to": [
+        "Shiki treated/received surgeon report; Nori was informed and spoke to Dzhiro's wife; family knows only surgical status"
+      ]
+    },
+    {
+      "topic": "uttro_pact_blood",
+      "source": [
+        "recovery/LATEST_SHIKI_CHECKPOINT.json@88d2390a0f578714e1bdc97f47ce2cffeb806266",
+        "recovery/LATEST_SHIKI_CHECKPOINT.json@8cb7e9349459adc8941a75305dc7baf6df65e971",
+        "s03.text.081",
+        "s03.text.085@corrected"
+      ],
+      "fact": "Shiki DIRECTLY ordered Utsuro to ANALYZE Shiki OWN BLOOD 27Sep13:38–13:44; Utsuro accepted and promised cells/chromosome/DNA-damage readings; at13:43 physically stored sealed tube marked 'образец Ш'; at15:02 still capped, no results. At22:05:27 Utsuro corrected response acknowledges blood tube and says STILL not analyzed; original generic 'Нет. Если бы я хотел исследовать, ты бы услышал просьбу' was false due loss of original memory. No completed assay, no justified Shiki Zero Genome knowledge. Blood PACT signature reading name is DIFFERENT from separate tube for analysis. See correction source.",
+      "status": "direct_player_instruction+played_sample+corrected_NPC_claim_no_lab_result",
+      "known_to": [
+        "Shiki himself gave request and knows Utsuro took tube and agreed; Utsuro has tube and accepted responsibility; other NPC not automatically informed."
+      ]
+    },
+    {
+      "topic": "uttro_elemental_first_introduction",
+      "source": [
+        "s03.text.081",
+        "s03.text.082"
+      ],
+      "fact": "Shiton/Byoton names first disclosed in corrected VALID turn081 at22:03, Byoton 'Возвращение болезни' demonstrated BY UTSURO in bounded reversible motor control test. In turn082 Byoton 'Белая чума' anti-HEAL S-rank trap in Sayu left forearm and Shiton 'Ассимиляция мёртвой плоти' cast BY UTSURO from funerary remains. SHIKI HAS LEARNED ZERO forbidden techniques, used ZERO forbidden chakra, accrued ZERO event points.",
+      "status": "played",
+      "known_to": [
+        "Shiki directly observed and heard; Utsuro knows; Sayu witnessed and heard; normal hospital/Nori/Sekido have not witnessed"
+      ]
+    },
+    {
+      "topic": "sayu_identity_consent",
+      "source": [
+        "s03.text.081",
+        "s03.text.082",
+        "s03.text.083",
+        "s03.text.084",
+        "s03.text.085"
+      ],
+      "fact": "Mizuno Sayu full living person, admitted at age28, current physical/chronological age unknown, has autonomous RIGHT hand, forced LEFT motor via pathological Byoton seals, viable+necrotic muscles and separate lifesupport trophic circuit. Byoton White Plague antiheal trap triggered by strong RESTORATIVE medical chakra; ordinary diagnostic chakra safe. Consented ONLY noninvasive scan and reversible test, has NOT consented high-risk unlink, amputation or relocation. Shiki suggested hypothetical amputation, DID NOT perform one. She actively refuses continuing imprisonment.",
+      "status": "played",
+      "known_to": [
+        "Shiki via medical examination; Sayu via experiences and explanations; Utsuro knows his own ward procedures; stone colleague has partial firsthand"
+      ]
+    },
+    {
+      "topic": "stone_relief_attack",
+      "source": [
+        "s03.text.081",
+        "s03.text.082",
+        "s03.text.083",
+        "s03.text.084",
+        "s03.text.085"
+      ],
+      "fact": "Living multi-rib-cage stone female former colleague (exact identity/agency unknown to Shiki) breaking out from opposing wall while left shoulder anchored; Utsuro's limited Shiton decaying corpse limb broke, bone-shard/chakra threads now temporarily bind attack RIGHT hand to stone pillar; hand about 2m from Sayu, binding FRAYING at22:05:34. Immediate physical threat—not conversation-only frozen.",
+      "status": "played",
+      "known_to": [
+        "Shiki, Utsuro and Sayu directly witness; no outside NPC"
+      ]
+    },
+    {
+      "topic": "nori_location",
+      "source": [
+        "s03.text.080",
+        "s03.text.081"
+      ],
+      "fact": "Nori was at Central Hospital at21:03 and may pursue autonomous case; not present in Lower Hospital Seventh Ward at22:05. Shiki left hospital to go alone to protected house then Utsuro's place.",
+      "status": "played",
+      "known_to": [
+        "Shiki observed Nori at hospital; Nori has own mission; no teleportation"
+      ]
+    },
+    {
+      "topic": "player_self_name_variant",
+      "source": [
+        "s03.text.084"
+      ],
+      "fact": "User directly wrote spoken introduction 'Магами Шики'; canon profile lists 'Мугами Шики'. Preserve spoken original in its source, do not silently assert character name has changed based on a single possible typo. New explicit player correction prevails if given.",
+      "status": "source_variant_unresolved",
+      "known_to": [
+        "Sayu heard Shiki's spoken introduction; don't make her unprompted claim about official spelling"
+      ]
+    }
+  ],
+  "invalidations": [
+    {
+      "id": "s03.text.081@void",
+      "former_commit": "10ab3bccaacc7799465e5bcc2b2874c9a8bf3fb1",
+      "replacement_commit": "85cd7204d423b8662cdba771cf1af81c4a13a59b",
+      "rule": "Never replay premature Utsuro birthname/gate closure, patient evacuation or effortless mastery from voided scene; used identical turn ID, so require commit+record_id identity."
+    },
+    {
+      "id": "s03.text.068@original",
+      "rule": "Original draft superseded by correction-before-publication file s03.text.068.rev1.json; do not count as second event."
+    },
+    {
+      "id": "s03.text.085@original-blood-dialogue",
+      "rule": "Original 'If I wanted to analyze your blood you would see request/instruments' scene text RETRACTED due objective original 13:38 Shiki sample/accepted analysis. Rest of original scene still played. See correction file.",
+      "correction_file": "recovery/corrections/s03.text.085_utsuro_blood_2026-11-15.json"
+    }
+  ],
+  "recovery_audit": {
+    "root_cause": "After SQLite rev217, complete turns only existed as Git-history versions of a mutable FAST_SCENE, while HOT recent summaries rolled off. The pre-session SQLite FTS5/actor memory and NPC belief graph were never replayed to current cursor, allowing knowledge-source drift. Contradictory documents still direct readers to stale LATEST_SHIKI_CHECKPOINT.json and stale technical time21:03. OOC-corrected turn s03.text.081 reused an ID and could reinfect recall without explicit invalidation.",
+    "restoration": "Exact text recovered 070–085 as standalone JSON file; 063–069 already separate immutable JSON, session1/2 independently archived. This source-aware index marks play versus revoked, attaches per-topic evidence and per-person access, and separates unseen GM knowledge from Shiki's observations.",
+    "limitations": "Not a substitute for actual confirmed SQLite 217→85 text turn replay or indexed actor-scoped beliefs. Do not claim verify --full has run. Index captures 063–085 sources, not total hidden game state; consult full source for any contested details. Repair stronger by replay at session handoff and derive world memory records from original evidence."
+  },
+  "audit_followup_2026_11_15": {
+    "specific_failure": "High-priority risk: prior source index lacked earlier first 63 turns! Added back-reference to 13:38 original source; merely indexing 063–085 did not recover earlier Utsuro blood sample. Historical checkpoint has dated content and specific confirmed text, NOT global obsolete data. When user asks about a pre-hot fact, search earlier checkpoint per dated source instead of declaring its contents 'stale'.",
+    "resolved_for": "Utsuro Shiki blood specimen and 085 answer",
+    "confirmed_still_open": "Other before-063 potentially important details remain to be checked when referenced; SQLite replay still pending"
+  }
+}

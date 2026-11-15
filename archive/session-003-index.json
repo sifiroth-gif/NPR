@@ -1,0 +1,1834 @@
+{
+  "format": "npr-shiki-session3-curated/1",
+  "session": 3,
+  "primary_source": "archive/session-003-source.md",
+  "source_sha256": "3be54294ad7d1336614c1bb660ff3b08b4033de2df54d9059ea81d4fce809611",
+  "canonical_export": "archive/session-003.md",
+  "canonical_export_sha256": "76a85c4c201dcaf57a2f1fa16eae9033fcbd7a23a4a4be2a1b1d4a0d36adcb7c",
+  "records_total": 118,
+  "response_blocks": 116,
+  "played_records": 85,
+  "stored_turn_receipts": 86,
+  "void_records": {
+    "5": "Player explicitly canceled original field operation; replaced by #7",
+    "41": "Original summoning manuscript voided by player; replaced by #44",
+    "42": "Interrupted prompt, no published response",
+    "43": "Interrupted revision instruction, consolidated into #44",
+    "110": "Uncorrected introduction of Utsuro powers; replaced after player objection by #112"
+  },
+  "excluded_nonplay": {
+    "1": "Session opener duplicates the already confirmed S2->S3 boundary",
+    "3": "Out-of-character persistence question",
+    "4": "Out-of-character persistence protocol",
+    "6": "Explicit cancellation of medical scene",
+    "8": "Field versus hospital medicine policy",
+    "45": "Illustration request",
+    "46": "Visual reference adjustment",
+    "47": "Technique brainstorming, not training",
+    "48": "Forbidden technique concepts, not learned",
+    "49": "Contract side-effect design, not yet manifested",
+    "50": "Contract side-effect specification",
+    "51": "Illustration request",
+    "52": "Illustration correction",
+    "55": "GM-only origins discussion, not playable",
+    "74": "GM-only pacing correction",
+    "79": "GM-only meta plot discussion",
+    "80": "GM-only meta mystery; disclosed idea subsequently retracted",
+    "81": "User rejects spoiler, no played event",
+    "82": "GM-only hidden-plot rewrite",
+    "83": "GM-only progression counter setup",
+    "88": "GM-only performance discussion",
+    "90": "Interrupted/explanatory response, no playable continuation",
+    "96": "GM-only performance criticism",
+    "108": "GM-only story criticism",
+    "109": "GM-only plan status question",
+    "111": "Player repudiates first introduction of techniques",
+    "117": "GM-only context failure analysis",
+    "118": "Later explicit canonical correction to turn 116"
+  },
+  "terminal": {
+    "world_at": "1283-09-27T22:05:34",
+    "engine_at": "0006-09-27T22:05:34",
+    "engine_year_correction": "0007->0006 for world year 1283; no fictional year advanced",
+    "place": "Нижний госпиталь, Седьмая палата"
+  },
+  "canonical_correction": "recovery/corrections/s03.text.085_utsuro_blood_2026-11-15.json",
+  "index": [
+    {
+      "n": 1,
+      "source_ref": "archive/session-003-source.md#L9-L131",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9,
+        131
+      ],
+      "reason": "Session opener duplicates the already confirmed S2->S3 boundary"
+    },
+    {
+      "n": 2,
+      "source_ref": "archive/session-003-source.md#L132-L247",
+      "status": "played",
+      "source_lines": [
+        132,
+        247
+      ],
+      "at": "0006-09-26T09:29:06",
+      "location": "Кусагакуре. Северный коллектор старого водоотвода.",
+      "receipts": [
+        "s3.played.002"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4101,
+      "input_chars": 104
+    },
+    {
+      "n": 3,
+      "source_ref": "archive/session-003-source.md#L248-L303",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        248,
+        303
+      ],
+      "reason": "Out-of-character persistence question"
+    },
+    {
+      "n": 4,
+      "source_ref": "archive/session-003-source.md#L304-L355",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        304,
+        355
+      ],
+      "reason": "Out-of-character persistence protocol"
+    },
+    {
+      "n": 5,
+      "source_ref": "archive/session-003-source.md#L356-L467",
+      "status": "void",
+      "source_lines": [
+        356,
+        467
+      ],
+      "reason": "Player explicitly canceled original field operation; replaced by #7"
+    },
+    {
+      "n": 6,
+      "source_ref": "archive/session-003-source.md#L468-L491",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        468,
+        491
+      ],
+      "reason": "Explicit cancellation of medical scene"
+    },
+    {
+      "n": 7,
+      "source_ref": "archive/session-003-source.md#L492-L793",
+      "status": "played",
+      "source_lines": [
+        492,
+        793
+      ],
+      "at": "0006-09-26T09:41:53",
+      "location": "Кусагакуре. Северный коллектор старого водоотвода.",
+      "receipts": [
+        "s3.played.007.p1",
+        "s3.played.007.p2"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 23062,
+      "input_chars": 0
+    },
+    {
+      "n": 8,
+      "source_ref": "archive/session-003-source.md#L794-L833",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        794,
+        833
+      ],
+      "reason": "Field versus hospital medicine policy"
+    },
+    {
+      "n": 9,
+      "source_ref": "archive/session-003-source.md#L834-L948",
+      "status": "played",
+      "source_lines": [
+        834,
+        948
+      ],
+      "at": "0006-09-26T09:46:36",
+      "location": "Кусагакуре. Северный водоотвод.",
+      "receipts": [
+        "s3.played.009"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6414,
+      "input_chars": 163
+    },
+    {
+      "n": 10,
+      "source_ref": "archive/session-003-source.md#L949-L1034",
+      "status": "played",
+      "source_lines": [
+        949,
+        1034
+      ],
+      "at": "0006-09-26T09:47:12",
+      "location": "Кусагакуре. Восточный склад водоснабжения.",
+      "receipts": [
+        "s3.played.010"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4318,
+      "input_chars": 65
+    },
+    {
+      "n": 11,
+      "source_ref": "archive/session-003-source.md#L1035-L1235",
+      "status": "played",
+      "source_lines": [
+        1035,
+        1235
+      ],
+      "at": "0006-09-26T09:50:16",
+      "location": "Кусагакуре. Восточный склад водоснабжения.",
+      "receipts": [
+        "s3.played.011"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 11246,
+      "input_chars": 101
+    },
+    {
+      "n": 12,
+      "source_ref": "archive/session-003-source.md#L1236-L1390",
+      "status": "played",
+      "source_lines": [
+        1236,
+        1390
+      ],
+      "at": "0006-09-26T09:53:19",
+      "location": "Кусагакуре. Восточный склад водоснабжения. Медицинское укрытие за кирпичным пристроем.",
+      "receipts": [
+        "s3.played.012"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 9062,
+      "input_chars": 45
+    },
+    {
+      "n": 13,
+      "source_ref": "archive/session-003-source.md#L1391-L1499",
+      "status": "played",
+      "source_lines": [
+        1391,
+        1499
+      ],
+      "at": "0006-09-26T09:53:58",
+      "location": "Кусагакуре. Восточный склад водоснабжения.",
+      "receipts": [
+        "s3.played.013"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4360,
+      "input_chars": 29
+    },
+    {
+      "n": 14,
+      "source_ref": "archive/session-003-source.md#L1500-L1588",
+      "status": "played",
+      "source_lines": [
+        1500,
+        1588
+      ],
+      "at": "0006-09-26T09:55:19",
+      "location": "Кусагакуре. Восточный склад водоснабжения.",
+      "receipts": [
+        "s3.played.014"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4896,
+      "input_chars": 234
+    },
+    {
+      "n": 15,
+      "source_ref": "archive/session-003-source.md#L1589-L1740",
+      "status": "played",
+      "source_lines": [
+        1589,
+        1740
+      ],
+      "at": "0006-09-26T09:57:41",
+      "location": "Кусагакуре. Восточный смотровой колодец.",
+      "receipts": [
+        "s3.played.015"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 11126,
+      "input_chars": 109
+    },
+    {
+      "n": 16,
+      "source_ref": "archive/session-003-source.md#L1741-L1855",
+      "status": "played",
+      "source_lines": [
+        1741,
+        1855
+      ],
+      "at": "0006-09-26T09:57:56",
+      "location": "Кусагакуре. Восточный смотровой колодец.",
+      "receipts": [
+        "s3.played.016"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4242,
+      "input_chars": 201
+    },
+    {
+      "n": 17,
+      "source_ref": "archive/session-003-source.md#L1856-L1986",
+      "status": "played",
+      "source_lines": [
+        1856,
+        1986
+      ],
+      "at": "0006-09-26T10:04:06",
+      "location": "Кусагакуре. Восточный смотровой колодец старого коллектора.",
+      "receipts": [
+        "s3.played.017"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 9570,
+      "input_chars": 128
+    },
+    {
+      "n": 18,
+      "source_ref": "archive/session-003-source.md#L1987-L2100",
+      "status": "played",
+      "source_lines": [
+        1987,
+        2100
+      ],
+      "at": "0006-09-26T10:06:16",
+      "location": "Кусагакуре. Восточный смотровой колодец.",
+      "receipts": [
+        "s3.played.018"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5859,
+      "input_chars": 387
+    },
+    {
+      "n": 19,
+      "source_ref": "archive/session-003-source.md#L2101-L2178",
+      "status": "played",
+      "source_lines": [
+        2101,
+        2178
+      ],
+      "at": "0006-09-26T10:07:11",
+      "location": "Кусагакуре. Восточный смотровой колодец.",
+      "receipts": [
+        "s3.played.019"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3714,
+      "input_chars": 49
+    },
+    {
+      "n": 20,
+      "source_ref": "archive/session-003-source.md#L2179-L2325",
+      "status": "played",
+      "source_lines": [
+        2179,
+        2325
+      ],
+      "at": "0006-09-26T10:10:17",
+      "location": "Кусагакуре. Северный водоотвод, временный пост дозора.",
+      "receipts": [
+        "s3.played.020"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 7439,
+      "input_chars": 86
+    },
+    {
+      "n": 21,
+      "source_ref": "archive/session-003-source.md#L2326-L2456",
+      "status": "played",
+      "source_lines": [
+        2326,
+        2456
+      ],
+      "at": "0006-09-26T10:13:29",
+      "location": "Кусагакуре. Северный водоотвод. Пост охраны В-7.",
+      "receipts": [
+        "s3.played.021"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6180,
+      "input_chars": 156
+    },
+    {
+      "n": 22,
+      "source_ref": "archive/session-003-source.md#L2457-L2601",
+      "status": "played",
+      "source_lines": [
+        2457,
+        2601
+      ],
+      "at": "0006-09-26T10:14:39",
+      "location": "Кусагакуре. Северный водоотвод, пост охраны В-7.",
+      "receipts": [
+        "s3.played.022"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5419,
+      "input_chars": 106
+    },
+    {
+      "n": 23,
+      "source_ref": "archive/session-003-source.md#L2602-L2695",
+      "status": "played",
+      "source_lines": [
+        2602,
+        2695
+      ],
+      "at": "0006-09-26T10:15:31",
+      "location": "Кусагакуре. Северный водоотвод.",
+      "receipts": [
+        "s3.played.023"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3501,
+      "input_chars": 4
+    },
+    {
+      "n": 24,
+      "source_ref": "archive/session-003-source.md#L2696-L2768",
+      "status": "played",
+      "source_lines": [
+        2696,
+        2768
+      ],
+      "at": "0006-09-26T10:16:09",
+      "location": "Кусагакуре. Северный водоотвод.",
+      "receipts": [
+        "s3.played.024"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3119,
+      "input_chars": 65
+    },
+    {
+      "n": 25,
+      "source_ref": "archive/session-003-source.md#L2769-L2841",
+      "status": "played",
+      "source_lines": [
+        2769,
+        2841
+      ],
+      "at": "0006-09-26T10:16:43",
+      "location": "Кусагакуре. Северный водоотвод.",
+      "receipts": [
+        "s3.played.025"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2679,
+      "input_chars": 19
+    },
+    {
+      "n": 26,
+      "source_ref": "archive/session-003-source.md#L2842-L2942",
+      "status": "played",
+      "source_lines": [
+        2842,
+        2942
+      ],
+      "at": "0006-09-26T10:17:59",
+      "location": "Кусагакуре. От северного водоотвода к восточным воротам.",
+      "receipts": [
+        "s3.played.026"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5151,
+      "input_chars": 90
+    },
+    {
+      "n": 27,
+      "source_ref": "archive/session-003-source.md#L2943-L3077",
+      "status": "played",
+      "source_lines": [
+        2943,
+        3077
+      ],
+      "at": "0006-09-26T10:18:18",
+      "location": "Кусагакуре. Восточная хозяйственная калитка школы.",
+      "receipts": [
+        "s3.played.027"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6555,
+      "input_chars": 116
+    },
+    {
+      "n": 28,
+      "source_ref": "archive/session-003-source.md#L3078-L3217",
+      "status": "played",
+      "source_lines": [
+        3078,
+        3217
+      ],
+      "at": "0006-09-26T10:20:44",
+      "location": "Кусагакуре. Крыша складского строения у восточной школы.",
+      "receipts": [
+        "s3.played.028"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6084,
+      "input_chars": 90
+    },
+    {
+      "n": 29,
+      "source_ref": "archive/session-003-source.md#L3218-L3312",
+      "status": "played",
+      "source_lines": [
+        3218,
+        3312
+      ],
+      "at": "0006-09-26T10:21:24",
+      "location": "Кусагакуре. Восточный канал, дом семьи Суга.",
+      "receipts": [
+        "s3.played.029"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4785,
+      "input_chars": 371
+    },
+    {
+      "n": 30,
+      "source_ref": "archive/session-003-source.md#L3313-L3408",
+      "status": "played",
+      "source_lines": [
+        3313,
+        3408
+      ],
+      "at": "0006-09-26T10:23:01",
+      "location": "Кусагакуре. Восточный канал. Дом семьи Суга.",
+      "receipts": [
+        "s3.played.030"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5262,
+      "input_chars": 281
+    },
+    {
+      "n": 31,
+      "source_ref": "archive/session-003-source.md#L3409-L3505",
+      "status": "played",
+      "source_lines": [
+        3409,
+        3505
+      ],
+      "at": "0006-09-26T10:23:56",
+      "location": "Кусагакуре. Восточный канал. Дом семьи Суга.",
+      "receipts": [
+        "s3.played.031"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4048,
+      "input_chars": 383
+    },
+    {
+      "n": 32,
+      "source_ref": "archive/session-003-source.md#L3506-L3603",
+      "status": "played",
+      "source_lines": [
+        3506,
+        3603
+      ],
+      "at": "0006-09-26T10:25:26",
+      "location": "Кусагакуре. Восточный канал. Дом семьи Суга.",
+      "receipts": [
+        "s3.played.032"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4891,
+      "input_chars": 154
+    },
+    {
+      "n": 33,
+      "source_ref": "archive/session-003-source.md#L3604-L3752",
+      "status": "played",
+      "source_lines": [
+        3604,
+        3752
+      ],
+      "at": "0006-09-26T10:41:09",
+      "location": "Кусагакуре. Дом семьи Суга, восточный канал.",
+      "receipts": [
+        "s3.played.033"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6416,
+      "input_chars": 375
+    },
+    {
+      "n": 34,
+      "source_ref": "archive/session-003-source.md#L3753-L3814",
+      "status": "played",
+      "source_lines": [
+        3753,
+        3814
+      ],
+      "at": "0006-09-26T10:41:37",
+      "location": "Кусагакуре. Восточный канал. Дом семьи Суга.",
+      "receipts": [
+        "s3.played.034"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2936,
+      "input_chars": 83
+    },
+    {
+      "n": 35,
+      "source_ref": "archive/session-003-source.md#L3815-L3930",
+      "status": "played",
+      "source_lines": [
+        3815,
+        3930
+      ],
+      "at": "0006-09-26T11:01:06",
+      "location": "Кусагакуре. Восточный канал, дом семьи Суга.",
+      "receipts": [
+        "s3.played.035"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5455,
+      "input_chars": 109
+    },
+    {
+      "n": 36,
+      "source_ref": "archive/session-003-source.md#L3931-L4063",
+      "status": "played",
+      "source_lines": [
+        3931,
+        4063
+      ],
+      "at": "0006-09-26T12:17:49",
+      "location": "Кусагакуре. Восточный канал. Боковой двор дома Суги.",
+      "receipts": [
+        "s3.played.036"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6757,
+      "input_chars": 0
+    },
+    {
+      "n": 37,
+      "source_ref": "archive/session-003-source.md#L4064-L4131",
+      "status": "played",
+      "source_lines": [
+        4064,
+        4131
+      ],
+      "at": "0006-09-26T12:19:28",
+      "location": "Кусагакуре. Восточный канал. Двор дома семьи Суга.",
+      "receipts": [
+        "s3.played.037"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2909,
+      "input_chars": 116
+    },
+    {
+      "n": 38,
+      "source_ref": "archive/session-003-source.md#L4132-L4299",
+      "status": "played",
+      "source_lines": [
+        4132,
+        4299
+      ],
+      "at": "0006-09-26T18:49:12",
+      "location": "Кусагакуре. Восточный канал.",
+      "receipts": [
+        "s3.played.038"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6898,
+      "input_chars": 27
+    },
+    {
+      "n": 39,
+      "source_ref": "archive/session-003-source.md#L4300-L4439",
+      "status": "played",
+      "source_lines": [
+        4300,
+        4439
+      ],
+      "at": "0006-09-27T06:03:00",
+      "location": "Кусагакуре. Дом семьи Суга, восточный канал.",
+      "receipts": [
+        "s3.played.039"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6596,
+      "input_chars": 204
+    },
+    {
+      "n": 40,
+      "source_ref": "archive/session-003-source.md#L4440-L4519",
+      "status": "played",
+      "source_lines": [
+        4440,
+        4519
+      ],
+      "at": "0006-09-27T06:27:08",
+      "location": "Кусагакуре. От восточного канала к архивному корпусу управления шиноби.",
+      "receipts": [
+        "s3.played.040"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4702,
+      "input_chars": 57
+    },
+    {
+      "n": 41,
+      "source_ref": "archive/session-003-source.md#L4520-L4729",
+      "status": "void",
+      "source_lines": [
+        4520,
+        4729
+      ],
+      "reason": "Original summoning manuscript voided by player; replaced by #44"
+    },
+    {
+      "n": 42,
+      "source_ref": "archive/session-003-source.md#L4730-L4734",
+      "status": "void",
+      "source_lines": [
+        4730,
+        4734
+      ],
+      "reason": "Interrupted prompt, no published response"
+    },
+    {
+      "n": 43,
+      "source_ref": "archive/session-003-source.md#L4735-L4739",
+      "status": "void",
+      "source_lines": [
+        4735,
+        4739
+      ],
+      "reason": "Interrupted revision instruction, consolidated into #44"
+    },
+    {
+      "n": 44,
+      "source_ref": "archive/session-003-source.md#L4740-L5029",
+      "status": "played",
+      "source_lines": [
+        4740,
+        5029
+      ],
+      "at": "0006-09-27T06:31:04",
+      "location": "Кусагакуре. Архив техник и печатей. Нижний читальный зал.",
+      "receipts": [
+        "s3.played.044"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 10471,
+      "input_chars": 0
+    },
+    {
+      "n": 45,
+      "source_ref": "archive/session-003-source.md#L5030-L5059",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5030,
+        5059
+      ],
+      "reason": "Illustration request"
+    },
+    {
+      "n": 46,
+      "source_ref": "archive/session-003-source.md#L5060-L5069",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5060,
+        5069
+      ],
+      "reason": "Visual reference adjustment"
+    },
+    {
+      "n": 47,
+      "source_ref": "archive/session-003-source.md#L5070-L5173",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5070,
+        5173
+      ],
+      "reason": "Technique brainstorming, not training"
+    },
+    {
+      "n": 48,
+      "source_ref": "archive/session-003-source.md#L5174-L5354",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5174,
+        5354
+      ],
+      "reason": "Forbidden technique concepts, not learned"
+    },
+    {
+      "n": 49,
+      "source_ref": "archive/session-003-source.md#L5355-L5415",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5355,
+        5415
+      ],
+      "reason": "Contract side-effect design, not yet manifested"
+    },
+    {
+      "n": 50,
+      "source_ref": "archive/session-003-source.md#L5416-L5457",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5416,
+        5457
+      ],
+      "reason": "Contract side-effect specification"
+    },
+    {
+      "n": 51,
+      "source_ref": "archive/session-003-source.md#L5458-L5477",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5458,
+        5477
+      ],
+      "reason": "Illustration request"
+    },
+    {
+      "n": 52,
+      "source_ref": "archive/session-003-source.md#L5478-L5487",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5478,
+        5487
+      ],
+      "reason": "Illustration correction"
+    },
+    {
+      "n": 53,
+      "source_ref": "archive/session-003-source.md#L5488-L5635",
+      "status": "played",
+      "source_lines": [
+        5488,
+        5635
+      ],
+      "at": "0006-09-27T06:32:18",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.053"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5067,
+      "input_chars": 13
+    },
+    {
+      "n": 54,
+      "source_ref": "archive/session-003-source.md#L5636-L5717",
+      "status": "played",
+      "source_lines": [
+        5636,
+        5717
+      ],
+      "at": "0006-09-27T06:33:02",
+      "location": "Кусагакуре. Архив техник и печатей, нижний читальный зал.",
+      "receipts": [
+        "s3.played.054"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3637,
+      "input_chars": 126
+    },
+    {
+      "n": 55,
+      "source_ref": "archive/session-003-source.md#L5718-L5828",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        5718,
+        5828
+      ],
+      "reason": "GM-only origins discussion, not playable"
+    },
+    {
+      "n": 56,
+      "source_ref": "archive/session-003-source.md#L5829-L6004",
+      "status": "played",
+      "source_lines": [
+        5829,
+        6004
+      ],
+      "at": "0006-09-27T06:38:24",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.056"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 8517,
+      "input_chars": 70
+    },
+    {
+      "n": 57,
+      "source_ref": "archive/session-003-source.md#L6005-L6168",
+      "status": "played",
+      "source_lines": [
+        6005,
+        6168
+      ],
+      "at": "0006-09-27T06:42:46",
+      "location": "Кусагакуре. Архив техник и печатей, нижний читальный зал.",
+      "receipts": [
+        "s3.played.057"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6831,
+      "input_chars": 495
+    },
+    {
+      "n": 58,
+      "source_ref": "archive/session-003-source.md#L6169-L6306",
+      "status": "played",
+      "source_lines": [
+        6169,
+        6306
+      ],
+      "at": "0006-09-27T06:45:16",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.058"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4557,
+      "input_chars": 193
+    },
+    {
+      "n": 59,
+      "source_ref": "archive/session-003-source.md#L6307-L6453",
+      "status": "played",
+      "source_lines": [
+        6307,
+        6453
+      ],
+      "at": "0006-09-27T06:49:52",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.059"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5685,
+      "input_chars": 220
+    },
+    {
+      "n": 60,
+      "source_ref": "archive/session-003-source.md#L6454-L6593",
+      "status": "played",
+      "source_lines": [
+        6454,
+        6593
+      ],
+      "at": "0006-09-27T07:00:28",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.060"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4807,
+      "input_chars": 85
+    },
+    {
+      "n": 61,
+      "source_ref": "archive/session-003-source.md#L6594-L6734",
+      "status": "played",
+      "source_lines": [
+        6594,
+        6734
+      ],
+      "at": "0006-09-27T07:17:32",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.061"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5375,
+      "input_chars": 183
+    },
+    {
+      "n": 62,
+      "source_ref": "archive/session-003-source.md#L6735-L6849",
+      "status": "played",
+      "source_lines": [
+        6735,
+        6849
+      ],
+      "at": "0006-09-27T07:24:02",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.062"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4922,
+      "input_chars": 203
+    },
+    {
+      "n": 63,
+      "source_ref": "archive/session-003-source.md#L6850-L6984",
+      "status": "played",
+      "source_lines": [
+        6850,
+        6984
+      ],
+      "at": "0006-09-27T07:30:12",
+      "location": "Кусагакуре. Нижний читальный зал архива.",
+      "receipts": [
+        "s3.played.063"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4300,
+      "input_chars": 141
+    },
+    {
+      "n": 64,
+      "source_ref": "archive/session-003-source.md#L6985-L7191",
+      "status": "played",
+      "source_lines": [
+        6985,
+        7191
+      ],
+      "at": "0006-09-27T11:23:00",
+      "location": "Кусагакуре. Архив техник и печатей, служебная комната отдыха.",
+      "receipts": [
+        "s3.played.064"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 7989,
+      "input_chars": 113
+    },
+    {
+      "n": 65,
+      "source_ref": "archive/session-003-source.md#L7192-L7282",
+      "status": "played",
+      "source_lines": [
+        7192,
+        7282
+      ],
+      "at": "0006-09-27T11:25:06",
+      "location": "Кусагакуре. Архив техник и печатей, комната отдыха.",
+      "receipts": [
+        "s3.played.065"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3490,
+      "input_chars": 158
+    },
+    {
+      "n": 66,
+      "source_ref": "archive/session-003-source.md#L7283-L7440",
+      "status": "played",
+      "source_lines": [
+        7283,
+        7440
+      ],
+      "at": "0006-09-27T12:27:00",
+      "location": "Кусагакуре. Архив техник и печатей.",
+      "receipts": [
+        "s3.played.066"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6807,
+      "input_chars": 34
+    },
+    {
+      "n": 67,
+      "source_ref": "archive/session-003-source.md#L7441-L7566",
+      "status": "played",
+      "source_lines": [
+        7441,
+        7566
+      ],
+      "at": "0006-09-27T12:33:00",
+      "location": "Кусагакуре. Управление печатей, западное крыло. Закрытый кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.067"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5755,
+      "input_chars": 128
+    },
+    {
+      "n": 68,
+      "source_ref": "archive/session-003-source.md#L7567-L7695",
+      "status": "played",
+      "source_lines": [
+        7567,
+        7695
+      ],
+      "at": "0006-09-27T13:08:12",
+      "location": "Кусагакуре. Управление печатей, западное крыло.",
+      "receipts": [
+        "s3.played.068"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5470,
+      "input_chars": 171
+    },
+    {
+      "n": 69,
+      "source_ref": "archive/session-003-source.md#L7696-L7814",
+      "status": "played",
+      "source_lines": [
+        7696,
+        7814
+      ],
+      "at": "0006-09-27T13:10:04",
+      "location": "Кусагакуре. Дом Мугами Шики.",
+      "receipts": [
+        "s3.played.069"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4915,
+      "input_chars": 45
+    },
+    {
+      "n": 70,
+      "source_ref": "archive/session-003-source.md#L7815-L7958",
+      "status": "played",
+      "source_lines": [
+        7815,
+        7958
+      ],
+      "at": "0006-09-27T13:15:02",
+      "location": "Кусагакуре. Дом Мугами Шики.",
+      "receipts": [
+        "s3.played.070"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6382,
+      "input_chars": 36
+    },
+    {
+      "n": 71,
+      "source_ref": "archive/session-003-source.md#L7959-L8230",
+      "status": "played",
+      "source_lines": [
+        7959,
+        8230
+      ],
+      "at": "0006-09-27T13:33:44",
+      "location": "Неизвестное подземное сооружение. Внешний приёмный предел.",
+      "receipts": [
+        "s3.played.071"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 13267,
+      "input_chars": 240
+    },
+    {
+      "n": 72,
+      "source_ref": "archive/session-003-source.md#L8231-L8365",
+      "status": "played",
+      "source_lines": [
+        8231,
+        8365
+      ],
+      "at": "0006-09-27T13:38:00",
+      "location": "Неизвестное подземное сооружение. Диагностический шлюз Седьмой палаты.",
+      "receipts": [
+        "s3.played.072"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 6258,
+      "input_chars": 96
+    },
+    {
+      "n": 73,
+      "source_ref": "archive/session-003-source.md#L8366-L8518",
+      "status": "played",
+      "source_lines": [
+        8366,
+        8518
+      ],
+      "at": "0006-09-27T13:44:00",
+      "location": "Седьмая палата. Внешний приёмный предел.",
+      "receipts": [
+        "s3.played.073"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5445,
+      "input_chars": 336
+    },
+    {
+      "n": 74,
+      "source_ref": "archive/session-003-source.md#L8519-L8554",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        8519,
+        8554
+      ],
+      "reason": "GM-only pacing correction"
+    },
+    {
+      "n": 75,
+      "source_ref": "archive/session-003-source.md#L8555-L8707",
+      "status": "played",
+      "source_lines": [
+        8555,
+        8707
+      ],
+      "at": "0006-09-27T14:24:00",
+      "location": "Кусагакуре. От дома Шики — к медицинскому архиву при госпитале.",
+      "receipts": [
+        "s3.played.075"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 8019,
+      "input_chars": 101
+    },
+    {
+      "n": 76,
+      "source_ref": "archive/session-003-source.md#L8708-L8822",
+      "status": "played",
+      "source_lines": [
+        8708,
+        8822
+      ],
+      "at": "0006-09-27T14:28:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.076"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5111,
+      "input_chars": 189
+    },
+    {
+      "n": 77,
+      "source_ref": "archive/session-003-source.md#L8823-L8970",
+      "status": "played",
+      "source_lines": [
+        8823,
+        8970
+      ],
+      "at": "0006-09-27T14:36:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.077"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5680,
+      "input_chars": 79
+    },
+    {
+      "n": 78,
+      "source_ref": "archive/session-003-source.md#L8971-L9112",
+      "status": "played",
+      "source_lines": [
+        8971,
+        9112
+      ],
+      "at": "0006-09-27T14:39:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.078"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4391,
+      "input_chars": 54
+    },
+    {
+      "n": 79,
+      "source_ref": "archive/session-003-source.md#L9113-L9154",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9113,
+        9154
+      ],
+      "reason": "GM-only meta plot discussion"
+    },
+    {
+      "n": 80,
+      "source_ref": "archive/session-003-source.md#L9155-L9232",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9155,
+        9232
+      ],
+      "reason": "GM-only meta mystery; disclosed idea subsequently retracted"
+    },
+    {
+      "n": 81,
+      "source_ref": "archive/session-003-source.md#L9233-L9250",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9233,
+        9250
+      ],
+      "reason": "User rejects spoiler, no played event"
+    },
+    {
+      "n": 82,
+      "source_ref": "archive/session-003-source.md#L9251-L9351",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9251,
+        9351
+      ],
+      "reason": "GM-only hidden-plot rewrite"
+    },
+    {
+      "n": 83,
+      "source_ref": "archive/session-003-source.md#L9352-L9428",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9352,
+        9428
+      ],
+      "reason": "GM-only progression counter setup"
+    },
+    {
+      "n": 84,
+      "source_ref": "archive/session-003-source.md#L9429-L9556",
+      "status": "played",
+      "source_lines": [
+        9429,
+        9556
+      ],
+      "at": "0006-09-27T14:42:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.084"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3226,
+      "input_chars": 132
+    },
+    {
+      "n": 85,
+      "source_ref": "archive/session-003-source.md#L9557-L9652",
+      "status": "played",
+      "source_lines": [
+        9557,
+        9652
+      ],
+      "at": "0006-09-27T14:43:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.085"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3501,
+      "input_chars": 55
+    },
+    {
+      "n": 86,
+      "source_ref": "archive/session-003-source.md#L9653-L9796",
+      "status": "played",
+      "source_lines": [
+        9653,
+        9796
+      ],
+      "at": "0006-09-27T14:58:00",
+      "location": "Кусагакуре. Медицинский архив госпиталя.",
+      "receipts": [
+        "s3.played.086"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5877,
+      "input_chars": 38
+    },
+    {
+      "n": 87,
+      "source_ref": "archive/session-003-source.md#L9797-L9905",
+      "status": "played",
+      "source_lines": [
+        9797,
+        9905
+      ],
+      "at": "0006-09-27T15:02:00",
+      "location": "Кусагакуре. Управление печатей. Кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.087"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4465,
+      "input_chars": 48
+    },
+    {
+      "n": 88,
+      "source_ref": "archive/session-003-source.md#L9906-L10003",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        9906,
+        10003
+      ],
+      "reason": "GM-only performance discussion"
+    },
+    {
+      "n": 89,
+      "source_ref": "archive/session-003-source.md#L10004-L10091",
+      "status": "played",
+      "source_lines": [
+        10004,
+        10091
+      ],
+      "at": "0006-09-27T15:05:00",
+      "location": "Кусагакуре. Управление печатей, кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.089"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3991,
+      "input_chars": 278
+    },
+    {
+      "n": 90,
+      "source_ref": "archive/session-003-source.md#L10092-L10124",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        10092,
+        10124
+      ],
+      "reason": "Interrupted/explanatory response, no playable continuation"
+    },
+    {
+      "n": 91,
+      "source_ref": "archive/session-003-source.md#L10125-L10229",
+      "status": "played",
+      "source_lines": [
+        10125,
+        10229
+      ],
+      "at": "0006-09-27T15:09:00",
+      "location": "Кусагакуре. Управление печатей, кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.091"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3659,
+      "input_chars": 59
+    },
+    {
+      "n": 92,
+      "source_ref": "archive/session-003-source.md#L10230-L10326",
+      "status": "played",
+      "source_lines": [
+        10230,
+        10326
+      ],
+      "at": "0006-09-27T15:13:00",
+      "location": "Кусагакуре. Управление печатей, кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.092"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3395,
+      "input_chars": 106
+    },
+    {
+      "n": 93,
+      "source_ref": "archive/session-003-source.md#L10327-L10437",
+      "status": "played",
+      "source_lines": [
+        10327,
+        10437
+      ],
+      "at": "0006-09-27T15:25:00",
+      "location": "Кусагакуре. Управление печатей, кабинет Сэкидо Тадао.",
+      "receipts": [
+        "s3.played.093"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2654,
+      "input_chars": 75
+    },
+    {
+      "n": 94,
+      "source_ref": "archive/session-003-source.md#L10438-L10550",
+      "status": "played",
+      "source_lines": [
+        10438,
+        10550
+      ],
+      "at": "0006-09-27T15:25:00",
+      "location": "Кусагакуре. Управление печатей.",
+      "receipts": [
+        "s3.played.094"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3954,
+      "input_chars": 25
+    },
+    {
+      "n": 95,
+      "source_ref": "archive/session-003-source.md#L10551-L10620",
+      "status": "played",
+      "source_lines": [
+        10551,
+        10620
+      ],
+      "at": "0006-09-27T15:46:00",
+      "location": "Кусагакуре. Восточный жилой квартал, дом Хасэ.",
+      "receipts": [
+        "s3.played.095"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2598,
+      "input_chars": 18
+    },
+    {
+      "n": 96,
+      "source_ref": "archive/session-003-source.md#L10621-L10694",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        10621,
+        10694
+      ],
+      "reason": "GM-only performance criticism"
+    },
+    {
+      "n": 97,
+      "source_ref": "archive/session-003-source.md#L10695-L10772",
+      "status": "played",
+      "source_lines": [
+        10695,
+        10772
+      ],
+      "at": "0006-09-27T15:48:00",
+      "location": "Кусагакуре. Дом Хасэ.",
+      "receipts": [
+        "s3.played.097"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2884,
+      "input_chars": 51
+    },
+    {
+      "n": 98,
+      "source_ref": "archive/session-003-source.md#L10773-L10840",
+      "status": "played",
+      "source_lines": [
+        10773,
+        10840
+      ],
+      "at": "0006-09-27T15:48:00",
+      "location": "Кусагакуре. Дом Хасэ.",
+      "receipts": [
+        "s3.played.098"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2487,
+      "input_chars": 35
+    },
+    {
+      "n": 99,
+      "source_ref": "archive/session-003-source.md#L10841-L10940",
+      "status": "played",
+      "source_lines": [
+        10841,
+        10940
+      ],
+      "at": "0006-09-27T16:08:00",
+      "location": "Кусагакуре. Дом Хасэ.",
+      "receipts": [
+        "s3.played.099"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3702,
+      "input_chars": 152
+    },
+    {
+      "n": 100,
+      "source_ref": "archive/session-003-source.md#L10941-L11019",
+      "status": "played",
+      "source_lines": [
+        10941,
+        11019
+      ],
+      "at": "0006-09-27T16:34:00",
+      "location": "Кусагакуре. Восточный жилой квартал.",
+      "receipts": [
+        "s3.played.100"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2443,
+      "input_chars": 58
+    },
+    {
+      "n": 101,
+      "source_ref": "archive/session-003-source.md#L11020-L11137",
+      "status": "played",
+      "source_lines": [
+        11020,
+        11137
+      ],
+      "at": "0006-09-27T16:34:00",
+      "location": "Кусагакуре. Западная санитарная линия.",
+      "receipts": [
+        "s3.played.101"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4455,
+      "input_chars": 175
+    },
+    {
+      "n": 102,
+      "source_ref": "archive/session-003-source.md#L11138-L11232",
+      "status": "played",
+      "source_lines": [
+        11138,
+        11232
+      ],
+      "at": "0006-09-27T16:55:00",
+      "location": "Кусагакуре. Западный распределительный узел.",
+      "receipts": [
+        "s3.played.102"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4660,
+      "input_chars": 76
+    },
+    {
+      "n": 103,
+      "source_ref": "archive/session-003-source.md#L11233-L11330",
+      "status": "played",
+      "source_lines": [
+        11233,
+        11330
+      ],
+      "at": "0006-09-27T16:55:12",
+      "location": "Кусагакуре. Нижний ярус западного санитарного коллектора.",
+      "receipts": [
+        "s3.played.103"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 4270,
+      "input_chars": 88
+    },
+    {
+      "n": 104,
+      "source_ref": "archive/session-003-source.md#L11331-L11402",
+      "status": "played",
+      "source_lines": [
+        11331,
+        11402
+      ],
+      "at": "0006-09-27T16:58:00",
+      "location": "Кусагакуре. Западный коллектор, запертая медицинская камера.",
+      "receipts": [
+        "s3.played.104"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3069,
+      "input_chars": 34
+    },
+    {
+      "n": 105,
+      "source_ref": "archive/session-003-source.md#L11403-L11591",
+      "status": "played",
+      "source_lines": [
+        11403,
+        11591
+      ],
+      "at": "0006-09-27T17:19:00",
+      "location": "Кусагакуре. Западный санитарный коллектор.",
+      "receipts": [
+        "s3.played.105"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 7663,
+      "input_chars": 37
+    },
+    {
+      "n": 106,
+      "source_ref": "archive/session-003-source.md#L11592-L11665",
+      "status": "played",
+      "source_lines": [
+        11592,
+        11665
+      ],
+      "at": "0006-09-27T17:24:00",
+      "location": "Кусагакуре. Старая насосная станция.",
+      "receipts": [
+        "s3.played.106"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 2112,
+      "input_chars": 40
+    },
+    {
+      "n": 107,
+      "source_ref": "archive/session-003-source.md#L11666-L11816",
+      "status": "played",
+      "source_lines": [
+        11666,
+        11816
+      ],
+      "at": "0006-09-27T21:03:00",
+      "location": "Кусагакуре. Старая насосная станция.",
+      "receipts": [
+        "s3.played.107"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5329,
+      "input_chars": 64
+    },
+    {
+      "n": 108,
+      "source_ref": "archive/session-003-source.md#L11817-L11932",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        11817,
+        11932
+      ],
+      "reason": "GM-only story criticism"
+    },
+    {
+      "n": 109,
+      "source_ref": "archive/session-003-source.md#L11933-L11998",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        11933,
+        11998
+      ],
+      "reason": "GM-only plan status question"
+    },
+    {
+      "n": 110,
+      "source_ref": "archive/session-003-source.md#L11999-L12234",
+      "status": "void",
+      "source_lines": [
+        11999,
+        12234
+      ],
+      "reason": "Uncorrected introduction of Utsuro powers; replaced after player objection by #112"
+    },
+    {
+      "n": 111,
+      "source_ref": "archive/session-003-source.md#L12235-L12320",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        12235,
+        12320
+      ],
+      "reason": "Player repudiates first introduction of techniques"
+    },
+    {
+      "n": 112,
+      "source_ref": "archive/session-003-source.md#L12321-L12513",
+      "status": "played",
+      "source_lines": [
+        12321,
+        12513
+      ],
+      "at": "0006-09-27T22:03:00",
+      "location": "Кусагакуре. Дом Мугами Шики.",
+      "receipts": [
+        "s3.played.112"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 7221,
+      "input_chars": 5
+    },
+    {
+      "n": 113,
+      "source_ref": "archive/session-003-source.md#L12514-L12655",
+      "status": "played",
+      "source_lines": [
+        12514,
+        12655
+      ],
+      "at": "0006-09-27T22:05:00",
+      "location": "Нижний госпиталь. Седьмая палата.",
+      "receipts": [
+        "s3.played.113"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 5934,
+      "input_chars": 178
+    },
+    {
+      "n": 114,
+      "source_ref": "archive/session-003-source.md#L12656-L12718",
+      "status": "played",
+      "source_lines": [
+        12656,
+        12718
+      ],
+      "at": "0006-09-27T22:05:00",
+      "location": "Нижний госпиталь. Седьмая палата.",
+      "receipts": [
+        "s3.played.114"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 1956,
+      "input_chars": 26
+    },
+    {
+      "n": 115,
+      "source_ref": "archive/session-003-source.md#L12719-L12796",
+      "status": "played",
+      "source_lines": [
+        12719,
+        12796
+      ],
+      "at": "0006-09-27T22:05:27",
+      "location": "Нижний госпиталь. Седьмая палата.",
+      "receipts": [
+        "s3.played.115"
+      ],
+      "text_status": "source_exact",
+      "text_chars": 3317,
+      "input_chars": 98
+    },
+    {
+      "n": 116,
+      "source_ref": "archive/session-003-source.md#L12797-L12870",
+      "status": "played",
+      "source_lines": [
+        12797,
+        12870
+      ],
+      "at": "0006-09-27T22:05:34",
+      "location": "Нижний госпиталь, Седьмая палата",
+      "receipts": [
+        "s3.played.116"
+      ],
+      "text_status": "canonical_corrected",
+      "text_chars": 2640,
+      "input_chars": 30
+    },
+    {
+      "n": 117,
+      "source_ref": "archive/session-003-source.md#L12871-L12949",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        12871,
+        12949
+      ],
+      "reason": "GM-only context failure analysis"
+    },
+    {
+      "n": 118,
+      "source_ref": "archive/session-003-source.md#L12950-L12997",
+      "status": "ooc_or_asset",
+      "source_lines": [
+        12950,
+        12997
+      ],
+      "reason": "Later explicit canonical correction to turn 116"
+    }
+  ]
+}
