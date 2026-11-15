@@ -171,10 +171,18 @@ def _score(section, doc, query, *, topical):
     paths = key_terms(doc["source"] + " " + section["field"])
     direct = len(common)
     # Mandatory source relevance should outrank generic long prose.
-    return (direct / (len(query) ** 0.5) + 1.4 * len(_overlap(paths, query))
-            + (1.1 if topical and section["field"].startswith(("capabilities", "equipment",
-              "gen_assimilation", "zero_genome", "current", "source")) else 0)
-            + _authority(doc))
+    specialization = (2.0 if topical and section["field"].startswith(
+        ("capabilities", "equipment", "gen_assimilation", "zero_genome",
+         "equipment_inventory", "laboratory")) else 0)
+    # A medically equipped *place* or the character's established competence
+    # is more relevant to a lab procedure than generic 'research facility'
+    # mentions in dozens of unrelated historical location strings.
+    thematic_location = (4.0 if topical and "/locations/" in doc["source"] and
+                         ("lab" in doc["source"].casefold() or
+                          section["field"].startswith(("capabilities", "equipment"))) else 0)
+    return (direct / (len(query) ** 0.5)
+            + 1.4 * len(_overlap(paths, query))
+            + specialization + thematic_location + _authority(doc))
 
 
 def _query_parts(action, location, actors):
