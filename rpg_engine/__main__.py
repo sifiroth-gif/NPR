@@ -105,6 +105,12 @@ def parser():
 
     verify = sub.add_parser("verify", help="verify the database and any pending draft")
     verify.add_argument("--full", action="store_true")
+    handoff_audit = sub.add_parser(
+        "audit-handoff", help="verify binary checkpoint against the current text fallback and memory index")
+    handoff_audit.add_argument("--state-dir", type=Path,
+                               help="private state directory, default: database parent")
+    handoff_audit.add_argument("--quick", action="store_true",
+                               help="skip the expensive full journal replay audit")
     compact = sub.add_parser("compact-history", help="lossless compression of only closed-session journal bodies")
     compact.add_argument("--through", type=int, help="last closed session number")
     checkpoint = sub.add_parser("checkpoint", help="write a consistent, resumable SQLite copy")
@@ -223,6 +229,9 @@ def run(args):
         case "compact-history":
             from . import compaction
             return compaction.compact_game(game, through=args.through)
+        case "audit-handoff":
+            from . import handoff_guard
+            return handoff_guard.audit(game, args.state_dir, full=not args.quick)
         case "checkpoint":
             return game.checkpoint(args.destination)
         case "export-state":
