@@ -118,7 +118,7 @@ def revision_value(value):
 
 def turn_value(packet):
     world.fields(packet, ("id", "expected_revision", "at", "location", "player_input", "text"),
-                 ("events", "input_mode", "scene", "source_ref", "source_status"), label="turn")
+                 ("events", "input_mode", "scene", "source_ref", "source_status", "memory_gate"), label="turn")
     world.id_value(packet["id"], "turn id")
     revision_value(packet["expected_revision"])
     world.time_value(packet["at"], "turn at")
@@ -153,6 +153,37 @@ def turn_value(packet):
             raise ValueError("unknown scene beat")
         if "focus" in scene:
             world.text_value(scene["focus"], "scene focus", 500)
+    if "memory_gate" in packet:
+        gate = world.fields(packet["memory_gate"],
+            ("schema", "previous_turn_id", "index_turn", "index_blob_sha",
+             "player_input", "source_refs", "unretrieved", "mode"),
+            label="turn memory gate")
+        if gate["schema"] != "npr-memory-gate/1":
+            raise ValueError("unknown memory gate protocol")
+        world.id_value(gate["previous_turn_id"], "memory previous turn")
+        world.id_value(gate["index_turn"], "memory index turn")
+        if not isinstance(gate["index_blob_sha"], str) or not re.fullmatch(
+                "[0-9a-f]{40}", gate["index_blob_sha"]):
+            raise ValueError("memory index Git blob SHA missing")
+        if gate["player_input"] != player_input:
+            raise ValueError("memory receipt does not match player input")
+        refs = world.sequence(gate["source_refs"], "memory source refs", 16)
+        gaps = world.sequence(gate["unretrieved"], "memory source gaps", 12)
+        if not refs and not gaps:
+            raise ValueError("memory receipt must identify sources or explicit gaps")
+        for ref in refs:
+            world.fields(ref, ("source", "sha256"), label="memory evidence source")
+            if not isinstance(ref["source"], str) or not re.fullmatch(
+                    r"(campaigns|archive|recovery)/[A-Za-z0-9_./-]{1,250}", ref["source"]):
+                raise ValueError("unrecognized memory source path")
+            if not isinstance(ref["sha256"], str) or not re.fullmatch(
+                    "[0-9a-f]{64}", ref["sha256"]):
+                raise ValueError("memory source SHA-256 missing")
+        for gap in gaps:
+            world.text_value(gap, "unretrieved memory", 300)
+        if gate["mode"] not in ("indexed_hybrid", "stale_index_plus_current_hot",
+                               "sqlite_graph", "sqlite_hybrid"):
+            raise ValueError("unknown memory preflight mode")
     for event in world.sequence(packet.get("events", []), "turn events", 1000):
         world.validate_event(event)
 
@@ -408,6 +439,21 @@ class Campaign:
                 return confirmed_receipt(old)
             current = state(con)
             require_revision(current, packet["expected_revision"])
+            campaign_id = json.loads(current["setup_json"])["id"]
+            if campaign_id == "naruto-shiki" and current["revision"] >= 304:
+                # Played S4 turns 001–004 preceded mandatory memory receipts.
+                legacy = (turn_id.startswith("s04.text.") and
+                          turn_id.rsplit(".", 1)[-1].isdigit() and
+                          int(turn_id.rsplit(".", 1)[-1]) <= 4)
+                if not legacy:
+                    gate = packet.get("memory_gate")
+                    if not isinstance(gate, dict):
+                        raise ValueError("Shiki scene-memory receipt required before prepare")
+                    prev = con.execute(
+                        "SELECT id FROM journal WHERE kind='turn' ORDER BY seq DESC LIMIT 1"
+                    ).fetchone()
+                    if prev is not None and gate["previous_turn_id"] != prev["id"]:
+                        raise ValueError("Scene-memory receipt cites stale predecessor turn")
             pending = reserve_turn(con, turn_id, packet["expected_revision"])
             if pending["packet"] is not None:
                 if pending["packet"] != encoded:
@@ -460,8 +506,8 @@ class Campaign:
             revision = current["revision"] + 1
             details = {"location": packet["location"], "packet_sha": world.sha_json(packet),
                        "draft_sha": draft_sha, "input_mode": packet.get("input_mode", "auto")}
-            details.update({key: packet[key] for key in ("scene", "source_ref", "source_status")
-                            if key in packet})
+            details.update({key: packet[key] for key in ("scene", "source_ref", "source_status",
+                                                            "memory_gate") if key in packet})
             append_entry(con, entry_id=turn_id, kind="turn", revision=revision,
                          session=current["session"], at=packet["at"], visibility="player_known",
                          body=packet["text"], details=details, player_input=packet["player_input"])
