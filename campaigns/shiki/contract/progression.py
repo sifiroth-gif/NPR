@@ -50,11 +50,15 @@ def advance(state, rules, at):
     until = stamp(at)
     if until < from_at:
         raise ValueError("Cannot move game time backwards")
-    delta = Decimal(str((until - from_at).total_seconds())) / Decimal("86400")
-    gain = delta * Decimal(str(rules["trigger"]["base_points_per_in_game_day"]))
-    # Keep enough precision in the ledger to eliminate repeated micro-rounding loss.
-    state["time_growth_total"] = round4(Decimal(str(state["time_growth_total"])) + gain)
-    state["value"] = min(100, round4(Decimal(str(state["value"])) + gain))
+    # Calculate from the immutable binding timestamp, so small scene hops
+    # cannot discard fractions by repeatedly rounding the current delta.
+    elapsed = Decimal(str((until - stamp(state["bound_at"])).total_seconds()))
+    if elapsed < 0:
+        raise ValueError("Cannot calculate pact burden before blood binding")
+    baseline = elapsed * Decimal(str(rules["trigger"]["base_points_per_in_game_day"])) / Decimal("86400")
+    state["time_growth_total"] = round4(baseline)
+    state["value"] = min(100, round4(
+        Decimal(str(state["time_growth_total"])) + Decimal(str(state["technique_growth_total"]))))
     state["last_at"] = at
     state["stage"] = stage_for(state["value"], rules)
     state["passive_direct_bare_skin_transmission_active"] = state["stage"] >= 5
@@ -82,7 +86,8 @@ def apply(state, rules, at, eid, kind, school, technique_id):
     points = Decimal(str(rules["trigger"]["event_types"][kind]["points"][school]))
     state["technique_growth_total"] = round4(
         Decimal(str(state["technique_growth_total"])) + points)
-    state["value"] = min(100, round4(Decimal(str(state["value"])) + points))
+    state["value"] = min(100, round4(
+        Decimal(str(state["time_growth_total"])) + Decimal(str(state["technique_growth_total"]))))
     state["stage"] = stage_for(state["value"], rules)
     state["passive_direct_bare_skin_transmission_active"] = state["stage"] >= 5
     if kind == "mastery":
