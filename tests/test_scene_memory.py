@@ -96,6 +96,16 @@ class SceneMemoryTests(unittest.TestCase):
         data = json.loads(hot.read_text())
         data["cursor"]["last_turn_id"] = "s04.text.005"
         data["latest_turn"]["id"] = "s04.text.005"
+        data["latest_turn"]["turn_kind"] = "player_action"
+        data["latest_turn"]["player_input"] = "Продолжаю анализ"
+        data["latest_turn"]["memory_gate"] = {
+            "schema": "npr-memory-gate/1", "previous_turn_id": "s04.text.004",
+            "index_turn": "s04.text.004", "index_blob_sha": "a" * 40,
+            "player_input": "Продолжаю анализ",
+            "source_refs": [{"source": self.lab,
+                             "sha256": hashlib.sha256((self.root / self.lab).read_bytes()).hexdigest()}],
+            "unretrieved": [], "mode": "indexed_hybrid"}
+        data["history"].append({"turn_id": "s04.text.005", "summary": "Продолжение"})
         hot.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
         self.assertEqual(scene_memory.write_live_index(self.root, self.root, out)["status"], "updated")
 
@@ -103,9 +113,9 @@ class SceneMemoryTests(unittest.TestCase):
         hot = self.root / "recovery/FAST_SCENE.json"
         hot.parent.mkdir()
         hot.write_text(json.dumps({
-            "cursor": {"last_turn_id": "s04.text.005", "at": "0006-09-28T06:50:00",
+            "cursor": {"last_turn_id": "s04.text.004", "at": "0006-09-28T06:50:00",
                        "location": "Тайная лаборатория"},
-            "latest_turn": {"id": "s04.text.005",
+            "latest_turn": {"id": "s04.text.004",
                             "facts": {"blood_sample": "Уцуро не исследовал образец Ш"}},
             "story_compass": {"immediate": "Саю жива, образцы кожи получены"}
         }, ensure_ascii=False), encoding="utf-8")
