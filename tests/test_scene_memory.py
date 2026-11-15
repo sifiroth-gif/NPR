@@ -75,6 +75,45 @@ class SceneMemoryTests(unittest.TestCase):
         self.assertEqual(p["cursor"]["last_turn_id"], "s04.text.004")
         self.assertTrue(p["file_memory"]["evidence"])
 
+    def test_compact_index_tracks_hot_version_and_is_idempotent(self):
+        hot = self.root / "recovery/FAST_SCENE.json"
+        hot.parent.mkdir()
+        hot.write_text(json.dumps({
+            "cursor": {"last_turn_id": "s04.text.004", "at": "0006-09-28T06:48:00",
+                       "location": "Тайная лаборатория"},
+            "latest_turn": {"id": "s04.text.004", "facts": {"consent": "two skin biopsies"}},
+            "story_compass": {"immediate": "Шики исследует клетки Саю"},
+            "history": [{"turn_id": "s04.text.004", "summary": "ДНК анализ"}]
+        }, ensure_ascii=False), encoding="utf-8")
+        out = self.root / "recovery/SCENE_MEMORY_INDEX.json"
+        first = scene_memory.write_live_index(self.root, self.root, out)
+        self.assertEqual(first["status"], "updated")
+        self.assertEqual(scene_memory.write_live_index(self.root, self.root, out)["status"], "current")
+        p = json.loads(out.read_text())
+        self.assertEqual(p["cursor"]["turn"], "s04.text.004")
+        self.assertIn(self.lab, [d["source"] for d in p["documents"]])
+        self.assertEqual(p["hot_sha256"], hashlib.sha256(hot.read_bytes()).hexdigest())
+        data = json.loads(hot.read_text())
+        data["cursor"]["last_turn_id"] = "s04.text.005"
+        data["latest_turn"]["id"] = "s04.text.005"
+        hot.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        self.assertEqual(scene_memory.write_live_index(self.root, self.root, out)["status"], "updated")
+
+    def test_current_hot_facts_are_retrievable_without_sqlite(self):
+        hot = self.root / "recovery/FAST_SCENE.json"
+        hot.parent.mkdir()
+        hot.write_text(json.dumps({
+            "cursor": {"last_turn_id": "s04.text.005", "at": "0006-09-28T06:50:00",
+                       "location": "Тайная лаборатория"},
+            "latest_turn": {"id": "s04.text.005",
+                            "facts": {"blood_sample": "Уцуро не исследовал образец Ш"}},
+            "story_compass": {"immediate": "Саю жива, образцы кожи получены"}
+        }, ensure_ascii=False), encoding="utf-8")
+        result = scene_memory.fast_packet_from_files(self.root, self.root,
+            action="Что Уцуро сделал с образцом крови?")
+        sources = [r["source"] for r in result["file_memory"]["evidence"]]
+        self.assertIn("recovery/FAST_SCENE.json", sources)
+
     def test_broken_cursor_refuses_to_narrate(self):
         hot = self.root / "recovery/FAST_SCENE.json"
         hot.parent.mkdir()
