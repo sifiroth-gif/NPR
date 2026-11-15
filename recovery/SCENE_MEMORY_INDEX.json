@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-28T14:42:00",
-    "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
-    "turn": "s04.text.006"
+    "at": "0006-09-29T00:37:00",
+    "location": "Тайная лаборатория Шики, северо-западнее Кусагакуре",
+    "turn": "s04.text.007"
   },
   "documents": [
     {
@@ -7602,23 +7602,17 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "0a726e27a7791e02cdb1495d6d79c568f61b45f3f2e9afeddcca588cf9910a82",
+  "hot_sha256": "61e0e49db1ca9c1e03344f79f70d63f30852359d2d56f97890212c03447508eb",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "blood_sample": "new fresh autologous blood from Shiki, independently sampled ex vivo, NOT Utsuro's sealed sample",
-      "limits": "No cell division/inheritance demonstrated, no systemic exposure, no installed new jutsu or powers, no autonomous pact activation",
-      "privacy": "only Shiki in secret lab; patient specimens retained",
-      "results": "few viable leukocytes have confirmed autologous foreign DNA chromosomal integration of short fragment, most leukocytes injured/apoptotic; peculiar directional reaction to dark-tendon tissue and residual chakra, causality unresolved",
-      "technical": "Only nucleated leukocytes suitable for genomic insertion, erythrocytes and platelets anucleate"
+      "achievement": "Stable integration of a short foreign genetic section in ex vivo autologous leukocytes, verified in daughter cells. No full donor genome or automatic kinjutsu.",
+      "body": "Shiki unmodified by this ex vivo research, nothing injected/reinfused; pact not activated.",
+      "effect": "Cultured cells connect into tiny networks and respond to dark tendon with short seven-impulse chakra sequences; some die under excessive activation; unexplained directional response at closed chamber edge.",
+      "time": "0006-09-29T00:37:00",
+      "zero_genome": "Works on Shiki's own still-living detached cells under direct chakra contact, not remote omnipotence."
     },
     "recent": [
-      {
-        "at": "0006-09-27T22:05:36",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Каменная тварь потянула двигательную печать Саю; Уцуро дополнительно закрепил её костями, Саю заявила границы своего согласия; Шики не действовал.",
-        "turn_id": "s04.text.001"
-      },
       {
         "at": "0006-09-27T22:05:41",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7650,9 +7644,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Шики экспериментировал только ex vivo со своей кровью. В немногих лейкоцитах подтвердилось приращение маленького фрагмента чужой ДНК к его собственной хромосоме, большинство клеток погибли. Выжившие показывали слабую направленную реакцию на образец чёрного тяжа и его чакру; стабильная наследуемая линия/изменение тела Шики/техника не возникли.",
         "turn_id": "s04.text.006"
+      },
+      {
+        "at": "0006-09-29T00:37:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "С помощью Нулевого Генома Шики in vitro стабилизировал чужеродный фрагмент ДНК в собственных жизнеспособных лейкоцитах, подтвердил копирование в дочерние клетки. При реакции на тёмный тяж образуются клеточные связи, ритм семи чакровых импульсов и локальная клеточная гибель. Все опыты только ex vivo, тело Шики неизменено.",
+        "turn_id": "s04.text.007"
       }
     ],
-    "story": "28.09.1283 14:42, тайная лаборатория Шики. По прямому действию игрока Шики взял собственную свежую кровь, ex vivo отделил ядерные клетки крови (лейкоциты), установил контроль и попытался прирастить фрагменты чужой ДНК из ткани существа/отклонённой кожи Саю. В нескольких изолированных лейкоцитах подтверждены границы встраивания небольшой чужой последовательности в СОБСТВЕННУЮ хромосомную ДНК Шики; большинство клеток разрушилось/апоптоз, часть выжила. В жизнеспособных генетически модифицированных клетках обнаружена слабая направленная реакция на тёмный тяж и его остаточный чакровый рисунок (механизм НЕ установлен). Нет устойчивой наследуемой новой клеточной линии, не доказано воспроизведение в дочерних клетках. НЕТ внедрения в организм Шики, активации договора, новых навыков/иммунитета/заражения. Кровь в Уцуро пробирке Ш всё ещё отдельна и Уцуро её НЕ исследовал. Саю/Уцуро у седьмой палаты, без сведений о тайной лаборатории. Продолжаем игроку дать выбор: дальнейшая культура/Zero Genome/исследование."
+    "story": "S4-007 29Sep1283 00:37: Shiki applies his fully learned Zero Genome directly to living autologous ex vivo leukocytes in his private lab, achieved directed stable integration of short foreign DNA section from Sayu/creature lineage into his OWN cultured leukocyte chromosomes and verified it in some daughter cells after hours of study. Foreign segment gives unusual tissue network formation and chakra-responsive connections to dark tendon; seven-pulse responses can damage cells, mechanism and relation to seven locks UNKNOWN. Some cells died. No reinfusion, no whole-body genetic alteration, no automatic technique mastery, no seal activation. Suspicious directional response toward apparently empty edge of closed specimen chamber (clue; not proven actor or attack). Blood tube Ш retained separately by Utsuro and unanalysed. Sayu last known with Utsuro in Seventh Ward and neither knows private data. End at choice to study, isolate or other action."
   },
   "schema": "npr-github-scene-memory/1"
 }
