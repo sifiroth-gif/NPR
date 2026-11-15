@@ -42,6 +42,10 @@ def parser():
     mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
     mem.add_argument("--player-action", default="")
     mem.add_argument("--limit", type=int, default=9)
+    build_mem = sub.add_parser("scene-memory-build", help="refresh compact GitHub memory catalog from canonical sources and HOT")
+    build_mem.add_argument("--state-dir", type=Path, required=True)
+    build_mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
+    build_mem.add_argument("--output", type=Path, required=True)
     queue = sub.add_parser("world-queue", help="review upcoming NPC decisions through a target time")
     queue.add_argument("until")
 
@@ -171,6 +175,8 @@ def run(args):
             limit_value(args.limit, 1, 20)
             return scene_memory.fast_packet_from_files(
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
+        case "scene-memory-build":
+            return scene_memory.write_live_index(args.source_root, args.state_dir, args.output)
         case "world-queue":
             with game.connection() as con:
                 at = state(con)["at"]
