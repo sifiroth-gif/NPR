@@ -1,0 +1,56 @@
+{
+  "schema": "NPR-SHIKI-SCENE-CONTINUITY-AUDIT/1.0",
+  "created_at_real": "2026-11-15",
+  "at_checked": "0007-09-27T15:13:00",
+  "sources": [
+    "recovery/FAST_SCENE.json",
+    "recovery/fast_turns/s03.text.064.json",
+    "recovery/fast_turns/s03.text.065.json",
+    "recovery/fast_turns/s03.text.066.json",
+    "recovery/LATEST_SHIKI_CHECKPOINT.json"
+  ],
+  "scope": "Targeted continuity check last 3 published immutable turns + currently accessible legacy scene and approved current actor knowledge; NOT claim all 66 active s03 turns individually audited; SQLite still rev217 and not running.",
+  "findings": [
+    {
+      "severity": "correction_needed",
+      "key": "kashiva_location",
+      "played": "At latest verified older snapshot Kashiva (Касива) is at Hase's HOME, supporting convalescence; not in hospital archive nor bureau at15:13.",
+      "resolution": "Sekido clerk must first reach Hase residence and invite; do not transport Kashiva or abandon Hase without her autonomous decision and actual care arrangement. 'найдут' only establishes whereabouts not forced appearance."
+    },
+    {
+      "severity": "timeline_pressure",
+      "key": "suda_message",
+      "played": "Suda detained near former morgue by 15:09, preliminary signed phrase 'name known after scroll opening' reached Sekido 15:13 in person; 4 minutes too short for full station interrogation/forensic procedure.",
+      "resolution": "Treat as on-scene brief witness-recorded statement passed swiftly by ninja messenger; NOT formal completed interview/confession. Full interrogation, verification and exam of seized sealed folder still pending; don't retroactively move her to bureau before recorded evidence. Initial record in turn066 unchanged."
+    },
+    {
+      "severity": "stale_snapshot_fields",
+      "key": "legacy_stale_scene",
+      "played": "Frozen LATEST_SHIKI_CHECKPOINT.json includes outdated archive portal layout (06:31) and rejected older passive-byoton text; game is at 15:13 in Sekido office, staged scent starts from stage1 only.",
+      "resolution": "FAST_SCENE.json is authoritative active text cursor. Read long checkpoint ONLY for historically scoped facts with dates and priority; newer direct user rules and latest dates override older blocks. No hallucinated present aperture and no pact odor at stage0."
+    },
+    {
+      "severity": "verified",
+      "key": "pc_agency_and_memory",
+      "resolution": "Shiki explicitly doesn't remember 1277 Kaneda Ryo; no forced memories, retrospective voluntary actions, feelings or reconstructed PC words. Only player statements are spoken."
+    },
+    {
+      "severity": "verified",
+      "key": "npc_knowledge",
+      "resolution": "Sekido heard Utsuro details ONLY from Shiki in turns64-65 and theorized supernatural model; doesn't know private literal demon truth or woman patient specifics. Kashiva old hearsay name and warning not equal full knowledge of seven locks."
+    },
+    {
+      "severity": "verified",
+      "key": "lines",
+      "resolution": "Suda detained and binder Tamura rescued are independent real events, but still no judicial verdict; side medical patient lives under support, left arm involuntary signals, sampling consent pending; main Nori/V7 arc separate."
+    },
+    {
+      "severity": "verified",
+      "key": "clock_and_pact",
+      "resolution": "At15:13 baseline burden 0.2722/100 stage0 (only ring tattoo inner right forearm), no strange perfume, gauntness, contact disease; time leaps adjust +0.75 per in-game day, no technique events. 'Ситон/Бётон' not learned."
+    }
+  ],
+  "next_scene_constraints": "User says 'Тогда подождем пока ее найдут.' Shiki waits IN Sekido office for clerk to locate Kashiva; advance just enough for messenger to return whereabouts, without moving Shiki or Kashiva by fiat. Kashiva likely found home with Hase, her own choice whether to come. Offscreen Suda inquiry proceeds independently. Neither medical crisis nor archive access secretly resolved during mere wait.",
+  "long_term_protocol": "On every scene: current cursor, location and NPC whereabouts last known; direct/secondhand/suspected/GM-secret per character; elapsed time for travel and reports; active medical states and consent; one announced NPC progression; don't replay archived layout as current. Read actual original for contradiction rather than cloning whole 68KB checkpoint.",
+  "write_policy": "Audit is not a retroactive amendment to previously visible scene text, except how later reports clarify timing and roles; no SQLite revision claim."
+}
