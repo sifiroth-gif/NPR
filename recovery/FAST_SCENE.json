@@ -13,18 +13,18 @@
     "sqlite_replay_pending": true
   },
   "cursor": {
-    "last_turn_id": "s03.text.065",
-    "next_sequence": 66,
-    "at": "0007-09-27T15:09:00",
+    "last_turn_id": "s03.text.066",
+    "next_sequence": 67,
+    "at": "0007-09-27T15:13:00",
     "world_date": "Среда, 27 сентября 1283 года",
     "location": "Кусагакуре, управление печатей, кабинет Сэкидо Тадао",
     "state": "player_decision_pending",
-    "player_last_input": "Это мое предположение. Он сказал что многие называют его демоном, что ему обещали закрыть эту дверь и что соврали. В общем вопросов много. А ещё он как будто кого-то сдерживает во всяком случае это то что можено говорить о его появлении непосредственно после заключения договора\nМастеру: ты видимо сделал уцуро человеком, добавь ему сверхъестественную природу и демонизм.\nДемон медицины смерти и болезней, это объяснит новые стихии"
+    "player_last_input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить"
   },
   "scene": {
-    "focus": "Шики поясняет, что восьмой — только предположение; Уцуро многие зовут демоном, ему обещали закрыть дверь, но обманули, он, кажется, кого-то/что-то сдерживает. Сэкидо знает только слова Шики и допускает сверхъестественную природу, ещё не знает истинного скрытого канона. Суда Минако самостоятельно задержана людьми Сэкидо возле старого госпитального морга с запечатанной папкой и пропуском; содержимое и виновность не проверены.",
-    "actor_shiki": "20-летний дзёнин в кабинете Сэкидо, самостоятельные действия/чувства только по заявке игрока. На внутреннем ПРАВОМ предплечье чёрная семикольцевая печать и густые корни, иных побочных эффектов ещё нет. Шики считает себя возможным восьмым, не утверждает как факт. Сообщил Сэкидо слова Уцуро о демоне, обманутом обещании закрыть дверь, о сдерживаемой угрозе; не поведал об отдельной живой пациентке.",
-    "actor_sekido": "Сэкидо, престарелый специалист печатей, на основании свидетельства Шики допускает подлинный иномирный проход и даже демона; не знает истинного демонического статуса Уцуро как факта, старой тайной истории, личности за дверью, пациента, семи первоначальных сговоров. Подчеркнул 7 поколений поддерживавших печати != 7 прежних контрактов. Установил задержание Суды; отдал приказ опечатать папку, охрана, законный допрос, без выводов.",
+    "focus": "Шики заметил, что Касива, архивистка при Хасэ, не удивлялась словам Уцуро; намерен поговорить с ней ПОЗЖЕ, пока никуда не ушёл. Сэкидо послал служащего найти Касиву и предложить добровольно свидетельствовать (без задержания), но ещё не получил её ответа. Задержанная Суда Минако заявила в присутствии следователей, что узнала имя Мугами Шики лишь ПОСЛЕ открытия свитка, пока только её слова и не признание общей вины.",
+    "actor_shiki": "Шики остаётся в кабинете Сэкидо; свободен делать следующий выбор. Его заявка 'надо будет с Касивой поговорить' — намерение на будущее, НЕ немедленное перемещение и не согласие на допрос. Правая внутренняя рука несёт печать, stage0, без запаха, болезней и иных изменений.",
+    "actor_sekido": "Опытный Сэкидо анализирует слова Шики о спокойной реакции архивистки Касивы (знание или самоконтроль неизвестно); распорядился без принуждения попросить Касиву дать показания о Хасэ/свитке, не разглашать Уцуро посторонним. Из следственной группы приходит предварительная фраза Суды 'Имя Мугами Шики я узнала только после открытия свитка', он отмечает согласованность с задним числом оформленными записями, проверяет источник, НЕ объявляет виновность и не знает полного мотива и сущности демона.",
     "other_present": "За пределами кабинета вооружённая охрана управления; посыльный о доставке Сэкидо отсутствует. Шики ещё не выбрал следующего действия.",
     "foreground_evidence": [
       "Поддельные отметки 05:54 и 06:11 написаны одной рукой и нанесены ПОЗЖЕ их указанного времени (документальные вмятины); заранее выбранный Шики не доказан.",
@@ -33,7 +33,7 @@
       "Предварительное (не судебное) почерковедческое сходство Суды с записями 05:54 и 06:11. Личные вещи погибшего включали сложенный медлист неизвестного учреждения, ныне отсутствующий; в переплётном цехе найдена квитанция старого вещевого дела.",
       "Тамура Гэндзо жив, найден связанным в запертой сушильной комнате, обезвожен, запястья перетянуты; медик помогает. Утверждает, что Суда использовала старую печать и заперла его; утверждение ещё проверяется. Сэкидо разыскивает Суду."
     ],
-    "immediate_gate": "15:09 Шики свободен поговорить о Уцуро, вернуться к основному сюжету, ждать ответа, исследовать свой договор, предложить дальнейшее. Суда задержана, бумаги ещё не прочтены, её вина/мотив не раскрыты, следствие продолжает группа Сэкидо. Уцуро действительно демон смерти и болезни только по закрытому GM канону; НЕ вводить это в NPC знание автоматически. Участие Шики в следствии не требуется."
+    "immediate_gate": "15:13 кабинет Сэкидо, следствие двигается независимо. Касива ещё не приглашена лично и не обнаружена командой; не писать ей чужих признаний. Суда задержана, дала важное предварительное объяснение, no verdict. Шики может выбирать адресную встречу, поручить дальше, вернуться к основному делу/Уцуро."
   },
   "threads": {
     "main": {
@@ -42,7 +42,7 @@
     },
     "utsuro": {
       "name": "Одна побочная линия Уцуро / договор / архивная подмена / пациентка",
-      "status": "Суда Минако задержана стражей у бывшего госпитального морга с закрытой папкой и пропуском на 15:09, допрашивается без участия Шики. Сэкидо получил сведения от Шики о семи поколениях, прозвище демона, обманутом обещании закрыть дверь и сдерживаемом им опасном; допускает сверхъестественную природу, но не знает фактически. ГМ-канон 2026-11-15: Уцуро РЕАЛЬНЫЙ Демон медицины, смерти и болезней, прежде человеческий лекарь, теперь онтологически не человек; Ситон/Бётон — демонические начала. Никаких новых техник Шики. Медицинская пациентка всё ещё ожидает добровольного согласия и терапии; клинические процессы не продвинуты."
+      "status": "Касива из медицинского архива, ранее при Хасэ, по наблюдению Шики не удивлялась словам Уцуро; Сэкидо направил помощника выяснить её местонахождение и пригласить свидетельствовать без принуждения, результата ещё нет. Суда Минако задержана, при свидетелях утверждает, что Шики как подписант стал известен ей только ПОСЛЕ открытия свитка; пока недоказанное показание, не полный мотив/признание. Тамура спасён, осталось закрыть подмену и локальную медицинскую часть Седьмой палаты. Настоящий Демон медицины/смерти/болезней скрыт от NPC, знание семи поколений не установлено."
     },
     "archive": {
       "name": "МХ–VII/19 «Реестр невыписанных»",
@@ -58,7 +58,7 @@
     "mastered_shiton": [],
     "mastered_byoton": [],
     "projection": "total = clamp(round4(0.75 * seconds_since_bound / 86400 + technique_points_confirmed), 0, 100); passive growth computed on demand, no separate GitHub write on time-only scene",
-    "as_of_cursor_points": 0.2701,
+    "as_of_cursor_points": 0.2722,
     "stage": 0,
     "scent_activated": false,
     "direct_skin_disease_activated": false,
@@ -91,13 +91,8 @@
   },
   "history": {
     "immutable_turn_template": "recovery/fast_turns/s03.text.{NNN}.json",
-    "latest_immutable_turn": "recovery/fast_turns/s03.text.065.json",
+    "latest_immutable_turn": "recovery/fast_turns/s03.text.066.json",
     "recent_summaries": [
-      {
-        "at": "0007-09-27T15:02:00",
-        "input": "Нет не помню. Это было ещё до экзамена в конохе.",
-        "summary": "Shiki truthfully tells Sekido 'Нет не помню. Это было ещё до экзамена в конохе.' No memories/emotions imposed. Sekido explains genuine 1277 morgue personnel roster signer Suda Minako, former Kaneda, elder sister of dead Kaneda Ryo; her visible handwriting tentatively matches forged 05:54/06:11 but guilt not yet proven. Team autonomously rescues missing binder Tamura Gendzo alive from locked bindery drying chamber with wrist wire ligature marks/dehydration, medic treats, guard witness states Suda used stolen old bindery seal and locked him after he investigated. Old Kaneda Ryo personal effects storage issue receipt found in workshop. Sekido sends independent patrol to find and interview Suda, no instant arrest. Shiki at seal bureau15:02, may ask or go, no compulsion, original age14 loss unchanged. Pact at15:02 0.2665 stage0 no odd scent or infectious touch."
-      },
       {
         "at": "0007-09-27T15:05:00",
         "input": "По игре: пусть ваши люди действуют, оперативной информации достаточно. Но мне все ещё не ясна история свитка если Уцуро был человеком и лаборатория существовала, то как он стал призывным существом и что еще за 7 поколений которые он упоминал и его расстройство что, думаю, я стал восьмым",
@@ -107,6 +102,11 @@
         "at": "0007-09-27T15:09:00",
         "input": "Это мое предположение. Он сказал что многие называют его демоном, что ему обещали закрыть эту дверь и что соврали. В общем вопросов много. А ещё он как будто кого-то сдерживает во всяком случае это то что можено говорить о его появлении непосредственно после заключения договора\nМастеру: ты видимо сделал уцуро человеком, добавь ему сверхъестественную природу и демонизм.\nДемон медицины смерти и болезней, это объяснит новые стихии",
         "summary": "In game Shiki clarifies being 8th is his own speculation. He heard Utsuro called demon, was promised an inaccessible door would be closed but wardens lied, and appears to restrain something/someone. Sekido knows only Shiki's testimony and reconsiders limited human-seal theory, allows supernatural possibility but does not know private TRUE demon identity; distinguishes seven generations of lock maintainers from seven prior signers. Independent shinobi apprehend Suda Minako unharmed near old morgue with sealed folder and effects-access permit; no contents examined, guilt not proven. Sekido orders evidence preserved, reasonable interview; Shiki remains in bureau office at15:09. OOC player declares Utsuro REAL DEMON OF MEDICINE DEATH AND DISEASE, once human and now metaphysically demonic, two demonic Shiton/Byoton natures. Origin and character and arts files previously updated. No physiological syndrome now beyond seal; cumulative passive0.2701 stage0."
+      },
+      {
+        "at": "0007-09-27T15:13:00",
+        "input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить",
+        "summary": "Shiki states Kashiva (Касива), the female medical archivist present with Hase, seemed unsurprised by Utsuro's words, and says he will want to talk with her (no immediate travel). Sekido distinguishes knowledge, fear, outward reaction, asks clerk to locate Kashiva and invite voluntary statement without disclosing Utsuro widely, no arrest. Autonomous inquiry from Suda yields recorded but UNVERIFIED preliminary statement she learned Mugami Shiki's name only AFTER scroll opened, consistent with backdated 05:54/06:11 records; Sekido orders verification, no full confession/motive inferred. Shiki still in bureau office at15:13, pact burden0.2723 stage0, no scent/disease; Utsuro literal demonic essence GM only, not Sekido known."
       }
     ],
     "original_baseline_turns": "Previous original LATEST checkpoint recorded through s03.text.063; existing full SQLite lags at rev217. Do not claim all previous 1–62 have been consolidated.",
@@ -119,10 +119,10 @@
       "player_input": "Он прав это лучше не открывать. #передаю ей этот предмет и занимаюсь стабилизацией раненого нападающего#",
       "reply_saved_in": "recovery/LATEST_SHIKI_CHECKPOINT.json",
       "reason": "No local or connected runtime able to execute rpg_engine prepare+confirm against private binary SQLite; do not claim confirmed rev218 or modify state.json until replay+verify.",
-      "through_at": "0007-09-27T15:09:00",
-      "queued_text_turns": 65,
-      "latest_turn_id": "s03.text.065",
-      "latest_input": "Это мое предположение. Он сказал что многие называют его демоном, что ему обещали закрыть эту дверь и что соврали. В общем вопросов много. А ещё он как будто кого-то сдерживает во всяком случае это то что можено говорить о его появлении непосредственно после заключения договора\nМастеру: ты видимо сделал уцуро человеком, добавь ему сверхъестественную природу и демонизм.\nДемон медицины смерти и болезней, это объяснит новые стихии",
+      "through_at": "0007-09-27T15:13:00",
+      "queued_text_turns": 66,
+      "latest_turn_id": "s03.text.066",
+      "latest_input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить",
       "warning": "FAST_SCENE and immutable per-turn texts extend previous text-only replay queue. SQLite rev217 remains unchanged; verify at intersession. Not a confirmed SQLite game revision.",
       "retracted_prior_published_response": true,
       "retraction_ref": "032628e28951ad564621003962e29adab899fabd",
