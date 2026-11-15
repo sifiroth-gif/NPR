@@ -1,6 +1,6 @@
 {
   "format": "npr-shiki-fast-scene/1",
-  "purpose": "SMALL read/write source for ordinary scene turns when private SQLite rev217 remains behind. Uses immutable exact turn files. Never changes engine prepare/confirm contract; replay/verify at intersession.",
+  "purpose": "FAST text fallback through GitHub update of ONE compact hot scene file with exact response in last_turn and full older text preserved by Git file history. The actual SQLite engine baseline still rev217. Latest user OOC on 2026-11-15 explicitly complains 3-5min latency and dumb repetitive scene NPC questions; quality-first revision v2.",
   "session": 3,
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
@@ -90,7 +90,10 @@
     "state": "Character and source knowledge separate; all player corrections outrank GM plans; future time leap consider scheduled NPC acts.",
     "artifact": "Per-turn exact full GM response goes into new immutable recovery/fast_turns/s03.text.NNN.json; HOT_SCENE stores compact changing state, cursor and limited summaries only.",
     "audit_file": "recovery/CONTINUITY_AUDIT_1283_09_27_1513.json",
-    "time_knowledge_guard": "Kashiva at Hase HOME, not the medical archive. Suda 15:09->15:13 short on-site statement via swift shinobi messenger, formal interview not finished. Never use old frozen 06:31 archive layout as current 15:25. Right tattoo only, pact stage0. NPC knowledge remains separate."
+    "time_knowledge_guard": "Kashiva at Hase HOME, not the medical archive. Suda 15:09->15:13 short on-site statement via swift shinobi messenger, formal interview not finished. Never use old frozen 06:31 archive layout as current 15:25. Right tattoo only, pact stage0. NPC knowledge remains separate.",
+    "intellectual_npcs": "Professional NPCs independently infer/act based on what they know; do not ask Shiki trivial binary questions already answered or obvious from shared event; valuable action/clue or consequential decision in each scene. No endless dialogue nor repetitive paperwork. Give substantive difficult conversation, competing motives and competent intelligence with meaningful uncertainty.",
+    "next_scene_anti_repetition": "Kashiva and Shiki already AGREED both observed Utsuro restraining moving stone figure from crossing; previous 'сам выходил или сдерживал?' question is unnecessary. On next player in-game turn ignore this as mandatory prompt; Kashiva can advance by revealing NEW grounded fact, taking action independently, or being asked a nontrivial question. Do not retcon user's existing words.",
+    "latest_ooc": "User rejects slower scene production, shallow/dumb dialogue; no world time advance. Improvement validated by NEXT actual scene, not asserted by document writing."
   },
   "history": {
     "immutable_turn_template": "recovery/fast_turns/s03.text.{NNN}.json",
@@ -130,13 +133,29 @@
       "retracted_prior_published_response": true,
       "retraction_ref": "032628e28951ad564621003962e29adab899fabd",
       "replacement_this_checkpoint": true
-    }
+    },
+    "last_legacy_immutable_turn": "recovery/fast_turns/s03.text.069.json",
+    "one_write_from_turn": "s03.text.070",
+    "how_to_replay": "For <=069 read original recovery/fast_turns. For >=070 fetch older FAST_SCENE.json via successive Git commit SHA (one commit per turn, message 'Shiki s03.text.NNN at...'); each prior file revision has latest_turn.exact_visible_gm_response. At session end verify against dialogue and replay SQLite."
   },
   "performance": {
-    "hot_path": "recovery/FAST_SCENE.json",
-    "immutable_turns": true,
-    "preferred_read": "Only HOT_SCENE.json for same active scene; optional one targeted character or hidden-lore source if plot requires, never reread monolithic baseline each turn.",
-    "preferred_write": "Create immutable exact turn file first; then update compact HOT_SCENE.json with SHA from fetched file. Batch into one functions.exec call after one read. No per-turn pact JSON rewrite for time only.",
-    "verification": "After pair writes, check tool acknowledgement and invariant; read-back every 5 turns, on conflict, session handoff or sensitive/irreversible event. On partial failure repair before claiming saved."
+    "version": "one-write-s03.070",
+    "guide": "main:docs/SHIKI_FAST_SCENE.md",
+    "baseline_state": "s03.text.069 at15:46 27Sep1283",
+    "fetch": "one GitHub fetch_file of FAST_SCENE",
+    "write": "ONE GitHub update_file FAST_SCENE only, with complete response in latest_turn; no extra immutable fast_turn file from s03.text.070",
+    "originals": "GitHub each prior commit retains its own FAST_SCENE latest_turn exact text and unchanged original player input; at session transition reconcile into SQLite and immutable archive. Prior turns 063–069 also stored as individual files; current 069 original proof path stored in history.",
+    "readback": "only on important irreversible battle conflict, error, every 10 turns, session close",
+    "no_separate_passive_pact_update": true,
+    "why": "previous 2 sequential GitHub commits per turn + re-read loops more expensive than compact input, lowered quality"
+  },
+  "latest_turn": {
+    "id": "s03.text.069",
+    "at": "0007-09-27T15:46:00",
+    "player_input": "Я видел тоже самое",
+    "exact_visible_gm_response": "**Среда, 27 сентября 1283 года. 15:43.**  \n*Кусагакуре. Восточный жилой квартал, дом Хасэ.*\n\n**Мугами Шики:**\n— Я видел то же самое.\n\nКасива долго смотрела на него. Потом опустила голову; плечи её почти незаметно осели, будто полученное подтверждение отняло последние силы, которыми она ещё удерживала на расстоянии воспоминание об архиве.\n\n**Касива:**\n— Значит, мне не показалось.\n\nОна провела ногтем по столешнице. Тихий скребущий звук заставил её немедленно убрать руку.\n\n— Я не рассказала этого Сэкидо через посыльного. Не хотела, чтобы из моих слов сделали историю о призраке, прежде чем кто-нибудь подтвердит увиденное.\n\nОна повернулась к закрытой двери комнаты Хасэ и заговорила ещё тише.\n\n— Когда Уцуро приказал тому существу остановиться, я смотрела на его руку. У каменной фигуры были пальцы. Слишком длинные для человеческих, с суставами там, где их не должно быть.\n\nКасива подняла собственную кисть, распрямила пальцы и вдруг сжала их в кулак, словно от этого движения стало физически неприятно.\n\n— Она тянулась **не к нему**. В сторону открытого прохода. К нам.\n\nЖенщина замолчала. За стеной Хасэ перевернулся во сне; одеяло негромко зашуршало. Касива дождалась, пока дыхание юноши снова стало ровным.\n\n**Касива:**\n— Я не знаю, что было по ту сторону. И не знаю, сдерживал ли Уцуро чудовище или такого же пленника, каким, возможно, является сам. Но приказ он отдал прежде, чем фигура успела приблизиться.\n\nОна вынула из ящика короткий карандаш и лист бумаги. Несколько секунд колебалась, затем собственноручно записала время, положение фигуры относительно прохода и услышанный приказ. Имя Шики и увиденную на его руке печать она не упомянула.\n\n**Касива:**\n— Это я передам Сэкидо как своё свидетельство. Не больше.\n\nКарандаш лёг поперёк листа.\n\n— В старой описи не было сказано, кого бояться. Там запрещали *вскрывать* свиток. Теперь я начинаю понимать, почему предупреждение касалось именно этого действия.\n\nОна подняла глаза. В них оставался страх, но речь обрела неприятную, почти врачебную точность.\n\n**Касива:**\n— Вы встретились с ним лицом к лицу, Мугами-сан. Скажите хотя бы одно: **Уцуро сам пытался выйти через проход — или старался не дать выйти тому, что стояло у него за спиной?**\n\n*Дождь перестал. Однако с карниза всё ещё падали капли, и каждая звучала в доме Хасэ отчётливее прежней.*\n\n**15:46.** Касива подтверждает собственные наблюдения: движущаяся каменная фигура тянулась к проходу, а Уцуро приказал ей остановиться. Это её свидетельство, а не установленная природа существа. Она намерена передать Сэкидо запись, не раскрывая личных сведений Шики.\n\n**Ход Шики.**",
+    "status": "already_published",
+    "source_file": "recovery/fast_turns/s03.text.069.json",
+    "summary": "At15:43 at Hase's home Shiki responds 'Я видел тоже самое', confirming Kashiva's observation of Utsuro controlling motion behind him. Kashiva relieved and distressed; volunteers firsthand additional PERCEPTION: moving stone figure had overlong jointed fingers, seemed to reach toward aperture/people in medical archive, not toward Utsuro; she cannot determine monster/prisoner or reality of perspective. She writes her OWN preliminary dated observation note to send Sekido, without Shiki identity or right-arm tattoo; no official transmission yet. Hase still resting inside, briefly rolls over, regular breath. Kashiva asks if Utsuro seemed to try to leave via aperture or instead hold back thing behind him, Shiki's interpretation not imposed. Utsuro true literal demon known GM only. Suda independent investigation no new info transmitted. Pact time-only points at15:46 stage0 tattoo only, no odd odor/infectious contact."
   }
 }
