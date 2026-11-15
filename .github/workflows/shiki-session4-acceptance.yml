@@ -1,0 +1,87 @@
+name: Shiki IV intersession architecture acceptance
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-session4-acceptance.yml
+      - rpg_engine/preparation.py
+      - rpg_engine/handoff_guard.py
+      - rpg_engine/__main__.py
+      - campaigns/shiki/SCENE_PACK.json
+      - campaigns/shiki/sessions/SESSION_004.json
+      - tests/test_session4_focus.py
+      - tests/test_handoff_guard.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: All unit and RPG regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Read back private fourth session in a separate worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki4" refs/remotes/origin/game-state/shiki
+          echo "STATE_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
+      - name: Full source-aware binary/text handoff audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki4"
+          python -m rpg_engine --db "$state/campaign.sqlite" audit-handoff --state-dir "$state" > "$RUNNER_TEMP/handoff-audit.json"
+          cat "$RUNNER_TEMP/handoff-audit.json"
+      - name: Confirm real production handoff and fast focus packet
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki4"
+          python -m rpg_engine --db "$state/campaign.sqlite" gm-packet --mode handoff > "$RUNNER_TEMP/handoff-packet.json"
+          python -m rpg_engine --db "$state/campaign.sqlite" gm-packet --mode focus > "$RUNNER_TEMP/focus-packet.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])
+          audit=json.loads((p/"handoff-audit.json").read_text())
+          handoff=json.loads((p/"handoff-packet.json").read_text())
+          focus=json.loads((p/"focus-packet.json").read_text())
+          assert audit["status"]=="binary_verified"
+          assert audit["fallback"]=="synchronized"
+          assert audit["session"]==4 and audit["revision"]==304
+          assert handoff["confirmed"]["at"]=="0006-09-27T22:05:34"
+          assert handoff["confirmed"]["session"]==4
+          assert handoff["heading"].startswith("среда,")
+          assert handoff["session_plan"]["source"]=="sessions/SESSION_004.json"
+          assert "Седьмая" in handoff["session_plan"]["title"]
+          assert focus["scene_spine"]["source"]=="sessions/SESSION_004.json"
+          assert len(focus["scene_spine"]["next_causes"])<=2
+          assert "npc_psychological_presence" in focus
+          assert len(focus["rules"])<=10
+          last=handoff["confirmed"]["last_confirmed_turn"]
+          assert last["id"]=="s3.played.116"
+          assert handoff["confirmed"]["pending"] is None
+          print("FOCUS_ACCEPTED",{
+              "at":handoff["confirmed"]["at"],
+              "source":focus["scene_spine"]["source"],
+              "focus_bytes":len(json.dumps(focus,ensure_ascii=False).encode()),
+              "handoff_bytes":len(json.dumps(handoff,ensure_ascii=False).encode()),
+              "focused_rules_chars":sum(map(len,focus["rules"])),
+              "full_rules_chars":sum(map(len,handoff["rules"])),
+              "actor_count":len(focus["actors"]),
+              "last_confirmed_turn_id":last["id"]
+          })
+          PY
