@@ -1,0 +1,110 @@
+name: Shiki S3 to S4 full source-aware intersession transition
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-session3-to-4-transition.yml
+      - campaigns/shiki/maintenance/recover_session3_20261115.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+jobs:
+  source-replay:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run complete engine regression suite before state mutation
+        shell: bash
+        run: python -m unittest discover -s tests -v
+      - name: Checkout latest live private Shiki branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-s3-to-s4" refs/remotes/origin/game-state/shiki
+          git rev-parse refs/remotes/origin/game-state/shiki
+      - name: Validate source sha and old database before editing copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          game="$RUNNER_TEMP/shiki-s3-to-s4"
+          sha="$(git -C "$game" hash-object archive/session-003-source.md)"
+          test "$sha" = 45ae17193ecda5b625054908b1c55537a0c12bfc
+          python -m rpg_engine --db "$game/campaign.sqlite" verify --full
+      - name: Replay only accepted S3 scenes and corrected blood conversation
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session3_20261115.py "$RUNNER_TEMP/shiki-s3-to-s4"
+      - name: Verify original archive, exact corrections, independent NPC processes and index
+        shell: bash
+        run: |
+          set -euo pipefail
+          game="$RUNNER_TEMP/shiki-s3-to-s4"
+          python -m rpg_engine --db "$game/campaign.sqlite" verify --full
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          from rpg_engine import Campaign,verification,git_state,compaction,sessions
+          from rpg_engine.engine import file_sha256
+          p=Path(os.environ["RUNNER_TEMP"])/"shiki-s3-to-s4"
+          db=p/"campaign.sqlite"
+          g=Campaign(db)
+          report=verification.audit(g)
+          m=json.loads((p/"state.json").read_text())
+          assert git_state.verify_manifest(m,db)
+          assert m["session"]==4 and m["revision"]>217 and m["at"]=="0006-09-27T22:05:34" and not m["pending"]
+          assert report["compacted_sessions"]==3
+          idx=json.loads((p/"archive/session-003-index.json").read_text())
+          assert idx["records_total"]==118 and idx["response_blocks"]==116
+          assert idx["played_records"]>70 and idx["played_records"]<100
+          assert idx["index"][-1]["status"]=="ooc_or_asset"
+          last=g.entry("turn","s3.played.116",audience="gm")
+          assert "образец Ш" in last["text"] and "до сих пор не исследована" in last["text"]
+          assert "Если бы я хотел исследовать тебя" not in last["text"]
+          assert g.context(audience="gm",recent=1)["recent"][0]["id"]=="s3.played.116"
+          with g.connection() as c:
+              assert all((p/"archive"/f"session-{n:03}.md").exists() for n in (1,2,3))
+              for n in (1,2,3):
+                  original=p/"archive"/f"session-{n:03}.md"
+                  receipt=c.execute("SELECT sha256 FROM session_exports WHERE session=?",(n,)).fetchone()[0]
+                  assert hashlib.sha256(sessions.export_session(c,n)).hexdigest()==receipt
+                  assert file_sha256(original)==receipt
+              assert len(compaction.audit(c,p))==3
+              assert c.execute("SELECT 1 FROM processes WHERE id='s4.utsuro_stone_ward' AND status='active'").fetchone()
+              assert c.execute("SELECT 1 FROM processes WHERE id='s4.nori_institutional_case' AND status='active'").fetchone()
+          print("S3_TO_S4_ACCEPTED",report,"DB_BYTES",db.stat().st_size,"manifest",m)
+          PY
+      - name: Push complete verified binary state and all source index updates atomically
+        shell: bash
+        run: |
+          set -euo pipefail
+          game="$RUNNER_TEMP/shiki-s3-to-s4"
+          git -C "$game" config user.name "github-actions[bot]"
+          git -C "$game" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$game" add -f campaign.sqlite state.json
+          git -C "$game" add -A -- archive/session-003.md archive/session-003-index.json \
+            campaigns/shiki/continuity/SESSION_003_TO_004_CANON_1283-09-27.json \
+            recovery/FAST_SCENE.json recovery/ACTIVE_MEMORY_INDEX_1283_09_27.json \
+            recovery/transcripts recovery/sqlite
+          git -C "$game" status --short
+          git -C "$game" commit -m "shiki: verified S3 replay and compacted close, canonical S4 at 27Sep1283 22:05:34"
+          git -C "$game" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-s4.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-s4-state.json"
+          cmp "$RUNNER_TEMP/remote-s4.sqlite" "$game/campaign.sqlite"
+          cmp "$RUNNER_TEMP/remote-s4-state.json" "$game/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/remote-s4.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
