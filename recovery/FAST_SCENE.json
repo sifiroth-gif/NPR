@@ -1,0 +1,138 @@
+{
+  "format": "npr-shiki-fast-scene/1",
+  "purpose": "SMALL read/write source for ordinary scene turns when private SQLite rev217 remains behind. Uses immutable exact turn files. Never changes engine prepare/confirm contract; replay/verify at intersession.",
+  "session": 3,
+  "campaign_id": "naruto-shiki",
+  "branch": "game-state/shiki",
+  "baseline": {
+    "snapshot_file": "recovery/LATEST_SHIKI_CHECKPOINT.json",
+    "snapshot_game_at": "0007-09-27T15:02:00",
+    "baseline_turn": "s03.text.063",
+    "snapshot_branch_commit_after_seed": "bd37b22221e7ec1fd699b46ef8dfa50d61cda38d",
+    "sqlite_revision_reported": 217,
+    "sqlite_replay_pending": true
+  },
+  "cursor": {
+    "last_turn_id": "s03.text.063",
+    "next_sequence": 64,
+    "at": "0007-09-27T15:02:00",
+    "world_date": "Среда, 27 сентября 1283 года",
+    "location": "Кусагакуре, управление печатей, кабинет Сэкидо Тадао",
+    "state": "player_decision_pending",
+    "player_last_input": "Нет не помню. Это было ещё до экзамена в конохе."
+  },
+  "scene": {
+    "focus": "Сэкидо сопоставил подложные записи с медицинским посмертным протоколом 1277 года; Шики сказал, что погибшего не помнит.",
+    "actor_shiki": "Шики, 20 лет, дзёнин Кусагакуре. Игрок владеет его словами, мыслями, чувствами и добровольными действиями; не навязывать воспоминаний. У Шики на внутренней стороне ПРАВОГО предплечья семикольцевая чёрная печать с густыми корнями. Только она сейчас проявлена.",
+    "actor_sekido": "Сэкидо Тадао, пожилой фуин-специалист: сухая речь, профессиональное сомнение, раскрывает проверяемые источники; действует независимо. В кабинете 15:02; перед Шики оригиналы 1277 протокола и 1283 сомнительных записей. Предлагает показать вещевой талон; следственные люди работают независимо.",
+    "other_present": "За пределами кабинета вооружённая охрана управления; посыльный о доставке Сэкидо отсутствует. Шики ещё не выбрал следующего действия.",
+    "foreground_evidence": [
+      "Поддельные отметки 05:54 и 06:11 написаны одной рукой и нанесены ПОЗЖЕ их указанного времени (документальные вмятины); заранее выбранный Шики не доказан.",
+      "Оттиск с повреждённой матрицы переплётной мастерской; Идзуми открыл старый служебный канал замаскированному предъявителю разрешения, его вина/умысел не доказаны.",
+      "Суда Минако, бывшая Канэда, посмертный медэксперт 1277 и старшая сестра погибшего у каравана Канэды Рё. В 14 лет Шики действительно пытался спасти его после повреждений позвоночника и сосудов, он умер. Шики прямо сказал, что не помнит погибшего.",
+      "Предварительное (не судебное) почерковедческое сходство Суды с записями 05:54 и 06:11. Личные вещи погибшего включали сложенный медлист неизвестного учреждения, ныне отсутствующий; в переплётном цехе найдена квитанция старого вещевого дела.",
+      "Тамура Гэндзо жив, найден связанным в запертой сушильной комнате, обезвожен, запястья перетянуты; медик помогает. Утверждает, что Суда использовала старую печать и заперла его; утверждение ещё проверяется. Сэкидо разыскивает Суду."
+    ],
+    "immediate_gate": "Сэкидо ожидает действий/слов Шики у стола, предлагает запросить вещевой талон, не принуждает к следствию. Внешние агенты могут самостоятельно найти Суду. Плотное завершение побочной линии без бюрократического повторения; не делать искусственных трёх сюжетов."
+  },
+  "threads": {
+    "main": {
+      "name": "Нори / материалы S17-В7, старая транспортная линия",
+      "status": "САМостоятельный основной сюжет, без доказанной связи с Уцуро. Предыдущее подтверждённое расследование и casualties 26Sep1283 записаны в baseline active_case; при возвращении открыть адресно. Не утверждать нынешнее местонахождение Нори без свежей проверки."
+    },
+    "utsuro": {
+      "name": "Одна побочная линия Уцуро / договор / архивная подмена / пациентка",
+      "status": "Суда Минако подозревается по документам и показанию Тамуры, формально не задержана; один компактный арочный итог впереди. Уцуро в Седьмой палате сохраняет пациентке питание левой руки, пациентка владеет правой, левая принудительно двигается, ангиогенез и иннервация неполны, не было согласия на забор крови/биопсию. Шики нашёл медоснование различать контуры внешнего трофического питания и принудительной моторики, ещё не оперировал. Уцуро в палате не знает конторы Сэкидо, способности дистанционно связаться не установлено. Не придумывать лабораторные результаты и согласия."
+    },
+    "archive": {
+      "name": "МХ–VII/19 «Реестр невыписанных»",
+      "status": "Заявление Шики по ЛИЧНЫМ причинам зарегистрировано Омори на обычном рассмотрении; допуска пока нет. Шики показал Омори совпадающую татуировку, но ОТКАЗАЛ в добавлении свидетельства к делу. Омори уважает отказ, ничего дополнительно не записал."
+    }
+  },
+  "pact": {
+    "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
+    "snapshot": "campaigns/shiki/contract/PACT_BURDEN_LIVE.json",
+    "bound_at": "0007-09-27T06:30:19",
+    "passive_points_per_day": 0.75,
+    "forbidden_technique_points_confirmed": 0,
+    "mastered_shiton": [],
+    "mastered_byoton": [],
+    "projection": "total = clamp(round4(0.75 * seconds_since_bound / 86400 + technique_points_confirmed), 0, 100); passive growth computed on demand, no separate GitHub write on time-only scene",
+    "as_of_cursor_points": 0.2665,
+    "stage": 0,
+    "scent_activated": false,
+    "direct_skin_disease_activated": false,
+    "stages": [
+      0,
+      8,
+      22,
+      40,
+      60,
+      78,
+      95
+    ],
+    "rules_guard": "No scent, gauntness, skin disease before their stages; right forearm tattoo immediate; scent from stage1 inspired by Toskovat' Inexcusable Evil and NONCONTAGIOUS; skin transmission ONLY from stage5 via living bare skin to living bare skin, clothing/gloves/items absolutely safe. No fever/taste loss/pain loss/psych control, no technique mastery on pact. For summons own fresh blood on RIGHT forearm mark, hand seals and chakra. Only genuine learned/use events cause extra Shiton/Byoton burden."
+  },
+  "gm_private_refs": {
+    "hidden_culprit": "campaigns/shiki/lore/SCROLL_SUBSTITUTION_CULPRIT_GM_1283_09_27.json",
+    "utsuro_character": "campaigns/shiki/characters/UTSURO_1283_09_27.json",
+    "shiki_sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+    "old_main_case": "recovery/LATEST_SHIKI_CHECKPOINT.json, active_case",
+    "read_policy": "Do not load these routinely. Addressed search only for relevant mystery payoff/skill or when switching arcs. NEVER spoil hidden culprit OOC."
+  },
+  "continuity_guard": {
+    "pc": "No automatic Shiki movement, words, feelings, choices or memory.",
+    "npc": "Autonomous motives, details of posture/body language, medical/anatomical accuracy, subtle consequences.",
+    "prose": "Russian mature Lovecraftian noir, dark original scene, vivid but no repetitive recaps / bureaucracy. Scene heading date/time/location, speaker names.",
+    "clock": "No game time advance for this OOC optimization.",
+    "state": "Character and source knowledge separate; all player corrections outrank GM plans; future time leap consider scheduled NPC acts.",
+    "artifact": "Per-turn exact full GM response goes into new immutable recovery/fast_turns/s03.text.NNN.json; HOT_SCENE stores compact changing state, cursor and limited summaries only."
+  },
+  "history": {
+    "immutable_turn_template": "recovery/fast_turns/s03.text.{NNN}.json",
+    "latest_immutable_turn": "recovery/fast_turns/s03.text.063.json",
+    "recent_summaries": [
+      {
+        "at": "0007-09-27T14:43:00",
+        "input": "#поднимаю рукав где на предплечье печать# очень личное.",
+        "summary": "At medical archive Shiki raises sleeve displaying permanent seven interrupted black concentric rings with black void center and dense rootlike lines on RIGHT inner forearm, tells Omori 'очень личное'. Omori sees close exact ring geometry match to MH-VII/19 public archive card, guarded professional shock, shields Shiki from corridor, does NOT touch. Offers independent supplementary attestation of physical seal match to special archival request but makes clear only if Shiki authorizes; original personal reasons request remains filed normal queue; no clearance yet and no extra patient facts. Courier to Sekido already gone. At14:43 Shiki remains with Omori and can decide. Chronic pact burden0.2566 stage0 no smell/contagion/gauntness."
+      },
+      {
+        "at": "0007-09-27T14:58:00",
+        "input": "Нет, пока точно спасибо #иду к Сэкидо#",
+        "summary": "Shiki declines Omori's optional attestation; Omori DOES NOT annotate registered personal MХ–VII/19 restricted records application. Shiki walks to Sekido's Kusa fūin bureau 14:58. Sekido independently updates evidence 05:54 and 06:11 were backdated since ink over later document inspection indentations; prior hypothesis Shiki targeted before visit not substantiated. Tentative scribe match to 1277 morgue intake for Kaneda Ryo, the already-player-approved age14 caravan spinal/vascular injury death Shiki tried to save; original autopsy records Shiki as field medic, and personal inventory mentions folded medical paper from unknown institution NOW missing; report signer partly obscured in player view, no culprit yet confirmed. Sekido asks Shiki if he remembers dead caravan man, no response forced. Bureau team independently hears knocks behind locked bindery drying room door and begins planned rescue of missing custodian safely with medic. At14:58 player in Sekido office, 0.2644 pact burden stage0 no odour/other effect; main V7 unrelated; side arc fast closure but not exposition without proof."
+      },
+      {
+        "at": "0007-09-27T15:02:00",
+        "input": "Нет не помню. Это было ещё до экзамена в конохе.",
+        "summary": "Shiki truthfully tells Sekido 'Нет не помню. Это было ещё до экзамена в конохе.' No memories/emotions imposed. Sekido explains genuine 1277 morgue personnel roster signer Suda Minako, former Kaneda, elder sister of dead Kaneda Ryo; her visible handwriting tentatively matches forged 05:54/06:11 but guilt not yet proven. Team autonomously rescues missing binder Tamura Gendzo alive from locked bindery drying chamber with wrist wire ligature marks/dehydration, medic treats, guard witness states Suda used stolen old bindery seal and locked him after he investigated. Old Kaneda Ryo personal effects storage issue receipt found in workshop. Sekido sends independent patrol to find and interview Suda, no instant arrest. Shiki at seal bureau15:02, may ask or go, no compulsion, original age14 loss unchanged. Pact at15:02 0.2665 stage0 no odd scent or infectious touch."
+      }
+    ],
+    "original_baseline_turns": "Previous original LATEST checkpoint recorded through s03.text.063; existing full SQLite lags at rev217. Do not claim all previous 1–62 have been consolidated.",
+    "pending_sqlite_replay": {
+      "baseline_revision": 217,
+      "baseline_sha256": "dab4bac09ef17a70cfeac1e6cdc708cef1e929065cabc59bb1dc0291d5baab1d",
+      "turn_id": "s03.text.001",
+      "from_at": "0006-09-26T09:28:19",
+      "to_at": "0006-09-26T09:29:06",
+      "player_input": "Он прав это лучше не открывать. #передаю ей этот предмет и занимаюсь стабилизацией раненого нападающего#",
+      "reply_saved_in": "recovery/LATEST_SHIKI_CHECKPOINT.json",
+      "reason": "No local or connected runtime able to execute rpg_engine prepare+confirm against private binary SQLite; do not claim confirmed rev218 or modify state.json until replay+verify.",
+      "through_at": "0007-09-27T15:02:00",
+      "queued_text_turns": 63,
+      "latest_turn_id": "s03.text.063",
+      "latest_input": "Нет не помню. Это было ещё до экзамена в конохе.",
+      "warning": "FAST_SCENE and immutable per-turn texts extend previous text-only replay queue. SQLite rev217 remains unchanged; verify at intersession. Not a confirmed SQLite game revision.",
+      "retracted_prior_published_response": true,
+      "retraction_ref": "032628e28951ad564621003962e29adab899fabd",
+      "replacement_this_checkpoint": true
+    }
+  },
+  "performance": {
+    "hot_path": "recovery/FAST_SCENE.json",
+    "immutable_turns": true,
+    "preferred_read": "Only HOT_SCENE.json for same active scene; optional one targeted character or hidden-lore source if plot requires, never reread monolithic baseline each turn.",
+    "preferred_write": "Create immutable exact turn file first; then update compact HOT_SCENE.json with SHA from fetched file. Batch into one functions.exec call after one read. No per-turn pact JSON rewrite for time only.",
+    "verification": "After pair writes, check tool acknowledgement and invariant; read-back every 5 turns, on conflict, session handoff or sensitive/irreversible event. On partial failure repair before claiming saved."
+  }
+}
