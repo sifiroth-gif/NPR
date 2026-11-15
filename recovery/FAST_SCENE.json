@@ -87,5 +87,16 @@
     "sqlite_canonical_through": "session3 revision304",
     "text_ahead_unreplayed": true,
     "current_text_turn": "s04.text.004@rev2"
+  },
+  "memory_system": {
+    "schema": "npr-auto-preflight/1",
+    "status": "required_from_s04.text.005",
+    "primary": "recovery/FAST_SCENE.json",
+    "source_index": "recovery/SCENE_MEMORY_INDEX.json",
+    "source_index_automated_by": "npr-live-memory.yml",
+    "gate_schema": "npr-memory-gate/1",
+    "protocol": "docs/GITHUB_SCENE_MEMORY.md",
+    "sequence": "read_current_HOT_and_index -> rank_relevant_provenance -> inspect_exact_source_if_needed -> render -> save_exact_visible_text_with_memory_gate -> automatic_index_refresh",
+    "caveat": "SQLite rev304 remains older than text-ahead s04.text.004; no false binary replay"
   }
 }
