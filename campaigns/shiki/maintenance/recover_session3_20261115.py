@@ -63,7 +63,7 @@ SKIP = {
 }
 NAME = re.compile(r'\*\*(?:Вторник|Среда),\s*(\d{1,2})\s+сентября\s+1283\s+года', re.I)
 TOP = re.compile(r'\*\*(?:Вторник|Среда),\s*\d{1,2}\s+сентября\s+1283\s+года[^*]*\*\*',re.I)
-CLOCK = re.compile(r'^\*\*(?:Положение на\s+)?(\d{1,2}:\d{2}(?::\d{2})?)', re.I)
+CLOCK = re.compile(r'^\*\*(?:(?:Положение|Состояние)\s+на\s+)?(\d{1,2}:\d{2}(?::\d{2})?)', re.I)
 TIME_HEAD = re.compile(r'\d{1,2}:\d{2}(?::\d{2})?')
 FORMAT = "npr-shiki-session3-curated/1"
 
