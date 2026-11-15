@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-28T06:48:00",
-    "location": "Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре",
-    "turn": "s04.text.004"
+    "at": "0006-09-28T10:26:00",
+    "location": "Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
+    "turn": "s04.text.005"
   },
   "documents": [
     {
@@ -7602,20 +7602,16 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "6e3f897dc345674e272b7b26df6c5067ddf035a8a8c1cb1af1d760df7d0e6a35",
+  "hot_sha256": "21174a0964a0237fb78bfb776b694f2d714c46f4332f3bac9c82327557ba2304",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "caution": "genetic similarities do not identify donor or prove excision safety",
-      "limitations": "first-pass sequencing preliminary; cannot prove mechanism of seal or genetic source and no deep-tissue assessment",
-      "location": "secret NW private genetics lab",
-      "privacy": "Only Shiki access; private lab, no external technician",
-      "sample_results": "S-right normal control XX; S-left mostly patient cells with minority foreign cell line; creature multiple human lines; dark cord and minority S-left share specific allelic pattern; stone interior yielded no nuclear DNA",
-      "sayu_consent": "two superficial skin biopsies only, explicit consent; done with topical local lidocaine, no medical chakra",
-      "sayu_status": "alive; under Utsuro ward observation as of sample departure; no new prognosis asserted",
-      "sequencing": "six samples analyzed in private lab, preliminary comparative sequences from all DNA-bearing fractions; stone internal no useful DNA",
-      "shiki_decisions": "sequencing directed by player, no imposed further sampling or treatment",
-      "utsuro_blood": "Shiki's sealed sample Ш still not sequenced or analyzed by Utsuro"
+      "limits": "donor identity, transfer direction, deeper spread, seal physiology and safety unknown",
+      "privacy": "all specimens and results in Shiki's secret lab; no third party",
+      "sayu": "Alive as last known, ward with Utsuro; two superficial samples consented only, no new biopsies",
+      "sequencing": "Second independent library prep, phased long-read genotyping of existing six samples; definitive foreign XY cell-line signature in Sayu affected skin with multiple markers shared with dark cord; chimeric creature soft tissues; mineral no nuclear DNA",
+      "time": "0006-09-28T10:26:00",
+      "utsuro": "blood tube sample Ш not researched; no knowledge of sequencing results"
     },
     "recent": [
       {
@@ -7643,9 +7639,15 @@
         "supersedes_commit": "2720e61bcdca163bfc8529b2284af1c7b3bf125f",
         "turn_id": "s04.text.004",
         "version": 2
+      },
+      {
+        "at": "0006-09-28T10:26:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики провёл повторное углублённое секвенирование собственных проб: в изменённой коже Саю установлена чужая Y-содержащая клеточная линия, совпадающая по множеству маркеров с управляющим тяжем каменного существа. Происхождение неизвестно. Образцы/данные остались в тайной лаборатории.",
+        "turn_id": "s04.text.005"
       }
     ],
-    "story": "ИСПРАВЛЕНИЕ s04.text.004@rev2: Шики сам исследовал шесть проб (2 поверхностные биопсии Саю, 4 фракции твари) в своей тайной лаборатории; ранее частично описанная аппаратура теперь учитывает существующий из пятилетних исследований компактный ДНК-секвенатор. Внешних лаборантов или публичной лаборатории не было. Предварительное секвенирование: контрольная кожа Саю преимущественно один генотип XX; изменённая кожа даёт вторую DNA компоненту, редкие варианты которой совпадают с фрагментом тёмного тяжа существа; ткань существа генетически неоднородна; камень ДНК не дал. Верифицированные совпадения НЕ определяют происхождение или безопасность удаления. Саю с Уцуро в Седьмой палате; он не знает результатов и не исследовал пробирку Ш."
+    "story": "Шики провёл углублённое повторное секвенирование шести собственноручно полученных/выделенных проб в СВОЕЙ тайной лаборатории, без посторонних. Основная линия кожи Саю XX, поражённая кожа слева содержит подтверждённую чужую клеточную линию с Y-хромосомой. Несколько независимых длинных маркеров совпадают с одной линией тёмного управляющего тяжа отсечённой руки твари; иные фракции существа — смесь нескольких человеческих генотипов. Камень не дал ядерной DNA. Источник/направление переноса клеток неизвестны, степень глубокого поражения Саю и безопасность отделения от поддерживающей печати не установлены. Саю под наблюдением Уцуро в Седьмой палате, никто не знает результатов. Пробирка крови Ш у Уцуро всё ещё НЕ исследована. Сейчас 28.09.1283 10:26, Шики в секретной лаборатории."
   },
   "schema": "npr-github-scene-memory/1"
 }
