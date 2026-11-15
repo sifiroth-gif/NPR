@@ -154,13 +154,13 @@
   },
   "repertoire_catalogue_file": "campaigns/shiki/characters/UTSURO_FORBIDDEN_ARTS_1283_09_27.json",
   "permanent_byoton_pact_price": {
-    "confirmed_by_player": "Latest direct correction 2026-11-14: permanent gaunt appearance and skin-only unprotected contact hazard. Ordinary barriers fully protect, no temperature/fever/odor/taste/pain changes.",
+    "confirmed_by_player": "Latest direct correction 2026-11-14: permanent gaunt appearance and skin-only unprotected contact hazard. Ordinary barriers fully protect, no temperature/fever/odor/taste/pain changes. LATEST 2026-11-15 reauthorizes unusual progressively intensifying olfactory signature; replaces former no-odor prohibition ONLY.",
     "present": "At 27Sep1283 06:42:46 external ink seal already permanent but NO bodily/contagion side effects have started. Gradual onset over future days/weeks only; do not conflate seal activation with pathology activation.",
     "clinical_visual": "Later progressive permanent gaunt/pale hollows, dark veins; roots MAY extend neck and body but NEVER face; appearance currently unchanged except instant right forearm seal. Physical stats/medical skill not reduced.",
     "contact_price": "NO contact-transmitted disease in minutes after pact, even bare skin safe now. After later gradual manifestation, only unprotected BARE SKIN to BARE SKIN can transfer, no instant epidemic, clothes/gloves/items absolutely safe.",
     "cost_continuity": "Later symptoms develop over time; never assert sudden instantaneous contagion or gauntness from first blood drop. Current interactions safe. Existing pact remains unbreakable.",
     "details_file": "campaigns/shiki/characters/UTSURO_FORBIDDEN_ARTS_1283_09_27.json",
-    "noncanon_effects": "No permanently unusual skin heat, episodic fever, antiseptic/wilted flowers smell, altered taste, diminished pain sense. These were rejected; neither permanent nor automatic symptoms of the pact. Do not introduce as background descriptors or mere episodes from pact unless new independent in-game cause later."
+    "noncanon_effects": "No permanently unusual skin heat, episodic fever, altered taste or diminished pain sense. The earlier prohibition on ANY unusual scent, antiseptic note and withered flower associations is explicitly OVERRIDDEN by later direct player instruction 2026-11-15: a slowly evolving complex noncontagious smell based on Toskovat' Inexcusable Evil, beginning at pact burden >=8. At current stage0 no such smell."
   },
   "latest_player_amendment_2026_11_14": {
     "source": "Later direct player correction, 2026-11-14",
@@ -189,7 +189,7 @@
     "binding_time": "0007-09-27T06:30:19",
     "current_game_at": "0007-09-27T06:42:46",
     "now": "Only seven-ring black tattoo with dense black branching roots on INNER RIGHT FOREARM is instant and permanent. As of minutes after binding, NO automatic physiological side effects have yet manifested: Shiki retains his precontract appearance and bare skin is NOT infectious, regardless of glove/clothing; thus all contacts and patients since binding are safe even if bare. Earlier lines treating active contagiousness at this time are noncanonical.",
-    "later": "Over significant play time (days/weeks and/or narratively warranted gradual stages, no artificial sudden switch or exact predetermined deadline), Shiki will progressively develop irreversible gaunt/pale thin appearance with dark vessels and dark hollows, possible root filaments spreading along neck and body, NEVER on face. Only WHEN progression reaches an observable active threshold will direct skin-to-skin transmission become possible; before that, NO passive transfer. Gradual severity determines hazard and symptoms, no 100% automatic infection. Gloves, clothes and ordinary solid barriers remain completely safe after activation; objects never carry disease. No warmth, fever, odor, taste or pain loss, no compulsory emotion changes.",
+    "later": "Over significant play time (days/weeks and/or narratively warranted gradual stages, no artificial sudden switch or exact predetermined deadline), Shiki will progressively develop irreversible gaunt/pale thin appearance with dark vessels and dark hollows, possible root filaments spreading along neck and body, NEVER on face. Only WHEN progression reaches an observable active threshold will direct skin-to-skin transmission become possible; before that, NO passive transfer. Gradual severity determines hazard and symptoms, no 100% automatic infection. Gloves, clothes and ordinary solid barriers remain completely safe after activation; objects never carry disease. No warmth, fever, taste or pain loss, no compulsory emotion changes. Prior odor ban superseded by 2026-11-15 player approval for staged original smell inspired by Toskovat Inexcusable Evil.",
     "mastery": "No Shiton/Byoton combat technique learned merely by contract. Appearance changes do not imply weakness or stat loss. Extraordinary medicine/Zero Genome competence preserved.",
     "visibility": "NPCs including Hase and Kashiva have zero evidence of skin-transmission risk at present; do not narrate their precaution or fear about infectious skin for this reason. Existing dark tattoo may draw ordinary suspicion.",
     "reconciliation": "Any prior summaries stating 'risk active from pact' or that gloves alone prevented current infection are superseded: gloves are safe indeed, BUT they were unnecessary to prevent contract-related disease at 06:38–06:42 because no disease-contact ability manifested yet. Other normal glove hygiene remains valid."
@@ -201,6 +201,15 @@
     "calculator": "campaigns/shiki/contract/progression.py",
     "baseline": "binding 27Sep1283 06:30:19, at14:39 SAME DAY currently ~0.2545/100, stage0. Tattoo only, no paleness/gauntness/dark veins beyond usual physical baseline and NO transmission; first sign stage1 at8 points.",
     "mandatory_hook": "Before EVERY GM game turn whose in-world clock advances, calculate passive +0.75 points per in-game DAY prorated by seconds using live state, then add actual chakra-driven attempts/practice/mastery/casts by unique event IDs. Do not add for reading/OOC. Persist both tracker and narrative checkpoint consistently; if tools unavailable, mark pending instead of claiming persisted.",
-    "constraints": "All earlier approved bans remain: no fever, abnormal heat, odors, taste/pain loss, psychological control, skin hazards before stage5 78. Only DIRECT living bare skin against bare skin at stage5+, never barrier/air/fomite. Roots on neck/trunk later but NEVER face. No loss of stats or Zero Genome skill, no free new jutsu."
+    "constraints": "All earlier approved bans remain: no fever, abnormal heat or taste/pain loss. Unusual progressive odor starts at burden stage1, latest player override, psychological control, skin hazards before stage5 78. Only DIRECT living bare skin against bare skin at stage5+, never barrier/air/fomite. Roots on neck/trunk later but NEVER face. No loss of stats or Zero Genome skill, no free new jutsu."
+  },
+  "scent_canon_2026_11_15": {
+    "source": "later direct player OOC 2026-11-15",
+    "reference": "Toskovat' Inexcusable Evil; olfactory impression of ozone/gunpowder, blood/iodine, bandages and scorched flowers; wet concrete/rain/insense",
+    "starts_at_stage": 1,
+    "starts_at_burden": 8,
+    "current_stage0": "No unusual pact scent as of14:39 Sep27 1283; no physical changes other than seven-ring black right forearm seal.",
+    "not_literally": "Shiki not automatically wearing commercial perfume; artistic olfactory signature, no real clinical infection compounds, no airborne/passive transmission via scent.",
+    "rules_file": "campaigns/shiki/contract/PROGRESSION_RULES.json"
   }
 }
