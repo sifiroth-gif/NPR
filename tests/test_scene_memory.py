@@ -114,6 +114,61 @@ class SceneMemoryTests(unittest.TestCase):
         sources = [r["source"] for r in result["file_memory"]["evidence"]]
         self.assertIn("recovery/FAST_SCENE.json", sources)
 
+    def test_future_text_turn_requires_real_source_receipt(self):
+        hot = self.root / "recovery/FAST_SCENE.json"
+        hot.parent.mkdir()
+        payload = {
+            "cursor": {"last_turn_id": "s04.text.005", "at": "0006-09-28T06:50:00",
+                       "location": "Тайная лаборатория"},
+            "history": [
+                {"turn_id": "s04.text.004", "summary": "Предыдущий ход"},
+                {"turn_id": "s04.text.005", "summary": "Следующий ход"}],
+            "latest_turn": {"id": "s04.text.005", "turn_kind": "player_action",
+                            "player_input": "Изучаю ДНК"}
+        }
+        hot.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Missing mandatory"):
+            scene_memory.write_live_index(self.root, self.root,
+                self.root / "recovery/SCENE_MEMORY_INDEX.json")
+        payload["latest_turn"]["memory_gate"] = {
+            "schema": "npr-memory-gate/1", "previous_turn_id": "s04.text.004",
+            "index_turn": "s04.text.004", "index_blob_sha": "a" * 40,
+            "player_input": "Изучаю ДНК",
+            "source_refs": [{"source": self.lab,
+                             "sha256": hashlib.sha256((self.root / self.lab).read_bytes()).hexdigest()}],
+            "unretrieved": [], "mode": "indexed_hybrid"}
+        hot.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        self.assertEqual(scene_memory.write_live_index(self.root, self.root,
+            self.root / "recovery/SCENE_MEMORY_INDEX.json")["status"], "updated")
+        payload["latest_turn"]["memory_gate"]["player_input"] = "Чужая фраза"
+        hot.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            scene_memory.write_live_index(self.root, self.root,
+                self.root / "recovery/SCENE_MEMORY_INDEX.json")
+
+    def test_engine_turn_contract_accepts_valid_memory_gate(self):
+        from rpg_engine.engine import turn_value
+        player = "Провожу исследование образцов"
+        turn = {
+            "id": "s04.text.005", "expected_revision": 304,
+            "at": "0006-09-28T06:50:00", "location": "Тайная лаборатория",
+            "player_input": player, "text": "Следующая сцена.",
+            "memory_gate": {
+                "schema": "npr-memory-gate/1",
+                "previous_turn_id": "s04.text.004",
+                "index_turn": "s04.text.004",
+                "index_blob_sha": "a"*40,
+                "player_input": player,
+                "source_refs": [{"source": self.lab,
+                                 "sha256": hashlib.sha256((self.root / self.lab).read_bytes()).hexdigest()}],
+                "unretrieved": [], "mode": "indexed_hybrid",
+            }
+        }
+        turn_value(turn)
+        turn["memory_gate"]["index_blob_sha"] = "not-a-git-sha"
+        with self.assertRaisesRegex(ValueError, "index Git blob"):
+            turn_value(turn)
+
     def test_broken_cursor_refuses_to_narrate(self):
         hot = self.root / "recovery/FAST_SCENE.json"
         hot.parent.mkdir()
