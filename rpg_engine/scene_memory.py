@@ -365,14 +365,14 @@ def verify_hot_memory_gate(hot):
     """
     turn = hot.get("latest_turn", {})
     turn_id = turn.get("id", "")
-    if not turn_id.startswith("s04.text."):
+    match = re.fullmatch(r"s(\\d+)\\.text\\.(\\d+)", turn_id)
+    # Only the first four already published S4 turns predate the new barrier.
+    if match and int(match[1]) == 4 and int(match[2]) <= 4:
         return
-    suffix = turn_id.split(".")[-1]
-    if not suffix.isdigit() or int(suffix) <= 4:
+    if turn.get("turn_kind") in ("ooc", "technical"):
         return
-    if turn.get("turn_kind") not in ("player_action", "session_opener_npc_autonomy",
-                                   "player_action_corrected_by_gm_ooc"):
-        return
+    if not turn_id:
+        raise ValueError("No current turn ID for scene-memory verification")
     gate = turn.get("memory_gate")
     if not isinstance(gate, dict) or gate.get("schema") != "npr-memory-gate/1":
         raise ValueError("Missing mandatory scene-memory evidence receipt for published turn")
