@@ -183,5 +183,13 @@
       }
     ],
     "performance": "Write through NPC sensory perception, micro-reaction and associative memory, not rote listing of notes and never perfumed glamour. Shiki's own smell perception and attitude remain controlled by player; he can physically notice odor through ordinary senses where natural, without assigning feelings."
+  },
+  "lazy_projection_2026_11_15": {
+    "authority": "GM infrastructure optimization, NOT a new player mechanic or in-game event.",
+    "algorithm": "When game clock advances, calculate total passive burden from exact bound_at timestamp at 0.75/day, plus the last CONFIRMED accumulated technique event points. Do not write PACT_BURDEN_LIVE.json for passive time-only turns. Only write durable technique event state on actual learned/practice/cast/backlash event and reconcile with HOT_SCENE; persist computed stage in HOT_SCENE and descriptions. Never use stale cached last_at snapshot as if it were live at later time.",
+    "canonical_time": "recovery/FAST_SCENE.json cursor.at after migration; immutable event logs recovery/fast_turns, bootstrap from LATEST_SHIKI_CHECKPOINT.json s03.text.063",
+    "write_policy": "PACT_BURDEN_LIVE.json is an event-ledger + point-snapshot updated ONLY when forbidden technique event occurs and on periodic session replay/checkpoint. Its last_at identifies materialized snapshot time, not necessarily latest scene timestamp. For time-only scene, derive without writing; after last-at, live value can be greater than materialized value.",
+    "math": "passive_round4 = round(0.75*elapsed_days_since_blood_binding, 4); total=clamp(passive_round4+forbidden_event_points,0,100), stage=max threshold <= total. Real usage needs unique id; idempotence from ledger. No automatic `mastery` on pact only.",
+    "check": "No world clock advances on OOC-only user tasks, merely change rules/packets. In-game user actions advance as narratively grounded; no background real-time aging."
   }
 }
