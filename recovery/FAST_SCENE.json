@@ -13,19 +13,19 @@
     "sqlite_replay_pending": true
   },
   "cursor": {
-    "last_turn_id": "s03.text.066",
-    "next_sequence": 67,
-    "at": "0007-09-27T15:13:00",
+    "last_turn_id": "s03.text.067",
+    "next_sequence": 68,
+    "at": "0007-09-27T15:25:00",
     "world_date": "Среда, 27 сентября 1283 года",
     "location": "Кусагакуре, управление печатей, кабинет Сэкидо Тадао",
     "state": "player_decision_pending",
-    "player_last_input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить"
+    "player_last_input": "Тогда подождем пока ее найдут. Мастеру: проверь неприрывность мира в сценах"
   },
   "scene": {
-    "focus": "Шики заметил, что Касива, архивистка при Хасэ, не удивлялась словам Уцуро; намерен поговорить с ней ПОЗЖЕ, пока никуда не ушёл. Сэкидо послал служащего найти Касиву и предложить добровольно свидетельствовать (без задержания), но ещё не получил её ответа. Задержанная Суда Минако заявила в присутствии следователей, что узнала имя Мугами Шики лишь ПОСЛЕ открытия свитка, пока только её слова и не признание общей вины.",
-    "actor_shiki": "Шики остаётся в кабинете Сэкидо; свободен делать следующий выбор. Его заявка 'надо будет с Касивой поговорить' — намерение на будущее, НЕ немедленное перемещение и не согласие на допрос. Правая внутренняя рука несёт печать, stage0, без запаха, болезней и иных изменений.",
-    "actor_sekido": "Опытный Сэкидо анализирует слова Шики о спокойной реакции архивистки Касивы (знание или самоконтроль неизвестно); распорядился без принуждения попросить Касиву дать показания о Хасэ/свитке, не разглашать Уцуро посторонним. Из следственной группы приходит предварительная фраза Суды 'Имя Мугами Шики я узнала только после открытия свитка', он отмечает согласованность с задним числом оформленными записями, проверяет источник, НЕ объявляет виновность и не знает полного мотива и сущности демона.",
-    "other_present": "За пределами кабинета вооружённая охрана управления; посыльный о доставке Сэкидо отсутствует. Шики ещё не выбрал следующего действия.",
+    "focus": "Shiki waited in Sekido's office for Kashiva to be located (no Shiki travel or other voluntary behavior). At15:25 courier returns: Kashiva FOUND at Hase's HOME, personally caring for him, he resting after earlier event. Kashiva voluntarily agrees to speak to Shiki there out of Hase's presence, declines official trip to bureau so as not to abandon Hase. Sekido can give the actual address from hospital visitor register if Shiki chooses to go; no route/arrival yet. Suda still in custody under independent investigatory supervision, full interview and seized folio inspection pending.",
+    "actor_shiki": "20-year-old Shiki STILL at Sekido bureau at 15:25. Explicit user waits to find Kashiva, not agrees to go yet. Player owns words/actions/memories, no forced feelings. RIGHT inner forearm seven black ring seal only, burden0.2785 stage0 NO scent, gauntness, skin infection. Does NOT possess finished access to MH–VII/19.",
+    "actor_sekido": "Sekido waited with Shiki while investigators continued autonomously. Received messenger report Kashiva at Hase home, her personal conditional agreement to speak there away from Hase, refusal to leave convalescent. Respects witness autonomy and PC privacy, does not know Kashiva's inner knowledge, true Utsuro demon, patient's status. Suda kept under guard, no verdict. He can provide address only on Shiki asking/declaring trip.",
+    "other_present": "Sekido and Shiki in bureau, messenger at door with report of Kashiva's whereabouts; senior investigation teams outside. Kashiva NOT present; remains at Hase home. Hase asleep/resting under Kashiva's observation; no completed diagnosis claimed.",
     "foreground_evidence": [
       "Поддельные отметки 05:54 и 06:11 написаны одной рукой и нанесены ПОЗЖЕ их указанного времени (документальные вмятины); заранее выбранный Шики не доказан.",
       "Оттиск с повреждённой матрицы переплётной мастерской; Идзуми открыл старый служебный канал замаскированному предъявителю разрешения, его вина/умысел не доказаны.",
@@ -33,7 +33,7 @@
       "Предварительное (не судебное) почерковедческое сходство Суды с записями 05:54 и 06:11. Личные вещи погибшего включали сложенный медлист неизвестного учреждения, ныне отсутствующий; в переплётном цехе найдена квитанция старого вещевого дела.",
       "Тамура Гэндзо жив, найден связанным в запертой сушильной комнате, обезвожен, запястья перетянуты; медик помогает. Утверждает, что Суда использовала старую печать и заперла его; утверждение ещё проверяется. Сэкидо разыскивает Суду."
     ],
-    "immediate_gate": "15:13 кабинет Сэкидо, следствие двигается независимо. Касива ещё не приглашена лично и не обнаружена командой; не писать ей чужих признаний. Суда задержана, дала важное предварительное объяснение, no verdict. Шики может выбирать адресную встречу, поручить дальше, вернуться к основному делу/Уцуро."
+    "immediate_gate": "Shiki now knows Kashiva was found at Hase home, and she is willing to talk privately at that home, not at bureau. Player may choose to travel there, ask exact address, wait, return to another task, speak to Sekido; no automatic travel. Suda investigation autonomous, patient side Utsuro still pending, occult truth undisclosed."
   },
   "threads": {
     "main": {
@@ -42,7 +42,7 @@
     },
     "utsuro": {
       "name": "Одна побочная линия Уцуро / договор / архивная подмена / пациентка",
-      "status": "Касива из медицинского архива, ранее при Хасэ, по наблюдению Шики не удивлялась словам Уцуро; Сэкидо направил помощника выяснить её местонахождение и пригласить свидетельствовать без принуждения, результата ещё нет. Суда Минако задержана, при свидетелях утверждает, что Шики как подписант стал известен ей только ПОСЛЕ открытия свитка; пока недоказанное показание, не полный мотив/признание. Тамура спасён, осталось закрыть подмену и локальную медицинскую часть Седьмой палаты. Настоящий Демон медицины/смерти/болезней скрыт от NPC, знание семи поколений не установлено."
+      "status": "Kashiva FOUND at Hase HOME by15:25, aftercare of Hase, agrees to speak PERSONALLY with Shiki at his home but away from Hase. Doesn't depart herself. Earlier her lack of visible surprise was Shiki's observation, not proof of occult foreknowledge. Suda detained 15:09, prior quote is brief statement taken at detention, not full formal interrogation; dossier under witness seal and investigation ongoing. Tamura alive, recovering. Utsuro literal demon hidden from NPC, patient's medical consent still pending; one secondary arc."
     },
     "archive": {
       "name": "МХ–VII/19 «Реестр невыписанных»",
@@ -58,7 +58,7 @@
     "mastered_shiton": [],
     "mastered_byoton": [],
     "projection": "total = clamp(round4(0.75 * seconds_since_bound / 86400 + technique_points_confirmed), 0, 100); passive growth computed on demand, no separate GitHub write on time-only scene",
-    "as_of_cursor_points": 0.2722,
+    "as_of_cursor_points": 0.2785,
     "stage": 0,
     "scent_activated": false,
     "direct_skin_disease_activated": false,
@@ -87,17 +87,14 @@
     "prose": "Russian mature Lovecraftian noir, dark original scene, vivid but no repetitive recaps / bureaucracy. Scene heading date/time/location, speaker names.",
     "clock": "No game time advance for this OOC optimization.",
     "state": "Character and source knowledge separate; all player corrections outrank GM plans; future time leap consider scheduled NPC acts.",
-    "artifact": "Per-turn exact full GM response goes into new immutable recovery/fast_turns/s03.text.NNN.json; HOT_SCENE stores compact changing state, cursor and limited summaries only."
+    "artifact": "Per-turn exact full GM response goes into new immutable recovery/fast_turns/s03.text.NNN.json; HOT_SCENE stores compact changing state, cursor and limited summaries only.",
+    "audit_file": "recovery/CONTINUITY_AUDIT_1283_09_27_1513.json",
+    "time_knowledge_guard": "Kashiva at Hase HOME, not the medical archive. Suda 15:09->15:13 short on-site statement via swift shinobi messenger, formal interview not finished. Never use old frozen 06:31 archive layout as current 15:25. Right tattoo only, pact stage0. NPC knowledge remains separate."
   },
   "history": {
     "immutable_turn_template": "recovery/fast_turns/s03.text.{NNN}.json",
-    "latest_immutable_turn": "recovery/fast_turns/s03.text.066.json",
+    "latest_immutable_turn": "recovery/fast_turns/s03.text.067.json",
     "recent_summaries": [
-      {
-        "at": "0007-09-27T15:05:00",
-        "input": "По игре: пусть ваши люди действуют, оперативной информации достаточно. Но мне все ещё не ясна история свитка если Уцуро был человеком и лаборатория существовала, то как он стал призывным существом и что еще за 7 поколений которые он упоминал и его расстройство что, думаю, я стал восьмым",
-        "summary": "Shiki explicitly delegates ongoing scroll-substitution investigation to Sekido's independent team, states Utsuro was once human and hospital/lab existed and asks how he became a summoning entity, what Utsuro meant by seven generations and why he seemed distraught; Shiki speculates he may be eighth. Sekido, WHO DID NOT PREVIOUSLY KNOW UTSURO EXISTED AS SHIKI INTERLOCUTOR, reacts restrained and recognizes first-hand meeting from Shiki's words. He offers ONLY an explicitly hypothetical mechanical model: transformed human physician could become medically and spatially sealed ward anchor and summoned via Kuchiyose; technique doesn't determine species. Distinguishes seven seals, generations of ward-keepers, and seven prior blood signers, none necessarily same. Notes seven generations maintained locks if that was Utsuro wording, not proof Shiki eighth. Asks whether Utsuro explicitly called Shiki eighth or Shiki's inference. No hidden Utsuro biography given to Sekido. No PC feelings/memories/extra actions invented; bureau investigators still search Suda autonomously; in-game 15:05, at Sekido desk, other arc background, pact passive 0.2681 stage0 only tattoo, no odor or skin contagion."
-      },
       {
         "at": "0007-09-27T15:09:00",
         "input": "Это мое предположение. Он сказал что многие называют его демоном, что ему обещали закрыть эту дверь и что соврали. В общем вопросов много. А ещё он как будто кого-то сдерживает во всяком случае это то что можено говорить о его появлении непосредственно после заключения договора\nМастеру: ты видимо сделал уцуро человеком, добавь ему сверхъестественную природу и демонизм.\nДемон медицины смерти и болезней, это объяснит новые стихии",
@@ -107,6 +104,11 @@
         "at": "0007-09-27T15:13:00",
         "input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить",
         "summary": "Shiki states Kashiva (Касива), the female medical archivist present with Hase, seemed unsurprised by Utsuro's words, and says he will want to talk with her (no immediate travel). Sekido distinguishes knowledge, fear, outward reaction, asks clerk to locate Kashiva and invite voluntary statement without disclosing Utsuro widely, no arrest. Autonomous inquiry from Suda yields recorded but UNVERIFIED preliminary statement she learned Mugami Shiki's name only AFTER scroll opened, consistent with backdated 05:54/06:11 records; Sekido orders verification, no full confession/motive inferred. Shiki still in bureau office at15:13, pact burden0.2723 stage0, no scent/disease; Utsuro literal demonic essence GM only, not Sekido known."
+      },
+      {
+        "at": "0007-09-27T15:25:00",
+        "input": "Тогда подождем пока ее найдут. Мастеру: проверь неприрывность мира в сценах",
+        "summary": "Player says Shiki will WAIT at Sekido bureau till Kashiva found; OOC asks verify world continuity. GM audit finds Kashiva last known at Hase HOME, not bureau or archive; Suda quick preliminary quote (15:09 detention ->15:13 paper) is SHORT on-site witness-recorded utterance carried by swift ninja messenger, not completed formal interrogation; legacy long checkpoint stale archive layout/previous rejected syndrome, FAST authoritative. Audit saved recovery/CONTINUITY_AUDIT_1283_09_27_1513.json, scope last 3 immutable turn texts + accessible baseline, not all 66 turns or binary SQLite rev217. In scene Shiki waits to15:25 in Sekido bureau. Clerk locates Kashiva at Hase residence and reports she stays to care for Hase, who is resting after earlier encounter; she declines moving to government bureau but independently agrees to speak with Shiki personally at residence without Hase present. This does not grant archival access nor reveal real demon facts. Suda supervised by guards, no confirmed verdict/interrogation finished, independent investigation progresses. Shiki remains bureau. Pact burden projected0.2785 stage0, just right forearm tattoo and no scent/contagion."
       }
     ],
     "original_baseline_turns": "Previous original LATEST checkpoint recorded through s03.text.063; existing full SQLite lags at rev217. Do not claim all previous 1–62 have been consolidated.",
@@ -119,10 +121,10 @@
       "player_input": "Он прав это лучше не открывать. #передаю ей этот предмет и занимаюсь стабилизацией раненого нападающего#",
       "reply_saved_in": "recovery/LATEST_SHIKI_CHECKPOINT.json",
       "reason": "No local or connected runtime able to execute rpg_engine prepare+confirm against private binary SQLite; do not claim confirmed rev218 or modify state.json until replay+verify.",
-      "through_at": "0007-09-27T15:13:00",
-      "queued_text_turns": 66,
-      "latest_turn_id": "s03.text.066",
-      "latest_input": "Я не знаю. Но #имя сотрудницы которая была с Хасе# не удивлялась его словам. Надо будет и с ней поговорить",
+      "through_at": "0007-09-27T15:25:00",
+      "queued_text_turns": 67,
+      "latest_turn_id": "s03.text.067",
+      "latest_input": "Тогда подождем пока ее найдут. Мастеру: проверь неприрывность мира в сценах",
       "warning": "FAST_SCENE and immutable per-turn texts extend previous text-only replay queue. SQLite rev217 remains unchanged; verify at intersession. Not a confirmed SQLite game revision.",
       "retracted_prior_published_response": true,
       "retraction_ref": "032628e28951ad564621003962e29adab899fabd",
