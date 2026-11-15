@@ -1,0 +1,141 @@
+{
+  "schema": "NPR-SHIKI-PACT-PROGRESSION-RULES/1.0",
+  "established_real": "2026-11-15",
+  "authority": "Direct player OOC: gradually develop cumulative and persistent side effects of Seven Locks blood pact; faster progression for LEARNING and USING Shiton (Ситон 死遁) and Byōton (Бётон 病遁). This supplements previous direct player correction: first pact at06:30 only RIGHT inner forearm mark, no immediate gauntness or infectious touch.",
+  "live_state": "campaigns/shiki/contract/PACT_BURDEN_LIVE.json",
+  "trigger": {
+    "base_points_per_in_game_day": 0.75,
+    "time_source": "game-state/shiki confirmed latest in-world timestamp; calculate elapsed seconds since last_at, chronological only, NEVER from real-life dates or user OOC messages",
+    "event_types": {
+      "attempt": {
+        "description": "An actual chakra-driven short attempt to learn a NEW forbidden technique, not merely reading/theory",
+        "points": {
+          "shiton": 0.6,
+          "byoton": 0.9
+        }
+      },
+      "practice": {
+        "description": "A sustained deliberate training session with chakra circulation in technique's forbidden structure, with acknowledged meaningful progression",
+        "points": {
+          "shiton": 1.5,
+          "byoton": 2.25
+        }
+      },
+      "mastery": {
+        "description": "First confirmed stable learning of DISTINCT Shiton/Byoton technique, one-time per technique ID, not per scene repetition",
+        "points": {
+          "shiton": 3,
+          "byoton": 4.5
+        }
+      },
+      "cast_D_C": {
+        "description": "Real use of already learned D/C-rank forbidden technique",
+        "points": {
+          "shiton": 1,
+          "byoton": 1.5
+        }
+      },
+      "cast_B": {
+        "description": "Real use of learned B-rank forbidden technique",
+        "points": {
+          "shiton": 2,
+          "byoton": 3
+        }
+      },
+      "cast_A": {
+        "description": "Real use of learned A-rank forbidden technique",
+        "points": {
+          "shiton": 3.5,
+          "byoton": 5.25
+        }
+      },
+      "cast_S": {
+        "description": "Real use of learned S-rank forbidden technique",
+        "points": {
+          "shiton": 6,
+          "byoton": 9
+        }
+      },
+      "overload": {
+        "description": "Extra backlash from documented severe sustained overload/incomplete forbidden circuitry ONLY if scene actually warrants, once per distinct event",
+        "points": {
+          "shiton": 1.5,
+          "byoton": 2.25
+        }
+      }
+    },
+    "no_acceleration_for": [
+      "Reading medical archives or researching old lore without feeding forbidden chakra",
+      "Contemplating learning or asking questions",
+      "Ordinary medicine, Suiton/Raiton/Hyoton, Zero Genome changes",
+      "Utsuro's unrelated casts and remote chakra use, absent Shiki's own reciprocal load",
+      "Player OOC conversation and artificial elapsed real-world time"
+    ]
+  },
+  "scale": {
+    "min": 0,
+    "max": 100,
+    "monotonic": true,
+    "rounding": "store 4 decimals; nonnegative clamp to100; threshold is inclusive",
+    "thresholds": [
+      {
+        "stage": 0,
+        "at": 0,
+        "label": "Спящий",
+        "manifestation": "Only permanent seven broken concentric black rings and dense roots under RIGHT inner forearm, normal baseline face/body; ZERO contract skin-contact disease."
+      },
+      {
+        "stage": 1,
+        "at": 8,
+        "label": "Первые сосудистые тени",
+        "manifestation": "Subtle darkened superficial vessels close to RIGHT wrist and forearm mark, gradual additional thin branching there; ordinary physiology, strength and competence unchanged. Other changes subtle and not instantly obvious."
+      },
+      {
+        "stage": 2,
+        "at": 22,
+        "label": "Бледность",
+        "manifestation": "Gradual sustained skin paleness, beginning darkening of under-eye skin and slight hollowing visible only on close inspection; still NO contact-transmission ability. No itching, fever, altered pain, smell, taste or pathologic body heat."
+      },
+      {
+        "stage": 3,
+        "at": 40,
+        "label": "Истощённый силуэт",
+        "manifestation": "Recognizable gaunt appearance forms slowly, shadowed eyes, increasingly visible superficial veins under thin skin on wrists/forearms; no muscular or strength nerf, Zero Genome retained. Rootlike tattoo traces may progress to covered upper arm/trunk, NEVER facial skin."
+      },
+      {
+        "stage": 4,
+        "at": 60,
+        "label": "Чёрные сосуды",
+        "manifestation": "Deepened nonreversible gaunt/pale shape, prominent dark superficial vessels at neck/trunk, visual ink roots may reach NECK but NEVER FACE. STILL no harmful skin-to-skin transmission until stage 5. No fever/taste/pain/odor/abnormal heat."
+      },
+      {
+        "stage": 5,
+        "at": 78,
+        "label": "Активный контактный синдром",
+        "manifestation": "Only NOW possible to transfer abnormal chakra disease through unprotected DIRECT LIVING BARE SKIN against LIVING BARE SKIN. Chance and severity contextual, no guaranteed infection and no automatic contagious contact through gloves or clothes. No other route."
+      },
+      {
+        "stage": 6,
+        "at": 95,
+        "label": "Устойчивая тяжёлая форма",
+        "manifestation": "Permanent conspicuous gauntness, dark hollows and vessels, extended roots on neck/trunk but never FACE; the same skin-contact-only hazard continues. NO fixed disease symptoms beyond approved phenotype, no stat nerf, no preordained terminal collapse."
+      }
+    ]
+  },
+  "timing_and_agency": {
+    "baseline": "At 1283-09-27 14:39 ~8h after bond, progression remains stage0 below threshold8, no outward effects beyond seal, bare contact safe.",
+    "manifestation": "Crossings represent physiological changes manifesting gradually during normal scene play; don't narrate cosmetic metamorphosis instantly within a single combat cast even when points cross threshold. For visible description spread the transition across subsequent hours/days consistent with elapsed time, but contact hazard not active before threshold78 AND stage5 is narratively and physically established.",
+    "medical": "User's elite control 5/5 and Zero Genome can detect and compensate acute physiological disturbances and safely modify his own tissue where learned, but CANNOT simply erase external permanent covenant or lower counter through routine DNA edits. No assumed voluntary countermeasures unless user requests.",
+    "learning": "Neither school has any learned combat technique at baseline. Opening contract alone doesn't grant forbidden formulas; attempt/practice/mastery/cast events apply only to established actual learning/usage in scenes, never retroactively.",
+    "skin_route": "After stage5: only direct BARE living skin-to-skin exposure. Any intact cloth, gloves, bandage, sheet, tool or barrier COMPLETELY blocks it. No blood/object fomite, airborne, proximity, indirect propagation, stored contagious tools, epidemics. No automatic infection before stage5.",
+    "excluded": [
+      "No involuntary psych/emotion/memory change",
+      "No abnormal warm skin, fever, antiseptic odor, altered taste or pain reduction as background pact side effects",
+      "No reduction of battle movement, medical skill, intelligence, stamina stats solely because of gaunt appearance",
+      "Never place tattoo roots onto Shiki's face"
+    ],
+    "privacy": "GM-internal numeric value and exact thresholds stay hidden unless Shiki derives evidence through actual diagnostics. Player may request OOC counter status from GM."
+  },
+  "idempotency": "Every added event must have a stable unique event_id and recorded at; repeated same event_id has NO additional cost; mastery once per distinct acquired technique id.",
+  "version_note": "User's later explicit requests take precedence. If scene contradicts model, direct canon/played events outrank this rules draft; do not invent actual practice."
+}
