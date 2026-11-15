@@ -435,5 +435,16 @@
     "continuity": "No passive infectious danger and no appearance changes beyond tattoo until thresholds, no gloves needed for curse protection NOW. No automatic new techniques or forced protagonist actions. User correction highest priority over old summaries.",
     "unusual_odor_active": false,
     "odor_reference": "Toskovat Inexcusable Evil. Stage1 >=8, never contagious through scent."
+  },
+  "fast_scene_migration_2026_11_15": {
+    "status": "FROZEN_BASELINE_THROUGH_s03.text.063",
+    "successor_hot_path": "recovery/FAST_SCENE.json",
+    "first_immutable_turn": "recovery/fast_turns/s03.text.063.json",
+    "next_immutable_turn": "recovery/fast_turns/s03.text.064.json",
+    "document": "main:docs/SHIKI_FAST_SCENE.md",
+    "policy": "For ordinary scene reads/writes use the short HOT file and immutable exact per-turn log, NOT this stale 68KB baseline; update this only on intersession replay/reconciliation or exceptional justified recovery.",
+    "migration_did_not_advance_world_time": true,
+    "sqlite_backlog": "rev217 unchanged; textual s3 through63 not all replayed. All future 64+ immutable originals needed for verified replay.",
+    "no_canon_change": true
   }
 }
