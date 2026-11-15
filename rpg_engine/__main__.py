@@ -7,7 +7,7 @@ import sqlite3
 import sys
 from subprocess import TimeoutExpired
 
-from . import autonomy, continuity, git_state, preparation, sessions, setting, verification, world
+from . import autonomy, continuity, git_state, preparation, scene_memory, sessions, setting, verification, world
 from .engine import Campaign, limit_value, state
 from .history import recall
 
@@ -36,6 +36,12 @@ def parser():
     packet.add_argument("--target")
     packet.add_argument("--query", action="append", default=[])
     packet.add_argument("--recent", type=int)
+    packet.add_argument("--player-action", help="newest unconfirmed player message for pre-scene memory")
+    mem = sub.add_parser("scene-memory", help="source-grounded memory preflight from current HOT")
+    mem.add_argument("--state-dir", type=Path, required=True)
+    mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
+    mem.add_argument("--player-action", default="")
+    mem.add_argument("--limit", type=int, default=9)
     queue = sub.add_parser("world-queue", help="review upcoming NPC decisions through a target time")
     queue.add_argument("until")
 
@@ -159,7 +165,12 @@ def run(args):
             return game.context(audience=args.audience, recent=args.recent)
         case "gm-packet":
             return preparation.packet(game, mode=args.mode, actors=args.actor, target=args.target,
-                                      queries=args.query, recent=args.recent, pack_path=args.pack)
+                                      queries=args.query, recent=args.recent, pack_path=args.pack,
+                                      player_action=args.player_action)
+        case "scene-memory":
+            limit_value(args.limit, 1, 20)
+            return scene_memory.fast_packet_from_files(
+                args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "world-queue":
             with game.connection() as con:
                 at = state(con)["at"]
