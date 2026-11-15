@@ -4,28 +4,20 @@
   "campaign_id": "naruto-shiki",
   "purpose": "Text-only fallback for NEW session IV only. SQLite and state.json are authoritative through III.",
   "cursor": {
-    "last_turn_id": "s04.text.009",
-    "next_sequence": 10,
-    "at": "0006-09-29T02:26:00",
+    "last_turn_id": "s04.text.010",
+    "next_sequence": 11,
+    "at": "0006-09-29T02:29:00",
     "world_date": "Пятница, 29 сентября 1283 года",
     "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
     "state": "player_decision_pending"
   },
   "story_compass": {
-    "immediate": "S04-009 Fri 29 Sep 1283 02:26. Direct latest player canonical correction: the previously implanted foreign tissue-linked gene FRAGMENT DID unlock Shiki's first REAL intrinsic low-control channels to demonic SHITON (death/necrosis) and BYOTON (disease/pathological proliferation), overriding previous 'no forbidden schools available' mechanics; advanced named Utsuro jutsu remain unlearned. Shiki attempted reverse-direction influence on retained black tendon via his modified LEFT forearm; achieved limited necrosis and counter-proliferation in cord, but transmitted through network to distant Seventh Ward causing Sayu temporary left-arm spasm; Utsuro stabilized life seal, noticed opposing will in conduit but knows neither secret lab location nor DNA experimentation. Side effects as new consequence: focal skin necrosis/inflammatory swelling left forearm controlled spatially via Zero Genome, abnormal odor stage1 (not airborne infection), new thin roots to tattoo RIGHT forearm, accelerated preexisting pact burden; occult transformation has started earlier than prior progression. No dangerous skin touch contagion yet; all old explicit limitations on transmission intact, no NPC revelation of genetic secret, no city-scale power. Keep continuity next turn, NPCs autonomous. Canon says true demonic school accessible now due implanted receptor and pact coupling; not merely future possibility. No instant whole-body powers, no perfection, not automatically master Utsuro moves.",
+    "immediate": "S04-010 Fri 29Sep1283 02:29: Direct player OOC correction removes ALL previously GM-imposed Shiki pathologic self-side effects (necrotic epidermis, inflammatory swollen forearm) from S04-009; only staged approved gauntness/pallor/dark veins/scent and later bare-skin-to-skin risk stage5 (currently OFF). Genome bridge accelerated first stage1 (~9.37) with very faint scent and right wrist vascular shadows; physical stats intact. Player performed Kuchiyose blood on RIGHT inner forearm seven-ring seal + hand signs + chakra. Utsuro was stabilizing Sayu in Seventh Ward and autonomously erected temporary bone supports before PHYSICALLY summoning to Shiki PRIVATE NW laboratory, leaving Sayu alive but on short-duration backup; Utsuro has now SEEN the lab, tools, samples/screens yet not read secret notes or identified donor genetics, and senses Shiki affected cord and latent demonic powers. Utsuro demands why he was summoned and notes he has little time to leave Sayu supported. Utsuro blood tube marked Ш untouched. Shiki has access to basic Shiton and Byoton from implant but named techniques unlearned. Utsuro autonomously awaiting response, does not control Shiki.",
     "corrected_source": "campaigns/shiki/continuity/SESSION_003_TO_004_CANON_1283-09-27.json",
     "source_of_old_events": "SQLite search/recall/entry and archive/session-003-index.json; never reconstruct old NPC memories from summaries alone.",
     "pace": "Закончить активную личную сцену Уцуро/Саю последствиями, оставить С17/В7 автономной основой, затем показать освоение запретных техник только при решении игрока."
   },
   "history": [
-    {
-      "turn_id": "s04.text.004",
-      "at": "0006-09-28T06:48:00",
-      "summary": "Исправлено: Шики сам проводит сравнительное секвенирование шести проб в собственной секретной генетической лаборатории; первоначальная внешняя лаборатория и лаборантка — неканон.",
-      "source": "recovery/FAST_SCENE.json#latest_turn",
-      "version": 2,
-      "supersedes_commit": "2720e61bcdca163bfc8529b2284af1c7b3bf125f"
-    },
     {
       "turn_id": "s04.text.005",
       "at": "0006-09-28T10:26:00",
@@ -55,40 +47,42 @@
       "at": "0006-09-29T02:26:00",
       "summary": "По прямой поздней поправке игрока внедрённая чужая ДНК открыла Шики практический начальный доступ к Ситону и Бётону и ускорила побочные эффекты договора. Обратное воздействие на чёрный тяж дало некроз и патологический рост, откат — локальный очаг на левом предплечье и новые корни печати справа. Саю в Седьмой палате испытала судорогу, Уцуро удержал печать и заметил внешнее воздействие, но не узнал тайной лаборатории. Именные дзюцу не изучены.",
       "source": "recovery/FAST_SCENE.json#latest_turn"
+    },
+    {
+      "turn_id": "s04.text.010",
+      "at": "0006-09-29T02:29:00",
+      "summary": "Позднее исправление пользователя исключило придуманные ведущим некроз/припухлость и любые патологические побочные поражения самого Шики. Допустимы стадийные запах, худоба, бледность, тёмные сосуды и позднее контактное действие. Шики выполнил призыв Уцуро свежей кровью на правой печати, знаками и чакрой. Уцуро появился физически в тайной лаборатории, оставив Саю на временной опоре в Седьмой палате; знает существование лаборатории и видел образцы, подробные генетические секреты не раскрыты.",
+      "source": "recovery/FAST_SCENE.json#latest_turn"
     }
   ],
   "latest_turn": {
-    "id": "s04.text.009",
+    "id": "s04.text.010",
     "session": 4,
-    "player_input": "#попытка влияния на тяж назад и мастер: вообще подумай и придумай последствия этого вживления. Ладно черт с ним, я это уже сам увидел, это вживление и дало ход побочным эффектам и возможности использовать стихии болезни и смерти#",
+    "player_input": "Мастеру: в по очках нет патологических процессов, мы же утвердили запах, изменения конституции, цвета кожи, худоба, потемнения сосудов и опасность в прикосновениях.\nПо игре #техника призыва#",
     "turn_kind": "player_action",
-    "at": "0006-09-29T02:26:00",
+    "at": "0006-09-29T02:29:00",
     "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
-    "scene_basis": "Current HOT s04.text.008, Shiki genome source, Utsuro school mechanics and late direct player canon override",
-    "exact_visible_gm_response": "**Пятница, 29 сентября 1283 года. 02:26.**  \n*Страна Травы. Тайная лаборатория Мугами Шики.*\n\nТяж лежал под герметичным стеклом, серый и неподвижный, точно высушенная жила, которую извлекли из мёртвого тела много лет назад.\n\nЧужая последовательность, прижившаяся в левом предплечье Шики, уже воспринимала его остаточный чакровый рисунок. Теперь воздействие пошло в обратную сторону.\n\nВместо того чтобы принимать семь чужих импульсов, изменённые клетки Шики передали по обнаруженной связи собственный, противоположный ритм. Стекло не дрогнуло. Но под ним тяж стянулся так резко, что изогнулся крючком.\n\nПо его поверхности прошла чёрная полоса.\n\nМикроскопический анализ показал гибель живых клеток вдоль этой полосы: мембраны распадались, внутриклеточные структуры теряли целостность, и обычная лечебная чакра уже не могла вернуть погибшие участки. Разрушение шло дальше первоначального места воздействия, пока не истощился посланный импульс.\n\nЭто был первый настоящий отклик **Ситона — Стихии смерти**. Ещё бесформенный, лишённый изученной техники, но материальный: через чужую генетическую связь Шики смог направить в ткань процесс распада.\n\nЗатем остаток тяжа сделал нечто худшее.\n\nПо обе стороны мёртвой полосы клетки принялись делиться. Набухшие, похожие на воспалённую грануляционную ткань отростки оплели некротический участок. Нормальное заживление так не протекает: новые клетки появлялись быстрее, чем успевали сформировать сосуды и получить питание. Они давили друг на друга, деформировали ткань и погибали внутри собственного разрастания.\n\nШики различил второй поток чакры. Его можно было удержать, ослабить, направить, но нельзя было спутать с медицинским восстановлением. Это была **Бётон — Стихия болезни**: жизнь, принуждённая продолжаться неправильно.\n\nОба воздействия шли через одну прижившуюся линию.\n\nИ за них пришлось платить.\n\nНа левом предплечье Шики вдоль изменённого участка проступили несколько узких тёмных полос. Одна из них на мгновение побелела в центре: небольшой участок эпидермиса утратил кровоснабжение и начал отмирать. Рядом выступила плотная болезненная припухлость — очаг местного патологического роста. Нулевой Геном сохранил границы этих изменений и не позволил им распространиться на мышцы, сосудисто-нервный пучок и остальной организм.\n\nНо приживлённый фрагмент не исчез. И после прекращения воздействия обе линии оставались в состоянии готовности: одна — разрушать, другая — уродливо восстанавливать.\n\nОт кожи и одежды не исходило никакой заразной испарины. Однако воздух возле стола обрёл странный запах — влажного железа, старых лекарственных шкафов и цветов, слишком долго простоявших в воде. Он исчезал при отдалении от изменённой руки. Вентиляция не переносила никакой болезни: новый признак был только запахом, не способом заражения.\n\nНа правом предплечье семь чёрных колец договора на миг сделались отчётливее. Под их корнями обозначились ещё две тонкие ветви. Печать не подчиняла Шики и не отнимала его способности управлять телом.\n\n**Но процесс её превращения начался раньше ожидаемого.**\n\n***\n\n*Седьмая палата. Тот же час.*\n\nСаю проснулась от резкой судороги в левой руке.\n\nОна схватилась правой ладонью за локоть, резко втянула воздух и прижала плечо к груди. Под повязкой на месте прежнего среза что-то дрогнуло — один короткий толчок, затем ещё два. Саю побледнела. Её челюсти сомкнулись так сильно, что на висках обозначились напряжённые мышцы.\n\n**Мидзуно Саю:**\n— Опять?.. Что вы со мной сделали?\n\nУцуро уже стоял у ложа.\n\nСлепая повязка скрывала его взгляд, но длинные пальцы чёрной ладони разошлись, точно он ощупывал отсутствующую рану. Один из бледных огоньков под обсидиановой поверхностью погас. Уцуро не потянулся к повреждённой руке женщины: другой рукой он придержал опору поддерживающей печати, не позволяя её ритму сбиться.\n\n**Уцуро:**\n— Не двигайтесь.\n\nСаю посмотрела на него с откровенной ненавистью. И всё же подчинилась — не его власти, а ощущению, что любое движение сейчас может оторвать руку изнутри.\n\nУцуро медленно повернул голову к тёмному проходу. Под кожей его шеи напряглись старые швы.\n\n**Уцуро**, почти неслышно:\n— Кто-то потянул нить с другого конца.\n\nОн не знал, где находится Шики, и не видел его опыта. Но впервые за эту ночь почувствовал в старом управляющем контуре **чужую, направленную против него волю**.\n\n***\n\n*Тайная лаборатория. 02:26.*\n\nТяж под стеклом остался живым по краям и мёртвым посредине. Новые ткани продолжали медленно ползти вокруг некроза.\n\nОбратное воздействие сработало. Но связь оказалась **двусторонней**: импульс прошёл к основному контуру Седьмой палаты, вызвав ответ в поражённой руке Саю. Управлять всей системой через один образец не удалось; однако она больше не была недоступна для Шики.\n\n**Результат:** вживление открыло Шики оба новых начала — Ситон и Бётон. Пока это не готовые запретные дзюцу Уцуро, а собственная, нестабильная способность направлять распад и патологический рост через подходящую живую ткань и чакровую связь. Печать и чужая линия отзываются на применение; побочные изменения тела начали проявляться. Заражающего прикосновения пока нет.\n\nНа экране оставался слабый обратный сигнал. Его источник находился уже не в запечатанном образце.\n\n**Ход Шики.**",
+    "scene_basis": "Prior HOT s04.text.009, canonical Utsuro summon blood-right-seal rule, burden progression ledger and explicit new direct correction",
+    "exact_visible_gm_response": "**Пятница, 29 сентября 1283 года. 02:29.**  \n*Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре.*\n\nСвежая кровь легла на семь чёрных колец внутренней стороны правого предплечья. Шики сложил знаки призыва и направил чакру в печать.\n\nКаменный пол не содрогнулся. Сначала исчезло эхо: капля, сорвавшаяся с края стола, упала без звука. Затем над известняковыми плитами разошлась тёмная круговая вязь, которой не было ни в одном из лабораторных чертежей.\n\n***\n\n*Нижний госпиталь. Седьмая палата.*\n\nУцуро резко повернул голову.\n\nЕго чёрная ладонь всё ещё удерживала повреждённый контур возле ложа Саю. Женщина, сидевшая с прижатым к животу левым предплечьем, увидела, как узкие пальцы разом напряглись. Под их обсидиановой поверхностью погасли три светлые точки.\n\n**Мидзуно Саю:**\n— Что теперь?\n\nУцуро не ответил сразу. Длинная шея напряглась, старые швы натянули кожу. Он смотрел в пустое пространство поверх кровати, и в том, как неподвижно застыло его лицо, впервые появилась непритворная злость.\n\n**Уцуро:**\n— Меня вызывают.\n\n**Мидзуно Саю:**\n— А я?\n\nНа мгновение его пальцы задержались на опоре. Затем из камня поднялись тонкие костяные дуги и сомкнулись вокруг поддерживающего контура — временная подпорка, рассчитанная на минуты, не на часы.\n\n**Уцуро:**\n— Не трогайте левую руку. И если услышите голос из стены — не отвечайте.\n\nСаю побелела ещё сильнее. Но мужчина уже исчез, оставив за собой запах холодной пыли и неподвижную дугу над её грудной печатью.\n\n***\n\n*Тайная лаборатория.*\n\nУцуро выступил из чернеющей вязи во весь свой неестественный рост. Тяжёлая одежда коснулась влажного камня. Серебристо-седые волосы медленно опустились на плечи; тёмная повязка скрывала глаза, а обсидиановая ладонь оставалась раскрытой.\n\nОн не произнёс привычного приветствия.\n\nСначала голова повернулась к столу с образцами. Затем к секвенатору, запечатанным пробиркам и экрану с чужими гаплотипами. Под кожей шеи обозначились напряжённые тяжи; тонкие губы разошлись ровно настолько, чтобы обнажить выражение, почти похожее на отвращение.\n\nЧёрная ладонь поднялась в направлении закрытого препарата. Тот самый тёмный тяж, прежде двигавшийся навстречу невидимому сигналу, сжался под стеклом и застыл.\n\n**Уцуро:**\n— Ты взял что-то из моей палаты.\n\nПауза.\n\nОн медленно повернул голову к Шики. При этом его пальцы не опустились: каждый оставался чуть согнутым, словно удерживал за невидимое горло нечто, способное вырваться.\n\n**Уцуро:**\n— И заставил это отвечать тебе.\n\nВ его голосе не было удивления врача, которому показали удачный эксперимент. Там слышалось другое — узнавание старого несчастья и с трудом сдерживаемое желание уничтожить его причину.\n\nРядом с чёрной вязью воздух на миг приобрёл слабый запах сырого камня и железа. Уцуро задержал голову, будто различая ещё один, новый оттенок, и опустил ладонь к собственному боку.\n\n**Уцуро:**\n— Саю держится на временном контуре. У меня мало времени.\n\nОн сделал один медленный шаг вперёд. Высокая фигура заслонила часть рабочего освещения. Впервые он оказался **внутри тайной лаборатории Шики** — среди приборов и материалов, о существовании которых прежде не знал. Сами записи ещё оставались для него непрочитанными.\n\n**Уцуро:**\n— Ты позвал меня, чтобы спросить о том, что вживил себе? Или чтобы показать, что уже научился отвечать мёртвому?\n\nПод стеклом тяж вновь едва заметно дрогнул.\n\n**Ход Шики.**",
     "publication_status": "prepared_for_chat_delivery",
     "memory_gate": {
       "schema": "npr-memory-gate/1",
-      "previous_turn_id": "s04.text.008",
-      "index_turn": "s04.text.008",
-      "index_blob_sha": "6a4ec067fefbc748929e15bb203f4fb1329e5a63",
-      "player_input": "#попытка влияния на тяж назад и мастер: вообще подумай и придумай последствия этого вживления. Ладно черт с ним, я это уже сам увидел, это вживление и дало ход побочным эффектам и возможности использовать стихии болезни и смерти#",
+      "previous_turn_id": "s04.text.009",
+      "index_turn": "s04.text.009",
+      "index_blob_sha": "0d247d0cccca645c1a80bb56c96f267b4f92f51c",
+      "player_input": "Мастеру: в по очках нет патологических процессов, мы же утвердили запах, изменения конституции, цвета кожи, худоба, потемнения сосудов и опасность в прикосновениях.\nПо игре #техника призыва#",
       "source_refs": [
-        {
-          "source": "campaigns/shiki/characters/UTSURO_FORBIDDEN_ARTS_1283_09_27.json",
-          "sha256": "35fb8fa3e02b9ce113d1647a4cc82274a411534965a981823c4317d3ddd382bb"
-        },
         {
           "source": "campaigns/shiki/characters/UTSURO_1283_09_27.json",
           "sha256": "6d96ca57c64b143b91b3d7e9b43a1ee76f8ce5183ee7041f2f52dd5a9901938f"
         },
         {
-          "source": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-          "sha256": "bc1ca212147e600d901aa3c58989807a8718c569ba84685f8717a1f1a937babc"
+          "source": "campaigns/shiki/characters/UTSURO_FORBIDDEN_ARTS_1283_09_27.json",
+          "sha256": "35fb8fa3e02b9ce113d1647a4cc82274a411534965a981823c4317d3ddd382bb"
         },
         {
-          "source": "campaigns/shiki/continuity/ARC01_SESSION02_FULL_BODY_GENOME_DUAL_TRAIT_BALANCE_1283-09-25_041600.json",
-          "sha256": "55de7d63e637a335de25e37350051ef7c51929589a8f057f9f6e866096f79936"
+          "source": "campaigns/shiki/contract/PROGRESSION_RULES.json",
+          "sha256": "2be82f312cab14103b99d083a67e6c08c6dcbf9bb66812d1144b44bb47d1cb43"
         },
         {
           "source": "campaigns/shiki/locations/SECRET_LAB_NW_CATCHMENT_1283.json",
@@ -99,11 +93,12 @@
       "mode": "indexed_hybrid"
     },
     "facts": {
-      "new_canon": "Direct player states foreign implanted DNA unlocks Shiki's capacity to wield Shiton and Byoton; this supersedes historical assumption only Utsuro uses and Shiki has no access; no automatically learned named techniques.",
-      "outcome": "Shiki reverse-directed own chakra through altered left forearm into isolated black cord, causing localized necrosis (Shiton) followed by pathological tissue growth (Byoton), no free mastery or remote perfect control.",
-      "backlash": "Left forearm few tiny necrotic epidermal patches and inflammatory swelling, Zero Genome limits; unusual faint odor, additional branches visible in right-arm permanent seal, accelerated pact side effect course; no fever/airborne infection/skin-to-skin contagion yet.",
-      "ward": "Reverse pulse reached Seventh Ward, Sayu left arm transient spasm; Utsuro shielded seal, detected adversarial remote will, has no location or genetic knowledge.",
-      "time": "0006-09-29T02:26:00"
+      "correction": "User directly removes all pathological own-body adverse effects from S4-009; gradual appearance/odor/late contact hazard only",
+      "burden": "One-time foreign gene bridge +6.5, first two demonic efforts +0.6/+0.9 and passive stage1; not public to NPC; no skin contagion",
+      "summoning": "Shiki uses fresh own blood on RIGHT forearm tattoo, hand signs, chakra; Utsuro physically summoned inside Shiki secret lab, now aware of place/equipment",
+      "sayu": "Utsuro left temporary bone support of patient's life-sustaining seal in ward, time-limited; patient alive and autonomous",
+      "blood": "Utsuro sealed blood sample Ш remains unanalyzed",
+      "at": "0006-09-29T02:29:00"
     }
   },
   "runtime": {
@@ -118,7 +113,7 @@
     "last_played_gm_ref": "s3.played.116",
     "sqlite_canonical_through": "session3 revision304",
     "text_ahead_unreplayed": true,
-    "current_text_turn": "s04.text.009"
+    "current_text_turn": "s04.text.010"
   },
   "memory_system": {
     "schema": "npr-auto-preflight/1",
@@ -138,6 +133,12 @@
       "status": "binding_retroactive_clarification_from_insertion",
       "mechanism": "the ex vivo discovery and subsequent implanted foreign line, together with the Utsuro blood contract, unlock initial genuine Shiton and Byoton active conduits; advancement through techniques remains trained and dangerous",
       "precedence": "supersedes older UTSURO_FORBIDDEN_ARTS initial 'no school acquisition' for post-implant chronology but preserves catalogue and safety limits"
+    },
+    {
+      "source_turn": "s04.text.010",
+      "authority": "latest direct player correction",
+      "supersedes": "S04-009 invented pathological local necrosis/inflammatory swelling in Shiki; any such side effects of pact and demonic nature",
+      "canonical": "Staged aesthetic phenotype, odor, late direct skin transmission only; no self-pathological processes, no reductions of strength or agency."
     }
   ]
 }
