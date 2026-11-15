@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-28T10:26:00",
-    "location": "Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
-    "turn": "s04.text.005"
+    "at": "0006-09-28T14:42:00",
+    "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
+    "turn": "s04.text.006"
   },
   "documents": [
     {
@@ -7602,16 +7602,15 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "21174a0964a0237fb78bfb776b694f2d714c46f4332f3bac9c82327557ba2304",
+  "hot_sha256": "0a726e27a7791e02cdb1495d6d79c568f61b45f3f2e9afeddcca588cf9910a82",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "limits": "donor identity, transfer direction, deeper spread, seal physiology and safety unknown",
-      "privacy": "all specimens and results in Shiki's secret lab; no third party",
-      "sayu": "Alive as last known, ward with Utsuro; two superficial samples consented only, no new biopsies",
-      "sequencing": "Second independent library prep, phased long-read genotyping of existing six samples; definitive foreign XY cell-line signature in Sayu affected skin with multiple markers shared with dark cord; chimeric creature soft tissues; mineral no nuclear DNA",
-      "time": "0006-09-28T10:26:00",
-      "utsuro": "blood tube sample Ш not researched; no knowledge of sequencing results"
+      "blood_sample": "new fresh autologous blood from Shiki, independently sampled ex vivo, NOT Utsuro's sealed sample",
+      "limits": "No cell division/inheritance demonstrated, no systemic exposure, no installed new jutsu or powers, no autonomous pact activation",
+      "privacy": "only Shiki in secret lab; patient specimens retained",
+      "results": "few viable leukocytes have confirmed autologous foreign DNA chromosomal integration of short fragment, most leukocytes injured/apoptotic; peculiar directional reaction to dark-tendon tissue and residual chakra, causality unresolved",
+      "technical": "Only nucleated leukocytes suitable for genomic insertion, erythrocytes and platelets anucleate"
     },
     "recent": [
       {
@@ -7645,9 +7644,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Шики провёл повторное углублённое секвенирование собственных проб: в изменённой коже Саю установлена чужая Y-содержащая клеточная линия, совпадающая по множеству маркеров с управляющим тяжем каменного существа. Происхождение неизвестно. Образцы/данные остались в тайной лаборатории.",
         "turn_id": "s04.text.005"
+      },
+      {
+        "at": "0006-09-28T14:42:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики экспериментировал только ex vivo со своей кровью. В немногих лейкоцитах подтвердилось приращение маленького фрагмента чужой ДНК к его собственной хромосоме, большинство клеток погибли. Выжившие показывали слабую направленную реакцию на образец чёрного тяжа и его чакру; стабильная наследуемая линия/изменение тела Шики/техника не возникли.",
+        "turn_id": "s04.text.006"
       }
     ],
-    "story": "Шики провёл углублённое повторное секвенирование шести собственноручно полученных/выделенных проб в СВОЕЙ тайной лаборатории, без посторонних. Основная линия кожи Саю XX, поражённая кожа слева содержит подтверждённую чужую клеточную линию с Y-хромосомой. Несколько независимых длинных маркеров совпадают с одной линией тёмного управляющего тяжа отсечённой руки твари; иные фракции существа — смесь нескольких человеческих генотипов. Камень не дал ядерной DNA. Источник/направление переноса клеток неизвестны, степень глубокого поражения Саю и безопасность отделения от поддерживающей печати не установлены. Саю под наблюдением Уцуро в Седьмой палате, никто не знает результатов. Пробирка крови Ш у Уцуро всё ещё НЕ исследована. Сейчас 28.09.1283 10:26, Шики в секретной лаборатории."
+    "story": "28.09.1283 14:42, тайная лаборатория Шики. По прямому действию игрока Шики взял собственную свежую кровь, ex vivo отделил ядерные клетки крови (лейкоциты), установил контроль и попытался прирастить фрагменты чужой ДНК из ткани существа/отклонённой кожи Саю. В нескольких изолированных лейкоцитах подтверждены границы встраивания небольшой чужой последовательности в СОБСТВЕННУЮ хромосомную ДНК Шики; большинство клеток разрушилось/апоптоз, часть выжила. В жизнеспособных генетически модифицированных клетках обнаружена слабая направленная реакция на тёмный тяж и его остаточный чакровый рисунок (механизм НЕ установлен). Нет устойчивой наследуемой новой клеточной линии, не доказано воспроизведение в дочерних клетках. НЕТ внедрения в организм Шики, активации договора, новых навыков/иммунитета/заражения. Кровь в Уцуро пробирке Ш всё ещё отдельна и Уцуро её НЕ исследовал. Саю/Уцуро у седьмой палаты, без сведений о тайной лаборатории. Продолжаем игроку дать выбор: дальнейшая культура/Zero Genome/исследование."
   },
   "schema": "npr-github-scene-memory/1"
 }
