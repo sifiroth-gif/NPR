@@ -62,6 +62,12 @@
           "shiton": 1.5,
           "byoton": 2.25
         }
+      },
+      "genetic_bridge_activation": {
+        "description": "One-time unique implant of validated foreign tissue-line DNA into Shiki own forearm plus first real demonic Shiton/Byoton response; player explicitly established this opens schools and accelerates his pact transformation. Not re-awarded for repeat use.",
+        "points": {
+          "pact": 6.5
+        }
       }
     },
     "no_acceleration_for": [
@@ -69,7 +75,8 @@
       "Contemplating learning or asking questions",
       "Ordinary medicine, Suiton/Raiton/Hyoton, Zero Genome changes",
       "Utsuro's unrelated casts and remote chakra use, absent Shiki's own reciprocal load",
-      "Player OOC conversation and artificial elapsed real-world time"
+      "Player OOC conversation and artificial elapsed real-world time",
+      "Ordinary unaffected Zero Genome editing; only established foreign demonic bridge S4-008 is a one-time special acceleration."
     ]
   },
   "scale": {
@@ -191,5 +198,21 @@
     "write_policy": "PACT_BURDEN_LIVE.json is an event-ledger + point-snapshot updated ONLY when forbidden technique event occurs and on periodic session replay/checkpoint. Its last_at identifies materialized snapshot time, not necessarily latest scene timestamp. For time-only scene, derive without writing; after last-at, live value can be greater than materialized value.",
     "math": "passive_round4 = round(0.75*elapsed_days_since_blood_binding, 4); total=clamp(passive_round4+forbidden_event_points,0,100), stage=max threshold <= total. Real usage needs unique id; idempotence from ledger. No automatic `mastery` on pact only.",
     "check": "No world clock advances on OOC-only user tasks, merely change rules/packets. In-game user actions advance as narratively grounded; no background real-time aging."
+  },
+  "latest_player_correction_2026_11_15_s04_010": {
+    "authority": "LATER DIRECT PLAYER CORRECTION, supersedes previous GM S4-009 body-recoil narration",
+    "source_turn": "s04.text.010",
+    "allowed_only": [
+      "gradual gaunt/thin physique without loss of strength",
+      "gradual pallor and altered skin coloration",
+      "darkened prominent superficial vessels and right-arm tattoo roots, no roots on face",
+      "approved staged noninfectious odor",
+      "eventual potentially harmful bare living skin-to-skin touch at stage5 only, never objects/clothes/air"
+    ],
+    "prohibited_background_side_effects": [
+      "local epidermal necrosis, ulcers, inflammatory swelling, abnormal tissue growth, vascular injury, tumors or other pathological lesions in Shiki as the transformation's side effects",
+      "fever, pain/taste/sense alteration, compulsory emotions or debilitation"
+    ],
+    "clarification": "Shiton and Byoton are dangerous supernatural techniques to TARGETS, but using them does not force damaging pathological lesions in Shiki himself. Genomic foreign-fragment implant unlocked own early Shiton/Byoton channels and accelerates approved persistent aesthetic/contact stages; explicit earlier Shiki forearm necrosis/swelling in scene S4-009 is noncanonical. Scent stage thresholds and bare-touch stage5 rule remain firm."
   }
 }
