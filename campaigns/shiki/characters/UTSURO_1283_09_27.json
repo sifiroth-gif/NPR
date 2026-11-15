@@ -200,8 +200,9 @@
     "live_tracker": "campaigns/shiki/contract/PACT_BURDEN_LIVE.json",
     "calculator": "campaigns/shiki/contract/progression.py",
     "baseline": "binding 27Sep1283 06:30:19, at14:39 SAME DAY currently ~0.2545/100, stage0. Tattoo only, no paleness/gauntness/dark veins beyond usual physical baseline and NO transmission; first sign stage1 at8 points.",
-    "mandatory_hook": "Before EVERY GM game turn whose in-world clock advances, calculate passive +0.75 points per in-game DAY prorated by seconds using live state, then add actual chakra-driven attempts/practice/mastery/casts by unique event IDs. Do not add for reading/OOC. Persist both tracker and narrative checkpoint consistently; if tools unavailable, mark pending instead of claiming persisted.",
-    "constraints": "All earlier approved bans remain: no fever, abnormal heat or taste/pain loss. Unusual progressive odor starts at burden stage1, latest player override, psychological control, skin hazards before stage5 78. Only DIRECT living bare skin against bare skin at stage5+, never barrier/air/fomite. Roots on neck/trunk later but NEVER face. No loss of stats or Zero Genome skill, no free new jutsu."
+    "mandatory_hook": "Before EVERY in-game turn with clock change, project current passive burden using bound_at+0.75/game day plus event points. Persist calculated phase in small FAST_SCENE, but DO NOT separately write pact materialized snapshot for time-only turns. Add any actually earned Shiton/Byoton attempt/training/mastery/cast/overload by unique event ID to ledger and HOT. SQLite replay at intersession; never claim binary revision has advanced.",
+    "constraints": "All earlier approved bans remain: no fever, abnormal heat or taste/pain loss. Unusual progressive odor starts at burden stage1, latest player override, psychological control, skin hazards before stage5 78. Only DIRECT living bare skin against bare skin at stage5+, never barrier/air/fomite. Roots on neck/trunk later but NEVER face. No loss of stats or Zero Genome skill, no free new jutsu.",
+    "performance_reference": "recovery/FAST_SCENE.json and main docs/SHIKI_FAST_SCENE.md; from s03.text.064 immutable exact per-turn responses recovery/fast_turns/s03.text.NNN.json."
   },
   "scent_canon_2026_11_15": {
     "source": "later direct player OOC 2026-11-15",
