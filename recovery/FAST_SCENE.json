@@ -1,17 +1,9 @@
 {
   "format": "npr-shiki-fast-scene/1",
-  "purpose": "FAST text fallback through GitHub update of ONE compact hot scene file with exact response in last_turn and full older text preserved by Git file history. The actual SQLite engine baseline still rev217. Latest user OOC on 2026-11-15 explicitly complains 3-5min latency and dumb repetitive scene NPC questions; quality-first revision v2.",
+  "purpose": "v3 lean GitHub-only fallback; exact last response committed on every turn, earlier full text in commit history; SQLite still stale. Read story_compass FIRST; 1 fetch + 1 update per playable move.",
   "session": 3,
   "campaign_id": "naruto-shiki",
   "branch": "game-state/shiki",
-  "baseline": {
-    "snapshot_file": "recovery/LATEST_SHIKI_CHECKPOINT.json",
-    "snapshot_game_at": "0007-09-27T15:02:00",
-    "baseline_turn": "s03.text.063",
-    "snapshot_branch_commit_after_seed": "bd37b22221e7ec1fd699b46ef8dfa50d61cda38d",
-    "sqlite_revision_reported": 217,
-    "sqlite_replay_pending": true
-  },
   "cursor": {
     "last_turn_id": "s03.text.080",
     "next_sequence": 81,
@@ -21,34 +13,37 @@
     "state": "player_decision_pending",
     "player_last_input": "Быстро информация доходит хах. Спасибо капитан. #дальше по инре#"
   },
+  "story_compass": {
+    "refreshed_at": "0007-09-27T21:03:00",
+    "current": "Среда 27.09.1283 21:03, Центральный госпиталь Кусагакуре, после разговора с капитаном Нори у палаты Дзиро. Весь рассказ до этого уже сыгран, не воспроизводить повторно.",
+    "foreground_pov": "Шики — 20-летний дзёнин, выдающийся ПОЛЕВОЙ медик, скрытный, с огромной скоростью Шуншин и опасным чакровым скальпелем. В предыдущем дне он обезвреживал нападавших, добровольно спасал тяжелораненых и обнаружил навязанный ему кровью договор. NPC не обязаны восхищаться, им есть чего опасаться. Игрок временно разрешил GM вести его слова и действия, может отозвать в любое время. Шики сказал, что НЕ ПОМНИТ гибель Канэды Рё в 1277; не навязывать воспоминаний/эмоций.",
+    "story_axis": "ОСНОВНАЯ линия: S17–В7, исследования и жестокая транспортировка испытуемых. Этап ПОИСКА исчезнувших закончен: четверо установлены, один погиб; S17/02,/03,/04 спасены, но больны. Станция разгромлена, шесть ампул, техническая тетрадь, живые захватчики переданы Нори. Открыто: КТО И ЗАЧЕМ финансировал опыты, какова природа препаратов, кто внутри системы их поддерживал, последствия действий S17. Не выдавать эту широкую загадку за решённую и не устраивать новые бессвязные рейды. Нори работает автономно; Шики не обязан расследовать бумажный след.",
+    "counterpoint": "ПОБОЧНАЯ линия: Уцуро, буквально демон медицины, болезни и смерти (ТОЛЬКО GM знает истинную природу). Запретный свиток подменила Суда Минако, чтобы насильно привести произвольного медика в старый Нижний госпиталь; Сэкидо доказал подмену, задержал Суду, а Тамура спасён. Шики заключил навязанный договор и имеет 7 разорванных колец на ВНУТРЕННЕМ ПРАВОМ предплечье; до 8/100 НЕТ запаха/болезни. За порогом Уцуро удерживал неизвестное существо. В Седьмой палате жива женщина с принудительным двигательным контуром левой руки и поддерживающим трофику контуром, но согласие на операцию ещё не получено. Запрос Шики МХ–VII/19 на старые архивы в рассмотрении, допуск НЕ выдан. Арки НЕ связаны автоматически.",
+    "emotional_continuity": "Нори знает Шики как эффективного, опасно быстрого меднина и свидетеля смерти её бойца Хиросэ ранее 26 сентября. Только что Шики спас пациентов и помог тяжело раненому Дзиро, чья жена ожидает после операции. Уважение Нори перемешано с профессиональной ответственностью и усталостью: она не персонаж-почтальон, ей приходится говорить с семьями, руководить живыми людьми и переживать собственные ошибки. S17/02 после освобождения от насильственного управления движениями требует самостоятельности и согласна дать показания НЕ СЕГОДНЯ. Касива заботится о Хасэ, не знает демонической природы Уцуро. Сэкидо ведёт дело Суды без Шики.",
+    "casualties_and_care": "S17: один из четырёх обнаружен мёртвым (номер точно не установлен), S17/02, /03, /04 живы в госпитале с разными последствиями; анализ вещества ещё НЕ завершён. Шиноби Нори Хиросэ погиб 26.09. Дзиро пережил сложную операцию после повреждения правой лёгочной артерии железным крюком, остаётся КРИТИЧЕСКИ больным на аппаратной поддержке дыхания с переливаниями, выживет ли неизвестно. Другой боец с восстановленными Шики бедренными сосудами нуждался в объёме крови, направлен на лечение, дальнейший исход неизвестен. Не исправлять состояния мгновенным чудом и не повторять смерти ради драматизма.",
+    "unresolved_hook": "Ни химическая программа S17, ни источник власти над Седьмой палатой, ни личное последствие навязанного контракта для Шики не получили полноценного драматического разрешения. Нужна причинная цепочка с результатом, а не новые однотипные заложники, врачи и бумаги. Следующий игровой эпизод должен внятно вернуть субъективное присутствие Шики и повлиять на отношения или большой вопрос арки; можно двигать время к событию, без заранее придуманной новой катастрофы.",
+    "stop_at": "Пока пользователь даёт OOC оценку качества, дата и состояние неизменны. Следующий реальный ход может сопровождаться короткой прозрачной ориентацией (если нужна) без рецитации всех отчётов. Любое прямое решение/реплика игрока главнее делегированного ведущему контроля.",
+    "source": "Audit of confirmed turns s03.text.063–080 and baseline active_case; prior full turn texts remain in Git commit history, current gmpvt source only in refs. Not substitute for GM private secrets or locked archives."
+  },
   "scene": {
-    "focus": "Wed27Sep21:03 Shiki player quipped Nori rapid information spread and thanked her; delegated GM controls Shiki for routine progression. Nori replies without inventing Utsuro tie and independently manages evidence/rest. Shiki travels to Central Hospital by19:12 to see consequences. Dzhiro pulmonary artery surgical repair and hook extracted under controlled conditions, survives operation but STILL CRITICAL on assisted ventilation and transfusion, next24h uncertain; Nori visited his wife herself. Patient S17/04 alive airway stable watched for relapse; S17/03 responsive to voice intermittently, still slow; S17/02 awake, neck remote plate safely removed surgically, trauma reaction when nurse offered water, nurse respects agency, independently grasps cup and volunteers experienced consciousness during forced bodily motor actions, willing to testify but NOT tonight; Shiki says only 'Сегодня вас будут лечить. Всё остальное подождёт.' 21:03 Nori brings conclusive tactical operation closure: pump station secured, suspected perpetrators detained, 6 ampoules/notebook to experts, wider transport audits for officials, no official biochemical proof yet, main captives found 1 dead 3 alive under care; main core armed network dismantled, organizer potentially later legal proceedings not same as solved. Shiki now Central Hospital near rescued wards; player agency can resume; forbidden pact still separate.",
-    "actor_shiki": "20yo jōnin medic in Central Hospital surgical block21:03, user said 'Быстро информация доходит хах. Спасибо капитан. #дальше по инре#'; GM delegated PC control remains active. Own in-scene additional speech Shiki to S17/02 'Сегодня вас будут лечить. Всё остальное подождёт.' after she volunteers traumatic experience and refuses interview tonight. No imposed internal psychological state. No forbidden techniques, only prior normal rescue/healing, pact stage0 right inner forearm burden 0.4545 only no scent.",
-    "actor_sekido": "Remains at Kusa seal bureau running Suda legal investigation; swap solved by confession/evidence. No new Suda facts transmitted after previous courier; doesn't follow Shiki or Kashiva.",
-    "other_present": "At hospital: critical Dzhiro post-op with repaired right pulmonary artery, hook foreign body surgically removed, mechanical assisted ventilation and transfusions; wife informed by Nori. Female S17/02 awake neurologically distressed but acting with body by own volition, neck plate removed by surgical team; male S17/04 stable resp monitored for relapse; woman S17/03 fluctuating alertness. Their direct consent medical only, no forced questioning. One missing S17 patient found earlier DEAD (identity unspecified). Nori in hospital with Shiki. All older villains detained/station under Kusa control, Sekido Suda case elsewhere, Hase under Kashiva elsewhere.",
-    "foreground_evidence": [
-      "CONFIRMED BY INDEPENDENT EVIDENCE AND ADMISSION: Suda swapped A117 for original forbidden Seventh Ward bone-clasp scroll using forged old bindery pass/stamp, held binder Tamura forcibly in locked drying room, backdated 05:54/06:11 records AFTER random Shiki activation. Genuine A117 recovered from disused transfer duct.",
-      "Suda Minako older sister of dead Kaneda Ryo (1277); old hospital folded letter in his effects contained patients trapped ALIVE in Lower Hospital, motivated attempt to force arbitrary legal medical archivist into contract. Her decision was not with consent of patient or Shiki. She identified Shiki from blood/records only later, accidental past overlap.",
-      "Tamura rescued alive and undergoing medical care. Suda detained on forgery and unlawful imprisonment allegations, admits involvement, judicial consequences pending. Avoid inventing instant final conviction.",
-      "Kashiva knows old Utsuro warning in containment-seal register, personally saw portal with moving long-fingered figure and did not mistake Utsuro for one trying to exit. She sent code references to Sekido with courier.",
-      "Lower Hospital and Seventh Ward historical original still inaccessible without approved archival authorization, full location unknown to normal officials; Shiki previously saw Utsuro and a LIVE woman in ward, no consent to surgical separation yet."
-    ],
-    "immediate_gate": "At21:03 hospital, main S17 tactical rescue closed, three survivors and one dead, Dzhiro alive critically ill and needs 24h follow-up, Nori independent forensic/legal work. Shiki at hospital with Nori, can choose to follow medical case or personal Utsuro/Seventh Ward progression without being forced into endless paperwork; normal access application MH-VII/19 still pending unless later independently approved, do not give unauthorized files. User delegated GM control and asks for plot forward; next move can time skip with substantial stakes and closure of open story. No Utsuro automatic communication or pact symptoms stage0.",
-    "actor_kashiva": "Remains voluntarily caring for Hase, door closed as Shiki departs; her archival warning classification transmitted to Sekido by courier previously; no new dialogue or knowledge.",
-    "actor_nori": "Captain Nori autonomously closed tactical part of S17 at pump station and made family contact, remains committed to professional legal and biochemical investigation without forcing PC. At21:03 in Central Hospital surgical block, shows signs exhaustion/injured left arm, confirms she told Dzhiro's wife surgery finished and patient alive critical; six sealed ampoules and note evidence with specialists not yet full tests; she has never heard of Utsuro and makes no magical connection."
+    "focus": "21:03 Центральный госпиталь после разговора Шики с Нори: в главном S17 эпизоде спасены трое испытуемых, один умер; Dzhiro критический после операции. Суть и организаторы S17 остаются тайной, не выдавать операцию за конец всей интриги. Побочная Уцуро с навязанным контрактом и живой пациенткой Седьмой палаты также не завершена. Игрок сейчас даёт OOC отзыв о деградации, время не двигать.",
+    "actor_shiki": "Шики, 20-летний дзёнин-медик, в госпитале21:03. Пользователь ВРЕМЕННО делегировал GM разумные добровольные действия и речь, но явно заявленные игроком реплики и выбор первичны. Печать на внутреннем ПРАВОМ предплечье, стадия0, без симптомов.",
+    "actor_nori": "Нори на месте, осведомлена о рейде S17, шести уликах, трёх спасённых, погибшем и операции Дзиро. Не знает Уцуро и его тайны. Лично уведомила жену Дзиро; имеет собственную профессиональную ответственность и потери.",
+    "other_present": "Спасённая S17/02 очнулась и самостоятельно держала чашку, S17/03 отвечает на голос непостоянно, S17/04 дышит под наблюдением, Дзиро в интенсивной терапии критический. Остальные свидетели/слуги не телепортируются в палату. Суда задержана у Сэкидо отдельно; Касива с Хасэ отдельно.",
+    "immediate_gate": "Не создавать новый очередной допрос или похищение; следующая сюжетная сцена должна перейти к существенному эмоциональному, личному, этическому или стратегическому последствию с ясной причиной и обратной связью. Ход OOC — без изменения времени."
   },
   "threads": {
     "main": {
       "name": "Нори / материалы S17-В7, старая транспортная линия",
-      "status": "27Sep1283 21:03 Main S17 ARMED OPERATION CLOSED: all four abducted recipients accounted (1 dead, S17/02, /03, /04 alive hospital). Perpetrator at pump station and other immediate operatives under guard, samples six ampoules + notebook secured in lab, no full chemistry yet, historical transport auditing assigned to independent authorities, still open wider sponsor/forensic/legal but no need PC interrogations. Female S17/02 awake with neck control plate safely removed, remembers conscious forced body motion, independently asserts she will testify later not tonight; Shiki supports her autonomy without psych curing. S17/03 intermittently responsive, S17/04 breathing independently still under airway edema relapse watch. Дзиро pulmonary artery hook damage surgically repaired and fragment removed, survived surgery but critical on assisted ventilation and continued transfusions; Nori notified wife, last report21:03. Shiki at Central Hospital, main case not related to Utsuro. User temporarily authorized GM Shiki agency."
+      "status": "S17 search/raid closed, broader human experimentation and financing/source still OPEN. Four missing persons: one deceased, S17/02, /03, /04 alive in hospital. Six unknown ampoules and lab notebook under Nori custody, analysis pending. Suspected operatives captured, no mastermind proven; no compulsory PC detective work. Dzhiro survived pulmonary artery repair but still critical. Nori works independently."
     },
     "utsuro": {
       "name": "Одна побочная линия Уцуро / договор / архивная подмена / пациентка",
-      "status": "Scroll substitution solved by Sekido evidence and Suda confession; Suda under custody for process, Tamura alive. Kashiva continues caring for Hase, not traveled. Female Seventh Ward patient under sustained trophic and forced motor circuits and no surgical consent. Irreversible demon pact persists but no sudden activation or symptoms stage0; Utsuro literal demon GM-only. This stays independent of main S17/V7."
+      "status": "Suda Minako confessed scroll swap for unwilling random medic; genuine A117 recovered; Tamura rescued. Suda in custody, Sekido handles autonomously. Utsuro literal demon of medicine/death/disease known only to GM; Shiki met him through passage, witnessed him holding back creature. Living Seventh Ward woman has a forced motor circuit + separate life-sustaining trophic circuit, no informed consent to intervene yet. Pact involuntary and irreversible; no auto transmission or smell stage0. No link automatically with S17."
     },
     "archive": {
       "name": "МХ–VII/19 «Реестр невыписанных»",
-      "status": "Заявление Шики по ЛИЧНЫМ причинам зарегистрировано Омори на обычном рассмотрении; допуска пока нет. Шики показал Омори совпадающую татуировку, но ОТКАЗАЛ в добавлении свидетельства к делу. Омори уважает отказ, ничего дополнительно не записал."
+      "status": "MХ–VII/19 old 'Реестр невыписанных' application registered by Omori on PERSONAL REASONS; no grant yet, user refused recording tattoo as optional attestation, Omori respected it."
     }
   },
   "pact": {
@@ -75,6 +70,14 @@
     ],
     "rules_guard": "No scent, gauntness, skin disease before their stages; right forearm tattoo immediate; scent from stage1 inspired by Toskovat' Inexcusable Evil and NONCONTAGIOUS; skin transmission ONLY from stage5 via living bare skin to living bare skin, clothing/gloves/items absolutely safe. No fever/taste loss/pain loss/psych control, no technique mastery on pact. For summons own fresh blood on RIGHT forearm mark, hand seals and chakra. Only genuine learned/use events cause extra Shiton/Byoton burden."
   },
+  "baseline": {
+    "snapshot_file": "recovery/LATEST_SHIKI_CHECKPOINT.json",
+    "snapshot_game_at": "0007-09-27T15:02:00",
+    "baseline_turn": "s03.text.063",
+    "snapshot_branch_commit_after_seed": "bd37b22221e7ec1fd699b46ef8dfa50d61cda38d",
+    "sqlite_revision_reported": 217,
+    "sqlite_replay_pending": true
+  },
   "gm_private_refs": {
     "hidden_culprit": "campaigns/shiki/lore/SCROLL_SUBSTITUTION_CULPRIT_GM_1283_09_27.json",
     "utsuro_character": "campaigns/shiki/characters/UTSURO_1283_09_27.json",
@@ -84,41 +87,32 @@
     "utsuro_true_demon_origin": "campaigns/shiki/lore/UTSURO_SEVENTH_WARD_ORIGIN_1283_09_27.json, latest 15 Nov 2026 direct player true demon of medicine death disease"
   },
   "continuity_guard": {
-    "pc": "Шики полностью принадлежит игроку: никаких дополнительных добровольных перемещений, реплик, мыслей, чувств и воспоминаний без заявки; сказанное пользователем 'не помню' остаётся фактом, не навязывай ему вспышку памяти.",
-    "npc": "Autonomous motives, details of posture/body language, medical/anatomical accuracy, subtle consequences.",
-    "prose": "Russian mature Lovecraftian noir, dark original scene, vivid but no repetitive recaps / bureaucracy. Scene heading date/time/location, speaker names.",
-    "clock": "No game time advance for this OOC optimization.",
-    "state": "Character and source knowledge separate; all player corrections outrank GM plans; future time leap consider scheduled NPC acts.",
-    "artifact": "Per-turn exact full GM response goes into new immutable recovery/fast_turns/s03.text.NNN.json; HOT_SCENE stores compact changing state, cursor and limited summaries only.",
-    "audit_file": "recovery/CONTINUITY_AUDIT_1283_09_27_1513.json",
-    "time_knowledge_guard": "Kashiva at Hase HOME, not the medical archive. Suda 15:09->15:13 short on-site statement via swift shinobi messenger, formal interview not finished. Never use old frozen 06:31 archive layout as current 15:25. Right tattoo only, pact stage0. NPC knowledge remains separate.",
-    "intellectual_npcs": "Professional NPCs independently infer/act based on what they know; do not ask Shiki trivial binary questions already answered or obvious from shared event; valuable action/clue or consequential decision in each scene. No endless dialogue nor repetitive paperwork. Give substantive difficult conversation, competing motives and competent intelligence with meaningful uncertainty.",
-    "next_scene_anti_repetition": "Kashiva and Shiki already AGREED both observed Utsuro restraining moving stone figure from crossing; previous 'сам выходил или сдерживал?' question is unnecessary. On next player in-game turn ignore this as mandatory prompt; Kashiva can advance by revealing NEW grounded fact, taking action independently, or being asked a nontrivial question. Do not retcon user's existing words.",
-    "latest_ooc": "User rejects slower scene production, shallow/dumb dialogue; no world time advance. Improvement validated by NEXT actual scene, not asserted by document writing."
+    "pc": "Шики принадлежит игроку. Его разрешение 'можешь управлять Шики' временно допускает согласованные с характером действия/реплики до отзыва, но мысли, чувства, выбор личной судьбы не навязывать. Утверждение игрока о том, что он не помнит Канэду Рё, абсолютно.",
+    "npc": "Отличать персональную компетенцию и известные факты от слухов/дедукций. НПС самостоятельно действуют, имеют разную речь и мимику, могут убивать, предавать, ошибаться, менять мнение о Шики на основании РЕАЛЬНЫХ поступков. Не дублировать бессмысленные вопросы.",
+    "prose": "Русская взрослая мрачная проза в атмосферном ключе Лавкрафта с подробной физиологией, но не перечисление медицинских актов и рапортов; психологическое присутствие индивидуально, а не шаблонное. Каждый ход развивает причинность старых сцен и отношения.",
+    "chronology": "OOC user dissatisfaction at21:03, game time frozen until in-game request.",
+    "evidence": "RPG canon: direct player corrections > played turns > approved cards > other notes. No manufactured links between main S17 and side Utsuro; do not equate Seventh Ward with S17.",
+    "archival_provenance": "History of individual full responses from s03.text.070 onward exists in prior Git commits of this FAST_SCENE file, historical 063–069 also have recovery/fast_turns files. SQLite baseline rev217 stale, must replay and verify on session handoff.",
+    "use_current": "Current active shortcut is story_compass above; old LATEST_SHIKI_CHECKPOINT and v2 notes about 15:46 Kashiva historically correct but obsolete for current scene."
   },
   "history": {
     "immutable_turn_template": "recovery/fast_turns/s03.text.{NNN}.json",
     "latest_immutable_turn": "recovery/fast_turns/s03.text.069.json",
     "recent_summaries": [
       {
-        "at": "0007-09-27T16:58:00",
-        "input": "#нц попытаемся стабилизировать 04#",
-        "summary": "User instructs Shiki to stabilize S17/04, initiates emergency medical rescue. At16:55:12 Shiki crawls under 70cm shutter, goes 6m to seated S17/04, identifies pronounced upper airway obstruction from swelling of neck/tongue/glottic surrounding tissue with stridor, tachy pulse, humid skin, no proven identity of IV. Finds active infusion hidden pump behind chair, clamps and detaches it from patient preserving unknown fluid as forensic sample, gently relaxes shackles to enable safe airway posture and performs expert targeted medical chakra reducing swelling to restore spontaneous airflow, residual stridor and recurrence risk. By16:56 Kusa medic independently arrives with oxygen and airway tools, monitors further and warns possible invasive airway management. Nori and Kusa squad independently raise shutter 0.5m to 1.2m and ensure safe evacuate on stretcher without neck flexion. At16:58 S17/04 alive stabilized, still severe risk repeated laryngeal edema due to systemic unknown drug, sent to hospital via squad, no guaranteed full recovery. Independently Nori investigates behind partition: three EMPTY infusion stands and breached insulated transport box with all ampoule recesses empty but one cracked bloody ampoule, concludes biological/pharm material removed by separate party before seizure. On-site previous recipient S17/03 rescued alive, one previously found dead, final of four missing. Nori autonomously pursues whoever moved samples without Shiki interrogation. Shiki currently in inner medical chamber beside chair after treatment, not assumed to join pursuit; his last input only med stabilization. PACT burden 0.3269 stage0, only right forearm seal, no Shiton/Byoton used."
-      },
-      {
         "at": "0007-09-27T17:19:00",
         "input": "Дальше по игре  можешь управлять шики",
-        "summary": "User explicitly authorizes GM temporarily to control Shiki voluntary actions/speech, superseding prior exclusive PC agency until user revokes; no required checkin. At16:58 Shiki chooses pursue main S17 suspects alongside Nori after ensuring S17/04 medic evacuation. At17:05 old pump station, finds S17/02 female barefoot patient under external neck electromechanical control by surgeon transporting S17 experimental samples. Nori subordinate named Дзиро triggers near-invisible wire, hook impales right chest and he falls into pump water; another Nori subordinate rescues him. Shiki uses water clone from available water to draw trap, shunshin behind surgeon, A-rank genjutsu 'Чужой шаг' to distort balance/misalign button press, precise chakra scalpel damages surgeon right thumb extension tendon and superficial radial nerve; suspect disarmed and Nori knocks unconscious, captures ALIVE. Shiki isolates control device at connector WITHOUT removing embedded neck plate, keeps woman S17/02 breathing and with pulse, releases restraints only after disabling power, transferred to care with no diagnosis beyond possible sedation/nerve stimulation. At17:10 Shiki rushes to Дзиро found with severe right hemopneumothorax from impaling hook, preserves embedded part, uses med chakra to seal broken intercostal arterial bleeding and helps medics perform thoracic drain to restore ventilation, urgent hospital surgery required, survival uncertain. At17:19 Nori confiscates six sealed ampoules and notation book (not yet chemically verified), fixes pump flood gate and site, all four S17 recipients now accounted: S17/01? one previously dead (do not assert number as old dead body not numbered), S17/03, /04, /02 alive rescued but ill. Samples recovered, one surgeon captured, earlier cases under guard. Nori continues independently; no artificial Utsuro linkage; main missing-person search closed, forensic employer and disease investigation follow. Shiki at old pump station17:19, user now accepts delegated GM actions until explicit revocation; next can continue Shiki action autonomously or reclaim. Pact 0.3379 stage0 only right tattoo, no Shiton/Byoton (uses known clone/shunshin/genjutsu/medical scalpel/healing)."
+        "summary": "16:58–17:19: с разрешения игрока Шики содействовал Нори в нападении на насосную станцию; S17/02 освобождена от дистанционного управления движениями, хирург-захватчик задержан, Дзиро тяжело повреждён крюком в правую грудь, первая помощь и госпитализация. Шесть ампул и тетрадь захвачены. Поисковая часть S17 завершена: один погиб, трое живы."
       },
       {
         "at": "0007-09-27T17:24:00",
         "input": "Капитан, слышали когда-нибудь имя Уцуро?",
-        "summary": "Player Shiki expressly asks captain Nori whether she has ever heard name Utsuro at17:19 old pump station. She truthfully says NO: name not known to her personally among medics nor in S17 investigation, no access to other archives. Her Kusa chain of command received an anonymized morning incident notice of spatial archive seal breach, without Utsuro identity, but no tie to S17; does not learn demon truth. She does not ask foolish repetitive questions; independently orders sample containers sealed, unconscious captive surgeon isolated under guard with medical oversight, specialists test samples only in appropriate room. Messenger arrives by17:24 reporting Dzhiro in OR after earlier right chest hook injury: retained fragment damaged right pulmonary artery; surgeon operating under controlled vascular surgery, alive but prognosis unknown. Nori tells family she will inform and rotates exhausted rescuers, demonstrates independent captain care. Shiki remains near Nori at station, no voluntary extra PC speech despite previous GM delegation still active; no forced travel. Pact burden 0.3405 stage0, no symptoms; two arcs separate."
+        "summary": "17:19–17:24: Шики спросил Нори об Уцуро. Нори не знает это имя, лишь слышала обезличенную новость о необычной пространственной печати в медицинском архиве; никакой доказанной связи с S17. Дзиро в операционной, повреждена правая лёгочная артерия, исход неизвестен."
       },
       {
         "at": "0007-09-27T21:03:00",
         "input": "Быстро информация доходит хах. Спасибо капитан. #дальше по инре#",
-        "summary": "At17:24 Shiki player sarcastically says 'Быстро информация доходит хах. Спасибо капитан.' and directs proceed game; previous explicit GM control Shiki permission remains. Nori replies wryly information arrives but not in time to save people, autonomously delegates guard evidence and detained criminals and rest exhausted squad. Shiki chooses to walk to Kusa Central Hospital, medically check rescue repercussions, avoids needless interrogation. At19:12 surgeon announces Dzhiro survived operation to repair RIGHT pulmonary artery injured by metal hook; retained hook removed under controlled surgery, still critical on mechanical respiratory support and ongoing transfusion, next24h critical; female family member holding child's mitten (no asserted precise relationship until Nori later says spoke to his wife), surgeon does not promise recovery. Shiki reads clinical report and does not interfere with specialists. At19:46 patient S17/04 airway stable under watch, edema risk; S17/03 intermittently responds but cognitively sluggish; S17/02 female is awake after safe surgical neck plate removal, autonomous trauma reaction to hands approaching her, nurse respects privacy, patient successfully grips cup herself, informs Shiki she heard every word during forced motor control, her movements against will, she consents to testify later NOT today; Shiki reassures today is treatment. At21:03 Nori reports old pump station and S17 immediate tactical operation dismantled, current suspected group captured/secured, six S17 ampoules and handwritten notes transferred to appropriate specialists UNTESTED, previous transportation audits assigned, no instant organizer conviction or biology assumptions, no linkage with Utsuro. Nori told Dzhiro's wife about surgery, patient still alive critical, no final survival. This closes rescue/search arc and gives tangible agency to survivors, no forced player decision. Shiki physically at Central Hospital21:03, seven-ring tattoo right inner forearm stage0 burden 0.4545 no scent, disease or symptom."
+        "summary": "17:24–21:03: Шики идёт в Центральный госпиталь. Дзиро пережил операцию, аппаратная поддержка и критическое состояние; Нори лично уведомила его жену. S17/02 обретает собственный контроль над рукой, переживает травму, отказывается от показаний в этот день; S17/03 и /04 живы под наблюдением. Нори направляет независимую юридическую и медицинскую проверку."
       }
     ],
     "original_baseline_turns": "Previous original LATEST checkpoint recorded through s03.text.063; existing full SQLite lags at rev217. Do not claim all previous 1–62 have been consolidated.",
@@ -146,15 +140,18 @@
     "latest_committed_turn": "s03.text.080"
   },
   "performance": {
-    "version": "one-write-s03.070",
-    "guide": "main:docs/SHIKI_FAST_SCENE.md",
+    "version": "v3-2026-11-15",
+    "guide": "main:docs/SHIKI_FAST_SCENE.md#v3",
     "baseline_state": "s03.text.069 at15:46 27Sep1283",
-    "fetch": "one GitHub fetch_file of FAST_SCENE",
-    "write": "ONE GitHub update_file FAST_SCENE only, with complete response in latest_turn; no extra immutable fast_turn file from s03.text.070",
+    "fetch": "EXACTLY ONE fetch_file FAST_SCENE per normal game turn, keep first response/sha, NEVER REFETCH before update absent conflict",
+    "write": "ONE update_file same SHA, concise changes, latest_turn contains exact future GM text; omit old stale copies",
     "originals": "GitHub each prior commit retains its own FAST_SCENE latest_turn exact text and unchanged original player input; at session transition reconcile into SQLite and immutable archive. Prior turns 063–069 also stored as individual files; current 069 original proof path stored in history.",
-    "readback": "only on important irreversible battle conflict, error, every 10 turns, session close",
+    "readback": "Only after collision, significant retroactive error or periodic handoff; ordinary game turn is one read plus one write",
     "no_separate_passive_pact_update": true,
-    "why": "previous 2 sequential GitHub commits per turn + re-read loops more expensive than compact input, lowered quality"
+    "why": "previous 2 sequential GitHub commits per turn + re-read loops more expensive than compact input, lowered quality",
+    "scene_compass_first": true,
+    "cognitive_goal": "story causal axis and psychological presence, not report streams, endless repeated hostages or procedural closures",
+    "game_time_now": "0007-09-27T21:03:00"
   },
   "latest_turn": {
     "id": "s03.text.080",
