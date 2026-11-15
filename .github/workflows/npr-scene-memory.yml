@@ -1,0 +1,68 @@
+name: NPR mandatory pre-scene memory integration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rpg_engine/scene_memory.py"
+      - "rpg_engine/preparation.py"
+      - "rpg_engine/__main__.py"
+      - "tests/test_scene_memory.py"
+      - ".github/workflows/npr-scene-memory.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Full stdlib RPG regression suite
+        run: python -m unittest discover -s tests -q
+      - name: Read current campaign branch, including text-ahead turns
+        uses: actions/checkout@v4
+        with:
+          ref: game-state/shiki
+          path: _shiki_state
+          persist-credentials: false
+      - name: Run mandatory source-based memory before a genetic study
+        env:
+          NPR_CAMPAIGN_STATE_DIR: _shiki_state
+        run: |
+          set -euo pipefail
+          python -m rpg_engine --db _shiki_state/campaign.sqlite scene-memory \
+            --state-dir _shiki_state \
+            --player-action 'Провести секвенирование образцов ткани и исследование ДНК Шики' \
+            --limit 12 > "$RUNNER_TEMP/scene-memory.json"
+          python -m rpg_engine --db _shiki_state/campaign.sqlite gm-packet \
+            --mode focus --player-action 'Секвенирование образцов из руки Саю и существа' \
+            > "$RUNNER_TEMP/packet.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])
+          p=json.loads((root/"scene-memory.json").read_text())
+          f=json.loads((root/"packet.json").read_text())
+          assert p["retrieval_used"] is True
+          assert p["status"]=="text_ahead_unreplayed"
+          assert p["cursor"]["last_turn_id"]=="s04.text.004"
+          evidence=p["file_memory"]["evidence"]
+          assert any("SECRET_LAB_NW_CATCHMENT" in x["source"] for x in evidence), evidence
+          assert "scene_memory" in f and f["scene_memory"]["retrieval_used"]
+          assert f["scene_memory"]["file_memory"]["source_count"]>0
+          print("SCENE_MEMORY_INTEGRATION_OK", {
+              "sources":p["file_memory"]["source_count"],
+              "selected":len(evidence),
+              "lab_refs":[x["source"] for x in evidence if "SECRET_LAB" in x["source"]],
+              "sqlite_mode":f["scene_memory"]["journal_memory"]["mode"]})
+          PY
