@@ -116,6 +116,12 @@ def files_in(root, *, campaign="shiki"):
         p = base / name
         if p.is_file():
             found.append(p)
+    # Historical source-index summaries, never full raw transcripts.
+    for folder, pattern in (("archive", "session-*-index.json"),
+                            ("recovery/transcripts", "*memory-index*.json")):
+        p = root / folder
+        if p.is_dir():
+            found.extend(p.glob(pattern))
     found = sorted(set(found), key=lambda p: p.as_posix())
     if len(found) > MAX_FILES:
         raise ValueError("campaign material exceeds indexed file limit")
@@ -351,10 +357,96 @@ def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
             ]}
 
 
+def compact_live_index(root, state_dir):
+    """Small source-bound lookup catalog for GitHub-only ChatGPT turns.
+
+    Generated from current canonical cards and the latest HOT after each push.
+    It contains keywords/excerpts/paths and hashes, never full source books.
+    """
+    from collections import Counter
+    root = _canonical_root(root)
+    state_dir = _canonical_root(state_dir)
+    data = build_sources(root)
+    if root != state_dir:
+        private = build_sources(state_dir)
+        unique = {x["source"]: x for x in data["documents"]}
+        unique.update({x["source"]: x for x in private["documents"]})
+        data["documents"] = list(unique.values())
+    hot_path = state_dir / "recovery/FAST_SCENE.json"
+    raw = hot_path.read_bytes()
+    hot = json.loads(raw)
+    if hot.get("latest_turn", {}).get("id") != hot.get("cursor", {}).get("last_turn_id"):
+        raise ValueError("HOT current turn must match cursor before deriving memory")
+    records = []
+    for doc in data["documents"]:
+        all_terms = Counter(t for section in doc["sections"] for t in section["terms"])
+        anchor_terms = key_terms(doc["source"] + " " + doc["title"])
+        common = list(anchor_terms) + [t for t, _ in all_terms.most_common(100)]
+        keys = list(dict.fromkeys(common))[:115]
+        def field_priority(s):
+            f = s["field"]
+            if f.startswith(("capabilities", "equipment_inventory", "privacy",
+                             "zero_genome", "gen_assimilation", "current",
+                             "origin", "status", "source_player", "summary",
+                             "scene", "consent", "authority")):
+                return 2
+            if "lab" in f or "source" in f:
+                return 1
+            return 0
+        sections = sorted(doc["sections"], key=field_priority, reverse=True)
+        preview = [{"field": x["field"], "text": x["excerpt"][:260]}
+                   for x in sections[:4]]
+        records.append({"source": doc["source"], "sha256": doc["sha256"],
+                        "title": doc["title"], "terms": keys, "preview": preview,
+                        "links": doc["links"][:10],
+                        "weight": _authority(doc), "status": "source_candidate_only"})
+    live = hot.get("story_compass", {})
+    return {"schema": "npr-github-scene-memory/1", "campaign": data["campaign"],
+            "hot_sha256": hashlib.sha256(raw).hexdigest(),
+            "cursor": {"turn": hot["cursor"]["last_turn_id"], "at": hot["cursor"]["at"],
+                       "location": hot["cursor"].get("location", "")},
+            "documents": records,
+            "live": {"story": live.get("immediate", ""),
+                     "latest_facts": hot.get("latest_turn", {}).get("facts", {}),
+                     "recent": hot.get("history", [])[-6:]},
+            "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current."}
+
+
+def write_live_index(root, state_dir, destination):
+    result = compact_live_index(root, state_dir)
+    target = Path(destination)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    desired = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    if target.is_file() and target.read_text(encoding="utf-8") == desired:
+        return {"status": "current", "sources": len(result["documents"]),
+                "turn": result["cursor"]["turn"]}
+    target.write_text(desired, encoding="utf-8")
+    return {"status": "updated", "sources": len(result["documents"]),
+            "turn": result["cursor"]["turn"], "bytes": len(desired.encode("utf-8"))}
+
+
+def _hot_candidate(hot, raw):
+    """Newest confirmed HOT evidence participates in every text-ahead preflight."""
+    fields = {"story_compass": hot.get("story_compass", {}).get("immediate", ""),
+              "latest_turn.facts": hot.get("latest_turn", {}).get("facts", {}),
+              "recent_turns": hot.get("history", [])[-6:],
+              "cursor": hot.get("cursor", {})}
+    sections = []
+    for field, value in _sections(fields):
+        sections.append({"field": field, "excerpt": value[:480],
+                         "terms": sorted(key_terms(field + " " + value))[:170]})
+    return {"source": "recovery/FAST_SCENE.json",
+            "sha256": hashlib.sha256(raw).hexdigest(),
+            "title": "Current text-ahead canonical scene",
+            "sections": sections, "links": [],
+            "scope": "gm_only"}
+
+
 def fast_packet_from_files(root, state_dir, *, action="", limit=9):
     """Offline/text-ahead entrypoint: accepts the live HOT cursor and current files."""
     state_dir = Path(state_dir)
-    hot = json.loads((state_dir / "recovery/FAST_SCENE.json").read_text(encoding="utf-8"))
+    hot_bytes = (state_dir / "recovery/FAST_SCENE.json").read_bytes()
+    hot = json.loads(hot_bytes)
     cur = hot["cursor"]
     if cur.get("last_turn_id") != hot.get("latest_turn", {}).get("id"):
         raise ValueError("HOT cursor and turn disagree: refuse to narrate")
@@ -367,6 +459,9 @@ def fast_packet_from_files(root, state_dir, *, action="", limit=9):
         primary = {d["source"]: d for d in index["documents"]}
         primary.update({d["source"]: d for d in more["documents"]})
         index["documents"] = list(primary.values())
+    # HOT is the authoritative text-ahead tail; this source remains searchable
+    # even when the SQLite checkpoint and generated index lag behind it.
+    index["documents"].append(_hot_candidate(hot, hot_bytes))
     packet = preflight(action=action, location=cur.get("location", ""),
                        source_index=index, limit=limit)
     packet["cursor"] = cur
