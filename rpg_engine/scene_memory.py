@@ -27,6 +27,15 @@ MAX_SOURCE = 240_000
 MAX_FILES = 600
 MAX_SECTIONS = 4000
 
+# Small concept-level bilingual bridge for mixed Russian player input and
+# English-authored source cards. Not a claim about the game world.
+ALIASES = (
+    ("генет", "геном", "genet", "genom", "днк", "dna", "секвен", "sequenc"),
+    ("лаборатор", "lab", "laborator", "оборуд", "equipment", "research", "исслед"),
+    ("клет", "ткан", "cell", "tissue"),
+    ("образц", "проб", "sample", "specimen"),
+)
+
 
 def words(value):
     return [x.casefold() for x in WORDS.findall(str(value)) if len(x) >= 3 and x.casefold() not in STOP]
@@ -47,8 +56,13 @@ def stem(token):
 
 def key_terms(value, *, expand=False):
     terms = set(stem(x) for x in words(value))
-    if expand and _research_hits(terms) >= 2:
-        terms |= {stem(x) for x in RESEARCH}
+    if expand:
+        # Cross-language hints apply to a query, not as extra source facts.
+        for group in ALIASES:
+            if _overlap(terms, set(group)):
+                terms.update(group)
+        if _research_hits(terms) >= 2:
+            terms |= {stem(x) for x in RESEARCH}
     return terms
 
 
@@ -166,7 +180,12 @@ def _authority(doc):
 def _score(section, doc, query, *, topical):
     terms = set(section["terms"])
     common = _overlap(terms, query)
-    if not common:
+    # Structured equipment/location cards are vital to a research action even
+    # when authored in English. Source type + field establish *relevance* only.
+    equipment_place = (topical and "/locations/" in doc["source"]
+                       and ("lab" in doc["source"].casefold() or
+                            section["field"].startswith(("capabilities", "equipment"))))
+    if not common and not equipment_place:
         return 0.0
     paths = key_terms(doc["source"] + " " + section["field"])
     direct = len(common)
@@ -208,7 +227,7 @@ def source_candidates(index, *, action="", location="", actors=(), limit=9):
     results = []
     selected = {}
     for kind, label in queries:
-        target = key_terms(label)
+        target = key_terms(label, expand=True)
         if not target:
             continue
         topical = kind == "research_capability"
