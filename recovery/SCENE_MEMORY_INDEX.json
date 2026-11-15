@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-29T02:29:00",
-    "location": "Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре",
-    "turn": "s04.text.010"
+    "at": "0006-09-29T02:32:00",
+    "location": "Нижний госпиталь, Седьмая палата",
+    "turn": "s04.text.011"
   },
   "documents": [
     {
@@ -7602,24 +7602,19 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "044ebb29e59f80fb2ced549c375d82d9d0c48cf3050ef7cfe2cfc60d5b3f347b",
+  "hot_sha256": "017969f9c13caf0cf8735dfb0175044217855e4470ac6adb17f164dcec0987c4",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "at": "0006-09-29T02:29:00",
-      "blood": "Utsuro sealed blood sample Ш remains unanalyzed",
-      "burden": "One-time foreign gene bridge +6.5, first two demonic efforts +0.6/+0.9 and passive stage1; not public to NPC; no skin contagion",
-      "correction": "User directly removes all pathological own-body adverse effects from S4-009; gradual appearance/odor/late contact hazard only",
-      "sayu": "Utsuro left temporary bone support of patient's life-sustaining seal in ward, time-limited; patient alive and autonomous",
-      "summoning": "Shiki uses fresh own blood on RIGHT forearm tattoo, hand signs, chakra; Utsuro physically summoned inside Shiki secret lab, now aware of place/equipment"
+      "at": "0006-09-29T02:32:00",
+      "blood": "Utsuro sealed sample Ш still not studied",
+      "conversation": "In lab Shiki asserted the samples his and asked whether Utsuro senses implant; Utsuro senses changed alien thread but not DNA specifics; acknowledged independent Sayu interests.",
+      "dismissal": "Player dismissed Utsuro physical summon and requested voluntary reverse summon to ward",
+      "pov_rule": "Shiki can only perceive events inside his current scene or via credible later report; GM-hidden remote events never auto-leak to Shiki.",
+      "reverse_summoning": "Utsuro performed bounded reciprocal summon on expressed Shiki consent at 02:32 and physically transported Shiki to Seventh Ward",
+      "ward": "Shiki observes Sayu alive, left arm distressed and life-support bone seal strained; Utsuro reinforcing; Sayu asks Shiki results; no offscreen dialogue revealed"
     },
     "recent": [
-      {
-        "at": "0006-09-28T10:26:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Шики провёл повторное углублённое секвенирование собственных проб: в изменённой коже Саю установлена чужая Y-содержащая клеточная линия, совпадающая по множеству маркеров с управляющим тяжем каменного существа. Происхождение неизвестно. Образцы/данные остались в тайной лаборатории.",
-        "turn_id": "s04.text.005"
-      },
       {
         "at": "0006-09-28T14:42:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7649,9 +7644,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Позднее исправление пользователя исключило придуманные ведущим некроз/припухлость и любые патологические побочные поражения самого Шики. Допустимы стадийные запах, худоба, бледность, тёмные сосуды и позднее контактное действие. Шики выполнил призыв Уцуро свежей кровью на правой печати, знаками и чакрой. Уцуро появился физически в тайной лаборатории, оставив Саю на временной опоре в Седьмой палате; знает существование лаборатории и видел образцы, подробные генетические секреты не раскрыты.",
         "turn_id": "s04.text.010"
+      },
+      {
+        "at": "0006-09-29T02:32:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Игрок исправил ограничение перспективы: не показывать в игровом тексте события вне присутствия Шики и не считать их его знаниями; NPC вне кадра автономны. В лаборатории Шики сообщил Уцуро, что образцы его, спросил о чужом вживлении, попросил обратный призыв и распустил прямой. Уцуро признал ощущение чужой нити, но не знает её научной природы. Затем, при согласии Шики, выполнил обратный призыв в Седьмую палату. Шики теперь видит Саю, нестабильную опору и Уцуро; Саю просит результаты.",
+        "turn_id": "s04.text.011"
       }
     ],
-    "story": "S04-010 Fri 29Sep1283 02:29: Direct player OOC correction removes ALL previously GM-imposed Shiki pathologic self-side effects (necrotic epidermis, inflammatory swollen forearm) from S04-009; only staged approved gauntness/pallor/dark veins/scent and later bare-skin-to-skin risk stage5 (currently OFF). Genome bridge accelerated first stage1 (~9.37) with very faint scent and right wrist vascular shadows; physical stats intact. Player performed Kuchiyose blood on RIGHT inner forearm seven-ring seal + hand signs + chakra. Utsuro was stabilizing Sayu in Seventh Ward and autonomously erected temporary bone supports before PHYSICALLY summoning to Shiki PRIVATE NW laboratory, leaving Sayu alive but on short-duration backup; Utsuro has now SEEN the lab, tools, samples/screens yet not read secret notes or identified donor genetics, and senses Shiki affected cord and latent demonic powers. Utsuro demands why he was summoned and notes he has little time to leave Sayu supported. Utsuro blood tube marked Ш untouched. Shiki has access to basic Shiton and Byoton from implant but named techniques unlearned. Utsuro autonomously awaiting response, does not control Shiki."
+    "story": "S4-011 Fri29Sep1283 02:32: DIRECT PLAYER P0 POV correction: Shiki MUST NOT SEE/HEAR remote NPC scenes while absent; previous off-camera ward excerpts GM knowledge only until observed/reported. Shiki at SECRET LAB argued samples his, asked Utsuro if he sensed foreign implant; Utsuro confirmed felt a responsive alien thread not genetic details, challenged sample ownership. Shiki voluntarily dismissed Utsuro. After 3 mins Utsuro performed constrained reverse summons to Seventh Ward upon prior explicit consenting request; Shiki arrives, sees Sayu awake with distressed left arm and precarious pale bony external supporting arcs of life seal. Utsuro near head steadies support and warns connection isn't severed; Sayu demands Shiki results. Shiki can see actual ward NOW; he has NO knowledge of what was said/occurred during his absence before 02:32 beyond direct evidence. Utsuro now saw hidden lab but does not know genetic secrets. No new disease contact; appearance still only stage1 subtle smell/dark right arm near mark, no pathological Shiki processes. Ending at Shiki in ward; respond to patient and tackle anchor problem. Existing Utsuro tube blood Ш still unanalysed."
   },
   "schema": "npr-github-scene-memory/1"
 }
