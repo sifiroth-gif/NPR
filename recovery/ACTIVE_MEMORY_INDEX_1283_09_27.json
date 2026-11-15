@@ -286,13 +286,15 @@
     {
       "topic": "uttro_pact_blood",
       "source": [
+        "recovery/LATEST_SHIKI_CHECKPOINT.json@88d2390a0f578714e1bdc97f47ce2cffeb806266",
+        "recovery/LATEST_SHIKI_CHECKPOINT.json@8cb7e9349459adc8941a75305dc7baf6df65e971",
         "s03.text.081",
-        "s03.text.085"
+        "s03.text.085@corrected"
       ],
-      "fact": "Shiki's accidental blood signature on scroll created an IRREVERSIBLE bond, seal seven black interrupted rings/roots on INNER RIGHT forearm. Proper new summon requires OWN fresh blood smeared on RIGHT forearm seal plus handsigns+chakra; at22:05:34 Utsuro DENIED ever analyzing Shiki blood: says learned ONLY name and call-link. He does NOT know Shiki genome by default. This denial is character speech, not objective blood research demonstration.",
-      "status": "played+npc_claim",
+      "fact": "Shiki DIRECTLY ordered Utsuro to ANALYZE Shiki OWN BLOOD 27Sep13:38–13:44; Utsuro accepted and promised cells/chromosome/DNA-damage readings; at13:43 physically stored sealed tube marked 'образец Ш'; at15:02 still capped, no results. At22:05:27 Utsuro corrected response acknowledges blood tube and says STILL not analyzed; original generic 'Нет. Если бы я хотел исследовать, ты бы услышал просьбу' was false due loss of original memory. No completed assay, no justified Shiki Zero Genome knowledge. Blood PACT signature reading name is DIFFERENT from separate tube for analysis. See correction source.",
+      "status": "direct_player_instruction+played_sample+corrected_NPC_claim_no_lab_result",
       "known_to": [
-        "Shiki knows signature ritual and heard Utsuro's claim; Utsuro personally knows his own history; other NPCs not automatically informed"
+        "Shiki himself gave request and knows Utsuro took tube and agreed; Utsuro has tube and accepted responsibility; other NPC not automatically informed."
       ]
     },
     {
@@ -371,11 +373,21 @@
     {
       "id": "s03.text.068@original",
       "rule": "Original draft superseded by correction-before-publication file s03.text.068.rev1.json; do not count as second event."
+    },
+    {
+      "id": "s03.text.085@original-blood-dialogue",
+      "rule": "Original 'If I wanted to analyze your blood you would see request/instruments' scene text RETRACTED due objective original 13:38 Shiki sample/accepted analysis. Rest of original scene still played. See correction file.",
+      "correction_file": "recovery/corrections/s03.text.085_utsuro_blood_2026-11-15.json"
     }
   ],
   "recovery_audit": {
     "root_cause": "After SQLite rev217, complete turns only existed as Git-history versions of a mutable FAST_SCENE, while HOT recent summaries rolled off. The pre-session SQLite FTS5/actor memory and NPC belief graph were never replayed to current cursor, allowing knowledge-source drift. Contradictory documents still direct readers to stale LATEST_SHIKI_CHECKPOINT.json and stale technical time21:03. OOC-corrected turn s03.text.081 reused an ID and could reinfect recall without explicit invalidation.",
     "restoration": "Exact text recovered 070–085 as standalone JSON file; 063–069 already separate immutable JSON, session1/2 independently archived. This source-aware index marks play versus revoked, attaches per-topic evidence and per-person access, and separates unseen GM knowledge from Shiki's observations.",
     "limitations": "Not a substitute for actual confirmed SQLite 217→85 text turn replay or indexed actor-scoped beliefs. Do not claim verify --full has run. Index captures 063–085 sources, not total hidden game state; consult full source for any contested details. Repair stronger by replay at session handoff and derive world memory records from original evidence."
+  },
+  "audit_followup_2026_11_15": {
+    "specific_failure": "High-priority risk: prior source index lacked earlier first 63 turns! Added back-reference to 13:38 original source; merely indexing 063–085 did not recover earlier Utsuro blood sample. Historical checkpoint has dated content and specific confirmed text, NOT global obsolete data. When user asks about a pre-hot fact, search earlier checkpoint per dated source instead of declaring its contents 'stale'.",
+    "resolved_for": "Utsuro Shiki blood specimen and 085 answer",
+    "confirmed_still_open": "Other before-063 potentially important details remain to be checked when referenced; SQLite replay still pending"
   }
 }
