@@ -357,6 +357,44 @@ def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
             ]}
 
 
+def verify_hot_memory_gate(hot):
+    """Fail closed for future published gameplay without a source-memory receipt.
+
+    Historical turns 001–004 predate the mandatory gate. OOC corrections that
+    do not advance the current turn are reviewed separately.
+    """
+    turn = hot.get("latest_turn", {})
+    turn_id = turn.get("id", "")
+    if not turn_id.startswith("s04.text."):
+        return
+    suffix = turn_id.split(".")[-1]
+    if not suffix.isdigit() or int(suffix) <= 4:
+        return
+    if turn.get("turn_kind") not in ("player_action", "session_opener_npc_autonomy",
+                                   "player_action_corrected_by_gm_ooc"):
+        return
+    gate = turn.get("memory_gate")
+    if not isinstance(gate, dict) or gate.get("schema") != "npr-memory-gate/1":
+        raise ValueError("Missing mandatory scene-memory evidence receipt for published turn")
+    previous = [r.get("turn_id") for r in hot.get("history", [])
+                if r.get("turn_id") != turn_id]
+    if not previous or gate.get("previous_turn_id") != previous[-1]:
+        raise ValueError("Memory receipt not bound to the previous confirmed turn")
+    if not isinstance(gate.get("source_refs"), list) or len(gate["source_refs"]) > 16:
+        raise ValueError("Memory receipt must contain bounded source references")
+    if not gate["source_refs"] and not gate.get("unretrieved"):
+        raise ValueError("Neither verified source candidates nor explicit gaps recorded")
+    if gate.get("player_input") != turn.get("player_input"):
+        raise ValueError("Memory receipt player input does not match the published action")
+    for src in gate["source_refs"]:
+        if not isinstance(src, dict) or set(src) != {"source", "sha256"}:
+            raise ValueError("Invalid source reference in memory receipt")
+        if not isinstance(src["source"], str) or len(src["source"]) > 300:
+            raise ValueError("Invalid source path in memory receipt")
+        if not re.fullmatch(r"[0-9a-f]{64}", src["sha256"]):
+            raise ValueError("Source hash missing or invalid in memory receipt")
+
+
 def compact_live_index(root, state_dir):
     """Small source-bound lookup catalog for GitHub-only ChatGPT turns.
 
@@ -377,6 +415,7 @@ def compact_live_index(root, state_dir):
     hot = json.loads(raw)
     if hot.get("latest_turn", {}).get("id") != hot.get("cursor", {}).get("last_turn_id"):
         raise ValueError("HOT current turn must match cursor before deriving memory")
+    verify_hot_memory_gate(hot)
     records = []
     for doc in data["documents"]:
         all_terms = Counter(t for section in doc["sections"] for t in section["terms"])
