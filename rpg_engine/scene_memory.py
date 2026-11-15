@@ -365,7 +365,7 @@ def verify_hot_memory_gate(hot):
     """
     turn = hot.get("latest_turn", {})
     turn_id = turn.get("id", "")
-    match = re.fullmatch(r"s(\\d+)\\.text\\.(\\d+)", turn_id)
+    match = re.fullmatch(r"s(\d+)\.text\.(\d+)", turn_id)
     # Only the first four already published S4 turns predate the new barrier.
     if match and int(match[1]) == 4 and int(match[2]) <= 4:
         return
