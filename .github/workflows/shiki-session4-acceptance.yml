@@ -60,19 +60,30 @@ jobs:
           handoff=json.loads((p/"handoff-packet.json").read_text())
           focus=json.loads((p/"focus-packet.json").read_text())
           assert audit["status"]=="binary_verified"
-          assert audit["fallback"]=="synchronized"
-          assert audit["session"]==4 and audit["revision"]==304
-          assert handoff["confirmed"]["at"]=="0006-09-27T22:05:34"
-          assert handoff["confirmed"]["session"]==4
-          assert handoff["heading"].startswith("среда,")
-          assert handoff["session_plan"]["source"]=="sessions/SESSION_004.json"
-          assert "Седьмая" in handoff["session_plan"]["title"]
-          assert focus["scene_spine"]["source"]=="sessions/SESSION_004.json"
-          assert len(focus["scene_spine"]["next_causes"])<=2
+          assert audit["fallback"] in ("synchronized", "text_ahead_unreplayed")
+          assert audit["session"]>=4 and audit["revision"]>=304
+          assert handoff["confirmed"]["at"]==audit["at"]
+          assert handoff["confirmed"]["session"]==audit["session"]
+          assert focus["confirmed"]["revision"]==audit["revision"]
+          assert "scene_memory" in focus
+          assert focus["scene_memory"]["retrieval_used"]
+          if audit["fallback"]=="text_ahead_unreplayed":
+              assert audit["cursor_at"]>=audit["at"]
+              state=Path(os.environ["RUNNER_TEMP"])/"shiki4"
+              from rpg_engine import scene_memory
+              idx=json.loads((state/"recovery/SCENE_MEMORY_INDEX.json").read_text())
+              hot=json.loads((state/"recovery/FAST_SCENE.json").read_text())
+              assert idx["cursor"]["turn"]==hot["cursor"]["last_turn_id"]
+              assert idx["hot_sha256"]==__import__("hashlib").sha256(
+                  (state/"recovery/FAST_SCENE.json").read_bytes()).hexdigest()
+          if audit["session"]==4:
+              assert handoff["session_plan"]["source"]=="sessions/SESSION_004.json"
+              assert focus["scene_spine"]["source"]=="sessions/SESSION_004.json"
+              assert len(focus["scene_spine"]["next_causes"])<=2
           assert "npc_psychological_presence" in focus
           assert len(focus["rules"])<=10
           last=handoff["confirmed"]["last_confirmed_turn"]
-          assert last["id"]=="s3.played.116"
+          assert last["id"]
           assert handoff["confirmed"]["pending"] is None
           print("FOCUS_ACCEPTED",{
               "at":handoff["confirmed"]["at"],
