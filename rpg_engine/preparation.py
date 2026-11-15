@@ -64,8 +64,17 @@ def _head(game, con, recent):
 def heading(at, location, calendar=None):
     value = dt.datetime.fromisoformat(at)
     if calendar:
-        anchor = dt.datetime.fromisoformat(world.time_value(calendar["anchor_at"], "calendar anchor"))
-        weekday = (calendar["weekday"] + (value.date() - anchor.date()).days) % 7
+        # Fictional world time skips may establish a newer canonical weekday.
+        # Select the latest *explicit* era anchor without altering older scenes.
+        epoch = calendar
+        for candidate in calendar.get("weekday_anchors", []):
+            since = world.time_value(candidate["anchor_at"], "calendar era anchor")
+            if since <= at and (epoch is calendar or since > epoch["anchor_at"]):
+                epoch = candidate
+        anchor = dt.datetime.fromisoformat(world.time_value(epoch["anchor_at"], "calendar anchor"))
+        if type(epoch["weekday"]) is not int or not 0 <= epoch["weekday"] < 7:
+            raise ValueError("calendar weekday must be 0..6")
+        weekday = (epoch["weekday"] + (value.date() - anchor.date()).days) % 7
         year = value.year + calendar["year_offset"]
     else:
         weekday, year = value.weekday(), value.year
