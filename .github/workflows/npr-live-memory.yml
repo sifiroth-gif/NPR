@@ -1,0 +1,79 @@
+name: Shiki automatic live scene-memory refresh
+
+on:
+  push:
+    branches: ["game-state/shiki"]
+    paths:
+      - ".github/workflows/npr-live-memory.yml"
+      - "recovery/FAST_SCENE.json"
+      - "archive/*-index.json"
+      - "recovery/transcripts/*memory-index*.json"
+      - "campaigns/shiki/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: _engine
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: game-state/shiki
+          path: _state
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh with fast-forward lease and verify published catalog
+        shell: bash
+        env:
+          PYTHONPATH: ${{ github.workspace }}/_engine
+        run: |
+          set -euo pipefail
+          git -C _state config user.name "github-actions[bot]"
+          git -C _state config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git -C _state fetch origin refs/heads/game-state/shiki
+            git -C _state checkout -B game-state/shiki FETCH_HEAD
+            python -m rpg_engine --db _state/campaign.sqlite scene-memory-build \
+              --state-dir _state --source-root _engine \
+              --output _state/recovery/SCENE_MEMORY_INDEX.json
+            git -C _state add -- recovery/SCENE_MEMORY_INDEX.json
+            if git -C _state diff --cached --quiet; then
+              echo "MEMORY_INDEX_CURRENT"
+              exit 0
+            fi
+            git -C _state commit -m "Auto-refresh Shiki source-bound scene-memory index"
+            if git -C _state push origin HEAD:refs/heads/game-state/shiki; then
+              git -C _state fetch origin refs/heads/game-state/shiki
+              git -C _state show FETCH_HEAD:recovery/SCENE_MEMORY_INDEX.json > "$RUNNER_TEMP/published-memory.json"
+              cmp "$RUNNER_TEMP/published-memory.json" _state/recovery/SCENE_MEMORY_INDEX.json
+              python - <<'PY'
+          import json
+          d=json.load(open("_state/recovery/SCENE_MEMORY_INDEX.json"))
+          assert d["schema"]=="npr-github-scene-memory/1"
+          assert d["cursor"]["turn"]
+          assert any("SECRET_LAB_NW_CATCHMENT" in e["source"] for e in d["documents"])
+          print("MEMORY_GATE_PUBLISHED",d["cursor"]["turn"],len(d["documents"]))
+          PY
+              exit 0
+            fi
+            echo "Concurrent state update detected, reloading fresh state"
+            sleep 1
+          done
+          echo "Memory cache update failed safely after concurrent writes"
+          exit 1
