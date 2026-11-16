@@ -46,7 +46,9 @@ MONTHS = ("января", "февраля", "марта", "апреля", "ма�
 
 LINE_LIMIT = 320
 KNOWS_LIMIT = 14
-CHRONICLE_IN_HOT = 60
+CHRONICLE_IN_HOT = 8
+CANON_IN_HOT = 14
+CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
 RESOLVED_KEEP = 6
 CALENDAR_AHEAD = 14
@@ -555,6 +557,43 @@ def _full_chronicle(state_dir, hot):
     return sorted(entries.values(), key=lambda e: turn_number(e["id"]))
 
 
+def _archive_canon(state_dir, hot):
+    """Keep the full, source-attributed canon outside the small live packet.
+
+    This retains every approved correction in a durable JSONL archive. HOT
+    carries only recent corrections plus a source path; older rules remain
+    retrievable and are never inferred from summaries.
+    """
+    path = Path(state_dir) / CANON_ARCHIVE
+    collected = {}
+    if path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                entry = json.loads(line)
+                collected[(entry["turn"], entry["rule"])] = entry
+    for entry in hot.get("canon", []):
+        collected[(entry["turn"], entry["rule"])] = entry
+    if collected:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        contents = "".join(json.dumps(item, ensure_ascii=False) + "\n"
+                           for item in collected.values())
+        if not path.exists() or path.read_text(encoding="utf-8") != contents:
+            path.write_text(contents, encoding="utf-8")
+    if len(hot.get("canon", [])) > CANON_IN_HOT:
+        hot["canon"] = hot["canon"][-CANON_IN_HOT:]
+    if path.exists() and collected:
+        hot["canon_older"] = CANON_ARCHIVE
+
+
+def _trim_inactive_cast(hot):
+    """Cards are already persisted in recovery/cast, so keep only scene actors."""
+    present = set((hot.get("scene") or {}).get("present") or [])
+    cast = hot.get("cast") or {}
+    if len(cast) > len(present):
+        hot["cast"] = {key: value for key, value in cast.items() if key in present}
+        hot["cast_older"] = CAST_DIR
+
+
 def _read_state(state_dir):
     """HOT и закрытая половина сливаются в одно состояние в памяти."""
     state_dir = Path(state_dir)
@@ -685,6 +724,8 @@ def fold(state_dir):
         hot["chronicle"] = hot["chronicle"][-CHRONICLE_IN_HOT:]
         hot["chronicle_older"] = f"archive/session-{int(hot['session']):03}-chronicle.md"
     _write_cast(state_dir, hot)
+    _archive_canon(state_dir, hot)
+    _trim_inactive_cast(hot)
     texts, changed = _write_state(state_dir, hot, before)
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
@@ -752,6 +793,8 @@ def bootstrap(state_dir, seed):
         hot["chronicle"] = hot["chronicle"][-CHRONICLE_IN_HOT:]
         hot["chronicle_older"] = f"archive/session-{session:03}-chronicle.md"
     _write_cast(state_dir, hot)
+    _archive_canon(state_dir, hot)
+    _trim_inactive_cast(hot)
     texts, _changed = _write_state(state_dir, hot)
     return {"status": "bootstrapped", "cursor": hot["cursor"]["id"], "verbatim_turns": len(ordered),
             "chronicle": len(hot["chronicle"]),
