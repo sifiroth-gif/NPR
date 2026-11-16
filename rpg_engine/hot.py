@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import base64
 import datetime as _dt
+import hashlib
 import json
 import re
 import subprocess
@@ -474,6 +475,13 @@ def collect_turns(state_dir, hot):
     return [found[key] for key in sorted(found)], errors
 
 
+def _turn_digest(turn):
+    """Content identity independent of formatting and Git commit."""
+    encoded = json.dumps(turn, ensure_ascii=False, sort_keys=True,
+                         separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
 def _dump(data):
     return json.dumps(data, ensure_ascii=False, indent=1) + "\n"
 
@@ -612,7 +620,10 @@ def fold(state_dir):
             # the NPC before apply_turn skips the old ID resurrects stale cast.
             incoming = turn_number(turn["id"])
             current = (int(hot.get("session", 0)), int(hot.get("cursor", {}).get("seq", 0)))
-            if incoming <= current and not (turn.get("amend") and incoming == current):
+            fingerprint = _turn_digest(turn)
+            amendment = bool(turn.get("amend")) and incoming == current
+            if incoming <= current and (
+                    not amendment or hot.get("fold", {}).get("turn_digest") == fingerprint):
                 continue
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
@@ -622,6 +633,7 @@ def fold(state_dir):
                     if "hides" in card:
                         hot.setdefault("_hides", {})[key] = card["hides"]
             if apply_turn(hot, turn):
+                hot.setdefault("fold", {})["turn_digest"] = fingerprint
                 applied.append(turn)
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
