@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-30T20:28:00",
+    "at": "0006-09-30T20:30:00",
     "location": "Кусагакуре, собственный дом Магами Шики",
-    "turn": "s04.text.026"
+    "turn": "s04.text.027"
   },
   "documents": [
     {
@@ -7674,26 +7674,17 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "708ce9d31c70c70e3db930561654aced5bc49a8683429efe0c667b5cf3b46c2e",
+  "hot_sha256": "7fbffa6ff05069d849163f782e3241bbe7a88fe8cfe236f542eeb01934aec439",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "at": "0006-09-30T20:28:00",
-      "farewell": "Utsuro and Minase promise independent medical survey and report results after completion; no guaranteed immediate rescue outcome",
-      "meal": "User ate normal supper at home Sep30 at 20:28, ordinary need for nutrition unaffected",
-      "memory_priority_policy": "Direct 2026-11-16 player instruction: CURRENT DIALOGUE first, then HOT operative save, then historic index ONLY for missing essential past detail. Avoid redundant multi-file lookups per game turn and time-consuming preflights. AGENTS.md updated both branches.",
-      "nori_contact": "Unopened new sealed security message at doorway; male messenger outside gate called from Captain Hayase Nori, has not seen Shiki/received reply, unknown content",
-      "pact_mark": "Seven INTERRUPTED CONCENTRIC black rings surrounding empty black vortex with dense black root filigree on INNER RIGHT forearm, not 7 vertical circles",
-      "past_gm_prose_error": "Previous exact_visible_gm_response remains immutable as actually displayed; its 20:07 'directly at home' causal claim is specifically voided in favor of S4 lab origin and subsequent physical stealth travel.",
-      "reverse_summoning": "S04 correct: reverse summoning opened by Utsuro from Shiki's PRIVATE NW lab, dissolved at 20:07 from ward; Shiki materializes in secret lab then physically stealth-travels forest, outskirts to own Kusa house, eats by 20:28. No generic teleport, no home-anchor at Utsuro call."
+      "action": "Player stood, opened own front door, said home/unread documents",
+      "letter": "Still closed/unread",
+      "messenger": "Nori's Kusa communications messenger presented ID, is unnerved by Shiki, says Nori requests face-to-face talk tonight about C-17 before morning transfer to follow-up review, explicitly no arrest or interrogation; awaits answer.",
+      "no_user_extra_actions": true,
+      "seals": "Intact, entity silent"
     },
     "recent": [
-      {
-        "at": "0006-09-30T19:07:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Шики указал на контакт Уцуро с сущностью, отпустил руку каменной женщины и велел вскрыть «саркофаг». Уцуро подтвердил прямой контакт и превращение в демона, отличая себя от седьмого замка. Хирург вскрыла только наружный кожух, под ним Шики увидел шесть действующих вложенных колец с отдельными внешними и внутренними гнёздами и седьмой неподвижный обруч вокруг закрытой чёрной границы. Обнаружена настоящая начальная перемычка обратного питания от внутренней стороны шестого кольца через пятый ко второму. Шестое кольцо повреждено, Уцуро держит его, женщина больше не удерживается. Возможна отдельная проба совместимости внутреннего гнезда без полного переноса, но седьмой не имеет обычного входа. Ничего не перенесено.",
-        "turn_id": "s04.text.021"
-      },
       {
         "at": "0006-09-30T19:21:00",
         "source": "current_conversation_prior_assistant_message_s04.text.022; exact prose remains in visible chat, not yet copied into HOT",
@@ -7723,9 +7714,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "ИСПРАВЛЕННЫЙ ХОД: Шики поручил Уцуро и Минасэ разбираться с оставшимися пациентами и позднее сообщить результат. Разорвал обратный призыв, ранее установленный Уцуро ИЗ ТАЙНОЙ ЛАБОРАТОРИИ ШИКИ В НИЖНИЙ ГОСПИТАЛЬ на s04.text.011, и вернулся именно в лабораторию на северо-западных известняковых холмах. Затем по прямой заявке скрытно прошёл лесами/водоотводами в Кусагакуре и поел дома. Постоянный договор и 7 внутренних замков с сущностью сохранены. В доме неоткрытый конверт внутренней безопасности, у калитки посыльный Нори. Старое ошибочное изображение мгновенного госпиталь->дом утратило фактическую силу.",
         "turn_id": "s04.text.026"
+      },
+      {
+        "at": "0006-09-30T20:30:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики открыл домашнюю дверь посыльному капитана Хаясэ Нори, сказал: «Дома. С документами ещё не ознакомился». Посыльный показал служебный жетон, настороженно отреагировал на присутствие Шики, подтвердил личную проверку возвращения и незнание содержания закрытых бумаг. Сообщил просьбу Нори прийти лично этим вечером в управление безопасности до утренней ведомственной передачи части материалов дела С-17; это не задержание и не допрос. Спросил, какой ответ передать. Шики ещё не отвечал, документы не вскрывал.",
+        "turn_id": "s04.text.027"
       }
     ],
-    "story": "REWRITTEN s04.text.026 CANON: Shiki ended Utsuro's ACTIVE reciprocal summon from his SECRET NORTHWEST LAB (S04.text.011). Arrival at LAB 20:07; he then stealthily traversed NW woods/covered gutters with occasional short Shunshin to KUSAGAKURE, reached his own home and ATE by 20:28. The action was NOT direct hospital-to-home spatial jump, no arbitrary teleport. Utsuro and Minase autonomously continue old hospital patient examinations and promised later report. Semi-physical facility stable. Inside Shiki 7 prison locks keep autonomous entity fully sealed, no pact breakdown. At home sealed security envelope unread and male messenger of Captain Hayase Nori outside gate waiting answer, no PC reply yet. This revision REPLACES previous s04.text.026 text in HOT; preserves same cursor/time and player action. Contract mark anatomical original 7 concentric interrupted circles black abyss/root network right inner forearm. Continue from current chat, then HOT, historical index only for missing earlier specifics."
+    "story": "S04.text.027 30 Sep 1283 Sat 20:30, Shiki in own Kusa house (covertly returned from NW secret lab via canceled Utsuro reverse summon). User stood, OPENED his own front door, told messenger 'Дома. С документами ещё не ознакомился'. MESSENGER from Captain Hayase Nori sees Shiki, reflexively wary of Shiki's inherent unmotivated unsettling presence, identifies self with official token, says Nori needed face-to-face confirmation, contents of one sealed security letter unread and unknown to messenger, no opening or player consent. Messenger says Nori requests PERSONALLY to speak this evening at internal security HQ BEFORE papers on S-17 case get transmitted to later departmental review in morning; this is explicitly NOT detention or interrogation order, asks Shiki for reply. Shiki has not answered invitation or read letter; no PC thoughts/actions authored. Inside Shiki seven prison seals and finite entity spiritual energy buffer stable; entity silent. Next reply of Shiki needed. No retrospective NPC access to secrets (lab/genetic sources/hidden prisoner). Latest change to memory policy conversation>HOT>targeted archive only. No new arbitrary teleportation; seven concentric broken right inner forearm rings with dark vortex and roots remain permanent."
   },
   "schema": "npr-github-scene-memory/1"
 }
