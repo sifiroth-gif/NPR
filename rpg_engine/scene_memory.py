@@ -328,11 +328,12 @@ def environment_semantic():
 
 
 
-def historical_candidates(root, state_root, *, action="", location="", limit=9):
-    """Search every archived session plus corrections during the normal preflight.
+def historical_candidates(root, state_root, *, action="", location="", actors=(), limit=9):
+    """Independent historical anchors, not a single overconstrained query.
 
-    Uses the cache emitted by hot-fold. When absent/stale, it builds a read-only
-    temporary view from source files (never makes a canonical assertion).
+    Search ALL sessions for the action, scene place and cast separately.
+    Retrieved passages remain evidence candidates: NPC knowledge is gated
+    independently by witnessed/reported events and dates.
     """
     from . import heuristic_history
     state_root = Path(state_root)
@@ -355,14 +356,29 @@ def historical_candidates(root, state_root, *, action="", location="", limit=9):
         else:
             index = heuristic_history.build(root, state_root)
             source = "live_rebuilt_missing_cache"
-        question = (action + " " + location).strip()
-        if not question:
-            return {"schema": "npr-heuristic-answer/1", "status": "no_query",
-                    "matches": [], "index_documents": index["documents"]}
-        result = heuristic_history.query(index, question, limit=limit)
-        result["status"] = source
-        result["cursor"] = cursor
-        return result
+
+        anchors = [("action", action), ("location", location)]
+        anchors.extend(("actor", x) for x in list(actors)[:4])
+        selected, identities, reports = [], set(), []
+        for kind, phrase in anchors:
+            if not phrase.strip():
+                continue
+            cap = limit if kind == "action" else (3 if kind == "location" else 2)
+            found = heuristic_history.query(index, phrase, limit=cap)
+            reports.append({"type": kind, "phrase": phrase[:200],
+                            "count": len(found["matches"])})
+            for item in found["matches"]:
+                key = (item["source"], item["lines"][0], item["lines"][1])
+                if key in identities:
+                    continue
+                identities.add(key)
+                selected.append({**item, "channel": kind})
+        selected = selected[:limit]
+        return {"schema": "npr-heuristic-answer/1", "status": source,
+                "matches": selected, "anchors": reports,
+                "index_documents": index["documents"], "cursor": cursor,
+                "confidence": "candidate_evidence" if selected else "insufficient_evidence",
+                "rule": "All sessions searched, source-bound candidates only."}
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
         return {"schema": "npr-heuristic-answer/1",
                 "status": "unavailable_" + type(exc).__name__,
@@ -387,7 +403,7 @@ def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
                                   limit=limit, semantic_config=environment_semantic())
                  if con is not None else {"mode": "offline_text", "matches": []})
     history_result = (historical_candidates(root, state_root, action=action,
-                                            location=location, limit=limit)
+                                            location=location, actors=actors, limit=limit)
                       if root is not None and state_root is not None else
                       {"schema": "npr-heuristic-answer/1", "status": "state_unavailable",
                        "matches": [], "index_documents": 0})
