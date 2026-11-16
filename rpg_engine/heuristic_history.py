@@ -11,6 +11,7 @@ from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from hashlib import sha256
 import json
+import base64
 import math
 from pathlib import Path
 import re
@@ -38,7 +39,7 @@ LATIN = str.maketrans({
     "х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"shch","ъ":"",
     "ы":"y","ь":"","э":"e","ю":"yu","я":"ya",
 })
-MAX_RECORDS = 6000
+MAX_RECORDS = 60000
 
 
 def tokens(text):
@@ -308,57 +309,135 @@ def build(root, state):
             "rule": "Candidate evidence, not NPC knowledge. Read primary source and later corrections."}
 
 
-def save(root, state, output=None):
-    """Shard a derived cache so each GitHub-hosted lookup file stays readable.
+# Deterministic, generic Bloom routing is for remote/GitHub-first lookups only.
+# A positive bit test is a candidate hint; false positives are expected.
+# All real evidence still comes from verified, source-addressed shards.
+ROUTE_BITS = 32768
+ROUTE_HASHES = 4
 
-    Existing GitHub Actions hot-fold calls this automatically after every turn.
-    Each shard is content-checked, old identical shards are not rewritten.
+
+def _fnv(word, seed):
+    value = seed
+    for character in word:
+        value = ((value ^ ord(character)) * 16777619) & 0xffffffff
+    return value
+
+
+def _locations(word):
+    x = _fnv(word, 2166136261)
+    y = _fnv(word, 2166136261 ^ 0x9e3779b9) | 1
+    return [((x + i * y + i * i * 0x9e3779b1) & 0xffffffff) % ROUTE_BITS
+            for i in range(ROUTE_HASHES)]
+
+
+def _bloom(entries):
+    bits = bytearray(ROUTE_BITS // 8)
+    for entry in entries:
+        tokens = set(entry["terms"].split())
+        hints = tokens | {w[:4] for w in tokens if len(w) > 4}
+        for word in hints:
+            for position in _locations(word):
+                bits[position // 8] |= 1 << (position % 8)
+    return base64.b64encode(bits).decode("ascii")
+
+
+def might_contain(encoded, term):
+    """Public/testable no-false-negative shard selector; not a proof of match."""
+    bits = base64.b64decode(encoded)
+    if len(bits) != ROUTE_BITS // 8:
+        raise ValueError("Incorrect recall router size")
+    token = stem(term)
+    variants = (token, token[:4]) if len(token) > 4 else (token,)
+    return any(all(bits[pos // 8] & (1 << (pos % 8))
+                   for pos in _locations(word)) for word in variants)
+
+
+def _group(row):
+    match = re.search(r"session-(\\d{3})", row["source"])
+    if match:
+        return "s" + match.group(1)
+    if row["source"].startswith("recovery/TURN"):
+        return "live"
+    return "canon"
+
+
+def save(root, state, output=None):
+    """Incrementally refresh source-verified shards and a two-level router.
+
+    Root manifest → source-group route → verified passage shard.
+    Every session is included, regardless of age, without loading 100 entire
+    sessions into a chat query. A folder-only build works without external DBs.
     """
     state = Path(state)
     folder = Path(output).parent if output is not None else state / "archive/heuristic-recall"
     data = build(root, state)
     folder.mkdir(parents=True, exist_ok=True)
-    shards, chunks, size = [], [], 0
+    shards, records, size, current_group = [], [], 0, None
     changed = False
+    group_members = defaultdict(list)
+    group_shards = defaultdict(list)
+
+    def write_if_changed(path, contents):
+        nonlocal changed
+        if not path.is_file() or path.read_text(encoding="utf-8") != contents:
+            path.write_text(contents, encoding="utf-8")
+            changed = True
 
     def flush():
-        nonlocal changed, chunks, size
-        if not chunks:
+        nonlocal records, size
+        if not records:
             return
         name = f"shard-{len(shards):03d}.json"
-        path = folder / name
-        content = json.dumps(chunks, ensure_ascii=False, separators=(",", ":"),
+        content = json.dumps(records, ensure_ascii=False, separators=(",", ":"),
                              sort_keys=True) + "\n"
         digest = sha256(content.encode("utf-8")).hexdigest()
-        if not path.is_file() or path.read_text(encoding="utf-8") != content:
-            path.write_text(content, encoding="utf-8")
-            changed = True
-        shards.append({"file": name, "sha256": digest, "records": len(chunks)})
-        chunks, size = [], 0
+        write_if_changed(folder / name, content)
+        item = {"file": name, "sha256": digest,
+                "records": len(records), "group": current_group}
+        shards.append(item)
+        group_shards[current_group].append(
+            {**item, "bloom": _bloom(records)})
+        records, size = [], 0
 
     for entry in data["records"]:
-        estimate = len(json.dumps(entry, ensure_ascii=False).encode("utf-8"))
-        if chunks and (len(chunks) >= 65 or size + estimate > 115_000):
+        group = _group(entry)
+        if current_group is not None and group != current_group:
             flush()
-        chunks.append(entry)
+        current_group = group
+        group_members[group].append(entry)
+        estimate = len(json.dumps(entry, ensure_ascii=False).encode("utf-8"))
+        if records and (len(records) >= 65 or size + estimate > 115_000):
+            flush()
+        records.append(entry)
         size += estimate
     flush()
+
+    routes = []
+    for group, items in group_shards.items():
+        name = f"route-{group}.json"
+        contents = json.dumps(
+            {"schema": SCHEMA, "group": group, "shards": items,
+             "filter_bits": ROUTE_BITS, "hashes": ROUTE_HASHES},
+            ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n"
+        write_if_changed(folder / name, contents)
+        routes.append({"group": group, "route": name,
+                       "sha256": sha256(contents.encode("utf-8")).hexdigest(),
+                       "records": len(group_members[group]),
+                       "bloom": _bloom(group_members[group])})
 
     hot_path = state / "recovery/HOT.json"
     hot = json.loads(hot_path.read_text(encoding="utf-8")) if hot_path.is_file() else {}
     manifest = {"schema": SCHEMA, "documents": data["documents"],
                 "cursor": hot.get("cursor", {}).get("id", ""),
-                "shards": shards,
-                "rule": "Read exact source; correction > event; actor knowledge is separate."}
+                "shards": shards, "routes": routes, "filter_bits": ROUTE_BITS,
+                "hashes": ROUTE_HASHES,
+                "rule": "Route hints only; read matching shard and primary source before claiming facts."}
     path = folder / "manifest.json"
     content = json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
-    if not path.is_file() or path.read_text(encoding="utf-8") != content:
-        path.write_text(content, encoding="utf-8")
-        changed = True
+    write_if_changed(path, content)
     return {"status": "updated" if changed else "current",
             "records": data["documents"], "shards": len(shards),
-            "path": str(path)}
-
+            "groups": len(routes), "path": str(path)}
 
 def load(path):
     """Fail closed if a shard was modified or mixed with another index build."""
