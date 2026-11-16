@@ -377,6 +377,9 @@ class HotFilesTest(unittest.TestCase):
         self.put(turn(45, "0006-10-01T07:14:00", amend=True,
                       gm="Исправленная сцена.", d={"cast": {"nori": {"knows+": ["точный факт"]}}}))
         self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.commit("fold amended turn")
+        self.assertEqual(hot.fold(self.root)["status"], "current",
+                         "same amended TURN.json must not rerun on workflow restart")
         public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
         self.assertEqual(public["cast"]["nori"]["knows"], ["Тэцу ранен", "точный факт"])
         self.assertNotIn("_undo", public)
