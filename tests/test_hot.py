@@ -173,6 +173,33 @@ class HotFoldTest(unittest.TestCase):
         self.assertEqual(recent["verdict"], "переписать")
         self.assertGreaterEqual(state["lint"]["session_totals"]["deference"], 2)
 
+    def test_verified_scene_requires_fresh_positions_on_next_played_turn(self):
+        state = base()
+        state["scene"]["as_of"] = "s04.text.044"
+        state["last"] = {"id": "s04.text.044", "player": "p", "gm": "g"}
+        with self.assertRaisesRegex(hot.TurnError, "d.scene is required"):
+            hot.apply_turn(state, turn(45, "0006-10-01T09:05:00"))
+        self.assertEqual(state["cursor"]["id"], "s04.text.044")
+        changed = hot.apply_turn(state, turn(45, "0006-10-01T09:05:00",
+                              d={"scene": {"situation": "Новая сцена в лаборатории",
+                                           "present": ["shiki"], "positions": "Шики в лаборатории"}}))
+        self.assertTrue(changed)
+        self.assertEqual(state["scene"]["as_of"], "s04.text.045")
+        self.assertEqual(state["scene"]["present"], ["shiki"])
+
+    def test_ooc_repair_does_not_overwrite_last_played_scene_anchor(self):
+        state = base()
+        state["scene"]["as_of"] = "s04.text.044"
+        state["last"] = {"id": "s04.text.044", "player": "p", "gm": "g"}
+        meta = {"schema": hot.TURN_SCHEMA, "id": "s04.text.045",
+                "kind": "ooc", "at": "0006-10-01T07:10:00", "player": "Мастеру: исправь сцену",
+                "line": "Сверено размещение NPC",
+                "d": {"scene": {"as_of": "s04.text.044", "present": ["shiki"]}}}
+        self.assertTrue(hot.apply_turn(state, meta))
+        self.assertEqual(state["last"]["id"], "s04.text.044")
+        self.assertEqual(state["scene"]["as_of"], "s04.text.044")
+        self.assertEqual(state["cursor"]["id"], "s04.text.045")
+
     def test_legacy_fast_scene_is_adapted(self):
         legacy = {"format": "npr-shiki-fast-scene/1",
                   "cursor": {"last_turn_id": "s04.text.045", "at": "0006-10-01T07:14:00"},
