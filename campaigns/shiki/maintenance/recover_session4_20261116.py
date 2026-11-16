@@ -244,6 +244,15 @@ def main(root):
     indexed={int(row["id"].rsplit(".",1)[1]):row for row in archived}
     if len(archived)!=67 or sorted(indexed)!=[i for i in range(1,69) if i!=22]:
         raise ValueError("unexpected source ledger; .022 must be the only missing entry")
+    memory_file=root/"recovery/SCENE_MEMORY_INDEX.json"
+    memory_bytes=memory_file.read_bytes()
+    memory_data=json.loads(memory_bytes)
+    if memory_data.get("cursor",{}).get("turn")!="s04.text.048":
+        raise ValueError("historical memory index anchor changed")
+    memory_blob=hashlib.sha1(
+        ("blob "+str(len(memory_bytes))+"\\0").encode().replace(b"\\0",b"\\x00")+memory_bytes
+    ).hexdigest()
+    ledger_sha=hashlib.sha256(f.read_bytes()).hexdigest()
     # Do not edit the historical ledger. All newly recovered data are kept
     # in independently addressable named artifacts and verified SQLite.
     missing=sources[27]
@@ -342,6 +351,20 @@ def main(root):
                 "player_input":row["player"],"text":narrative,"input_mode":"direction",
                 "source_ref":text_source,"source_status":"exact",
                 "events":events}
+        with game.connection() as con:
+            previous=con.execute("SELECT id FROM journal WHERE kind='turn' ORDER BY seq DESC LIMIT 1").fetchone()
+        if previous is None:
+            raise ValueError("cannot substantiate previous played turn for memory gate")
+        evidence=[{"source":"archive/session-004-source.md","sha256":RAW_SHA},
+                  {"source":"archive/session-004-turns.jsonl","sha256":ledger_sha}]
+        if n==54:
+            evidence.append({"source":str(reviewed_path.relative_to(root)),
+                             "sha256":hashlib.sha256(reviewed_path.read_bytes()).hexdigest()})
+        packet["memory_gate"]={
+            "schema":"npr-memory-gate/1","previous_turn_id":previous["id"],
+            "index_turn":"s04.text.048","index_blob_sha":memory_blob,
+            "player_input":packet["player_input"],"source_refs":evidence,
+            "unretrieved":[],"mode":"stale_index_plus_current_hot"}
         if n==68:
             packet["scene"]={"id":"s5.seina.clinic.entry","actors":["shiki","rear_unknown"],
                 "beat":"conflict","focus":"Обнажённые руки Шики у открытой задней двери; неизвестный шантажирует семью; Нори спорит с другим у фасада."}
