@@ -1,0 +1,62 @@
+{
+  "documents": 1810,
+  "generic_probe_count": 5,
+  "generic_probe_hit_at_10": 5,
+  "groups": 7,
+  "indexed_sessions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "limitations": [
+    "Historical first session without a curated played/void index remains review_required",
+    "Source recall is not semantic entailment or NPC witnessed knowledge",
+    "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
+  ],
+  "load_ms": 53.77,
+  "probes": [
+    {
+      "query_ms": 48.51,
+      "query_terms": 1,
+      "session": 1,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 48.53,
+      "query_terms": 1,
+      "session": 2,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 47.89,
+      "query_terms": 1,
+      "session": 3,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 50.05,
+      "query_terms": 1,
+      "session": 4,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 60.2,
+      "query_terms": 1,
+      "session": 5,
+      "source_hit_at_10": true
+    }
+  ],
+  "schema": "npr-recall-audit/1",
+  "shards": 46,
+  "source_sessions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "warm_query_median_ms": 48.53,
+  "warm_query_p95_ms": 60.2
+}
