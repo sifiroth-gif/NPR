@@ -84,6 +84,49 @@ class HotFoldTest(unittest.TestCase):
         self.assertEqual(len(state["chronicle"]), 2)
         self.assertEqual(state["chronicle"][-1]["line"], "Исправлено: Нори осталась у ворот.")
 
+    def test_amend_retracts_old_delta_and_preserves_only_corrected_facts(self):
+        state = base()
+        original = turn(45, "0006-10-01T07:14:00", d={
+            "cast": {"nori": {"knows+": ["Ошибочное признание Шики"]}},
+            "clocks": {"fabricated": {"owner": "nori", "what": "ложный приказ",
+                                      "due": "0006-10-01T08:00:00",
+                                      "if_unopposed": "незаконное задержание"}},
+            "pact_events": [{"id": "s04.text.045:cast", "type": "cast_B", "school": "byoton"}]
+        })
+        hot.apply_turn(state, original)
+        self.assertIn("Ошибочное признание Шики", state["cast"]["nori"]["knows"])
+        corrected = turn(45, "0006-10-01T07:15:00", amend=True,
+                         gm="Нори осталась за воротами.",
+                         d={"cast": {"nori": {"knows+": ["Шики закрыл калитку"]}}})
+        self.assertTrue(hot.apply_turn(state, corrected))
+        self.assertEqual(state["cast"]["nori"]["knows"], ["Тэцу ранен", "Шики закрыл калитку"])
+        self.assertNotIn("fabricated", state["offscreen"]["clocks"])
+        self.assertFalse(any(e["id"] == "s04.text.045:cast" for e in state["pact"]["events"]))
+        self.assertEqual(state["last"]["gm"], "Нори осталась за воротами.")
+        self.assertEqual(state["chronicle"][-1]["id"], "s04.text.045")
+        self.assertEqual(len(state["chronicle"]), 2)
+
+    def test_gap_and_backward_time_reject_without_touching_hot(self):
+        state = base()
+        for invalid in (turn(46, "0006-10-01T07:15:00"),
+                        turn(45, "0006-09-30T07:15:00")):
+            before = json.dumps(state, sort_keys=True, ensure_ascii=False)
+            with self.assertRaises(hot.TurnError):
+                hot.apply_turn(state, invalid)
+            self.assertEqual(json.dumps(state, sort_keys=True, ensure_ascii=False), before)
+        with self.assertRaises(hot.TurnError):
+            hot.apply_turn(state, turn(44, "0006-10-01T07:10:00", amend=True))
+        self.assertEqual(state["cursor"]["id"], "s04.text.044")
+
+    def test_amend_snapshot_is_private(self):
+        state = base()
+        hot.apply_turn(state, turn(45, "0006-10-01T07:15:00"))
+        public, private = hot._split_state(state)
+        self.assertNotIn("_undo", public)
+        self.assertNotIn('"snapshot"', json.dumps(public))
+        self.assertIn("undo", private)
+        self.assertEqual(private["undo"]["id"], "s04.text.045")
+
     def test_clock_resolution_and_thread_closure_are_recorded(self):
         state = base()
         hot.apply_turn(state, turn(45, "0006-10-01T09:30:00", d={
@@ -271,6 +314,32 @@ class HotFilesTest(unittest.TestCase):
         self.commit("bootstrap")
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"])
+
+    def test_gap_rejects_entire_batch_without_publishing_partial_memory(self):
+        self.put(turn(45, "0006-10-01T07:14:00"))
+        self.put(turn(47, "0006-10-01T07:31:00"))
+        original = (self.root / hot.HOT_PATH).read_text(encoding="utf-8")
+        report = hot.fold(self.root)
+        self.assertEqual(report["status"], "rejected")
+        self.assertEqual(report["applied"], [])
+        self.assertTrue(any("sequence gap" in e for e in report["errors"]))
+        self.assertEqual((self.root / hot.HOT_PATH).read_text(encoding="utf-8"), original)
+        self.assertFalse((self.root / "archive/session-004-turns.jsonl").exists())
+
+    def test_amended_turn_undo_survives_private_file_roundtrip(self):
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      d={"cast": {"nori": {"knows+": ["ложное свидетельство"]}}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.commit("fold original")
+        private = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(private["undo"]["id"], "s04.text.045")
+        self.put(turn(45, "0006-10-01T07:14:00", amend=True,
+                      gm="Исправленная сцена.", d={"cast": {"nori": {"knows+": ["точный факт"]}}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(public["cast"]["nori"]["knows"], ["Тэцу ранен", "точный факт"])
+        self.assertNotIn("_undo", public)
+        self.assertNotIn("ложное свидетельство", public["cast"]["nori"]["knows"])
 
     def test_broken_turn_file_is_reported_not_fatal(self):
         (self.root / hot.TURN_PATH).write_text("{не json", encoding="utf-8")
