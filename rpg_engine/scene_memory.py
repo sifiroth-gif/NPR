@@ -327,8 +327,45 @@ def environment_semantic():
     return vals if all(vals.values()) else None
 
 
+
+def historical_candidates(root, state_root, *, action="", location="", limit=9):
+    """Search every archived session plus corrections during the normal preflight.
+
+    Uses the cache emitted by hot-fold. When absent/stale, it builds a read-only
+    temporary view from source files (never makes a canonical assertion).
+    """
+    from . import heuristic_history
+    state_root = Path(state_root)
+    manifest = state_root / "archive/heuristic-recall/manifest.json"
+    hot_path = state_root / "recovery/HOT.json"
+    hot = json.loads(hot_path.read_text(encoding="utf-8")) if hot_path.is_file() else {}
+    cursor = (hot.get("cursor") or {}).get("id", "")
+    source = "persistent_derived_cache"
+    try:
+        if manifest.is_file():
+            index = heuristic_history.load(manifest)
+            if cursor and index.get("cursor") != cursor:
+                index = heuristic_history.build(root, state_root)
+                source = "live_rebuilt_stale_cache"
+        else:
+            index = heuristic_history.build(root, state_root)
+            source = "live_rebuilt_missing_cache"
+        question = (action + " " + location).strip()
+        if not question:
+            return {"schema": "npr-heuristic-answer/1", "status": "no_query",
+                    "matches": [], "index_documents": index["documents"]}
+        result = heuristic_history.query(index, question, limit=limit)
+        result["status"] = source
+        result["cursor"] = cursor
+        return result
+    except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
+        return {"schema": "npr-heuristic-answer/1",
+                "status": "unavailable_" + type(exc).__name__,
+                "matches": [], "index_documents": 0,
+                "warning": "Historical search did not run: do not invent past dates or NPC knowledge."}
+
 def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
-              source_index=None, con=None, limit=9):
+              source_index=None, con=None, state_root=None, limit=9):
     """Mandatory bounded pre-scene packet. Always run before narration.
 
     A missing source or disconnected model is visible, never silently upgraded
@@ -344,10 +381,17 @@ def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
     db_result = (sqlite_candidates(con, action=action, location=location, actors=actors,
                                   limit=limit, semantic_config=environment_semantic())
                  if con is not None else {"mode": "offline_text", "matches": []})
+    history_result = (historical_candidates(root, state_root, action=action,
+                                            location=location, limit=limit)
+                      if root is not None and state_root is not None else
+                      {"schema": "npr-heuristic-answer/1", "status": "state_unavailable",
+                       "matches": [], "index_documents": 0})
     return {"schema": "npr-scene-preflight/1", "audience": "gm_only",
             "location": location, "action_excerpt": action[:400],
             "file_memory": source_result, "journal_memory": db_result,
-            "retrieval_used": bool(source_result["source_count"]) or con is not None,
+            "historical_memory": history_result,
+            "retrieval_used": bool(source_result["source_count"]) or con is not None
+                               or bool(history_result.get("index_documents")),
             "constraints": [
                 "Source candidates are not universal canon; check late corrections and established event time.",
                 "For NPC statements require witnessed/reported/document evidence; no omniscient NPC knowledge.",
@@ -471,93 +515,60 @@ def write_live_index(root, state_dir, destination):
             "turn": result["cursor"]["turn"], "bytes": len(desired.encode("utf-8"))}
 
 
-def _hot_candidate(hot, raw):
-    """Newest confirmed HOT evidence participates in every text-ahead preflight."""
-    fields = {"story_compass": hot.get("story_compass", {}).get("immediate", ""),
-              "latest_turn.facts": hot.get("latest_turn", {}).get("facts", {}),
-              "recent_turns": hot.get("history", [])[-6:],
+def _hot_candidate(hot, raw, *, source_name="recovery/FAST_SCENE.json"):
+    """Newest confirmed HOT v2 or older FAST_SCENE contributes to every query."""
+    latest = hot.get("latest_turn") or hot.get("last") or {}
+    fields = {"scene": hot.get("scene", {}),
+              "story_compass": hot.get("story_compass", {}).get("immediate", ""),
+              "latest_turn": latest,
+              "recent_turns": (hot.get("history") or hot.get("chronicle") or [])[-6:],
+              "recent_canon": hot.get("canon", [])[-12:],
               "cursor": hot.get("cursor", {})}
     sections = []
     for field, value in _sections(fields):
         sections.append({"field": field, "excerpt": value[:480],
                          "terms": sorted(key_terms(field + " " + value))[:170]})
-    return {"source": "recovery/FAST_SCENE.json",
-            "sha256": hashlib.sha256(raw).hexdigest(),
-            "title": "Current text-ahead canonical scene",
+    return {"source": source_name, "sha256": hashlib.sha256(raw).hexdigest(),
+            "title": "Current live canonical scene",
             "sections": sections, "links": [],
             "scope": "gm_only"}
 
 
+
 def fast_packet_from_files(root, state_dir, *, action="", limit=9):
-    """Operational recall gate for a live NPR scene: HOT + full history.
-
-    The engine's SQLite may still reflect an older 1278 checkpoint. The most
-    recent published text and verified archive are the source; the heuristic
-    index only locates evidence, it does not adjudicate or teach NPCs secrets.
-    """
-    from . import heuristic_history
+    """GitHub-first scene preparation: HOT v2, all history, live corrections."""
     state_dir = Path(state_dir)
-    root = Path(root)
-    hot_path = state_dir / "recovery/HOT.json"
-    v2 = hot_path.is_file()
-    if not v2:
-        hot_path = state_dir / "recovery/FAST_SCENE.json"
-    raw = hot_path.read_bytes()
-    hot = json.loads(raw)
+    hot_file = (state_dir / "recovery/HOT.json"
+                if (state_dir / "recovery/HOT.json").is_file()
+                else state_dir / "recovery/FAST_SCENE.json")
+    hot_bytes = hot_file.read_bytes()
+    hot = json.loads(hot_bytes)
     cur = hot["cursor"]
-    if v2:
-        current = cur["id"]
-        location = cur.get("place", "")
-        latest_input = hot.get("last", {}).get("player", "")
-        # A fresh published TURN may be ahead of asynchronous HOT fold; use it
-        # directly rather than replaying a stale scene. A last-turn amendment
-        # likewise has authority over its earlier archived version.
-        pending_path = state_dir / "recovery/TURN.json"
-        pending = json.loads(pending_path.read_text(encoding="utf-8")) if pending_path.is_file() else {}
-        turn_id = pending.get("id", "")
-        if re.fullmatch(r"s\\d+\\.text\\.\\d+", turn_id):
-            try:
-                from .hot import turn_number
-                if turn_number(turn_id) > turn_number(current) or (
-                        turn_id == current and pending.get("amend")):
-                    current = turn_id
-                    location = pending.get("place", location)
-                    latest_input = pending.get("player", latest_input)
-            except ValueError:
-                pass
-        present = (hot.get("scene") or {}).get("present") or []
-        actors = [str(hot.get("cast", {}).get(k, {}).get("name", k))
-                  for k in present if k != "shiki"]
-    else:
-        if cur.get("last_turn_id") != hot.get("latest_turn", {}).get("id"):
-            raise ValueError("Legacy HOT cursor and turn disagree")
-        current = cur["last_turn_id"]
-        location = cur.get("location", "")
-        latest_input = hot.get("latest_turn", {}).get("player_input", "")
-        actors = []
-
-    action = action or latest_input
-    source_index = build_sources(root)
-    if root.resolve() != state_dir.resolve():
-        private = build_sources(state_dir)
-        by_source = {d["source"]: d for d in source_index["documents"]}
-        by_source.update({d["source"]: d for d in private["documents"]})
-        source_index["documents"] = list(by_source.values())
-    if not v2:
-        source_index["documents"].append(_hot_candidate(hot, raw))
-    packet = preflight(action=action, location=location, actors=actors,
-                       source_index=source_index, limit=limit)
-    archive = state_dir / heuristic_history.DESTINATION
-    compiled = (heuristic_history.load(archive) if archive.is_file()
-                else heuristic_history.build(root, state_dir))
-    historical = heuristic_history.query(compiled, action + " " + location,
-                                         limit=limit)
-    packet["historical_heuristics"] = historical
-    packet["cursor"] = {"id": current, "place": location}
-    packet["status"] = ("text_ahead_unreplayed" if v2 and
-                        hot.get("cursor", {}).get("id") != current else
-                        "live_text_authoritative" if v2 else
-                        "text_ahead_unreplayed" if hot.get("runtime", {}).get(
-                            "text_ahead_unreplayed") else "sqlite_may_be_current")
-    packet["retrieval_used"] = True
+    newest = hot.get("last") or hot.get("latest_turn") or {}
+    current_id = cur.get("id") or cur.get("last_turn_id")
+    if current_id != newest.get("id"):
+        raise ValueError("HOT cursor and turn disagree: refuse to narrate")
+    turn_file = state_dir / "recovery/TURN.json"
+    newest_turn = json.loads(turn_file.read_text(encoding="utf-8")) if turn_file.is_file() else {}
+    if not action:
+        action = newest_turn.get("player") or newest.get("player_input") or newest.get("player") or ""
+    index = build_sources(root)
+    if Path(root).resolve() != state_dir.resolve():
+        more = build_sources(state_dir)
+        primary = {d["source"]: d for d in index["documents"]}
+        primary.update({d["source"]: d for d in more["documents"]})
+        index["documents"] = list(primary.values())
+    source_name = hot_file.relative_to(state_dir).as_posix()
+    index["documents"].append(_hot_candidate(hot, hot_bytes, source_name=source_name))
+    packet = preflight(action=action, location=cur.get("place", cur.get("location", "")),
+                       source_index=index, root=root, state_root=state_dir, limit=limit)
+    packet["cursor"] = cur
+    packet["status"] = ("text_ahead_unreplayed" if hot.get("runtime", {}).get(
+        "text_ahead_unreplayed") else "hot_current")
+    if newest_turn.get("id") and newest_turn["id"] != current_id:
+        packet["status"] = "text_ahead_pending_fold"
+        packet["pending_turn"] = {
+            "id": newest_turn["id"], "player": newest_turn.get("player", ""),
+            "line": newest_turn.get("line", ""),
+            "warning": "Pending TURN supersedes the folded HOT scene for continuation."}
     return packet
