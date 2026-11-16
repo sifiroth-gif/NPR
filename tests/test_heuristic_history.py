@@ -123,6 +123,24 @@ class HeuristicHistoryTests(unittest.TestCase):
         self.assertTrue(packet["historical_memory"]["matches"])
         self.assertEqual(packet["historical_memory"]["status"], "persistent_derived_cache")
 
+    def test_generic_router_covers_each_session_without_subject_shortcuts(self):
+        heuristic_history.save(self.root, self.root)
+        folder = self.root / "archive/heuristic-recall"
+        manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
+        groups = {item["group"]: item for item in manifest["routes"]}
+        for session in range(1, 6):
+            self.assertIn("s%03d" % session, groups)
+        self.assertIn("canon", groups)
+        for group, token in (("s001", "лиора"), ("s002", "сэндо"),
+                             ("s003", "дорин"), ("s004", "варвен"),
+                             ("s005", "палладиум"), ("canon", "селестин")):
+            self.assertTrue(heuristic_history.might_contain(
+                groups[group]["bloom"], token), (group, token))
+            route = json.loads((folder / groups[group]["route"]).read_text(encoding="utf-8"))
+            self.assertEqual(route["group"], group)
+            self.assertTrue(any(heuristic_history.might_contain(
+                shard["bloom"], token) for shard in route["shards"]))
+
     def test_stale_shard_is_rejected_not_silently_trusted(self):
         heuristic_history.save(self.root, self.root)
         shard = self.root / "archive/heuristic-recall/shard-000.json"
