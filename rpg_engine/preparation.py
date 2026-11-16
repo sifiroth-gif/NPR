@@ -295,5 +295,7 @@ def packet(game, *, mode="focus", actors=(), target=None, queries=(), recent=Non
             action=player_action if player_action is not None else (
                 recent_turns[-1]["player"]["text"] if recent_turns else ""),
             location=head["location"], actors=[npc["name"] for npc in npcs],
-            root=source_root, campaign=campaign_slug, con=con, limit=8)
+            root=source_root, campaign=campaign_slug, con=con,
+            state_root=Path(os.environ.get("NPR_CAMPAIGN_STATE_DIR", game.path.parent)),
+            limit=8)
         return result
