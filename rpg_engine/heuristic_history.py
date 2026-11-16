@@ -104,42 +104,105 @@ def _index_rows(state, session):
     return obj.get("entries", obj.get("index", []))
 
 
-def _old_session(state, session):
-    path = state / f"archive/session-{session:03}-source.md"
+def _windows(lines, first, last, *, target=2400, max_lines=44, overlap=5):
+    """Contiguous anchored spans: every line is indexed, with small overlap."""
+    start = first
+    while start <= last:
+        end, length = start - 1, 0
+        while end < last and end - start + 1 < max_lines:
+            length += len(lines[end]) + 1
+            end += 1
+            if length >= target:
+                break
+        if end < start:
+            end = start
+        yield start, end, "\n".join(lines[start - 1:end])
+        if end == last:
+            break
+        start = max(start + 1, end - overlap + 1)
+
+
+def _first_session(state):
+    """Session 1 has a complete historical archive but no accepted turn index.
+
+    Include EVERY source line; mark candidates as requiring replay review rather
+    than asserting that raw text is confirmed canon. Later corrections override.
+    """
+    path = state / "archive/session-001.md"
     if not path.is_file():
         return []
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
     source = path.relative_to(state).as_posix()
-    lines = path.read_text(encoding="utf-8").splitlines()
     digest = _digest(path)
+    rows = []
+    for a, b, chunk in _windows(lines, 1, len(lines)):
+        rows.append(_entry(
+            key=f"s1.lines.{a:06d}", source=source, body=chunk,
+            headline=" ".join(chunk.splitlines()[:3])[:230], at=_at(chunk),
+            line_start=a, line_end=b, digest=digest,
+            kind="archived_source_review_required", authority=0.65))
+    return rows
+
+
+def _old_session(state, session):
+    """Use curated, played-only navigation for ANY reviewed historical session.
+
+    Session 2 uses index.entries; session 3 uses index.index. Neither is
+    silently downgraded to a raw-text scrape or promoted beyond its authority.
+    """
+    catalog = state / f"archive/session-{session:03}-index.json"
+    if not catalog.is_file():
+        return []
+    info = json.loads(catalog.read_text(encoding="utf-8-sig"))
+    source_rel = info.get("source") or info.get("primary_source")
+    if not source_rel:
+        return []
+    path = state / source_rel
+    if not path.is_file():
+        return []
+    digest = _digest(path)
+    expected = info.get("source_sha256")
+    if expected and digest != expected:
+        raise ValueError("Historical source index does not match " + source_rel)
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
     out = []
-    for row in _index_rows(state, session):
+    for row in info.get("entries", info.get("index", [])):
         if row.get("status") != "played":
             continue
         a, b = row.get("source_lines", [0, 0])
         if not (0 < a <= b <= len(lines)):
             continue
-        full = "\n".join(lines[a-1:b])
-        # Prefer actual user turn and scene material, not raw metadata.
-        headline = row.get("scene_heading", "") or row.get("location", "")
-        if row.get("player_excerpt"):
-            headline = str(headline or "") + " " + row["player_excerpt"]
-        out.append(_entry(key=row.get("id", f"s{session}.{a}"), source=source,
-                          body=full, at=row.get("at", "") or
-                          (_at(full) if session == 3 else ""),
-                          headline=headline, digest=digest,
-                          line_start=a, line_end=b))
+        label = str(row.get("id") or f"s{session}.{row.get('n', a):03}")
+        heading = row.get("scene_heading", "") or row.get("location", "")
+        player = row.get("player_excerpt", "")
+        at = row.get("at") or _at("\n".join(lines[a-1:min(b,a+8)]))
+        for number, (start, end, excerpt) in enumerate(_windows(lines, a, b), 1):
+            out.append(_entry(
+                key=f"{label}.{number:02d}", source=source_rel, body=excerpt,
+                at=at or heading, headline=(heading + " " + player)[:470],
+                kind="played", line_start=start, line_end=end,
+                digest=digest, authority=1.3))
     return out
 
-
 def _turn_sessions(state):
+    """Automatically include all live accepted JSONL sessions and latest TURN.
+
+    Legacy session-4 review exclusions are respected; NEW session numbers are
+    discovered from filenames, never hardcoded as a closed set.
+    """
     out = []
     for path in sorted((state / "archive").glob("session-*-turns.jsonl")):
         try:
             number = int(path.stem.split("-")[1])
         except (ValueError, IndexError):
             continue
-        if number < 4:  # Earlier sources are reviewed, not raw journal.
-            continue
+        if number < 4:
+            continue  # These sessions have independent reviewed source indexes.
+        excluded = set()
+        idx = state / f"archive/session-{number:03}-index.json"
+        if idx.is_file():
+            review = json.loads(idx.read_text(encoding="utf-8-sig"))
+            excluded.update(int(n) for n in review.get("ooc_in_live", []))
         digest = _digest(path)
         for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             if not line.strip():
@@ -147,13 +210,16 @@ def _turn_sessions(state):
             row = json.loads(line)
             if row.get("kind") in ("ooc", "technical", "void"):
                 continue
+            m = re.search(r"\.text\.(\d+)$", row.get("id", ""))
+            if m and int(m.group(1)) in excluded:
+                continue
             body = " ".join((str(row.get("player", "")), str(row.get("gm", "")),
                              str(row.get("line", ""))))
             out.append(_entry(key=row["id"], source=path.relative_to(state).as_posix(),
                               at=row.get("at", ""), headline=row.get("line", ""),
-                              body=body, digest=digest,
+                              body=body, digest=digest, kind="played",
                               line_start=line_no, line_end=line_no))
-    # The newest TURN can be ahead of the folded, immutable journal.
+    # Latest text-ahead TURN precedes the folded journal in GitHub gameplay.
     path = state / "recovery/TURN.json"
     if path.is_file():
         row = json.loads(path.read_text(encoding="utf-8"))
@@ -161,15 +227,15 @@ def _turn_sessions(state):
             digest = _digest(path)
             cur = _entry(key=row["id"], source="recovery/TURN.json",
                          body=" ".join((str(row.get("player","")), str(row.get("gm","")),
-                                        str(row.get("line","")))),
+                                        str(row.get("line","")), json.dumps(
+                                            row.get("d", {}).get("canon+", []), ensure_ascii=False))),
                          headline=row.get("line", ""), at=row.get("at",""),
-                         digest=digest, authority=1.15)
+                         digest=digest, authority=1.5)
             out = [x for x in out if x["id"] != row["id"]] + [cur]
     return out
 
-
 def _canon(root, state):
-    # Existing canonical source resolver retains field-level provenance.
+    """All canonical cards plus each explicitly recorded correction, not only HOT."""
     from . import scene_memory
     base = scene_memory.build_sources(root)
     if Path(root).resolve() != Path(state).resolve():
@@ -182,7 +248,7 @@ def _canon(root, state):
     for doc in docs.values():
         source = doc["source"]
         if source.endswith("-index.json"):
-            continue  # Historical index references already resolved to played text.
+            continue
         body = " ".join(s["field"]+" "+s["excerpt"] for s in doc["sections"])
         if not body:
             continue
@@ -196,19 +262,35 @@ def _canon(root, state):
                        links=doc["links"], digest=doc["sha256"],
                        authority=2.25 if "/characters/" in source or "/continuity/" in source else 1.65)
         entry["preview"] = preview[:670]
-        # Source index already tokenized whole sections; include all terms
-        # rather than relying on the first 1,400-character preview.
         all_terms = Counter(t for sec in doc["sections"] for t in sec["terms"])
         if all_terms:
-            entry["terms"] = " ".join(w for w, _ in all_terms.most_common(135))
+            entry["terms"] = " ".join(w for w, _ in all_terms.most_common(230))
         out.append(entry)
+    path = state / "archive/shiki-canon.jsonl"
+    if path.is_file():
+        digest = _digest(path)
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            rule = row.get("rule", "")
+            if not rule:
+                continue
+            out.append(_entry(key=f"canon.{lineno:05d}", source="archive/shiki-canon.jsonl",
+                              body=rule, headline=row.get("turn", ""),
+                              kind="correction", line_start=lineno, line_end=lineno,
+                              digest=digest, authority=3.0))
     return out
-
 
 def build(root, state):
     """Compile played source spans and canonical cards, never raw rejected drafts."""
     root, state = Path(root), Path(state)
-    entries = _old_session(state, 2) + _old_session(state, 3)
+    entries = _first_session(state)
+    # Discover all curated session indexes; preserve future session additions.
+    for index in sorted((state / "archive").glob("session-*-index.json")):
+        number = int(index.name.split("-")[1])
+        if number > 1 and number < 4:
+            entries.extend(_old_session(state, number))
     entries += _turn_sessions(state)
     entries += _canon(root, state)
     if len(entries) > MAX_RECORDS:
@@ -223,16 +305,80 @@ def build(root, state):
 
 
 def save(root, state, output=None):
+    """Shard a derived cache so each GitHub-hosted lookup file stays readable.
+
+    Existing GitHub Actions hot-fold calls this automatically after every turn.
+    Each shard is content-checked, old identical shards are not rewritten.
+    """
     state = Path(state)
-    output = Path(output) if output is not None else state / DESTINATION
+    folder = Path(output).parent if output is not None else state / "archive/heuristic-recall"
     data = build(root, state)
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n"
-    output.parent.mkdir(parents=True, exist_ok=True)
-    if output.is_file() and output.read_text(encoding="utf-8") == payload:
-        return {"status": "current", "records": data["documents"], "path": str(output)}
-    output.write_text(payload, encoding="utf-8")
-    return {"status": "updated", "records": data["documents"], "path": str(output),
-            "bytes": len(payload.encode("utf-8"))}
+    folder.mkdir(parents=True, exist_ok=True)
+    shards, chunks, size = [], [], 0
+    changed = False
+
+    def flush():
+        nonlocal changed, chunks, size
+        if not chunks:
+            return
+        name = f"shard-{len(shards):03d}.json"
+        path = folder / name
+        content = json.dumps(chunks, ensure_ascii=False, separators=(",", ":"),
+                             sort_keys=True) + "\n"
+        digest = sha256(content.encode("utf-8")).hexdigest()
+        if not path.is_file() or path.read_text(encoding="utf-8") != content:
+            path.write_text(content, encoding="utf-8")
+            changed = True
+        shards.append({"file": name, "sha256": digest, "records": len(chunks)})
+        chunks, size = [], 0
+
+    for entry in data["records"]:
+        estimate = len(json.dumps(entry, ensure_ascii=False).encode("utf-8"))
+        if chunks and (len(chunks) >= 65 or size + estimate > 115_000):
+            flush()
+        chunks.append(entry)
+        size += estimate
+    flush()
+
+    hot_path = state / "recovery/HOT.json"
+    hot = json.loads(hot_path.read_text(encoding="utf-8")) if hot_path.is_file() else {}
+    manifest = {"schema": SCHEMA, "documents": data["documents"],
+                "cursor": hot.get("cursor", {}).get("id", ""),
+                "shards": shards,
+                "rule": "Read exact source; correction > event; actor knowledge is separate."}
+    path = folder / "manifest.json"
+    content = json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    if not path.is_file() or path.read_text(encoding="utf-8") != content:
+        path.write_text(content, encoding="utf-8")
+        changed = True
+    return {"status": "updated" if changed else "current",
+            "records": data["documents"], "shards": len(shards),
+            "path": str(path)}
+
+
+def load(path):
+    """Fail closed if a shard was modified or mixed with another index build."""
+    path = Path(path)
+    manifest_path = path / "manifest.json" if path.is_dir() else path
+    info = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if info.get("schema") != SCHEMA:
+        raise ValueError("Invalid heuristic manifest")
+    records = []
+    for item in info["shards"]:
+        shard = manifest_path.parent / item["file"]
+        raw = shard.read_bytes()
+        if sha256(raw).hexdigest() != item["sha256"]:
+            raise ValueError("Heuristic shard hash mismatch: " + str(shard))
+        batch = json.loads(raw)
+        if len(batch) != item["records"]:
+            raise ValueError("Heuristic shard count mismatch: " + str(shard))
+        records.extend(batch)
+    if len(records) != info["documents"]:
+        raise ValueError("Incomplete heuristic history index")
+    frequency = Counter(w for row in records for w in set(row["terms"].split()))
+    return {"schema": SCHEMA, "source_policy": "played_and_reviewed_candidate",
+            "records": records, "documents": len(records),
+            "df": dict(frequency), "cursor": info.get("cursor", "")}
 
 
 def _similar(a, b):
@@ -325,5 +471,3 @@ def query(index, question, *, limit=9, sessions=(), no_guess=True):
                        "Empty result does not prove an event never occurred"]}
 
 
-def load(path):
-    return json.loads(Path(path).read_text(encoding="utf-8"))
