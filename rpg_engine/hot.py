@@ -727,10 +727,18 @@ def fold(state_dir):
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
     texts, changed = _write_state(state_dir, hot, before)
+    # Historical recall is refreshed by the *same* existing fold and committed
+    # in archive/ with the verbatim journal; no detached optional sidecar job.
+    heuristic = None
+    if (state_dir / "archive/session-002-index.json").is_file():
+        from . import heuristic_history
+        heuristic = heuristic_history.save(
+            Path(__file__).resolve().parents[1], state_dir)
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
+            "heuristic_history": heuristic,
             "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
 
 
