@@ -1,0 +1,711 @@
+{
+  "format": "npr-session4-replay-index/1",
+  "raw_sha256": "cf038865aef05f487d9577a0ed2b4e36e2511b0bc1d065ca2171f2fc45ba3b21",
+  "raw_blob": "6f69b5c55a1c1f2efaa8e0e539895a8e692c13d0",
+  "source": "archive/session-004-source.md",
+  "live_original": "archive/session-004-turns.jsonl",
+  "full_original_prompt_count": 83,
+  "raw_response_count": 83,
+  "live_logged_rows": 67,
+  "live_missing": [
+    "s04.text.022"
+  ],
+  "canonical_game_turns": 61,
+  "ooc_in_live": [
+    49,
+    55,
+    56,
+    57,
+    60,
+    61,
+    62
+  ],
+  "recovered_missing": "archive/session-004-recovered-022.json",
+  "canonical_026": "archive/session-004-source.md#L3548-L3662",
+  "canonical_054": "campaigns/shiki/continuity/REVISED_MASTERY_SCENE_S04_054_2026_11_16.md",
+  "raw_correction_refs": [
+    "archive/session-004-source.md#L451-L500",
+    "archive/session-004-source.md#L3366-L3405",
+    "archive/session-004-source.md#L3406-L3459",
+    "archive/session-004-source.md#L3499-L3547",
+    "archive/session-004-source.md#L3548-L3662",
+    "archive/session-004-source.md#L6577-L6592",
+    "archive/session-004-source.md#L6593-L6638",
+    "archive/session-004-source.md#L6639-L6819",
+    "archive/session-004-source.md#L6974-L7031",
+    "archive/session-004-source.md#L7032-L7061",
+    "archive/session-004-source.md#L7062-L7101",
+    "archive/session-004-source.md#L7479-L7544"
+  ],
+  "world_terminal": "1283-10-01T21:33:28",
+  "engine_terminal": "0006-10-01T21:33:28",
+  "export_sha256": "80ebd4189cd50ff0fcd9a8aa50dab912a74c5f56df91994b08fb95713aaa423e",
+  "index": [
+    {
+      "prompt": 1,
+      "id": "s04.text.001",
+      "canonical_id": "s4.played.001",
+      "status": "played",
+      "at": "0006-09-27T22:05:36",
+      "source_ref": "archive/session-004-source.md#L9-L128",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.001"
+    },
+    {
+      "prompt": 2,
+      "id": "s04.text.002",
+      "canonical_id": "s4.played.002",
+      "status": "played",
+      "at": "0006-09-27T22:05:41",
+      "source_ref": "archive/session-004-source.md#L129-L215",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.002"
+    },
+    {
+      "prompt": 3,
+      "id": "s04.text.003",
+      "canonical_id": "s4.played.003",
+      "status": "played",
+      "at": "0006-09-27T22:13:00",
+      "source_ref": "archive/session-004-source.md#L216-L322",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.003"
+    },
+    {
+      "prompt": 4,
+      "id": "s04.text.004",
+      "canonical_id": "s4.played.004",
+      "status": "played",
+      "at": "0006-09-28T06:48:00",
+      "source_ref": "archive/session-004-source.md#L323-L450",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.004"
+    },
+    {
+      "prompt": 5,
+      "source_ref": "archive/session-004-source.md#L451-L500",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 6,
+      "source_ref": "archive/session-004-source.md#L501-L573",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 7,
+      "source_ref": "archive/session-004-source.md#L574-L644",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 8,
+      "source_ref": "archive/session-004-source.md#L645-L668",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 9,
+      "source_ref": "archive/session-004-source.md#L669-L714",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 10,
+      "id": "s04.text.005",
+      "canonical_id": "s4.played.005",
+      "status": "played",
+      "at": "0006-09-28T10:26:00",
+      "source_ref": "archive/session-004-source.md#L715-L787",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.005"
+    },
+    {
+      "prompt": 11,
+      "id": "s04.text.006",
+      "canonical_id": "s4.played.006",
+      "status": "played",
+      "at": "0006-09-28T14:42:00",
+      "source_ref": "archive/session-004-source.md#L788-L866",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.006"
+    },
+    {
+      "prompt": 12,
+      "id": "s04.text.007",
+      "canonical_id": "s4.played.007",
+      "status": "played",
+      "at": "0006-09-29T00:37:00",
+      "source_ref": "archive/session-004-source.md#L867-L946",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.007"
+    },
+    {
+      "prompt": 13,
+      "id": "s04.text.008",
+      "canonical_id": "s4.played.008",
+      "status": "played",
+      "at": "0006-09-29T02:18:00",
+      "source_ref": "archive/session-004-source.md#L947-L1025",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.008"
+    },
+    {
+      "prompt": 14,
+      "id": "s04.text.009",
+      "canonical_id": "s4.played.009",
+      "status": "played",
+      "at": "0006-09-29T02:26:00",
+      "source_ref": "archive/session-004-source.md#L1026-L1139",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.009"
+    },
+    {
+      "prompt": 15,
+      "id": "s04.text.010",
+      "canonical_id": "s4.played.010",
+      "status": "played",
+      "at": "0006-09-29T02:29:00",
+      "source_ref": "archive/session-004-source.md#L1140-L1253",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.010"
+    },
+    {
+      "prompt": 16,
+      "id": "s04.text.011",
+      "canonical_id": "s4.played.011",
+      "status": "played",
+      "at": "0006-09-29T02:32:00",
+      "source_ref": "archive/session-004-source.md#L1254-L1365",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.011"
+    },
+    {
+      "prompt": 17,
+      "id": "s04.text.012",
+      "canonical_id": "s4.played.012",
+      "status": "played",
+      "at": "0006-09-30T15:08:00",
+      "source_ref": "archive/session-004-source.md#L1366-L1480",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.012"
+    },
+    {
+      "prompt": 18,
+      "id": "s04.text.013",
+      "canonical_id": "s4.played.013",
+      "status": "played",
+      "at": "0006-09-30T15:17:00",
+      "source_ref": "archive/session-004-source.md#L1481-L1630",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.013"
+    },
+    {
+      "prompt": 19,
+      "id": "s04.text.014",
+      "canonical_id": "s4.played.014",
+      "status": "played",
+      "at": "0006-09-30T15:20:00",
+      "source_ref": "archive/session-004-source.md#L1631-L1724",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.014"
+    },
+    {
+      "prompt": 20,
+      "id": "s04.text.015",
+      "canonical_id": "s4.played.015",
+      "status": "played",
+      "at": "0006-09-30T15:23:00",
+      "source_ref": "archive/session-004-source.md#L1725-L1820",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.015"
+    },
+    {
+      "prompt": 21,
+      "id": "s04.text.016",
+      "canonical_id": "s4.played.016",
+      "status": "played",
+      "at": "0006-09-30T18:31:00",
+      "source_ref": "archive/session-004-source.md#L1821-L1971",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.016"
+    },
+    {
+      "prompt": 22,
+      "id": "s04.text.017",
+      "canonical_id": "s4.played.017",
+      "status": "played",
+      "at": "0006-09-30T18:49:00",
+      "source_ref": "archive/session-004-source.md#L1972-L2114",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.017"
+    },
+    {
+      "prompt": 23,
+      "id": "s04.text.018",
+      "canonical_id": "s4.played.018",
+      "status": "played",
+      "at": "0006-09-30T18:49:03",
+      "source_ref": "archive/session-004-source.md#L2115-L2194",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.018"
+    },
+    {
+      "prompt": 24,
+      "id": "s04.text.019",
+      "canonical_id": "s4.played.019",
+      "status": "played",
+      "at": "0006-09-30T18:56:00",
+      "source_ref": "archive/session-004-source.md#L2195-L2336",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.019"
+    },
+    {
+      "prompt": 25,
+      "id": "s04.text.020",
+      "canonical_id": "s4.played.020",
+      "status": "played",
+      "at": "0006-09-30T19:01:00",
+      "source_ref": "archive/session-004-source.md#L2337-L2460",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.020"
+    },
+    {
+      "prompt": 26,
+      "id": "s04.text.021",
+      "canonical_id": "s4.played.021",
+      "status": "played",
+      "at": "0006-09-30T19:07:00",
+      "source_ref": "archive/session-004-source.md#L2461-L2596",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.021"
+    },
+    {
+      "prompt": 27,
+      "id": "s04.text.022",
+      "canonical_id": "s4.played.022",
+      "status": "source_recovered",
+      "at": "0006-09-30T19:21:00",
+      "source_ref": "archive/session-004-source.md#L2597-L2800",
+      "canonical_text_source": "archive/session-004-source.md#L2597-L2800"
+    },
+    {
+      "prompt": 28,
+      "id": "s04.text.023",
+      "canonical_id": "s4.played.023",
+      "status": "played",
+      "at": "0006-09-30T19:47:00",
+      "source_ref": "archive/session-004-source.md#L2801-L2947",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.023"
+    },
+    {
+      "prompt": 29,
+      "id": "s04.text.024",
+      "canonical_id": "s4.played.024",
+      "status": "played",
+      "at": "0006-09-30T20:01:00",
+      "source_ref": "archive/session-004-source.md#L2948-L3059",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.024"
+    },
+    {
+      "prompt": 30,
+      "source_ref": "archive/session-004-source.md#L3060-L3079",
+      "status": "ooc_or_asset"
+    },
+    {
+      "prompt": 31,
+      "source_ref": "archive/session-004-source.md#L3080-L3125",
+      "status": "ooc_or_asset"
+    },
+    {
+      "prompt": 32,
+      "source_ref": "archive/session-004-source.md#L3126-L3135",
+      "status": "ooc_or_asset"
+    },
+    {
+      "prompt": 33,
+      "source_ref": "archive/session-004-source.md#L3136-L3155",
+      "status": "ooc_or_asset"
+    },
+    {
+      "prompt": 34,
+      "id": "s04.text.025",
+      "canonical_id": "s4.played.025",
+      "status": "played",
+      "at": "0006-09-30T20:05:00",
+      "source_ref": "archive/session-004-source.md#L3156-L3258",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.025"
+    },
+    {
+      "prompt": 35,
+      "id": "s04.text.026",
+      "canonical_id": "s4.played.026",
+      "status": "source_replaced",
+      "at": "0006-09-30T20:28:00",
+      "source_ref": "archive/session-004-source.md#L3259-L3365",
+      "canonical_text_source": "archive/session-004-source.md#L3548-L3662"
+    },
+    {
+      "prompt": 36,
+      "source_ref": "archive/session-004-source.md#L3366-L3405",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 37,
+      "source_ref": "archive/session-004-source.md#L3406-L3459",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 38,
+      "source_ref": "archive/session-004-source.md#L3460-L3498",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 39,
+      "source_ref": "archive/session-004-source.md#L3499-L3547",
+      "status": "ooc_canon_amendment"
+    },
+    {
+      "prompt": 40,
+      "source_ref": "archive/session-004-source.md#L3548-L3662",
+      "status": "late_canonical_replacement"
+    },
+    {
+      "prompt": 41,
+      "id": "s04.text.027",
+      "canonical_id": "s4.played.027",
+      "status": "played",
+      "at": "0006-09-30T20:30:00",
+      "source_ref": "archive/session-004-source.md#L3663-L3730",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.027"
+    },
+    {
+      "prompt": 42,
+      "id": "s04.text.028",
+      "canonical_id": "s4.played.028",
+      "status": "played",
+      "at": "0006-09-30T21:12:00",
+      "source_ref": "archive/session-004-source.md#L3731-L3841",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.028"
+    },
+    {
+      "prompt": 43,
+      "id": "s04.text.029",
+      "canonical_id": "s4.played.029",
+      "status": "played",
+      "at": "0006-09-30T21:13:00",
+      "source_ref": "archive/session-004-source.md#L3842-L3894",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.029"
+    },
+    {
+      "prompt": 44,
+      "id": "s04.text.030",
+      "canonical_id": "s4.played.030",
+      "status": "played",
+      "at": "0006-09-30T21:16:00",
+      "source_ref": "archive/session-004-source.md#L3895-L3993",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.030"
+    },
+    {
+      "prompt": 45,
+      "id": "s04.text.031",
+      "canonical_id": "s4.played.031",
+      "status": "played",
+      "at": "0006-09-30T21:32:00",
+      "source_ref": "archive/session-004-source.md#L3994-L4120",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.031"
+    },
+    {
+      "prompt": 46,
+      "id": "s04.text.032",
+      "canonical_id": "s4.played.032",
+      "status": "played",
+      "at": "0006-09-30T21:39:00",
+      "source_ref": "archive/session-004-source.md#L4121-L4252",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.032"
+    },
+    {
+      "prompt": 47,
+      "id": "s04.text.033",
+      "canonical_id": "s4.played.033",
+      "status": "played",
+      "at": "0006-09-30T21:43:00",
+      "source_ref": "archive/session-004-source.md#L4253-L4379",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.033"
+    },
+    {
+      "prompt": 48,
+      "id": "s04.text.034",
+      "canonical_id": "s4.played.034",
+      "status": "played",
+      "at": "0006-09-30T21:48:00",
+      "source_ref": "archive/session-004-source.md#L4380-L4527",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.034"
+    },
+    {
+      "prompt": 49,
+      "id": "s04.text.035",
+      "canonical_id": "s4.played.035",
+      "status": "played",
+      "at": "0006-09-30T21:53:00",
+      "source_ref": "archive/session-004-source.md#L4528-L4651",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.035"
+    },
+    {
+      "prompt": 50,
+      "id": "s04.text.036",
+      "canonical_id": "s4.played.036",
+      "status": "played",
+      "at": "0006-09-30T21:54:00",
+      "source_ref": "archive/session-004-source.md#L4652-L4713",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.036"
+    },
+    {
+      "prompt": 51,
+      "id": "s04.text.037",
+      "canonical_id": "s4.played.037",
+      "status": "played",
+      "at": "0006-09-30T22:08:00",
+      "source_ref": "archive/session-004-source.md#L4714-L4826",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.037"
+    },
+    {
+      "prompt": 52,
+      "id": "s04.text.038",
+      "canonical_id": "s4.played.038",
+      "status": "played",
+      "at": "0006-09-30T22:09:00",
+      "source_ref": "archive/session-004-source.md#L4827-L4908",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.038"
+    },
+    {
+      "prompt": 53,
+      "id": "s04.text.039",
+      "canonical_id": "s4.played.039",
+      "status": "played",
+      "at": "0006-09-30T22:11:00",
+      "source_ref": "archive/session-004-source.md#L4909-L4984",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.039"
+    },
+    {
+      "prompt": 54,
+      "id": "s04.text.040",
+      "canonical_id": "s4.played.040",
+      "status": "played",
+      "at": "0006-10-01T06:41:00",
+      "source_ref": "archive/session-004-source.md#L4985-L5083",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.040"
+    },
+    {
+      "prompt": 55,
+      "id": "s04.text.041",
+      "canonical_id": "s4.played.041",
+      "status": "played",
+      "at": "0006-10-01T06:42:00",
+      "source_ref": "archive/session-004-source.md#L5084-L5139",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.041"
+    },
+    {
+      "prompt": 56,
+      "id": "s04.text.042",
+      "canonical_id": "s4.played.042",
+      "status": "played",
+      "at": "0006-10-01T06:55:00",
+      "source_ref": "archive/session-004-source.md#L5140-L5243",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.042"
+    },
+    {
+      "prompt": 57,
+      "id": "s04.text.043",
+      "canonical_id": "s4.played.043",
+      "status": "played",
+      "at": "0006-10-01T07:06:00",
+      "source_ref": "archive/session-004-source.md#L5244-L5329",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.043"
+    },
+    {
+      "prompt": 58,
+      "id": "s04.text.044",
+      "canonical_id": "s4.played.044",
+      "status": "played",
+      "at": "0006-10-01T07:10:00",
+      "source_ref": "archive/session-004-source.md#L5330-L5468",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.044"
+    },
+    {
+      "prompt": 59,
+      "id": "s04.text.045",
+      "canonical_id": "s4.played.045",
+      "status": "played",
+      "at": "0006-10-01T07:15:00",
+      "source_ref": "archive/session-004-source.md#L5469-L5601",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.045"
+    },
+    {
+      "prompt": 60,
+      "id": "s04.text.046",
+      "canonical_id": "s4.played.046",
+      "status": "played",
+      "at": "0006-10-01T07:29:00",
+      "source_ref": "archive/session-004-source.md#L5602-L5702",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.046"
+    },
+    {
+      "prompt": 61,
+      "id": "s04.text.047",
+      "canonical_id": "s4.played.047",
+      "status": "played",
+      "at": "0006-10-01T08:06:00",
+      "source_ref": "archive/session-004-source.md#L5703-L5783",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.047"
+    },
+    {
+      "prompt": 62,
+      "id": "s04.text.048",
+      "canonical_id": "s4.played.048",
+      "status": "played",
+      "at": "0006-10-01T09:36:00",
+      "source_ref": "archive/session-004-source.md#L5784-L5863",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.048"
+    },
+    {
+      "prompt": 63,
+      "source_ref": "archive/session-004-source.md#L5864-L6018",
+      "status": "ooc_or_asset"
+    },
+    {
+      "prompt": 64,
+      "id": "s04.text.049",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L6019-L6032"
+    },
+    {
+      "prompt": 65,
+      "id": "s04.text.050",
+      "canonical_id": "s4.played.050",
+      "status": "played",
+      "at": "0006-10-01T09:38:00",
+      "source_ref": "archive/session-004-source.md#L6033-L6105",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.050"
+    },
+    {
+      "prompt": 66,
+      "id": "s04.text.051",
+      "canonical_id": "s4.played.051",
+      "status": "played",
+      "at": "0006-10-01T09:40:00",
+      "source_ref": "archive/session-004-source.md#L6106-L6195",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.051"
+    },
+    {
+      "prompt": 67,
+      "id": "s04.text.052",
+      "canonical_id": "s4.played.052",
+      "status": "played",
+      "at": "0006-10-01T09:43:00",
+      "source_ref": "archive/session-004-source.md#L6196-L6293",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.052"
+    },
+    {
+      "prompt": 68,
+      "id": "s04.text.053",
+      "canonical_id": "s4.played.053",
+      "status": "played",
+      "at": "0006-10-01T12:12:00",
+      "source_ref": "archive/session-004-source.md#L6294-L6433",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.053"
+    },
+    {
+      "prompt": 69,
+      "id": "s04.text.054",
+      "canonical_id": "s4.played.054",
+      "status": "source_replaced",
+      "at": "0006-10-01T19:52:00",
+      "source_ref": "archive/session-004-source.md#L6434-L6576",
+      "canonical_text_source": "campaigns/shiki/continuity/REVISED_MASTERY_SCENE_S04_054_2026_11_16.md; archive/session-004-source.md#L6639-L6819"
+    },
+    {
+      "prompt": 70,
+      "id": "s04.text.055",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L6577-L6592"
+    },
+    {
+      "prompt": 71,
+      "id": "s04.text.056",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L6593-L6638"
+    },
+    {
+      "prompt": 72,
+      "id": "s04.text.057",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L6639-L6819"
+    },
+    {
+      "prompt": 73,
+      "id": "s04.text.058",
+      "canonical_id": "s4.played.058",
+      "status": "played",
+      "at": "0006-10-01T19:54:00",
+      "source_ref": "archive/session-004-source.md#L6820-L6898",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.058"
+    },
+    {
+      "prompt": 74,
+      "id": "s04.text.059",
+      "canonical_id": "s4.played.059",
+      "status": "played",
+      "at": "0006-10-01T20:21:00",
+      "source_ref": "archive/session-004-source.md#L6899-L6973",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.059"
+    },
+    {
+      "prompt": 75,
+      "id": "s04.text.060",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L6974-L7031"
+    },
+    {
+      "prompt": 76,
+      "id": "s04.text.061",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L7032-L7061"
+    },
+    {
+      "prompt": 77,
+      "id": "s04.text.062",
+      "status": "ooc_not_replayed",
+      "source_ref": "archive/session-004-source.md#L7062-L7101"
+    },
+    {
+      "prompt": 78,
+      "id": "s04.text.063",
+      "canonical_id": "s4.played.063",
+      "status": "played",
+      "at": "0006-10-01T21:02:00",
+      "source_ref": "archive/session-004-source.md#L7102-L7165",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.063"
+    },
+    {
+      "prompt": 79,
+      "id": "s04.text.064",
+      "canonical_id": "s4.played.064",
+      "status": "played",
+      "at": "0006-10-01T21:03:00",
+      "source_ref": "archive/session-004-source.md#L7166-L7222",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.064"
+    },
+    {
+      "prompt": 80,
+      "id": "s04.text.065",
+      "canonical_id": "s4.played.065",
+      "status": "played",
+      "at": "0006-10-01T21:32:00",
+      "source_ref": "archive/session-004-source.md#L7223-L7325",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.065"
+    },
+    {
+      "prompt": 81,
+      "id": "s04.text.066",
+      "canonical_id": "s4.played.066",
+      "status": "played",
+      "at": "0006-10-01T21:33:00",
+      "source_ref": "archive/session-004-source.md#L7326-L7399",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.066"
+    },
+    {
+      "prompt": 82,
+      "id": "s04.text.067",
+      "canonical_id": "s4.played.067",
+      "status": "played",
+      "at": "0006-10-01T21:33:15",
+      "source_ref": "archive/session-004-source.md#L7400-L7478",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.067"
+    },
+    {
+      "prompt": 83,
+      "id": "s04.text.068",
+      "canonical_id": "s4.played.068",
+      "status": "played",
+      "at": "0006-10-01T21:33:28",
+      "source_ref": "archive/session-004-source.md#L7479-L7544",
+      "canonical_text_source": "archive/session-004-turns.jsonl#s04.text.068"
+    }
+  ]
+}
