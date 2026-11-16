@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-30T20:30:00",
-    "location": "Кусагакуре, собственный дом Магами Шики",
-    "turn": "s04.text.027"
+    "at": "0006-09-30T21:12:00",
+    "location": "Кусагакуре, управление внутренней безопасности, кабинет Хаясэ Нори",
+    "turn": "s04.text.028"
   },
   "documents": [
     {
@@ -7253,7 +7253,7 @@
           "text": "Спящий"
         }
       ],
-      "sha256": "616affb65ce3bcd7d285e0bdbd9c1bd4b53284ac67f390edb6c907f58302548d",
+      "sha256": "1ba2d869b90fbfb54041b8b5d27daba2d84723eeec5d1f095a713b31472aa465",
       "source": "campaigns/shiki/contract/PROGRESSION_RULES.json",
       "status": "source_candidate_only",
       "terms": [
@@ -7271,40 +7271,40 @@
         "scent",
         "types",
         "only",
-        "points",
-        "reference",
         "stage",
         "player",
+        "points",
+        "reference",
         "not",
         "cast",
         "manifestation",
         "stages",
+        "pact",
         "latest",
         "forbidden",
         "technique",
-        "pact",
+        "correction",
         "shiton",
         "never",
         "real",
-        "correction",
+        "time",
         "byoton",
         "skin",
-        "time",
+        "s04",
         "description",
         "agency",
         "timing",
         "010",
-        "s04",
         "use",
         "olfactory",
-        "scene",
-        "projection",
+        "visible",
         "smell",
         "direct",
-        "actual",
-        "learned",
-        "label",
-        "contact"
+        "scene",
+        "but",
+        "projection",
+        "rule",
+        "forearm"
       ],
       "title": "PROGRESSION RULES",
       "weight": 1.0
@@ -7674,23 +7674,17 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "7fbffa6ff05069d849163f782e3241bbe7a88fe8cfe236f542eeb01934aec439",
+  "hot_sha256": "6e50877c176664453bc448c608d367861e4c8c0942e20fbcc45a3d70088b21e2",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "action": "Player stood, opened own front door, said home/unread documents",
-      "letter": "Still closed/unread",
-      "messenger": "Nori's Kusa communications messenger presented ID, is unnerved by Shiki, says Nori requests face-to-face talk tonight about C-17 before morning transfer to follow-up review, explicitly no arrest or interrogation; awaits answer.",
-      "no_user_extra_actions": true,
-      "seals": "Intact, entity silent"
+      "at": "0006-09-30T21:12:00",
+      "letters": "Shiki did not read sealed letter at home",
+      "nori": "Presents allegedly stamped new V-7 order with already completed tomorrow 06:00 receipt; Nori halted transfer for investigation, asks Shiki to examine recipient signature; no answer yet.",
+      "pact_appearance": "Stage1 near burden 10.76 at Sep30 21:12; first subtle dark superficial veins by RIGHT wrist/inner forearm seven concentric broken rings+roots, very faint damp stone ozone scent; no stage2 gauntness or disease, no skin contagion; visual progression and NPC reaction mandatory future",
+      "player": "Showered, put on canonical Kusa layered shinobi uniform and arrived at Nori office, no forced further Shiki decisions"
     },
     "recent": [
-      {
-        "at": "0006-09-30T19:21:00",
-        "source": "current_conversation_prior_assistant_message_s04.text.022; exact prose remains in visible chat, not yet copied into HOT",
-        "summary": "ПРЕДЫДУЩИЙ ФАКТИЧЕСКИ ПОКАЗАННЫЙ ход в беседе (ещё не внесённый в FAST): Шики сознательно вырезал семь отдельных фуин-контуров на собственном теле, использовал Нулевой Геном и одновременно перевёл из каменной Нулевой операционной ВСЕ ШЕСТЬ внешних замков и СЕДЬМУЮ центральную онтологическую границу вместе с запертой в ней автономной сущностью. Кольца опустели, центральная чёрная граница исчезла из старого саркофага и замкнулась в Шики: он стал действительным живым носителем всех семи печатей и заключённого в них существа. Уцуро и Минасэ Рэи наблюдали, поражены, боятся. На теле Шики появились семиконтурные резаные печати, при этом собственных патологий, а также принудительных мыслей/действий нет. Прямое игровое согласие и поступок Шики — по предыдущему видимому ходу. Полный текст прежнего ответа остаётся в беседе и должен быть дословно перенесён при окончательной архивации сессии.",
-        "turn_id": "s04.text.022"
-      },
       {
         "at": "0006-09-30T19:47:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7720,9 +7714,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Шики открыл домашнюю дверь посыльному капитана Хаясэ Нори, сказал: «Дома. С документами ещё не ознакомился». Посыльный показал служебный жетон, настороженно отреагировал на присутствие Шики, подтвердил личную проверку возвращения и незнание содержания закрытых бумаг. Сообщил просьбу Нори прийти лично этим вечером в управление безопасности до утренней ведомственной передачи части материалов дела С-17; это не задержание и не допрос. Спросил, какой ответ передать. Шики ещё не отвечал, документы не вскрывал.",
         "turn_id": "s04.text.027"
+      },
+      {
+        "at": "0006-09-30T21:12:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики сказал посыльному, что примет душ, переоденется и прибудет. Исполнил эти действия, явился в управление Кусагакуре к Хаясэ Нори. Во время душа заметны лишь начальные стадийные эффекты Договора: дополнительные тонкие корни от семи ПРЕРЫВИСТЫХ КОНЦЕНТРИЧЕСКИХ колец вокруг пустой чёрной сердцевины на правом предплечье, слабое потемнение сосудов у запястья, едва заметный запах мокрого камня и грозового воздуха. Без болезни, выраженной худобы и контактного заражения. Новое прямое правило игрока — ОБЯЗАТЕЛЬНО обыгрывать постепенное изменение внешности и реакции NPC, закреплено в PROGRESSION_RULES.json. Нори сообщает новое подозрительное предписание: В-7 передать завтра в 06:00, но приложенная квитанция уже содержит отметку 'получено' с будущим временем. Нори остановила выдачу до проверки и просит Шики посмотреть подпись получателя, тот ещё не посмотрел и ничего не ответил. Домашнее служебное письмо не открыто.",
+        "turn_id": "s04.text.028"
       }
     ],
-    "story": "S04.text.027 30 Sep 1283 Sat 20:30, Shiki in own Kusa house (covertly returned from NW secret lab via canceled Utsuro reverse summon). User stood, OPENED his own front door, told messenger 'Дома. С документами ещё не ознакомился'. MESSENGER from Captain Hayase Nori sees Shiki, reflexively wary of Shiki's inherent unmotivated unsettling presence, identifies self with official token, says Nori needed face-to-face confirmation, contents of one sealed security letter unread and unknown to messenger, no opening or player consent. Messenger says Nori requests PERSONALLY to speak this evening at internal security HQ BEFORE papers on S-17 case get transmitted to later departmental review in morning; this is explicitly NOT detention or interrogation order, asks Shiki for reply. Shiki has not answered invitation or read letter; no PC thoughts/actions authored. Inside Shiki seven prison seals and finite entity spiritual energy buffer stable; entity silent. Next reply of Shiki needed. No retrospective NPC access to secrets (lab/genetic sources/hidden prisoner). Latest change to memory policy conversation>HOT>targeted archive only. No new arbitrary teleportation; seven concentric broken right inner forearm rings with dark vortex and roots remain permanent."
+    "story": "S04.text.028 Saturday Sep30 1283 21:12 Kusa Internal Security office, Hayase Nori's room. Shiki answered messenger: 'Сейчас я приму душ переоденусь и прибуду', showered and changed into canonical layered dark graphite and olive Kusa shinobi uniform with high collar, low tied silver-white hair and gloves, then went to meet Nori. DIRECT OOC rule from user: evolving permanent pact physical/olfactory phenotype MUST BE SHOWN across game stages with grounded NPC psychological reactions, NO invented instant advanced-stage gauntness. At current stage1 burden ~10.76 (9.3743 as of Sep29 02:29 + 0.75/day to Sep30 21:12), first faint dark vessels near RIGHT inner forearm/wrist, new fine black roots amidst PERMANENT seven broken concentric black rings and abyssal empty center; fleeting wet-stone/ozone scent at very close range. NO stage2 eye hollows/full gauntness, no illness or weakness, no infectious skin touch. Detailed enduring player rule written in PROGRESSION_RULES.json 2026-11-16. Messenger acknowledges arrival, exits, still no letter opened. At HQ Nori autonomously investigated S-17 / V-7 chain of custody. NEW SCENE DEVELOPMENT: second formally stamped V-7 transport order received 19:12 demands container shipment tomorrow 06:00, but attached receipt inexplicably ALREADY MARKED 'received' with tomorrow's time (possible forged or pre-filled receipt). Nori froze transfer pending review and shows Shiki recipient signature, asks if recognizable based on earlier suspicious first document Shiki inspected on the north water channel post. Nori keeps personal/genetic lab privacy, sees Shiki's composed uncanny presence and slight ozone/mineral smell, controlled anxious response; do not equate smell with contagion. Shiki hasn't read sealed courier letter at home. User controls whether to inspect/sign or say anything to Nori. Seven internal prison seals and captive independent intact, no offscreen revelations or NPC omniscience."
   },
   "schema": "npr-github-scene-memory/1"
 }
