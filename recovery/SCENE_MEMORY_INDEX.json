@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-10-01T07:10:00",
-    "location": "Кусагакуре, дом Мугами Шики, внутри у входа",
-    "turn": "s04.text.044"
+    "at": "0006-10-01T07:15:00",
+    "location": "Кусагакуре, дом Мугами Шики, комната у входа",
+    "turn": "s04.text.045"
   },
   "documents": [
     {
@@ -7674,25 +7674,19 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "642defc77305b79bc1a8b8e6be35211dc6136f1778be2e31351a702b1e392119",
+  "hot_sha256": "b0db1ae55c5552b77e0bac0c556e12a4d5a097397954b35c12906750cb864f75",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "guards": "Outside gate obey hold order, no entry, leader answers not there to take patient.",
-      "letter": "Two sheets from UВБ Kusa: Sept30 18:16 notice #С-17/М-42 to Shiki inviting to Nori Sept30 before 22:00 for S17/V7 planned 1 Oct 06:00 custody expert consultation, not arrest; generic copy inventory. Does NOT include false early sanction or recipient signature. Envelope remains SEALED and unhandled beyond scan.",
-      "nori": "PERSONALLY arrived outside gate 07:10 with three escorts, confirms they are hers, will vouch identifications, wants investigation of attack and will not enter without Shiki consent.",
-      "player": "Tells guard trio not to move/enter and that Tetsu is under his protection, warns he is watching; performs non-destructive chakra scan to READ still sealed envelope's contents.",
-      "seals": "Seven intact, Nemera cannot see/hear conversation through Shiki senses.",
-      "tetsu": "Indoors alive stable post-hemostasis but weak from blood loss.",
-      "v7": "No new confirmed finding about Central directorate or Arakawa's authority."
+      "anbu": "One from earlier V7 with triple-mark mask inside, two outdoor guards per Nori security assignment, no attack witnessed.",
+      "document": "Witness signature disputed, not proven forged yet despite Tetsu denial; 3 test signatures for comparison awaiting evaluation.",
+      "entity": "Nemera sealed and hears no external speech.",
+      "letter": "Old scanned domestic letter remains sealed and unhandled, contains ordinary invitation and inventory only.",
+      "nori": "Admitted error in not challenging Tetsu release. Revealed independent ANBU check verified only ordinary 06:00 transfer order, NOT Arakawa's earlier extra-urgent channel; V7 not transferred, Kage-linked ANBU imposed temporary no-change custody, Arakawa formal protest and not arrested. Proposed closed hospital admission under Kage protection subject to Shiki medical assessment and Tetsu consent.",
+      "player": "Invited Nori and entourage inside with single 'Заходите', no other player actions. Nori herself split escort (1 entered with Nori, 2 outside).",
+      "tetsu": "Conscious stable but weak after real blood loss, rebuked Nori about release resulting in assault, no forgiveness, wary of hospital confinement; has not consented to transfer."
     },
     "recent": [
-      {
-        "at": "0006-09-30T22:11:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Шики вошёл ДОМОЙ и мысленно исправил Немеру: её имя — её собственный выбор, а об ужасе Шики не говорил. Спросил, есть ли ещё что знать и неприятен ли ей разговор с тюремщиком. Немера признала неточность своей интерпретации, без человеческого раскаяния. Ей неприятно ЗАКЛЮЧЕНИЕ, но разговор она предпочитает молчанию, поскольку изучает создавшего тюрьму Шики. Ограничения заявила: не видит глазами Шики, не слышит ушами, не читает память; лишь разрешённый смысловой канал и механические ощущения по свою сторону замков. Отдельно сказала: она может быть искренна, оставаясь противницей, правда не равна покорности. Завершила речь по своей воле. Семь замков целы, Шики не контролируется. Дом, 22:11, служебный конверт у входа всё ещё не вскрыт.",
-        "turn_id": "s04.text.039"
-      },
       {
         "at": "0006-10-01T06:41:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7722,9 +7716,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Шики приказал троим пришедшим за воротами стоять без движения, объявил, что Тэцу сейчас под его защитой, и предупредил о наблюдении. Группа подчинилась без попытки войти. Шики медицинско-чакровым послойным сканированием РАЗЛИЧИЛ ТЕКСТ двух листов в старом официальном запечатанном пакете, не вскрывая печати: уведомление канцелярии УВБ № С-17/М-42 от 30.09.1283 18:16 с приглашением к Хаясэ Нори до 22:00 на экспертное ознакомление с изменённой описью С-17/В-7 перед плановой передачей 01.10 06:00 (не допрос/задержание); обычная сопроводительная опись без подписей получателей, санкций досрочной передачи или отметок 'получено'. Пакет был доставлен до 20:28 предыдущего дня и все это время не вскрывался. В 07:10 капитан Хаясэ Нори ЛИЧНО прибыла К ВОРОТАМ с группой, не вошла; удостоверяет свою группу по запросу, хочет расследовать нападение на свидетеля. Тэцу стабилен после лечения внутри. Семь печатей целы, Немера не знает внешней сцены.",
         "turn_id": "s04.text.044"
+      },
+      {
+        "at": "0006-10-01T07:15:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики сказал 'Заходите' и допустил людей в дом. Нори выбрала войти с одним из трёх АНБУ (маска с тремя полосами, участник ночной сцены В-7), двое других оставлены охранять периметр снаружи по её решению. Тэцу резко и справедливо упрекнул её: после признания подписи спорной его отпустили, и он подвергся нападению. Нори признала ошибку в том, что не оспорила освобождение; Тэцу её не простил. Нори донесла НОВЫЙ подтверждённый итог ночной проверки: обычное распоряжение Центрального управления о В-7 на 1 октября 06:00 действительно существует, экстренное ночное распоряжение по закрытому каналу Аракавы НЕ ПОДТВЕРЖДЕНО. В 06:00 В-7 НЕ ПЕРЕДАН из-за временного ограничения АНБУ на смену хранителя, пока резиденция Кагэ рассматривает дело; Аракава подал протест и не задержан. Подпись Тэцу в квитанции СПОРНАЯ, сравнительная проверка образцов ещё не закончена. Нори предложила переместить ослабленного кровопотерей Тэцу в закрытое лечебное отделение под охрану резиденции Кагэ, с медицинской оценкой Шики и личным согласием Тэцу; ни Шики, ни Тэцу ещё НЕ СОГЛАСИЛИСЬ. Шики остаётся дома. Немера не знает разговора, семь печатей целы.",
+        "turn_id": "s04.text.045"
       }
     ],
-    "story": "S04.text.044 Sun Oct1 1283 07:10. Shiki at own home, Tetsu stabilized after previous wound operation indoors; door/gate closed to arriving guards. Shiki openly told trio outside 'Ну вот и стойте там и не дёргайтесь... Тэцу как свидетель под моей защитой... я за вами слежу' and they COMPLIED, remain beyond gate with no force; group leader answered not seeking to take patient. Shiki performed chakra structural SCAN of previously SEALED official domestic service packet from Internal Security (first present at home by s04.text.026 and known UNREAD until now); envelope remained SEALED/NOT OPENED; 2 sheets mapped via pigment density and fiber layers rather than sight or soul-reading. Content NOW DISCOVERED: notice #С-17/М-42 dated Sept30 1283 18:16 to external specialist Mugami Shiki from Internal Security Kusa, request attend Captain Hayase Nori until 22:00 Sept30 regarding personal expert review of S17 archive transfer V7 due Oct1 06:00, NOT subpoena/arrest. Second short mundane inventory: V7 contains medical and expert materials S17; NO names of receiving agents, NO early delivery order, NO 'получено' receipt. Created in this turn as previously UNINSPECTED paper; do not retroactively attribute suspicious forged authorizations to it. At 07:10 Nori herself arrived at OUTSIDE gate with three presumed escorts, sleepless, angry at attack on witness, promises Shiki may verify all 3 by her and no unauthorized entry, intends to investigate knife assault. Nori still OUTSIDE waiting consent; other 3 also outside, none crossed threshold. Tetsu still awake, weak but stable, listening inside, blood loss requires rest/fluids. V7 investigation, Arakawa culpability not yet adjudicated; no supernatural entity omniscience or external sensing; Nemera isolated, seven seals intact, pact stage1 slight right inner forearm black rootlike lines/vascular shadow, no contact hazard. User next decides permit Nori/guards, speak, inquire, inspect patient, etc."
+    "story": "S04.text.045 Sun Oct1 1283 07:15. Shiki at home with medically stabilized Tetsu, told Nori and her group 'Заходите' granting entry. Nori independently split 3-person team: entered with masked ANBU wearing THREE dark marks on nose bridge (seen last night at V7); two other guards form visible exterior perimeter, one alley and one opposite roof, their identity not independently verified to Shiki beyond Nori's assurance. Nori examined Tetsu by observation, did NOT take command of his treatment; Tetsu conscious, wound stopped bleeding but blood volume not replaced, weak, must be monitored. Tetsu accuses Nori's process of releasing him after testimony, after which unknown attacker stabbed him; she admits she did not contest formal release decision, accepts it was error, but does NOT concede attack ordered by her. Tetsu emotionally distrusts her and does NOT forgive, no forced PC role. Nori informs Shiki of offscreen night result now legitimately disclosed: Central directorate ordinary transfer request for V7 at 06:00 CONFIRMED; Arakawa's supposed NIGHT EMERGENCY release order via claimed classified channel was NOT VERIFIED; original V7 CONTAINER WAS NOT HANDED OVER at 06:00 because masked Kage observer team imposed INTERIM bar on changing custodian until Kage residence finishes review. Arakawa submitted formal protest, remains not arrested. Receipt carries purported Tetsu witness signature; authenticity pending independent comparison with 3 reference handwriting samples. Thus attempted early handover and suspicious document unresolved, no proven culprit/traitor yet. Nori plans MOVE Tetsu to closed hospital medical ward under Kage ANBU protection (NOT central security) to monitor blood loss, but leaves medical transfer decision to Shiki and Tetsu consent necessary; Tetsu suspicious whether they will release him again. Nori promises personally to account for any future release authorization, not blanket guarantee safety. Several of the three outside are moving with perimeter signal but no attack yet. Shiki has not responded to proposed transfer. PREVIOUS: Shiki used chakra structure scan to read previous SEALED domestic letter, two sheets simple invitation from Sept30 18:16 to meet Nori by 22:00 about planned V7 transfer and plain inventory; sealed still, not new incriminating evidence. Seven inner seals stable Nemera cannot hear outside, pact stage1 rootmark and dark vessels RIGHT inner forearm, no disease or skin transmission. Keep narrative forward as independent investigation and Tetsu's agency; next player's choice possible."
   },
   "receipt": "advisory: Neither verified source candidates nor explicit gaps recorded",
   "schema": "npr-github-scene-memory/1"
