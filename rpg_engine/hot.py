@@ -730,7 +730,7 @@ def fold(state_dir):
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
-    if (state_dir / "archive/session-002-index.json").is_file():
+    if (state_dir / "archive").is_dir():
         from . import heuristic_history
         heuristic = heuristic_history.save(
             Path(__file__).resolve().parents[1], state_dir)
