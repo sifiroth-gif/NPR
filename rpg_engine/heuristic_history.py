@@ -16,7 +16,7 @@ from pathlib import Path
 import re
 
 SCHEMA = "npr-heuristic-history/1"
-DESTINATION = "archive/heuristic-recall.json"
+DESTINATION = "archive/heuristic-recall/manifest.json"
 WORD = re.compile(r"[^\W_]+", re.UNICODE)
 STOP = frozenset(("а и но или либо да не ни же бы как что чтобы кто какой где когда "
     "свой свои ваше уже еще ещё нам вам нас вас они оно она он мы вы ты я это тот "
@@ -285,11 +285,15 @@ def _canon(root, state):
 def build(root, state):
     """Compile played source spans and canonical cards, never raw rejected drafts."""
     root, state = Path(root), Path(state)
-    entries = _first_session(state)
-    # Discover all curated session indexes; preserve future session additions.
-    for index in sorted((state / "archive").glob("session-*-index.json")):
-        number = int(index.name.split("-")[1])
-        if number > 1 and number < 4:
+    # The first session currently has no curated index, but its complete
+    # transcript must remain searchable. If reviewed, prefer its exact index.
+    entries = (_old_session(state, 1) if
+               (state / "archive/session-001-index.json").is_file()
+               else _first_session(state))
+    # Discover every future reviewed session dynamically, not by story subject.
+    for catalog in sorted((state / "archive").glob("session-*-index.json")):
+        number = int(catalog.name.split("-")[1])
+        if number != 1:
             entries.extend(_old_session(state, number))
     entries += _turn_sessions(state)
     entries += _canon(root, state)
