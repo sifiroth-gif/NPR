@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-30T18:31:00",
-    "location": "Нижний госпиталь, Седьмая палата",
-    "turn": "s04.text.016"
+    "at": "0006-09-30T18:49:00",
+    "location": "Нижний госпиталь, Нулевая операционная",
+    "turn": "s04.text.017"
   },
   "documents": [
     {
@@ -7674,24 +7674,18 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "3fe1d396e55d3809b82c11c20147060b44bfece0e8074c169db6cdb198ac350a",
+  "hot_sha256": "7dd0c65e758c14100e45ff0971950d9a0c194caaf588dd89d023a788171434f2",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "at": "0006-09-30T18:31:00",
-      "node": "Sixth seal strain sensed from below, main node accessible, user has choice",
-      "p0_rule": "Mandatory Shiki passive intrinsic unmotivated anxiety in significant NPCs with individual, observable psychological/body reactions; recorded AGENTS.md as P0",
-      "sayu": "No amputation, patient stable and awake, self-breathing, self-circulating with self-powered spare safety seal. Alien strands isolated, branch 2/3 no longer operating through Sayu. Left hand partly mobile/sensate, weakness requires follow-up. Sayu thanks Shiki and anxious still.",
-      "shiki": "User-initiated medical treatment executed, significant ordinary chakra use; no pact-induced tissue pathology, passive anxiety effect predates new natures",
-      "utsuro": "No longer has to hold Sayu's life support. Reacted to Shiki's pity with old bitterness and complex unease. Can choose to guide lower."
+      "at": "0006-09-30T18:49:00",
+      "descent": "Utsuro guides Shiki through registration seal and command-independence seal ~40m down to Zero Operating Theatre",
+      "hostile_npc": "Female half-stone surgeon emerged from relief, called Utsuro Hisanori, intentionally damaged sixth support; about to strike again; Shiki 4m, clear path; Utsuro preoccupied stabilizing channel",
+      "node": "Six material conduits at ancient surgical table; sixth pressure channel badly damaged with metal/stone brace failures; seventh descends under table, occult edge unseen",
+      "sayu": "Stable alone with self-powered vital backup, requires overnight monitoring, no immediate death assumed",
+      "shiki": "Sensory response at own foreign DNA to sixth pulses, incoming control gated, reverse open; innate NPC unexplained anxiety felt by Sayu/Utsuro/surgeon"
     },
     "recent": [
-      {
-        "at": "0006-09-29T02:32:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Игрок исправил ограничение перспективы: не показывать в игровом тексте события вне присутствия Шики и не считать их его знаниями; NPC вне кадра автономны. В лаборатории Шики сообщил Уцуро, что образцы его, спросил о чужом вживлении, попросил обратный призыв и распустил прямой. Уцуро признал ощущение чужой нити, но не знает её научной природы. Затем, при согласии Шики, выполнил обратный призыв в Седьмую палату. Шики теперь видит Саю, нестабильную опору и Уцуро; Саю просит результаты.",
-        "turn_id": "s04.text.011"
-      },
       {
         "at": "0006-09-30T15:08:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7721,9 +7715,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Игрок велел повторно закрепить врождённое психологическое влияние Шики: НПС чувствуют необъяснимую тревогу, обязательно показывать разный язык тела. В AGENTS.md добавлено P0. В Седьмой палате Шики с помощью медицинской чакры и временной поддержки Уцуро вылечил основные нарушения Саю: отделил её самостоятельное дыхание и кровообращение от второго контура и двигательную ветвь руки от третьего; сосуды и нервы сохранены, частичная чувствительность/движение кисти возвращены, нужна реабилитация и ночное наблюдение с автономной резервной печатью. Саю жива, благодарит и всё же насторожена. Уцуро свободен для похода к Нулевой операционной, шестой замок неровно отзывается.",
         "turn_id": "s04.text.016"
+      },
+      {
+        "at": "0006-09-30T18:49:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики и Уцуро по прямой просьбе игрока спустились через два старых проверочных затвора к Нулевой операционной. Обе печати пропустили Шики из-за договора и самостоятельной генетической защиты от чужих команд. У шестого проводника выявлена серьёзная поломка. Из каменного рельефа вышла живая полукаменная женщина-хирург, узнала Уцуро как Хисанори, встревожилась присутствием Шики, затем сознательно сорвала ещё одну скобу шестого проводника и готовит новый удар. Уцуро занят удержанием шестого потока, Шики в 4 м от противницы, ход игрока перед ударом.",
+        "turn_id": "s04.text.017"
       }
     ],
-    "story": "S04-016 Sat30Sep1283 18:31 Seventh Ward. User said aloud 'Ладно, надо Саю поправить, а то я не вынесу ещё больше криков. Уцуро, мне тебя жаль' and initiated medically skilled healing Sayu. User OOC P0 reemphasized Shiki's INNATE unnerving presence: NPCs around Shiki feel inexplicable/unmotivated anxiety (not caused by contract/odor/forbidden natures) and always show psychologically distinctive individualized detailed body language. Updated branch AGENTS.md in commit 5006ee8d16baeb1cdde56c35f9944f75fc39c8e3. Shiki with Utsuro's temporary backup constructed independent patient-local autonomic chakra life support, gradually uncoupled Sayu vital organs from damaged second feeding lock and her arm motor/vascular nerve tissues from third lock. Shiki's own reverse access isolated alien motor strands, performed medical chakra nerve-sheath repair, secured sample in fuin capsule; NO amputation or destruction of patient's own structures. Sayu alive, breathing/circulating independently; left hand perfused and partial sensitivity/motor return, still weak ulnar digits and requires recovery/observational backup self-powered seal through night, not instantaneous full nerve recovery. Sayu thanks Shiki with mixed relief and persistent innate unnerving anxiety, retains personality. Utsuro relieved of direct life support for first time, now physically able to lead Shiki to underground Zero Operating Theatre. New low stone impact sensed as irregular sixth seal pressure from bell shaft, no immediate breach; player decides descend or other action. Shiki has significant chakra expenditure from recent 36h triple genome and ~3h treatment, still competent but fatigued, no own-body pathology; stage1 pact cosmetics, no infectious contact. Only perspective Shiki experienced. GM hidden entity remains private. Utsuro sealed blood tube Ш still unanalyzed. No NPC automatically knows private lab information except Utsuro's earlier visit."
+    "story": "S4-017 Sat Sep30 1283 18:49. Shiki said 'Пойдём, Уцуро' and walked from Seventh Ward to Zero Operating Theatre, guided by Utsuro. Sayu remains alive, breathing/circulating independently with self-powered backup seal, partially impaired left hand; her fear from Shiki innate presence persists mixed with respect. Utsuro guided via service corridor, first living-registry gate accepted Shiki through right seven-ring blood pact, then lowered old freight platform ~40 m. Second gate identified third foreign genome but admitted because Shiki autonomously gates incoming motor commands; Utsuro expended minor chakra. At Нулевая операционная Shiki sees six arm-thick material chakra conduits entering operating stone slab; seventh immaterial boundary-contour descends beneath central table into darkness. Sixth pressure reducer visibly badly damaged (three original missing brace fittings, then one more knocked loose) and intermittently pulses under load. Autonomous old female stone-hybrid surgeon emerges from bas-relief, speaks to Utsuro as 'Хисанори' and 'ты снова привёл врача?', wary of Shiki's presence and strange ability. She intentionally struck SIXTH conduit with bone clamp then prepares second strike. Utsuro currently using both arms/chakra to prevent sixth rupture, cannot prevent attacker without risking seal. Shiki stands about 4m from hostile surgeon, ~2m from conduit, clear path. Enemy can strike on next beat. Full body triple genome feels pressure below table but incoming control still blocked, reverse path accessible. No forced Shiki action, reaction or unobserved knowledge. GM-only entity secret unchanged and unknown to Shiki. Narrative focus here is action, don't slip back into endless verbal discussions. Shiki has ordinary physical/chakra fatigue from long genome/healing, remains elite jōnin with burst shunshin and med powers. No side effect pathology, stage1 faint scent and cosmetic veins; bare-skin disease not active."
   },
   "schema": "npr-github-scene-memory/1"
 }
