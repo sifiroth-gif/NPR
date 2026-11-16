@@ -427,6 +427,22 @@ def main(root):
     out=root/"campaigns/shiki/continuity/SESSION_004_TO_005_CANON_1283-10-01.json"
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(handoff,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    # The long active-session chronicle already exists verbatim in the
+    # append-only JSONL and chronicle archives. Keep only a small last-scene
+    # tail in HOT; otherwise the old session may exceed the 72 KiB guard.
+    # HOT stays at s04.text.068 until first s05.text.001, per GM_CORE.
+    hot["chronicle"]=hot.get("chronicle",[])[-6:]
+    hot["chronicle_older"]="archive/session-004-chronicle.md"
+    hot["handoff"]={
+        "closed":4,"next_session":5,"sqlite_revision":final["revision"],
+        "at":END,"last_turn":"s04.text.068","first_turn":"s05.text.001",
+        "source":"campaigns/shiki/continuity/SESSION_004_TO_005_CANON_1283-10-01.json"}
+    (root/"recovery/HOT.json").write_text(
+        json.dumps(hot,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
+    from rpg_engine import hot as live_hot
+    hot_report=live_hot.check(root)
+    if not hot_report["ok"]:
+        raise ValueError("post-close HOT continuity check failed: "+str(hot_report))
     # Binary canonical manifest and transport are published atomically with
     # all new source files. Historical HOT / GM_ONLY are NOT overwritten.
     (root/"recovery-before-s4.sqlite").unlink()
