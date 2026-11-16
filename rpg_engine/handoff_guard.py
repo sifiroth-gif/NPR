@@ -24,6 +24,45 @@ def audit(game, state_dir=None, *, full=True):
              "session":result["session"],"revision":result["revision"],
              "at":result["at"],"pending":result["pending"],
              "full_audit":bool(result.get("full_audit"))}
+    # HOT v2 supersedes the old FAST_SCENE, which may have been frozen
+    # many hours before the last played turn. Never let the legacy snapshot
+    # veto or silently replace the verified source-aware HOT boundary.
+    modern=root/"recovery/HOT.json"
+    if modern.is_file():
+        from . import hot as live
+        h=json.loads(modern.read_text(encoding="utf-8"))
+        if h.get("schema")!=live.SCHEMA:
+            raise ValueError("current HOT v2 schema is invalid")
+        c=h.get("cursor") or {}
+        s=h.get("session")
+        text_at=c.get("at")
+        if not isinstance(text_at,str) or len(text_at)!=19:
+            raise ValueError("HOT has no exact in-world clock")
+        if (h.get("fold") or {}).get("errors"):
+            raise ValueError("HOT has unreconciled fold failures")
+        if live.heading(text_at)["date"]!=c.get("date"):
+            raise ValueError("HOT weekday and time disagree")
+        if text_at<result["at"]:
+            raise ValueError("modern HOT is older than canonical SQLite")
+        if s==result["session"]-1:
+            boundary=h.get("handoff") or {}
+            if (text_at!=result["at"] or
+                    boundary.get("closed")!=s or
+                    boundary.get("next_session")!=result["session"] or
+                    boundary.get("sqlite_revision")!=result["revision"] or
+                    boundary.get("last_turn")!=c.get("id")):
+                raise ValueError("intersession HOT/SQLite handoff is not source verified")
+            return {**current,"fallback":"awaiting_first_live_turn","cursor_at":text_at,
+                    "last_text_turn_id":c.get("id"),
+                    "next_live_turn":boundary.get("first_turn")}
+        if s!=result["session"]:
+            raise ValueError("current HOT is from an unrelated game session")
+        if text_at>result["at"]:
+            if not isinstance(h.get("last"),dict) or h["last"].get("id")!=c.get("id") or not h["last"].get("gm"):
+                raise ValueError("HOT advanced but lacks the exact last published text")
+            return {**current,"fallback":"text_ahead_unreplayed",
+                    "cursor_at":text_at,"last_text_turn_id":c.get("id")}
+        return {**current,"fallback":"synchronized","cursor_at":text_at}
     path=root/"recovery/FAST_SCENE.json"
     if not path.is_file():
         return {**current,"fallback":"none"}
