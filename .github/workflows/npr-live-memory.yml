@@ -1,14 +1,17 @@
-name: Shiki automatic live scene-memory refresh
+name: Shiki live memory fold
+
+# Ведущий записывает один маленький recovery/TURN.json на ход.
+# Этот процесс сворачивает его в recovery/HOT.json, recovery/GM_ONLY.json,
+# дословный журнал archive/session-NNN-turns.jsonl, хронику и карточки NPC.
+# Коммиты, сделанные GITHUB_TOKEN, новых запусков не вызывают: петли нет.
 
 on:
   push:
     branches: ["game-state/shiki"]
     paths:
       - ".github/workflows/npr-live-memory.yml"
+      - "recovery/TURN.json"
       - "recovery/FAST_SCENE.json"
-      - "archive/*-index.json"
-      - "recovery/transcripts/*memory-index*.json"
-      - "campaigns/shiki/**"
   workflow_dispatch:
 
 permissions:
@@ -19,10 +22,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  rebuild:
+  fold:
     if: github.repository == 'sifiroth-gif/NPR'
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,7 +41,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Refresh with fast-forward lease and verify published catalog
+      - name: Fold turns into HOT, verbatim log, chronicle and cast cards
         shell: bash
         env:
           PYTHONPATH: ${{ github.workspace }}/_engine
@@ -46,34 +49,41 @@ jobs:
           set -euo pipefail
           git -C _state config user.name "github-actions[bot]"
           git -C _state config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4; do
             git -C _state fetch origin refs/heads/game-state/shiki
             git -C _state checkout -B game-state/shiki FETCH_HEAD
+            python -m rpg_engine hot-fold --state-dir _state | tee "$RUNNER_TEMP/fold.json"
+            python -m rpg_engine hot-check --state-dir _state | tee "$RUNNER_TEMP/check.json"
+            # Старый поисковый каталог по архивам: полезен, но игру не блокирует.
             python -m rpg_engine --db _state/campaign.sqlite scene-memory-build \
               --state-dir _state --source-root _engine \
-              --output _state/recovery/SCENE_MEMORY_INDEX.json
-            git -C _state add -- recovery/SCENE_MEMORY_INDEX.json
+              --output _state/recovery/SCENE_MEMORY_INDEX.json > /dev/null \
+              || echo "::warning::legacy scene-memory index was not rebuilt"
+            git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
+            git -C _state add -- recovery/SCENE_MEMORY_INDEX.json 2>/dev/null || true
             if git -C _state diff --cached --quiet; then
-              echo "MEMORY_INDEX_CURRENT"
-              exit 0
+              echo "HOT_CURRENT"
+              break
             fi
-            git -C _state commit -m "Auto-refresh Shiki source-bound scene-memory index"
+            cursor=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['cursor'])" "$RUNNER_TEMP/fold.json")
+            git -C _state commit -q -m "Fold $cursor into HOT, log and cast cards"
             if git -C _state push origin HEAD:refs/heads/game-state/shiki; then
-              git -C _state fetch origin refs/heads/game-state/shiki
-              git -C _state show FETCH_HEAD:recovery/SCENE_MEMORY_INDEX.json > "$RUNNER_TEMP/published-memory.json"
-              cmp "$RUNNER_TEMP/published-memory.json" _state/recovery/SCENE_MEMORY_INDEX.json
-              python - <<'PY'
-          import json
-          d=json.load(open("_state/recovery/SCENE_MEMORY_INDEX.json"))
-          assert d["schema"]=="npr-github-scene-memory/1"
-          assert d["cursor"]["turn"]
-          assert any("SECRET_LAB_NW_CATCHMENT" in e["source"] for e in d["documents"])
-          print("MEMORY_GATE_PUBLISHED",d["cursor"]["turn"],len(d["documents"]))
-          PY
-              exit 0
+              echo "HOT_PUBLISHED $cursor"
+              break
             fi
-            echo "Concurrent state update detected, reloading fresh state"
-            sleep 1
+            if [ "$attempt" = 4 ]; then
+              echo "::error::state branch kept moving, fold not published"
+              exit 1
+            fi
+            echo "Concurrent state update, reloading"
+            sleep 2
           done
-          echo "Memory cache update failed safely after concurrent writes"
-          exit 1
+          python - "$RUNNER_TEMP/fold.json" "$RUNNER_TEMP/check.json" <<'PY'
+          import json, sys
+          fold, check = (json.load(open(p)) for p in sys.argv[1:3])
+          for line in fold["errors"]:
+              print(f"::error::turn rejected: {line}")
+          for line in check["problems"]:
+              print(f"::error::state check: {line}")
+          sys.exit(1 if fold["errors"] or not check["ok"] else 0)
+          PY

@@ -137,9 +137,12 @@ class SceneMemoryTests(unittest.TestCase):
                             "player_input": "Изучаю ДНК"}
         }
         hot.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        # Квитанция стала справочной: её отсутствие не останавливает сборку индекса.
+        target = self.root / "recovery/SCENE_MEMORY_INDEX.json"
+        self.assertEqual(scene_memory.write_live_index(self.root, self.root, target)["status"], "updated")
+        self.assertIn("Missing mandatory", json.loads(target.read_text())["receipt"])
         with self.assertRaisesRegex(ValueError, "Missing mandatory"):
-            scene_memory.write_live_index(self.root, self.root,
-                self.root / "recovery/SCENE_MEMORY_INDEX.json")
+            scene_memory.verify_hot_memory_gate(payload)
         payload["latest_turn"]["memory_gate"] = {
             "schema": "npr-memory-gate/1", "previous_turn_id": "s04.text.004",
             "index_turn": "s04.text.004", "index_blob_sha": "a" * 40,
@@ -153,8 +156,8 @@ class SceneMemoryTests(unittest.TestCase):
         payload["latest_turn"]["memory_gate"]["player_input"] = "Чужая фраза"
         hot.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "does not match"):
-            scene_memory.write_live_index(self.root, self.root,
-                self.root / "recovery/SCENE_MEMORY_INDEX.json")
+            scene_memory.verify_hot_memory_gate(payload)
+        self.assertIn("does not match", scene_memory.compact_live_index(self.root, self.root)["receipt"])
 
     def test_engine_turn_contract_accepts_valid_memory_gate(self):
         from rpg_engine.engine import turn_value

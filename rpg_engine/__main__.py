@@ -7,7 +7,8 @@ import sqlite3
 import sys
 from subprocess import TimeoutExpired
 
-from . import autonomy, continuity, git_state, preparation, scene_memory, sessions, setting, verification, world
+from . import (autonomy, continuity, git_state, hot, preparation, prose_lint, scene_memory, sessions, setting,
+               verification, world)
 from .engine import Campaign, limit_value, state
 from .history import recall
 
@@ -46,6 +47,15 @@ def parser():
     build_mem.add_argument("--state-dir", type=Path, required=True)
     build_mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
     build_mem.add_argument("--output", type=Path, required=True)
+    for name, help_text in (("hot-fold", "fold new turn files into HOT v2, the verbatim log and cast cards"),
+                            ("hot-check", "verify HOT v2 consistency without writing")):
+        command = sub.add_parser(name, help=help_text)
+        command.add_argument("--state-dir", type=Path, required=True)
+    boot = sub.add_parser("hot-bootstrap", help="one-off lossless migration from legacy FAST_SCENE history")
+    boot.add_argument("--state-dir", type=Path, required=True)
+    boot.add_argument("--seed", type=Path, required=True)
+    lint = sub.add_parser("prose-lint", help="report explained, deferential and therapeutic prose in a scene text")
+    lint.add_argument("file", type=Path)
     queue = sub.add_parser("world-queue", help="review upcoming NPC decisions through a target time")
     queue.add_argument("until")
 
@@ -177,6 +187,14 @@ def run(args):
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "scene-memory-build":
             return scene_memory.write_live_index(args.source_root, args.state_dir, args.output)
+        case "hot-fold":
+            return hot.fold(args.state_dir)
+        case "hot-check":
+            return hot.check(args.state_dir)
+        case "hot-bootstrap":
+            return hot.bootstrap(args.state_dir, read_json(args.seed))
+        case "prose-lint":
+            return prose_lint.lint(args.file.read_text(encoding="utf-8"))
         case "world-queue":
             with game.connection() as con:
                 at = state(con)["at"]
@@ -278,7 +296,7 @@ def main(argv=None):
     args = parser().parse_args(argv)
     try:
         result = run(args)
-    except (OSError, ValueError, sqlite3.Error, TimeoutExpired) as exc:
+    except (OSError, ValueError, RuntimeError, sqlite3.Error, TimeoutExpired) as exc:
         print(f"rpg_engine: {exc}", file=sys.stderr)
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))
