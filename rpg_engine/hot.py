@@ -604,9 +604,14 @@ def fold(state_dir):
                 applied.append(turn)
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
+    # Never publish a partly accepted batch. All turns remain in Git history
+    # and will be replayed after the rejected entry is corrected.
+    if errors:
+        return {"status": "rejected", "cursor": hot["cursor"].get("id"),
+                "applied": [], "errors": errors, "due": 0}
     refresh(hot)
     fold_info = hot.setdefault("fold", {})
-    fold_info["errors"] = errors[-8:]
+    fold_info["errors"] = []
     if applied:
         fold_info["commit"] = _head(state_dir) or fold_info.get("commit", "")
         fold_info["turns"] = fold_info.get("turns", 0) + len(applied)
