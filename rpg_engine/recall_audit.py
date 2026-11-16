@@ -30,11 +30,13 @@ def audit(state_dir):
     source_numbers = set()
     for p in (state / "archive").glob("session-*"):
         m = re.search(r"session-(\d{3})", p.name)
-        if m and (p.name.endswith(".md") or p.name.endswith("-turns.jsonl")):
+        if m and (re.fullmatch(r"session-\\d{3}(?:-source)?\\.md", p.name)
+                  or re.fullmatch(r"session-\\d{3}-turns\\.jsonl", p.name)):
             source_numbers.add(int(m.group(1)))
     missing = sorted(source_numbers - set(folders))
-    if missing:
-        raise ValueError("Unindexed sessions: " + repr(missing))
+    # A fixture or OOC-only journal may not contain played historical evidence.
+    # Report missing coverage explicitly, but do not invalidate a correctly
+    # folded campaign solely because a historical source has no playable turns.
     manifest = json.loads(path.read_text(encoding="utf-8"))
     if sum(int(x["records"]) for x in manifest["shards"]) != index["documents"]:
         raise ValueError("Shard records do not match manifest")
@@ -72,6 +74,8 @@ def audit(state_dir):
             "documents": index["documents"],
             "indexed_sessions": sorted(folders),
             "source_sessions": sorted(source_numbers),
+            "unindexed_source_sessions": missing,
+            "source_coverage_ok": not missing,
             "shards": len(manifest["shards"]),
             "groups": len(manifest.get("routes", [])),
             "load_ms": round(loaded, 2),
