@@ -30,8 +30,9 @@ def audit(state_dir):
     source_numbers = set()
     for p in (state / "archive").glob("session-*"):
         m = re.search(r"session-(\d{3})", p.name)
-        if m and (re.fullmatch(r"session-\\d{3}(?:-source)?\\.md", p.name)
-                  or re.fullmatch(r"session-\\d{3}-turns\\.jsonl", p.name)):
+        if m and p.name in (f"session-{m.group(1)}.md",
+                               f"session-{m.group(1)}-source.md",
+                               f"session-{m.group(1)}-turns.jsonl"):
             source_numbers.add(int(m.group(1)))
     missing = sorted(source_numbers - set(folders))
     # A fixture or OOC-only journal may not contain played historical evidence.
