@@ -273,6 +273,34 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
+    def test_fold_recovers_historical_long_summary_and_opening_without_player(self):
+        """Bad metadata in a previously published opening must not freeze HOT."""
+        opening = turn(45, "0006-10-01T07:14:00")
+        opening["id"] = "s05.text.001"
+        opening["player"] = ""
+        opening["line"] = "Очень длинная строка хроники. " * 30
+        opening["gm"] = "Точный первый ответ ведущего."
+        with self.assertRaises(hot.TurnError):
+            hot.validate_turn(opening)
+        self.put(opening)
+        subsequent = turn(46, "0006-10-01T07:20:00")
+        subsequent["id"] = "s05.text.002"
+        subsequent["line"] = "Следующий ход. " * 45
+        subsequent["gm"] = "Точный второй ответ ведущего."
+        self.put(subsequent)
+        report = hot.fold(self.root)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["applied"], ["s05.text.001", "s05.text.002"])
+        public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(public["cursor"]["id"], "s05.text.002")
+        self.assertTrue(all(len(c["line"]) <= hot.LINE_LIMIT for c in public["chronicle"]))
+        rows = [json.loads(line) for line in
+                (self.root / "archive/session-005-turns.jsonl").read_text(encoding="utf-8").splitlines()]
+        self.assertEqual([r["gm"] for r in rows],
+                         ["Точный первый ответ ведущего.", "Точный второй ответ ведущего."])
+        self.assertIn("сообщения игрока не было", rows[0]["player"])
+        self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
     def test_replaying_retired_npc_turn_cannot_resurrect_cast(self):
         self.put(turn(45, "0006-10-01T07:14:00", d={
             "scene": {"present": ["shiki"], "positions": "Только Шики в лаборатории"},
