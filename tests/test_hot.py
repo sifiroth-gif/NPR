@@ -315,6 +315,32 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"])
 
+    def test_gap_rejects_entire_batch_without_publishing_partial_memory(self):
+        self.put(turn(45, "0006-10-01T07:14:00"))
+        self.put(turn(47, "0006-10-01T07:31:00"))
+        original = (self.root / hot.HOT_PATH).read_text(encoding="utf-8")
+        report = hot.fold(self.root)
+        self.assertEqual(report["status"], "rejected")
+        self.assertEqual(report["applied"], [])
+        self.assertTrue(any("sequence gap" in e for e in report["errors"]))
+        self.assertEqual((self.root / hot.HOT_PATH).read_text(encoding="utf-8"), original)
+        self.assertFalse((self.root / "archive/session-004-turns.jsonl").exists())
+
+    def test_amended_turn_undo_survives_private_file_roundtrip(self):
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      d={"cast": {"nori": {"knows+": ["ложное свидетельство"]}}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.commit("fold original")
+        private = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(private["undo"]["id"], "s04.text.045")
+        self.put(turn(45, "0006-10-01T07:14:00", amend=True,
+                      gm="Исправленная сцена.", d={"cast": {"nori": {"knows+": ["точный факт"]}}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(public["cast"]["nori"]["knows"], ["Тэцу ранен", "точный факт"])
+        self.assertNotIn("_undo", public)
+        self.assertNotIn("ложное свидетельство", public["cast"]["nori"]["knows"])
+
     def test_broken_turn_file_is_reported_not_fatal(self):
         (self.root / hot.TURN_PATH).write_text("{не json", encoding="utf-8")
         report = hot.fold(self.root)
