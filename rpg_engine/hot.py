@@ -283,9 +283,7 @@ def apply_turn(hot, turn):
     if (session, number) <= current and not amend:
         return False
     if amend:
-        # Editing the latest story must also undo its world deltas. A text-only
-        # replacement over the already-mutated HOT used to retain false NPC
-        # knowledge, spent resources and closed clocks from the voided version.
+        # Undo the previous version fully before applying its replacement.
         undo = hot.get("_undo") or {}
         if undo.get("id") != turn["id"] or not undo.get("snapshot"):
             raise TurnError(f"{turn['id']}: no verified pre-turn state for safe amendment")
@@ -294,26 +292,35 @@ def apply_turn(hot, turn):
                 base64.b64decode(undo["snapshot"], validate=True)).decode("utf-8"))
         except (ValueError, zlib.error, UnicodeDecodeError, TypeError) as exc:
             raise TurnError(f"{turn['id']}: invalid amendment rollback snapshot") from exc
+        candidate = previous
+    else:
+        candidate = hot
+
+    # Validate against the *predecessor* before mutating anything. A gap or
+    # backwards timestamp must never be represented as a merely logged warning.
+    before_cursor = candidate.get("cursor", {})
+    before_session = int(candidate.get("session", 0))
+    before_seq = int(before_cursor.get("seq", 0))
+    if (session != before_session or number != before_seq + 1) and not (
+            session == before_session + 1 and number == 1):
+        raise TurnError(f"{turn['id']}: sequence gap after {before_cursor.get('id')}")
+    if before_cursor.get("at") and parse_at(turn["at"]) < parse_at(before_cursor["at"]):
+        raise TurnError(f"{turn['id']}: game time precedes {before_cursor['at']}")
+
+    if amend:
         hot.clear()
         hot.update(previous)
         hot["_undo"] = undo
-        cursor = hot.setdefault("cursor", {})
-        current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
     else:
-        # Keep one compressed private snapshot, never a second full HOT file.
-        # This lets the last turn be amended atomically without double-applying
-        # its deltas; older turns are corrected by a new explicit revision turn.
-        previous = {k: v for k, v in hot.items() if k != "_undo"}
-        raw = json.dumps(previous, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        # A compact private snapshot preserves exact pre-turn state for one
+        # amendment. Older turns require a separate, sourced correction.
+        prior = {k: v for k, v in hot.items() if k != "_undo"}
+        raw = json.dumps(prior, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
         hot["_undo"] = {"id": turn["id"], "snapshot":
                         base64.b64encode(zlib.compress(raw, level=6)).decode("ascii")}
 
-    if session < current[0] or session > current[0] + 1 or (
-            session == current[0] and number != current[1] + 1) or (
-            session == current[0] + 1 and number != 1):
-        raise TurnError(f"{turn['id']}: sequence gap after {cursor.get('id')}")
-    if cursor.get("at") and parse_at(turn["at"]) < parse_at(cursor["at"]):
-        raise TurnError(f"{turn['id']}: game time precedes {cursor['at']}")
+    cursor = hot.setdefault("cursor", {})
+    current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
 
     ooc = turn.get("kind") == "ooc"
     if session != current[0]:
