@@ -54,13 +54,9 @@ jobs:
             git -C _state checkout -B game-state/shiki FETCH_HEAD
             python -m rpg_engine hot-fold --state-dir _state | tee "$RUNNER_TEMP/fold.json"
             python -m rpg_engine hot-check --state-dir _state | tee "$RUNNER_TEMP/check.json"
-            # Старый поисковый каталог по архивам: полезен, но игру не блокирует.
-            python -m rpg_engine --db _state/campaign.sqlite scene-memory-build \
-              --state-dir _state --source-root _engine \
-              --output _state/recovery/SCENE_MEMORY_INDEX.json > /dev/null \
-              || echo "::warning::legacy scene-memory index was not rebuilt"
+            # Legacy SQLite/search catalog is rebuilt only at intersession handoff,
+            # never on every live-chat turn. HOT v2 holds all current play state.
             git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
-            git -C _state add -- recovery/SCENE_MEMORY_INDEX.json 2>/dev/null || true
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
               break
