@@ -731,9 +731,16 @@ def fold(state_dir):
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
     if (state_dir / "archive").is_dir():
-        from . import heuristic_history
+        from . import heuristic_history, recall_audit
         heuristic = heuristic_history.save(
             Path(__file__).resolve().parents[1], state_dir)
+        # Validate coverage of every existing session, source-shard checksums,
+        # and warm search timings in the same ordinary gameplay fold.
+        report = recall_audit.audit(state_dir)
+        stats_path = state_dir / "archive/heuristic-recall/audit.json"
+        stats_path.write_text(
+            json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\\n",
+            encoding="utf-8")
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
