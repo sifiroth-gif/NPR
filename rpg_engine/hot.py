@@ -447,6 +447,28 @@ def _head(state_dir):
         return ""
 
 
+def _normalize_recorded_turn(raw):
+    """Backwards-compatible projection for previously published turn metadata.
+
+    Full player/GM prose remains verbatim. Only the derived chronicle summary
+    may be shortened. An opening scene without a player message uses an
+    explicit *non-quotation* marker rather than inventing a player's words.
+    Direct validate_turn() stays strict for new producers.
+    """
+    if not isinstance(raw, dict):
+        return raw
+    turn = dict(raw)
+    line = turn.get("line")
+    if isinstance(line, str) and len(line) > LINE_LIMIT:
+        turn["line"] = _shorten(line)
+    ident = turn.get("id")
+    if (isinstance(ident, str) and ident.endswith(".text.001")
+            and turn.get("player") == "" and isinstance(turn.get("gm"), str)
+            and turn["gm"].strip()):
+        turn["player"] = "[Начальная сцена ведущего; сообщения игрока не было]"
+    return turn
+
+
 def collect_turns(state_dir, hot):
     """Новые ходы из истории TURN.json, рабочей копии и старого FAST_SCENE.json."""
     state_dir = Path(state_dir)
@@ -455,7 +477,7 @@ def collect_turns(state_dir, hot):
 
     def take(raw, origin, legacy=False):
         try:
-            turn = turn_from_legacy(raw) if legacy else raw
+            turn = _normalize_recorded_turn(turn_from_legacy(raw) if legacy else raw)
             validate_turn(turn)
         except TurnError as exc:
             errors.append(f"{origin}: {exc}")
