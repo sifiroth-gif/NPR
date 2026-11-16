@@ -340,11 +340,16 @@ def historical_candidates(root, state_root, *, action="", location="", limit=9):
     hot_path = state_root / "recovery/HOT.json"
     hot = json.loads(hot_path.read_text(encoding="utf-8")) if hot_path.is_file() else {}
     cursor = (hot.get("cursor") or {}).get("id", "")
+    pending_path = state_root / "recovery/TURN.json"
+    pending = (json.loads(pending_path.read_text(encoding="utf-8"))
+               if pending_path.is_file() else {})
+    pending_id = pending.get("id", "")
     source = "persistent_derived_cache"
     try:
         if manifest.is_file():
             index = heuristic_history.load(manifest)
-            if cursor and index.get("cursor") != cursor:
+            if (cursor and index.get("cursor") != cursor) or (
+                    pending_id and pending_id != cursor):
                 index = heuristic_history.build(root, state_root)
                 source = "live_rebuilt_stale_cache"
         else:
