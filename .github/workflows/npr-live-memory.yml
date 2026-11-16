@@ -56,6 +56,14 @@ jobs:
             python -m rpg_engine hot-check --state-dir _state | tee "$RUNNER_TEMP/check.json"
             # Legacy SQLite/search catalog is rebuilt only at intersession handoff,
             # never on every live-chat turn. HOT v2 holds all current play state.
+            # Do not publish any partial fold on an invalid turn or state.
+            python - "$RUNNER_TEMP/fold.json" "$RUNNER_TEMP/check.json" <<'PY'
+          import json, sys
+          fold, check = (json.load(open(p)) for p in sys.argv[1:3])
+          for item in fold["errors"] + check["problems"]:
+              print("::error::" + item)
+          sys.exit(1 if fold["errors"] or not check["ok"] else 0)
+          PY
             git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
