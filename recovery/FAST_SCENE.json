@@ -4,26 +4,20 @@
   "campaign_id": "naruto-shiki",
   "purpose": "Text-only fallback for NEW session IV only. SQLite and state.json are authoritative through III.",
   "cursor": {
-    "last_turn_id": "s04.text.046",
-    "next_sequence": 47,
-    "at": "0006-10-01T07:29:00",
+    "last_turn_id": "s04.text.047",
+    "next_sequence": 48,
+    "at": "0006-10-01T08:06:00",
     "world_date": "Воскресенье, 1 октября 1283 года",
-    "location": "Кусагакуре, дом Мугами Шики, комната у входа",
+    "location": "Кусагакуре, дом Мугами Шики",
     "state": "player_decision_pending"
   },
   "story_compass": {
-    "immediate": "S04.text.046 Sun Oct1 1283 07:29 Shiki remains INSIDE home, Tetsu medical patient now transferred OUT under independent Kage residence ANBU custody. Shiki explicitly authorized MEDICAL TRANSPORT 'Да, можете переводить' only, did not accompany, no other player actions. Nori asked Tetsu himself for INFORMED CONSENT to relocate to closed hospital ward; Tetsu insisted credentials and no walking, verified residence ANBU badge via chakra response and gave own consent. Protected ambulance carrying him departed ~07:24–07:29; Shiki stayed home. Tetsu conscious, cooperative but deeply distrustful of all security including Nori; he doesn't know stabber. Bleeding stopped in prior scene, lost blood NOT magically restored, ongoing volume deficit/weakness, needs pulse/BP surveillance, fluids, recovery, possible serial blood counts. Nori gave instructions protected ward, custody access only medics, 2 independent ANBU, Nori for testimony when cleared; Arakawa/Central staff barred under her authority but not omnipotent guarantee. She will send clinical updates directly to Shiki on protected channel if condition changes, and promised V7 no custody change pending written Kage residence decision. Nori's attack investigation continues offscreen; no conclusions on attacker, evidence/handwriting/Arakawa culpability unresolved. Shiki did NOT voluntarily speak more or move, did not clear room or open existing sealed letter. Tetsu blood on entry floor/porch, used surgical instruments/bandages remain. At ~07:29 home quiet after departure, original security envelope sealed but previously read by Shiki via chakra scan: routine summons dated Sept30 18:16 concerning S17/V7 1 Oct 06:00 planned transfer, not conspiratorial forged document. Nemera confined by seven locks, no extra sensory access, stage1 right inner forearm root tattoo and dark veins, no skin disease. Next player choice free.",
+    "immediate": "S04.text.047 Sun Oct1 1283 08:06 Shiki home after breakfast and CLEANING previously bloody room as player expressly elected; instruments cleaned/processed, used medical bandages disposed, floors cleaned with minor dark wood fibers still. Mentally asked captive Nemera if she would TEACH HIM control of NEW CHAKRA NATURES (Shiton=death/decay includes Suiton/Doton/Yin; Byoton=disease includes Suiton/Yang). Nemera spoke ONLY through isolated 4th semantic gate, answered YES CONDITIONALLY, she knows underlying alien phenomena but not automatically formal human mudras or full view of Shiki's chakra or senses. She gave GENERAL CONTROL PRINCIPLES, not playable/completed technique: Shiton selectively breaks sustaining living-tissue processes within bounds; Byoton causes sustained aberrant 'disease' process by disordered own tissue dynamics, far more delicate than generic toxin; both require explicit START and STOP boundaries and tissue target feedback. Nemera says Shiki twice attempted genuine chakra access with ex vivo sample Sept29, crude not blind; requires honest experimental reports of observations for her teaching, since her knowledge is bounded to her side and connected foreign strand echoes. She is not benevolent human teacher: wants REAL RESULTS to learn what of her alien ecology can be stabilized in Shiki's tissues, long-term freedom still goal. She did NOT demand seal unlock now, did not transfer her chakra, make pact, or involuntarily control PC. Shiki not committed to lessons, not chose target or practised new nature, so NO technique attempt/practice/mastery event points. Seven seals fully intact, stage1 right inner forearm dark roots/slight vessels/rare ozone scent, ordinary skills intact; count passive clock elapsed later from PACT_BURDEN_LIVE last_at Oct1 06:41. Note user can accept/reject, pick Shiton or Byoton and target/space; do not make actions for Shiki. Tetsu transferred earlier to secure ward with independent consent; Nori and ANBU investigation V7 proceeds offscreen, results unknown to Shiki. Sealed original notice at house entry previously read by chakra scan but not physically opened.",
     "corrected_source": "campaigns/shiki/continuity/SESSION_003_TO_004_CANON_1283-09-27.json",
     "source_of_old_events": "SQLite search/recall/entry and archive/session-003-index.json; never reconstruct old NPC memories from summaries alone.",
     "pace": "Закончить активную личную сцену Уцуро/Саю последствиями, оставить С17/В7 автономной основой, затем показать освоение запретных техник только при решении игрока."
   },
   "history": [
-    {
-      "turn_id": "s04.text.041",
-      "at": "0006-10-01T06:42:00",
-      "summary": "Шики открыл дверь Тэцу. Молодой сопровождающий Аракавы стоит на колене у порога, сознание и речь сохранены, пот, бледность, частое поверхностное дыхание, продолжающееся кровотечение из раны справа под нижними рёбрами (объём/глубина ещё не установлены); нуждается в скором медицинском осмотре. Тэцу сообщает, что в ночном процессе АНБУ видел квитанцию с якобы его подписью, но отрицает подписание; по дороге служебным переулком к водоотводу незнакомец по имени сказал ему 'Ты неправильно вспомнил, что подписывал' и ударил сбоку, виден только тёмный рукав, ЛИЦО неизвестно. Он не обвиняет Аракаву без доказательств, боится смерти. Входная дверь ОТКРЫТА, Шики не сказал и не сделал ничего другого, письма не вскрывал. Немера не знает внешнего события из-за изоляции.",
-      "source": "recovery/FAST_SCENE.json#latest_turn"
-    },
     {
       "turn_id": "s04.text.042",
       "at": "0006-10-01T06:55:00",
@@ -53,37 +47,50 @@
       "at": "0006-10-01T07:29:00",
       "summary": "Шики разрешил перевести Тэцу ('Да, можете переводить'). Нори отдельно спросила СОГЛАСИЕ самого Тэцу на охраняемую госпитализацию, подробно назвала режим допуска, по его просьбе АНБУ продемонстрировал подтверждение удостоверения резиденции. Тэцу самостоятельно согласился при условии транспортировки на носилках; недоверие к силовикам сохранилось. Медицинская транспортная бригада перепроверила основные показатели, подготовила венозный доступ и к 07:29 увезла Тэцу в защищённое отделение под охраной АНБУ резиденции Кагэ. Шики остался дома, не выезжал. Рана кровоточить перестала после его лечения, кровопотеря не восстановилась автоматически; нуждается в наблюдении и жидкости. Нори обещала клинические сведения по закрытому каналу, напомнила В-7 сохранять до письменной санкции Кагэ. Вина Аракавы или нападавшего неизвестна, исследование места нападения идёт за кадром. В доме остались кровь, инструменты, повязки и запечатанное старое уведомление, которое Шики ранее прочитал через сканирование, но не вскрыл.",
       "source": "recovery/FAST_SCENE.json#latest_turn"
+    },
+    {
+      "turn_id": "s04.text.047",
+      "at": "0006-10-01T08:06:00",
+      "summary": "Шики позавтракал и УБРАЛСЯ дома после помощи Тэцу, обработал инструменты и убрал кровь/перевязочный материал. По четвёртому ментальному каналу спросил Немеру: 'поучишь меня управлению новыми природами чакры?' Немера СОГЛАСНА обучать при обоюдном интересе к результатам опытов, но не отдала готовые техники и не открыла печати. Её знания — чужеродные законы, не человеческие печати: Ситон (вода+земля+Инь) в контролируемом прекращении/разложении живых тканевых связей; Бётон (вода+Ян) в создании устойчивого патологического порядка живой ткани. Главный принцип — контроль границы начала И ОСТАНОВКИ. Немера знает лишь собственные контуры и ограниченные отклики чужого геномного звена; просит фактические отчёты Шики о результатах, интересуется взаимодействием свойств её мира с его телом, остаётся манипулятивной самостоятельной нечеловеческой заключённой. Шики НЕ НАЧИНАЛ практические пробы и НЕ ВЫБРАЛ школу/образцы, прогресс техники отсутствует, договор 7 замков прежний. 1 октября 08:06 дома, запечатанный ранее просканированный документ всё ещё в доме, расследование В-7 развивается отдельно.",
+      "source": "recovery/FAST_SCENE.json#latest_turn"
     }
   ],
   "latest_turn": {
-    "id": "s04.text.046",
+    "id": "s04.text.047",
     "session": 4,
-    "player_input": "Да, можете переводить",
-    "turn_kind": "player_medical_approval_npc_transfer",
-    "at": "0006-10-01T07:29:00",
-    "location": "Кусагакуре, дом Мугами Шики, комната у входа",
-    "scene_basis": "Current conversation s04.text.045 and HOT, recent Tetsu medical data; no old archive needed",
-    "exact_visible_gm_response": "**Воскресенье, 1 октября 1283 года. 07:16.**  \n*Кусагакуре. Дом Мугами Шики.*\n\n**Мугами Шики:**\n— Да, можете переводить.\n\nНори кивнула один раз. Она не стала благодарить за разрешение: решение медицинского специалиста было получено, но оставался человек, которого предстояло увезти.\n\nКапитан опустилась перед Тэцу на корточки. Под тканью её плаща напряглась прямая мышца бедра; колено едва не коснулось испачканного кровью пола.\n\n**Хаясэ Нори:**\n— Вы слышали врача. Теперь ответьте вы. Палата госпиталя, охрана резиденции Кагэ. Ни Аракава, ни люди Центрального управления не получат к вам доступа по моему пропуску. Согласны?\n\nТэцу рассматривал её долго. В неподвижности его лица было больше враждебности, чем прежде в срывающемся голосе.\n\n**Тэцу:**\n— А кто получит?\n\n— Медицинский персонал. Двое АНБУ из отдельной группы. И я — для показаний, когда позволит врач.\n\n— Вы можете показать мне их удостоверения?\n\nНори посмотрела на стоявшего у двери шиноби. Тот без возражений извлёк из-под плаща пластину с печатью резиденции, позволил Тэцу увидеть её лицевую сторону и провёл над знаком короткую проверочную последовательность чакры. Оттиск ответил таким же рисунком, какой Шики уже видел при ночной проверке у В-7. Удостоверение подтверждало полномочия носителя; не могло предсказать, как он ими воспользуется.\n\nТэцу с трудом сглотнул.\n\n**Тэцу:**\n— Согласен. Только я не пойду своим ходом.\n\n**Хаясэ Нори:**\n— И не пойдёте.\n\nОна поднялась и передала приказ сопровождающему. Впервые за всё утро в её движениях появилась торопливость, которую она не сумела скрыть: пальцы слишком сильно сдавили застёжку сумки, прежде чем разжались.\n\n***\n\n**07:24.**\n\nЗа воротами подали закрытые медицинские носилки. Перевязанный бок Тэцу дополнительно зафиксировали, не тревожа восстановленный сосуд. Медик транспортной группы оценил пульс, давление и сознание пациента, подготовил венозный доступ для восполнения жидкости и наблюдения в пути.\n\nТэцу попробовал приподнять голову, когда его перекладывали. Широкоплечий АНБУ поддержал носилки, но юноша отстранился от его руки раньше, чем прикосновение стало необходимым.\n\n**Тэцу, обращаясь к Шики:**\n— Я не знаю, кто меня ударил. Если выяснится, что это кто-то из наших, меня попросят забыть всё ещё раз.\n\nНори услышала.\n\n**Хаясэ Нори:**\n— Вас уже один раз попросили. Теперь это зафиксировано в деле о нападении.\n\n— Бумага, — произнёс Тэцу и горько усмехнулся, едва заметно приподняв уголок рта. — Вчера из-за бумаги меня едва не убили.\n\nКапитан не ответила. Возразить ей было нечем.\n\nНосилки вынесли за калитку. Двое АНБУ заняли места по сторонам сопровождаемой группы; Нори пошла следом, не позволяя носильщикам увеличить расстояние. На прощание она остановилась у порога.\n\n**Хаясэ Нори:**\n— Тэцу поступит в закрытое отделение. Медицинские записи о его ранении остаются за вашей подписью. Если его состояние изменится, вам передадут сведения через защищённый канал. Что касается В-7: до письменного решения резиденции никто его не получит. Даже Центральное управление.\n\nОна посмотрела на багровые следы между досками крыльца.\n\n— Место нападения уже осматривают. Если свидетель ошибся хотя бы в одной детали, это выяснится. Если нет — у нас появился человек, которому было важнее заставить его замолчать, чем дождаться обычной передачи.\n\nНори ушла.\n\n***\n\n**07:29. Дом Мугами Шики.**\n\nЗа воротами постепенно смолкли шаги сопровождения. Тэцу увезли живым, под охраной резиденции Кагэ, с его собственным согласием. Его рана была закрыта; последствия кровопотери ещё предстояло контролировать.\n\nВ доме остались использованные инструменты, окровавленные повязки и тёмные пятна на древесине. У порога лежал прежний служебный пакет: его печать после сканирования оставалась целой.\n\nКусагакуре просыпалась. Вдалеке торговец уже спорил с покупателем из-за стоимости свежей рыбы. В той же деревне неизвестный человек недавно пытался изменить чужие показания ударом ножа.\n\nСемь замков сохраняли молчание.\n\n**Ход Шики.**",
+    "player_input": "#завтракаю убираюсь и в момент этого мысленно к Немере# поучишь меня управлению новыми природами чакры?",
+    "turn_kind": "player_breakfast_cleanup_and_mental_training_request",
+    "at": "0006-10-01T08:06:00",
+    "location": "Кусагакуре, дом Мугами Шики",
+    "scene_basis": "Current s04.text.046, HOT, targeted profile of Nemera GM-only and progression rule/live burden",
+    "exact_visible_gm_response": "**Воскресенье, 1 октября 1283 года. 07:42.**  \n*Кусагакуре. Дом Мугами Шики.*\n\nЗавтрак прошёл под монотонный шум пробуждающейся деревни. Затем настал черёд крови.\n\nНа досках возле двери она успела потемнеть и забиться в продольные щели. Инструменты требовали очистки, окровавленные повязки — утилизации. Постепенно комната теряла следы чужого отчаяния; только влажность древесины и резковатый запах обработанных поверхностей напоминали, что ещё недавно здесь лежал человек с пробитым боком.\n\n**Мугами Шики, мысленно:**\n— Поучишь меня управлению новыми природами чакры?\n\nНа вопрос Немера ответила не сразу.\n\nВ четвёртом контуре возникло странное ощущение: несколько разнородных последовательностей словно попытались совпасть по длине, не совпадая по порядку. Когда наконец пришёл смысл, в нём слышалось явное любопытство.\n\n**Немера, мысленно:**\n*— Могу. Но то, что ты называешь Ситоном и Бётоном, я знаю иначе. В вашем мире эти явления обрели форму чакры. Там, откуда пришла я, их не требовалось складывать из ваших стихий.*\n\nПауза была короткой.\n\n*— Ты уже заставлял чужую структуру отвечать на свою волю. Дважды. Оба раза действовал грубо, но не бессмысленно. Ты добивался результата. Теперь тебе понадобится научиться определять, **где результат должен закончиться**.*\n\nПод правым рукавом семь прерывистых колец сохраняли неизменную форму. Никакой чакры через них Немера не посылала; речь шла лишь по разрешённому смысловому пути.\n\n*— Ситон у тебя ближе к прекращению. Разложение — только видимая сторона. Живая ткань состоит из множества процессов, которые поддерживают друг друга. Ты должен научиться обрывать нужные связи в выбранных пределах. Иначе получишь повреждение, которым не управляешь.*\n\n*— Бётон сложнее. У болезни нет собственной воли. Она существует потому, что организм продолжает поддерживать неправильный порядок: воспроизводит повреждение, расходует силы, защищает то, что его разрушает. Создать нарушение легче, чем сделать его устойчивым и предсказуемым.*\n\nЕё слова не звучали как объяснение человеческого наставника. Она говорила об организмах так, словно они были временными соглашениями между чужими друг другу веществами.\n\n**Немера:**\n*— Твоё человеческое деление мне тоже понятно: для первого тебе понадобятся вода, земля и Инь; для второго — вода и Ян. Но перечисление компонентов не научит тебя управлять их отношением. Ты уже умеешь складывать чакру. Теперь учись отменять последствия собственного приказа.*\n\nЗа границей печатей обозначилось слабое, почти нетерпеливое смещение присутствия.\n\n*— Я могу указывать на ошибки, когда ты начнёшь опыт. Саму твою чакру мне чувствовать целиком не дано. Ты сообщишь, что наблюдаешь, а я сопоставлю это с откликом доступного мне чужеродного звена. Так будет честнее, чем притворяться, будто я вижу твоими глазами.*\n\n*— И я хочу кое-что взамен.*\n\nНемера умолкла на время, достаточное, чтобы отмерить последнюю фразу.\n\n*— Не свободу. Пока. **Результаты.** Не называй неудачей опыт, который тебе не понравился. Рассказывай, что произошло на самом деле. Мне интересно, какие свойства моего мира твоя плоть сумеет воспроизвести — и что останется, когда ты научишься их останавливать.*\n\nВ её голосе не было обещания безопасности, но и открытой угрозы тоже. Это была заинтересованность исследователя в веществе, способном нарушить известные ему правила.\n\n***\n\n**08:06.**\n\nУборка была закончена. Инструменты очищены и обработаны, кровь с пола смыта, использованные материалы убраны. Деревянные доски сохранили кое-где едва различимые тёмные следы в глубоких волокнах.\n\nНемера не стала требовать немедленного опыта. Она оставалась за всеми семью запорами, а первые техники двух новых природ по-прежнему не были освоены. Разговор сам по себе ничего не изменил в управлении чакрой.\n\n**Немера, мысленно:**\n*— Когда решишь начать, выбери одну природу. И приготовь материал, который не жалко потерять. Я предпочитаю наблюдать там, где ошибка действительно что-нибудь значит.*\n\nЗа окном раздался глухой удар храмового колокола. Снаружи жизнь текла своим чередом; внутри дома всё ещё сохранялось присутствие существа, которое предложило знания не из доброты, а из собственной необходимости понять чужую форму жизни.\n\n**Ход Шики.**",
     "publication_status": "prepared_for_chat_delivery",
     "memory_gate": {
       "schema": "npr-memory-gate/1",
-      "previous_turn_id": "s04.text.045",
-      "index_turn": "s04.text.029",
-      "index_blob_sha": "545d3b5df78d870e48234ddc725a89825b967316",
-      "player_input": "Да, можете переводить",
-      "source_refs": [],
+      "previous_turn_id": "s04.text.046",
+      "player_input": "#завтракаю убираюсь и в момент этого мысленно к Немере# поучишь меня управлению новыми природами чакры?",
+      "source_refs": [
+        {
+          "path": "campaigns/shiki/lore/SEVENTH_THRESHOLD_ENTITY_GM_ONLY_1283.json",
+          "sha": "8dc0f53c722e47141f120662e758e3637460ad1a"
+        },
+        {
+          "path": "campaigns/shiki/contract/PROGRESSION_RULES.json",
+          "sha": "4e3105e767f64bff495536b8d576ae3b4ee219a1"
+        }
+      ],
       "unretrieved": [],
-      "mode": "conversation_hot_sufficient",
-      "note": "User medically approves transfer. Nori and Tetsu independently decide custody and consent; preserve no player auto-movement."
+      "mode": "conversation_hot_plus_targeted_lore_rules",
+      "note": "Only necessary targeted lore and power rules, no broader history. Any request alone cannot count as actual forbidden technique training."
     },
     "facts": {
-      "player": "Gave medical permission for Tetsu transfer, did NOT escort Tetsu, stayed home and took no other new voluntary actions.",
-      "tetsu": "Gave independent consent after viewing Kage ANBU credentials, transported on stretcher to protected ward; stable after hemostasis but blood loss remains, weak and suspicious, attacker unidentified.",
-      "nori": "Directly arranged protected transport and clinical updates, reiterated no V7 transfer before Kage's written clearance, investigator of stabbing continues; cannot guarantee outcome.",
-      "time": "Oct1 1283 Sunday 07:29 inside Shiki home",
-      "home": "Blood stained floor, instruments and used bandages, security envelope still sealed though scan read prior notice.",
-      "v7": "Custody unchanged under interim Kage ANBU restrictions, no determination of fraudulent signature or culprit.",
-      "seals": "All seven remain closed, Nemera has no external perception and is silent."
+      "player": "Breakfast and house cleaning completed; mentally asked Nemera if she will teach Shiton/Byoton control. Did NOT yet practice chakra or choose school/experimental tissue.",
+      "nemera": "Yes conditionally, offers guidance from alien rules not human hand seals. Understands dynamics, interest in truthful reports of Shiki's experiments and his alien-genome response for her own goals, says no automatic access to PC senses or all chakra.",
+      "techniques": "Shiton/Byoton only initial natures no named mastered techniques. General principles of controllable selective decay and pathological order, boundary termination. No training or pact burden event point for asking.",
+      "time": "Sun Oct1 1283 08:06 home",
+      "home": "Breakfast and cleanup done; instruments processed; previously scanned but unopened sealed V7 notice remains.",
+      "world": "Nori V7 internal check and Tetsu medical follow-up offscreen, no new known result.",
+      "seals": "Seven intact, Nemera still isolated via semantic channel, stage1 only."
     }
   },
   "runtime": {
@@ -98,7 +105,7 @@
     "last_played_gm_ref": "s3.played.116",
     "sqlite_canonical_through": "session3 revision304",
     "text_ahead_unreplayed": true,
-    "current_text_turn": "s04.text.046",
+    "current_text_turn": "s04.text.047",
     "retro_recovered_visible_turn": "s04.text.022",
     "prior_turn_exact_text_location": "current conversation player-visible s04.text.022; pending end-session archival verbatim reconciliation",
     "memory_priority": "live_chat > HOT > only-targeted-historic-index",
