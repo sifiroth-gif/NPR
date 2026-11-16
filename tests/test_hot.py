@@ -273,6 +273,20 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
+    def test_replaying_retired_npc_turn_cannot_resurrect_cast(self):
+        self.put(turn(45, "0006-10-01T07:14:00", d={
+            "scene": {"present": ["shiki"], "positions": "Только Шики в лаборатории"},
+            "cast": {"nori": None}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.assertNotIn("nori", json.loads(
+            (self.root / hot.HOT_PATH).read_text(encoding="utf-8"))["cast"])
+        self.assertTrue((self.root / "recovery/cast/nori.json").exists())
+        self.commit("fold after retiring Nori")
+        self.assertEqual(hot.fold(self.root)["status"], "current")
+        self.assertNotIn("nori", json.loads(
+            (self.root / hot.HOT_PATH).read_text(encoding="utf-8"))["cast"])
+        self.assertTrue(hot.check(self.root)["ok"])
+
     def test_fold_accepts_old_protocol_writes_after_migration(self):
         legacy = {"format": "npr-shiki-fast-scene/1",
                   "cursor": {"last_turn_id": "s04.text.045", "at": "0006-10-01T07:14:00"},
