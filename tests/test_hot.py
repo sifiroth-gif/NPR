@@ -115,7 +115,7 @@ class HotFoldTest(unittest.TestCase):
                 hot.apply_turn(state, invalid)
             self.assertEqual(json.dumps(state, sort_keys=True, ensure_ascii=False), before)
         with self.assertRaises(hot.TurnError):
-            hot.apply_turn(state, turn(45, "0006-10-01T07:15:00", amend=True))
+            hot.apply_turn(state, turn(44, "0006-10-01T07:10:00", amend=True))
         self.assertEqual(state["cursor"]["id"], "s04.text.044")
 
     def test_amend_snapshot_is_private(self):
