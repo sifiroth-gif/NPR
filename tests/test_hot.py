@@ -301,6 +301,35 @@ class HotFilesTest(unittest.TestCase):
         self.assertIn("сообщения игрока не было", rows[0]["player"])
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
+    def test_hot_compaction_archives_full_canon_and_retired_cast(self):
+        state, _ = hot._read_state(self.root)
+        state["canon"] = [
+            {"turn": "s04.text.044", "rule": f"Правка {i}: " + "а" * 200}
+            for i in range(35)
+        ]
+        state["cast"]["retired"] = {"name": "Поздний свидетель",
+                                       "knows": ["долгая запись " + "x" * 8000]}
+        state["chronicle"] = [
+            {"id": f"s04.text.{i:03}", "at": "0006-10-01T07:10:00",
+             "line": f"Оперативная запись {i}."} for i in range(21, 45)
+        ]
+        hot._write_state(self.root, state)
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      d={"scene": {"situation": "Нори держит калитку",
+                                    "present": ["nori", "tetsu"]}}))
+        report = hot.fold(self.root)
+        self.assertEqual(report["errors"], [])
+        public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        self.assertLessEqual(len(public["canon"]), hot.CANON_IN_HOT)
+        self.assertLessEqual(len(public["chronicle"]), hot.CHRONICLE_IN_HOT)
+        self.assertNotIn("retired", public["cast"])
+        self.assertTrue((self.root / "recovery/cast/retired.json").exists())
+        canon = (self.root / hot.CANON_ARCHIVE).read_text(encoding="utf-8").splitlines()
+        self.assertEqual(len(canon), 35)
+        self.assertEqual(public["canon_older"], hot.CANON_ARCHIVE)
+        self.assertLess(report["bytes"]["hot"], hot.HOT_LIMIT)
+        self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
     def test_replaying_retired_npc_turn_cannot_resurrect_cast(self):
         self.put(turn(45, "0006-10-01T07:14:00", d={
             "scene": {"present": ["shiki"], "positions": "Только Шики в лаборатории"},
