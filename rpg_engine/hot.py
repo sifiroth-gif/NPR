@@ -607,6 +607,13 @@ def fold(state_dir):
     applied = []
     for turn in turns:
         try:
+            # Idempotency must precede *any* cast rehydration or file writes.
+            # A replayed TURN.json may contain cast: {npc: null}: restoring
+            # the NPC before apply_turn skips the old ID resurrects stale cast.
+            incoming = turn_number(turn["id"])
+            current = (int(hot.get("session", 0)), int(hot.get("cursor", {}).get("seq", 0)))
+            if incoming <= current and not (turn.get("amend") and incoming == current):
+                continue
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
                 # Перед тем как убрать NPC из состава, сохраняем его карточку и тайну.
