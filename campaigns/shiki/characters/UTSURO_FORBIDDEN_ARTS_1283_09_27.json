@@ -30,7 +30,7 @@
   "design_constraints": [
     "Ranks are approximate practical relative danger, not reliable cast speed. B can kill a helpless person; S can fail against prepared specialist. Full cost depends on amount of target matter, exposure, anchored chakra, terrain and time.",
     "Effects like fast tissue growth are chakra-forced supernatural events, NOT ordinary viruses/fungi/cancers instantly growing or blood literally boiling at 42°C. Mark real observable signs vs magical interpretation.",
-    "Pathogen-style techniques are depicted as NON-SELF-PROPAGATING chakra-patterned illnesses rather than providing biological engineering instructions. No perfect uncontrolled community-spread bioweapons.",
+    "Чакровые болезни имеют сверхъестественную природу. Особый поздний прямой канон игрока: активная техника Byōton «Плачущие Бубоны» способна передать гной с едким и заражающим действием на другую цель при фактическом попадании; не подменять это пассивным касанием Шики и не вводить фиксированный радиус или произвольную всеобщую эпидемию.",
     "Shiton can use previously dead tissue, corpse seals or living tissue necrosis but never freely create matter or resurrect an intact person. Stored residual chakra is not the entire deceased person's mind.",
     "Byōton targets LIVING physiology, may be countered by elite medical ninjutsu, elemental dispersion, seal removal and chakra resistance; effects have onset windows and require proximity/contact, path or preconditions.",
     "Both schools are possessed by male Utsuro, but precise ownership/mastery of individual techniques should be revealed/verified in narrative, not assumed by player-character Shiki. Pact does NOT grant any technique formula automatically.",
@@ -46,9 +46,9 @@
       "title": "Кашель Гниющего Лотоса",
       "japanese": "死遁・腐敗蓮の咳",
       "romaji": "Shiton: Fuhai Hasu no Seki",
-      "premise": "A short-reaching bloom of ashlike chakra from decayed organic substrate leaves dark petal-like necrotic deposits in vulnerable tissue on adequate exposure; victims cough black flecks and may suffer dangerous respiratory compromise.",
-      "horror": "Wet black petals appear at the lips, yet when crushed they leave only the smell of an extinguished funeral candle.",
-      "conditions": "Limited arc or close-range contaminated space; requires chakra-laden substrate and breathing/contact with afflicted field, exposure time and viable target tissue; cannot spontaneously create self-replicating contagious spores.",
+      "premise": "Пользователь выдыхает облако невидимых спор из некротической демонической чакры Ситона. При вдыхании они оседают в лёгких цели и повреждают живую ткань изнутри; сильное воздействие приводит к мучительному кашлю с чёрными гниющими лепестками из отмерших тканей лёгких, удушью и возможной смерти.",
+      "horror": "Жертва откашливает чёрные лепестки своей собственной гниющей лёгочной ткани.",
+      "conditions": "Требуется фактическое вдыхание облака и достаточная экспозиция; возможны защита дыхания, уклонение, рассеивание и медицинское противодействие. Не объявлять мгновенную гарантированную смерть. Споры — сверхъестественная чакровая сущность, не обычный созданный микроб.",
       "counterplay": "Airflow / sealing screen / withdrawal / advanced medical suppression; without field anchoring remnants rapidly inert; severe outcomes need sustained effect."
     },
     {
@@ -139,13 +139,13 @@
       "id": "byoton_naku_bubon",
       "school": "byoton",
       "rank": "B",
-      "title": "Плачущие бубоны",
+      "title": "Плачущие Бубоны",
       "japanese": "病遁・泣く腫れ",
-      "romaji": "Byōton: Naku Hare",
-      "premise": "A close-range disease seal creates focal swollen, blisterlike painful growths and pathological fluid collections where chakra contact was anchored. Rupture can spray corrosive magical exudate at nearby surfaces.",
-      "horror": "An inflamed lump opens like a wet eyelid; it does not look outward, but the victim feels observed from within.",
-      "conditions": "Requires prior physical/weapon contact and continuing local chakra anchor, no automatic pathogen spreading five meters or infectious plague through ordinary splashes.",
-      "counterplay": "Avoid touch/dispersion, advanced medical drainage plus breaking seal, barriers and distance to any localized magical splash."
+      "romaji": "Byōton: Naku Bubon",
+      "premise": "Чакровая ловушка «Плачущие Бубоны» накладывается при контакте в тайдзюцу или посредством сенбона, доставившего чакру Бётона. В точке поражения на теле врага быстро набухают большие пульсирующие чёрные гнойники, причиняя мучительную пульсирующую боль. Когда нарывы самопроизвольно разрываются или их вскрывают, под давлением выбрасывается едкий заразный гной. Если этот гной попадает на другого человека, он вызывает ожог и заражение. Фиксированного радиуса поражения нет; последствия определяются фактическим попаданием выделений.",
+      "horror": "Огромные чёрные пульсирующие гнойники разрываются с выбросом едкого заразного содержимого; попавшие на других брызги причиняют ожоги и заражение.",
+      "conditions": "Первичная чакровая ловушка ставится ударом или прямым контактом тайдзюцу, либо заряженным Бётоном сенбоном. При разрыве нарыва вторичное поражение определяется тем, попал ли гной на окружающих: если да, возникают ожог и заражение. Фиксированной дистанции нет, автоматической волны заражения нет.",
+      "counterplay": "Защита от контакта и сенбонов, противодействие чакровой ловушке, уклонение от фактического выброса, защита кожи, удаление чакрового паттерна, медицинская помощь. Отдельно от пассивного касания по договору."
     },
     {
       "id": "byoton_fuyu_kinshi_shitagau_shikabane",
@@ -235,7 +235,7 @@
   },
   "knowledge_and_progression": {
     "utsuro": "At GM world level Utsuro is a rare dangerous practitioner of both forbidden schools; precise jutsu currently sealed behind personal knowledge, bonds and unseen preparation, his competence and agenda can be changed by causal narrative.",
-    "shiki": "Neither Shiton nor Byōton mechanically acquired/activated. They are potential training branches unlocked as topics by pact, not instantly new kekkei genkai in Shiki or another hereditary DNA rewrite. Shiki's choice to pursue, use, refuse, test or share these is exclusively player's. If actually trained, resolve skill learning and costs using canon stats.",
+    "shiki": "После s04.text.054 Шики освоил две B-ранговые техники по прямой поздней поправке игрока: Ситон «Кашель Гниющего Лотоса» и Бётон «Плачущие Бубоны». C-ранговые «Мёртвый узел» и «Болезненное клеймо» от предыдущего мастера отменены. Другие техники каталога не освоены. Повторно начислять нагрузку/мастерство за реткон запрещено.",
     "outsiders": "Archivewoman Kashiva has legends of Utsuro and reverse pact, cannot name techniques or know hidden repertoire without written source; outsiders/authorities don't automatically learn all abilities. Contracts known only to actual witnesses and future evidence.",
     "social": "Using forbidden death/disease combat and tissue fusion may incur legal/political consequences depending on actions, witnesses and applicable rules. Contract activation itself was accidental lawful archive access."
   },
@@ -305,5 +305,13 @@
     "side_effects": "Only approved progressive thin/gaunt figure, pallor/skin tone, dark superficial vessels, stage-gated odor and late direct bare-skin contact hazard, with right arm tattoo; NO self-pathology, necrotic lesions, inflammation, tumor growth or loss of physical abilities as pact/forbidden-casting side effects.",
     "abilities": "After S4-008/009 demonic foreign DNA graft Shiki genuinely has low-level Shiton and Byoton access; named Utsuro jutsu still unlearned. Direct source supersedes earlier baseline not yet learned two schools.",
     "source": "S4-009-010 user OOC corrections"
+  },
+  "latest_player_amendment_2026_11_16": {
+    "status": "authoritative_later_user_correction",
+    "canon_ref": "campaigns/shiki/continuity/PLAYER_FORBIDDEN_ARTS_CORRECTION_2026_11_16.json",
+    "shiton": "Кашель Гниющего Лотоса: невидимые некротические чакровые споры из выдоха, ингаляция, поражение лёгких, откашливание чёрных лепестков, риск летального удушья",
+    "byoton": "Плачущие Бубоны: удар/тайдзюцу или заряженный сенбон, чёрные болезненные пульсирующие нарывы, при разрыве кислотный заразный гной, при попадании на другого вызывает ожог и заражение; НЕТ фиксированной дистанции",
+    "presentation": "Числовые траты чакры, Ньютоны, игровые проценты и прочую бухгалтерию игроку не показывать. Сопоставимые пределы ведущий определяет качественно по сцене.",
+    "progress": "Две B-техники ретроактивно освоены за уже состоявшиеся тренировки s04.text.054, без нового начисления."
   }
 }
