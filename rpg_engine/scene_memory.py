@@ -1,8 +1,7 @@
-"""Mandatory source-bound memory preflight for every RPG scene.
+"""Source-bound memory for long campaigns.
 
-Uses native SQLite journal recall plus campaign-file evidence.  A pinned offline
-embedding index enriches retrieval when configured; graph/source and lexical
-retrieval always run, including in a text-ahead GitHub-only session.
+Routine turns use the active dialogue and verified HOT. Historical corpus search
+is explicitly requested when a material past fact is missing or disputed.
 """
 from __future__ import annotations
 
@@ -328,12 +327,16 @@ def environment_semantic():
 
 
 def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
-              source_index=None, con=None, limit=9):
-    """Mandatory bounded pre-scene packet. Always run before narration.
+              source_index=None, con=None, limit=9, fast=False):
+    """Read-only source packet; fast=True never scans historical files or FTS.
 
-    A missing source or disconnected model is visible, never silently upgraded
-    to a verified fact. This function is read-only.
+    Current context must already have been checked by the caller. Use full
+    retrieval for uncertain provenance, old events, or contested NPC knowledge.
     """
+    if fast:
+        # No historic scan or semantic model load on an ordinary dialogue turn.
+        # The caller's confirmed context and recent events remain authoritative.
+        root = source_index = con = None
     if root is not None and source_index is None:
         source_index = build_sources(root, campaign=campaign)
     source_result = (source_candidates(source_index, action=action, location=location,
@@ -348,6 +351,7 @@ def preflight(*, action="", location="", actors=(), root=None, campaign="shiki",
             "location": location, "action_excerpt": action[:400],
             "file_memory": source_result, "journal_memory": db_result,
             "retrieval_used": bool(source_result["source_count"]) or con is not None,
+            "retrieval_policy": "current_context_only" if fast else "targeted_history",
             "constraints": [
                 "Source candidates are not universal canon; check late corrections and established event time.",
                 "For NPC statements require witnessed/reported/document evidence; no omniscient NPC knowledge.",
@@ -383,7 +387,16 @@ def verify_hot_memory_gate(hot):
     if not isinstance(gate.get("source_refs"), list) or len(gate["source_refs"]) > 16:
         raise ValueError("Memory receipt must contain bounded source references")
     if not gate["source_refs"] and not gate.get("unretrieved"):
-        raise ValueError("Neither verified source candidates nor explicit gaps recorded")
+        # A played continuation can be grounded in the immediate confirmed
+        # dialogue + HOT without pretending that an archive was searched.
+        # Require a checked predecessor, index identity and an explicit mode;
+        # empty evidence in any other mode still fails closed.
+        mode = gate.get("mode", "")
+        if not (isinstance(mode, str) and mode.startswith("conversation_hot")
+                and isinstance(gate.get("index_turn"), str)
+                and gate["index_turn"] and
+                re.fullmatch(r"[0-9a-f]{40}", str(gate.get("index_blob_sha", "")))):
+            raise ValueError("Neither verified source candidates nor explicit gaps recorded")
     if gate.get("player_input") != turn.get("player_input"):
         raise ValueError("Memory receipt player input does not match the published action")
     for src in gate["source_refs"]:
@@ -481,8 +494,12 @@ def _hot_candidate(hot, raw):
             "scope": "gm_only"}
 
 
-def fast_packet_from_files(root, state_dir, *, action="", limit=9):
-    """Offline/text-ahead entrypoint: accepts the live HOT cursor and current files."""
+def fast_packet_from_files(root, state_dir, *, action="", limit=9, deep=True):
+    """Read current HOT quickly, or include a targeted full source lookup.
+
+    deep=True is retained for programmatic backwards compatibility. The
+    interactive CLI defaults to HOT-only and offers --deep when warranted.
+    """
     state_dir = Path(state_dir)
     hot_bytes = (state_dir / "recovery/FAST_SCENE.json").read_bytes()
     hot = json.loads(hot_bytes)
@@ -491,19 +508,24 @@ def fast_packet_from_files(root, state_dir, *, action="", limit=9):
         raise ValueError("HOT cursor and turn disagree: refuse to narrate")
     if not action:
         action = hot.get("latest_turn", {}).get("player_input", "")
-    index = build_sources(root)
-    # The state branch may contain more recent canon sources than main.
-    if Path(root).resolve() != state_dir.resolve():
-        more = build_sources(state_dir)
-        primary = {d["source"]: d for d in index["documents"]}
-        primary.update({d["source"]: d for d in more["documents"]})
-        index["documents"] = list(primary.values())
-    # HOT is the authoritative text-ahead tail; this source remains searchable
-    # even when the SQLite checkpoint and generated index lag behind it.
+    if deep:
+        index = build_sources(root)
+        # The state branch may contain more recent canon sources than main.
+        if Path(root).resolve() != state_dir.resolve():
+            more = build_sources(state_dir)
+            primary = {d["source"]: d for d in index["documents"]}
+            primary.update({d["source"]: d for d in more["documents"]})
+            index["documents"] = list(primary.values())
+    else:
+        index = {"schema": "npr-scene-memory/1", "campaign": "shiki",
+                 "documents": []}
+    # HOT is the only live source in the fast path. Older facts require
+    # explicit source inspection, never an unverified stale index claim.
     index["documents"].append(_hot_candidate(hot, hot_bytes))
     packet = preflight(action=action, location=cur.get("location", ""),
                        source_index=index, limit=limit)
     packet["cursor"] = cur
+    packet["retrieval_policy"] = "full_source_review" if deep else "current_hot_only"
     packet["status"] = "text_ahead_unreplayed" if hot.get("runtime", {}).get(
         "text_ahead_unreplayed") else "sqlite_may_be_current"
     return packet
