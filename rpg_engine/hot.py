@@ -19,10 +19,12 @@
 """
 from __future__ import annotations
 
+import base64
 import datetime as _dt
 import json
 import re
 import subprocess
+import zlib
 from pathlib import Path
 
 from . import prose_lint
@@ -280,12 +282,38 @@ def apply_turn(hot, turn):
     amend = bool(turn.get("amend")) and (session, number) == current
     if (session, number) <= current and not amend:
         return False
-    warnings = hot.setdefault("fold", {}).setdefault("warnings", [])
-    if session == current[0] and number != current[1] + 1 and not amend:
-        warnings.append(f"{turn['id']}: пропуск нумерации после {cursor.get('id')}")
+    if amend:
+        # Editing the latest story must also undo its world deltas. A text-only
+        # replacement over the already-mutated HOT used to retain false NPC
+        # knowledge, spent resources and closed clocks from the voided version.
+        undo = hot.get("_undo") or {}
+        if undo.get("id") != turn["id"] or not undo.get("snapshot"):
+            raise TurnError(f"{turn['id']}: no verified pre-turn state for safe amendment")
+        try:
+            previous = json.loads(zlib.decompress(
+                base64.b64decode(undo["snapshot"], validate=True)).decode("utf-8"))
+        except (ValueError, zlib.error, UnicodeDecodeError, TypeError) as exc:
+            raise TurnError(f"{turn['id']}: invalid amendment rollback snapshot") from exc
+        hot.clear()
+        hot.update(previous)
+        hot["_undo"] = undo
+        cursor = hot.setdefault("cursor", {})
+        current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
+    else:
+        # Keep one compressed private snapshot, never a second full HOT file.
+        # This lets the last turn be amended atomically without double-applying
+        # its deltas; older turns are corrected by a new explicit revision turn.
+        previous = {k: v for k, v in hot.items() if k != "_undo"}
+        raw = json.dumps(previous, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        hot["_undo"] = {"id": turn["id"], "snapshot":
+                        base64.b64encode(zlib.compress(raw, level=6)).decode("ascii")}
+
+    if session < current[0] or session > current[0] + 1 or (
+            session == current[0] and number != current[1] + 1) or (
+            session == current[0] + 1 and number != 1):
+        raise TurnError(f"{turn['id']}: sequence gap after {cursor.get('id')}")
     if cursor.get("at") and parse_at(turn["at"]) < parse_at(cursor["at"]):
-        warnings.append(f"{turn['id']}: игровое время идёт назад ({turn['at']} < {cursor['at']})")
-    hot["fold"]["warnings"] = warnings[-8:]
+        raise TurnError(f"{turn['id']}: game time precedes {cursor['at']}")
 
     ooc = turn.get("kind") == "ooc"
     if session != current[0]:
@@ -317,9 +345,8 @@ def apply_turn(hot, turn):
                        "hits": [{"rule": h["rule"], "quote": h["quote"]} for h in report["hits"][:6]]})
         lint["recent"] = recent[-LINT_KEEP:]
         totals = lint.setdefault("session_totals", {})
-        if not amend:
-            for rule, count in report["by_rule"].items():
-                totals[rule] = totals.get(rule, 0) + count
+        for rule, count in report["by_rule"].items():
+            totals[rule] = totals.get(rule, 0) + count
         lint["note"] = prose_lint.GM_NOTE
     else:
         cursor["seq"] = number
@@ -488,6 +515,7 @@ def _read_state(state_dir):
     secret = json.loads(raw_secret) if raw_secret else {}
     hot["offscreen"] = secret.get("offscreen") or {"truth": {}, "clocks": {}, "resolved": []}
     hot["_hides"] = dict(secret.get("cast") or {})
+    hot["_undo"] = secret.get("undo")
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -498,6 +526,7 @@ def _split_state(hot):
     """Открытая часть для HOT.json и закрытая для GM_ONLY.json."""
     public = json.loads(json.dumps(hot))
     hides = public.pop("_hides", {})
+    undo = public.pop("_undo", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
             hides[key] = card.pop("hides")
@@ -506,7 +535,8 @@ def _split_state(hot):
                            "clocks": len(offscreen.get("clocks", {}))}
     secret = {"schema": SECRET_SCHEMA,
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
-              "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen, "cast": hides}
+              "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
+              "cast": hides, "undo": undo}
     return public, secret
 
 
