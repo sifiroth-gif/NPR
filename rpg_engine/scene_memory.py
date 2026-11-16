@@ -489,28 +489,75 @@ def _hot_candidate(hot, raw):
 
 
 def fast_packet_from_files(root, state_dir, *, action="", limit=9):
-    """Offline/text-ahead entrypoint: accepts the live HOT cursor and current files."""
+    """Operational recall gate for a live NPR scene: HOT + full history.
+
+    The engine's SQLite may still reflect an older 1278 checkpoint. The most
+    recent published text and verified archive are the source; the heuristic
+    index only locates evidence, it does not adjudicate or teach NPCs secrets.
+    """
+    from . import heuristic_history
     state_dir = Path(state_dir)
-    hot_bytes = (state_dir / "recovery/FAST_SCENE.json").read_bytes()
-    hot = json.loads(hot_bytes)
+    root = Path(root)
+    hot_path = state_dir / "recovery/HOT.json"
+    v2 = hot_path.is_file()
+    if not v2:
+        hot_path = state_dir / "recovery/FAST_SCENE.json"
+    raw = hot_path.read_bytes()
+    hot = json.loads(raw)
     cur = hot["cursor"]
-    if cur.get("last_turn_id") != hot.get("latest_turn", {}).get("id"):
-        raise ValueError("HOT cursor and turn disagree: refuse to narrate")
-    if not action:
-        action = hot.get("latest_turn", {}).get("player_input", "")
-    index = build_sources(root)
-    # The state branch may contain more recent canon sources than main.
-    if Path(root).resolve() != state_dir.resolve():
-        more = build_sources(state_dir)
-        primary = {d["source"]: d for d in index["documents"]}
-        primary.update({d["source"]: d for d in more["documents"]})
-        index["documents"] = list(primary.values())
-    # HOT is the authoritative text-ahead tail; this source remains searchable
-    # even when the SQLite checkpoint and generated index lag behind it.
-    index["documents"].append(_hot_candidate(hot, hot_bytes))
-    packet = preflight(action=action, location=cur.get("location", ""),
-                       source_index=index, limit=limit)
-    packet["cursor"] = cur
-    packet["status"] = "text_ahead_unreplayed" if hot.get("runtime", {}).get(
-        "text_ahead_unreplayed") else "sqlite_may_be_current"
+    if v2:
+        current = cur["id"]
+        location = cur.get("place", "")
+        latest_input = hot.get("last", {}).get("player", "")
+        # A fresh published TURN may be ahead of asynchronous HOT fold; use it
+        # directly rather than replaying a stale scene. A last-turn amendment
+        # likewise has authority over its earlier archived version.
+        pending_path = state_dir / "recovery/TURN.json"
+        pending = json.loads(pending_path.read_text(encoding="utf-8")) if pending_path.is_file() else {}
+        turn_id = pending.get("id", "")
+        if re.fullmatch(r"s\\d+\\.text\\.\\d+", turn_id):
+            try:
+                from .hot import turn_number
+                if turn_number(turn_id) > turn_number(current) or (
+                        turn_id == current and pending.get("amend")):
+                    current = turn_id
+                    location = pending.get("place", location)
+                    latest_input = pending.get("player", latest_input)
+            except ValueError:
+                pass
+        present = (hot.get("scene") or {}).get("present") or []
+        actors = [str(hot.get("cast", {}).get(k, {}).get("name", k))
+                  for k in present if k != "shiki"]
+    else:
+        if cur.get("last_turn_id") != hot.get("latest_turn", {}).get("id"):
+            raise ValueError("Legacy HOT cursor and turn disagree")
+        current = cur["last_turn_id"]
+        location = cur.get("location", "")
+        latest_input = hot.get("latest_turn", {}).get("player_input", "")
+        actors = []
+
+    action = action or latest_input
+    source_index = build_sources(root)
+    if root.resolve() != state_dir.resolve():
+        private = build_sources(state_dir)
+        by_source = {d["source"]: d for d in source_index["documents"]}
+        by_source.update({d["source"]: d for d in private["documents"]})
+        source_index["documents"] = list(by_source.values())
+    if not v2:
+        source_index["documents"].append(_hot_candidate(hot, raw))
+    packet = preflight(action=action, location=location, actors=actors,
+                       source_index=source_index, limit=limit)
+    archive = state_dir / heuristic_history.DESTINATION
+    compiled = (heuristic_history.load(archive) if archive.is_file()
+                else heuristic_history.build(root, state_dir))
+    historical = heuristic_history.query(compiled, action + " " + location,
+                                         limit=limit)
+    packet["historical_heuristics"] = historical
+    packet["cursor"] = {"id": current, "place": location}
+    packet["status"] = ("text_ahead_unreplayed" if v2 and
+                        hot.get("cursor", {}).get("id") != current else
+                        "live_text_authoritative" if v2 else
+                        "text_ahead_unreplayed" if hot.get("runtime", {}).get(
+                            "text_ahead_unreplayed") else "sqlite_may_be_current")
+    packet["retrieval_used"] = True
     return packet
