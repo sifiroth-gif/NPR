@@ -739,7 +739,7 @@ def fold(state_dir):
         report = recall_audit.audit(state_dir)
         stats_path = state_dir / "archive/heuristic-recall/audit.json"
         stats_path.write_text(
-            json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\\n",
+            json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n",
             encoding="utf-8")
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
