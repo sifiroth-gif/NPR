@@ -162,6 +162,9 @@ def validate_turn(turn):
         raise TurnError(f"строка хроники должна быть строкой до {LINE_LIMIT} знаков")
     if "d" in turn and not isinstance(turn["d"], dict):
         raise TurnError("дельта 'd' должна быть объектом")
+    if isinstance(turn.get("d"), dict) and "scene" in turn["d"] and not isinstance(
+            turn["d"]["scene"], dict):
+        raise TurnError("дельта 'd.scene' должна быть объектом")
     return turn
 
 
@@ -307,6 +310,14 @@ def apply_turn(hot, turn):
     if before_cursor.get("at") and parse_at(turn["at"]) < parse_at(before_cursor["at"]):
         raise TurnError(f"{turn['id']}: game time precedes {before_cursor['at']}")
 
+    # Once a scene has a verified anchor, no new in-world turn may silently
+    # inherit the positions and present NPCs from an unrelated old scene.
+    # A small scene patch is cheaper than debugging contradictory HOT memory.
+    scene_anchor = (candidate.get("scene") or {}).get("as_of")
+    if turn.get("kind") != "ooc" and scene_anchor and not isinstance(
+            (turn.get("d") or {}).get("scene"), dict):
+        raise TurnError(f"{turn['id']}: d.scene is required after {scene_anchor}")
+
     if amend:
         hot.clear()
         hot.update(previous)
@@ -359,7 +370,10 @@ def apply_turn(hot, turn):
         cursor["seq"] = number
         cursor["id"] = turn["id"]
 
-    _apply_delta(hot, turn.get("d") or {}, turn)
+    delta = turn.get("d") or {}
+    _apply_delta(hot, delta, turn)
+    if not ooc and isinstance(delta.get("scene"), dict):
+        hot.setdefault("scene", {})["as_of"] = turn["id"]
     refresh(hot)
     return True
 
@@ -715,6 +729,9 @@ def check(state_dir):
     if hot.get("last", {}).get("id") not in (cursor.get("id"), None) and \
             not (hot.get("chronicle") and hot["chronicle"][-1].get("ooc")):
         problems.append("последний ответ не совпадает с курсором")
+    scene_anchor = (hot.get("scene") or {}).get("as_of")
+    if scene_anchor and scene_anchor != (hot.get("last") or {}).get("id"):
+        problems.append("сцена отстаёт от последнего игрового хода")
     if cursor.get("at") and heading(cursor["at"])["date"] != cursor.get("date"):
         problems.append("дата курсора не соответствует игровому времени")
     for key in hot.get("scene", {}).get("present", []):
