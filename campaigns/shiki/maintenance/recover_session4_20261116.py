@@ -250,7 +250,7 @@ def main(root):
     if memory_data.get("cursor",{}).get("turn")!="s04.text.048":
         raise ValueError("historical memory index anchor changed")
     memory_blob=hashlib.sha1(
-        ("blob "+str(len(memory_bytes))+"\\0").encode().replace(b"\\0",b"\\x00")+memory_bytes
+        f"blob {len(memory_bytes)}\0".encode()+memory_bytes
     ).hexdigest()
     ledger_sha=hashlib.sha256(f.read_bytes()).hexdigest()
     # Do not edit the historical ledger. All newly recovered data are kept
