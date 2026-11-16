@@ -43,6 +43,12 @@ def parser():
     mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
     mem.add_argument("--player-action", default="")
     mem.add_argument("--limit", type=int, default=9)
+    heuristic = sub.add_parser("history-heuristic", help="search all accepted session history and canon corrections")
+    heuristic.add_argument("query")
+    heuristic.add_argument("--state-dir", type=Path, required=True)
+    heuristic.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
+    heuristic.add_argument("--limit", type=int, default=9)
+    heuristic.add_argument("--session", action="append", type=int, default=[])
     build_mem = sub.add_parser("scene-memory-build", help="refresh compact GitHub memory catalog from canonical sources and HOT")
     build_mem.add_argument("--state-dir", type=Path, required=True)
     build_mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -187,6 +193,14 @@ def run(args):
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "scene-memory-build":
             return scene_memory.write_live_index(args.source_root, args.state_dir, args.output)
+        case "history-heuristic":
+            from . import heuristic_history
+            limit_value(args.limit, 1, 30)
+            manifest = args.state_dir / heuristic_history.DESTINATION
+            index = (heuristic_history.load(manifest) if manifest.is_file()
+                     else heuristic_history.build(args.source_root, args.state_dir))
+            return heuristic_history.query(
+                index, args.query, limit=args.limit, sessions=tuple(args.session))
         case "hot-fold":
             return hot.fold(args.state_dir)
         case "hot-check":
