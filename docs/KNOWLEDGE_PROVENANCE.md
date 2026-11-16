@@ -1,3 +1,5 @@
+> **СПРАВОЧНИК ПО ТРЕБОВАНИЮ (16.11.2026).** Правила кампании — в `campaigns/shiki/GM_CORE.md`, краткая выжимка — в `campaigns/shiki/ref/`. Сюда заглядывать только за конкретной деталью. 
+
 # NPC knowledge, source provenance and anti-metagaming in NPR
 
 **Source architecture:** adapted to the compact NPR SQLite engine from `sifiroth-gif/Bleach-RPG-`: `docs/GM_PRE_SCENE_RECALL.md`, `docs/GM_NPC_AGENCY.md`, `world_autonomy.py`, `world_state.py`, `gm_scene_gate.py`, `npc_scene_fidelity.py` and `docs/GM_EVENT_GRAPH.md`. This is a functional adaptation, **not** a copy of Bleach campaign lore, private history, neural caches, or its entire heavyweight runtime.

@@ -1,0 +1,29 @@
+name: NPR tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rpg_engine/**"
+      - "tests/**"
+      - "skills/**"
+      - "campaigns/shiki/GM_CORE.md"
+      - "AGENTS.md"
+      - ".github/workflows/npr-tests.yml"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit and regression tests
+        run: python -m unittest discover -s tests -q

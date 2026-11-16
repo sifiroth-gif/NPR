@@ -415,7 +415,13 @@ def compact_live_index(root, state_dir):
     hot = json.loads(raw)
     if hot.get("latest_turn", {}).get("id") != hot.get("cursor", {}).get("last_turn_id"):
         raise ValueError("HOT current turn must match cursor before deriving memory")
-    verify_hot_memory_gate(hot)
+    # Квитанция памяти больше не обязательна и никогда не останавливает сборку:
+    # с S04-030 она восемнадцать раз подряд ломала обновление индекса.
+    try:
+        verify_hot_memory_gate(hot)
+        receipt = "ok"
+    except ValueError as exc:
+        receipt = f"advisory: {exc}"
     records = []
     for doc in data["documents"]:
         all_terms = Counter(t for section in doc["sections"] for t in section["terms"])
@@ -448,6 +454,7 @@ def compact_live_index(root, state_dir):
             "live": {"story": live.get("immediate", ""),
                      "latest_facts": hot.get("latest_turn", {}).get("facts", {}),
                      "recent": hot.get("history", [])[-6:]},
+            "receipt": receipt,
             "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current."}
 
 

@@ -1,3 +1,5 @@
+> **ЗАМЕНЁН 16.11.2026.** Этот файл — история правок, а не правила. Действуют `AGENTS.md` и `campaigns/shiki/GM_CORE.md`. Ведущему в игровом чате не читать.
+
 # NPR — быстрое сохранение сыгранного
 
 Источники подхода: `sifiroth-gif/Bleach-RPG-/docs/GITHUB_CHAT_CHECKPOINTS.md` и реализованные в `NPR` `Campaign.prepare/confirm`, `verify`, `checkpoint`. Это **адаптация протокола**, не копия несовместимых файлов: Bleach использует журналы, контуры и JSON runtime, NPR — SQLite и `state.json`.

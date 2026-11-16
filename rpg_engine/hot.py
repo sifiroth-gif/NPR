@@ -1,0 +1,688 @@
+"""HOT v2: единое оперативное состояние текстовой кампании.
+
+Мастер в чате записывает только короткий файл хода (``recovery/TURN.json``):
+дословную заявку игрока, дословный видимый ответ, одну строку хроники и
+необязательную дельту состояния. Всё остальное делает эта свёртка в CI:
+
+* ``recovery/HOT.json``            — курсор, сцена, состав с мотивами и знанием,
+                                     нити, закадровые часы, тело Шики, договор,
+                                     хроника сессии, последний ответ дословно;
+* ``archive/session-NNN-turns.jsonl`` — дословный журнал ходов, только дозапись;
+* ``archive/session-NNN-chronicle.md`` — хроника сессии строкой на ход;
+* ``recovery/cast/<ключ>.json``     — живая карточка каждого затронутого NPC;
+* ``recovery/GM_ONLY.json``         — скрытая правда, закадровые часы и тайны NPC.
+                                     В HOT этого нет: игрок может открыть HOT без спойлеров.
+
+Мастер никогда не переписывает HOT целиком и не дублирует сцену пересказами.
+Свёртка детерминирована и идемпотентна: ход с номером не больше курсора
+пропускается, кроме явной правки последнего хода (``"amend": true``).
+"""
+from __future__ import annotations
+
+import datetime as _dt
+import json
+import re
+import subprocess
+from pathlib import Path
+
+from . import prose_lint
+
+SCHEMA = "npr-hot/2"
+TURN_SCHEMA = "npr-turn/2"
+HOT_PATH = "recovery/HOT.json"
+TURN_PATH = "recovery/TURN.json"
+LEGACY_PATH = "recovery/FAST_SCENE.json"
+CAST_DIR = "recovery/cast"
+SECRET_PATH = "recovery/GM_ONLY.json"   # скрытая правда, закадровые часы, тайны NPC: игроку не открывать
+SECRET_SCHEMA = "npr-gm-only/2"
+
+TURN_ID = re.compile(r"s(\d{2})\.text\.(\d{3,4})")
+WEEKDAYS = ("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье")
+MONTHS = ("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа",
+          "сентября", "октября", "ноября", "декабря")
+
+LINE_LIMIT = 320
+KNOWS_LIMIT = 14
+CHRONICLE_IN_HOT = 60
+LINT_KEEP = 3
+RESOLVED_KEEP = 6
+CALENDAR_AHEAD = 14
+HOT_LIMIT = 72000   # байт; HOT читается один раз за чат, но расти без конца не должен
+
+# Договор семи запоров: ленивый расчёт по игровому времени (PROGRESSION_RULES.json).
+PACT_STAGES = (
+    (0, "Спящий", "Только семь прерывистых колец и корни на внутренней стороне правого предплечья."),
+    (8, "Первые сосудистые тени", "Потемневшие поверхностные сосуды у правого запястья, новые тонкие корни печати; "
+        "вблизи изредка едва уловимый запах озона, мокрого камня, холодного железа."),
+    (22, "Бледность", "Стойкая бледность, тени под глазами, лёгкая впалость при близком взгляде; "
+         "запах йода и бинта поверх сырого камня."),
+    (40, "Истощённый силуэт", "Заметная худоба без потери силы, тёмные вены на запястьях и предплечьях, корни печати "
+         "до плеча и корпуса; металл, кровь, палёные цветы, озон."),
+    (60, "Чёрные сосуды", "Тёмные сосуды на шее и корпусе, корни могут дойти до шеи; порох и дым в мокрой кладке, "
+         "холодный ладан, запах не смывается."),
+    (78, "Активный контактный синдром", "Прямое касание живой голой кожи к живой голой коже может передать чакровую "
+         "болезнь; ткань и перчатки блокируют полностью."),
+    (95, "Устойчивая тяжёлая форма", "Постоянная резкая худоба, тёмные впадины и сосуды, корни на шее и корпусе; "
+         "контактная опасность прежняя."),
+)
+PACT_EVENT_POINTS = {
+    "attempt": {"shiton": 0.6, "byoton": 0.9},
+    "practice": {"shiton": 1.5, "byoton": 2.25},
+    "mastery": {"shiton": 3.0, "byoton": 4.5},
+    "cast_D_C": {"shiton": 1.0, "byoton": 1.5},
+    "cast_B": {"shiton": 2.0, "byoton": 3.0},
+    "cast_A": {"shiton": 3.5, "byoton": 5.25},
+    "cast_S": {"shiton": 6.0, "byoton": 9.0},
+    "overload": {"shiton": 1.5, "byoton": 2.25},
+}
+
+
+class TurnError(ValueError):
+    """Файл хода не годится для свёртки."""
+
+
+# --------------------------------------------------------------------------- время
+
+def parse_at(value):
+    try:
+        return _dt.datetime.fromisoformat(value)
+    except (TypeError, ValueError) as exc:
+        raise TurnError(f"некорректное игровое время: {value!r}") from exc
+
+
+def heading(at, *, year_offset=1277):
+    """Дата и день недели для шапки сцены считаются кодом, а не мастером."""
+    moment = parse_at(at)
+    return {
+        "date": f"{WEEKDAYS[moment.weekday()]}, {moment.day} {MONTHS[moment.month - 1]} "
+                f"{moment.year + year_offset} года",
+        "time": f"{moment:%H:%M}",
+    }
+
+
+def turn_number(turn_id):
+    match = TURN_ID.fullmatch(turn_id or "")
+    if not match:
+        raise TurnError(f"некорректный идентификатор хода: {turn_id!r}")
+    return int(match[1]), int(match[2])
+
+
+# --------------------------------------------------------------------------- договор
+
+def pact_state(pact, at):
+    """Пассивный рост 0.75/сутки от связывания плюс очки событий запретных школ."""
+    pact = dict(pact or {})
+    bound = pact.get("bound_at")
+    if not bound:
+        return pact
+    days = max((parse_at(at) - parse_at(bound)).total_seconds(), 0) / 86400
+    passive = round(float(pact.get("rate_per_day", 0.75)) * days, 4)
+    events = round(sum(float(e.get("points", 0)) for e in pact.get("events", [])), 4)
+    value = min(round(passive + events, 4), 100.0)
+    stage = 0
+    for index, (threshold, _label, _signs) in enumerate(PACT_STAGES):
+        if value >= threshold:
+            stage = index
+    pact.update({"value": value, "stage": stage, "label": PACT_STAGES[stage][1],
+                 "signs": PACT_STAGES[stage][2], "contact_hazard": stage >= 5})
+    if stage + 1 < len(PACT_STAGES):
+        pact["next_stage_at"] = PACT_STAGES[stage + 1][0]
+    else:
+        pact.pop("next_stage_at", None)
+    return pact
+
+
+def _pact_event(pact, event, at):
+    event_id = event.get("id")
+    kind, school = event.get("type"), event.get("school")
+    if not event_id or kind not in PACT_EVENT_POINTS or school not in PACT_EVENT_POINTS[kind]:
+        raise TurnError(f"некорректное событие договора: {event!r}")
+    events = pact.setdefault("events", [])
+    if any(e.get("id") == event_id for e in events):
+        return
+    events.append({"id": event_id, "at": at, "type": kind, "school": school,
+                   "points": PACT_EVENT_POINTS[kind][school]})
+
+
+# --------------------------------------------------------------------------- ход
+
+def validate_turn(turn):
+    if not isinstance(turn, dict) or turn.get("schema") != TURN_SCHEMA:
+        raise TurnError(f"ожидается схема {TURN_SCHEMA}")
+    turn_number(turn.get("id"))
+    parse_at(turn.get("at"))
+    ooc = turn.get("kind") == "ooc"
+    for field in ("player",) + (() if ooc else ("gm", "place")):
+        if not isinstance(turn.get(field), str) or not turn[field].strip():
+            raise TurnError(f"пустое обязательное поле {field!r}")
+    line = turn.get("line", "")
+    if not isinstance(line, str) or len(line) > LINE_LIMIT:
+        raise TurnError(f"строка хроники должна быть строкой до {LINE_LIMIT} знаков")
+    if "d" in turn and not isinstance(turn["d"], dict):
+        raise TurnError("дельта 'd' должна быть объектом")
+    return turn
+
+
+def _shorten(text, limit=LINE_LIMIT):
+    text = " ".join(str(text or "").split())
+    if len(text) <= limit:
+        return text
+    cut = text[:limit - 1]
+    stop = max(cut.rfind(". "), cut.rfind("; "))
+    return (cut[:stop + 1] if stop > limit // 2 else cut.rstrip(" ,;:") + "…")
+
+
+def turn_from_legacy(fast):
+    """Адаптер старого ``FAST_SCENE.json`` (npr-shiki-fast-scene/1)."""
+    if not isinstance(fast, dict) or not isinstance(fast.get("latest_turn") or {}, dict) \
+            or not isinstance(fast.get("cursor") or {}, dict):
+        raise TurnError("старый файл сцены имеет неизвестное строение")
+    latest = fast.get("latest_turn") or {}
+    turn_id = latest.get("id") or (fast.get("cursor") or {}).get("last_turn_id")
+    history = fast.get("history") if isinstance(fast.get("history"), list) else []
+    summary = next((str(h.get("summary") or "") for h in reversed(history)
+                    if isinstance(h, dict) and h.get("turn_id") == turn_id), "")
+    if not summary and isinstance(latest.get("facts"), dict):
+        summary = "; ".join(str(v) for v in latest["facts"].values())
+    turn = {
+        "schema": TURN_SCHEMA, "id": turn_id,
+        "at": latest.get("at") or (fast.get("cursor") or {}).get("at"),
+        "place": latest.get("location") or (fast.get("cursor") or {}).get("location", ""),
+        "player": latest.get("player_input") or "",
+        "gm": latest.get("exact_visible_gm_response") or "",
+        "line": _shorten(summary), "legacy": True,
+    }
+    if latest.get("turn_kind") in ("ooc", "technical"):
+        turn["kind"] = "ooc"
+    return turn
+
+
+# --------------------------------------------------------------------------- свёртка
+
+def _merge(target, patch):
+    """Словари сливаются рекурсивно, ``null`` удаляет ключ, ``ключ+`` дополняет список."""
+    for key, value in patch.items():
+        if key.endswith("+"):
+            base = target.setdefault(key[:-1], [])
+            for item in (value if isinstance(value, list) else [value]):
+                if item not in base:
+                    base.append(item)
+        elif value is None:
+            target.pop(key, None)
+        elif isinstance(value, dict) and isinstance(target.get(key), dict):
+            _merge(target[key], value)
+        else:
+            target[key] = value
+    return target
+
+
+def _apply_delta(hot, delta, turn):
+    turn_id, at = turn["id"], turn["at"]
+    if "scene" in delta:
+        _merge(hot.setdefault("scene", {}), delta["scene"])
+    present = set(hot.get("scene", {}).get("present", []))
+    for key, patch in (delta.get("cast") or {}).items():
+        if patch is None:
+            hot.get("cast", {}).pop(key, None)
+            continue
+        card = hot.setdefault("cast", {}).setdefault(key, {})
+        _merge(card, patch)
+        if len(card.get("knows", [])) > KNOWS_LIMIT:
+            card["knows"] = card["knows"][-KNOWS_LIMIT:]
+        card["seen"] = turn_id
+    for key in present:
+        if key in hot.get("cast", {}):
+            hot["cast"][key]["seen"] = turn_id
+    for key, patch in (delta.get("threads") or {}).items():
+        threads = hot.setdefault("threads", {})
+        if patch is None or (isinstance(patch, dict) and patch.get("closed")):
+            closed = threads.pop(key, {})
+            if isinstance(patch, dict):
+                closed.update(patch)
+            hot.setdefault("offscreen", {}).setdefault("resolved", []).append(
+                {"id": f"thread:{key}", "at": at, "turn": turn_id,
+                 "outcome": closed.get("closed") or closed.get("state", "")})
+        else:
+            _merge(threads.setdefault(key, {}), patch if isinstance(patch, dict) else {"state": patch})
+            threads[key]["turn"] = turn_id
+    offscreen = hot.setdefault("offscreen", {})
+    for key, patch in (delta.get("clocks") or {}).items():
+        clocks = offscreen.setdefault("clocks", {})
+        if patch is None or (isinstance(patch, dict) and "done" in patch):
+            done = clocks.pop(key, {})
+            offscreen.setdefault("resolved", []).append(
+                {"id": f"clock:{key}", "at": at, "turn": turn_id,
+                 "outcome": (patch or {}).get("done", "снято")
+                 if isinstance(patch, dict) else "снято", "what": done.get("what", "")})
+        else:
+            if "due" in patch:
+                parse_at(patch["due"])
+            _merge(clocks.setdefault(key, {}), patch)
+    if "truth" in delta:
+        _merge(offscreen.setdefault("truth", {}), delta["truth"])
+    if "shiki" in delta:
+        _merge(hot.setdefault("shiki", {}), delta["shiki"])
+    for event in delta.get("pact_events") or []:
+        _pact_event(hot.setdefault("pact", {}), event, at)
+    for item in delta.get("canon+") or []:
+        entry = {"turn": turn_id, "rule": item}
+        if entry not in hot.setdefault("canon", []):
+            hot["canon"].append(entry)
+    offscreen["resolved"] = offscreen.get("resolved", [])[-RESOLVED_KEEP:]
+
+
+def apply_turn(hot, turn):
+    """Применяет один ход. Возвращает ``True``, если состояние изменилось."""
+    validate_turn(turn)
+    session, number = turn_number(turn["id"])
+    cursor = hot.setdefault("cursor", {})
+    current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
+    amend = bool(turn.get("amend")) and (session, number) == current
+    if (session, number) <= current and not amend:
+        return False
+    warnings = hot.setdefault("fold", {}).setdefault("warnings", [])
+    if session == current[0] and number != current[1] + 1 and not amend:
+        warnings.append(f"{turn['id']}: пропуск нумерации после {cursor.get('id')}")
+    if cursor.get("at") and parse_at(turn["at"]) < parse_at(cursor["at"]):
+        warnings.append(f"{turn['id']}: игровое время идёт назад ({turn['at']} < {cursor['at']})")
+    hot["fold"]["warnings"] = warnings[-8:]
+
+    ooc = turn.get("kind") == "ooc"
+    if session != current[0]:
+        hot.setdefault("sessions_closed", []).append(
+            {"session": current[0], "last": cursor.get("id"),
+             "chronicle": f"archive/session-{current[0]:03}-chronicle.md"})
+        hot["chronicle"] = []
+        hot["session"] = session
+
+    line = turn.get("line") or _shorten("Игрок: " + turn["player"], 200)
+    entry = {"id": turn["id"], "at": turn["at"], "line": line}
+    if ooc:
+        entry["ooc"] = True
+    chronicle = hot.setdefault("chronicle", [])
+    if amend and chronicle and chronicle[-1]["id"] == turn["id"]:
+        chronicle[-1] = entry
+    else:
+        chronicle.append(entry)
+
+    if not ooc:
+        cursor.update({"id": turn["id"], "seq": number, "at": turn["at"], "place": turn["place"],
+                       "awaiting": turn.get("awaiting", "player")})
+        cursor.update(heading(turn["at"], year_offset=hot.get("calendar", {}).get("year_offset", 1277)))
+        hot["last"] = {"id": turn["id"], "player": turn["player"], "gm": turn["gm"]}
+        report = prose_lint.lint(turn["gm"])
+        lint = hot.setdefault("lint", {})
+        recent = [r for r in lint.get("recent", []) if r["id"] != turn["id"]]
+        recent.append({"id": turn["id"], "score": report["score"], "verdict": report["verdict"],
+                       "hits": [{"rule": h["rule"], "quote": h["quote"]} for h in report["hits"][:6]]})
+        lint["recent"] = recent[-LINT_KEEP:]
+        totals = lint.setdefault("session_totals", {})
+        if not amend:
+            for rule, count in report["by_rule"].items():
+                totals[rule] = totals.get(rule, 0) + count
+        lint["note"] = prose_lint.GM_NOTE
+    else:
+        cursor["seq"] = number
+        cursor["id"] = turn["id"]
+
+    _apply_delta(hot, turn.get("d") or {}, turn)
+    refresh(hot)
+    return True
+
+
+def refresh(hot):
+    """Производные поля: договор, просроченные закадровые часы."""
+    at = hot.get("cursor", {}).get("at")
+    if not at:
+        return hot
+    if hot.get("pact"):
+        hot["pact"] = pact_state(hot["pact"], at)
+    # Календарь на две недели вперёд: мастер не считает дни недели в уме.
+    calendar = hot.setdefault("calendar", {})
+    offset = calendar.get("year_offset", 1277)
+    start = parse_at(at)
+    calendar["ahead"] = [heading((start + _dt.timedelta(days=shift)).isoformat(), year_offset=offset)["date"]
+                         for shift in range(1, CALENDAR_AHEAD + 1)]
+    offscreen = hot.setdefault("offscreen", {})
+    now = parse_at(at)
+    due = sorted((key for key, clock in offscreen.get("clocks", {}).items()
+                  if clock.get("due") and parse_at(clock["due"]) <= now),
+                 key=lambda key: offscreen["clocks"][key]["due"])
+    offscreen["due_now"] = due
+    return hot
+
+
+# --------------------------------------------------------------------------- файлы
+
+def _git(state_dir, *args):
+    result = subprocess.run(["git", "-C", str(state_dir), *args], capture_output=True, text=True)
+    if result.returncode:
+        raise RuntimeError(result.stderr.strip() or "git failed")
+    return result.stdout
+
+
+def _history(state_dir, path, since):
+    """Версии файла от старых к новым после коммита ``since`` (или все)."""
+    try:
+        _git(state_dir, "rev-parse", "--git-dir")
+    except (RuntimeError, FileNotFoundError):
+        return []
+    span = ["HEAD"]
+    if since:
+        try:
+            _git(state_dir, "cat-file", "-e", f"{since}^{{commit}}")
+            span = [f"{since}..HEAD"]
+        except RuntimeError:
+            pass
+    try:
+        commits = _git(state_dir, "log", "--format=%H", "--reverse", *span, "--", path).split()
+    except RuntimeError:
+        return []
+    versions = []
+    for commit in commits:
+        try:
+            versions.append((commit, json.loads(_git(state_dir, "show", f"{commit}:{path}"))))
+        except (RuntimeError, json.JSONDecodeError):
+            continue
+    return versions
+
+
+def _head(state_dir):
+    try:
+        return _git(state_dir, "rev-parse", "HEAD").strip()
+    except (RuntimeError, FileNotFoundError):
+        return ""
+
+
+def collect_turns(state_dir, hot):
+    """Новые ходы из истории TURN.json, рабочей копии и старого FAST_SCENE.json."""
+    state_dir = Path(state_dir)
+    since = hot.get("fold", {}).get("commit", "")
+    found, errors = {}, []
+
+    def take(raw, origin, legacy=False):
+        try:
+            turn = turn_from_legacy(raw) if legacy else raw
+            validate_turn(turn)
+        except TurnError as exc:
+            errors.append(f"{origin}: {exc}")
+            return
+        found[turn_number(turn["id"])] = turn
+
+    for commit, raw in _history(state_dir, LEGACY_PATH, since):
+        if raw.get("format", "").startswith("npr-shiki-fast-scene"):
+            take(raw, f"{LEGACY_PATH}@{commit[:7]}", legacy=True)
+    legacy = state_dir / LEGACY_PATH
+    if legacy.is_file():
+        take(json.loads(legacy.read_text(encoding="utf-8")), LEGACY_PATH, legacy=True)
+    for commit, raw in _history(state_dir, TURN_PATH, since):
+        take(raw, f"{TURN_PATH}@{commit[:7]}")
+    current = state_dir / TURN_PATH
+    if current.is_file():
+        try:
+            take(json.loads(current.read_text(encoding="utf-8")), TURN_PATH)
+        except json.JSONDecodeError as exc:
+            errors.append(f"{TURN_PATH}: не JSON ({exc})")
+    return [found[key] for key in sorted(found)], errors
+
+
+def _dump(data):
+    return json.dumps(data, ensure_ascii=False, indent=1) + "\n"
+
+
+def _append_log(state_dir, session, turns):
+    path = Path(state_dir) / f"archive/session-{session:03}-turns.jsonl"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rows = {}
+    if path.is_file():
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            if raw.strip():
+                row = json.loads(raw)
+                rows[row["id"]] = row
+    for turn in turns:
+        rows[turn["id"]] = {k: turn[k] for k in ("id", "at", "place", "player", "gm", "line", "kind", "roll")
+                            if k in turn}
+    ordered = sorted(rows.values(), key=lambda row: turn_number(row["id"]))
+    path.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in ordered),
+                    encoding="utf-8")
+    return path
+
+
+def _write_chronicle(state_dir, hot, full):
+    session = int(hot["session"])
+    path = Path(state_dir) / f"archive/session-{session:03}-chronicle.md"
+    lines = [f"# Сессия {session}: хроника по ходам", ""]
+    lines += [f"- `{e['id']}` {e['at']} — {e['line']}" for e in full]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return path
+
+
+def _full_chronicle(state_dir, hot):
+    """Полная хроника сессии: архивный файл плюс хвост из HOT."""
+    session = int(hot["session"])
+    path = Path(state_dir) / f"archive/session-{session:03}-chronicle.md"
+    entries = {}
+    if path.is_file():
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            match = re.match(r"- `([^`]+)` (\S+) — (.*)", raw)
+            if match:
+                entries[match[1]] = {"id": match[1], "at": match[2], "line": match[3]}
+    for entry in hot.get("chronicle", []):
+        entries[entry["id"]] = entry
+    return sorted(entries.values(), key=lambda e: turn_number(e["id"]))
+
+
+def _read_state(state_dir):
+    """HOT и закрытая половина сливаются в одно состояние в памяти."""
+    state_dir = Path(state_dir)
+    hot_path = state_dir / HOT_PATH
+    if not hot_path.is_file():
+        raise ValueError(f"нет {HOT_PATH}: сначала выполните миграцию")
+    raw_hot = hot_path.read_text(encoding="utf-8")
+    hot = json.loads(raw_hot)
+    if hot.get("schema") != SCHEMA:
+        raise ValueError(f"{HOT_PATH}: ожидается схема {SCHEMA}")
+    secret_path = state_dir / SECRET_PATH
+    raw_secret = secret_path.read_text(encoding="utf-8") if secret_path.is_file() else ""
+    secret = json.loads(raw_secret) if raw_secret else {}
+    hot["offscreen"] = secret.get("offscreen") or {"truth": {}, "clocks": {}, "resolved": []}
+    hot["_hides"] = dict(secret.get("cast") or {})
+    for key, hidden in hot["_hides"].items():
+        if key in hot.get("cast", {}):
+            hot["cast"][key]["hides"] = hidden
+    return hot, (raw_hot, raw_secret)
+
+
+def _split_state(hot):
+    """Открытая часть для HOT.json и закрытая для GM_ONLY.json."""
+    public = json.loads(json.dumps(hot))
+    hides = public.pop("_hides", {})
+    for key, card in public.get("cast", {}).items():
+        if "hides" in card:
+            hides[key] = card.pop("hides")
+    offscreen = public.pop("offscreen", {})
+    public["offscreen"] = {"see": SECRET_PATH, "due": len(offscreen.get("due_now", [])),
+                           "clocks": len(offscreen.get("clocks", {}))}
+    secret = {"schema": SECRET_SCHEMA,
+              "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
+              "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen, "cast": hides}
+    return public, secret
+
+
+def _write_state(state_dir, hot, before=("", "")):
+    state_dir = Path(state_dir)
+    public, secret = _split_state(hot)
+    texts = (_dump(public), _dump(secret))
+    for path, text, old in zip((HOT_PATH, SECRET_PATH), texts, before):
+        if text != old:
+            (state_dir / path).parent.mkdir(parents=True, exist_ok=True)
+            (state_dir / path).write_text(text, encoding="utf-8")
+    return texts, texts != tuple(before)
+
+
+def _write_cast(state_dir, hot):
+    """Карточка каждого NPC из состава. Убранный из HOT персонаж остаётся в файле."""
+    cast_dir = Path(state_dir) / CAST_DIR
+    cast_dir.mkdir(parents=True, exist_ok=True)
+    for key, card in hot.get("cast", {}).items():
+        target = cast_dir / f"{key}.json"
+        desired = _dump({"schema": "npr-cast-card/2", "key": key,
+                         **{k: v for k, v in card.items() if k != "hides"}})
+        if not target.is_file() or target.read_text(encoding="utf-8") != desired:
+            target.write_text(desired, encoding="utf-8")
+
+
+def _recall_cast(state_dir, hot, turn):
+    """Возвращает в состав отложенную карточку, если ход снова трогает этого NPC."""
+    delta = turn.get("d") or {}
+    wanted = set(delta.get("cast") or {}) | set((delta.get("scene") or {}).get("present") or [])
+    for key in wanted:
+        target = Path(state_dir) / CAST_DIR / f"{key}.json"
+        if key not in hot.get("cast", {}) and target.is_file():
+            card = json.loads(target.read_text(encoding="utf-8"))
+            card.pop("schema", None)
+            card.pop("key", None)
+            if key in hot.get("_hides", {}):
+                card["hides"] = hot["_hides"][key]
+            hot.setdefault("cast", {})[key] = card
+
+
+def fold(state_dir):
+    """Сворачивает новые ходы в HOT и архивы. Возвращает краткий отчёт."""
+    state_dir = Path(state_dir)
+    hot, before = _read_state(state_dir)
+    turns, errors = collect_turns(state_dir, hot)
+    applied = []
+    for turn in turns:
+        try:
+            _recall_cast(state_dir, hot, turn)
+            if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
+                # Перед тем как убрать NPC из состава, сохраняем его карточку и тайну.
+                _write_cast(state_dir, hot)
+                for key, card in hot.get("cast", {}).items():
+                    if "hides" in card:
+                        hot.setdefault("_hides", {})[key] = card["hides"]
+            if apply_turn(hot, turn):
+                applied.append(turn)
+        except TurnError as exc:
+            errors.append(f"{turn.get('id')}: {exc}")
+    refresh(hot)
+    fold_info = hot.setdefault("fold", {})
+    fold_info["errors"] = errors[-8:]
+    if applied:
+        fold_info["commit"] = _head(state_dir) or fold_info.get("commit", "")
+        fold_info["turns"] = fold_info.get("turns", 0) + len(applied)
+    by_session = {}
+    for turn in applied:
+        by_session.setdefault(turn_number(turn["id"])[0], []).append(turn)
+    for session, batch in by_session.items():
+        _append_log(state_dir, session, batch)
+    full = _full_chronicle(state_dir, hot)
+    _write_chronicle(state_dir, hot, full)
+    if len(hot.get("chronicle", [])) > CHRONICLE_IN_HOT:
+        hot["chronicle"] = hot["chronicle"][-CHRONICLE_IN_HOT:]
+        hot["chronicle_older"] = f"archive/session-{int(hot['session']):03}-chronicle.md"
+    _write_cast(state_dir, hot)
+    texts, changed = _write_state(state_dir, hot, before)
+    return {"status": "updated" if changed else "current",
+            "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
+            "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
+            "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
+            "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
+
+
+def bootstrap(state_dir, seed):
+    """Разовая миграция со старого ``FAST_SCENE.json``: без потерь и без правки старых файлов.
+
+    ``seed`` — заготовка HOT (состав, нити, закадровое, тело, договор, канон и строки хроники,
+    написанные по сыгранному). Курсор, последний ответ и дословный журнал берутся из истории git.
+    """
+    state_dir = Path(state_dir)
+    hot = json.loads(json.dumps(seed))
+    hot["schema"] = SCHEMA
+    session = int(hot["session"])
+    versions = [raw for _commit, raw in _history(state_dir, LEGACY_PATH, "")]
+    legacy_file = state_dir / LEGACY_PATH
+    if legacy_file.is_file():
+        versions.append(json.loads(legacy_file.read_text(encoding="utf-8")))
+    turns = {}
+    for raw in versions:
+        try:
+            turn = validate_turn(turn_from_legacy(raw))
+        except TurnError:
+            continue
+        if turn_number(turn["id"])[0] == session:
+            turns[turn["id"]] = turn
+    if not turns:
+        raise ValueError(f"в истории {LEGACY_PATH} нет ходов сессии {session}")
+    ordered = sorted(turns.values(), key=lambda t: turn_number(t["id"]))
+    lines = {e["id"]: e for e in hot.get("chronicle", [])}
+    for turn in ordered:
+        if turn["id"] in lines:
+            turn["line"] = lines[turn["id"]]["line"]
+        else:
+            lines[turn["id"]] = {"id": turn["id"], "at": turn["at"], "line": turn["line"]}
+    hot["chronicle"] = sorted(lines.values(), key=lambda e: turn_number(e["id"]))
+    latest = ordered[-1]
+    number = turn_number(latest["id"])[1]
+    offset = hot.setdefault("calendar", {}).setdefault("year_offset", 1277)
+    hot["cursor"] = {"id": latest["id"], "seq": number, "at": latest["at"], "place": latest["place"],
+                     "awaiting": "player", **heading(latest["at"], year_offset=offset)}
+    hot["last"] = {"id": latest["id"], "player": latest["player"], "gm": latest["gm"]}
+    totals, recent = {}, []
+    for turn in ordered:
+        report = prose_lint.lint(turn["gm"])
+        for rule, count in report["by_rule"].items():
+            totals[rule] = totals.get(rule, 0) + count
+        recent.append({"id": turn["id"], "score": report["score"], "verdict": report["verdict"],
+                       "hits": [{"rule": h["rule"], "quote": h["quote"]} for h in report["hits"][:6]]})
+    hot["lint"] = {"recent": recent[-LINT_KEEP:], "session_totals": totals, "note": prose_lint.GM_NOTE}
+    present = hot.get("scene", {}).get("present", [])
+    for key in present:
+        if key in hot.get("cast", {}):
+            hot["cast"][key]["seen"] = latest["id"]
+    hot["fold"] = {"commit": _head(state_dir), "turns": len(hot["chronicle"]), "errors": [], "warnings": [],
+                   "migrated_from": LEGACY_PATH, "verbatim_turns": len(ordered)}
+    refresh(hot)
+    _append_log(state_dir, session, ordered)
+    _write_chronicle(state_dir, hot, hot["chronicle"])
+    if len(hot["chronicle"]) > CHRONICLE_IN_HOT:
+        hot["chronicle"] = hot["chronicle"][-CHRONICLE_IN_HOT:]
+        hot["chronicle_older"] = f"archive/session-{session:03}-chronicle.md"
+    _write_cast(state_dir, hot)
+    texts, _changed = _write_state(state_dir, hot)
+    return {"status": "bootstrapped", "cursor": hot["cursor"]["id"], "verbatim_turns": len(ordered),
+            "chronicle": len(hot["chronicle"]),
+            "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
+            "pact": {k: hot["pact"].get(k) for k in ("value", "stage", "label")} if hot.get("pact") else None,
+            "due": len(hot["offscreen"].get("due_now", []))}
+
+
+def check(state_dir):
+    """Проверка согласованности без записи: для CI и ручного аудита."""
+    state_dir = Path(state_dir)
+    hot, raw = _read_state(state_dir)
+    problems = []
+    if '"truth"' in raw[0] or '"hides"' in raw[0]:
+        problems.append(f"скрытая правда попала в {HOT_PATH}")
+    cursor = hot.get("cursor", {})
+    for field in ("id", "seq", "at", "place", "date", "time"):
+        if field not in cursor:
+            problems.append(f"в курсоре нет {field}")
+    if hot.get("last", {}).get("id") not in (cursor.get("id"), None) and \
+            not (hot.get("chronicle") and hot["chronicle"][-1].get("ooc")):
+        problems.append("последний ответ не совпадает с курсором")
+    if cursor.get("at") and heading(cursor["at"])["date"] != cursor.get("date"):
+        problems.append("дата курсора не соответствует игровому времени")
+    for key in hot.get("scene", {}).get("present", []):
+        if key not in hot.get("cast", {}) and key != "shiki":
+            problems.append(f"в сцене присутствует {key}, но карточки в составе нет")
+    for key, clock in hot.get("offscreen", {}).get("clocks", {}).items():
+        for field in ("owner", "what", "due", "if_unopposed"):
+            if not clock.get(field):
+                problems.append(f"часы {key}: нет поля {field}")
+    size = len(raw[0].encode("utf-8"))
+    if size > HOT_LIMIT:
+        problems.append(f"HOT разросся до {size} байт")
+    return {"ok": not problems, "problems": problems, "bytes": size, "cursor": cursor.get("id")}
