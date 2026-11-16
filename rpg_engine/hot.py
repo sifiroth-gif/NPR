@@ -342,6 +342,9 @@ def apply_turn(hot, turn):
              "chronicle": f"archive/session-{current[0]:03}-chronicle.md"})
         hot["chronicle"] = []
         hot["session"] = session
+        # The verified intersession marker belongs only to the cold-start
+        # boundary. Remove it after the FIRST exact new-session turn.
+        hot.pop("handoff", None)
 
     line = turn.get("line") or _shorten("Игрок: " + turn["player"], 200)
     entry = {"id": turn["id"], "at": turn["at"], "line": line}
