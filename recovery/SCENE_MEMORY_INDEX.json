@@ -1,9 +1,9 @@
 {
   "campaign": "shiki",
   "cursor": {
-    "at": "0006-09-30T21:12:00",
+    "at": "0006-09-30T21:13:00",
     "location": "Кусагакуре, управление внутренней безопасности, кабинет Хаясэ Нори",
-    "turn": "s04.text.028"
+    "turn": "s04.text.029"
   },
   "documents": [
     {
@@ -7674,23 +7674,17 @@
       "weight": 1.0
     }
   ],
-  "hot_sha256": "6e50877c176664453bc448c608d367861e4c8c0942e20fbcc45a3d70088b21e2",
+  "hot_sha256": "ffbbe7f3f1242ecad96bffeefe368822fd3eace45049a48f31406d86c8d4e72f",
   "instructions": "Source candidates only; primary sources and later corrections outrank snippets. If HOT hash differs, merge the newest HOT facts and do not claim the cache is current.",
   "live": {
     "latest_facts": {
-      "at": "0006-09-30T21:12:00",
-      "letters": "Shiki did not read sealed letter at home",
-      "nori": "Presents allegedly stamped new V-7 order with already completed tomorrow 06:00 receipt; Nori halted transfer for investigation, asks Shiki to examine recipient signature; no answer yet.",
-      "pact_appearance": "Stage1 near burden 10.76 at Sep30 21:12; first subtle dark superficial veins by RIGHT wrist/inner forearm seven concentric broken rings+roots, very faint damp stone ozone scent; no stage2 gauntness or disease, no skin contagion; visual progression and NPC reaction mandatory future",
-      "player": "Showered, put on canonical Kusa layered shinobi uniform and arrived at Nori office, no forced further Shiki decisions"
+      "current": "Sep30 1283 21:13 Nori office, V7 holds until review",
+      "nori_knowledge": "Nori knows Shiki is private medical researcher and worked on S17, has no knowledge of secret lab, Haku/Hozuki donor origin, private genome changes or entity/seals",
+      "nori_position": "Clarifies comment not accusation, does not suspect Shiki falsified V7 receipt, asks to inspect receiver signature on future-dated already-completed 'received' receipt",
+      "shiki": "Only challenged Nori with question; has not examined document or volunteered secrets",
+      "stages": "Contract appearance stage1 remains, cannot invent advanced gauntness"
     },
     "recent": [
-      {
-        "at": "0006-09-30T19:47:00",
-        "source": "recovery/FAST_SCENE.json#latest_turn",
-        "summary": "Шики перестроил уже перенесённую внутрь семиконтурную печать: отдельные слои наблюдения и исполнения, изоляция двигательных/патологических/мнемонических путей, независимые обратные клапаны и двойной глубинный ограничитель. Создал управляемый собственными печатями ВНУТРЕННИЙ буфер для ограниченного поступления духовной энергии сущности, без чужого контроля, сохранив седьмую границу замкнутой. После около 25 минут конструкция стабилизирована; существо впервые ответило внутренним смысловым голосом через четвёртый контур: может говорить, имеет собственную волю, спрашивает «зачем тебе понадобился её заключённый?». Имя и подлинная природа скрыты. Уцуро слышал вопрос Шики и спросил «кто-нибудь ответил?», содержание голоса неизвестно ему. Минасэ встревожена.",
-        "turn_id": "s04.text.023"
-      },
       {
         "at": "0006-09-30T20:01:00",
         "source": "recovery/FAST_SCENE.json#latest_turn",
@@ -7720,9 +7714,15 @@
         "source": "recovery/FAST_SCENE.json#latest_turn",
         "summary": "Шики сказал посыльному, что примет душ, переоденется и прибудет. Исполнил эти действия, явился в управление Кусагакуре к Хаясэ Нори. Во время душа заметны лишь начальные стадийные эффекты Договора: дополнительные тонкие корни от семи ПРЕРЫВИСТЫХ КОНЦЕНТРИЧЕСКИХ колец вокруг пустой чёрной сердцевины на правом предплечье, слабое потемнение сосудов у запястья, едва заметный запах мокрого камня и грозового воздуха. Без болезни, выраженной худобы и контактного заражения. Новое прямое правило игрока — ОБЯЗАТЕЛЬНО обыгрывать постепенное изменение внешности и реакции NPC, закреплено в PROGRESSION_RULES.json. Нори сообщает новое подозрительное предписание: В-7 передать завтра в 06:00, но приложенная квитанция уже содержит отметку 'получено' с будущим временем. Нори остановила выдачу до проверки и просит Шики посмотреть подпись получателя, тот ещё не посмотрел и ничего не ответил. Домашнее служебное письмо не открыто.",
         "turn_id": "s04.text.028"
+      },
+      {
+        "at": "0006-09-30T21:13:00",
+        "source": "recovery/FAST_SCENE.json#latest_turn",
+        "summary": "Шики спросил, что Нори имела в виду под «личными исследованиями». Капитан признала двусмысленность и сказала, что знает только о профессиональной и самостоятельной медицинской исследовательской деятельности Шики по С-17; о тайной лаборатории, донорах, Нулевом Геноме и семи внутренних замках ничего не знает и не утверждает. Не подозревает Шики в подделке квитанции В-7, собственную фразу исправила; подчёркнуто скрывать или изучать его личное ей не требуется. Снова предлагает оценить подпись получателя на предварительно отмеченной квитанции В-7, Шики ещё не изучил её, ответа нет. Нори тревожно не может прочитать реакцию Шики.",
+        "turn_id": "s04.text.029"
       }
     ],
-    "story": "S04.text.028 Saturday Sep30 1283 21:12 Kusa Internal Security office, Hayase Nori's room. Shiki answered messenger: 'Сейчас я приму душ переоденусь и прибуду', showered and changed into canonical layered dark graphite and olive Kusa shinobi uniform with high collar, low tied silver-white hair and gloves, then went to meet Nori. DIRECT OOC rule from user: evolving permanent pact physical/olfactory phenotype MUST BE SHOWN across game stages with grounded NPC psychological reactions, NO invented instant advanced-stage gauntness. At current stage1 burden ~10.76 (9.3743 as of Sep29 02:29 + 0.75/day to Sep30 21:12), first faint dark vessels near RIGHT inner forearm/wrist, new fine black roots amidst PERMANENT seven broken concentric black rings and abyssal empty center; fleeting wet-stone/ozone scent at very close range. NO stage2 eye hollows/full gauntness, no illness or weakness, no infectious skin touch. Detailed enduring player rule written in PROGRESSION_RULES.json 2026-11-16. Messenger acknowledges arrival, exits, still no letter opened. At HQ Nori autonomously investigated S-17 / V-7 chain of custody. NEW SCENE DEVELOPMENT: second formally stamped V-7 transport order received 19:12 demands container shipment tomorrow 06:00, but attached receipt inexplicably ALREADY MARKED 'received' with tomorrow's time (possible forged or pre-filled receipt). Nori froze transfer pending review and shows Shiki recipient signature, asks if recognizable based on earlier suspicious first document Shiki inspected on the north water channel post. Nori keeps personal/genetic lab privacy, sees Shiki's composed uncanny presence and slight ozone/mineral smell, controlled anxious response; do not equate smell with contagion. Shiki hasn't read sealed courier letter at home. User controls whether to inspect/sign or say anything to Nori. Seven internal prison seals and captive independent intact, no offscreen revelations or NPC omniscience."
+    "story": "S04.text.029 Sat Sep30 1283 21:13 Kusa Internal Security Hayase Nori office. Shiki challenged Nori's remark 'Моим личным исследованиям? Что вы имеете ввиду?' Nori noticed her implication, clarifies: She ONLY KNOWS Shiki is a medical shinobi/researcher with independent investigation of S-17 and outside-normal-investigation medical work; NO knowledge of secret NW limestone lab, Haku or Hozuki sources, his hidden DNA modifications, captive entity or new seal. Not an interrogation about private research, she did not claim access and said so. She is perturbed by Shiki's calm near-blank expression, irritation at being unable to gauge his reaction, physically stiffens; does not force Shiki to expose sleeves/contract. Nori says she does NOT suspect him personally in falsifying V-7 receipt and only wants him to recognize or inspect recipient signature on tomorrow morning 06:00 already-marked 'received' receipt, transfer halted by her pending investigation. She shows document but Shiki has NOT looked/recognized/handled it or replied yet, user controls. Shiki clean uniform with stage1 faint dark vessels at covered right inner forearm; faint close ozone mineral scent, no advanced stage and no infection. Seven internal seals intact, entity silent. Letter at Shiki home still unread. Dynamic event: tomorrow 06:00 V-7 physical delivery and pre-filled receipt risk."
   },
   "schema": "npr-github-scene-memory/1"
 }
