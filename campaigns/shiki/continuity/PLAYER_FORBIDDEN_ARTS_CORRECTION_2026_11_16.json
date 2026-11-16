@@ -24,7 +24,31 @@
       "description": "Пользователь выдыхает облако невидимых спор некротической чакры. После вдыхания они оседают в лёгких жертвы, поедают живые клетки, прорастают внутрь; развивается мучительный кашель и удушье, изо рта выходят чёрные гниющие лепестки из собственных отмерших лёгочных тканей. Тяжёлое поражение может завершиться смертью от удушья собственной плотью.",
       "nature": "Сверхъестественные некротические споры, возникающие из демонического Ситона, не обычная биологическая культура/лабораторный микроорганизм.",
       "tactical_limits": "Поражение требует вдохнуть облако и достаточного воздействия. Противник может защищать дыхательные пути, отходить, рассеивать облако воздухом/стихией, защищаться печатями и лечением. Не гарантирует мгновенную смерть или поражение любого шиноби; эффект зависит от сопротивления, степени воздействия и медицинской помощи.",
-      "status": "learned_after_2026-11-16_player_retcon_of_s04.text.054"
+      "status": "learned_after_2026-11-16_player_retcon_of_s04.text.054",
+      "hand_seals": {
+        "hands_required": 1,
+        "hand": "left",
+        "steps": [
+          {
+            "id": "blind_root",
+            "name": "Слепой корень",
+            "hand": "левая",
+            "fingers": "Большой прижимает безымянный и мизинец к ладони; средний вытянут вперёд, указательный согнут над ним крюком."
+          },
+          {
+            "id": "funerary_cup",
+            "name": "Погребальная чаша",
+            "hand": "левая",
+            "fingers": "Кончики большого, указательного и среднего соединены вокруг маленькой пустоты; безымянный и мизинец поджаты."
+          },
+          {
+            "id": "black_lotus",
+            "name": "Чёрный лотос",
+            "hand": "левая",
+            "fingers": "Средний и безымянный прижаты большим к ладони; указательный и мизинец разведены в стороны. Последняя печать направляет некротическую чакру в выдох."
+          }
+        ]
+      }
     },
     {
       "school": "byoton",
@@ -40,7 +64,31 @@
         "контакт в тайдзюцу",
         "сенбон, заряженный чакрой Бётона"
       ],
-      "secondary_transmission": "Гной при попадании на другого вызывает ожог и заражение, без заданной дистанции и без гарантии попадания."
+      "secondary_transmission": "Гной при попадании на другого вызывает ожог и заражение, без заданной дистанции и без гарантии попадания.",
+      "hand_seals": {
+        "hands_required": 1,
+        "hand": "left",
+        "steps": [
+          {
+            "id": "seed",
+            "name": "Зародыш",
+            "hand": "левая",
+            "fingers": "Подушечки большого и мизинца соединены внутри неплотного кулака, три остальных пальца закрывают полость."
+          },
+          {
+            "id": "pulse",
+            "name": "Пульс",
+            "hand": "левая",
+            "fingers": "Кончики указательного, среднего и безымянного сходятся на подушечке большого; мизинец согнут."
+          },
+          {
+            "id": "broken_suture",
+            "name": "Лопнувший шов",
+            "hand": "левая",
+            "fingers": "Указательный и средний скрещены, затем резко расходятся; остальные пальцы уходят в ладонь. Рисунок можно направить через касание или заряженный сенбон в правой руке."
+          }
+        ]
+      }
     }
   ],
   "progress_reconciliation": "Учебная практика и два события первого освоения s04.text.054 остаются ОДНИМ пройденным этапом для каждой школы, технические pact_event IDs о старых названиях трактуются как ссылки на фактическое освоение этих двух B-техник. Никакого повторного начисления за исправление. Существовавшие ранее базовые проявления (некроз на трупе, местное воспаление) сохраняются как предварительные опыты, но не образуют двух иных освоенных техник.",
@@ -51,5 +99,16 @@
     "source": "Прямая последующая реплика игрока",
     "supersedes": "Указанный в предыдущем прямом описании радиус 5 м, а также ограничение только тайдзюцу",
     "rule": "Убрать 5 метров. При разрыве бубонов гной, если попадёт на другого, вызывает ожог и заражение. Допустима доставка чакровой ловушки сенбоном. Никакого фиксированного радиуса, техника не обязательно поражает окружающих без попадания."
+  },
+  "revised_mastery_scene": "campaigns/shiki/continuity/REVISED_MASTERY_SCENE_S04_054_2026_11_16.md",
+  "mastery_scene_rewrite_2026_11_16": {
+    "source": "Player explicitly requested rewrite mastering scene with original one-hand hand signs and greater pact cosmetic consequence from using B-rank techniques",
+    "retcon_only": true,
+    "world_time": "01.10.1283 12:12–19:52 (unchanged)",
+    "learned": "Two B-rank arts remain learned s04.text.054; supersedes previous C-rank scene",
+    "actual_repeated_B_uses": "Three independent actual B-rank casts after attaining controllable formula of each learned art, performed in montage on wild animals under Utsuro guidance. Separate incident IDs in OOC correction s04.text.057, no double mastery.",
+    "pact": "From stage2 to stage3 by repeated real B-rank use, gradual external signs beginning during afternoon; darkening vessels on right forearm, sharpening cheekbones and under-eye shadows, close-range metallic/stone/singed-floral smell; no pathology, no stat nerf, no face roots, no passive infection before stage5.",
+    "specimens": "Utsuro supplied additional live wildlife himself to allow respiratory trials without inventing Shiki leaving lab; original hare lived through bubo trials but remains injured, other specimens suffered respiratory necrosis; dead tissue does not regenerate.",
+    "clock": "19:51 Minase reports 4 critical patients as before, Shiki has not answered or intervened."
   }
 }
