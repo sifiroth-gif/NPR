@@ -353,7 +353,7 @@ def might_contain(encoded, term):
 
 
 def _group(row):
-    match = re.search(r"session-(\\d{3})", row["source"])
+    match = re.search(r"session-(\d{3})", row["source"])
     if match:
         return "s" + match.group(1)
     if row["source"].startswith("recovery/TURN"):
