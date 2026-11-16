@@ -108,8 +108,12 @@ jobs:
             recovery/HOT.json recovery/sqlite \
             campaigns/shiki/continuity/SESSION_004_TO_005_CANON_1283-10-01.json
           git -C "$state" status --short
-          git -C "$state" commit -m "shiki: verified S4 source replay, recovered seven-lock transfer, close and compact S5"
-          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          if git -C "$state" diff --cached --quiet; then
+            echo "S4_TO_S5_ALREADY_PUBLISHED: verified revision 366; no second game-state commit"
+          else
+            git -C "$state" commit -m "shiki: verified S4 source replay, recovered seven-lock transfer, close and compact S5"
+            git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
           git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
           git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/remote-s5.sqlite"
           git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/remote-s5-state.json"
