@@ -84,6 +84,49 @@ class HotFoldTest(unittest.TestCase):
         self.assertEqual(len(state["chronicle"]), 2)
         self.assertEqual(state["chronicle"][-1]["line"], "Исправлено: Нори осталась у ворот.")
 
+    def test_amend_retracts_old_delta_and_preserves_only_corrected_facts(self):
+        state = base()
+        original = turn(45, "0006-10-01T07:14:00", d={
+            "cast": {"nori": {"knows+": ["Ошибочное признание Шики"]}},
+            "clocks": {"fabricated": {"owner": "nori", "what": "ложный приказ",
+                                      "due": "0006-10-01T08:00:00",
+                                      "if_unopposed": "незаконное задержание"}},
+            "pact_events": [{"id": "s04.text.045:cast", "type": "cast_B", "school": "byoton"}]
+        })
+        hot.apply_turn(state, original)
+        self.assertIn("Ошибочное признание Шики", state["cast"]["nori"]["knows"])
+        corrected = turn(45, "0006-10-01T07:15:00", amend=True,
+                         gm="Нори осталась за воротами.",
+                         d={"cast": {"nori": {"knows+": ["Шики закрыл калитку"]}}})
+        self.assertTrue(hot.apply_turn(state, corrected))
+        self.assertEqual(state["cast"]["nori"]["knows"], ["Тэцу ранен", "Шики закрыл калитку"])
+        self.assertNotIn("fabricated", state["offscreen"]["clocks"])
+        self.assertFalse(any(e["id"] == "s04.text.045:cast" for e in state["pact"]["events"]))
+        self.assertEqual(state["last"]["gm"], "Нори осталась за воротами.")
+        self.assertEqual(state["chronicle"][-1]["id"], "s04.text.045")
+        self.assertEqual(len(state["chronicle"]), 2)
+
+    def test_gap_and_backward_time_reject_without_touching_hot(self):
+        state = base()
+        for invalid in (turn(46, "0006-10-01T07:15:00"),
+                        turn(45, "0006-09-30T07:15:00")):
+            before = json.dumps(state, sort_keys=True, ensure_ascii=False)
+            with self.assertRaises(hot.TurnError):
+                hot.apply_turn(state, invalid)
+            self.assertEqual(json.dumps(state, sort_keys=True, ensure_ascii=False), before)
+        with self.assertRaises(hot.TurnError):
+            hot.apply_turn(state, turn(45, "0006-10-01T07:15:00", amend=True))
+        self.assertEqual(state["cursor"]["id"], "s04.text.044")
+
+    def test_amend_snapshot_is_private(self):
+        state = base()
+        hot.apply_turn(state, turn(45, "0006-10-01T07:15:00"))
+        public, private = hot._split_state(state)
+        self.assertNotIn("_undo", public)
+        self.assertNotIn('"snapshot"', json.dumps(public))
+        self.assertIn("undo", private)
+        self.assertEqual(private["undo"]["id"], "s04.text.045")
+
     def test_clock_resolution_and_thread_closure_are_recorded(self):
         state = base()
         hot.apply_turn(state, turn(45, "0006-10-01T09:30:00", d={
