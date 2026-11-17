@@ -1,0 +1,124 @@
+name: Shiki S5 to S6 verified intersession replay and archive
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-session5-to6.yml
+      - campaigns/shiki/maintenance/recover_session5_20261117.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+jobs:
+  replay:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Engine and source-memory regression tests
+        run: python -m unittest discover -s tests
+      - name: Isolate authorized private Shiki branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-session5" refs/remotes/origin/game-state/shiki
+      - name: Verify original exact user export, full folded live history and starting SQLite
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-session5"
+          test "$(git -C "$state" hash-object archive/session-005-source.md)" = 16246b61102a80dc3fd65acf425d371736ed4846
+          python - <<'PY'
+          import os,json,hashlib
+          from pathlib import Path
+          r=Path(os.environ["RUNNER_TEMP"])/"shiki-session5"
+          raw=(r/"archive/session-005-source.md").read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=="8219a7d48c481af632aea61825b0ede0d3715a92c974a39ea02af1f386682230"
+          rows=[json.loads(s) for s in (r/"archive/session-005-turns.jsonl").read_text().splitlines() if s.strip()]
+          assert len(rows)==58
+          assert [o["id"] for o in rows]==[f"s05.text.{i:03}" for i in range(1,59)]
+          assert rows[-1]["kind"]=="ooc" and "Отменяй" in rows[-1]["player"]
+          h=json.loads((r/"recovery/HOT.json").read_text())
+          assert h["cursor"]["id"]=="s05.text.058" and h["scene"]["as_of"]=="s05.text.057"
+          print("SOURCE_BOUND S5",len(rows),h["cursor"]["at"])
+          PY
+          python -m rpg_engine --db "$state/campaign.sqlite" verify --full
+      - name: Replay 54 played scenes with exact source, skip 4 OOC and entire canceled T058, close S5
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session5_20261117.py "$RUNNER_TEMP/shiki-session5"
+      - name: Independently verify SQLite, archive, source-index, ongoing world and small HOT
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-session5"
+          python -m rpg_engine --db "$state/campaign.sqlite" verify --full
+          python -m rpg_engine --db "$state/campaign.sqlite" hot-check --state-dir "$state"
+          python -m rpg_engine --db "$state/campaign.sqlite" audit-handoff --state-dir "$state"
+          python - <<'PY'
+          import json,os,hashlib
+          from pathlib import Path
+          from rpg_engine.engine import Campaign
+          from rpg_engine import git_state, verification, compaction, hot
+          root=Path(os.environ["RUNNER_TEMP"])/"shiki-session5"
+          game=Campaign(root/"campaign.sqlite")
+          data=verification.audit(game)
+          assert data["session"]==6 and data["at"]=="0006-10-02T10:12:40"
+          assert data["revision"]==421 and data["compacted_sessions"]==5
+          assert git_state.verify_manifest(json.loads((root/"state.json").read_text()),root/"campaign.sqlite")
+          i=json.loads((root/"archive/session-005-index.json").read_text())
+          assert i["live_turns"]==58 and i["played_sqlite_turns"]==54 and i["canceled_source_prompt"]==69
+          assert not any(x.get("canonical_id")=="s5.played.058" for x in i["index"])
+          assert "Двойник" in game.entry("turn","s5.played.057",audience="gm")["text"] or "двойник" in game.entry("turn","s5.played.057",audience="gm")["text"]
+          assert hot.check(root)["ok"]
+          h=json.loads((root/"recovery/HOT.json").read_text())
+          s=json.loads((root/"recovery/GM_ONLY.json").read_text())
+          assert h["handoff"]["next_session"]==6 and h["handoff"]["first_turn"]=="s06.text.001"
+          assert h["scene"]["as_of"]=="s05.text.057" and s["undo"] is None
+          assert len(h["chronicle"])<=2 and len(h["canon"])<=3
+          assert (root/"recovery/HOT.json").stat().st_size<72000
+          assert (root/"recovery/GM_ONLY.json").stat().st_size<30000
+          with game.connection() as con:
+              assert con.execute("SELECT count(*) FROM journal WHERE session=5 AND kind='turn'").fetchone()[0]==54
+              assert not con.execute("SELECT 1 FROM journal WHERE id='s5.played.058'").fetchone()
+              assert compaction.audit(con,root)
+          print("S5_ACCEPTED",data,"hot",(root/"recovery/HOT.json").stat().st_size,
+                "gm_only",(root/"recovery/GM_ONLY.json").stat().st_size)
+          PY
+      - name: Publish one verified historical SQLite commit with compact operational memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-session5"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f campaign.sqlite state.json
+          git -C "$state" add -A -- archive/session-005.md \
+             archive/session-005-index.json \
+             campaigns/shiki/continuity/SESSION_005_TO_006_CANON_1283-10-02.json \
+             recovery/HOT.json recovery/GM_ONLY.json recovery/sqlite
+          git -C "$state" status --short
+          if git -C "$state" diff --cached --quiet; then
+            echo S5_ALREADY_PUBLISHED_VERIFIED
+          else
+            git -C "$state" commit -m "shiki: verified S5 source replay and voided T058; close S6, archive and compact HOT/GM_ONLY"
+            git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/recheck-session6.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/recheck-session6-state.json"
+          cmp "$RUNNER_TEMP/recheck-session6.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/recheck-session6-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/recheck-session6.sqlite" verify --full
+          echo PUBLISHED=$(git rev-parse refs/remotes/origin/game-state/shiki)
