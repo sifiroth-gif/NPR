@@ -153,7 +153,7 @@ def main(root):
     chk=hot.check(root)
     if not chk["ok"]:raise ValueError("Post-close HOT review failed "+str(chk))
     if (root/"recovery/GM_ONLY.json").stat().st_size>=30000:
-        raise ValueError("GM_ONLY still oversized; preserve hidden context")
+        raise ValueError("GM_ONLY still oversized: "+str((root/"recovery/GM_ONLY.json").stat().st_size)+" bytes; sections="+str({k:len(json.dumps(v,ensure_ascii=False).encode("utf-8")) for k,v in g.items()}))
     state={"format":git_state.FORMAT,**game.verify(),"sha256":file_sha256(game.path)}
     (root/"state.json").write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
     shutil.rmtree(root/"recovery/sqlite",ignore_errors=True)
