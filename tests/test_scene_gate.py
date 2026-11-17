@@ -80,10 +80,17 @@ class SceneGateTests(unittest.TestCase):
         acknowledged = scene_gate.review_draft(
             packet, flawed, new_revelation=True,
             reviewed=packet["review_required"])
-        self.assertTrue(acknowledged["ready"])
-        # A pass proves the sources were acknowledged, not that the GM
-        # actually interpreted them correctly. That is a human GM decision.
-        self.assertIn("overlap_candidates_not_proof", acknowledged)
+        # Acknowledging a source is NOT enough to call the SAME claim new.
+        self.assertFalse(acknowledged["ready"])
+        self.assertTrue(any("source-bound contrast" in x for x in acknowledged["errors"]))
+        explained = scene_gate.review_draft(
+            packet, flawed, new_revelation=True,
+            reviewed=packet["review_required"],
+            novelty_explanation=(
+                "The old turn gave the motivation; the new independent source "
+                "would have to provide an actual additional document or name."),
+            novelty_source="private_reviewed_evidence")
+        self.assertTrue(explained["ready"])
 
     def test_turn_override_wins_over_stale_archive_and_no_duplicate(self):
         revised = dict(self.d)
