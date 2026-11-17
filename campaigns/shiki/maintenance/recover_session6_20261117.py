@@ -38,6 +38,21 @@ def due(game,at,n,ref):
     return out
 
 def main(root):
+    baseline = Campaign(root/"campaign.sqlite").verify()
+    if baseline["session"] == 7 and baseline["at"] == END:
+        # Refresh only the private-readable preview after the verified close.
+        # Keep the immutable SQLite, state.json, HOT and archive untouched.
+        complete, _ = hot._read_state(root)
+        _public, private = hot._split_state(complete)
+        private["undo"] = None
+        target = root/"recovery/GM_ONLY.json"
+        target.write_text(json.dumps(private, ensure_ascii=False,
+                         separators=(",", ":")) + "\n", encoding="utf-8")
+        checked = hot.check(root)
+        if not checked["ok"] or target.stat().st_size >= 30000:
+            raise ValueError("Private memory preview invalid: " + str(checked))
+        print("S7_SECRET_PREVIEW_REFRESHED", target.stat().st_size)
+        return
     folded=hot.fold(root)
     if folded["errors"] or folded["cursor"]!="s06.text.046":
         raise ValueError("Incomplete source history: "+str(folded))
