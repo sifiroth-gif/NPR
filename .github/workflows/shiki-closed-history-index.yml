@@ -43,7 +43,7 @@ jobs:
           assert git_state.verify_manifest(m,g.path)
           print("BASELINE_CANON_VERIFIED",v)
           PY
-      - name: Build canonical final-session source navigation, not obsolete mutable HOT drafts
+      - name: Build canonical final-session source navigation and strictly session-filtered search
         shell: bash
         run: |
           set -euo pipefail
