@@ -1,0 +1,122 @@
+name: Shiki canonical history refresh after session V close
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-closed-history-index.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+jobs:
+  reindex:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run all regression tests, including late-correction source checks
+        run: python -m unittest discover -s tests -v
+      - name: Read verified private game-state separately
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki-history" refs/remotes/origin/game-state/shiki
+          python - <<'PY'
+          import os,json
+          from pathlib import Path
+          from rpg_engine import Campaign,verification,git_state
+          root=Path(os.environ["RUNNER_TEMP"])/"shiki-history"
+          g=Campaign(root/"campaign.sqlite")
+          v=verification.audit(g)
+          m=json.loads((root/"state.json").read_text())
+          assert v["revision"]==421 and v["session"]==6 and v["compacted_sessions"]==5 and not v["pending"]
+          assert git_state.verify_manifest(m,g.path)
+          print("BASELINE_CANON_VERIFIED",v)
+          PY
+      - name: Build canonical final-session source navigation, not obsolete mutable HOT drafts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os,json,re
+          from pathlib import Path
+          from rpg_engine import heuristic_history,recall_audit
+          root=Path.cwd()
+          state=Path(os.environ["RUNNER_TEMP"])/"shiki-history"
+          old=json.loads((state/"archive/heuristic-recall/manifest.json").read_text())
+          print("INDEX_BEFORE",old["documents"],old["cursor"],len(old["shards"]))
+          for session in (3,4,5):
+              records=heuristic_history._closed_reviewed_export(state,session)
+              assert records and all(r["source"]==f"archive/session-{session:03}.md" for r in records)
+              print("CLOSED_CANONICAL",session,len(records),records[0]["id"],records[-1]["id"])
+          result=heuristic_history.save(root,state)
+          report=recall_audit.audit(state)
+          doc=heuristic_history.load(state/"archive/heuristic-recall/manifest.json")
+          assert report["source_coverage_ok"] and report["source_sessions"]==[1,2,3,4,5]
+          assert report["unindexed_source_sessions"]==[]
+          played5=[r for r in doc["records"] if r["source"]=="archive/session-005.md"]
+          assert len(played5)>=54
+          assert len({re.search(r"s5\.played\.\d+",r["id"]).group(0) for r in played5})==54
+          assert all(r["source"]!="archive/session-005-turns.jsonl" for r in doc["records"])
+          assert all(r["source"]!="archive/session-004-turns.jsonl" for r in doc["records"])
+          assert not any("s5.played.058" in r["id"] for r in doc["records"])
+          for s,q in ((3,"образец Ш"),(4,"Плачущие Бубоны"),(5,"двойник Кагэ заложник")):
+              matches=heuristic_history.query(doc,q,sessions=(s,),limit=30)["matches"]
+              relevant=[row for row in matches if row["source"]==f"archive/session-{s:03}.md"]
+              assert relevant,(s,q,matches[:5])
+              print("SOURCE_SEARCH_OK",s,q,len(relevant),
+                    [(x["id"],x["score"],x["source"],x["lines"]) for x in relevant[:3]])
+          manifest=json.loads((state/"archive/heuristic-recall/manifest.json").read_text())
+          expected={x["file"] for x in manifest["shards"]}
+          expected|={x["route"] for x in manifest["routes"]}
+          expected|={"manifest.json","audit.json"}
+          folder=state/"archive/heuristic-recall"
+          for orphan in folder.glob("shard-*.json"):
+              if orphan.name not in expected:
+                  orphan.unlink()
+          for orphan in folder.glob("route-*.json"):
+              if orphan.name not in expected:
+                  orphan.unlink()
+          (folder/"audit.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
+          print("INDEX_AFTER",result)
+          print("INDEX_AUDIT",report)
+          PY
+      - name: Publish only derived search files, preserve SQLite and original logs
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki-history"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -A -- archive/heuristic-recall
+          git -C "$state" status --short
+          if git -C "$state" diff --cached --quiet; then
+              echo SEARCH_INDEX_ALREADY_CURRENT
+          else
+              git -C "$state" commit -m "shiki: index final approved scenes of S3-S5 with source SHA and canceled-turn exclusion"
+              git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:archive/heuristic-recall/manifest.json > "$RUNNER_TEMP/remote-manifest.json"
+          cmp "$RUNNER_TEMP/remote-manifest.json" "$state/archive/heuristic-recall/manifest.json"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from rpg_engine import heuristic_history,recall_audit
+          state=Path(os.environ["RUNNER_TEMP"])/"shiki-history"
+          result=recall_audit.audit(state)
+          index=heuristic_history.load(state/"archive/heuristic-recall/manifest.json")
+          assert result["source_coverage_ok"] and index["documents"]>=1800
+          print("PUBLISHED_SEARCH_VALID",index["documents"],result["shards"])
+          PY
+          echo SEARCH_INDEX_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)
