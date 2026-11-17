@@ -116,7 +116,8 @@
         "manifestation": "Recognizable gaunt appearance forms slowly, shadowed eyes, increasingly visible superficial veins under thin skin on wrists/forearms; no muscular or strength nerf, Zero Genome retained. Rootlike tattoo traces may progress to covered upper arm/trunk, NEVER facial skin.",
         "olfactory_manifestation": "At conversational arm's length, an identifiable but restrained scent: stale hospital air, wet earth and a faint organic decay note, with distant metallic or medicinal undertones. Near Shiki while noticed; no persistent airborne plume or scent trail. Coexists with, and is secondary to, the stronger death-agony foreboding.",
         "psychological_impression": "Current stage: a restrained, psychologically uncanny conviction, for some NPCs, that lingering sick agony and approaching death are somehow close. Express through their body language and personal history, never universal fear.",
-        "direct_skin_contact_precursor": "Confirmed played in session 6 (s6.played.017 and .018): after several seconds of sustained bare living skin contact with Shiki at stage 3, a transient local vascular / toxin-like reaction CAN occur in contacted person's skin: ashen-gray discoloration and thin branching dark superficial vascular pattern. The marks fade gradually after the contact ends. This is a real physical change, separate from psychological dread. It is not yet the systemic chakra-disease infection of stage 5. Precursor strength and occurrence depend on contact duration and conditions; no guaranteed reaction to every light touch."
+        "direct_skin_contact_precursor": "Confirmed played in session 6 (s6.played.017 and .018): after several seconds of sustained bare living skin contact with Shiki at stage 3, a transient local vascular / toxin-like reaction CAN occur in contacted person's skin: ashen-gray discoloration and thin branching dark superficial vascular pattern. The marks fade gradually after the contact ends. This is a real physical change, separate from psychological dread. It is not yet the systemic chakra-disease infection of stage 5. Precursor strength and occurrence depend on contact duration and conditions; no guaranteed reaction to every light touch.",
+        "contract_blood_phenotype": "Прямое уточнение игрока 17.11.2026: на стадии 3 формируются внутренние тёмные чакроориентированные клеточно-фибриновые микросети в крови/сгустках самого Шики, даже при отсутствии чужих тканей. Это самостоятельное проявление Договора Семи Запоров, НЕ следствие внедрения биоптатов Аракавы и НЕ побочный результат Нулевого Генома. Внешние стимулы могут менять рисунок, но не создавать его. Кровь снаружи обычного красного цвета, гемостаз, газотранспорт, физические способности сохранены; заражения через кровь, аэрозоль или предметы нет."
       },
       {
         "stage": 4,
@@ -124,7 +125,8 @@
         "label": "Чёрные сосуды",
         "manifestation": "Deepened nonreversible gaunt/pale shape, prominent dark superficial vessels at neck/trunk, visual ink roots may reach NECK but NEVER FACE. STILL no harmful skin-to-skin transmission until stage 5. No fever, taste/pain loss or abnormal heat. Unusual cold-mineral smoke scent develops at stage-appropriate intensity.",
         "olfactory_manifestation": "During prolonged close personal contact the musty medical/earth/decay accord gains intensity, without range extension, stealth penalty or infection.",
-        "psychological_impression": "As outward pallor and vessel marks progress, perceived closeness may intensify dread of a slow painful death; depends on who notices and context."
+        "psychological_impression": "As outward pallor and vessel marks progress, perceived closeness may intensify dread of a slow painful death; depends on who notices and context.",
+        "contract_blood_phenotype": "Постепенное углубление тех же внутренних чакроориентированных сетей в крови с сохранной физиологической функцией; нет автоматического тромбоза, болезни и новых путей инфекции."
       },
       {
         "stage": 5,
@@ -132,7 +134,8 @@
         "label": "Активный контактный синдром",
         "manifestation": "The earlier stage-3 reversible local vascular reaction remains possible; only NOW possible to transfer abnormal chakra disease through unprotected DIRECT LIVING BARE SKIN against LIVING BARE SKIN. Chance and severity contextual, no guaranteed infection and no automatic contagious contact through gloves or clothes. No other route.",
         "olfactory_manifestation": "In direct close quarters the same signature is recognizable; it does not transmit disease via smell. Stage5 bare-living-skin-contact hazard remains separate.",
-        "psychological_impression": "Dread as before plus separately gated possible bare-skin contact illness; emotional signal itself never transmits disease or acts as genjutsu."
+        "psychological_impression": "Dread as before plus separately gated possible bare-skin contact illness; emotional signal itself never transmits disease or acts as genjutsu.",
+        "contract_blood_phenotype": "Изменения крови сохраняются, но не меняют канонический путь передачи болезни: только прямой контакт голой живой кожи с голой живой кожей на стадии 5."
       },
       {
         "stage": 6,
@@ -156,7 +159,8 @@
       "No reduction of battle movement, medical skill, intelligence, stamina stats solely because of gaunt appearance",
       "Never place tattoo roots onto Shiki's face"
     ],
-    "privacy": "GM-internal numeric value and exact thresholds stay hidden unless Shiki derives evidence through actual diagnostics. Player may request OOC counter status from GM."
+    "privacy": "GM-internal numeric value and exact thresholds stay hidden unless Shiki derives evidence through actual diagnostics. Player may request OOC counter status from GM.",
+    "blood_correction_2026_11_17": "В s07.text.017 впервые обнаруженный фенотип крови Шики вызван договором, не введёнными биоптатами. Это прямое исправление игрока и имеет приоритет над более ранней неуверенной трактовкой. Независим от чужих образцов и воспроизводится при других повреждениях при той же стадии; никаких новых инфекционных путей или уменьшения компетенций."
   },
   "idempotency": "Every added event must have a stable unique event_id and recorded at; repeated same event_id has NO additional cost; mastery once per distinct acquired technique id.",
   "version_note": "Direct player reminder 2026-11-17: preserve poisonous/toxic-like direct touch as part of pact side effects already demonstrated in original played session 6 s6.played.017 and s6.played.018. The later system-summary 'no contact effect before stage 5' was overly broad. Stage 3 local reversible vascular response, stage 5 systemic disease infection. Direct canon/played events outweigh summary.",
