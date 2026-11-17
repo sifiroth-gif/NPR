@@ -27,6 +27,21 @@ SENSITIVE = re.compile(
     r"молчал|скрыва|умолч|говорил|рассказ|призн|зна[ею]|помн|"
     r"зачем|почему|кто\s+приказ|повтор|раньше|прежде|обещал|"
     r"сообщал|документ|показал|предъяв|выяснил", re.I)
+# Bleach gm_event_graph principle: event/entity co-mentions are navigational
+# candidates, never evidence that the actor knew, caused or witnessed an event.
+ENTITY = re.compile(r"(?:\b[А-ЯЁ][а-яё]{3,}\b|\b[А-ЯЁA-Z]+-\d+\b)")
+ENTITY_STOP = {"Первое", "Второе", "Третье", "Сегодня", "Понедельник",
+               "Вторник", "Среда", "Четверг", "Пятница", "Суббота",
+               "Воскресенье", "Результат", "Ход"}
+
+
+def _entities(value):
+    return tuple(dict.fromkeys(
+        match.group(0) for match in ENTITY.finditer(value or "")
+        if match.group(0) not in ENTITY_STOP
+    ))
+
+
 DISCLOSURE = re.compile(
     r"рассказ|призн|объяснил|сказал|сообщил|предъяв|показал|"
     r"подтвердил|отрицал|отверг|выдал|раскрыл|предложил|"
@@ -197,8 +212,28 @@ def prepare(state_dir, *, player_action, actors, limit=10):
                 if item["disclosure_candidate"]:
                     required.append(item["turn"])
     required = list(dict.fromkeys(required))[:min(limit, 12)]
-    graph = {"nodes": list(graph_nodes.values())[:limit * len(actors)],
-             "edges": list(graph_edges.values())[:limit * len(actors)]}
+    # Expand the short event graph with generic source/entity candidate
+    # links. The graph is source-bounded and cannot promote co-occurrence
+    # to witness knowledge, causality, a new fact or an NPC intention.
+    actor_nodes = list(graph_nodes.values())[:limit * len(actors)]
+    entity_nodes, entity_edges = {}, {}
+    for node in actor_nodes:
+        for label in _entities(node["label"])[:8]:
+            key = "entity:" + label.casefold()
+            entity_nodes[key] = {"id": key, "kind": "mentioned_entity",
+                                 "label": label, "status": "candidate_only"}
+            edge_key = (node["id"], key)
+            entity_edges[edge_key] = {
+                "from": node["id"], "to": key,
+                "type": "mentions_entity",
+                "status": "candidate_only", "proof": "lexical_cooccurrence",
+            }
+    graph = {
+        "nodes": actor_nodes + list(entity_nodes.values()),
+        "edges": list(graph_edges.values())[:limit * len(actors)] +
+                 list(entity_edges.values())[:limit * len(actors) * 5],
+        "rule": "Chronology is source order; entity links only guide retrieval.",
+    }
     return {
         "format": FORMAT, "current_turn": (hot.get("cursor") or {}).get("id"),
         "latest_turn": turns[-1]["id"] if turns else None,
