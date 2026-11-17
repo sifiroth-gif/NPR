@@ -1,0 +1,64 @@
+name: Shiki S6 to S7 source-checked intersession
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/shiki-session6-to7.yml
+      - campaigns/shiki/maintenance/recover_session6_20261117.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  transition:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve exact private state branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki6" refs/remotes/origin/game-state/shiki
+          test -f "$RUNNER_TEMP/shiki6/campaign.sqlite"
+          test -f "$RUNNER_TEMP/shiki6/recovery/TURN.json"
+      - name: Replay only recorded S6 turns, check source and SQLite and prepare S7
+        shell: bash
+        run: |
+          set -euo pipefail
+          python campaigns/shiki/maintenance/recover_session6_20261117.py "$RUNNER_TEMP/shiki6"
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki6/campaign.sqlite" verify --full
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki6/campaign.sqlite" hot-check --state-dir "$RUNNER_TEMP/shiki6"
+      - name: Publish checked SQLite and historical archive; verify remote bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki6"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f -- campaign.sqlite state.json recovery/sqlite
+          git -C "$state" add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
+          git -C "$state" add -A -- campaigns/shiki/continuity/SESSION_006_TO_007_HANDOFF_1283-10-02.json
+          git -C "$state" commit -m "Close Shiki S6 from 46 saved turns, verify SQLite and compact live memory"
+          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/s7-reloaded.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/s7-reloaded-state.json"
+          cmp "$RUNNER_TEMP/s7-reloaded.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/s7-reloaded-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/s7-reloaded.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
