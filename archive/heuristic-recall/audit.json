@@ -1,8 +1,6 @@
 {
-  "documents": 1837,
-  "generic_probe_count": 5,
-  "generic_probe_hit_at_10": 5,
-  "groups": 6,
+  "schema": "npr-recall-audit/1",
+  "documents": 2059,
   "indexed_sessions": [
     1,
     2,
@@ -10,47 +8,6 @@
     4,
     5
   ],
-  "limitations": [
-    "Historical first session without a curated played/void index remains review_required",
-    "Source recall is not semantic entailment or NPC witnessed knowledge",
-    "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
-  ],
-  "load_ms": 50.89,
-  "probes": [
-    {
-      "query_ms": 48.94,
-      "query_terms": 1,
-      "session": 1,
-      "source_hit_at_10": true
-    },
-    {
-      "query_ms": 48.22,
-      "query_terms": 1,
-      "session": 2,
-      "source_hit_at_10": true
-    },
-    {
-      "query_ms": 47.72,
-      "query_terms": 1,
-      "session": 3,
-      "source_hit_at_10": true
-    },
-    {
-      "query_ms": 50.03,
-      "query_terms": 1,
-      "session": 4,
-      "source_hit_at_10": true
-    },
-    {
-      "query_ms": 44.61,
-      "query_terms": 1,
-      "session": 5,
-      "source_hit_at_10": true
-    }
-  ],
-  "schema": "npr-recall-audit/1",
-  "shards": 46,
-  "source_coverage_ok": true,
   "source_sessions": [
     1,
     2,
@@ -59,6 +16,49 @@
     5
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 48.22,
-  "warm_query_p95_ms": 50.03
+  "source_coverage_ok": true,
+  "shards": 60,
+  "groups": 6,
+  "load_ms": 79.29,
+  "warm_query_median_ms": 76.75,
+  "warm_query_p95_ms": 86.18,
+  "generic_probe_hit_at_10": 5,
+  "generic_probe_count": 5,
+  "probes": [
+    {
+      "session": 1,
+      "query_terms": 1,
+      "source_hit_at_10": true,
+      "query_ms": 76.49
+    },
+    {
+      "session": 2,
+      "query_terms": 1,
+      "source_hit_at_10": true,
+      "query_ms": 76.75
+    },
+    {
+      "session": 3,
+      "query_terms": 1,
+      "source_hit_at_10": true,
+      "query_ms": 75.97
+    },
+    {
+      "session": 4,
+      "query_terms": 1,
+      "source_hit_at_10": true,
+      "query_ms": 86.18
+    },
+    {
+      "session": 5,
+      "query_terms": 1,
+      "source_hit_at_10": true,
+      "query_ms": 78.67
+    }
+  ],
+  "limitations": [
+    "Historical first session without a curated played/void index remains review_required",
+    "Source recall is not semantic entailment or NPC witnessed knowledge",
+    "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
+  ]
 }
