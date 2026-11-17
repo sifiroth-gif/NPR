@@ -210,7 +210,8 @@ def prepare(state_dir, *, player_action, actors, limit=10):
     }
 
 
-def review_draft(packet, draft, *, reviewed=(), new_revelation=False):
+def review_draft(packet, draft, *, reviewed=(), new_revelation=False,
+                 novelty_explanation="", novelty_source=""):
     """Fail closed if a source-sensitive draft was not reviewed.
 
     This cannot semantically prove that paraphrases differ. Explicit human/GM
@@ -234,7 +235,15 @@ def review_draft(packet, draft, *, reviewed=(), new_revelation=False):
             common = tokens & prior
             if len(common) >= 3 and len(common) >= max(3, int(0.25 * len(prior))):
                 overlap.append({"turn": item["turn"], "shared_terms": sorted(common)[:10]})
-    if new_revelation and (overlap or NOVELTY.search(draft)) and not checked:
+    if (new_revelation or NOVELTY.search(draft)) and overlap:
+        # In Bleach's scene gate, an acknowledged source is not sufficient:
+        # the draft must distinguish a genuinely NEW fact from an already
+        # played disclosure. This prevents the s07.030 Arakawa regression.
+        if len(novelty_explanation.strip()) < 40 or not novelty_source.strip():
+            errors.append(
+                "Already-disclosed facts overlap a novelty claim; provide "
+                "a source-bound contrast explaining the NEW information")
+    if new_revelation and not checked:
         errors.append("Novelty claim without source review")
     return {"ready": not errors, "errors": errors,
             "overlap_candidates_not_proof": overlap,
@@ -264,13 +273,17 @@ def main(argv=None):
     p.add_argument("--draft", type=Path)
     p.add_argument("--reviewed", action="append", default=[])
     p.add_argument("--new-revelation", action="store_true")
+    p.add_argument("--novelty-explanation", default="")
+    p.add_argument("--novelty-source", default="")
     args = p.parse_args(argv)
     result = prepare(args.state_dir, player_action=args.player_action,
                      actors=args.actor, limit=args.limit)
     if args.draft:
         result["review"] = review_draft(
             result, args.draft.read_text(encoding="utf-8"),
-            reviewed=args.reviewed, new_revelation=args.new_revelation)
+            reviewed=args.reviewed, new_revelation=args.new_revelation,
+            novelty_explanation=args.novelty_explanation,
+            novelty_source=args.novelty_source)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if not args.draft or result["review"]["ready"] else 1
 
