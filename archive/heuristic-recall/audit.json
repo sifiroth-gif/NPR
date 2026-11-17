@@ -1,5 +1,5 @@
 {
-  "documents": 1817,
+  "documents": 1818,
   "generic_probe_count": 5,
   "generic_probe_hit_at_10": 5,
   "groups": 7,
@@ -15,41 +15,41 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 64.67,
+  "load_ms": 63.32,
   "probes": [
     {
-      "query_ms": 59.27,
+      "query_ms": 59.96,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 58.79,
+      "query_ms": 60.21,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 58.97,
+      "query_ms": 59.58,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 62.63,
+      "query_ms": 61.99,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 63.61,
+      "query_ms": 61.57,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 46,
+  "shards": 47,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -59,6 +59,6 @@
     5
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 59.27,
-  "warm_query_p95_ms": 63.61
+  "warm_query_median_ms": 60.21,
+  "warm_query_p95_ms": 61.99
 }
