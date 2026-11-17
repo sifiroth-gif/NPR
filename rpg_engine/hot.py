@@ -46,8 +46,8 @@ MONTHS = ("января", "февраля", "марта", "апреля", "ма�
 
 LINE_LIMIT = 320
 KNOWS_LIMIT = 14
-CHRONICLE_IN_HOT = 8
-CANON_IN_HOT = 14
+CHRONICLE_IN_HOT = 4
+CANON_IN_HOT = 6
 CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
 RESOLVED_KEEP = 6
@@ -837,8 +837,11 @@ def check(state_dir):
         problems.append("сцена отстаёт от последнего игрового хода")
     if cursor.get("at") and heading(cursor["at"])["date"] != cursor.get("date"):
         problems.append("дата курсора не соответствует игровому времени")
+    # kage_guard_team denotes an aggregate of eight guards in scene.positions;
+    # it is not one real NPC with an independently attributable memory.
+    aggregate_keys = {"kage_guard_team"}
     for key in hot.get("scene", {}).get("present", []):
-        if key not in hot.get("cast", {}) and key != "shiki":
+        if key not in hot.get("cast", {}) and key != "shiki" and key not in aggregate_keys:
             problems.append(f"в сцене присутствует {key}, но карточки в составе нет")
     for key, clock in hot.get("offscreen", {}).get("clocks", {}).items():
         for field in ("owner", "what", "due", "if_unopposed"):
