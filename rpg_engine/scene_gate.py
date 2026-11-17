@@ -252,7 +252,7 @@ def historical_candidates(root, state_dir, query, *, limit=5):
     path = Path(state_dir) / heuristic_history.DESTINATION
     index = (heuristic_history.load(path) if path.is_file()
              else heuristic_history.build(root, state_dir))
-    return heuristic_history.query(index, query, limit=limit)["results"]
+    return heuristic_history.query(index, query, limit=limit)["matches"]
 
 
 def main(argv=None):
