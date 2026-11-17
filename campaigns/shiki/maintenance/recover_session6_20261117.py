@@ -42,6 +42,14 @@ def main(root):
     if baseline["session"] == 7 and baseline["at"] == END:
         # Refresh only the private-readable preview after the verified close.
         # Keep the immutable SQLite, state.json, HOT and archive untouched.
+        # Earlier close was valid but kept one redundant operational line
+        # above the strict UTF-8 budget; exact originals remain in archive.
+        visible_path = root/"recovery/HOT.json"
+        visible = json.loads(visible_path.read_text(encoding="utf-8"))
+        visible["chronicle"] = visible.get("chronicle", [])[-1:]
+        visible["canon"] = visible.get("canon", [])[-2:]
+        visible_path.write_text(json.dumps(visible, ensure_ascii=False,
+                               separators=(",", ":")) + "\n", encoding="utf-8")
         complete, _ = hot._read_state(root)
         _public, private = hot._split_state(complete)
         private["undo"] = None
