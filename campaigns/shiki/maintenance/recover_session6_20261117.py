@@ -149,7 +149,7 @@ def main(root):
     h["scene"]["present"]=[k for k in h["scene"].get("present",[])
                             if k not in ("two_medical_witnesses","junior_lab_technician")]
     for key,value in (("recovery/HOT.json",h),("recovery/GM_ONLY.json",g)):
-        (root/key).write_text(json.dumps(value,ensure_ascii=False,indent=1)+"\n")
+        (root/key).write_text(json.dumps(value,ensure_ascii=False,separators=(",",":"))+"\n")
     chk=hot.check(root)
     if not chk["ok"]:raise ValueError("Post-close HOT review failed "+str(chk))
     if (root/"recovery/GM_ONLY.json").stat().st_size>=30000:
