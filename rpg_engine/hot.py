@@ -607,7 +607,20 @@ def _read_state(state_dir):
     secret_path = state_dir / SECRET_PATH
     raw_secret = secret_path.read_text(encoding="utf-8") if secret_path.is_file() else ""
     secret = json.loads(raw_secret) if raw_secret else {}
-    hot["offscreen"] = secret.get("offscreen") or {"truth": {}, "clocks": {}, "resolved": []}
+    offscreen = secret.get("offscreen") or {"truth": {}, "clocks": {}, "resolved": []}
+    if "truth_zlib64" in offscreen:
+        # Rehydrate hidden, losslessly stored facts before applying any turn.
+        if offscreen.get("truth"):
+            raise ValueError("GM_ONLY contains both plain and compressed truth")
+        encoded = offscreen["truth_zlib64"]
+        payload = zlib.decompress(base64.b64decode(encoded, validate=True))
+        loaded = json.loads(payload.decode("utf-8"))
+        if not isinstance(loaded, dict):
+            raise ValueError("compressed GM_ONLY truth is not an object")
+        offscreen = dict(offscreen)
+        offscreen.pop("truth_zlib64")
+        offscreen["truth"] = loaded
+    hot["offscreen"] = offscreen
     hot["_hides"] = dict(secret.get("cast") or {})
     hot["_undo"] = secret.get("undo")
     for key, hidden in hot["_hides"].items():
@@ -625,6 +638,17 @@ def _split_state(hot):
         if "hides" in card:
             hides[key] = card.pop("hides")
     offscreen = public.pop("offscreen", {})
+    # The secret facts grow across dozens of sessions. Store them losslessly
+    # compressed, not by dropping older hidden evidence or NPC motives.
+    truth = offscreen.get("truth")
+    if isinstance(truth, dict):
+        truth_bytes = json.dumps(truth, ensure_ascii=False, sort_keys=True,
+                                 separators=(",", ":")).encode("utf-8")
+        if len(truth_bytes) > 4096:
+            offscreen = dict(offscreen)
+            offscreen.pop("truth")
+            offscreen["truth_zlib64"] = base64.b64encode(
+                zlib.compress(truth_bytes, level=9)).decode("ascii")
     public["offscreen"] = {"see": SECRET_PATH, "due": len(offscreen.get("due_now", [])),
                            "clocks": len(offscreen.get("clocks", {}))}
     secret = {"schema": SECRET_SCHEMA,
