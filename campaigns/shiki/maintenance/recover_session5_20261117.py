@@ -113,7 +113,7 @@ def due_events(game,n,target,source_ref):
                     "visibility":"gm_only","source_ref":source_ref,"operations":ops})
     return out
 
-def final_ops(hot, ledger):
+def final_ops(hot, game):
     ops=[]
     known={
        "nori":"Хаясэ Нори",
@@ -122,7 +122,11 @@ def final_ops(hot, ledger):
        "kage_doppelganger":"Неизвестный двойник Кагэ",
        "captive_guard":"Захваченный охранник внутреннего поста"
     }
+    with game.connection() as con:
+        already={r[0] for r in con.execute("SELECT id FROM npcs")}
     for key,name in known.items():
+        if key in already:
+            continue
         card=(hot.get("cast") or {}).get(key, {})
         ops.append({"op":"upsert_npc","npc":{"id":key,"name":name,
              "profile":{"role":card.get("role","Наблюдаемая роль в последней сцене"),
@@ -265,7 +269,7 @@ def main(root:Path):
                 {"opened":"зрение, слух, ощущения, эмоциональная окраска — только в одну сторону",
                  "closed":"моторика, мысли, воспоминания"},True))
         if i==57:
-            ops+=final_ops(h,rows)
+            ops+=final_ops(h,game)
         if ops:events.append(event(i,target,ops,ref))
         with game.connection() as con:
             prev=con.execute("SELECT id FROM journal WHERE kind='turn' ORDER BY seq DESC LIMIT 1").fetchone()
