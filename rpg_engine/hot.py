@@ -609,16 +609,22 @@ def _read_state(state_dir):
     secret = json.loads(raw_secret) if raw_secret else {}
     offscreen = secret.get("offscreen") or {"truth": {}, "clocks": {}, "resolved": []}
     if "truth_zlib64" in offscreen:
-        # Rehydrate hidden, losslessly stored facts before applying any turn.
-        if offscreen.get("truth"):
-            raise ValueError("GM_ONLY contains both plain and compressed truth")
+        # Rehydrate complete hidden facts; the readable preview is not a
+        # second source of truth. Verify it against the complete payload.
         encoded = offscreen["truth_zlib64"]
         payload = zlib.decompress(base64.b64decode(encoded, validate=True))
         loaded = json.loads(payload.decode("utf-8"))
         if not isinstance(loaded, dict):
             raise ValueError("compressed GM_ONLY truth is not an object")
+        preview = offscreen.get("truth_preview", {})
+        if not isinstance(preview, dict) or any(loaded.get(k) != v for k, v in preview.items()):
+            raise ValueError("GM_ONLY truth preview does not match full archive")
+        if offscreen.get("truth_index") and list(loaded) != offscreen["truth_index"]:
+            raise ValueError("GM_ONLY truth index differs from full archive")
         offscreen = dict(offscreen)
         offscreen.pop("truth_zlib64")
+        offscreen.pop("truth_preview", None)
+        offscreen.pop("truth_index", None)
         offscreen["truth"] = loaded
     hot["offscreen"] = offscreen
     hot["_hides"] = dict(secret.get("cast") or {})
@@ -645,10 +651,25 @@ def _split_state(hot):
         truth_bytes = json.dumps(truth, ensure_ascii=False, sort_keys=True,
                                  separators=(",", ":")).encode("utf-8")
         if len(truth_bytes) > 4096:
+            # Recent entries are kept readable to GitHub-only GMs; all older
+            # material remains compressed in the same authenticated file.
+            recent = {}
+            budget = 6800
+            for k, v in reversed(list(truth.items())):
+                entry_bytes = len(json.dumps({k: v}, ensure_ascii=False,
+                                separators=(",", ":")).encode("utf-8"))
+                if entry_bytes > budget:
+                    continue
+                recent[k] = v
+                budget -= entry_bytes
+                if len(recent) >= 8:
+                    break
             offscreen = dict(offscreen)
             offscreen.pop("truth")
             offscreen["truth_zlib64"] = base64.b64encode(
                 zlib.compress(truth_bytes, level=9)).decode("ascii")
+            offscreen["truth_preview"] = dict(reversed(list(recent.items())))
+            offscreen["truth_index"] = list(truth)
     public["offscreen"] = {"see": SECRET_PATH, "due": len(offscreen.get("due_now", [])),
                            "clocks": len(offscreen.get("clocks", {}))}
     secret = {"schema": SECRET_SCHEMA,
