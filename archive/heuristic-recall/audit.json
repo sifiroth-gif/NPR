@@ -1,8 +1,8 @@
 {
-  "documents": 2129,
+  "documents": 2130,
   "generic_probe_count": 7,
   "generic_probe_hit_at_10": 7,
-  "groups": 9,
+  "groups": 8,
   "indexed_sessions": [
     1,
     2,
@@ -17,53 +17,53 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 103.64,
+  "load_ms": 85.51,
   "probes": [
     {
-      "query_ms": 98.09,
+      "query_ms": 80.28,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 103.51,
+      "query_ms": 79.04,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 97.3,
+      "query_ms": 90.06,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 114.09,
+      "query_ms": 108.23,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 99.59,
+      "query_ms": 80.09,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 96.76,
+      "query_ms": 79.42,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 107.0,
+      "query_ms": 83.61,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 65,
+  "shards": 64,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -75,6 +75,6 @@
     7
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 99.59,
-  "warm_query_p95_ms": 114.09
+  "warm_query_median_ms": 80.28,
+  "warm_query_p95_ms": 108.23
 }
