@@ -1,63 +1,70 @@
 {
-  "documents": 2126,
-  "generic_probe_count": 6,
-  "generic_probe_hit_at_10": 6,
-  "groups": 8,
+  "documents": 2127,
+  "generic_probe_count": 7,
+  "generic_probe_hit_at_10": 7,
+  "groups": 9,
   "indexed_sessions": [
     1,
     2,
     3,
     4,
     5,
-    6
+    6,
+    7
   ],
   "limitations": [
     "Historical first session without a curated played/void index remains review_required",
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 84.47,
+  "load_ms": 106.31,
   "probes": [
     {
-      "query_ms": 82.69,
+      "query_ms": 99.28,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 82.24,
+      "query_ms": 99.04,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 81.98,
+      "query_ms": 98.69,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 94.34,
+      "query_ms": 113.37,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 86.07,
+      "query_ms": 100.82,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 82.61,
+      "query_ms": 98.34,
       "query_terms": 1,
       "session": 6,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 104.23,
+      "query_terms": 1,
+      "session": 7,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 64,
-  "source_coverage_ok": false,
+  "shards": 65,
+  "source_coverage_ok": true,
   "source_sessions": [
     1,
     2,
@@ -67,9 +74,7 @@
     6,
     7
   ],
-  "unindexed_source_sessions": [
-    7
-  ],
-  "warm_query_median_ms": 82.65,
-  "warm_query_p95_ms": 94.34
+  "unindexed_source_sessions": [],
+  "warm_query_median_ms": 99.28,
+  "warm_query_p95_ms": 113.37
 }
