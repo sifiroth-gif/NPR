@@ -209,6 +209,8 @@ def run(args):
                 report["review"] = scene_gate.review_draft(
                     report, args.draft.read_text(encoding="utf-8"),
                     reviewed=args.reviewed, new_revelation=args.new_revelation)
+            if args.draft and not report["review"]["ready"]:
+                raise ValueError("Scene-gate review incomplete: " + "; ".join(report["review"]["errors"]))
             return report
         case "scene-memory-build":
             return scene_memory.write_live_index(args.source_root, args.state_dir, args.output)
