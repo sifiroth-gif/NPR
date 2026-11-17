@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python campaigns/shiki/maintenance/recover_session6_20261117.py "$RUNNER_TEMP/shiki6"
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session6_20261117.py "$RUNNER_TEMP/shiki6"
           python -m rpg_engine --db "$RUNNER_TEMP/shiki6/campaign.sqlite" verify --full
           python -m rpg_engine --db "$RUNNER_TEMP/shiki6/campaign.sqlite" hot-check --state-dir "$RUNNER_TEMP/shiki6"
       - name: Publish checked SQLite and historical archive; verify remote bytes
