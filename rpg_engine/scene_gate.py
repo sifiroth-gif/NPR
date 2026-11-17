@@ -186,11 +186,17 @@ def prepare(state_dir, *, player_action, actors, limit=10):
         selected_list = sorted(selected.values(), key=lambda x: int(x["turn"].rsplit(".",1)[-1]))
         # The source list is a candidate; the GM must actually read any
         # relevant original player+GM text before certifying disclosure novelty.
-        known = (hot.get("cast") or {}).get(actor, {}).get("knows", [])
-        known = [value for value in known if isinstance(value, str)]
+        profile = (hot.get("cast") or {}).get(actor, {})
+        known = [value for value in profile.get("knows", [])
+                 if isinstance(value, str)]
         actor_packets[actor] = {
             "played_disclosures": selected_list,
             "npc_knows_cues": known[-5:],
+            "npc_agency": {key: profile.get(key, "") for key in
+                           ("role", "wants", "fears", "leverage", "stance", "voice")},
+            "knowledge_limits": (
+                "The player, GM and NPC have separate knowledge. An NPC can "
+                "lie or infer, but assertions need an actual access route."),
             "known_vs_disclosed": "An actor's knowledge does not mean the actor told the player.",
         }
         for item in selected_list:
