@@ -551,9 +551,12 @@ def query(index, question, *, limit=9, sessions=(), no_guess=True):
     df = index["df"]
     total = max(1, index["documents"])
     for item in index["records"]:
-        if sessions and item["kind"] == "played":
+        if sessions:
+            # An explicit --session is a provenance filter: global correction
+            # cards stay visible in the unfiltered search, but must not crowd
+            # out the actual scene from this session's evidence results.
             match = re.search(r"session-(\d{3})", item["source"])
-            if match and int(match.group(1)) not in sessions:
+            if not match or int(match.group(1)) not in sessions:
                 continue
         lex = set(item["terms"].split())
         exact = set(parsed) & lex
