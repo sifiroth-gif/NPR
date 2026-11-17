@@ -185,6 +185,64 @@ def _old_session(state, session):
                 digest=digest, authority=1.3))
     return out
 
+def _closed_reviewed_export(state, session):
+    """Index only approved, source-verified text after a session is closed.
+
+    Later player corrections can replace an earlier HOT draft. For closed
+    sessions 3+, the exact session export includes those accepted revisions,
+    while the live text ledger intentionally remains a historical original.
+    """
+    catalog = state / f"archive/session-{session:03}-index.json"
+    if not catalog.is_file():
+        return []
+    info = json.loads(catalog.read_text(encoding="utf-8-sig"))
+    digest_expected = info.get("canonical_export_sha256") or info.get("export_sha256")
+    if not digest_expected:
+        return []
+    source = info.get("canonical_export") or f"archive/session-{session:03}.md"
+    path = state / source
+    if not path.is_file():
+        raise ValueError(f"Reviewed closed session {session}: missing canonical export {source}")
+    digest = _digest(path)
+    if digest != digest_expected:
+        raise ValueError(f"Reviewed closed session {session}: canonical export SHA mismatch")
+    reviewed = info.get("index", info.get("entries", []))
+    allowed = {"played", "source_recovered", "source_replaced"}
+    expected = []
+    for row in reviewed:
+        if row.get("status") not in allowed:
+            continue
+        expected.extend(row.get("receipts", []))
+        if row.get("canonical_id"):
+            expected.append(row["canonical_id"])
+    if len(expected) != len(set(expected)):
+        raise ValueError(f"Reviewed closed session {session}: duplicate canonical turn ID")
+    lines = path.read_text(encoding="utf-8").splitlines()
+    pattern = re.compile(
+        r"^##\s+(000\d-\d\d-\d\dT\d\d:\d\d:\d\d)\s+·\s+(.+?)\s+·\s+"
+        r"(s\d+\.played\.\d+(?:\.p\d+)?)\s*$")
+    anchors = []
+    for line_no, line in enumerate(lines, 1):
+        hit = pattern.match(line)
+        if hit:
+            anchors.append((line_no,hit.group(1),hit.group(2),hit.group(3)))
+    found = [entry[3] for entry in anchors]
+    if not expected or len(found)!=len(set(found)) or set(found)!=set(expected):
+        raise ValueError(
+            f"Reviewed closed session {session}: export entries disagree with "
+            f"confirmed replay receipts (found {len(found)}, expected {len(expected)})")
+    output = []
+    for i,(start,at,place,turn_id) in enumerate(anchors):
+        end = anchors[i+1][0]-1 if i+1<len(anchors) else len(lines)
+        for chunk_id,(a,b,body) in enumerate(_windows(lines,start,end),1):
+            output.append(_entry(
+                key=f"{turn_id}.{chunk_id:02}", source=source,
+                body=body, at=at, headline=f"{place} {turn_id}",
+                kind="played", line_start=a, line_end=b,
+                digest=digest, authority=1.5))
+    return output
+
+
 def _turn_sessions(state):
     """Automatically include all live accepted JSONL sessions and latest TURN.
 
@@ -199,6 +257,8 @@ def _turn_sessions(state):
             continue
         if number < 4:
             continue  # These sessions have independent reviewed source indexes.
+        if _closed_reviewed_export(state, number):
+            continue  # Closed canonical source has replaced mutable HOT drafts.
         excluded = set()
         idx = state / f"archive/session-{number:03}-index.json"
         if idx.is_file():
@@ -295,7 +355,8 @@ def build(root, state):
     for catalog in sorted((state / "archive").glob("session-*-index.json")):
         number = int(catalog.name.split("-")[1])
         if number != 1:
-            entries.extend(_old_session(state, number))
+            verified = _closed_reviewed_export(state, number)
+            entries.extend(verified if verified else _old_session(state, number))
     entries += _turn_sessions(state)
     entries += _canon(root, state)
     if len(entries) > MAX_RECORDS:
