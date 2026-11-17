@@ -65,6 +65,12 @@ def stem(word):
 def _lexicon(text):
     # Index every distinct rare term before pruning; include temporal anchors.
     words = [stem(w) for w in tokens(text)]
+    # Closed-session exports are intentionally split into <=2400-character
+    # source spans. Their complete term set is small enough to retain, and
+    # dropping once-mentioned medical terms or names made historical recall
+    # silently miss real events. Large cast/canon cards remain pruned.
+    if len(str(text)) <= 6000:
+        return " ".join(dict.fromkeys(words))
     freq = Counter(words)
     ordered = sorted(freq, key=lambda w: (-min(freq[w], 5), -len(w), w))
     chosen = list(dict.fromkeys(ordered[:100] +
