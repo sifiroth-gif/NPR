@@ -1,6 +1,6 @@
 # Общая историческая память NPR: рабочий маршрут
 
-**Действующий код:** `rpg_engine/heuristic_history.py`, `rpg_engine/scene_memory.py`, `rpg_engine/preparation.py`, `rpg_engine/hot.py`.
+**Действующий код:** `rpg_engine/heuristic_history.py`, `rpg_engine/scene_memory.py`, `rpg_engine/scene_gate.py`, `rpg_engine/preparation.py`, `rpg_engine/hot.py`. Предсценная проверка уже сказанного NPC — в [SOURCE_REVIEWED_SCENE_GATE.md](SOURCE_REVIEWED_SCENE_GATE.md).
 
 Цель — поиск по **всей** подтверждённой доступной истории игры. Не существует тематических частных поисков «для Хаку», «для медицины» или «для последней сессии». Смена сеттинга не требует переписывать список имён и событий. Поисковая выдача не становится каноном без проверки первоисточника.
 
