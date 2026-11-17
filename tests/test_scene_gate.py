@@ -108,7 +108,10 @@ class SceneGateTests(unittest.TestCase):
         graph = packet["graph"]
         self.assertTrue(graph["nodes"])
         self.assertTrue(graph["edges"])
-        self.assertTrue(all(edge["status"] == "source_order_only" for edge in graph["edges"]))
+        self.assertTrue(any(edge["status"] == "source_order_only" for edge in graph["edges"]))
+        self.assertTrue(any(edge["type"] == "mentions_entity" for edge in graph["edges"]))
+        self.assertTrue(all(edge["status"] in ("source_order_only", "candidate_only")
+                            for edge in graph["edges"]))
 
     def test_unrelated_actors_do_not_inherit_arakawa_disclosures(self):
         packet = scene_gate.prepare(
