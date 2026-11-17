@@ -586,6 +586,19 @@ def fast_packet_from_files(root, state_dir, *, action="", limit=9):
     packet["cursor"] = cur
     packet["status"] = ("text_ahead_unreplayed" if hot.get("runtime", {}).get(
         "text_ahead_unreplayed") else "hot_current")
+    # Bleach-style actor-scoped source review is required for dialogue about
+    # what an NPC already said, concealed, knew, promised or disclosed.
+    # Fast path for routine actions remains untouched.
+    from . import scene_gate
+    if scene_gate.SENSITIVE.search(action):
+        present = (hot.get("scene") or {}).get("present") or []
+        npcs = [actor for actor in present if actor in (hot.get("cast") or {})
+                and actor not in ("shiki", "player")][:8]
+        if npcs:
+            packet["npc_source_review"] = scene_gate.prepare(
+                state_dir, player_action=action, actors=npcs, limit=10)
+            packet["npc_review_required"] = bool(
+                packet["npc_source_review"]["review_required"])
     if newest_turn.get("id") and newest_turn["id"] != current_id:
         packet["status"] = "text_ahead_pending_fold"
         packet["pending_turn"] = {
