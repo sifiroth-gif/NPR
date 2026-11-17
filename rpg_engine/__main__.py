@@ -58,6 +58,8 @@ def parser():
     review_scene.add_argument("--draft", type=Path)
     review_scene.add_argument("--reviewed", action="append", default=[])
     review_scene.add_argument("--new-revelation", action="store_true")
+    review_scene.add_argument("--novelty-explanation", default="")
+    review_scene.add_argument("--novelty-source", default="")
     build_mem = sub.add_parser("scene-memory-build", help="refresh compact GitHub memory catalog from canonical sources and HOT")
     build_mem.add_argument("--state-dir", type=Path, required=True)
     build_mem.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -208,7 +210,9 @@ def run(args):
             if args.draft:
                 report["review"] = scene_gate.review_draft(
                     report, args.draft.read_text(encoding="utf-8"),
-                    reviewed=args.reviewed, new_revelation=args.new_revelation)
+                    reviewed=args.reviewed, new_revelation=args.new_revelation,
+                    novelty_explanation=args.novelty_explanation,
+                    novelty_source=args.novelty_source)
             if args.draft and not report["review"]["ready"]:
                 raise ValueError("Scene-gate review incomplete: " + "; ".join(report["review"]["errors"]))
             return report
