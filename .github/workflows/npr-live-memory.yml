@@ -2,8 +2,6 @@ name: Shiki live memory fold
 
 # Ведущий записывает один маленький recovery/TURN.json на ход.
 # Этот процесс сворачивает его в recovery/HOT.json, recovery/GM_ONLY.json,
-# GM-пакет включает динамику NPC по архивным карточкам и ближайшим срокам.
-# Владелец мирового таймера — не обязательно NPC; тип проверяется по реестру.
 # дословный журнал archive/session-NNN-turns.jsonl, хронику и карточки NPC.
 # Коммиты, сделанные GITHUB_TOKEN, новых запусков не вызывают: петли нет.
 
@@ -81,7 +79,7 @@ jobs:
               git -C _state add -- recovery/CHECKS.json
             else
               git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json \
-                recovery/CHECKS.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
+                recovery/CHECKS.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
             fi
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
