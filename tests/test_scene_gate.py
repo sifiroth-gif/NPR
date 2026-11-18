@@ -119,6 +119,33 @@ class SceneGateTests(unittest.TestCase):
             actors=["takagi"])
         self.assertFalse(packet["actors"]["takagi"]["played_disclosures"])
 
+    def test_hot_cue_preserves_early_disclosures_and_cites_sources(self):
+        packet_hot, turns = scene_gate.played_turns(self.root)
+        cues = scene_gate.compact_disclosure_cues(packet_hot, turns, per_actor=4)
+        self.assertEqual(cues, {})  # no scene cast without named presence
+        packet_hot["scene"] = {"present": ["arakawa"]}
+        cues = scene_gate.compact_disclosure_cues(packet_hot, turns, per_actor=4)
+        self.assertIn("arakawa", cues)
+        disclosed = cues["arakawa"]
+        self.assertIn("s07.text.012", [item["turn"] for item in disclosed])
+        self.assertIn("s07.text.013", [item["turn"] for item in disclosed])
+        self.assertTrue(all(item["status"] == "source_candidate_only" for item in disclosed))
+        self.assertTrue(all(item["source"] == "archive/session-007-turns.jsonl"
+                            for item in disclosed))
+
+    def test_hot_cues_keep_old_even_after_many_late_disclosures(self):
+        packet_hot, turns = scene_gate.played_turns(self.root)
+        packet_hot["scene"] = {"present": ["arakawa"]}
+        for i in range(31, 46):
+            turns.append(turn(i, "далее", "Аракава подтвердил новое назначение №%s" % i,
+                              "Аракава: Назначение"))
+        cues = scene_gate.compact_disclosure_cues(packet_hot, turns, per_actor=8)
+        ids = [x["turn"] for x in cues["arakawa"]]
+        self.assertIn("s07.text.012", ids)
+        self.assertIn("s07.text.013", ids)
+        self.assertIn("s07.text.045", ids)
+        self.assertLessEqual(len(ids), 8)
+
     def test_plain_dialogue_not_forced_into_history_review(self):
         packet = scene_gate.prepare(
             self.root, player_action="Повернитесь к двери.",
