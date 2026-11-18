@@ -1,0 +1,74 @@
+name: Shiki S7 to S8 checked intersession
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-session7-to8.yml"
+      - "campaigns/shiki/maintenance/recover_session7_20261118.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  close-session:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run regression tests on source and clock pipeline
+        run: python -m unittest discover -s tests -q
+      - name: Restore actual private binary state and S7 turn ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki7" refs/remotes/origin/game-state/shiki
+          test -f "$RUNNER_TEMP/shiki7/campaign.sqlite"
+          test -f "$RUNNER_TEMP/shiki7/state.json"
+          test -f "$RUNNER_TEMP/shiki7/archive/session-007-turns.jsonl"
+          test -f "$RUNNER_TEMP/shiki7/recovery/TURN.json"
+      - name: Replay exactly accepted S7, freeze archive and open S8
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session7_20261118.py "$RUNNER_TEMP/shiki7"
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki7/campaign.sqlite" verify --full
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki7/campaign.sqlite" hot-check --state-dir "$RUNNER_TEMP/shiki7"
+      - name: Publish a coherent SQLite, text and indexed archive checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki7"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f -- campaign.sqlite state.json recovery/sqlite
+          git -C "$state" add -A -- archive recovery/HOT.json recovery/GM_ONLY.json \
+            recovery/GM_BRIEF.json recovery/CHECKS.json recovery/cast \
+            campaigns/shiki/continuity/SESSION_007_TO_008_HANDOFF_1283-10-03.json
+          if git -C "$state" diff --cached --quiet; then
+            echo "ALREADY_S8_CHECKPOINT"
+          else
+            git -C "$state" commit -m "Close Shiki S7 from 38 source-checked entries and open verified S8"
+            git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/s8-readback.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/s8-readback-state.json"
+          cmp "$RUNNER_TEMP/s8-readback.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/s8-readback-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/s8-readback.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
