@@ -25,7 +25,7 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import fight, plot
+from . import fight, plot, talk
 
 SCHEMA = "npr-wiki/1"
 DIR = "memory"
@@ -408,6 +408,9 @@ def build(state_dir, hot, source_root=None):
             store[key]["gm"]["psyche"] = psyche
     _merge_same_names(store)
     _auto_aliases(store)
+    conversations, unplaced = talk.collect(state_dir, store)
+    for key, entries in conversations.items():
+        store[key]["talk"] = entries
     for entity in store.values():
         entity["history"].sort(key=lambda h: _order(h.get("turn")))
         if not entity["name"]:
@@ -559,6 +562,15 @@ def _npc_page(entity, present):
         if len(entity["history"]) > len(shown):
             where = entity.get("history_file") or "archive/npc-memory/"
             lines.append(f"- ранее: {len(entity['history']) - len(shown)} эпизодов, полностью в `{where}`")
+    if entity.get("talk"):
+        entries = entity["talk"]
+        sessions = sorted({e["turn"][:3] for e in entries})
+        lines += ["", f"## Разговоры с Шики: {len(entries)} ходов ({', '.join(sessions)})",
+                  f"- дословно по ходам: `memory/npc/{entity['id']}.talk.md`"]
+        for entry in entries[-2:]:
+            said = (entry.get("said") or [""])[0]
+            lines.append(f"- {entry['turn']}: Шики — «{_text(entry.get('heard'), 160)}»; "
+                         f"{entity['name']} — «{_text(said, 160)}»")
     if entity["notes"]:
         lines += ["", "## Заметки"] + [f"- {n}" for n in entity["notes"]]
     lines += ["", "Ход целиком: `archive/turns/sNN/<id>.md`."]
@@ -862,6 +874,8 @@ def render(state_dir, hot, registry):
         files[f"{DIR}/{folder}/{key}.md"] = _npc_page(entity, present)
         if len(entity["knows"]) > KNOWS_ON_PAGE:
             files[f"{DIR}/{folder}/{key}.knows.md"] = _knows_page(entity)
+        if entity.get("talk"):
+            files.update(talk.pages(entity, entity["talk"], f"{DIR}/{folder}"))
         secret = _npc_gm_page(entity)
         if secret:
             files[f"{DIR}/{folder}/{key}.GM_ONLY.md"] = secret
