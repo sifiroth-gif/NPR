@@ -342,9 +342,17 @@ def _auto_aliases(store):
         for part in re.findall(r"[\w-]{4,}", entity["name"]):
             if _norm(part) in NOT_ALIASES:
                 continue
-            if owners[_norm(part)] == {key} and _norm(part) != _norm(entity["name"]):
+            if _norm(part) != _norm(entity["name"]) and _owner(store, owners[_norm(part)]) == key:
                 if part not in entity["aliases"]:
                     entity["aliases"].append(part)
+
+
+def _owner(store, keys):
+    """Общая фамилия достаётся тому, о ком в игре написано больше всего; при равенстве — никому."""
+    if len(keys) == 1:
+        return next(iter(keys))
+    weight = sorted(((len(store[k]["sources"]) + len(store[k]["history"]), k) for k in keys), reverse=True)
+    return weight[0][1] if weight[0][0] > weight[1][0] else None
 
 
 def build(state_dir, hot, source_root=None):
