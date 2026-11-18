@@ -20,6 +20,8 @@ PATH = "recovery/GM_BRIEF.json"
 POLICY_PATH = "recovery/GATE_POLICY.json"
 MAX_ACTORS = 8
 MAX_GRAPH = 55
+MAX_PASSAGES = 12
+MAX_BRIEF_BYTES = 36000
 
 
 def _digest(obj):
@@ -43,7 +45,13 @@ def _cast(hot, actor):
         return {"status": "missing_card", "actor": actor}
     keys = ("name", "role", "wants", "fears", "leverage", "stance",
             "voice", "body", "state", "seen", "knows", "hides")
-    profile = {k: card[k] for k in keys if k in card}
+    profile = {}
+    for k in keys:
+        if k not in card:
+            continue
+        val = card[k]
+        profile[k] = ([_short(x, 210) for x in val[-8:]]
+                      if isinstance(val, list) else _short(val, 850))
     # The live packet is private, but do not drop distinctions between
     # a source-backed NPC belief and an unverified descriptive note.
     provenance = card.get("knowledge_provenance")
@@ -89,7 +97,7 @@ def build(hot, turns):
                 "line": _short(turn.get("line", ""), 220),
                 "status": "played_candidate_not_automatic_actor_fact",
             })
-            if turn["id"] not in passages:
+            if turn["id"] not in passages and len(passages) < MAX_PASSAGES:
                 original = turn.get("gm", "")
                 excerpt = (original if len(original) <= 1550 else
                            original[:550] + "\n[... source excerpt shortened ...]\n" + original[-900:])
@@ -190,6 +198,21 @@ def build(hot, turns):
             "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn",
         },
     }
+    # Bounded packet size is an architectural requirement, not a style tip.
+    # Keep all source REFERENCES; trim only optional duplicated prose extracts.
+    def packet_bytes():
+        return len(json.dumps(result, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        for key in reversed(list(passages)):
+            if packet_bytes() <= MAX_BRIEF_BYTES:
+                break
+            passages[key]["gm_excerpt"] = _short(passages[key]["gm_excerpt"], 280)
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        for actor_data in actors.values():
+            if packet_bytes() <= MAX_BRIEF_BYTES:
+                break
+            actor_data["profile"]["hides"] = _short(
+                actor_data["profile"].get("hides", ""), 160)
     result["digest"] = _digest(result)
     return result
 
