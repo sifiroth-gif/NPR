@@ -505,5 +505,39 @@ class HotFilesTest(unittest.TestCase):
         self.assertTrue(report["errors"])
 
 
+    def test_long_last_answer_keeps_only_tail_in_hot(self):
+        state = base()
+        long_gm = "Начало сцены. " + "Кадзиура молчал. " * 400 + "Финальная реплика."
+        hot.apply_turn(state, turn(45, "0006-10-01T07:14:00", gm=long_gm))
+        last = state["last"]
+        self.assertEqual(last["id"], "s04.text.045")
+        self.assertTrue(last["gm"].endswith("Финальная реплика."))
+        self.assertLessEqual(len(last["gm"]), hot.LAST_GM_TAIL + 1)
+        self.assertEqual(last["gm_chars"], len(long_gm))
+
+    def test_short_last_answer_is_kept_whole(self):
+        state = base()
+        hot.apply_turn(state, turn(45, "0006-10-01T07:14:00"))
+        self.assertEqual(state["last"]["gm"], "Нори вошла первой и сразу присела у кровяного следа.")
+        self.assertNotIn("gm_chars", state["last"])
+
+    def test_blocked_state_check_is_published_in_checks(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / hot.CHECKS_PATH
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({"schema": "npr-checks/1", "cursor": "s04.text.044",
+                                        "fold_errors": [], "checks": [{"turn": "x", "text": "y"}]}),
+                            encoding="utf-8")
+            hot.record_blocked(tmp, ["HOT разросся до 77715 байт"], "s04.text.045")
+            published = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(published["state_errors"], ["HOT разросся до 77715 байт"])
+            self.assertEqual(published["state_errors_turn"], "s04.text.045")
+            self.assertEqual(published["cursor"], "s04.text.044")
+            self.assertEqual(published["checks"], [{"turn": "x", "text": "y"}])
+            # The next successful fold rewrites CHECKS without the stale failure.
+            hot._write_checks(tmp, {"cursor": {"id": "s04.text.045"}, "fold": {"errors": []}})
+            self.assertNotIn("state_errors", json.loads(path.read_text(encoding="utf-8")))
+
+
 if __name__ == "__main__":
     unittest.main()
