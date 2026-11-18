@@ -184,6 +184,26 @@ class GeneralMemoryTests(unittest.TestCase):
                             for v in idx["entities"].values()))
         self.assertEqual(idx["entities"]["red_sarcophagus"]["sources"], ["s04.text.001"])
 
+    def test_historical_locations_cannot_evict_known_patient(self):
+        idx = self._index()
+        for number in range(70):
+            ident = f"place:old_{number:03}"
+            idx["entities"][ident] = {
+                "id": ident, "kind": "place",
+                "label": f"Кусагакуре, Центральный госпиталь, палата {number}",
+                "aliases": ["Кусагакуре", "Центральный госпиталь", f"палата {number}"],
+                "facts": [], "projections": [], "mentions": [],
+                "sources": ["s04.text.001"],
+            }
+        current = general_memory.retrieve(
+            idx, scene=self.hot["scene"], cursor=self.hot["cursor"], limit=7)
+        ids = [x["id"] for x in current["activated"]]
+        self.assertIn("recipient6", ids)
+        self.assertIn("doctor_aka", ids)
+        self.assertTrue(all(not x.startswith("place:old_") for x in ids), ids)
+        self.assertLessEqual(len([x for x in current["activated"]
+                                  if x["kind"] == "place"]), 1)
+
     def test_save_and_rebuild_are_deterministic_and_readable(self):
         a = general_memory.save(self.root, self.hot)
         first = (self.root / general_memory.PATH).read_bytes()
