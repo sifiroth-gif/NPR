@@ -288,7 +288,7 @@ def _apply_delta(hot, delta, turn):
     offscreen = hot.setdefault("offscreen", {})
     for key, patch in (delta.get("clocks") or {}).items():
         clocks = offscreen.setdefault("clocks", {})
-        if patch is None or (isinstance(patch, dict) and "done" in patch):
+        if patch is None or (isinstance(patch, dict) and ("done" in patch or patch.get("closed"))):
             done = clocks.pop(key, {})
             offscreen.setdefault("resolved", []).append(
                 {"id": f"clock:{key}", "at": at, "turn": turn_id,
@@ -438,7 +438,7 @@ def refresh(hot):
     offscreen = hot.setdefault("offscreen", {})
     now = parse_at(at)
     due = sorted((key for key, clock in offscreen.get("clocks", {}).items()
-                  if clock.get("due") and parse_at(clock["due"]) <= now),
+                  if clock.get("due") and not clock.get("closed") and parse_at(clock["due"]) <= now),
                  key=lambda key: offscreen["clocks"][key]["due"])
     offscreen["due_now"] = due
     npc_memory.refresh(hot)
