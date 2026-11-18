@@ -6,7 +6,6 @@ on:
     paths:
       - .github/workflows/shiki-session6-to7.yml
       - campaigns/shiki/maintenance/recover_session6_20261117.py
-      - rpg_engine/hot.py
   workflow_dispatch:
 
 permissions:
@@ -54,8 +53,12 @@ jobs:
           git -C "$state" add -f -- campaign.sqlite state.json recovery/sqlite
           git -C "$state" add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
           git -C "$state" add -A -- campaigns/shiki/continuity/SESSION_006_TO_007_HANDOFF_1283-10-02.json
-          git -C "$state" commit -m "Close Shiki S6 from 46 saved turns, verify SQLite and compact live memory"
-          git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          if git -C "$state" diff --cached --quiet; then
+            echo "S6_TO_S7_ALREADY_PUBLISHED; verifying existing checkpoint"
+          else
+            git -C "$state" commit -m "Close Shiki S6 from 46 saved turns, verify SQLite and compact live memory"
+            git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
           git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
           git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/s7-reloaded.sqlite"
           git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/s7-reloaded-state.json"
