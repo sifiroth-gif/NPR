@@ -273,6 +273,28 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
+    def test_fold_publishes_source_bound_prior_npc_disclosures_in_hot(self):
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      line="Нори признала, что получила приказ задержать Тэцу.",
+                      gm="Нори: Я получила приказ задержать Тэцу."))
+        self.put(turn(46, "0006-10-01T07:20:00",
+                      line="Нори предъявила запись о допуске к воротам.",
+                      gm="Нори: Вот запись о допуске."))
+        self.put(turn(47, "0006-10-01T07:31:00",
+                      line="Нори подтвердила предыдущее распоряжение.",
+                      gm="Нори: Я не меняю показаний."))
+        report = hot.fold(self.root)
+        self.assertEqual(report["errors"], [])
+        public = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        anchors = public["scene"]["npc_disclosures_to_player"]["nori"]
+        ids = [item["turn"] for item in anchors]
+        self.assertIn("s04.text.045", ids)
+        self.assertIn("s04.text.046", ids)
+        self.assertTrue(all(row["status"] == "source_candidate_only" for row in anchors))
+        self.assertTrue(all(row["source"] == "archive/session-004-turns.jsonl"
+                            for row in anchors))
+        self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
     def test_fold_recovers_historical_long_summary_and_opening_without_player(self):
         """Bad metadata in a previously published opening must not freeze HOT."""
         opening = turn(45, "0006-10-01T07:14:00")
