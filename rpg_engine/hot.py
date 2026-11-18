@@ -947,8 +947,9 @@ def fold(state_dir):
     _, accepted = scene_gate.played_turns(state_dir)
     # Canonical entity cards are derived from reviewed seed + played turn deltas.
     # They include patients/places/items omitted from scene.present NPC roster.
-    from . import entity_memory
-    entity_memory.rebuild(state_dir)
+    from . import entity_memory, general_memory
+    ledger = entity_memory.rebuild(state_dir)
+    general_memory.save(state_dir, hot, ledger=ledger)
     live_scene.write(brief_path, live_scene.build_for_state(hot, accepted, state_dir))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
