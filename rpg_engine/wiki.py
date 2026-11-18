@@ -25,6 +25,8 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from . import plot
+
 SCHEMA = "npr-wiki/1"
 DIR = "memory"
 DELTAS_DIR = "archive/deltas"
@@ -706,6 +708,11 @@ def _scene_page(hot, store):
         lines += [f"## Сроки в ближайшие 24 игровых часа: {len(soon)}",
                   "- " + ", ".join(f"`{k}` ({d})" for d, k in soon),
                   "- подробности только для ведущего: `memory/threads/CLOCKS.GM_ONLY.md`", ""]
+    events = [e for e in ((hot.get("_plot") or {}).get("events") or {}).values()
+              if e.get("status") == "active" and e.get("kind") != "main"]
+    if events:
+        lines += [f"## События: идут {len(events)}",
+                  "- вопросы, концовки и пределы только для ведущего: `memory/PLOT.GM_ONLY.md`", ""]
     last = hot.get("last") or {}
     if last.get("gm"):
         lines += ["## Конец последнего ответа", _text(last["gm"][-900:]), ""]
@@ -721,7 +728,7 @@ def _index_page(hot, registry):
              "(`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке "
              "или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.", "",
              "- Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · "
-             "`threads/CLOCKS.GM_ONLY` · поправки к миру · `world-fixes`", ""]
+             "`threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`", ""]
 
     def role(entity):
         series = entity["character"].get("role")
@@ -817,7 +824,8 @@ def render(state_dir, hot, registry):
              f"{DIR}/SCENE.md": _scene_page(hot, store),
              f"{DIR}/shiki.md": _shiki_page(hot, registry["fixes"]),
              f"{DIR}/shiki-fixes.md": _shiki_fixes_page(registry["fixes"]),
-             f"{DIR}/threads/CLOCKS.GM_ONLY.md": _clocks_page(hot, store)}
+             f"{DIR}/threads/CLOCKS.GM_ONLY.md": _clocks_page(hot, store),
+             f"{DIR}/PLOT.GM_ONLY.md": plot.page(hot)}
     for key, entity in store.items():
         folder = "npc" if entity["kind"] == "npc" else entity["kind"]
         files[f"{DIR}/{folder}/{key}.md"] = _npc_page(entity, present)

@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, npc_memory, prose_lint
+from . import continuity_guard, dread, npc_memory, plot, prose_lint
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -304,6 +304,8 @@ def _apply_delta(hot, delta, turn):
         else:
             _merge(threads.setdefault(key, {}), patch if isinstance(patch, dict) else {"state": patch})
             threads[key]["turn"] = turn_id
+    plot.apply(hot, delta.get("plot"), turn_id, at)
+    plot.touch_threads(hot, delta.get("threads"), turn_id)
     offscreen = hot.setdefault("offscreen", {})
     for key, patch in (delta.get("clocks") or {}).items():
         clocks = offscreen.setdefault("clocks", {})
@@ -692,6 +694,7 @@ def _read_state(state_dir):
     hot["_psyche"] = dict(secret.get("psyche") or {})
     hot["_checks"] = list(secret.get("checks") or [])
     hot["_horror"] = dict(secret.get("horror") or {})
+    hot["_plot"] = dict(secret.get("plot") or {})
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -707,6 +710,7 @@ def _split_state(hot):
     psyche = public.pop("_psyche", {})
     checks = public.pop("_checks", [])
     horror = public.pop("_horror", {})
+    plot_state = public.pop("_plot", {})
     public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -744,7 +748,7 @@ def _split_state(hot):
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
               "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
-              "checks": checks, "horror": horror, "undo": undo}
+              "checks": checks, "horror": horror, "plot": plot_state, "undo": undo}
     return public, secret
 
 
@@ -957,6 +961,11 @@ def fold(state_dir):
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
+    if applied:
+        checks = hot.setdefault("_checks", [])
+        for note in plot.review(hot, applied):
+            if note not in checks:
+                checks.append(note)
     wiki_report = _update_wiki(state_dir, hot, applied)
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
