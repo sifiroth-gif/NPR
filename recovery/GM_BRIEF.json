@@ -39,11 +39,16 @@
    "kind": "horror",
    "text": "4 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)",
    "turn": "s08.text.003"
+  },
+  {
+   "kind": "horror",
+   "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)",
+   "turn": "s08.text.010"
   }
  ],
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.009",
+  "cursor": "s08.text.010",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -88,13 +93,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T02:55:00",
+  "at": "0006-10-03T02:56:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.009",
+  "id": "s08.text.010",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
-  "time": "02:55"
+  "time": "02:56"
  },
- "digest": "7cd1127c6d8807af7581f313ebc535aca817c9565b299a37b72ed40dab3dca7c",
+ "digest": "fbffd1bc250b537c7add964be066d5d0767eca4d19605c7bf3f39fae3bfff62f",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -112,11 +117,25 @@
     "to": "s08.text.009"
    },
    {
+    "actor": "kadziura_satoru",
+    "from": "s08.text.009",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s08.text.010"
+   },
+   {
     "actor": "night_icu_physician",
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s08.text.009"
+   },
+   {
+    "actor": "night_icu_physician",
+    "from": "s08.text.009",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s08.text.010"
    }
   ],
   "nodes": [
@@ -133,10 +152,10 @@
     "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки не"
    },
    {
-    "at": "0006-10-03T02:40:00",
-    "id": "s08.text.006",
-    "kind": "recent_turn",
-    "line": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, "
+    "at": "0006-10-03T02:56:00",
+    "id": "s08.text.010",
+    "kind": "played_turn",
+    "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддер"
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -227,7 +246,15 @@
  },
  "handoff": null,
  "horror": {
-  "due": null,
+  "due": {
+   "npcs": [
+    "kadziura_satoru",
+    "night_icu_physician",
+    "s17_recipient_6"
+   ],
+   "quiet": 3,
+   "since": "s08.text.010"
+  },
   "npcs": {
    "kadziura_satoru": {
     "does": "Involuntarily froze gripping clipboard, then preferentially approached from far side of bed, while continuing clinical collaboration.",
@@ -248,28 +275,35 @@
     "stage": null
    }
   },
-  "quiet": 2,
+  "quiet": 3,
   "recent": [],
   "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
   "worn": []
  },
  "last": {
-  "gm_tail": "но с его пациентом.\n\nКадзиура вновь взял бронхоскопический снимок.\n\n— **Кадзиура, Шики:** Я могу получить клетки с границы этого участка щёточным соскобом, отдельно от уже извлечённых слепков. Тогда сравним морфологию и, если материала хватит, клеточные признаки с доступными архивными образцами. Но пока это будут данные о ткани, а не доказательство её происхождения.\n\nНа койке шестнадцатилетний мальчик продолжал дышать в такт аппарату. Удалённые слепки больше не перекрывали крупные бронхи. Там, где медицинская чакра восстановила слизистую, кровоточивость не возобновилась. В глубоком правом сегменте сохранялся тот самый участок, о котором спросил Шики.\n\nКадзиура оставил снимок на столе — изображением к нему.\n\n— **Кадзиура:** Ответ на ваш вопрос пока такой: **пересадка лёгочной ткани не подтверждена, но исключить скрытое вмешательство я не могу**. Попробуем получить то, что можно проверить.",
-  "player": "Это не было исправлением. Это был вопрос врачам и ответ на вопрос врача"
+  "gm_tail": "атору:**\n\n— Потому что во втором случае мой ответ зависит от того, что именно вы намерены сделать.\n\nВрач сложил руки на груди. Пальцы правой кисти с усилием сжали левое предплечье.\n\n— Если вам понадобятся инструменты, наблюдение или помощь при осложнении, я выслушаю. Если вы хотите использовать собственное тело как исследовательскую систему, я должен хотя бы понимать, что буду наблюдать.\n\nЕго голос стал ниже.\n\n— И ещё одно. Сейчас этот мальчик зависит в том числе от вашей чакры. Я должен знать, что произойдёт с этой поддержкой, если ваш опыт пойдёт не так.\n\nКадзиура распрямился.\n\n**Кадзиура Сатору:**\n\n— **Изложите идею, Мугами. Полностью.** Я не дам согласия на то, чего ещё не услышал. Но и отвергать её заранее не собираюсь.\n\nНа койке мерно поднималась грудь шестнадцатилетнего подростка. В прозрачном дыхательном контуре дрожала капля конденсата.\n\nВрач ждал ответа, не отводя глаз от Шики.",
+  "player": "Есть идея. Вам не понравится. Она нарушает все протоколы, не касается пациента, она касается меня. Готовы на такое пойти что бы увеличить шанс на его выживание?"
  },
  "needs_profile": [
   {
-   "appearances": 11,
+   "appearances": 12,
    "facets": 0,
    "need": 3,
    "npc": "kadziura_satoru",
    "tier": "developed"
   },
   {
-   "appearances": 6,
+   "appearances": 7,
    "facets": 0,
    "need": 3,
    "npc": "night_icu_physician",
+   "tier": "developed"
+  },
+  {
+   "appearances": 4,
+   "facets": 0,
+   "need": 3,
+   "npc": "s17_recipient_6",
    "tier": "developed"
   }
  ],
@@ -408,10 +442,18 @@
     {
      "at": "0006-10-03T02:55:00",
      "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке",
-     "sha256": "471ff1653753fda87832142d916db1d27665df17ca8c5b9f3ce8d0713650775c",
+     "sha256": "5a223883258bdc6958074f18d18af9cf141c5c2f9e6bf415e6bed410c7818c82",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.009"
+    },
+    {
+     "at": "0006-10-03T02:56:00",
+     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
+     "sha256": "083a04cd8483ee6d1d6d1cf31613a30f4af071366bd8e7701a0022d5f1bcfd09",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.010"
     }
    ],
    "profile": {
@@ -433,11 +475,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.003",
-      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Ч"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.006",
       "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхожде"
      },
@@ -450,15 +487,20 @@
       "ch": "present",
       "turn": "s08.text.009",
       "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи и"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.010",
+      "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 11,
+    "memory_total": 12,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.009",
+    "seen": "s08.text.010",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "At 02:55 in response to Shiki's explicit in-game question checked chart and found no documented lung tissue transplantation for recipient #6; warns transferred operative records incomplete, so cannot exclude hidden procedures. Asked nurse to fetch original admission and bronchoscopy documentation, proposes gentle bronchial brushing for tissue comparison, not yet performed. Remains cautious about causality.",
+    "state": "02:56 heard Shiki propose a protocol-violating idea involving experimentation on his own body for patient benefit. Doctor neither accepts nor rejects hypothetical experiment, requests concrete method and clarity on impact on chakra support; professional reserve and wariness persist.",
     "status": "present_profile",
     "tier": "developed",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -480,10 +522,18 @@
     {
      "at": "0006-10-03T02:55:00",
      "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке",
-     "sha256": "471ff1653753fda87832142d916db1d27665df17ca8c5b9f3ce8d0713650775c",
+     "sha256": "5a223883258bdc6958074f18d18af9cf141c5c2f9e6bf415e6bed410c7818c82",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.009"
+    },
+    {
+     "at": "0006-10-03T02:56:00",
+     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
+     "sha256": "083a04cd8483ee6d1d6d1cf31613a30f4af071366bd8e7701a0022d5f1bcfd09",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.010"
     }
    ],
    "profile": {
@@ -500,11 +550,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.003",
-      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Ч"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.006",
       "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхожде"
      },
@@ -517,13 +562,18 @@
       "ch": "present",
       "turn": "s08.text.009",
       "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи и"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.010",
+      "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 6,
+    "memory_total": 7,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.009",
+    "seen": "s08.text.010",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
     "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
     "status": "present_profile",
@@ -558,24 +608,25 @@
       "ch": "present",
       "turn": "s08.text.009",
       "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи и"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.010",
+      "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
-    "memory_total": 3,
+    "memory_total": 4,
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-    "seen": "s08.text.009",
+    "seen": "s08.text.010",
     "state": "02:54 16yo boy intubated on ventilation and S17 infusion, conscious status limited by sedation; after targeted viable bronchial regeneration SpO2 96%, HR98, BP108/70, peak pressure26, persistent unstable deeper right bronchial epithelial focus.",
     "status": "present_profile",
-    "tier": "archetypal"
+    "tier": "developed"
    }
   }
  },
  "recent_turns": [
-  {
-   "id": "s08.text.006",
-   "line": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
-  },
   {
    "id": "s08.text.007",
    "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную пробу. Диалоги атрибутированы."
@@ -583,12 +634,16 @@
   {
    "id": "s08.text.009",
    "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
+  },
+  {
+   "id": "s08.text.010",
+   "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
   }
  ],
  "scene": {
-  "positions": "Shiki still at recipient #6 bedside supporting with medical chakra; Kadz at bed with chart and bronchoscopy images, anesthetist monitoring, nurse departed to fetch intake/operative documents; sixteen-year-old boy sedated on ventilator and S17 infusion. Experimental gene carrier sealed in office cabinet.",
-  "pressure": "Question of source and nature of recurrent bronchial injury unresolved; primary medical documentation incomplete. Kadz pursues chart verification and targeted cytology before any claim of graft or NСП-δ.",
-  "situation": "03.10.1283 02:55: Previously player text in s08.text.008 was misclassified OOC; it was Shiki's in-world response to doctor's question: some freshly regenerated bronchial cells rapidly lose cohesion with neighbors and protein-rich exudate appears, followed by question whether recipient #6 underwent lung tissue transplantation. Kadz checked available medical chart: no documented pulmonary transplantation; transferred patient #6 from research ward 3 has incomplete operative records; transplant cannot be ruled out or presumed. No molecular etiology shown. Kadz ordered nurse to bring original intake forms, old bronchoscopy sheets and recorded scars and proposed separate gentle bronchial brushing sample to study morphology; no sample taken yet, awaiting next actions. Patient boy~16 remains on same ventilation and existing S17 regimen with Shiki's ongoing medical chakra support after local regenerative treatment, stable latest SpO2 96%, Ppeak26. Kadz professionally acknowledges cell contacts could fail in native epithelium due ongoing insult. Speaker names explicitly provided."
+  "positions": "Shiki bedside maintaining medical chakra support, facing Kadziura who stands within arm's reach and awaits explanation; boy ~16 on ventilator, sedated, on ongoing S17; anesthetist at monitor. Nurse has left for original hospital transfer records. Carrier sealed locked in Kadziura office.",
+  "pressure": "Kadziura asks exact self-experiment method and consequences for current ongoing life support, no prior approval of unknown risks.",
+  "situation": "03.10 02:56: Shiki voiced a potential idea involving unconventional experiment on himself, not on 16yo recipient #6, asks Kadziura whether willing to participate to improve chance of recipient survival. No method specified. Kadziura, wary but medically interested, refuses advance blind consent, asks what the actual experiment is and how to ensure continued chakra support for patient if Shiki becomes incapacitated. Team maintains existing ventilation and S17 infusion; currently SpO2 96% at same settings, stable peak pressure. No procedure begun."
  },
  "shiki": {
   "body": "02:54: Shiki completed targeted regenerative medchakra on surviving bronchial mucosa of recipient6 while sustaining support; additional chakra expenditure; no contract stage change or Zero Genome used.",
@@ -605,7 +660,7 @@
     "due": "0006-10-03T03:20:00",
     "id": "s17_patient6_intake_record_review",
     "if_unopposed": "Персонал найдёт реально имеющиеся листы и сообщит их содержание; неполные записи не превращать в доказательство отсутствия вмешательства.",
-    "minutes": 25.0,
+    "minutes": 24.0,
     "owner": "Дежурная сестра и Кадзиура Сатору",
     "signs": "02:55 Кадзиура поручил сестре поднять архив поступления из исследовательского корпуса №3.",
     "status": "scheduled",
@@ -615,7 +670,7 @@
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 195.0,
+    "minutes": 194.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "status": "scheduled",
@@ -625,7 +680,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 320.0,
+    "minutes": 319.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",

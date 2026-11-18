@@ -22,17 +22,17 @@
   ]
  },
  "scene": {
-  "situation": "03.10.1283 02:55: Previously player text in s08.text.008 was misclassified OOC; it was Shiki's in-world response to doctor's question: some freshly regenerated bronchial cells rapidly lose cohesion with neighbors and protein-rich exudate appears, followed by question whether recipient #6 underwent lung tissue transplantation. Kadz checked available medical chart: no documented pulmonary transplantation; transferred patient #6 from research ward 3 has incomplete operative records; transplant cannot be ruled out or presumed. No molecular etiology shown. Kadz ordered nurse to bring original intake forms, old bronchoscopy sheets and recorded scars and proposed separate gentle bronchial brushing sample to study morphology; no sample taken yet, awaiting next actions. Patient boy~16 remains on same ventilation and existing S17 regimen with Shiki's ongoing medical chakra support after local regenerative treatment, stable latest SpO2 96%, Ppeak26. Kadz professionally acknowledges cell contacts could fail in native epithelium due ongoing insult. Speaker names explicitly provided.",
+  "situation": "03.10 02:56: Shiki voiced a potential idea involving unconventional experiment on himself, not on 16yo recipient #6, asks Kadziura whether willing to participate to improve chance of recipient survival. No method specified. Kadziura, wary but medically interested, refuses advance blind consent, asks what the actual experiment is and how to ensure continued chakra support for patient if Shiki becomes incapacitated. Team maintains existing ventilation and S17 infusion; currently SpO2 96% at same settings, stable peak pressure. No procedure begun.",
   "present": [
    "shiki",
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6"
   ],
-  "positions": "Shiki still at recipient #6 bedside supporting with medical chakra; Kadz at bed with chart and bronchoscopy images, anesthetist monitoring, nurse departed to fetch intake/operative documents; sixteen-year-old boy sedated on ventilator and S17 infusion. Experimental gene carrier sealed in office cabinet.",
-  "pressure": "Question of source and nature of recurrent bronchial injury unresolved; primary medical documentation incomplete. Kadz pursues chart verification and targeted cytology before any claim of graft or NСП-δ.",
+  "positions": "Shiki bedside maintaining medical chakra support, facing Kadziura who stands within arm's reach and awaits explanation; boy ~16 on ventilator, sedated, on ongoing S17; anesthetist at monitor. Nurse has left for original hospital transfer records. Carrier sealed locked in Kadziura office.",
+  "pressure": "Kadziura asks exact self-experiment method and consequences for current ongoing life support, no prior approval of unknown risks.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s08.text.009",
+  "as_of": "s08.text.010",
   "npc_disclosures_to_player": {
    "kadziura_satoru": [
     {
@@ -44,6 +44,12 @@
     {
      "turn": "s08.text.009",
      "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позв",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.010",
+     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать.",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
     }
@@ -58,6 +64,12 @@
     {
      "turn": "s08.text.009",
      "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позв",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.010",
+     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать.",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
     }
@@ -79,7 +91,7 @@
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
    ],
-   "seen": "s08.text.009",
+   "seen": "s08.text.010",
    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
    "memory": [
     {
@@ -117,9 +129,15 @@
      "at": "0006-10-03T02:55:00",
      "ch": "present",
      "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
+    },
+    {
+     "turn": "s08.text.010",
+     "at": "0006-10-03T02:56:00",
+     "ch": "present",
+     "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
     }
    ],
-   "memory_total": 6,
+   "memory_total": 7,
    "first": "s07.text.033",
    "tier": "developed"
   },
@@ -144,8 +162,8 @@
     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
    ],
-   "seen": "s08.text.009",
-   "state": "At 02:55 in response to Shiki's explicit in-game question checked chart and found no documented lung tissue transplantation for recipient #6; warns transferred operative records incomplete, so cannot exclude hidden procedures. Asked nurse to fetch original admission and bronchoscopy documentation, proposes gentle bronchial brushing for tissue comparison, not yet performed. Remains cautious about causality.",
+   "seen": "s08.text.010",
+   "state": "02:56 heard Shiki propose a protocol-violating idea involving experimentation on his own body for patient benefit. Doctor neither accepts nor rejects hypothetical experiment, requests concrete method and clarity on impact on chakra support; professional reserve and wariness persist.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -158,12 +176,6 @@
      "at": "0006-10-03T01:17:00",
      "ch": "mentioned",
      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать предложение, происхождение С-17 ему не ра…"
-    },
-    {
-     "turn": "s07.text.038",
-     "at": "0006-10-03T01:35:00",
-     "ch": "present",
-     "what": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие данных о клинических испытаниях, запрети…"
     },
     {
      "turn": "s08.text.002",
@@ -194,9 +206,15 @@
      "at": "0006-10-03T02:55:00",
      "ch": "present",
      "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
+    },
+    {
+     "turn": "s08.text.010",
+     "at": "0006-10-03T02:56:00",
+     "ch": "present",
+     "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
     }
    ],
-   "memory_total": 11,
+   "memory_total": 12,
    "first": "s07.text.033",
    "tier": "developed"
   },
@@ -209,7 +227,7 @@
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.009",
+   "seen": "s08.text.010",
    "memory": [
     {
      "turn": "s08.text.006",
@@ -228,11 +246,17 @@
      "at": "0006-10-03T02:55:00",
      "ch": "present",
      "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
+    },
+    {
+     "turn": "s08.text.010",
+     "at": "0006-10-03T02:56:00",
+     "ch": "present",
+     "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
     }
    ],
-   "memory_total": 3,
+   "memory_total": 4,
    "first": "s08.text.006",
-   "tier": "archetypal"
+   "tier": "developed"
   }
  },
  "threads": {
@@ -345,8 +369,8 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "03.10 02:55: Shiki explicitly told physicians that in damaged right bronchial area newly regenerated epithelial cells quickly lose junctions and protein-rich exudate appears, then asked if lung tissues were transplanted into recipient6. Kadz checked chart: no recorded pulmonary graft; documentation from corpus3 incomplete, not proof of no graft. New cellular disruption cannot be linked to Aракawa's donor nsp-delta pathway absent sampling. Kadz ordered retrieval of original intake/old bronchial records and proposed edge brushing; no new results. Boy 16 remains sedated on ventilator + unchanged S17 regimen supported by Shiki's chakra, SpO2 96% at most recent measurement.",
-   "turn": "s08.text.009"
+   "state": "03.10 02:56 Shiki proposed undisclosed self-experiment to improve survival chance for recipient #6, not an action yet; Kadz requests exact description and safety of uninterrupted ongoing support. Teen on same assisted ventilation and S17; prior SpO2 96% persists, unchanged clinical status, no new testing or medication.",
+   "turn": "s08.text.010"
   }
  },
  "shiki": {
@@ -531,7 +555,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 60.1379,
+  "value": 60.1384,
   "stage": 4,
   "label": "Чёрные сосуды",
   "signs": "Тёмные сосуды на шее и корпусе, корни до шеи; кровь при ранах постепенно тёмно-бордовая, пока НЕ заразна; предчувствие болезненной смерти и запах только вблизи.",
@@ -575,11 +599,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.006",
-   "at": "0006-10-03T02:40:00",
-   "line": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
-  },
-  {
    "id": "s08.text.007",
    "at": "0006-10-03T02:54:00",
    "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную пробу. Диалоги атрибутированы."
@@ -594,36 +613,30 @@
    "id": "s08.text.009",
    "at": "0006-10-03T02:55:00",
    "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
+  },
+  {
+   "id": "s08.text.010",
+   "at": "0006-10-03T02:56:00",
+   "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.009",
-  "seq": 9,
-  "at": "0006-10-03T02:55:00",
+  "id": "s08.text.010",
+  "seq": 10,
+  "at": "0006-10-03T02:56:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "02:55"
+  "time": "02:56"
  },
  "last": {
-  "id": "s08.text.009",
-  "player": "Это не было исправлением. Это был вопрос врачам и ответ на вопрос врача",
-  "gm": "*Вторник, 3 октября 1283 года. 02:55.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Часть новообразованных клеток почти сразу возвращается к патологическому состоянию: нарушается их связь с соседними, на поверхности выступает белковый экссудат. Ему что, пересаживали ткани лёгкого? — спросил **Шики**.\n\n**Кадзиура Сатору** перестал водить карандашом по схеме бронхиального дерева.\n\n— Лёгкого? — переспросил он.\n\nВрач перевернул несколько листов истории болезни. Двигался он быстро, но на каждом развороте задерживался у графы предшествующих операций. Потом положил папку на край кровати.\n\n— **Кадзиура:** В документах, переданных вместе с мальчиком, пересадки лёгкого нет. Есть сведения об аппаратной поддержке, инфузии С-17 и нескольких вмешательствах без подробных протоколов. Утверждать, что ему *ничего* не пересаживали, я тоже не могу. Из третьего корпуса нам передали пациента, а не его полную историю.\n\n**Анестезиолог**, не отрывая глаз от монитора, произнёс:\n\n— Давление в контуре двадцать шесть. Насыщение девяносто шесть. Сорок минут назад он не выдержал бы подобного разговора у койки.\n\nКадзиура поднял руку, призывая не отвлекаться, и опять повернулся к Шики. На этот раз его взгляд задержался не на тёмных венах молодого врача, а на участке схемы, который тот обозначил как повреждённый.\n\n— **Кадзиура:** Вы говорите о нарушении связи между новыми клетками. Это важное наблюдение. Но такое возможно и в собственной ткани, если на неё продолжает действовать повреждающий фактор. Из одной картины регенерации я не сделаю вывода о трансплантате.\n\nОн наклонился к столу с образцами.\n\n— **Кадзиура, медсестре:** Поднимите документы поступления из корпуса № 3. Особенно лист первичного осмотра, описание послеоперационных рубцов и всё, что сохранилось от прежних бронхоскопий. Если обнаружится запись о трансплантации, немедленно принесите.\n\n**Медсестра** коротко кивнула и вышла. Перед дверью она один раз оглянулась на Шики — без прежней растерянности, но с явной тревогой человека, который понял, что лечащий врач может не знать даже того, что именно было сделано с его пациентом.\n\nКадзиура вновь взял бронхоскопический снимок.\n\n— **Кадзиура, Шики:** Я могу получить клетки с границы этого участка щёточным соскобом, отдельно от уже извлечённых слепков. Тогда сравним морфологию и, если материала хватит, клеточные признаки с доступными архивными образцами. Но пока это будут данные о ткани, а не доказательство её происхождения.\n\nНа койке шестнадцатилетний мальчик продолжал дышать в такт аппарату. Удалённые слепки больше не перекрывали крупные бронхи. Там, где медицинская чакра восстановила слизистую, кровоточивость не возобновилась. В глубоком правом сегменте сохранялся тот самый участок, о котором спросил Шики.\n\nКадзиура оставил снимок на столе — изображением к нему.\n\n— **Кадзиура:** Ответ на ваш вопрос пока такой: **пересадка лёгочной ткани не подтверждена, но исключить скрытое вмешательство я не могу**. Попробуем получить то, что можно проверить."
+  "id": "s08.text.010",
+  "player": "Есть идея. Вам не понравится. Она нарушает все протоколы, не касается пациента, она касается меня. Готовы на такое пойти что бы увеличить шанс на его выживание?",
+  "gm": "*Вторник, 3 октября 1283 года. 02:56.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Есть идея. Вам не понравится. Она нарушает все протоколы, не касается пациента, она касается меня. Готовы на такое пойти, чтобы увеличить шанс на его выживание?\n\n**Кадзиура Сатору** медленно опустил бронхоскопический снимок.\n\nВрач несколько секунд не отвечал. Его пальцы разгладили загнувшийся угол бумаги; потом он положил её на стол так тщательно, словно пытался привести в порядок нечто гораздо более существенное.\n\nВ свете операционных ламп тёмные сосудистые разветвления на шее Шики казались особенно отчётливыми. Кадзиура посмотрел на них, затем на запястья молодого дзёнина. Его нижняя челюсть напряглась. Однако отступать он не стал.\n\n**Кадзиура Сатору:**\n\n— Вы выбрали скверный способ начать разговор с врачом, Мугами.\n\nОн повернулся к анестезиологу.\n\n**Кадзиура Сатору:**\n\n— Продолжайте наблюдение. Если насыщение начнёт снижаться или вернётся обструкция, сообщите немедленно.\n\n**Анестезиолог:**\n\n— Понял. Пока девяносто шесть. Давление в контуре стабильное.\n\nКадзиура подошёл к Шики на расстояние вытянутой руки. Теперь между ними оставался лишь узкий промежуток возле изголовья койки.\n\n**Кадзиура Сатору:**\n\n— Я видел результаты вашей работы. Видел ткань, которую вы восстановили за минуты. И слышал достаточно, чтобы понимать: ваш экспериментальный носитель возник не из обычной медицинской практики.\n\nОн на мгновение взглянул на мальчика.\n\n— Но у меня есть вопрос. Вы спрашиваете, готов ли я разрешить вам поставить опыт на себе? Или готов ли я **участвовать** в этом опыте?\n\nПауза.\n\n**Кадзиура Сатору:**\n\n— Потому что во втором случае мой ответ зависит от того, что именно вы намерены сделать.\n\nВрач сложил руки на груди. Пальцы правой кисти с усилием сжали левое предплечье.\n\n— Если вам понадобятся инструменты, наблюдение или помощь при осложнении, я выслушаю. Если вы хотите использовать собственное тело как исследовательскую систему, я должен хотя бы понимать, что буду наблюдать.\n\nЕго голос стал ниже.\n\n— И ещё одно. Сейчас этот мальчик зависит в том числе от вашей чакры. Я должен знать, что произойдёт с этой поддержкой, если ваш опыт пойдёт не так.\n\nКадзиура распрямился.\n\n**Кадзиура Сатору:**\n\n— **Изложите идею, Мугами. Полностью.** Я не дам согласия на то, чего ещё не услышал. Но и отвергать её заранее не собираюсь.\n\nНа койке мерно поднималась грудь шестнадцатилетнего подростка. В прозрачном дыхательном контуре дрожала капля конденсата.\n\nВрач ждал ответа, не отводя глаз от Шики."
  },
  "lint": {
   "recent": [
-   {
-    "id": "s08.text.006",
-    "score": 2.1,
-    "verdict": "чисто",
-    "hits": [
-     {
-      "rule": "hedge",
-      "quote": "Исследование не установило причины повреждения и пока ничего не доказывало относительно действия С-17."
-     }
-    ]
-   },
    {
     "id": "s08.text.007",
     "score": 1.9,
@@ -640,6 +653,17 @@
     "score": 0.0,
     "verdict": "чисто",
     "hits": []
+   },
+   {
+    "id": "s08.text.010",
+    "score": 2.9,
+    "verdict": "чисто",
+    "hits": [
+     {
+      "rule": "explain",
+      "quote": "Его пальцы разгладили загнувшийся угол бумаги; потом он положил её на стол так тщательно, словно пытался привести в порядок нечто гораздо более существенное."
+     }
+    ]
    }
   ],
   "note": "Попадания линтера по последним ответам. Каждая цитата — тип фразы, который в следующей сцене не повторяется. Не оправдывайся в тексте, пиши иначе.",
@@ -650,19 +674,19 @@
    "neg_parallel": 1,
    "status": 3,
    "absent": 6,
-   "explain": 6,
+   "explain": 7,
    "pc_inner": 1,
    "caveat": 1
   }
  },
  "fold": {
-  "commit": "db1c379a81bf3c75136b2682a7c3e8c7a0aca71b",
-  "turns": 214,
+  "commit": "24861fa4c1330a955ebeaa2b0acdc7e690b09495",
+  "turns": 215,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "e2d9804b4ef83b4cc4e6b862a6b8dc813d847da3ef211d384234bd5cf10eb315"
+  "turn_digest": "d2a051896f39526680dc53b214f3a5cb77c7978ff4c9b6f3fbd7918f8de7ebd4"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
