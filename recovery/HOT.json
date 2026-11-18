@@ -460,18 +460,6 @@
  },
  "canon": [
   {
-   "turn": "s07.text.025",
-   "rule": "Прямая поздняя поправка: односторонний сенсорный мост Немере из session-005 включал ВСЕ ощущения Шики, в том числе феноменологическое восприятие Нулевого Генома. В s07.text.025 Шики предоставил его на время опыта, а по завершении ЗАКРЫЛ только восприятие Нулевого Генома, оставив обычные сенсорные и смысловые каналы; без ослабления печатей и контроля над волей."
-  },
-  {
-   "turn": "s07.text.030",
-   "rule": "17.11.2026 прямая исправляющая OOC оценка игрока: не повторять как новые открытия уже сыгранные диалоги. Внутри s07.text.012 Аракава признал мотив снабжения и направления Тэцу, в s07.text.013 прямо предъявил папку с маршрутом запроса В-7; s07.text.014 Шики назвал себя врачом и отказался заниматься расследованием. Исправленная версия s07.text.030 устраняет повтор и не навязывает новое признание или следственную инициативу Шики."
-  },
-  {
-   "turn": "s07.text.036",
-   "rule": "User correction 18.11.2026: source is Sept25 S17 DRUG composition study with measured bioactive S17-A/B fractions, not Oct2 CELL CULTURE genotypes A/B; player shared ONLY functional information. Maintain exact separation of measured drug function, demonstrated NSP-delta donor pathology, and speculative gelsolin/GsMTx4 molecular identities."
-  },
-  {
    "turn": "s07.text.037",
    "rule": "18.11.2026 direct player correction: practically no one knows of Shiki's Byoton nature. In scene s07.text.037, Shiki did not disclose Byoton or how carrier was created; Kadziura cannot name or infer Byoton by observing vial or hearing mechanism. Remove prior hallucinated revelation."
   },
@@ -494,16 +482,6 @@
   "entity": "campaigns/shiki/lore/SEVENTH_THRESHOLD_ENTITY_GM_ONLY_1283.json"
  },
  "chronicle": [
-  {
-   "id": "s07.text.035",
-   "at": "0006-10-03T01:19:00",
-   "line": "Шики спросил Кадзиуру о составе С-17 и предположил временную блокаду донорских белковых структур. Кадзиура знает клинику и режимы лечения, но не полный состав или механизм действия препарата. Разделил образование, сборку, закрепление и эффект белка; попросил функциональные данные Шики."
-  },
-  {
-   "id": "s07.text.036",
-   "at": "0006-10-03T01:29:00",
-   "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарион не раскрывались."
-  },
   {
    "id": "s07.text.037",
    "at": "0006-10-03T01:32:00",
@@ -532,17 +510,6 @@
  },
  "lint": {
   "recent": [
-   {
-    "id": "s07.text.036",
-    "score": 1.6,
-    "verdict": "чисто",
-    "hits": [
-     {
-      "rule": "explain",
-      "quote": "Кадзиура отодвинул стул, словно хотел увеличить расстояние, но остановил себя и остался возле стола."
-     }
-    ]
-   },
    {
     "id": "s07.text.037",
     "score": 6.0,
@@ -604,9 +571,18 @@
  "canon_older": "archive/shiki-canon.jsonl",
  "cast_older": "recovery/cast",
  "things": {},
+ "handoff": {
+  "closed": 7,
+  "next_session": 8,
+  "sqlite_revision": 497,
+  "at": "0006-10-03T01:35:00",
+  "last_turn": "s07.text.038",
+  "first_turn": "s08.text.001",
+  "source": "campaigns/shiki/continuity/SESSION_007_TO_008_HANDOFF_1283-10-03.json"
+ },
  "offscreen": {
   "see": "recovery/GM_ONLY.json",
-  "due": 2,
-  "clocks": 4
+  "due": 0,
+  "clocks": 2
  }
 }

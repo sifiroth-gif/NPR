@@ -1,355 +1,332 @@
 {
- "checks": [
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034",
-   "turn": "s07.text.037"
-  },
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034",
-   "turn": "s07.text.038"
-  }
- ],
- "continuity": {
-  "gone": [],
-  "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
-  "things": {}
- },
- "cursor": {
-  "at": "0006-10-03T01:35:00",
-  "date": "Вторник, 3 октября 1283 года",
-  "id": "s07.text.038",
-  "place": "Кусагакуре, Центральный госпиталь, кабинет старшего врача реанимации Кадзиуры Сатору",
-  "time": "01:35"
- },
- "digest": "b1d5d12d279c66d30db44427ea19ccce62587b64d00ec9006f820959ab9f90d6",
- "evidence_graph": {
-  "edges": [
-   {
-    "actor": "kadziura_satoru",
-    "from": "s07.text.033",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s07.text.034"
-   },
-   {
-    "actor": "kadziura_satoru",
-    "from": "s07.text.034",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s07.text.037"
-   },
-   {
-    "actor": "kadziura_satoru",
-    "from": "s07.text.037",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s07.text.038"
-   }
-  ],
-  "nodes": [
-   {
-    "at": "0006-10-03T01:14:00",
-    "id": "s07.text.033",
-    "kind": "played_turn",
-    "line": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали"
-   },
-   {
-    "at": "0006-10-03T01:17:00",
-    "id": "s07.text.034",
-    "kind": "played_turn",
-    "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и п"
-   },
-   {
-    "at": "0006-10-03T01:32:00",
-    "id": "s07.text.037",
-    "kind": "played_turn",
-    "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Ник"
-   },
-   {
-    "at": "0006-10-03T01:35:00",
+  "format": "NPR-LIVE-SCENE/1",
+  "cursor": {
     "id": "s07.text.038",
-    "kind": "played_turn",
-    "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его бе"
-   },
-   {
-    "at": "0006-10-03T01:29:00",
-    "id": "s07.text.036",
-    "kind": "recent_turn",
-    "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функци"
-   }
-  ],
-  "scope": "chronological edges only; semantic links are candidates, not causality"
- },
- "fold_errors": [],
- "format": "NPR-LIVE-SCENE/1",
- "guards": {
-  "clock_deadlines_are_real": true,
-  "no_npc_knowledge_without_channel": true,
-  "no_repeated_revelations_without_new_source": true,
-  "player_owns_shiki": true,
-  "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
- },
- "horror": {
-  "due": null,
-  "npcs": {
-   "kadziura_satoru": {
-    "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
-    "stage": null
-   }
+    "at": "0006-10-03T01:35:00",
+    "place": "Кусагакуре, Центральный госпиталь, кабинет старшего врача реанимации Кадзиуры Сатору",
+    "time": "01:35",
+    "date": "Вторник, 3 октября 1283 года"
   },
-  "quiet": 2,
-  "recent": [],
-  "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
-  "worn": [
-   "взгляд-по-облику",
-   "замер",
-   "напрягся",
-   "сосуды"
-  ]
- },
- "last": {
-  "gm_tail": "я в замке с тихим, тяжёлым щелчком.\n\n— Я свяжусь с лабораторией. Сверю ваши данные с тем, что у нас есть по четырём больным. Если источник повреждения окажется одинаковым, тогда и будем решать, кто имеет право подвергать их такому воздействию.\n\nСнаружи послышались шаги дежурной сестры. Кадзиура не позвал её в кабинет. Лишь посмотрел на дверь, потом опять на Шики.\n\n— Вы, возможно, оставили мне выход из истории, в которой мы до сих пор умели только продлевать страдания. А возможно — ещё одну её главу.\n\nОн не поблагодарил.\n\n— Материал я принял, Мугами. Но если выяснится, что вы скрыли сведения о его действии на живых людях, это будет иметь значение. И для меня, и для пациентов.\n\nЗа запертой дверцей шкафа не раздалось ни звука. Оставленная Шики пробирка теперь находилась у Кадзиуры; вместе с ней ему досталась возможность действовать самостоятельно — и ошибиться самостоятельно.\n\n**Ход Шики.**",
-  "player": "Мастеру: И Бётон — ваша природа, не моя, о которой блять никто практически не знает\nПо игре: оставлю это вам #кладу пробирку на записи# думаю вы разберётесь"
- },
- "needs_profile": [
-  {
-   "appearances": 6,
-   "facets": 0,
-   "need": 3,
-   "npc": "kadziura_satoru",
-   "tier": "developed"
-  }
- ],
- "present_npcs": {
-  "kadziura_satoru": {
-   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
-   "prior_disclosures": [
-    {
-     "at": "0006-10-03T01:14:00",
-     "line": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока. Он прибыл, представ",
-     "sha256": "0bf12c47c06614e2fa4f51696dbd0d117fd93f0288c38349dd8b3d732e5bde2f",
-     "source": "archive/session-007-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s07.text.033"
-    },
-    {
-     "at": "0006-10-03T01:17:00",
-     "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать пр",
-     "sha256": "33088bf4b5a3870648a58fc60c027c1420e80c10b14300d57c54e3e5a4294b9c",
-     "source": "archive/session-007-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s07.text.034"
-    },
-    {
-     "at": "0006-10-03T01:32:00",
-     "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бётоне или его природе К",
-     "sha256": "cca76483dcd431c71120477ee12c7e9e092601fec55f119e26d176bab43edc07",
-     "source": "archive/session-007-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s07.text.037"
-    },
-    {
-     "at": "0006-10-03T01:35:00",
-     "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие д",
-     "sha256": "e7e7cb9cba0f0c78dd94434fb80c3364f45ccc65f6c6ab9c10af24ce0daa86fb",
-     "source": "archive/session-007-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s07.text.038"
+  "scene": {
+    "situation": "03.10.1283 01:35. Direct OOC player correction 'И Бётон — ваша природа, не моя, о которой блять никто практически не знает': GM previously invented disclosure of Shiki's near-secret Byoton to Kadziura. Prior s07.text.037 was amended to delete verbal mention of Byoton and to remove this nonexistent knowledge from NPC. In game Shiki said 'оставлю это вам, думаю вы разберётесь' and PHYSICALLY PLACED SECOND sealed vial of experimental carrier onto the written notes, thereby handing over material for doctor to handle. Kadziura accepted possession, carefully transferred sealed vial without opening/using it into a separate clean lidded metal tray with support, recorded date, donor's name Shiki, classification unknown experimental gene-directed carrier, unverified safety, do-not-open/do-not-administer; locked tray in inner cabinet in his private office. Shiki did NOT take back vial, does NOT own it in physical custody now; container remains under his created holding chakra contour but durability in ordinary storage unknown, exact stability not confirmed. Kadziura aware of broad disclosed carrier mechanism aiming at donor nsp-δ expression, biopsy testing and potential irreversible modification; has NOT learned Byoton identity, its genetic origin, Zero Genome, Nemera or other secret abilities. He directly noted Shiki did not answer question whether it had ever been tested in living human and documented 'history not provided', NOT a claim that tests didn't happen. Privately knows from GM truth Arakawa in vivo trial s07.text.027 partially worked, but does not infer it himself. Doctor autonomous stance: will request checks from medical laboratory and compare clinical records/diagnostics for 4 patients; for now NO vial testing, no injections, no new patients cured or S17 stopped. Exi",
+    "positions": "Shiki in private office facing Kadziura across desk; Kadziura locked second experimental carrier vial in his INNER PERSONAL CABINET inside protected tray, key under doctor control. Two handwritten notes about S17-A/B and NSP-delta on desk. Existing four recipients monitored in guarded ward, #6 ventilated on S17; no new therapy.",
+    "pressure": "Custody/medical responsibility shifted to Kadziura. He views Shiki's absent human-trial answer as important; his independent plans to check samples and original pharmacodynamic records proceed. Secret of Byoton fully preserved."
+  },
+  "present_npcs": {
+    "kadziura_satoru": {
+      "profile": {
+        "name": "Кадзиура Сатору",
+        "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
+        "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента",
+        "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+        "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
+        "stance": "Deeply interested but alarmed and personally responsible; skeptical of lack of full history, refuses to treat vial as approved therapy or submissively accept Shiki's assertions.",
+        "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
+        "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
+        "state": "03.10 01:35: Took PHYSICAL CUSTODY of Shiki's second sealed experimental carrier vial left on documents; labeled unverified experimental sample, kept closed in separate tray locked in inner cabinet; forbids patient injections or opening without validation. Knows high-level directed nsp-δ mechanism and biopsy evidence, not source kekkei genkai. User OOC correction explicitly means NO KNOWLEDGE BYOTON. Asked about past human clinical tests, Shiki did not answer; recorded as NOT PROVIDED, not negative. Will independently liaise with hospital laboratory and compare four patient charts/old samples.",
+        "seen": "s07.text.038",
+        "knows": [
+          "Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача.",
+          "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
+          "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
+          "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ bloc",
+          "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
+          "Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
+          "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
+          "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
+        ],
+        "tier": "developed",
+        "first": "s07.text.033",
+        "memory_total": 6,
+        "memory": [
+          {
+            "turn": "s07.text.033",
+            "ch": "mentioned",
+            "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока."
+          },
+          {
+            "turn": "s07.text.034",
+            "ch": "mentioned",
+            "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет"
+          },
+          {
+            "turn": "s07.text.035",
+            "ch": "mentioned",
+            "what": "Шики спросил Кадзиуру о составе С-17 и предположил временную блокаду донорских белковых структур. Кадзиура знает клинику и режимы лечения, но не полный состав или механизм действия препарата. Разделил"
+          },
+          {
+            "turn": "s07.text.036",
+            "ch": "present",
+            "what": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и "
+          },
+          {
+            "turn": "s07.text.037",
+            "ch": "present",
+            "what": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бёто"
+          },
+          {
+            "turn": "s07.text.038",
+            "ch": "present",
+            "what": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегист"
+          }
+        ],
+        "memory_file": "archive/npc-memory/kadziura_satoru.json",
+        "status": "present_profile"
+      },
+      "prior_disclosures": [
+        {
+          "turn": "s07.text.033",
+          "at": "0006-10-03T01:14:00",
+          "source": "archive/session-007-turns.jsonl",
+          "sha256": "0bf12c47c06614e2fa4f51696dbd0d117fd93f0288c38349dd8b3d732e5bde2f",
+          "line": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока. Он прибыл, представ",
+          "status": "played_candidate_not_automatic_actor_fact"
+        },
+        {
+          "turn": "s07.text.034",
+          "at": "0006-10-03T01:17:00",
+          "source": "archive/session-007-turns.jsonl",
+          "sha256": "33088bf4b5a3870648a58fc60c027c1420e80c10b14300d57c54e3e5a4294b9c",
+          "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать пр",
+          "status": "played_candidate_not_automatic_actor_fact"
+        },
+        {
+          "turn": "s07.text.037",
+          "at": "0006-10-03T01:32:00",
+          "source": "archive/session-007-turns.jsonl",
+          "sha256": "cca76483dcd431c71120477ee12c7e9e092601fec55f119e26d176bab43edc07",
+          "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бётоне или его природе К",
+          "status": "played_candidate_not_automatic_actor_fact"
+        },
+        {
+          "turn": "s07.text.038",
+          "at": "0006-10-03T01:35:00",
+          "source": "archive/session-007-turns.jsonl",
+          "sha256": "e7e7cb9cba0f0c78dd94434fb80c3364f45ccc65f6c6ab9c10af24ce0daa86fb",
+          "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие д",
+          "status": "played_candidate_not_automatic_actor_fact"
+        }
+      ],
+      "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence."
     }
-   ],
-   "profile": {
-    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
-    "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-    "first": "s07.text.033",
-    "knows": [
-     "Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача.",
-     "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
-     "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
-     "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ bloc",
-     "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
-     "Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
-     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
-     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
+  },
+  "source_passages": {
+    "s07.text.033": {
+      "player": "Кто их ведёт? Главный лечащий врач, на месте?",
+      "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:14.**  \n*Центральный госпиталь. Охраняемое отделение.*\n\n— Кто их ведёт? Главный лечащий врач на месте?\n\nДежурная перестала придерживать истории болезни. Вопрос, по-видимому, оказался куда привычнее ожидания незнакомого вмешательства.\n\n— За каждым закреплён лечащий врач. Все четыре случая координирует **Кадзиура Сатору**, старший врач реанимационного отделения. Он здесь. После ночного обхода остался в соседнем блоке: у шестого пациента последние сутки нестабильная дыхательная функция.\n\nОна слегка повернула голо\n[... source excerpt shortened ...]\nгляд врача задержался на непривычной бледности лица, затем на сосудистых разветвлениях у шеи. Кадзиура медленно опустил руки вдоль тела, не демонстрируя страха, хотя подбородок его заметно напрягся. В следующий миг он перевёл глаза на истории болезни, будто проверил собственное внимание и вернул его туда, где оно должно было находиться.\n\n— Кадзиура Сатору. Я отвечаю за лечение этих четверых.\n\nГолос у него был низкий, с той усталой хрипотой, которую оставляют многие ночи в палатах, где чужое дыхание приходится поддерживать руками и машинами.\n\n— О вашем участии в их обнаружении я читал. Поэтому спрошу прямо, Мугами: вы пришли за медицинскими данными или с предложением лечения?\n\nКадзиура отодвинул стул, но садиться не стал. За стеклом вновь раздался ровный выдох аппарата, и старший врач, не оборачиваясь, по звуку сосчитал несколько циклов.\n\n— Я на месте. Можем говорить здесь.\n\n**Ход Шики.**",
+      "source": "archive/session-007-turns.jsonl"
+    },
+    "s07.text.034": {
+      "player": "О лечении и предпочел бы говорить в вашем кабинете, если только вы не сильно устали #указываю на пуговицы#",
+      "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:17.**  \n*Центральный госпиталь. Кабинет старшего врача реанимации.*\n\n— О лечении. И предпочёл бы говорить в вашем кабинете, если только вы не слишком устали.\n\nШики указал на неправильно застёгнутый халат.\n\nКадзиура опустил взгляд. На мгновение его лицо застыло, затем врач без улыбки перестегнул пуговицу. Оказалось, что ткань попала не только в чужую петлю: нижний край халата всё равно остался перекошенным.\n\n— Когда я начну путать назначенные дозы, можете отправлять меня спать, — произнёс он. — Пока путаю тольк\n[... source excerpt shortened ...]\nо работала вытяжка, похожая звуком на чьё-то осторожное, не до конца удающееся дыхание.\n\nКадзиура закрыл дверь, но не запер её. Снял маску с запястья и положил рядом с журналом. Лишь теперь он сел, вытянув вперёд руки с пятнами чернил.\n\n— Здесь никто не услышит разговор случайно. Если потребуется вмешательство, я всё равно обязан буду его оформить.\n\nОн поднял взгляд на Шики.\n\n— Я веду этих людей с момента передачи под охрану. Знаю, как они переносят С-17, какую поддержку получают и что происходит при ухудшении. Но происхождения препарата мне не открыли. Не собираюсь делать вид, что понимаю всю природу повреждений.\n\nВрач медленно соединил кончики пальцев. Его глаза снова остановились на лице Шики — на мучительно бледной коже, на черноте сосудов. Страха Кадзиура не высказал; вместо этого отодвинул чашку и освободил середину стола.\n\n— Вы сказали, что речь о лечении. Я слушаю.\n\n**Ход Шики.**",
+      "source": "archive/session-007-turns.jsonl"
+    },
+    "s07.text.037": {
+      "player": "У меня есть идея #достаю пробирку с вирусом и рассказываю механизм действия это нужно вывести в чат#",
+      "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:32.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\n— У меня есть идея.\n\nШики достал пробирку.\n\nВ почти прозрачном секрете угадывался тонкий тёмный рисунок. Он не оседал на дно и не расплывался по стеклу: удерживающий чакровый контур сохранял его форму. Кадзиура отодвинулся вместе со стулом. Плечи его поднялись, пальцы замерли на краю стола. Врач посмотрел на пробирку, затем на ветвящиеся тёмные сосуды под кожей Шики — и не протянул руки.\n\nШики объяснил механизм.\n\n— С-17 действует, пока его вводят. Но в\n[... source excerpt shortened ...]\nовенной сухостью. Затем наклонился ближе, всматриваясь в рисунок внутри пробирки.\n\n— Но изменение генома нельзя отменить прекращением инфузии. И я не знаю, что произойдёт с этим носителем в тканях другого человека, пока не увижу соответствующих результатов.\n\nВрач выпрямился. Вместо того чтобы требовать пробирку, он развернул к Шики историю шестого реципиента.\n\n— Я сопоставлю уже имеющиеся материалы пациентов с вашей мишенью. Пока никто здесь ничего не получит без решения о лечении. Но есть вопрос, который определит многое.\n\nКадзиура посмотрел Шики прямо в глаза. На этот раз ужас от изменившегося лица не заставил его отвернуться.\n\n— **Вы испытывали носитель только на отделённой живой ткани — или уже вводили его человеку?**\n\nЗа стеной, в глубине охраняемого отделения, размеренно выдохнул аппарат искусственной вентиляции. Из коридора послышался короткий скрежет колёс тележки.\n\n**Ход Шики.**",
+      "source": "archive/session-007-turns.jsonl"
+    },
+    "s07.text.038": {
+      "player": "Мастеру: И Бётон — ваша природа, не моя, о которой блять никто практически не знает\nПо игре: оставлю это вам #кладу пробирку на записи# думаю вы разберётесь",
+      "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:35.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\n— Оставлю это вам. Думаю, вы разберётесь.\n\nШики положил пробирку поверх исписанных листов.\n\nНа несколько мгновений Кадзиура перестал двигаться. Под стеклом едва различимый тёмный рисунок оставался неподвижен, но врачу, привыкшему наблюдать, как живые ткани медленно отказываются исполнять собственное назначение, неподвижность казалась ещё одним видом жизни — терпеливой, безмолвной и совершенно чужой.\n\nОн не притронулся к сосуду сразу.\n\n— Вы предлагаете \n[... source excerpt shortened ...]\nя в замке с тихим, тяжёлым щелчком.\n\n— Я свяжусь с лабораторией. Сверю ваши данные с тем, что у нас есть по четырём больным. Если источник повреждения окажется одинаковым, тогда и будем решать, кто имеет право подвергать их такому воздействию.\n\nСнаружи послышались шаги дежурной сестры. Кадзиура не позвал её в кабинет. Лишь посмотрел на дверь, потом опять на Шики.\n\n— Вы, возможно, оставили мне выход из истории, в которой мы до сих пор умели только продлевать страдания. А возможно — ещё одну её главу.\n\nОн не поблагодарил.\n\n— Материал я принял, Мугами. Но если выяснится, что вы скрыли сведения о его действии на живых людях, это будет иметь значение. И для меня, и для пациентов.\n\nЗа запертой дверцей шкафа не раздалось ни звука. Оставленная Шики пробирка теперь находилась у Кадзиуры; вместе с ней ему досталась возможность действовать самостоятельно — и ошибиться самостоятельно.\n\n**Ход Шики.**",
+      "source": "archive/session-007-turns.jsonl"
+    }
+  },
+  "recent_turns": [
+    {
+      "id": "s07.text.036",
+      "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарион не раскры"
+    },
+    {
+      "id": "s07.text.037",
+      "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бётоне или его природе Кадзиуре не раскрывал. Врач спросил о введении чело"
+    },
+    {
+      "id": "s07.text.038",
+      "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие данных о клинических испытаниях, запретил введение "
+    }
+  ],
+  "evidence_graph": {
+    "nodes": [
+      {
+        "id": "s07.text.033",
+        "kind": "played_turn",
+        "at": "0006-10-03T01:14:00",
+        "line": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали"
+      },
+      {
+        "id": "s07.text.034",
+        "kind": "played_turn",
+        "at": "0006-10-03T01:17:00",
+        "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и п"
+      },
+      {
+        "id": "s07.text.037",
+        "kind": "played_turn",
+        "at": "0006-10-03T01:32:00",
+        "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Ник"
+      },
+      {
+        "id": "s07.text.038",
+        "kind": "played_turn",
+        "at": "0006-10-03T01:35:00",
+        "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его бе"
+      },
+      {
+        "id": "s07.text.036",
+        "kind": "recent_turn",
+        "at": "0006-10-03T01:29:00",
+        "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функци"
+      }
     ],
-    "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
-    "memory": [
-     {
-      "ch": "mentioned",
-      "turn": "s07.text.033",
-      "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока."
-     },
-     {
-      "ch": "mentioned",
-      "turn": "s07.text.034",
-      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет"
-     },
-     {
-      "ch": "mentioned",
-      "turn": "s07.text.035",
-      "what": "Шики спросил Кадзиуру о составе С-17 и предположил временную блокаду донорских белковых структур. Кадзиура знает клинику и режимы лечения, но не полный состав или механизм действия препарата. Разделил"
-     },
-     {
-      "ch": "present",
-      "turn": "s07.text.036",
-      "what": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и "
-     },
-     {
-      "ch": "present",
+    "edges": [
+      {
+        "from": "s07.text.033",
+        "to": "s07.text.034",
+        "kind": "chronology_same_actor",
+        "actor": "kadziura_satoru",
+        "status": "source_order_only"
+      },
+      {
+        "from": "s07.text.034",
+        "to": "s07.text.037",
+        "kind": "chronology_same_actor",
+        "actor": "kadziura_satoru",
+        "status": "source_order_only"
+      },
+      {
+        "from": "s07.text.037",
+        "to": "s07.text.038",
+        "kind": "chronology_same_actor",
+        "actor": "kadziura_satoru",
+        "status": "source_order_only"
+      }
+    ],
+    "scope": "chronological edges only; semantic links are candidates, not causality"
+  },
+  "world": {
+    "clocks": [
+      {
+        "id": "s17_existing_samples_lookup",
+        "owner": "Hospital medical staff responding to Kadziura",
+        "what": "Locate original Sept25 drug assay S17-A/B report and extant four recipients' infusion and clinical respiratory records; no new sampling or treatment changes.",
+        "due": "0006-10-03T01:42:00",
+        "minutes": 7.0,
+        "signs": "Kadziura ordered after reading Shiki's functional transcription at 01:29.",
+        "if_unopposed": "Staff return existing report and clinical log materials or report their absence, without inventing new chemical findings.",
+        "status": "scheduled"
+      },
+      {
+        "id": "arakawa_supply_audit",
+        "owner": "Аракава Дзюн",
+        "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных.",
+        "due": "0006-10-03T08:15:00",
+        "minutes": 400.0,
+        "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
+        "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
+        "status": "scheduled"
+      }
+    ],
+    "due_now": [],
+    "threads": {
+      "tetsu": "{\"last_known\": \"s04.text.064\", \"state\": \"Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты.\", \"turn\": \"s04.text.064\"}",
+      "v7": "{\"last_known\": \"s04.text.063\", \"state\": \"02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги: один погибший защитник, один раненый, один нападающий задержан, остальные отступили. Маточная культура и реестр на месте у Такаги. В 23:12 Шики слышал только сообщение о нападении, погибших и удержании поста. Отдельный генетический анализ",
+      "order": "{\"last_known\": \"s04.text.045\", \"state\": \"Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям канцелярии за 30.09–01.10, в обход общего ЦУ, лично.\", \"turn\": \"s05.text.017\"}",
+      "sanction": "{\"last_known\": \"s04.text.051\", \"state\": \"В 09:30 получен формально действующий документ резиденции, подпись/печать подлинна по официальной проверке, но Кагэ лично заявку не читал. До 10:30 В-7 остаётся на хранении УВБ. Нори возражает.\", \"turn\": \"s04.text.051\"}",
+      "lower_hospital": "{\"last_known\": \"s04.text.060\", \"state\": \"Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Нижнего госпиталя по сообщению Шики, их судьбы не объявлять подтверждённо спасёнными, пока нет фактических данных.\", \"turn\": \"s05.text.031\"}",
+      "nemera": "{\"last_known\": \"s04.text.047\", \"state\": \"Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпиталя, но не считает Шики добрым. Временно замолчала по собственной воле и хочет слушать дождь до утра. Одностороннее сенсорное окно открыто, ",
+      "pact": "{\"state\": \"Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени.\"}",
+      "forbidden_arts": "{\"last_known\": \"s04.text.059\", \"state\": \"Шики с 19:54 до 20:21 направлял ОБЩУЮ природу Ситона на тела и остатки животных, разложив мягкую органику до бесформенной массы, оставив минерализованные частицы; потратил значительную долю чакры, приобрёл опыт длительного адресного воздействия, НО НЕ ОСВОИЛ отдельное именное jutsu и НЕ кастовал 'Кашель Гнию",
+      "sharingan": "{\"state\": \"Цель игрока. Шарингана нет. Нужно реальное свободное время; не заваливать вызовами.\"}",
+      "secret_lab": "{\"last_known\": \"s04.text.063\", \"state\": \"К 21:02 Шики скрытно покинул тайную лабораторию, оставив биомассу в закрытых ёмкостях, и незамеченным прибыл в Кусагакуре; теперь на личной связи с Нори.\", \"turn\": \"s04.text.063\"}",
+      "parents": "{\"last_known\": \"s05.text.002\", \"state\": \"Нао, Акихиро и Сэйна остаются с пациентами за запертой третьей палатой. Из коридора неизвестно, что они слышали из дворового боя.\", \"turn\": \"s05.text.002\"}",
+      "nori_meet": "{\"last_known\": \"s05.text.013\", \"state\": \"Нори охраняет арестованных и изъятые предметы в клинике. Она НЕ знает, что Шики направлялся или уже прибыл к Кагэ; прошлого ложного знания о его маршруте не существовало.\", \"turn\": \"s05.text.017\"}"
+    },
+    "secrets_in": "recovery/GM_ONLY.json",
+    "secret_topics": [
+      "masked_leader_bomb",
+      "masked_leader_interrogation",
+      "masked_leader_new_statement",
+      "masked_scout_case",
+      "morioka_hiroaki",
+      "nemera",
+      "rear_cylinder_substance",
+      "rear_unknown_hired_via_drop",
+      "rear_unknown_supply_envelope",
+      "resident",
+      "separate_arcs",
+      "siton_handler_inhaled",
+      "target_correction",
+      "v7",
+      "v7_access_plate",
+      "v7_maintenance",
+      "v7_personal_targeting",
+      "v7_tapping"
+    ],
+    "no_automatic_conclusion": true
+  },
+  "continuity": {
+    "things": {},
+    "gone": [],
+    "rule": "Вещь, рана, число и место меняются только через d.things was→now."
+  },
+  "horror": {
+    "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
+    "npcs": {
+      "kadziura_satoru": {
+        "stage": null,
+        "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+        "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода."
+      }
+    },
+    "quiet": 2,
+    "due": null,
+    "worn": [
+      "взгляд-по-облику",
+      "замер",
+      "напрягся",
+      "сосуды"
+    ],
+    "recent": []
+  },
+  "checks": [
+    {
       "turn": "s07.text.037",
-      "what": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бёто"
-     },
-     {
-      "ch": "present",
+      "kind": "review",
+      "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034"
+    },
+    {
       "turn": "s07.text.038",
-      "what": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегист"
-     }
-    ],
-    "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 6,
-    "name": "Кадзиура Сатору",
-    "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s07.text.038",
-    "stance": "Deeply interested but alarmed and personally responsible; skeptical of lack of full history, refuses to treat vial as approved therapy or submissively accept Shiki's assertions.",
-    "state": "03.10 01:35: Took PHYSICAL CUSTODY of Shiki's second sealed experimental carrier vial left on documents; labeled unverified experimental sample, kept closed in separate tray locked in inner cabinet; forbids patient injections or opening without validation. Knows high-level directed nsp-δ mechanism and biopsy evidence, not source kekkei genkai. User OOC correction explicitly means NO KNOWLEDGE BYOTON. Asked about past human clinical tests, Shiki did not answer; recorded as NOT PROVIDED, not negative. Will independently liaise with hospital laboratory and compare four patient charts/old samples.",
-    "status": "present_profile",
-    "tier": "developed",
-    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
-    "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-   }
-  }
- },
- "recent_turns": [
-  {
-   "id": "s07.text.036",
-   "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарион не раскры"
-  },
-  {
-   "id": "s07.text.037",
-   "line": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бётоне или его природе Кадзиуре не раскрывал. Врач спросил о введении чело"
-  },
-  {
-   "id": "s07.text.038",
-   "line": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие данных о клинических испытаниях, запретил введение "
-  }
- ],
- "scene": {
-  "positions": "Shiki in private office facing Kadziura across desk; Kadziura locked second experimental carrier vial in his INNER PERSONAL CABINET inside protected tray, key under doctor control. Two handwritten notes about S17-A/B and NSP-delta on desk. Existing four recipients monitored in guarded ward, #6 ventilated on S17; no new therapy.",
-  "pressure": "Custody/medical responsibility shifted to Kadziura. He views Shiki's absent human-trial answer as important; his independent plans to check samples and original pharmacodynamic records proceed. Secret of Byoton fully preserved.",
-  "situation": "03.10.1283 01:35. Direct OOC player correction 'И Бётон — ваша природа, не моя, о которой блять никто практически не знает': GM previously invented disclosure of Shiki's near-secret Byoton to Kadziura. Prior s07.text.037 was amended to delete verbal mention of Byoton and to remove this nonexistent knowledge from NPC. In game Shiki said 'оставлю это вам, думаю вы разберётесь' and PHYSICALLY PLACED SECOND sealed vial of experimental carrier onto the written notes, thereby handing over material for doctor to handle. Kadziura accepted possession, carefully transferred sealed vial without opening/using it into a separate clean lidded metal tray with support, recorded date, donor's name Shiki, classification unknown experimental gene-directed carrier, unverified safety, do-not-open/do-not-administer; locked tray in inner cabinet in his private office. Shiki did NOT take back vial, does NOT own it in physical custody now; container remains under his created holding chakra contour but durability in ordinary storage unknown, exact stability not confirmed. Kadziura aware of broad disclosed carrier mechanism aiming at donor nsp-δ expression, biopsy testing and potential irreversible modification; has NOT learned Byoton identity, its genetic origin, Zero Genome, Nemera or other secret abilities. He directly noted Shiki did not answer question whether it had ever been tested in living human and documented 'history not provided', NOT a claim that tests didn't happen. Privately knows from GM truth Arakawa in vivo trial s07.text.027 partially worked, but does not infer it himself. Doctor autonomous stance: will request checks from medical laboratory and compare clinical records/diagnostics for 4 patients; for now NO vial testing, no injections, no new patients cured or S17 stopped. Exi"
- },
- "shiki": {
-  "body": "03.10.1283 00:51: левая рука цела, 4 биоптата уничтожены; создана НОВАЯ пробирка с Бётон-носителем для других пациентов, первая ранее введена Аракаве. При дальнейшей практике Бётона нагрузка договора переходит следующий порог, внешние признаки и кровь будут меняться со временем; на данный момент без кровяной инфекции.",
-  "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
-  "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
-  "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
- },
- "source_passages": {
-  "s07.text.033": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:14.**  \n*Центральный госпиталь. Охраняемое отделение.*\n\n— Кто их ведёт? Главный лечащий врач на месте?\n\nДежурная перестала придерживать истории болезни. Вопрос, по-видимому, оказался куда привычнее ожидания незнакомого вмешательства.\n\n— За каждым закреплён лечащий врач. Все четыре случая координирует **Кадзиура Сатору**, старший врач реанимационного отделения. Он здесь. После ночного обхода остался в соседнем блоке: у шестого пациента последние сутки нестабильная дыхательная функция.\n\nОна слегка повернула голо\n[... source excerpt shortened ...]\nгляд врача задержался на непривычной бледности лица, затем на сосудистых разветвлениях у шеи. Кадзиура медленно опустил руки вдоль тела, не демонстрируя страха, хотя подбородок его заметно напрягся. В следующий миг он перевёл глаза на истории болезни, будто проверил собственное внимание и вернул его туда, где оно должно было находиться.\n\n— Кадзиура Сатору. Я отвечаю за лечение этих четверых.\n\nГолос у него был низкий, с той усталой хрипотой, которую оставляют многие ночи в палатах, где чужое дыхание приходится поддерживать руками и машинами.\n\n— О вашем участии в их обнаружении я читал. Поэтому спрошу прямо, Мугами: вы пришли за медицинскими данными или с предложением лечения?\n\nКадзиура отодвинул стул, но садиться не стал. За стеклом вновь раздался ровный выдох аппарата, и старший врач, не оборачиваясь, по звуку сосчитал несколько циклов.\n\n— Я на месте. Можем говорить здесь.\n\n**Ход Шики.**",
-   "player": "Кто их ведёт? Главный лечащий врач, на месте?",
-   "source": "archive/session-007-turns.jsonl"
-  },
-  "s07.text.034": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:17.**  \n*Центральный госпиталь. Кабинет старшего врача реанимации.*\n\n— О лечении. И предпочёл бы говорить в вашем кабинете, если только вы не слишком устали.\n\nШики указал на неправильно застёгнутый халат.\n\nКадзиура опустил взгляд. На мгновение его лицо застыло, затем врач без улыбки перестегнул пуговицу. Оказалось, что ткань попала не только в чужую петлю: нижний край халата всё равно остался перекошенным.\n\n— Когда я начну путать назначенные дозы, можете отправлять меня спать, — произнёс он. — Пока путаю тольк\n[... source excerpt shortened ...]\nо работала вытяжка, похожая звуком на чьё-то осторожное, не до конца удающееся дыхание.\n\nКадзиура закрыл дверь, но не запер её. Снял маску с запястья и положил рядом с журналом. Лишь теперь он сел, вытянув вперёд руки с пятнами чернил.\n\n— Здесь никто не услышит разговор случайно. Если потребуется вмешательство, я всё равно обязан буду его оформить.\n\nОн поднял взгляд на Шики.\n\n— Я веду этих людей с момента передачи под охрану. Знаю, как они переносят С-17, какую поддержку получают и что происходит при ухудшении. Но происхождения препарата мне не открыли. Не собираюсь делать вид, что понимаю всю природу повреждений.\n\nВрач медленно соединил кончики пальцев. Его глаза снова остановились на лице Шики — на мучительно бледной коже, на черноте сосудов. Страха Кадзиура не высказал; вместо этого отодвинул чашку и освободил середину стола.\n\n— Вы сказали, что речь о лечении. Я слушаю.\n\n**Ход Шики.**",
-   "player": "О лечении и предпочел бы говорить в вашем кабинете, если только вы не сильно устали #указываю на пуговицы#",
-   "source": "archive/session-007-turns.jsonl"
-  },
-  "s07.text.037": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:32.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\n— У меня есть идея.\n\nШики достал пробирку.\n\nВ почти прозрачном секрете угадывался тонкий тёмный рисунок. Он не оседал на дно и не расплывался по стеклу: удерживающий чакровый контур сохранял его форму. Кадзиура отодвинулся вместе со стулом. Плечи его поднялись, пальцы замерли на краю стола. Врач посмотрел на пробирку, затем на ветвящиеся тёмные сосуды под кожей Шики — и не протянул руки.\n\nШики объяснил механизм.\n\n— С-17 действует, пока его вводят. Но в\n[... source excerpt shortened ...]\nовенной сухостью. Затем наклонился ближе, всматриваясь в рисунок внутри пробирки.\n\n— Но изменение генома нельзя отменить прекращением инфузии. И я не знаю, что произойдёт с этим носителем в тканях другого человека, пока не увижу соответствующих результатов.\n\nВрач выпрямился. Вместо того чтобы требовать пробирку, он развернул к Шики историю шестого реципиента.\n\n— Я сопоставлю уже имеющиеся материалы пациентов с вашей мишенью. Пока никто здесь ничего не получит без решения о лечении. Но есть вопрос, который определит многое.\n\nКадзиура посмотрел Шики прямо в глаза. На этот раз ужас от изменившегося лица не заставил его отвернуться.\n\n— **Вы испытывали носитель только на отделённой живой ткани — или уже вводили его человеку?**\n\nЗа стеной, в глубине охраняемого отделения, размеренно выдохнул аппарат искусственной вентиляции. Из коридора послышался короткий скрежет колёс тележки.\n\n**Ход Шики.**",
-   "player": "У меня есть идея #достаю пробирку с вирусом и рассказываю механизм действия это нужно вывести в чат#",
-   "source": "archive/session-007-turns.jsonl"
-  },
-  "s07.text.038": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 01:35.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\n— Оставлю это вам. Думаю, вы разберётесь.\n\nШики положил пробирку поверх исписанных листов.\n\nНа несколько мгновений Кадзиура перестал двигаться. Под стеклом едва различимый тёмный рисунок оставался неподвижен, но врачу, привыкшему наблюдать, как живые ткани медленно отказываются исполнять собственное назначение, неподвижность казалась ещё одним видом жизни — терпеливой, безмолвной и совершенно чужой.\n\nОн не притронулся к сосуду сразу.\n\n— Вы предлагаете \n[... source excerpt shortened ...]\nя в замке с тихим, тяжёлым щелчком.\n\n— Я свяжусь с лабораторией. Сверю ваши данные с тем, что у нас есть по четырём больным. Если источник повреждения окажется одинаковым, тогда и будем решать, кто имеет право подвергать их такому воздействию.\n\nСнаружи послышались шаги дежурной сестры. Кадзиура не позвал её в кабинет. Лишь посмотрел на дверь, потом опять на Шики.\n\n— Вы, возможно, оставили мне выход из истории, в которой мы до сих пор умели только продлевать страдания. А возможно — ещё одну её главу.\n\nОн не поблагодарил.\n\n— Материал я принял, Мугами. Но если выяснится, что вы скрыли сведения о его действии на живых людях, это будет иметь значение. И для меня, и для пациентов.\n\nЗа запертой дверцей шкафа не раздалось ни звука. Оставленная Шики пробирка теперь находилась у Кадзиуры; вместе с ней ему досталась возможность действовать самостоятельно — и ошибиться самостоятельно.\n\n**Ход Шики.**",
-   "player": "Мастеру: И Бётон — ваша природа, не моя, о которой блять никто практически не знает\nПо игре: оставлю это вам #кладу пробирку на записи# думаю вы разберётесь",
-   "source": "archive/session-007-turns.jsonl"
-  }
- },
- "world": {
-  "clocks": [
-   {
-    "due": "0006-10-02T22:57:00",
-    "id": "lab_registry_check",
-    "if_unopposed": "Охрана проверяет названную ячейку и рабочее место Фурукавы, возвращает доступные факты и предметные следы; виновность никого не следует автоматически.",
-    "minutes": -158.0,
-    "owner": "Курода Маю и конвой",
-    "signs": "Конвоир отправлен через служебный коридор без оповещения общей сетью",
-    "status": "overdue_needs_adjudication",
-    "what": "Проверить ячейку №4 у служебного входа, лабораторный журнал и местонахождение Фурукавы"
-   },
-   {
-    "due": "0006-10-02T23:28:00",
-    "id": "arakawa_reinforcement",
-    "if_unopposed": "Группа будет принята к внешнему оцеплению и выносу пострадавших либо получит отказ без подтверждения допуска; действия бойцов Такаги и оставшихся нападающих разрешать отдельно.",
-    "minutes": -127.0,
-    "owner": "Охрана Центрального управления по поручению Аракавы",
-    "signs": "Аракава отправил группу на место в 23:13, к 23:20 она вышла из корпуса и запросила прямую связь с УВБ.",
-    "status": "overdue_needs_adjudication",
-    "what": "4 резервных охранника и медицинское звено подходят к периметру УВБ и запрашивают координацию у Такаги; их допуск и фактическое содействие зависят от его решений, могут столкнуться с оставшимися налётчиками."
-   },
-   {
-    "due": "0006-10-03T01:42:00",
-    "id": "s17_existing_samples_lookup",
-    "if_unopposed": "Staff return existing report and clinical log materials or report their absence, without inventing new chemical findings.",
-    "minutes": 7.0,
-    "owner": "Hospital medical staff responding to Kadziura",
-    "signs": "Kadziura ordered after reading Shiki's functional transcription at 01:29.",
-    "status": "scheduled",
-    "what": "Locate original Sept25 drug assay S17-A/B report and extant four recipients' infusion and clinical respiratory records; no new sampling or treatment changes."
-   },
-   {
-    "due": "0006-10-03T08:15:00",
-    "id": "arakawa_supply_audit",
-    "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 400.0,
-    "owner": "Аракава Дзюн",
-    "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
-    "status": "scheduled",
-    "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
-   }
+      "kind": "review",
+      "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034"
+    }
   ],
-  "due_now": [
-   "lab_registry_check",
-   "arakawa_reinforcement"
+  "fold_errors": [],
+  "needs_profile": [
+    {
+      "npc": "kadziura_satoru",
+      "tier": "developed",
+      "facets": 0,
+      "need": 3,
+      "appearances": 6
+    }
   ],
-  "no_automatic_conclusion": true,
-  "secret_topics": [
-   "masked_leader_bomb",
-   "masked_leader_interrogation",
-   "masked_leader_new_statement",
-   "masked_scout_case",
-   "morioka_hiroaki",
-   "nemera",
-   "rear_cylinder_substance",
-   "rear_unknown_hired_via_drop",
-   "rear_unknown_supply_envelope",
-   "resident",
-   "separate_arcs",
-   "siton_handler_inhaled",
-   "target_correction",
-   "v7",
-   "v7_access_plate",
-   "v7_maintenance",
-   "v7_personal_targeting",
-   "v7_tapping"
-  ],
-  "secrets_in": "recovery/GM_ONLY.json",
-  "threads": {
-   "forbidden_arts": "{\"last_known\": \"s04.text.059\", \"state\": \"Шики с 19:54 до 20:21 направлял ОБЩУЮ природу Ситона на тела и остатки животных, разложив мягкую органику до бесформенной массы, оставив минерализованные частицы; потратил значительную долю чакры, приобрёл опыт длительного адресного воздействия, НО НЕ ОСВОИЛ отдельное именное jutsu и НЕ кастовал 'Кашель Гнию",
-   "lower_hospital": "{\"last_known\": \"s04.text.060\", \"state\": \"Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Нижнего госпиталя по сообщению Шики, их судьбы не объявлять подтверждённо спасёнными, пока нет фактических данных.\", \"turn\": \"s05.text.031\"}",
-   "nemera": "{\"last_known\": \"s04.text.047\", \"state\": \"Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпиталя, но не считает Шики добрым. Временно замолчала по собственной воле и хочет слушать дождь до утра. Одностороннее сенсорное окно открыто, ",
-   "nori_meet": "{\"last_known\": \"s05.text.013\", \"state\": \"Нори охраняет арестованных и изъятые предметы в клинике. Она НЕ знает, что Шики направлялся или уже прибыл к Кагэ; прошлого ложного знания о его маршруте не существовало.\", \"turn\": \"s05.text.017\"}",
-   "order": "{\"last_known\": \"s04.text.045\", \"state\": \"Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям канцелярии за 30.09–01.10, в обход общего ЦУ, лично.\", \"turn\": \"s05.text.017\"}",
-   "pact": "{\"state\": \"Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени.\"}",
-   "parents": "{\"last_known\": \"s05.text.002\", \"state\": \"Нао, Акихиро и Сэйна остаются с пациентами за запертой третьей палатой. Из коридора неизвестно, что они слышали из дворового боя.\", \"turn\": \"s05.text.002\"}",
-   "sanction": "{\"last_known\": \"s04.text.051\", \"state\": \"В 09:30 получен формально действующий документ резиденции, подпись/печать подлинна по официальной проверке, но Кагэ лично заявку не читал. До 10:30 В-7 остаётся на хранении УВБ. Нори возражает.\", \"turn\": \"s04.text.051\"}",
-   "secret_lab": "{\"last_known\": \"s04.text.063\", \"state\": \"К 21:02 Шики скрытно покинул тайную лабораторию, оставив биомассу в закрытых ёмкостях, и незамеченным прибыл в Кусагакуре; теперь на личной связи с Нори.\", \"turn\": \"s04.text.063\"}",
-   "sharingan": "{\"state\": \"Цель игрока. Шарингана нет. Нужно реальное свободное время; не заваливать вызовами.\"}",
-   "tetsu": "{\"last_known\": \"s04.text.064\", \"state\": \"Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты.\", \"turn\": \"s04.text.064\"}",
-   "v7": "{\"last_known\": \"s04.text.063\", \"state\": \"02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги: один погибший защитник, один раненый, один нападающий задержан, остальные отступили. Маточная культура и реестр на месте у Такаги. В 23:12 Шики слышал только сообщение о нападении, погибших и удержании поста. Отдельный генетический анализ"
-  }
- }
+  "shiki": {
+    "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
+    "body": "03.10.1283 00:51: левая рука цела, 4 биоптата уничтожены; создана НОВАЯ пробирка с Бётон-носителем для других пациентов, первая ранее введена Аракаве. При дальнейшей практике Бётона нагрузка договора переходит следующий порог, внешние признаки и кровь будут меняться со временем; на данный момент без кровяной инфекции.",
+    "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
+    "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились."
+  },
+  "last": {
+    "player": "Мастеру: И Бётон — ваша природа, не моя, о которой блять никто практически не знает\nПо игре: оставлю это вам #кладу пробирку на записи# думаю вы разберётесь",
+    "gm_tail": "я в замке с тихим, тяжёлым щелчком.\n\n— Я свяжусь с лабораторией. Сверю ваши данные с тем, что у нас есть по четырём больным. Если источник повреждения окажется одинаковым, тогда и будем решать, кто имеет право подвергать их такому воздействию.\n\nСнаружи послышались шаги дежурной сестры. Кадзиура не позвал её в кабинет. Лишь посмотрел на дверь, потом опять на Шики.\n\n— Вы, возможно, оставили мне выход из истории, в которой мы до сих пор умели только продлевать страдания. А возможно — ещё одну её главу.\n\nОн не поблагодарил.\n\n— Материал я принял, Мугами. Но если выяснится, что вы скрыли сведения о его действии на живых людях, это будет иметь значение. И для меня, и для пациентов.\n\nЗа запертой дверцей шкафа не раздалось ни звука. Оставленная Шики пробирка теперь находилась у Кадзиуры; вместе с ней ему досталась возможность действовать самостоятельно — и ошибиться самостоятельно.\n\n**Ход Шики.**"
+  },
+  "guards": {
+    "player_owns_shiki": true,
+    "no_repeated_revelations_without_new_source": true,
+    "no_npc_knowledge_without_channel": true,
+    "clock_deadlines_are_real": true,
+    "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
+  },
+  "digest": "723111a1283e172959209ad02ee827b330b63072d6b3c5eccf73ea482345b941"
 }
