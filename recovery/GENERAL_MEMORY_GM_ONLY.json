@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.017",
+  "cursor": "s08.text.018",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -261,22 +261,6 @@
         "recovery/cast/archive_roof_fugitive.json"
       ]
     },
-    "canon:s08.text.017:0": {
-      "aliases": [
-        "canon:s08.text.017:0",
-        "Новая прямая авторская техника, доступна Шики с 03.10.1283 03:21: «Бётон: Заражение» («Воспроизведение патогена»). Шики направленной чакрой Бётона может воспроизвести в теле другог"
-      ],
-      "facts": [],
-      "id": "canon:s08.text.017:0",
-      "kind": "canon",
-      "label": "Новая прямая авторская техника, доступна Шики с 03.10.1283 03:21: «Бётон: Заражение» («Воспроизведение патогена»). Шики направленной чакрой Бётона может воспроизвести в теле другог",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.017"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -369,23 +353,6 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
-      ]
-    },
-    "clock:s17_patient6_intake_record_review": {
-      "aliases": [
-        "clock:s17 patient6 intake record review",
-        "s17 patient6 intake record review",
-        "s17_patient6_intake_record_review"
-      ],
-      "facts": [],
-      "id": "clock:s17_patient6_intake_record_review",
-      "kind": "clock",
-      "label": "s17 patient6 intake record review",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.017"
       ]
     },
     "courier_unknown": {
@@ -587,7 +554,7 @@
       "id": "kadziura_satoru",
       "kind": "npc",
       "label": "Кадзиура Сатору",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0006-10-03T01:14:00",
@@ -595,13 +562,6 @@
           "source": "archive/session-007-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s07.text.033"
-        },
-        {
-          "at": "0006-10-03T03:18:00",
-          "excerpt": "о отдельно от собственных клеток Шики. **Шики:** — Кадзиура-сан. Врач поднял голову от истории болезни. **Кадзиура Сатору:** — Слушаю. Шики изложил результаты исследования. **Шики:** — В образце две генетически различные клеточные популяции. Основная — собстве",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.015"
         },
         {
           "at": "0006-10-03T03:21:00",
@@ -616,6 +576,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.017"
+        },
+        {
+          "at": "0006-10-03T03:28:00",
+          "excerpt": ". Взгляд приобрёл знакомую сосредоточенность врача, столкнувшегося с трудной, но определимой задачей. **Кадзиура Сатору:** — Теперь я понимаю, какую границу вы предлагаете. Он придвинул лист со схемой ближе. — Вы управляете распространением носителя посредство",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.018"
         }
       ],
       "projections": [
@@ -623,9 +590,9 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s08.text.017",
+          "seen": "s08.text.018",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "03:24: visibly shocked by claimed body-mediated induction of agent, now holds separate clinical control boundary: orders no new experimental intervention on recipient6 until Shiki specifies whether spreading requires chakra control and whether he can stop it. ",
+          "state": "03:28 signed only preparation order for possible experimental treatment, preserving independent material, maintaining ventilation and original S17. Distinguishes controlled spread vs irreversible potential DNA edits, awaits separate action before patient expos",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         },
@@ -633,14 +600,14 @@
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "03:24: visibly shocked by claimed body-mediated induction of agent, now holds separate clinical control boundary: orders no new experimental intervention on recipient6 until Shiki specifies whether spreading requires chakra control and whether he can stop it. ",
+          "state": "03:28 signed only preparation order for possible experimental treatment, preserving independent material, maintaining ventilation and original S17. Distinguishes controlled spread vs irreversible potential DNA edits, awaits separate action before patient expos",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
         "recovery/HOT.json",
-        "s08.text.017"
+        "s08.text.018"
       ]
     },
     "kage_doppelganger": {
@@ -1203,9 +1170,9 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.017",
+          "seen": "s08.text.018",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "03:24: reacted with visible revulsion, independently writes Shiki's exact claim into separate clinical safety record, supports no new experimental exposure without assessing control.",
+          "state": "03:28 independently documents unresolved irreversible edits after chakra removal and refuses to sign actual administration, while recording Kadziura's narrow authorization of preparatory actions.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         },
@@ -1213,14 +1180,14 @@
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "03:24: reacted with visible revulsion, independently writes Shiki's exact claim into separate clinical safety record, supports no new experimental exposure without assessing control.",
+          "state": "03:28 independently documents unresolved irreversible edits after chakra removal and refuses to sign actual administration, while recording Kadziura's narrow authorization of preparatory actions.",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
         "recovery/cast/night_icu_physician.json",
         "recovery/HOT.json",
-        "s08.text.017"
+        "s08.text.018"
       ]
     },
     "nori": {
@@ -6010,7 +5977,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.017",
+        "s08.text.018",
         "s08.text.002",
         "s08.text.003",
         "s08.text.006",
@@ -6020,7 +5987,8 @@
         "s08.text.011",
         "s08.text.013",
         "s08.text.015",
-        "s08.text.016"
+        "s08.text.016",
+        "s08.text.017"
       ]
     },
     "place:e98c8605d584c4e9": {
@@ -6663,7 +6631,7 @@
       "id": "recipient6",
       "kind": "entity",
       "label": "Реципиент № 6",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0001-07-28T18:22:00",
@@ -6671,13 +6639,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.011"
-        },
-        {
-          "at": "0006-10-03T03:17:00",
-          "excerpt": "еский конструкт. Личность донора из такого совпадения установить было невозможно. Но теперь его присутствие в ткани шестого подтверждалось непосредственно. *** На следующем этапе открылась причина необычного поведения бронхиального эпителия. Стромальные клетки",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.013"
         },
         {
           "at": "0006-10-03T03:21:00",
@@ -6692,6 +6653,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.017"
+        },
+        {
+          "at": "0006-10-03T03:28:00",
+          "excerpt": "Его голос стал сухим и властным. — Подготовка — это сохранение образцов, проверка характеристик носителя и обеспечение непрерывной поддержки шестого. Решение о непосредственном воздействии будет отдельным. Ваше возражение останется в документах. Дежурная врач ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.018"
         }
       ],
       "projections": [],
@@ -6769,7 +6737,8 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -6796,17 +6765,18 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s08.text.017",
-          "state": "03:21: teen boy ~16 ventilated/sedated on same S17, pulse not newly measured, SpO2 94% at elevated inspired oxygen and Ppeak 27; no new bronchial large cast seen, no new gene intervention."
+          "seen": "s08.text.018",
+          "state": "03:28 ventilated 16yo recipient6 on continuing S17 infusion and higher FiO2; SpO2 94%, pulse110, peak pressure27; no gene editing administered yet, still critically ill."
         },
         {
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "state": "03:21: teen boy ~16 ventilated/sedated on same S17, pulse not newly measured, SpO2 94% at elevated inspired oxygen and Ppeak 27; no new bronchial large cast seen, no new gene intervention."
+          "state": "03:28 ventilated 16yo recipient6 on continuing S17 infusion and higher FiO2; SpO2 94%, pulse110, peak pressure27; no gene editing administered yet, still critically ill."
         }
       ],
       "sources": [
         "recovery/cast/s17_recipient_6.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s08.text.018"
       ]
     },
     "sayu": {
@@ -7439,11 +7409,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03.10 03:21: Shiki disclosed carrier specifically RNA-nature viral vector with CRISPR complex for nsp-delta editing/suppression; alternative cell-by-cell destruction of foreign graft via his own chakra risks catastrophic structural damage. Doctor Kadziura, independently assessing uncertainty of foreign stroma distribution and in"
+          "state": "03.10.1283 03:28 Shiki speaks about limited, chakra-dependent dissemination of non-self-replicating CRISPR RNA viral vector, and claim it cannot propagate to healthy cells, while already-delivered intracellular cargo remains active after chakra withdrawal. Kadziura recognizes persistent gene edit may outlive delivery; signs prep"
         }
       ],
       "sources": [
-        "s08.text.016"
+        "s08.text.018"
       ]
     },
     "thread:sanction": {
@@ -7778,5 +7748,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 567
+  "source_turns_indexed": 568
 }
