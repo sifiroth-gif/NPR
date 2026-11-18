@@ -53,7 +53,7 @@
  ],
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.020",
+  "cursor": "s08.text.021",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -65,10 +65,11 @@
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6",
-   "place:c22ad5f06ef17dc0",
+   "place:5270dd69fc81a58d",
+   "stage_floor5",
    "thread:pact"
   ],
-  "focus_bytes": 4264,
+  "focus_bytes": 4417,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -100,13 +101,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T04:12:00",
+  "at": "0006-10-03T05:46:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.020",
-  "place": "Кусагакуре, Центральный госпиталь, палата №6 и соседняя палата",
-  "time": "04:12"
+  "id": "s08.text.021",
+  "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
+  "time": "05:46"
  },
- "digest": "f818ff9bcbcd7d9a5d89f1fea643b7f3a1f877ae70f4fdbd7dd2530cd48c26d7",
+ "digest": "eabd10e10df747b4a7a714ab9450fd2215fdd8f97629faab4c644b48c43f6c41",
  "entity_memory": {
   "activated": [
    {
@@ -247,12 +248,6 @@
     "line": "Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носите"
    },
    {
-    "at": "0006-10-03T03:28:00",
-    "id": "s08.text.018",
-    "kind": "recent_turn",
-    "line": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. К"
-   },
-   {
     "at": "0006-10-03T03:31:00",
     "id": "s08.text.019",
     "kind": "recent_turn",
@@ -263,6 +258,12 @@
     "id": "s08.text.020",
     "kind": "recent_turn",
     "line": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 "
+   },
+   {
+    "at": "0006-10-03T05:46:00",
+    "id": "s08.text.021",
+    "kind": "recent_turn",
+    "line": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально зараз"
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -349,9 +350,19 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:c22ad5f06ef17dc0",
+    "id": "place:5270dd69fc81a58d",
     "kind": "place",
-    "label": "Кусагакуре, Центральный госпиталь, палата №6 и соседняя палата",
+    "label": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "stage_floor5",
+    "kind": "unresolved",
+    "label": "stage_floor5",
     "status": "no_verified_facts"
    },
    {
@@ -371,7 +382,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 6
+  "total_matched": 7
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -385,20 +396,20 @@
   "due": null,
   "npcs": {
    "kadziura_satoru": {
-    "does": "Catches fainting Shiki only by clothing and directs barrier-protected clinical observation while continuing ICU management.",
+    "does": "Keeps specimen isolated, wears protective barrier and undertakes nonstandard microscopy rather than routine disposal, continues direct clinical oversight.",
     "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "Clinical and biological control was no longer reducible to the locked vial; both injured recipient and dangerously depleted healer require independent care.",
+    "reads": "His treating colleague's body may be an unidentified origin of unusual biological phenomenon and the physician is no longer able to interpret safely ordinary blood tests.",
     "stage": 4,
     "step": "необратимость"
    },
    "night_icu_physician": {
-    "does": "Dons gloves, helps move Shiki without skin contact and documents the witnessed outcome in separate medical chart.",
+    "does": "Issues formal internal medical notification to hospital review committee for controlled isolation and exposure management, without giving false claims of proven contagion.",
     "lever": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
-    "next": "NPC принимает решение, которое нельзя отменить: предательство, бегство, союз, покушение, служение. Мир отвечает на это сам.",
-    "reads": "A form of direct biologic intervention not dependent on a stored agent exists, and medical responsibility now extends to the exhausted practitioner.",
-    "stage": 3,
-    "step": "поступок"
+    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
+    "reads": "He poses a possible risk to clinical staff that requires written internal hospital controls even without confirmed transmission pathways.",
+    "stage": 4,
+    "step": "необратимость"
    },
    "s17_recipient_6": {
     "lever": "",
@@ -421,26 +432,26 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "На другом: *«Мугами Шики. Потеря сознания после продолжительного сочетанного применения медицинской и неизвестной ранее патологической чакры. Предположительно критическое истощение».*\n\nКадзиура перечитал вторую запись.\n\n**Кадзиура Сатору:**\n\n— Исправьте.\n\n**Дежурная врач:**\n\n— Что именно?\n\nВрач указал на последние слова.\n\n— Он назвал её. Бётон.\n\nОна посмотрела на него.\n\n**Дежурная врач:**\n\n— Вы знаете такую стихию?\n\nКадзиура ответил не сразу.\n\n**Кадзиура Сатору:**\n\n— Нет.\n\nГолос был совершенно ровным.\n\n— Но я видел, что она сделала.\n\nЗа его спиной аппарат ИВЛ продолжал мерно работать.\n\nНа соседней каталке без сознания лежал Шики. Под восстановленной кожей левого плеча оставался небольшой изолированный участок чужой бронхиальной ткани, утративший постоянную подпитку чакрой.\n\nЗа стеклом палаты начинался обычный предрассветный обход.\n\nНи один из врачей не вышел ему навстречу.\n\n**Ход Шики.**",
-  "player": "#печати, там есть оригинальные для одной руки и опять же реакции и на печати и на стихию# Бётон заражение: воспроизведение патогена #одной рукой распространяю второй поддержка и регенирация с уничтожением патогенного белка до полного восстановления и падаю в обморок от перерасхода чакры (вот тебе пример напряжения и драмы) перед обмороком сдавлено с помутневшими глазами# держать...не могу....не трогайте...меня...голыми рук....."
+  "gm_tail": "вы ожидали такого изменения?**\n\nВ пробирке тёмные нити медленно перестраиваются.\n\nВ теле Шики та же сеть существует повсюду.\n\nИ теперь, с пробуждением, обнаруживается ещё одно её свойство.\n\nВблизи поверхности живой кожи некоторые волокна образуют чрезвычайно тонкие чакровые окончания, которых раньше не было. При непосредственном соприкосновении с чужой открытой кожей они способны передавать патологический импульс Договора. Свежая кровь, попавшая прямо на слизистую или в открытую рану другого человека, тоже стала возможным путём такого воздействия.\n\nЭто уже **пятая стадия Договора Семи запоров — «Активный контактный синдром»**.\n\nСемь замков остаются закрыты.\n\nТело Шики живо и физиологически работоспособно, но его кровь и внутренняя среда перешли необратимую границу. Чужая кожа теперь может оказаться частью патологического процесса при прямом контакте.\n\nКадзиура ждёт ответа.\n\n**Ход Шики.**",
+  "player": "Мастеру: побочные эффекты должны перейти на следующую стадию и должны произойти разительные изменения крови и внутренней среды Шики. И давай дальше к пробуждению"
  },
  "needs_profile": [
   {
-   "appearances": 20,
+   "appearances": 21,
    "facets": 0,
    "need": 5,
    "npc": "kadziura_satoru",
    "tier": "deep"
   },
   {
-   "appearances": 15,
+   "appearances": 16,
    "facets": 0,
    "need": 5,
    "npc": "night_icu_physician",
    "tier": "deep"
   },
   {
-   "appearances": 12,
+   "appearances": 13,
    "facets": 0,
    "need": 3,
    "npc": "s17_recipient_6",
@@ -529,18 +540,6 @@
     "due": "0006-10-03T06:10:00",
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "status": "unresolved_actor_or_non_npc_owner"
-   },
-   {
-    "clock_id": "shiki_unconscious_observation",
-    "due": "0006-10-03T04:30:00",
-    "owner": "Кадзиура и дежурная медицинская бригада",
-    "status": "unresolved_actor_or_non_npc_owner"
-   },
-   {
-    "clock_id": "shiki_biopsy_ischemia",
-    "due": "0006-10-03T04:25:00",
-    "owner": "Биоптат №6 в левой дельтовидной мышце Шики",
-    "status": "unresolved_actor_or_non_npc_owner"
    }
   ]
  },
@@ -567,8 +566,8 @@
     ],
     "parent": "main",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
-    "scenes": 7,
-    "scenes_left": 5,
+    "scenes": 8,
+    "scenes_left": 4,
     "threads": [
      "s17_survivors",
      "arakawa_treatment"
@@ -738,22 +737,17 @@
     "first": "s07.text.033",
     "hides": "",
     "knows": [
-     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing.",
      "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue.",
      "At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, matching previously investigated Arakawa donor construct, continuous NSP-",
      "Shiki says experimental gene-targeting carrier is an RNA-type viral vector with CRISPR complex, intended to suppress nsp-delta; Shiki can also attempt painstaking cell-by-cell destruction of unknown donor-deriv",
      "03.10 03:24 Shiki directly CLAIMED he can reproduce/administer his previously described experimental viral CRISPR vector inside patient6 without needing stored vial and that its propagation is not entirely auto",
      "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, c",
      "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no lo",
-     "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle"
+     "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle",
+     "Between 04:26 and 05:46 after Shiki lost consciousness Kadz saw Shiki blood dramatically dark maroon with coherent black microscopic filaments not typical fibrin/erythrocyte clumping and not disappearing in ant"
     ],
     "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.017",
-      "what": "Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражен"
-     },
      {
       "ch": "present",
       "turn": "s08.text.018",
@@ -768,15 +762,20 @@
       "ch": "present",
       "turn": "s08.text.020",
       "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.021",
+      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 20,
+    "memory_total": 21,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.020",
+    "seen": "s08.text.021",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "04:12 witnessed named Byoton Infection through one-handed seals and a clinical airway response to Shiki's two-hand treatment, then Shiki unconscious from overuse. Caught Shiki by his clothing after warning against bare-skin contact, ordered gloves and monitored him separately, maintained ongoing S17/ventilator for child.",
+    "state": "05:46 after supervising Shiki examination and monitoring following collapse, Kadziura sees him regain consciousness. Reports tests of darkened anomalous blood with unusual anticoagulant-resistant microstructures and preserved gross physiological function. Applies gloves/barrier precautions and asks if Shiki expected changes. Continues care of recipient6 on ventilator/S17, reviews duty doctor internal notification.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -834,22 +833,17 @@
     "first": "s07.text.033",
     "hides": "",
     "knows": [
-     "Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка.",
      "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
      "Главой запрещён перевод пациентов без независимой проверки распоряжений.",
      "03:18 heard Shiki's direct disclosure of nsp-δ-expressing donor-like stroma in recipient6 right bronchial biopsy and key functional mechanism, under limitations; tasked to request independent verification by Ku",
      "At 03:21 heard Shiki's description of RNA-type viral vector with CRISPR complex and alternative cellular destruction, and Kadziura's conditional preference for suppression while preserving tissues.",
      "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
      "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
-     "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why."
+     "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
+     "04:26–05:46 during Shiki monitoring, she observed dark blood sample and unknown filament structures, knows his warning against bare hands, but cannot prove cause of harm or identify Pact stage. She sent interna"
     ],
     "leverage": "Ведёт ночные истории наблюдения; проверяет назначения, имеет доступ к посту реанимации",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.017",
-      "what": "Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражен"
-     },
      {
       "ch": "present",
       "turn": "s08.text.018",
@@ -864,15 +858,20 @@
       "ch": "present",
       "turn": "s08.text.020",
       "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.021",
+      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 15,
+    "memory_total": 16,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.020",
+    "seen": "s08.text.021",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-    "state": "04:12 responded to Shiki collapse by donning gloves and securing observation, notes new term Byoton from his audible jutsu utterance, records immediate patient6 clinical outcome separately.",
+    "state": "05:46 independently maintained protected handling and recorded clinical blood tests; sent bounded hospital internal incident notification to medical review committee without giving unknown secret mechanisms, now present as Shiki wakes.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -893,11 +892,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.017",
-      "what": "Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражен"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.018",
       "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оф"
      },
@@ -910,14 +904,19 @@
       "ch": "present",
       "turn": "s08.text.020",
       "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.021",
+      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
-    "memory_total": 12,
+    "memory_total": 13,
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-    "seen": "s08.text.020",
-    "state": "04:12 restored surface of visibly damaged bronchi following Byoton carrier and medical chakra therapy; SpO2 96%, BP108/70, Ppeak23 on reduced supplemental oxygen but still on mechanical ventilation and unchanged S17 with inadequate spontaneous muscle strength. No new bronchial casts; longer-term edits and systemic dependence unproven.",
+    "seen": "s08.text.021",
+    "state": "05:46 sedated/intubated teenage recipient6 still mechanically ventilated on established S17; latest SpO2 96 on lower inspired oxygen, no new bronchial slough/casts observed, insufficient spontaneous breathing and unknown long-term results of gene therapy.",
     "status": "present_profile",
     "tier": "developed"
    }
@@ -925,25 +924,25 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.018",
-   "line": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение."
-  },
-  {
    "id": "s08.text.019",
    "line": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
   },
   {
    "id": "s08.text.020",
    "line": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
+  },
+  {
+   "id": "s08.text.021",
+   "line": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при прямом контакте. Шики пришёл в сознание в 05:46."
   }
  ],
  "scene": {
-  "positions": "04:12: Shiki unconscious on gurney near adjacent ward after prolonged chakra depletion, breathing independently, no fresh injuries, contact via barrier only; small prior recipient6 bronchial biopsy still in Shiki left deltoid and no longer chakra-supported. Sixteen-year-old boy #6 remains sedated/intubated on ventilation and unchanged S17, SpO2 96 with lower FiO2, Ppeak23 BP108/70. Kadz directs ICU and protects Shiki, night duty physician keeps two separate medical charts, anesthetist remains at recipient6 ventilator.",
-  "pressure": "Treatment achieved immediate observable bronchial restoration but little reserve for emergency response, gene-edit long-term outcomes unknown, underlying S17 neuromuscular dependence remains. Shiki unconscious after overdose of chakra; doctors have heard name Byoton for first time and are now responsible for both patients.",
-  "situation": "03 Oct 1283 03:31–04:12. Shiki really casts previously canonized Byoton Infection and, with left hand, performs the exact established one-handed Byoton seals 'Зародыш'→'Пульс'→'Лопнувший шов' (from rewritten s04.text.054), speaks the name 'Бётон. Заражение: воспроизведение патогена'. Doctors hear name Byoton for first time but cannot know pact origin, full Byoton workings or Zero Genome secrets. Chakra-guided reproduction of his previously engineered non-self-replicating CRISPR RNA vector takes place in affected recipient6 bronchial cells; intracellular activity then proceeds after chakra withdraws. Right hand concurrently maintains medical chakra support and degrades/clears deposited NSP-delta while healing bronchial epithelia and capillaries. At 03:39 transient mucus partial blockage causes SpO2 89 Ppeak31; ICU responds with bronchoscopy and aspiration. By 04:07 healed bronchial mucosa throughout visible examined lesions with no active desquamation, SpO2 97 Ppeak23; at 04:12 SpO2 96 BP108/70, lower inspired oxygen than prior, still ventilator-dependent with major neuromuscular weakness and continuing S17; no claim whole-body genetic cure or long-term effect. Shiki knowingly spends his last chakra in both simultaneous techniques, becomes exhausted with clouded eyes, says strained 'Держать… не могу… не трогайте… меня… голыми рук…', collapses unconscious at 04:12. Kadz catches him by CLOTHING not bare skin; night duty physician dons gloves, checks his breathing and pupil response and has him taken to adjacent gurney for observation. Left deltoid retains isolated small biopsy now without chakra support and viability declining. No additional actions by Shiki beyond requested faint; Shiki remains unconscious at scene end."
+  "positions": "Shiki awake 05:46 in separate hospital observation bed, weak from chakra overuse, left deltoid tiny ischemic bronchial sample still embedded; dark maroon blood in sealed lab vial and charts next to bed. Kadziura at bedside gloved with test file and glasses, night duty physician by door and medical incident sheet. Patient6 separate in ICU room6 with anesthetist, ventilated on S17; heard SpO2 96 through wall.",
+  "pressure": "After exhausting chakra and converting pact to stage5, Shiki poses novel possible direct bare skin and fresh blood contact hazard that hospital does not yet understand. Duty doctor filed bounded biohazard report to hospital medical commission. Kadziura saw radical blood change but does not know its cause or pathways. Patient6 temporarily stable on own ICU support and needs long-term study.",
+  "situation": "03.10.1283 05:46 Shiki regained consciousness on observation bed next to ICU after 94min severe chakra-depleting coma. The player's direct pact-stage advancement took hold during sleep: stage5 Active Contact Syndrome (engine stage_floor5). High-intensity novel blood/internal milieu: dark maroon circulating blood with black mobile chakra-sensitive microfilaments organized not just in clots but throughout plasma, erythrocyte/other cell interfaces, endothelial glycocalyx, organ microcirculation, marrow, interstitial fluid and lymphatic spaces; preserved normal oxygen delivery, no massive hemolysis, good circulation and ordinary hemostasis. Blood draw at 04:26 through protective gloves and sealed container revealed dark blood, microscopy showed black filament networks even with anticoagulant; clinical studies found no catastrophic clotting/oxygen impairment, etiology unknown to Kadz and hospital staff. Shiki's bare living skin now can transmit chakra illness to other bare living skin, fresh blood direct to mucosa or open wound also may transmit; no airborne, glove/clothing, dry blood or instrument transmission, no guaranteed automatic infection. This hazard is known to player, NOT proven/identified by doctors. At 04:25 previously isolated no-longer-vascularized 2mm patient6 bronchial graft in left deltoid becomes ischemically damaged after chakra support ended, not assimilated; not surgically removed. At 04:30 staff evaluated Shiki unconscious but breathing, and continue surveillance through recovery. At 05:46 awake, very low chakra and not fully recovered, seven seals remain closed. Kadz reports strange blood test and asks whether he expected it, no claim he knows contract. Night duty physician independently issued a medically bounded internal incident notice to hospital m"
  },
  "shiki": {
-  "body": "04:12 fully depleted chakra, unconscious from strenuous simultaneous Byoton infection/medical regeneration, breathing independently and with reactive pupils; left deltoid healed and contains tiny non-integrated patient6 bronchial biopsy, now lacking sustaining chakra, begins ischemic loss. No bare skin handling by attending doctors after Shiki warned them.",
+  "body": "05:46 03.10.1283: conscious again after 94min exhaustion-induced loss of consciousness; chakra still severely depleted and recovering slowly, not instant full refill. Pact forcibly at stage5 (Active Contact Syndrome) by direct player request: circulating blood is markedly dark maroon with visible black organized, chakra-responsive microfilaments independent of normal fibrin; dark networks extend from blood/plasma across endothelial glycocalyx, organ microcirculation, marrow and lymph/interstitial fluid, physiology remains functional. Can now transmit pact disease on direct living bare skin/bare skin or fresh blood into open wound/mucosa; no remote, clothing, dried blood or object route. No other spontaneous damage. Seven sealing circuits intact. Left deltoid contains non-assimilated bronchial sample from patient6, ischemic after loss of chakra maintenance, not removed.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -964,30 +963,10 @@
   "clock_list_truncated": true,
   "clocks": [
    {
-    "due": "0006-10-03T04:25:00",
-    "id": "shiki_biopsy_ischemia",
-    "if_unopposed": "Нарастание ишемического повреждения биоптата; нет спонтанной генетической ассимиляции",
-    "minutes": 13.0,
-    "owner": "Биоптат №6 в левой дельтовидной мышце Шики",
-    "signs": "Прекратилась чакровая изоляция жизнеспособного биоптата при потере сознания Шики",
-    "status": "scheduled",
-    "what": "Неваскуляризированная чужая ткань остаётся после прекращения поддерживающей чакры"
-   },
-   {
-    "due": "0006-10-03T04:30:00",
-    "id": "shiki_unconscious_observation",
-    "if_unopposed": "Оценят динамику и сохранят наблюдение, без автоматического мгновенного восстановления полного запаса чакры",
-    "minutes": 18.0,
-    "owner": "Кадзиура и дежурная медицинская бригада",
-    "signs": "Шики без сознания, дыхание самостоятельное, врачебное наблюдение установлено",
-    "status": "scheduled",
-    "what": "Контроль сознания, дыхания и кровообращения Шики при выраженном истощении чакры; без прямого кожного контакта"
-   },
-   {
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 118.0,
+    "minutes": 24.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "status": "scheduled",
@@ -997,7 +976,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 243.0,
+    "minutes": 149.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",

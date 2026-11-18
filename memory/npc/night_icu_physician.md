@@ -1,6 +1,6 @@
 # Дежурная врач охраняемого отделения · `night_icu_physician`
 
-вид: npc · впервые: s07.text.032 · последний раз: s08.text.020 · сейчас в сцене
+вид: npc · впервые: s07.text.032 · последний раз: s08.text.021 · сейчас в сцене
 
 ## Постоянное
 - не записано. Не выдумывай: открой первый ход персонажа или оставь черту неопределённой; новую черту запиши в d.cast.<id>.facts или look.
@@ -14,10 +14,10 @@
 - голос: Негромко, профессионально, без раболепия и без лишних слов [s07.text.032]
 
 ## Сейчас
-- положение: 04:12 responded to Shiki collapse by donning gloves and securing observation, notes new term Byoton from his audible jutsu utterance, records immediate patient6 clinical outcome separately. [s08.text.020]
+- положение: 05:46 independently maintained protected handling and recorded clinical blood tests; sent bounded hospital internal incident notification to medical review committee without giving unknown secret mechanisms, now present as Shiki wakes. [s08.text.021]
 - вид в последней сцене: Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает [s07.text.032]
 
-## Знает (последние 8 из 8)
+## Знает (последние 9 из 9)
 - Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка. [s07.text.032]
 - Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам. [s07.text.032]
 - Главой запрещён перевод пациентов без независимой проверки распоряжений. [s07.text.032]
@@ -26,9 +26,9 @@
 - 03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics. [s08.text.017]
 - 03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal. [s08.text.018]
 - Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why. [s08.text.020]
+- 04:26–05:46 during Shiki monitoring, she observed dark blood sample and unknown filament structures, knows his warning against bare hands, but cannot prove cause of harm or identify Pact stage. She sent internal biomedical incident notice to hospital medical review committee describing witnessed Byoton and unusual blood findings, omitting speculation about secret origins. [s08.text.021]
 
-## История (последние 8 из 15)
-- s08.text.011 0006-10-03T03:09:00: Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато.
+## История (последние 8 из 16)
 - s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.
 - s08.text.015 0006-10-03T03:18:00: Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ.
 - s08.text.016 0006-10-03T03:21:00: Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носителя и запросил сведения о его распространении.
@@ -36,6 +36,7 @@
 - s08.text.018 0006-10-03T03:28:00: Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение.
 - s08.text.019 0006-10-03T03:31:00: Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было.
 - s08.text.020 0006-10-03T04:12:00: Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения.
-- ранее: 7 эпизодов, полностью в `archive/npc-memory/night_icu_physician.json`
+- s08.text.021 0006-10-03T05:46:00: После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при прямом контакте. Шики пришёл в сознание в 05:46.
+- ранее: 8 эпизодов, полностью в `archive/npc-memory/night_icu_physician.json`
 
 Ход целиком: `archive/turns/sNN/<id>.md`.
