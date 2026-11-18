@@ -82,6 +82,10 @@ def parser():
                             ("hot-check", "verify HOT v2 consistency without writing")):
         command = sub.add_parser(name, help=help_text)
         command.add_argument("--state-dir", type=Path, required=True)
+    blocked = sub.add_parser("hot-blocked", help="publish a failed state check in CHECKS.json")
+    blocked.add_argument("--state-dir", type=Path, required=True)
+    blocked.add_argument("--check", type=Path, required=True, help="hot-check JSON output")
+    blocked.add_argument("--turn", default=None, help="turn the failed fold attempted")
     backfill = sub.add_parser("npc-backfill", help="rebuild NPC episode memory from the verbatim session logs")
     backfill.add_argument("--state-dir", type=Path, required=True)
     boot = sub.add_parser("hot-bootstrap", help="one-off lossless migration from legacy FAST_SCENE history")
@@ -309,6 +313,9 @@ def run(args):
             return hot.fold(args.state_dir)
         case "hot-check":
             return hot.check(args.state_dir)
+        case "hot-blocked":
+            report = read_json(args.check)
+            return hot.record_blocked(args.state_dir, report.get("problems") or [], args.turn)
         case "npc-backfill":
             from . import npc_memory
             return npc_memory.backfill(args.state_dir)

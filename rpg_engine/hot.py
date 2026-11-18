@@ -54,7 +54,11 @@ CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
 RESOLVED_KEEP = 6
 CALENDAR_AHEAD = 14
-HOT_LIMIT = 72000   # байт; HOT читается один раз за чат, но расти без конца не должен
+# байт; HOT не должен расти без конца. Запас поднят с 72000 на время перехода
+# к постраничной памяти: сбой проверки теперь виден в CHECKS.json, а не молча
+# останавливает свёртку. Норма после межсессионной чистки — меньше 64 КБ.
+HOT_LIMIT = 90000
+LAST_GM_TAIL = 1500  # знаков последнего ответа в HOT; полный текст — в TURN.json и archive/
 
 # Договор семи запоров: ленивый расчёт по игровому времени (PROGRESSION_RULES.json).
 PACT_STAGES = (
@@ -209,6 +213,21 @@ def turn_from_legacy(fast):
 
 
 # --------------------------------------------------------------------------- свёртка
+
+def _last_entry(turn):
+    """Хвост последнего ответа для продолжения сцены.
+
+    Полный опубликованный текст хранится в TURN.json и дословном журнале
+    archive/session-NNN-turns.jsonl; копия длинной сцены в HOT переполняла предел.
+    """
+    gm = turn["gm"]
+    entry = {"id": turn["id"], "player": turn["player"], "gm": gm}
+    if len(gm) > LAST_GM_TAIL:
+        entry["gm"] = "…" + gm[-LAST_GM_TAIL:]
+        entry["gm_chars"] = len(gm)
+    return entry
+
+
 
 def _merge(target, patch):
     """Словари сливаются рекурсивно, ``null`` удаляет ключ, ``ключ+`` дополняет список."""
@@ -393,7 +412,7 @@ def apply_turn(hot, turn):
         cursor.update({"id": turn["id"], "seq": number, "at": turn["at"], "place": turn["place"],
                        "awaiting": turn.get("awaiting", "player")})
         cursor.update(heading(turn["at"], year_offset=hot.get("calendar", {}).get("year_offset", 1277)))
-        hot["last"] = {"id": turn["id"], "player": turn["player"], "gm": turn["gm"]}
+        hot["last"] = _last_entry(turn)
         report = prose_lint.lint(turn["gm"])
         lint = hot.setdefault("lint", {})
         recent = [r for r in lint.get("recent", []) if r["id"] != turn["id"]]
@@ -1014,7 +1033,7 @@ def bootstrap(state_dir, seed):
     offset = hot.setdefault("calendar", {}).setdefault("year_offset", 1277)
     hot["cursor"] = {"id": latest["id"], "seq": number, "at": latest["at"], "place": latest["place"],
                      "awaiting": "player", **heading(latest["at"], year_offset=offset)}
-    hot["last"] = {"id": latest["id"], "player": latest["player"], "gm": latest["gm"]}
+    hot["last"] = _last_entry(latest)
     totals, recent = {}, []
     for turn in ordered:
         report = prose_lint.lint(turn["gm"])
@@ -1094,3 +1113,27 @@ def check(state_dir):
     if size > HOT_LIMIT:
         problems.append(f"HOT разросся до {size} байт")
     return {"ok": not problems, "problems": problems, "bytes": size, "cursor": cursor.get("id")}
+
+
+def record_blocked(state_dir, problems, attempted=None):
+    """Публикует в CHECKS.json сбой проверки состояния, когда свёртка не записана.
+
+    Без этого ведущий видит прежний чистый CHECKS.json и не знает, что память
+    перестала обновляться. Ходы не теряются: следующая успешная свёртка берёт
+    их из истории git.
+    """
+    path = Path(state_dir) / CHECKS_PATH
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        payload = {"schema": "npr-checks/1", "fold_errors": [], "checks": []}
+    payload["state_errors"] = list(problems)
+    payload["state_errors_turn"] = attempted
+    payload["state_errors_rule"] = (
+        "Ход сохранён в истории, но память (HOT, GM_BRIEF, карточки) не обновилась. "
+        "Это неисправность движка, а не ошибка хода: не исправляй ход, сообщи игроку, "
+        "что нужна починка. После исправления свёртка догонит все ходы сама.")
+    body = _dump(payload)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(body, encoding="utf-8")
+    return payload
