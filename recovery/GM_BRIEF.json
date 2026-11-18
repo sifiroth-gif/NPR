@@ -64,7 +64,48 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "e15a852d4107b312b821f8c0ab0229f8c2bd267ada9a003d907d9ad25191b4d6",
+ "digest": "584326b2accea58c3ce143f1ea59c6eec40764303b2d095a47930937ae06b6e4",
+ "entity_memory": {
+  "activated": [
+   {
+    "activated_by": "scene",
+    "facts": [
+     {
+      "authority": "played_source",
+      "field": "age_at_discovery",
+      "id": "recipient6:identity:age-discovery:source-s05",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "примерно шестнадцать лет",
+      "visibility": "gm_only"
+     },
+     {
+      "authority": "played_source",
+      "field": "discovery",
+      "id": "recipient6:history:discovery:source-s05",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
+      "visibility": "gm_only"
+     },
+     {
+      "authority": "player_correction",
+      "field": "sex",
+      "id": "recipient6:identity:sex:source-s08",
+      "source": "archive/shiki-canon.jsonl:s08.text.005",
+      "value": "мальчик (мужской пол)",
+      "visibility": "gm_only"
+     }
+    ],
+    "id": "recipient6",
+    "label": "Реципиент № 6",
+    "rule": "No absent demographic or biographical attribute may be guessed.",
+    "status": "source_bound"
+   }
+  ],
+  "conflicts": [],
+  "rule": "Entity attributes are claims with sources, not prose suggestions.",
+  "schema": "npr-entity-ledger/1",
+  "total_activated": 1
+ },
  "evidence_graph": {
   "edges": [],
   "nodes": [
