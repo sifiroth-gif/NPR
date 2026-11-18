@@ -1,0 +1,458 @@
+"""Память персонажей: эпизоды, отношения, чувство, намерения, психика.
+
+Перенос контрактов Bleach ``npc_psyche`` / ``npc_importance`` / ``gm_npc_names``
+на одну запись ``TURN.json`` за ход. Ведущий не запускает код: всё ниже
+вызывается из ``hot.fold`` в GitHub Actions.
+
+Что делает код сам, без участия ведущего:
+
+* каждому NPC из ``scene.present`` дописывает эпизод «был в этой сцене»
+  со строкой хроники хода (наблюдённое, не толкование);
+* считает появления и глубину профиля (``tier``), как ``npc_importance``;
+* гасит истёкшее чувство по игровым часам, а не по числу реплик;
+* ловит молчаливую смену характера и совпадение имён.
+
+Что пишет ведущий в ``d.cast.<ключ>`` (всё необязательно):
+
+* ``mem``    — как NPC это запомнил, своими словами (приватно);
+* ``rel``    — сдвиг отношения к Шики или к ``to``: ``{"trust": -1, "why": "…"}``;
+* ``affect`` — текущее чувство со сроком: ``{"feel": "…", "hours": 6}``;
+* ``intent`` — намерения: ``{"ключ": {"goal": "…", "status": "committed"}}``;
+* ``psyche`` — устойчивые грани характера (см. ``FACETS``);
+* ``why``    — причина, если меняются ``wants``/``fears``/``voice``/``psyche``.
+
+Психика, отношения, чувство, намерения и личные воспоминания хранятся в
+``GM_ONLY.json`` (``psyche``): игрок их не читает. Наблюдённые эпизоды —
+открытый факт сыгранного, их полный список лежит в
+``archive/npc-memory/<ключ>.json``.
+"""
+from __future__ import annotations
+
+import datetime as _dt
+import json
+import re
+from pathlib import Path
+
+MEMORY_DIR = "archive/npc-memory"
+REL_DIMS = ("trust", "fear", "respect", "debt", "grievance", "attachment", "dependence")
+REL_RANGE = 5
+FACETS = ("temper", "values", "deep_fear", "needs", "contradiction", "defense",
+          "habits", "boundary", "mask", "decides")
+INTENT_STATUS = ("committed", "paused", "fulfilled", "abandoned")
+CHANNELS = ("present", "witnessed", "told", "document", "inferred", "rumor", "mentioned")
+STABLE = ("wants", "fears", "voice")
+INNER_KEYS = ("mem", "rel", "affect", "intent", "psyche", "why")
+CARD_FIRST = 2      # самые ранние эпизоды в карточке: откуда NPC знает Шики
+CARD_RECENT = 6     # последние эпизоды в карточке
+PRIVATE_MEMORIES = 16   # как в Bleach: рабочая память профиля, полная — в архиве
+LOG_KEEP = 8
+DEFAULT_AFFECT_HOURS = 6
+TITLES = {"Капитан", "Старший", "Старшая", "Младший", "Глава", "Доктор", "Сестра",
+          "Командир", "Мастер", "Господин", "Госпожа", "Неизвестный", "Неизвестная",
+          "Курьер", "Охранник", "Страж", "Врач", "Дежурный", "Дежурная", "Санитар"}
+
+
+def _parse(at):
+    return _dt.datetime.fromisoformat(f"2000{at[4:]}") if at.startswith("0") else _dt.datetime.fromisoformat(at)
+
+
+def _short(text, limit=220):
+    text = " ".join(str(text or "").split())
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
+def _inner(hot, key):
+    return hot.setdefault("_psyche", {}).setdefault(key, {})
+
+
+def _check(hot, turn_id, kind, text):
+    checks = hot.setdefault("_checks", [])
+    entry = {"turn": turn_id, "kind": kind, "text": text}
+    if entry not in checks:
+        checks.append(entry)
+
+
+# ----------------------------------------------------------------- до слияния
+
+def split_patch(hot, delta, turn_id):
+    """Отделяет приватные поля NPC от открытой карточки и ловит дрейф характера.
+
+    Возвращает ``(открытая_дельта, приватные_поля)``. Исходная дельта не меняется.
+    """
+    cast = (delta or {}).get("cast")
+    if not isinstance(cast, dict):
+        return delta, {}
+    public = dict(delta)
+    public["cast"] = {}
+    inner = {}
+    for key, patch in cast.items():
+        if not isinstance(patch, dict):
+            public["cast"][key] = patch
+            continue
+        own = {k: patch[k] for k in INNER_KEYS if k in patch}
+        rest = {k: v for k, v in patch.items() if k not in INNER_KEYS}
+        public["cast"][key] = rest
+        if own:
+            inner[key] = own
+        card = (hot.get("cast") or {}).get(key)
+        if not isinstance(card, dict):
+            continue
+        for field in STABLE:
+            old, new = card.get(field), rest.get(field)
+            if old and new and _short(old, 400) != _short(new, 400):
+                log = _inner(hot, key).setdefault("drift", [])
+                log.append({"turn": turn_id, "field": field, "was": _short(old, 160),
+                            "why": _short(own.get("why", ""), 160)})
+                del log[:-LOG_KEEP]
+                if not own.get("why"):
+                    _check(hot, turn_id, "drift",
+                           f"{key}: {field} переписано без why; характер не меняется молча")
+    return public, inner
+
+
+def check_names(hot, delta, turn_id, archived=()):
+    """Новый NPC не должен носить имя уже существующего (Bleach gm_npc_names).
+
+    Возвращает список замечаний; уже введённых персонажей не переименовывает.
+    """
+    known = {}
+    for key, card in list((hot.get("cast") or {}).items()) + list(archived):
+        if isinstance(card, dict) and card.get("name"):
+            known[key] = card["name"]
+    notes = []
+    for key, patch in ((delta or {}).get("cast") or {}).items():
+        if not isinstance(patch, dict) or key in known or not patch.get("name"):
+            continue
+        mine = _proper_words(patch["name"])
+        for other, name in known.items():
+            if patch["name"].casefold() == name.casefold():
+                notes.append(f"{key}: имя «{name}» уже носит {other}")
+            elif mine & _proper_words(name):
+                same = ", ".join(sorted(mine & _proper_words(name)))
+                notes.append(f"{key}: часть имени ({same}) совпадает с {other}")
+    return notes
+
+
+def _proper_words(name):
+    words = re.findall(r"[А-ЯЁA-Z][а-яёa-z\-]{2,}", name or "")
+    if re.search(r"(?:^|\s)[а-яё]", name or ""):
+        return set()   # описательное имя: «Дежурная врач отделения»
+    return {w for w in words if w not in TITLES}
+
+
+# ----------------------------------------------------------------- после слияния
+
+def apply(hot, turn, inner):
+    """Эпизоды, отношения, чувство, намерения. Вызывается после слияния дельты."""
+    turn_id, at = turn["id"], turn["at"]
+    if turn.get("kind") == "ooc":
+        return
+    present = [k for k in (hot.get("scene") or {}).get("present") or []
+               if k in (hot.get("cast") or {})]
+    touched = set(present) | {k for k in inner if k in (hot.get("cast") or {})}
+    line = _short(turn.get("line") or "", 260)
+    for key in sorted(touched):
+        card = hot["cast"][key]
+        channel = "present" if key in present else "told"
+        episode = {"turn": turn_id, "at": at, "ch": channel, "what": line}
+        _remember(hot, key, card, episode)
+    for key, own in inner.items():
+        if key not in (hot.get("cast") or {}):
+            _check(hot, turn_id, "cast", f"{key}: приватные поля для NPC без карточки")
+            continue
+        profile = _inner(hot, key)
+        if own.get("mem"):
+            memories = profile.setdefault("memories", [])
+            memories[:] = [m for m in memories if m.get("turn") != turn_id]
+            memories.append({"turn": turn_id, "at": at, "as": _short(own["mem"], 400)})
+            del memories[:-PRIVATE_MEMORIES]
+        if isinstance(own.get("rel"), dict):
+            _relation(hot, profile, own["rel"], turn_id)
+        if isinstance(own.get("affect"), dict) and own["affect"].get("feel"):
+            hours = own["affect"].get("hours", DEFAULT_AFFECT_HOURS)
+            try:
+                until = _iso(_parse(at) + _dt.timedelta(hours=float(hours)), at)
+            except (TypeError, ValueError):
+                until = _iso(_parse(at) + _dt.timedelta(hours=DEFAULT_AFFECT_HOURS), at)
+            profile["affect"] = {"feel": _short(own["affect"]["feel"], 200), "since": at,
+                                 "until": until, "turn": turn_id}
+        if isinstance(own.get("intent"), dict):
+            _intents(hot, profile, own["intent"], turn_id, at)
+        if isinstance(own.get("psyche"), dict):
+            facets = profile.setdefault("psyche", {})
+            for facet, value in own["psyche"].items():
+                if facet not in FACETS:
+                    _check(hot, turn_id, "psyche", f"{key}: неизвестная грань {facet}")
+                    continue
+                if value is None:
+                    facets.pop(facet, None)
+                    continue
+                if facets.get(facet) and facets[facet] != value and not own.get("why"):
+                    _check(hot, turn_id, "drift",
+                           f"{key}: psyche.{facet} переписана без why")
+                facets[facet] = _short(value, 300)
+    for key in touched:
+        _tier(hot, key)
+
+
+def _iso(moment, like):
+    text = moment.isoformat(timespec="seconds")
+    return like[:4] + text[4:] if like.startswith("0") else text
+
+
+def _remember(hot, key, card, episode):
+    memory = card.setdefault("memory", [])
+    memory[:] = [m for m in memory if m.get("turn") != episode["turn"]]
+    memory.append(episode)
+    total = card.get("memory_total", 0) + 1
+    if len(memory) > CARD_FIRST + CARD_RECENT:
+        memory[:] = memory[:CARD_FIRST] + memory[-CARD_RECENT:]
+    card["memory_total"] = max(total, len(memory))
+    card.setdefault("first", memory[0]["turn"])
+    hot.setdefault("_mem_log", {}).setdefault(key, []).append(episode)
+
+
+def _relation(hot, profile, patch, turn_id):
+    target = patch.get("to", "shiki")
+    rel = profile.setdefault("rel", {}).setdefault(target, {})
+    change = {}
+    for dim in REL_DIMS:
+        if dim not in patch:
+            continue
+        try:
+            step = int(patch[dim])
+        except (TypeError, ValueError):
+            continue
+        value = max(-REL_RANGE, min(REL_RANGE, int(rel.get(dim, 0)) + step))
+        rel[dim] = value
+        change[dim] = step
+    if change:
+        log = rel.setdefault("log", [])
+        log.append({"turn": turn_id, "change": change, "why": _short(patch.get("why", ""), 200)})
+        del log[:-LOG_KEEP]
+        if not patch.get("why"):
+            _check(hot, turn_id, "rel", f"сдвиг отношения к {target} без why")
+
+
+def _intents(hot, profile, patch, turn_id, at):
+    active = profile.setdefault("intent", {})
+    done = profile.setdefault("intent_done", [])
+    for key, value in patch.items():
+        if value is None:
+            active.pop(key, None)
+            continue
+        if isinstance(value, str):
+            value = {"goal": value}
+        entry = active.get(key, {})
+        entry.update({k: _short(v, 240) for k, v in value.items() if isinstance(v, str)})
+        entry.setdefault("status", "committed")
+        if entry["status"] not in INTENT_STATUS:
+            _check(hot, turn_id, "intent", f"намерение {key}: статус {entry['status']}")
+            entry["status"] = "committed"
+        entry["turn"] = turn_id
+        if entry["status"] in ("fulfilled", "abandoned"):
+            active.pop(key, None)
+            done.append({"key": key, "at": at, **entry})
+            del done[:-LOG_KEEP]
+        else:
+            active[key] = entry
+
+
+def _tier(hot, key):
+    """Глубина профиля по значимости (Bleach npc_importance): не мотив, а требование."""
+    card = hot["cast"][key]
+    seen = card.get("memory_total", 0)
+    facets = len((_inner(hot, key).get("psyche") or {}))
+    tier = "deep" if seen >= 15 or facets >= 6 else "developed" if seen >= 4 else "archetypal"
+    card["tier"] = tier
+
+
+def needs_profile(hot, keys):
+    """Кому из присутствующих не хватает психики для их значимости."""
+    wanted = {"deep": 5, "developed": 3, "archetypal": 0}
+    out = []
+    for key in keys:
+        card = (hot.get("cast") or {}).get(key) or {}
+        have = len(((hot.get("_psyche") or {}).get(key) or {}).get("psyche") or {})
+        need = wanted.get(card.get("tier", "archetypal"), 0)
+        if have < need:
+            out.append({"npc": key, "tier": card.get("tier"), "facets": have, "need": need,
+                        "appearances": card.get("memory_total", 0)})
+    return out
+
+
+def refresh(hot):
+    """Истёкшее чувство уходит в прошлое по игровым часам."""
+    at = (hot.get("cursor") or {}).get("at")
+    if not at:
+        return
+    now = _parse(at)
+    for key, profile in (hot.get("_psyche") or {}).items():
+        affect = profile.get("affect")
+        if affect and affect.get("until") and _parse(affect["until"]) <= now:
+            past = profile.setdefault("affect_past", [])
+            past.append(affect)
+            del past[:-3]
+            profile.pop("affect")
+
+
+def inner_view(hot, key, *, at=None):
+    """Приватный срез для пакета сцены ведущего."""
+    profile = (hot.get("_psyche") or {}).get(key) or {}
+    view = {}
+    if profile.get("psyche"):
+        view["psyche"] = profile["psyche"]
+    rel = profile.get("rel") or {}
+    if rel:
+        view["rel"] = {target: {**{d: v for d, v in values.items() if d in REL_DIMS},
+                                "last_why": [x["why"] for x in values.get("log", [])[-3:] if x.get("why")]}
+                       for target, values in rel.items()}
+    if profile.get("affect"):
+        view["affect"] = profile["affect"]
+    if profile.get("intent"):
+        view["intent"] = profile["intent"]
+    if profile.get("memories"):
+        view["remembers"] = profile["memories"][:2] + profile["memories"][-6:] \
+            if len(profile["memories"]) > 8 else profile["memories"]
+    if profile.get("drift"):
+        view["drift"] = profile["drift"][-3:]
+    return view
+
+
+# ----------------------------------------------------------------- архив эпизодов
+
+def flush(state_dir, hot, amended=()):
+    """Полная эпизодическая память NPC: ``archive/npc-memory/<ключ>.json``."""
+    log = hot.pop("_mem_log", {}) or {}
+    root = Path(state_dir) / MEMORY_DIR
+    if not log and not amended:
+        return 0
+    root.mkdir(parents=True, exist_ok=True)
+    touched = set(log)
+    if amended:
+        touched |= {p.stem for p in root.glob("*.json")}
+    written = 0
+    for key in sorted(touched):
+        path = root / f"{key}.json"
+        data = (json.loads(path.read_text(encoding="utf-8")) if path.is_file()
+                else {"schema": "npr-npc-memory/1", "key": key, "episodes": []})
+        episodes = [e for e in data.get("episodes", []) if e.get("turn") not in amended]
+        fresh = log.get(key, [])
+        seen = {e["turn"] for e in fresh}
+        episodes = [e for e in episodes if e.get("turn") not in seen] + fresh
+        episodes.sort(key=lambda e: _order(e.get("turn", "")))
+        card = (hot.get("cast") or {}).get(key) or {}
+        if card.get("name"):
+            data["name"] = card["name"]
+        data["episodes"] = episodes
+        body = json.dumps(data, ensure_ascii=False, indent=1) + "\n"
+        if not path.is_file() or path.read_text(encoding="utf-8") != body:
+            path.write_text(body, encoding="utf-8")
+            written += 1
+    return written
+
+
+def _order(turn_id):
+    match = re.match(r"s(\d+)\.text\.(\d+)", turn_id or "")
+    return (int(match.group(1)), int(match.group(2))) if match else (0, 0)
+
+
+# ----------------------------------------------------------------- разовое восстановление
+
+def _stems(name):
+    stems = []
+    for word in _proper_words(name):
+        stem = word[:-2] if len(word) >= 6 else word[:-1] if len(word) >= 5 else word
+        stems.append(re.escape(stem))
+    return stems
+
+
+def backfill(state_dir):
+    """Восстанавливает эпизоды всех NPC по дословным журналам сыгранных сессий.
+
+    Совпадение имени — указатель «упомянут/был в сцене», а не доказательство,
+    что NPC видел или знал всё сказанное в этом ходе (``ch: "mentioned"``).
+    Повторный запуск ничего не дублирует.
+    """
+    state_dir = Path(state_dir)
+    cards = {}
+    cast_dir = state_dir / "recovery/cast"
+    for path in sorted(cast_dir.glob("*.json")):
+        cards[path.stem] = json.loads(path.read_text(encoding="utf-8"))
+    patterns = {}
+    for key, card in cards.items():
+        stems = _stems(card.get("name", ""))
+        if stems:
+            patterns[key] = re.compile(r"(?<![А-Яа-яЁё])(?:" + "|".join(stems) + r")[а-яё]*")
+    rows = []
+    for path in sorted((state_dir / "archive").glob("session-*-turns.jsonl")):
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            if raw.strip():
+                row = json.loads(raw)
+                if row.get("kind") != "ooc" and row.get("id"):
+                    rows.append(row)
+    rows.sort(key=lambda r: _order(r["id"]))
+    found = {}
+    for row in rows:
+        text = " ".join(str(row.get(k) or "") for k in ("gm", "line"))
+        for key, pattern in patterns.items():
+            if pattern.search(text):
+                found.setdefault(key, []).append(
+                    {"turn": row["id"], "at": row.get("at", ""), "ch": "mentioned",
+                     "what": _short(row.get("line") or "", 260)})
+        for key, card in cards.items():
+            if card.get("seen") == row["id"] and not any(
+                    e["turn"] == row["id"] for e in found.get(key, [])):
+                found.setdefault(key, []).append(
+                    {"turn": row["id"], "at": row.get("at", ""), "ch": "present",
+                     "what": _short(row.get("line") or "", 260)})
+    root = state_dir / MEMORY_DIR
+    root.mkdir(parents=True, exist_ok=True)
+    report = {}
+    for key, episodes in found.items():
+        path = root / f"{key}.json"
+        data = (json.loads(path.read_text(encoding="utf-8")) if path.is_file()
+                else {"schema": "npr-npc-memory/1", "key": key, "episodes": []})
+        have = {e["turn"]: e for e in data.get("episodes", [])}
+        for episode in episodes:
+            have.setdefault(episode["turn"], episode)
+        merged = sorted(have.values(), key=lambda e: _order(e["turn"]))
+        data.update({"name": cards[key].get("name", ""), "episodes": merged,
+                     "note": "ch=mentioned: имя встречается в ходе; это указатель на источник, "
+                             "а не доказательство, что NPC всё видел или знал"})
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        report[key] = len(merged)
+    return report
+
+
+def hydrate_card(card, episodes):
+    """Ранние и последние эпизоды из архива — в карточку NPC."""
+    if not episodes:
+        return card
+    card["memory"] = (episodes if len(episodes) <= CARD_FIRST + CARD_RECENT
+                      else episodes[:CARD_FIRST] + episodes[-CARD_RECENT:])
+    card["memory_total"] = len(episodes)
+    card["first"] = episodes[0]["turn"]
+    seen = len(episodes)
+    card["tier"] = "deep" if seen >= 15 else "developed" if seen >= 4 else "archetypal"
+    return card
+
+
+def sync_cards(state_dir, hot):
+    """Архив эпизодов — источник истины: карточки в HOT сверяются с ним после свёртки.
+
+    Так исправление хода (amend), откатывающее карточку к снимку до хода,
+    не обнуляет восстановленную память NPC.
+    """
+    for key, card in (hot.get("cast") or {}).items():
+        episodes = load_episodes(state_dir, key)
+        if episodes:
+            hydrate_card(card, episodes)
+            _tier(hot, key)
+
+
+def load_episodes(state_dir, key):
+    path = Path(state_dir) / MEMORY_DIR / f"{key}.json"
+    if not path.is_file():
+        return []
+    return json.loads(path.read_text(encoding="utf-8")).get("episodes", [])

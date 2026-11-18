@@ -446,6 +446,9 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual([e["line"] for e in state["chronicle"]], ["Начало", "Сводка 43", "Нори у ворот"])
         self.assertEqual(state["pact"]["stage"], 1)
         self.commit("bootstrap")
+        # The first fold may do the one-off NPC memory backfill; after it nothing moves.
+        self.assertIn(hot.fold(self.root)["status"], ("current", "updated"))
+        self.commit("npc memory backfill")
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"])
 
@@ -457,7 +460,14 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(report["status"], "rejected")
         self.assertEqual(report["applied"], [])
         self.assertTrue(any("sequence gap" in e for e in report["errors"]))
-        self.assertEqual((self.root / hot.HOT_PATH).read_text(encoding="utf-8"), original)
+        after = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        before = json.loads(original)
+        # Nothing of the batch is applied, but the refusal itself is visible.
+        self.assertEqual(after["cursor"], before["cursor"])
+        self.assertEqual(after.get("chronicle"), before.get("chronicle"))
+        self.assertTrue(any("sequence gap" in e for e in after["fold"]["errors"]))
+        checks = json.loads((self.root / hot.CHECKS_PATH).read_text(encoding="utf-8"))
+        self.assertTrue(any("sequence gap" in e for e in checks["fold_errors"]))
         self.assertFalse((self.root / "archive/session-004-turns.jsonl").exists())
 
     def test_amended_turn_undo_survives_private_file_roundtrip(self):

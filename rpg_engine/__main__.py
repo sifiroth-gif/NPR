@@ -74,6 +74,8 @@ def parser():
                             ("hot-check", "verify HOT v2 consistency without writing")):
         command = sub.add_parser(name, help=help_text)
         command.add_argument("--state-dir", type=Path, required=True)
+    backfill = sub.add_parser("npc-backfill", help="rebuild NPC episode memory from the verbatim session logs")
+    backfill.add_argument("--state-dir", type=Path, required=True)
     boot = sub.add_parser("hot-bootstrap", help="one-off lossless migration from legacy FAST_SCENE history")
     boot.add_argument("--state-dir", type=Path, required=True)
     boot.add_argument("--seed", type=Path, required=True)
@@ -265,6 +267,9 @@ def run(args):
             return hot.fold(args.state_dir)
         case "hot-check":
             return hot.check(args.state_dir)
+        case "npc-backfill":
+            from . import npc_memory
+            return npc_memory.backfill(args.state_dir)
         case "hot-bootstrap":
             return hot.bootstrap(args.state_dir, read_json(args.seed))
         case "prose-lint":
