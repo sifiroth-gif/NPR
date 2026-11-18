@@ -1,0 +1,628 @@
+{
+  "schema": "npr-shiki-npc-alignments/1",
+  "access": "GM_ONLY",
+  "prepared_real_at": "2026-11-18",
+  "current_context": "session VIII prepared, S07 last accepted s07.text.038; no clock advance",
+  "basis": "D&D Free Rules 2024, Step 4: Choose an Alignment",
+  "source_url": "https://www.dndbeyond.com/sources/dnd/br-2024/creating-a-character",
+  "reference": "campaigns/shiki/ref/ALIGNMENT.md (main)",
+  "authority": "Character values as master preparation for future choices, never forced reinterpretation of played words or objective in-world diagnosis.",
+  "scope_rule": "Significant NPCs only. Do not add generic sentries, medics, messengers, unnamed ensemble or the player character Shiki. When plot promotes an extra, add then.",
+  "aliases": {
+    "takagi_ren": [
+      "Такаги Рэн, senior guard, not Hayase Ren"
+    ],
+    "ren": [
+      "Хаясэ Рэн, former teammate, not Takagi"
+    ],
+    "kusa_head": [
+      "подлинный глава; двойник is kage_doppelganger"
+    ],
+    "morioka_hiroaki": [
+      "Мориока Хидэаки; административный полномочный"
+    ],
+    "inaba_shigeru": [
+      "Инаба Сигэру"
+    ]
+  },
+  "policy": [
+    "Card code is a stable ethical default, not a deterministic mechanic or a license to make NPC omniscient.",
+    "Maintain knowledge/professional limitations from source cards separately. Alignment is not a knowledge tag.",
+    "Adjust code only upon sustained in-fiction transformation with source turn and cause.",
+    "Past-period Naruto alignments are not automatically the present-day state after five years; review if reintroduced.",
+    "Do not expose hidden registry, motives, or spoilers to player without in-world information.",
+    "Player character Shiki has no GM-assigned alignment."
+  ],
+  "excluded_examples": [
+    "night_icu_physician",
+    "arakawa_guard",
+    "captive_guard",
+    "v7_crossbowman",
+    "wagon_guard_wounded",
+    "courier_unknown",
+    "v7_lockworker",
+    "orderly",
+    "senior_orderly",
+    "messenger_injured",
+    "fujita",
+    "arai_mitiko",
+    "archive_custodian",
+    "missing_guard"
+  ],
+  "characters": {
+    "kusa_head": {
+      "name": "Глава Кусагакуре",
+      "scope": "active",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "established_interpretation"
+      },
+      "order": "Деревня держится на праве главы и цепи приказов",
+      "morality": "Готов жертвовать частными выгодами ради управляемости",
+      "line": "Сначала проверит власть, прежде чем санкционировать безусловную расправу",
+      "breaking_point": "Если управление рушится, может прикрыть преступление чрезвычайными полномочиями",
+      "basis": "recovery/cast/kusa_head.json: удержать деревню и контроль ведомств"
+    },
+    "takagi_ren": {
+      "name": "Такаги Рэн",
+      "scope": "active",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "established_interpretation"
+      },
+      "order": "Присяга личной охраны и подлинность приказа выше ведомственного давления",
+      "morality": "Подчинённых и охраняемый объект считает собственной ответственностью",
+      "line": "Не выдаёт пленного без проверяемых полномочий",
+      "breaking_point": "Может нарушить ритуал допуска, если это единственный способ защитить главу",
+      "basis": "recovery/cast/takagi_ren.json; охрана В-7"
+    },
+    "nori": {
+      "name": "Хаясэ Нори",
+      "scope": "active",
+      "alignment": {
+        "code": "LG",
+        "label": "законопослушный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Служебная процедура нужна, чтобы власть можно было проверить",
+      "morality": "Свидетель и погибший заслуживают расследования даже вопреки начальству",
+      "line": "Не подменяет доказательства удобной версией",
+      "breaking_point": "При формальном запрете готова действовать вне полномочий ради дела",
+      "basis": "recovery/cast/nori.json: самостоятельная работа после отстранения"
+    },
+    "arakawa": {
+      "name": "Аракава Дзюн",
+      "scope": "active",
+      "alignment": {
+        "code": "LE",
+        "label": "законопослушный злой",
+        "status": "established_interpretation"
+      },
+      "order": "Административные нормы и распоряжения — инструмент самосохранения",
+      "morality": "Чужими рисками готов платить за доступ к собственной поддерживающей терапии",
+      "line": "Не отдаёт открыто доказуемый контроль без компенсации",
+      "breaking_point": "Страх отторжения может склонить к измене даже своему ведомству",
+      "basis": "recovery/cast/arakawa.json; адресные приказы, С-17; тип предварителен: персональный заказ покушения НЕ доказан"
+    },
+    "kuroda_mayu": {
+      "name": "Курода Маю",
+      "scope": "active",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "established_interpretation"
+      },
+      "order": "Первичное измерение и достоверность лабораторного журнала выше политического удобства",
+      "morality": "Готова защищать больного лишь тем, что может профессионально подтвердить",
+      "line": "Не подпишет непроверенный генетический вывод",
+      "breaking_point": "Риск уничтожения источников способен вынудить скрыть часть результатов от начальства",
+      "basis": "recovery/cast/kuroda_mayu.json, s06.text.046"
+    },
+    "kadziura_satoru": {
+      "name": "Кадзиура Сатору",
+      "scope": "active",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности",
+      "morality": "Живые пациенты важнее показателей и ведомственного благополучия",
+      "line": "Не вводит неподтверждённый носитель четырём больным по одному обещанию",
+      "breaking_point": "При реальном скором ухудшении может согласиться на рискованный индивидуальный эксперимент",
+      "basis": "recovery/cast/kadziura_satoru.json, s07.text.033–038"
+    },
+    "seina": {
+      "name": "Кирисава Сэйна",
+      "scope": "active",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Медицина и личный профессиональный кодекс важнее приказов",
+      "morality": "Уязвимые пациенты и ученики заслуживают помощи без покровительства",
+      "line": "Не допускает неосмотрительного вмешательства в собственной клинике",
+      "breaking_point": "При угрозе пациентам может нарушить запрет властей",
+      "basis": "recovery/cast/seina.json, approved roster"
+    },
+    "akihiro": {
+      "name": "Мугами Акихиро",
+      "scope": "active",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Важнее семья и профессиональная добросовестность, чем послушание власти",
+      "morality": "Близким обязан защитой; чужим — честным трудом",
+      "line": "Не продаст семейную тайну из простого страха за положение",
+      "breaking_point": "При угрозе Нао/Шики может скрыть вещественные следы от следствия",
+      "basis": "recovery/cast/akihiro.json: отец, фармацевт"
+    },
+    "nao": {
+      "name": "Мугами Нао",
+      "scope": "active",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Домашние обязательства и уход выше чужой административной иерархии",
+      "morality": "Индивидуальная забота не должна делать сына несвободным",
+      "line": "Не делает из семейной близости права распоряжаться Шики",
+      "breaking_point": "При опасности для близких способна действовать скрытно и жёстко",
+      "basis": "recovery/cast/nao.json: самостоятельная забота и настороженность"
+    },
+    "nemera": {
+      "name": "Немера",
+      "scope": "active",
+      "alignment": {
+        "code": "CN",
+        "label": "хаотичный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Отрицает право чужой системы замков навсегда определять её бытие",
+      "morality": "Человеческую этику не считает собственной обязанностью; любопытство сильнее сострадания",
+      "line": "Не признаёт над собой правосудия тюремщика",
+      "breaking_point": "Реальный шанс свободы может привести к опасной сделке либо неожиданной верности своему слову",
+      "basis": "recovery/cast/nemera.json: воля выйти и изучить Шики; человеческая сетка применена приблизительно"
+    },
+    "utsuro": {
+      "name": "Уцуро",
+      "scope": "active",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "established_interpretation"
+      },
+      "order": "Кодекс школы соблюдает, пока тот даёт силу и власть",
+      "morality": "Пациенты и ученики могут стать ресурсом его собственной работы",
+      "line": "Не отдаёт запрещённое знание без встречной платы",
+      "breaking_point": "Потеря влияния Немеры или госпиталя делает обман/насилие выгодными",
+      "basis": "recovery/cast/utsuro.json: сокрытие смертей ради влияния"
+    },
+    "minase": {
+      "name": "Минасэ Рэи",
+      "scope": "active",
+      "alignment": {
+        "code": "CG",
+        "label": "хаотичный добрый",
+        "status": "established_interpretation"
+      },
+      "order": "Самостоятельная жизнь пациента ценнее правил Нижнего госпиталя",
+      "morality": "Готова вступить в конфликт с сильными ради спасения живых",
+      "line": "Не оставляет людей в плитах ради спокойствия начальства",
+      "breaking_point": "Если Шики действительно выносит пациентов, способна временно работать с ним вопреки страху",
+      "basis": "recovery/cast/minase.json: спасение узников, конфликт с Хисанори"
+    },
+    "sayu": {
+      "name": "Мидзуно Саю",
+      "scope": "active",
+      "alignment": {
+        "code": "CN",
+        "label": "хаотичный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Решение о собственном теле не принадлежит госпиталю или спасителю",
+      "morality": "Чужой долг не отменяет злости и личной свободы",
+      "line": "Не согласится вернуть себя в систему печатей ради чужого удобства",
+      "breaking_point": "При риске потерять руку может заключить сделку с неприятным человеком",
+      "basis": "recovery/cast/sayu.json: восстановление, автономия, сложное отношение к Шики"
+    },
+    "kase": {
+      "name": "Касэ",
+      "scope": "active",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "established_interpretation"
+      },
+      "order": "Служба и товарищество полезны, пока сохраняют место в реестре",
+      "morality": "Чужой жизнью готов платить за собственную будущую руку",
+      "line": "Не признается добровольно в убийстве свидетеля",
+      "breaking_point": "При близком разоблачении может убить, бежать или предать прежнего нанимателя",
+      "basis": "GM_ONLY knife truth; recovery/cast/kase.json; убийство Тэцу установлено в скрытом каноне"
+    },
+    "tetsu": {
+      "name": "Тэцу",
+      "scope": "closed_story",
+      "alignment": {
+        "code": "N",
+        "label": "истинно нейтральный",
+        "status": "established_interpretation"
+      },
+      "order": "Выживание под чужой властью важнее абстрактной присяги",
+      "morality": "Ищет защитника, даже если защитник сам опасен",
+      "line": "Не собирался умирать за документы Центрального управления",
+      "breaking_point": "Под угрозой жизни был готов сказать угодное человеку ближе остальных",
+      "basis": "recovery/cast/tetsu.json; погиб, мировоззрение не означает продолжающуюся жизнь"
+    },
+    "matsuda": {
+      "name": "Мацуда",
+      "scope": "active",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "established_interpretation"
+      },
+      "order": "Личная верность Нори и дисциплина службы определяют его риск",
+      "morality": "Защищает расследование из привязанности к капитану",
+      "line": "Не раскрывает роль наблюдателя без веской причины",
+      "breaking_point": "Если формальный приказ противоречит безопасности Нори, может нарушить его",
+      "basis": "recovery/cast/matsuda.json"
+    },
+    "morioka_hiroaki": {
+      "name": "Мориока Хидэаки",
+      "scope": "active_hidden",
+      "alignment": {
+        "code": "LE",
+        "label": "законопослушный злой",
+        "status": "provisional"
+      },
+      "order": "Бумага и печать позволяют принуждать, оставаясь формально уполномоченным",
+      "morality": "Собственную зависимость и положение готов поддерживать чужими ограничениями",
+      "line": "Не отдаст реестр без гарантии защиты своей дозы",
+      "breaking_point": "При открытии личного списка получателей может продать соучастников",
+      "basis": "GM_ONLY morioka_hiroaki; получатель С-17, НЕ установлен заказчиком убийства Шики"
+    },
+    "inaba_shigeru": {
+      "name": "Инаба Сигэру",
+      "scope": "active_hidden",
+      "alignment": {
+        "code": "N",
+        "label": "истинно нейтральный",
+        "status": "provisional"
+      },
+      "order": "Выживание и медицинская зависимость перед лицом чужой системы",
+      "morality": "Вероятно ставит собственную безопасность выше абстрактной государственной выгоды",
+      "line": "Пока не установлена: выяснять в личной сцене",
+      "breaking_point": "При обоснованном предложении лечения может рискнуть свидетельством",
+      "basis": "S-17 line B/right-hand graft; черты — предварительная мастерская подготовка, не знания Шики"
+    },
+    "kage_doppelganger": {
+      "name": "Неизвестный двойник Кагэ",
+      "scope": "opposition",
+      "alignment": {
+        "code": "LE",
+        "label": "законопослушный злой",
+        "status": "established_interpretation"
+      },
+      "order": "Маска власти и процедура заставляют охрану выполнять его требования",
+      "morality": "Заложник допустим как инструмент давления",
+      "line": "Не сдаёт ключи и людей добровольно, пока есть окно торга",
+      "breaking_point": "При прорыве может снять маску и пожертвовать чужим прикрытием",
+      "basis": "recovery/cast/kage_doppelganger.json"
+    },
+    "masked_leader": {
+      "name": "Старший в тёмной полумаске",
+      "scope": "opposition",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "provisional"
+      },
+      "order": "Приказ существует, пока наниматель оплачивает риск",
+      "morality": "Чужие пленники и товарищи рассматриваются как разменные фигуры",
+      "line": "Не раскрывает канал оплаты без преимущества",
+      "breaking_point": "Может продать нанимателя в обмен на жизнь",
+      "basis": "recovery/cast/masked_leader.json; нанятый, личность и права сомнительны"
+    },
+    "v7_rogue_officer": {
+      "name": "Неизвестный офицер у В-7",
+      "scope": "opposition",
+      "alignment": {
+        "code": "LE",
+        "label": "законопослушный злой",
+        "status": "provisional"
+      },
+      "order": "Силовая иерархия служит захвату хранилища",
+      "morality": "Сохранность чужой жизни уступает поставленной операции",
+      "line": "Не считает подлинную охрану законной помехой",
+      "breaking_point": "При тяжёлой травме способен переоценить верность заказу",
+      "basis": "recovery/cast/v7_rogue_officer.json; отдельный пленник"
+    },
+    "ren": {
+      "name": "Хаясэ Рэн (напарник Шики)",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "CG",
+        "label": "хаотичный добрый",
+        "status": "provisional"
+      },
+      "order": "Команде верен больше, чем указаниям старших",
+      "morality": "За друга вступается импульсивно, иногда во вред стратегии",
+      "line": "Не откажется от своего товарища ради церемоний",
+      "breaking_point": "При личном унижении может бросить вызов без разрешения",
+      "basis": "campaigns/shiki/roster.json: pdf_approved, не путать с Такаги Рэном"
+    },
+    "aki": {
+      "name": "Мидзухара Аки",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "provisional"
+      },
+      "order": "План и выверенные обязательства важнее мгновенного успеха",
+      "morality": "Команда — ресурс доверия, который нельзя тратить без необходимости",
+      "line": "Не раскрывает товарищей из-за чьего-то давления",
+      "breaking_point": "Ради спасения близкого готова нарушить собственный порядок",
+      "basis": "campaigns/shiki/roster.json: pdf_approved"
+    },
+    "kusa_leader": {
+      "name": "Асумага Тосэ",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LG",
+        "label": "законопослушный добрый",
+        "status": "provisional"
+      },
+      "order": "Командир отвечает за всех, кого отправил на задание",
+      "morality": "Долг — довести людей живыми, не продав их ради выслуги",
+      "line": "Не подменяет подготовку показной жестокостью",
+      "breaking_point": "Скрытый приказ Кусы способен поставить его против начальства",
+      "basis": "campaigns/shiki/roster.json: командир двух лет"
+    },
+    "kabuto": {
+      "name": "Кабуто Якуши",
+      "scope": "separate_active",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "provisional"
+      },
+      "order": "Правила нужны как маскировка и доступ к архивам",
+      "morality": "Человек интересен прежде всего тем, что можно из него узнать",
+      "line": "Не раскрывает источник детской медицинской записи Шики без собственной выгоды",
+      "breaking_point": "Перед риском потерять эксперимент может нарушить приказ наставника",
+      "basis": "campaigns/shiki/roster.json и письмо 19.09.1278; НЕ доказанный автор текущих покушений"
+    },
+    "orochimaru": {
+      "name": "Орочимару",
+      "scope": "separate_active",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "provisional"
+      },
+      "order": "Иерархии и присяги имеют цену только как инструменты исследования",
+      "morality": "Чужие тела и жизни допустимы как ресурс для развития техники",
+      "line": "Не уничтожит уникальный образец просто ради чужой гордости",
+      "breaking_point": "Предательство соратника допустимо, если знание или бессмертие важнее",
+      "basis": "campaigns/shiki/roster.json; частные цели вне сцены"
+    },
+    "danzo": {
+      "name": "Данзо Шимура",
+      "scope": "separate_active",
+      "alignment": {
+        "code": "LE",
+        "label": "законопослушный злой",
+        "status": "provisional"
+      },
+      "order": "Скрытая государственная дисциплина оправдывает неподконтрольные приказы",
+      "morality": "Ущерб отдельному человеку для него приемлем ради контроля Конохи",
+      "line": "Не раскрывает сеть оперативников ради личного оправдания",
+      "breaking_point": "Угроза стратегическому контролю делает договоры расходными",
+      "basis": "campaigns/shiki/roster.json; не приписывать связь с текущим заговором без доказательств"
+    },
+    "hiruzen": {
+      "name": "Хирузен Сарутоби",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LG",
+        "label": "законопослушный добрый",
+        "status": "provisional"
+      },
+      "order": "Долг Хокаге — защищать жителей, сохраняя институт деревни",
+      "morality": "Даже тяжёлый противник остаётся человеком, которому можно дать шанс",
+      "line": "Не отдаст деревню ради личной симпатии",
+      "breaking_point": "Угроза массовой гибели может заставить принять чрезвычайное решение",
+      "basis": "campaigns/shiki/roster.json; это интерпретация, не знание Шики"
+    },
+    "naruto": {
+      "name": "Наруто Узумаки",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "CG",
+        "label": "хаотичный добрый",
+        "status": "provisional"
+      },
+      "order": "Личная клятва и дружба выше формального приказа",
+      "morality": "За чужого вступается даже вопреки расчёту",
+      "line": "Не отказывается от товарища лишь потому, что тот неудобен",
+      "breaking_point": "При угрозе другу может действовать без согласования с командой",
+      "basis": "campaigns/shiki/roster.json; пересматривать с учётом реально сыгранного развития"
+    },
+    "sasuke": {
+      "name": "Саске Учиха",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "CN",
+        "label": "хаотичный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Месть и независимое решение значимее закона деревни",
+      "morality": "Чужое благополучие уступает поиску силы, но привязанности реальны",
+      "line": "Не отдаст свою цель ради чужого спокойствия",
+      "breaking_point": "Потеря контроля над судьбой может заставить разорвать командные обязательства",
+      "basis": "campaigns/shiki/roster.json; при новом периоде уточнить перемены"
+    },
+    "gaara": {
+      "name": "Гаара",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "CE",
+        "label": "хаотичный злой",
+        "status": "provisional"
+      },
+      "order": "В период экзамена внешнюю власть воспринимал как угрозу",
+      "morality": "Вражда и насилие — способ удостоверить собственное существование",
+      "line": "Не терпит навязанного личного унижения",
+      "breaking_point": "Реально прожитый опыт связи может изменить ось; НЕ переносить ранний тип на 1283 автоматически",
+      "basis": "campaigns/shiki/roster.json Naruto part1 / ранняя игра, тип только для периода экзамена"
+    },
+    "temari": {
+      "name": "Темари",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Обязанности перед Суной и безопасностью команды важнее личного каприза",
+      "morality": "Готова действовать жёстко, но лишнюю смерть не считает выгодой",
+      "line": "Не отдаст брата чужому плану без борьбы",
+      "breaking_point": "Опасность для Гаары может вынудить нарушить приказ куратора",
+      "basis": "campaigns/shiki/roster.json"
+    },
+    "neji": {
+      "name": "Нэдзи Хьюга",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Долг и предопределение клана влияют на ранние решения",
+      "morality": "Жестокость объясняет судьбой, однако способен учиться",
+      "line": "Не поступится гордостью от одного доброго слова",
+      "breaking_point": "Проверенный личный опыт может изменить убеждение о неизменности судьбы",
+      "basis": "campaigns/shiki/roster.json, экзамен"
+    },
+    "lee": {
+      "name": "Рок Ли",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LG",
+        "label": "законопослушный добрый",
+        "status": "provisional"
+      },
+      "order": "Личный кодекс дисциплины и наставничества выше лёгкой победы",
+      "morality": "Помощь другим и честное усилие ценнее унижения соперника",
+      "line": "Не применяет бесчестный способ ради славы",
+      "breaking_point": "За друга готов рискнуть телом и потерять будущий карьерный шанс",
+      "basis": "campaigns/shiki/roster.json, экзамен"
+    },
+    "ibiki": {
+      "name": "Ибики Морино",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Стрессовое испытание и контроль правил нужны безопасности",
+      "morality": "Сочувствие не мешает жестко проверять слабость кандидата",
+      "line": "Не пропускает кандидата из жалости или восхищения",
+      "breaking_point": "При угрозе Конохе может отступить от обычного протокола",
+      "basis": "campaigns/shiki/roster.json, проведённые экзамены"
+    },
+    "anko": {
+      "name": "Анко Митараши",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "CG",
+        "label": "хаотичный добрый",
+        "status": "provisional"
+      },
+      "order": "Свободная тактика и личная смелость важнее гладкой инструкции",
+      "morality": "Защищает деревню, иногда открыто пренебрегая формальностями",
+      "line": "Не отдаёт учеников эксперименту чужого учителя",
+      "breaking_point": "Увидев истинную угрозу, может нарушить протокол экзамена",
+      "basis": "campaigns/shiki/roster.json"
+    },
+    "kakashi": {
+      "name": "Какаши Хатакэ",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "provisional"
+      },
+      "order": "Товарищи и миссия сопоставляются по реальной цене",
+      "morality": "Не бросает своих людей ради пустой формальности",
+      "line": "Не предаст команду ради бюрократического удобства",
+      "breaking_point": "В условиях массовой угрозы способен принять очень жёсткое решение",
+      "basis": "campaigns/shiki/roster.json"
+    },
+    "shikamaru": {
+      "name": "Шикамару Нара",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "provisional"
+      },
+      "order": "Дисциплина полезна, пока не заставляет бессмысленно терять людей",
+      "morality": "Сохранение друзей весит больше внешней славы",
+      "line": "Не положит бойцов ради красивого плана",
+      "breaking_point": "Для защиты команды готов обойти формальный порядок",
+      "basis": "campaigns/shiki/roster.json"
+    },
+    "hinata": {
+      "name": "Хината Хьюга",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "provisional"
+      },
+      "order": "Уважает клан, но ценность другого человека для неё выше приказа",
+      "morality": "Защита близких и преодоление собственного страха",
+      "line": "Не причинит вреда слабому ради одобрения старших",
+      "breaking_point": "Ради дорогого человека способна нарушить прямой семейный запрет",
+      "basis": "campaigns/shiki/roster.json"
+    },
+    "baki": {
+      "name": "Баки",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "LN",
+        "label": "законопослушный нейтральный",
+        "status": "provisional"
+      },
+      "order": "Служба Суне требует сохранять тайны и проводить приказы",
+      "morality": "Миссия может оправдывать риск для чужих, но не бездумную резню",
+      "line": "Не выдаст всю операцию случайному участнику экзамена",
+      "breaking_point": "Если успех операции невозможен, стремится вывести собственных людей",
+      "basis": "campaigns/shiki/roster.json; без приписывания неизвестных злодейств"
+    },
+    "dosu": {
+      "name": "Досу Кинута",
+      "scope": "past_recurring",
+      "alignment": {
+        "code": "NE",
+        "label": "нейтральный злой",
+        "status": "provisional"
+      },
+      "order": "Чужой приказ — средство личного признания",
+      "morality": "Соперник используется, пока полезен для миссии",
+      "line": "Не признаёт поражения как достаточное основание стать послушным",
+      "breaking_point": "Терпя унижение от своего хозяина, может изменить цели",
+      "basis": "campaigns/shiki/roster.json"
+    }
+  }
+}
