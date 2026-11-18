@@ -8,8 +8,8 @@
 
 **Старт нового чата — один пакет параллельных чтений:**
 1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md` и `skills/dark-literary-gm/SKILL.md` (main): правила, Шики, проза.
-2. `memory/SCENE.md` и `recovery/GM_BRIEF.json` (game-state/shiki): сцена, облик и знания присутствующих, сроки. О любом NPC — его страница из `memory/INDEX.md`. `recovery/HOT.json`/`recovery/GM_ONLY.json` — полное состояние и тайны при необходимости.
-3. `recovery/TURN.json` и `recovery/CHECKS.json` (game-state/shiki): последний ход, blob SHA, замечания свёртки; если TURN новее HOT — TURN приоритетен. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
+2. `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `memory/INDEX.md` (game-state/shiki): сцена, облик и знания присутствующих, кости, сроки, sha `TURN.json` (`turn_file`); о любом NPC и месте — страница из INDEX. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
+3. `recovery/TURN.json` — только при конфликте sha; `recovery/HOT.json`/`recovery/GM_ONLY.json` — по необходимости; `memory/SCENE.md` — сцена для человека.
 4. `archive/heuristic-recall/manifest.json` читать **только при адресном историческом поиске**. README/AGENTS — при первом входе или тех. работе.
 
 **Обычный ход — быстрый путь:** если тот же эпизод и его действующие NPC/часы уже известны из текущего чата, **0 поисков, 0 повторных чтений, 1 запись** `recovery/TURN.json`. Перед новым признанием NPC проверь `scene.npc_disclosures_to_player` в HOT (источниковые подсказки, не факты); при сомнении открой исходный ход. Сохраняй в контексте последний `content_sha` GitHub и следующий ID. Применяй действие игрока, самостоятельный ход NPC и ближайшие часы, пиши сцену. Не перечитывай уже известные позиции, стадию договора и механики; Шики действует только по заявке игрока.
@@ -37,6 +37,6 @@ GitHub Actions сворачивает ход, обновляет память и
 - Код `rpg_engine/`, тесты `python -m unittest discover -s tests`. Только стандартная библиотека.
 - Живая память: `rpg_engine/hot.py`; общая историческая эвристика: `rpg_engine/heuristic_history.py`, вызывается при `hot-fold` и автоматически в `gm-packet`/`scene-memory`; прямой поиск `history-heuristic`. Устройство: `docs/ARCHITECTURE.md`.
 - Историю на `game-state/shiki` не переписывать и не удалять; исходники сессий хранить дословно в `archive/`.
-- **После каждой сессии:** сначала точный replay в SQLite, `verify --full`, закрытие и индекс. Затем чистить только восстановимые данные оперативного контура: `HOT` — текущая сцена/состав и 2–4 строки хроники, 3–6 канон-поправок; полный остаток — в архив/карточки. У `GM_ONLY` сохранять действующие тайны и часы, а разовый `undo` завершённой сессии обнулять. Проверить размер `HOT` < 64 КБ, `GM_ONLY` < 30 КБ, `hot-check` и `audit-handoff`. Первый ход следующей сессии сам переключает HOT.
+- **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. HOT < 90 КБ, `GM_BRIEF` ≤ 48 КБ.
 - Этот файл одинаков на `main` и `game-state/shiki`. Размер этого файла, GM_CORE и навыка держат тесты `tests/test_instruction_budget.py`: рост означает, что правило надо заменить, а не добавить.
 - Скрытая правда живёт только в `recovery/GM_ONLY.json` и файлах `*GM_ONLY*`. В `HOT.json`, коммитах, PR и ответах игроку её нет.

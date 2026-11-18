@@ -9,8 +9,7 @@
 В начале каждого нового чата, до ответа игроку, одним пакетом прочитай:
 
 1. `AGENTS.md`, `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `skills/dark-literary-gm/SKILL.md` — ветка `main`.
-2. `memory/SCENE.md`, `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `recovery/TURN.json` — ветка `game-state/shiki`.
-3. `memory/INDEX.md` — карта мира: у каждого персонажа, вещи и линии своя страница `memory/<путь>.md`.
+2. `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `memory/INDEX.md` — ветка `game-state/shiki`. `TURN.json` не читай: его sha — `GM_BRIEF.turn_file`, конец последнего ответа — `GM_BRIEF.last`.
 
 Затем продолжай с курсора `GM_BRIEF.cursor`: дата, место, присутствующие, их память, отношение и намерения. Если в `CHECKS.json` есть `fold_errors`, сначала исправь указанный ход тем же `id` с `"amend": true`. Если есть `checks`, учти их в следующей сцене.
 
