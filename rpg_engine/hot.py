@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, npc_memory, prose_lint
+from . import continuity_guard, dread, npc_memory, prose_lint
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -416,6 +416,7 @@ def apply_turn(hot, turn):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
     npc_memory.apply(hot, turn, inner)
+    dread.after_turn(hot, turn, inner, delta)
     continuity_guard.check_turn(hot, turn)
     refresh(hot)
     return True
@@ -671,6 +672,7 @@ def _read_state(state_dir):
     hot["_undo"] = secret.get("undo")
     hot["_psyche"] = dict(secret.get("psyche") or {})
     hot["_checks"] = list(secret.get("checks") or [])
+    hot["_horror"] = dict(secret.get("horror") or {})
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -685,6 +687,7 @@ def _split_state(hot):
     undo = public.pop("_undo", None)
     psyche = public.pop("_psyche", {})
     checks = public.pop("_checks", [])
+    horror = public.pop("_horror", {})
     public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -722,7 +725,7 @@ def _split_state(hot):
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
               "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
-              "checks": checks, "undo": undo}
+              "checks": checks, "horror": horror, "undo": undo}
     return public, secret
 
 
@@ -815,6 +818,12 @@ def ensure_npc_memory(state_dir, hot):
     for key, card in (hot.get("cast") or {}).items():
         if "memory_total" not in card:
             npc_memory.hydrate_card(card, npc_memory.load_episodes(state_dir, key))
+    if "motifs" not in (hot.get("_horror") or {}):
+        rows = []
+        for path in sorted((state_dir / "archive").glob("session-*-turns.jsonl"))[-2:]:
+            rows += [json.loads(r) for r in path.read_text(encoding="utf-8").splitlines() if r.strip()]
+        rows.sort(key=lambda r: npc_memory._order(r.get("id", "")))
+        dread.seed_motifs(hot, rows)
     cast_dir = state_dir / CAST_DIR
     for path in sorted(cast_dir.glob("*.json")) if cast_dir.is_dir() else ():
         if path.stem in (hot.get("cast") or {}):

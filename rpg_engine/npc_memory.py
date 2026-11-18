@@ -33,6 +33,8 @@ import json
 import re
 from pathlib import Path
 
+from . import dread as _dread
+
 MEMORY_DIR = "archive/npc-memory"
 REL_DIMS = ("trust", "fear", "respect", "debt", "grievance", "attachment", "dependence")
 REL_RANGE = 5
@@ -41,7 +43,7 @@ FACETS = ("temper", "values", "deep_fear", "needs", "contradiction", "defense",
 INTENT_STATUS = ("committed", "paused", "fulfilled", "abandoned")
 CHANNELS = ("present", "witnessed", "told", "document", "inferred", "rumor", "mentioned")
 STABLE = ("wants", "fears", "voice")
-INNER_KEYS = ("mem", "rel", "affect", "intent", "psyche", "why")
+INNER_KEYS = ("mem", "rel", "affect", "intent", "psyche", "why", "dread")
 CARD_FIRST = 2      # самые ранние эпизоды в карточке: откуда NPC знает Шики
 CARD_RECENT = 6     # последние эпизоды в карточке
 PRIVATE_MEMORIES = 16   # как в Bleach: рабочая память профиля, полная — в архиве
@@ -176,6 +178,8 @@ def apply(hot, turn, inner):
                 until = _iso(_parse(at) + _dt.timedelta(hours=DEFAULT_AFFECT_HOURS), at)
             profile["affect"] = {"feel": _short(own["affect"]["feel"], 200), "since": at,
                                  "until": until, "turn": turn_id}
+        if "dread" in own:
+            _dread.apply(hot, key, own["dread"], turn_id, at)
         if isinstance(own.get("intent"), dict):
             _intents(hot, profile, own["intent"], turn_id, at)
         if isinstance(own.get("psyche"), dict):
