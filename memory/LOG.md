@@ -1,0 +1,60 @@
+# Журнал памяти · последние 60 ходов
+
+Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
+
+- s08.text.021: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`, поправки игрока: 3
+- s08.text.020: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
+- s08.text.019: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
+- s08.text.018: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
+- s08.text.017: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), поправки игрока: 1
+- s08.text.016: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
+- s08.text.015: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
+- s08.text.013: Кадзиура Сатору (`npc/kadziura_satoru`), Реципиент № 6 (`npc/s17_recipient_6`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
+- s08.text.012: линия `family_night`, линия `family_visit`, линия `attire`, план сюжета
+- s08.text.011: Кадзиура Сатору (`npc/kadziura_satoru`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
+- s08.text.010: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s08.text.009: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
+- s08.text.008: поправки игрока: 1
+- s08.text.007: Реципиент № 6 (`npc/s17_recipient_6`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s08.text.006: Реципиент № 6 (`npc/s17_recipient_6`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s08.text.005: поправки игрока: 1
+- s08.text.003: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `recipient6_airway_cast_followup`, линия `s17_survivors`
+- s08.text.002: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, вещь `shiki_hospital_gown_gloves`, вещь `recipient6_airway_cast_sample`, линия `s17_survivors`
+- s08.text.001: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s07.text.038: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 2
+- s07.text.037: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
+- s07.text.036: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
+- s07.text.035: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s07.text.034: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s07.text.033: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
+- s07.text.032: Аракава Дзюн (`npc/arakawa`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
+- s07.text.031: Аракава Дзюн (`npc/arakawa`)
+- s07.text.030: Аракава Дзюн (`npc/arakawa`), поправки игрока: 1
+- s07.text.029: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
+- s07.text.028: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
+- s07.text.027: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
+- s07.text.026: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
+- s07.text.025: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`, поправки игрока: 1
+- s07.text.024: Аракава Дзюн (`npc/arakawa`)
+- s07.text.023: Аракава Дзюн (`npc/arakawa`)
+- s07.text.022: Аракава Дзюн (`npc/arakawa`), поправки игрока: 1
+- s07.text.021: Аракава Дзюн (`npc/arakawa`)
+- s07.text.020: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`, поправки игрока: 1
+- s07.text.019: линия `arakawa_treatment`, поправки игрока: 1
+- s07.text.018: линия `arakawa_treatment`, поправки игрока: 3
+- s07.text.017: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`), линия `v7`
+- s07.text.016: Аракава Дзюн (`npc/arakawa`)
+- s07.text.015: Аракава Дзюн (`npc/arakawa`)
+- s07.text.014: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`)
+- s07.text.013: Аракава Дзюн (`npc/arakawa`)
+- s07.text.012: Аракава Дзюн (`npc/arakawa`)
+- s07.text.011: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`)
+- s07.text.009: Аракава Дзюн (`npc/arakawa`), Курода Маю (`npc/kuroda_mayu`), Охрана Аракавы (`npc/arakawa_guard`)
+- s07.text.008: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`), Такаги Рэн (`npc/takagi_ren`)
+- s07.text.007: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
+- s07.text.006: поправки игрока: 1
+- s07.text.005: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
+- s07.text.003: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
+- s07.text.002: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
+- s07.text.001: Курода Маю (`npc/kuroda_mayu`), Неизвестный в сером медицинском плаще (`npc/courier_unknown`)
+- s06.text.046: Курода Маю (`npc/kuroda_mayu`), Мастер фуиндзюцу охраны Кусагакуре (`npc/fuin_master_v7`), Такаги Рэн (`npc/takagi_ren`), линия `v7`
