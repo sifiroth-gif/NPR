@@ -146,6 +146,33 @@ class WholeGameIntegration(unittest.TestCase):
         self.assertIn("escape", doctors["enemy"]["unclocked_intents"])
         self.assertFalse(any(k in self.hot for k in ("npc_actions", "choices")))
 
+    def test_character_pressure_works_from_historical_card_without_psyche(self):
+        self.hot["_psyche"]["doctor"] = {}
+        outlook = npc_dynamics.view(self.hot, index=self.index)
+        doctor = next(x for x in outlook["actors"] if x["id"] == "doctor")
+        self.assertEqual(doctor["pressure_pairs"][0]["kind"], "goal_at_risk")
+        self.assertEqual(doctor["unoperationalized_goal"], None)  # doctor has future lab clock
+        self.assertEqual(doctor["identity_status"],
+                         "operational_or_archival_projection_not_new_fact")
+
+    def test_nonpresent_due_soon_npc_uses_archival_profile(self):
+        self.index["entities"]["future_actor"] = card(
+            "future_actor", "npc", "Historian", ["Historian"],
+            projections=[{"role": "archivist", "wants": "hide ledger",
+                          "fears": "discovery", "stance": "fearful"}])
+        self.hot["offscreen"]["clocks"]["future"] = {
+            "owner": "future_actor", "what": "Visit the archive",
+            "due": "0006-11-19T01:00:00", "turn": "s23.text.001"}
+        outlook = npc_dynamics.view(self.hot, index=self.index)
+        npc = next(x for x in outlook["actors"] if x["id"] == "future_actor")
+        self.assertFalse(npc["present"])
+        self.assertEqual(npc["identity_projection"]["wants"], "hide ledger")
+        self.assertEqual(npc["identity_source"],
+                         "archive/session-001-turns.jsonl:future_actor")
+        self.assertEqual(npc["world_clocks"][0]["status"], "pending")
+        self.assertTrue(npc["pressure_pairs"])
+        self.assertNotIn("future_actor", self.hot["cast"])
+
     def test_dynamics_omissions_disclosed_for_crowded_scenes(self):
         self.hot["scene"]["present"].extend(f"actor_{i}" for i in range(25))
         outlook = npc_dynamics.view(self.hot)
