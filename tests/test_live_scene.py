@@ -67,6 +67,28 @@ class LiveSceneTests(unittest.TestCase):
         self.assertEqual(brief["digest"], live_scene._digest({
             key: value for key, value in brief.items() if key != "digest"}))
 
+    def test_npc_role_does_not_imply_universal_technical_comprehension(self):
+        self.h["cast"]["arakawa"]["role"] = "Senior government inspector"
+        brief = live_scene.build(self.h, self.old)
+        npc = brief["present_npcs"]["arakawa"]
+        self.assertNotIn("competence", npc["profile"])
+        self.assertNotIn("limits", npc["profile"])
+        self.assertIn("Hearing or repeating terminology is not understanding",
+                      npc["epistemic_limit"])
+        self.assertIn("bluffing", npc["epistemic_limit"])
+
+    def test_explicit_competence_gaps_and_misconceptions_remain_separate(self):
+        npc = self.h["cast"]["arakawa"]
+        npc["competence"] = ["official paperwork", "procedural threats"]
+        npc["limits"] = ["genetic engineering", "biochemistry"]
+        npc["misconceptions"] = ["thinks an experimental carrier is an established medicine"]
+        brief = live_scene.build(self.h, self.old)
+        profile = brief["present_npcs"]["arakawa"]["profile"]
+        self.assertEqual(profile["competence"], npc["competence"])
+        self.assertEqual(profile["limits"], npc["limits"])
+        self.assertEqual(profile["misconceptions"], npc["misconceptions"])
+        self.assertNotIn(npc["misconceptions"][0], profile["knows"])
+
     def test_completed_legacy_clocks_are_not_overdue_or_blocking(self):
         self.h["offscreen"]["clocks"]["finished_old"] = {
             "owner": "captain", "what": "prior escort",
