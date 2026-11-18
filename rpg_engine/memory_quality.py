@@ -14,8 +14,8 @@ from . import context_dispatcher, general_memory
 
 SCHEMA = "npr-memory-quality/1"
 PATH = "recovery/MEMORY_QUALITY_GM_ONLY.json"
-MAX_PER_KIND = 8
-MAX_PROBES = 72
+MAX_PER_KIND = 24
+MAX_PROBES = 120
 
 
 def _pick_alias(card):
