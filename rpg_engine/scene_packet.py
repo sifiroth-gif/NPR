@@ -229,11 +229,19 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
             "gm_tail": _short(last.get("gm_tail"), 350),
             "source": "recovery/TURN.json",
         }
-    # The chronological graph is an address index, not a duplicate history.
-    graph = packet.get("evidence_graph") or {}
-    graph["nodes"] = (graph.get("nodes") or [])[:8]
-    graph["edges"] = (graph.get("edges") or [])[:8]
-    graph["source"] = "archive/session-*-turns.jsonl"
+    # A routine scene already has actor-scoped chronological source IDs;
+    # the large node graph is generated on demand by scene_gate for a historical
+    # claim. Keep only tiny order anchors; never infer cause or actor knowledge.
+    edges = []
+    for actor_id, actor in (packet.get("present_npcs") or {}).items():
+        refs = actor.get("prior_disclosures") or []
+        if len(refs) >= 2:
+            edges.append({"from": refs[0]["turn"], "to": refs[-1]["turn"],
+                          "actor": actor_id, "status": "source_order_only"})
+    packet["evidence_graph"] = {
+        "nodes": [], "edges": edges, "source": "archive/session-*-turns.jsonl",
+        "scope": "source order only; no semantic entailment",
+    }
     horror = packet.get("horror") or {}
     if horror.get("rule"):
         horror["rule"] = "campaigns/shiki/ref/HORROR.md"
