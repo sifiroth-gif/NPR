@@ -19,7 +19,10 @@ def texts(notes):
 
 class PlotTest(unittest.TestCase):
     def setUp(self):
-        self.hot = {"cursor": {"id": "s04.text.044", "at": "0006-10-01T07:10:00"}}
+        self.hot = {"session": 4, "cursor": {"id": "s04.text.044", "at": "0006-10-01T07:10:00"}}
+        plot.apply(self.hot, {"main": {"kind": "main", "question": "…", "endings": ["…", "…"]},
+                              "ch1": {"kind": "chapter", "question": "…", "endings": ["…", "…"],
+                                      "limit": {"scenes": 50}}}, "s04.text.044", "0006-10-01T07:10:00")
 
     def play(self, number, patch, threads=None):
         turn_id = f"s04.text.{number:03}"
@@ -97,11 +100,24 @@ class PlotTest(unittest.TestCase):
         self.assertIn("«Экзамен» (`ch2`)", notes[0])
         self.assertEqual(self.hot["_plot"]["events"]["main"].get("scenes"), 0)
 
+    def test_missing_main_story_and_stale_threads_are_flagged(self):
+        self.hot = {"session": 8, "cursor": {"id": "s08.text.003", "at": "0006-10-03T03:00:00"},
+                    "threads": {"old": {"state": "…", "turn": "s05.text.010"},
+                                "fresh": {"state": "…", "turn": "s07.text.002"},
+                                "goal": {"state": "цель игрока"},
+                                "linked": {"state": "…", "turn": "s04.text.001"}}}
+        plot.apply(self.hot, {"x": side(threads=["linked"])}, "s08.text.003", "0006-10-03T03:00:00")
+        notes = texts(plot.review(self.hot, [{"id": "s08.text.003"}]))
+        self.assertTrue(any("Сквозной сюжет не задан" in n for n in notes))
+        stale = [n for n in notes if n.startswith("Линии без движения")]
+        self.assertEqual(len(stale), 1)
+        self.assertIn(": old.", stale[0])
+
     def test_brief_and_page_show_what_is_running(self):
         self.play(45, {"theft": side(), "street": {"kind": "scene", "title": "торговец"}})
         data = plot.brief(self.hot)
-        self.assertEqual([e["id"] for e in data["active"]], ["theft", "street"])
-        self.assertEqual(data["active"][0]["scenes_left"], 2)
+        self.assertEqual([e["id"] for e in data["active"]], ["ch1", "theft", "street"])
+        self.assertEqual(data["active"][1]["scenes_left"], 2)
         self.assertIn("1–2 обмена", data["rules"])
         page = plot.page(self.hot)
         self.assertIn("концовка: след потерян", page)
@@ -131,6 +147,17 @@ class PlotFoldTest(unittest.TestCase):
         self.assertIn("События: идут 1", scene)
         self.assertNotIn("вор найден", scene)
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
+    def test_plot_notes_are_replaced_not_piled_up(self):
+        self.put(turn(45, "0006-10-01T07:14:00", d={"plot": {"theft": {"kind": "side"}}}))
+        hot.fold(self.root)
+        self.commit("fold")
+        self.put(turn(46, "0006-10-01T07:20:00", d={"plot": {"theft": {"touch": True}}}))
+        hot.fold(self.root)
+        checks = json.loads((self.root / hot.CHECKS_PATH).read_text(encoding="utf-8"))["checks"]
+        plot_notes = [c for c in checks if c["kind"] == "plot"]
+        self.assertEqual({c["turn"] for c in plot_notes}, {"s04.text.046"})
+        self.assertEqual(sum("без конца" in c["text"] for c in plot_notes), 1)
 
     def test_amend_rolls_back_plot_counts(self):
         self.put(turn(45, "0006-10-01T07:14:00", d={"plot": {"theft": side()}}))
