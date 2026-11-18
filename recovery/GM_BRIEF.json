@@ -94,7 +94,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "6fad51c8c4634ae18f2975b98bb284efc27bf7e928ad3b2ad9ba9d99022ca927",
+ "digest": "d69835478f1c2ed56927a0284bfeab4eb47a9022bc076980af9631c1c5d9359c",
  "entity_memory": {
   "activated": [
    {
@@ -329,11 +329,26 @@
      "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
      "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
     },
+    "identity_source": "HOT.cast",
+    "identity_status": "operational_or_archival_projection_not_new_fact",
     "present": true,
-    "pressure_pairs": [],
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+       "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
+      },
+      "kind": "goal_at_risk",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
     "psyche_facets": {},
     "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
     "unclocked_intents": [],
+    "unoperationalized_goal": {
+     "status": "motivation_not_committed_action",
+     "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
+    },
     "world_clocks": []
    },
    {
@@ -346,12 +361,73 @@
      "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное меди",
      "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
     },
+    "identity_source": "HOT.cast",
+    "identity_status": "operational_or_archival_projection_not_new_fact",
     "present": true,
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
+       "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
+      },
+      "kind": "goal_at_risk",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
+    "psyche_facets": {},
+    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
+    "unclocked_intents": [],
+    "unoperationalized_goal": {
+     "status": "motivation_not_committed_action",
+     "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
+    },
+    "world_clocks": []
+   },
+   {
+    "committed_or_paused_intents": [],
+    "current_affect": null,
+    "id": "Аракава Дзюн",
+    "identity_projection": {},
+    "identity_source": "HOT.cast",
+    "identity_status": "operational_or_archival_projection_not_new_fact",
+    "present": false,
     "pressure_pairs": [],
     "psyche_facets": {},
     "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
     "unclocked_intents": [],
-    "world_clocks": []
+    "unoperationalized_goal": null,
+    "world_clocks": [
+     {
+      "due": "0006-10-03T08:15:00",
+      "id": "arakawa_supply_audit",
+      "source": "GM_ONLY.offscreen.clocks",
+      "status": "pending",
+      "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
+     }
+    ]
+   },
+   {
+    "committed_or_paused_intents": [],
+    "current_affect": null,
+    "id": "Центральный госпиталь, лаборатория морфологии",
+    "identity_projection": {},
+    "identity_source": "HOT.cast",
+    "identity_status": "operational_or_archival_projection_not_new_fact",
+    "present": false,
+    "pressure_pairs": [],
+    "psyche_facets": {},
+    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
+    "unclocked_intents": [],
+    "unoperationalized_goal": null,
+    "world_clocks": [
+     {
+      "due": "0006-10-03T02:40:00",
+      "id": "s17_cast_morphology",
+      "source": "GM_ONLY.offscreen.clocks",
+      "status": "pending",
+      "what": "Получить и рассмотреть бронхиальные слепки пациента №6 для первичного морфологического описания без заранее определённой причины"
+     }
+    ]
    }
   ],
   "omitted_actor_ids": [],
