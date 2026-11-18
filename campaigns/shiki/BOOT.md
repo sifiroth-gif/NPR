@@ -9,9 +9,12 @@
 В начале каждого нового чата, до ответа игроку, одним пакетом прочитай:
 
 1. `AGENTS.md`, `campaigns/shiki/GM_CORE.md`, `skills/dark-literary-gm/SKILL.md` — ветка `main`.
-2. `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `recovery/TURN.json` — ветка `game-state/shiki`.
+2. `memory/SCENE.md`, `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `recovery/TURN.json` — ветка `game-state/shiki`.
+3. `memory/INDEX.md` — карта мира: у каждого персонажа, вещи и линии своя страница `memory/<путь>.md`.
 
 Затем продолжай с курсора `GM_BRIEF.cursor`: дата, место, присутствующие, их память, отношение и намерения. Если в `CHECKS.json` есть `fold_errors`, сначала исправь указанный ход тем же `id` с `"amend": true`. Если есть `checks`, учти их в следующей сцене.
+
+Прежде чем описать персонажа, место или вещь, открой страницу из INDEX. Черты на странице нет — не выдумывай: оставь неопределённой или задай и запиши в карточку (`look`, `facts`).
 
 Каждый ход: сцена игроку, затем одна запись `recovery/TURN.json` на `game-state/shiki` по GM_CORE §3. Память NPC, хронику, учёт вещей и проверки делает код после записи. Не пиши в другие файлы сохранения.
 

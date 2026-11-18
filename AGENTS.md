@@ -8,7 +8,7 @@
 
 **Старт нового чата — один пакет параллельных чтений:**
 1. `campaigns/shiki/GM_CORE.md` (main) и `skills/dark-literary-gm/SKILL.md` (main): правила и проза.
-2. `recovery/GM_BRIEF.json` (game-state/shiki): единый пакет сцены, знания NPC, источники, граф и сроки. `recovery/HOT.json`/`recovery/GM_ONLY.json` — полное состояние и тайны при необходимости.
+2. `memory/SCENE.md` и `recovery/GM_BRIEF.json` (game-state/shiki): сцена, облик и знания присутствующих, сроки. О любом NPC — его страница из `memory/INDEX.md`. `recovery/HOT.json`/`recovery/GM_ONLY.json` — полное состояние и тайны при необходимости.
 3. `recovery/TURN.json` и `recovery/CHECKS.json` (game-state/shiki): последний ход, blob SHA, замечания свёртки; если TURN новее HOT — TURN приоритетен. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
 4. `archive/heuristic-recall/manifest.json` читать **только при адресном историческом поиске**. README/AGENTS — при первом входе или технической работе.
 
