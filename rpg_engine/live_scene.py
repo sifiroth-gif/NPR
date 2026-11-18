@@ -177,6 +177,7 @@ def build(hot, turns):
     # The private GM_ONLY is still the single authoritative secret store.
     result = {
         "format": FORMAT,
+        "handoff": hot.get("handoff"),  # immutable closed-session pointer until the first S08 turn
         "cursor": {k: cursor.get(k) for k in ("id", "at", "place", "time", "date")},
         "scene": {k: _short(scene.get(k, ""), 1800)
                   for k in ("situation", "positions", "pressure")},
