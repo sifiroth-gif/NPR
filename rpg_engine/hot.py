@@ -907,6 +907,21 @@ def check(state_dir):
     if hot.get("last", {}).get("id") not in (cursor.get("id"), None) and \
             not (hot.get("chronicle") and hot["chronicle"][-1].get("ooc")):
         problems.append("последний ответ не совпадает с курсором")
+    # The optional live GM brief is a derived file: it must refer to exactly
+    # the same accepted turn. Never allow a stale actor/source packet.
+    from . import live_scene
+    brief_path = state_dir / live_scene.PATH
+    if brief_path.is_file():
+        try:
+            brief = json.loads(brief_path.read_text(encoding="utf-8"))
+            signature = brief.get("digest")
+            payload = {k: v for k, v in brief.items() if k != "digest"}
+            if brief.get("format") != live_scene.FORMAT or signature != live_scene._digest(payload):
+                problems.append("GM_BRIEF has invalid format or digest")
+            elif brief.get("cursor", {}).get("id") != cursor.get("id"):
+                problems.append("GM_BRIEF cursor is stale")
+        except (OSError, ValueError, TypeError):
+            problems.append("GM_BRIEF cannot be read")
     scene_anchor = (hot.get("scene") or {}).get("as_of")
     if scene_anchor and scene_anchor != (hot.get("last") or {}).get("id"):
         problems.append("сцена отстаёт от последнего игрового хода")
