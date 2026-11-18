@@ -13,7 +13,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from . import continuity_guard, dread, entity_memory, npc_memory, scene_gate
+from . import continuity_guard, dread, entity_memory, general_memory, npc_memory, scene_gate
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -103,10 +103,11 @@ def load_alignments(state_dir):
 def build_for_state(hot, turns, state_dir):
     """Derive a small GM packet with ONLY present story NPC alignments."""
     return build(hot, turns, alignments=load_alignments(state_dir),
-                 entity_ledger=entity_memory.load(state_dir))
+                 entity_ledger=entity_memory.load(state_dir),
+                 memory_index=general_memory.load(state_dir, hot=hot))
 
 
-def build(hot, turns, *, alignments=None, entity_ledger=None):
+def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None):
     """One bounded read packet: sources, NPC knowledge, world pressure, graph.
 
     A primary passage is included for every selected past disclosure, so
@@ -275,6 +276,9 @@ def build(hot, turns, *, alignments=None, entity_ledger=None):
     if entity_ledger is not None:
         result["entity_memory"] = entity_memory.activate(
             entity_ledger, scene=scene, cursor=cursor)
+    if memory_index is not None:
+        result["general_memory"] = general_memory.compact(
+            general_memory.retrieve(memory_index, scene=scene, cursor=cursor))
     # Bounded packet size is an architectural requirement, not a style tip.
     # Keep all source REFERENCES; trim only optional duplicated prose extracts.
     def packet_bytes():
@@ -316,6 +320,8 @@ def build(hot, turns, *, alignments=None, entity_ledger=None):
             list(result["world"]["threads"].items())[:7]}
         result["world"]["clocks"] = result["world"]["clocks"][:12]
         result["world"]["clock_list_truncated"] = True
+    if packet_bytes() > MAX_BRIEF_BYTES and result.get("general_memory"):
+        result["general_memory"] = general_memory.compact(result["general_memory"], 2600)
     result["digest"] = _digest(result)
     return result
 
