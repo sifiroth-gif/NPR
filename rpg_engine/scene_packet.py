@@ -14,7 +14,7 @@ import json
 TARGET_BYTES = 32_000
 HARD_BYTES = 48_000
 MAX_PASSAGES = 4
-MAX_THREAD_DETAILS = 6
+MAX_THREAD_DETAILS = 3
 
 
 def _bytes(packet):
@@ -44,15 +44,18 @@ def _plot(packet):
         elif event.get("endings"):
             record["endings_ref"] = "recovery/GM_ONLY.json:plot.events." + str(event["id"])
         if event.get("notes"):
-            record["notes"] = [_short(x, 210) for x in event["notes"][:3]]
+            if event.get("kind") == "chapter" or resolve_soon:
+                record["notes"] = [_short(x, 175) for x in event["notes"][:3]]
+            else:
+                record["notes_ref"] = "recovery/GM_ONLY.json:plot.events." + str(event["id"])
         active.append(record)
     packet["plot"] = {
         "main": {k: v for k, v in (source.get("main") or {}).items()
                  if k in ("title", "question")},
         "active": active,
-        "queued": [{k: (_short(v, 135) if k == "trigger" else v)
-                    for k, v in event.items() if k in ("id", "kind", "title", "trigger")}
+        "queued": [{k: v for k, v in event.items() if k in ("id", "kind", "title")}
                    for event in source.get("queued") or []],
+        "queued_ref": "recovery/GM_ONLY.json:plot.events",
         "source": "recovery/GM_ONLY.json:plot",
         "rules": "campaigns/shiki/GM_CORE.md#темп-и-события",
     }
@@ -65,9 +68,9 @@ def _actors(packet):
         profile = node.get("profile") or {}
         knows = profile.get("knows")
         if isinstance(knows, list):
-            if len(knows) > 6:
+            if len(knows) > 4:
                 profile["knows_total"] = len(knows)
-            profile["knows"] = [_short(v, 265) for v in knows[-6:]]
+            profile["knows"] = [_short(v, 245) for v in knows[-4:]]
             profile["knows_ref"] = "memory/npc/" + actor + ".md"
         if isinstance(profile.get("memory"), list):
             profile["memory"] = profile["memory"][-2:]
@@ -89,11 +92,15 @@ def _actors(packet):
                                  if k in ("code", "order", "line", "breaking_point")}
             node["alignment_ref"] = "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json"
         prior = node.get("prior_disclosures") or []
-        for ref in prior:
+        if len(prior) > 4:
+            node["prior_disclosure_ids"] = [ref["turn"] for ref in prior]
+            node["prior_disclosures"] = list(prior[:2]) + list(prior[-2:])
+        for ref in node.get("prior_disclosures") or []:
             if "line" in ref:
-                ref["line"] = _short(ref["line"], 165)
+                ref["line"] = _short(ref["line"], 130)
         if prior:
             node["source_ref"] = "archive/session-*-turns.jsonl"
+        node.pop("policy", None)  # canonical epistemic rule is already in guards
     dynamics = packet.get("npc_dynamics") or {}
     background = []
     for entry in dynamics.get("actors") or []:
@@ -149,7 +156,7 @@ def _threads(packet, hot):
         value = all_threads[key]
         state = value.get("state", value) if isinstance(value, dict) else value
         detail[key] = {
-            "state": _short(state, 380),
+            "state": _short(state, 220),
             "source": "memory/threads/" + key + ".md",
         }
         if isinstance(value, dict) and value.get("turn"):
@@ -157,7 +164,16 @@ def _threads(packet, hot):
     world["threads"] = detail
     world["omitted_thread_ids"] = [key for key in all_threads if key not in detail]
     world["thread_sources"] = "memory/INDEX.md"
-    # All active/overdue clocks remain intact, regardless of packet size.
+    world["secret_topics"] = (world.get("secret_topics") or [])[-6:]
+    world["secrets_in"] = "recovery/GM_ONLY.json"
+    # Keep full imminent clock mechanics, summarize later deadlines by source.
+    # Every clock ID and due timestamp must survive even in an oversized packet.
+    for index, clock in enumerate(world.get("clocks") or []):
+        clock["source"] = "recovery/GM_ONLY.json:offscreen.clocks." + str(clock.get("id"))
+        if index >= 2 and clock.get("status") != "overdue_needs_adjudication":
+            clock["what"] = _short(clock.get("what"), 145)
+            clock["signs"] = _short(clock.get("signs"), 115)
+            clock["if_unopposed"] = _short(clock.get("if_unopposed"), 135)
 
 
 def _passages(packet):
@@ -202,7 +218,7 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     _actors(packet)
     _threads(packet, hot)
     _passages(packet)
-    packet["checks"] = (packet.get("checks") or [])[-4:]
+    packet["checks"] = (packet.get("checks") or [])[-2:]
     packet["checks_ref"] = "recovery/CHECKS.json"
     packet["recent_turns"] = (packet.get("recent_turns") or [])[-2:]
     packet["recent_turns_ref"] = "recovery/TURN.json"
@@ -213,6 +229,19 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
             "gm_tail": _short(last.get("gm_tail"), 350),
             "source": "recovery/TURN.json",
         }
+    # The chronological graph is an address index, not a duplicate history.
+    graph = packet.get("evidence_graph") or {}
+    graph["nodes"] = (graph.get("nodes") or [])[:8]
+    graph["edges"] = (graph.get("edges") or [])[:8]
+    graph["source"] = "archive/session-*-turns.jsonl"
+    horror = packet.get("horror") or {}
+    if horror.get("rule"):
+        horror["rule"] = "campaigns/shiki/ref/HORROR.md"
+    # Do not duplicate empty NPC identity projections in general memory.
+    for item in (packet.get("general_memory") or {}).get("activated") or []:
+        if item.get("id") in (packet.get("present_npcs") or {}) and not item.get("facts"):
+            for field in ("label", "channels", "status"):
+                item.pop(field, None)
     # No cutting of arbitrary player/narrator text is required at first:
     # clinical state and physical positions are more important than an aesthetic target.
     if _bytes(packet) > target_bytes:
@@ -246,7 +275,7 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     if _bytes(packet) > target_bytes:
         # Never remove the sole source excerpt. A GM can open the exact journal.
         passages = packet.get("source_passages") or {}
-        for key in reversed(list(passages)[1:]):
+        for key in reversed(list(passages)[2:]):
             if _bytes(packet) <= target_bytes:
                 break
             passages.pop(key)
