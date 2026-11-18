@@ -6,7 +6,7 @@
  "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента",
  "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
  "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
- "stance": "Deeply interested but alarmed and personally responsible; skeptical of lack of full history, refuses to treat vial as approved therapy or submissively accept Shiki's assertions.",
+ "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
  "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
  "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
  "knows": [
@@ -21,8 +21,8 @@
   "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
   "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
  ],
- "seen": "s08.text.001",
- "state": "At 01:42 signed order for study of available archived patient materials; retained four original case histories and assay in ward. Left office for urgent #6 airway care, nursing and anesthesia team alerted. Still has custody of sealed gene carrier vial and still does not know Byoton origin.",
+ "seen": "s08.text.002",
+ "state": "03.10 01:44 urgent ward intervention: led airway evaluation, suction by anesthesia team extracted blood-streaked branching airway material with partial improvement. Ordered sterile sample for morphology, continued airway checks. Does not know carrier origin or suggest unverified genetic therapy.",
  "memory": [
   {
    "turn": "s07.text.033",
@@ -59,9 +59,15 @@
    "at": "0006-10-03T01:35:00",
    "ch": "present",
    "what": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие данных о клинических испытаниях, запрети…"
+  },
+  {
+   "turn": "s08.text.002",
+   "at": "0006-10-03T01:44:00",
+   "ch": "present",
+   "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
   }
  ],
- "memory_total": 6,
+ "memory_total": 7,
  "first": "s07.text.033",
  "tier": "developed"
 }

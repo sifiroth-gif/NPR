@@ -9,21 +9,52 @@
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034",
    "turn": "s07.text.038"
+  },
+  {
+   "kind": "things",
+   "text": "shiki_upper_clothing: изменён предмет вне учёта; введён без проверки прежнего состояния",
+   "turn": "s08.text.002"
+  },
+  {
+   "kind": "things",
+   "text": "shiki_hospital_gown_gloves: изменён предмет вне учёта; введён без проверки прежнего состояния",
+   "turn": "s08.text.002"
+  },
+  {
+   "kind": "things",
+   "text": "recipient6_airway_cast_sample: изменён предмет вне учёта; введён без проверки прежнего состояния",
+   "turn": "s08.text.002"
+  },
+  {
+   "kind": "horror",
+   "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)",
+   "turn": "s08.text.002"
   }
  ],
  "continuity": {
   "gone": [],
   "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
-  "things": {}
+  "things": {
+   "shiki_hospital_gown_gloves": {
+    "holder": "shiki",
+    "since": "s08.text.002",
+    "turn": "s08.text.002"
+   },
+   "shiki_upper_clothing": {
+    "holder": "shiki",
+    "since": "s08.text.002",
+    "turn": "s08.text.002"
+   }
+  }
  },
  "cursor": {
-  "at": "0006-10-03T01:42:00",
+  "at": "0006-10-03T01:44:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.001",
-  "place": "Кусагакуре, Центральный госпиталь, кабинет старшего врача реанимации Кадзиуры Сатору",
-  "time": "01:42"
+  "id": "s08.text.002",
+  "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
+  "time": "01:44"
  },
- "digest": "a77816e5e66dad1330cd97bf3951538962a6464bb39008adf088e4c717dfa689",
+ "digest": "a914a40b195fcc685acc4a410e47889b02c61cf40a24e654f7b55adf69c02dfc",
  "evidence_graph": {
   "edges": [],
   "nodes": [
@@ -32,6 +63,12 @@
     "id": "s08.text.001",
     "kind": "recent_turn",
     "line": "Медперсонал принёс исходный протокол С-17 и четыре истории. Кадзиура распорядился сохранить оригиналы и начал архивную проверку. У реципиента №6 развилась тяжёлая гипоксемия, врач ушёл в пал"
+   },
+   {
+    "at": "0006-10-03T01:44:00",
+    "id": "s08.text.002",
+    "kind": "recent_turn",
+    "line": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла д"
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -47,33 +84,178 @@
  },
  "handoff": null,
  "horror": {
-  "due": null,
-  "npcs": {},
-  "quiet": 2,
+  "due": {
+   "npcs": [
+    "kadziura_satoru",
+    "night_icu_physician"
+   ],
+   "quiet": 3,
+   "since": "s08.text.002"
+  },
+  "npcs": {
+   "kadziura_satoru": {
+    "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
+    "stage": null
+   },
+   "night_icu_physician": {
+    "lever": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
+    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
+    "stage": null
+   }
+  },
+  "quiet": 3,
   "recent": [],
   "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
-  "worn": [
-   "взгляд-по-облику",
-   "замер",
-   "сосуды"
-  ]
+  "worn": []
  },
  "last": {
-  "gm_tail": "тимым предполагаемым механизмом действия.\n\nОн посмотрел на запертый внутренний шкаф.\n\n— Я собираюсь выяснить, способен ли он принести пользу этим людям. Но шестой пациент может умереть раньше, чем мы закончим проверку.\n\nНовый сигнал раздался из коридора, теперь длиннее прежнего.\n\nКадзиура распахнул дверь.\n\n— Если хотите осмотреть его, палата здесь. Я буду заниматься дыхательными путями.\n\nИ врач ушёл, не ожидая ответа.\n\nЗа открытой дверью быстро двигались люди. Кто-то толкал реанимационную тележку, металлическая рама которой тяжело ударилась о дверной косяк. Из глубины отделения доносился резкий, прерывистый свист тревожного сигнала аппарата ИВЛ.\n\nНа столе остались четыре истории болезни.\n\nЗа спиной Шики, в запертом шкафу, находилась пробирка, содержимое которой Кадзиура намеревался изучать.\n\nВ коридоре прозвучал новый приказ:\n\n— **Сатурация семьдесят девять. Готовьте ручную вентиляцию!**",
-  "player": "Сессия 8"
+  "gm_tail": "до 30 см водяного столба. Грудная клетка начинает двигаться равномернее.\n\nСатурация медленно поднимается до 85%.\n\nКадзиура переводит взгляд с монитора на собранный материал. Кровянистая слизь в контейнере удерживает очертания, напоминающие мелкое разветвление бронха.\n\n— Бронхиальный слепок? — произносит анестезиолог.\n\n— Возможно. Отправьте на морфологию. И проверьте, сколько ещё этого осталось в дыхательных путях.\n\nКадзиура поворачивается к Шики. Губы врача плотно сжаты; он придерживает край кровати одной рукой, второй указывает на экран аппарата.\n\n— Обструкция, по крайней мере частичная. Мы устранили часть препятствия. Газообмен остаётся тяжело нарушенным.\n\nВрач смотрит на больного.\n\n— Что вы видите, Мугами? У нас есть несколько минут до следующего решения.\n\nАнестезиолог продолжает следить за давлением и насыщением крови кислородом. В прозрачной магистрали вновь появляется тёмная слизь.",
+  "player": "По игре: иду в палату, оставляю верхнюю одежду, накидываю халат, мытьё рук и перчатки. #обслкдование шестого#"
  },
- "needs_profile": [],
- "present_npcs": {},
+ "needs_profile": [
+  {
+   "appearances": 7,
+   "facets": 0,
+   "need": 3,
+   "npc": "kadziura_satoru",
+   "tier": "developed"
+  }
+ ],
+ "present_npcs": {
+  "kadziura_satoru": {
+   "alignment": {
+    "breaking_point": "При реальном скором ухудшении может согласиться на рискованный индивидуальный эксперимент",
+    "code": "NG",
+    "label": "нейтральный добрый",
+    "line": "Не вводит неподтверждённый носитель четырём больным по одному обещанию",
+    "morality": "Живые пациенты важнее показателей и ведомственного благополучия",
+    "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности",
+    "rule": "GM-only moral compass, not a deterministic decision or NPC knowledge",
+    "status": "established_interpretation"
+   },
+   "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
+   "prior_disclosures": [],
+   "profile": {
+    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
+    "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+    "first": "s07.text.033",
+    "knows": [
+     "Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача.",
+     "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
+     "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
+     "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ bloc",
+     "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
+     "Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
+     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
+     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
+    ],
+    "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
+    "memory": [
+     {
+      "ch": "mentioned",
+      "turn": "s07.text.033",
+      "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока."
+     },
+     {
+      "ch": "mentioned",
+      "turn": "s07.text.034",
+      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет"
+     },
+     {
+      "ch": "mentioned",
+      "turn": "s07.text.035",
+      "what": "Шики спросил Кадзиуру о составе С-17 и предположил временную блокаду донорских белковых структур. Кадзиура знает клинику и режимы лечения, но не полный состав или механизм действия препарата. Разделил"
+     },
+     {
+      "ch": "present",
+      "turn": "s07.text.036",
+      "what": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и "
+     },
+     {
+      "ch": "present",
+      "turn": "s07.text.037",
+      "what": "Шики показал пробирку вирусоподобного носителя и объяснил адресное выключение nsp-δ, постепенное устранение НСП-δ и сохранение клеток. Рассказал об успешном опыте на биоптатах. Никаких сведений о Бёто"
+     },
+     {
+      "ch": "present",
+      "turn": "s07.text.038",
+      "what": "Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегист"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.002",
+      "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, при"
+     }
+    ],
+    "memory_file": "archive/npc-memory/kadziura_satoru.json",
+    "memory_total": 7,
+    "name": "Кадзиура Сатору",
+    "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
+    "seen": "s08.text.002",
+    "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
+    "state": "03.10 01:44 urgent ward intervention: led airway evaluation, suction by anesthesia team extracted blood-streaked branching airway material with partial improvement. Ordered sterile sample for morphology, continued airway checks. Does not know carrier origin or suggest unverified genetic therapy.",
+    "status": "present_profile",
+    "tier": "developed",
+    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
+    "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
+   }
+  },
+  "night_icu_physician": {
+   "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
+   "prior_disclosures": [],
+   "profile": {
+    "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
+    "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
+    "first": "s07.text.033",
+    "knows": [
+     "Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка.",
+     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
+     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
+    ],
+    "leverage": "Ведёт ночные истории наблюдения; проверяет назначения, имеет доступ к посту реанимации",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s07.text.033",
+      "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока."
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.002",
+      "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, при"
+     }
+    ],
+    "memory_file": "archive/npc-memory/night_icu_physician.json",
+    "memory_total": 2,
+    "name": "Дежурная врач охраняемого отделения",
+    "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
+    "seen": "s08.text.002",
+    "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
+    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
+    "status": "present_profile",
+    "tier": "archetypal",
+    "voice": "Негромко, профессионально, без раболепия и без лишних слов",
+    "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
+   }
+  }
+ },
  "recent_turns": [
   {
    "id": "s08.text.001",
    "line": "Медперсонал принёс исходный протокол С-17 и четыре истории. Кадзиура распорядился сохранить оригиналы и начал архивную проверку. У реципиента №6 развилась тяжёлая гипоксемия, врач ушёл в палату; пробирка заперта."
+  },
+  {
+   "id": "s08.text.002",
+   "line": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
   }
  ],
  "scene": {
-  "positions": "Shiki in Kadziura's office, four original case charts and Sept25 functional report on desk, sealed vial locked in inner cabinet; door open to corridor. Kadziura departed toward #6's ward.",
-  "pressure": "Severe ventilator alarm for recipient #6. Acute respiratory response underway.",
-  "situation": "03.10.1283 01:42. Hospital staff delivered original Sept25 S17 functional assay and four recipient records as ordered. Kadziura reviewed existing S17-A/B functional effects against Shiki's nsp-delta notes; issued archive study request, no new assay results. Recipient #6 (already ventilated and unstable) developed acute severe hypoxemia, SpO2 83 then 79, rising peak airway pressure; responding ward team checks ETT/circuit and prepares suction. Cause/outcome unknown. Kadziura left office to treat. Four charts and report on desk, his inner cabinet remains locked with Shiki's sealed second experimental gene carrier vial; no opening or use. Shiki remains in office and no action or intent attributed to him."
+  "positions": "Shiki at bedside of ventilated recipient #6 after exam, in hospital gown and gloves; Kadziura and anesthetist at ventilator, nurse present; sealed experimental carrier remains behind locked inner cabinet in Kadziura's office.",
+  "pressure": "Hypoxemia persists despite removal of one airway obstruction, signs of recurrent tenacious sputum in ETT circuit; team is acting urgently and demands medical assessment.",
+  "situation": "03.10 01:44: Shiki voluntarily went to ward #6, removed outer clothing, washed hands, donned clean medical gown and gloves; examined recipient #6 with usual noninvasive bedside clinical exam, no special techniques. Findings: SpO2 79%, pulse 126, BP 92/58, peak airway pressure 42 cmH2O, reduced right-sided chest excursion and breath sounds, left coarse inspiratory sounds/crackles, diminished peripheral circulation, midline trachea. Plateau pressure significantly lower than peak, suggesting airway/tube resistance. Patient intubated/sedated, pupillary responses preserved, neuro assessment limited. Independently Kadziura and anesthetist conducted ETT suction; removed thick brown blood-streaked branching mucus cast (possible plastic bronchitis, not confirmed), peak pressure fell to 30, SpO2 gradually rose to 85%, still critical. Morphology ordered, recurrence visible in circuit. Clinicians request Shiki's assessment, no answer or further action yet."
  },
  "shiki": {
   "body": "03.10.1283 00:51: левая рука цела, 4 биоптата уничтожены; создана НОВАЯ пробирка с Бётон-носителем для других пациентов, первая ранее введена Аракаве. При дальнейшей практике Бётона нагрузка договора переходит следующий порог, внешние признаки и кровь будут меняться со временем; на данный момент без кровяной инфекции.",
@@ -85,20 +267,20 @@
  "world": {
   "clocks": [
    {
-    "due": "0006-10-03T01:45:00",
-    "id": "s17_recipient6_airway_response",
-    "if_unopposed": "Стандартная неотложная помощь дыхательным путям и аппарату; исход зависит от причины и ответа без предрешённого спасения.",
+    "due": "0006-10-03T01:47:00",
+    "id": "s17_recipient6_next_intervention",
+    "if_unopposed": "Команда продолжает санацию и диагностический поиск причин обструкции. Дальнейшее развитие зависит от их действий и состояния пациента; исход не предрешён.",
     "minutes": 3.0,
-    "owner": "Кадзиура Сатору и дежурная реанимационная бригада",
-    "signs": "01:42 SpO2 83%, затем 79%, растущее пиковое давление.",
+    "owner": "Кадзиура Сатору и реанимационная бригада",
+    "signs": "SpO2 85%, в дыхательном контуре снова заметен густой тёмный секрет.",
     "status": "scheduled",
-    "what": "Неотложно оценить дыхательный контур и интубационную трубку, устранить обратимые причины критической гипоксемии реципиента №6"
+    "what": "Продолжить контроль проходимости искусственных дыхательных путей, оценить повторное накопление секрета и причину устойчивой гипоксемии; не ждать бездействуя."
    },
    {
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 393.0,
+    "minutes": 391.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",
