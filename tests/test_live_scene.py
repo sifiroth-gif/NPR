@@ -58,7 +58,7 @@ class LiveSceneTests(unittest.TestCase):
         self.assertEqual(brief["cursor"]["id"], "s07.text.029")
         prior = brief["present_npcs"]["arakawa"]["prior_disclosures"]
         self.assertEqual([x["turn"] for x in prior], ["s07.text.012", "s07.text.013"])
-        self.assertEqual(prior[0]["gm_excerpt"], "A confession")
+        self.assertEqual(brief["source_passages"]["s07.text.012"]["gm_excerpt"], "A confession")
         self.assertEqual(brief["world"]["clocks"][0]["status"], "scheduled")
         self.assertEqual(brief["world"]["secret_topics"], ["donor"])
         self.assertTrue(all(edge["status"] == "source_order_only"
