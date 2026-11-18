@@ -217,7 +217,7 @@ def run(args):
             return scene_memory.fast_packet_from_files(
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "live-preflight":
-            from . import live_scene, scene_gate, heuristic_history, entity_memory, general_memory
+            from . import live_scene, scene_gate, heuristic_history, entity_memory, general_memory, memory_guard
             limit_value(args.limit, 1, 12)
             merged, _ = hot._read_state(args.state_dir)
             _, turns = scene_gate.played_turns(args.state_dir)
@@ -252,8 +252,8 @@ def run(args):
                 policy = read_json(policy_path) if policy_path.is_file() else {"enabled": False}
                 result["admission_errors"] = live_scene.validate_admission(
                     merged, incoming, policy=policy, accepted=turns)
-                result["admission_errors"].extend(
-                    entity_memory.claim_errors(entity_ledger, incoming))
+                result["memory_review"] = memory_guard.review(entity_ledger, incoming)
+                result["admission_errors"].extend(result["memory_review"]["errors"])
                 if result["admission_errors"]:
                     raise ValueError("Live admission failed: " + "; ".join(result["admission_errors"]))
             return result
