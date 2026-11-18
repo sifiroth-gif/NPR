@@ -20,6 +20,7 @@ BUDGET = {
     "campaigns/shiki/ref/MEMORY.md": 6000,
     "campaigns/shiki/ref/HORROR.md": 6000,
     "campaigns/shiki/BOOT.md": 2000,
+    "campaigns/shiki/SHIKI.md": 8000,
 }
 
 

@@ -57,7 +57,7 @@ def _plot(packet):
                    for event in source.get("queued") or []],
         "queued_ref": "recovery/GM_ONLY.json:plot.events",
         "source": "recovery/GM_ONLY.json:plot",
-        "rules": "campaigns/shiki/GM_CORE.md#темп-и-события",
+        "rules": source.get("rules") or "",
     }
 
 
