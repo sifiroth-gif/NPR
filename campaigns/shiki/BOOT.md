@@ -8,7 +8,7 @@
 
 В начале каждого нового чата, до ответа игроку, одним пакетом прочитай:
 
-1. `AGENTS.md`, `campaigns/shiki/GM_CORE.md`, `skills/dark-literary-gm/SKILL.md` — ветка `main`.
+1. `AGENTS.md`, `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `skills/dark-literary-gm/SKILL.md` — ветка `main`.
 2. `memory/SCENE.md`, `recovery/GM_BRIEF.json`, `recovery/CHECKS.json`, `recovery/TURN.json` — ветка `game-state/shiki`.
 3. `memory/INDEX.md` — карта мира: у каждого персонажа, вещи и линии своя страница `memory/<путь>.md`.
 

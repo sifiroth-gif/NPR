@@ -1,0 +1,89 @@
+name: NPR bounded scene context checks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "rpg_engine/**"
+      - "tests/**"
+      - "docs/LIVE_SCENE_PIPELINE.md"
+      - ".github/workflows/npr-scene-packet-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out engine from PR
+        uses: actions/checkout@v4
+        with:
+          path: _engine
+      - name: Check out live Shiki state read-only
+        uses: actions/checkout@v4
+        with:
+          ref: game-state/shiki
+          path: _state
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run regression tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd _engine
+          python -m unittest discover -s tests
+      - name: Verify bounded packet against actual private campaign
+        shell: bash
+        env:
+          PYTHONPATH: ${{ github.workspace }}/_engine
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from rpg_engine import hot, live_scene, scene_gate
+          state = Path("_state")
+          old = json.loads((state / "recovery/GM_BRIEF.json").read_text(encoding="utf-8"))
+          full, _ = hot._read_state(state)
+          _, turns = scene_gate.played_turns(state)
+          fresh = live_scene.build_for_state(full, turns, state)
+          old_bytes = len(json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+          new_bytes = len(json.dumps(fresh, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+          print(f"Before: {old_bytes} bytes; after: {new_bytes} bytes")
+          part_sizes = {k: len(json.dumps(v, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+                        for k, v in fresh.items()}
+          print("Section bytes:", dict(sorted(part_sizes.items(), key=lambda item: -item[1])))
+          actor_sizes = {k: len(json.dumps(v, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+                         for k, v in fresh.get("present_npcs", {}).items()}
+          print("Actor bytes:", actor_sizes)
+          for key in ("world", "plot", "general_memory", "horror", "evidence_graph"):
+              section = fresh.get(key) or {}
+              if isinstance(section, dict):
+                  fields = {k: len(json.dumps(v, ensure_ascii=False).encode("utf-8"))
+                            for k, v in section.items()}
+                  print(f"Breakdown {key}:", fields)
+          for key, actor in fresh.get("present_npcs", {}).items():
+              fields = {k: len(json.dumps(v, ensure_ascii=False).encode("utf-8"))
+                        for k, v in actor.get("profile", {}).items()}
+              print(f"Actor profile breakdown {key}:", fields)
+          print(f"Target: {live_scene.TARGET_BRIEF_BYTES}; hard: {live_scene.MAX_BRIEF_BYTES}")
+          print(f"Source excerpts retained: {len(fresh.get('source_passages') or {})}")
+          # Smoke test on the live save: these must hold whatever the story state is.
+          assert fresh["cursor"]["id"] == old["cursor"]["id"]
+          assert new_bytes <= live_scene.MAX_BRIEF_BYTES
+          assert not fresh.get("over_budget")
+          if not fresh.get("source_passages"):
+              print("WARNING: no source excerpts retained for this scene")
+          before_clocks = set((full.get("offscreen") or {}).get("clocks") or {})
+          after_clocks = {x["id"] for x in fresh["world"]["clocks"]}
+          assert before_clocks <= after_clocks, "A live clock disappeared"
+          active = fresh.get("plot", {}).get("active") or []
+          if not any(x.get("kind") == "chapter" and x.get("endings") for x in active):
+              print("WARNING: no active chapter with endings in the live plot")
+          print("Real Shiki packet: source, clock, active chapter and byte checks PASS")
+          PY

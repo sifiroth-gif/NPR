@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 from . import (continuity_guard, context_dispatcher, dread, entity_memory,
-               general_memory, npc_dynamics, npc_memory, plot, scene_gate)
+               general_memory, npc_dynamics, npc_memory, plot, scene_gate, scene_packet)
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -25,7 +25,8 @@ ALIGNMENT_CODES = frozenset(("LG", "LN", "LE", "NG", "N", "NE", "CG", "CN", "CE"
 MAX_ACTORS = 8
 MAX_GRAPH = 55
 MAX_PASSAGES = 12
-MAX_BRIEF_BYTES = 48000
+TARGET_BRIEF_BYTES = scene_packet.TARGET_BYTES
+MAX_BRIEF_BYTES = scene_packet.HARD_BYTES
 
 
 def _digest(obj):
@@ -286,59 +287,10 @@ def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None)
             hot, memory_index)
     result["npc_dynamics"] = npc_dynamics.view(
         hot, present=scene.get("present") or [], index=memory_index)
-    # Bounded packet size is an architectural requirement, not a style tip.
-    # Keep all source REFERENCES; trim only optional duplicated prose extracts.
-    def packet_bytes():
-        return len(json.dumps(result, ensure_ascii=False, sort_keys=True).encode("utf-8"))
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        for key in reversed(list(passages)):
-            if packet_bytes() <= MAX_BRIEF_BYTES:
-                break
-            passages[key]["gm_excerpt"] = _short(passages[key]["gm_excerpt"], 280)
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        for actor_data in actors.values():
-            if packet_bytes() <= MAX_BRIEF_BYTES:
-                break
-            inner = actor_data["profile"].get("inner") or {}
-            if inner.get("remembers"):
-                inner["remembers"] = inner["remembers"][-3:]
-            if actor_data["profile"].get("memory"):
-                actor_data["profile"]["memory"] = actor_data["profile"]["memory"][-4:]
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        for actor_data in actors.values():
-            if packet_bytes() <= MAX_BRIEF_BYTES:
-                break
-            actor_data["profile"]["hides"] = _short(
-                actor_data["profile"].get("hides", ""), 160)
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        # Preserve the actor and source pointers; primary text is still in
-        # the immutable journal when a very crowded scene exceeds the budget.
-        for actor_data in actors.values():
-            if packet_bytes() <= MAX_BRIEF_BYTES:
-                break
-            for ref in actor_data["prior_disclosures"]:
-                ref["line"] = _short(ref.get("line", ""), 110)
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        passages.clear()  # source IDs survive in actor lists
-        result["source_passages_truncated"] = True
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        result["world"]["threads"] = {
-            k: _short(v, 150) for k, v in
-            list(result["world"]["threads"].items())[:7]}
-        result["world"]["clocks"] = result["world"]["clocks"][:12]
-        result["world"]["clock_list_truncated"] = True
-    if packet_bytes() > MAX_BRIEF_BYTES and result.get("general_memory"):
-        result["general_memory"] = general_memory.compact(result["general_memory"], 2600)
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        # Character identity, committed plans and clock sources outrank optional
-        # speculative tension pairs. No hidden motives are erased from GM_ONLY.
-        for actor in reversed(result["npc_dynamics"]["actors"]):
-            if packet_bytes() <= MAX_BRIEF_BYTES:
-                break
-            actor["pressure_pairs"] = []
-            actor["psyche_facets"] = {}
-    if packet_bytes() > MAX_BRIEF_BYTES:
-        result["over_budget"] = True
+    # One source-preserving L0 projector; no destructive overflow cascade.
+    # Source archives, full plots, clocks and cast data remain authoritative.
+    result = scene_packet.compact(result, hot, target_bytes=TARGET_BRIEF_BYTES,
+                                  hard_bytes=MAX_BRIEF_BYTES)
     result["digest"] = _digest(result)
     return result
 
