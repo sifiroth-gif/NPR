@@ -242,6 +242,35 @@ def _apply_delta(hot, delta, turn):
     for key in present:
         if key in hot.get("cast", {}):
             hot["cast"][key]["seen"] = turn_id
+    # Actor-scoped knowledge is source-attributed and has an explicit access
+    # channel. Secret beliefs never enter player-readable HOT or cast cards.
+    for evidence in delta.get("knowledge_events") or []:
+        if not isinstance(evidence, dict):
+            raise TurnError("knowledge_events must contain objects")
+        actor = evidence.get("actor")
+        if actor not in (hot.get("cast") or {}):
+            raise TurnError(f"knowledge_events: unknown actor {actor!r}")
+        if (not isinstance(evidence.get("claim"), str) or not evidence["claim"].strip()
+                or not isinstance(evidence.get("source"), str) or not evidence["source"]
+                or evidence.get("channel") not in
+                ("message", "witness", "document", "inference", "told_in_scene")):
+            raise TurnError("knowledge_events require claim, source and authentic channel")
+        visibility = evidence.get("visibility", "player_known")
+        if visibility not in ("player_known", "gm_only"):
+            raise TurnError("knowledge_events visibility must be player_known or gm_only")
+        entry = {k: evidence[k] for k in
+                 ("actor", "claim", "source", "channel", "certainty") if k in evidence}
+        entry["turn"] = turn_id
+        entry["visibility"] = visibility
+        if visibility == "gm_only":
+            records = hot.setdefault("_npc_knowledge", {}).setdefault(actor, [])
+        else:
+            records = hot["cast"][actor].setdefault("knowledge_provenance", [])
+        if not any(v.get("source") == entry["source"] and
+                   v.get("claim") == entry["claim"] for v in records):
+            records.append(entry)
+        if len(records) > 32:
+            del records[:-32]
     for key, patch in (delta.get("threads") or {}).items():
         threads = hot.setdefault("threads", {})
         if patch is None or (isinstance(patch, dict) and patch.get("closed")):
@@ -628,6 +657,7 @@ def _read_state(state_dir):
         offscreen["truth"] = loaded
     hot["offscreen"] = offscreen
     hot["_hides"] = dict(secret.get("cast") or {})
+    hot["_npc_knowledge"] = dict(secret.get("npc_knowledge") or {})
     hot["_undo"] = secret.get("undo")
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
@@ -639,6 +669,7 @@ def _split_state(hot):
     """Открытая часть для HOT.json и закрытая для GM_ONLY.json."""
     public = json.loads(json.dumps(hot))
     hides = public.pop("_hides", {})
+    npc_knowledge = public.pop("_npc_knowledge", {})
     undo = public.pop("_undo", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -675,7 +706,7 @@ def _split_state(hot):
     secret = {"schema": SECRET_SCHEMA,
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
-              "cast": hides, "undo": undo}
+              "cast": hides, "npc_knowledge": npc_knowledge, "undo": undo}
     return public, secret
 
 
