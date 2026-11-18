@@ -203,7 +203,7 @@ def post_close_memory(root,closed,revision):
     hot._write_state(root,full)
     # Derived actor packet must be regenerated after removing completed clocks.
     _,accepted=scene_gate.played_turns(root)
-    brief=live_scene.build(full,accepted)
+    brief=live_scene.build_for_state(full,accepted,root)
     save(root/live_scene.PATH,brief)
     hot._write_checks(root,full)
     check=hot.check(root)
