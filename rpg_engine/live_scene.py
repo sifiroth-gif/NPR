@@ -13,7 +13,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from . import continuity_guard, dread, npc_memory, scene_gate
+from . import continuity_guard, dread, entity_memory, npc_memory, scene_gate
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -102,10 +102,11 @@ def load_alignments(state_dir):
 
 def build_for_state(hot, turns, state_dir):
     """Derive a small GM packet with ONLY present story NPC alignments."""
-    return build(hot, turns, alignments=load_alignments(state_dir))
+    return build(hot, turns, alignments=load_alignments(state_dir),
+                 entity_ledger=entity_memory.load(state_dir))
 
 
-def build(hot, turns, *, alignments=None):
+def build(hot, turns, *, alignments=None, entity_ledger=None):
     """One bounded read packet: sources, NPC knowledge, world pressure, graph.
 
     A primary passage is included for every selected past disclosure, so
@@ -271,6 +272,9 @@ def build(hot, turns, *, alignments=None):
             "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn",
         },
     }
+    if entity_ledger is not None:
+        result["entity_memory"] = entity_memory.activate(
+            entity_ledger, scene=scene, cursor=cursor)
     # Bounded packet size is an architectural requirement, not a style tip.
     # Keep all source REFERENCES; trim only optional duplicated prose extracts.
     def packet_bytes():
