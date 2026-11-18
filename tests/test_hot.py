@@ -74,6 +74,16 @@ class HotFoldTest(unittest.TestCase):
         self.assertEqual(state["last"]["player"], "#открываю калитку#")
         self.assertEqual(len(state["chronicle"]), 2)
 
+    def test_legacy_closed_clock_is_not_due_or_replayed(self):
+        state = base()
+        state["offscreen"]["clocks"]["cleaner"]["closed"] = "resolved earlier"
+        hot.refresh(state)
+        self.assertEqual(state["offscreen"]["due_now"], [])
+        # Legacy closed clocks must never be reactivated by a later scene.
+        self.assertTrue(hot.apply_turn(state, turn(45, "0006-10-01T10:00:00",
+                                                d={"scene": {}})))
+        self.assertEqual(state["offscreen"]["due_now"], [])
+
     def test_replay_is_idempotent_and_amend_replaces_last(self):
         state = base()
         first = turn(45, "0006-10-01T07:14:00")
