@@ -62,10 +62,13 @@ def _add(entities, key, kind, label, *, aliases=(), source="", projection=None):
         if (isinstance(name, str) and len(name) > 2 and
                 name not in card["aliases"] and len(card["aliases"]) < 24):
             card["aliases"].append(name)
-    if source and source not in card["sources"]:
+    if source and source not in card["sources"] and len(card["sources"]) < 24:
         card["sources"].append(source)
-    if projection and isinstance(projection, dict):
-        card["projections"].append(projection)
+    if projection and isinstance(projection, dict) and projection:
+        if projection not in card["projections"]:
+            card["projections"].append(projection)
+        if len(card["projections"]) > 3:
+            card["projections"] = card["projections"][:1] + card["projections"][-2:]
     return card
 
 
@@ -208,6 +211,71 @@ def build(state_dir, hot, ledger=None):
         if name not in entities and len(name) < 85:
             _add(entities, name, "unresolved", name,
                  source=(hot.get("cursor") or {}).get("id") or "recovery/HOT.json")
+    for name in scene.get("present", []):
+        if isinstance(name, str) and name not in entities and name not in ("player", "shiki"):
+            _add(entities, name, "unresolved", name,
+                 source=(hot.get("cursor") or {}).get("id") or "recovery/HOT.json")
+
+    # Reconstruct the entire roster of *historically referenced* entities from
+    # explicit turn structure. Removing a thing or NPC from HOT must never erase
+    # its identity and exact source from long-term retrieval.
+    sources = list(_source_rows(root))
+    for path, row in sources:
+        if row["id"].startswith("archive.s"):
+            continue  # Markdown is evidence; never authoritative structure.
+        at, turn_id = row.get("at", ""), row["id"]
+        delta = row.get("d") or {}
+        for key, patch in (delta.get("cast") or {}).items():
+            if not isinstance(key, str):
+                continue
+            _add(entities, key, "npc", (patch or {}).get("name") or key if isinstance(patch, dict) else key,
+                 source=turn_id)
+        for key, patch in (delta.get("things") or {}).items():
+            if not isinstance(key, str):
+                continue
+            new = patch.get("now") if isinstance(patch, dict) else None
+            details = new if isinstance(new, dict) else patch if isinstance(patch, dict) else {}
+            _add(entities, key, "item", details.get("name") or key.replace("_", " "),
+                 source=turn_id)
+        for key in (delta.get("threads") or {}):
+            if isinstance(key, str):
+                _add(entities, "thread:" + key, "thread", key.replace("_", " "),
+                     aliases=(key,), source=turn_id)
+        for key in (delta.get("clocks") or {}):
+            if isinstance(key, str):
+                _add(entities, "clock:" + key, "clock", key.replace("_", " "),
+                     aliases=(key,), source=turn_id)
+        for name in ((delta.get("scene") or {}).get("present") or []):
+            if isinstance(name, str) and name not in ("shiki", "player") and name not in entities:
+                _add(entities, name, "unresolved", name, source=turn_id)
+        # Canon amendments and explicit world events are memory too.
+        for i, text in enumerate(delta.get("canon+") or []):
+            if isinstance(text, str) and text:
+                _add(entities, f"canon:{turn_id}:{i}", "canon", _short(text, 180),
+                     source=turn_id)
+        for i, event in enumerate(delta.get("pact_events") or []):
+            if isinstance(event, dict):
+                eid = event.get("id") or f"{turn_id}.{i}"
+                _add(entities, "event:" + eid, "event", event.get("type") or eid,
+                     source=turn_id,
+                     projection={"at": at, "kind": event.get("type", "")})
+        old_place = row.get("place")
+        if isinstance(old_place, str) and old_place:
+            key = "place:" + sha256(old_place.encode("utf-8")).hexdigest()[:16]
+            aliases = [p.strip() for p in old_place.split(",") if len(p.strip()) >= 8]
+            _add(entities, key, "place", old_place, aliases=aliases, source=turn_id)
+
+    # Canonical relationship facts become source-stamped graph edges.
+    # Mere mentions or co-occurrence never imply a relation.
+    for key, card in entities.items():
+        for fact in card.get("facts", []):
+            value = fact.get("value")
+            if (fact.get("field") in ("relationship", "link") and
+                    isinstance(value, dict) and
+                    value.get("target") in entities and value.get("type")):
+                links.append({"from": key, "to": value["target"],
+                              "type": value["type"], "source": fact["source"],
+                              "status": "verified"})
 
     # Explicit source mentions let the GM expand from short memory to the
     # earliest and newest *verbatim* played evidence, not a lossy summary.
@@ -221,7 +289,7 @@ def build(state_dir, hot, ledger=None):
                 for a in sorted(forms, key=len, reverse=True)[:18]))
 
     processed = set()
-    for source, row in _source_rows(root):
+    for source, row in sources:
         if row["id"] in processed:  # folded and current TURN may overlap
             continue
         processed.add(row["id"])
