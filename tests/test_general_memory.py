@@ -155,6 +155,35 @@ class GeneralMemoryTests(unittest.TestCase):
         self.assertTrue(any(m["turn"] == "s08.text.006"
                             for m in idx["entities"]["old_enemy"]["mentions"]))
 
+    def test_unstructured_first_session_source_is_addressable(self):
+        path = self.root / "archive/session-001.md"
+        path.write_text(
+            "Глава 1\nДоктор Ака видел обстоятельства случившегося.\n"
+            "Нацуми Рей исчезла в конце коридора.\n", encoding="utf-8")
+        idx = self._index()
+        card = idx["entities"]["old_enemy"]
+        self.assertTrue(any(ref["source"].startswith("archive/session-001.md:L")
+                            for ref in card["mentions"]), card["mentions"])
+
+    def test_long_gone_items_and_locations_are_still_queryable(self):
+        old = {"id": "s04.text.001", "at": "0006-09-27T10:00:00",
+               "place": "Старая башня, восточное крыло", "gm": "Обыск завершён.",
+               "d": {"things": {"red_sarcophagus": {"now": None}},
+                     "cast": {"npc_gone": {"name": "Фуруяма"}},
+                     "threads": {"old_survey": {"closed": True}},
+                     "canon+": ["Башня сгорела при первом нападении."]}}
+        path = self.root / "archive/session-004-turns.jsonl"
+        path.write_text(json.dumps(old, ensure_ascii=False) + "\n", encoding="utf-8")
+        idx = self._index()
+        self.assertIn("red_sarcophagus", idx["entities"])
+        self.assertIn("npc_gone", idx["entities"])
+        self.assertIn("thread:old_survey", idx["entities"])
+        self.assertTrue(any(v["label"] == "Старая башня, восточное крыло"
+                            for v in idx["entities"].values()))
+        self.assertTrue(any(v["kind"] == "canon"
+                            for v in idx["entities"].values()))
+        self.assertEqual(idx["entities"]["red_sarcophagus"]["sources"], ["s04.text.001"])
+
     def test_save_and_rebuild_are_deterministic_and_readable(self):
         a = general_memory.save(self.root, self.hot)
         first = (self.root / general_memory.PATH).read_bytes()
