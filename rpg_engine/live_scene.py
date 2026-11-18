@@ -258,7 +258,7 @@ def validate_admission(hot, turn, *, policy, accepted=()):
             required.extend(x["turn"] for x in cues if x["turn"] in known)
         # A small deterministic subset: older and latest actor admissions.
         required = list(dict.fromkeys(required))
-        selected = required[:3] + required[-2:]
+        selected = list(dict.fromkeys(required[:6] + required[-6:]))
         if any(x not in sources for x in selected):
             errors.append("missing earliest/latest prior NPC disclosure source: " +
                           ", ".join(x for x in selected if x not in sources))
