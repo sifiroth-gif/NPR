@@ -72,6 +72,7 @@ def build(hot, turns):
     all_turns = _source_turns(turns)
     disclosures = scene_gate.compact_disclosure_cues(hot, turns, per_actor=8)
     actors = {}
+    passages = {}
     node_ids = set()
     nodes, edges = [], []
     for actor in present:
@@ -85,11 +86,18 @@ def build(hot, turns):
                 "turn": turn["id"], "at": turn["at"],
                 "source": ref["source"],
                 "sha256": scene_gate._source(turn)["sha256"],
-                "player": _short(turn.get("player", ""), 450),
-                "gm_excerpt": _short(turn.get("gm", ""), 2300),
-                "line": _short(turn.get("line", ""), 260),
+                "line": _short(turn.get("line", ""), 220),
                 "status": "played_candidate_not_automatic_actor_fact",
             })
+            if turn["id"] not in passages:
+                original = turn.get("gm", "")
+                excerpt = (original if len(original) <= 1550 else
+                           original[:550] + "\n[... source excerpt shortened ...]\n" + original[-900:])
+                passages[turn["id"]] = {
+                    "player": _short(turn.get("player", ""), 240),
+                    "gm_excerpt": excerpt,
+                    "source": ref["source"],
+                }
             if turn["id"] not in node_ids:
                 node_ids.add(turn["id"])
                 nodes.append({"id": turn["id"], "kind": "played_turn",
@@ -153,6 +161,7 @@ def build(hot, turns):
         "scene": {k: _short(scene.get(k, ""), 1800)
                   for k in ("situation", "positions", "pressure")},
         "present_npcs": actors,
+        "source_passages": passages,
         "recent_turns": [{"id": r["id"], "line": _short(r.get("line"), 270)}
                          for r in last],
         "evidence_graph": {
