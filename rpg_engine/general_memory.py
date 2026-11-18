@@ -483,8 +483,11 @@ def compact(packet, max_bytes=MAX_BRIEF_BYTES):
         item.pop("links", None)
         item.pop("operational_cues", None)
     while size() > max_bytes and len(value.get("activated", [])) > 1:
-        value["activated"].pop()
+        removed = value["activated"].pop()
         value["omitted"] += 1
+        if (removed["facts"] or "scene_anchor" in removed.get("channels", [])) and (
+                removed["id"] not in value.setdefault("omitted_priority_entities", [])):
+            value["omitted_priority_entities"].append(removed["id"])
     if size() > max_bytes:
         value["over_budget"] = True
     return value
