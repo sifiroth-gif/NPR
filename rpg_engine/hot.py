@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, npc_memory, plot, prose_lint
+from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -398,6 +398,7 @@ def apply_turn(hot, turn):
 
     cursor = hot.setdefault("cursor", {})
     current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
+    pool = fight.dice(hot)   # кости, выданные ведущему до этого хода
 
     ooc = turn.get("kind") == "ooc"
     if session != current[0]:
@@ -443,6 +444,7 @@ def apply_turn(hot, turn):
     # Психика, отношения, чувство и намерения NPC не попадают в открытую карточку.
     public_delta, inner = npc_memory.split_patch(hot, delta, turn["id"])
     _apply_delta(hot, public_delta, turn)
+    hot.setdefault("_checks", []).extend(fight.apply(hot, delta, turn, pool))
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
@@ -656,6 +658,20 @@ def _archive_canon(state_dir, hot):
         hot["canon_older"] = CANON_ARCHIVE
 
 
+def _load_stats(state_dir, hot):
+    """Уровни умений из листа Шики (HOT.shiki.sheet) — для порогов боя."""
+    shiki = hot.get("shiki") or {}
+    sheet = shiki.get("sheet")
+    if not isinstance(sheet, str) or not (Path(state_dir) / sheet).is_file():
+        return
+    try:
+        stats = json.loads((Path(state_dir) / sheet).read_text(encoding="utf-8")).get("stats_out_of_5")
+    except (ValueError, OSError):
+        return
+    if isinstance(stats, dict) and stats != shiki.get("stats"):
+        shiki["stats"] = stats
+
+
 def _cap_cards(hot):
     """HOT держит в карточке только свежие знания и эпизоды; полные — в вики и archive/npc-memory."""
     keep = npc_memory.CARD_FIRST + npc_memory.CARD_RECENT
@@ -718,6 +734,7 @@ def _read_state(state_dir):
     hot["_checks"] = list(secret.get("checks") or [])
     hot["_horror"] = dict(secret.get("horror") or {})
     hot["_plot"] = dict(secret.get("plot") or {})
+    hot["_fight"] = dict(secret.get("fight") or {})
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -734,6 +751,7 @@ def _split_state(hot):
     checks = public.pop("_checks", [])
     horror = public.pop("_horror", {})
     plot_state = public.pop("_plot", {})
+    fight_state = public.pop("_fight", {})
     public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -771,7 +789,8 @@ def _split_state(hot):
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
               "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
-              "checks": checks, "horror": horror, "plot": plot_state, "undo": undo}
+              "checks": checks, "horror": horror, "plot": plot_state, "fight": fight_state,
+              "undo": undo}
     return public, secret
 
 
@@ -897,6 +916,7 @@ def fold(state_dir):
     state_dir = Path(state_dir)
     hot, before = _read_state(state_dir)
     ensure_npc_memory(state_dir, hot)
+    _load_stats(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
     applied = []
     amended = []

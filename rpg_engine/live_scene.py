@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 from . import (continuity_guard, context_dispatcher, dread, entity_memory,
-               general_memory, npc_dynamics, npc_memory, plot, scene_gate, scene_packet)
+               fight, general_memory, npc_dynamics, npc_memory, plot, scene_gate, scene_packet)
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -253,6 +253,7 @@ def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None)
             "no_automatic_conclusion": True,
         },
         "plot": plot.brief(hot),
+        "fight": fight.brief(hot),
         "wiki": {"scene": "memory/SCENE.md", "index": "memory/INDEX.md",
                  "present": {k: f"memory/npc/{k}.md" for k in (scene.get("present") or []) if k != "shiki"},
                  "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай."},

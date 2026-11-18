@@ -1,3 +1,4 @@
+# Устарело (19.11.2026): боевой кадр для старого SQLite-движка. Живой бой — rpg_engine/fight.py.
 """Causal, continuous-time combat contract for NPR campaigns.
 
 Ported in principle from Bleach-RPG-/docs/GM_RULES.md sections 8-9:
