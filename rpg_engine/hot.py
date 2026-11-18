@@ -795,13 +795,13 @@ def fold(state_dir):
         hot.setdefault("scene", {})["npc_disclosures_to_player"] = (
             scene_gate.compact_disclosure_cues(hot, accepted))
     texts, changed = _write_state(state_dir, hot, before)
-    if applied:
-        # One bounded, source-linked GM brief is materialized as a derived
-        # cache. All private clocks remain in the private state branch.
-        from . import live_scene, scene_gate
+    # Build even for an older already-folded checkpoint when a new policy
+    # activates the cache. No revision, source canon or game clock is changed.
+    from . import live_scene, scene_gate
+    brief_path = state_dir / live_scene.PATH
+    if applied or not brief_path.is_file():
         _, accepted = scene_gate.played_turns(state_dir)
-        live_scene.write(state_dir / live_scene.PATH,
-                         live_scene.build(hot, accepted))
+        live_scene.write(brief_path, live_scene.build(hot, accepted))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
