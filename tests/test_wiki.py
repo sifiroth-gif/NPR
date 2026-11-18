@@ -75,13 +75,19 @@ class WikiTest(unittest.TestCase):
         self.assertEqual(len(notes), 1)
         self.assertIn("Было «около 16»", notes[0]["text"])
 
-    def test_unknown_speaker_is_reported_known_name_is_not(self):
+    def test_named_speaker_without_page_is_reported_background_role_is_not(self):
         hot = hot_state()
         self.build([turn(1, {"cast": {"kadziura": {"name": "Кадзиура Сатору"}}})], hot)
-        report = self.build([turn(2, {}, gm="**Кадзиура:** — Да.\n**Анестезиолог:** — Сатурация 93.")], hot)
+        gm = ("**Кадзиура:** — Да.\n**Анестезиолог:** — Сатурация 93.\n**Медсестра:** — Готово.\n"
+              "**Старший патруля:** — Тихо.\n**Сато Кэн:** — Я видел.")
+        report = self.build([turn(2, {}, gm=gm)], hot)
         texts = [n["text"] for n in report["checks"] if n["kind"] == "new_character"]
         self.assertEqual(len(texts), 1)
-        self.assertIn("«анестезиолог»", texts[0])
+        self.assertIn("«сато кэн»", texts[0])
+
+    def test_speaker_declared_in_same_turn_by_name_is_not_reported(self):
+        report = self.build([turn(1, {"cast": {"sato": {"name": "Сато Кэн"}}}, gm="**Сато Кэн:** — Я видел.")])
+        self.assertFalse([n for n in report["checks"] if n["kind"] == "new_character"])
 
     def test_secrets_stay_in_gm_only_pages(self):
         self.build([turn(1, {"cast": {"kadziura": {"name": "Кадзиура Сатору", "hides": "подменил дозы"}}})])
