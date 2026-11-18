@@ -100,6 +100,21 @@ class EntityMemoryTests(unittest.TestCase):
                 ledger, scene=scene())["activated"][0]["facts"][0]["value"],
                 "примерно 16 лет")
 
+    def test_submitted_turn_before_async_fold_already_visible(self):
+        entity_memory.rebuild(self.root)
+        pending = {"id": "s08.text.006", "at": "0006-10-03T02:10:00",
+                   "d": {"entity_facts": {"recipient6": {"facts+": [
+                       {"field": "test_status", "value": "assays pending",
+                        "source": "s08.text.006"}]}}}}
+        target = self.root / "recovery/TURN.json"
+        target.write_text(json.dumps(pending, ensure_ascii=False), encoding="utf-8")
+        ledger = entity_memory.load(self.root)
+        card = ledger["entities"]["recipient6"]
+        self.assertIn("assays pending", [x["value"] for x in card["facts"]])
+        # Derived ledger is not rewritten by a read; official fold owns writes.
+        saved = json.loads((self.root / entity_memory.LEDGER_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(len(saved["entities"]["recipient6"]["facts"]), 2)
+
     def test_structured_turn_fact_survives_regeneration(self):
         archive = self.root / "archive"
         archive.mkdir()
