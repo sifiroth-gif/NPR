@@ -1,7 +1,7 @@
 # Кадзиура Сатору · `kadziura_satoru`
 
 псевдонимы: Кадзиура, Сатору
-вид: npc · впервые: s07.text.033 · последний раз: s08.text.012 · сейчас в сцене
+вид: npc · впервые: s07.text.033 · последний раз: s08.text.013 · сейчас в сцене
 
 ## Постоянное
 - внешность: крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза [s07.text.033]
@@ -17,10 +17,10 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 03:09: after hearing Shiki describe himself as biological diagnostic station, agreed to carefully limited self-experiment using his own body. Conducted targeted bronchial biopsies in recipient6, created sterile deltoid muscle pocket in Shiki and inserted fresh ~2mm patient bronchial tissue, documented procedure. Does not know Shiki's Zero Genome or Byoton; watches patient vital signs. Increasingly troubled by method but decides patient opportunity warrants calculated protocol breach. [s08.text.011]
+- положение: 03:17 observed Shiki's surgical wound heal rapidly under visible sutures while donor sample stays inside; amended operation documentation and restricts self-experiment from open night log, independently orders second sample to Kuroda Mayu. Asks for findings but does not know them. Prior dread calibrated stage2, now response changes tangible practice. [s08.text.013]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
-## Знает (последние 10 из 10)
+## Знает (последние 11 из 11)
 - Четверо подтверждённых выживших реципиентов С-17 находятся под его координацией в охраняемом отделении. [s07.text.033]
 - Реципиент №6 нуждается в аппаратной респираторной поддержке и текущем лечении; дыхательная функция последние сутки нестабильна. [s07.text.033]
 - Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача. [s07.text.033]
@@ -31,9 +31,9 @@
 - Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat. [s07.text.037]
 - Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed. [s07.text.037]
 - Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing. [s07.text.038]
+- Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue. [s08.text.013]
 
-## История (последние 8 из 13)
-- s07.text.038 0006-10-03T01:35:00: Шики оставил пробирку неизвестного Кадзиуре по происхождению экспериментального носителя на столе и сказал, что врач разберётся. Кадзиура принял материал, изолировал и запер его без вскрытия; зарегистрировал отсутствие данных о клинических испытаниях, запрети…
+## История (последние 8 из 14)
 - s08.text.002 0006-10-03T01:44:00: Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена.
 - s08.text.003 0006-10-03T01:50:00: Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Чакроподдержка продолжается и требует усилий.
 - s08.text.006 0006-10-03T02:40:00: Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно.
@@ -41,6 +41,7 @@
 - s08.text.009 0006-10-03T02:55:00: Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство.
 - s08.text.010 0006-10-03T02:56:00: Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать.
 - s08.text.011 0006-10-03T03:09:00: Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато.
-- ранее: 5 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
+- s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.
+- ранее: 6 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
 
 Ход целиком: `archive/turns/sNN/<id>.md`.

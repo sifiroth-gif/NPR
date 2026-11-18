@@ -53,7 +53,7 @@
  ],
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.012",
+  "cursor": "s08.text.013",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -65,9 +65,11 @@
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6",
-   "place:e83fa7a531838fa4"
+   "place:e83fa7a531838fa4",
+   "arakawa",
+   "kuroda_mayu"
   ],
-  "focus_bytes": 3826,
+  "focus_bytes": 5628,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -99,13 +101,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T03:09:00",
+  "at": "0006-10-03T03:17:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.012",
+  "id": "s08.text.013",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
-  "time": "03:09"
+  "time": "03:17"
  },
- "digest": "07c6b98c30d14ea36f1c52586a31e074c876770a994f618d8c7e06e3da05b314",
+ "digest": "3a59d0a6c58e837c0d140118e1f37e0843bc5cf33637d28cb727ccad0f7d521a",
  "entity_memory": {
   "activated": [
    {
@@ -210,6 +212,12 @@
     "id": "s08.text.011",
     "kind": "recent_turn",
     "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной "
+   },
+   {
+    "at": "0006-10-03T03:17:00",
+    "id": "s08.text.013",
+    "kind": "recent_turn",
+    "line": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результ"
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -300,6 +308,26 @@
     "kind": "place",
     "label": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
     "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "arakawa",
+    "kind": "npc",
+    "label": "Аракава Дзюн",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "kuroda_mayu",
+    "kind": "npc",
+    "label": "Курода Маю",
+    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -308,7 +336,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 5
+  "total_matched": 7
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -319,23 +347,15 @@
  },
  "handoff": null,
  "horror": {
-  "due": {
-   "npcs": [
-    "kadziura_satoru",
-    "night_icu_physician",
-    "s17_recipient_6"
-   ],
-   "quiet": 4,
-   "since": "s08.text.010"
-  },
+  "due": null,
   "npcs": {
    "kadziura_satoru": {
-    "does": "Involuntarily froze gripping clipboard, then preferentially approached from far side of bed, while continuing clinical collaboration.",
+    "does": "Takes custody of unusual surgery record, restricts routine log and sends a separate patient sample for independent review.",
     "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-    "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "Increasingly sees Shiki as a competent yet biologically abnormal and potentially dangerous medical actor he cannot categorize; remains responsible for patient.",
-    "stage": 2,
-    "step": "пересмотр"
+    "next": "NPC принимает решение, которое нельзя отменить: предательство, бегство, союз, покушение, служение. Мир отвечает на это сам.",
+    "reads": "Concern that Shiki's experimental biology exceeds his medicine and could expose patient records to a power he cannot control.",
+    "stage": 3,
+    "step": "поступок"
    },
    "night_icu_physician": {
     "lever": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
@@ -348,7 +368,7 @@
     "stage": null
    }
   },
-  "quiet": 4,
+  "quiet": 0,
   "recent": [],
   "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
   "worn": [
@@ -356,26 +376,26 @@
   ]
  },
  "last": {
-  "gm_tail": "ой жидкостью неизбежен. Если вы собираетесь его исследовать, сейчас подходящий момент.\n\nОн отложил инструменты.\n\n**Анестезиолог**, от аппарата ИВЛ:\n\n— Сатурация мальчика девяносто три. Пульс сто шестнадцать. Давление сто на шестьдесят два.\n\nКадзиура сразу повернул голову.\n\n**Кадзиура Сатору:**\n\n— Поддержка ослабла?\n\n**Анестезиолог:**\n\n— По показателям — да. Но дыхательные пути пока проходимы.\n\nВрач вновь посмотрел на Шики.\n\nТеперь ему было известно нечто совершенно конкретное: перед ним находился человек, добровольно допустивший внедрение потенциально опасной чужой ткани в собственную мышцу ради диагностики.\n\nНо **каким образом Шики намеревался использовать этот биоптат**, Кадзиура по-прежнему не знал.\n\nПод кожей левого плеча находился образец ткани шестого реципиента. Он был доступен для исследования способностями Шики; никакая генетическая ассимиляция или перестройка ещё не начиналась.",
-  "player": "Хорошо. Вот теперь ты хотя бы обосновываешь. По игре: вы хороший врач, проницательный. Суть в том, что я сам по себе отличная диагностическая станция. На это я потрачу чакру и сократиться время поддержания, но я могу выявить патоген. Вы сказали что можете взять образц ткани, берите, а потом вскройте меня по мышце и вложите туда биоптат."
+  "gm_tail": "лось в ходе наблюдения».\n\n**Кадзиура Сатору, дежурной врачу:**\n\n— Запись об этой операции в общий ночной журнал пока не переносить. Оригинал оставить у меня. Вторую биопсию отправить Куроде Маю для независимого анализа, без объяснений о происхождении первого образца.\n\nДежурная врач задержала взгляд на документе.\n\n**Дежурная врач:**\n\n— То есть сведения о вмешательстве будут только у вас?\n\n**Кадзиура Сатору:**\n\n— У меня, у вас и у человека, на котором оно произведено. Остальным пока достаточно результатов пациента.\n\nДежурная врач ничего не ответила. Она взяла направление, но не стала убирать из него номер шестой палаты.\n\nКадзиура повернулся к Шики.\n\n**Кадзиура Сатору:**\n\n— Мугами. Если вы действительно получили результат, мне нужна его медицинская часть. Состояние мальчика снова ухудшается, хотя непосредственная обструкция устранена.\n\nОн взглянул на монитор.\n\n— Что вы нашли?\n\n**Ход Шики.**",
+  "player": "#нулевой геном, закрыть рану и анализ на поиск источника патогенного процесса#"
  },
  "needs_profile": [
   {
-   "appearances": 13,
+   "appearances": 14,
    "facets": 0,
    "need": 3,
    "npc": "kadziura_satoru",
    "tier": "developed"
   },
   {
-   "appearances": 8,
+   "appearances": 9,
    "facets": 0,
    "need": 3,
    "npc": "night_icu_physician",
    "tier": "developed"
   },
   {
-   "appearances": 5,
+   "appearances": 6,
    "facets": 0,
    "need": 3,
    "npc": "s17_recipient_6",
@@ -470,12 +490,6 @@
     "due": "0006-10-03T03:20:00",
     "owner": "Дежурная сестра и Кадзиура Сатору",
     "status": "unresolved_actor_or_non_npc_owner"
-   },
-   {
-    "clock_id": "s17_implanted_biopsy_viability",
-    "due": "0006-10-03T03:23:00",
-    "owner": "Физиология живого бронхиального биоптата и Мугами Шики",
-    "status": "unresolved_actor_or_non_npc_owner"
    }
   ]
  },
@@ -502,8 +516,8 @@
     ],
     "parent": "main",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
-    "scenes": 1,
-    "scenes_left": 11,
+    "scenes": 2,
+    "scenes_left": 10,
     "threads": [
      "s17_survivors",
      "arakawa_treatment"
@@ -657,22 +671,17 @@
     "first": "s07.text.033",
     "hides": "",
     "knows": [
-     "Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача.",
      "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
      "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
      "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ bloc",
      "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
      "Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
      "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
-     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
+     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing.",
+     "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue."
     ],
     "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.007",
-      "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
-     },
      {
       "ch": "present",
       "turn": "s08.text.009",
@@ -687,15 +696,20 @@
       "ch": "present",
       "turn": "s08.text.011",
       "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.013",
+      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известе"
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 13,
+    "memory_total": 14,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.012",
+    "seen": "s08.text.013",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "03:09: after hearing Shiki describe himself as biological diagnostic station, agreed to carefully limited self-experiment using his own body. Conducted targeted bronchial biopsies in recipient6, created sterile deltoid muscle pocket in Shiki and inserted fresh ~2mm patient bronchial tissue, documented procedure. Does not know Shiki's Zero Genome or Byoton; watches patient vital signs. Increasingly troubled by method but decides patient opportunity warrants calculated protocol breach.",
+    "state": "03:17 observed Shiki's surgical wound heal rapidly under visible sutures while donor sample stays inside; amended operation documentation and restricts self-experiment from open night log, independently orders second sample to Kuroda Mayu. Asks for findings but does not know them. Prior dread calibrated stage2, now response changes tangible practice.",
     "status": "present_profile",
     "tier": "developed",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -745,11 +759,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.007",
-      "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.009",
       "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи и"
      },
@@ -762,15 +771,20 @@
       "ch": "present",
       "turn": "s08.text.011",
       "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.013",
+      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известе"
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 8,
+    "memory_total": 9,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.012",
+    "seen": "s08.text.013",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
+    "state": "03:17 Kadziura instructed her to keep unusual Shiki surgery out of general night log for now while preserving original, and send second biopsy for independent analysis to Kuroda Mayu; she retains copy with recipient6 case number and may independently act.",
     "status": "present_profile",
     "tier": "developed",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -791,11 +805,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.007",
-      "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.009",
       "what": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи и"
      },
@@ -808,14 +817,19 @@
       "ch": "present",
       "turn": "s08.text.011",
       "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.013",
+      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известе"
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
-    "memory_total": 5,
+    "memory_total": 6,
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-    "seen": "s08.text.012",
-    "state": "03:09: sedated sixteen-year-old recipient of S17, ventilated with unchanged medication, underwent limited bronchoscopic paired biopsies of damaged right bronchial mucosa; mild capillary bleeding controlled. SpO2 93% HR116 BP100/62; no genetic treatment. His live tissue biopsy is now inside Shiki's left deltoid, another biopsy for pathology; still critically ill.",
+    "seen": "s08.text.013",
+    "state": "03:17 still ventilated/sedated with S17, SpO2 declined to 91% HR122 as Shiki diverted some support for diagnostic assay; ICU team increased inspired oxygen and SpO2 reached 93% on greater support, airway patent.",
     "status": "present_profile",
     "tier": "developed"
    }
@@ -823,25 +837,25 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.009",
-   "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
-  },
-  {
    "id": "s08.text.010",
    "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
   },
   {
    "id": "s08.text.011",
    "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
+  },
+  {
+   "id": "s08.text.013",
+   "line": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики."
   }
  ],
  "scene": {
-  "positions": "Shiki at bedside after requested surgery with new sterile dressing/sutures over left deltoid and living ~2mm biopsy of recipient6 bronchial mucosa housed in shallow left deltoid muscle pocket; medically supported boy ~16 remains on ventilator and existing S17. Kadziura at Shiki's shoulder, anesthetist at recipient's ventilator; second independent biopsy in pathology container. Experimental gene carrier still sealed and locked in Kadziura's office.",
-  "pressure": "Shiki faces choice of whether/how to activate diagnostic abilities using just-implanted biopsy with ongoing chakra allocation; recipient oxygenation fell slightly to 93 while medical support split, standard ICU care ongoing.",
-  "situation": "03.10 03:09. Shiki explained to Kadziura that his own body can serve as a diagnostic station, at chakra cost reducing time available for maintaining recipient6, explicitly asked Kadziura to biopsy damaged bronchial tissue from recipient #6 and incise Shiki's muscle and implant a viable fragment. After independent professional hesitation, Kadziura accepted restricted biopsy and separate surgery, documented and prepared two separate sterile instrument sets. ~03:04 physician bronchoscopically took two small 2mm edge biopsies of still unstable right bronchial mucosa: one stored for ordinary formal histology, one maintained fresh in sterile nutrient medium for transplant. Small capillary bleed controlled by anesthetist; at procedure patient SpO2 94% Ppeak28, usual ventilator and S17 support unchanged. ~03:09 Kadziura opened superficial left deltoid skin, fascia and muscle fibers, implanted the fresh bronchial fragment into shallow intramuscular pocket and closed wound with interrupted stitches, no complications determined yet. Shiki has not invoked Zero Genome, assimilated fragment or modified cells, and no pathogen has been detected. At 03:09 recipient SpO2 93%, pulse 116, BP100/62, airway patent, consistent with less chakra support during diagnostic preparation; remains ventilated, S17 infused. Kadziura knows only patient-to-Shiki self-experimental tissue implantation and Shiki's claimed bodily diagnostic ability, not exact mechanism, Null Genome or Byoton."
+  "positions": "Shiki at patient bedside with healed left deltoid under retained sutures, isolated living bronchial biopsy inside. Kadz by patient and Shiki, night staff with clinical chart, anesthetist at ventilator. Sixteen-year-old boy sedated, intubated SpO2 93% on increased inspired O2 and unchanged S17. Other sample referred for lab. Experimental carrier locked in Kadz office, unadministered.",
+  "pressure": "Only Shiki holds confirmed local genomic/functional result; Kadz asks him what he found, while patient needs increased oxygen due diverted support.",
+  "situation": "03.10 03:17: Shiki healed his left deltoid surgery wound through fascia, muscle and skin with medical chakra, sutures remained externally; living patient6 bronchial biopsy maintained in isolated chakra-supported intramuscular pocket. Zero Genome analysis revealed within this one injured right bronchial sample two distinct nuclear+mitochondrial cell lineages: main epithelial KRT5/TP63/ciliated population and minority subepithelial stromal population bearing same engineered nsp-delta coding/splice/regulatory construct previously found in Arakawa donor cells. Stromal cells express NSP-delta and shed vesicles absorbed into epithelial cells without encoding DNA transfer. During observed mechanically evoked PIEZO1/Ca2+ signaling, calpain activation and E-cadherin junction disruption occur, producing sloughing, exudate and fibrin casts. Source of LOCAL destructive process is demonstrated, NOT identity of donor, full graft history, spread to other bronchi, origin of systemic neuromuscular weakness, S17 drug role or global pathogen. Biopsy remains isolated viable; Shiki genome untouched. Only Shiki has genetic findings. Diverted chakra reduced recipient6 support: SpO2 91% pulse122, after anesthetist increased inspired O2 SpO2 93%, still on same S17 and ventilator. Kadz sees healed wound, corrects record, restricts report of transplant-surgery to own documentation, orders second sample to Kuroda Mayu for independent testing, asks Shiki what he found."
  },
  "shiki": {
-  "body": "03.10 03:09: left deltoid sterile incision through skin fascia and superficial muscle closed with interrupted stitches, contains fresh ~2mm bronchial mucosal biopsy from recipient6 in small intramuscular pocket, independent from Shiki own muscle cells at implantation. No Zero Genome yet activated on sample, no assimilation and no regeneration/repair of Shiki's incision declared. Medical chakra allocation between patient and pending self diagnostics, exact expenditure unquantified.",
+  "body": "03.10 03:17 healed left deltoid skin, muscle and fascia after surgery via medical chakra; stitches remain externally, isolated recipient6 bronchial tissue alive in chakra pocket. Used Zero Genome for cellular/gene function analysis, NO donor-line absorption or permanent chromosome edit; diagnostic chakra expenditure decreases available patient support.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -865,27 +879,17 @@
     "due": "0006-10-03T03:20:00",
     "id": "s17_patient6_intake_record_review",
     "if_unopposed": "Персонал найдёт реально имеющиеся листы и сообщит их содержание; неполные записи не превращать в доказательство отсутствия вмешательства.",
-    "minutes": 11.0,
+    "minutes": 3.0,
     "owner": "Дежурная сестра и Кадзиура Сатору",
     "signs": "02:55 Кадзиура поручил сестре поднять архив поступления из исследовательского корпуса №3.",
     "status": "scheduled",
     "what": "Найти и сверить подлинные документы первичного осмотра реципиента №6, записи об операциях и прошлых бронхоскопиях; доложить ограничения и пробелы."
    },
    {
-    "due": "0006-10-03T03:23:00",
-    "id": "s17_implanted_biopsy_viability",
-    "if_unopposed": "Ткань постепенно теряет жизнеспособность по мере ишемии без специальных мер; не считать её автоматически прижившейся или генетически усвоенной.",
-    "minutes": 14.0,
-    "owner": "Физиология живого бронхиального биоптата и Мугами Шики",
-    "signs": "03:09 живой бронхиальный биоптат только что перенесён в левую дельтовидную мышцу; полноценного общего кровоснабжения нет.",
-    "status": "scheduled",
-    "what": "Сохранение жизнеспособности неваскуляризированного тканевого фрагмента в мышечном ложе; требуется внимание при длительном бездействии."
-   },
-   {
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 181.0,
+    "minutes": 173.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "status": "scheduled",
@@ -895,7 +899,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 306.0,
+    "minutes": 298.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",
