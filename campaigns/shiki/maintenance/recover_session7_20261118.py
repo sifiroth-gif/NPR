@@ -229,7 +229,7 @@ def main(root:Path):
         if complete.get("cursor",{}).get("id")!=LAST:
             raise ValueError("Live turn moved after S8 acceptance")
         _, accepted = scene_gate.played_turns(root)
-        save(root/live_scene.PATH, live_scene.build(complete,accepted))
+        save(root/live_scene.PATH, live_scene.build_for_state(complete,accepted,root))
         result=hot.check(root)
         if not result["ok"]:
             raise ValueError("S8 derived packet refresh broke state: "+str(result))
