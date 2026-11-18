@@ -297,6 +297,26 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["status"], "current")
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
+    def test_fold_records_new_character_page_and_flags_unregistered_speaker(self):
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      gm="**Хаясэ Нори:** — Тихо.\n**Писарь:** — Я ничего не видел.",
+                      d={"cast": {"kase": {"name": "Касэ", "look": "шрам через бровь",
+                                           "facts": {"возраст": "около 30"}, "role": "боец заслона"}}}))
+        report = hot.fold(self.root)
+        self.assertEqual(report["errors"], [])
+        page = (self.root / "memory/npc/kase.md").read_text(encoding="utf-8")
+        self.assertIn("- внешность: шрам через бровь [s04.text.045]", page)
+        self.assertIn("- возраст: около 30 [s04.text.045]", page)
+        self.assertIn("`npc/kase`", (self.root / "memory/INDEX.md").read_text(encoding="utf-8"))
+        delta = (self.root / "archive/deltas/session-004.jsonl").read_text(encoding="utf-8")
+        self.assertIn("шрам через бровь", delta)
+        checks = json.loads((self.root / hot.CHECKS_PATH).read_text(encoding="utf-8"))["checks"]
+        speakers = [c["text"] for c in checks if c.get("kind") == "new_character"]
+        self.assertEqual(len(speakers), 1)
+        self.assertIn("«писарь»", speakers[0])
+        self.assertNotIn("ей нужен виновный", page)
+        self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
     def test_fold_publishes_source_bound_prior_npc_disclosures_in_hot(self):
         self.put(turn(45, "0006-10-01T07:14:00",
                       line="Нори признала, что получила приказ задержать Тэцу.",

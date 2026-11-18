@@ -940,6 +940,13 @@ def fold(state_dir):
         by_session.setdefault(turn_number(turn["id"])[0], []).append(turn)
     for session, batch in by_session.items():
         _append_log(state_dir, session, batch)
+    from . import wiki
+    if not (state_dir / wiki.DELTAS_DIR).is_dir():
+        try:  # разово: прошлые дельты из истории TURN.json (в Actions история полная)
+            wiki.backfill_deltas(state_dir)
+        except (OSError, subprocess.CalledProcessError):
+            pass
+    wiki.record_deltas(state_dir, applied)
     full = _full_chronicle(state_dir, hot)
     _write_chronicle(state_dir, hot, full)
     if len(hot.get("chronicle", [])) > CHRONICLE_IN_HOT:
@@ -950,6 +957,7 @@ def fold(state_dir):
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
+    wiki_report = _update_wiki(state_dir, hot, applied)
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
                    not (hot.get("scene") or {}).get("npc_disclosures_to_player")):
@@ -992,8 +1000,27 @@ def fold(state_dir):
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
-            "heuristic_history": heuristic,
+            "heuristic_history": heuristic, "wiki": wiki_report,
             "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
+
+
+def _update_wiki(state_dir, hot, applied):
+    """Пересобирает memory/ и добавляет замечания о новых персонажах и смене постоянного."""
+    from . import wiki
+    try:
+        report = wiki.write(state_dir, hot, new_turns=applied)
+    except Exception as exc:  # вики производна: её сбой не останавливает свёртку
+        hot.setdefault("_checks", []).append(
+            {"turn": (hot.get("cursor") or {}).get("id"), "kind": "wiki",
+             "text": f"Вики не обновилась: {type(exc).__name__}: {exc}"})
+        return {"error": str(exc)}
+    checks = hot.setdefault("_checks", [])
+    for note in report.pop("checks", []):
+        if note not in checks:
+            checks.append(note)
+    if len(checks) > CHECKS_KEEP:
+        hot["_checks"] = checks[-CHECKS_KEEP:]
+    return report
 
 
 def bootstrap(state_dir, seed):
