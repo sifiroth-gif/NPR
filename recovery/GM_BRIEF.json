@@ -1,45 +1,9 @@
 {
+ "budget": {
+  "hard_bytes": 48000,
+  "target_bytes": 32000
+ },
  "checks": [
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010",
-   "turn": "s08.text.015"
-  },
-  {
-   "kind": "review",
-   "text": "review.sources must refer to exact prior played turns",
-   "turn": "s08.text.016"
-  },
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010",
-   "turn": "s08.text.016"
-  },
-  {
-   "kind": "review",
-   "text": "time jump crossed unreviewed NPC clock deadlines: s17_patient6_intake_record_review",
-   "turn": "s08.text.016"
-  },
-  {
-   "kind": "review",
-   "text": "review.sources must refer to exact prior played turns",
-   "turn": "s08.text.017"
-  },
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010",
-   "turn": "s08.text.017"
-  },
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010",
-   "turn": "s08.text.019"
-  },
-  {
-   "kind": "look",
-   "text": "внешность Шики описана 2 раза (сосуды, глаза). Ужас — в чужом поступке и последствии, а не в облике",
-   "turn": "s08.text.020"
-  },
   {
    "kind": "review",
    "text": "review.sources must refer to exact prior played turns",
@@ -51,6 +15,7 @@
    "turn": "s08.text.020"
   }
  ],
+ "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
   "cursor": "s08.text.021",
@@ -106,7 +71,7 @@
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
   "time": "05:46"
  },
- "digest": "671846b97cfd60d03632745e8735a598acdd2cd8fceb83e900bccce25383e558",
+ "digest": "dbb39a055dd22f0509606caf2887b590237f502f535a27d83cfe2daf45448502",
  "entity_memory": {
   "activated": [
    {
@@ -163,27 +128,6 @@
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.009"
-   },
-   {
-    "actor": "kadziura_satoru",
-    "from": "s08.text.009",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.010"
-   },
-   {
-    "actor": "kadziura_satoru",
-    "from": "s08.text.010",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.015"
-   },
-   {
-    "actor": "kadziura_satoru",
-    "from": "s08.text.015",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
     "to": "s08.text.016"
    },
    {
@@ -191,81 +135,12 @@
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.009"
-   },
-   {
-    "actor": "night_icu_physician",
-    "from": "s08.text.009",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.010"
-   },
-   {
-    "actor": "night_icu_physician",
-    "from": "s08.text.010",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.015"
-   },
-   {
-    "actor": "night_icu_physician",
-    "from": "s08.text.015",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
     "to": "s08.text.016"
    }
   ],
-  "nodes": [
-   {
-    "at": "0006-10-03T02:54:00",
-    "id": "s08.text.007",
-    "kind": "played_turn",
-    "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура п"
-   },
-   {
-    "at": "0006-10-03T02:55:00",
-    "id": "s08.text.009",
-    "kind": "played_turn",
-    "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки не"
-   },
-   {
-    "at": "0006-10-03T02:56:00",
-    "id": "s08.text.010",
-    "kind": "played_turn",
-    "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддер"
-   },
-   {
-    "at": "0006-10-03T03:18:00",
-    "id": "s08.text.015",
-    "kind": "played_turn",
-    "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызыва"
-   },
-   {
-    "at": "0006-10-03T03:21:00",
-    "id": "s08.text.016",
-    "kind": "played_turn",
-    "line": "Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носите"
-   },
-   {
-    "at": "0006-10-03T03:31:00",
-    "id": "s08.text.019",
-    "kind": "recent_turn",
-    "line": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6;"
-   },
-   {
-    "at": "0006-10-03T04:12:00",
-    "id": "s08.text.020",
-    "kind": "recent_turn",
-    "line": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 "
-   },
-   {
-    "at": "0006-10-03T05:46:00",
-    "id": "s08.text.021",
-    "kind": "recent_turn",
-    "line": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, "
-   }
-  ],
-  "scope": "chronological edges only; semantic links are candidates, not causality"
+  "nodes": [],
+  "scope": "source order only; no semantic entailment",
+  "source": "archive/session-*-turns.jsonl"
  },
  "fold_errors": [],
  "format": "NPR-LIVE-SCENE/1",
@@ -277,72 +152,62 @@
     ],
     "facts": [
      {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
       "field": "age_at_discovery",
-      "id": "recipient6:identity:age-discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "примерно шестнадцать лет",
-      "visibility": "gm_only"
+      "source": "archive/session-005-source.md:L3057"
      },
      {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
       "field": "discovery",
-      "id": "recipient6:history:discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
-      "visibility": "gm_only"
+      "source": "archive/session-005-source.md:L3057"
      },
      {
-      "authority": "player_correction",
       "field": "sex",
-      "id": "recipient6:identity:sex:source-s08",
-      "source": "archive/shiki-canon.jsonl:s08.text.005",
-      "value": "мальчик (мужской пол)",
-      "visibility": "gm_only"
+      "source": "archive/shiki-canon.jsonl:s08.text.005"
      }
     ],
+    "facts_ref": "entity_memory.activated[recipient6].facts",
     "id": "recipient6",
     "kind": "entity",
     "label": "Реципиент № 6",
     "status": "verified_facts"
    },
    {
-    "channels": [
-     "scene_anchor"
-    ],
     "facts": [],
     "id": "kadziura_satoru",
     "kind": "npc",
-    "label": "Кадзиура Сатору",
-    "status": "no_verified_facts"
+    "operational_cues": {
+     "source": "recovery/cast/kadziura_satoru.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик созн",
+      "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17"
+     }
+    }
    },
    {
-    "channels": [
-     "scene_anchor"
-    ],
     "facts": [],
     "id": "night_icu_physician",
     "kind": "npc",
-    "label": "Дежурная врач охраняемого отделения",
-    "status": "no_verified_facts"
+    "operational_cues": {
+     "source": "recovery/cast/night_icu_physician.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
+      "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17"
+     }
+    }
    },
    {
-    "channels": [
-     "scene_anchor"
-    ],
     "facts": [],
     "id": "s17_recipient_6",
     "kind": "npc",
-    "label": "Реципиент № 6",
-    "status": "no_verified_facts"
+    "operational_cues": {
+     "source": "recovery/cast/s17_recipient_6.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
+      "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет"
+     }
+    }
    },
    {
     "channels": [
@@ -362,6 +227,13 @@
     "id": "thread:pact",
     "kind": "thread",
     "label": "pact",
+    "operational_cues": {
+     "source": "recovery/HOT.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
+     }
+    },
     "status": "no_verified_facts"
    }
   ],
@@ -417,12 +289,11 @@
     "what": "Публично названная Шики стихия Бётон активирована одноручными печатями, пока другая рука восстанавливает бронхи; она оставляет мальчика с целой слизистой, а самого Шики без сознания, заставив врачей защищаться от прикосновений к своему спасителю."
    }
   ],
-  "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
+  "rule": "campaigns/shiki/ref/HORROR.md",
   "worn": []
  },
  "last": {
-  "gm_tail": "скусствами. Его запас чакры после предельного перерасхода всё ещё был почти пуст, но сами способности никуда не исчезли.\n\nКровь и живые ткани теперь несли действительную опасность при прямом контакте. Голая кожа могла передать патологическую чакру другой живой коже. Свежая кровь — при попадании непосредственно в открытую рану или на слизистую.\n\nЗапах и предметы такого действия не имели.\n\nВрачи знали лишь то, что видели и измерили.\n\nКадзиура положил обе руки в перчатках на край кровати. Его лицо приобрело жёсткое, усталое выражение.\n\n**Кадзиура Сатору:**\n\n— Перед тем как потерять сознание, вы просили не касаться вас голыми руками. Я выполнил это распоряжение.\n\nОн посмотрел на совершенно чёрную кровь.\n\n— Теперь я намерен спросить прямо.\n\nВ голосе впервые появились холодные, почти враждебные нотки.\n\n— **Что произойдёт с моими сотрудниками, если ваша кровь попадёт им в рану?**\n\n**Ход Шики.**",
-  "player": "Мастеру: побочные эффекты должны перейти на следующую стадию и должны произойти разительные изменения крови и внутренней среды Шики. И давай дальше к пробуждению. Исправление: сделай максимально мрачно — Шики действительно гниёт, почти труп по показателям, чёрная опасная кровь, холодное тело, запах металл/йод/старые бинты/могильная земля, но без потери функций. Будем считать, что Договор вышел на максимум."
+  "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
@@ -448,75 +319,15 @@
   }
  ],
  "npc_dynamics": {
-  "actors": [
-   {
-    "committed_or_paused_intents": [],
-    "current_affect": null,
-    "id": "kadziura_satoru",
-    "identity_projection": {
-     "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-     "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-    },
-    "identity_source": "HOT.cast",
-    "identity_status": "operational_or_archival_projection_not_new_fact",
-    "present": true,
-    "pressure_pairs": [],
-    "psyche_facets": {},
-    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
-    "unclocked_intents": [],
-    "unoperationalized_goal": {
-     "status": "motivation_not_committed_action",
-     "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-    },
-    "world_clocks": []
-   },
-   {
-    "committed_or_paused_intents": [],
-    "current_affect": null,
-    "id": "night_icu_physician",
-    "identity_projection": {
-     "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
-     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное меди",
-     "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
-    },
-    "identity_source": "HOT.cast",
-    "identity_status": "operational_or_archival_projection_not_new_fact",
-    "present": true,
-    "pressure_pairs": [],
-    "psyche_facets": {},
-    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
-    "unclocked_intents": [],
-    "unoperationalized_goal": {
-     "status": "motivation_not_committed_action",
-     "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
-    },
-    "world_clocks": []
-   },
-   {
-    "committed_or_paused_intents": [],
-    "current_affect": null,
-    "id": "s17_recipient_6",
-    "identity_projection": {
-     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет"
-    },
-    "identity_source": "HOT.cast",
-    "identity_status": "operational_or_archival_projection_not_new_fact",
-    "present": true,
-    "pressure_pairs": [],
-    "psyche_facets": {},
-    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
-    "unclocked_intents": [],
-    "unoperationalized_goal": null,
-    "world_clocks": []
-   }
-  ],
+  "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "rule": "Never drive the player character; never invent NPC action or change canon without a TURN delta. Existing intent and clock are actionable, not completed.",
-  "schema": "npr-npc-dynamics/1",
+  "present_inline": [
+   "kadziura_satoru",
+   "night_icu_physician",
+   "s17_recipient_6"
+  ],
+  "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": [
    {
     "clock_id": "arakawa_supply_audit",
@@ -532,7 +343,6 @@
    }
   ]
  },
- "over_budget": true,
  "plot": {
   "active": [
    {
@@ -564,24 +374,14 @@
     "title": "Два источника и чужой долг"
    },
    {
-    "endings": [
-     "Цепь конкретных документов, доступов и исполнителей подтверждена с указанием степени доказанности; последствия для полномочий реальны.",
-     "Часть следов установлена, но ответственность и судьба документов остаются предметом отдельных действий.",
-     "Доказательства уничтожены, подменены или стали недоступны; политический и личный ущерб фиксируются.",
-     "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
-    ],
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.side_seal_records",
     "id": "side_seal_records",
     "kind": "side",
     "limit": {
      "scenes": 9,
      "until": "0006-10-10T00:00:00"
     },
-    "notes": [
-     "Тэцу остаётся без подтверждённого вскрытия; Нори официально отстранена. Не присваивать ей должность без решения.",
-     "Подлинность печати не доказывает личное одобрение Кагэ. Допуск к МХ–VII/19 подписан, но не взят Шики.",
-     "Налёт на В-7 уже отражён с потерями: использовать последствия и судьбы сторон, не повторять штурм.",
-     "Фактическое действие Аракавы, Такаги, Нори и канцелярии зависит от их знания и часов."
-    ],
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_seal_records",
     "parent": "main",
     "question": "Какой проверяемый результат дадут уже начатые служебные проверки, прошлые нападения и следы распоряжений, и кто сумеет удержать либо утратить доказательства?",
     "scenes": 1,
@@ -600,19 +400,6 @@
    }
   ],
   "main": {
-   "endings": [
-    "Конкретная цепь контроля и исполнителей доказана; её власть над людьми и материалом изменена, цена перемен сохранена.",
-    "Доказана часть цепи; участники переоформили контроль и продолжают борьбу с новыми ресурсами и потерями.",
-    "Источники и свидетели утрачены либо погибли, система сохранила или сменила хозяев; личная ответственность остаётся в пределах доказанного.",
-    "Ничего окончательно не вскрыто, но независимые процессы завершаются реальными исходами; выбор Шики не подменяется решениями ведущего."
-   ],
-   "notes": [
-    "Продолжение уже сыгранной арки; НЕ новая история и не реткон.",
-    "Личность заказчика покушений, его мотив и канал доступа к сведениям устанавливать только источниками.",
-    "Не объединять С-17, Нижний госпиталь, Немеру и письмо Кабуто без самостоятельного доказательства.",
-    "У В-7 уже был конкретный исход нападения 02.10: штурм не повторять как несостоявшийся.",
-    "Действия и исходы NPC самостоятельны; провал, гибель, бездействие и выбор иной цели допустимы без сюжетных иммунитетов."
-   ],
    "question": "Кто распоряжается чужой живой тканью, зависимыми людьми, реестрами и приказами об устранении свидетелей, и как изменится эта система вследствие самостоятельных действий её участников?",
    "title": "Чужая ткань"
   },
@@ -620,92 +407,70 @@
    {
     "id": "side_clinic_aftercare",
     "kind": "side",
-    "title": "Последствия у клиники",
-    "trigger": "Подтверждённое сообщение Сэйны, пострадавшего, санитаров или осмотр Шики; событие не обязано ждать Шики."
+    "title": "Последствия у клиники"
    },
    {
     "id": "side_family_confidentiality",
     "kind": "side",
-    "title": "Дом и врачебная тайна",
-    "trigger": "Реальное решение семьи или Сэйны, доставленное сообщение либо новая инициатива Шики; никаких придуманных ответов за него."
+    "title": "Дом и врачебная тайна"
    },
    {
     "id": "side_lower_hospital",
     "kind": "side",
-    "title": "Нижний госпиталь",
-    "trigger": "Проверяемая весть от Минасэ/Уцуро либо реальное прибытие/действие участников; никакого автоматического спасения."
+    "title": "Нижний госпиталь"
    },
    {
     "id": "side_nemera",
     "kind": "side",
-    "title": "Семь запоров",
-    "trigger": "Самостоятельное решение Немеры, действительная реакция договора или заявка Шики; без обязательного освобождения."
+    "title": "Семь запоров"
    },
    {
     "id": "side_shiki_goals",
     "kind": "side",
-    "title": "Личные дела Шики",
-    "trigger": "Заявка Шики на исследование, практику, доступ к тайной лаборатории или подачу рапорта; нельзя создавать обязательное поручение ради закрытия плана."
+    "title": "Личные дела Шики"
    },
    {
     "id": "side_kabuto_archive",
     "kind": "side",
-    "title": "Старая медицинская запись",
-    "trigger": "Проверенная улика, независимое действие Кабуто или адресный интерес Шики к письму 1278 года."
+    "title": "Старая медицинская запись"
    },
    {
     "id": "ch09_order_chain",
     "kind": "chapter",
-    "parent": "main",
-    "title": "Цепь приказа",
-    "trigger": "После клинической главы либо по достоверному новому доказательству личного преследования Шики; не задерживать смену глав ради расследовательской рутины."
+    "title": "Цепь приказа"
    }
   ],
-  "recently_closed": [],
-  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя."
+  "queued_ref": "recovery/GM_ONLY.json:plot.events",
+  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
+  "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
   "kadziura_satoru": {
    "alignment": {
     "breaking_point": "При реальном скором ухудшении может согласиться на рискованный индивидуальный эксперимент",
     "code": "NG",
-    "label": "нейтральный добрый",
     "line": "Не вводит неподтверждённый носитель четырём больным по одному обещанию",
-    "morality": "Живые пациенты важнее показателей и ведомственного благополучия",
-    "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности",
-    "rule": "GM-only moral compass, not a deterministic decision or NPC knowledge",
-    "status": "established_interpretation"
+    "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности"
    },
+   "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
-   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
+   "prior_disclosure_ids": [
+    "s08.text.007",
+    "s08.text.009",
+    "s08.text.010",
+    "s08.text.015",
+    "s08.text.016"
+   ],
    "prior_disclosures": [
     {
      "at": "0006-10-03T02:54:00",
-     "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил в",
      "sha256": "2af415a76d3366e8c7a94fd420809cc2a5b6907fa2485e3b280df59d54f179e2",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.007"
     },
     {
-     "at": "0006-10-03T02:55:00",
-     "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке",
-     "sha256": "5a223883258bdc6958074f18d18af9cf141c5c2f9e6bf415e6bed410c7818c82",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.009"
-    },
-    {
-     "at": "0006-10-03T02:56:00",
-     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
-     "sha256": "6cabd40c60807142197fc915eb4d1805b9eb8512ed2c7c5e1e5975b3f6c7d060",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.010"
-    },
-    {
      "at": "0006-10-03T03:18:00",
-     "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Ка",
      "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -713,7 +478,6 @@
     },
     {
      "at": "0006-10-03T03:21:00",
-     "line": "Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клето",
      "sha256": "5f6dc63ae358114cd80f0396e1c6215524463baac0260fd8bc9fcb1e1aa34d6d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -724,34 +488,16 @@
     "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
     "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "first": "s07.text.033",
-    "hides": "",
     "knows": [
-     "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue.",
-     "At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, matching previously investigated Arakawa donor construct, continuous NSP-",
-     "Shiki says experimental gene-targeting carrier is an RNA-type viral vector with CRISPR complex, intended to suppress nsp-delta; Shiki can also attempt painstaking cell-by-cell destruction of unknown donor-deriv",
-     "03.10 03:24 Shiki directly CLAIMED he can reproduce/administer his previously described experimental viral CRISPR vector inside patient6 without needing stored vial and that its propagation is not entirely auto",
      "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, c",
      "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no lo",
      "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle",
      "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, real superficial tissue autolysis and sheet debris despite normal perfusion, extre"
     ],
+    "knows_ref": "memory/npc/kadziura_satoru.md",
+    "knows_total": 8,
     "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.018",
-      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оф"
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.019",
-      "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения "
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.020",
-      "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
-     },
      {
       "ch": "present",
       "turn": "s08.text.021",
@@ -769,39 +515,28 @@
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
     "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-   }
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   },
   "night_icu_physician": {
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
-   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
+   "prior_disclosure_ids": [
+    "s08.text.007",
+    "s08.text.009",
+    "s08.text.010",
+    "s08.text.015",
+    "s08.text.016"
+   ],
    "prior_disclosures": [
     {
      "at": "0006-10-03T02:54:00",
-     "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил в",
      "sha256": "2af415a76d3366e8c7a94fd420809cc2a5b6907fa2485e3b280df59d54f179e2",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.007"
     },
     {
-     "at": "0006-10-03T02:55:00",
-     "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке",
-     "sha256": "5a223883258bdc6958074f18d18af9cf141c5c2f9e6bf415e6bed410c7818c82",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.009"
-    },
-    {
-     "at": "0006-10-03T02:56:00",
-     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
-     "sha256": "6cabd40c60807142197fc915eb4d1805b9eb8512ed2c7c5e1e5975b3f6c7d060",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.010"
-    },
-    {
      "at": "0006-10-03T03:18:00",
-     "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Ка",
      "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -809,7 +544,6 @@
     },
     {
      "at": "0006-10-03T03:21:00",
-     "line": "Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клето",
      "sha256": "5f6dc63ae358114cd80f0396e1c6215524463baac0260fd8bc9fcb1e1aa34d6d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -820,34 +554,16 @@
     "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
     "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
     "first": "s07.text.033",
-    "hides": "",
     "knows": [
-     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
-     "Главой запрещён перевод пациентов без независимой проверки распоряжений.",
-     "03:18 heard Shiki's direct disclosure of nsp-δ-expressing donor-like stroma in recipient6 right bronchial biopsy and key functional mechanism, under limitations; tasked to request independent verification by Ku",
-     "At 03:21 heard Shiki's description of RNA-type viral vector with CRISPR complex and alternative cellular destruction, and Kadziura's conditional preference for suppression while preserving tissues.",
      "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
      "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
      "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
      "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and authentic gray autolysed epidermis; records do not establish transmission, origin or contract. I"
     ],
+    "knows_ref": "memory/npc/night_icu_physician.md",
+    "knows_total": 8,
     "leverage": "Ведёт ночные истории наблюдения; проверяет назначения, имеет доступ к посту реанимации",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.018",
-      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оф"
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.019",
-      "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения "
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.020",
-      "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
-     },
      {
       "ch": "present",
       "turn": "s08.text.021",
@@ -865,35 +581,20 @@
     "tier": "deep",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
     "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
-   }
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   },
   "s17_recipient_6": {
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
-   "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
    "prior_disclosures": [],
    "profile": {
     "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
     "first": "s08.text.006",
-    "hides": "",
     "knows": [
      "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
     ],
+    "knows_ref": "memory/npc/s17_recipient_6.md",
     "memory": [
-     {
-      "ch": "present",
-      "turn": "s08.text.018",
-      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оф"
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.019",
-      "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения "
-     },
-     {
-      "ch": "present",
-      "turn": "s08.text.020",
-      "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжают"
-     },
      {
       "ch": "present",
       "turn": "s08.text.021",
@@ -913,18 +614,11 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.019",
-   "line": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
-  },
-  {
-   "id": "s08.text.020",
-   "line": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
-  },
-  {
    "id": "s08.text.021",
    "line": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена."
   }
  ],
+ "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "05:46 Shiki has awakened in separate hospital bed, profoundly chakra depleted but physiologically intact even with superficially necrotic skin and extreme cold. His near-black blood samples protected in two sealed vials beside bed. Kadz, gloved, beside him; night duty physician near the door with separate lab and incident record. Recipient6 remains intubated in adjacent ICU room6 receiving ongoing ventilator and S17; anesthetist reports SpO2 96.",
   "pressure": "Pact reached maximum, overtly corpse-like decomposition and bizarre intact physiology visible to clinicians. Duty physician's internal medical committee notice means exposure of unusual findings is already in motion, but origin and true infection routes remain secret. Severe personal chakra deficit unresolved; treated teenager still ventilator-dependent after bronchial repair.",
@@ -936,8 +630,21 @@
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {},
+ "source_passages": {
+  "s08.text.007": {
+   "gm_excerpt": "*Вторник, 3 октября 1283 года. 02:40–02:54.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Я начну регенерацию, аккуратно там, где смогу без риска, — сказал Шики.\n\n**Кадзиура Сатору** поднялся со стула. При этих словах его взгляд на мгновение задержался на руках Шики, а пальцы сильнее сжали край истории болезни.\n\n— Покажите, какие участки отвечают, — произнёс он. — Я буду следить за вентиляцией и кровотечением.\n\nОн отступил к монитору и назвал анестезиологу прежние показатели, чтобы тот записал их до вмешательства.\n\nМедицинская чакра изме\n[... sou…",
+   "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
+   "source": "archive/session-008-turns.jsonl"
+  },
+  "s08.text.016": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 03:19.**\n\n*Кусагакуре. Центральный госпиталь. Палата № 6.*\n\n**Шики:**\n\n— Я уже говорил. Экспериментальный носитель — это, по сути, вирус РНК-природы. Вирусный вектор с CRISPR-комплексом. А оценка — это эксперимент. Лечение методом генетических ножниц.\n\n— Есть и другой вариант. Я могу аккуратно, клетка за клеткой, до изнеможения уничтожать весь имплантат. Но последствия… Я не могу их предсказать ни в одном из вариантов.\n\nКадзиура положил карандаш поперёк истории болезни.\n\n**Кадзиура Сатору:**\n\n— Помню, Мугами. Пом\n[... sou…",
+   "player": "Я уже говорил. Экспериментальный носитель это по сути вирус - РНК природы. вирусный вектор с CRISPR-комплексом. А оценка - это эксперимент, лечение методом генетических ножниц. Есть и другой вектор я могу аккуратно по клетке до изнеможения ",
+   "source": "archive/session-008-turns.jsonl"
+  }
+ },
+ "source_passages_ref": "archive/session-*-turns.jsonl",
  "source_passages_truncated": true,
+ "target_exceeded": true,
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
@@ -949,7 +656,6 @@
   "scene": "memory/SCENE.md"
  },
  "world": {
-  "clock_list_truncated": true,
   "clocks": [
    {
     "due": "0006-10-03T06:10:00",
@@ -958,6 +664,7 @@
     "minutes": 24.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
+    "source": "recovery/GM_ONLY.json:offscreen.clocks.s17_cast_comparison",
     "status": "scheduled",
     "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
    },
@@ -968,25 +675,35 @@
     "minutes": 149.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
+    "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
     "status": "scheduled",
     "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
    }
   ],
   "due_now": [],
   "no_automatic_conclusion": true,
-  "secret_topics": [
-   "masked_leader_bomb",
-   "masked_leader_interrogation",
-   "masked_leader_new_statement",
-   "masked_scout_case",
-   "morioka_hiroaki",
+  "omitted_thread_ids": [
+   "v7",
+   "order",
+   "sanction",
+   "lower_hospital",
    "nemera",
-   "rear_cylinder_substance",
-   "rear_unknown_hired_via_drop",
-   "rear_unknown_supply_envelope",
-   "resident",
-   "separate_arcs",
-   "siton_handler_inhaled",
+   "pact",
+   "forbidden_arts",
+   "sharingan",
+   "secret_lab",
+   "parents",
+   "nori_meet",
+   "chemical_hazard",
+   "clinic_breathing_emergency",
+   "central_visitors",
+   "case19T",
+   "personal_archive",
+   "anbu_transfer",
+   "medical_family",
+   "kabuto_letter"
+  ],
+  "secret_topics": [
    "target_correction",
    "v7",
    "v7_access_plate",
@@ -995,14 +712,23 @@
    "v7_tapping"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
+  "thread_sources": "memory/INDEX.md",
   "threads": {
-   "lower_hospital": "{\"last_known\": \"s04.text.060\", \"state\": \"Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Нижнего госпиталя по сообщению Шики, их с",
-   "nemera": "{\"last_known\": \"s04.text.047\", \"state\": \"Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки",
-   "order": "{\"last_known\": \"s04.text.045\", \"state\": \"Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал",
-   "pact": "{\"state\": \"Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени.\"}",
-   "sanction": "{\"last_known\": \"s04.text.051\", \"state\": \"В 09:30 получен формально действующий документ резиденции, подпись/печать подлинна по официальной проверке, н",
-   "tetsu": "{\"last_known\": \"s04.text.064\", \"state\": \"Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори на",
-   "v7": "{\"last_known\": \"s04.text.063\", \"state\": \"02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги: один погибший защитник, один раненый, "
+   "arakawa_treatment": {
+    "source": "memory/threads/arakawa_treatment.md",
+    "state": "03.10 00:53 после одного местного Бётон-вмешательства в трансплантат Аракавы: объективное частичное улучшение при остаточных спазмах, независимость от С-17 ещё не доказана. Шики создал ВТОРУЮ пробирку для собственной да…",
+    "turn": "s07.text.029"
+   },
+   "s17_survivors": {
+    "source": "memory/threads/s17_survivors.md",
+    "state": "03 Oct 1283 05:46 patient6 has maintained early positive airway outcome after Shiki Byoton+medical repair but ventilator and S17 remain; SpO2 ~96 lower FiO2, no new inspected casts. In adjacent room Shiki awakens after …",
+    "turn": "s08.text.021"
+   },
+   "tetsu": {
+    "source": "memory/threads/tetsu.md",
+    "state": "Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты.",
+    "turn": "s04.text.064"
+   }
   }
  }
 }
