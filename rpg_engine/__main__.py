@@ -227,6 +227,7 @@ def run(args):
                                                       args.state_dir))
                 result["historical_graph_candidates"] = heuristic_history.query(
                     index, args.action, limit=args.limit)
+                live_scene.attach_history_graph(result, result["historical_graph_candidates"])
             if args.turn:
                 incoming = read_json(args.turn)
                 policy_path = args.state_dir / live_scene.POLICY_PATH
