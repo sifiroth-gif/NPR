@@ -14,6 +14,7 @@ from pathlib import Path
 import re
 
 from . import entity_memory
+from .heuristic_history import stem
 
 FORMAT = "npr-general-memory/1"
 PATH = "recovery/GENERAL_MEMORY_GM_ONLY.json"
@@ -36,7 +37,7 @@ def _norm(value):
 
 
 def _tokens(value):
-    return set(WORD.findall(_norm(value)))
+    return {stem(x) for x in WORD.findall(_norm(value))}
 
 
 def _short(value, length=220):
@@ -282,6 +283,8 @@ def build(state_dir, hot, ledger=None):
     # All aliases are lexical candidate hints: no asserted causality or knowledge.
     pattern = {}
     for key, card in entities.items():
+        if card["kind"] in ("canon", "event", "clock", "thread", "place"):
+            continue  # explicit source pointers already exist; avoid costly scans
         forms = list(dict.fromkeys(_norm(a) for a in card["aliases"] if len(_norm(a)) >= 4))
         if forms:
             pattern[key] = re.compile("|".join(
