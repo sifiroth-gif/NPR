@@ -1,0 +1,44 @@
+{
+  "schema": "npr-entity-ledger/1",
+  "entities": {
+    "recipient6": {
+      "label": "Реципиент № 6",
+      "aliases": [
+        "реципиент №6",
+        "реципиента №6",
+        "реципиента № 6",
+        "пациент №6",
+        "пациента №6",
+        "шестого",
+        "recipient6",
+        "реципиент6"
+      ],
+      "facts": [
+        {
+          "id": "recipient6:identity:sex:source-s08",
+          "field": "sex",
+          "value": "мальчик (мужской пол)",
+          "source": "archive/shiki-canon.jsonl:s08.text.005",
+          "authority": "player_correction",
+          "visibility": "gm_only"
+        },
+        {
+          "id": "recipient6:identity:age-discovery:source-s05",
+          "field": "age_at_discovery",
+          "value": "примерно шестнадцать лет",
+          "source": "archive/session-005-source.md:L3057",
+          "authority": "played_source",
+          "visibility": "gm_only"
+        },
+        {
+          "id": "recipient6:history:discovery:source-s05",
+          "field": "discovery",
+          "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
+          "source": "archive/session-005-source.md:L3057",
+          "authority": "played_source",
+          "visibility": "gm_only"
+        }
+      ]
+    }
+  }
+}
