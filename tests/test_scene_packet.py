@@ -131,6 +131,26 @@ class ScenePacketBudgetTests(unittest.TestCase):
         self.assertLessEqual(packet["budget"]["target_bytes"],
                              packet["budget"]["hard_bytes"])
 
+    def test_documented_limits_match_runtime_constants(self):
+        from pathlib import Path
+        docs = (Path(__file__).resolve().parents[1] / "docs/LIVE_SCENE_PIPELINE.md")
+        prose = docs.read_text(encoding="utf-8")
+        self.assertIn("TARGET_BRIEF_BYTES = 32000", prose)
+        self.assertIn("MAX_BRIEF_BYTES = 48000", prose)
+        self.assertEqual(live_scene.TARGET_BRIEF_BYTES, scene_packet.TARGET_BYTES)
+        self.assertEqual(live_scene.MAX_BRIEF_BYTES, scene_packet.HARD_BYTES)
+
+    def test_middle_disclosure_ids_remain_recoverable(self):
+        hot, turns = campaign()
+        packet = live_scene.build(hot, turns)
+        for actor_id in ("doctor", "nurse"):
+            record = packet["present_npcs"][actor_id]
+            if "prior_disclosure_ids" in record:
+                self.assertGreater(len(record["prior_disclosure_ids"]),
+                                   len(record["prior_disclosures"]))
+                self.assertTrue(all(value.startswith("s08.text.")
+                                    for value in record["prior_disclosure_ids"]))
+
     def test_oversized_mandatory_data_is_explicit_not_deleted(self):
         input_packet = {
             "scene": {"situation": "X" * 60000},
