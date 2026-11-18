@@ -1,0 +1,11 @@
+{
+  "schema": "npr-gate-policy/1",
+  "enabled": true,
+  "enforce_due": true,
+  "scope": "game-state/shiki",
+  "activated_at": "s07.text.031",
+  "source_rule": "Prior actor statements and player-known disclosures require exact played source IDs; newly disclosed facts require a source-bound contrast.",
+  "knowledge_rule": "Offscreen NPC knowledge requires channel and source; GM-only knowledge stays in GM_ONLY.",
+  "world_rule": "Every newly crossed time deadline must be explicitly resolved or reviewed before the next canonical turn.",
+  "fallback": "If sources are unavailable, do not invent new facts. Read the exact archived turn; never bypass a failed gate by fabricating review markers."
+}
