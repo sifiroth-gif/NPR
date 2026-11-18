@@ -44,7 +44,8 @@ def _cast(hot, actor):
     if not isinstance(card, dict):
         return {"status": "missing_card", "actor": actor}
     keys = ("name", "role", "wants", "fears", "leverage", "stance",
-            "voice", "body", "state", "seen", "knows", "hides")
+            "voice", "body", "state", "seen", "knows", "hides",
+            "competence", "limits", "misconceptions")
     profile = {}
     for k in keys:
         if k not in card:
@@ -141,6 +142,12 @@ def build(hot, turns):
                               "status": "explicit_source_record", "visibility": belief.get("visibility")})
         actors[actor] = {"profile": actor_profile,
                          "prior_disclosures": prior,
+                         "epistemic_limit": ("Hearing or repeating terminology is not understanding. "
+                                             "Infer expertise only from established training and experience; "
+                                             "a role alone grants no universal domain knowledge. "
+                                             "Allow surprise, concrete clarification, misunderstanding, "
+                                             "confident bluffing or denial according to character and risk; "
+                                             "do not make every NPC react identically."),
                          "policy": ("A source mentioning an NPC is not proof they knew "
                                     "or said it; actor knowledge and player disclosure "
                                     "require distinct evidence.")}
