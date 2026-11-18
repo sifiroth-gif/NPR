@@ -29,6 +29,16 @@
    "kind": "horror",
    "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)",
    "turn": "s08.text.002"
+  },
+  {
+   "kind": "things",
+   "text": "recipient6_airway_cast_followup: изменён предмет вне учёта; введён без проверки прежнего состояния",
+   "turn": "s08.text.003"
+  },
+  {
+   "kind": "horror",
+   "text": "4 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)",
+   "turn": "s08.text.003"
   }
  ],
  "continuity": {
@@ -48,13 +58,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T01:44:00",
+  "at": "0006-10-03T01:50:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.002",
+  "id": "s08.text.003",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
-  "time": "01:44"
+  "time": "01:50"
  },
- "digest": "a914a40b195fcc685acc4a410e47889b02c61cf40a24e654f7b55adf69c02dfc",
+ "digest": "50f3d1f731db807ffcf0152ecd24513018f69449317e685e76ca09da18693d80",
  "evidence_graph": {
   "edges": [],
   "nodes": [
@@ -69,6 +79,12 @@
     "id": "s08.text.002",
     "kind": "recent_turn",
     "line": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла д"
+   },
+   {
+    "at": "0006-10-03T01:50:00",
+    "id": "s08.text.003",
+    "kind": "recent_turn",
+    "line": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на иссле"
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -89,7 +105,7 @@
     "kadziura_satoru",
     "night_icu_physician"
    ],
-   "quiet": 3,
+   "quiet": 4,
    "since": "s08.text.002"
   },
   "npcs": {
@@ -104,18 +120,18 @@
     "stage": null
    }
   },
-  "quiet": 3,
+  "quiet": 4,
   "recent": [],
   "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
   "worn": []
  },
  "last": {
-  "gm_tail": "до 30 см водяного столба. Грудная клетка начинает двигаться равномернее.\n\nСатурация медленно поднимается до 85%.\n\nКадзиура переводит взгляд с монитора на собранный материал. Кровянистая слизь в контейнере удерживает очертания, напоминающие мелкое разветвление бронха.\n\n— Бронхиальный слепок? — произносит анестезиолог.\n\n— Возможно. Отправьте на морфологию. И проверьте, сколько ещё этого осталось в дыхательных путях.\n\nКадзиура поворачивается к Шики. Губы врача плотно сжаты; он придерживает край кровати одной рукой, второй указывает на экран аппарата.\n\n— Обструкция, по крайней мере частичная. Мы устранили часть препятствия. Газообмен остаётся тяжело нарушенным.\n\nВрач смотрит на больного.\n\n— Что вы видите, Мугами? У нас есть несколько минут до следующего решения.\n\nАнестезиолог продолжает следить за давлением и насыщением крови кислородом. В прозрачной магистрали вновь появляется тёмная слизь.",
-  "player": "По игре: иду в палату, оставляю верхнюю одежду, накидываю халат, мытьё рук и перчатки. #обслкдование шестого#"
+  "gm_tail": "иковое давление в дыхательном контуре снижается до 29 см водяного столба.\n\nКадзиура отходит от изголовья, рассматривая извлечённый материал через прозрачную стенку контейнера.\n\n— Если это будет образовываться снова с такой скоростью, одних санаций нам надолго не хватит.\n\nОн указывает на зафиксированное время первого и второго удаления слепков.\n\n— Двадцать минут назад он был на грани остановки. Теперь у нас есть возможность установить причину.\n\nВ этот момент на мониторе появляется новая отметка: **сатурация 92%**.\n\nНо в дистальных отделах правого лёгкого остаются участки, в которых даже при поддержке чакрой газообмен выраженно нарушен.\n\nКадзиура возвращает контейнер сестре.\n\n— Отправляйте срочно. Приоритетное исследование.\n\nЗатем смотрит на Шики.\n\n— Скажите, Мугами, насколько долго вы сможете удерживать такую поддержку? Мне нужно понимать, есть ли у нас время для следующего этапа лечения.",
+  "player": "#чакрой стабилизация и поддержка#"
  },
  "needs_profile": [
   {
-   "appearances": 7,
+   "appearances": 8,
    "facets": 0,
    "need": 3,
    "npc": "kadziura_satoru",
@@ -187,15 +203,20 @@
       "ch": "present",
       "turn": "s08.text.002",
       "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, при"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.003",
+      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Ч"
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 7,
+    "memory_total": 8,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.002",
+    "seen": "s08.text.003",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "03.10 01:44 urgent ward intervention: led airway evaluation, suction by anesthesia team extracted blood-streaked branching airway material with partial improvement. Ordered sterile sample for morphology, continued airway checks. Does not know carrier origin or suggest unverified genetic therapy.",
+    "state": "03.10 01:50: witnessed improved vital signs during Shiki's general medical chakra support and managed bronchoscopic removal of further two right bronchial casts through anesthesia team. Ordered emergency histology and asked how long Shiki can sustain support; still knows no Byoton or secret origin.",
     "status": "present_profile",
     "tier": "developed",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -226,13 +247,18 @@
       "ch": "present",
       "turn": "s08.text.002",
       "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, при"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.003",
+      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Ч"
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 2,
+    "memory_total": 3,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.002",
+    "seen": "s08.text.003",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
     "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
     "status": "present_profile",
@@ -250,15 +276,19 @@
   {
    "id": "s08.text.002",
    "line": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
+  },
+  {
+   "id": "s08.text.003",
+   "line": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Чакроподдержка продолжается и требует усилий."
   }
  ],
  "scene": {
-  "positions": "Shiki at bedside of ventilated recipient #6 after exam, in hospital gown and gloves; Kadziura and anesthetist at ventilator, nurse present; sealed experimental carrier remains behind locked inner cabinet in Kadziura's office.",
-  "pressure": "Hypoxemia persists despite removal of one airway obstruction, signs of recurrent tenacious sputum in ETT circuit; team is acting urgently and demands medical assessment.",
-  "situation": "03.10 01:44: Shiki voluntarily went to ward #6, removed outer clothing, washed hands, donned clean medical gown and gloves; examined recipient #6 with usual noninvasive bedside clinical exam, no special techniques. Findings: SpO2 79%, pulse 126, BP 92/58, peak airway pressure 42 cmH2O, reduced right-sided chest excursion and breath sounds, left coarse inspiratory sounds/crackles, diminished peripheral circulation, midline trachea. Plateau pressure significantly lower than peak, suggesting airway/tube resistance. Patient intubated/sedated, pupillary responses preserved, neuro assessment limited. Independently Kadziura and anesthetist conducted ETT suction; removed thick brown blood-streaked branching mucus cast (possible plastic bronchitis, not confirmed), peak pressure fell to 30, SpO2 gradually rose to 85%, still critical. Morphology ordered, recurrence visible in circuit. Clinicians request Shiki's assessment, no answer or further action yet."
+  "positions": "Shiki at recipient6 bedside sustaining medical chakra (continuous and consuming his capacity), Kadz and anesthesia team beside ventilator; tissue samples given to nurse for lab. Experimental carrier vial still isolated in locked doctor office.",
+  "pressure": "Respiratory stabilization depends on ongoing interventions; recurrent casts and unknown origin. Kadziura requests estimate of duration Shiki will sustain chakra support.",
+  "situation": "03.10 01:50. Shiki applies continuous general medical chakra to recipient6 for stabilization/support: improves function of viable respiratory cells and circulation while team maintains mechanical ventilation. Continuing expenditure of Shiki's chakra, no long-term automatic maintenance and no reversal of S17/genomic pathology. Team independently performs bronchoscopic inspection/extraction of two further right segmental bronchial casts, bleeding fragile mucosa; sends samples for urgent histology, underlying cause unknown. SpO2 rises 85→91→92%, heart rate 113, BP 101/64, peak pressure down to 29; severely ill, no confirmed recovery. Kadziura asks Shiki how long support can last; waiting for player answer. Earlier 01:47 emergency clock dealt with by stabilization and airway intervention."
  },
  "shiki": {
-  "body": "03.10.1283 00:51: левая рука цела, 4 биоптата уничтожены; создана НОВАЯ пробирка с Бётон-носителем для других пациентов, первая ранее введена Аракаве. При дальнейшей практике Бётона нагрузка договора переходит следующий порог, внешние признаки и кровь будут меняться со временем; на данный момент без кровяной инфекции.",
+  "body": "03.10 01:50: during #6 emergency Shiki continuously channels standard medical chakra to support living respiratory tissues and local perfusion; active concentration and chakra expenditure, amount not measured, no additional kekkei genkai or Zero Genome use.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -267,20 +297,20 @@
  "world": {
   "clocks": [
    {
-    "due": "0006-10-03T01:47:00",
-    "id": "s17_recipient6_next_intervention",
-    "if_unopposed": "Команда продолжает санацию и диагностический поиск причин обструкции. Дальнейшее развитие зависит от их действий и состояния пациента; исход не предрешён.",
-    "minutes": 3.0,
-    "owner": "Кадзиура Сатору и реанимационная бригада",
-    "signs": "SpO2 85%, в дыхательном контуре снова заметен густой тёмный секрет.",
+    "due": "0006-10-03T02:40:00",
+    "id": "s17_cast_morphology",
+    "if_unopposed": "Морфологическая лаборатория сообщит наблюдения и ограничения метода; не подтверждать происхождение по недостоверным данным.",
+    "minutes": 50.0,
+    "owner": "Центральный госпиталь, лаборатория морфологии",
+    "signs": "Сестра направлена с помеченными контейнерами в лабораторию по распоряжению Кадзиуры.",
     "status": "scheduled",
-    "what": "Продолжить контроль проходимости искусственных дыхательных путей, оценить повторное накопление секрета и причину устойчивой гипоксемии; не ждать бездействуя."
+    "what": "Получить и рассмотреть бронхиальные слепки пациента №6 для первичного морфологического описания без заранее определённой причины"
    },
    {
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 391.0,
+    "minutes": 385.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",

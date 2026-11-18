@@ -1,6 +1,6 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.002",
+ "cursor": "s08.text.003",
  "fold_errors": [],
  "checks": [
   {
@@ -32,6 +32,16 @@
    "turn": "s08.text.002",
    "kind": "horror",
    "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)"
+  },
+  {
+   "turn": "s08.text.003",
+   "kind": "things",
+   "text": "recipient6_airway_cast_followup: изменён предмет вне учёта; введён без проверки прежнего состояния"
+  },
+  {
+   "turn": "s08.text.003",
+   "kind": "horror",
+   "text": "4 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
