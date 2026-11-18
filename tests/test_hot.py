@@ -506,7 +506,9 @@ class HotFilesTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["errors"], [])
         self.commit("fold original")
         private = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))
-        self.assertEqual(private["undo"]["id"], "s04.text.045")
+        self.assertNotIn("undo", private)
+        undo = json.loads((self.root / hot.UNDO_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(undo["undo"]["id"], "s04.text.045")
         self.put(turn(45, "0006-10-01T07:14:00", amend=True,
                       gm="Исправленная сцена.", d={"cast": {"nori": {"knows+": ["точный факт"]}}}))
         self.assertEqual(hot.fold(self.root)["errors"], [])

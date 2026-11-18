@@ -37,6 +37,7 @@ TURN_PATH = "recovery/TURN.json"
 LEGACY_PATH = "recovery/FAST_SCENE.json"
 CAST_DIR = "recovery/cast"
 SECRET_PATH = "recovery/GM_ONLY.json"   # скрытая правда, закадровые часы, тайны NPC: игроку не открывать
+UNDO_PATH = "recovery/UNDO.GM_ONLY.json"   # снимок для amend последнего хода: отдельно, чтобы GM_ONLY читался целиком
 SECRET_SCHEMA = "npr-gm-only/2"
 CHECKS_PATH = "recovery/CHECKS.json"   # замечания свёртки: ведущий читает перед новой сценой
 CHECKS_KEEP = 16
@@ -47,7 +48,7 @@ MONTHS = ("января", "февраля", "марта", "апреля", "ма�
           "сентября", "октября", "ноября", "декабря")
 
 LINE_LIMIT = 320
-KNOWS_LIMIT = 14
+KNOWS_LIMIT = 8       # в HOT — последние; все знания на странице memory/npc/<id>.md
 CHRONICLE_IN_HOT = 4
 CANON_IN_HOT = 6
 CANON_ARCHIVE = "archive/shiki-canon.jsonl"
@@ -655,6 +656,17 @@ def _archive_canon(state_dir, hot):
         hot["canon_older"] = CANON_ARCHIVE
 
 
+def _cap_cards(hot):
+    """HOT держит в карточке только свежие знания и эпизоды; полные — в вики и archive/npc-memory."""
+    keep = npc_memory.CARD_FIRST + npc_memory.CARD_RECENT
+    for card in (hot.get("cast") or {}).values():
+        if len(card.get("knows") or []) > KNOWS_LIMIT:
+            card["knows"] = card["knows"][-KNOWS_LIMIT:]
+        memory = card.get("memory")
+        if isinstance(memory, list) and len(memory) > keep:
+            card["memory"] = memory[:npc_memory.CARD_FIRST] + memory[-npc_memory.CARD_RECENT:]
+
+
 def _trim_inactive_cast(hot):
     """Cards are already persisted in recovery/cast, so keep only scene actors."""
     present = set((hot.get("scene") or {}).get("present") or [])
@@ -699,7 +711,9 @@ def _read_state(state_dir):
     hot["offscreen"] = offscreen
     hot["_hides"] = dict(secret.get("cast") or {})
     hot["_npc_knowledge"] = dict(secret.get("npc_knowledge") or {})
-    hot["_undo"] = secret.get("undo")
+    undo_path = state_dir / UNDO_PATH
+    hot["_undo"] = (json.loads(undo_path.read_text(encoding="utf-8")).get("undo")
+                    if undo_path.is_file() else secret.get("undo"))
     hot["_psyche"] = dict(secret.get("psyche") or {})
     hot["_checks"] = list(secret.get("checks") or [])
     hot["_horror"] = dict(secret.get("horror") or {})
@@ -764,12 +778,18 @@ def _split_state(hot):
 def _write_state(state_dir, hot, before=("", "")):
     state_dir = Path(state_dir)
     public, secret = _split_state(hot)
+    undo_text = _dump({"schema": "npr-undo/1", "access": secret["access"], "undo": secret.pop("undo")})
     texts = (_dump(public), _dump(secret))
     for path, text, old in zip((HOT_PATH, SECRET_PATH), texts, before):
         if text != old:
             (state_dir / path).parent.mkdir(parents=True, exist_ok=True)
             (state_dir / path).write_text(text, encoding="utf-8")
-    return texts, texts != tuple(before)
+    undo_path = state_dir / UNDO_PATH
+    undo_changed = not undo_path.is_file() or undo_path.read_text(encoding="utf-8") != undo_text
+    if undo_changed:
+        undo_path.parent.mkdir(parents=True, exist_ok=True)
+        undo_path.write_text(undo_text, encoding="utf-8")
+    return texts, texts != tuple(before) or undo_changed
 
 
 def _write_cast(state_dir, hot):
@@ -973,6 +993,7 @@ def fold(state_dir):
     # Замечания плана — текущее состояние, не события: каждая свёртка заменяет прежние.
     hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") != "plot"]
     hot["_checks"].extend(plot.review(hot, applied))
+    _cap_cards(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
