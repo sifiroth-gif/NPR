@@ -315,6 +315,56 @@ def validate_admission(hot, turn, *, policy, accepted=()):
     return errors
 
 
+def attach_history_graph(packet, historical):
+    """Connect lexical history candidates without inventing causality.
+
+    A search hit is only a source pointer. A candidate link NEVER makes an
+    actor a witness or attributes the underlying action to them.
+    """
+    graph = packet.setdefault("evidence_graph", {"nodes": [], "edges": []})
+    existing = {node["id"] for node in graph["nodes"]}
+    seen_edges = {(e["from"], e["to"], e["kind"]) for e in graph["edges"]}
+    actors = packet.get("present_npcs") or {}
+    for hit in (historical or {}).get("matches", [])[:12]:
+        ident = "historical:" + str(hit.get("id"))
+        if ident not in existing:
+            graph["nodes"].append({
+                "id": ident, "kind": "historical_candidate",
+                "source": hit.get("source"), "lines": hit.get("lines"),
+                "at": hit.get("at"), "headline": _short(hit.get("headline", ""), 220),
+                "source_sha256": hit.get("source_sha256"),
+                "status": "candidate_only",
+            })
+            existing.add(ident)
+        # Evidence is tied to a search query, never to made-up actor knowledge.
+        target = "query:history"
+        edge = (ident, target, "retrieved_for_query")
+        if edge not in seen_edges:
+            graph["edges"].append({
+                "from": ident, "to": target, "kind": "retrieved_for_query",
+                "score": hit.get("score"),
+                "status": "candidate_only",
+            })
+            seen_edges.add(edge)
+        for actor in actors:
+            name = actors[actor].get("profile", {}).get("name", actor)
+            actor_terms = set(scene_gate._words(name))
+            matched = set(scene_gate._words(hit.get("headline", "") +
+                                               " " + hit.get("preview", "")))
+            if actor_terms & matched:
+                key = (ident, "npc:" + actor, "lexical_co_mention")
+                if key not in seen_edges:
+                    graph["edges"].append({
+                        "from": ident, "to": "npc:" + actor,
+                        "kind": "lexical_co_mention",
+                        "status": "candidate_only",
+                    })
+                    seen_edges.add(key)
+    graph["nodes"] = graph["nodes"][:MAX_GRAPH]
+    graph["edges"] = graph["edges"][:MAX_GRAPH]
+    return packet
+
+
 def write(path, packet):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
