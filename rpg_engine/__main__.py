@@ -55,6 +55,12 @@ def parser():
     live.add_argument("--action", default="")
     live.add_argument("--turn", type=Path)
     live.add_argument("--limit", type=int, default=6)
+    live.add_argument("--memory-level", type=int, choices=(0, 1, 2), default=1)
+    wide = sub.add_parser("memory-context", help="layered all-entity and source memory; no model service")
+    wide.add_argument("--state-dir", type=Path, required=True)
+    wide.add_argument("--action", default="")
+    wide.add_argument("--level", type=int, choices=(0, 1, 2), default=1)
+    wide.add_argument("--limit", type=int, default=9)
     review_scene = sub.add_parser(
         "scene-gate", help="Bleach-derived source review of NPC prior disclosures and draft novelty")
     review_scene.add_argument("--state-dir", type=Path, required=True)
@@ -211,13 +217,19 @@ def run(args):
             return scene_memory.fast_packet_from_files(
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "live-preflight":
-            from . import live_scene, scene_gate, heuristic_history, entity_memory
+            from . import live_scene, scene_gate, heuristic_history, entity_memory, general_memory
             limit_value(args.limit, 1, 12)
             merged, _ = hot._read_state(args.state_dir)
             _, turns = scene_gate.played_turns(args.state_dir)
             entity_ledger = entity_memory.load(args.state_dir)
-            result = live_scene.build(merged, turns, entity_ledger=entity_ledger)
+            memory_index = general_memory.load(args.state_dir, hot=merged, ledger=entity_ledger)
+            result = live_scene.build(merged, turns, entity_ledger=entity_ledger,
+                                      memory_index=memory_index)
             if args.action:
+                result["general_memory"] = general_memory.retrieve(
+                    memory_index, action=args.action,
+                    scene=merged.get("scene") or {}, cursor=merged.get("cursor") or {},
+                    level=args.memory_level, limit=max(args.limit, 7))
                 result["entity_memory"] = entity_memory.activate(
                     entity_ledger, scene=merged.get("scene") or {},
                     cursor=merged.get("cursor") or {}, action=args.action)
@@ -245,6 +257,15 @@ def run(args):
                 if result["admission_errors"]:
                     raise ValueError("Live admission failed: " + "; ".join(result["admission_errors"]))
             return result
+        case "memory-context":
+            from . import general_memory, entity_memory
+            limit_value(args.limit, 1, 25)
+            merged, _ = hot._read_state(args.state_dir)
+            ledger = entity_memory.load(args.state_dir)
+            index = general_memory.load(args.state_dir, hot=merged, ledger=ledger)
+            return general_memory.retrieve(
+                index, action=args.action, scene=merged.get("scene") or {},
+                cursor=merged.get("cursor") or {}, level=args.level, limit=args.limit)
         case "scene-gate":
             from . import scene_gate
             report = scene_gate.prepare(
