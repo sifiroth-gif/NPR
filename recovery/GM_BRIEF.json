@@ -41,6 +41,36 @@
    "turn": "s08.text.003"
   }
  ],
+ "context_route": {
+  "budget_bytes": 6600,
+  "cursor": "s08.text.005",
+  "epistemic_rules": {
+   "npc_knowledge": "separate from world truth and from player disclosure",
+   "shiki": "player alone owns Shiki's voluntary decisions",
+   "source_candidate": "retrieve original before treating as canon",
+   "truth": "verified fact requires source and scope"
+  },
+  "focus": [
+   "recipient6",
+   "kadziura_satoru",
+   "night_icu_physician",
+   "place:e83fa7a531838fa4"
+  ],
+  "focus_bytes": 3123,
+  "mode": "scene",
+  "needs_primary_source_review": false,
+  "omitted_critical": [],
+  "omitted_present_actors": [],
+  "read_levels": {
+   "L0": "source-bound entity facts and current scene identities",
+   "L1": "open relevant cast, equipment, process and psyche projections on demand",
+   "L2": "open exact archived turn and testimony before historical truth claims"
+  },
+  "schema": "npr-context-routing/1",
+  "status": "focused",
+  "time_advance_requires_world_review": false,
+  "unindexed_present_actors": []
+ },
  "continuity": {
   "gone": [],
   "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
@@ -64,7 +94,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "8c593a28cb34943e7ad7e0a015dff35ab29ce03b1b2cef4783743217c085d96d",
+ "digest": "6fad51c8c4634ae18f2975b98bb284efc27bf7e928ad3b2ad9ba9d99022ca927",
  "entity_memory": {
   "activated": [
    {
@@ -287,6 +317,48 @@
    "tier": "developed"
   }
  ],
+ "npc_dynamics": {
+  "actors": [
+   {
+    "committed_or_paused_intents": [],
+    "current_affect": null,
+    "id": "kadziura_satoru",
+    "identity_projection": {
+     "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
+     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
+     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
+     "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
+    },
+    "present": true,
+    "pressure_pairs": [],
+    "psyche_facets": {},
+    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
+    "unclocked_intents": [],
+    "world_clocks": []
+   },
+   {
+    "committed_or_paused_intents": [],
+    "current_affect": null,
+    "id": "night_icu_physician",
+    "identity_projection": {
+     "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
+     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
+     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное меди",
+     "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
+    },
+    "present": true,
+    "pressure_pairs": [],
+    "psyche_facets": {},
+    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
+    "unclocked_intents": [],
+    "world_clocks": []
+   }
+  ],
+  "omitted_actor_ids": [],
+  "overdue_owner_ids": [],
+  "rule": "Never drive the player character; never invent NPC action or change canon without a TURN delta. Existing intent and clock are actionable, not completed.",
+  "schema": "npr-npc-dynamics/1"
+ },
  "present_npcs": {
   "kadziura_satoru": {
    "alignment": {
