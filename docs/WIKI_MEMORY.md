@@ -15,7 +15,8 @@
 | `memory/threads/<id>.md`, `memory/threads/CLOCKS.GM_ONLY.md` | Сюжетные линии и часы мира |
 | `memory/items/<id>.md` | Вещи |
 | `memory/world-fixes.md` | Поправки игрока, не привязанные к одной странице |
-| `archive/turns/sNN/<id>.md` | Ход целиком (пока сессии 4–8) |
+| `archive/turns/sNN/<id>.md` | Ход целиком, все сессии; пометка, если ход заменён или отменён игроком |
+| `archive/session-NNN-turns.jsonl` | Единый формат архива всех сессий; устройство в `archive/README.md` |
 | `archive/deltas/session-NNN.jsonl` | Дельты `d` каждого хода: источник страниц |
 | `memory/_curated/*.json` | Проверенные дополнения хранителя в формате `d` с полем `source` |
 
@@ -35,6 +36,7 @@
 ```bash
 python -m rpg_engine wiki-backfill --state-dir STATE   # дельты прошлых ходов из истории TURN.json
 python -m rpg_engine wiki-build --state-dir STATE      # пересобрать memory/ без свёртки
+python -m rpg_engine archive-normalize --state-dir STATE  # сессии 1–3 в единый формат (разово)
 ```
 
 Если `archive/deltas/` ещё нет, свёртка сама один раз восстанавливает дельты из истории git.

@@ -728,8 +728,35 @@ def _index_page(hot, registry):
     return "\n".join(lines) + "\n"
 
 
-def _turn_files(state_dir):
+CONTINUITY = re.compile(r"campaigns/shiki/continuity/[\w.-]+\.md")
+TURN_REF = re.compile(r"s\d{2}\.text\.\d{3}")
+
+
+def turn_notes(fixes):
+    """Ходы, заменённые, отменённые или частично исправленные поправкой игрока."""
+    notes = {}
+    for fix in fixes:
+        rule = str(fix.get("rule") or "")
+        refs = TURN_REF.findall(rule)
+        others = [r for r in refs if r != fix.get("turn")]
+        replaced = CONTINUITY.search(rule)
+        if replaced and re.search(r"замен", rule, re.I) and others:
+            target, note = others[0], (f"Текст ведущего заменён поправкой игрока ({fix.get('turn')}): "
+                                       f"`{replaced.group(0)}`.")
+        elif re.search(r"ПРЯМАЯ ОТМЕНА|аннулирован\w* целиком", rule) and refs:
+            target, note = refs[0], f"Ход отменён игроком ({fix.get('turn')}): {_text(rule, 300)}"
+        elif re.search(r"ОТКАТ ОШИБКИ", rule) and refs:
+            target, note = refs[0], f"Часть текста исправлена игроком ({fix.get('turn')}): {_text(rule, 300)}"
+        else:
+            continue
+        if note not in notes.get(target, []):
+            notes.setdefault(target, []).append(note)
+    return notes
+
+
+def _turn_files(state_dir, fixes=()):
     files = {}
+    notes = turn_notes(fixes)
     for path in sorted((Path(state_dir) / "archive").glob("session-*-turns.jsonl")):
         for row in _jsonl(path):
             if not row.get("id"):
@@ -737,6 +764,19 @@ def _turn_files(state_dir):
             session = _session(row["id"])
             text = [f"# Ход `{row['id']}`", "",
                     f"{row.get('at', '')} · {row.get('place', '')}", ""]
+            for note in notes.get(row["id"], []):
+                text += [f"> **{note}**", ""]
+            meta = []
+            if row.get("legacy_id"):
+                legacy = row["legacy_id"]
+                meta.append("прежний id: " + (", ".join(legacy) if isinstance(legacy, list) else legacy))
+            if row.get("status"):
+                meta.append(f"статус: {row['status']}")
+            if row.get("source"):
+                source = row["source"]
+                meta.append("источник: " + (", ".join(source) if isinstance(source, list) else source))
+            if meta:
+                text += ["*" + " · ".join(meta) + "*", ""]
             if row.get("player"):
                 text += ["## Игрок", row["player"], ""]
             text += ["## Ведущий", row.get("gm", ""), ""]
@@ -772,7 +812,7 @@ def render(state_dir, hot, registry):
              "Те, что не относятся к одной странице. Более поздняя сильнее ранней.", ""]
     lines += [f"- {f.get('turn')}: {_text(f.get('rule'))}" for f in rest]
     files[f"{DIR}/world-fixes.md"] = "\n".join(lines) + "\n"
-    files.update(_turn_files(state_dir))
+    files.update(_turn_files(state_dir, registry["fixes"]))
     return files
 
 

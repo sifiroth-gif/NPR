@@ -82,6 +82,8 @@ def parser():
                             ("hot-check", "verify HOT v2 consistency without writing")):
         command = sub.add_parser(name, help=help_text)
         command.add_argument("--state-dir", type=Path, required=True)
+    normal = sub.add_parser("archive-normalize", help="write sessions 1-3 as session-NNN-turns.jsonl from saved sources")
+    normal.add_argument("--state-dir", type=Path, required=True)
     wiki_back = sub.add_parser("wiki-backfill", help="restore turn deltas from the git history of recovery/TURN.json")
     wiki_back.add_argument("--state-dir", type=Path, required=True)
     wiki_build = sub.add_parser("wiki-build", help="rebuild the memory/ wiki pages from all played sources")
@@ -317,6 +319,9 @@ def run(args):
             return hot.fold(args.state_dir)
         case "hot-check":
             return hot.check(args.state_dir)
+        case "archive-normalize":
+            from . import archive_normalize
+            return archive_normalize.normalize(args.state_dir)
         case "wiki-backfill":
             from . import wiki
             return wiki.backfill_deltas(args.state_dir)
