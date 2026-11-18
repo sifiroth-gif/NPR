@@ -1,16 +1,6 @@
 {
  "checks": [
   {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034",
-   "turn": "s07.text.037"
-  },
-  {
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034",
-   "turn": "s07.text.038"
-  },
-  {
    "kind": "things",
    "text": "shiki_upper_clothing: изменён предмет вне учёта; введён без проверки прежнего состояния",
    "turn": "s08.text.002"
@@ -44,11 +34,26 @@
    "kind": "horror",
    "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)",
    "turn": "s08.text.010"
+  },
+  {
+   "kind": "horror",
+   "text": "4 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)",
+   "turn": "s08.text.011"
+  },
+  {
+   "kind": "review",
+   "text": "review.sources must refer to exact prior played turns",
+   "turn": "s08.text.011"
+  },
+  {
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.010",
+   "turn": "s08.text.011"
   }
  ],
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.010",
+  "cursor": "s08.text.011",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -56,12 +61,13 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
+   "recipient6",
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6",
    "place:e83fa7a531838fa4"
   ],
-  "focus_bytes": 2760,
+  "focus_bytes": 3826,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -93,19 +99,61 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T02:56:00",
+  "at": "0006-10-03T03:09:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.010",
+  "id": "s08.text.011",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
-  "time": "02:56"
+  "time": "03:09"
  },
- "digest": "fbffd1bc250b537c7add964be066d5d0767eca4d19605c7bf3f39fae3bfff62f",
+ "digest": "e59c73503e31f66d266c3164896f79c641d8b378ff803016e4992d83b19c1241",
  "entity_memory": {
-  "activated": [],
+  "activated": [
+   {
+    "activated_by": "scene",
+    "facts": [
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "age_at_discovery",
+      "id": "recipient6:identity:age-discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "примерно шестнадцать лет",
+      "visibility": "gm_only"
+     },
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "discovery",
+      "id": "recipient6:history:discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
+      "visibility": "gm_only"
+     },
+     {
+      "authority": "player_correction",
+      "field": "sex",
+      "id": "recipient6:identity:sex:source-s08",
+      "source": "archive/shiki-canon.jsonl:s08.text.005",
+      "value": "мальчик (мужской пол)",
+      "visibility": "gm_only"
+     }
+    ],
+    "id": "recipient6",
+    "label": "Реципиент № 6",
+    "rule": "No absent demographic or biographical attribute may be guessed.",
+    "status": "source_bound"
+   }
+  ],
   "conflicts": [],
   "rule": "Entity attributes are claims with sources, not prose suggestions.",
   "schema": "npr-entity-ledger/1",
-  "total_activated": 0
+  "total_activated": 1
  },
  "evidence_graph": {
   "edges": [
@@ -156,6 +204,12 @@
     "id": "s08.text.010",
     "kind": "played_turn",
     "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддер"
+   },
+   {
+    "at": "0006-10-03T03:09:00",
+    "id": "s08.text.011",
+    "kind": "recent_turn",
+    "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной "
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -168,18 +222,53 @@
     "channels": [
      "scene_anchor"
     ],
+    "facts": [
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "age_at_discovery",
+      "id": "recipient6:identity:age-discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "примерно шестнадцать лет",
+      "visibility": "gm_only"
+     },
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "discovery",
+      "id": "recipient6:history:discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
+      "visibility": "gm_only"
+     },
+     {
+      "authority": "player_correction",
+      "field": "sex",
+      "id": "recipient6:identity:sex:source-s08",
+      "source": "archive/shiki-canon.jsonl:s08.text.005",
+      "value": "мальчик (мужской пол)",
+      "visibility": "gm_only"
+     }
+    ],
+    "id": "recipient6",
+    "kind": "entity",
+    "label": "Реципиент № 6",
+    "status": "verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
     "facts": [],
     "id": "kadziura_satoru",
     "kind": "npc",
     "label": "Кадзиура Сатору",
-    "operational_cues": {
-     "source": "recovery/cast/kadziura_satoru.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик созн",
-      "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17"
-     }
-    },
     "status": "no_verified_facts"
    },
    {
@@ -190,14 +279,6 @@
     "id": "night_icu_physician",
     "kind": "npc",
     "label": "Дежурная врач охраняемого отделения",
-    "operational_cues": {
-     "source": "recovery/cast/night_icu_physician.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
-      "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17"
-     }
-    },
     "status": "no_verified_facts"
    },
    {
@@ -208,14 +289,6 @@
     "id": "s17_recipient_6",
     "kind": "npc",
     "label": "Реципиент № 6",
-    "operational_cues": {
-     "source": "recovery/cast/s17_recipient_6.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
-      "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет"
-     }
-    },
     "status": "no_verified_facts"
    },
    {
@@ -235,7 +308,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 4
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -252,7 +325,7 @@
     "night_icu_physician",
     "s17_recipient_6"
    ],
-   "quiet": 3,
+   "quiet": 4,
    "since": "s08.text.010"
   },
   "npcs": {
@@ -275,32 +348,34 @@
     "stage": null
    }
   },
-  "quiet": 3,
+  "quiet": 4,
   "recent": [],
   "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. Каждый NPC боится своего: смотри lever.",
-  "worn": []
+  "worn": [
+   "напрягся"
+  ]
  },
  "last": {
-  "gm_tail": "атору:**\n\n— Потому что во втором случае мой ответ зависит от того, что именно вы намерены сделать.\n\nВрач сложил руки на груди. Пальцы правой кисти с усилием сжали левое предплечье.\n\n— Если вам понадобятся инструменты, наблюдение или помощь при осложнении, я выслушаю. Если вы хотите использовать собственное тело как исследовательскую систему, я должен хотя бы понимать, что буду наблюдать.\n\nЕго голос стал ниже.\n\n— И ещё одно. Сейчас этот мальчик зависит в том числе от вашей чакры. Я должен знать, что произойдёт с этой поддержкой, если ваш опыт пойдёт не так.\n\nКадзиура распрямился.\n\n**Кадзиура Сатору:**\n\n— **Изложите идею, Мугами. Полностью.** Я не дам согласия на то, чего ещё не услышал. Но и отвергать её заранее не собираюсь.\n\nНа койке мерно поднималась грудь шестнадцатилетнего подростка. В прозрачном дыхательном контуре дрожала капля конденсата.\n\nВрач ждал ответа, не отводя глаз от Шики.",
-  "player": "Есть идея. Вам не понравится. Она нарушает все протоколы, не касается пациента, она касается меня. Готовы на такое пойти что бы увеличить шанс на его выживание?"
+  "gm_tail": "ой жидкостью неизбежен. Если вы собираетесь его исследовать, сейчас подходящий момент.\n\nОн отложил инструменты.\n\n**Анестезиолог**, от аппарата ИВЛ:\n\n— Сатурация мальчика девяносто три. Пульс сто шестнадцать. Давление сто на шестьдесят два.\n\nКадзиура сразу повернул голову.\n\n**Кадзиура Сатору:**\n\n— Поддержка ослабла?\n\n**Анестезиолог:**\n\n— По показателям — да. Но дыхательные пути пока проходимы.\n\nВрач вновь посмотрел на Шики.\n\nТеперь ему было известно нечто совершенно конкретное: перед ним находился человек, добровольно допустивший внедрение потенциально опасной чужой ткани в собственную мышцу ради диагностики.\n\nНо **каким образом Шики намеревался использовать этот биоптат**, Кадзиура по-прежнему не знал.\n\nПод кожей левого плеча находился образец ткани шестого реципиента. Он был доступен для исследования способностями Шики; никакая генетическая ассимиляция или перестройка ещё не начиналась.",
+  "player": "Хорошо. Вот теперь ты хотя бы обосновываешь. По игре: вы хороший врач, проницательный. Суть в том, что я сам по себе отличная диагностическая станция. На это я потрачу чакру и сократиться время поддержания, но я могу выявить патоген. Вы сказали что можете взять образц ткани, берите, а потом вскройте меня по мышце и вложите туда биоптат."
  },
  "needs_profile": [
   {
-   "appearances": 12,
+   "appearances": 13,
    "facets": 0,
    "need": 3,
    "npc": "kadziura_satoru",
    "tier": "developed"
   },
   {
-   "appearances": 7,
+   "appearances": 8,
    "facets": 0,
    "need": 3,
    "npc": "night_icu_physician",
    "tier": "developed"
   },
   {
-   "appearances": 4,
+   "appearances": 5,
    "facets": 0,
    "need": 3,
    "npc": "s17_recipient_6",
@@ -322,16 +397,7 @@
     "identity_source": "HOT.cast",
     "identity_status": "operational_or_archival_projection_not_new_fact",
     "present": true,
-    "pressure_pairs": [
-     {
-      "anchor": {
-       "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-       "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-      },
-      "kind": "goal_at_risk",
-      "status": "possibility_to_test_not_a_fact"
-     }
-    ],
+    "pressure_pairs": [],
     "psyche_facets": {},
     "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
     "unclocked_intents": [],
@@ -354,16 +420,7 @@
     "identity_source": "HOT.cast",
     "identity_status": "operational_or_archival_projection_not_new_fact",
     "present": true,
-    "pressure_pairs": [
-     {
-      "anchor": {
-       "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
-       "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
-      },
-      "kind": "goal_at_risk",
-      "status": "possibility_to_test_not_a_fact"
-     }
-    ],
+    "pressure_pairs": [],
     "psyche_facets": {},
     "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
     "unclocked_intents": [],
@@ -413,9 +470,16 @@
     "due": "0006-10-03T03:20:00",
     "owner": "Дежурная сестра и Кадзиура Сатору",
     "status": "unresolved_actor_or_non_npc_owner"
+   },
+   {
+    "clock_id": "s17_implanted_biopsy_viability",
+    "due": "0006-10-03T03:23:00",
+    "owner": "Физиология живого бронхиального биоптата и Мугами Шики",
+    "status": "unresolved_actor_or_non_npc_owner"
    }
   ]
  },
+ "over_budget": true,
  "present_npcs": {
   "kadziura_satoru": {
    "alignment": {
@@ -450,7 +514,7 @@
     {
      "at": "0006-10-03T02:56:00",
      "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
-     "sha256": "083a04cd8483ee6d1d6d1cf31613a30f4af071366bd8e7701a0022d5f1bcfd09",
+     "sha256": "6cabd40c60807142197fc915eb4d1805b9eb8512ed2c7c5e1e5975b3f6c7d060",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.010"
@@ -475,11 +539,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.006",
-      "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхожде"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.007",
       "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
      },
@@ -492,15 +551,20 @@
       "ch": "present",
       "turn": "s08.text.010",
       "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.011",
+      "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 12,
+    "memory_total": 13,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.010",
+    "seen": "s08.text.011",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "02:56 heard Shiki propose a protocol-violating idea involving experimentation on his own body for patient benefit. Doctor neither accepts nor rejects hypothetical experiment, requests concrete method and clarity on impact on chakra support; professional reserve and wariness persist.",
+    "state": "03:09: after hearing Shiki describe himself as biological diagnostic station, agreed to carefully limited self-experiment using his own body. Conducted targeted bronchial biopsies in recipient6, created sterile deltoid muscle pocket in Shiki and inserted fresh ~2mm patient bronchial tissue, documented procedure. Does not know Shiki's Zero Genome or Byoton; watches patient vital signs. Increasingly troubled by method but decides patient opportunity warrants calculated protocol breach.",
     "status": "present_profile",
     "tier": "developed",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -530,7 +594,7 @@
     {
      "at": "0006-10-03T02:56:00",
      "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не о",
-     "sha256": "083a04cd8483ee6d1d6d1cf31613a30f4af071366bd8e7701a0022d5f1bcfd09",
+     "sha256": "6cabd40c60807142197fc915eb4d1805b9eb8512ed2c7c5e1e5975b3f6c7d060",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.010"
@@ -550,11 +614,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.006",
-      "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхожде"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.007",
       "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
      },
@@ -567,13 +626,18 @@
       "ch": "present",
       "turn": "s08.text.010",
       "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.011",
+      "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 7,
+    "memory_total": 8,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.010",
+    "seen": "s08.text.011",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
     "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
     "status": "present_profile",
@@ -596,11 +660,6 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.006",
-      "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхожде"
-     },
-     {
-      "ch": "present",
       "turn": "s08.text.007",
       "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную "
      },
@@ -613,14 +672,19 @@
       "ch": "present",
       "turn": "s08.text.010",
       "what": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде "
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.011",
+      "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики"
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
-    "memory_total": 4,
+    "memory_total": 5,
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-    "seen": "s08.text.010",
-    "state": "02:54 16yo boy intubated on ventilation and S17 infusion, conscious status limited by sedation; after targeted viable bronchial regeneration SpO2 96%, HR98, BP108/70, peak pressure26, persistent unstable deeper right bronchial epithelial focus.",
+    "seen": "s08.text.011",
+    "state": "03:09: sedated sixteen-year-old recipient of S17, ventilated with unchanged medication, underwent limited bronchoscopic paired biopsies of damaged right bronchial mucosa; mild capillary bleeding controlled. SpO2 93% HR116 BP100/62; no genetic treatment. His live tissue biopsy is now inside Shiki's left deltoid, another biopsy for pathology; still critically ill.",
     "status": "present_profile",
     "tier": "developed"
    }
@@ -628,25 +692,25 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.007",
-   "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную пробу. Диалоги атрибутированы."
-  },
-  {
    "id": "s08.text.009",
    "line": "Шики ответил Кадзиуре об утрате связности вновь образованных клеток и белковом экссудате и спросил о пересадке лёгочной ткани. Кадзиура сообщил: в доступных документах пересадки нет, неполные записи из корпуса №3 не позволяют исключить скрытое вмешательство."
   },
   {
    "id": "s08.text.010",
    "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
+  },
+  {
+   "id": "s08.text.011",
+   "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
   }
  ],
  "scene": {
-  "positions": "Shiki bedside maintaining medical chakra support, facing Kadziura who stands within arm's reach and awaits explanation; boy ~16 on ventilator, sedated, on ongoing S17; anesthetist at monitor. Nurse has left for original hospital transfer records. Carrier sealed locked in Kadziura office.",
-  "pressure": "Kadziura asks exact self-experiment method and consequences for current ongoing life support, no prior approval of unknown risks.",
-  "situation": "03.10 02:56: Shiki voiced a potential idea involving unconventional experiment on himself, not on 16yo recipient #6, asks Kadziura whether willing to participate to improve chance of recipient survival. No method specified. Kadziura, wary but medically interested, refuses advance blind consent, asks what the actual experiment is and how to ensure continued chakra support for patient if Shiki becomes incapacitated. Team maintains existing ventilation and S17 infusion; currently SpO2 96% at same settings, stable peak pressure. No procedure begun."
+  "positions": "Shiki at bedside after requested surgery with new sterile dressing/sutures over left deltoid and living ~2mm biopsy of recipient6 bronchial mucosa housed in shallow left deltoid muscle pocket; medically supported boy ~16 remains on ventilator and existing S17. Kadziura at Shiki's shoulder, anesthetist at recipient's ventilator; second independent biopsy in pathology container. Experimental gene carrier still sealed and locked in Kadziura's office.",
+  "pressure": "Shiki faces choice of whether/how to activate diagnostic abilities using just-implanted biopsy with ongoing chakra allocation; recipient oxygenation fell slightly to 93 while medical support split, standard ICU care ongoing.",
+  "situation": "03.10 03:09. Shiki explained to Kadziura that his own body can serve as a diagnostic station, at chakra cost reducing time available for maintaining recipient6, explicitly asked Kadziura to biopsy damaged bronchial tissue from recipient #6 and incise Shiki's muscle and implant a viable fragment. After independent professional hesitation, Kadziura accepted restricted biopsy and separate surgery, documented and prepared two separate sterile instrument sets. ~03:04 physician bronchoscopically took two small 2mm edge biopsies of still unstable right bronchial mucosa: one stored for ordinary formal histology, one maintained fresh in sterile nutrient medium for transplant. Small capillary bleed controlled by anesthetist; at procedure patient SpO2 94% Ppeak28, usual ventilator and S17 support unchanged. ~03:09 Kadziura opened superficial left deltoid skin, fascia and muscle fibers, implanted the fresh bronchial fragment into shallow intramuscular pocket and closed wound with interrupted stitches, no complications determined yet. Shiki has not invoked Zero Genome, assimilated fragment or modified cells, and no pathogen has been detected. At 03:09 recipient SpO2 93%, pulse 116, BP100/62, airway patent, consistent with less chakra support during diagnostic preparation; remains ventilated, S17 infused. Kadziura knows only patient-to-Shiki self-experimental tissue implantation and Shiki's claimed bodily diagnostic ability, not exact mechanism, Null Genome or Byoton."
  },
  "shiki": {
-  "body": "02:54: Shiki completed targeted regenerative medchakra on surviving bronchial mucosa of recipient6 while sustaining support; additional chakra expenditure; no contract stage change or Zero Genome used.",
+  "body": "03.10 03:09: left deltoid sterile incision through skin fascia and superficial muscle closed with interrupted stitches, contains fresh ~2mm bronchial mucosal biopsy from recipient6 in small intramuscular pocket, independent from Shiki own muscle cells at implantation. No Zero Genome yet activated on sample, no assimilation and no regeneration/repair of Shiki's incision declared. Medical chakra allocation between patient and pending self diagnostics, exact expenditure unquantified.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -660,17 +724,27 @@
     "due": "0006-10-03T03:20:00",
     "id": "s17_patient6_intake_record_review",
     "if_unopposed": "Персонал найдёт реально имеющиеся листы и сообщит их содержание; неполные записи не превращать в доказательство отсутствия вмешательства.",
-    "minutes": 24.0,
+    "minutes": 11.0,
     "owner": "Дежурная сестра и Кадзиура Сатору",
     "signs": "02:55 Кадзиура поручил сестре поднять архив поступления из исследовательского корпуса №3.",
     "status": "scheduled",
     "what": "Найти и сверить подлинные документы первичного осмотра реципиента №6, записи об операциях и прошлых бронхоскопиях; доложить ограничения и пробелы."
    },
    {
+    "due": "0006-10-03T03:23:00",
+    "id": "s17_implanted_biopsy_viability",
+    "if_unopposed": "Ткань постепенно теряет жизнеспособность по мере ишемии без специальных мер; не считать её автоматически прижившейся или генетически усвоенной.",
+    "minutes": 14.0,
+    "owner": "Физиология живого бронхиального биоптата и Мугами Шики",
+    "signs": "03:09 живой бронхиальный биоптат только что перенесён в левую дельтовидную мышцу; полноценного общего кровоснабжения нет.",
+    "status": "scheduled",
+    "what": "Сохранение жизнеспособности неваскуляризированного тканевого фрагмента в мышечном ложе; требуется внимание при длительном бездействии."
+   },
+   {
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 194.0,
+    "minutes": 181.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "status": "scheduled",
@@ -680,7 +754,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 319.0,
+    "minutes": 306.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "status": "scheduled",
