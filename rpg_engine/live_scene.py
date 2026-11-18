@@ -49,6 +49,9 @@ def _cast(hot, actor):
     provenance = card.get("knowledge_provenance")
     if provenance:
         profile["knowledge_provenance"] = provenance[-12:]
+    hidden = (hot.get("_npc_knowledge") or {}).get(actor, [])
+    if hidden:
+        profile["gm_private_beliefs"] = hidden[-10:]
     profile["status"] = "present_profile"
     return profile
 
@@ -95,7 +98,20 @@ def build(hot, turns):
             edges.append({"from": left["turn"], "to": right["turn"],
                           "kind": "chronology_same_actor", "actor": actor,
                           "status": "source_order_only"})
-        actors[actor] = {"profile": _cast(hot, actor),
+        actor_profile = _cast(hot, actor)
+        for belief in (actor_profile.get("knowledge_provenance", []) +
+                       actor_profile.get("gm_private_beliefs", [])):
+            source = belief.get("source")
+            if source in all_turns:
+                if source not in node_ids:
+                    node_ids.add(source)
+                    nodes.append({"id": source, "kind": "knowledge_source",
+                                  "at": all_turns[source].get("at", ""),
+                                  "line": _short(all_turns[source].get("line", ""), 180)})
+                edges.append({"from": source, "to": "npc:" + actor,
+                              "kind": "actor_received_by_" + belief.get("channel", "unknown"),
+                              "status": "explicit_source_record", "visibility": belief.get("visibility")})
+        actors[actor] = {"profile": actor_profile,
                          "prior_disclosures": prior,
                          "policy": ("A source mentioning an NPC is not proof they knew "
                                     "or said it; actor knowledge and player disclosure "
@@ -219,6 +235,28 @@ def validate_admission(hot, turn, *, policy, accepted=()):
             contrast = review.get("novelty_contrast")
             if not isinstance(contrast, str) or len(contrast.strip()) < 40:
                 errors.append("new NPC revelation requires source-bound novelty_contrast")
+    # Validate every new source-bound NPC knowledge event, including private
+    # memories. A hidden belief may use the same storage transaction without
+    # making its content public.
+    events = (turn.get("d") or {}).get("knowledge_events") or []
+    for evidence in events:
+        if not isinstance(evidence, dict):
+            errors.append("knowledge_events contains non-object evidence")
+            continue
+        source = evidence.get("source")
+        channel = evidence.get("channel")
+        actor = evidence.get("actor")
+        if (not evidence.get("claim") or channel not in
+                ("message", "witness", "document", "inference", "told_in_scene")):
+            errors.append("knowledge_event requires claim and valid channel")
+        if source not in known and not (
+                source == turn["id"] and actor in actor_ids
+                and channel in ("witness", "told_in_scene")):
+            errors.append("knowledge_event source not prior/observed: " + str(source))
+        if (evidence.get("visibility") == "gm_only" and
+                evidence.get("claim") in ((turn.get("d") or {})
+                                           .get("cast", {}).get(actor, {}).get("knows+") or [])):
+            errors.append("secret NPC belief must not be duplicated in public knows+")
     # Only source-authenticated knowledge may be delivered to a remote actor.
     # Actors already present can learn by hearing/seeing the current scene.
     for actor, patch in (turn.get("d") or {}).get("cast", {}).items():
