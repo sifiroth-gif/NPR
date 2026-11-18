@@ -364,18 +364,29 @@ def retrieve(index, *, action="", scene=None, cursor=None, limit=MAX_BRIEF_ENTIT
     scene = scene or {}
     scene_text = " ".join(str(scene.get(k) or "") for k in
                           ("situation", "positions", "pressure", "present"))
-    scene_text += " " + str(cursor.get("place") or "")
+    local_text = scene_text + " " + str(cursor.get("place") or "")
+    present = set(scene.get("present") or [])
     question_terms = _tokens(action)
     scored = {}
     channels = {}
     for key, card in index.get("entities", {}).items():
         forms = [key, card.get("label", "")] + card.get("aliases", [])
         by_action = bool(action and any(_match(action, a) for a in forms if len(a) >= 4))
-        by_scene = any(_match(scene_text, a) for a in forms if len(a) >= 4)
+        if card["kind"] == "place":
+            # A shared building name does not make every prior ward/office
+            # the active location. Only its exact scene place is activated.
+            by_scene = _norm(card.get("label")) == _norm(cursor.get("place"))
+        else:
+            by_scene = any(_match(local_text, a) for a in forms if len(a) >= 4)
         profile_text = " ".join(str(p) for p in card.get("projections", []))
         facts_text = " ".join(str(f.get("value")) for f in card.get("facts", []))
         overlap = len(question_terms & _tokens(card.get("label", "") + " " + facts_text + " " + profile_text))
-        score = (100 if by_action else 0) + (70 if by_scene else 0) + min(overlap, 6) * 2
+        known = any(_fact_valid(f, cursor.get("at", "")) for f in card.get("facts", []))
+        score = ((140 if by_action else 0) + (90 if by_scene else 0) +
+                 (50 if known and by_scene else 0) +
+                 (25 if key in present else 0) +
+                 (12 if card["kind"] == "place" and by_scene else 0) +
+                 min(overlap, 6) * 2)
         if score == 0:
             continue
         scored[key] = score
@@ -395,8 +406,16 @@ def retrieve(index, *, action="", scene=None, cursor=None, limit=MAX_BRIEF_ENTIT
 
     selected = sorted(scored, key=lambda x: (-scored[x], x))
     chosen = []
-    for key in selected[:max(1, limit)]:
+    place_count = 0
+    for key in selected:
+        if len(chosen) >= max(1, limit):
+            break
         card = index["entities"][key]
+        # Do not allow 80 historical rooms to evict people or objects.
+        if card["kind"] == "place":
+            if place_count >= (3 if action else 1):
+                continue
+            place_count += 1
         evidence = [f for f in card.get("facts", []) if _fact_valid(f, cursor.get("at", ""))]
         priority = {"identity", "sex", "age_at_discovery", "birth_date",
                     "species", "origin", "relationship", "discovery"}
