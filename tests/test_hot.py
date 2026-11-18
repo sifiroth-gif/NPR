@@ -138,6 +138,20 @@ class HotFoldTest(unittest.TestCase):
         self.assertIn("Тэцу зарезан в лазарете управления", outcomes)
         self.assertEqual(state["offscreen"]["due_now"], [])
 
+    def test_private_npc_knowledge_is_stored_only_in_gm_only(self):
+        state = base()
+        evidence = {"actor": "nori", "claim": "тайный источник приказа",
+                    "source": "s04.text.044", "channel": "document",
+                    "visibility": "gm_only", "certainty": 0.7}
+        hot.apply_turn(state, turn(45, "0006-10-01T07:14:00",
+                                  d={"knowledge_events": [evidence]}))
+        public, hidden = hot._split_state(state)
+        self.assertNotIn("тайный источник приказа",
+                         json.dumps(public, ensure_ascii=False))
+        self.assertIn("тайный источник приказа",
+                      json.dumps(hidden, ensure_ascii=False))
+        self.assertEqual(hidden["npc_knowledge"]["nori"][0]["source"], "s04.text.044")
+
     def test_pact_event_is_counted_once(self):
         state = base()
         event = {"id": "s04.text.045:cast", "type": "cast_B", "school": "byoton"}
