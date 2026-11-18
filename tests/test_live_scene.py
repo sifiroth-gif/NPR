@@ -102,7 +102,7 @@ class LiveSceneTests(unittest.TestCase):
         errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
         self.assertTrue(any("offscreen knows+" in e for e in errors))
         t["d"]["knowledge_events"] = [
-            {"actor": "tetsu", "channel": "message", "source": "s07.text.013"}]
+            {"actor": "tetsu", "channel": "message", "claim": "Shiki is in office", "source": "s07.text.013"}]
         self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
                                                       accepted=self.old), [])
 
@@ -117,6 +117,21 @@ class LiveSceneTests(unittest.TestCase):
         t["d"]["clocks"] = {"delivery": {"done": "NPC returned and reported"}}
         self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
                                                       accepted=self.old), [])
+
+    def test_hidden_belief_has_provenance_without_public_contradiction(self):
+        t = turn()
+        t["d"]["world_reviewed"] = ["delivery"]
+        t["d"]["knowledge_events"] = [{
+            "actor": "arakawa", "source": "s07.text.013",
+            "channel": "document", "claim": "A private hidden name",
+            "visibility": "gm_only", "certainty": 0.8,
+        }]
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+        t["d"]["cast"] = {"arakawa": {"knows+": ["A private hidden name"]}}
+        errs = live_scene.validate_admission(self.h, t, policy=self.policy,
+                                             accepted=self.old)
+        self.assertTrue(any("secret NPC belief" in e for e in errs), errs)
 
     def test_inert_policy_maintains_legacy_compatibility(self):
         t = turn()
