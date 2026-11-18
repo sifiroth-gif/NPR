@@ -91,7 +91,7 @@
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
    ],
-   "seen": "s08.text.013",
+   "seen": "s08.text.014",
    "state": "03:17 Kadziura instructed her to keep unusual Shiki surgery out of general night log for now while preserving original, and send second biopsy for independent analysis to Kuroda Mayu; she retains copy with recipient6 case number and may independently act.",
    "memory": [
     {
@@ -169,7 +169,7 @@
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing.",
     "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue."
    ],
-   "seen": "s08.text.013",
+   "seen": "s08.text.014",
    "state": "03:17 observed Shiki's surgical wound heal rapidly under visible sutures while donor sample stays inside; amended operation documentation and restricts self-experiment from open night log, independently orders second sample to Kuroda Mayu. Asks for findings but does not know them. Prior dread calibrated stage2, now response changes tangible practice.",
    "memory": [
     {
@@ -234,7 +234,7 @@
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.013",
+   "seen": "s08.text.014",
    "memory": [
     {
      "turn": "s08.text.006",
@@ -606,11 +606,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.010",
-   "at": "0006-10-03T02:56:00",
-   "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать."
-  },
-  {
    "id": "s08.text.011",
    "at": "0006-10-03T03:09:00",
    "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
@@ -625,12 +620,18 @@
    "id": "s08.text.013",
    "at": "0006-10-03T03:17:00",
    "line": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики."
+  },
+  {
+   "id": "s08.text.014",
+   "at": "0006-10-03T03:17:00",
+   "line": "OOC: подтверждено наложение швов Кадзиурой в s08.text.011. Обновлены инструкции MEDICINE.md и GM_CORE.md §6: медицинские механизмы нужно пояснять профессионально; время 03:17 не изменено.",
+   "ooc": true
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.013",
-  "seq": 13,
+  "id": "s08.text.014",
+  "seq": 14,
   "at": "0006-10-03T03:17:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
@@ -693,13 +694,13 @@
   }
  },
  "fold": {
-  "commit": "6f432032796739df272dac91669f875ba18e8688",
-  "turns": 218,
+  "commit": "eb975c48c2f7b9f36f5a1cd14e79e394195f9f8b",
+  "turns": 219,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "d834fa053c511b7c2c318dfb249612d3b448354e93ba0b20b31945587e6f0ca3"
+  "turn_digest": "82344810d46416412be3de9caea65de2c5a85aad3bb1a5770f1e325d6ebeaa09"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
