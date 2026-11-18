@@ -65,7 +65,7 @@ jobs:
               print("::error::" + item)
           sys.exit(1 if fold["errors"] or not check["ok"] else 0)
           PY
-            git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/cast archive
+            git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json recovery/cast archive
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
               break
