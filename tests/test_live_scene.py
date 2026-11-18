@@ -1,0 +1,136 @@
+"""Integrated live scene memory, actor knowledge and world time gates."""
+import copy
+import json
+import unittest
+
+from rpg_engine import live_scene
+
+
+def source(num, line, gm):
+    return {"id": f"s07.text.{num:03}", "at": f"0006-10-02T23:{num:02}:00",
+            "place": "office", "player": "Ask", "line": line, "gm": gm}
+
+
+def hot():
+    return {
+        "cursor": {"id": "s07.text.029", "at": "0006-10-03T00:53:00",
+                   "place": "office", "date": "Вторник", "time": "00:53"},
+        "last": {"player": "Will the suppliers come?", "gm": "He watched the door."},
+        "scene": {"present": ["arakawa"], "situation": "office discussion",
+                  "npc_disclosures_to_player": {"arakawa": [
+                      {"turn": "s07.text.012", "source": "archive/session-007-turns.jsonl"},
+                      {"turn": "s07.text.013", "source": "archive/session-007-turns.jsonl"},
+                  ]}},
+        "cast": {"arakawa": {"name": "Аракава Дзюн", "wants": "survive",
+                             "knows": ["Own medicine schedule"],
+                             "hides": "Does not want to give a signed confession"}},
+        "offscreen": {"truth": {"donor": {"unknown": True}},
+                      "clocks": {"delivery": {
+                          "owner": "supplier", "what": "check missed S-17",
+                          "due": "0006-10-03T00:54:00",
+                          "signs": "missed call",
+                          "if_unopposed": "followup requested"}}},
+        "threads": {"v7": {"state": "pending investigation"}},
+        "shiki": {"body": "healed"},
+    }
+
+
+def turn(gm="The inspector moved his hand.", player="I look at him"):
+    return {
+        "schema": "npr-turn/2", "id": "s07.text.030",
+        "at": "0006-10-03T00:55:00", "place": "office",
+        "player": player, "gm": gm, "line": "The inspector moved his hand.",
+        "d": {"scene": {}},
+        "review": {"predecessor": "s07.text.029", "sources": ["s07.text.012", "s07.text.013"]},
+    }
+
+
+class LiveSceneTests(unittest.TestCase):
+    def setUp(self):
+        self.h = hot()
+        self.old = [source(12, "Аракава признал зависимость от С-17", "A confession"),
+                    source(13, "Аракава предъявил папку с запросом В-7", "An old document")]
+        self.policy = {"enabled": True, "enforce_due": True}
+
+    def test_compact_brief_has_source_bound_memories_and_private_clocks(self):
+        brief = live_scene.build(self.h, self.old)
+        self.assertEqual(brief["format"], live_scene.FORMAT)
+        self.assertEqual(brief["cursor"]["id"], "s07.text.029")
+        prior = brief["present_npcs"]["arakawa"]["prior_disclosures"]
+        self.assertEqual([x["turn"] for x in prior], ["s07.text.012", "s07.text.013"])
+        self.assertEqual(prior[0]["gm_excerpt"], "A confession")
+        self.assertIn("delivery", brief["world"]["due_now"])  # clock before cursor
+        self.assertEqual(brief["world"]["secret_topics"], ["donor"])
+        self.assertTrue(all(edge["status"] == "source_order_only"
+                            for edge in brief["evidence_graph"]["edges"]))
+        self.assertEqual(brief["digest"], live_scene._digest({
+            key: value for key, value in brief.items() if key != "digest"}))
+
+    def test_missing_review_rejected_for_sensitive_question(self):
+        t = turn(player="Аракава, о чём вы прежде молчали?")
+        t.pop("review")
+        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
+        self.assertTrue(any("predecessor" in e for e in errors), errors)
+        self.assertTrue(any("review.sources" in e for e in errors), errors)
+
+    def test_source_replay_must_cover_prior_actor_disclosures(self):
+        t = turn(player="Аракава, что вы сказали мне раньше?")
+        t["review"]["sources"] = ["s07.text.013"]
+        t["d"]["world_reviewed"] = ["delivery"]
+        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
+        self.assertTrue(any("s07.text.012" in e for e in errors), errors)
+        t["review"]["sources"] = ["s07.text.012", "s07.text.013"]
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+
+    def test_false_novelty_claim_needs_comparison(self):
+        t = turn(gm="Аракава впервые признал, что ему нужен С-17.",
+                 player="Зачем вы хотели В-7?")
+        t["d"]["world_reviewed"] = ["delivery"]
+        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
+        self.assertTrue(any("novelty_contrast" in e for e in errors))
+        t["review"]["novelty_contrast"] = (
+            "The old source already mentions S-17, the new source would have "
+            "to provide a distinct document or change in testimony.")
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+
+    def test_remote_npc_knowledge_needs_delivery_channel(self):
+        t = turn()
+        t["d"]["world_reviewed"] = ["delivery"]
+        t["d"]["cast"] = {"tetsu": {"knows+": ["Shiki is in office"]}}
+        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
+        self.assertTrue(any("offscreen knows+" in e for e in errors))
+        t["d"]["knowledge_events"] = [
+            {"actor": "tetsu", "channel": "message", "source": "s07.text.013"}]
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+
+    def test_world_deadline_needs_adjudication_on_jump(self):
+        t = turn()
+        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
+        self.assertTrue(any("delivery" in e for e in errors))
+        t["d"]["world_reviewed"] = ["delivery"]
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+        t["d"]["world_reviewed"] = []
+        t["d"]["clocks"] = {"delivery": {"done": "NPC returned and reported"}}
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+
+    def test_inert_policy_maintains_legacy_compatibility(self):
+        t = turn()
+        t.pop("review")
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy={"enabled": False},
+                                                      accepted=self.old), [])
+
+    def test_ooc_never_moves_clock_or_needs_review(self):
+        t = turn()
+        t["kind"] = "ooc"
+        t.pop("review")
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
+                                                      accepted=self.old), [])
+
+
+if __name__ == "__main__":
+    unittest.main()
