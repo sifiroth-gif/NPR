@@ -771,6 +771,14 @@ def fold(state_dir):
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
+    if applied:
+        # Cache the actor-scoped historical SOURCE pointers in ordinary HOT.
+        # Next-turn preparation now sees older disclosures without an extra
+        # repository search or a separate knowledge store.
+        from . import scene_gate
+        _, accepted = scene_gate.played_turns(state_dir)
+        hot.setdefault("scene", {})["npc_disclosures_to_player"] = (
+            scene_gate.compact_disclosure_cues(hot, accepted))
     texts, changed = _write_state(state_dir, hot, before)
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
