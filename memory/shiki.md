@@ -3,13 +3,13 @@
 Персонаж игрока. Мысли, слова и добровольные действия Шики не придумывать.
 
 ## Договор Семи замков сейчас
-- стадия 4: Чёрные сосуды (значение 60.1566)
+- стадия 4: Чёрные сосуды (значение 63.328)
 
 ## Лист персонажа
 - campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json
 
 ## Тело сейчас
-- 03.10 03:18: left deltoid fully restored and without stitches or scar; Zero Genome dissolved organic suture material. Live sample of recipient6 bronchial tissue deliberately isolated in chakra-managed intramuscular pocket, not incorporated into Shiki cells or genetic program. Chakra support costs ongoing.
+- 04:12 fully depleted chakra, unconscious from strenuous simultaneous Byoton infection/medical regeneration, breathing independently and with reactive pupils; left deltoid healed and contains tiny non-integrated patient6 bronchial biopsy, now lacking sustaining chakra, begins ischemic loss. No bare skin handling by attending doctors after Shiki warned them.
 
 ## Внешность
 - 20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.019",
+  "cursor": "s08.text.020",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -355,6 +355,56 @@
         "recovery/GM_ONLY.json"
       ]
     },
+    "clock:shiki_biopsy_ischemia": {
+      "aliases": [
+        "clock:shiki biopsy ischemia",
+        "Неваскуляризированная чужая ткань остаётся после прекращения поддерживающей чакры",
+        "shiki_biopsy_ischemia",
+        "shiki biopsy ischemia"
+      ],
+      "facts": [],
+      "id": "clock:shiki_biopsy_ischemia",
+      "kind": "clock",
+      "label": "Неваскуляризированная чужая ткань остаётся после прекращения поддерживающей чакры",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "due": "0006-10-03T04:25:00",
+          "owner": "Биоптат №6 в левой дельтовидной мышце Шики",
+          "what": "Неваскуляризированная чужая ткань остаётся после прекращения поддерживающей чакры"
+        }
+      ],
+      "sources": [
+        "recovery/GM_ONLY.json",
+        "s08.text.020"
+      ]
+    },
+    "clock:shiki_unconscious_observation": {
+      "aliases": [
+        "clock:shiki unconscious observation",
+        "Контроль сознания, дыхания и кровообращения Шики при выраженном истощении чакры; без прямого кожного контакта",
+        "shiki_unconscious_observation",
+        "shiki unconscious observation"
+      ],
+      "facts": [],
+      "id": "clock:shiki_unconscious_observation",
+      "kind": "clock",
+      "label": "Контроль сознания, дыхания и кровообращения Шики при выраженном истощении чакры; без прямого кожного контакта",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "due": "0006-10-03T04:30:00",
+          "owner": "Кадзиура и дежурная медицинская бригада",
+          "what": "Контроль сознания, дыхания и кровообращения Шики при выраженном истощении чакры; без прямого кожного контакта"
+        }
+      ],
+      "sources": [
+        "recovery/GM_ONLY.json",
+        "s08.text.020"
+      ]
+    },
     "courier_unknown": {
       "aliases": [
         "courier unknown",
@@ -380,6 +430,48 @@
       ],
       "sources": [
         "recovery/cast/courier_unknown.json"
+      ]
+    },
+    "event:s08.text.020:infection": {
+      "aliases": [
+        "event:s08.text.020:infection",
+        "attempt"
+      ],
+      "facts": [],
+      "id": "event:s08.text.020:infection",
+      "kind": "event",
+      "label": "attempt",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "at": "0006-10-03T04:12:00",
+          "kind": "attempt"
+        }
+      ],
+      "sources": [
+        "s08.text.020"
+      ]
+    },
+    "event:s08.text.020:overload": {
+      "aliases": [
+        "event:s08.text.020:overload",
+        "overload"
+      ],
+      "facts": [],
+      "id": "event:s08.text.020:overload",
+      "kind": "event",
+      "label": "overload",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "at": "0006-10-03T04:12:00",
+          "kind": "overload"
+        }
+      ],
+      "sources": [
+        "s08.text.020"
       ]
     },
     "front_unknown": {
@@ -554,7 +646,7 @@
       "id": "kadziura_satoru",
       "kind": "npc",
       "label": "Кадзиура Сатору",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0006-10-03T01:14:00",
@@ -562,13 +654,6 @@
           "source": "archive/session-007-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s07.text.033"
-        },
-        {
-          "at": "0006-10-03T03:24:00",
-          "excerpt": "Он способен к распространению. Но не совсем сам. И тот образец, который я передал, мне не понадобится. **Кадзиура Сатору** чуть приподнял брови. **Шики:** — Чёрт. Чёрт. Чёрт. Последовала пауза. — Не хотелось в один вечер слить несколько своих секретов. Каранда",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.017"
         },
         {
           "at": "0006-10-03T03:28:00",
@@ -583,6 +668,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.019"
+        },
+        {
+          "at": "0006-10-03T04:12:00",
+          "excerpt": "ставляя между фалангами крошечное замкнутое пространство. Кадзиура сразу заметил необычность движения. **Кадзиура Сатору:** — Одной рукой?.. **«Пульс».** Три средних пальца сошлись на подушечке большого. Мизинец остался согнутым. Воздух возле левой кисти измен",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.020"
         }
       ],
       "projections": [
@@ -590,9 +682,9 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s08.text.019",
+          "seen": "s08.text.020",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "03:31 clinically signs authorization for initial targeting of the confirmed right bronchial nsp-delta-positive focus by Shiki's proposed engineered vector, accepts full treatment responsibility and orders ICU clinical support; the doctor does not control Shiki",
+          "state": "04:12 witnessed named Byoton Infection through one-handed seals and a clinical airway response to Shiki's two-hand treatment, then Shiki unconscious from overuse. Caught Shiki by his clothing after warning against bare-skin contact, ordered gloves and monitore",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         },
@@ -600,14 +692,14 @@
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "03:31 clinically signs authorization for initial targeting of the confirmed right bronchial nsp-delta-positive focus by Shiki's proposed engineered vector, accepts full treatment responsibility and orders ICU clinical support; the doctor does not control Shiki",
+          "state": "04:12 witnessed named Byoton Infection through one-handed seals and a clinical airway response to Shiki's two-hand treatment, then Shiki unconscious from overuse. Caught Shiki by his clothing after warning against bare-skin contact, ordered gloves and monitore",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
         "recovery/HOT.json",
-        "s08.text.019"
+        "s08.text.020"
       ]
     },
     "kage_doppelganger": {
@@ -1170,9 +1262,9 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.019",
+          "seen": "s08.text.020",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "03:31 refuses to cosign the experimental intervention but remains in the ICU and keeps signed opposition in patient chart; will observe independent effects.",
+          "state": "04:12 responded to Shiki collapse by donning gloves and securing observation, notes new term Byoton from his audible jutsu utterance, records immediate patient6 clinical outcome separately.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         },
@@ -1180,14 +1272,14 @@
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "03:31 refuses to cosign the experimental intervention but remains in the ICU and keeps signed opposition in patient chart; will observe independent effects.",
+          "state": "04:12 responded to Shiki collapse by donning gloves and securing observation, notes new term Byoton from his audible jutsu utterance, records immediate patient6 clinical outcome separately.",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
         "recovery/cast/night_icu_physician.json",
         "recovery/HOT.json",
-        "s08.text.019"
+        "s08.text.020"
       ]
     },
     "nori": {
@@ -5274,6 +5366,25 @@
         "s04.text.035"
       ]
     },
+    "place:c22ad5f06ef17dc0": {
+      "aliases": [
+        "place:c22ad5f06ef17dc0",
+        "Кусагакуре, Центральный госпиталь, палата №6 и соседняя палата",
+        "Кусагакуре",
+        "Центральный госпиталь",
+        "палата №6 и соседняя палата"
+      ],
+      "facts": [],
+      "id": "place:c22ad5f06ef17dc0",
+      "kind": "place",
+      "label": "Кусагакуре, Центральный госпиталь, палата №6 и соседняя палата",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.020"
+      ]
+    },
     "place:c260bf06d3c7477d": {
       "aliases": [
         "place:c260bf06d3c7477d",
@@ -5977,7 +6088,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.019",
         "s08.text.002",
         "s08.text.003",
         "s08.text.006",
@@ -5989,7 +6099,8 @@
         "s08.text.015",
         "s08.text.016",
         "s08.text.017",
-        "s08.text.018"
+        "s08.text.018",
+        "s08.text.019"
       ]
     },
     "place:e98c8605d584c4e9": {
@@ -6766,18 +6877,18 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s08.text.019",
-          "state": "03:31 still sedated, ventilated and on uninterrupted S17, SpO2 93% HR118 BP102/64 on higher oxygen; no new experimental gene treatment administered."
+          "seen": "s08.text.020",
+          "state": "04:12 restored surface of visibly damaged bronchi following Byoton carrier and medical chakra therapy; SpO2 96%, BP108/70, Ppeak23 on reduced supplemental oxygen but still on mechanical ventilation and unchanged S17 with inadequate spontaneous muscle strength."
         },
         {
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "state": "03:31 still sedated, ventilated and on uninterrupted S17, SpO2 93% HR118 BP102/64 on higher oxygen; no new experimental gene treatment administered."
+          "state": "04:12 restored surface of visibly damaged bronchi following Byoton carrier and medical chakra therapy; SpO2 96%, BP108/70, Ppeak23 on reduced supplemental oxygen but still on mechanical ventilation and unchanged S17 with inadequate spontaneous muscle strength."
         }
       ],
       "sources": [
         "recovery/cast/s17_recipient_6.json",
         "recovery/HOT.json",
-        "s08.text.019"
+        "s08.text.020"
       ]
     },
     "sayu": {
@@ -7410,11 +7521,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03.10 03:31: Shiki tells doctors he has ~1–1.5h remaining ability to support patient and deliver trial due limited chakra; Kadziura accepts clinical decision himself, signs authorization for limited in vivo nsp-delta suppression at one confirmed bronchial lesion. ICU team handles ventilation/airway suction, S17 continues as befo"
+          "state": "03 Oct 1283 04:12 first in-vivo use of Shiki's Byoton Infection in patient6 followed by simultaneous medical chakra clearance of residual NSP-delta and bronchial mucosal regeneration. Bronchoscopy revealed renewed intact mucosa, no new slough or casts, Ppeak down to 23, SpO2 96% on lower FiO2. Patient remains intubated and S17-d"
         }
       ],
       "sources": [
-        "s08.text.019"
+        "s08.text.020"
       ]
     },
     "thread:sanction": {
@@ -7749,5 +7860,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 569
+  "source_turns_indexed": 570
 }

@@ -1,23 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.019",
+ "cursor": "s08.text.020",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.002",
-   "kind": "things",
-   "text": "shiki_hospital_gown_gloves: изменён предмет вне учёта; введён без проверки прежнего состояния"
-  },
-  {
-   "turn": "s08.text.002",
-   "kind": "things",
-   "text": "recipient6_airway_cast_sample: изменён предмет вне учёта; введён без проверки прежнего состояния"
-  },
-  {
-   "turn": "s08.text.002",
-   "kind": "horror",
-   "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, или нарушение знакомого (d.horror)"
-  },
   {
    "turn": "s08.text.003",
    "kind": "things",
@@ -82,6 +67,21 @@
    "turn": "s08.text.019",
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010"
+  },
+  {
+   "turn": "s08.text.020",
+   "kind": "look",
+   "text": "внешность Шики описана 2 раза (сосуды, глаза). Ужас — в чужом поступке и последствии, а не в облике"
+  },
+  {
+   "turn": "s08.text.020",
+   "kind": "review",
+   "text": "review.sources must refer to exact prior played turns"
+  },
+  {
+   "turn": "s08.text.020",
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010, s08.text.016"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
