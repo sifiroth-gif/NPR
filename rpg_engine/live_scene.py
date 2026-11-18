@@ -155,7 +155,7 @@ def build(hot, turns):
     now = parse_at(cursor.get("at")) if cursor.get("at") else None
     clocks = []
     for key, value in (hot.get("offscreen") or {}).get("clocks", {}).items():
-        if not isinstance(value, dict) or not value.get("due"):
+        if not isinstance(value, dict) or not value.get("due") or value.get("closed"):
             continue
         try:
             when = parse_at(value["due"])
@@ -353,7 +353,7 @@ def validate_admission(hot, turn, *, policy, accepted=()):
         if prev_at:
             earlier, later = parse_at(prev_at), parse_at(turn["at"])
             crossed = [key for key, clock in (hot.get("offscreen") or {}).get("clocks", {}).items()
-                       if isinstance(clock, dict) and clock.get("due") and
+                       if isinstance(clock, dict) and clock.get("due") and not clock.get("closed") and
                        earlier < parse_at(clock["due"]) <= later]
             addressed = set((turn.get("d") or {}).get("clocks") or {})
             addressed.update((turn.get("d") or {}).get("world_reviewed") or [])
