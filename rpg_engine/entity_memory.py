@@ -94,6 +94,16 @@ def _update(ledger, turn):
                     "visibility": raw.get("visibility", "gm_only")}
             if raw.get("supersedes"):
                 fact["supersedes"] = list(raw["supersedes"])
+            # Narrative state is temporal; do not discard the event's valid time.
+            for temporal in ("valid_from", "valid_until", "observed_at", "event_at"):
+                if raw.get(temporal):
+                    fact[temporal] = raw[temporal]
+            if (fact.get("valid_from") and fact.get("valid_until") and
+                    fact["valid_until"] <= fact["valid_from"]):
+                raise ValueError(f"entity {key}: invalid fact time window")
+            for field in ("certainty", "scope", "channel"):
+                if field in raw:
+                    fact[field] = raw[field]
             current = next((old for old in card["facts"] if old["id"] == fact["id"]), None)
             if current:
                 if any(current.get(k) != fact.get(k) for k in ("field", "value", "source")):

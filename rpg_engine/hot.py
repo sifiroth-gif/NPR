@@ -865,7 +865,7 @@ def fold(state_dir):
             # показана игроку: отказ свернуть её лишь разорвал бы память. Поэтому
             # содержательные замечания записываются, а не останавливают свёртку.
             # Блокируют только структурные ошибки apply_turn (разрыв, время назад).
-            from . import live_scene, scene_gate
+            from . import live_scene, scene_gate, memory_guard, entity_memory
             policy_path = state_dir / live_scene.POLICY_PATH
             policy = (json.loads(policy_path.read_text(encoding="utf-8"))
                       if policy_path.is_file() else {"enabled": False})
@@ -875,6 +875,9 @@ def fold(state_dir):
             base = _amend_base(hot, turn) if amendment else hot
             review_notes = live_scene.validate_admission(
                 base, turn, policy=policy, accepted=sources)
+            # Already published prose cannot be retracted by an asynchronous fold;
+            # record any source discrepancy for the very next scene.
+            review_notes.extend(memory_guard.review(entity_memory.load(state_dir), turn)["errors"])
             if archived is None:
                 archived = _archived_cards(state_dir)
             name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)
@@ -947,8 +950,9 @@ def fold(state_dir):
     _, accepted = scene_gate.played_turns(state_dir)
     # Canonical entity cards are derived from reviewed seed + played turn deltas.
     # They include patients/places/items omitted from scene.present NPC roster.
-    from . import entity_memory
-    entity_memory.rebuild(state_dir)
+    from . import entity_memory, general_memory
+    ledger = entity_memory.rebuild(state_dir)
+    general_memory.save(state_dir, hot, ledger=ledger)
     live_scene.write(brief_path, live_scene.build_for_state(hot, accepted, state_dir))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
