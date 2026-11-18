@@ -5,24 +5,22 @@
     "night_icu_physician",
     "s17_recipient_6",
     "place:5270dd69fc81a58d",
-    "stage_floor5",
     "thread:pact"
   ],
   "cursor": "s08.text.021",
   "focus_byte_limit": 6600,
-  "focus_bytes": 4417,
+  "focus_bytes": 4284,
   "index_entities": 366,
   "index_source_records": 571,
   "indexed_cursor": "s08.text.021",
   "kinds": {
-    "canon": 2,
+    "canon": 3,
     "clock": 4,
     "entity": 1,
     "item": 4,
     "npc": 49,
     "place": 283,
-    "thread": 22,
-    "unresolved": 1
+    "thread": 22
   },
   "missing_critical": [],
   "notes": [
@@ -41,6 +39,12 @@
       "at_1": true,
       "at_5": true,
       "id": "canon:s08.text.021:1",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.021:2",
       "kind": "canon"
     },
     {
@@ -516,12 +520,6 @@
       "at_5": true,
       "id": "thread:v7",
       "kind": "thread"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "stage_floor5",
-      "kind": "unresolved"
     }
   ],
   "schema": "npr-memory-quality/1",

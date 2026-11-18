@@ -3,13 +3,13 @@
 Персонаж игрока. Мысли, слова и добровольные действия Шики не придумывать.
 
 ## Договор Семи замков сейчас
-- стадия 5: Активный контактный синдром (значение 63.3769)
+- стадия 6: Устойчивая тяжёлая форма (значение 63.3769)
 
 ## Лист персонажа
 - campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json
 
 ## Тело сейчас
-- 05:46 03.10.1283: conscious again after 94min exhaustion-induced loss of consciousness; chakra still severely depleted and recovering slowly, not instant full refill. Pact forcibly at stage5 (Active Contact Syndrome) by direct player request: circulating blood is markedly dark maroon with visible black organized, chakra-responsive microfilaments independent of normal fibrin; dark networks extend from blood/plasma across endothelial glycocalyx, organ microcirculation, marrow and lymph/interstitial fluid, physiology remains functional. Can now transmit pact disease on direct living bare skin/bare skin or fresh blood into open wound/mucosa; no remote, clothing, dried blood or object route. No other spontaneous damage. Seven sealing circuits intact. Left deltoid contains non-assimilated bronchial sample from patient6, ischemic after loss of chakra maintenance, not removed.
+- 05:46 03.10.1283 conscious after prolonged chakra collapse; no restoration of spent chakra, but preserved physical strength/movement/medical and cognitive potential. PACT MAXIMUM STAGE6: persistent true superficial autolysis and gray-black corpse-like epidermal slough (not deep disability), function-preserving living structural counterregeneration, core temp 29.3–29.4 C HR52 sinus BP108/66; full perfusion and oxygen delivery by almost-black ink-dark blood with chakra filaments through plasma, microvessels, marrow, organ fluids and lymph. Seen by NPCs as rotting, extremely cold alive body, nearby smell of iodine, iron, old dressings and grave earth. Direct bare living skin contact potentially conveys pact disease; fresh blood dangerous when directly in another's open wound/mucosa. No object/air/odor transmission. Seven seals remain closed, ability ranks unchanged. Former patient6 biopsy remains nonvascularized/ischemic under healed left deltoid and not genomically assimilated.
 
 ## Внешность
 - 20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.
@@ -53,5 +53,5 @@
 ## Немера
 - Прямое уточнение игрока: односторонний сенсорный мост session-005 включал ВСЕ ощущения Шики, в том числе Нулевой Геном. В s07.text.025 доступ явно открыт/подтверждён на время опыта, Немера была непосредственным наблюдателем. После исследования по заявке Шики закрыта только ветвь Нулевого Генома, остальные чувства и смысловая связь остались; исполнительного контроля нет.
 
-## Поправки игрока: 71
+## Поправки игрока: 74
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход

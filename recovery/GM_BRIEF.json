@@ -66,10 +66,9 @@
    "night_icu_physician",
    "s17_recipient_6",
    "place:5270dd69fc81a58d",
-   "stage_floor5",
    "thread:pact"
   ],
-  "focus_bytes": 4417,
+  "focus_bytes": 4284,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -107,7 +106,7 @@
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
   "time": "05:46"
  },
- "digest": "eabd10e10df747b4a7a714ab9450fd2215fdd8f97629faab4c644b48c43f6c41",
+ "digest": "671846b97cfd60d03632745e8735a598acdd2cd8fceb83e900bccce25383e558",
  "entity_memory": {
   "activated": [
    {
@@ -263,7 +262,7 @@
     "at": "0006-10-03T05:46:00",
     "id": "s08.text.021",
     "kind": "recent_turn",
-    "line": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально зараз"
+    "line": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, "
    }
   ],
   "scope": "chronological edges only; semantic links are candidates, not causality"
@@ -360,16 +359,6 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "stage_floor5",
-    "kind": "unresolved",
-    "label": "stage_floor5",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
     "id": "thread:pact",
     "kind": "thread",
     "label": "pact",
@@ -382,7 +371,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 7
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -396,18 +385,18 @@
   "due": null,
   "npcs": {
    "kadziura_satoru": {
-    "does": "Keeps specimen isolated, wears protective barrier and undertakes nonstandard microscopy rather than routine disposal, continues direct clinical oversight.",
+    "does": "Keeps blood and tissue samples under sealed control and documented custody, uses gloves, demands clear answer about direct staff exposure.",
     "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "His treating colleague's body may be an unidentified origin of unusual biological phenomenon and the physician is no longer able to interpret safely ordinary blood tests.",
+    "reads": "His usual distinction of living patient vs cadaver is no longer clinically reliable, and his staff may be exposed to unknown contact biology while committee requests records.",
     "stage": 4,
     "step": "необратимость"
    },
    "night_icu_physician": {
-    "does": "Issues formal internal medical notification to hospital review committee for controlled isolation and exposure management, without giving false claims of proven contagion.",
+    "does": "Requests explicit hospital reporting and refuses to treat new findings as ordinary, while following barrier precautions.",
     "lever": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "He poses a possible risk to clinical staff that requires written internal hospital controls even without confirmed transmission pathways.",
+    "reads": "Institutional classification and staff safety fail if this organism is treated as a standard living patient without special records.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -432,8 +421,8 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "вы ожидали такого изменения?**\n\nВ пробирке тёмные нити медленно перестраиваются.\n\nВ теле Шики та же сеть существует повсюду.\n\nИ теперь, с пробуждением, обнаруживается ещё одно её свойство.\n\nВблизи поверхности живой кожи некоторые волокна образуют чрезвычайно тонкие чакровые окончания, которых раньше не было. При непосредственном соприкосновении с чужой открытой кожей они способны передавать патологический импульс Договора. Свежая кровь, попавшая прямо на слизистую или в открытую рану другого человека, тоже стала возможным путём такого воздействия.\n\nЭто уже **пятая стадия Договора Семи запоров — «Активный контактный синдром»**.\n\nСемь замков остаются закрыты.\n\nТело Шики живо и физиологически работоспособно, но его кровь и внутренняя среда перешли необратимую границу. Чужая кожа теперь может оказаться частью патологического процесса при прямом контакте.\n\nКадзиура ждёт ответа.\n\n**Ход Шики.**",
-  "player": "Мастеру: побочные эффекты должны перейти на следующую стадию и должны произойти разительные изменения крови и внутренней среды Шики. И давай дальше к пробуждению"
+  "gm_tail": "скусствами. Его запас чакры после предельного перерасхода всё ещё был почти пуст, но сами способности никуда не исчезли.\n\nКровь и живые ткани теперь несли действительную опасность при прямом контакте. Голая кожа могла передать патологическую чакру другой живой коже. Свежая кровь — при попадании непосредственно в открытую рану или на слизистую.\n\nЗапах и предметы такого действия не имели.\n\nВрачи знали лишь то, что видели и измерили.\n\nКадзиура положил обе руки в перчатках на край кровати. Его лицо приобрело жёсткое, усталое выражение.\n\n**Кадзиура Сатору:**\n\n— Перед тем как потерять сознание, вы просили не касаться вас голыми руками. Я выполнил это распоряжение.\n\nОн посмотрел на совершенно чёрную кровь.\n\n— Теперь я намерен спросить прямо.\n\nВ голосе впервые появились холодные, почти враждебные нотки.\n\n— **Что произойдёт с моими сотрудниками, если ваша кровь попадёт им в рану?**\n\n**Ход Шики.**",
+  "player": "Мастеру: побочные эффекты должны перейти на следующую стадию и должны произойти разительные изменения крови и внутренней среды Шики. И давай дальше к пробуждению. Исправление: сделай максимально мрачно — Шики действительно гниёт, почти труп по показателям, чёрная опасная кровь, холодное тело, запах металл/йод/старые бинты/могильная земля, но без потери функций. Будем считать, что Договор вышел на максимум."
  },
  "needs_profile": [
   {
@@ -744,7 +733,7 @@
      "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, c",
      "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no lo",
      "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle",
-     "Between 04:26 and 05:46 after Shiki lost consciousness Kadz saw Shiki blood dramatically dark maroon with coherent black microscopic filaments not typical fibrin/erythrocyte clumping and not disappearing in ant"
+     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, real superficial tissue autolysis and sheet debris despite normal perfusion, extre"
     ],
     "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
     "memory": [
@@ -766,7 +755,7 @@
      {
       "ch": "present",
       "turn": "s08.text.021",
-      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
+      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
@@ -775,7 +764,7 @@
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
     "seen": "s08.text.021",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "05:46 after supervising Shiki examination and monitoring following collapse, Kadziura sees him regain consciousness. Reports tests of darkened anomalous blood with unusual anticoagulant-resistant microstructures and preserved gross physiological function. Applies gloves/barrier precautions and asks if Shiki expected changes. Continues care of recipient6 on ventilator/S17, reviews duty doctor internal notification.",
+    "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, genuine superficial necrosis and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -840,7 +829,7 @@
      "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
      "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
      "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
-     "04:26–05:46 during Shiki monitoring, she observed dark blood sample and unknown filament structures, knows his warning against bare hands, but cannot prove cause of harm or identify Pact stage. She sent interna"
+     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and authentic gray autolysed epidermis; records do not establish transmission, origin or contract. I"
     ],
     "leverage": "Ведёт ночные истории наблюдения; проверяет назначения, имеет доступ к посту реанимации",
     "memory": [
@@ -862,7 +851,7 @@
      {
       "ch": "present",
       "turn": "s08.text.021",
-      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
+      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
@@ -871,7 +860,7 @@
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
     "seen": "s08.text.021",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-    "state": "05:46 independently maintained protected handling and recorded clinical blood tests; sent bounded hospital internal incident notification to medical review committee without giving unknown secret mechanisms, now present as Shiki wakes.",
+    "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric physiological state and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -908,7 +897,7 @@
      {
       "ch": "present",
       "turn": "s08.text.021",
-      "what": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при пря"
+      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
@@ -916,7 +905,7 @@
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
     "seen": "s08.text.021",
-    "state": "05:46 sedated/intubated teenage recipient6 still mechanically ventilated on established S17; latest SpO2 96 on lower inspired oxygen, no new bronchial slough/casts observed, insufficient spontaneous breathing and unknown long-term results of gene therapy.",
+    "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory muscle function; long-term CRISPR safety unproven.",
     "status": "present_profile",
     "tier": "developed"
    }
@@ -933,16 +922,16 @@
   },
   {
    "id": "s08.text.021",
-   "line": "После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при прямом контакте. Шики пришёл в сознание в 05:46."
+   "line": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена."
   }
  ],
  "scene": {
-  "positions": "Shiki awake 05:46 in separate hospital observation bed, weak from chakra overuse, left deltoid tiny ischemic bronchial sample still embedded; dark maroon blood in sealed lab vial and charts next to bed. Kadziura at bedside gloved with test file and glasses, night duty physician by door and medical incident sheet. Patient6 separate in ICU room6 with anesthetist, ventilated on S17; heard SpO2 96 through wall.",
-  "pressure": "After exhausting chakra and converting pact to stage5, Shiki poses novel possible direct bare skin and fresh blood contact hazard that hospital does not yet understand. Duty doctor filed bounded biohazard report to hospital medical commission. Kadziura saw radical blood change but does not know its cause or pathways. Patient6 temporarily stable on own ICU support and needs long-term study.",
-  "situation": "03.10.1283 05:46 Shiki regained consciousness on observation bed next to ICU after 94min severe chakra-depleting coma. The player's direct pact-stage advancement took hold during sleep: stage5 Active Contact Syndrome (engine stage_floor5). High-intensity novel blood/internal milieu: dark maroon circulating blood with black mobile chakra-sensitive microfilaments organized not just in clots but throughout plasma, erythrocyte/other cell interfaces, endothelial glycocalyx, organ microcirculation, marrow, interstitial fluid and lymphatic spaces; preserved normal oxygen delivery, no massive hemolysis, good circulation and ordinary hemostasis. Blood draw at 04:26 through protective gloves and sealed container revealed dark blood, microscopy showed black filament networks even with anticoagulant; clinical studies found no catastrophic clotting/oxygen impairment, etiology unknown to Kadz and hospital staff. Shiki's bare living skin now can transmit chakra illness to other bare living skin, fresh blood direct to mucosa or open wound also may transmit; no airborne, glove/clothing, dry blood or instrument transmission, no guaranteed automatic infection. This hazard is known to player, NOT proven/identified by doctors. At 04:25 previously isolated no-longer-vascularized 2mm patient6 bronchial graft in left deltoid becomes ischemically damaged after chakra support ended, not assimilated; not surgically removed. At 04:30 staff evaluated Shiki unconscious but breathing, and continue surveillance through recovery. At 05:46 awake, very low chakra and not fully recovered, seven seals remain closed. Kadz reports strange blood test and asks whether he expected it, no claim he knows contract. Night duty physician independently issued a medically bounded internal incident notice to hospital m"
+  "positions": "05:46 Shiki has awakened in separate hospital bed, profoundly chakra depleted but physiologically intact even with superficially necrotic skin and extreme cold. His near-black blood samples protected in two sealed vials beside bed. Kadz, gloved, beside him; night duty physician near the door with separate lab and incident record. Recipient6 remains intubated in adjacent ICU room6 receiving ongoing ventilator and S17; anesthetist reports SpO2 96.",
+  "pressure": "Pact reached maximum, overtly corpse-like decomposition and bizarre intact physiology visible to clinicians. Duty physician's internal medical committee notice means exposure of unusual findings is already in motion, but origin and true infection routes remain secret. Severe personal chakra deficit unresolved; treated teenager still ventilator-dependent after bronchial repair.",
+  "situation": "03.10.1283 05:46, REVISED s08.text.021: after Shiki's severe chakra exhaustion and collapse at 04:12, his pact reached maximum STAGE6 instead of formerly written stage5. During unconsciousness between ~04:26 and 05:32 blood samples darkened from dark maroon to almost ink-black with faint red transmitted-light glint, black chakra-responsive filament networks in plasma, red-cell membranes, endothelial glycocalyx and whole organ vascular/interstitial/lymphatic milieu. Surface skin at wrists, clavicles and folds developed genuine limited superficial tissue autolysis/necrosis and soft gray slough while underlying living tissue structurally regenerates fast enough that all motor/sensory/organ function is preserved. Strong close-range scent of metallic iodine, old bandages and grave soil with organic decay, no airborne contagious effect. Shiki's core temperature 29.3–29.4 C, ECG sinus HR52/min and BP108/66; tissue oxygen delivery and coagulation preserved despite normally dangerously hypothermic reading. The pact gives anomalous alternate stability: Shiki appears medically almost cadaveric but consciously awakens with full physiological potential, not full CHAKRA reserves; no preordained disability or loss of intellectual/medical talents. At 04:26 and 05:32 gloved protected staff drew separate samples, recognized darkening blood/non-fibrin filaments, isolated them. Duty doctor had issued bounded internal medical alert to hospital commission and intends to supplement; Kadz refuses uncontrolled handing over samples absent record of chain of custody; doctors are hostile/wary of contagion but DO NOT know hidden contract, its max stage or precise pathways. Shiki's warning to avoid unprotected skin remains a remembered witnessed fact. Kadz asks whether fresh Shiki blood into staff w"
  },
  "shiki": {
-  "body": "05:46 03.10.1283: conscious again after 94min exhaustion-induced loss of consciousness; chakra still severely depleted and recovering slowly, not instant full refill. Pact forcibly at stage5 (Active Contact Syndrome) by direct player request: circulating blood is markedly dark maroon with visible black organized, chakra-responsive microfilaments independent of normal fibrin; dark networks extend from blood/plasma across endothelial glycocalyx, organ microcirculation, marrow and lymph/interstitial fluid, physiology remains functional. Can now transmit pact disease on direct living bare skin/bare skin or fresh blood into open wound/mucosa; no remote, clothing, dried blood or object route. No other spontaneous damage. Seven sealing circuits intact. Left deltoid contains non-assimilated bronchial sample from patient6, ischemic after loss of chakra maintenance, not removed.",
+  "body": "05:46 03.10.1283 conscious after prolonged chakra collapse; no restoration of spent chakra, but preserved physical strength/movement/medical and cognitive potential. PACT MAXIMUM STAGE6: persistent true superficial autolysis and gray-black corpse-like epidermal slough (not deep disability), function-preserving living structural counterregeneration, core temp 29.3–29.4 C HR52 sinus BP108/66; full perfusion and oxygen delivery by almost-black ink-dark blood with chakra filaments through plasma, microvessels, marrow, organ fluids and lymph. Seen by NPCs as rotting, extremely cold alive body, nearby smell of iodine, iron, old dressings and grave earth. Direct bare living skin contact potentially conveys pact disease; fresh blood dangerous when directly in another's open wound/mucosa. No object/air/odor transmission. Seven seals remain closed, ability ranks unchanged. Former patient6 biopsy remains nonvascularized/ischemic under healed left ",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"

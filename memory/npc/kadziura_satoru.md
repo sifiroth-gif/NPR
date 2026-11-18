@@ -17,7 +17,7 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 05:46 after supervising Shiki examination and monitoring following collapse, Kadziura sees him regain consciousness. Reports tests of darkened anomalous blood with unusual anticoagulant-resistant microstructures and preserved gross physiological function. Applies gloves/barrier precautions and asks if Shiki expected changes. Continues care of recipient6 on ventilator/S17, reviews duty doctor internal notification. [s08.text.021]
+- положение: 05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, genuine superficial necrosis and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated. [s08.text.021]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
 ## Знает (последние 18 из 18)
@@ -38,7 +38,7 @@
 - 03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, claims it cannot spread to healthy cells. He has not witnessed this in patient. [s08.text.018]
 - Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no long-term safety data. [s08.text.019]
 - Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowledge of hidden pact or Zero Genome granted. [s08.text.020]
-- Between 04:26 and 05:46 after Shiki lost consciousness Kadz saw Shiki blood dramatically dark maroon with coherent black microscopic filaments not typical fibrin/erythrocyte clumping and not disappearing in anticoagulated sample. Observed oxygen carrying and clotting functions remained adequate in performed tests. Received his 04:12 warning not to touch with bare hands and took protective samples. Does not know Pact stage, direct routes, Seven Seals or true origins of anomaly. [s08.text.021]
+- Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, real superficial tissue autolysis and sheet debris despite normal perfusion, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals. [s08.text.021]
 
 ## История (последние 8 из 21)
 - s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.
@@ -48,7 +48,7 @@
 - s08.text.018 0006-10-03T03:28:00: Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение.
 - s08.text.019 0006-10-03T03:31:00: Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было.
 - s08.text.020 0006-10-03T04:12:00: Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения.
-- s08.text.021 0006-10-03T05:46:00: После катастрофического истощения Договор Шики перешёл на стадию 5. Кровь и внутренняя среда перестроились в темно-бордовые чакровые сети; свежая кровь и голая кожа теперь потенциально заразны при прямом контакте. Шики пришёл в сознание в 05:46.
+- s08.text.021 0006-10-03T05:46:00: Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена.
 - ранее: 13 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
 
 Ход целиком: `archive/turns/sNN/<id>.md`.
