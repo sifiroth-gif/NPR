@@ -25,7 +25,7 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import plot
+from . import fight, plot
 
 SCHEMA = "npr-wiki/1"
 DIR = "memory"
@@ -736,6 +736,9 @@ def _scene_page(hot, store):
         lines += [f"## Сроки в ближайшие 24 игровых часа: {len(soon)}",
                   "- " + ", ".join(f"`{k}` ({d})" for d, k in soon),
                   "- подробности только для ведущего: `memory/threads/CLOCKS.GM_ONLY.md`", ""]
+    combat = fight.scene_lines(hot)
+    if combat:
+        lines += ["## Бой, раны, чакра"] + combat + [""]
     events = [e for e in ((hot.get("_plot") or {}).get("events") or {}).values()
               if e.get("status") == "active" and e.get("kind") != "main"]
     if events:
