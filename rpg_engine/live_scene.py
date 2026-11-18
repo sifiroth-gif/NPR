@@ -18,6 +18,9 @@ from . import continuity_guard, dread, npc_memory, scene_gate
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
 POLICY_PATH = "recovery/GATE_POLICY.json"
+ALIGNMENT_PATH = "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json"
+ALIGNMENT_SCHEMA = "npr-shiki-npc-alignments/1"
+ALIGNMENT_CODES = frozenset(("LG", "LN", "LE", "NG", "N", "NE", "CG", "CN", "CE"))
 MAX_ACTORS = 8
 MAX_GRAPH = 55
 MAX_PASSAGES = 12
@@ -77,7 +80,32 @@ def _cast(hot, actor):
     return profile
 
 
-def build(hot, turns):
+def load_alignments(state_dir):
+    """GM-only, state-local storyline values; no default for unnamed extras."""
+    path = Path(state_dir) / ALIGNMENT_PATH
+    if not path.is_file():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("schema") != ALIGNMENT_SCHEMA:
+        raise ValueError("Invalid NPC alignment registry schema")
+    characters = data.get("characters")
+    if not isinstance(characters, dict):
+        raise ValueError("NPC alignments must have a characters map")
+    for ident, item in characters.items():
+        if ident in ("shiki", "player"):
+            raise ValueError("GM cannot assign Shiki an alignment")
+        if not isinstance(item, dict) or (
+                (item.get("alignment") or {}).get("code") not in ALIGNMENT_CODES):
+            raise ValueError("Unknown alignment for " + str(ident))
+    return characters
+
+
+def build_for_state(hot, turns, state_dir):
+    """Derive a small GM packet with ONLY present story NPC alignments."""
+    return build(hot, turns, alignments=load_alignments(state_dir))
+
+
+def build(hot, turns, *, alignments=None):
     """One bounded read packet: sources, NPC knowledge, world pressure, graph.
 
     A primary passage is included for every selected past disclosure, so
@@ -151,6 +179,22 @@ def build(hot, turns):
                          "policy": ("A source mentioning an NPC is not proof they knew "
                                     "or said it; actor knowledge and player disclosure "
                                     "require distinct evidence.")}
+        # A curated hidden registry applies ONLY to recurring plot characters.
+        # Do not invent a value for an unlisted sentry or grant player knowledge.
+        alignment = (alignments or {}).get(actor)
+        if isinstance(alignment, dict):
+            ethical = alignment.get("alignment") or {}
+            if ethical.get("code") in ALIGNMENT_CODES:
+                actors[actor]["alignment"] = {
+                    "code": ethical["code"],
+                    "label": ethical.get("label", ""),
+                    "status": ethical.get("status", ""),
+                    "order": _short(alignment.get("order", ""), 320),
+                    "morality": _short(alignment.get("morality", ""), 320),
+                    "line": _short(alignment.get("line", ""), 300),
+                    "breaking_point": _short(alignment.get("breaking_point", ""), 320),
+                    "rule": "GM-only moral compass, not a deterministic decision or NPC knowledge",
+                }
     last = [r for r in turns if r.get("kind") != "ooc"][-3:]
     for row in last:
         if row["id"] not in node_ids:
