@@ -151,8 +151,9 @@ def after_turn(hot, turn, inner, delta):
                 state["due"] = {"since": since, "npcs": present, "quiet": state["quiet"]}
                 _check(hot, turn_id, "horror",
                        f"{state['quiet']} ход(а) подряд рядом с Шики никто не изменился. "
-                       f"Следующая сцена обязана дать ступень dread хотя бы одному из: {', '.join(present)}, "
-                       "или нарушение знакомого (d.horror)")
+                       f"Проверь, есть ли у кого-то из {', '.join(present)} причина измениться: увиденное, "
+                       "услышанное, цена близости к Шики. Есть — дай ступень dread или нарушение знакомого "
+                       "(d.horror). Нет причины — затишье честнее нагнетания по расписанию.")
     motifs = prose_lint.motifs(turn.get("gm") or "")
     recent = [m for m in state.get("motifs", []) if m.get("turn") != turn_id]
     recent.append({"turn": turn_id, **motifs})
