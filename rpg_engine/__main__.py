@@ -49,6 +49,12 @@ def parser():
     heuristic.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[1])
     heuristic.add_argument("--limit", type=int, default=9)
     heuristic.add_argument("--session", action="append", type=int, default=[])
+    live = sub.add_parser("live-preflight",
+                          help="single GM-only scene packet: NPC evidence, world clocks, graph and draft gates")
+    live.add_argument("--state-dir", type=Path, required=True)
+    live.add_argument("--action", default="")
+    live.add_argument("--turn", type=Path)
+    live.add_argument("--limit", type=int, default=6)
     review_scene = sub.add_parser(
         "scene-gate", help="Bleach-derived source review of NPC prior disclosures and draft novelty")
     review_scene.add_argument("--state-dir", type=Path, required=True)
@@ -202,6 +208,34 @@ def run(args):
             limit_value(args.limit, 1, 20)
             return scene_memory.fast_packet_from_files(
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
+        case "live-preflight":
+            from . import live_scene, scene_gate, heuristic_history
+            limit_value(args.limit, 1, 12)
+            merged, _ = hot._read_state(args.state_dir)
+            _, turns = scene_gate.played_turns(args.state_dir)
+            result = live_scene.build(merged, turns)
+            if args.action:
+                actors = [a for a in (merged.get("scene") or {}).get("present", [])
+                          if a in (merged.get("cast") or {}) and a not in ("player", "shiki")][:8]
+                if actors:
+                    result["npc_source_review"] = scene_gate.prepare(
+                        args.state_dir, player_action=args.action, actors=actors,
+                        limit=max(6, args.limit))
+                manifest = args.state_dir / heuristic_history.DESTINATION
+                index = (heuristic_history.load(manifest) if manifest.is_file()
+                         else heuristic_history.build(Path(__file__).resolve().parents[1],
+                                                      args.state_dir))
+                result["historical_graph_candidates"] = heuristic_history.query(
+                    index, args.action, limit=args.limit)
+            if args.turn:
+                incoming = read_json(args.turn)
+                policy_path = args.state_dir / live_scene.POLICY_PATH
+                policy = read_json(policy_path) if policy_path.is_file() else {"enabled": False}
+                result["admission_errors"] = live_scene.validate_admission(
+                    merged, incoming, policy=policy, accepted=turns)
+                if result["admission_errors"]:
+                    raise ValueError("Live admission failed: " + "; ".join(result["admission_errors"]))
+            return result
         case "scene-gate":
             from . import scene_gate
             report = scene_gate.prepare(
