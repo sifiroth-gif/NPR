@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import prose_lint
+from . import continuity_guard, npc_memory, prose_lint
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -38,6 +38,8 @@ LEGACY_PATH = "recovery/FAST_SCENE.json"
 CAST_DIR = "recovery/cast"
 SECRET_PATH = "recovery/GM_ONLY.json"   # скрытая правда, закадровые часы, тайны NPC: игроку не открывать
 SECRET_SCHEMA = "npr-gm-only/2"
+CHECKS_PATH = "recovery/CHECKS.json"   # замечания свёртки: ведущий читает перед новой сценой
+CHECKS_KEEP = 16
 
 TURN_ID = re.compile(r"s(\d{2})\.text\.(\d{3,4})")
 WEEKDAYS = ("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье")
@@ -407,9 +409,14 @@ def apply_turn(hot, turn):
         cursor["id"] = turn["id"]
 
     delta = turn.get("d") or {}
-    _apply_delta(hot, delta, turn)
+    # Психика, отношения, чувство и намерения NPC не попадают в открытую карточку.
+    public_delta, inner = npc_memory.split_patch(hot, delta, turn["id"])
+    _apply_delta(hot, public_delta, turn)
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
+    continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
+    npc_memory.apply(hot, turn, inner)
+    continuity_guard.check_turn(hot, turn)
     refresh(hot)
     return True
 
@@ -433,6 +440,9 @@ def refresh(hot):
                   if clock.get("due") and parse_at(clock["due"]) <= now),
                  key=lambda key: offscreen["clocks"][key]["due"])
     offscreen["due_now"] = due
+    npc_memory.refresh(hot)
+    if len(hot.get("_checks") or []) > CHECKS_KEEP:
+        hot["_checks"] = hot["_checks"][-CHECKS_KEEP:]
     return hot
 
 
@@ -659,6 +669,8 @@ def _read_state(state_dir):
     hot["_hides"] = dict(secret.get("cast") or {})
     hot["_npc_knowledge"] = dict(secret.get("npc_knowledge") or {})
     hot["_undo"] = secret.get("undo")
+    hot["_psyche"] = dict(secret.get("psyche") or {})
+    hot["_checks"] = list(secret.get("checks") or [])
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -671,6 +683,9 @@ def _split_state(hot):
     hides = public.pop("_hides", {})
     npc_knowledge = public.pop("_npc_knowledge", {})
     undo = public.pop("_undo", None)
+    psyche = public.pop("_psyche", {})
+    checks = public.pop("_checks", [])
+    public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
             hides[key] = card.pop("hides")
@@ -706,7 +721,8 @@ def _split_state(hot):
     secret = {"schema": SECRET_SCHEMA,
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
-              "cast": hides, "npc_knowledge": npc_knowledge, "undo": undo}
+              "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
+              "checks": checks, "undo": undo}
     return public, secret
 
 
@@ -748,12 +764,82 @@ def _recall_cast(state_dir, hot, turn):
             hot.setdefault("cast", {})[key] = card
 
 
+def _amend_base(hot, turn):
+    """Состояние до исправляемого хода: правку сверяют с ним, а не с ней самой."""
+    undo = hot.get("_undo") or {}
+    if undo.get("id") != turn.get("id") or not undo.get("snapshot"):
+        return hot
+    try:
+        return json.loads(zlib.decompress(
+            base64.b64decode(undo["snapshot"], validate=True)).decode("utf-8"))
+    except (ValueError, zlib.error, UnicodeDecodeError, TypeError):
+        return hot
+
+
+def _archived_cards(state_dir):
+    cast_dir = Path(state_dir) / CAST_DIR
+    out = []
+    for path in sorted(cast_dir.glob("*.json")) if cast_dir.is_dir() else ():
+        try:
+            out.append((path.stem, json.loads(path.read_text(encoding="utf-8"))))
+        except ValueError:
+            continue
+    return out
+
+
+def _write_checks(state_dir, hot):
+    """Короткий открытый файл замечаний: читается за один запрос перед новой сценой."""
+    payload = {"schema": "npr-checks/1", "cursor": (hot.get("cursor") or {}).get("id"),
+               "fold_errors": (hot.get("fold") or {}).get("errors", []),
+               "checks": hot.get("_checks", []),
+               "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом "
+                       "(d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."}
+    path = Path(state_dir) / CHECKS_PATH
+    body = _dump(payload)
+    if not path.is_file() or path.read_text(encoding="utf-8") != body:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(body, encoding="utf-8")
+
+
+def ensure_npc_memory(state_dir, hot):
+    """Разовое восстановление памяти NPC из сыгранного и наполнение карточек.
+
+    Запускается из каждого ``fold``: если архива эпизодов ещё нет, он строится
+    по дословным журналам; карточка без ``memory_total`` получает ранние и
+    последние эпизоды. Повторный вызов ничего не меняет.
+    """
+    state_dir = Path(state_dir)
+    report = {}
+    if not (state_dir / npc_memory.MEMORY_DIR).is_dir() and (state_dir / "archive").is_dir():
+        report = npc_memory.backfill(state_dir)
+    for key, card in (hot.get("cast") or {}).items():
+        if "memory_total" not in card:
+            npc_memory.hydrate_card(card, npc_memory.load_episodes(state_dir, key))
+    cast_dir = state_dir / CAST_DIR
+    for path in sorted(cast_dir.glob("*.json")) if cast_dir.is_dir() else ():
+        if path.stem in (hot.get("cast") or {}):
+            continue
+        try:
+            card = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            continue
+        if "memory_total" not in card:
+            episodes = npc_memory.load_episodes(state_dir, path.stem)
+            if episodes:
+                npc_memory.hydrate_card(card, episodes)
+                path.write_text(_dump(card), encoding="utf-8")
+    return report
+
+
 def fold(state_dir):
     """Сворачивает новые ходы в HOT и архивы. Возвращает краткий отчёт."""
     state_dir = Path(state_dir)
     hot, before = _read_state(state_dir)
+    ensure_npc_memory(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
     applied = []
+    amended = []
+    archived = None
     for turn in turns:
         try:
             # Idempotency must precede *any* cast rehydration or file writes.
@@ -766,21 +852,23 @@ def fold(state_dir):
             if incoming <= current and (
                     not amendment or hot.get("fold", {}).get("turn_digest") == fingerprint):
                 continue
-            # Before applying the turn, check predecessor, source-reviewed
-            # revelations, remote NPC knowledge and crossed world deadlines.
+            # Проверка источников, знаний NPC и наступивших сроков. Сцена уже
+            # показана игроку: отказ свернуть её лишь разорвал бы память. Поэтому
+            # содержательные замечания записываются, а не останавливают свёртку.
+            # Блокируют только структурные ошибки apply_turn (разрыв, время назад).
             from . import live_scene, scene_gate
             policy_path = state_dir / live_scene.POLICY_PATH
             policy = (json.loads(policy_path.read_text(encoding="utf-8"))
                       if policy_path.is_file() else {"enabled": False})
             _, primary = scene_gate.played_turns(state_dir)
-            # Include preceding accepted turns that the current fold is about
-            # to apply; the archive may lag several Git commits behind.
             sources = [x for x in primary if x["id"] != turn["id"]]
             sources += [x for x in applied if x["id"] != turn["id"]]
-            validation_errors = live_scene.validate_admission(
-                hot, turn, policy=policy, accepted=sources)
-            if validation_errors:
-                raise TurnError("; ".join(validation_errors))
+            base = _amend_base(hot, turn) if amendment else hot
+            review_notes = live_scene.validate_admission(
+                base, turn, policy=policy, accepted=sources)
+            if archived is None:
+                archived = _archived_cards(state_dir)
+            name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
                 # Перед тем как убрать NPC из состава, сохраняем его карточку и тайну.
@@ -791,12 +879,24 @@ def fold(state_dir):
             if apply_turn(hot, turn):
                 hot.setdefault("fold", {})["turn_digest"] = fingerprint
                 applied.append(turn)
+                if amendment:
+                    amended.append(turn["id"])
+                checks = hot.setdefault("_checks", [])
+                for note in review_notes:
+                    checks.append({"turn": turn["id"], "kind": "review", "text": note})
+                for note in name_notes:
+                    checks.append({"turn": turn["id"], "kind": "name", "text": note})
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
     # Never publish a partly accepted batch. All turns remain in Git history
-    # and will be replayed after the rejected entry is corrected.
+    # and will be replayed after the rejected entry is corrected. The refusal
+    # itself IS published, so the GM sees it instead of a silently stale HOT.
     if errors:
-        return {"status": "rejected", "cursor": hot["cursor"].get("id"),
+        stale, stale_before = _read_state(state_dir)
+        stale.setdefault("fold", {})["errors"] = errors
+        _write_state(state_dir, stale, stale_before)
+        _write_checks(state_dir, stale)
+        return {"status": "rejected", "cursor": stale["cursor"].get("id"),
                 "applied": [], "errors": errors, "due": 0}
     refresh(hot)
     fold_info = hot.setdefault("fold", {})
@@ -814,9 +914,12 @@ def fold(state_dir):
     if len(hot.get("chronicle", [])) > CHRONICLE_IN_HOT:
         hot["chronicle"] = hot["chronicle"][-CHRONICLE_IN_HOT:]
         hot["chronicle_older"] = f"archive/session-{int(hot['session']):03}-chronicle.md"
+    npc_memory.flush(state_dir, hot, amended=amended)
+    npc_memory.sync_cards(state_dir, hot)
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
+    _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
                    not (hot.get("scene") or {}).get("npc_disclosures_to_player")):
         # Cache source pointers even for an existing folded campaign when

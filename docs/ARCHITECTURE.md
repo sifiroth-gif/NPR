@@ -49,6 +49,24 @@ recovery/HOT.json  recovery/      archive/session-NNN-   recovery/cast/
 
 Пределы проверяет `tests/test_instruction_budget.py`. Новая поправка заменяет строку, а не добавляет раздел. Прежние своды (`GM_PROTOCOL.md`, `SCENE_PREP_PRIORITY.md` и другие) оставлены на месте с пометкой «заменён», прежние `AGENTS.md` обеих веток — в `docs/legacy/`.
 
+## Память NPC и непротиворечивость (перенос из Bleach RPG)
+
+Взято из `sifiroth-gif/Bleach-RPG-` в облегчённом виде, всё внутри обычной свёртки `hot-fold`:
+
+| Bleach | NPR | Что делает |
+|---|---|---|
+| `npc_psyche` | `rpg_engine/npc_memory.py` | эпизоды присутствующих NPC, оси отношения ±5, чувство со сроком в игровых часах, намерения BDI, грани характера, дрейф без причины |
+| `npc_importance` | `npc_memory._tier` | `deep/developed/archetypal` и `needs_profile` в пакете сцены |
+| `gm_npc_names` | `npc_memory.check_names` | совпадение имени нового NPC с существующим |
+| `gm_turn_guard` | `rpg_engine/continuity_guard.py` | учёт вещей `was→now`, новая вещь с причиной, отрицательный счёт, охват реплики игрока |
+| `LOCAL_CONTINUITY` | `GM_BRIEF.continuity`, `recovery/CHECKS.json` | вещи у присутствующих и на месте, последние замечания |
+
+Файлы: `archive/npc-memory/<ключ>.json` — полный список эпизодов (источник истины для карточек), `GM_ONLY.psyche` — внутреннее NPC, `HOT.things` — учёт, `recovery/CHECKS.json` — замечания и отказы свёртки. Первый `hot-fold` после обновления сам восстанавливает эпизоды по дословным журналам (`npc-backfill`, `ch: "mentioned"` — указатель на источник, не доказательство знания) и наполняет карточки.
+
+Принцип: показанная игроку сцена уже сыграна. Содержательные проверки (источники, знания, сроки, вещи, имена) пишут замечания и не останавливают свёртку; отказ дают только структурные ошибки. Отказ публикуется в `HOT.fold.errors` и `CHECKS.json`, а не теряется в логе Actions.
+
+Не перенесено намеренно: многоуровневые реестры документов, CAS для бросков и цепочка SQLite-релизов Bleach. Они замедляют подготовку сцены, а NPR держит ход на одной записи `TURN.json`.
+
 ## Откат
 
 Старые файлы не тронуты. Чтобы вернуться к прежней схеме: восстановить `AGENTS.md` из `docs/legacy/` и продолжить писать `recovery/FAST_SCENE.json`. Новые файлы (`HOT.json`, `GM_ONLY.json`, `TURN.json`, `archive/session-*-turns.jsonl`, `recovery/cast/`) можно оставить: прежняя схема их не читает.

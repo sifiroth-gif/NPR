@@ -13,7 +13,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from . import scene_gate
+from . import continuity_guard, npc_memory, scene_gate
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -21,7 +21,7 @@ POLICY_PATH = "recovery/GATE_POLICY.json"
 MAX_ACTORS = 8
 MAX_GRAPH = 55
 MAX_PASSAGES = 12
-MAX_BRIEF_BYTES = 36000
+MAX_BRIEF_BYTES = 48000
 
 
 def _digest(obj):
@@ -60,6 +60,18 @@ def _cast(hot, actor):
     hidden = (hot.get("_npc_knowledge") or {}).get(actor, [])
     if hidden:
         profile["gm_private_beliefs"] = hidden[-10:]
+    # Память персонажа (Bleach npc_psyche): что он пережил рядом с Шики,
+    # как к нему относится, что чувствует сейчас и чего добивается.
+    for k in ("tier", "first", "memory_total"):
+        if k in card:
+            profile[k] = card[k]
+    if card.get("memory"):
+        profile["memory"] = [{"turn": m.get("turn"), "ch": m.get("ch"),
+                              "what": _short(m.get("what", ""), 200)} for m in card["memory"]]
+        profile["memory_file"] = f"{npc_memory.MEMORY_DIR}/{actor}.json"
+    inner = npc_memory.inner_view(hot, actor)
+    if inner:
+        profile["inner"] = inner
     profile["status"] = "present_profile"
     return profile
 
@@ -184,6 +196,14 @@ def build(hot, turns):
             "secret_topics": list(truths)[-18:],
             "no_automatic_conclusion": True,
         },
+        "continuity": {
+            "things": continuity_guard.scene_things(hot, present),
+            "gone": (hot.get("things_gone") or [])[-5:],
+            "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
+        },
+        "checks": (hot.get("_checks") or [])[-10:],
+        "fold_errors": (hot.get("fold") or {}).get("errors", []),
+        "needs_profile": npc_memory.needs_profile(hot, present),
         "shiki": {k: _short(v, 950) for k, v in (hot.get("shiki") or {}).items()
                   if k in ("body", "mental_link", "sheet", "genome")},
         "last": {
@@ -207,6 +227,15 @@ def build(hot, turns):
             if packet_bytes() <= MAX_BRIEF_BYTES:
                 break
             passages[key]["gm_excerpt"] = _short(passages[key]["gm_excerpt"], 280)
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        for actor_data in actors.values():
+            if packet_bytes() <= MAX_BRIEF_BYTES:
+                break
+            inner = actor_data["profile"].get("inner") or {}
+            if inner.get("remembers"):
+                inner["remembers"] = inner["remembers"][-3:]
+            if actor_data["profile"].get("memory"):
+                actor_data["profile"]["memory"] = actor_data["profile"]["memory"][-4:]
     if packet_bytes() > MAX_BRIEF_BYTES:
         for actor_data in actors.values():
             if packet_bytes() <= MAX_BRIEF_BYTES:
