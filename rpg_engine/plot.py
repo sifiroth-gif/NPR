@@ -172,7 +172,33 @@ def review(hot, turns):
             hint = f" Следующая в очереди: {_label(queued[0])}." if queued else ""
             note("У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом."
                  + hint)
+    else:
+        note("Сквозной сюжет не задан. Ближайшим ходом (можно OOC) запиши d.plot.main — question и endings "
+             "по планам campaigns/shiki/plans/*GM_ONLY* — и текущую главу chapter с концовками и пределом.")
+    stale = _stale_threads(hot)
+    if stale:
+        note(f"Линии без движения две сессии и больше: {', '.join(stale[:8])}"
+             f"{' и ещё ' + str(len(stale) - 8) if len(stale) > 8 else ''}. Закрой каждую с исходом "
+             "(d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).")
     return notes
+
+
+def _stale_threads(hot):
+    """Линии HOT.threads, не менявшиеся две сессии и не привязанные к событию."""
+    session = int(hot.get("session") or 0)
+    linked = {t for e in (hot.get("_plot") or {}).get("events", {}).values() for t in e.get("threads") or []}
+    stale = []
+    for key, value in (hot.get("threads") or {}).items():
+        last = (value or {}).get("turn") if isinstance(value, dict) else None
+        if not last or key in linked:
+            continue          # без хода — постоянная заметка (договор, цель), не событие
+        try:
+            last_session = int(str(last)[1:3])
+        except ValueError:
+            continue
+        if session - last_session >= 2:
+            stale.append(key)
+    return stale
 
 
 def brief(hot):

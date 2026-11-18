@@ -961,11 +961,9 @@ def fold(state_dir):
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
-    if applied:
-        checks = hot.setdefault("_checks", [])
-        for note in plot.review(hot, applied):
-            if note not in checks:
-                checks.append(note)
+    # Замечания плана — текущее состояние, не события: каждая свёртка заменяет прежние.
+    hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") != "plot"]
+    hot["_checks"].extend(plot.review(hot, applied))
     wiki_report = _update_wiki(state_dir, hot, applied)
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
