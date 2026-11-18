@@ -488,6 +488,7 @@ def turn_checks(registry, turns):
             notes.append({"turn": turn["id"], "kind": "new_character",
                           "text": f"В сцене говорит «{name}» с именем, а страницы нет. Если это не "
                                   f"разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."})
+    notes += _read_checks(store, turns)
     for key, field, old, new in registry["changes"]:
         if new["src"] not in fresh:
             continue
@@ -496,6 +497,38 @@ def turn_checks(registry, turns):
                       "text": f"{name}: изменена постоянная черта «{field}». Было «{_text(old['v'], 90)}» "
                               f"({old['src']}), стало «{_text(new['v'], 90)}». Если это ошибка, исправь "
                               f"ход amend; если перемена произошла в мире, оставь."})
+    return notes
+
+
+RETURN_GAP = 10   # ходов без NPC, после которых его надо перечитать
+
+
+def _read_checks(store, turns):
+    """Вернувшийся в сцену NPC должен быть прочитан: поле ``read`` хода."""
+    resolve = talk.Resolver(store)
+    notes = []
+    for turn in turns:
+        if turn.get("kind") == "ooc":
+            continue
+        read = {str(r).removeprefix("memory/").removesuffix(".md") for r in turn.get("read") or []}
+        session, seq = _order(turn.get("id"))
+        returning = []
+        for label, _said in talk.utterances(turn.get("gm")):
+            key = resolve(label, session)
+            if not key or key in returning or f"npc/{key}" in read:
+                continue
+            before = [_order(e["turn"]) for e in store[key].get("talk") or []] + \
+                     [_order(h.get("turn")) for h in store[key].get("history") or []]
+            before = [b for b in before if b < (session, seq)]
+            last = max(before) if before else None
+            if last is None or last[0] != session or seq - last[1] > RETURN_GAP:
+                returning.append(key)
+        for key in returning[:3]:
+            entity = store[key]
+            notes.append({"turn": turn["id"], "kind": "read",
+                          "text": f"«{entity['name']}» вернулся в сцену, а его страница `npc/{key}` не открыта "
+                                  f"(поле read хода). Открой её до следующей реплики: облик, что знает, "
+                                  f"что говорил (`npc/{key}.talk`)."})
     return notes
 
 

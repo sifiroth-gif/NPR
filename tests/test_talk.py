@@ -59,3 +59,17 @@ class TalkTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReadCheckTest(unittest.TestCase):
+    def test_returning_npc_must_be_read(self):
+        from rpg_engine import wiki
+        store = {"nori": dict(entity("nori", "Хаясэ Нори", first="s04.text.001"),
+                              talk=[{"turn": "s04.text.001"}])}
+        gm = "**Хаясэ Нори:** — Вы опоздали."
+        later = {"id": "s05.text.010", "gm": gm, "read": []}
+        soon = {"id": "s04.text.005", "gm": gm}
+        opened = {"id": "s05.text.011", "gm": gm, "read": ["memory/npc/nori.md"]}
+        notes = wiki._read_checks(store, [later, soon, opened])
+        self.assertEqual([n["turn"] for n in notes], ["s05.text.010"])
+        self.assertIn("`npc/nori`", notes[0]["text"])
