@@ -1,7 +1,7 @@
 # Сцена сейчас
 
-**Вторник, 3 октября 1283 года, 03:17.** *Кусагакуре, Центральный госпиталь, реанимация, палата №6*
-Последний ход: `s08.text.014`.
+**Вторник, 3 октября 1283 года, 03:18.** *Кусагакуре, Центральный госпиталь, реанимация, палата №6*
+Последний ход: `s08.text.015`.
 
 ## Рядом
 ### Кадзиура Сатору · `npc/kadziura_satoru`
@@ -12,14 +12,14 @@
 - хочет: Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента
 - боится: Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений
-- знает (последнее из 11): Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revea…; Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton ide…; Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta resu…
+- знает (последнее из 12): Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton ide…; Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta resu…; At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, ma…
 ### Дежурная врач охраняемого отделения · `npc/night_icu_physician`
 - облик: не записан — опиши при первой возможности и внеси в карточку (`look`)
 - роль: Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17
 - хочет: Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения
 - боится: Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов
 - голос: Негромко, профессионально, без раболепия и без лишних слов
-- знает (последнее из 3): Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка.; Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.; Главой запрещён перевод пациентов без независимой проверки распоряжений.
+- знает (последнее из 4): Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.; Главой запрещён перевод пациентов без независимой проверки распоряжений.; 03:18 heard Shiki's direct disclosure of nsp-δ-expressing donor-like stroma in recipient6 right bronchial biopsy and key functional mechani…
 ### Реципиент № 6 · `npc/s17_recipient_6`
 - облик: худощавый подросток; коротко остриженные тёмные волосы, острые скулы, бледная кожа
 - возраст: примерно шестнадцать лет
@@ -28,13 +28,13 @@
 - знает (последнее из 1): Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в к…
 
 ## Положение
-03.10 03:17: Shiki healed his left deltoid surgery wound through fascia, muscle and skin with medical chakra, sutures remained externally; living patient6 bronchial biopsy maintained in isolated chakra-supported intramuscular pocket. Zero Genome analysis revealed within this one injured right bronchial sample two distinct nuclear+mitochondrial cell lineages: main epithelial KRT5/TP63/ciliated population and minority subepithelial stromal population bearing same engineered nsp-delta coding/splice/regulatory construct previously found in Arakawa donor cells. Stromal cells express NSP-delta and shed vesicles absorbed into epithelial cells without encoding DNA transfer. During observed mechanically evoked PIEZO1/Ca2+ signaling, calpain activation and E-cadherin junction disruption occur, producing sloughing, exudate and fibrin casts. Source of LOCAL destructive process is demonstrated, NOT identity of donor, full graft history, spread to other bronchi, origin of systemic neuromuscular weakness, S17 drug role or global pathogen. Biopsy remains isolated viable; Shiki genome untouched. Only Shiki has genetic findings. Diverted chakra reduced recipient6 support: SpO2 91% pulse122, after anesthetist increased inspired O2 SpO2 93%, still on same S17 and ventilator. Kadz sees healed wound, corrects record, restricts report of transplant-surgery to own documentation, orders second sample to Kuroda Mayu for independent testing, asks Shiki what he found.
+03.10 03:18: Shiki applied Zero Genome to locally degrade proteinaceous surgical sutures in left shoulder and fully restore physical integrity/function of skin, fascia, deltoid muscle, vessels and nerves. Viable recipient6 bronchial biopsy remains in isolated chakra-maintained pocket without integration. Shiki explicitly reported detailed results of s08.text.013 to Kadziura: two genetically distinct cell populations in patient6 one sampled right bronchial segment, minority subepithelial stroma with nsp-δ matching Arakawa source construct, NSP-δ-containing vesicles transferring protein but not gene into native epithelial cells, dysregulated PIEZO1/mechanosensitive Ca2 response, calpain and E-cadherin junction breakdown, epithelial sloughing, plasma-rich secretion and fibrin casts. Spelled out limits: location only, unknown donor and graft route, unproven whole-lung extent and separate S17 drug contribution. Kadziura now knows reported findings by direct verbal channel and inferred link to previously discussed experimental gene carrier, still in locked cabinet and unadministered; duty physician overheard briefing. Physician orders lab to verify cell lineage and protein marker independently with reserved second biopsy and asks Shiki treatment/monitoring plan. No changes to ventilator/S17 or new measurements. Boy 16 sedated, critically ill, last SpO2 93% on higher FiO2.
 
 ## Кто где
-Shiki at patient bedside with healed left deltoid under retained sutures, isolated living bronchial biopsy inside. Kadz by patient and Shiki, night staff with clinical chart, anesthetist at ventilator. Sixteen-year-old boy sedated, intubated SpO2 93% on increased inspired O2 and unchanged S17. Other sample referred for lab. Experimental carrier locked in Kadz office, unadministered.
+Shiki beside recipient6, left deltoid skin/fascia/muscle fully healed, no stitches or scar, live patient biopsy still isolated in intramuscular pocket. Kadziura with chart and cabinet key, duty physician listening, anesthetist at ventilator, teen boy on unchanged S17 infusion and mechanical ventilation.
 
 ## Давление
-Only Shiki holds confirmed local genomic/functional result; Kadz asks him what he found, while patient needs increased oxygen due diverted support.
+Kadziura now has Shiki's specific local molecular evidence to validate against independent laboratory biopsy, experimental carrier still sealed, asks for patient's treatment/assessment plan.
 
 ## Не прочитано Шики
 Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.
@@ -47,4 +47,4 @@ Only Shiki holds confirmed local genomic/functional result; Kadz asks him what h
 - вопросы, концовки и пределы только для ведущего: `memory/PLOT.GM_ONLY.md`
 
 ## Конец последнего ответа
-лось в ходе наблюдения». **Кадзиура Сатору, дежурной врачу:** — Запись об этой операции в общий ночной журнал пока не переносить. Оригинал оставить у меня. Вторую биопсию отправить Куроде Маю для независимого анализа, без объяснений о происхождении первого образца. Дежурная врач задержала взгляд на документе. **Дежурная врач:** — То есть сведения о вмешательстве будут только у вас? **Кадзиура Сатору:** — У меня, у вас и у человека, на котором оно произведено. Остальным пока достаточно результатов пациента. Дежурная врач ничего не ответила. Она взяла направление, но не стала убирать из него номер шестой палаты. Кадзиура повернулся к Шики. **Кадзиура Сатору:** — Мугами. Если вы действительно получили результат, мне нужна его медицинская часть. Состояние мальчика снова ухудшается, хотя непосредственная обструкция устранена. Он взглянул на монитор. — Что вы нашли? **Ход Шики.**
+чение источника поражения. До этого назначения мальчику остаются прежними. Он вновь посмотрел на Шики. Теперь его взгляд задержался на левом плече. Швов там больше не было. **Кадзиура Сатору:** — Вы разрушили хирургические нити, восстановили собственную мышцу и сохранили чужой образец внутри неё. Он медленно закрыл историю болезни. — После сегодняшней ночи мне придётся пересмотреть некоторые представления о том, что вообще можно назвать человеческой тканью. Врач извлёк из кармана ключ от своего кабинета и положил на стол перед собой. **Кадзиура Сатору:** — В запертом шкафу лежит ваш экспериментальный носитель. Теперь я понимаю его предполагаемую мишень применительно к шестому пациенту. Он не протянул ключ Шики. — Но прежде чем говорить о введении, мне необходимо знать, что вы предлагаете делать с установленным источником НСП-δ и как намерены оценивать результат. **Ход Шики.**

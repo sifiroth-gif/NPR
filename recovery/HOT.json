@@ -22,17 +22,17 @@
   ]
  },
  "scene": {
-  "situation": "03.10 03:17: Shiki healed his left deltoid surgery wound through fascia, muscle and skin with medical chakra, sutures remained externally; living patient6 bronchial biopsy maintained in isolated chakra-supported intramuscular pocket. Zero Genome analysis revealed within this one injured right bronchial sample two distinct nuclear+mitochondrial cell lineages: main epithelial KRT5/TP63/ciliated population and minority subepithelial stromal population bearing same engineered nsp-delta coding/splice/regulatory construct previously found in Arakawa donor cells. Stromal cells express NSP-delta and shed vesicles absorbed into epithelial cells without encoding DNA transfer. During observed mechanically evoked PIEZO1/Ca2+ signaling, calpain activation and E-cadherin junction disruption occur, producing sloughing, exudate and fibrin casts. Source of LOCAL destructive process is demonstrated, NOT identity of donor, full graft history, spread to other bronchi, origin of systemic neuromuscular weakness, S17 drug role or global pathogen. Biopsy remains isolated viable; Shiki genome untouched. Only Shiki has genetic findings. Diverted chakra reduced recipient6 support: SpO2 91% pulse122, after anesthetist increased inspired O2 SpO2 93%, still on same S17 and ventilator. Kadz sees healed wound, corrects record, restricts report of transplant-surgery to own documentation, orders second sample to Kuroda Mayu for independent testing, asks Shiki what he found.",
+  "situation": "03.10 03:18: Shiki applied Zero Genome to locally degrade proteinaceous surgical sutures in left shoulder and fully restore physical integrity/function of skin, fascia, deltoid muscle, vessels and nerves. Viable recipient6 bronchial biopsy remains in isolated chakra-maintained pocket without integration. Shiki explicitly reported detailed results of s08.text.013 to Kadziura: two genetically distinct cell populations in patient6 one sampled right bronchial segment, minority subepithelial stroma with nsp-δ matching Arakawa source construct, NSP-δ-containing vesicles transferring protein but not gene into native epithelial cells, dysregulated PIEZO1/mechanosensitive Ca2 response, calpain and E-cadherin junction breakdown, epithelial sloughing, plasma-rich secretion and fibrin casts. Spelled out limits: location only, unknown donor and graft route, unproven whole-lung extent and separate S17 drug contribution. Kadziura now knows reported findings by direct verbal channel and inferred link to previously discussed experimental gene carrier, still in locked cabinet and unadministered; duty physician overheard briefing. Physician orders lab to verify cell lineage and protein marker independently with reserved second biopsy and asks Shiki treatment/monitoring plan. No changes to ventilator/S17 or new measurements. Boy 16 sedated, critically ill, last SpO2 93% on higher FiO2.",
   "present": [
    "shiki",
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6"
   ],
-  "positions": "Shiki at patient bedside with healed left deltoid under retained sutures, isolated living bronchial biopsy inside. Kadz by patient and Shiki, night staff with clinical chart, anesthetist at ventilator. Sixteen-year-old boy sedated, intubated SpO2 93% on increased inspired O2 and unchanged S17. Other sample referred for lab. Experimental carrier locked in Kadz office, unadministered.",
-  "pressure": "Only Shiki holds confirmed local genomic/functional result; Kadz asks him what he found, while patient needs increased oxygen due diverted support.",
+  "positions": "Shiki beside recipient6, left deltoid skin/fascia/muscle fully healed, no stitches or scar, live patient biopsy still isolated in intramuscular pocket. Kadziura with chart and cabinet key, duty physician listening, anesthetist at ventilator, teen boy on unchanged S17 infusion and mechanical ventilation.",
+  "pressure": "Kadziura now has Shiki's specific local molecular evidence to validate against independent laboratory biopsy, experimental carrier still sealed, asks for patient's treatment/assessment plan.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s08.text.013",
+  "as_of": "s08.text.015",
   "npc_disclosures_to_player": {
    "kadziura_satoru": [
     {
@@ -50,6 +50,12 @@
     {
      "turn": "s08.text.010",
      "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать.",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.015",
+     "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ.",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
     }
@@ -72,6 +78,12 @@
      "line": "Шики предложил Кадзиуре нарушающий протоколы эксперимент над собственным телом ради шанса спасти №6. Врач не отверг идею, но потребовал раскрыть метод и гарантии непрерывной поддержки ребёнка, прежде чем участвовать.",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.015",
+     "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ.",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
     }
    ]
   }
@@ -89,10 +101,11 @@
    "knows": [
     "Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка.",
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
-    "Главой запрещён перевод пациентов без независимой проверки распоряжений."
+    "Главой запрещён перевод пациентов без независимой проверки распоряжений.",
+    "03:18 heard Shiki's direct disclosure of nsp-δ-expressing donor-like stroma in recipient6 right bronchial biopsy and key functional mechanism, under limitations; tasked to request independent verification by Kuroda Mayu."
    ],
-   "seen": "s08.text.014",
-   "state": "03:17 Kadziura instructed her to keep unusual Shiki surgery out of general night log for now while preserving original, and send second biopsy for independent analysis to Kuroda Mayu; she retains copy with recipient6 case number and may independently act.",
+   "seen": "s08.text.015",
+   "state": "03:18 duty physician has received Kadziura's lab order and directly heard report from Shiki.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -105,12 +118,6 @@
      "at": "0006-10-03T01:44:00",
      "ch": "present",
      "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
-    },
-    {
-     "turn": "s08.text.006",
-     "at": "0006-10-03T02:40:00",
-     "ch": "present",
-     "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
     },
     {
      "turn": "s08.text.007",
@@ -141,9 +148,15 @@
      "at": "0006-10-03T03:17:00",
      "ch": "present",
      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики."
+    },
+    {
+     "turn": "s08.text.015",
+     "at": "0006-10-03T03:18:00",
+     "ch": "present",
+     "what": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ."
     }
    ],
-   "memory_total": 9,
+   "memory_total": 10,
    "first": "s07.text.033",
    "tier": "developed"
   },
@@ -167,10 +180,11 @@
     "Shiki showed experimental viral-like carrier of undisclosed origin and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing.",
-    "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue."
+    "Shiki's left deltoid incision rapidly healed despite retained sutures; Kadziura still lacks knowledge of Zero Genome and any nsp-delta result in patient6 tissue.",
+    "At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, matching previously investigated Arakawa donor construct, continuous NSP-δ vesicular protein affecting epithelial Ca2/PIEZO1, calpain and E-cadherin contacts, causing casts. Scope confined to sampled lesion; unknown donor, implantation origin, lung-wide distribution or contribution of S17."
    ],
-   "seen": "s08.text.014",
-   "state": "03:17 observed Shiki's surgical wound heal rapidly under visible sutures while donor sample stays inside; amended operation documentation and restricts self-experiment from open night log, independently orders second sample to Kuroda Mayu. Asks for findings but does not know them. Prior dread calibrated stage2, now response changes tangible practice.",
+   "seen": "s08.text.015",
+   "state": "03:18 Kadziura heard complete molecular report and saw surgical suture breakdown and Shiki's intact left shoulder; initiated independent lab request via duty physician. Recognizes previously secured gene carrier was designed to affect nsp-δ, but does not know Byoton or internal Zero Genome mechanism, requests proposed plan.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -185,12 +199,6 @@
      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать предложение, происхождение С-17 ему не ра…"
     },
     {
-     "turn": "s08.text.006",
-     "at": "0006-10-03T02:40:00",
-     "ch": "present",
-     "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
-    },
-    {
      "turn": "s08.text.007",
      "at": "0006-10-03T02:54:00",
      "ch": "present",
@@ -219,11 +227,17 @@
      "at": "0006-10-03T03:17:00",
      "ch": "present",
      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики."
+    },
+    {
+     "turn": "s08.text.015",
+     "at": "0006-10-03T03:18:00",
+     "ch": "present",
+     "what": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ."
     }
    ],
-   "memory_total": 14,
+   "memory_total": 15,
    "first": "s07.text.033",
-   "tier": "developed"
+   "tier": "deep"
   },
   "s17_recipient_6": {
    "name": "Реципиент № 6",
@@ -234,7 +248,7 @@
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.014",
+   "seen": "s08.text.015",
    "memory": [
     {
      "turn": "s08.text.006",
@@ -271,9 +285,15 @@
      "at": "0006-10-03T03:17:00",
      "ch": "present",
      "what": "Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики."
+    },
+    {
+     "turn": "s08.text.015",
+     "at": "0006-10-03T03:18:00",
+     "ch": "present",
+     "what": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ."
     }
    ],
-   "memory_total": 6,
+   "memory_total": 7,
    "first": "s08.text.006",
    "tier": "developed"
   }
@@ -376,13 +396,13 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "03.10 03:17 Shiki performed Zero Genome assay of live patient6 bronchial biopsy held isolated in left deltoid, with healed external incision and retained sutures, no genomic assimilation. Confirmed local two-lineage mosaic: nsp-delta engineered construct in minority non-epithelial stromal cells with genetically distinct nuclei and mtDNA; same construct as Arakawa donor biopsy, NSP-delta vesicles absorbed by host epithelium, dysregulated PIEZO1-Ca2+/calpain/E-cadherin response drives mucosal sloughing and fibrin cast production in tested lesion. Identity, implant history/distribution and systemic cause unproven; S17 role untested. This information ONLY Shiki knows until disclosed. While Shiki diverted chakra patient6 SpO2 91 HR122; anesthetist increased inspired O2, SpO2 93 on higher support. No patient experimental therapy or S17 change. Kadz requests result, independent second biopsy sent to Kuroda.",
-   "turn": "s08.text.013"
+   "state": "03.10 03:18 Shiki fully healed left deltoid and degraded surgical stitches by Zero Genome, retained biopsy without assimilating genetics. He SPOKE all findings to Kadziura and duty physician: locally genetically distinct donor-like stroma with nsp-δ in boy6 bronchial injury; NSP-δ vesicles impair mechanosensitive Ca2, calpains and E-cadherin junctions of host epithelium, causing desquamation, plasma exudate and fibrin casts. Same pathological construct as prior Arakawa donor tissue, but donor identity, implantation, lesion extent and S17 contribution unresolved. Kadz asks Kuroda Mayu for independent confirmatory assays using reserved second biopsy. Experimental carrier still in locked office, no patient treatment or S17 change, patient remains ventilator dependent (last SpO2 93% on higher FiO2).",
+   "turn": "s08.text.015"
   }
  },
  "shiki": {
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-  "body": "03.10 03:17 healed left deltoid skin, muscle and fascia after surgery via medical chakra; stitches remain externally, isolated recipient6 bronchial tissue alive in chakra pocket. Used Zero Genome for cellular/gene function analysis, NO donor-line absorption or permanent chromosome edit; diagnostic chakra expenditure decreases available patient support.",
+  "body": "03.10 03:18: left deltoid fully restored and without stitches or scar; Zero Genome dissolved organic suture material. Live sample of recipient6 bronchial tissue deliberately isolated in chakra-managed intramuscular pocket, not incorporated into Shiki cells or genetic program. Chakra support costs ongoing.",
   "look": "20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.",
   "presence": "Врождённое: рядом с ним у людей без причины поднимается тревога. Никто не называет причину. Люди отвечают не телом и не разглядыванием облика, а поступком по своей лестнице dread (GM_BRIEF.horror).",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
@@ -562,7 +582,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 60.1493,
+  "value": 60.1498,
   "stage": 4,
   "label": "Чёрные сосуды",
   "signs": "Тёмные сосуды на шее и корпусе, корни до шеи; кровь при ранах постепенно тёмно-бордовая, пока НЕ заразна; предчувствие болезненной смерти и запах только вблизи.",
@@ -606,11 +626,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.011",
-   "at": "0006-10-03T03:09:00",
-   "line": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
-  },
-  {
    "id": "s08.text.012",
    "at": "0006-10-03T03:09:00",
    "line": "Внеигровое планирование: создан сквозной сюжет «Чужая ткань», активная глава о С-17 и ограниченные события по старым линиям; завершённые ночёвки и покупка одежды закрыты без реткона.",
@@ -626,37 +641,31 @@
    "at": "0006-10-03T03:17:00",
    "line": "OOC: подтверждено наложение швов Кадзиурой в s08.text.011. Обновлены инструкции MEDICINE.md и GM_CORE.md §6: медицинские механизмы нужно пояснять профессионально; время 03:17 не изменено.",
    "ooc": true
+  },
+  {
+   "id": "s08.text.015",
+   "at": "0006-10-03T03:18:00",
+   "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.014",
-  "seq": 14,
-  "at": "0006-10-03T03:17:00",
+  "id": "s08.text.015",
+  "seq": 15,
+  "at": "0006-10-03T03:18:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "03:17"
+  "time": "03:18"
  },
  "last": {
-  "id": "s08.text.013",
-  "player": "#нулевой геном, закрыть рану и анализ на поиск источника патогенного процесса#",
-  "gm": "…еличенной доле кислорода насыщение поднялось до девяноста трёх процентов.\n\nКадзиура тем временем осматривал левое плечо Шики.\n\nТам, где несколько минут назад проходил скальпель, края раны уже срослись. Между ними остались хирургические нити. Врач осторожно коснулся ткани возле шва, убедился в отсутствии кровотечения и убрал руку.\n\n**Кадзиура Сатору:**\n\n— Рассечение зажило.\n\nОн произнёс это почти без выражения.\n\nЗатем взял лист, на котором была записана операция, и перечеркнул первоначальную формулировку «послеоперационная рана». Рядом вписал: «Состояние мягких тканей после вмешательства изменилось в ходе наблюдения».\n\n**Кадзиура Сатору, дежурной врачу:**\n\n— Запись об этой операции в общий ночной журнал пока не переносить. Оригинал оставить у меня. Вторую биопсию отправить Куроде Маю для независимого анализа, без объяснений о происхождении первого образца.\n\nДежурная врач задержала взгляд на документе.\n\n**Дежурная врач:**\n\n— То есть сведения о вмешательстве будут только у вас?\n\n**Кадзиура Сатору:**\n\n— У меня, у вас и у человека, на котором оно произведено. Остальным пока достаточно результатов пациента.\n\nДежурная врач ничего не ответила. Она взяла направление, но не стала убирать из него номер шестой палаты.\n\nКадзиура повернулся к Шики.\n\n**Кадзиура Сатору:**\n\n— Мугами. Если вы действительно получили результат, мне нужна его медицинская часть. Состояние мальчика снова ухудшается, хотя непосредственная обструкция устранена.\n\nОн взглянул на монитор.\n\n— Что вы нашли?\n\n**Ход Шики.**",
-  "gm_chars": 6564
+  "id": "s08.text.015",
+  "player": "#нулевой геном: распад швов, полностью излечения рука# кадзиура - сан. #напиши все что было выяснено в чат#",
+  "gm": "… на стол.\n\n**Кадзиура Сатору:**\n\n— Ваша находка объясняет местное разрушение эпителия. Она пока не объясняет, насколько далеко распространилась чужая ткань и что удерживает мальчика на С-17.\n\nОн повернулся к дежурной врачу.\n\n**Кадзиура Сатору:**\n\n— Передайте Куроде дополнение к исследованию. Проверить в образце две генетические линии, локус *nsp-δ* и признаки его экспрессии. Отдельно — наличие белкового продукта в эпителии, геном которого не содержит этого локуса.\n\n**Дежурная врач:**\n\n— А если результаты подтвердятся?\n\n**Кадзиура Сатору:**\n\n— Тогда у нас впервые появится основание обсуждать лечение источника поражения. До этого назначения мальчику остаются прежними.\n\nОн вновь посмотрел на Шики. Теперь его взгляд задержался на левом плече.\n\nШвов там больше не было.\n\n**Кадзиура Сатору:**\n\n— Вы разрушили хирургические нити, восстановили собственную мышцу и сохранили чужой образец внутри неё.\n\nОн медленно закрыл историю болезни.\n\n— После сегодняшней ночи мне придётся пересмотреть некоторые представления о том, что вообще можно назвать человеческой тканью.\n\nВрач извлёк из кармана ключ от своего кабинета и положил на стол перед собой.\n\n**Кадзиура Сатору:**\n\n— В запертом шкафу лежит ваш экспериментальный носитель. Теперь я понимаю его предполагаемую мишень применительно к шестому пациенту.\n\nОн не протянул ключ Шики.\n\n— Но прежде чем говорить о введении, мне необходимо знать, что вы предлагаете делать с установленным источником НСП-δ и как намерены оценивать результат.\n\n**Ход Шики.**",
+  "gm_chars": 6341
  },
  "lint": {
   "recent": [
-   {
-    "id": "s08.text.010",
-    "score": 2.9,
-    "verdict": "чисто",
-    "hits": [
-     {
-      "rule": "explain",
-      "quote": "Его пальцы разгладили загнувшийся угол бумаги; потом он положил её на стол так тщательно, словно пытался привести в порядок нечто гораздо более существенное."
-     }
-    ]
-   },
    {
     "id": "s08.text.011",
     "score": 1.6,
@@ -678,11 +687,22 @@
       "quote": "Генетическое различие подтверждало клеточную химерность, но само по себе не восстанавливало историю её возникновения."
      }
     ]
+   },
+   {
+    "id": "s08.text.015",
+    "score": 1.3,
+    "verdict": "чисто",
+    "hits": [
+     {
+      "rule": "hedge",
+      "quote": "Их генетическое отличие подтверждает наличие чужеродной линии, однако ещё не доказывает, каким способом она попала в бронхи."
+     }
+    ]
    }
   ],
   "note": "Попадания линтера по последним ответам. Каждая цитата — тип фразы, который в следующей сцене не повторяется. Не оправдывайся в тексте, пиши иначе.",
   "session_totals": {
-   "hedge": 3,
+   "hedge": 4,
    "deference": 2,
    "therapy": 9,
    "neg_parallel": 1,
@@ -694,13 +714,13 @@
   }
  },
  "fold": {
-  "commit": "eb975c48c2f7b9f36f5a1cd14e79e394195f9f8b",
-  "turns": 219,
+  "commit": "4659e16d20c816a27dcb036d935d4861ce0d802f",
+  "turns": 220,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "82344810d46416412be3de9caea65de2c5a85aad3bb1a5770f1e325d6ebeaa09"
+  "turn_digest": "e97ab755e09ee7ae4674d59c81a44f12bd646e2e680bfa840b6dfb53a65d3aa1"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
