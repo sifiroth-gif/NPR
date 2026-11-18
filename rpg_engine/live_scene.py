@@ -285,13 +285,14 @@ def validate_admission(hot, turn, *, policy, accepted=()):
                 source == turn["id"] and actor in actor_ids
                 and channel in ("witness", "told_in_scene")):
             errors.append("knowledge_event source not prior/observed: " + str(source))
+        actor_patch = (((turn.get("d") or {}).get("cast") or {}).get(actor) or {})
+        public_knows = actor_patch.get("knows+", []) if isinstance(actor_patch, dict) else []
         if (evidence.get("visibility") == "gm_only" and
-                evidence.get("claim") in ((turn.get("d") or {})
-                                           .get("cast", {}).get(actor, {}).get("knows+") or [])):
+                evidence.get("claim") in (public_knows or [])):
             errors.append("secret NPC belief must not be duplicated in public knows+")
     # Only source-authenticated knowledge may be delivered to a remote actor.
     # Actors already present can learn by hearing/seeing the current scene.
-    for actor, patch in (turn.get("d") or {}).get("cast", {}).items():
+    for actor, patch in (((turn.get("d") or {}).get("cast") or {})).items():
         if not isinstance(patch, dict) or not patch.get("knows+"):
             continue
         if actor not in actor_ids and not any(
