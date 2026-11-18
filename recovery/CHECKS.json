@@ -1,18 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.016",
+ "cursor": "s08.text.017",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s07.text.037",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034"
-  },
-  {
-   "turn": "s07.text.038",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034"
-  },
   {
    "turn": "s08.text.002",
    "kind": "things",
@@ -82,6 +72,16 @@
    "turn": "s08.text.016",
    "kind": "review",
    "text": "time jump crossed unreviewed NPC clock deadlines: s17_patient6_intake_record_review"
+  },
+  {
+   "turn": "s08.text.017",
+   "kind": "review",
+   "text": "review.sources must refer to exact prior played turns"
+  },
+  {
+   "turn": "s08.text.017",
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
