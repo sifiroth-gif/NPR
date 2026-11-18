@@ -173,6 +173,22 @@ class WholeGameIntegration(unittest.TestCase):
         self.assertTrue(npc["pressure_pairs"])
         self.assertNotIn("future_actor", self.hot["cast"])
 
+    def test_clock_owner_organization_is_not_spurious_npc(self):
+        self.hot["offscreen"]["clocks"]["morphology"] = {
+            "owner": "Central Hospital, morphology laboratory",
+            "what": "Histology completes", "due": "0006-11-18T23:00:00"}
+        self.hot["offscreen"]["clocks"]["unidentified"] = {
+            "owner": "Unknown person by free text label",
+            "what": "Witness might return", "due": "0006-11-19T00:00:00"}
+        outlook = npc_dynamics.view(self.hot, index=self.index)
+        ids = {x["id"] for x in outlook["actors"]}
+        self.assertNotIn("Central Hospital, morphology laboratory", ids)
+        self.assertNotIn("Unknown person by free text label", ids)
+        pending = {x["owner"] for x in outlook["unresolved_clock_owners"]}
+        self.assertIn("Central Hospital, morphology laboratory", pending)
+        self.assertIn("Unknown person by free text label", pending)
+        self.assertIn("ghost", ids)
+
     def test_dynamics_omissions_disclosed_for_crowded_scenes(self):
         self.hot["scene"]["present"].extend(f"actor_{i}" for i in range(25))
         outlook = npc_dynamics.view(self.hot)

@@ -58,6 +58,10 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
     # omissions rather than silently claiming that the excluded actors are fine.
     ordered = present.copy()
     urgent = []
+    unresolved_owners = []
+    known_npcs = set((hot.get("cast") or {})) | set((hot.get("_psyche") or {}))
+    known_npcs.update(k for k, record in archive_entities.items()
+                      if record.get("kind") == "npc")
     if include_offscreen:
         for clock, value in clocks.items():
             if not isinstance(value, dict) or value.get("closed"):
@@ -65,8 +69,19 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
             owner, due = value.get("owner"), _parse(value.get("due"))
             if owner and owner not in players and due and now and (
                     due <= now + timedelta(hours=24)):
-                if owner not in urgent:
-                    urgent.append(owner)
+                if owner in known_npcs:
+                    if owner not in urgent:
+                        urgent.append(owner)
+                else:
+                    # A clock owner might be an office, building, organization or
+                    # a human label without a verified identity. Preserve it in
+                    # world time, never fabricate an NPC from a string.
+                    unresolved_owners.append({
+                        "clock_id": clock,
+                        "owner": _text(owner, 130),
+                        "due": value.get("due"),
+                        "status": "unresolved_actor_or_non_npc_owner",
+                    })
         for key, hidden in (hot.get("_psyche") or {}).items():
             if key in players or key in ordered or key in urgent:
                 continue
@@ -158,6 +173,7 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
     return {
         "schema": SCHEMA, "actors": result,
         "omitted_actor_ids": ordered[max_actors:],
+        "unresolved_clock_owners": unresolved_owners[:MAX_ACTORS],
         "overdue_owner_ids": [a for a in urgent if
                               any(c.get("status") == "overdue"
                                   for c in next((r["world_clocks"] for r in result
