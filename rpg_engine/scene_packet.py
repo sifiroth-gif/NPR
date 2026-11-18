@@ -117,7 +117,8 @@ def _actors(packet):
                 **detail,
             })
     packet["npc_dynamics"] = {
-        "offscreen_actors": background,
+        "actors": [{**entry, "present": False} for entry in background],
+        "present_inline": list(present),
         "omitted_actor_ids": dynamics.get("omitted_actor_ids") or [],
         "overdue_owner_ids": dynamics.get("overdue_owner_ids") or [],
         "unresolved_clock_owners": dynamics.get("unresolved_clock_owners") or [],
