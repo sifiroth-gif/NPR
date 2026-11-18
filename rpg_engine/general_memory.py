@@ -382,7 +382,12 @@ def retrieve(index, *, action="", scene=None, cursor=None, limit=MAX_BRIEF_ENTIT
         facts_text = " ".join(str(f.get("value")) for f in card.get("facts", []))
         overlap = len(question_terms & _tokens(card.get("label", "") + " " + facts_text + " " + profile_text))
         known = any(_fact_valid(f, cursor.get("at", "")) for f in card.get("facts", []))
-        score = ((140 if by_action else 0) + (90 if by_scene else 0) +
+        # Full, source-backed identity beats a shared alias (e.g. every room in
+        # the same hospital). This also improves old-NPC and object lookup.
+        full_name_match = bool(action and len(_norm(card.get("label"))) >= 5
+                               and _match(action, card["label"]))
+        score = ((140 if by_action else 0) + (45 if full_name_match else 0) +
+                 (90 if by_scene else 0) +
                  (50 if known and by_scene else 0) +
                  (25 if key in present else 0) +
                  (12 if card["kind"] == "place" and by_scene else 0) +
