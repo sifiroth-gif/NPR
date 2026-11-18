@@ -7,7 +7,7 @@ The existing private NPC psyche, intents and world clocks remain authoritative.
 """
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from . import npc_memory
 
@@ -40,7 +40,7 @@ def _clock_relevance(clocks, actor):
             and not value.get("closed")]
 
 
-def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
+def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscreen=True):
     """Read-only GM projection for every active cast member and urgent actor.
 
     The outcome of any pressure point still needs an autonomous GM decision and
@@ -49,6 +49,7 @@ def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
     cursor = hot.get("cursor") or {}
     now = _parse(cursor.get("at"))
     clocks = (hot.get("offscreen") or {}).get("clocks") or {}
+    archive_entities = (index or {}).get("entities") or {}
     players = {"shiki", "player"}
     scene = hot.get("scene") or {}
     present = list(dict.fromkeys(present or scene.get("present") or []))
@@ -62,7 +63,8 @@ def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
             if not isinstance(value, dict) or value.get("closed"):
                 continue
             owner, due = value.get("owner"), _parse(value.get("due"))
-            if owner and owner not in players and due and now and due <= now:
+            if owner and owner not in players and due and now and (
+                    due <= now + timedelta(hours=24)):
                 if owner not in urgent:
                     urgent.append(owner)
         for key, hidden in (hot.get("_psyche") or {}).items():
@@ -77,6 +79,16 @@ def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
     result = []
     for actor in keep:
         card = (hot.get("cast") or {}).get(actor) or {}
+        archival = archive_entities.get(actor) or {}
+        archival_sources = archival.get("sources") or []
+        archived_identity = {}
+        for projection in reversed(archival.get("projections") or []):
+            for field in ("role", "wants", "fears", "stance"):
+                if not card.get(field) and not archived_identity.get(field) and projection.get(field):
+                    archived_identity[field] = projection[field]
+        # Card fields are current operational state; archive fallback is an
+        # explicitly labelled historic projection, not a renewed canon fact.
+        card = {**archived_identity, **card}
         inner = npc_memory.inner_view(hot, actor)
         psyche = inner.get("psyche") or {}
         relevant = _clock_relevance(clocks, actor)
@@ -110,6 +122,12 @@ def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
              "status": "possibility_to_test_not_a_fact"}
             for a, b, name in FACET_PAIRS if a in facets and b in facets
         ]
+        if identity.get("wants") and identity.get("fears"):
+            tensions.append({
+                "kind": "goal_at_risk",
+                "anchor": {"wants": identity["wants"], "fears": identity["fears"]},
+                "status": "possibility_to_test_not_a_fact",
+            })
         # The intent lacks an explicit due clock. This is an *open choice*,
         # not evidence that the NPC already acted, ignored it or abandoned it.
         unscheduled = [i["id"] for i in intents if i["status"] == "committed"
@@ -119,12 +137,19 @@ def view(hot, *, present=(), max_actors=MAX_ACTORS, include_offscreen=True):
         result.append({
             "id": actor, "present": actor in present,
             "identity_projection": identity,
+            "identity_source": (archival_sources[0] if archived_identity and
+                                archival_sources else "HOT.cast"),
+            "identity_status": "operational_or_archival_projection_not_new_fact",
             "psyche_facets": facets,
             "pressure_pairs": tensions,
             "current_affect": inner.get("affect"),
             "committed_or_paused_intents": intents[:MAX_INTENTS],
             "world_clocks": schedule,
             "unclocked_intents": unscheduled[:MAX_INTENTS],
+            "unoperationalized_goal": (
+                {"wants": identity["wants"], "status": "motivation_not_committed_action"}
+                if identity.get("wants") and not intents and not relevant else None
+            ),
             "rule": "Character may act cruelly, irrationally or self-protectively. "
                     "Pressure pairs are alternative questions, not decisions. "
                     "NPC knows only their source-bound experience. "
