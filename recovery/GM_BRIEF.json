@@ -94,7 +94,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "d69835478f1c2ed56927a0284bfeab4eb47a9022bc076980af9631c1c5d9359c",
+ "digest": "12edefa58dd8f8011b2768748dbb377efb1179ef2cb802ac17061a44e0f54119",
  "entity_memory": {
   "activated": [
    {
@@ -382,58 +382,26 @@
      "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
     },
     "world_clocks": []
-   },
-   {
-    "committed_or_paused_intents": [],
-    "current_affect": null,
-    "id": "Аракава Дзюн",
-    "identity_projection": {},
-    "identity_source": "HOT.cast",
-    "identity_status": "operational_or_archival_projection_not_new_fact",
-    "present": false,
-    "pressure_pairs": [],
-    "psyche_facets": {},
-    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
-    "unclocked_intents": [],
-    "unoperationalized_goal": null,
-    "world_clocks": [
-     {
-      "due": "0006-10-03T08:15:00",
-      "id": "arakawa_supply_audit",
-      "source": "GM_ONLY.offscreen.clocks",
-      "status": "pending",
-      "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
-     }
-    ]
-   },
-   {
-    "committed_or_paused_intents": [],
-    "current_affect": null,
-    "id": "Центральный госпиталь, лаборатория морфологии",
-    "identity_projection": {},
-    "identity_source": "HOT.cast",
-    "identity_status": "operational_or_archival_projection_not_new_fact",
-    "present": false,
-    "pressure_pairs": [],
-    "psyche_facets": {},
-    "rule": "Character may act cruelly, irrationally or self-protectively. Pressure pairs are alternative questions, not decisions. NPC knows only their source-bound experience. Do not auto-advance or resolve any clock here.",
-    "unclocked_intents": [],
-    "unoperationalized_goal": null,
-    "world_clocks": [
-     {
-      "due": "0006-10-03T02:40:00",
-      "id": "s17_cast_morphology",
-      "source": "GM_ONLY.offscreen.clocks",
-      "status": "pending",
-      "what": "Получить и рассмотреть бронхиальные слепки пациента №6 для первичного морфологического описания без заранее определённой причины"
-     }
-    ]
    }
   ],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "rule": "Never drive the player character; never invent NPC action or change canon without a TURN delta. Existing intent and clock are actionable, not completed.",
-  "schema": "npr-npc-dynamics/1"
+  "schema": "npr-npc-dynamics/1",
+  "unresolved_clock_owners": [
+   {
+    "clock_id": "arakawa_supply_audit",
+    "due": "0006-10-03T08:15:00",
+    "owner": "Аракава Дзюн",
+    "status": "unresolved_actor_or_non_npc_owner"
+   },
+   {
+    "clock_id": "s17_cast_morphology",
+    "due": "0006-10-03T02:40:00",
+    "owner": "Центральный госпиталь, лаборатория морфологии",
+    "status": "unresolved_actor_or_non_npc_owner"
+   }
+  ]
  },
  "present_npcs": {
   "kadziura_satoru": {
