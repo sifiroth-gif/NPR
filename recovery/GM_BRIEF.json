@@ -64,7 +64,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "584326b2accea58c3ce143f1ea59c6eec40764303b2d095a47930937ae06b6e4",
+ "digest": "3a57c1ddec7d4474a921e59f76e82ded773c129154f49b683c57be4c5d9fbb15",
  "entity_memory": {
   "activated": [
    {
@@ -132,6 +132,86 @@
  },
  "fold_errors": [],
  "format": "NPR-LIVE-SCENE/1",
+ "general_memory": {
+  "activated": [
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "kadziura_satoru",
+    "kind": "npc",
+    "label": "Кадзиура Сатору",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "night_icu_physician",
+    "kind": "npc",
+    "label": "Дежурная врач охраняемого отделения",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "place:001feb168c600401",
+    "kind": "place",
+    "label": "Кусагакуре, северный хозяйственный квартал, старая котельная УВБ",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "place:0210ea1232c91e9c",
+    "kind": "place",
+    "label": "Кусагакуре, Центральный госпиталь, молекулярная лаборатория Куроды Маю, аналитическая станция",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "place:033d936cdd6a48a6",
+    "kind": "place",
+    "label": "Кусагакуре, дом Мугами Шики",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "place:0651a28fafc1654d",
+    "kind": "place",
+    "label": "Кусагакуре, дом Мугами Шики, открытая входная дверь",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "place:0b99f9c7888df2de",
+    "kind": "place",
+    "label": "Кусагакуре, подземный комплекс УВБ, внутренний коридор перед В-7",
+    "status": "no_verified_facts"
+   }
+  ],
+  "conflicts": [],
+  "level": 0,
+  "omitted": 87,
+  "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
+  "schema": "npr-general-memory/1",
+  "total_matched": 94
+ },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
