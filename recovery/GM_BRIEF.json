@@ -64,7 +64,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "01:50"
  },
- "digest": "cc97d281ab389d77485a57c4e18d704717a7bf6cd5b717ab798b9047d8fcc9dd",
+ "digest": "8c593a28cb34943e7ad7e0a015dff35ab29ce03b1b2cef4783743217c085d96d",
  "entity_memory": {
   "activated": [
    {
@@ -193,6 +193,14 @@
     "id": "kadziura_satoru",
     "kind": "npc",
     "label": "Кадзиура Сатору",
+    "operational_cues": {
+     "source": "recovery/cast/kadziura_satoru.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик созн",
+      "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17"
+     }
+    },
     "status": "no_verified_facts"
    },
    {
@@ -203,6 +211,14 @@
     "id": "night_icu_physician",
     "kind": "npc",
     "label": "Дежурная врач охраняемого отделения",
+    "operational_cues": {
+     "source": "recovery/cast/night_icu_physician.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
+      "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17"
+     }
+    },
     "status": "no_verified_facts"
    },
    {
@@ -219,6 +235,7 @@
   "conflicts": [],
   "level": 0,
   "omitted": 0,
+  "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
   "total_matched": 4
