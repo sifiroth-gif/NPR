@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.006",
+  "cursor": "s08.text.007",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -336,8 +336,7 @@
       "aliases": [
         "clock:s17 cast comparison",
         "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности.",
-        "s17_cast_comparison",
-        "s17 cast comparison"
+        "s17_cast_comparison"
       ],
       "facts": [],
       "id": "clock:s17_cast_comparison",
@@ -353,25 +352,7 @@
         }
       ],
       "sources": [
-        "recovery/GM_ONLY.json",
-        "s08.text.006"
-      ]
-    },
-    "clock:s17_cast_morphology": {
-      "aliases": [
-        "clock:s17 cast morphology",
-        "s17 cast morphology",
-        "s17_cast_morphology"
-      ],
-      "facts": [],
-      "id": "clock:s17_cast_morphology",
-      "kind": "clock",
-      "label": "s17 cast morphology",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.006"
+        "recovery/GM_ONLY.json"
       ]
     },
     "courier_unknown": {
@@ -573,7 +554,7 @@
       "id": "kadziura_satoru",
       "kind": "npc",
       "label": "Кадзиура Сатору",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0006-10-03T01:14:00",
@@ -581,6 +562,13 @@
           "source": "archive/session-007-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s07.text.033"
+        },
+        {
+          "at": "0006-10-03T02:54:00",
+          "excerpt": "Кусагакуре. Палата № 6.* — Я начну регенерацию, аккуратно там, где смогу без риска, — сказал Шики. **Кадзиура Сатору** поднялся со стула. При этих словах его взгляд на мгновение задержался на руках Шики, а пальцы сильнее сжали край истории болезни. — Покажите,",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.007"
         }
       ],
       "projections": [
@@ -588,9 +576,9 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s08.text.006",
+          "seen": "s08.text.007",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "02:40: independently examined bronchial tree using ICU team, ordered blood gases and more detailed sample comparisons with other S17 recipients, maintains established S17 dose while evaluating risks. Witnessed temporary function improvement during Shiki's chak",
+          "state": "02:54 independently recorded rapid bronchial epithelial regeneration after Shiki's chakra and had anesthetist monitor objectively. Wary but professionally interested; asks Shiki to identify cause of deeper right bronchial mucosal breakdown, offers biopsy. Cont",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         },
@@ -598,14 +586,14 @@
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "02:40: independently examined bronchial tree using ICU team, ordered blood gases and more detailed sample comparisons with other S17 recipients, maintains established S17 dose while evaluating risks. Witnessed temporary function improvement during Shiki's chak",
+          "state": "02:54 independently recorded rapid bronchial epithelial regeneration after Shiki's chakra and had anesthetist monitor objectively. Wary but professionally interested; asks Shiki to identify cause of deeper right bronchial mucosal breakdown, offers biopsy. Cont",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
         "recovery/HOT.json",
-        "s08.text.006"
+        "s08.text.007"
       ]
     },
     "kage_doppelganger": {
@@ -1167,7 +1155,7 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.006",
+          "seen": "s08.text.007",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
           "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -3165,9 +3153,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.006",
+        "s08.text.007",
         "s08.text.002",
-        "s08.text.003"
+        "s08.text.003",
+        "s08.text.006"
       ]
     },
     "place:ebc9ac4aec82428d": {
@@ -3515,7 +3504,8 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -3542,18 +3532,18 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s08.text.006",
-          "state": "03.10.1283 02:40: в реанимации, интубирован, седирован, SpO2 ~93% при ИВЛ и активной медицинской чакроподдержке Шики, сохраняет дыхательную зависимость; тромбоподобные бронхиальные слепки с фибрином, эритроцитами и десквамацией эпителия, происхождение не выясн"
+          "seen": "s08.text.007",
+          "state": "02:54 16yo boy intubated on ventilation and S17 infusion, conscious status limited by sedation; after targeted viable bronchial regeneration SpO2 96%, HR98, BP108/70, peak pressure26, persistent unstable deeper right bronchial epithelial focus."
         },
         {
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "state": "03.10.1283 02:40: в реанимации, интубирован, седирован, SpO2 ~93% при ИВЛ и активной медицинской чакроподдержке Шики, сохраняет дыхательную зависимость; тромбоподобные бронхиальные слепки с фибрином, эритроцитами и десквамацией эпителия, происхождение не выясн"
+          "state": "02:54 16yo boy intubated on ventilation and S17 infusion, conscious status limited by sedation; after targeted viable bronchial regeneration SpO2 96%, HR98, BP108/70, peak pressure26, persistent unstable deeper right bronchial epithelial focus."
         }
       ],
       "sources": [
         "recovery/cast/s17_recipient_6.json",
         "recovery/HOT.json",
-        "s08.text.006"
+        "s08.text.007"
       ]
     },
     "sayu": {
@@ -4248,11 +4238,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03.10 02:40: Recipient №6 is a 16-year-old boy, canon restored from primary archive. With continued Shiki general medical chakra and independent active ventilator/airway intervention, stable SpO2 93% only on mechanical ventilation, BP 104/66 HR108. Lab prelim morphology of branching bronchial casts: fibrin, erythrocytes, inflamm"
+          "state": "03.10 02:54 patient #6 16yo boy, on IMV and usual S17, improved after Shiki explicitly undertook cautious 5/5 medical chakra regeneration of viable local bronchial mucosa, closing capillary bleeding. SpO2 96% on same ventilation, Ppeak26 HR98 BP108/70. Deep right segment epithelial patch remains viable but rapidly loses renewed "
         }
       ],
       "sources": [
-        "s08.text.006"
+        "s08.text.007"
       ]
     },
     "thread:sanction": {
@@ -4587,5 +4577,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 2186
+  "source_turns_indexed": 2187
 }
