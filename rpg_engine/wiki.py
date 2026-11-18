@@ -25,7 +25,7 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import fight, plot, talk
+from . import fight, places, plot, talk
 
 SCHEMA = "npr-wiki/1"
 DIR = "memory"
@@ -36,6 +36,7 @@ TURNS_DIR = "archive/turns"
 ROSTER = "campaigns/shiki/roster.json"
 PLAYERS = {"shiki", "player"}
 HISTORY_ON_PAGE = 8
+LOG_TURNS = 60
 KNOWS_ON_PAGE = 25
 NOT_ALIASES = {"глава", "мастер", "охрана", "старший", "дежурная", "неизвестный",
                "неустановленный", "второй", "третий", "раненый", "реципиент"}
@@ -429,9 +430,10 @@ def build(state_dir, hot, source_root=None):
             text = _norm(rule.get("rule"))
             if any(_norm(f) in text for f in forms):
                 entity["fixes"].append({"turn": rule.get("turn"), "rule": _text(rule.get("rule"))})
+    where = places.collect(state_dir, {k: e["talk"] for k, e in store.items() if e.get("talk")})
     return {"schema": SCHEMA, "cursor": (hot.get("cursor") or {}).get("id"),
             "entities": store, "things": things, "threads": threads,
-            "fixes": fixes, "changes": changes}
+            "fixes": fixes, "changes": changes, "places": where, "recent": [r for r in deltas if not r.get("curated")][-LOG_TURNS:]}
 
 
 # ----------------------------------------------------------------- проверка нового хода
@@ -762,6 +764,30 @@ def _scene_page(hot, store):
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _log_page(registry):
+    """Что менял в памяти каждый из последних ходов: страницы персонажей, вещей, линий."""
+    store = registry["entities"]
+    lines = [f"# Журнал памяти · последние {LOG_TURNS} ходов", "",
+             "Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.", ""]
+    for row in reversed(registry.get("recent") or []):
+        d = row.get("d") or {}
+        touched = []
+        for key in d.get("cast") or {}:
+            if key not in PLAYERS:
+                touched.append(f"{(store.get(key) or {}).get('name') or key} (`npc/{key}`)")
+        touched += [f"вещь `{k}`" for k in d.get("things") or {}]
+        touched += [f"линия `{k}`" for k in d.get("threads") or {}]
+        if d.get("plot"):
+            touched.append("план сюжета")
+        if d.get("fight") or d.get("rolls"):
+            touched.append("бой")
+        if d.get("canon+"):
+            touched.append(f"поправки игрока: {len(d['canon+'])}")
+        if touched:
+            lines.append(f"- {row.get('id')}: " + ", ".join(touched))
+    return "\n".join(lines) + "\n"
+
+
 def _index_page(hot, registry):
     store = registry["entities"]
     cursor = (hot.get("cursor") or {}).get("id")
@@ -771,7 +797,9 @@ def _index_page(hot, registry):
              "(`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке "
              "или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.", "",
              "- Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · "
-             "`threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`", ""]
+             "`threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`",
+             f"- места · `places/INDEX` ({len(registry.get('places') or {})}) · фракции · `factions/INDEX.GM_ONLY` · "
+             "что менялось в памяти · `LOG`", ""]
 
     def role(entity):
         series = entity["character"].get("role")
@@ -868,7 +896,13 @@ def render(state_dir, hot, registry):
              f"{DIR}/shiki.md": _shiki_page(hot, registry["fixes"]),
              f"{DIR}/shiki-fixes.md": _shiki_fixes_page(registry["fixes"]),
              f"{DIR}/threads/CLOCKS.GM_ONLY.md": _clocks_page(hot, store),
-             f"{DIR}/PLOT.GM_ONLY.md": plot.page(hot)}
+             f"{DIR}/PLOT.GM_ONLY.md": plot.page(hot),
+             f"{DIR}/LOG.md": _log_page(registry),
+             f"{DIR}/places/INDEX.md": places.index_page(registry.get("places") or {})}
+    names = {k: e["name"] for k, e in store.items()}
+    for key, item in (registry.get("places") or {}).items():
+        files[f"{DIR}/places/{key}.md"] = places.page(key, item, names)
+    files.update(places.faction_pages(state_dir))
     for key, entity in store.items():
         folder = "npc" if entity["kind"] == "npc" else entity["kind"]
         files[f"{DIR}/{folder}/{key}.md"] = _npc_page(entity, present)
