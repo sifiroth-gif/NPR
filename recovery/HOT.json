@@ -22,7 +22,7 @@
   ]
  },
  "scene": {
-  "situation": "03.10.1283 03:28. Shiki told Kadziura he controls dissemination of engineered vector through chakra, not downstream biological process; after he withdraws chakra already delivered CRISPR cargo remains functional within exposed cells but RNA does not self-replicate and he claims healthy cells cannot become secondary recipients, so propagation should stop. Kadziura separates bounded dissemination and potentially permanent host DNA edits, recognizes latter are not switched off by ceasing chakra; he regards healthy-cell exclusivity as design claim tested on limited prior donor samples, not whole-body guarantee. Night duty physician retains objections and explicitly documents that intracellular effects after delivery are not under Shiki's immediate control. ICU team measures 03:28 SpO2 94% on raised FiO2, HR110, peak airway pressure27; no new casts in airway recorded; teen still sedated ventilated and S17 continued, no administration of gene vector. Reviewing existing bronchoscopy records Kadz notes multiple lesions in right bronchial tree but only a single region genetically sampled. Kadz signs permission to PREPARE possible intervention and retain samples, not to administer; decision for first patient application separate. Staff continues support, sample test requested from Kuroda. No Byoton term/mechanics disclosed.",
+  "situation": "03.10 03:31. Shiki irritated by discussion, directly tells attending doctor and night physician that sustained chakra support of recipient6 plus earlier own diagnostics leaves only 1-1.5h for proposed targeted experiment, demands Kadz take own patient responsibility. Kadz signs clinical authorization for limited first experimental in-vivo nsp-delta suppression at one biopsied right bronchial lesion with patient's ongoing ventilator/S17 and ICU team handling airway obstruction, gas exchange and circulation if Shiki diverts chakra. Night-duty doctor refuses to cosign and records independent dissent while remaining on team. Anesthetist reports SpO2 93% on raised inspired oxygen, HR118 BP102/64, Ppeak27. At 03:31 no vector delivered to patient, no gene editing begun; previously locked vial remains untouched. Shiki's declared 'Byoton: Infection' is NOT used; physicians still do not know the technique name or its true derivation. Shiki's live isolated 2mm biopsy remains in fully healed left deltoid.",
   "present": [
    "shiki",
    "kadziura_satoru",
@@ -30,9 +30,9 @@
    "s17_recipient_6"
   ],
   "positions": "Shiki at bedside fully healed left arm with isolated living biopsy. Kadz with chart, locked-office carrier key retained, night physician near records and ventilator, anesthetist at machine. Recipient6 still intubated/sedated and on ordinary S17 at enhanced O2; carrier remains secured and unadministered.",
-  "pressure": "Preparations for an intervention are sanctioned by Kadziura but patient dose and experimental trial not yet authorized; duty physician challenges and documents risks, no change to supportive regimen.",
+  "pressure": "Formal accountable authorization now secured; Shiki's diminishing chakra gives an approximate window ending 04:30–05:00. Other clinicians monitor ventilation with independent responsibility; night-duty doctor opposes and records that opposition.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s08.text.018",
+  "as_of": "s08.text.019",
   "npc_disclosures_to_player": {
    "kadziura_satoru": [
     {
@@ -119,8 +119,8 @@
     "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
     "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal."
    ],
-   "seen": "s08.text.018",
-   "state": "03:28 independently documents unresolved irreversible edits after chakra removal and refuses to sign actual administration, while recording Kadziura's narrow authorization of preparatory actions.",
+   "seen": "s08.text.019",
+   "state": "03:31 refuses to cosign the experimental intervention but remains in the ICU and keeps signed opposition in patient chart; will observe independent effects.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -135,12 +135,6 @@
      "what": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
     },
     {
-     "turn": "s08.text.011",
-     "at": "0006-10-03T03:09:00",
-     "ch": "present",
-     "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
-    },
-    {
      "turn": "s08.text.013",
      "at": "0006-10-03T03:17:00",
      "ch": "present",
@@ -169,9 +163,15 @@
      "at": "0006-10-03T03:28:00",
      "ch": "present",
      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение."
+    },
+    {
+     "turn": "s08.text.019",
+     "at": "0006-10-03T03:31:00",
+     "ch": "present",
+     "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
     }
    ],
-   "memory_total": 13,
+   "memory_total": 14,
    "first": "s07.text.033",
    "tier": "developed"
   },
@@ -185,7 +185,6 @@
    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
    "knows": [
-    "Реципиент №6 нуждается в аппаратной респираторной поддержке и текущем лечении; дыхательная функция последние сутки нестабильна.",
     "Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача.",
     "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
     "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
@@ -198,10 +197,11 @@
     "At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, matching previously investigated Arakawa donor construct, continuous NSP-δ vesicular protein affecting epithelial Ca2/PIEZO1, calpain and E-cadherin contacts, causing casts. Scope confined to sampled lesion; unknown donor, implantation origin, lung-wide distribution or contribution of S17.",
     "Shiki says experimental gene-targeting carrier is an RNA-type viral vector with CRISPR complex, intended to suppress nsp-delta; Shiki can also attempt painstaking cell-by-cell destruction of unknown donor-derived implant and admits outcomes unpredictable in both cases (s08.text.016).",
     "03.10 03:24 Shiki directly CLAIMED he can reproduce/administer his previously described experimental viral CRISPR vector inside patient6 without needing stored vial and that its propagation is not entirely autonomous; exact biological nature, control, Byoton technique/name, mechanics remain undisclosed.",
-    "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, claims it cannot spread to healthy cells. He has not witnessed this in patient."
+    "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, claims it cannot spread to healthy cells. He has not witnessed this in patient.",
+    "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no long-term safety data."
    ],
-   "seen": "s08.text.018",
-   "state": "03:28 signed only preparation order for possible experimental treatment, preserving independent material, maintaining ventilation and original S17. Distinguishes controlled spread vs irreversible potential DNA edits, awaits separate action before patient exposure.",
+   "seen": "s08.text.019",
+   "state": "03:31 clinically signs authorization for initial targeting of the confirmed right bronchial nsp-delta-positive focus by Shiki's proposed engineered vector, accepts full treatment responsibility and orders ICU clinical support; the doctor does not control Shiki's internal delivery method and cannot force action.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -216,12 +216,6 @@
      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать предложение, происхождение С-17 ему не ра…"
     },
     {
-     "turn": "s08.text.011",
-     "at": "0006-10-03T03:09:00",
-     "ch": "present",
-     "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
-    },
-    {
      "turn": "s08.text.013",
      "at": "0006-10-03T03:17:00",
      "ch": "present",
@@ -250,9 +244,15 @@
      "at": "0006-10-03T03:28:00",
      "ch": "present",
      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение."
+    },
+    {
+     "turn": "s08.text.019",
+     "at": "0006-10-03T03:31:00",
+     "ch": "present",
+     "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
     }
    ],
-   "memory_total": 18,
+   "memory_total": 19,
    "first": "s07.text.033",
    "tier": "deep"
   },
@@ -260,12 +260,12 @@
    "name": "Реципиент № 6",
    "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
    "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
-   "state": "03:28 ventilated 16yo recipient6 on continuing S17 infusion and higher FiO2; SpO2 94%, pulse110, peak pressure27; no gene editing administered yet, still critically ill.",
+   "state": "03:31 still sedated, ventilated and on uninterrupted S17, SpO2 93% HR118 BP102/64 on higher oxygen; no new experimental gene treatment administered.",
    "knows": [
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.018",
+   "seen": "s08.text.019",
    "memory": [
     {
      "turn": "s08.text.006",
@@ -280,12 +280,6 @@
      "what": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную пробу. Диалоги атрибутированы."
     },
     {
-     "turn": "s08.text.011",
-     "at": "0006-10-03T03:09:00",
-     "ch": "present",
-     "what": "Кадзиура согласился на необычный самоэксперимент Шики: взял две прицельные биопсии нестабильной слизистой №6, одну сохранил для гистологии, другую перенёс в мышечное ложе левой дельтовидной мышцы Шики. Исследование Нулевым Геномом ещё не начато."
-    },
-    {
      "turn": "s08.text.013",
      "at": "0006-10-03T03:17:00",
      "ch": "present",
@@ -314,9 +308,15 @@
      "at": "0006-10-03T03:28:00",
      "ch": "present",
      "what": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение."
+    },
+    {
+     "turn": "s08.text.019",
+     "at": "0006-10-03T03:31:00",
+     "ch": "present",
+     "what": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
     }
    ],
-   "memory_total": 10,
+   "memory_total": 11,
    "first": "s08.text.006",
    "tier": "developed"
   }
@@ -419,8 +419,8 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "03.10.1283 03:28 Shiki speaks about limited, chakra-dependent dissemination of non-self-replicating CRISPR RNA viral vector, and claim it cannot propagate to healthy cells, while already-delivered intracellular cargo remains active after chakra withdrawal. Kadziura recognizes persistent gene edit may outlive delivery; signs preparation only, not patient's experimental exposure. Duty physician files independent documented reservations. Patient6 sixteen years, S17 and ventilation continued, high FiO2, SpO2 94%, HR110, Ppeak27. Carrier vial held locked, not used. Nsp-delta still proven only in one sampled right bronchial lesion; no proof distribution through entire bronchial tree.",
-   "turn": "s08.text.018"
+   "state": "03.10 03:31: Shiki tells doctors he has ~1–1.5h remaining ability to support patient and deliver trial due limited chakra; Kadziura accepts clinical decision himself, signs authorization for limited in vivo nsp-delta suppression at one confirmed bronchial lesion. ICU team handles ventilation/airway suction, S17 continues as before. Night duty physician files formal dissent; no active Byoton infection/vector generation or in-vivo CRISPR editing yet. Patient6 still at risk, last SpO2 93 HR118 BP102/64 on raised FiO2. Other donor tissue distributions and longer-term risk unknown.",
+   "turn": "s08.text.019"
   }
  },
  "shiki": {
@@ -605,7 +605,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 60.155,
+  "value": 60.1566,
   "stage": 4,
   "label": "Чёрные сосуды",
   "signs": "Тёмные сосуды на шее и корпусе, корни до шеи; кровь при ранах постепенно тёмно-бордовая, пока НЕ заразна; предчувствие болезненной смерти и запах только вблизи.",
@@ -649,11 +649,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.015",
-   "at": "0006-10-03T03:18:00",
-   "line": "Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ."
-  },
-  {
    "id": "s08.text.016",
    "at": "0006-10-03T03:21:00",
    "line": "Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носителя и запросил сведения о его распространении."
@@ -667,32 +662,31 @@
    "id": "s08.text.018",
    "at": "0006-10-03T03:28:00",
    "line": "Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение."
+  },
+  {
+   "id": "s08.text.019",
+   "at": "0006-10-03T03:31:00",
+   "line": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.018",
-  "seq": 18,
-  "at": "0006-10-03T03:28:00",
+  "id": "s08.text.019",
+  "seq": 19,
+  "at": "0006-10-03T03:31:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "03:28"
+  "time": "03:31"
  },
  "last": {
-  "id": "s08.text.018",
-  "player": "Я могу управлять распространением, но не самим процессом как таковым, при полном извлечении чакры процесс будет идти самостоятельно, но важно то, что вирусный верктор не способен к распространению дальше на здоровые клетки и РНК не самовоспроизводящаяся, поэтому заражение как процес должно прекратиться.",
-  "gm": "…нная усмешка.\n\n— Забавно. Из трёх предложений самое щадящее предполагает необратимое вмешательство в чужой геном.\n\nОн взял отдельный лист, вписал номер пациента и поставил свою подпись под распоряжением о подготовке к возможному экспериментальному вмешательству.\n\n**Дежурная врач:**\n\n— Сатору-сэнсэй, я не подпишу разрешение на введение.\n\n**Кадзиура Сатору:**\n\n— Я его пока и не выдал.\n\nЕго голос стал сухим и властным.\n\n— Подготовка — это сохранение образцов, проверка характеристик носителя и обеспечение непрерывной поддержки шестого. Решение о непосредственном воздействии будет отдельным. Ваше возражение останется в документах.\n\nДежурная врач продолжила писать. На этот раз спорить она не стала.\n\nКадзиура сложил снимки в историю болезни и вновь посмотрел на Шики.\n\n**Кадзиура Сатору:**\n\n— Я больше не буду просить вас объяснять, почему вам не нужен мой флакон. Вы заявили, что способны воспроизводить созданный носитель самостоятельно. Я это услышал.\n\nВ его низком голосе уже не было прежнего недоверия. Зато появилась осторожность другого рода: человек, который больше не мог контролировать инструмент, намеревался контролировать хотя бы собственные решения.\n\n— Мы подошли к границе, Мугами. Дальше будут уже не рассуждения.\n\nОн положил подписанный лист рядом с картой мальчика.\n\n— **Если вы решите применить свой метод, я буду оценивать его по состоянию пациента и полученным образцам.** Но утверждать, что мы знаем исход, я не стану.\n\nЗа его спиной ровно работал аппарат ИВЛ.\n\n**Ход Шики.**",
-  "gm_chars": 5178
+  "id": "s08.text.019",
+  "player": "Хотите что бы решение было только моим? #немного злобно на него и на дежурного врача# я не знаю долгосрочных эффектов, краткосрочные я оценил в чашке Петри которой сам и являюсь. Все что я сказал, это данные исследования внутри организма. Но я уже достаточно долго держу его на поддержке плюс чакра на анализ, нам нужно придумать выход быстрее потому что через час полтора, мое предложение уже будет неосуществимо. Думайте, это ваш пациент",
+  "gm": "…дошла к столу и взяла копию распоряжения.\n\n**Дежурная врач:**\n\n— Я останусь в палате. Если начнётся системная реакция, вы услышите моё мнение независимо от вашей подписи.\n\n**Кадзиура Сатору:**\n\n— Именно поэтому вы здесь.\n\nОн поставил время — 03:31 — и подписался.\n\n***\n\nНа белом листе чернели три строки: диагноз, основание вмешательства, имя ответственного врача.\n\nСатору Кадзиура.\n\nЕго решение больше не зависело от того, захочет ли кто-нибудь позднее назвать эту ночь медицинским преступлением.\n\nВрач положил документ рядом с кроватью.\n\n**Кадзиура Сатору:**\n\n— Теперь моя часть выполнена, Мугами.\n\nОн указал на мальчика, затем на бронхоскопическую схему.\n\n— Мы начинаем с подтверждённого очага. Если вам понадобится прекратить поддерживающую чакру ради доставки носителя, сообщите мне непосредственно перед воздействием. Я подготовил бригаду к ухудшению дыхания.\n\nКадзиура остановился у изголовья. Лицо было суровым, почти неприязненным.\n\n**Кадзиура Сатору:**\n\n— И ещё. Если эксперимент не сработает, я не собираюсь объявлять вас единственным виновным. Но и списывать последствия на обстоятельства не стану.\n\nОн отвернулся к монитору.\n\n— Анестезиолог, доложите состояние.\n\n**Анестезиолог:**\n\n— SpO₂ девяносто три. Пульс сто восемнадцать. Давление сто два на шестьдесят четыре. ИВЛ продолжается.\n\nВрач занял место у аппарата.\n\nНа койке лежал мальчик, чью жизнь поддерживали чужие руки, машины и постепенно истощавшаяся чакра.\n\n**Кадзиура Сатору:**\n\n— Бригада готова. Решение принято.\n\n**Ход Шики.**",
+  "gm_chars": 6034
  },
  "lint": {
   "recent": [
-   {
-    "id": "s08.text.016",
-    "score": 0.0,
-    "verdict": "чисто",
-    "hits": []
-   },
    {
     "id": "s08.text.017",
     "score": 1.1,
@@ -706,6 +700,12 @@
    },
    {
     "id": "s08.text.018",
+    "score": 0.0,
+    "verdict": "чисто",
+    "hits": []
+   },
+   {
+    "id": "s08.text.019",
     "score": 0.0,
     "verdict": "чисто",
     "hits": []
@@ -725,13 +725,13 @@
   }
  },
  "fold": {
-  "commit": "be0737b6023715237b7158c8d69b5209edd0181a",
-  "turns": 223,
+  "commit": "a0c995fcf86feac72c2d6515cee720e68920e4b2",
+  "turns": 224,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "8abc816d9ae0cced5a4e10acc37fea174e793c2f224ac9b8546fc4fc1c8b6496"
+  "turn_digest": "b0377029cc62d6795d518e753317813dae59add1658a42bf65412163b79258ef"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
