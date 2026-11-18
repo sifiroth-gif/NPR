@@ -1,7 +1,13 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s07.text.036",
+ "cursor": "s07.text.037",
  "fold_errors": [],
- "checks": [],
+ "checks": [
+  {
+   "turn": "s07.text.037",
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s07.text.033, s07.text.034"
+  }
+ ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
 }

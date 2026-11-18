@@ -22,15 +22,15 @@
   ]
  },
  "scene": {
-  "situation": "REVISED s07.text.036 canonical at 03.10.1283 01:29 following explicit user objection 18 Nov 2026. EXACT SOURCE campaigns/shiki/continuity/ARC01_SESSION02_SHIKI_READS_S17_RESULTS_NORI_REPORT_1283-09-25_134300.json: Shiki previously read preliminary Sept25 LAB REPORT of ACTUAL INJECTED C-17. Drug fractionation CONFIRMED two active peptide-containing fractions S17-A and S17-B in experimental vial and earlier ward aliquot. S17-A amplifies/prolongs ACh postsynaptic endplate response then causes muscle unresponsiveness to repeated signal, motor nerve conduction intact; nicotinic NMJ receptor and Nav1.4 inactivation plausible but unproved direct binding. S17-B increases free muscle cytoplasmic Ca despite nicotinic NMJ blockade, possible RyR1/SERCA1 dysregulation not proven direct binding. Peak ratios differ, absolute concentration and precise chemical identities not established. Shiki copied ONLY functional report data; also his established NSP-delta donor protein mechanism and separate hypothetical gelsolin-like/GsMTx4-like peptide identities. The measured S17-A/B drug effects do NOT prove or align seamlessly with these hypothetical blocker identities. Shiki DID NOT SHARE genetic composition of living CULTURE from s06.text.046: two nuclear genotypes, heterokaryon, Inaba graft comparison are completely outside his declared 'only functional information' scope, and were wrongly added in previous revision. Nor did he reveal Zero Genome, Arakawa as studied source, prior Byoton treatment, vial, Nemera. Kadziura now informed of measured active fractions, reads with alarm and professional interest, autonomously requests original Sept25 report plus clinical infusion/respiratory traces, no change in ongoing therapy and no new sampling. Asks if Shiki has a tested way to interrupt source. Previously committed s07.text.036 with culture-genetics disclosure is noncanonical and superseded. Game time 01:29 unchanged.",
+  "situation": "03.10 01:32. Shiki personally took out own second sealed Byoton-carrier vial to show Kadziura without giving or injecting. Shiki explicitly explained mechanism: nsp-δ donor cell gene constantly creates pathological NSP-δ protein and nerve-independent signal. Limited, non-replicating Byoton-made AAV-like carrier aims to direct CRISPR-Cas9-like knockout of donor nsp-δ expression to halt source, preserve graft and normal host function. Existing protein complexes gradually decay and if untreated donor foci persist, response incomplete; not another temporary S17 blocker or universal cure. He described original tests on donor biopsies: cytotoxic first design rejected; refined design ceased NSP-δ and pathological signal in treated viable donor fragment, leaving untreated abnormal fragment active and healthy control unchanged. He did NOT mention previously intervening in living Arakawa; actually he had done so at s07.text.027 with partial response at 48 min but Kadziura has no channel to know this until told. He did NOT give construction protocols, exact sequences or disclose his secret Zero Genome, Nemera or personal health. Kadziura sees vial and hears Byoton's nature, physically recoils, then recognizes durable gene targeting and professional risks; he does not handle vial, approve intervention, or gain ownership. He asked whether in vivo patient administration already occurred vs only isolated biopsy experiments. Four rescued patients still receive their baseline medical support, recipient6 on assisted ventilation and S17. Ward search for Sept25 original clinical drug assay and infusion charts is still pending until 01:42; no new study, call or results have occurred.",
   "present": [
    "shiki",
    "kadziura_satoru"
   ],
-  "positions": "Shiki and Kadziura in his office. Shiki owns unshown second experimental Byoton vial; Kadziura holds two pages of functional findings and preliminary fraction analyses. Surviving patients remain on previous ongoing medical support.",
-  "pressure": "Clinical harm versus dependence on S-17 is an open question; Kadziura autonomously evaluates risks, and awaits Shiki's response.",
+  "positions": "Shiki has his own second experimental Byoton carrier vial in Kadziura's closed but not locked office. Kadziura stands by desk near records and original written S17-A/B and NSP-delta functionality. Patients are in guarded ward.",
+  "pressure": "Kadziura independently decides on medical validation and asks in-vivo history. The serum remains Shiki's, no transfer or treatment.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s07.text.036",
+  "as_of": "s07.text.037",
   "npc_disclosures_to_player": {
    "kadziura_satoru": [
     {
@@ -42,6 +42,12 @@
     {
      "turn": "s07.text.034",
      "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать пр",
+     "source": "archive/session-007-turns.jsonl",
+     "status": "source_candidate_only"
+    },
+    {
+     "turn": "s07.text.037",
+     "line": "Шики показал Кадзиуре собственную пробирку Бётон-носителя и объяснил выключение патологического гена nsp-δ ограниченной вирусоподобной системой с сохранением ткани. Рассказал о доказанном эффекте на донорских биоптатах. ",
      "source": "archive/session-007-turns.jsonl",
      "status": "source_candidate_only"
     }
@@ -83,7 +89,7 @@
    "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента",
    "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
    "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
-   "stance": "Independent critical clinician; concerned his patient care may be masking drug's contribution to disability. Reacts warily to Shiki's altered appearance and does not defer blindly.",
+   "stance": "Experienced independent skeptical but deeply interested physician, concerned about irreversible gene modification and uncertain tissue reach.",
    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
    "knows": [
@@ -93,10 +99,12 @@
     "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
     "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
     "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ blockade. Their precise chemical structures and concentrations unconfirmed.",
-    "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification."
+    "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
+    "Shiki showed experimental Byoton viral-like carrier and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
+    "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed."
    ],
-   "seen": "s07.text.036",
-   "state": "03.10 01:29 corrected: Received only measured functional data of S17-A/S17-B ACTIVE PEPTIDE-CONTAINING DRUG FRACTIONS from Sept25 report and functional NSP-delta pathogenic protein observations. Also heard speculative two peptide blocker identities NOT analytically matched to S17-A/B. Did NOT learn culture genotypes, heterokaryon, identity of tissue donor, Zero Genome, Arakawa treatment, Byoton vial. Ordered copy of historical lab report and patient dosing/respiration charts, no intervention.",
+   "seen": "s07.text.037",
+   "state": "03.10 01:32. Saw Shiki's Byoton-produced nonreplicating viral-like carrier in closed vial, heard how AAV/CRISPR-like targeting of nsp-δ in pathological donor cells could stop NSP-δ synthesis over time while keeping cells viable. Heard confirmed separate tissue biopsy effect and rejected toxic earlier design. Does not know Arakawa treated human in vivo and asks exactly about this. Has not held vial or consented to treatment.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -121,9 +129,15 @@
      "at": "0006-10-03T01:29:00",
      "ch": "present",
      "what": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарио…"
+    },
+    {
+     "turn": "s07.text.037",
+     "at": "0006-10-03T01:32:00",
+     "ch": "present",
+     "what": "Шики показал Кадзиуре собственную пробирку Бётон-носителя и объяснил выключение патологического гена nsp-δ ограниченной вирусоподобной системой с сохранением ткани. Рассказал о доказанном эффекте на донорских биоптатах. Кадзиура спросил, применялся ли носител…"
     }
    ],
-   "memory_total": 4,
+   "memory_total": 5,
    "first": "s07.text.033",
    "tier": "developed"
   }
@@ -238,8 +252,8 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "03.10 01:29 corrected. Kadziura has measured S17-A/B pharmacodynamic results and functional NSP-delta pathology; genetic culture A/B analysis was NOT disclosed. Staff requested original drug assay and existing infusion/respiratory charts, without new tests or treatment changes. Four survivors remain under watch, recipient6 still on supportive ventilation and S-17.",
-   "turn": "s07.text.036"
+   "state": "03.10 01:32. Kadziura has learned about prospective durable Byoton carrier from Shiki and prior positive in-vitro donor biopsy tests, but no recorded hospital intervention. Search for old clinical S17-A/B report and infusion charts scheduled to 01:42; patient's ventilator and S17 remain unchanged.",
+   "turn": "s07.text.037"
   }
  },
  "shiki": {
@@ -424,7 +438,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 60.0931,
+  "value": 60.0946,
   "stage": 4,
   "label": "Чёрные сосуды",
   "signs": "Тёмные сосуды на шее и корпусе, корни до шеи; кровь при ранах постепенно тёмно-бордовая, пока НЕ заразна; предчувствие болезненной смерти и запах только вблизи.",
@@ -456,11 +470,6 @@
  },
  "chronicle": [
   {
-   "id": "s07.text.033",
-   "at": "0006-10-03T01:14:00",
-   "line": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока. Он прибыл, представился и спросил о цели визита."
-  },
-  {
    "id": "s07.text.034",
    "at": "0006-10-03T01:17:00",
    "line": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать предложение, происхождение С-17 ему не раскрыто."
@@ -474,31 +483,30 @@
    "id": "s07.text.036",
    "at": "0006-10-03T01:29:00",
    "line": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарион не раскрывались."
+  },
+  {
+   "id": "s07.text.037",
+   "at": "0006-10-03T01:32:00",
+   "line": "Шики показал Кадзиуре собственную пробирку Бётон-носителя и объяснил выключение патологического гена nsp-δ ограниченной вирусоподобной системой с сохранением ткани. Рассказал о доказанном эффекте на донорских биоптатах. Кадзиура спросил, применялся ли носитель человеку."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s07.text.036",
-  "seq": 36,
-  "at": "0006-10-03T01:29:00",
-  "place": "Кусагакуре, Центральный госпиталь, кабинет Кадзиуры Сатору",
+  "id": "s07.text.037",
+  "seq": 37,
+  "at": "0006-10-03T01:32:00",
+  "place": "Кусагакуре, Центральный госпиталь, кабинет старшего врача Кадзиуры Сатору",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "01:29"
+  "time": "01:32"
  },
  "last": {
-  "id": "s07.text.036",
-  "player": "#беру карандаш и переписываю ему данные из заключения о составе С-17 полученные Шики и все данные о белках и влиянии на ткани реципиента, только функциональную информацию, а также предположительные пептиды самого лекарства#",
-  "gm": "**Вторник, 3 октября 1283 года. 01:29.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\nШики взял карандаш. Первым он переписал результаты **исследования самого вводимого С-17**, полученные химико-медицинской лабораторией двадцать пятого сентября.\n\nНа листе появились два обозначения: **S17-A** и **S17-B**.\n\nОбе биологически активные пептидсодержащие фракции были обнаружены в исследованных образцах препарата. Соотношение их пиков различалось между серией 41-К и более ранней больничной пробой. Точные концентрации, молекулярные структуры и аминокислотные последовательности установить пока не удалось.\n\n**S17-A.** При неизменной ацетилхолиновой стимуляции ответ нервно-мышевой концевой пластинки усиливался и удлинялся. После этого мышца переставала отвечать на повторное раздражение, хотя проведение импульса по двигательному нерву сохранялось. Результат указывал на постсинаптическую дисфункцию; возможные механизмы включали изменение никотиновых рецепторов мышц и последующую инактивацию натриевых каналов. Прямого связывания с определённой молекулярной мишенью анализ не доказал.\n\n**S17-B.** Содержание свободного кальция в мышечных клетках возрастало даже при подавленной никотиновой нервно-мышечной передаче. Возникало подозрение на нарушение высвобождения кальция и его обратного захвата — процессов, связанных с RyR1 и SERCA1. Но и здесь непосредственная молекулярная мишень оставалась неустановленной.\n\nСледующим разделом легли **функциональные результаты работы с донорской тканью**. Клетки с локусом *nsp-δ* образуют патологический белок НСП-δ. Он сохраняется на мембране и в межклеточном каркасе, а также передаётся соседним клеткам в мембранных частицах — без передачи кодирующего гена. Нарушаются механочувствительность, кальциевый и чакровый ответы; возникают сокращения независимо от обычной двигательной команды. Раздельное подавление образования НСП-δ либо разрыв патологического каркаса прекращали самостоятельные импульсы, не уничтожая нормальную сократимость исследованной ткани.\n\nТолько в конце, **отделив от экспериментальных результатов**, Шики записал свою прежнюю гипотезу о двух возможных молекулярных компонентах лекарства: гелзолиноподобном пептиде, препятствующем росту патологического каркаса, и веществе с GsMTx4-подобным действием на механочувствительные каналы. Установленного тождества этих предполагаемых веществ с фракциями S17-A и S17-B не было.\n\nКадзиура читал стоя.\n\nКогда он дошёл до первой фракции, большой палец прижал бумагу возле слов «проведение по нерву сохранено». Прочитав вторую, врач медленно снял очки. На его лице появилась складка столь глубокая, будто за несколько минут усталость многих бессонных ночей собралась в одном месте.\n\n— Значит, **их действительно выделили из препарата**, — произнёс он. — Две активные фракции. И обе способны нарушать работу мышц.\n\nОн надел очки обратно, взглядом вернулся к листу назначений шестого пациента.\n\n— При ухудшении дыхания ему увеличивали скорость введения С-17. Я видел последующие показатели. Но никогда не имел перед собой этой фармакологической картины. Если одна фракция способна вызвать функциональную блокаду мышечного ответа, а другая повышает внутриклеточный кальций, то часть того, что мы считаем проявлениями его болезни, может быть связана и с самим лечением.\n\nКадзиура произнёс последнее слово с усилием. Он не стал отрицать пользу поддерживающей терапии, которой собственноручно руководил. Вместо этого вытащил из стопки историю шестого реципиента и положил перед собой.\n\n— И одновременно резкая отмена препарата у человека, который без него уже ухудшался, остаётся опасной. Придётся разделить два эффекта по наблюдениям, а не гадать по названию ампулы.\n\nОн провёл ногтем по написанному Шики обозначению НСП-δ.\n\n— А это другая линия доказательств. Вы установили источник патологического сигнала в исследованной донорской ткани. Но ваша версия о двух блокирующих пептидах пока **не объясняет**, почему лаборатория увидела у S17-A усиление постсинаптического ответа, а у S17-B — рост кальция. Считать это одной и той же парой молекул без проверки нельзя.\n\nКадзиура повернул голову к служебному переговорному устройству.\n\n— Найдите подлинник заключения лаборатории от двадцать пятого сентября. Поднимите кривые инфузии и дыхательные записи четырёх больных. Особенно шестого. Сохранять назначения до моего распоряжения; никаких новых проб пока не брать.\n\nОн дождался подтверждения и снова посмотрел на Шики. Его глаза задержались на тёмных сосудах под кожей молодого врача. Кадзиура отодвинул стул, словно хотел увеличить расстояние, но остановил себя и остался возле стола.\n\n— С лекарством мы теперь хотя бы знаем, **что было измерено**, — сказал он. — А вы продемонстрировали возможность прервать патологический сигнал, сохранив нормальную функцию ткани.\n\nОн положил палец возле последней стрелки на схеме.\n\n— **У вас уже есть испытанный способ выключить источник НСП-δ у живого реципиента?**\n\n**Ход Шики.**"
+  "id": "s07.text.037",
+  "player": "У меня есть идея #достаю пробирку с вирусом и рассказываю механизм действия это нужно вывести в чат#",
+  "gm": "**Вторник, 3 октября 1283 года. 01:32.**  \n*Центральный госпиталь. Кабинет Кадзиуры Сатору.*\n\n— У меня есть идея.\n\nШики достал пробирку.\n\nВ почти прозрачном секрете угадывался тонкий тёмный рисунок. Он не оседал на дно и не расплывался по стеклу: удерживающий чакровый контур сохранял его форму. Кадзиура отодвинулся вместе со стулом. Плечи его поднялись, пальцы замерли на краю стола. Врач посмотрел на пробирку, затем на ветвящиеся тёмные сосуды под кожей Шики — и не протянул руки.\n\nШики объяснил механизм.\n\n— С-17 действует, пока его вводят. Но в донорской ткани остаётся локус *nsp-δ*, который постоянно обеспечивает производство НСП-δ. Пока клетки продолжают его создавать, временная блокада не уничтожает причину.\n\nПробирка оставалась у него.\n\n— Это ограниченный вирусоподобный носитель, созданный Бётоном. Он не рассчитан на самостоятельное размножение и бесконечное распространение. Его назначение — доставить в патологические донорские клетки систему адресного изменения генетической программы, по принципу модифицированного AAV и направленного комплекса типа CRISPR-Cas9. Мишень — *nsp-δ*. Если выключить его кодирующую функцию, донорская клетка перестанет производить НСП-δ.\n\nКадзиура резко поднял голову.\n\n— Вы собираетесь изменить наследственный материал трансплантата?\n\nШики продолжил:\n\n— **Сохранить клетку живой, убрав патологическую функцию.** Не уничтожить трансплантат вместе с сосудами и нервно-мышечными связями. Уже образованный белок не исчезнет мгновенно: его межклеточные комплексы будут постепенно разрушаться и удаляться. Пока остаются старые структуры или необработанные очаги, могут сохраняться и непроизвольные сокращения. Поэтому результат должен развиваться постепенно, а неполное воздействие даст неполный эффект.\n\nНа столе рядом лежали записи о С-17. Кадзиура перевёл взгляд с них на неподвижный тёмный узор в сосуде.\n\n— И это работает?\n\nШики изложил результаты уже проведённого опыта на живых донорских биоптатах. Первый вариант подавлял сигнал ценой повреждения самих клеток — его пришлось отвергнуть. Последующая форма прекратила образование НСП-δ в обработанном участке, не уничтожив ткань. Соседняя необработанная часть продолжала передавать патологический импульс; здоровая контрольная ткань не изменилась. После прекращения воздействия обработанные клетки оставались живыми, а патологический ритм за время наблюдения не возвращался.\n\nКадзиура слушал стоя. Под левой скулой сокращалась мышца. Казалось, он разрывался между желанием изучить содержимое пробирки и отвращением к самой возможности, что под этим стеклом лежит средство необратимо переписывать живые клетки.\n\n— Значит, — тихо сказал он, — вы предлагаете не новый подавитель судорог. Вы предлагаете устранить программу, которая их порождает.\n\nЕго рука переместилась к листу с НСП-δ, но остановилась, не коснувшись его.\n\n— Я лечу этих людей веществом, которое может само нарушать нервно-мышечную передачу. А вы принесли вещь, способную изменить причину зависимости. Хорошо. Это я понимаю.\n\nОн произнёс последнее слово с необыкновенной сухостью. Затем наклонился ближе, всматриваясь в рисунок внутри пробирки.\n\n— Но изменение генома нельзя отменить прекращением инфузии. И Бётон — ваша природа, не моя. Я не знаю, что произойдёт с этим носителем в тканях другого человека, пока не увижу соответствующих результатов.\n\nВрач выпрямился. Вместо того чтобы требовать пробирку, он развернул к Шики историю шестого реципиента.\n\n— Я сопоставлю уже имеющиеся материалы пациентов с вашей мишенью. Пока никто здесь ничего не получит без решения о лечении. Но есть вопрос, который определит многое.\n\nКадзиура посмотрел Шики прямо в глаза. На этот раз ужас от изменившегося лица не заставил его отвернуться.\n\n— **Вы испытывали носитель только на отделённой живой ткани — или уже вводили его человеку?**\n\nЗа стеной, в глубине охраняемого отделения, размеренно выдохнул аппарат искусственной вентиляции. Из коридора послышался короткий скрежет колёс тележки.\n\n**Ход Шики.**"
  },
  "lint": {
   "recent": [
-   {
-    "id": "s07.text.034",
-    "score": 0.0,
-    "verdict": "чисто",
-    "hits": []
-   },
    {
     "id": "s07.text.035",
     "score": 0.0,
@@ -515,6 +523,17 @@
       "quote": "Кадзиура отодвинул стул, словно хотел увеличить расстояние, но остановил себя и остался возле стола."
      }
     ]
+   },
+   {
+    "id": "s07.text.037",
+    "score": 5.9,
+    "verdict": "шум",
+    "hits": [
+     {
+      "rule": "caveat",
+      "quote": "Уже образованный белок не исчезнет мгновенно: его межклеточные комплексы будут постепенно разрушаться и удаляться."
+     }
+    ]
    }
   ],
   "note": "Попадания линтера по последним ответам. Каждая цитата — тип фразы, который в следующей сцене не повторяется. Не оправдывайся в тексте, пиши иначе.",
@@ -526,17 +545,18 @@
    "status": 3,
    "absent": 6,
    "explain": 5,
-   "pc_inner": 1
+   "pc_inner": 1,
+   "caveat": 1
   }
  },
  "fold": {
-  "commit": "898379f0629aa5b7af20f6674e69ec61f6de5de6",
-  "turns": 203,
+  "commit": "8106997e0b4267a5257168b7a4a630a0cb741c69",
+  "turns": 204,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "3d90d4b6357d8de20f3404a8fa533c41a696faaf568486e0e3c344e702409d5a"
+  "turn_digest": "478ec18a1e1630b4305a5c1c0061351bf47e2e47cfe3b2b932d553da82221268"
  },
  "chronicle_older": "archive/session-007-chronicle.md",
  "sessions_closed": [

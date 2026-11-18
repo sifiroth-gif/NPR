@@ -6,7 +6,7 @@
  "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента",
  "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
  "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
- "stance": "Independent critical clinician; concerned his patient care may be masking drug's contribution to disability. Reacts warily to Shiki's altered appearance and does not defer blindly.",
+ "stance": "Experienced independent skeptical but deeply interested physician, concerned about irreversible gene modification and uncertain tissue reach.",
  "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
  "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
  "knows": [
@@ -16,10 +16,12 @@
   "Шики хочет поговорить о лечении реципиентов в личном кабинете; заметил пуговицы на халате Кадзиуры.",
   "03.10 01:19 Шики полагает, что С-17 временно препятствует встраиванию структур белкового происхождения, закодированных в донорской ткани; Шики утверждает это как предположение, а не передал доказательства.",
   "Sept25 chemical-medical lab confirmed two separable active S-17 drug fractions: S17-A prolongs postsynaptic NMJ response followed by muscle blockade; S17-B increases cytosolic calcium despite nicotinic NMJ blockade. Their precise chemical structures and concentrations unconfirmed.",
-  "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification."
+  "Shiki provided functional findings for NSP-delta donor-protein pathology and separate hypothetical gelsolin-like and GsMTx4-like peptide mechanism; no proven chemical identification.",
+  "Shiki showed experimental Byoton viral-like carrier and explained targeted nsp-δ gene suppression, preservation of living donor cells, gradual clearance and incomplete targeting caveat.",
+  "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed."
  ],
- "seen": "s07.text.036",
- "state": "03.10 01:29 corrected: Received only measured functional data of S17-A/S17-B ACTIVE PEPTIDE-CONTAINING DRUG FRACTIONS from Sept25 report and functional NSP-delta pathogenic protein observations. Also heard speculative two peptide blocker identities NOT analytically matched to S17-A/B. Did NOT learn culture genotypes, heterokaryon, identity of tissue donor, Zero Genome, Arakawa treatment, Byoton vial. Ordered copy of historical lab report and patient dosing/respiration charts, no intervention.",
+ "seen": "s07.text.037",
+ "state": "03.10 01:32. Saw Shiki's Byoton-produced nonreplicating viral-like carrier in closed vial, heard how AAV/CRISPR-like targeting of nsp-δ in pathological donor cells could stop NSP-δ synthesis over time while keeping cells viable. Heard confirmed separate tissue biopsy effect and rejected toxic earlier design. Does not know Arakawa treated human in vivo and asks exactly about this. Has not held vial or consented to treatment.",
  "memory": [
   {
    "turn": "s07.text.033",
@@ -44,9 +46,15 @@
    "at": "0006-10-03T01:29:00",
    "ch": "present",
    "what": "Исправление: Шики передал именно функциональный отчёт о введённом С-17 от 25.09: две измеренные активные фракции S17-A (постсинаптическое усиление и блок) и S17-B (повышение кальция), функцию НСП-δ и отдельно гипотезу пептидов. Генотипы культуры и гетерокарио…"
+  },
+  {
+   "turn": "s07.text.037",
+   "at": "0006-10-03T01:32:00",
+   "ch": "present",
+   "what": "Шики показал Кадзиуре собственную пробирку Бётон-носителя и объяснил выключение патологического гена nsp-δ ограниченной вирусоподобной системой с сохранением ткани. Рассказал о доказанном эффекте на донорских биоптатах. Кадзиура спросил, применялся ли носител…"
   }
  ],
- "memory_total": 4,
+ "memory_total": 5,
  "first": "s07.text.033",
  "tier": "developed"
 }
