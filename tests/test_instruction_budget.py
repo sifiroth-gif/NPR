@@ -18,6 +18,7 @@ BUDGET = {
     "campaigns/shiki/ref/COMBAT.md": 6000,
     "campaigns/shiki/ref/KNOWLEDGE.md": 6000,
     "campaigns/shiki/ref/MEMORY.md": 6000,
+    "campaigns/shiki/ref/HORROR.md": 6000,
     "campaigns/shiki/BOOT.md": 2000,
 }
 

@@ -116,6 +116,26 @@ class NpcMemoryFoldTest(unittest.TestCase):
         self.assertEqual(card["memory_total"], 1)
         self.assertEqual(self.read(hot.HOT_PATH)["chronicle"][-1]["line"], "Исправленная строка.")
 
+    def test_dread_is_private_and_amend_does_not_double_count(self):
+        d = {"scene": {}, "cast": {"nori": {"dread": {"saw": "зашил рану без нити", "reads": "он режет живое как бумагу",
+                                                     "stage": 1}}}}
+        self.put(turn(45, "0006-10-01T07:14:00", d=d))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.commit("f45")
+        d2 = {"scene": {}, "cast": {"nori": {"dread": {"saw": "прочитал запечатанный пакет", "reads": "он знает"}}}}
+        self.put(turn(46, "0006-10-01T07:20:00", d=d2))
+        hot.fold(self.root)
+        self.commit("f46")
+        self.put(turn(46, "0006-10-01T07:20:00", d=d2, amend=True, review={"predecessor": "s04.text.045"}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        private = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))
+        self.assertEqual(private["psyche"]["nori"]["dread"]["stage"], 2)
+        self.assertIn("horror", private)
+        public = (self.root / hot.HOT_PATH).read_text(encoding="utf-8")
+        self.assertNotIn("режет живое", public)
+        brief = json.loads((self.root / "recovery/GM_BRIEF.json").read_text(encoding="utf-8"))
+        self.assertEqual(brief["horror"]["npcs"]["nori"]["stage"], 2)
+
 
 class BackfillTest(unittest.TestCase):
     def test_backfill_from_verbatim_log_is_idempotent_and_hydrates_cards(self):

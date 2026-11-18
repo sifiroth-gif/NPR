@@ -13,7 +13,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from . import continuity_guard, npc_memory, scene_gate
+from . import continuity_guard, dread, npc_memory, scene_gate
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -201,6 +201,7 @@ def build(hot, turns):
             "gone": (hot.get("things_gone") or [])[-5:],
             "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
         },
+        "horror": dread.brief(hot, present),
         "checks": (hot.get("_checks") or [])[-10:],
         "fold_errors": (hot.get("fold") or {}).get("errors", []),
         "needs_profile": npc_memory.needs_profile(hot, present),
