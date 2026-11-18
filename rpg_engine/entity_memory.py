@@ -14,7 +14,7 @@ from pathlib import Path
 SCHEMA = "npr-entity-ledger/1"
 SEED_PATH = "recovery/ENTITY_SEED_GM_ONLY.json"
 LEDGER_PATH = "recovery/ENTITY_LEDGER_GM_ONLY.json"
-MAX_ENTITY_FACTS = 12
+MAX_ENTITY_FACTS = 8
 MAX_ACTIVATED = 8
 
 
@@ -57,6 +57,16 @@ def load(state_dir):
         return {"schema": SCHEMA, "entities": {}, "conflicts": []}
     normal = _normalise(data)
     normal["conflicts"] = data.get("conflicts", [])
+    # The submitted TURN may be newer than GitHub Actions' asynchronous fold.
+    # Include its explicit facts without treating generated excerpts as canon.
+    latest = _json(root / "recovery/TURN.json")
+    if isinstance(latest, dict) and latest.get("id") and (latest.get("d") or {}).get("entity_facts"):
+        present = {f["id"] for card in normal["entities"].values() for f in card.get("facts", [])}
+        introduced = {raw.get("id") or f"{latest['id']}:{key}:{i}"
+                      for key, patch in latest["d"]["entity_facts"].items()
+                      for i, raw in enumerate(patch.get("facts+", []))}
+        if not introduced.issubset(present):
+            _update(normal, latest)
     return normal
 
 
@@ -133,6 +143,10 @@ def activate(ledger, *, scene=None, cursor=None, action="", limit=MAX_ACTIVATED)
         if not (in_scene or in_action):
             continue
         facts = [fact for fact in card.get("facts", []) if not fact.get("superseded_by")]
+        # Keep the core identity invariants in the bounded hot context.
+        essential = ("identity", "sex", "age_at_discovery", "species", "origin",
+                     "birth_date", "discovery", "relationship")
+        facts.sort(key=lambda f: (f.get("field") not in essential, f.get("field", ""), f.get("id", "")))
         results.append({"id": key, "label": card["label"],
                         "activated_by": "action" if in_action else "scene",
                         "facts": facts[:MAX_ENTITY_FACTS],
