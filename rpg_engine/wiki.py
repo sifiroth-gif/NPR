@@ -695,6 +695,27 @@ def _due_soon(hot):
     return sorted(soon)
 
 
+def _present_card(key, entity):
+    """Короткая карточка присутствующего: облик, характер, последнее знание. Полное — на его странице."""
+    def last(series, limit):
+        return _text(series[-1]["v"], limit) if series else ""
+    lines = [f"### {entity.get('name') or key} · `npc/{key}`"]
+    stable = entity.get("stable") or {}
+    look = last(stable.get("внешность"), 260) or "не записан — опиши при первой возможности и внеси в карточку (`look`)"
+    lines.append(f"- облик: {look}")
+    for field in ("возраст", "пол"):
+        if stable.get(field):
+            lines.append(f"- {field}: {last(stable[field], 60)}")
+    for field, label in (("role", "роль"), ("wants", "хочет"), ("fears", "боится"), ("voice", "голос")):
+        value = last((entity.get("character") or {}).get(field), 200)
+        if value:
+            lines.append(f"- {label}: {value}")
+    knows = entity.get("knows") or []
+    if knows:
+        lines.append(f"- знает (последнее из {len(knows)}): " + "; ".join(_text(k["v"] if isinstance(k, dict) else k, 140) for k in knows[-3:]))
+    return lines
+
+
 def _scene_page(hot, store):
     cursor, scene = hot.get("cursor") or {}, hot.get("scene") or {}
     lines = ["# Сцена сейчас", "",
@@ -704,8 +725,7 @@ def _scene_page(hot, store):
     if present:
         lines.append("## Рядом")
         for key in present:
-            entity = store.get(key) or {}
-            lines.append(f"- {entity.get('name', key)} · `npc/{key}`")
+            lines += _present_card(key, store.get(key) or {})
         lines.append("")
     for field, label in (("situation", "Положение"), ("positions", "Кто где"),
                          ("pressure", "Давление"), ("unread", "Не прочитано Шики")):
