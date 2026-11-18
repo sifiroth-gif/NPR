@@ -220,7 +220,18 @@ def main(root:Path):
     if end["session"]==8 and end["at"]==END:
         if not (root/INDEX).is_file() or not (root/HANDOFF).is_file():
             raise ValueError("S8 binary exists but evidence index/handoff missing")
-        print("S7_TO_S8_ALREADY_PUBLISHED",end,flush=True)
+        # The binary is already immutable and verified. A later engine
+        # enhancement can refresh its derived GM briefing without advancing
+        # the game, replaying a turn, or touching HOT's accepted narrative.
+        complete,_ = hot._read_state(root)
+        if complete.get("cursor",{}).get("id")!=LAST:
+            raise ValueError("Live turn moved after S8 acceptance")
+        _, accepted = scene_gate.played_turns(root)
+        save(root/live_scene.PATH, live_scene.build(complete,accepted))
+        result=hot.check(root)
+        if not result["ok"]:
+            raise ValueError("S8 derived packet refresh broke state: "+str(result))
+        print("S7_TO_S8_ALREADY_PUBLISHED_DERIVED_PACKET_REFRESHED",end,flush=True)
         return
     check_ending(root,rows)
     game,index,played=replay(root,rows,source_sha)
