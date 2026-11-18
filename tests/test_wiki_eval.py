@@ -56,3 +56,19 @@ class PlacesTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MetricsTest(unittest.TestCase):
+    def test_corrections_per_hundred_turns(self):
+        from rpg_engine import metrics
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "archive").mkdir()
+            rows = [{"id": f"s04.text.{i:03}", "gm": "…"} for i in range(1, 21)]
+            (root / "archive/session-004-turns.jsonl").write_text(
+                "\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+            (root / "archive/shiki-canon.jsonl").write_text(
+                json.dumps({"turn": "s04.text.003", "rule": "x"}) + "\n", encoding="utf-8")
+            report = metrics.collect(root)
+            self.assertEqual(report["corrections_per_100_turns"]["s04"],
+                             {"turns": 20, "corrections": 1, "per_100": 5.0})

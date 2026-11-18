@@ -10,7 +10,9 @@ from __future__ import annotations
 
 from datetime import timedelta
 from hashlib import sha256
+import hashlib
 import json
+import re
 from pathlib import Path
 
 from . import (continuity_guard, context_dispatcher, dread, entity_memory,
@@ -104,9 +106,31 @@ def load_alignments(state_dir):
 
 def build_for_state(hot, turns, state_dir):
     """Derive a small GM packet with ONLY present story NPC alignments."""
-    return build(hot, turns, alignments=load_alignments(state_dir),
-                 entity_ledger=entity_memory.load(state_dir),
-                 memory_index=general_memory.load(state_dir, hot=hot))
+    result = build(hot, turns, alignments=load_alignments(state_dir),
+                   entity_ledger=entity_memory.load(state_dir),
+                   memory_index=general_memory.load(state_dir, hot=hot))
+    # Облик присутствующих — со страниц вики: ведущему не нужно отдельно читать SCENE.md.
+    for actor, node in (result.get("present_npcs") or {}).items():
+        page = Path(state_dir) / "memory/npc" / f"{actor}.md"
+        if page.is_file():
+            text = page.read_text(encoding="utf-8")
+            for field in ("внешность", "возраст", "пол"):
+                match = re.search(rf"^- {field}: (.+?)(?: \[[^\]]*\])?$", text, re.M)
+                if match:
+                    node.setdefault("look", {})[field] = _short(match.group(1), 260)
+        if not (node.get("look") or {}).get("внешность"):
+            node.setdefault("look", {})["внешность"] = f"не записан: опиши при первой возможности и внеси в d.cast.{actor}.look"
+    # Blob SHA записанного TURN.json: ведущий пишет следующий ход без его чтения.
+    turn_path = Path(state_dir) / "recovery/TURN.json"
+    if turn_path.is_file():
+        raw = turn_path.read_bytes()
+        result["turn_file"] = {"path": "recovery/TURN.json",
+                               "sha": hashlib.sha1(b"blob %d\0" % len(raw) + raw).hexdigest(),
+                               "turn": (hot.get("cursor") or {}).get("id"),
+                               "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json."}
+    result.pop("digest", None)
+    result["digest"] = _digest(result)
+    return result
 
 
 def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None):
