@@ -49,7 +49,7 @@
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
    ],
-   "seen": "s08.text.004",
+   "seen": "s08.text.005",
    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
    "memory": [
     {
@@ -96,7 +96,7 @@
     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
    ],
-   "seen": "s08.text.004",
+   "seen": "s08.text.005",
    "state": "03.10 01:50: witnessed improved vital signs during Shiki's general medical chakra support and managed bronchoscopic removal of further two right bronchial casts through anesthesia team. Ordered emergency histology and asked how long Shiki can sustain support; still knows no Byoton or secret origin.",
    "memory": [
     {
@@ -468,6 +468,10 @@
   {
    "turn": "s07.text.038",
    "rule": "03.10.1283 01:35: player explicitly transferred physical second experiment tube to Kadziura to investigate; transferred vial no longer in Shiki's pocket."
+  },
+  {
+   "turn": "s08.text.005",
+   "rule": "Коррекция OOC игрока 18.11.2026 на основании archive/session-005-source.md: реципиент С-17 №6 — мальчик, подросток примерно 16 лет, найденный в корпусе №3 в медицинском контейнере с аппаратной поддержкой дыхания и непрерывной инфузией С-17. Фраза «худощавый мужчина» в s08.text.002 — ошибка ведущего и не описывает возраст и пол пациента. Сыгранная реанимация и меры поддержки не аннулируются."
   }
  ],
  "refs": {
@@ -480,11 +484,6 @@
   "entity": "campaigns/shiki/lore/SEVENTH_THRESHOLD_ENTITY_GM_ONLY_1283.json"
  },
  "chronicle": [
-  {
-   "id": "s08.text.001",
-   "at": "0006-10-03T01:42:00",
-   "line": "Медперсонал принёс исходный протокол С-17 и четыре истории. Кадзиура распорядился сохранить оригиналы и начал архивную проверку. У реципиента №6 развилась тяжёлая гипоксемия, врач ушёл в палату; пробирка заперта."
-  },
   {
    "id": "s08.text.002",
    "at": "0006-10-03T01:44:00",
@@ -500,12 +499,18 @@
    "at": "0006-10-03T01:50:00",
    "line": "OOC: уточнено, что пациент №6 — один из четырёх известных реципиентов С-17; острый кризис и бронхиальные слепки введены в сессии 8, причинная связь со С-17 не доказана.",
    "ooc": true
+  },
+  {
+   "id": "s08.text.005",
+   "at": "0006-10-03T01:50:00",
+   "line": "OOC: проверено по archive/session-005-source.md: реципиент №6 — мальчик около 16 лет. Описание взрослого мужчины в s08.text.002 ошибочно, канонически исправлено. Время и медицинская сцена не меняются.",
+   "ooc": true
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.004",
-  "seq": 4,
+  "id": "s08.text.005",
+  "seq": 5,
   "at": "0006-10-03T01:50:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
@@ -552,15 +557,15 @@
   }
  },
  "fold": {
-  "commit": "87c9b1610a6aacc84cc99750b09a23dbba0c171f",
-  "turns": 209,
+  "commit": "0a38eb27e56143dadaca716e4c02e457a60e543d",
+  "turns": 210,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "5dd96d0617cc944077c0ac542d8ad2a8268296a6bc5d55161282c7b43dff0e02"
+  "turn_digest": "ee16acb84d5af35d8e9895a3619202abcb70f3ce8a22a8b79106cdca7fe93d16"
  },
- "chronicle_older": "archive/session-007-chronicle.md",
+ "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
   {
    "session": 4,
