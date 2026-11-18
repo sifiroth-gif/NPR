@@ -133,6 +133,24 @@ class LiveSceneTests(unittest.TestCase):
                                              accepted=self.old)
         self.assertTrue(any("secret NPC belief" in e for e in errs), errs)
 
+    def test_historical_graph_candidates_do_not_grant_npc_knowledge(self):
+        brief = live_scene.build(self.h, self.old)
+        historic = {"matches": [{
+            "id": "s01:archive:451", "source": "archive/session-001.md",
+            "lines": [5, 9], "source_sha256": "a" * 64,
+            "at": "0006-09-26T01:00:00",
+            "headline": "Аракава в архиве", "preview": "Аракава видел шкаф",
+            "score": 0.7, "status": "candidate_only"
+        }]}
+        live_scene.attach_history_graph(brief, historic)
+        node = next(x for x in brief["evidence_graph"]["nodes"]
+                    if x["kind"] == "historical_candidate")
+        self.assertEqual(node["source"], "archive/session-001.md")
+        edges = [x for x in brief["evidence_graph"]["edges"]
+                 if x["from"] == node["id"]]
+        self.assertTrue(edges)
+        self.assertTrue(all(x["status"] == "candidate_only" for x in edges))
+
     def test_inert_policy_maintains_legacy_compatibility(self):
         t = turn()
         t.pop("review")
