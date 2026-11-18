@@ -117,7 +117,17 @@
         }
       ],
       "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
-      "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence."
+      "policy": "A source mentioning an NPC is not proof they knew or said it; actor knowledge and player disclosure require distinct evidence.",
+      "alignment": {
+        "code": "NG",
+        "label": "нейтральный добрый",
+        "status": "established_interpretation",
+        "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности",
+        "morality": "Живые пациенты важнее показателей и ведомственного благополучия",
+        "line": "Не вводит неподтверждённый носитель четырём больным по одному обещанию",
+        "breaking_point": "При реальном скором ухудшении может согласиться на рискованный индивидуальный эксперимент",
+        "rule": "GM-only moral compass, not a deterministic decision or NPC knowledge"
+      }
     }
   },
   "source_passages": {
@@ -338,5 +348,5 @@
     "clock_deadlines_are_real": true,
     "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
   },
-  "digest": "b0df0ce713e6e483236d8b4df7ecc5aa324e132b5c1baf1495291dcda1a41057"
+  "digest": "7863ab27d5e4ec2567ca21a010dd83b057cf4e67627c3940145888699b5ca8e3"
 }
