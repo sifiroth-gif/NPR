@@ -22,16 +22,17 @@
   ]
  },
  "scene": {
-  "situation": "03.10 01:50. Shiki applies continuous general medical chakra to recipient6 for stabilization/support: improves function of viable respiratory cells and circulation while team maintains mechanical ventilation. Continuing expenditure of Shiki's chakra, no long-term automatic maintenance and no reversal of S17/genomic pathology. Team independently performs bronchoscopic inspection/extraction of two further right segmental bronchial casts, bleeding fragile mucosa; sends samples for urgent histology, underlying cause unknown. SpO2 rises 85→91→92%, heart rate 113, BP 101/64, peak pressure down to 29; severely ill, no confirmed recovery. Kadziura asks Shiki how long support can last; waiting for player answer. Earlier 01:47 emergency clock dealt with by stabilization and airway intervention.",
+  "situation": "03.10.1283 02:40. Shiki replied to Kadziura that he can maintain support 'достаточно долго', continues previously initiated standard medical chakra support of recipient #6, a boy about sixteen years old confirmed from archive/session-005-source.md. Patient remains mechanically ventilated and S17-infused as previously prescribed, ongoing chakra cost. ICU staff independently took ABG, optimized ventilation and bronchoscopically supervised airway clearance; preliminary laboratory morphology of bronchial cast shows fibrin, erythrocytes, inflammatory cells, abundant desquamated bronchial epithelium. No pathogen, genetic result or proven cause of injury; S17 causality not established. Current SpO2 93% during assisted ventilation and chakra, pulse 108, BP 104/66, still dependent, no cure. Kadziura maintains current S17 infusion dosage to avoid abrupt deterioration and demands comparison with archived recipient materials; unverified experimental carrier not used. At ~02:00 Kadziura noticed Shiki's visibly dark vessels, froze briefly, began approaching Shiki from opposite side of bed out of involuntary fear. Kadz tells Shiki he will identify damage mechanism before any further experimental administration.",
   "present": [
    "shiki",
    "kadziura_satoru",
-   "night_icu_physician"
+   "night_icu_physician",
+   "s17_recipient_6"
   ],
-  "positions": "Shiki at recipient6 bedside sustaining medical chakra (continuous and consuming his capacity), Kadz and anesthesia team beside ventilator; tissue samples given to nurse for lab. Experimental carrier vial still isolated in locked doctor office.",
-  "pressure": "Respiratory stabilization depends on ongoing interventions; recurrent casts and unknown origin. Kadziura requests estimate of duration Shiki will sustain chakra support.",
+  "positions": "Shiki at bedside of recipient six, maintaining supportive medical chakra while dressed in gown/gloves; patient teen male ~16 ventilated/sedated, on S17, critically but temporarily stable; Kadziura seated with chart by bed, anesthesiologist and nurse at apparatus. Second Shiki-supplied gene carrier still sealed and locked in doctor's private cabinet, no treatment administered.",
+  "pressure": "Morphology confirms sloughed epithelium and fibrin casts, no causal diagnosis. Patient dependent on medical support; urgent treatment decisions withheld pending reliable evidence while physicians act.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s08.text.003",
+  "as_of": "s08.text.006",
   "npc_disclosures_to_player": {}
  },
  "cast": {
@@ -49,7 +50,7 @@
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
    ],
-   "seen": "s08.text.005",
+   "seen": "s08.text.006",
    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
    "memory": [
     {
@@ -69,11 +70,17 @@
      "at": "0006-10-03T01:50:00",
      "ch": "present",
      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Чакроподдержка продолжается и требует усилий."
+    },
+    {
+     "turn": "s08.text.006",
+     "at": "0006-10-03T02:40:00",
+     "ch": "present",
+     "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
     }
    ],
-   "memory_total": 3,
+   "memory_total": 4,
    "first": "s07.text.033",
-   "tier": "archetypal"
+   "tier": "developed"
   },
   "kadziura_satoru": {
    "name": "Кадзиура Сатору",
@@ -96,8 +103,8 @@
     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
    ],
-   "seen": "s08.text.005",
-   "state": "03.10 01:50: witnessed improved vital signs during Shiki's general medical chakra support and managed bronchoscopic removal of further two right bronchial casts through anesthesia team. Ordered emergency histology and asked how long Shiki can sustain support; still knows no Byoton or secret origin.",
+   "seen": "s08.text.006",
+   "state": "02:40: independently examined bronchial tree using ICU team, ordered blood gases and more detailed sample comparisons with other S17 recipients, maintains established S17 dose while evaluating risks. Witnessed temporary function improvement during Shiki's chakra support, but refuses unverified new injections until investigated.",
    "memory": [
     {
      "turn": "s07.text.033",
@@ -110,12 +117,6 @@
      "at": "0006-10-03T01:17:00",
      "ch": "mentioned",
      "what": "Шики предложил обсуждать лечение в кабинете, заметив неправильно застёгнутый халат Кадзиуры. Старший врач перестегнул пуговицу, поручил дежурной наблюдать дыхание реципиента №6 и провёл Шики в кабинет. Готов выслушать предложение, происхождение С-17 ему не ра…"
-    },
-    {
-     "turn": "s07.text.035",
-     "at": "0006-10-03T01:19:00",
-     "ch": "mentioned",
-     "what": "Шики спросил Кадзиуру о составе С-17 и предположил временную блокаду донорских белковых структур. Кадзиура знает клинику и режимы лечения, но не полный состав или механизм действия препарата. Разделил образование, сборку, закрепление и эффект белка; попросил…"
     },
     {
      "turn": "s07.text.036",
@@ -146,11 +147,39 @@
      "at": "0006-10-03T01:50:00",
      "ch": "present",
      "what": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Чакроподдержка продолжается и требует усилий."
+    },
+    {
+     "turn": "s08.text.006",
+     "at": "0006-10-03T02:40:00",
+     "ch": "present",
+     "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
     }
    ],
-   "memory_total": 8,
+   "memory_total": 9,
    "first": "s07.text.033",
    "tier": "developed"
+  },
+  "s17_recipient_6": {
+   "name": "Реципиент № 6",
+   "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
+   "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
+   "state": "03.10.1283 02:40: в реанимации, интубирован, седирован, SpO2 ~93% при ИВЛ и активной медицинской чакроподдержке Шики, сохраняет дыхательную зависимость; тромбоподобные бронхиальные слепки с фибрином, эритроцитами и десквамацией эпителия, происхождение не выяснено.",
+   "knows": [
+    "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
+   ],
+   "source": "archive/session-005-source.md",
+   "seen": "s08.text.006",
+   "memory": [
+    {
+     "turn": "s08.text.006",
+     "at": "0006-10-03T02:40:00",
+     "ch": "present",
+     "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
+    }
+   ],
+   "memory_total": 1,
+   "first": "s08.text.006",
+   "tier": "archetypal"
   }
  },
  "threads": {
@@ -263,13 +292,13 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "03.10 01:50: recipient6's respiratory failure temporarily supported by Shiki's continuous ordinary medical chakra in conjunction with active ventilator care. Two further obstructive casts bronchoscopically extracted from right bronchial segments, fragile mucosa seen. Peak pressure down to 29, SpO2 up to 92% on artificial ventilation. Urgent sample histology pending; underlying pathology unproven and other three recipients unaffected. Experimental carrier never opened/administered; belongs in Kadz locked office. Shiki yet to state duration of support.",
-   "turn": "s08.text.003"
+   "state": "03.10 02:40: Recipient №6 is a 16-year-old boy, canon restored from primary archive. With continued Shiki general medical chakra and independent active ventilator/airway intervention, stable SpO2 93% only on mechanical ventilation, BP 104/66 HR108. Lab prelim morphology of branching bronchial casts: fibrin, erythrocytes, inflammatory cells and extensive sloughed bronchial epithelial sheets. Etiology and S17 causal link unknown. Kadz does not halt existing S17 infusion; refuses experimental carrier until evidence. Shiki still supporting chakra; substantial ongoing chakra expenditure, no automatic cure.",
+   "turn": "s08.text.006"
   }
  },
  "shiki": {
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-  "body": "03.10 01:50: during #6 emergency Shiki continuously channels standard medical chakra to support living respiratory tissues and local perfusion; active concentration and chakra expenditure, amount not measured, no additional kekkei genkai or Zero Genome use.",
+  "body": "03.10 02:40: Шики поддерживает жизнеспособность повреждённых тканей пациента №6 обычной медицинской чакрой с ~01:46; длительное непрерывное поддержание требует расхода чакры, точное количество не измерено. Свои контрактные сосудистые признаки без изменения стадии; иных техник не применял.",
   "look": "20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.",
   "presence": "Врождённое: рядом с ним у людей без причины поднимается тревога. Никто не называет причину. Люди отвечают не телом и не разглядыванием облика, а поступком по своей лестнице dread (GM_BRIEF.horror).",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
@@ -449,7 +478,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 60.104,
+  "value": 60.13,
   "stage": 4,
   "label": "Чёрные сосуды",
   "signs": "Тёмные сосуды на шее и корпусе, корни до шеи; кровь при ранах постепенно тёмно-бордовая, пока НЕ заразна; предчувствие болезненной смерти и запах только вблизи.",
@@ -485,11 +514,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.002",
-   "at": "0006-10-03T01:44:00",
-   "line": "Шики осмотрел реципиента №6: тяжёлая гипоксемия, асимметричная вентиляция, повышенное сопротивление дыхательных путей. Команда извлекла ветвящийся кровянисто-слизистый слепок; SpO₂ выросла до 85%, причина формирования не установлена."
-  },
-  {
    "id": "s08.text.003",
    "at": "0006-10-03T01:50:00",
    "line": "Шики медицинской чакрой поддержал функции дыхательных тканей №6. SpO₂ выросла до 92% при продолжающейся ИВЛ; бригада провела бронхоскопию, удалила ещё два слепка и отправила образцы на исследование. Чакроподдержка продолжается и требует усилий."
@@ -505,31 +529,30 @@
    "at": "0006-10-03T01:50:00",
    "line": "OOC: проверено по archive/session-005-source.md: реципиент №6 — мальчик около 16 лет. Описание взрослого мужчины в s08.text.002 ошибочно, канонически исправлено. Время и медицинская сцена не меняются.",
    "ooc": true
+  },
+  {
+   "id": "s08.text.006",
+   "at": "0006-10-03T02:40:00",
+   "line": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.005",
-  "seq": 5,
-  "at": "0006-10-03T01:50:00",
+  "id": "s08.text.006",
+  "seq": 6,
+  "at": "0006-10-03T02:40:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "01:50"
+  "time": "02:40"
  },
  "last": {
-  "id": "s08.text.003",
-  "player": "#чакрой стабилизация и поддержка#",
-  "gm": "*Вторник, 3 октября 1283 года. 01:46.*\n\n*Центральный госпиталь. Реанимация. Палата № 6.*\n\nМедицинская чакра проникает сквозь кожу, распространяясь в подлежащих тканях грудной клетки. Её ровное, направленное воздействие охватывает межрёберные мышцы, диафрагму, бронхиальную стенку и повреждённые участки лёгочной паренхимы.\n\nС первых мгновений обнаруживается тяжесть состояния шестого реципиента.\n\nБронхиальная слизистая отёчна, отдельные участки эпителия повреждены. Мелкие дыхательные пути местами перекрыты вязкими массами. Вентилируемые альвеолы распределены неравномерно; часть лёгочной ткани остаётся практически выключенной из газообмена.\n\nШики направляет чакру на поддержание жизнеспособности повреждённых клеток, уменьшение местного отёка и стабилизацию работы дыхательной мускулатуры. Поддерживающее воздействие распространяется на микроциркуляторное русло.\n\nОтвет организма неоднороден.\n\nВ относительно сохранных участках бронхов уменьшается сопротивление воздушному потоку. Дыхательные движения становятся равномернее. В наиболее повреждённых отделах чакра поддерживает клеточную активность, но механическое препятствие продолжает ограничивать вентиляцию.\n\nМонитор меняет показания.\n\n<row gap={2} align=\"center\" wrap=\"wrap\">\n  <box border radius=\"lg\" padding={3} flex=\"1\" gap={1}>\n    <caption>SpO₂</caption>\n    <row align=\"baseline\" gap={2}>\n      <title size=\"xl\" color=\"default\" tabularNums>91%</title>\n      <text color=\"success\" size=\"xs\"><icon name=\"arrow-up\" inline/> с 85%</text>\n    </row>\n  </box>\n  <box border radius=\"lg\" padding={3} flex=\"1\" gap={1}>\n    <caption>ЧСС</caption>\n    <row align=\"baseline\" gap={2}>\n      <title size=\"xl\" tabularNums>113</title>\n      <text color=\"secondary\" size=\"xs\">уд/мин</text>\n    </row>\n  </box>\n  <box border radius=\"lg\" padding={3} flex=\"1\" gap={1}>\n    <caption>АД</caption>\n    <title size=\"xl\" tabularNums>101/64</title>\n    <caption>мм рт. ст.</caption>\n  </box>\n</row>\n\nКадзиура поднимает глаза на монитор. Убедившись, что улучшение сохраняется несколько последовательных дыхательных циклов, он обращается к анестезиологу:\n\n— Сейчас можно работать. Готовьте бронхоскоп. Мне нужно увидеть правое бронхиальное дерево.\n\nАнестезиолог распоряжается подготовить оборудование. Медсестра проверяет дыхательный контур, затем освобождает рабочее пространство возле изголовья.\n\nКадзиура приближается к кровати. На мгновение его взгляд останавливается на руках Шики; врач уже видел обычные медицинские техники, но скорость изменения показателей заставляет его пересмотреть первоначальную оценку возможностей молодого дзёнина.\n\n— Вы удерживаете повреждённую ткань функционально активной, — произносит он, следя за кривой давления. — Это даёт нам возможность закончить обследование.\n\nОн подтягивает к себе столик с оборудованием.\n\n— Работайте в пределах той поддержки, которую способны контролировать. Мне нужен достоверный ответ, что происходит внутри бронхов.\n\nЧерез несколько минут бронхоскопия выявляет ещё два плотных слепка, частично перекрывающих сегментарные бронхи справа. При осторожном извлечении одного из них обнажается ярко-красная, легко кровоточащая слизистая.\n\nНа поверхности второго слепка различимы тончайшие белёсые волокна, удерживающие кровянистые сгустки в единой структуре. Отделившаяся часть материала распадается в аспирационной ловушке.\n\n— Сохраните образец для гистологии, — приказывает Кадзиура.\n\nСестра закрывает контейнер.\n\nПод непрерывным воздействием чакры состояние больного удерживается в относительной стабильности. Пиковое давление в дыхательном контуре снижается до 29 см водяного столба.\n\nКадзиура отходит от изголовья, рассматривая извлечённый материал через прозрачную стенку контейнера.\n\n— Если это будет образовываться снова с такой скоростью, одних санаций нам надолго не хватит.\n\nОн указывает на зафиксированное время первого и второго удаления слепков.\n\n— Двадцать минут назад он был на грани остановки. Теперь у нас есть возможность установить причину.\n\nВ этот момент на мониторе появляется новая отметка: **сатурация 92%**.\n\nНо в дистальных отделах правого лёгкого остаются участки, в которых даже при поддержке чакрой газообмен выраженно нарушен.\n\nКадзиура возвращает контейнер сестре.\n\n— Отправляйте срочно. Приоритетное исследование.\n\nЗатем смотрит на Шики.\n\n— Скажите, Мугами, насколько долго вы сможете удерживать такую поддержку? Мне нужно понимать, есть ли у нас время для следующего этапа лечения."
+  "id": "s08.text.006",
+  "player": "По игре: достаточно долго",
+  "gm": "*Вторник, 3 октября 1283 года. 01:50–02:40.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Достаточно долго.\n\nКадзиура некоторое время смотрел на Шики. Затем коротко кивнул.\n\n— Тогда мы используем это время.\n\nОн не стал выяснять, что именно означает «достаточно». Ни один опытный врач не принимает подобного ответа за измеримую величину. Но перед ним лежал шестнадцатилетний мальчик, у которого ещё недавно насыщение крови кислородом падало ниже восьмидесяти процентов, а теперь при сохраняющейся искусственной вентиляции показатели удерживались в пределах, позволявших продолжать лечение.\n\nКадзиура повернулся к анестезиологу:\n\n— Больше никаких глубоких санаций вслепую. Контроль бронхоскопом. Каждое кровотечение фиксировать отдельно. И возьмите газовый состав артериальной крови: одной сатурации мне недостаточно.\n\nДальше отделение заработало без разговоров.\n\nМедсестра меняла расходные материалы. Анестезиолог проверял параметры вентиляции, постепенно подбирая режим с меньшим давлением. Кадзиура несколько раз возвращался к изголовью, изучал движения грудной клетки подростка, сопоставлял записи и результаты обследования.\n\nШики продолжал поддерживать повреждённые ткани медицинской чакрой.\n\nУдерживать их жизнеспособность оказалось возможно. Восстановить за эти минуты разрушенную структуру бронхиального эпителия — нет. Там, где клеточные пласты были уже утрачены, поддерживать было нечего. На обнажённых участках слизистой сохранялось капиллярное кровотечение, а воспалительный секрет вновь соединялся с кровью и белками плазмы.\n\nПоддержка расходовала чакру непрерывно. Её действие не превращалось в самостоятельное исцеление.\n\nОколо двух часов ночи Кадзиура подошёл к Шики ближе, чем прежде. Его взгляд невольно задержался на тёмных сосудистых линиях у шеи молодого дзёнина. Врач замер на долю секунды; пальцы, сжимавшие планшет, побелели. Он отвёл глаза лишь после того, как осознал собственную неподвижность.\n\n— Давление стабилизируется, — произнёс он несколько суше прежнего. — Пока вы поддерживаете ткани.\n\nОн отошёл к монитору. Однако в следующие минуты старался обращаться к Шики с другой стороны кровати.\n\n***\n\n**02:40.**\n\nИз лаборатории пришёл предварительный морфологический ответ.\n\nКадзиура прочитал его стоя. Затем ещё раз, медленно, двигая большим пальцем вдоль строки.\n\n— Фибрин. Эритроциты. Скопления воспалительных клеток. Большое количество слущенного бронхиального эпителия.\n\nОн положил лист на металлический столик.\n\n— Значит, это действительно слепки дыхательных путей. И образуются они не из одной слизи. Повреждается сама выстилка бронхов.\n\nИсследование не установило причины повреждения и пока ничего не доказывало относительно действия С-17.\n\n<box border radius=\"lg\" padding={3} gap={2}>\n  <text color=\"secondary\" weight=\"medium\" size=\"xs\">Состояние реципиента № 6 · 02:40</text>\n  <grid columns={2} gap={3}>\n    <grid-item>\n      <caption>SpO₂ на ИВЛ</caption>\n      <title size=\"lg\" tabularNums>93%</title>\n    </grid-item>\n    <grid-item>\n      <caption>Пульс</caption>\n      <title size=\"lg\" tabularNums>108/мин</title>\n    </grid-item>\n    <grid-item>\n      <caption>АД</caption>\n      <title size=\"lg\" tabularNums>104/66</title>\n    </grid-item>\n    <grid-item>\n      <caption>Дыхательные пути</caption>\n      <text weight=\"medium\">Проходимы частично</text>\n    </grid-item>\n  </grid>\n  <divider color=\"subtle\"/>\n  <text size=\"sm\">Улучшение сохраняется при ИВЛ и непрерывной чакроподдержке. Самостоятельная дыхательная функция остаётся недостаточной.</text>\n</box>\n\n— Продолжайте наблюдение, — распорядился Кадзиура. — Образцы передайте на углублённое исследование. Сравнить с архивными материалами других реципиентов. Мне нужны отличия, а не общая формулировка «воспаление».\n\nОн взял лист назначений шестого.\n\nНа нём сохранялась прежняя схема введения С-17.\n\nКадзиура провёл по ней кончиком карандаша. Врач знал, что резкое прекращение инфузии уже сопровождалось тяжёлым ухудшением состояния мальчика. Он не собирался повторять это ради красивой проверки гипотезы.\n\n— Текущую дозу не меняем, — сказал он дежурной. — До получения подтверждённых данных.\n\nЗатем придвинул стул к кровати и сел перед Шики, удерживая лист двумя руками.\n\n— Мы выиграли время. Теперь необходимо выяснить, что именно убивает этого мальчика: первичное повреждение, действие препарата или последствия их взаимодействия.\n\nОн помолчал, глядя на неподвижное лицо подростка.\n\n— И прежде чем вводить ему что-либо ещё, я намерен это установить.\n\nЗа стеклом палаты постепенно угасала ночная суета госпиталя. Внутри продолжали работать аппараты, тихо постукивали клапаны дыхательного контура.\n\nПоддержка Шики всё ещё удерживала повреждённые ткани от дальнейшего функционального срыва. Но болезнь оставалась."
  },
  "lint": {
   "recent": [
-   {
-    "id": "s08.text.001",
-    "score": 0.0,
-    "verdict": "чисто",
-    "hits": []
-   },
    {
     "id": "s08.text.002",
     "score": 0.0,
@@ -541,11 +564,22 @@
     "score": 0.0,
     "verdict": "чисто",
     "hits": []
+   },
+   {
+    "id": "s08.text.006",
+    "score": 2.1,
+    "verdict": "чисто",
+    "hits": [
+     {
+      "rule": "hedge",
+      "quote": "Исследование не установило причины повреждения и пока ничего не доказывало относительно действия С-17."
+     }
+    ]
    }
   ],
   "note": "Попадания линтера по последним ответам. Каждая цитата — тип фразы, который в следующей сцене не повторяется. Не оправдывайся в тексте, пиши иначе.",
   "session_totals": {
-   "hedge": 2,
+   "hedge": 3,
    "deference": 2,
    "therapy": 8,
    "neg_parallel": 1,
@@ -557,13 +591,13 @@
   }
  },
  "fold": {
-  "commit": "0a38eb27e56143dadaca716e4c02e457a60e543d",
-  "turns": 210,
+  "commit": "d824f7b054181dde7cc97620d4206e586ba60b81",
+  "turns": 211,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "ee16acb84d5af35d8e9895a3619202abcb70f3ce8a22a8b79106cdca7fe93d16"
+  "turn_digest": "fcadaaaf61ee79c0804a21677bd743749d8e7bf935d743775d52eb03435d0c92"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
