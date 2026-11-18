@@ -92,9 +92,9 @@ def _actors(packet):
                                  if k in ("code", "order", "line", "breaking_point")}
             node["alignment_ref"] = "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json"
         prior = node.get("prior_disclosures") or []
-        if len(prior) > 4:
+        if len(prior) > 3:
             node["prior_disclosure_ids"] = [ref["turn"] for ref in prior]
-            node["prior_disclosures"] = list(prior[:2]) + list(prior[-2:])
+            node["prior_disclosures"] = [prior[0], *prior[-2:]]
         for ref in node.get("prior_disclosures") or []:
             if "line" in ref:
                 ref["line"] = _short(ref["line"], 130)
@@ -176,6 +176,27 @@ def _threads(packet, hot):
             clock["if_unopposed"] = _short(clock.get("if_unopposed"), 135)
 
 
+def _deduplicate_memory(packet):
+    """One copy of identical verified facts, with an in-packet reference."""
+    record_by_id = {
+        item["id"]: item for item in (packet.get("entity_memory") or {}).get("activated") or []
+        if isinstance(item, dict) and item.get("id")
+    }
+    for item in (packet.get("general_memory") or {}).get("activated") or []:
+        entity = record_by_id.get(item.get("id"))
+        if not entity or not item.get("facts"):
+            continue
+        general_facts = item["facts"]
+        entity_facts = entity.get("facts") or []
+        def keys(facts):
+            return sorted((f.get("field"), f.get("source"), str(f.get("value")))
+                          for f in facts)
+        if len(general_facts) == len(entity_facts) and keys(general_facts) == keys(entity_facts):
+            item["facts"] = [{"field": f.get("field"), "source": f.get("source")}
+                             for f in general_facts]
+            item["facts_ref"] = "entity_memory.activated[" + str(item["id"]) + "].facts"
+
+
 def _passages(packet):
     passages = packet.get("source_passages") or {}
     if not passages:
@@ -196,7 +217,7 @@ def _passages(packet):
     for key in chosen:
         value = passages[key]
         excerpt = value.get("gm_excerpt", "")
-        short = _short(excerpt, 780)
+        short = _short(excerpt, 560)
         trimmed = trimmed or short != excerpt
         retained[key] = {**value, "gm_excerpt": short}
     packet["source_passages"] = retained
@@ -217,6 +238,7 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     _plot(packet)
     _actors(packet)
     _threads(packet, hot)
+    _deduplicate_memory(packet)
     _passages(packet)
     packet["checks"] = (packet.get("checks") or [])[-2:]
     packet["checks_ref"] = "recovery/CHECKS.json"
