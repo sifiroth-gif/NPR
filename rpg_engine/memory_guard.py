@@ -11,7 +11,7 @@ import re
 
 from . import entity_memory
 
-ADULT = re.compile(r"\b(?:взросл(?:ый|ая|ое|ого|ому)|совершеннолетн(?:ий|яя|его)|adult)\b", re.I)
+ADULT = re.compile(r"\b(?:взросл(?:ый|ая|ое|ого|ому|ым|ым|ого|ой)|совершеннолетн(?:ий|яя|его|им)|adult)\b", re.I)
 YOUNG = re.compile(r"\b(?:мальчик|девочка|подрост(?:ок|ка)|ребенок|ребёнок|teenager)\b", re.I)
 MAN = re.compile(r"\b(?:мужчин(?:а|ой|у|ы)|man)\b", re.I)
 WOMAN = re.compile(r"\b(?:женщин(?:а|ой|у|ы)|woman)\b", re.I)
@@ -21,6 +21,9 @@ NON_ASSERTION = re.compile(
     r"не\s+был|не\s+являлся|not|thought|claimed|mistaken)\b", re.I)
 AGE_NUMBER = re.compile(r"\b(\d{1,3})\s*(?:лет|года|год|years?\s+old)\b", re.I)
 AGE_SEED = re.compile(r"\b(\d{1,3})\b")
+RUSSIAN_AGE = {"деся": 10, "одиннадц": 11, "двенадц": 12, "тринадц": 13,
+               "четырнадц": 14, "пятнадц": 15, "шестнадц": 16,
+               "семнадц": 17, "восемнадц": 18, "девятнадц": 19}
 
 
 def _clean(s):
@@ -118,6 +121,12 @@ def prose_errors(ledger, turn):
             tail = clean[match.end():match.end() + 70]
             if re.search(r"\b(?:рядом|возле|перед|около|у\s+кровати|врач|сестра)\b", tail[:25]):
                 continue
+            # Only appositions or direct subject predicates describe this
+            # entity. "Beside recipient6 stood an adult man" describes another.
+            if not re.match(r"^\s*(?:[,\-—:]|(?:был|была|стал|стала|оказался|оказалась|являлся|это)\b)", tail):
+                continue
+            if re.search(r"\bне\s+(?:взросл|мужчин|женщин)", tail[:70]):
+                continue
             sex = _active(card, "sex")
             if sex:
                 value = _clean(sex[-1]["value"])
@@ -131,6 +140,11 @@ def prose_errors(ledger, turn):
             if age and _now_and_observed_close(age[-1], turn.get("at")):
                 old = AGE_SEED.search(str(age[-1]["value"]))
                 base = int(old.group(1)) if old else None
+                if base is None:
+                    for stem, value in RUSSIAN_AGE.items():
+                        if stem in _clean(age[-1]["value"]):
+                            base = value
+                            break
                 if base is not None and base < 18:
                     if ADULT.search(tail[:65]):
                         errors.append(f"{entity}.age: 'adult' contradicts recent source {age[-1]['source']}")
