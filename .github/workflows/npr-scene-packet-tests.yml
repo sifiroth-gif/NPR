@@ -55,6 +55,12 @@ jobs:
           old_bytes = len(json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8"))
           new_bytes = len(json.dumps(fresh, ensure_ascii=False, sort_keys=True).encode("utf-8"))
           print(f"Before: {old_bytes} bytes; after: {new_bytes} bytes")
+          part_sizes = {k: len(json.dumps(v, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+                        for k, v in fresh.items()}
+          print("Section bytes:", dict(sorted(part_sizes.items(), key=lambda item: -item[1])))
+          actor_sizes = {k: len(json.dumps(v, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+                         for k, v in fresh.get("present_npcs", {}).items()}
+          print("Actor bytes:", actor_sizes)
           print(f"Target: {live_scene.TARGET_BRIEF_BYTES}; hard: {live_scene.MAX_BRIEF_BYTES}")
           print(f"Source excerpts retained: {len(fresh.get('source_passages') or {})}")
           assert fresh["cursor"]["id"] == old["cursor"]["id"]
