@@ -61,6 +61,8 @@ def parser():
     wide.add_argument("--action", default="")
     wide.add_argument("--level", type=int, choices=(0, 1, 2), default=1)
     wide.add_argument("--limit", type=int, default=9)
+    audit_mem = sub.add_parser("memory-audit", help="check cross-session source retrieval and live focus coverage")
+    audit_mem.add_argument("--state-dir", type=Path, required=True)
     review_scene = sub.add_parser(
         "scene-gate", help="Bleach-derived source review of NPC prior disclosures and draft novelty")
     review_scene.add_argument("--state-dir", type=Path, required=True)
@@ -217,7 +219,8 @@ def run(args):
             return scene_memory.fast_packet_from_files(
                 args.source_root, args.state_dir, action=args.player_action, limit=args.limit)
         case "live-preflight":
-            from . import live_scene, scene_gate, heuristic_history, entity_memory, general_memory, memory_guard
+            from . import (live_scene, scene_gate, heuristic_history, entity_memory,
+                           general_memory, memory_guard, context_dispatcher)
             limit_value(args.limit, 1, 12)
             merged, _ = hot._read_state(args.state_dir)
             _, turns = scene_gate.played_turns(args.state_dir)
@@ -226,10 +229,16 @@ def run(args):
             result = live_scene.build(merged, turns, entity_ledger=entity_ledger,
                                       memory_index=memory_index)
             if args.action:
-                result["general_memory"] = general_memory.retrieve(
-                    memory_index, action=args.action,
-                    scene=merged.get("scene") or {}, cursor=merged.get("cursor") or {},
-                    level=args.memory_level, limit=max(args.limit, 7))
+                result["general_memory"], result["context_route"] = context_dispatcher.route(
+                    merged, memory_index, action=args.action,
+                    limit=max(args.limit, 10))
+                if args.memory_level > 0:
+                    # Explicit L1/L2 historical investigation: extra source
+                    # pointers, never automatic new canon or NPC knowledge.
+                    result["general_memory_detail"] = general_memory.retrieve(
+                        memory_index, action=args.action,
+                        scene=merged.get("scene") or {}, cursor=merged.get("cursor") or {},
+                        level=args.memory_level, limit=args.limit)
                 result["entity_memory"] = entity_memory.activate(
                     entity_ledger, scene=merged.get("scene") or {},
                     cursor=merged.get("cursor") or {}, action=args.action)
@@ -266,6 +275,12 @@ def run(args):
             return general_memory.retrieve(
                 index, action=args.action, scene=merged.get("scene") or {},
                 cursor=merged.get("cursor") or {}, level=args.level, limit=args.limit)
+        case "memory-audit":
+            from . import general_memory, entity_memory, memory_quality
+            merged, _ = hot._read_state(args.state_dir)
+            ledger = entity_memory.load(args.state_dir)
+            index = general_memory.load(args.state_dir, hot=merged, ledger=ledger)
+            return memory_quality.audit(index, merged)
         case "scene-gate":
             from . import scene_gate
             report = scene_gate.prepare(
