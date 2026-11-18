@@ -135,6 +135,9 @@ def pact_state(pact, at):
     for index, (threshold, _label, _signs) in enumerate(PACT_STAGES):
         if value >= threshold:
             stage = index
+    # A player-authored narrative breakthrough may explicitly advance the
+    # irreversible pact stage without fabricating technique casts or points.
+    stage = max(stage, int(pact.get("stage_floor", 0)))
     pact.update({"value": value, "stage": stage, "label": PACT_STAGES[stage][1],
                  "signs": PACT_STAGES[stage][2], "contact_hazard": stage >= 5})
     if stage + 1 < len(PACT_STAGES):
@@ -325,6 +328,12 @@ def _apply_delta(hot, delta, turn):
         _merge(hot.setdefault("shiki", {}), delta["shiki"])
     for event in delta.get("pact_events") or []:
         _pact_event(hot.setdefault("pact", {}), event, at)
+    if "pact_stage_floor" in delta:
+        floor = delta["pact_stage_floor"]
+        if type(floor) is not int or not 0 <= floor < len(PACT_STAGES):
+            raise TurnError("pact_stage_floor must be an integer stage in range")
+        pact = hot.setdefault("pact", {})
+        pact["stage_floor"] = max(int(pact.get("stage_floor", 0)), floor)
     for item in delta.get("canon+") or []:
         entry = {"turn": turn_id, "rule": item}
         if entry not in hot.setdefault("canon", []):
