@@ -281,7 +281,7 @@ def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None)
         result["general_memory"], result["context_route"] = context_dispatcher.route(
             hot, memory_index)
     result["npc_dynamics"] = npc_dynamics.view(
-        hot, present=scene.get("present") or [])
+        hot, present=scene.get("present") or [], index=memory_index)
     # Bounded packet size is an architectural requirement, not a style tip.
     # Keep all source REFERENCES; trim only optional duplicated prose extracts.
     def packet_bytes():
