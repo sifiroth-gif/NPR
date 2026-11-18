@@ -212,6 +212,34 @@ class GeneralMemoryTests(unittest.TestCase):
         self.assertEqual(first, (self.root / general_memory.PATH).read_bytes())
         self.assertEqual(general_memory.load(self.root, hot=self.hot), a)
 
+    def test_returning_old_npc_keeps_body_and_role_without_canon_upgrade(self):
+        index = self._index()
+        packet = general_memory.retrieve(index, action="Нацуми Рей", level=0)
+        npc = packet["activated"][0]
+        self.assertEqual(npc["id"], "old_enemy")
+        self.assertEqual(npc["facts"], [])
+        self.assertEqual(npc["operational_cues"]["values"]["role"], "former antagonist")
+        self.assertEqual(npc["operational_cues"]["status"],
+                         "projection_not_authoritative_fact")
+        self.assertIn("recovery/cast/old_enemy.json",
+                      npc["operational_cues"]["source"])
+
+    def test_limited_scene_reports_unloaded_critical_entities(self):
+        index = self._index()
+        for i in range(10):
+            ident = f"cast_member_{i}"
+            index["entities"][ident] = {
+                "id": ident, "kind": "npc", "label": ident,
+                "aliases": [ident], "facts": [
+                    {"id": f"{ident}.sex", "field": "sex",
+                     "value": "male", "source": "s07.text.001"}],
+                "projections": [], "sources": ["s07.text.001"], "mentions": [],
+            }
+        scene = {"present": [f"cast_member_{i}" for i in range(10)]}
+        packet = general_memory.retrieve(index, scene=scene, limit=5)
+        self.assertEqual(len(packet["activated"]), 5)
+        self.assertEqual(len(packet["omitted_priority_entities"]), 5)
+
     def test_80_npcs_bounded_and_no_fact_dropped_for_priority(self):
         for i in range(80):
             _write(self.root / f"recovery/cast/npc_{i:03}.json", {

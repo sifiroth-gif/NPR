@@ -424,6 +424,24 @@ def retrieve(index, *, action="", scene=None, cursor=None, limit=MAX_BRIEF_ENTIT
                 "channels": channels[key],
                 "facts": evidence[:8],
                 "status": "verified_facts" if evidence else "no_verified_facts"}
+        # An old NPC can return without having a verified entity-ledger card.
+        # Preserve 1-2 operational profile cues in L0, visibly marked as
+        # projections, so the GM does not have to reconstruct body/role anew.
+        cue_keys = ("body", "role", "state") if card["kind"] == "npc" else (
+            "holder", "status", "place", "state", "due")
+        cue_candidates = card.get("projections", [])
+        cue_values = {}
+        for field in cue_keys:
+            for snapshot in reversed(cue_candidates):
+                if isinstance(snapshot.get(field), str) and snapshot[field].strip():
+                    cue_values[field] = snapshot[field][:170]
+                    break
+            if len(cue_values) >= 2:
+                break
+        if cue_values:
+            item["operational_cues"] = {
+                "values": cue_values, "source": (card.get("sources") or [""])[0],
+                "status": "projection_not_authoritative_fact"}
         if level >= 1:
             item["projections"] = card.get("projections", [])[:2]
             item["sources"] = card.get("sources", [])[:12]
@@ -433,7 +451,17 @@ def retrieve(index, *, action="", scene=None, cursor=None, limit=MAX_BRIEF_ENTIT
             item["links"] = [edge for edge in index.get("links", [])
                              if key in (edge.get("from"), edge.get("to"))][:8]
         chosen.append(item)
+    selected_ids = {row["id"] for row in chosen}
+    # If a crowded scene exceeds its fixed budget, call out *required* entities,
+    # rather than implying that no other critical facts were activated.
+    overlooked = [
+        key for key in selected if key not in selected_ids and
+        (key in present or (any(_fact_valid(f, cursor.get("at", ""))
+                                for f in index["entities"][key].get("facts", []))
+                            and "scene_anchor" in channels.get(key, [])))
+    ]
     result = {"schema": FORMAT, "level": level, "activated": chosen,
+              "omitted_priority_entities": overlooked[:20],
               "total_matched": len(selected),
               "omitted": max(0, len(selected) - len(chosen)),
               "conflicts": index.get("conflicts", []),
@@ -453,9 +481,13 @@ def compact(packet, max_bytes=MAX_BRIEF_BYTES):
         item.pop("source_candidates", None)
         item.pop("projections", None)
         item.pop("links", None)
+        item.pop("operational_cues", None)
     while size() > max_bytes and len(value.get("activated", [])) > 1:
-        value["activated"].pop()
+        removed = value["activated"].pop()
         value["omitted"] += 1
+        if (removed["facts"] or "scene_anchor" in removed.get("channels", [])) and (
+                removed["id"] not in value.setdefault("omitted_priority_entities", [])):
+            value["omitted_priority_entities"].append(removed["id"])
     if size() > max_bytes:
         value["over_budget"] = True
     return value
