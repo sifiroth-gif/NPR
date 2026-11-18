@@ -66,6 +66,20 @@ class LiveSceneTests(unittest.TestCase):
         self.assertEqual(brief["digest"], live_scene._digest({
             key: value for key, value in brief.items() if key != "digest"}))
 
+    def test_completed_legacy_clocks_are_not_overdue_or_blocking(self):
+        self.h["offscreen"]["clocks"]["finished_old"] = {
+            "owner": "captain", "what": "prior escort",
+            "due": "0006-10-03T00:53:30", "if_unopposed": "report filed",
+            "closed": "completed", "signs": "already reported"}
+        brief = live_scene.build(self.h, self.old)
+        self.assertNotIn("finished_old",
+                         [c["id"] for c in brief["world"]["clocks"]])
+        self.assertNotIn("finished_old", brief["world"]["due_now"])
+        t = turn()
+        t["d"]["world_reviewed"] = ["delivery"]
+        self.assertEqual(live_scene.validate_admission(self.h, t,
+                         policy=self.policy, accepted=self.old), [])
+
     def test_missing_review_rejected_for_sensitive_question(self):
         t = turn(player="Аракава, о чём вы прежде молчали?")
         t.pop("review")
