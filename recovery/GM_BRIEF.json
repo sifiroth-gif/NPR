@@ -71,7 +71,7 @@
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
   "time": "05:46"
  },
- "digest": "272567664de0c79122ba66b6fee78678a2da49448284a4cde510732333fd756e",
+ "digest": "f0cc2e20006ef38555b76db32762c76f0388c5aaa0fd1c5f8ec954c1ba8f7609",
  "entity_memory": {
   "activated": [
    {
@@ -477,6 +477,11 @@
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "look": {
+    "внешность": "крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза",
+    "возраст": "около 50 (1283)",
+    "пол": "мужской"
+   },
    "prior_disclosure_ids": [
     "s08.text.007",
     "s08.text.009",
@@ -543,6 +548,9 @@
   },
   "night_icu_physician": {
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "look": {
+    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.night_icu_physician.look"
+   },
    "prior_disclosure_ids": [
     "s08.text.007",
     "s08.text.009",
@@ -609,6 +617,11 @@
   },
   "s17_recipient_6": {
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "look": {
+    "внешность": "худощавый подросток; коротко остриженные тёмные волосы, острые скулы, бледная кожа",
+    "возраст": "примерно шестнадцать лет",
+    "пол": "мальчик (мужской пол)"
+   },
    "prior_disclosures": [],
    "profile": {
     "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
@@ -668,6 +681,12 @@
  "source_passages_ref": "archive/session-*-turns.jsonl",
  "source_passages_truncated": true,
  "target_exceeded": true,
+ "turn_file": {
+  "path": "recovery/TURN.json",
+  "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
+  "sha": "cb59728a4501a0130d7ffcb4b2daf5c4ad9bb640",
+  "turn": "s08.text.021"
+ },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
