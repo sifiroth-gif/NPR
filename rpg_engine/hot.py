@@ -735,6 +735,21 @@ def fold(state_dir):
             if incoming <= current and (
                     not amendment or hot.get("fold", {}).get("turn_digest") == fingerprint):
                 continue
+            # Before applying the turn, check predecessor, source-reviewed
+            # revelations, remote NPC knowledge and crossed world deadlines.
+            from . import live_scene, scene_gate
+            policy_path = state_dir / live_scene.POLICY_PATH
+            policy = (json.loads(policy_path.read_text(encoding="utf-8"))
+                      if policy_path.is_file() else {"enabled": False})
+            _, primary = scene_gate.played_turns(state_dir)
+            # Include preceding accepted turns that the current fold is about
+            # to apply; the archive may lag several Git commits behind.
+            sources = [x for x in primary if x["id"] != turn["id"]]
+            sources += [x for x in applied if x["id"] != turn["id"]]
+            validation_errors = live_scene.validate_admission(
+                hot, turn, policy=policy, accepted=sources)
+            if validation_errors:
+                raise TurnError("; ".join(validation_errors))
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
                 # Перед тем как убрать NPC из состава, сохраняем его карточку и тайну.
@@ -780,6 +795,13 @@ def fold(state_dir):
         hot.setdefault("scene", {})["npc_disclosures_to_player"] = (
             scene_gate.compact_disclosure_cues(hot, accepted))
     texts, changed = _write_state(state_dir, hot, before)
+    if applied:
+        # One bounded, source-linked GM brief is materialized as a derived
+        # cache. All private clocks remain in the private state branch.
+        from . import live_scene, scene_gate
+        _, accepted = scene_gate.played_turns(state_dir)
+        live_scene.write(state_dir / live_scene.PATH,
+                         live_scene.build(hot, accepted))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
