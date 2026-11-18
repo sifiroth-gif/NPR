@@ -43,6 +43,9 @@ Pact reached maximum, overtly corpse-like decomposition and bizarre intact physi
 - `s17_cast_comparison` (0006-10-03T06:10:00), `arakawa_supply_audit` (0006-10-03T08:15:00)
 - подробности только для ведущего: `memory/threads/CLOCKS.GM_ONLY.md`
 
+## Бой, раны, чакра
+- чакра Шики: пусто
+
 ## События: идут 2
 - вопросы, концовки и пределы только для ведущего: `memory/PLOT.GM_ONLY.md`
 

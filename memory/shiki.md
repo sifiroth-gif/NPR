@@ -53,5 +53,34 @@
 ## Немера
 - Прямое уточнение игрока: односторонний сенсорный мост session-005 включал ВСЕ ощущения Шики, в том числе Нулевой Геном. В s07.text.025 доступ явно открыт/подтверждён на время опыта, Немера была непосредственным наблюдателем. После исследования по заявке Шики закрыта только ветвь Нулевого Генома, остальные чувства и смысловая связь остались; исполнительного контроля нет.
 
+## Chakra
+- value: 
+- at: 0006-10-03T05:46:00
+- locked_until: 0006-10-03T06:12:00
+- state: пусто
+- why: Хранитель: обморок от перерасхода в s08.text.020 (04:12); по канону s08.text.021 чакра сразу не восполняется
+
+## Stats
+- ninjutsu: 4.7
+- taijutsu: 4.5
+- genjutsu: 4.6
+- medical_ninjutsu: 5
+- suiton: 4.8
+- raiton: 4.6
+- futon: 3.8
+- hyoton: 4.5
+- sensory: 4.7
+- zero_genome_mastery: 5
+- shunshin_no_jutsu: 5.5
+- stealth: 5
+- espionage: 4.8
+- field_command: 4.6
+- planning: 4.7
+- physical_strength: 3.8
+- physical_endurance: 4.6
+- chakra_reserves: 4.8
+- chakra_control: 5
+- reflex_and_coordination: 5
+
 ## Поправки игрока: 74
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
