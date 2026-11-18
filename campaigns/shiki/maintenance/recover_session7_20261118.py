@@ -218,6 +218,7 @@ def main(root:Path):
     rows,source_sha=source_checked_rows(root)
     end=Campaign(root/"campaign.sqlite").verify()
     # Refresh the derived S8 GM briefing after a change to NPC comprehension policy.
+    # Regression suite now enforces compact instruction budgets; do not modify played turns.
     if end["session"]==8 and end["at"]==END:
         if not (root/INDEX).is_file() or not (root/HANDOFF).is_file():
             raise ValueError("S8 binary exists but evidence index/handoff missing")
