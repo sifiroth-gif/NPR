@@ -80,6 +80,27 @@ def _source_rows(state_dir):
                 row = json.loads(line)
                 if isinstance(row, dict) and row.get("id") and row.get("kind") != "ooc":
                     yield path.relative_to(root).as_posix(), row
+    # Early campaigns have canonical Markdown transcripts, not JSONL turns.
+    # Route them by precise line window, avoiding duplicate indexing when a
+    # playable JSONL replay for that session already exists.
+    present_sessions = {m.group(1) for p in archive.glob("session-*-turns.jsonl")
+                        if (m := re.fullmatch(r"session-(\d{3})-turns\.jsonl", p.name))}
+    texts = defaultdict(list)
+    for p in archive.glob("session-*.md"):
+        m = re.fullmatch(r"session-(\d{3})(?:-(source|reviewed))?\.md", p.name)
+        if m and m.group(1) not in present_sessions:
+            texts[m.group(1)].append((2 if m.group(2) == "source" else
+                                      1 if m.group(2) == "reviewed" else 0, p))
+    for number, paths in sorted(texts.items()):
+        path = max(paths, key=lambda pair: (pair[0], pair[1].name))[1]
+        lines = path.read_text(encoding="utf-8").splitlines()
+        for i in range(0, len(lines), 30):
+            body = "\n".join(lines[i:i + 35])
+            if not body.strip():
+                continue
+            source = f"{path.relative_to(root).as_posix()}:L{i + 1}-{min(len(lines), i + 35)}"
+            yield source, {"id": f"archive.s{number}.L{i + 1:06}", "gm": body, "at": "",
+                           "player": "", "line": ""}
     # The submitted turn may not yet have been folded by asynchronous GitHub CI.
     recent = _read(root / "recovery/TURN.json", {})
     if isinstance(recent, dict) and recent.get("id") and recent.get("kind") != "ooc":
