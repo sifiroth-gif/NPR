@@ -292,6 +292,45 @@ def review_draft(packet, draft, *, reviewed=(), new_revelation=False,
             "advice": "Check each earlier actor disclosure in its source, then re-evaluate the scene."}
 
 
+
+def compact_disclosure_cues(hot, turns, *, per_actor=8):
+    """Derive a small player-visible disclosure *source index* for HOT.
+
+    This is a convenience for the next GM response, not a belief ledger:
+    lexical involvement does not prove who spoke or who witnessed a fact.
+    Keep the earliest admissions as well as the latest ones; recent-only
+    retention lost s07.text.012/.013 despite their still being relevant.
+    Every cue points to the exact played record for source review.
+    """
+    if not 4 <= per_actor <= 12:
+        raise ValueError("per_actor must be between 4 and 12")
+    cast = hot.get("cast") or {}
+    present = (hot.get("scene") or {}).get("present") or []
+    output = {}
+    for actor in dict.fromkeys(present):
+        if actor not in cast or actor in ("player", "shiki"):
+            continue
+        forms = _actor_forms(hot, actor)
+        matches = []
+        for row in turns:
+            line = row.get("line") or ""
+            if not DISCLOSURE.search(line) or not _mentions(row, forms):
+                continue
+            matches.append({
+                "turn": row["id"],
+                "line": line[:220],
+                "source": _source(row)["source"],
+                "status": "source_candidate_only",
+            })
+        # Preserve earliest disclosures which a long present-day discussion
+        # could otherwise displace. Also keep recent commitments and changes.
+        if matches:
+            first = max(3, per_actor // 2)
+            selected = {x["turn"]: x for x in
+                        (matches[:first] + matches[-(per_actor - first):])}
+            output[actor] = list(selected.values())
+    return output
+
 def historical_candidates(root, state_dir, query, *, limit=5):
     """Leverage NPR's Bleach-inspired all-session graph/heuristic shards.
 
