@@ -817,7 +817,8 @@ def fold(state_dir):
     _write_cast(state_dir, hot)
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
-    if applied or not (hot.get("scene") or {}).get("npc_disclosures_to_player"):
+    if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
+                   not (hot.get("scene") or {}).get("npc_disclosures_to_player")):
         # Cache source pointers even for an existing folded campaign when
         # activating the integrated pre-scene gate.
         from . import scene_gate
