@@ -423,6 +423,28 @@ def build(state_dir, hot, source_root=None):
 
 # ----------------------------------------------------------------- проверка нового хода
 
+# Фон без имени: роль, должность, приметa. Такие голоса не получают подсказки о карточке,
+# даже если звучат во многих ходах; значимого безымянного ведущий оформляет сам.
+ROLE_STEMS = ("анестезиолог", "медсестр", "сестр", "врач", "санитар", "фельдшер", "хирург", "лаборант",
+              "медик", "охран", "патрул", "караул", "страж", "боец", "солдат", "конвой", "задержан",
+              "пленн", "ранен", "голос", "посыльн", "курьер", "гонец", "чиновник", "писар", "секретар",
+              "старш", "младш", "дежурн", "неизвестн", "незнаком", "неустановлен", "мужчин", "женщин",
+              "девушк", "парен", "юнош", "старик", "старух", "ребен", "мальчик", "девочк", "пациент",
+              "капитан", "командир", "офицер", "инспектор", "судья", "экзаменатор", "наблюдател",
+              "продав", "хозя", "официант", "трактир", "торговц", "торговец", "шиноби", "генин",
+              "тюнин", "дзенин", "анбу", "толп", "люди", "все ", "второй", "третий", "первый")
+ROLE_ENDINGS = re.compile(r"(лог|ник|ница|тель|тельница|ист|истка|ор|ер|ец|арь|ач|ент|ант|ый|ий|ой|ая|яя|ые|ие)$")
+
+
+def _is_background(label):
+    """Безымянная роль, а не имя: «Анестезиолог», «Старший патруля», «Задержанный»."""
+    name = _norm(label)
+    if any(stem in name for stem in ROLE_STEMS):
+        return True
+    words = re.findall(r"[\w-]+", name)
+    return len(words) == 1 and bool(ROLE_ENDINGS.search(words[0]))
+
+
 def turn_checks(registry, turns):
     """Замечания к только что свёрнутым ходам: новые говорящие без карточки и смена постоянного."""
     store = registry["entities"]
@@ -434,19 +456,23 @@ def turn_checks(registry, turns):
     notes = []
     fresh = {t.get("id") for t in turns}
     for turn in turns:
-        declared = {_norm(k) for k in ((turn.get("d") or {}).get("cast") or {})}
+        cast = (turn.get("d") or {}).get("cast") or {}
+        declared = {_norm(k) for k in cast}
+        declared |= {_norm(p.get("name")) for p in cast.values() if isinstance(p, dict) and p.get("name")}
         unknown = []
         for label in SPEAKER.findall(turn.get("gm") or ""):
             name = _norm(label)
             if not name or "шики" in name or name in declared or name in unknown:
+                continue
+            if _is_background(label):
                 continue
             if any(name == f or name in f or f in name for f in forms):
                 continue
             unknown.append(name)
         for name in unknown[:4]:
             notes.append({"turn": turn["id"], "kind": "new_character",
-                          "text": f"В сцене говорит «{name}», а страницы нет. Если персонаж может "
-                                  f"вернуться, добавь в следующий ход d.cast.<id> с name, look и facts."})
+                          "text": f"В сцене говорит «{name}» с именем, а страницы нет. Если это не "
+                                  f"разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."})
     for key, field, old, new in registry["changes"]:
         if new["src"] not in fresh:
             continue

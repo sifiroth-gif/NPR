@@ -299,7 +299,7 @@ class HotFilesTest(unittest.TestCase):
 
     def test_fold_records_new_character_page_and_flags_unregistered_speaker(self):
         self.put(turn(45, "0006-10-01T07:14:00",
-                      gm="**Хаясэ Нори:** — Тихо.\n**Писарь:** — Я ничего не видел.",
+                      gm="**Хаясэ Нори:** — Тихо.\n**Писарь:** — Нет.\n**Сато Кэн:** — Я ничего не видел.",
                       d={"cast": {"kase": {"name": "Касэ", "look": "шрам через бровь",
                                            "facts": {"возраст": "около 30"}, "role": "боец заслона"}}}))
         report = hot.fold(self.root)
@@ -313,7 +313,7 @@ class HotFilesTest(unittest.TestCase):
         checks = json.loads((self.root / hot.CHECKS_PATH).read_text(encoding="utf-8"))["checks"]
         speakers = [c["text"] for c in checks if c.get("kind") == "new_character"]
         self.assertEqual(len(speakers), 1)
-        self.assertIn("«писарь»", speakers[0])
+        self.assertIn("«сато кэн»", speakers[0])
         self.assertNotIn("ей нужен виновный", page)
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
