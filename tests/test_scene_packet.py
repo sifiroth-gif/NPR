@@ -37,10 +37,10 @@ def campaign():
     threads["supply"] = {"state": "Поставки ещё не проверены.",
                          "turn": "s08.text.011"}
     events = {
-        "main": {"kind": "main", "title": "Чужая ткань",
+        "main": {"id": "main", "kind": "main", "title": "Чужая ткань",
                  "question": "Кто распоряжается чужой тканью и судьбами людей?",
                  "endings": ["Установлен источник", "Ответственность распределилась", "Доказательства утрачены"]},
-        "chapter": {"kind": "chapter", "parent": "main", "title": "Исследование тканей",
+        "chapter": {"id": "chapter", "kind": "chapter", "parent": "main", "title": "Исследование тканей",
                     "question": "Как определить происхождение поражения?",
                     "status": "active", "scenes": 1,
                     "endings": ["Диагноз подтверждён", "Часть признаков установлена",
@@ -50,7 +50,7 @@ def campaign():
     }
     for i in range(8):
         events[f"side_{i}"] = {
-            "kind": "side", "title": f"Старая линия {i}", "status": "queued",
+            "id": f"side_{i}", "kind": "side", "title": f"Старая линия {i}", "status": "queued",
             "question": "Каким будет исход старой линии?",
             "endings": ["Одна развязка", "Другая развязка", "Провал", "Ничего"],
             "trigger": "Подтверждённая реакция независимой стороны с проверяемыми последствиями " * 2,
@@ -126,7 +126,7 @@ class ScenePacketBudgetTests(unittest.TestCase):
         self.assertTrue(all("endings" not in x for x in packet["plot"]["queued"]))
         self.assertEqual(packet["npc_dynamics"]["source"],
                          "recovery/GM_ONLY.json:psyche")
-        self.assertNotIn("actors", packet["npc_dynamics"])
+        self.assertTrue(all(not x["present"] for x in packet["npc_dynamics"]["actors"]))
         self.assertIn("checks_ref", packet)
         self.assertLessEqual(packet["budget"]["target_bytes"],
                              packet["budget"]["hard_bytes"])
