@@ -213,6 +213,23 @@ def build(hot, turns):
                 break
             actor_data["profile"]["hides"] = _short(
                 actor_data["profile"].get("hides", ""), 160)
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        # Preserve the actor and source pointers; primary text is still in
+        # the immutable journal when a very crowded scene exceeds the budget.
+        for actor_data in actors.values():
+            if packet_bytes() <= MAX_BRIEF_BYTES:
+                break
+            for ref in actor_data["prior_disclosures"]:
+                ref["line"] = _short(ref.get("line", ""), 110)
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        passages.clear()  # source IDs survive in actor lists
+        result["source_passages_truncated"] = True
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        result["world"]["threads"] = {
+            k: _short(v, 150) for k, v in
+            list(result["world"]["threads"].items())[:7]}
+        result["world"]["clocks"] = result["world"]["clocks"][:12]
+        result["world"]["clock_list_truncated"] = True
     result["digest"] = _digest(result)
     return result
 
