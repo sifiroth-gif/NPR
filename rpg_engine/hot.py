@@ -830,9 +830,10 @@ def fold(state_dir):
     # activates the cache. No revision, source canon or game clock is changed.
     from . import live_scene, scene_gate
     brief_path = state_dir / live_scene.PATH
-    if applied or not brief_path.is_file():
-        _, accepted = scene_gate.played_turns(state_dir)
-        live_scene.write(brief_path, live_scene.build(hot, accepted))
+    # Rebuild the bounded derived packet on every fold, including policy and
+    # engine-only updates. write() avoids changing bytes when it is identical.
+    _, accepted = scene_gate.played_turns(state_dir)
+    live_scene.write(brief_path, live_scene.build(hot, accepted))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
