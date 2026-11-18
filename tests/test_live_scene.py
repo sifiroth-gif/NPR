@@ -55,6 +55,7 @@ class LiveSceneTests(unittest.TestCase):
     def test_compact_brief_has_source_bound_memories_and_private_clocks(self):
         brief = live_scene.build(self.h, self.old)
         self.assertEqual(brief["format"], live_scene.FORMAT)
+        self.assertIsNone(brief["handoff"])
         self.assertEqual(brief["cursor"]["id"], "s07.text.029")
         prior = brief["present_npcs"]["arakawa"]["prior_disclosures"]
         self.assertEqual([x["turn"] for x in prior], ["s07.text.012", "s07.text.013"])
