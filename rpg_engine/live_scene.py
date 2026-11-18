@@ -13,7 +13,8 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from . import continuity_guard, dread, entity_memory, general_memory, npc_memory, scene_gate
+from . import (continuity_guard, context_dispatcher, dread, entity_memory,
+               general_memory, npc_dynamics, npc_memory, scene_gate)
 
 FORMAT = "NPR-LIVE-SCENE/1"
 PATH = "recovery/GM_BRIEF.json"
@@ -277,8 +278,10 @@ def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None)
         result["entity_memory"] = entity_memory.activate(
             entity_ledger, scene=scene, cursor=cursor)
     if memory_index is not None:
-        result["general_memory"] = general_memory.compact(
-            general_memory.retrieve(memory_index, scene=scene, cursor=cursor))
+        result["general_memory"], result["context_route"] = context_dispatcher.route(
+            hot, memory_index)
+    result["npc_dynamics"] = npc_dynamics.view(
+        hot, present=scene.get("present") or [])
     # Bounded packet size is an architectural requirement, not a style tip.
     # Keep all source REFERENCES; trim only optional duplicated prose extracts.
     def packet_bytes():
@@ -322,6 +325,16 @@ def build(hot, turns, *, alignments=None, entity_ledger=None, memory_index=None)
         result["world"]["clock_list_truncated"] = True
     if packet_bytes() > MAX_BRIEF_BYTES and result.get("general_memory"):
         result["general_memory"] = general_memory.compact(result["general_memory"], 2600)
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        # Character identity, committed plans and clock sources outrank optional
+        # speculative tension pairs. No hidden motives are erased from GM_ONLY.
+        for actor in reversed(result["npc_dynamics"]["actors"]):
+            if packet_bytes() <= MAX_BRIEF_BYTES:
+                break
+            actor["pressure_pairs"] = []
+            actor["psyche_facets"] = {}
+    if packet_bytes() > MAX_BRIEF_BYTES:
+        result["over_budget"] = True
     result["digest"] = _digest(result)
     return result
 
