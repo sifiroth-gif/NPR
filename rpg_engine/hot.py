@@ -1075,6 +1075,18 @@ def _update_wiki(state_dir, hot, applied):
     for note in report.pop("checks", []):
         if note not in checks:
             checks.append(note)
+    from . import wiki_eval
+    try:
+        evaluation = wiki_eval.run(state_dir)
+    except Exception as exc:  # проверка памяти не останавливает свёртку
+        evaluation = {"error": str(exc)}
+    report["eval"] = {k: evaluation.get(k) for k in ("total", "passed", "score", "error")}
+    checks[:] = [c for c in checks if c.get("kind") != "memory"]
+    if evaluation.get("score") is not None and evaluation["score"] < wiki_eval.TARGET:
+        failed = "; ".join(f"{f['q']} — {f['why']}" for f in evaluation["failed"][:3])
+        checks.append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
+                       "text": f"Контрольные вопросы памяти: {evaluation['passed']} из {evaluation['total']}. "
+                               f"Не найдено: {failed}"})
     if len(checks) > CHECKS_KEEP:
         hot["_checks"] = checks[-CHECKS_KEEP:]
     return report

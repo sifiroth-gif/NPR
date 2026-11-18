@@ -88,6 +88,8 @@ def parser():
     wiki_back.add_argument("--state-dir", type=Path, required=True)
     wiki_build = sub.add_parser("wiki-build", help="rebuild the memory/ wiki pages from all played sources")
     wiki_build.add_argument("--state-dir", type=Path, required=True)
+    wiki_eval = sub.add_parser("wiki-eval", help="control questions: is each answer on the page reached via INDEX")
+    wiki_eval.add_argument("--state-dir", type=Path, required=True)
     blocked = sub.add_parser("hot-blocked", help="publish a failed state check in CHECKS.json")
     blocked.add_argument("--state-dir", type=Path, required=True)
     blocked.add_argument("--check", type=Path, required=True, help="hot-check JSON output")
@@ -331,6 +333,9 @@ def run(args):
             report = wiki.write(args.state_dir, merged)
             report.pop("checks", None)
             return report
+        case "wiki-eval":
+            from . import wiki_eval
+            return wiki_eval.run(args.state_dir)
         case "hot-blocked":
             report = read_json(args.check)
             return hot.record_blocked(args.state_dir, report.get("problems") or [], args.turn)
