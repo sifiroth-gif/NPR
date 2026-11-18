@@ -2,16 +2,6 @@
  "checks": [
   {
    "kind": "things",
-   "text": "shiki_upper_clothing: изменён предмет вне учёта; введён без проверки прежнего состояния",
-   "turn": "s08.text.002"
-  },
-  {
-   "kind": "things",
-   "text": "shiki_hospital_gown_gloves: изменён предмет вне учёта; введён без проверки прежнего состояния",
-   "turn": "s08.text.002"
-  },
-  {
-   "kind": "things",
    "text": "recipient6_airway_cast_sample: изменён предмет вне учёта; введён без проверки прежнего состояния",
    "turn": "s08.text.002"
   },
@@ -48,6 +38,16 @@
   {
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.010",
+   "turn": "s08.text.011"
+  },
+  {
+   "kind": "plot",
+   "text": "Сквозной сюжет не задан. Ближайшим ходом (можно OOC) запиши d.plot.main — question и endings по планам campaigns/shiki/plans/*GM_ONLY* — и текущую главу chapter с концовками и пределом.",
+   "turn": "s08.text.011"
+  },
+  {
+   "kind": "plot",
+   "text": "Линии без движения две сессии и больше: tetsu, order, sanction, lower_hospital, nemera, forbidden_arts, secret_lab, parents и ещё 12. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
    "turn": "s08.text.011"
   }
  ],
@@ -105,7 +105,7 @@
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "time": "03:09"
  },
- "digest": "90cac1c58765e6b529a5a4743951734ba403c9e30f4dbbc0db9c496cf36a8b35",
+ "digest": "9feb5ea35e70618452f311ad791b0ecda5683e11a66eaf5b2b057c0e777d9183",
  "entity_memory": {
   "activated": [
    {
