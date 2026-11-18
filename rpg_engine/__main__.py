@@ -82,6 +82,10 @@ def parser():
                             ("hot-check", "verify HOT v2 consistency without writing")):
         command = sub.add_parser(name, help=help_text)
         command.add_argument("--state-dir", type=Path, required=True)
+    wiki_back = sub.add_parser("wiki-backfill", help="restore turn deltas from the git history of recovery/TURN.json")
+    wiki_back.add_argument("--state-dir", type=Path, required=True)
+    wiki_build = sub.add_parser("wiki-build", help="rebuild the memory/ wiki pages from all played sources")
+    wiki_build.add_argument("--state-dir", type=Path, required=True)
     blocked = sub.add_parser("hot-blocked", help="publish a failed state check in CHECKS.json")
     blocked.add_argument("--state-dir", type=Path, required=True)
     blocked.add_argument("--check", type=Path, required=True, help="hot-check JSON output")
@@ -313,6 +317,15 @@ def run(args):
             return hot.fold(args.state_dir)
         case "hot-check":
             return hot.check(args.state_dir)
+        case "wiki-backfill":
+            from . import wiki
+            return wiki.backfill_deltas(args.state_dir)
+        case "wiki-build":
+            from . import wiki
+            merged, _ = hot._read_state(args.state_dir)
+            report = wiki.write(args.state_dir, merged)
+            report.pop("checks", None)
+            return report
         case "hot-blocked":
             report = read_json(args.check)
             return hot.record_blocked(args.state_dir, report.get("problems") or [], args.turn)
