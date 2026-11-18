@@ -67,7 +67,7 @@
     "Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам.",
     "Главой запрещён перевод пациентов без независимой проверки распоряжений."
    ],
-   "seen": "s08.text.007",
+   "seen": "s08.text.008",
    "state": "03.10 01:14. Назвала старшего врача отделения и попросила сестру привести его; ведёт ночную документацию и наблюдение.",
    "memory": [
     {
@@ -126,7 +126,7 @@
     "Shiki said lab donor biopsy tests successfully suppressed NSP-δ in viable target, old first version was cytotoxic. No human trial yet revealed.",
     "Shiki physically gave his experimental carrier vial to Kadziura and indicated doctor should investigate. He did not disclose any Byoton identity or prior treatment of Arakawa, nor the outcome of human testing."
    ],
-   "seen": "s08.text.007",
+   "seen": "s08.text.008",
    "state": "02:54 independently recorded rapid bronchial epithelial regeneration after Shiki's chakra and had anesthetist monitor objectively. Wary but professionally interested; asks Shiki to identify cause of deeper right bronchial mucosal breakdown, offers biopsy. Continued ordinary S17, kept experimental carrier sealed.",
    "memory": [
     {
@@ -191,7 +191,7 @@
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.007",
+   "seen": "s08.text.008",
    "memory": [
     {
      "turn": "s08.text.006",
@@ -530,6 +530,10 @@
   {
    "turn": "s08.text.005",
    "rule": "Коррекция OOC игрока 18.11.2026 на основании archive/session-005-source.md: реципиент С-17 №6 — мальчик, подросток примерно 16 лет, найденный в корпусе №3 в медицинском контейнере с аппаратной поддержкой дыхания и непрерывной инфузией С-17. Фраза «худощавый мужчина» в s08.text.002 — ошибка ведущего и не описывает возраст и пол пациента. Сыгранная реанимация и меры поддержки не аннулируются."
+  },
+  {
+   "turn": "s08.text.008",
+   "rule": "Коррекция s08.text.007: у реципиента №6 отсутствуют подтверждённые сведения о трансплантации ткани лёгких, донорской клеточной популяции в бронхах или экспрессии НСП-δ. Доказательства НСП-δ относятся к исследованной донорской ткани Аракавы. Повторный экссудат и местная нестабильность слизистой — наблюдение без установленного механизма; фраза о возвращении новых клеток к патологическому состоянию недоказательна и не определяет генетическую причину. Прицельная регенерация и измеренное клиническое улучшение остаются сыгранными."
   }
  ],
  "refs": {
@@ -542,12 +546,6 @@
   "entity": "campaigns/shiki/lore/SEVENTH_THRESHOLD_ENTITY_GM_ONLY_1283.json"
  },
  "chronicle": [
-  {
-   "id": "s08.text.004",
-   "at": "0006-10-03T01:50:00",
-   "line": "OOC: уточнено, что пациент №6 — один из четырёх известных реципиентов С-17; острый кризис и бронхиальные слепки введены в сессии 8, причинная связь со С-17 не доказана.",
-   "ooc": true
-  },
   {
    "id": "s08.text.005",
    "at": "0006-10-03T01:50:00",
@@ -563,12 +561,18 @@
    "id": "s08.text.007",
    "at": "0006-10-03T02:54:00",
    "line": "Шики прицельно регенерировал сохранные участки бронхиального эпителия №6, прекратил кровоточивость и улучшил вентиляцию. Глубокий очаг нестабилен и не лечится устойчиво; Кадзиура предложил прицельную пробу. Диалоги атрибутированы."
+  },
+  {
+   "id": "s08.text.008",
+   "at": "0006-10-03T02:54:00",
+   "line": "OOC: пересадка лёгочной ткани шестому не установлена. Механизм НСП-δ подтверждён в ткани Аракавы, но не бронхах №6; возвращение клеток к «патологическому состоянию» после регенерации — недоказанная интерпретация. Время 02:54.",
+   "ooc": true
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.007",
-  "seq": 7,
+  "id": "s08.text.008",
+  "seq": 8,
   "at": "0006-10-03T02:54:00",
   "place": "Кусагакуре, Центральный госпиталь, реанимация, палата №6",
   "awaiting": "player",
@@ -625,13 +629,13 @@
   }
  },
  "fold": {
-  "commit": "2d6d63fef26250a7c7abc7a35ad321f19f4868d0",
-  "turns": 212,
+  "commit": "0b58c159fc8f15cfcf425a27bfe97902ebb1f05b",
+  "turns": 213,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "5a7ff2587e2301f5e7114abf8f78a277af18d6823298991fc1f3cae457fca92c"
+  "turn_digest": "d104bfb89d50024cf2632d1bcd5805c219aa63499c48060cf1124ef80fbe554d"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [
