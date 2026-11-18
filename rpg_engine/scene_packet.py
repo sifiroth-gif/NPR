@@ -237,7 +237,8 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
         refs = actor.get("prior_disclosures") or []
         if len(refs) >= 2:
             edges.append({"from": refs[0]["turn"], "to": refs[-1]["turn"],
-                          "actor": actor_id, "status": "source_order_only"})
+                          "kind": "chronology_same_actor", "actor": actor_id,
+                          "status": "source_order_only"})
     packet["evidence_graph"] = {
         "nodes": [], "edges": edges, "source": "archive/session-*-turns.jsonl",
         "scope": "source order only; no semantic entailment",
