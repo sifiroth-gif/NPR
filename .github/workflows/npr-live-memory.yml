@@ -2,7 +2,6 @@ name: Shiki live memory fold
 
 # Ведущий записывает один маленький recovery/TURN.json на ход.
 # Этот процесс сворачивает его в recovery/HOT.json, recovery/GM_ONLY.json,
-# дополнительно пересобирает общий GM-only индекс исторических сущностей.
 # дословный журнал archive/session-NNN-turns.jsonl, хронику и карточки NPC.
 # Коммиты, сделанные GITHUB_TOKEN, новых запусков не вызывают: петли нет.
 
@@ -73,7 +72,7 @@ jobs:
               break
             fi
             git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json \
-              recovery/CHECKS.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/cast archive
+              recovery/CHECKS.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
               break
