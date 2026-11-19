@@ -30,11 +30,14 @@ def _read(path):
 def _by_index(state_dir, who):
     index = _read(Path(state_dir) / "memory/INDEX.md") or ""
     want = _norm(who)
-    for line in index.splitlines():
-        if want and want in _norm(line):
-            match = re.search(r"`((?:npc|items|threads|places)/[^`]+)`", line)
-            if match:
-                return f"memory/{match.group(1)}.md"
+    lines = [line for line in index.splitlines()
+             if re.search(r"`((?:npc|items|threads|places)/[^`]+)`", line)]
+    # Сначала заглавное слово строки (имя до « — »): «Тэцу» — его страница, а не Нори «…по делу Тэцу».
+    for head_only in (True, False):
+        for line in lines:
+            text = _norm(line.split(" — ", 1)[0] if head_only else line)
+            if want and want in text:
+                return "memory/" + re.search(r"`((?:npc|items|threads|places)/[^`]+)`", line).group(1) + ".md"
     return None
 
 

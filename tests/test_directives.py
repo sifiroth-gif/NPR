@@ -108,3 +108,52 @@ class FirstSightTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KeeperReplaceTest(unittest.TestCase):
+    def test_replace_applies_once_per_version_then_gm_wins(self):
+        root = Path(tempfile.mkdtemp())
+        (root / "memory/_curated").mkdir(parents=True)
+        path = root / hot.KEEPER_FILL
+        path.write_text(json.dumps({"replace": {"shiki": {"presence": "новый канон"}}}, ensure_ascii=False),
+                        encoding="utf-8")
+        h = {"shiki": {"presence": "старое"}}
+        hot._keeper_fill(root, h)
+        self.assertEqual(h["shiki"]["presence"], "новый канон")
+        h["shiki"]["presence"] = "ведущий уточнил ходом"
+        hot._keeper_fill(root, h)
+        self.assertEqual(h["shiki"]["presence"], "ведущий уточнил ходом")
+
+
+class KeeperDeltaTest(unittest.TestCase):
+    def test_closes_played_events_and_threads_once(self):
+        from rpg_engine import keeper, plot
+        root = Path(tempfile.mkdtemp())
+        (root / "memory/_curated").mkdir(parents=True)
+        h = {"cursor": {"id": "s08.text.090", "at": "0006-10-04T06:43:00"},
+             "threads": {"old": {"state": "давно"}, "live": {"state": "идёт"}},
+             "_plot": {"events": {"side_a": {"id": "side_a", "kind": "side", "status": "queued", "scenes": 0},
+                                  "ch": {"id": "ch", "kind": "chapter", "status": "active", "scenes": 7}}}}
+        (root / keeper.SEED).write_text(json.dumps({
+            "threads": {"old": {"closed": "сыграно"}, "live": {"state": "обновлено"}},
+            "plot": {"side_a": {"closed": "исход"}, "ch": {"notes": ["заметка"]},
+                     "side_b": {"kind": "side", "question": "?", "endings": ["да", "нет"]}}}, ensure_ascii=False),
+            encoding="utf-8")
+        self.assertTrue(keeper.apply(root, h))
+        self.assertNotIn("old", h["threads"])
+        self.assertEqual(h["threads"]["live"]["state"], "обновлено")
+        self.assertEqual(h["_plot"]["closed"][-1]["outcome"], "исход")
+        self.assertEqual(h["_plot"]["events"]["ch"]["scenes"], 7, "сцену не засчитывает")
+        self.assertEqual(h["_plot"]["events"]["side_b"]["status"], "queued")
+        self.assertFalse(keeper.apply(root, h), "второй раз та же версия не применяется")
+
+
+class WikiFactsListTest(unittest.TestCase):
+    def test_list_facts_render_and_bad_patch_is_skipped(self):
+        from rpg_engine import wiki
+        store, changes = {}, []
+        wiki._apply_cast(store, "porter", {"name": "Носильщик", "facts": ["ночной служащий", "ранен"]},
+                         "s08.text.082", changes)
+        self.assertIn("ночной служащий; ранен", store["porter"]["stable"]["сведения"][-1]["v"])
+        wiki._apply_cast(store, "porter", {"facts": ["другое"]}, "s08.text.083", changes)
+        self.assertEqual(changes, [], "смена списка сведений — не смена постоянной черты")

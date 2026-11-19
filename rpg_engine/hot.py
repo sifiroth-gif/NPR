@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import claims, continuity_guard, directives, dread, fight, inquiry, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import claims, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -695,8 +695,19 @@ def _keeper_fill(state_dir, hot):
         data = json.loads(path.read_text(encoding="utf-8"))
     except ValueError:
         return
+    # «replace»: поправка хранителя, которая заменяет устаревшее поле один раз на версию
+    # файла (например, HOT.shiki.presence после поправки игрока). Дальнейшие записи
+    # ведущего ходом сильнее: повторно заменяется только при новой версии файла.
+    replace = data.get("replace") if isinstance(data.get("replace"), dict) else {}
+    digest = hashlib.sha256(json.dumps(replace, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
+    fold = hot.setdefault("fold", {})
+    if replace and fold.get("keeper_replace") != digest:
+        for section, fields in replace.items():
+            if isinstance(fields, dict):
+                hot.setdefault(section, {}).update(fields)
+        fold["keeper_replace"] = digest
     for section, fields in data.items():
-        if section.startswith("_") or not isinstance(fields, dict):
+        if section.startswith("_") or section == "replace" or not isinstance(fields, dict):
             continue
         target = hot.setdefault(section, {})
         for key, value in fields.items():
@@ -1184,6 +1195,7 @@ def fold(state_dir):
         hot.setdefault("fold", {})["lore_new"] = lore_new   # впервые увидевшие — для NEXT.must
     merge.apply(state_dir, hot, alias)   # снимок amend мог вернуть лишний ключ
     merge.names(state_dir, hot)
+    keeper.apply(state_dir, hot)   # поправка хранителя к сюжету и линиям, раз на версию
     will.seed(state_dir, hot)
     will.fill_names(state_dir, hot)
     _keeper_fill(state_dir, hot)
@@ -1252,6 +1264,7 @@ def _update_wiki(state_dir, hot, applied):
              "text": f"Вики не обновилась: {type(exc).__name__}: {exc}"})
         return {"error": str(exc)}
     checks = hot.setdefault("_checks", [])
+    checks[:] = [c for c in checks if not str(c.get("text", "")).startswith("Вики не обновилась")]
     for note in report.pop("checks", []):
         if note not in checks:
             checks.append(note)
