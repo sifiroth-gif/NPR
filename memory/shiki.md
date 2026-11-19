@@ -75,5 +75,12 @@
 - chakra_control: 5
 - reflex_and_coordination: 5
 
+## Chakra
+- value: 
+- at: 0006-10-03T05:46:00
+- locked_until: 0006-10-03T06:12:00
+- state: пусто
+- why: Хранитель: обморок от перерасхода в s08.text.020; канон s08.text.021
+
 ## Поправки игрока: 78
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход

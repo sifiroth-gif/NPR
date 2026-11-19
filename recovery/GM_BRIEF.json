@@ -1,20 +1,74 @@
 {
+ "agendas": {
+  "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
+  "soon": [
+   {
+    "against_shiki": "канцелярия, куда она переведёт вину, — та самая, где за деньги выносят бланки",
+    "due": "0006-10-03T07:05:00",
+    "if_unopposed": "ложный маршрут становится официальным, настоящий получатель не ищется",
+    "name": "Дежурная врач охраняемого отделения",
+    "next": "в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес",
+    "npc": "night_icu_physician",
+    "overdue": false,
+    "plan": "shift_blame"
+   },
+   {
+    "against_shiki": "рапорт делает Шики единственным ответственным за всё, что случилось в палате",
+    "due": "0006-10-03T09:00:00",
+    "if_unopposed": "рапорт и опечатанные пробы крови уходят по служебной линии — в том числе к тем, чьи имена на пластине",
+    "name": "Кадзиура Сатору",
+    "next": "подать заведующему рапорт: вмешательство Мугами было разрешено устно, последствия — под его ответственность",
+    "npc": "kadziura_satoru",
+    "overdue": false,
+    "plan": "cover_ward"
+   },
+   {
+    "against_shiki": "в рапорте она назовёт Шики источником, чтобы прикрыть отсутствие санкции",
+    "due": "0006-10-03T12:00:00",
+    "if_unopposed": "её отстраняют окончательно, а журнал доступа исчезает в тот же час",
+    "name": "Хаясэ Нори",
+    "next": "использовать жалобы Шики о тайне медицинских данных как основание для служебной проверки госпиталя и потребовать журнал доступа",
+    "npc": "nori",
+    "overdue": false,
+    "plan": "registry"
+   },
+   {
+    "against_shiki": "его пробы становятся объяснением чужой недостачи",
+    "due": "0006-10-03T13:00:00",
+    "if_unopposed": "недостача ампул исчезает из учёта",
+    "name": "Курода Маю",
+    "next": "тихо переписать журнал контрольных ампул и объяснить пропуск загрязнением от проб Шики",
+    "npc": "kuroda_mayu",
+    "overdue": false,
+    "plan": "controls"
+   },
+   {
+    "against_shiki": "данные о шестой стадии становятся товаром на рынке тканей",
+    "due": "0006-10-03T14:00:00",
+    "if_unopposed": "к вечеру поставщик знает о Шики больше, чем госпиталь",
+    "name": "Аракава Дзюн",
+    "next": "выйти на поставщика через позывной отдела снабжения и предложить плату — сведения о крови и теле Шики",
+    "npc": "arakawa",
+    "overdue": false,
+    "plan": "dose"
+   },
+   {
+    "against_shiki": "одно слово главы — и «охрана Шики» становится задержанием Шики",
+    "due": "0006-10-03T18:00:00",
+    "if_unopposed": "к ночи у Шики появляется сопровождение, о котором он не просил",
+    "name": "Такаги Рэн",
+    "next": "доложить главе полный список поручений и спросить, распространяется ли охрана Шики на его передвижения",
+    "npc": "takagi_ren",
+    "overdue": false,
+    "plan": "custody"
+   }
+  ]
+ },
  "budget": {
   "hard_bytes": 48000,
   "target_bytes": 32000
  },
- "checks": [
-  {
-   "kind": "review",
-   "text": "keiji: offscreen knows+ requires knowledge_events with source/channel",
-   "turn": "s08.text.030"
-  },
-  {
-   "kind": "review",
-   "text": "seina: offscreen knows+ requires knowledge_events with source/channel",
-   "turn": "s08.text.030"
-  }
- ],
+ "checks": [],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
@@ -67,7 +121,7 @@
   "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
   "time": "06:49"
  },
- "digest": "f0b949f7212519dcc82c75fa19d6592a25922babe2a96f2166139d625303db28",
+ "digest": "559a40ecc96603bd6876ede2336e9e90a5ef31b8aec1e50fc825ccc718332ea6",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -82,6 +136,11 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fight": {
+  "chakra": {
+   "locked_until": "0006-10-03T06:12:00",
+   "state": "пусто",
+   "value": 0.0
+  },
   "dice": [
    23,
    96,
@@ -220,6 +279,7 @@
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
@@ -229,7 +289,7 @@
   "npcs": {
    "keiji": {
     "does": "Stops an attempted greeting handshake, moves back to chair but engages Shiki and recalls his assistance rather than fleeing.",
-    "lever": "",
+    "lever": "остаться хромым и бесполезным для своей группы",
     "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
     "reads": "This may be the same healer he once trusted, but contact with him now might be biologically dangerous; Seina's reaction reinforces concern.",
     "stage": 1,
@@ -237,7 +297,7 @@
    },
    "seina": {
     "does": "Closes inner-room door, avoids contact and directly asks Shiki about present safety while telling Keiji to sit.",
-    "lever": "Вред людям кабинета и срыв медицинской работы",
+    "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
     "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
     "reads": "Her own clinic, established old confidentiality pact and ordinary patient safety require understanding newly increased hazards; she may have to protect both Shiki and waiting Keiji.",
     "stage": 1,
@@ -264,15 +324,7 @@
  "last": {
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 35,
-   "facets": 0,
-   "need": 5,
-   "npc": "seina",
-   "tier": "deep"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
@@ -417,7 +469,40 @@
  },
  "present_npcs": {
   "keiji": {
-   "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "against_shiki": "слух о его теле уходит в Коноху, к людям, которые записывают слухи",
+      "due": "0006-10-03T11:00:00",
+      "flaw": "не умеет молчать о необычном",
+      "goal": "вернуться с караваном в Коноху без проблем",
+      "id": "report_home",
+      "if_unopposed": "в отчёте каравана появляется строка о Мугами Шики",
+      "next": "рассказать старшему сопровождения, что знакомый медик Кусы с экзамена 1278 года выглядит как мертвец и лечит в частном кабинете",
+      "source_turn": "keeper",
+      "status": "committed"
+     }
+    ],
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "deep_fear": "остаться хромым и бесполезным для своей группы",
+       "mask": "шутки и болтовня"
+      },
+      "kind": "mask_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
+    "psyche_facets": {
+     "contradiction": "благодарен Шики за колено и боится того, во что тот превратился",
+     "decides": "быстро и вслух, потом жалеет",
+     "deep_fear": "остаться хромым и бесполезным для своей группы",
+     "mask": "шутки и болтовня"
+    },
+    "unclocked_intents": [
+     "report_home"
+    ]
+   },
    "look": {
     "внешность": "худощавый подросток; светло-каштановые волосы до плеч, узкое лицо, протектор Конохи на шее",
     "возраст": "около 13",
@@ -426,6 +511,7 @@
    "prior_disclosures": [],
    "profile": {
     "first": "s08.text.030",
+    "inner": {},
     "knows": [
      "03.10.1283 06:49 Keiji unexpectedly met Shiki at Kirisawa Seina's private clinic while waiting for assessment of left knee, recognized old medical rescuer from Konoha Chunin exam July 1278, observed his changed"
     ],
@@ -453,7 +539,49 @@
     "order": "Медицина и личный профессиональный кодекс важнее приказов"
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
-   "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "against_shiki": "её заключение описывает его кровь и тело — второй документ о Шики уйдёт в чужие руки",
+      "due": "0006-10-03T16:00:00",
+      "flaw": "уверена в своей правоте и не спрашивает согласия Шики на то, что считает правильным",
+      "goal": "превратить утечку медицинских данных Шики в дело против Центрального госпиталя",
+      "id": "expose_leak",
+      "if_unopposed": "к вечеру заключение лежит у юриста, а копия — у того, кто платит юристу",
+      "next": "составить письменное заключение о состоянии Шики шестой стадии как доказательство нарушения врачебной тайны и показать его знакомому юристу УВБ",
+      "source_turn": "keeper",
+      "status": "committed"
+     }
+    ],
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
+       "mask": "сухая точность и деловитость там, где ей страшно"
+      },
+      "kind": "mask_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     },
+     {
+      "anchor": {
+       "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
+       "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление"
+      },
+      "kind": "boundary_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
+    "psyche_facets": {
+     "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
+     "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление",
+     "decides": "по пациенту и праву: сначала человек на столе, потом закон, учреждение последним",
+     "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
+     "mask": "сухая точность и деловитость там, где ей страшно"
+    },
+    "unclocked_intents": [
+     "expose_leak"
+    ]
+   },
    "look": {
     "внешность": "32 года, собранная, усталость врача в спокойном лице"
    },
@@ -462,6 +590,7 @@
     "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
     "fears": "Вред людям кабинета и срыв медицинской работы",
     "first": "s04.text.065",
+    "inner": {},
     "knows": [
      "Последние обычные лабораторные анализы Шики в ЕЁ частной картотеке датированы 18 июля 1279 г.; последующие записи — преимущественно осмотры, нет данных секретной лаборатории.",
      "Шики запретил отправлять образцы за пределы частной клиники; Сэйна обязалась соблюдать это ограничение.",

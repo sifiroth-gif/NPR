@@ -34,6 +34,9 @@ Old friend Keiji and old teacher Seina respond to maximal pact transformation in
 - `medical_notice_registry_trace` (0006-10-03T07:05:00), `arakawa_supply_audit` (0006-10-03T08:15:00), `shiki_blood_disposal_request` (0006-10-03T09:30:00)
 - подробности только для ведущего: `memory/threads/CLOCKS.GM_ONLY.md`
 
+## Бой, раны, чакра
+- чакра Шики: пусто
+
 ## События: идут 3
 - вопросы, концовки и пределы только для ведущего: `memory/PLOT.GM_ONLY.md`
 
