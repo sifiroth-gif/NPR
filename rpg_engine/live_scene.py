@@ -346,30 +346,16 @@ def validate_admission(hot, turn, *, policy, accepted=()):
     if review.get("predecessor") != current:
         errors.append("stale review: predecessor must equal accepted HOT cursor")
     known = _source_turns(accepted)
-    actor_ids = [x for x in ((hot.get("scene") or {}).get("present") or [])
-                 if x in (hot.get("cast") or {}) and x not in ("shiki", "player")]
-    if actor_ids and _requires_review(turn):
-        sources = review.get("sources")
-        if not isinstance(sources, list):
-            errors.append("source-sensitive scene must provide review.sources")
-            sources = []
-        if any(not isinstance(x, str) or x not in known for x in sources):
-            errors.append("review.sources must refer to exact prior played turns")
-        required = []
-        for actor in actor_ids:
-            cues = ((hot.get("scene") or {}).get("npc_disclosures_to_player") or {}).get(actor, [])
-            required.extend(x["turn"] for x in cues if x["turn"] in known)
-        # A small deterministic subset: older and latest actor admissions.
-        required = list(dict.fromkeys(required))
-        selected = list(dict.fromkeys(required[:6] + required[-6:]))
-        if any(x not in sources for x in selected):
-            errors.append("missing earliest/latest prior NPC disclosure source: " +
-                          ", ".join(x for x in selected if x not in sources))
-        if (scene_gate.NOVELTY.search(turn.get("gm", "")) and
-                scene_gate.DISCLOSURE.search(turn.get("gm", ""))):
-            contrast = review.get("novelty_contrast")
-            if not isinstance(contrast, str) or len(contrast.strip()) < 40:
-                errors.append("new NPC revelation requires source-bound novelty_contrast")
+    # Present = who stood in the scene before the turn, who entered it in this
+    # turn (d.scene.present) and who is always with Shiki (policy, e.g. Nemera).
+    joined = (((turn.get("d") or {}).get("scene") or {}).get("present") or [])
+    actor_ids = [x for x in dict.fromkeys(list((hot.get("scene") or {}).get("present") or []) +
+                                          list(joined) + list(policy.get("always_present") or []))
+                 if isinstance(x, str) and x not in ("shiki", "player")]
+    # Prior disclosures of present NPCs are handed to the GM before the scene
+    # (GM_BRIEF.present_npcs.prior_disclosures, npc/<id>.talk). Citing their
+    # turn ids back after the scene was bureaucracy the GM never filled; the
+    # fold now flags an NPC repeating an old line instead (wiki repeat check).
     # Validate every new source-bound NPC knowledge event, including private
     # memories. A hidden belief may use the same storage transaction without
     # making its content public.

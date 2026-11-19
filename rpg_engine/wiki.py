@@ -489,6 +489,7 @@ def turn_checks(registry, turns):
                           "text": f"В сцене говорит «{name}» с именем, а страницы нет. Если это не "
                                   f"разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."})
     notes += _read_checks(store, turns)
+    notes += _repeat_checks(store, turns)
     for key, field, old, new in registry["changes"]:
         if new["src"] not in fresh:
             continue
@@ -501,6 +502,45 @@ def turn_checks(registry, turns):
 
 
 RETURN_GAP = 10   # ходов без NPC, после которых его надо перечитать
+REPEAT_SHARE = 0.5  # доля общих четвёрок слов, при которой реплика считается повтором
+
+
+def _shingles(text):
+    words = re.findall(r"\w+", _norm(text))
+    return {tuple(words[i:i + 4]) for i in range(max(0, len(words) - 3))}
+
+
+def _repeat_checks(store, turns):
+    """NPC почти дословно повторяет свою прежнюю реплику: старое не выдаётся за новое."""
+    resolve = talk.Resolver(store)
+    notes = []
+    for turn in turns:
+        if turn.get("kind") == "ooc":
+            continue
+        current = _order(turn.get("id"))
+        found = 0
+        for label, said in talk.utterances(turn.get("gm")):
+            if len(said) < 60 or found >= 2:
+                continue
+            key = resolve(label, current[0])
+            if not key:
+                continue
+            mine = _shingles(said)
+            for entry in store[key].get("talk") or []:
+                if _order(entry["turn"]) >= current:
+                    continue
+                for old in entry.get("said") or []:
+                    theirs = _shingles(old)
+                    if mine and theirs and len(mine & theirs) / len(mine | theirs) >= REPEAT_SHARE:
+                        notes.append({"turn": turn["id"], "kind": "repeat",
+                                      "text": f"«{store[key]['name']}» почти дословно повторяет сказанное в "
+                                              f"{entry['turn']}: «{_text(old, 120)}». Если это подано как "
+                                              f"новое признание — ошибка памяти; NPC помнит, что уже говорил."})
+                        found += 1
+                        break
+                if found and notes[-1]["turn"] == turn["id"] and store[key]["name"] in notes[-1]["text"]:
+                    break
+    return notes
 
 
 def _read_checks(store, turns):

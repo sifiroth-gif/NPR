@@ -103,34 +103,21 @@ class LiveSceneTests(unittest.TestCase):
         self.assertEqual(live_scene.validate_admission(self.h, t,
                          policy=self.policy, accepted=self.old), [])
 
-    def test_missing_review_rejected_for_sensitive_question(self):
-        t = turn(player="Аракава, о чём вы прежде молчали?")
-        t.pop("review")
-        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
-        self.assertTrue(any("predecessor" in e for e in errors), errors)
-        self.assertTrue(any("review.sources" in e for e in errors), errors)
-
-    def test_source_replay_must_cover_prior_actor_disclosures(self):
-        t = turn(player="Аракава, что вы сказали мне раньше?")
-        t["review"]["sources"] = ["s07.text.013"]
+    def test_history_question_needs_no_cited_ids_after_the_scene(self):
+        t = turn(player="Аракава, о чём вы прежде молчали?", gm="Аракава впервые признал, что ему нужен С-17.")
+        t["review"] = {"predecessor": "s07.text.029"}
         t["d"]["world_reviewed"] = ["delivery"]
-        errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
-        self.assertTrue(any("s07.text.012" in e for e in errors), errors)
-        t["review"]["sources"] = ["s07.text.012", "s07.text.013"]
-        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
-                                                      accepted=self.old), [])
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old), [])
 
-    def test_false_novelty_claim_needs_comparison(self):
-        t = turn(gm="Аракава впервые признал, что ему нужен С-17.",
-                 player="Зачем вы хотели В-7?")
+    def test_npc_entering_in_this_turn_or_always_with_shiki_is_present(self):
+        t = turn()
         t["d"]["world_reviewed"] = ["delivery"]
+        t["d"]["scene"] = {"present": ["shiki", "seina"]}
+        t["d"]["cast"] = {"seina": {"knows+": ["Shiki fainted"]}, "nemera": {"knows+": ["The seals hold"]}}
         errors = live_scene.validate_admission(self.h, t, policy=self.policy, accepted=self.old)
-        self.assertTrue(any("novelty_contrast" in e for e in errors))
-        t["review"]["novelty_contrast"] = (
-            "The old source already mentions S-17, the new source would have "
-            "to provide a distinct document or change in testimony.")
-        self.assertEqual(live_scene.validate_admission(self.h, t, policy=self.policy,
-                                                      accepted=self.old), [])
+        self.assertEqual(errors, ["nemera: offscreen knows+ requires knowledge_events with source/channel"])
+        policy = dict(self.policy, always_present=["nemera"])
+        self.assertEqual(live_scene.validate_admission(self.h, t, policy=policy, accepted=self.old), [])
 
     def test_remote_npc_knowledge_needs_delivery_channel(self):
         t = turn()

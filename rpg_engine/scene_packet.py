@@ -240,7 +240,7 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     _threads(packet, hot)
     _deduplicate_memory(packet)
     _passages(packet)
-    packet["checks"] = (packet.get("checks") or [])[-2:]
+    packet["checks"] = _current_checks(packet.get("checks") or [], (hot.get("cursor") or {}).get("id"))
     packet["checks_ref"] = "recovery/CHECKS.json"
     packet["recent_turns"] = (packet.get("recent_turns") or [])[-2:]
     packet["recent_turns_ref"] = "recovery/TURN.json"
@@ -318,7 +318,6 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
             actor.pop("policy", None)  # policy is also in guards
     if _bytes(packet) > target_bytes:
         # Do not lose deadlines or characters; safe reduction of optional indices.
-        packet["checks"] = (packet.get("checks") or [])[-2:]
         packet["recent_turns"] = (packet.get("recent_turns") or [])[-1:]
     packet["budget"] = {"target_bytes": target_bytes, "hard_bytes": hard_bytes}
     if _bytes(packet) > target_bytes:
@@ -328,3 +327,12 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     else:
         packet.pop("over_budget", None)
     return packet
+
+
+STATE_CHECKS = ("plot", "fight", "memory", "will")
+
+
+def _current_checks(checks, cursor):
+    """Замечания к последнему ходу и текущему состоянию — все; старые остаются в CHECKS.json."""
+    keep = [c for c in checks if c.get("turn") == cursor or c.get("kind") in STATE_CHECKS]
+    return keep[-8:] or checks[-2:]
