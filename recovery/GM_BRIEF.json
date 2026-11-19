@@ -74,7 +74,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.093",
+  "cursor": "s08.text.094",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -123,11 +123,11 @@
  "cursor": {
   "at": "0006-10-04T07:13:00",
   "date": "Среда, 4 октября 1283 года",
-  "id": "s08.text.093",
+  "id": "s08.text.094",
   "place": "Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре",
   "time": "07:13"
  },
- "digest": "ae1bf66389295aec2381682b27b8f82a18ebed16ef5ebf3bb99063aef5ad033f",
+ "digest": "91442ca2be07e958a3a1acbf2bbc73f8d9778c27590d09dd156b6ade6bfca59c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -183,18 +183,18 @@
    "value": 28.0
   },
   "dice": [
-   96,
-   8,
-   50,
-   96,
-   30,
-   77,
-   56,
-   21,
-   16,
-   89,
-   3,
-   24
+   32,
+   84,
+   24,
+   54,
+   69,
+   59,
+   14,
+   24,
+   10,
+   68,
+   13,
+   79
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -403,6 +403,25 @@
     "title": "Дом и врачебная тайна"
    },
    {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit",
+    "id": "side_nukenin_pursuit",
+    "kind": "side",
+    "limit": {
+     "scenes": 6,
+     "until": "0006-10-09T20:00:00"
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit",
+    "parent": "main",
+    "question": "Кто и какой ценой сможет отыскать и воздействовать на самопровозглашённого нукенина Шики после разрушения С-17, если он сам не принимает ничью сторону?",
+    "scenes": 1,
+    "scenes_left": 5,
+    "threads": [
+     "order",
+     "v7"
+    ],
+    "title": "Перечёркнутый знак"
+   },
+   {
     "endings": [
      "Цепь конкретных документов, доступов и исполнителей подтверждена с указанием степени доказанности; последствия для полномочий реальны.",
      "Часть следов установлена, но ответственность и судьба документов остаются предметом отдельных действий.",
@@ -452,6 +471,16 @@
     "id": "side_kabuto_archive",
     "kind": "side",
     "title": "Старая медицинская запись"
+   },
+   {
+    "id": "ch10_outside_the_village",
+    "kind": "chapter",
+    "title": "За чертой"
+   },
+   {
+    "id": "side_two_vials",
+    "kind": "side",
+    "title": "Два сосуда"
    }
   ],
   "queued_ref": "recovery/GM_ONLY.json:plot.events",
@@ -510,7 +539,7 @@
     "memory_file": "archive/npc-memory/hirano.json",
     "memory_total": 3,
     "name": "Хирано",
-    "seen": "s08.text.093",
+    "seen": "s08.text.094",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -587,7 +616,7 @@
     "memory_file": "archive/npc-memory/morioka_hideaki.json",
     "memory_total": 15,
     "name": "Мориока Хидэаки",
-    "seen": "s08.text.093",
+    "seen": "s08.text.094",
     "state": "Слышал слова Шики о сыне Такаги; о судьбе ребёнка ничего не знает, только о принципе шантажа. Остался на В-7, вылечен и под охраной.",
     "status": "present_profile",
     "tier": "deep"
@@ -732,7 +761,7 @@
     "memory_total": 66,
     "name": "Такаги Рэн",
     "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-    "seen": "s08.text.093",
+    "seen": "s08.text.094",
     "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена [давняя запись: сверяй со state]",
     "state": "Услышал сочувствие Шики о сыне, которого упомянул пленный, но не назвал по имени. Получил две пробирки и велел независимо охранять их и проверить первую у Куроды; отпустил Шики, не предпринимая безнадёжного одиночного преследования.",
     "status": "present_profile",
@@ -779,8 +808,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "fe779d181dc99813e21d02919be34a14ba9c4cfa",
-  "turn": "s08.text.093"
+  "sha": "77841260cb112149bd476752e91f64f386a84455",
+  "turn": "s08.text.094"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -813,12 +842,12 @@
    "shiki_confidentiality"
   ],
   "secret_topics": [
-   "v7_tapping",
+   "v7_access_plate",
    "v7_destruction",
-   "vials",
-   "takagi_son",
-   "own_lab",
-   "north_lab"
+   "v7_maintenance",
+   "v7_personal_targeting",
+   "v7_tapping",
+   "vials"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
