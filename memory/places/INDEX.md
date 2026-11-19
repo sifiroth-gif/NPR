@@ -51,6 +51,7 @@
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
+- Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
 - Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
@@ -76,7 +77,6 @@
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
 - Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 2 ход(ов), s06–s06
-- Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 2 ход(ов), s08–s08
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
