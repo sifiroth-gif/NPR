@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.053",
+  "cursor": "s08.text.054",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -56,8 +56,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json",
-        "s08.text.053"
+        "recovery/cast/akihiro.json"
       ]
     },
     "arai_mitiko": {
@@ -155,8 +154,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/arakawa.json",
-        "s08.text.053"
+        "recovery/cast/arakawa.json"
       ]
     },
     "arakawa_guard": {
@@ -332,57 +330,6 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
-      ]
-    },
-    "clock:home_intrusion": {
-      "aliases": [
-        "clock:home intrusion",
-        "home intrusion",
-        "home_intrusion"
-      ],
-      "facts": [],
-      "id": "clock:home_intrusion",
-      "kind": "clock",
-      "label": "home intrusion",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.053"
-      ]
-    },
-    "clock:privacy_record_missing": {
-      "aliases": [
-        "clock:privacy record missing",
-        "privacy record missing",
-        "privacy_record_missing"
-      ],
-      "facts": [],
-      "id": "clock:privacy_record_missing",
-      "kind": "clock",
-      "label": "privacy record missing",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.053"
-      ]
-    },
-    "clock:s17_ampoule_accounting": {
-      "aliases": [
-        "clock:s17 ampoule accounting",
-        "s17 ampoule accounting",
-        "s17_ampoule_accounting"
-      ],
-      "facts": [],
-      "id": "clock:s17_ampoule_accounting",
-      "kind": "clock",
-      "label": "s17 ampoule accounting",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.053"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -621,8 +568,7 @@
     "kadziura_satoru": {
       "aliases": [
         "kadziura satoru",
-        "Кадзиура Сатору",
-        "kadziura_satoru"
+        "Кадзиура Сатору"
       ],
       "facts": [],
       "id": "kadziura_satoru",
@@ -672,8 +618,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kadziura_satoru.json",
-        "s08.text.053"
+        "recovery/cast/kadziura_satoru.json"
       ]
     },
     "kage_doppelganger": {
@@ -1243,8 +1188,7 @@
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения",
-        "night_icu_physician"
+        "Дежурная врач охраняемого отделения"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -1265,8 +1209,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json",
-        "s08.text.053"
+        "recovery/cast/night_icu_physician.json"
       ]
     },
     "nori": {
@@ -1278,7 +1221,7 @@
       "id": "nori",
       "kind": "npc",
       "label": "Хаясэ Нори",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0006-09-22T20:14:10",
@@ -1286,13 +1229,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.101"
-        },
-        {
-          "at": "0006-10-02T10:17:35",
-          "excerpt": "медик после обследования, колено зафиксировать. Живым он мне полезнее. Нори стояла у стены, скрестив руки. **Хаясэ Нори:** — Я бы ещё записала, как вы добились показаний. Она смотрела на Шики. Правая рука капитана крепко обхватывала собственное левое предплечь",
-          "source": "archive/session-006-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s06.text.019"
         },
         {
           "at": "0006-10-02T10:17:51",
@@ -1307,6 +1243,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.053"
+        },
+        {
+          "at": "0006-10-03T16:28:00",
+          "excerpt": "льтаты анализа двух активных фракций препарата и различий между исследованными образцами. Второй — донесение Хаясэ Нори от той же даты. Сведения о реципиентах, восстановленных фрагментах регистра, двух параллельных системах учёта и невыясненной судьбе части па",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.054"
         }
       ],
       "projections": [
@@ -1322,8 +1265,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nori.json",
-        "s08.text.053"
+        "recovery/cast/nori.json"
       ]
     },
     "orderly": {
@@ -1371,6 +1313,27 @@
       ],
       "sources": [
         "recovery/cast/patient_airway.json"
+      ]
+    },
+    "personal_paper_reports": {
+      "aliases": [
+        "personal paper reports"
+      ],
+      "facts": [],
+      "id": "personal_paper_reports",
+      "kind": "item",
+      "label": "personal paper reports",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "destroyed",
+          "since": "s08.text.054",
+          "turn": "s08.text.054"
+        }
+      ],
+      "sources": [
+        "s08.text.054"
       ]
     },
     "place:001feb168c600401": {
@@ -6847,6 +6810,25 @@
         "s04.text.007"
       ]
     },
+    "place:fdb4dc3fd78cd3fd": {
+      "aliases": [
+        "place:fdb4dc3fd78cd3fd",
+        "Кусагакуре, дом Мугами Шики, кабинет и жилые помещения",
+        "Кусагакуре",
+        "дом Мугами Шики",
+        "кабинет и жилые помещения"
+      ],
+      "facts": [],
+      "id": "place:fdb4dc3fd78cd3fd",
+      "kind": "place",
+      "label": "Кусагакуре, дом Мугами Шики, кабинет и жилые помещения",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.054"
+      ]
+    },
     "place:ffd3ce985f79d2d1": {
       "aliases": [
         "place:ffd3ce985f79d2d1",
@@ -7230,15 +7212,24 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.047",
+          "seen": "s08.text.054",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "08:41 знает, что Шики ушёл из клиники к себе отдыхать; продолжит конфиденциальное изучение крови на месте.",
+          "state": "К 16:00 без согласования с Шики подготовила клиническое изложение его аномального состояния стадии 6 для институционального разбирательства о разглашении данных, считая это оправданным; содержание не сообщено Шики, вопрос передачи знакомому юристу остаётся её ",
           "voice": "Сдержанная точная медицинская речь",
+          "wants": "Поддерживать независимую медицинскую практику"
+        },
+        {
+          "fears": "Вред людям кабинета и срыв медицинской работы",
+          "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
+          "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
+          "state": "К 16:00 без согласования с Шики подготовила клиническое изложение его аномального состояния стадии 6 для институционального разбирательства о разглашении данных, считая это оправданным; содержание не сообщено Шики, вопрос передачи знакомому юристу остаётся её ",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
-        "recovery/cast/seina.json"
+        "recovery/cast/seina.json",
+        "recovery/HOT.json",
+        "s08.text.054"
       ]
     },
     "senior_orderly": {
@@ -7303,6 +7294,27 @@
       ],
       "sources": [
         "s08.text.027"
+      ]
+    },
+    "stolen_house_plan": {
+      "aliases": [
+        "stolen house plan"
+      ],
+      "facts": [],
+      "id": "stolen_house_plan",
+      "kind": "item",
+      "label": "stolen house plan",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "destroyed",
+          "since": "s08.text.054",
+          "turn": "s08.text.054"
+        }
+      ],
+      "sources": [
+        "s08.text.054"
       ]
     },
     "takagi_ren": {
@@ -7701,11 +7713,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "09:00 патруль обнаружил: деревянный ящик с железной окантовкой не является вещью Шики, это заранее скрытно установленный в доступной наружной пристройке комплект внешнего наблюдения за подходом и доступным чакровым фоном. Свежие крепежные отверстия подтверждают установку. Злоумышленники хотели его забрать; неизвестен заказчик и "
+          "state": "16:28 после того как внешний наблюдатель был изъят патрулём, Шики самостоятельно очистил дом от найденных бумажных отчётов С-17, донесения Нори, уведомления В-7 и плана дома. Сохранились сведения в официальных архивах, прибор у следствия, а источники планировки/слежки неизвестны. Четыре защитных контура жилого дома без поврежден"
         }
       ],
       "sources": [
-        "s08.text.052"
+        "s08.text.054"
       ]
     },
     "thread:pact": {
@@ -8149,6 +8161,20 @@
       "type": "held_by"
     },
     {
+      "from": "personal_paper_reports",
+      "source": "s08.text.054",
+      "status": "projected",
+      "to": "destroyed",
+      "type": "held_by"
+    },
+    {
+      "from": "stolen_house_plan",
+      "source": "s08.text.054",
+      "status": "projected",
+      "to": "destroyed",
+      "type": "held_by"
+    },
+    {
       "from": "clock:arakawa_supply_audit",
       "source": "recovery/GM_ONLY.json",
       "status": "projected",
@@ -8157,5 +8183,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 602
+  "source_turns_indexed": 603
 }
