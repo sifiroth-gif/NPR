@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.091: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Медик у панели В-7 (`npc/medical_panel_operator`), hirano_seiji (`npc/hirano_seiji`)
 - s08.text.090: morioka_khideaki (`npc/morioka_khideaki`), Такаги Рэн (`npc/takagi_ren`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1
 - s08.text.089: Такаги Рэн (`npc/takagi_ren`), Мастер фуиндзюцу охраны Кусагакуре (`npc/fuin_master_v7`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s08.text.088: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`)
@@ -56,4 +57,3 @@
 - s08.text.034: Кирисава Сэйна (`npc/seina`), Мугами Акихиро (`npc/akihiro`), линия `medical_family`, поправки игрока: 1
 - s08.text.033: Кирисава Сэйна (`npc/seina`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `medical_family`
 - s08.text.032: Кирисава Сэйна (`npc/seina`), линия `medical_family`
-- s08.text.031: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `keiji_reunion`, план сюжета
