@@ -22,17 +22,17 @@
   ]
  },
  "scene": {
-  "situation": "05:48 03.10 Shiki, awake with profoundly low chakra but otherwise physically functional, stands up unaided from observation cot. Stage6 cold gray-white epidermis remains wholly intact with no sloughing, scabs or necrotic spots (player-corrected prior turn). He says he does not know what fresh blood in staff wound will do; he warned not to touch his bare skin because direct skin contact may cause necrosis or poisoning with cell death, presented as his own tentative assessment, not verified medically. Addressing night ICU physician, Shiki asks if she has laid formal charges and placed him under investigation. She bluntly says no: she is not investigator, no criminal charge or arrest is known; she DID file formal medical incident report and internal notice to medical commission. She reads accurate text: experimental delivery of biological agent to minor with signed Kadziura clinical authorization, Shiki named practitioner, immediate result positive, long-term safety unknown, independent review requested. Committee received notification but has not to her knowledge opened formal review or legal inquiry. She keeps independent copy and will document Shiki's latest claim of hazardous bare-skin contact as unverified self-report. Kadz criticizes unguarded information release, but accepts report as clinically accurate and prohibits passing both preserved near-black blood tubes out of lab chain without documented handover. No physical restraint, no formal criminal charges, no unseen police/committee decision invented. Patient6 remains in ICU on S17, ventilator support, at last stable SpO2 96 on reduced oxygen; child's long-term edit effects unknown.",
+  "situation": "03.10.1283 05:49 Shiki directly and precisely asks night duty ICU physician if she sent his own PRIVATE HEALTH DATA unrelated to recipient6's experimental intervention to medical committee WITHOUT HIS CONSENT, citing her earlier words about observed technique, blood changes and staff safety. She unequivocally answers YES: her already-sent internal hospital incident notice included Shiki's full name as procedure participant, observed Byoton name and intervention, collapse, abnormal appearance of blood, and bare-contact safety precaution. She did NOT obtain his consent because he was unconscious, and had not told him scope when he awoke; she defends transmission as necessary for staff protection but admits personal nature of data and her own decision. It did not include his full personal chart, exact body temperature, expanded test values, blood vials or separate lab report; additional readings had been planned but not sent. She shows Shiki exact outgoing notification and retains independent copy, does not lie or retract it. Kadziura sees distinct privacy problem beyond medical report on recipient6, asks documented recipients/scope/legal basis and halts casual further disclosures pending separate internal decision; he cannot retract notification already received. No known formal investigation or criminal charge, report to internal medical commission only. Shiki standing near cot with wholly intact cold pale skin, very low chakra, maximally altered almost-black blood but functioning, no new direct-contact exposure. Recipient6 still ventilated on S17, early bronchial outcome stable. Scene ends on doctor's direct admission and exposed outgoing paper.",
   "present": [
    "shiki",
    "kadziura_satoru",
    "night_icu_physician",
    "s17_recipient_6"
   ],
-  "positions": "Shiki standing beside the observation cot, fully intact skin at pact max stage6, very low chakra, exceptionally cold but otherwise strong and able to move. Kadz at bedside in gloves with sample custody files, duty physician close to doorway holding independent duplicate report. Two sealed near-black blood vials safely in room. Recipient6 sedated and ventilated nearby.",
-  "pressure": "Documented medical incident has reached hospital committee; public discussion of unknown direct-contact hazard and unknown CRISPR long-term risk may produce review or political leverage, not yet formal charges. Duty doctor maintains independent copy and autonomy, Kadz guards sample transfer chain. Shiki now knows he is not currently detained or formally charged.",
+  "positions": "Shiki standing independently at bedside with intact gray-cold skin, chakra profoundly depleted. Duty ICU doctor near table with copy of outgoing report, openly acknowledges private data dissemination. Kadziura at table with chain of custody paperwork, deciding scope of any further specimen transfers. Sealed blood specimens remain within medical unit, no further transfer. Patient6 adjacent ICU ventilator on continuing S17.",
+  "pressure": "Shiki has discovered unauthorized-in-his-eyes medical data release to committee, formally confirmed. Night doctor defends staff protection and preserves documentation, Kadz limits dissemination and insists on documented addressees. No legal finding about wrongdoing predetermined, no criminal matter started. Institutional consequences now real from existing disclosure.",
   "unread": "Сведения о физиологической природе двойника доступны только Шики, не озвучены Кагэ/Такаги/Нори и не подтверждают конкретного автора или способ производства.",
-  "as_of": "s08.text.022",
+  "as_of": "s08.text.023",
   "npc_disclosures_to_player": {
    "kadziura_satoru": [
     {
@@ -68,6 +68,12 @@
     {
      "turn": "s08.text.022",
      "line": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следс",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.023",
+     "line": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал ",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
     }
@@ -108,6 +114,12 @@
      "line": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следс",
      "source": "archive/session-008-turns.jsonl",
      "status": "source_candidate_only"
+    },
+    {
+     "turn": "s08.text.023",
+     "line": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал ",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "source_candidate_only"
     }
    ],
    "s17_recipient_6": [
@@ -131,29 +143,23 @@
    "voice": "Негромко, профессионально, без раболепия и без лишних слов",
    "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
    "knows": [
-    "Главой запрещён перевод пациентов без независимой проверки распоряжений.",
     "03:18 heard Shiki's direct disclosure of nsp-δ-expressing donor-like stroma in recipient6 right bronchial biopsy and key functional mechanism, under limitations; tasked to request independent verification by Kuroda Mayu.",
     "At 03:21 heard Shiki's description of RNA-type viral vector with CRISPR complex and alternative cellular destruction, and Kadziura's conditional preference for suppression while preserving tissues.",
     "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
     "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
     "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmission, origin or contract. Internal biomedical incident report issued earlier, now to be supplemented with measurements.",
-    "At 05:48 Shiki explicitly says his bare skin contact may cause poisoning/necrosis/cell death, he does NOT KNOW actual fresh-blood effect or underlying Pact transmissibility. He believes she might have accused him, and asks if he is under investigation."
+    "At 05:48 Shiki explicitly says his bare skin contact may cause poisoning/necrosis/cell death, he does NOT KNOW actual fresh-blood effect or underlying Pact transmissibility. He believes she might have accused him, and asks if he is under investigation.",
+    "05:49 Shiki specifically challenges her disclosure of HIS personal health info to medical committee without consent, beyond her account of experimental treatment. She admits scope: full name, heard Byoton, loss of consciousness, abnormal appearance of blood and precautionary contact warning. She knows she never obtained consent and had not disclosed scope until challenged; no lab results/temperature reported yet."
    ],
-   "seen": "s08.text.022",
-   "state": "05:48 directly tells Shiki she filed an official internal medical incident report (not charges), identifies its precise content and states she knows of no formal investigation or arrest. She independently retains duplicate report and plans to record his unverified statement that bare skin contact may be dangerous.",
+   "seen": "s08.text.023",
+   "state": "05:49 admits direct unconsented dissemination of Shiki's personal health observations as part of internal staff-protection incident notification to hospital medical committee. Defends need, shows exact outgoing text and maintains independent copy, refuses to falsify or delete report; agrees in practice no subsequent supplement without a separate internal decision.",
    "memory": [
     {
      "turn": "s07.text.033",
      "at": "0006-10-03T01:14:00",
      "ch": "present",
      "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока. Он прибыл, представился и спросил о цели визита."
-    },
-    {
-     "turn": "s08.text.020",
-     "at": "0006-10-03T04:12:00",
-     "ch": "present",
-     "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
     },
     {
      "turn": "s08.text.021",
@@ -166,9 +172,15 @@
      "at": "0006-10-03T05:48:00",
      "ch": "present",
      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…"
+    },
+    {
+     "turn": "s08.text.023",
+     "at": "0006-10-03T05:49:00",
+     "ch": "present",
+     "what": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…"
     }
    ],
-   "memory_total": 17,
+   "memory_total": 18,
    "first": "s07.text.033",
    "tier": "deep"
   },
@@ -182,29 +194,23 @@
    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
    "knows": [
-    "At 03:18 Shiki directly disclosed minority genetically distinct stromal cell population with nsp-δ in right bronchial biopsy recipient6, matching previously investigated Arakawa donor construct, continuous NSP-δ vesicular protein affecting epithelial Ca2/PIEZO1, calpain and E-cadherin contacts, causing casts. Scope confined to sampled lesion; unknown donor, implantation origin, lung-wide distribution or contribution of S17.",
     "Shiki says experimental gene-targeting carrier is an RNA-type viral vector with CRISPR complex, intended to suppress nsp-delta; Shiki can also attempt painstaking cell-by-cell destruction of unknown donor-derived implant and admits outcomes unpredictable in both cases (s08.text.016).",
     "03.10 03:24 Shiki directly CLAIMED he can reproduce/administer his previously described experimental viral CRISPR vector inside patient6 without needing stored vial and that its propagation is not entirely autonomous; exact biological nature, control, Byoton technique/name, mechanics remain undisclosed.",
     "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, claims it cannot spread to healthy cells. He has not witnessed this in patient.",
     "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no long-term safety data.",
     "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowledge of hidden pact or Zero Genome granted.",
     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite extraordinary metabolic indicators, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals.",
-    "05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shiki's estimate, not proven mechanism."
+    "05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shiki's estimate, not proven mechanism.",
+    "05:49 duty doctor explicitly confirms to Shiki that internal committee notice contains his name, witnessed Byoton, blood anomaly and precautionary contact warning, sent without his consent, while full lab results and actual blood samples were not included."
    ],
-   "seen": "s08.text.022",
-   "state": "05:48 sees Shiki stand up unaided, cold intact skin and proper coordination despite continued low chakra; hears tentative warning of bare skin toxicity and user's question about formal legal accusation. He insists controlled transfer of unusual blood specimens with chain of custody; agrees that the duty doctor's report accurately documents clinical action and his own signature, but disapproves uncontrolled sharing.",
+   "seen": "s08.text.023",
+   "state": "05:49 independently distinguishes private health information about Shiki from record of treatment of recipient6, demands documented list of recipients and justification and orders no further disclosures without separate decision. Keeps original samples in medical unit by documented custody, takes responsibility for his own authorization but does not declare automatic legal wrongdoing.",
    "memory": [
     {
      "turn": "s07.text.033",
      "at": "0006-10-03T01:14:00",
      "ch": "mentioned",
      "what": "Шики спросил, кто руководит лечением реципиентов С-17 и на месте ли врач. Дежурная назвала старшего врача реанимации Кадзиуру Сатору, координирующего четырёх пациентов; его вызвали из соседнего блока. Он прибыл, представился и спросил о цели визита."
-    },
-    {
-     "turn": "s08.text.020",
-     "at": "0006-10-03T04:12:00",
-     "ch": "present",
-     "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
     },
     {
      "turn": "s08.text.021",
@@ -217,9 +223,15 @@
      "at": "0006-10-03T05:48:00",
      "ch": "present",
      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…"
+    },
+    {
+     "turn": "s08.text.023",
+     "at": "0006-10-03T05:49:00",
+     "ch": "present",
+     "what": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…"
     }
    ],
-   "memory_total": 22,
+   "memory_total": 23,
    "first": "s07.text.033",
    "tier": "deep"
   },
@@ -232,19 +244,13 @@
     "Ничего нового достоверно не известно о текущем сознании/осведомлённости, на фоне седации оно не оценено; при первоначальном обнаружении в корпусе №3 признаки сознания сохранялись."
    ],
    "source": "archive/session-005-source.md",
-   "seen": "s08.text.022",
+   "seen": "s08.text.023",
    "memory": [
     {
      "turn": "s08.text.006",
      "at": "0006-10-03T02:40:00",
      "ch": "present",
      "what": "Шики ответил, что сможет поддерживать пациента достаточно долго, и продолжил чакроподдержку. К 02:40 слепки распознаны как фибринозные с отторгнутым бронхиальным эпителием. С-17 не отменён, происхождение повреждений неясно."
-    },
-    {
-     "turn": "s08.text.020",
-     "at": "0006-10-03T04:12:00",
-     "ch": "present",
-     "what": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
     },
     {
      "turn": "s08.text.021",
@@ -257,11 +263,17 @@
      "at": "0006-10-03T05:48:00",
      "ch": "present",
      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…"
+    },
+    {
+     "turn": "s08.text.023",
+     "at": "0006-10-03T05:49:00",
+     "ch": "present",
+     "what": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…"
     }
    ],
-   "memory_total": 14,
+   "memory_total": 15,
    "first": "s08.text.006",
-   "tier": "developed"
+   "tier": "deep"
   }
  },
  "threads": {
@@ -362,8 +374,8 @@
    "turn": "s07.text.029"
   },
   "s17_survivors": {
-   "state": "05:48 Shiki stood up fully functionally with stage6 cold INTACT skin and near-black potentially contact-infectious blood; still low chakra. He said direct skin touching may poison/necrotize another's cells, no confirmed disclosure about fresh-blood-to-wound hazard. Night-duty doctor confirmed she had sent an internal medical incident report to hospital committee, NOT criminal charge or arrest; exact report lists physician-authorized experimental vector treatment in patient6 and unknown long-term risks, independent copy exists; no formal review decision known. Kadziura controls lab samples chain. Patient6 previously stable after bronchial repair but still ventilated and S17-dependent, no long-term outcome established.",
-   "turn": "s08.text.022"
+   "state": "05:49 Shiki asks about confidentiality of HIS data and duty physician admits her internal hospital report includes identifying Shiki, witnessed Byoton, collapse, abnormal near-black blood appearance, and caution about contact, sent without asking his consent. No full blood lab data, temperature or physical specimens transferred to committee. Kadz starts custody/recipient audit and restricts new disclosure, duty doctor retains copy and defends staff safety; commission already received notification, no formal legal action yet. Recipient6 on S17 and ventilator with improved bronchial patency, long term effects unknown. Shiki max stage6 and intact skin and low chakra unchanged.",
+   "turn": "s08.text.023"
   }
  },
  "shiki": {
@@ -584,7 +596,7 @@
    }
   ],
   "rules": "campaigns/shiki/contract/PROGRESSION_RULES.json",
-  "value": 63.378,
+  "value": 63.3785,
   "stage": 6,
   "label": "Устойчивая тяжёлая форма",
   "signs": "Максимум Договора: холодная цельная мертвенно-серая кожа без шелушения, распада поверхности, некротических пятен или лоскутов при сохранной работе органов, практически чёрная функциональная кровь и чакросети внутренней среды; корни и сосуды шеи и туловища, но не лица. Заражение только прямым голым контактом живых кож либо свежей кровью в открытую рану/слизистую, не через воздух, запах и предметы.",
@@ -628,11 +640,6 @@
  },
  "chronicle": [
   {
-   "id": "s08.text.019",
-   "at": "0006-10-03T03:31:00",
-   "line": "Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было."
-  },
-  {
    "id": "s08.text.020",
    "at": "0006-10-03T04:12:00",
    "line": "Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения."
@@ -646,45 +653,31 @@
    "id": "s08.text.022",
    "at": "0006-10-03T05:48:00",
    "line": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует описи перед выдачей образцов."
+  },
+  {
+   "id": "s08.text.023",
+   "at": "0006-10-03T05:49:00",
+   "line": "Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующую передачу."
   }
  ],
  "schema": "npr-hot/2",
  "cursor": {
-  "id": "s08.text.022",
-  "seq": 22,
-  "at": "0006-10-03T05:48:00",
+  "id": "s08.text.023",
+  "seq": 23,
+  "at": "0006-10-03T05:49:00",
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
   "awaiting": "player",
   "date": "Вторник, 3 октября 1283 года",
-  "time": "05:48"
+  "time": "05:49"
  },
  "last": {
-  "id": "s08.text.022",
-  "player": "Не знаю. Я просил не #встаю с кушктки# не касаться голыми руками кожи, это опасно, по виду некроз или отравление с отмиранием клеток #мастеру давай ка кожа не отслаивается, это следы и прочее не нужно# есть ещё кое что #на дежурную# вы выдвинули мне официальное обвинение и я нахожусь под следствием?",
-  "gm": "…вреждению. Я внесу ваши слова в журнал наблюдения. Именно как ваше сообщение, поскольку мы ещё не исследовали этот эффект.\n\nЕё лицо осталось неподвижным, но голос сделался жёстче.\n\n— Я не собираюсь изображать, будто этого разговора не было.\n\nКадзиура посмотрел на неё и снова перевёл взгляд на Шики.\n\n**Кадзиура Сатору:**\n\n— Мугами, вы можете стоять, говорить и, судя по результатам осмотра, двигаться без посторонней помощи. Удерживать вас на койке из-за одной температуры я не стану.\n\nОн указал на две пробирки с чёрной кровью.\n\n— Но я запрещаю персоналу передавать эти образцы за пределы лабораторного контура без документированной передачи. Ни комиссия, ни заинтересованные лица из корпуса № 3 не получат их просто по устному требованию.\n\nДежурная врач отвела глаза к своей папке.\n\n— А если комиссия запросит их официально?\n\n**Кадзиура Сатору:**\n\n— Тогда мне придётся либо подписать передачу, либо открыто отказать. И отвечать за отказ.\n\nОн не смотрел на Шики, произнося это.\n\nДежурная врач закрыла папку. Внизу её последней страницы оставалась пустой графа:\n\n*«Решение врачебной комиссии».*\n\nОна положила документ на стол так, чтобы его было видно обоим мужчинам.\n\n— Вот ваше положение, Мугами. Медицинский рапорт существует. Обвинения пока нет. Что комиссия сделает с рапортом — я не знаю.\n\nКадзиура не отвёл глаз от документа.\n\n— И теперь, — добавила дежурная врач тише, — я бы на вашем месте не путала отсутствие обвинения с отсутствием людей, которым захочется его предъявить.\n\n**Ход Шики.**",
-  "gm_chars": 5170
+  "id": "s08.text.023",
+  "player": "Я спрашивал о другом. Вы передали им мои личные данные не связанные с экспериментальным воздействием? Вы сказали в том числе: \"Указала наблюдавшуюся технику, изменения крови и необходимость защиты персонала.\" Я перефразирую вопрос. Вы отправили врачебной комиссии данные о моем состоянии здоровья вне экспериментального воздействия без моего согласия?",
+  "gm": "…\n— Тогда вам придётся обосновать, почему для предупреждения персонала потребовалось передать комиссии сведения именно об изменениях его крови, а не ограничиться указанием на необходимость защитных мер.\n\n— Я готова.\n\n— Хорошо.\n\nКадзиура взял лист бумаги и записал номер исходящего уведомления.\n\n— Зафиксируем объём передачи, получателей и основание, на которое вы ссылаетесь. Дальнейшие сведения о Мугами без отдельного решения из отделения не отправлять.\n\nДежурная врач резко подняла голову.\n\n— Вы не можете просто отменить уведомление.\n\n**Кадзиура Сатору:**\n\n— Я его и не отменяю. Оно уже получено.\n\nОн положил бумагу рядом с её экземпляром.\n\n— И Мугами теперь знает, что именно вы сделали.\n\n***\n\nДежурная врач посмотрела на Шики.\n\nПрежняя уверенность не исчезла. Однако голос стал тише, лишившись вызывающей резкости.\n\n**Дежурная врач:**\n\n— Я не буду утверждать, будто ваше согласие было получено или что переданные сведения не относятся к вашей частной жизни.\n\nОна сделала короткую паузу.\n\n— **Я передала их без вашего согласия. Это было моё решение.**\n\nКадзиура не вмешался.\n\n**Дежурная врач:**\n\n— Считаете, что я превысила полномочия, — вы вправе оспорить мои действия. Но задним числом делать вид, что уведомления не существовало, я не стану.\n\nОна отодвинула документ к краю стола, ближе к Шики.\n\nСнаружи прошли двое санитаров. Скрип колёс постепенно затих в коридоре.\n\nВ палате оставались три человека и запись, которую уже невозможно было забрать обратно простым распоряжением.\n\n**Ход Шики.**",
+  "gm_chars": 4653
  },
  "lint": {
   "recent": [
-   {
-    "id": "s08.text.020",
-    "score": 4.6,
-    "verdict": "шум",
-    "hits": [
-     {
-      "rule": "absent",
-      "quote": "На его лице больше не было ни злости, ни испуга."
-     },
-     {
-      "rule": "absent",
-      "quote": "Ни один из врачей не вышел ему навстречу."
-     },
-     {
-      "rule": "look",
-      "quote": "облик Шики в 2 предложениях: сосуды, глаза"
-     }
-    ]
-   },
    {
     "id": "s08.text.021",
     "score": 0.0,
@@ -696,12 +689,23 @@
     "score": 0.0,
     "verdict": "чисто",
     "hits": []
+   },
+   {
+    "id": "s08.text.023",
+    "score": 4.8,
+    "verdict": "шум",
+    "hits": [
+     {
+      "rule": "deference",
+      "quote": "— **Я передала их без вашего согласия."
+     }
+    ]
    }
   ],
   "note": "Попадания линтера по последним ответам. Каждая цитата — тип фразы, который в следующей сцене не повторяется. Не оправдывайся в тексте, пиши иначе.",
   "session_totals": {
    "hedge": 4,
-   "deference": 2,
+   "deference": 3,
    "therapy": 9,
    "neg_parallel": 1,
    "status": 3,
@@ -713,13 +717,13 @@
   }
  },
  "fold": {
-  "commit": "f072d1403022efba9744f823cf521c468e75b5df",
-  "turns": 227,
+  "commit": "f6133bc790fe9e21b9337728a6a3c3a90162f1cb",
+  "turns": 228,
   "errors": [],
   "warnings": [],
   "migrated_from": "recovery/FAST_SCENE.json",
   "verbatim_turns": 43,
-  "turn_digest": "d7ddf1d84c840ec28df76574005c64842ee12752a092c55d025b8203d3da4ec3"
+  "turn_digest": "38f2c8002406fdc62d91a764d9f844cc3ff02ecc1612484e5330fcf8fabe80c0"
  },
  "chronicle_older": "archive/session-008-chronicle.md",
  "sessions_closed": [

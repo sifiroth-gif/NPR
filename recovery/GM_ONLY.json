@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.022",
+ "cursor": "s08.text.023",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -133,13 +133,6 @@
     "since": "s08.text.006",
     "log": [
      {
-      "turn": "s08.text.013",
-      "at": "0006-10-03T03:17:00",
-      "change": "рост",
-      "saw": "s08.text.011 Kadziura personally implanted live bronchial biopsy in Shiki; at 03:17 directly sees the surgically closed left deltoid incision healed while Shiki studies tissue internally.",
-      "does": "Takes custody of unusual surgery record, restricts routine log and sends a separate patient sample for independent review."
-     },
-     {
       "turn": "s08.text.017",
       "at": "0006-10-03T03:24:00",
       "change": "рост",
@@ -173,11 +166,18 @@
       "change": "подтвердилось",
       "saw": "Shiki stood on his own despite profoundly abnormal temperature and near-black blood, argued over possible direct contact injury while duty doctor kept independent report.",
       "does": "Orders strict documented custody for samples and refuses informal release even to committee."
+     },
+     {
+      "turn": "s08.text.023",
+      "at": "0006-10-03T05:49:00",
+      "change": "подтвердилось",
+      "saw": "A staff physician has openly admitted sending altered blood observations and named elemental technique of a dangerous shinobi to a review body without his consent.",
+      "does": "Documents outgoing report provenance and restricts subsequent disclosures within his clinical authority, without pretending to retrieve delivered documents."
      }
     ],
-    "reads": "The hospital's institutional process can claim access to Shiki's specimens and information without approval; Kadz's signature makes him personally accountable.",
-    "does": "Orders strict documented custody for samples and refuses informal release even to committee.",
-    "turn": "s08.text.022",
+    "reads": "The confidentiality breach dispute now risks hospital governance and possible external interest, while the signed experimental intervention remains his clinical responsibility.",
+    "does": "Documents outgoing report provenance and restricts subsequent disclosures within his clinical authority, without pretending to retrieve delivered documents.",
+    "turn": "s08.text.023",
     "step": "необратимость"
    }
   },
@@ -220,22 +220,24 @@
       "change": "подтвердилось",
       "saw": "An unusually cold patient with near-black blood stands and publicly claims his bare skin can harm healthcare workers, then asks whether the duty physician charged him.",
       "does": "Shows and keeps an independent accurate duplicate of internal event report, commits to writing Shiki's warning as unverified assertion."
+     },
+     {
+      "turn": "s08.text.023",
+      "at": "0006-10-03T05:49:00",
+      "change": "подтвердилось",
+      "saw": "Shiki precisely challenged whether the doctor disclosed HIS private health observations without his consent, rather than claiming legal arrest; she could not rely on the clinical trial report alone a…",
+      "does": "Unequivocally admits the content and absence of consent, provides report to view, holds ground on her own rationale."
      }
     ],
-    "reads": "Precise documentation and preserved report copy are her leverage to protect patients and herself from retrospective suppression.",
-    "does": "Shows and keeps an independent accurate duplicate of internal event report, commits to writing Shiki's warning as unverified assertion.",
-    "turn": "s08.text.022",
+    "reads": "Now faces potential complaint/clinical audit and conflict over confidentiality after having notified hospital committee on staff safety grounds.",
+    "does": "Unequivocally admits the content and absence of consent, provides report to view, holds ground on her own rationale.",
+    "turn": "s08.text.023",
     "step": "необратимость"
    }
   },
   "s17_recipient_6": {}
  },
  "checks": [
-  {
-   "turn": "s08.text.010",
-   "kind": "horror",
-   "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)"
-  },
   {
    "turn": "s08.text.011",
    "kind": "horror",
@@ -310,15 +312,15 @@
    "turn": "s08.text.022",
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010, s08.text.016"
+  },
+  {
+   "turn": "s08.text.023",
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.017",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.018",
     "look": [],
@@ -346,6 +348,11 @@
    },
    {
     "turn": "s08.text.022",
+    "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.023",
     "look": [],
     "soma": []
    }
@@ -394,7 +401,7 @@
     "status": "active",
     "opened": "s08.text.012",
     "opened_at": "0006-10-03T03:09:00",
-    "scenes": 9,
+    "scenes": 10,
     "title": "Два источника и чужой долг",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
     "endings": [
@@ -417,7 +424,7 @@
      "Сроки 03:20 записи поступления, 03:23 жизнеспособность биоптата, 06:10 сравнение слепков и 08:15 документы Аракавы; время на OOC не сдвигается.",
      "Не объявлять автоматически ни источник поражения, ни гетерокарион интеграцией ДНК, ни получение геномной программы из-за имплантации."
     ],
-    "last": "s08.text.022"
+    "last": "s08.text.023"
    },
    "side_seal_records": {
     "id": "side_seal_records",

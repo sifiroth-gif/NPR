@@ -1,13 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.022",
+ "cursor": "s08.text.023",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.010",
-   "kind": "horror",
-   "text": "3 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)"
-  },
   {
    "turn": "s08.text.011",
    "kind": "horror",
@@ -82,6 +77,11 @@
    "turn": "s08.text.022",
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010, s08.text.016"
+  },
+  {
+   "turn": "s08.text.023",
+   "kind": "review",
+   "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

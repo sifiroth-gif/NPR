@@ -1,6 +1,6 @@
 # Дежурная врач охраняемого отделения · `night_icu_physician`
 
-вид: npc · впервые: s07.text.032 · последний раз: s08.text.022 · сейчас в сцене
+вид: npc · впервые: s07.text.032 · последний раз: s08.text.023 · сейчас в сцене
 
 ## Постоянное
 - не записано. Не выдумывай: открой первый ход персонажа или оставь черту неопределённой; новую черту запиши в d.cast.<id>.facts или look.
@@ -14,10 +14,10 @@
 - голос: Негромко, профессионально, без раболепия и без лишних слов [s07.text.032]
 
 ## Сейчас
-- положение: 05:48 directly tells Shiki she filed an official internal medical incident report (not charges), identifies its precise content and states she knows of no formal investigation or arrest. She independently retains duplicate report and plans to record his unverified statement that bare skin contact may be dangerous. [s08.text.022]
+- положение: 05:49 admits direct unconsented dissemination of Shiki's personal health observations as part of internal staff-protection incident notification to hospital medical committee. Defends need, shows exact outgoing text and maintains independent copy, refuses to falsify or delete report; agrees in practice no subsequent supplement without a separate internal decision. [s08.text.023]
 - вид в последней сцене: Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает [s07.text.032]
 
-## Знает (последние 10 из 10)
+## Знает (последние 11 из 11)
 - Сведения о реципиентах из собственной документации отделения, их текущие назначения и дыхательная поддержка. [s07.text.032]
 - Шики Мугами предъявил удостоверение, значится в материалах прежнего расследования по этим пациентам. [s07.text.032]
 - Главой запрещён перевод пациентов без независимой проверки распоряжений. [s07.text.032]
@@ -28,9 +28,9 @@
 - Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why. [s08.text.020]
 - 05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmission, origin or contract. Internal biomedical incident report issued earlier, now to be supplemented with measurements. [s08.text.021]
 - At 05:48 Shiki explicitly says his bare skin contact may cause poisoning/necrosis/cell death, he does NOT KNOW actual fresh-blood effect or underlying Pact transmissibility. He believes she might have accused him, and asks if he is under investigation. [s08.text.022]
+- 05:49 Shiki specifically challenges her disclosure of HIS personal health info to medical committee without consent, beyond her account of experimental treatment. She admits scope: full name, heard Byoton, loss of consciousness, abnormal appearance of blood and precautionary contact warning. She knows she never obtained consent and had not disclosed scope until challenged; no lab results/temperature reported yet. [s08.text.023]
 
-## История (последние 8 из 17)
-- s08.text.015 0006-10-03T03:18:00: Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ.
+## История (последние 8 из 18)
 - s08.text.016 0006-10-03T03:21:00: Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носителя и запросил сведения о его распространении.
 - s08.text.017 0006-10-03T03:24:00: Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражение», не применён.
 - s08.text.018 0006-10-03T03:28:00: Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение.
@@ -38,11 +38,12 @@
 - s08.text.020 0006-10-03T04:12:00: Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения.
 - s08.text.021 0006-10-03T05:46:00: Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена.
 - s08.text.022 0006-10-03T05:48:00: Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…
-- ранее: 9 эпизодов, полностью в `archive/npc-memory/night_icu_physician.json`
+- s08.text.023 0006-10-03T05:49:00: Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…
+- ранее: 10 эпизодов, полностью в `archive/npc-memory/night_icu_physician.json`
 
-## Разговоры с Шики: 9 ходов (s08)
+## Разговоры с Шики: 10 ходов (s08)
 - дословно по ходам: `memory/npc/night_icu_physician.talk.md`
-- s08.text.021: Шики — «»; Дежурная врач охраняемого отделения — «»
 - s08.text.022: Шики — «Не знаю. Я просил не не касаться голыми руками кожи, это опасно, по виду некроз или отравление с отмиранием клеток есть ещё кое что вы выдвинули мне официально…»; Дежурная врач охраняемого отделения — «»
+- s08.text.023: Шики — «Я спрашивал о другом. Вы передали им мои личные данные не связанные с экспериментальным воздействием? Вы сказали в том числе: "Указала наблюдавшуюся технику, и…»; Дежурная врач охраняемого отделения — «»
 
 Ход целиком: `archive/turns/sNN/<id>.md`.
