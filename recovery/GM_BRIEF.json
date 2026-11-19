@@ -70,9 +70,9 @@
  },
  "checks": [
   {
-   "kind": "will",
-   "text": "«Кирисава Сэйна» 4 ход(ов) рядом с Шики только отвечает. Его цель: «превратить утечку медицинских данных Шики в дело против Центрального госпиталя». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s08.text.035"
+   "kind": "intent",
+   "text": "намерение shift_blame: статус partial_success",
+   "turn": "s08.text.033"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
@@ -127,7 +127,7 @@
   "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
   "time": "07:37"
  },
- "digest": "15b5ff5a06a33e71f85f0c66c3ae25ea7206af02e75b09e9e81285b4904c94f5",
+ "digest": "6851d74a9e5812f391378320cb6869aaafc044e4179125efb91e9b53a357fd4f",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -149,6 +149,9 @@
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Кирисава Сэйна — слышал(а) с s05.text.030."
+ ],
  "fight": {
   "chakra": {
    "state": "пусто",
@@ -530,7 +533,7 @@
     }
    ],
    "profile": {
-    "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
+    "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [давняя запись: сверяй со state]",
     "fears": "Вред людям кабинета и срыв медицинской работы",
     "first": "s04.text.065",
     "inner": {},
@@ -555,7 +558,7 @@
     "name": "Кирисава Сэйна",
     "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
     "seen": "s08.text.035",
-    "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
+    "stance": "На текущем ходе не видела Шики, реакция ещё впереди [давняя запись: сверяй со state]",
     "state": "07:37 records Byoton/Shiton as Shiki's working mechanistic hypothesis alongside private smear comparisons without concluding causality; declines to provoke new ninjutsu tests while chakra recovery is incomplete. Keeps both 01 Oct and 03 Oct blood and resulting slides separately in locked private cabinet with no outside disclosure. Hears Akihiro request old drug-issue ledger from front supplies.",
     "status": "present_profile",
     "tier": "deep",
