@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.031: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `keiji_reunion`, план сюжета
 - s08.text.030: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `shiki_confidentiality`, план сюжета
 - s08.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera`, линия `shiki_confidentiality`, план сюжета, поправки игрока: 1
 - s08.text.028: Немера (Невыписанная) (`npc/nemera`), линия `nemera`
@@ -58,4 +59,3 @@
 - s07.text.013: Аракава Дзюн (`npc/arakawa`)
 - s07.text.012: Аракава Дзюн (`npc/arakawa`)
 - s07.text.011: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`)
-- s07.text.009: Аракава Дзюн (`npc/arakawa`), Курода Маю (`npc/kuroda_mayu`), Охрана Аракавы (`npc/arakawa_guard`)

@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.030",
+ "cursor": "s08.text.031",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -369,11 +369,18 @@
       "change": "калибровка",
       "saw": "A medic who helped his injured left knee in July 1278 appears in Seina's clinic with intact gray-cold deathlike features, wrap-covered neck and arms, troubling close-range odor, while Seina is wary o…",
       "does": "Stops an attempted greeting handshake, moves back to chair but engages Shiki and recalls his assistance rather than fleeing."
+     },
+     {
+      "turn": "s08.text.031",
+      "at": "0006-10-03T07:03:00",
+      "change": "подтвердилось",
+      "saw": "He examined Shiki from a close respectful distance, saw fully wrapped arms/neck, maskless deathlike face and unfamiliar scent while discussing common Konoha affairs.",
+      "does": "Gives an account from his own experience without inventing secret facts, leaves civilly with Seina's medical advice and no touch."
      }
     ],
-    "reads": "This may be the same healer he once trusted, but contact with him now might be biologically dangerous; Seina's reaction reinforces concern.",
-    "does": "Stops an attempted greeting handshake, moves back to chair but engages Shiki and recalls his assistance rather than fleeing.",
-    "turn": "s08.text.030",
+    "reads": "He may still trust his memory of Shiki as a competent healer but cannot ignore his new alien outward condition; contact may be unsafe.",
+    "does": "Gives an account from his own experience without inventing secret facts, leaves civilly with Seina's medical advice and no touch.",
+    "turn": "s08.text.031",
     "step": "примета"
    },
    "psyche": {
@@ -397,7 +404,7 @@
   },
   "seina": {
    "dread": {
-    "stage": 1,
+    "stage": 2,
     "since": "s08.text.030",
     "log": [
      {
@@ -406,12 +413,19 @@
       "change": "калибровка",
       "saw": "Her former pupil Shiki reappears after a single night with severely corpse-like facial appearance despite normal movement and new barriers on skin; he is standing near another patient who is startled…",
       "does": "Closes inner-room door, avoids contact and directly asks Shiki about present safety while telling Keiji to sit."
+     },
+     {
+      "turn": "s08.text.031",
+      "at": "0006-10-03T07:03:00",
+      "change": "рост",
+      "saw": "Shiki remained nearby throughout another patient's examination, offering little about his new gray-cold appearance but respecting the clinician's need to finish treating Keiji first.",
+      "does": "Finishes independent knee exam, sends Keiji with written findings, draws Shiki's confidential charts from lock and invites him to state his business."
      }
     ],
-    "reads": "Her own clinic, established old confidentiality pact and ordinary patient safety require understanding newly increased hazards; she may have to protect both Shiki and waiting Keiji.",
-    "does": "Closes inner-room door, avoids contact and directly asks Shiki about present safety while telling Keiji to sit.",
-    "turn": "s08.text.030",
-    "step": "примета"
+    "reads": "She must maintain her usual clinical work and later address her former pupil's unmistakable transformation and established privacy commitments.",
+    "does": "Finishes independent knee exam, sends Keiji with written findings, draws Shiki's confidential charts from lock and invites him to state his business.",
+    "turn": "s08.text.031",
+    "step": "пересмотр"
    },
    "psyche": {
     "decides": "по пациенту и праву: сначала человек на столе, потом закон, учреждение последним",
@@ -674,13 +688,6 @@
  "horror": {
   "motifs": [
    {
-    "turn": "s08.text.025",
-    "look": [
-     "пелерина"
-    ],
-    "soma": []
-   },
-   {
     "turn": "s08.text.026",
     "look": [],
     "soma": []
@@ -714,11 +721,15 @@
     "soma": [
      "сжал"
     ]
+   },
+   {
+    "turn": "s08.text.031",
+    "look": [],
+    "soma": []
    }
   ],
   "worn": [
-   "волосы",
-   "пелерина"
+   "волосы"
   ],
   "quiet": 0,
   "log": [
@@ -989,26 +1000,6 @@
      "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
     ],
     "last": "s08.text.029"
-   },
-   "old_keiji_reunion": {
-    "id": "old_keiji_reunion",
-    "kind": "scene",
-    "status": "active",
-    "opened": "s08.text.030",
-    "opened_at": "0006-10-03T06:49:00",
-    "scenes": 1,
-    "title": "Пять лет и одно колено",
-    "question": "Как обойдутся друг с другом Шики и Кэйдзи после пяти лет, когда прошлое врачебное доверие сталкивается с нынешней угрозой?",
-    "endings": [
-     "Кэйдзи и Шики узнают друг друга и обмениваются новым знанием, сохраняя личную связь.",
-     "Кэйдзи прерывает контакт из страха, но встреча оставляет последствия.",
-     "Встреча проходит без сближения или важных новых сведений."
-    ],
-    "limit": {
-     "scenes": 2
-    },
-    "parent": "main",
-    "last": "s08.text.030"
    }
   },
   "closed": [
@@ -1022,11 +1013,26 @@
     "turn": "s08.text.026",
     "at": "0006-10-03T06:06:00",
     "scenes": 12
+   },
+   {
+    "id": "old_keiji_reunion",
+    "kind": "scene",
+    "title": "Пять лет и одно колено",
+    "question": "Как обойдутся друг с другом Шики и Кэйдзи после пяти лет, когда прошлое врачебное доверие сталкивается с нынешней угрозой?",
+    "parent": "main",
+    "outcome": "Кэйдзи узнал Шики после пяти лет, сообщил ограниченные слухи из Конохи и собственную историю медицинского сопровождения, вспомнил помощь без оплаты; сохранил человеческое уважение, но от контакта воздержался и ушёл после осмотра Сэйны. Общая линия Кабуто/преследования не объединена с его караваном без доказательств.",
+    "turn": "s08.text.031",
+    "at": "0006-10-03T07:03:00",
+    "scenes": 1
    }
   ]
  },
  "fight": {},
  "will": {
-  "seed": "b77c1bd431424992"
+  "seed": "b77c1bd431424992",
+  "streak": {
+   "seina": 1
+  },
+  "touched": {}
  }
 }

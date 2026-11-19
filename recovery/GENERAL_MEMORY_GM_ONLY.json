@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.030",
+  "cursor": "s08.text.031",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -718,17 +718,17 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.030",
-          "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has broken no-jumping advice over years and has not yet had definitive exam. He recognizes Shiki,"
+          "seen": "s08.text.031",
+          "state": "07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal/political news as hearsay with Shiki and memories of unpaid Chunin exam knee treatment in"
         },
         {
-          "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has broken no-jumping advice over years and has not yet had definitive exam. He recognizes Shiki,"
+          "state": "07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal/political news as hearsay with Shiki and memories of unpaid Chunin exam knee treatment in"
         }
       ],
       "sources": [
         "recovery/cast/keiji.json",
         "recovery/HOT.json",
-        "s08.text.030"
+        "s08.text.031"
       ]
     },
     "kuroda_mayu": {
@@ -2717,6 +2717,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.031",
         "s08.text.030"
       ]
     },
@@ -7018,9 +7019,9 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.030",
+          "seen": "s08.text.031",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "06:49 after attending to Konoha shinobi Keiji's chronic left knee complaint in her private clinic, Seina sees Shiki arrive visibly radically changed and chooses controlled clinical privacy by closing hallway door. She refuses to touch before Shiki clarifies cu",
+          "state": "07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample",
           "voice": "Сдержанная точная медицинская речь",
           "wants": "Поддерживать независимую медицинскую практику"
         },
@@ -7028,14 +7029,14 @@
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "06:49 after attending to Konoha shinobi Keiji's chronic left knee complaint in her private clinic, Seina sees Shiki arrive visibly radically changed and chooses controlled clinical privacy by closing hallway door. She refuses to touch before Shiki clarifies cu",
+          "state": "07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s08.text.030"
+        "s08.text.031"
       ]
     },
     "senior_orderly": {
@@ -7379,6 +7380,27 @@
       ],
       "sources": [
         "s06.text.038"
+      ]
+    },
+    "thread:keiji_reunion": {
+      "aliases": [
+        "thread:keiji reunion",
+        "keiji reunion",
+        "keiji_reunion"
+      ],
+      "facts": [],
+      "id": "thread:keiji_reunion",
+      "kind": "thread",
+      "label": "keiji reunion",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "03.10 07:03 Konoha shinobi Keiji (~18), saved by Shiki's July 1278 free medical repair of old left lateral knee ligament, came independently to Seina with ongoing overuse knee ache during herb supply escort. Seina documented no gross tear but mild residual laxity, sent for Konoha follow-up. Keiji shared only partially verified K"
+        }
+      ],
+      "sources": [
+        "s08.text.031"
       ]
     },
     "thread:lower_hospital": {
@@ -7919,5 +7941,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 580
+  "source_turns_indexed": 581
 }
