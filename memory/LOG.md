@@ -58,4 +58,3 @@
 - s07.text.022: Аракава Дзюн (`npc/arakawa`), поправки игрока: 1
 - s07.text.021: Аракава Дзюн (`npc/arakawa`)
 - s07.text.020: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`, поправки игрока: 1
-- s07.text.019: линия `arakawa_treatment`, поправки игрока: 1
