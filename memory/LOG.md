@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.025: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`
 - s08.text.024: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
 - s08.text.023: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s08.text.022: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
@@ -57,4 +58,3 @@
 - s07.text.007: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
 - s07.text.006: поправки игрока: 1
 - s07.text.005: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
-- s07.text.003: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)

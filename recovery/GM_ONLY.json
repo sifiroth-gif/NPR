@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.024",
+ "cursor": "s08.text.025",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -25,6 +25,13 @@
     "due": "0006-10-03T07:05:00",
     "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
     "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа."
+   },
+   "shiki_blood_disposal_request": {
+    "owner": "Кадзиура Сатору",
+    "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов",
+    "due": "0006-10-03T09:30:00",
+    "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
+    "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним."
    }
   },
   "resolved": [
@@ -140,13 +147,6 @@
     "since": "s08.text.006",
     "log": [
      {
-      "turn": "s08.text.019",
-      "at": "0006-10-03T03:31:00",
-      "change": "подтвердилось",
-      "saw": "Shiki informed him that delayed decision could exhaust the remaining chakra support and treatment opportunity within ~1–1.5h.",
-      "does": "Signs personal authorization for limited experimental gene suppression and commands respiratory support preparation."
-     },
-     {
       "turn": "s08.text.020",
       "at": "0006-10-03T04:12:00",
       "change": "подтвердилось",
@@ -180,11 +180,18 @@
       "change": "подтвердилось",
       "saw": "Shiki openly warns that doctors' internal dissemination might reach interested parties while citing Kage and unidentified sensitive documents; duty physician admits ordinary registration path.",
       "does": "Orders formal tracing of document receipt, copying and access before any further release, personally signs order and separates medical files."
+     },
+     {
+      "turn": "s08.text.025",
+      "at": "0006-10-03T06:01:00",
+      "change": "подтвердилось",
+      "saw": "Shiki, a Kusa jōnin with near-black blood and frightening biological technique, has formally claimed secrecy and control over his samples while refusing uncontrolled release.",
+      "does": "Signs formal request copy and locks both specimens in documented limited access compartment, personally taking key; refuses immediate destruction despite pressure."
      }
     ],
-    "reads": "A clinical notice about a shinobi's unseen biological ability can become a tool for those seeking leverage over him and hospital survivors, with uncertain political access.",
-    "does": "Orders formal tracing of document receipt, copying and access before any further release, personally signs order and separates medical files.",
-    "turn": "s08.text.024",
+    "reads": "He must preserve enough specimens to defend treatment and clinical continuity, but sample ownership and accidental circulation could invite interested power brokers or put staff at risk.",
+    "does": "Signs formal request copy and locks both specimens in documented limited access compartment, personally taking key; refuses immediate destruction despite pressure.",
+    "turn": "s08.text.025",
     "step": "необратимость"
    }
   },
@@ -245,11 +252,6 @@
   "s17_recipient_6": {}
  },
  "checks": [
-  {
-   "turn": "s08.text.011",
-   "kind": "horror",
-   "text": "4 ход(а) подряд рядом с Шики никто не изменился. Следующая сцена обязана дать ступень dread хотя бы одному из: kadziura_satoru, night_icu_physician, s17_recipient_6, или нарушение знакомого (d.horror)"
-  },
   {
    "turn": "s08.text.011",
    "kind": "review",
@@ -324,15 +326,15 @@
    "turn": "s08.text.023",
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
+  },
+  {
+   "turn": "s08.text.025",
+   "kind": "plot",
+   "text": "Событие «Два источника и чужой долг» (`ch08_tissue_debt`) на пределе (12 из 12 сцен): разреши следующей сценой одной из концовок: Получены проверяемые клинические и лабораторные результаты, определены реальные границы лечения и происхождения хотя бы одного источника. / Пациент и/или источники сохранились с неизбежной ценой, но причинность и зависимость раскрыты лишь частично. / Невосполнимая потеря пациента, ткани, документа или доступа меняет дальнейшее расследование; никакой компенсации задним числом. / Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения.. Новых преград не вводи; продолжение — новым событием."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.019",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.020",
     "look": [
@@ -361,6 +363,13 @@
    {
     "turn": "s08.text.024",
     "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.025",
+    "look": [
+     "пелерина"
+    ],
     "soma": []
    }
   ],
@@ -408,7 +417,7 @@
     "status": "active",
     "opened": "s08.text.012",
     "opened_at": "0006-10-03T03:09:00",
-    "scenes": 11,
+    "scenes": 12,
     "title": "Два источника и чужой долг",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
     "endings": [
@@ -431,7 +440,7 @@
      "Сроки 03:20 записи поступления, 03:23 жизнеспособность биоптата, 06:10 сравнение слепков и 08:15 документы Аракавы; время на OOC не сдвигается.",
      "Не объявлять автоматически ни источник поражения, ни гетерокарион интеграцией ДНК, ни получение геномной программы из-за имплантации."
     ],
-    "last": "s08.text.024"
+    "last": "s08.text.025"
    },
    "side_seal_records": {
     "id": "side_seal_records",

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.024",
+  "cursor": "s08.text.025",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -336,8 +336,7 @@
       "aliases": [
         "clock:medical notice registry trace",
         "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки",
-        "medical_notice_registry_trace",
-        "medical notice registry trace"
+        "medical_notice_registry_trace"
       ],
       "facts": [],
       "id": "clock:medical_notice_registry_trace",
@@ -353,8 +352,7 @@
         }
       ],
       "sources": [
-        "recovery/GM_ONLY.json",
-        "s08.text.024"
+        "recovery/GM_ONLY.json"
       ]
     },
     "clock:s17_cast_comparison": {
@@ -378,6 +376,31 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
+      ]
+    },
+    "clock:shiki_blood_disposal_request": {
+      "aliases": [
+        "clock:shiki blood disposal request",
+        "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов",
+        "shiki_blood_disposal_request",
+        "shiki blood disposal request"
+      ],
+      "facts": [],
+      "id": "clock:shiki_blood_disposal_request",
+      "kind": "clock",
+      "label": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "due": "0006-10-03T09:30:00",
+          "owner": "Кадзиура Сатору",
+          "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов ана"
+        }
+      ],
+      "sources": [
+        "recovery/GM_ONLY.json",
+        "s08.text.025"
       ]
     },
     "courier_unknown": {
@@ -579,7 +602,7 @@
       "id": "kadziura_satoru",
       "kind": "npc",
       "label": "Кадзиура Сатору",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0006-10-03T01:14:00",
@@ -587,13 +610,6 @@
           "source": "archive/session-007-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s07.text.033"
-        },
-        {
-          "at": "0006-10-03T05:48:00",
-          "excerpt": "официальный медицинский рапорт о чрезвычайном вмешательстве и направила уведомление врачебной комиссии. Это разные вещи. **Кадзиура Сатору:** — Покажите формулировку. **Дежурная врач:** — Вы уже её читали. **Кадзиура Сатору:** — Покажите ещё раз. Его голос ста",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.022"
         },
         {
           "at": "0006-10-03T05:49:00",
@@ -608,6 +624,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.024"
+        },
+        {
+          "at": "0006-10-03T06:01:00",
+          "excerpt": "ой металлический футляр с гнёздами для пробирок. При виде содержимого прозрачного контейнера она на секунду задержала руку над журналом. **Кадзиура Сатору:** — Две пробы. Время забора — в первичных записях. Целостность ёмкостей подтверждена. Перенос в ограниче",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.025"
         }
       ],
       "projections": [
@@ -615,9 +638,9 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s08.text.024",
+          "seen": "s08.text.025",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "05:51 accepts clinical documentation must remain but fears uncontrolled circulation of named Byoton and blood details. Signs actionable registry-access audit request and orders duty doctor to lodge it; does not know or imply proof of extra recipients, Kage's a",
+          "state": "06:01 independently declines instant destruction as jeopardizing legitimate recipient6 treatment/evidence account, writes and signs formal patient request receipt and gives Shiki copy; seals both near-black blood samples with logged chain in separate locked of",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         },
@@ -625,14 +648,14 @@
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "05:51 accepts clinical documentation must remain but fears uncontrolled circulation of named Byoton and blood details. Signs actionable registry-access audit request and orders duty doctor to lodge it; does not know or imply proof of extra recipients, Kage's a",
+          "state": "06:01 independently declines instant destruction as jeopardizing legitimate recipient6 treatment/evidence account, writes and signs formal patient request receipt and gives Shiki copy; seals both near-black blood samples with logged chain in separate locked of",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
         "recovery/HOT.json",
-        "s08.text.024"
+        "s08.text.025"
       ]
     },
     "kage_doppelganger": {
@@ -1181,8 +1204,7 @@
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения",
-        "night_icu_physician"
+        "Дежурная врач охраняемого отделения"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -1200,19 +1222,10 @@
           "state": "05:51 independently defends staff safety rationale and accuracy of original report while acknowledging possible excess disclosed clinical detail; accepts she may have to explain herself to committee and refuses to retract documentation. Under Kadziura signed i",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
-        },
-        {
-          "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
-          "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "05:51 independently defends staff safety rationale and accuracy of original report while acknowledging possible excess disclosed clinical detail; accepts she may have to explain herself to committee and refuses to retract documentation. Under Kadziura signed i",
-          "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json",
-        "recovery/HOT.json",
-        "s08.text.024"
+        "recovery/cast/night_icu_physician.json"
       ]
     },
     "nori": {
@@ -3033,10 +3046,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.024",
         "s08.text.021",
         "s08.text.022",
-        "s08.text.023"
+        "s08.text.023",
+        "s08.text.024"
       ]
     },
     "place:527af539feaff3c7": {
@@ -5933,6 +5946,25 @@
         "s01.text.042"
       ]
     },
+    "place:e282ecc6d8237346": {
+      "aliases": [
+        "place:e282ecc6d8237346",
+        "Кусагакуре, Центральный госпиталь, место для личных вещей у палаты реанимации №6",
+        "Кусагакуре",
+        "Центральный госпиталь",
+        "место для личных вещей у палаты реанимации №6"
+      ],
+      "facts": [],
+      "id": "place:e282ecc6d8237346",
+      "kind": "place",
+      "label": "Кусагакуре, Центральный госпиталь, место для личных вещей у палаты реанимации №6",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.025"
+      ]
+    },
     "place:e28dbdcc3fb25bb1": {
       "aliases": [
         "place:e28dbdcc3fb25bb1",
@@ -6698,7 +6730,7 @@
       "id": "recipient6",
       "kind": "entity",
       "label": "Реципиент № 6",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0001-07-28T18:22:00",
@@ -6706,13 +6738,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.011"
-        },
-        {
-          "at": "0006-10-03T05:48:00",
-          "excerpt": "ру:** — Покажите ещё раз. Его голос стал ниже. В нём появилась интонация, которой до сих пор не было даже при обсуждении смерти шестого реципиента. Она развернула лист. **Дежурная врач:** — «Экспериментальное введение биологического агента в организм несоверше",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.022"
         },
         {
           "at": "0006-10-03T05:49:00",
@@ -6727,6 +6752,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.024"
+        },
+        {
+          "at": "0006-10-03T06:01:00",
+          "excerpt": "ри сознания. Они имеют отношение к оказанию вам медицинской помощи и к разбирательству обстоятельств вмешательства у шестого. Пока не установлено, какие из материалов должны сохраняться для медицинской документации, уничтожение сделает меня человеком, который ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.025"
         }
       ],
       "projections": [],
@@ -6833,15 +6865,10 @@
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
           "seen": "s08.text.024",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
-        },
-        {
-          "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json",
-        "recovery/HOT.json"
+        "recovery/cast/s17_recipient_6.json"
       ]
     },
     "sayu": {
@@ -7010,11 +7037,11 @@
         {
           "holder": "shiki",
           "since": "s08.text.002",
-          "turn": "s08.text.002"
+          "turn": "s08.text.025"
         }
       ],
       "sources": [
-        "s08.text.002"
+        "s08.text.025"
       ]
     },
     "takagi_ren": {
@@ -7474,11 +7501,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "05:51 03 Oct: after treating recipient6, Shiki declares he will personally complain about doctor revealing his private medical data to internal medical/ethics committees, and warns Kadz it may reach unauthorized interested parties, cites Kage but does not provide contents of unrelated sealed documents. Duty doctor insists origin"
+          "state": "06:01 Shiki officially requests destruction of both blood samples and protection of private analysis, Kadz refuses instant destruction but records request, gives signed copy, locks TWO intact physical specimens separately under his own controlled custody with registry of handover. No outside dissemination of actual biological sa"
         }
       ],
       "sources": [
-        "s08.text.024"
+        "s08.text.025"
       ]
     },
     "thread:sanction": {
@@ -7799,7 +7826,7 @@
   "links": [
     {
       "from": "shiki_upper_clothing",
-      "source": "s08.text.002",
+      "source": "s08.text.025",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -7813,5 +7840,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 574
+  "source_turns_indexed": 575
 }
