@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.069: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.068: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.067: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.066: Сэкидо Тадао (`npc/sekido_tadao`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Уцуро (`npc/utsuro`), линия `parents`
@@ -55,4 +56,3 @@
 - s08.text.012: линия `family_night`, линия `family_visit`, линия `attire`, план сюжета
 - s08.text.011: Кадзиура Сатору (`npc/kadziura_satoru`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
 - s08.text.010: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
-- s08.text.009: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
