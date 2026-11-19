@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.063: Сэкидо Тадао (`npc/sekido_tadao`), Кэйдзи (`npc/keiji`), Хаясэ Нори (`npc/nori`), Курода Маю (`npc/kuroda_mayu`), Аракава Дзюн (`npc/arakawa`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Такаги Рэн (`npc/takagi_ren`), Минасэ Рэи (`npc/minase`)
 - s08.text.062: Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.061: Сэкидо Тадао (`npc/sekido_tadao`), поправки игрока: 1
 - s08.text.060: Сэкидо Тадао (`npc/sekido_tadao`)
@@ -54,4 +55,3 @@
 - s08.text.007: Реципиент № 6 (`npc/s17_recipient_6`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s08.text.006: Реципиент № 6 (`npc/s17_recipient_6`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s08.text.005: поправки игрока: 1
-- s08.text.003: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `recipient6_airway_cast_followup`, линия `s17_survivors`

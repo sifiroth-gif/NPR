@@ -1,40 +1,11 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.062",
+ "cursor": "s08.text.063",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
-  "clocks": {
-   "arakawa_supply_audit": {
-    "owner": "arakawa",
-    "what": "Самостоятельная ведомственная сверка доступных бумаг по дозам и назначениям С-17; инициирована в срок 08:15, ещё не окончена и ничего не доказала о тайных участниках",
-    "due": "0006-10-03T09:00:00",
-    "signs": "Служебная помета о запросе на сопоставление расходных ведомостей",
-    "if_unopposed": "Получит доступные внутренние записи и документирует несоответствия только там, где они реально имеются, без выдумывания виновных"
-   },
-   "shiki_blood_disposal_request": {
-    "owner": "Кадзиура Сатору",
-    "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов",
-    "due": "0006-10-03T09:30:00",
-    "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
-    "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним."
-   }
-  },
+  "clocks": {},
   "resolved": [
-   {
-    "id": "clock:s17_cast_comparison",
-    "at": "0006-10-03T06:18:00",
-    "turn": "s08.text.027",
-    "outcome": "06:10 03.10: ICU and hospital lab completed requested morphological comparison of recipient6 bronchial casts with archived S17 recipient samples. Comparability of surviving archive material is insufficient to establish identical tissue provenance or a shared donor; no imaginary donor identified. Inconclusive outcome retained in patient6 case for Kadziura, not spontaneously communicated to Shiki.",
-    "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
-   },
-   {
-    "id": "clock:medical_notice_registry_trace",
-    "at": "0006-10-03T07:18:00",
-    "turn": "s08.text.032",
-    "outcome": "03.10.1283 ~07:05 Hospital internal registration clerk produced the available outgoing-transmission and internal-viewing routing entries for Kadz's signed audit request. Entries support delivery from ward through internal registration to medical commission and have gaps in per-person reading/copy history; cannot determine or exclude unofficial forwarding from those gaps. Duty physician retains report copy and Kadz can later inspect the response, but Shiki and Seina do NOT yet know it.",
-    "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки"
-   },
    {
     "id": "clock:home_intrusion",
     "at": "0006-10-03T08:54:16",
@@ -62,12 +33,23 @@
     "turn": "s08.text.053",
     "outcome": "13:00 Курода Маю внесла скрытую ложную правку о недостаче ампул, сославшись на загрязнение материалами Шики. Связь с его пробами не доказана; Шики не знает.",
     "what": ""
+   },
+   {
+    "id": "clock:arakawa_supply_audit",
+    "at": "0006-10-03T23:47:00",
+    "turn": "s08.text.063",
+    "outcome": "К концу 03.10 Аракава собрал доступные записи о расходе С-17, отправил запрос на дополнительную сверку; конкретный виновный по имеющимся данным не установлен.",
+    "what": "Самостоятельная ведомственная сверка доступных бумаг по дозам и назначениям С-17; инициирована в срок 08:15, ещё не окончена и ничего не доказала о тайных участниках"
+   },
+   {
+    "id": "clock:shiki_blood_disposal_request",
+    "at": "0006-10-03T23:47:00",
+    "turn": "s08.text.063",
+    "outcome": "03.10 Кадзиура сохранил две пробы крови Шики раздельно опечатанными; запрос на уничтожение передан для решения, немедленно пробы не уничтожались и никому без надлежащего разрешения не выдавались.",
+    "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов"
    }
   ],
-  "due_now": [
-   "arakawa_supply_audit",
-   "shiki_blood_disposal_request"
-  ],
+  "due_now": [],
   "truth_zlib64": "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",
   "truth_preview": {
    "resident": "Уполномоченный резиденции, который ночью «рассматривал» ходатайство, тянет время: его имя тоже на пластине. Кагэ ходатайства не видел.",
@@ -391,15 +373,16 @@
    "intent": {
     "report_home": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "вернуться с караваном в Коноху без проблем",
-     "next": "рассказать старшему сопровождения, что знакомый медик Кусы с экзамена 1278 года выглядит как мертвец и лечит в частном кабинете",
-     "due": "0006-10-03T11:00:00",
+     "next": "Дождаться обычной отправки караванного отчёта",
+     "due": "0006-10-04T11:00:00",
      "flaw": "не умеет молчать о необычном",
      "against_shiki": "слух о его теле уходит в Коноху, к людям, которые записывают слухи",
      "if_unopposed": "в отчёте каравана появляется строка о Мугами Шики"
     }
-   }
+   },
+   "intent_done": []
   },
   "seina": {
    "dread": {
@@ -457,16 +440,17 @@
    "intent": {
     "expose_leak": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "превратить утечку медицинских данных Шики в дело против Центрального госпиталя",
-     "next": "составить письменное заключение о состоянии Шики шестой стадии как доказательство нарушения врачебной тайны и показать его знакомому юристу УВБ",
-     "due": "0006-10-03T16:00:00",
+     "next": "Добиться ответа специалиста УВБ по проекту заключения",
+     "due": "0006-10-04T15:00:00",
      "flaw": "уверена в своей правоте и не спрашивает согласия Шики на то, что считает правильным",
      "against_shiki": "её заключение описывает его кровь и тело — второй документ о Шики уйдёт в чужие руки",
      "if_unopposed": "к вечеру заключение лежит у юриста, а копия — у того, кто платит юристу"
     }
    },
-   "name": "Кирисава Сэйна"
+   "name": "Кирисава Сэйна",
+   "intent_done": []
   },
   "nori": {
    "name": "Хаясэ Нори",
@@ -480,15 +464,16 @@
    "intent": {
     "registry": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "добраться до реестра обязательств С-17 раньше, чем его переоформят",
-     "next": "использовать жалобы Шики о тайне медицинских данных как основание для служебной проверки госпиталя и потребовать журнал доступа",
-     "due": "0006-10-03T12:00:00",
+     "next": "Искать регистрационный след выемки журнала без полномочий",
+     "due": "0006-10-04T12:00:00",
      "flaw": "никому не доверяет, работает одна и поэтому не знает, что её проверку уже ждут",
      "against_shiki": "в рапорте она назовёт Шики источником, чтобы прикрыть отсутствие санкции",
      "if_unopposed": "её отстраняют окончательно, а журнал доступа исчезает в тот же час"
     }
-   }
+   },
+   "intent_done": []
   },
   "arakawa": {
    "name": "Аракава Дзюн",
@@ -503,15 +488,16 @@
    "intent": {
     "dose": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "получить С-17 до того, как отторжение станет видно",
-     "next": "выйти на поставщика через позывной отдела снабжения и предложить плату — сведения о крови и теле Шики",
-     "due": "0006-10-03T14:00:00",
+     "next": "Дождаться ответа снабженца и попытаться получить дозу",
+     "due": "0006-10-04T09:00:00",
      "flaw": "ломка: раздражение, поспешность, он оставляет след в журнале связи",
      "against_shiki": "данные о шестой стадии становятся товаром на рынке тканей",
      "if_unopposed": "к вечеру поставщик знает о Шики больше, чем госпиталь"
     }
-   }
+   },
+   "intent_done": []
   },
   "kusa_head": {
    "name": "Глава Кусагакуре",
@@ -546,10 +532,10 @@
    "intent": {
     "custody": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "держать задержанных и улики под охраной резиденции",
-     "next": "доложить главе полный список поручений и спросить, распространяется ли охрана Шики на его передвижения",
-     "due": "0006-10-03T18:00:00",
+     "next": "Ожидать письменный ответ, не отдавать документы без подтверждения полномочий",
+     "due": "0006-10-04T10:00:00",
      "flaw": "исполняет буквально, даже когда видит, что приказ используют",
      "against_shiki": "одно слово главы — и «охрана Шики» становится задержанием Шики",
      "if_unopposed": "к ночи у Шики появляется сопровождение, о котором он не просил"
@@ -571,7 +557,8 @@
     "does": "Признаёт тревогу, но принимает документы лично и увольняет с поста сорвавшегося делопроизводителя.",
     "turn": "s08.text.056",
     "step": "примета"
-   }
+   },
+   "intent_done": []
   },
   "kabuto": {
    "psyche": {
@@ -604,15 +591,16 @@
    "intent": {
     "controls": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "чтобы расхождение в контрольных ампулах не всплыло",
-     "next": "тихо переписать журнал контрольных ампул и объяснить пропуск загрязнением от проб Шики",
-     "due": "0006-10-03T13:00:00",
+     "next": "Дождаться проверок, сохраняя официальную версию",
+     "due": "0006-10-04T12:30:00",
      "flaw": "переписывает слишком чисто: новая запись свежее соседних",
      "against_shiki": "его пробы становятся объяснением чужой недостачи",
      "if_unopposed": "недостача ампул исчезает из учёта"
     }
-   }
+   },
+   "intent_done": []
   },
   "utsuro": {
    "name": "Уцуро",
@@ -647,15 +635,16 @@
    "intent": {
     "contour": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "спасти четверых в плитах",
-     "next": "найти Шики и потребовать вернуть второй контур или его силу, угрожая рассказать о печатях",
-     "due": "0006-10-03T20:00:00",
+     "next": "Попытаться застать Шики при новом выходе, не зная где он ночью",
+     "due": "0006-10-04T12:00:00",
      "flaw": "отчаяние: угрожает тем, на что не имеет права",
      "against_shiki": "она знает о семи кольцах и скажет это не тем людям",
      "if_unopposed": "к ночи о кольцах знает ещё один посторонний"
     }
-   }
+   },
+   "intent_done": []
   },
   "kase": {
    "name": "Касэ",
@@ -690,10 +679,10 @@
    "intent": {
     "truth_from_seina": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.063",
      "goal": "узнать всю правду о стадии Шики и способ её остановить",
-     "next": "прийти к Сэйне без Шики и выпросить полное заключение",
-     "due": "0006-10-03T20:00:00",
+     "next": "Искать второе медицинское мнение о сыне, не получая предварительного согласия Шики",
+     "due": "0006-10-04T17:00:00",
      "flaw": "материнский страх: поверит любому, кто пообещает вернуть сына прежним",
      "against_shiki": "лишний человек получает заключение о его теле",
      "if_unopposed": "Сэйна и Нао договариваются о нём без него"
@@ -715,7 +704,8 @@
     "does": "Meets son without public questioning; insists husband inventory any relocated documents rather than hide them informally.",
     "turn": "s08.text.045",
     "step": "примета"
-   }
+   },
+   "intent_done": []
   },
   "akihiro": {
    "name": "Мугами Акихиро",
@@ -738,23 +728,23 @@
     },
     "tell_nao": {
      "goal": "Сообщить Нао, что Шики вернулся в клинику и он серьёзно изменился, но не рассказывать за сына непроверенные детали",
-     "next": "Нао уже встретила сына утром в клинике",
-     "due": "0006-10-03T08:25:00",
+     "next": "Нао уже знает о состоянии сына после встречи в госпитале",
+     "due": "0006-10-04T10:00:00",
      "flaw": "Раздражение и страх могут сделать его слова резче и менее точными, чем он рассчитывает",
      "against_shiki": "Нао узнает о визите даже без самостоятельного решения Шики известить её",
      "if_unopposed": "Нао получит от мужа фактическое сообщение о появлении сына и необычайной перемене, и самостоятельно решит, когда говорить с ним",
      "status": "committed",
-     "turn": "s08.text.053"
+     "turn": "s08.text.063"
     },
     "secure_supplies": {
      "goal": "Защитить прежние аптечные документы о поставках от непроверенных запросов",
-     "next": "Переписать и перечитать накладные перед запиранием по описи, обсудить второй ключ с Сэйной",
-     "due": "0006-10-03T11:00:00",
+     "next": "Довести сверку с архивом, сохраняя вторые экземпляры под описью",
+     "due": "0006-10-04T13:00:00",
      "flaw": "Стремление спрятать бумаги может выглядеть как попытка уничтожить доказательства",
      "against_shiki": "При последующей проверке отсутствие документов на обычном месте могут истолковать против семьи",
      "if_unopposed": "Временно переведёт найденные записи в личное хранилище, сохранив их содержание; если нужных записей не найдёт, отсутствие будет документальным пробелом",
      "status": "committed",
-     "turn": "s08.text.045"
+     "turn": "s08.text.063"
     }
    },
    "dread": {
@@ -812,99 +802,73 @@
  },
  "checks": [
   {
-   "turn": "s08.text.061",
-   "kind": "look",
-   "text": "внешность Шики описана 2 раза (кольца, кольца). Ужас — в чужом поступке и последствии, а не в облике"
-  },
-  {
-   "turn": "s08.text.061",
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4021 знаков (норма до 4000); крупнее всего: shiki 1518, scene 1127, canon+ 299."
-  },
-  {
-   "turn": "s08.text.061",
-   "kind": "new_character",
-   "text": "В сцене говорит «мастеру» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."
-  },
-  {
-   "turn": "s08.text.061",
+   "turn": "s08.text.062",
    "kind": "new_character",
    "text": "В сцене говорит «служащая архива» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."
   },
   {
-   "turn": "s08.text.061",
-   "kind": "read",
-   "text": "«Неустановленный архивариус верхнего административного архива» вернулся в сцену, а его страница `npc/archive_custodian` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/archive_custodian.talk`)."
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение report_home: статус done"
   },
   {
-   "turn": "s08.text.062",
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение registry: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение controls: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение dose: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение truth_from_seina: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение tell_nao: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение secure_supplies: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение expose_leak: статус in_progress"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "intent",
+   "text": "намерение custody: статус done"
+  },
+  {
+   "turn": "s08.text.063",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 5837 знаков (норма до 4000); крупнее всего: cast 3167, scene 960, shiki 526."
+  },
+  {
+   "turn": "s08.text.063",
    "kind": "will",
-   "text": "За кадром: «Мугами Акихиро» собирался «Нао уже встретила сына утром в клинике» к 0006-10-03T08:25:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: Раздражение и страх могут сделать его слова резче и менее точными, чем он рассчитывает. Запиши d.cast.akihiro.intent.tell_nao (status, next, due) и след в мире."
+   "text": "За кадром: «Немера (Невыписанная)» собирался «предложить обмен: одна именная техника Ситона или Бётона за одно его чувство на одну минуту; цена первой сделки настоящая и малая» к 0006-10-03T23:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: недооценивает, от чего человек откажется даже себе во вред. Запиши d.cast.nemera.intent.first_deal (status, next, due) и след в мире."
   },
   {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «keiji» собирался «рассказать старшему сопровождения, что знакомый медик Кусы с экзамена 1278 года выглядит как мертвец и лечит в частном кабинете» к 0006-10-03T11:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: не умеет молчать о необычном. Запиши d.cast.keiji.intent.report_home (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Мугами Акихиро» собирался «Переписать и перечитать накладные перед запиранием по описи, обсудить второй ключ с Сэйной» к 0006-10-03T11:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: Стремление спрятать бумаги может выглядеть как попытка уничтожить доказательства. Запиши d.cast.akihiro.intent.secure_supplies (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Хаясэ Нори» собирался «использовать жалобы Шики о тайне медицинских данных как основание для служебной проверки госпиталя и потребовать журнал доступа» к 0006-10-03T12:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: никому не доверяет, работает одна и поэтому не знает, что её проверку уже ждут. Запиши d.cast.nori.intent.registry (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Курода Маю» собирался «тихо переписать журнал контрольных ампул и объяснить пропуск загрязнением от проб Шики» к 0006-10-03T13:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: переписывает слишком чисто: новая запись свежее соседних. Запиши d.cast.kuroda_mayu.intent.controls (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Аракава Дзюн» собирался «выйти на поставщика через позывной отдела снабжения и предложить плату — сведения о крови и теле Шики» к 0006-10-03T14:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: ломка: раздражение, поспешность, он оставляет след в журнале связи. Запиши d.cast.arakawa.intent.dose (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Кирисава Сэйна» собирался «составить письменное заключение о состоянии Шики шестой стадии как доказательство нарушения врачебной тайны и показать его знакомому юристу УВБ» к 0006-10-03T16:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: уверена в своей правоте и не спрашивает согласия Шики на то, что считает правильным. Запиши d.cast.seina.intent.expose_leak (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Такаги Рэн» собирался «доложить главе полный список поручений и спросить, распространяется ли охрана Шики на его передвижения» к 0006-10-03T18:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: исполняет буквально, даже когда видит, что приказ используют. Запиши d.cast.takagi_ren.intent.custody (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Минасэ Рэи» собирался «найти Шики и потребовать вернуть второй контур или его силу, угрожая рассказать о печатях» к 0006-10-03T20:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: отчаяние: угрожает тем, на что не имеет права. Запиши d.cast.minase.intent.contour (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
-   "kind": "will",
-   "text": "За кадром: «Мугами Нао» собирался «прийти к Сэйне без Шики и выпросить полное заключение» к 0006-10-03T20:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: материнский страх: поверит любому, кто пообещает вернуть сына прежним. Запиши d.cast.nao.intent.truth_from_seina (status, next, due) и след в мире."
-  },
-  {
-   "turn": "s08.text.062",
+   "turn": "s08.text.063",
    "kind": "new_character",
    "text": "В сцене говорит «служащая архива» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.056",
-    "look": [
-     "взгляд-по-облику+капюшон"
-    ],
-    "soma": [
-     "отступил",
-     "напрягся",
-     "дрожь"
-    ]
-   },
    {
     "turn": "s08.text.058",
     "look": [],
@@ -932,15 +896,16 @@
     "turn": "s08.text.062",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s08.text.063",
+    "look": [],
+    "soma": []
    }
   ],
   "worn": [],
   "quiet": 1,
   "log": [
-   {
-    "turn": "s08.text.020",
-    "what": "Публично названная Шики стихия Бётон активирована одноручными печатями, пока другая рука восстанавливает бронхи; она оставляет мальчика с целой слизистой, а самого Шики без сознания, заставив врачей защищаться от прикосновений к своему спасителю."
-   },
    {
     "turn": "s08.text.058",
     "what": "Охранник предпочёл обсуждать право Шики покинуть пост не с ним, а с начальником; затем оставил непрозрачную дополнительную помету в журнале. Это обычное человеческое отношение к непонятному, не воздействие ауры."
@@ -960,6 +925,10 @@
    {
     "turn": "s08.text.062",
     "what": "Архивная служащая самостоятельно квалифицировала исследование религиозных аналогов как изучение «запрещённых верований», Сэкидо исправил формулировку; профессиональное незнание превращается в социальную метку."
+   },
+   {
+    "turn": "s08.text.063",
+    "what": "Обрядовые свидетельства древнейших погребений говорят о плодородии из гниения и о заблокированных шахтах, не доказывая реальность божеств; служащая уступила Сэкидо формально, не открыв новый доступ на имя Шики."
    }
   ]
  },
@@ -1250,11 +1219,29 @@
  "fight": {},
  "will": {
   "seed": "b77c1bd431424992",
-  "streak": {},
+  "streak": {
+   "keiji": 0,
+   "nori": 0,
+   "kuroda_mayu": 0,
+   "arakawa": 0,
+   "nao": 0,
+   "akihiro": 0,
+   "seina": 0,
+   "takagi_ren": 0,
+   "minase": 0
+  },
   "touched": {
    "night_icu_physician": "s08.text.053",
-   "akihiro": "s08.text.053",
-   "kadziura_satoru": "s08.text.053"
+   "akihiro": "s08.text.063",
+   "kadziura_satoru": "s08.text.053",
+   "keiji": "s08.text.063",
+   "nori": "s08.text.063",
+   "kuroda_mayu": "s08.text.063",
+   "arakawa": "s08.text.063",
+   "nao": "s08.text.063",
+   "seina": "s08.text.063",
+   "takagi_ren": "s08.text.063",
+   "minase": "s08.text.063"
   }
  }
 }

@@ -1,6 +1,6 @@
 # Кэйдзи · `keiji`
 
-вид: npc · впервые: s01.text.049 · последний раз: s08.text.031 · вне сцены
+вид: npc · впервые: s01.text.049 · последний раз: s08.text.063 · вне сцены
 
 ## Постоянное
 - внешность: худощавый подросток; светло-каштановые волосы до плеч, узкое лицо, протектор Конохи на шее [s01.text.049]
@@ -13,15 +13,16 @@
 - роль: генин Конохи; на втором этапе экзамена ранено колено, Шики осматривал рану [s01.text.049]
 
 ## Сейчас
-- положение: 07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal/political news as hearsay with Shiki and memories of unpaid Chunin exam knee treatment in 1278, remains grateful but avoids physical contact due to Shiki's altered aura and smell. He left privately with report, returning toward duties with medicine escort, no secret access granted. [s08.text.031]
+- положение: Утром 03.10 рассказал старшему сопровождающему каравана про изменившегося медика Кусагакуре, запись попала в дорожный рапорт, Шики пока не осведомлён. [s08.text.063]
 
 ## Знает (последние 2 из 2)
 - 03.10.1283 06:49 Keiji unexpectedly met Shiki at Kirisawa Seina's private clinic while waiting for assessment of left knee, recognized old medical rescuer from Konoha Chunin exam July 1278, observed his changed corpse-like color, bandaged neck, strong strange odor and gloves, and saw Seina identify as his teacher. He does not know Pact/Nemera, Byoton, blood risk mechanisms, or current official rank beyond what Shiki shows. [s08.text.030]
 - 03 Oct 1283 06:49 Shiki said direct proximity is not dangerous, heard it personally during Seina exam; Keiji does not know direct-contact or blood contagion mechanics. Shiki asked him about the wider world's state, and Keiji personally gave his limited Konoha/gossip overview. [s08.text.031]
 
-## История (последние 2 из 2)
+## История (последние 3 из 3)
 - s08.text.030 0006-10-03T06:49:00: Шики, предупредив медсестру об опасности кожи, оплатил бинты и ушёл из госпиталя. У наставницы Сэйны он неожиданно встретил Кэйдзи из Конохи — пациента, чьё колено вылечил на экзамене пять лет назад. Сэйна заметила новую перемену Шики.
 - s08.text.031 0006-10-03T07:03:00: Шики дождался осмотра Кэйдзи, расспросил его о переменах в Конохе, Суне, на границах и слухах об Акацуки. Кэйдзи рассказал о своей службе и старой помощи Шики, затем ушёл. Сэйна осталась с Шики наедине и достала его закрытую карту.
+- s08.text.063 0006-10-03T23:47:00: Шики изучил древнейшие хтонические образы: Идзанами и Ёми, материально подтверждённый культ Куромэ, шахтные заглушки Бездонного Глотка. Это не продолжение дела Уцуро; прямых связей с ним не найдено. Выявлен древнейший указатель неперсонифицированных подземных…
 
 ## Разговоры с Шики: 7 ходов (s01, s08)
 - дословно по ходам: `memory/npc/keiji.talk.md`
