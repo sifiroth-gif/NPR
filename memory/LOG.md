@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.060: Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.059: Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.058: Такаги Рэн (`npc/takagi_ren`)
 - s08.text.057: поправки игрока: 3
@@ -54,4 +55,3 @@
 - s08.text.003: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `recipient6_airway_cast_followup`, линия `s17_survivors`
 - s08.text.002: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, вещь `shiki_hospital_gown_gloves`, вещь `recipient6_airway_cast_sample`, линия `s17_survivors`
 - s08.text.001: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
-- s07.text.038: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 2
