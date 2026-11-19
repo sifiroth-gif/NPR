@@ -55,4 +55,3 @@
 - s07.text.029: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
 - s07.text.028: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
 - s07.text.027: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
-- s07.text.026: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`

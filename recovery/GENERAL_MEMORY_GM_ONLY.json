@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.047",
+  "cursor": "s08.text.048",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -56,8 +56,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json",
-        "s08.text.047"
+        "recovery/cast/akihiro.json"
       ]
     },
     "arai_mitiko": {
@@ -336,26 +335,26 @@
     "clock:home_intrusion": {
       "aliases": [
         "clock:home intrusion",
-        "Довести незаконный осмотр/проникновение в дом до цели, избегая внимания улицы; если собственник заметит, отвлечь его легендой о ремонте, затем действовать по обстановке",
+        "Закончить манипуляции с неизвестным громоздким предметом в пристройке и попытаться уйти, пока один участник задерживает Шики угрозой ножа",
         "home_intrusion",
         "home intrusion"
       ],
       "facts": [],
       "id": "clock:home_intrusion",
       "kind": "clock",
-      "label": "Довести незаконный осмотр/проникновение в дом до цели, избегая внимания улицы; если собственник заметит, отвлечь его легендой о ремонте, затем действовать по обстановке",
+      "label": "Закончить манипуляции с неизвестным громоздким предметом в пристройке и попытаться уйти, пока один участник задерживает Шики угрозой ножа",
       "mention_count": 0,
       "mentions": [],
       "projections": [
         {
           "due": "0006-10-03T09:02:00",
-          "owner": "Трое неизвестных у дома Шики",
-          "what": "Довести незаконный осмотр/проникновение в дом до цели, избегая внимания улицы; если собственник заметит, отвлечь его легендой о ремонте, затем действовать по обстановке"
+          "owner": "Неподчинившиеся участники проникновения у дома Шики",
+          "what": "Закончить манипуляции с неизвестным громоздким предметом в пристройке и попытаться уйти, пока один участник задерживает Шики угрозой ножа"
         }
       ],
       "sources": [
         "recovery/GM_ONLY.json",
-        "s08.text.047"
+        "s08.text.048"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -1161,8 +1160,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s08.text.047"
+        "recovery/cast/nao.json"
       ]
     },
     "nemera": {
@@ -3389,6 +3387,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.048",
         "s08.text.047"
       ]
     },
@@ -7112,8 +7111,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/seina.json",
-        "s08.text.047"
+        "recovery/cast/seina.json"
       ]
     },
     "senior_orderly": {
@@ -8025,5 +8023,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 596
+  "source_turns_indexed": 597
 }
