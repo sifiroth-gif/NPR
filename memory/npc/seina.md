@@ -1,7 +1,7 @@
 # Кирисава Сэйна · `seina`
 
 псевдонимы: Кирисава, Сэйна
-вид: npc · впервые: s04.text.065 · последний раз: s08.text.040 · вне сцены
+вид: npc · впервые: s04.text.065 · последний раз: s08.text.047 · вне сцены
 
 ## Постоянное
 - внешность: 32 года, собранная, усталость врача в спокойном лице [campaigns/shiki/roster.json]
@@ -20,14 +20,13 @@
 - голос: Сдержанная точная медицинская речь [s04.text.065]
 
 ## Сейчас
-- положение: Разрешила Шики работать во второй смотровой, не выводя его на голый контакт с пациентом; продолжает своих пациентов. [s08.text.040]
+- положение: 08:41 знает, что Шики ушёл из клиники к себе отдыхать; продолжит конфиденциальное изучение крови на месте. [s08.text.047]
 - вид в последней сцене: Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [s05.text.014]
 
 ## Граница знаний
 - Знает лишь то, что испытал, услышал или получил по службе. Не знает Нулевой Геном и мотивов Шики без отдельного источника.
 
-## Знает (последние 25 из 26)
-- Шики по собственной заявке помог стабилизировать слизистую гортани медицинской чакрой; после вмешательства SpO2 91%, давление начало повышаться. [s05.text.014]
+## Знает (последние 25 из 27)
 - Посетитель от имени Центрального управления требует списки пациентов за три дня, его полномочия не подтверждены. [s05.text.014]
 - Шики признал, что Сэйна и родители хотят разобраться в его внешности, но сказал, что объяснит позже, и отправился в резиденцию. [s05.text.016]
 - Шики признал, что Сэйна и родители хотят разобраться в его внешности, но сказал, что объяснит позже; куда он направился, им НЕ сообщал. [s05.text.028]
@@ -52,7 +51,8 @@
 - 07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that direct bare-skin/fresh blood contact might harm and that central-hospital staff reported his private blood/capability data without consent. He explicitly asks her to privately examine him and asks whereabouts/results of her original 01 Oct blood sample. [s08.text.032]
 - 03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly permits a confidential NEW blood draw at Seina's private clinic. At 07:32 Seina personally sees much denser threadlike network in new black specimen vs sparse in 01 Oct red specimen and preserved erythrocyte shapes in examined areas; no infectivity evidence, no precise cause. [s08.text.033]
 - 07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; no chakra was visibly activated and no new technical permissions given. [s08.text.034]
-- ранее: ещё 1, полностью в `memory/npc/seina.knows.md`
+- Шики уходит домой для восстановления; сам сообщил семье о возможном вечернем визите. [s08.text.047]
+- ранее: ещё 2, полностью в `memory/npc/seina.knows.md`
 
 ## Поправки игрока
 - s04.text.065: Кирисава Сэйна — установленная в campaigns/shiki/lore.json наставница Мугами Шики с детства, медицинская тюнин. Позднее ПРЯМОЕ уточнение игрока s04.text.065: старый частный медицинский кабинет Кирисавы Сэйны в Кусагакуре продолжает работать, в нём по-прежнему работают родители Шики — Мугами Акихиро и Мугами Нао.

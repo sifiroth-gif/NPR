@@ -1,7 +1,7 @@
 # Мугами Акихиро · `akihiro`
 
 псевдонимы: Мугами, Акихиро
-вид: npc · впервые: s04.text.002 · последний раз: s08.text.046 · сейчас в сцене
+вид: npc · впервые: s04.text.002 · последний раз: s08.text.047 · вне сцены
 
 ## Постоянное
 - внешность: Взрослый человек с руками, пахнущими порошками и растительными маслами [campaigns/shiki/roster.json]
@@ -20,13 +20,13 @@
 - голос: Сдержанная речь, срыв при волнении [s04.text.065]
 
 ## Сейчас
-- положение: 08:40 при Нао продолжает опись старых документов и невольно спорит о накладных; уступает её решению отказать торговцу с неподходящими травами. [s08.text.046]
+- положение: 08:41 услышал намерение сына уйти к себе и, продолжая опись, напомнил запирать дверь. Остался в клинике, заниматься записями. [s08.text.047]
 - вид в последней сцене: Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство. [s05.text.028]
 
 ## Граница знаний
 - Знает лишь то, что испытал, услышал или получил по службе. Не знает Нулевой Геном и мотивов Шики без отдельного источника.
 
-## Знает (последние 15 из 15)
+## Знает (последние 16 из 16)
 - К 21:24 01.10 увидел сына заметно изменившимся и бледным [s04.text.065]
 - Шики предупредил о возможном нападении на кабинет и попросил укрыться, Акихиро подчинился. [s04.text.066]
 - Шики запретил прикосновение к изменённой коже; реальная опасность ещё не объяснена. [s05.text.029]
@@ -42,6 +42,7 @@
 - Мужчина с фонарём — новый сосед, его погреб залит, водосток забит корнями семейного лекарственного растения; сосед требует возмещения ремонта. [s05.text.037]
 - 03 Oct 07:38 through Seina calling his name and inviting him into her private clinic office, Akihiro sees Shiki physically alive but dramatically changed to fully corpse-gray face, white hair, bandaged neck and arms, closed-finger gloves, hood-down dark outfit. Seina directly says changes happened overnight and both his 01 Oct and 03 Oct blood specimens are privately locked, with no transfer. He knows from s05 previous direct Pact story and cautions against bare skin touch but does not know exact stage6 physiological values or new hospital complaint and specimen status. [s08.text.036]
 - Shiki directly tells Akihiro Seina's examinations are private by his request, admits Pact changes can surprise him, and asks father not to dwell on stigma of being dangerous to approach. A morning customer repeats unsourced local gossip about a frightening long-haired doctor in the clinic. [s08.text.037]
+- Шики намерен вернуться к себе и возможно навестить родителей вечером. [s08.text.047]
 
 ## Поправки игрока
 - s04.text.065: Кирисава Сэйна — установленная в campaigns/shiki/lore.json наставница Мугами Шики с детства, медицинская тюнин. Позднее ПРЯМОЕ уточнение игрока s04.text.065: старый частный медицинский кабинет Кирисавы Сэйны в Кусагакуре продолжает работать, в нём по-прежнему работают родители Шики — Мугами Акихиро и Мугами Нао.
