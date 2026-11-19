@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), morioka_hideaki (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)
 - s08.text.079: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.078: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.077: Немера (Невыписанная) (`npc/nemera`)
@@ -56,4 +57,3 @@
 - s08.text.023: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s08.text.022: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
 - s08.text.021: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`, поправки игрока: 3
-- s08.text.020: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
