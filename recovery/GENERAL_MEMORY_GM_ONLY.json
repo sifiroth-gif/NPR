@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.042",
+  "cursor": "s08.text.043",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -64,8 +64,7 @@
       ],
       "sources": [
         "recovery/cast/akihiro.json",
-        "recovery/HOT.json",
-        "s08.text.042"
+        "recovery/HOT.json"
       ]
     },
     "arai_mitiko": {
@@ -321,24 +320,26 @@
     "clock:arakawa_supply_audit": {
       "aliases": [
         "clock:arakawa supply audit",
-        "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных.",
-        "arakawa_supply_audit"
+        "Самостоятельная ведомственная сверка доступных бумаг по дозам и назначениям С-17; инициирована в срок 08:15, ещё не окончена и ничего не доказала о тайных участниках",
+        "arakawa_supply_audit",
+        "arakawa supply audit"
       ],
       "facts": [],
       "id": "clock:arakawa_supply_audit",
       "kind": "clock",
-      "label": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных.",
+      "label": "Самостоятельная ведомственная сверка доступных бумаг по дозам и назначениям С-17; инициирована в срок 08:15, ещё не окончена и ничего не доказала о тайных участниках",
       "mention_count": 0,
       "mentions": [],
       "projections": [
         {
-          "due": "0006-10-03T08:15:00",
-          "owner": "Аракава Дзюн",
-          "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
+          "due": "0006-10-03T09:00:00",
+          "owner": "arakawa",
+          "what": "Самостоятельная ведомственная сверка доступных бумаг по дозам и назначениям С-17; инициирована в срок 08:15, ещё не окончена и ничего не доказала о тайных участниках"
         }
       ],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "recovery/GM_ONLY.json",
+        "s08.text.043"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -5621,8 +5622,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.042",
-        "s08.text.041"
+        "s08.text.043",
+        "s08.text.041",
+        "s08.text.042"
       ]
     },
     "place:ca8dd7c91b21f899": {
@@ -7974,8 +7976,15 @@
       "status": "projected",
       "to": "hospital",
       "type": "held_by"
+    },
+    {
+      "from": "clock:arakawa_supply_audit",
+      "source": "recovery/GM_ONLY.json",
+      "status": "projected",
+      "to": "arakawa",
+      "type": "owned_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 591
+  "source_turns_indexed": 592
 }
