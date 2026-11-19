@@ -70,15 +70,15 @@
  },
  "checks": [
   {
-   "kind": "intent",
-   "text": "намерение shift_blame: статус partial_success",
-   "turn": "s08.text.033"
+   "kind": "will",
+   "text": "«Кирисава Сэйна» 4 ход(ов) рядом с Шики только отвечает. Его цель: «превратить утечку медицинских данных Шики в дело против Центрального госпиталя». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s08.text.034"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.033",
+  "cursor": "s08.text.034",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -88,12 +88,13 @@
   "focus": [
    "seina",
    "place:44fbe9adb51ae417",
+   "akihiro",
    "nemera",
    "thread:nemera",
    "thread:pact",
    "thread:parents"
   ],
-  "focus_bytes": 3108,
+  "focus_bytes": 3774,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -120,13 +121,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T07:36:00",
+  "at": "0006-10-03T07:37:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.033",
+  "id": "s08.text.034",
   "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-  "time": "07:36"
+  "time": "07:37"
  },
- "digest": "39d813ff404d638e757b85c79144a075acf7a2fb95d9bae6d4805601b6720cea",
+ "digest": "ff7ed6d9e9253d422d4c8924e6090dab8cbd6b375e6e9e7bdf81c1e5332426b0",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -151,21 +152,21 @@
  "fight": {
   "chakra": {
    "state": "пусто",
-   "value": 8.4
+   "value": 8.5
   },
   "dice": [
-   64,
-   74,
-   73,
-   80,
-   76,
-   59,
-   78,
-   24,
+   3,
+   91,
+   56,
    49,
-   70,
-   66,
-   75
+   10,
+   93,
+   67,
+   63,
+   76,
+   48,
+   3,
+   71
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -195,6 +196,24 @@
     "id": "place:44fbe9adb51ae417",
     "kind": "place",
     "label": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "akihiro",
+    "kind": "npc",
+    "label": "Мугами Акихиро",
+    "operational_cues": {
+     "source": "recovery/cast/akihiro.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
+      "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны"
+     }
+    },
     "status": "no_verified_facts"
    },
    {
@@ -273,7 +292,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 6
+  "total_matched": 7
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -288,10 +307,10 @@
   "due": null,
   "npcs": {
    "seina": {
-    "does": "Retains new specimen separately under key and does not share to public labs or family; asks Shiki for distinction between max somatic stage and seal strength.",
+    "does": "Records the hypothesis as attributed, locks samples, refuses technique stress test, and answers Akihiro's supply question from private office.",
     "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
     "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "Directly held blood could itself be valuable or dangerous, but confidentiality is her professional obligation and established promise; the clinical ceiling of Pact remains unknown.",
+    "reads": "She must distinguish observation from explanation and maintain both patient confidentiality and ordinary clinic function; no evidence for a new intrusion or sample request.",
     "stage": 2,
     "step": "пересмотр"
    }
@@ -504,7 +523,7 @@
     },
     {
      "at": "0006-10-03T07:36:00",
-     "sha256": "0bd91271e49823bfbf260bb8b6f73c12b566b6b8758bec3e8274d4fca4065534",
+     "sha256": "2dc4c0505d567dc3858ad891c52c911f119e28b118bbe49c7300094ccc5162be",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.033"
@@ -516,10 +535,10 @@
     "first": "s04.text.065",
     "inner": {},
     "knows": [
-     "06:49 03.10 Shiki returned unannounced to Seina's private clinic physically alive and mobile but with significantly worsened corpse-like gray complexion, neck and arms hidden beneath fabric, fingered shinobi gl",
      "03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his ",
      "07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that",
-     "03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly pe"
+     "03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly pe",
+     "07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; n"
     ],
     "knows_ref": "memory/npc/seina.md",
     "knows_total": 8,
@@ -527,17 +546,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.033",
-      "what": "Шики объяснил изменения общими побочными эффектами Договора и добровольно разрешил частный забор крови. Сэйна безопасно взяла пробу, сравнила два мазка: нити стали гуще, но исследованные эритроциты со"
+      "turn": "s08.text.034",
+      "what": "Шики предположил, что изменение организма связано со встроенными Бётоном и Шитоном. Сэйна отметила это как гипотезу и отказалась провоцировать техники при истощении. В канон закреплён чёрный, сам по с"
      }
     ],
     "memory_file": "archive/npc-memory/seina.json",
-    "memory_total": 38,
+    "memory_total": 39,
     "name": "Кирисава Сэйна",
     "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-    "seen": "s08.text.033",
+    "seen": "s08.text.034",
     "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-    "state": "07:36 heard Shiki himself attribute the progression of extreme cold, near black blood and uncanny phenotype to side effects of Pact after maximum exertion; accepted limited confidential blood-draw permission. With double gloves and barrier technique Seina acquired one new private black-blood specimen and made protected in-house morphology comparison with 01 Oct red specimen: visibly denser dark interfibrillar structures, recognizable intact red cells, no demonstrated gross hemolysis in observed fields, causes unknown. Both specimens separately locked, no other dissemination. Unsettled by current sample but professionally controlled; asks if 'limit of Pact' means changed physiology or seven seals' ability to hold.",
+    "state": "07:37 records Byoton/Shiton as Shiki's working mechanistic hypothesis alongside private smear comparisons without concluding causality; declines to provoke new ninjutsu tests while chakra recovery is incomplete. Keeps both 01 Oct and 03 Oct blood and resulting slides separately in locked private cabinet with no outside disclosure. Hears Akihiro request old drug-issue ledger from front supplies.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Сдержанная точная медицинская речь",
@@ -548,18 +567,18 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.033",
-   "line": "Шики объяснил изменения общими побочными эффектами Договора и добровольно разрешил частный забор крови. Сэйна безопасно взяла пробу, сравнила два мазка: нити стали гуще, но исследованные эритроциты сохраняют форму; обе пробы заперла."
+   "id": "s08.text.034",
+   "line": "Шики предположил, что изменение организма связано со встроенными Бётоном и Шитоном. Сэйна отметила это как гипотезу и отказалась провоцировать техники при истощении. В канон закреплён чёрный, сам по себе безопасный цвет чакры Шики."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "07:36 Shiki in Seina's private clinic exam office, fully dressed and wrapped after one small sterile elbow puncture with new local dressing under wrap. Seina now without contaminated examination gloves, at office desk, has sealed both original 01 Oct red-blood specimen and newly acquired 03 Oct almost-black specimen in separate private cassettes in locked clinic cabinet; protected microscopy slide material also retained and access restricted. Only Seina holds cabinet key; Seina has not transmitted any biological materials or lab notes outside her practice. ICU Kadz holds his own two near-black tubes elsewhere under retention/destruction review.",
-  "pressure": "Documented progression from sparse dark strands 01 Oct to dense irregular lattice 03 Oct without visible bulk erythrocyte lysis suggests a blood-matrix change but mechanism is unproven; small stored specimens now personally sensitive. Seina asks precise distinction between bodily stage ceiling and remaining strength of seven seals. Unknown to them the hospital registry report trail has an omitted redirect requiring investigation.",
-  "situation": "07:19–07:36 03 Oct 1283. Shiki tells Seina only broadly that his almost black blood, low body temperature, necrotic-corpse-like outer appearance but INTACT skin, smell and internal retuning with preserved normal function are side effects of progressive seven-seal Pact brought to its maximum by overnight Byoton + medical chakra overload, and voluntarily authorizes ONE small new private blood sample in Seina's clinic. She accepts attribution as Shiki's causal claim, not proven physiology. Wearing double gloves and face shield, she performs limited peripheral closed-system venipuncture at temporarily exposed elbow crease (wrap shifted in controlled way), fills one small sealed tube with nearly ink-black normal-flow blood, protects needle and covers minuscule puncture with sterile dressing under existing cotton wrap, no contact through ungloved living skin and no inoculation to staff. Seina independently makes small protected sample slide and compares under microscopy with the 01 Oct red blood specimen she preserved privately: prior slide shows sparse strange dark strands, new slide has significantly denser interconnected dark structures passing between recognizable erythrocytes; no compelling generalized erythrocyte destruction in examined fields but larger testing required to rule out damage or assign cause. No test of infectious potential attempted, no external lab, no staff outside room, no formal disease diagnosis. After viewing, Seina stores new sealed tube separately from former 01 Oct tube in her locked cabinet labeled 'Частное', keeps slides contained, reiterates no disclosure of samples to parents/others without Shiki's permission. She asks whether Shiki means ultimate limit of bodily change or ultimate limit of holding seven locks, without knowing that Nemera cou"
+  "positions": "07:37 Shiki in private medical exam room with Seina. Seina back beside desk and locked specimen cabinet, having privately safeguarded both dated specimens; father Akihiro is audible in outer clinic inventory area, not in room and unaware of Shiki's arrival. No personnel have seen black chakra used in this turn; no contact risk exposure.",
+  "pressure": "Seina explicitly distinguishes Shiki's kekkei genkai causation hypothesis from established observations and defers exhausting technical provocation; private research retains material risks and boundaries. Akihiro is on site independently working supplies, giving an ordinary possible encounter with a parent who knows stage3 but not the new stage6 changes.",
+  "situation": "03.10.1283 07:36–07:37, Kusa Seina private medical office. Shiki states a conjecture that his recent physical and blood changes reflect effects of integrated Byoton and Shiton kekkei genkai, not necessarily the holding capacity of Nemera's seven locks. Seina recalls prior disclosure that he acquired both through Pact (01 Oct s05) and her own October 1 sparse dark-strand red-blood smear versus Oct3 denser near-black lattice after overloaded Byoton medical technique; she records two kekkei genkai as Shiki's unverified hypothesis rather than proven etiology. She declines to provoke a new test using Shiki's almost exhausted chakra and distinguishes examination from experimenting on abilities. She seals already collected 01 Oct and Oct3 separate confidential blood specimens and private notes back into her own locked cabinet; no disclosure outside clinic. From outer supply/administrative area of Seina's established clinic, Shiki's father Akihiro calls asking where old pharmacy delivery/issue ledger is, sees empty folder, and grumbles about misfiled papers. Nothing supports a deliberate stolen ledger or new conspiratorial link: his unrelated supply records simply are not immediately located. Akihiro has no knowledge that Shiki is in Seina's private room, unless someone informs him. Seina suggests parents be informed if Shiki is staying and notes Shiki did not answer about seal integrity, but she does not force his choice. Shiki has NOT demonstrated the newly corrected black chakra: OOC fixed its actual visual property for future seen techniques, not an in-world fact granted to Seina. All seven locks currently intact, despite prior transient weakening during collapse, sealed Nemera unchanged. Shiki intact cold corpse-pale skin wrapped and gloved, hood down, fully mobile though "
  },
  "shiki": {
-  "body": "06:26 wearing existing completely wrapped hands/forearms, neck, upper arms and legs beneath tidy dark combat uniform and pelerine, full-finger shinobi gloves added over wrapped hands; hood remains DOWN, white hair visible, stage6 physiology unchanged, body and skills functional but chakra reserves still depleted.",
+  "body": "Current maximal Pact stage6 and physical health unchanged: intact gray corpse-cold skin beneath bandages, near black blood, no epidermal necrosis or debris, full purposeful function but still very depleted chakra. VISIBLE CHAKRA IS NOW BLACK (not blue) for every school including safe medical ninjutsu; color is not independently harmful or infectious and its outward ominousness may frighten witnesses; there has been no chakra manifestation in this turn.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -582,8 +601,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8043d723b37118d58b5cf63cf8d00ca2702bfece",
-  "turn": "s08.text.033"
+  "sha": "85a43c6dff4543d598ee83db0dc145d9649ecb12",
+  "turn": "s08.text.034"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -599,7 +618,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 39.0,
+    "minutes": 38.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -610,7 +629,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним.",
-    "minutes": 114.0,
+    "minutes": 113.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",

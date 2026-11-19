@@ -1,7 +1,7 @@
 # Кирисава Сэйна · `seina`
 
 псевдонимы: Кирисава, Сэйна
-вид: npc · впервые: s04.text.065 · последний раз: s08.text.033 · сейчас в сцене
+вид: npc · впервые: s04.text.065 · последний раз: s08.text.034 · сейчас в сцене
 
 ## Постоянное
 - внешность: 32 года, собранная, усталость врача в спокойном лице [campaigns/shiki/roster.json]
@@ -20,14 +20,13 @@
 - голос: Сдержанная точная медицинская речь [s04.text.065]
 
 ## Сейчас
-- положение: 07:36 heard Shiki himself attribute the progression of extreme cold, near black blood and uncanny phenotype to side effects of Pact after maximum exertion; accepted limited confidential blood-draw permission. With double gloves and barrier technique Seina acquired one new private black-blood specimen and made protected in-house morphology comparison with 01 Oct red specimen: visibly denser dark interfibrillar structures, recognizable intact red cells, no demonstrated gross hemolysis in observed fields, causes unknown. Both specimens separately locked, no other dissemination. Unsettled by current sample but professionally controlled; asks if 'limit of Pact' means changed physiology or seven seals' ability to hold. [s08.text.033]
+- положение: 07:37 records Byoton/Shiton as Shiki's working mechanistic hypothesis alongside private smear comparisons without concluding causality; declines to provoke new ninjutsu tests while chakra recovery is incomplete. Keeps both 01 Oct and 03 Oct blood and resulting slides separately in locked private cabinet with no outside disclosure. Hears Akihiro request old drug-issue ledger from front supplies. [s08.text.034]
 - вид в последней сцене: Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [s05.text.014]
 
 ## Граница знаний
 - Знает лишь то, что испытал, услышал или получил по службе. Не знает Нулевой Геном и мотивов Шики без отдельного источника.
 
-## Знает (последние 25 из 25)
-- Шики вернулся в кабинет заметно исхудавшим, предупредил о возможном нападении; причины облика и противник ей неизвестны. [s04.text.066]
+## Знает (последние 25 из 26)
 - Шики по собственной заявке помог стабилизировать слизистую гортани медицинской чакрой; после вмешательства SpO2 91%, давление начало повышаться. [s05.text.014]
 - Посетитель от имени Центрального управления требует списки пациентов за три дня, его полномочия не подтверждены. [s05.text.014]
 - Шики признал, что Сэйна и родители хотят разобраться в его внешности, но сказал, что объяснит позже, и отправился в резиденцию. [s05.text.016]
@@ -52,6 +51,8 @@
 - 03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his second-hand news and heard his account of Shiki treating him without payment in 1278. [s08.text.031]
 - 07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that direct bare-skin/fresh blood contact might harm and that central-hospital staff reported his private blood/capability data without consent. He explicitly asks her to privately examine him and asks whereabouts/results of her original 01 Oct blood sample. [s08.text.032]
 - 03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly permits a confidential NEW blood draw at Seina's private clinic. At 07:32 Seina personally sees much denser threadlike network in new black specimen vs sparse in 01 Oct red specimen and preserved erythrocyte shapes in examined areas; no infectivity evidence, no precise cause. [s08.text.033]
+- 07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; no chakra was visibly activated and no new technical permissions given. [s08.text.034]
+- ранее: ещё 1, полностью в `memory/npc/seina.knows.md`
 
 ## Поправки игрока
 - s04.text.065: Кирисава Сэйна — установленная в campaigns/shiki/lore.json наставница Мугами Шики с детства, медицинская тюнин. Позднее ПРЯМОЕ уточнение игрока s04.text.065: старый частный медицинский кабинет Кирисавы Сэйны в Кусагакуре продолжает работать, в нём по-прежнему работают родители Шики — Мугами Акихиро и Мугами Нао.
@@ -59,10 +60,10 @@
 - s05.text.034: Сэйна не имеет доступа к секретной лаборатории и её протоколам Хаку/Ходзуки. «20 сентября 1283» как дата последнего анализа до ассимиляций была ВЫДУМАНА и отменена; точный прежний анализ в её обычном архиве по проверенным источникам не установлен. Без прямого игрового установления не изобретать его дату.
 - s05.text.034: По исправленной сцене s05.text.034 введён новый, ранее НЕ существовавший датированный документ частной медицинской картотеки Сэйны: последний обычный клинический анализ крови/мазок от 18.07.1279, до успешной первой ассимиляции Хаку 1281-03 и второй Ходзуки 1282-08. Эта дата НОВАЯ ИГРОВАЯ ДЕТАЛЬ, а не извлечённый из сессий 2–4 факт. Сэйна не знает происхождения и времени тайных ассимиляций, имеет …
 - s06.text.038: 17.11.2026, прямое исправление прежней оценки: эталон неожиданных многоуровневых раскрытий — линия Кабуто в ПЕРВОЙ сессии. 07.07.1278 первые беседы после боя Шики с Ёрои; Шики заметил несоответствия мимики и знания Кабуто о медкрыле; 21.07.1278 Шики разобрал странное оформление второй команды Травы, пять переглядываний и сигналы пальцев, позднее состоялись медтренировки. 19.09.1278 Кабуто направи…
+- s08.text.034: С s08.text.034 прямая поправка игрока: ВИДИМАЯ ЧАКРА МУГАМИ ШИКИ ЧЁРНАЯ, а не синяя, при любой его технике, включая медицинское ниндзюцу, Бётон и Шитон. ЧЁРНЫЙ ЦВЕТ сам по себе не делает чакру токсичной, заразной, разрушительной либо злой и не меняет механизм/эффективность техник или силу воздействия. Окружающие могут опасаться её из-за внешнего впечатления или ошибочно считать опасной. Не путать…
 - полный текст поправок: `archive/shiki-canon.jsonl`
 
-## История (последние 8 из 38)
-- s05.text.035 0006-10-01T23:22:00: Шики подтвердил Сэйне, что анализы 18.07.1279 — последние реальные обычные, и это намеренно. Нао сказала, что хочет его видеть дома; Акихиро готов идти. У больного третьей палаты десатурация, Сэйна ушла к нему.
+## История (последние 8 из 39)
 - s05.text.036 0006-10-01T23:53:00: Шики согласился прийти домой с Нао и Акихиро. Родители накрыли ужин и заговорили о саде. Нао предложила ему старую комнату. Акихиро заметил незнакомца с фонарём у соседского водостока, направился выяснить, кто он.
 - s05.text.044 0006-10-02T09:06:00: Шики уснул у родителей и проснулся 02.10 в 09:06; Нао передала о вечернем разговоре с Сэйной. Нори по личному каналу сообщила о внеочередной смене караула у В-7 и вопросах нового охранника о Шики. Закадровый тайник у переправы очищен в 02:15.
 - s06.text.046 0006-10-02T22:47:00: Раздельная генетическая проверка С-17 выявила две клеточные линии и одну гетерокарионную клетку с ядрами генотипов А и Б. Архивный профиль пересаженной кисти Инабы с высокой вероятностью совпал с линией Б культуры. Такаги сам сорвал подозрительную внеплановую…
@@ -70,7 +71,8 @@
 - s08.text.031 0006-10-03T07:03:00: Шики дождался осмотра Кэйдзи, расспросил его о переменах в Конохе, Суне, на границах и слухах об Акацуки. Кэйдзи рассказал о своей службе и старой помощи Шики, затем ушёл. Сэйна осталась с Шики наедине и достала его закрытую карту.
 - s08.text.032 0006-10-03T07:18:00: Шики попросил Сэйну тайно обследовать его и рассказал о ночном коллапсе, крови и жалобе. Сэйна провела осмотр без голого контакта и показала сохранённую частную пробу крови 01.10 с предварительным мазком: тёмные нити существовали ещё до последнего вмешательст…
 - s08.text.033 0006-10-03T07:36:00: Шики объяснил изменения общими побочными эффектами Договора и добровольно разрешил частный забор крови. Сэйна безопасно взяла пробу, сравнила два мазка: нити стали гуще, но исследованные эритроциты сохраняют форму; обе пробы заперла.
-- ранее: 30 эпизодов, полностью в `archive/npc-memory/seina.json`
+- s08.text.034 0006-10-03T07:37:00: Шики предположил, что изменение организма связано со встроенными Бётоном и Шитоном. Сэйна отметила это как гипотезу и отказалась провоцировать техники при истощении. В канон закреплён чёрный, сам по себе безопасный цвет чакры Шики.
+- ранее: 31 эпизодов, полностью в `archive/npc-memory/seina.json`
 
 ## Разговоры с Шики: 26 ходов (s02, s04, s05, s08)
 - дословно по ходам: `memory/npc/seina.talk.md`

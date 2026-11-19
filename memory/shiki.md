@@ -3,13 +3,13 @@
 Персонаж игрока. Мысли, слова и добровольные действия Шики не придумывать.
 
 ## Договор Семи замков сейчас
-- стадия 6: Устойчивая тяжёлая форма (значение 63.4342)
+- стадия 6: Устойчивая тяжёлая форма (значение 63.4347)
 
 ## Лист персонажа
 - campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json
 
 ## Тело сейчас
-- 06:26 wearing existing completely wrapped hands/forearms, neck, upper arms and legs beneath tidy dark combat uniform and pelerine, full-finger shinobi gloves added over wrapped hands; hood remains DOWN, white hair visible, stage6 physiology unchanged, body and skills functional but chakra reserves still depleted.
+- Current maximal Pact stage6 and physical health unchanged: intact gray corpse-cold skin beneath bandages, near black blood, no epidermal necrosis or debris, full purposeful function but still very depleted chakra. VISIBLE CHAKRA IS NOW BLACK (not blue) for every school including safe medical ninjutsu; color is not independently harmful or infectious and its outward ominousness may frighten witnesses; there has been no chakra manifestation in this turn.
 
 ## Внешность
 - 20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.
@@ -76,10 +76,10 @@
 - reflex_and_coordination: 5
 
 ## Chakra
-- value: 8.4
-- at: 0006-10-03T07:36:00
+- value: 8.5
+- at: 0006-10-03T07:37:00
 - state: пусто
 - why: Хранитель: обморок от перерасхода в s08.text.020; канон s08.text.021
 
-## Поправки игрока: 78
+## Поправки игрока: 79
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
