@@ -150,3 +150,4 @@
 - Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
 - Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 1 ход(ов), s08–s08
