@@ -96,6 +96,8 @@ def parser():
     blocked.add_argument("--state-dir", type=Path, required=True)
     blocked.add_argument("--check", type=Path, required=True, help="hot-check JSON output")
     blocked.add_argument("--turn", default=None, help="turn the failed fold attempted")
+    zero = sub.add_parser("protocol-zero", help="run a pending Protocol Zero command (dry run only)")
+    zero.add_argument("--state-dir", type=Path, required=True)
     backfill = sub.add_parser("npc-backfill", help="rebuild NPC episode memory from the verbatim session logs")
     backfill.add_argument("--state-dir", type=Path, required=True)
     boot = sub.add_parser("hot-bootstrap", help="one-off lossless migration from legacy FAST_SCENE history")
@@ -344,6 +346,9 @@ def run(args):
         case "hot-blocked":
             report = read_json(args.check)
             return hot.record_blocked(args.state_dir, report.get("problems") or [], args.turn)
+        case "protocol-zero":
+            from . import protocol_zero
+            return protocol_zero.handle(args.state_dir) or {"result": "idle"}
         case "npc-backfill":
             from . import npc_memory
             return npc_memory.backfill(args.state_dir)

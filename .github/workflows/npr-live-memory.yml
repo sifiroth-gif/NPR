@@ -14,6 +14,7 @@ on:
       - "recovery/GATE_POLICY.json"
       - "recovery/ENTITY_SEED_GM_ONLY.json"
       - "recovery/FAST_SCENE.json"
+      - "recovery/ZERO.json"
   workflow_dispatch:
 
 permissions:
@@ -81,6 +82,13 @@ jobs:
               git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json \
                 recovery/CHECKS.json recovery/NEXT.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
             fi
+            # Протокол ноль: ожидающая кодовая команда игрока. Сейчас только пробный
+            # прогон — пишет recovery/ZERO_REPORT.md и гасит команду, игру не трогает.
+            python -m rpg_engine protocol-zero --state-dir _state | tee "$RUNNER_TEMP/zero.json"
+            for f in recovery/ZERO.json recovery/ZERO_REPORT.md; do
+              if [ -e "_state/$f" ]; then git -C _state add -- "$f"; fi
+            done
+            zero=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['result'])" "$RUNNER_TEMP/zero.json")
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
               break
@@ -89,6 +97,8 @@ jobs:
               git -C _state commit -q -m "Fold refused after $cursor: see recovery/CHECKS.json"
             elif [ "$mode" = broken ]; then
               git -C _state commit -q -m "Fold blocked at $cursor by state check: see recovery/CHECKS.json"
+            elif [ "$zero" != idle ]; then
+              git -C _state commit -q -m "Protocol zero ($zero) at $cursor: see recovery/ZERO_REPORT.md"
             else
               git -C _state commit -q -m "Fold $cursor into HOT, log, cast cards and NPC memory"
             fi
