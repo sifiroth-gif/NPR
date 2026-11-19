@@ -1,0 +1,171 @@
+"""Кто в сцене: по подписям реплик, если ведущий не обновил ``d.scene.present``.
+
+С s08.047 ведущий перестал вести ``present``: в сохранении до s08.065 рядом с Шики
+числился только он сам, хотя говорили Такаги, Мориока, Сэкидо, служащая архива.
+На присутствии держится всё, что напоминает ведущему о людях: реакции на Шики,
+воля NPC, границы знания, карточки. Пустой состав выключил это молча.
+
+Теперь каждая реплика подписана (``**Имя:** — …``), и код восстанавливает
+состав сам: подписи → ключи карточек. Ведущий, написавший ``present``,
+остаётся главным — догадка кода применяется только без его записи.
+Безымянный, но повторяющийся голос (не фоновая роль) на втором ходу получает
+карточку-заготовку: без карточки человек выпадает из всех напоминаний.
+"""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+from .places import slug
+from .wiki import ROLE_STEMS, _is_background
+
+SHIKI = "shiki"
+TITLE_WORDS = {"мастер", "господин", "госпожа", "доктор", "глава", "сама", "сан", "кун", "тян", "сенсей"}
+AUTO_AFTER = 2       # ходов с подписью без карточки — и карточка-заготовка
+FORGET = 3           # ходов без реплики — и добавленный кодом уходит из состава
+
+
+def _norm(text):
+    return " ".join(re.findall(r"[\wё-]+", str(text or "").casefold()))
+
+
+def _clean(label):
+    text = re.sub(r"\(.*?\)", " ", str(label or ""))
+    text = text.split(",")[0]
+    return _norm(text)
+
+
+def _entry(names):
+    names = [str(n) for n in names if n and str(n).strip()]
+    proper = set()
+    for name in names:
+        for word in re.findall(r"[\wё-]+", name):
+            low = word.casefold()
+            # Часть имени — только собственное имя: с заглавной и не должность/роль.
+            if word[:1].isupper() and len(low) >= 3 and low not in TITLE_WORDS \
+                    and not any(stem in low for stem in ROLE_STEMS):
+                proper.add(low)
+    return {"display": names[0] if names else "", "forms": [_norm(n) for n in names], "parts": proper}
+
+
+def _wiki_names(path):
+    try:
+        head = path.read_text(encoding="utf-8")[:600]
+    except OSError:
+        return []
+    title = re.match(r"#\s*(.+?)\s*·", head)
+    names = [title.group(1)] if title else []
+    alias = re.search(r"^псевдонимы:\s*(.+)$", head, re.M)
+    if alias:
+        names += [a.strip() for a in alias.group(1).split(",")]
+    return names
+
+
+def display(names, key):
+    return (names.get(key) or {}).get("display") or key
+
+
+def roster(state_dir, hot):
+    """Ключ → имя и формы: карточки HOT, отложенные в recovery/cast, страницы вики."""
+    raw = {}
+    for key, card in (hot.get("cast") or {}).items():
+        raw.setdefault(key, []).extend([card.get("name")] + list(card.get("aliases") or []))
+    cast_dir = Path(state_dir) / "recovery/cast"
+    for path in sorted(cast_dir.glob("*.json")) if cast_dir.is_dir() else ():
+        try:
+            card = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        raw.setdefault(path.stem, []).extend([card.get("name")] + list(card.get("aliases") or []))
+    for key, profile in (hot.get("_psyche") or {}).items():
+        if isinstance(profile, dict) and profile.get("name"):
+            raw.setdefault(key, []).append(profile["name"])
+    npc_dir = Path(state_dir) / "memory/npc"
+    for path in sorted(npc_dir.glob("*.md")) if npc_dir.is_dir() else ():
+        if "." not in path.stem:
+            raw.setdefault(path.stem, []).extend(_wiki_names(path))
+    return {k: _entry(v) for k, v in raw.items() if any(v)}
+
+
+def resolve(label, names):
+    """Подпись → ключ: полное имя или псевдоним, затем единственное совпадение по собственному имени."""
+    clean = _clean(label)
+    if not clean:
+        return None
+    exact = [k for k, e in names.items() if clean in e["forms"]]
+    if len(exact) == 1:
+        return exact[0]
+    words = {w for w in clean.split() if len(w) >= 3}
+    partial = [k for k, e in names.items() if words & e["parts"]]
+    return partial[0] if len(partial) == 1 else None
+
+
+VOICE = re.compile(r"\*\*([^*\n:]{2,48}):\*\*\s*[*_]*\s*[—–]")
+NOT_VOICES = ("мастеру", "мастер", "ooc", "примечание")
+
+
+def speakers(gm):
+    """Подписи реплик: «**Имя:** — …». Поля документа («**Объект:** …») без тире — не голоса."""
+    return [m.group(1).strip() for m in VOICE.finditer(str(gm or ""))]
+
+
+def voices(turn, names, always_present=()):
+    """Подписи хода → (ключи карточек, метки без карточки)."""
+    if turn.get("kind") == "ooc":
+        return [], []
+    keys, unknown = [], []
+    for label in speakers(turn.get("gm")):
+        if "шики" in _norm(label) or _clean(label) in NOT_VOICES:
+            continue
+        key = resolve(label, names)
+        if key:
+            if key not in always_present and key not in keys:
+                keys.append(key)
+        elif not _is_background(_clean(label)) and _clean(label) not in unknown:
+            unknown.append(_clean(label))
+    return keys, unknown
+
+
+def update(hot, turn, seq, declared):
+    """Состав после хода: ведущий записал present — его слово; иначе добавить говоривших.
+
+    Добавленный кодом, кто молчит FORGET ходов, уходит из состава: так сцена не
+    копит людей, оставшихся в другом месте. Записанных ведущим код не убирает.
+    """
+    auto = hot.setdefault("fold", {}).setdefault("auto_present", {})
+    if declared:
+        auto.clear()
+        return
+    scene = hot.setdefault("scene", {})
+    present = list(scene.get("present") or [SHIKI])
+    for key in turn.get("_spoke") or []:
+        auto[key] = seq
+        if key not in present:
+            present.append(key)
+    for key, last in list(auto.items()):
+        if seq - int(last) >= FORGET:
+            auto.pop(key)
+            if key in present:
+                present.remove(key)
+    scene["present"] = present
+
+
+def auto_cards(hot, turn, unknown, names):
+    """Повторяющийся безымянный голос → {ключ: карточка-заготовка}."""
+    seen = hot.setdefault("fold", {}).setdefault("voices", {})
+    made = {}
+    for label in unknown:
+        row = seen.setdefault(label, {"turns": [], "first": turn["id"]})
+        if turn["id"] not in row["turns"]:
+            row["turns"] = (row["turns"] + [turn["id"]])[-4:]
+        if len(row["turns"]) < AUTO_AFTER:
+            continue
+        key = slug(label).replace("-", "_")[:40]
+        if key in names:
+            continue
+        made[key] = {"name": label[:1].upper() + label[1:], "role": "по подписи в сцене",
+                     "first": row["first"], "auto": True}
+        names[key] = _entry([made[key]["name"]])
+        seen.pop(label, None)
+    return made

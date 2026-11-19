@@ -477,7 +477,7 @@ def turn_checks(registry, turns):
         unknown = []
         for label in SPEAKER.findall(turn.get("gm") or ""):
             name = _norm(label)
-            if not name or "шики" in name or name in declared or name in unknown:
+            if not name or "шики" in name or name in ("мастеру", "мастер") or name in declared or name in unknown:
                 continue
             if _is_background(label):
                 continue
