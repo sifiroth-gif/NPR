@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.083",
+ "cursor": "s08.text.084",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {},
@@ -678,10 +678,12 @@
     },
     "protect_s17": {
      "status": "committed",
-     "next": "Лично проверить лабораторную выдачу и найти исчезнувшего приёмщика пропусков; удержать резерв и не допустить передачи маточной культуры без комиссии.",
-     "due": "0006-10-04T06:00:00",
-     "flaw": "Может столкнуться с сопротивлением врачебной администрации.",
-     "turn": "s08.text.083"
+     "next": "Вызвать фуин-мастера, проверить контур питания и охлаждение, удержать охрану и искать независимого медицинского получателя.",
+     "due": "0006-10-04T06:12:00",
+     "flaw": "Упёртость может затянуть решение и навредить пациентам.",
+     "turn": "s08.text.084",
+     "goal": "Сберечь живую культуру и доказательства.",
+     "if_unopposed": "Добьётся временного охлаждения и проверки без единоличной передачи Мориоке, если техника позволит."
     }
    },
    "dread": {
@@ -1054,7 +1056,17 @@
    }
   },
   "hospital_transporter": {
-   "intent": {},
+   "intent": {
+    "protect_self": {
+     "status": "committed",
+     "goal": "Не стать единственным обвиняемым в попытке вывоза С-17.",
+     "next": "Найти начальника ночной транспортной службы и потребовать подтвердить маршрут и поручение.",
+     "due": "0006-10-04T09:00:00",
+     "flaw": "Начальство может быть связано с организатором.",
+     "if_unopposed": "Подаст официальную жалобу с указанием маршрута и поручения.",
+     "turn": "s08.text.084"
+    }
+   },
    "intent_done": [
     {
      "key": "avoid_blame",
@@ -1074,29 +1086,71 @@
    }
   },
   "hospital_night_admin": {
-   "intent": {
-    "protect_service": {
-     "status": "committed",
+   "intent": {},
+   "intent_done": [
+    {
+     "key": "protect_service",
+     "at": "0006-10-04T04:00:00",
+     "status": "fulfilled",
      "next": "Оформить письменное возражение по допуску и продолжить проверять правовую основу изъятия.",
      "due": "0006-10-04T04:00:00",
      "flaw": "Защищает бумажную процедуру вместо выяснения судьбы образца.",
-     "turn": "s08.text.083"
+     "turn": "s08.text.084",
+     "outcome": "добился: Оформить письменное возражение по допуску и продолжить проверять правовую основу изъятия.",
+     "by": "world",
+     "roll": 60
     }
-   },
-   "intent_done": [],
+   ],
    "psyche": {
     "decides": "Защитить ведомственную самостоятельность.",
     "deep_fear": "Паралич лаборатории и ответственность за утрату образцов.",
     "boundary": "Не уступать внешней охране без письменного основания."
    }
+  },
+  "morioka_hideaki": {
+   "intent": {
+    "force_transfer": {
+     "status": "committed",
+     "goal": "Получить С-17 по официальной передаче.",
+     "next": "Требовать решения Такаги при комиссии и попытаться получить допуск в хранилище.",
+     "due": "0006-10-04T06:05:00",
+     "flaw": "Он сам получатель препарата, конфликт интересов.",
+     "if_unopposed": "Получит культуру по ведомственному маршруту.",
+     "turn": "s08.text.084"
+    }
+   },
+   "intent_done": []
+  },
+  "hospital_pass_custodian": {
+   "intent": {
+    "survive": {
+     "status": "committed",
+     "goal": "Выжить и избежать повторной атаки.",
+     "next": "Проходить операцию под медицинской охраной.",
+     "due": "0006-10-04T08:00:00",
+     "flaw": "Тяжело ранен.",
+     "if_unopposed": "Врачебное лечение продолжается, исход не гарантирован.",
+     "turn": "s08.text.084"
+    }
+   },
+   "intent_done": []
+  },
+  "unknown_masked_prisoner": {
+   "intent": {
+    "silent": {
+     "status": "committed",
+     "goal": "Не раскрыть организатора нападения.",
+     "next": "Отказаться от прямых ответов и требовать связи с Центральным управлением.",
+     "due": "0006-10-04T08:00:00",
+     "flaw": "Нападение видели охранники.",
+     "if_unopposed": "Останется в распоряжении охраны и не сообщит имя заказчика.",
+     "turn": "s08.text.084"
+    }
+   },
+   "intent_done": []
   }
  },
  "checks": [
-  {
-   "turn": "s08.text.082",
-   "kind": "wiki",
-   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
-  },
   {
    "turn": "s08.text.083",
    "kind": "write",
@@ -1105,16 +1159,22 @@
   {
    "turn": "s08.text.083",
    "kind": "wiki",
+   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'",
+   "since": "s08.text.082"
+  },
+  {
+   "turn": "s08.text.084",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4163 знаков (норма до 4000); крупнее всего: cast 2646, scene 922."
+  },
+  {
+   "turn": "s08.text.084",
+   "kind": "wiki",
    "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.078",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.079",
     "look": [],
@@ -1141,10 +1201,17 @@
     "turn": "s08.text.083",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s08.text.084",
+    "look": [],
+    "soma": [
+     "побледнел"
+    ]
    }
   ],
   "worn": [],
-  "quiet": 0,
+  "quiet": 1,
   "log": [
    {
     "turn": "s08.text.064",
@@ -1175,7 +1242,7 @@
    "takagi_ren": {
     "since": "s08.text.080",
     "need": false,
-    "quiet": 0,
+    "quiet": 1,
     "last": "s08.text.083"
    }
   }
@@ -1469,8 +1536,10 @@
   "seed": "eaeb979ad3ed0d5e",
   "streak": {
    "takagi_ren": 0,
+   "morioka_hideaki": 0,
    "hospital_transporter": 0,
-   "hospital_night_admin": 0
+   "hospital_pass_custodian": 0,
+   "unknown_masked_prisoner": 0
   },
   "touched": {
    "night_icu_physician": "s08.text.053",
@@ -1482,12 +1551,15 @@
    "arakawa": "s08.text.063",
    "nao": "s08.text.071",
    "seina": "s08.text.063",
-   "takagi_ren": "s08.text.083",
+   "takagi_ren": "s08.text.084",
    "minase": "s08.text.063",
    "nemera": "s08.text.079",
    "utsuro": "s08.text.066",
-   "hospital_transporter": "s08.text.083",
-   "hospital_night_admin": "s08.text.083"
+   "hospital_transporter": "s08.text.084",
+   "hospital_night_admin": "s08.text.083",
+   "morioka_hideaki": "s08.text.084",
+   "hospital_pass_custodian": "s08.text.084",
+   "unknown_masked_prisoner": "s08.text.084"
   },
   "happened": [
    {
@@ -1511,6 +1583,16 @@
     "turn": "s08.text.063",
     "shown": 0,
     "against_shiki": "Нао узнает о визите даже без самостоятельного решения Шики известить её"
+   },
+   {
+    "npc": "hospital_night_admin",
+    "name": "hospital_night_admin",
+    "plan": "protect_service",
+    "at": "0006-10-04T04:00:00",
+    "status": "fulfilled",
+    "outcome": "добился: Оформить письменное возражение по допуску и продолжить проверять правовую основу изъятия.",
+    "turn": "s08.text.084",
+    "shown": 0
    }
   ]
  }

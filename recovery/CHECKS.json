@@ -1,13 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.083",
+ "cursor": "s08.text.084",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.082",
-   "kind": "wiki",
-   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
-  },
   {
    "turn": "s08.text.083",
    "kind": "write",
@@ -15,6 +10,17 @@
   },
   {
    "turn": "s08.text.083",
+   "kind": "wiki",
+   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'",
+   "since": "s08.text.082"
+  },
+  {
+   "turn": "s08.text.084",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4163 знаков (норма до 4000); крупнее всего: cast 2646, scene 922."
+  },
+  {
+   "turn": "s08.text.084",
    "kind": "wiki",
    "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
   }
