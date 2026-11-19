@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.056: Такаги Рэн (`npc/takagi_ren`), morioka_hideaki (`npc/morioka_hideaki`), вещь `personal_paper_reports`, поправки игрока: 1
 - s08.text.055: Такаги Рэн (`npc/takagi_ren`), вещь `personal_paper_reports`
 - s08.text.054: вещь `personal_paper_reports`, вещь `stolen_house_plan`, линия `order`, поправки игрока: 2
 - s08.text.053: Хаясэ Нори (`npc/nori`), Мугами Акихиро (`npc/akihiro`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), Аракава Дзюн (`npc/arakawa`)
@@ -54,4 +55,3 @@
 - s07.text.037: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
 - s07.text.036: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`, поправки игрока: 1
 - s07.text.035: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
-- s07.text.034: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
