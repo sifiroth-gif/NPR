@@ -1,15 +1,20 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.082",
+ "cursor": "s08.text.083",
  "fold_errors": [],
  "checks": [
   {
-   "turn": "s08.text.080",
-   "kind": "read",
-   "text": "«Такаги Рэн» вернулся в сцену, а его страница `npc/takagi_ren` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/takagi_ren.talk`)."
+   "turn": "s08.text.082",
+   "kind": "wiki",
+   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
   },
   {
-   "turn": "s08.text.082",
+   "turn": "s08.text.083",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4133 знаков (норма до 4000); крупнее всего: cast 1580, scene 1008, investigations 856."
+  },
+  {
+   "turn": "s08.text.083",
    "kind": "wiki",
    "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'"
   }
