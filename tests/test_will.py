@@ -45,18 +45,50 @@ class WillTest(unittest.TestCase):
         self.assertEqual(will.seed(self.root, h), [])
         self.assertEqual(profile["intent"]["cover"]["next"], "ведущий сменил шаг")
 
-    def test_overdue_plan_asks_what_happened_offscreen(self):
+    def test_overdue_plan_of_absent_npc_happens_by_itself(self):
         h = state()
         will.seed(self.root, h)
-        self.assertEqual(will.review(h, []), [])
+        h["_psyche"]["kadziura"]["intent"]["cover"]["if_unopposed"] = "лист переписан, виноват Шики"
         h["cursor"]["at"] = "0006-10-01T09:30:00"
-        notes = [n["text"] for n in will.review(h, [])]
-        self.assertEqual(len(notes), 1)
-        self.assertIn("За кадром: «Кадзиура» собирался «переписать лист назначений»", notes[0])
-        self.assertIn("доверяет подписи начальства", notes[0])
-        self.assertEqual(will.soon(h), [], "присутствующий NPC — в present_npcs, не в agendas")
+        self.assertEqual(will.advance(h), [], "присутствующий: его ход играется в сцене")
+        self.assertEqual([k for k, _, _ in will.due_here(h)], ["kadziura"])
         h["scene"]["present"] = ["shiki"]
         self.assertEqual(will.soon(h)[0]["overdue"], True)
+        self.assertEqual(will.advance(h), [], "час на решение ведущего ещё идёт")
+        self.assertEqual(will.advance(h, always_present=["kadziura"]), [])
+        h["cursor"]["at"] = "0006-10-01T10:30:00"
+        events = will.advance(h)
+        self.assertEqual(len(events), 1)
+        profile = h["_psyche"]["kadziura"]
+        self.assertNotIn("cover", profile["intent"])
+        closed = profile["intent_done"][-1]
+        self.assertEqual(closed["by"], "world")
+        self.assertIn(closed["status"], ("fulfilled", "partial", "failed"))
+        self.assertTrue(closed["outcome"])
+        self.assertEqual(will.advance(h), [], "решённое не решается дважды")
+        shown = will.offscreen(h)
+        self.assertIn("Кадзиура", shown[0])
+        self.assertIn("Против Шики: вина ляжет на Шики", shown[0])
+        for _ in range(will.SHOW_FOLDS - 1):
+            will.offscreen(h)
+        self.assertEqual(will.offscreen(h), [])
+        self.assertEqual([k for k, _ in will.without_plan(h)], ["kadziura"])
+
+    def test_keeper_closes_a_played_plan_once(self):
+        h = state()
+        will.seed(self.root, h)
+        fix = dict(SEED)
+        fix["kadziura"] = dict(SEED["kadziura"], close={"cover": {"status": "done", "outcome": "лист переписан"}})
+        (self.root / will.SEED).write_text(json.dumps(fix, ensure_ascii=False), encoding="utf-8")
+        will.seed(self.root, h)
+        profile = h["_psyche"]["kadziura"]
+        self.assertNotIn("cover", profile["intent"])
+        self.assertEqual(profile["intent_done"][-1]["status"], "fulfilled")
+        self.assertEqual(profile["intent_done"][-1]["by"], "keeper")
+
+    def test_roll_is_deterministic(self):
+        self.assertEqual(will._roll("a", "b", "c"), will._roll("a", "b", "c"))
+        self.assertTrue(1 <= will._roll("a", "b", "c") <= 100)
 
     def test_passive_significant_npc_is_asked_about_his_own_move(self):
         h = state()

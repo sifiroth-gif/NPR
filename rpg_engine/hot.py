@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, lore, nextpack, npc_memory, plot, prose_lint, will
+from . import continuity_guard, dread, fight, inquiry, lore, nextpack, npc_memory, plot, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -722,6 +722,8 @@ def _tidy_checks(hot):
         text = str(check.get("text") or "")
         if any(rule in text for rule in OBSOLETE_CHECKS):
             continue
+        if re.match(r"намерение \S+: статус \S+$", text):
+            continue   # старая форма: «done»/«in_progress» теперь понимаются, план не откатывается
         if "offscreen knows+" in text and text.split(":")[0] in present:
             continue   # NPC уже в сцене: замечание о «заочном» знании снято
         match = re.match(r"s(\d+)\.text\.(\d+)", str(check.get("turn") or ""))
@@ -929,6 +931,14 @@ def _archived_cards(state_dir):
     return out
 
 
+def _always_present(state_dir):
+    try:
+        policy = json.loads((Path(state_dir) / "recovery/GATE_POLICY.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    return [k for k in policy.get("always_present") or [] if isinstance(k, str)]
+
+
 def _checks_payload(hot):
     return {"schema": "npr-checks/1", "cursor": (hot.get("cursor") or {}).get("id"),
             "fold_errors": (hot.get("fold") or {}).get("errors", []),
@@ -1084,6 +1094,7 @@ def fold(state_dir):
                 checks.extend(lore.review(hot, turn, lore_entries, present_before, present_after))
                 lore.track(hot, turn, lore_entries, list(dict.fromkeys(present_before + present_after)))
                 checks.extend(_write_notes(hot, turn))
+                checks.extend(inquiry.track(hot, turn))
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
     # Never publish a partly accepted batch. All turns remain in Git history
@@ -1135,6 +1146,9 @@ def fold(state_dir):
     will.seed(state_dir, hot)
     will.fill_names(state_dir, hot)
     _keeper_fill(state_dir, hot)
+    # Мир не ждёт ведущего: просроченные планы отсутствующих исполняются сами
+    # (GM_ONLY will.happened → NEXT.offscreen).
+    will.advance(hot, _always_present(state_dir))
     _cap_cards(hot)
     _tidy_checks(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)
@@ -1163,7 +1177,7 @@ def fold(state_dir):
     memory_quality.save(state_dir, hot, memory_index)
     brief = live_scene.build_for_state(hot, accepted, state_dir)
     live_scene.write(brief_path, brief)
-    nextpack.write(state_dir, hot, brief, _checks_payload(hot))
+    nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
