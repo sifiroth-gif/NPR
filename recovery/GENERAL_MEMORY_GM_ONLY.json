@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.084",
+  "cursor": "s08.text.085",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -532,12 +532,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.083",
-          "state": "По требованию Такаги зарегистрировала видимое состояние ампулы и ограниченность результатов осмотра; формальное заключение Шики не подписано."
+          "seen": "s08.text.085",
+          "state": "04:00 подала письменное возражение о допуске Шики, не осведомлена о нынешнем захвате В-7."
         }
       ],
       "sources": [
-        "recovery/cast/hospital_night_admin.json"
+        "recovery/cast/hospital_night_admin.json",
+        "s08.text.085"
       ]
     },
     "hospital_pass_custodian": {
@@ -557,8 +558,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hospital_pass_custodian.json",
-        "s08.text.084"
+        "recovery/cast/hospital_pass_custodian.json"
       ]
     },
     "hospital_transporter": {
@@ -579,8 +579,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hospital_transporter.json",
-        "s08.text.084"
+        "recovery/cast/hospital_transporter.json"
       ]
     },
     "kadziura_satoru": {
@@ -1013,6 +1012,48 @@
         "recovery/cast/matsuda.json"
       ]
     },
+    "medical_panel_operator": {
+      "aliases": [
+        "medical panel operator",
+        "medical_panel_operator"
+      ],
+      "facts": [],
+      "id": "medical_panel_operator",
+      "kind": "npc",
+      "label": "medical_panel_operator",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.085"
+        }
+      ],
+      "sources": [
+        "recovery/cast/medical_panel_operator.json",
+        "s08.text.085"
+      ]
+    },
+    "medical_spectacles": {
+      "aliases": [
+        "medical spectacles",
+        "medical_spectacles"
+      ],
+      "facts": [],
+      "id": "medical_spectacles",
+      "kind": "npc",
+      "label": "medical_spectacles",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.085"
+        }
+      ],
+      "sources": [
+        "recovery/cast/medical_spectacles.json",
+        "s08.text.085"
+      ]
+    },
     "messenger_injured": {
       "aliases": [
         "messenger injured",
@@ -1122,6 +1163,27 @@
         "recovery/cast/missing_guard.json"
       ]
     },
+    "morioka_escort_leader": {
+      "aliases": [
+        "morioka escort leader",
+        "morioka_escort_leader"
+      ],
+      "facts": [],
+      "id": "morioka_escort_leader",
+      "kind": "npc",
+      "label": "morioka_escort_leader",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.085"
+        }
+      ],
+      "sources": [
+        "recovery/cast/morioka_escort_leader.json",
+        "s08.text.085"
+      ]
+    },
     "morioka_hideaki": {
       "aliases": [
         "morioka hideaki",
@@ -1135,13 +1197,67 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.084",
-          "state": "05:58 с двумя медиками и четырьмя вооружёнными прибыл требовать С-17, ссылаясь на лечение. Его связь с неисправностью охлаждения НЕ установлена."
+          "seen": "s08.text.085",
+          "state": "Публично признал зависимость получателей от повторных доз С-17, предложил через собственный канал привести настоящего конечного адресата, если Шики может лечить. Впервые увидел Хьётон Шики."
         }
       ],
       "sources": [
         "recovery/cast/morioka_hideaki.json",
-        "s08.text.084"
+        "s08.text.085"
+      ]
+    },
+    "morioka_khideaki": {
+      "aliases": [
+        "morioka khideaki",
+        "Мориока хидэаки"
+      ],
+      "facts": [],
+      "id": "morioka_khideaki",
+      "kind": "npc",
+      "label": "Мориока хидэаки",
+      "mention_count": 6,
+      "mentions": [
+        {
+          "at": "0006-10-02T13:07:00",
+          "excerpt": "извлекать. Такаги удержал документ. — Кем запрещено? — Уполномоченным резиденции. — Имя. Чиновник поднял подбородок. **Чиновник:** — Мориока Хидэаки. Такаги некоторое время смотрел на него. Затем сложил распоряжение пополам и убрал в собственный нагрудный карм",
+          "source": "archive/session-006-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s06.text.034"
+        },
+        {
+          "at": "0006-10-04T01:53:00",
+          "excerpt": "Он раскрыл реестр С-17 на странице действующих получателей. Три имени оставались хорошо различимыми: Инаба Сигэру, Аракава Дзюн, Мориока Хидэаки. **Такаги Рэн:** — Мориока не случайный чиновник. Он получатель препарата и одновременно участвовал в оформлении ег",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.081"
+        },
+        {
+          "at": "0006-10-04T05:58:00",
+          "excerpt": "лище В-7.** Такаги и Шики вернулись к внутреннему посту. В коридоре стояли шесть человек. Четверо были вооружены; двое носили медицинские знаки. Перед ними находился Мориока Хидэаки. Он выглядел хуже, чем во время вчерашнего визита. Лицо осунулось, на шее под ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.084"
+        },
+        {
+          "at": "0006-10-04T06:03:00",
+          "excerpt": "й Шики, затем к двум медикам. Один из врачей уже попятился к лестнице. Второй остался у контрольной панели. **Мориока Хидэаки:** — Вы сейчас угрожаете убийством представителям собственной деревни. **Такаги Рэн:** — Он сказал достаточно ясно. Такаги повернулся ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.085"
+        }
+      ],
+      "projections": [
+        {
+          "role": "по подписи в сцене",
+          "seen": "s08.text.085"
+        },
+        {
+          "role": "по подписи в сцене"
+        }
+      ],
+      "sources": [
+        "recovery/cast/morioka_khideaki.json",
+        "recovery/HOT.json"
       ]
     },
     "nao": {
@@ -6423,6 +6539,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.085",
         "s08.text.084"
       ]
     },
@@ -7739,7 +7856,7 @@
       "id": "takagi_ren",
       "kind": "npc",
       "label": "Такаги Рэн",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0006-10-02T09:28:10",
@@ -7747,13 +7864,6 @@
           "source": "archive/session-005-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s05.text.052"
-        },
-        {
-          "at": "0006-10-04T02:27:00",
-          "excerpt": "Среда, 4 октября 1283 года. 01:54.** *Кусагакуре. Подземный комплекс УВБ.* **Мугами Шики:** — Да. **Такаги Рэн:** — За мной. Такаги вышел, не закрыв папку. Дежурный немедленно занял его место за столом. **Такаги Рэн:** — До моего возвращения никому ничего не в",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.082"
         },
         {
           "at": "0006-10-04T02:41:00",
@@ -7768,6 +7878,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.084"
+        },
+        {
+          "at": "0006-10-04T06:03:00",
+          "excerpt": "жания. Первым двинулся человек справа от Мориоки. Он даже не успел полностью обнажить короткий меч. **Такаги Рэн:** — Руку убрал. Офицер остановился. Не потому, что испугался Шики. Он смотрел на Такаги, ожидая, что капитан сейчас отступит или повторит приказ. ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.085"
         }
       ],
       "projections": [
@@ -7775,9 +7892,9 @@
           "body": "Средних лет/пожилой офицер с короткой седой бородой, тёмный плащ, резидентская повязка на левом плече и служебная печать на шее, следит за руками Нори",
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-          "seen": "s08.text.084",
+          "seen": "s08.text.085",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
-          "state": "Задержал нападавшего, помог раненому служащему и вернулся к 05:58 на В-7. Требует независимого хранителя при передаче, столкнулся с сигналом охлаждения.",
+          "state": "06:03 остановил вооружённого сопровождающего, не отнял культуру у Шики, но сообщил Кагэ о захвате и смертельных угрозах. Впервые увидел Хьётон Шики.",
           "voice": "Сухие короткие приказы без объяснения мотивов, требовательная прямая речь",
           "wants": "Получить контроль над задержанными, вещественными доказательствами и свидетелями до прибытия медиков, исполнить прямой приказ главы и не допустить вывоза из-под наблюдения"
         },
@@ -7785,14 +7902,14 @@
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
-          "state": "Задержал нападавшего, помог раненому служащему и вернулся к 05:58 на В-7. Требует независимого хранителя при передаче, столкнулся с сигналом охлаждения.",
+          "state": "06:03 остановил вооружённого сопровождающего, не отнял культуру у Шики, но сообщил Кагэ о захвате и смертельных угрозах. Впервые увидел Хьётон Шики.",
           "wants": "Получить контроль над задержанными, вещественными доказательствами и свидетелями до прибытия медиков, исполнить прямой приказ главы и не допустить вывоза из-под наблюдения"
         }
       ],
       "sources": [
         "recovery/cast/takagi_ren.json",
         "recovery/HOT.json",
-        "s08.text.084"
+        "s08.text.085"
       ]
     },
     "tetsu": {
@@ -8362,8 +8479,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json",
-        "s08.text.084"
+        "recovery/cast/unknown_masked_prisoner.json"
       ]
     },
     "utsuro": {
@@ -8619,5 +8735,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 632
+  "source_turns_indexed": 633
 }
