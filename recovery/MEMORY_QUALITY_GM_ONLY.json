@@ -1,23 +1,24 @@
 {
   "current_focus": [
+    "recipient6",
     "nemera",
-    "place:5270dd69fc81a58d",
-    "thread:lower_hospital",
+    "place:315f1a0b32513edf",
     "thread:nemera"
   ],
-  "cursor": "s08.text.028",
+  "cursor": "s08.text.029",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2089,
-  "index_entities": 364,
-  "index_source_records": 578,
-  "indexed_cursor": "s08.text.028",
+  "focus_bytes": 2574,
+  "index_entities": 367,
+  "index_source_records": 579,
+  "indexed_cursor": "s08.text.029",
   "kinds": {
+    "canon": 1,
     "clock": 3,
     "entity": 1,
     "item": 4,
     "npc": 49,
-    "place": 285,
-    "thread": 22
+    "place": 286,
+    "thread": 23
   },
   "missing_critical": [],
   "notes": [
@@ -26,6 +27,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.029:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -485,6 +492,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:shiki_confidentiality",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:tetsu",
       "kind": "thread"
     },
@@ -496,9 +509,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 78,
-  "self_query_count": 78,
+  "self_query_at_1": 80,
+  "self_query_at_5": 80,
+  "self_query_count": 80,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

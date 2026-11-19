@@ -1,8 +1,8 @@
 # Линия `nemera`
 
-- state: 06:19 03.10: Shiki asked Nemera why she stayed instead of escaping while he was unconscious. She stated all seven locks held despite his chakra exhaustion; she remains imprisoned, still wishes to leave, yet finds his voluntarily shared perception and changed relation to other humans worth observing. She refused to promise loyalty or claim affection. No breach, extra sensory/motor rights, memory reading or bargain; prior channel boundaries preserved.
+- state: 03 Oct 06:26: Shiki directly asserts septuple seals weakened during earlier chakra-coma enough to be broken by Nemera. This player-established correction overrides Nemera's earlier 'no opportunity' statement; Nemera admits that account was convenient and does not conclusively explain why she chose not to escape. Seven locks remain intact after recovery, no sensory/motor privilege changes; she still desires exit.
 - last_known: s04.text.047
-- turn: s08.text.028
+- turn: s08.text.029
 
 ## Изменения по ходам
 - s04.text.049: state: Немера — нечеловеческая сущность за семью замками. По разрешённому четвёртому каналу предложила наставничество в Ситоне/Бётоне при обмене на подробные истинные наблюдения. Не видит и не слышит внешнюю лабораторию. Запоры стабильны.; last_known: s04.text.047
@@ -13,3 +13,4 @@
 - s05.text.042: state: 02.10 02:09 Шики закончил модификацию семи запоров с помощью Нулевого Генома: Немера имеет постоянное ОДНОСТОРОННЕЕ полное чувственное наблюдение (зрение слух вкус запах кожа боль температура проприоцепция вестибулярное внутренние ощущения эмоциональная окраска), не читает мысли/память и не управляет движениями или мыслями. Её слабые пробы моторной/исполнительной обратной связи заблокирова…
 - s05.text.043: state: Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпиталя, но не считает Шики добрым. Временно замолчала по собственной воле и хочет слушать дождь до утра. Одностороннее сенсорное окно открыто, моторика/мысли закрыты; новых сделок нет.
 - s08.text.028: state: 06:19 03.10: Shiki asked Nemera why she stayed instead of escaping while he was unconscious. She stated all seven locks held despite his chakra exhaustion; she remains imprisoned, still wishes to leave, yet finds his voluntarily shared perception and changed relation to other humans worth observing. She refused to promise loyalty or claim affection. No breach, extra sensory/motor rights, m…
+- s08.text.029: state: 03 Oct 06:26: Shiki directly asserts septuple seals weakened during earlier chakra-coma enough to be broken by Nemera. This player-established correction overrides Nemera's earlier 'no opportunity' statement; Nemera admits that account was convenient and does not conclusively explain why she chose not to escape. Seven locks remain intact after recovery, no sensory/motor privilege changes; …

@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.028",
+ "cursor": "s08.text.029",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -262,11 +262,18 @@
       "change": "подтвердилось",
       "saw": "She experienced through granted sensorium Shiki's profound collapse and restoration with seven seals unmoved; heard his direct challenge about why she stayed.",
       "does": "Refutes premise that weakness alone opened the seals and admits self-interested curiosity without promising allegiance."
+     },
+     {
+      "turn": "s08.text.029",
+      "at": "0006-10-03T06:26:00",
+      "change": "подтвердилось",
+      "saw": "Shiki recognized actual transient weakening of the seven locks while unconscious, refuted Nemera's previous explanation and did not demand further argument.",
+      "does": "Offers a brief grudging admission without revealing the ultimate motive of staying, no physical escape action attempted."
      }
     ],
-    "reads": "A future chance to leave, if genuinely presented, would force a conflict between her desire for freedom and interest in the voluntary connection with her captor.",
-    "does": "Refutes premise that weakness alone opened the seals and admits self-interested curiosity without promising allegiance.",
-    "turn": "s08.text.028",
+    "reads": "Her ability to deceive about the contours is no longer accepted at face value, which may change future bargaining over imprisonment.",
+    "does": "Offers a brief grudging admission without revealing the ultimate motive of staying, no physical escape action attempted.",
+    "turn": "s08.text.029",
     "step": "примета"
    }
   }
@@ -346,20 +353,10 @@
    "turn": "s08.text.028",
    "kind": "review",
    "text": "review.sources must refer to exact prior played turns"
-  },
-  {
-   "turn": "s08.text.028",
-   "kind": "plot",
-   "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.023",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.024",
     "look": [],
@@ -390,6 +387,11 @@
    },
    {
     "turn": "s08.text.028",
+    "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.029",
     "look": [],
     "soma": []
    }
@@ -639,10 +641,10 @@
    "ch09_order_chain": {
     "id": "ch09_order_chain",
     "kind": "chapter",
-    "status": "queued",
-    "opened": "s08.text.012",
-    "opened_at": "0006-10-03T03:09:00",
-    "scenes": 0,
+    "status": "active",
+    "opened": "s08.text.029",
+    "opened_at": "0006-10-03T06:26:00",
+    "scenes": 1,
     "title": "Цепь приказа",
     "question": "Кто конкретно инициировал попытки устранить Шики, с какими полномочиями, мотивом и каналом сведений?",
     "endings": [
@@ -664,7 +666,8 @@
     "trigger": "После клинической главы либо по достоверному новому доказательству личного преследования Шики; не задерживать смену глав ради расследовательской рутины.",
     "notes": [
      "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
-    ]
+    ],
+    "last": "s08.text.029"
    }
   },
   "closed": [

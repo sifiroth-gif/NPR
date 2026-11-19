@@ -3,13 +3,13 @@
 Персонаж игрока. Мысли, слова и добровольные действия Шики не придумывать.
 
 ## Договор Семи замков сейчас
-- стадия 6: Устойчивая тяжёлая форма (значение 63.3941)
+- стадия 6: Устойчивая тяжёлая форма (значение 63.3978)
 
 ## Лист персонажа
 - campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json
 
 ## Тело сейчас
-- 06:18 03.10 Shiki's stage6 max-state blood, core low temperature, wholly intact grayish skin and clothed contagious contact mechanics unchanged; severe chakra depletion persists. He wraps hands/fingers/forearms completely and partial shoulders, neck and legs with cotton bandages and puts on established neat charcoal-black layered combat attire, medical kit and belt, hood DOWN, white hair exposed. Cloth blocks direct skin contact in covered regions; not a magical cure or full restoration. Zero Genome remains 5/5, seven locks unchanged, isolated old biopsy within left deltoid ischemic after prior chakra collapse.
+- 06:26 wearing existing completely wrapped hands/forearms, neck, upper arms and legs beneath tidy dark combat uniform and pelerine, full-finger shinobi gloves added over wrapped hands; hood remains DOWN, white hair visible, stage6 physiology unchanged, body and skills functional but chakra reserves still depleted.
 
 ## Внешность
 - 20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.
@@ -75,5 +75,5 @@
 - chakra_control: 5
 - reflex_and_coordination: 5
 
-## Поправки игрока: 77
+## Поправки игрока: 78
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход

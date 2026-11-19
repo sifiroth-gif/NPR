@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s08.text.028`
+# Карта мира NPR · на ходе `s08.text.029`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -135,13 +135,13 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (22)
+## Линии (23)
 - `tetsu` — Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах… · `threads/tetsu`
 - `v7` — 02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги… · `threads/v7`
 - `order` — Кагэ получил от Шики обвинительные сведения о подменах медицинских и … · `threads/order`
 - `sanction` — В 09:30 получен формально действующий документ резиденции, подпись/пе… · `threads/sanction`
 - `lower_hospital` — Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Н… · `threads/lower_hospital`
-- `nemera` — 06:19 03.10: Shiki asked Nemera why she stayed instead of escaping wh… · `threads/nemera`
+- `nemera` — 03 Oct 06:26: Shiki directly asserts septuple seals weakened during e… · `threads/nemera`
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `forbidden_arts` — Шики с 19:54 до 20:21 направлял ОБЩУЮ природу Ситона на тела и остатк… · `threads/forbidden_arts`
 - `sharingan` — Цель игрока. Шарингана нет. Нужно реальное свободное время; не завали… · `threads/sharingan`
@@ -158,6 +158,7 @@
 - `kabuto_letter` — ОТКРЫТАЯ ОТЛОЖЕННАЯ СЮЖЕТНАЯ НИТЬ: 19.09.1278 в кабинете Кирисавы Сэй… · `threads/kabuto_letter`
 - `arakawa_treatment` — 03.10 00:53 после одного местного Бётон-вмешательства в трансплантат … · `threads/arakawa_treatment`
 - `s17_survivors` — 06:18 Shiki is in his current layered dark combat outfit with all pot… · `threads/s17_survivors`
+- `shiki_confidentiality` — 03 Oct 06:26 Shiki now submitted and has stamped copies of a formal p… · `threads/shiki_confidentiality`
 
 ## Вещи (4)
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`

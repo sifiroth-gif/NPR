@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera`, линия `shiki_confidentiality`, план сюжета, поправки игрока: 1
 - s08.text.028: Немера (Невыписанная) (`npc/nemera`), линия `nemera`
 - s08.text.027: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, вещь `shiki_hospital_gown_gloves`, линия `s17_survivors`, план сюжета
 - s08.text.026: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`, план сюжета
@@ -58,4 +59,3 @@
 - s07.text.011: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`)
 - s07.text.009: Аракава Дзюн (`npc/arakawa`), Курода Маю (`npc/kuroda_mayu`), Охрана Аракавы (`npc/arakawa_guard`)
 - s07.text.008: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`), Такаги Рэн (`npc/takagi_ren`)
-- s07.text.007: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
