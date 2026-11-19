@@ -5,10 +5,11 @@
   "cursor": "s08.text.054",
   "focus_byte_limit": 6600,
   "focus_bytes": 485,
-  "index_entities": 380,
+  "index_entities": 382,
   "index_source_records": 603,
   "indexed_cursor": "s08.text.054",
   "kinds": {
+    "canon": 2,
     "clock": 2,
     "entity": 1,
     "item": 7,
@@ -23,6 +24,18 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.054:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.054:1",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -517,9 +530,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 82,
-  "self_query_at_5": 82,
-  "self_query_count": 82,
+  "self_query_at_1": 84,
+  "self_query_at_5": 84,
+  "self_query_count": 84,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

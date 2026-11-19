@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s08.text.054: Кирисава Сэйна (`npc/seina`), вещь `personal_paper_reports`, вещь `stolen_house_plan`, линия `order`
+- s08.text.054: вещь `personal_paper_reports`, вещь `stolen_house_plan`, линия `order`, поправки игрока: 2
 - s08.text.053: Хаясэ Нори (`npc/nori`), Мугами Акихиро (`npc/akihiro`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), Аракава Дзюн (`npc/arakawa`)
 - s08.text.052: вещь `foreign_observation_case`, линия `order`, поправки игрока: 2
 - s08.text.051: линия `order`
