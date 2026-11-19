@@ -672,6 +672,37 @@ def _load_stats(state_dir, hot):
         shiki["stats"] = stats
 
 
+CHECK_TURNS = 3        # замечания живут три хода: дальше они история, а не задание
+OBSOLETE_CHECKS = ("review.sources must refer", "missing earliest/latest prior NPC disclosure",
+                   "source-sensitive scene must provide review.sources", "requires source-bound novelty_contrast")
+
+
+def _tidy_checks(hot):
+    """Повтор одного замечания — одна строка; старше трёх ходов — уходит из CHECKS."""
+    cursor = hot.get("cursor") or {}
+    session, seq = int(hot.get("session") or 0), int(cursor.get("seq") or 0)
+    fresh, seen = [], {}
+    present = set((hot.get("scene") or {}).get("present") or [])
+    for check in hot.get("_checks") or []:
+        text = str(check.get("text") or "")
+        if any(rule in text for rule in OBSOLETE_CHECKS):
+            continue
+        if "offscreen knows+" in text and text.split(":")[0] in present:
+            continue   # NPC уже в сцене: замечание о «заочном» знании снято
+        match = re.match(r"s(\d+)\.text\.(\d+)", str(check.get("turn") or ""))
+        if match and (int(match.group(1)) != session or seq - int(match.group(2)) >= CHECK_TURNS) \
+                and check.get("kind") not in ("plot", "fight", "memory", "will"):
+            continue
+        key = (check.get("kind"), re.sub(r"s\d+\.text\.\d+", "#", str(check.get("text"))))
+        if key in seen:
+            first = seen[key]
+            check = dict(check, since=first.get("since") or first.get("turn"))
+            fresh.remove(first)
+        seen[key] = check
+        fresh.append(check)
+    hot["_checks"] = fresh
+
+
 def _cap_cards(hot):
     """HOT держит в карточке только свежие знания и эпизоды; полные — в вики и archive/npc-memory."""
     keep = npc_memory.CARD_FIRST + npc_memory.CARD_RECENT
@@ -1014,6 +1045,7 @@ def fold(state_dir):
     hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") != "plot"]
     hot["_checks"].extend(plot.review(hot, applied))
     _cap_cards(hot)
+    _tidy_checks(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and

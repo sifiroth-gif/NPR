@@ -73,3 +73,16 @@ class ReadCheckTest(unittest.TestCase):
         notes = wiki._read_checks(store, [later, soon, opened])
         self.assertEqual([n["turn"] for n in notes], ["s05.text.010"])
         self.assertIn("`npc/nori`", notes[0]["text"])
+
+
+class RepeatCheckTest(unittest.TestCase):
+    def test_npc_repeating_an_old_line_is_flagged(self):
+        from rpg_engine import wiki
+        old = "В документах пересадки нет, и я не подпишу ничего, пока не увижу протокол инфузии целиком."
+        store = {"kadziura": dict(entity("kadziura", "Кадзиура", first="s08.text.001"),
+                                  talk=[{"turn": "s08.text.009", "said": [old]}])}
+        repeat = {"id": "s08.text.020", "gm": f"**Кадзиура:** — {old}"}
+        fresh = {"id": "s08.text.021", "gm": "**Кадзиура:** — Протокол я видел, и в нём стоит чужая подпись. Кто её поставил?"}
+        notes = wiki._repeat_checks(store, [repeat, fresh])
+        self.assertEqual([n["turn"] for n in notes], ["s08.text.020"])
+        self.assertIn("s08.text.009", notes[0]["text"])
