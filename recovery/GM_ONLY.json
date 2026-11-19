@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.036",
+ "cursor": "s08.text.037",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -707,6 +707,16 @@
      "if_unopposed": "Нао получит от мужа фактическое сообщение о появлении сына и необычайной перемене, и самостоятельно решит, когда говорить с ним",
      "status": "committed",
      "turn": "s08.text.036"
+    },
+    "secure_supplies": {
+     "goal": "Защитить прежние аптечные документы о поставках от непроверенных запросов",
+     "next": "Найти старые журналы отпуска и накладные в общей кладовой и убрать в личное запираемое хранение, не отдавая посторонним",
+     "due": "0006-10-03T11:00:00",
+     "flaw": "Стремление спрятать бумаги может выглядеть как попытка уничтожить доказательства",
+     "against_shiki": "При последующей проверке отсутствие документов на обычном месте могут истолковать против семьи",
+     "if_unopposed": "Временно переведёт найденные записи в личное хранилище, сохранив их содержание; если нужных записей не найдёт, отсутствие будет документальным пробелом",
+     "status": "committed",
+     "turn": "s08.text.037"
     }
    },
    "dread": {
@@ -726,11 +736,18 @@
       "change": "подтвердилось",
       "saw": "He now sees his known son physically alive and functional despite intact corpse-gray skin and full protective wrapping after earlier Pact disclosure.",
       "does": "Does not touch son, interrogates Seina about secured samples, decides to inform Nao of visit, demands direct explanation of predictability from Shiki."
+     },
+     {
+      "turn": "s08.text.037",
+      "at": "0006-10-03T07:44:00",
+      "change": "подтвердилось",
+      "saw": "Сын отказался продолжать тему собственной опасности, а покупательница уже пересказывает непроверенный слух о пугающем враче с длинными волосами.",
+      "does": "Прекращает давить на сына и отправляется защищать аптечные документы без согласования с ним."
      }
     ],
-    "reads": "What was alarming two days ago is accelerating; father can neither control the contract nor trust hospital/state custody of biological records.",
-    "does": "Does not touch son, interrogates Seina about secured samples, decides to inform Nao of visit, demands direct explanation of predictability from Shiki.",
-    "turn": "s08.text.036",
+    "reads": "Слухи и прежние поддельные распоряжения способны навредить частной практике и семье независимо от реального контактного риска.",
+    "does": "Прекращает давить на сына и отправляется защищать аптечные документы без согласования с ним.",
+    "turn": "s08.text.037",
     "step": "примета"
    },
    "intent_done": []
@@ -741,19 +758,15 @@
    "turn": "s08.text.036",
    "kind": "write",
    "text": "Запись хода: review: нужен только predecessor, novelty_contrast, sources не пиши; d.scene.situation 1719 знаков: только перемена и то, что нужно следующему ходу, до 600; знания NPC — в knows+, не в situation; вся запись сверх сцены 6800 знаков (норма до 4000); крупнее всего: cast 2563, scene 2539; state у akihiro длиннее 400 знаков: одна-две фразы о перемене."
+  },
+  {
+   "turn": "s08.text.037",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4106 знаков (норма до 4000); крупнее всего: cast 1961, scene 1241, threads 436."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.030",
-    "look": [
-     "волосы"
-    ],
-    "soma": [
-     "сжал"
-    ]
-   },
    {
     "turn": "s08.text.031",
     "look": [],
@@ -782,12 +795,14 @@
     "soma": [
      "сжал"
     ]
+   },
+   {
+    "turn": "s08.text.037",
+    "look": [],
+    "soma": []
    }
   ],
-  "worn": [
-   "волосы",
-   "сжал"
-  ],
+  "worn": [],
   "quiet": 0,
   "log": [
    {
@@ -1092,7 +1107,7 @@
   },
   "touched": {
    "night_icu_physician": "s08.text.033",
-   "akihiro": "s08.text.036"
+   "akihiro": "s08.text.037"
   }
  }
 }

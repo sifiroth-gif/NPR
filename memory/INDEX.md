@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s08.text.036`
+# Карта мира NPR · на ходе `s08.text.037`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -155,7 +155,7 @@
 - `case19T` — Нори знает о личной закрытой проверке главы, но по-прежнему официальн… · `threads/case19T`
 - `personal_archive` — Личный ограниченный допуск Шики к МХ–VII/19 подписан и лежит у края с… · `threads/personal_archive`
 - `anbu_transfer` — Шики сообщил личное НАМЕРЕНИЕ позже подать установленный рапорт о пер… · `threads/anbu_transfer`
-- `medical_family` — 07:37 Shiki identifies his working theory of progressive physical cha… · `threads/medical_family`
+- `medical_family` — 07:44 Akihiro knows of confidential Seina testing and hears Shiki's r… · `threads/medical_family`
 - `kabuto_letter` — ОТКРЫТАЯ ОТЛОЖЕННАЯ СЮЖЕТНАЯ НИТЬ: 19.09.1278 в кабинете Кирисавы Сэй… · `threads/kabuto_letter`
 - `arakawa_treatment` — 03.10 00:53 после одного местного Бётон-вмешательства в трансплантат … · `threads/arakawa_treatment`
 - `s17_survivors` — 06:18 Shiki is in his current layered dark combat outfit with all pot… · `threads/s17_survivors`

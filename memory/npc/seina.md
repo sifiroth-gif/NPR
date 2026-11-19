@@ -1,7 +1,7 @@
 # Кирисава Сэйна · `seina`
 
 псевдонимы: Кирисава, Сэйна
-вид: npc · впервые: s04.text.065 · последний раз: s08.text.036 · вне сцены
+вид: npc · впервые: s04.text.065 · последний раз: s08.text.037 · вне сцены
 
 ## Постоянное
 - внешность: 32 года, собранная, усталость врача в спокойном лице [campaigns/shiki/roster.json]
@@ -20,7 +20,7 @@
 - голос: Сдержанная точная медицинская речь [s04.text.065]
 
 ## Сейчас
-- положение: 07:39 Seina invited Akihiro from ordinary clinic supply duties after Shiki said he would not hide from parents. She confirmed both private specimens are still secured and returned to outer patients, leaving Shiki to decide what to share with his father. Her earlier promised confidentiality and autonomous intent toward hospital medical-privacy dispute persist; no dossier has been transferred. [s08.text.036]
+- положение: After brief exchange with Akihiro about ordinary missing pharmacy ledger, continues clinic patients. She has not released private blood samples or told any outsider Shiki's measurements. [s08.text.037]
 - вид в последней сцене: Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [s05.text.014]
 
 ## Граница знаний

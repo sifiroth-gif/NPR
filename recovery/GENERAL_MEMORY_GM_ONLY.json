@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.036",
+  "cursor": "s08.text.037",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -48,9 +48,9 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s08.text.036",
+          "seen": "s08.text.037",
           "stance": "Встревожен, не знает причин",
-          "state": "07:39 father Akihiro, interrupted while locating a misplaced routine medicine issue ledger, has seen his son stage6 for the first time and was shocked. Does not touch him; recalls threat of forged medical record requests, asks about samples and challenges him ",
+          "state": "He accepts Shiki's request to stop discussing his altered appearance, but plainly objects to being confused with hostile hospital staff. An unnamed buyer's gossip about a long-haired frightening healer alarms him; he independently decides to move old pharmacy ",
           "voice": "Сдержанная речь, срыв при волнении",
           "wants": "Сохранить спокойствие семьи и работу клиники"
         },
@@ -58,14 +58,14 @@
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
           "stance": "Встревожен, не знает причин",
-          "state": "07:39 father Akihiro, interrupted while locating a misplaced routine medicine issue ledger, has seen his son stage6 for the first time and was shocked. Does not touch him; recalls threat of forged medical record requests, asks about samples and challenges him ",
+          "state": "He accepts Shiki's request to stop discussing his altered appearance, but plainly objects to being confused with hostile hospital staff. An unnamed buyer's gossip about a long-haired frightening healer alarms him; he independently decides to move old pharmacy ",
           "wants": "Сохранить спокойствие семьи и работу клиники"
         }
       ],
       "sources": [
         "recovery/cast/akihiro.json",
         "recovery/HOT.json",
-        "s08.text.036"
+        "s08.text.037"
       ]
     },
     "arai_mitiko": {
@@ -2698,12 +2698,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.036",
+        "s08.text.037",
         "s08.text.030",
         "s08.text.031",
         "s08.text.032",
         "s08.text.033",
-        "s08.text.034"
+        "s08.text.034",
+        "s08.text.036"
       ]
     },
     "place:453c1d7e7dfbb4dc": {
@@ -7004,9 +7005,9 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.036",
+          "seen": "s08.text.037",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:39 Seina invited Akihiro from ordinary clinic supply duties after Shiki said he would not hide from parents. She confirmed both private specimens are still secured and returned to outer patients, leaving Shiki to decide what to share with his father. Her ea",
+          "state": "After brief exchange with Akihiro about ordinary missing pharmacy ledger, continues clinic patients. She has not released private blood samples or told any outsider Shiki's measurements.",
           "voice": "Сдержанная точная медицинская речь",
           "wants": "Поддерживать независимую медицинскую практику"
         },
@@ -7014,14 +7015,14 @@
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:39 Seina invited Akihiro from ordinary clinic supply duties after Shiki said he would not hide from parents. She confirmed both private specimens are still secured and returned to outer patients, leaving Shiki to decide what to share with his father. Her ea",
+          "state": "After brief exchange with Akihiro about ordinary missing pharmacy ledger, continues clinic patients. She has not released private blood samples or told any outsider Shiki's measurements.",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s08.text.036"
+        "s08.text.037"
       ]
     },
     "senior_orderly": {
@@ -7423,11 +7424,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "07:37 Shiki identifies his working theory of progressive physical changes as integrated Byoton and Shiton influence, not proof of cause or comment on seal strength. Seina records it as a hypothesis, no technical activation or new tests and safely locks old red Oct01 and newer nearly black Oct03 blood for private research. Both r"
+          "state": "07:44 Akihiro knows of confidential Seina testing and hears Shiki's request to stop conversations about his dangerous appearance; father accepts topic boundary, chooses to secure general clinic supply ledgers after customer gossip and past forged orders. Nao not yet told/seen Shiki today. Seina continues working and keeps Shiki'"
         }
       ],
       "sources": [
-        "s08.text.034"
+        "s08.text.037"
       ]
     },
     "thread:nemera": {
@@ -7926,5 +7927,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 585
+  "source_turns_indexed": 586
 }
