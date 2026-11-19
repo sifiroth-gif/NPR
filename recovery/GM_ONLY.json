@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.026",
+ "cursor": "s08.text.027",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -11,13 +11,6 @@
     "due": "0006-10-03T08:15:00",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов."
-   },
-   "s17_cast_comparison": {
-    "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
-    "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности.",
-    "due": "0006-10-03T06:10:00",
-    "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
-    "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов."
    },
    "medical_notice_registry_trace": {
     "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
@@ -35,12 +28,6 @@
    }
   },
   "resolved": [
-   {
-    "id": "thread:family_visit",
-    "at": "0006-10-03T03:09:00",
-    "turn": "s08.text.012",
-    "outcome": "Закрыт конкретный завершившийся визит с ночёвкой и завтраком у родителей. Ожидаемые анализы Сэйны, семейные тайны и намерения родителей остались открыты в других линиях."
-   },
    {
     "id": "thread:attire",
     "at": "0006-10-03T03:09:00",
@@ -74,6 +61,13 @@
     "turn": "s08.text.021",
     "outcome": "04:30 staff assessed Shiki still unconscious but spontaneously breathing with protected gloved examinations; continued observation until waking 05:46, despite body temperature ~29.4 and progressive blood/tissue changes.",
     "what": "Контроль сознания, дыхания и кровообращения Шики при выраженном истощении чакры; без прямого кожного контакта"
+   },
+   {
+    "id": "clock:s17_cast_comparison",
+    "at": "0006-10-03T06:18:00",
+    "turn": "s08.text.027",
+    "outcome": "06:10 03.10: ICU and hospital lab completed requested morphological comparison of recipient6 bronchial casts with archived S17 recipient samples. Comparability of surviving archive material is insufficient to establish identical tissue provenance or a shared donor; no imaginary donor identified. Inconclusive outcome retained in patient6 case for Kadziura, not spontaneously communicated to Shiki.",
+    "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
    }
   ],
   "due_now": [],
@@ -249,19 +243,28 @@
     "step": "необратимость"
    }
   },
-  "s17_recipient_6": {}
+  "s17_recipient_6": {},
+  "nemera": {
+   "dread": {
+    "stage": 1,
+    "since": "s08.text.027",
+    "log": [
+     {
+      "turn": "s08.text.027",
+      "at": "0006-10-03T06:18:00",
+      "change": "калибровка",
+      "saw": "Through the voluntarily opened sensory window, Nemera experiences human clinicians alternately healing with Shiki's help, hoarding his near-black blood and recoiling from his presence; she herself re…",
+      "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched."
+     }
+    ],
+    "reads": "Human fear makes staff preserve dangerous material, seek protection and exercise authority in conflicting ways; their choices offer her information about confinement and control.",
+    "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched.",
+    "turn": "s08.text.027",
+    "step": "примета"
+   }
+  }
  },
  "checks": [
-  {
-   "turn": "s08.text.011",
-   "kind": "review",
-   "text": "review.sources must refer to exact prior played turns"
-  },
-  {
-   "turn": "s08.text.011",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.010"
-  },
   {
    "turn": "s08.text.015",
    "kind": "review",
@@ -328,20 +331,23 @@
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
   },
   {
-   "turn": "s08.text.026",
+   "turn": "s08.text.027",
+   "kind": "look",
+   "text": "внешность Шики описана 5 раза (ворот, пелерина, капюшон, волосы, капюшон). Ужас — в чужом поступке и последствии, а не в облике"
+  },
+  {
+   "turn": "s08.text.027",
+   "kind": "review",
+   "text": "nemera: offscreen knows+ requires knowledge_events with source/channel"
+  },
+  {
+   "turn": "s08.text.027",
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.021",
-    "look": [
-     "волосы"
-    ],
-    "soma": []
-   },
    {
     "turn": "s08.text.022",
     "look": [],
@@ -368,9 +374,22 @@
     "turn": "s08.text.026",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s08.text.027",
+    "look": [
+     "ворот",
+     "пелерина",
+     "капюшон",
+     "волосы",
+     "капюшон"
+    ],
+    "soma": []
    }
   ],
-  "worn": [],
+  "worn": [
+   "пелерина"
+  ],
   "quiet": 0,
   "log": [
    {
@@ -620,8 +639,8 @@
     "title": "Цепь приказа",
     "question": "Кто конкретно инициировал попытки устранить Шики, с какими полномочиями, мотивом и каналом сведений?",
     "endings": [
-     "Заказчик, исполнители, мотив и путь передачи приказа доказаны или честно разделены на установленные и неизвестные звенья.",
-     "Доказан один участок цепи, а иные участники самостоятельно сохранили или изменили контроль.",
+     "Заказчик, исполнители, мотив и путь передачи приказа доказаны либо честно разделены на установленные и неизвестные звенья.",
+     "Доказан один участок цепи, а иные участники самостоятельно сохранили либо изменили контроль.",
      "Возможность доказать личный приказ потеряна вследствие событий; реальные последствия сохраняются.",
      "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
     ],

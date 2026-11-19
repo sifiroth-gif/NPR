@@ -1,18 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.026",
+ "cursor": "s08.text.027",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.011",
-   "kind": "review",
-   "text": "review.sources must refer to exact prior played turns"
-  },
-  {
-   "turn": "s08.text.011",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.010"
-  },
   {
    "turn": "s08.text.015",
    "kind": "review",
@@ -79,7 +69,17 @@
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
   },
   {
-   "turn": "s08.text.026",
+   "turn": "s08.text.027",
+   "kind": "look",
+   "text": "внешность Шики описана 5 раза (ворот, пелерина, капюшон, волосы, капюшон). Ужас — в чужом поступке и последствии, а не в облике"
+  },
+  {
+   "turn": "s08.text.027",
+   "kind": "review",
+   "text": "nemera: offscreen knows+ requires knowledge_events with source/channel"
+  },
+  {
+   "turn": "s08.text.027",
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }

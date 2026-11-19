@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.026",
+  "cursor": "s08.text.027",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -358,24 +358,18 @@
     "clock:s17_cast_comparison": {
       "aliases": [
         "clock:s17 cast comparison",
-        "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности.",
+        "s17 cast comparison",
         "s17_cast_comparison"
       ],
       "facts": [],
       "id": "clock:s17_cast_comparison",
       "kind": "clock",
-      "label": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности.",
+      "label": "s17 cast comparison",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "due": "0006-10-03T06:10:00",
-          "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
-          "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
-        }
-      ],
+      "projections": [],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "s08.text.027"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -593,8 +587,7 @@
     "kadziura_satoru": {
       "aliases": [
         "kadziura satoru",
-        "Кадзиура Сатору",
-        "kadziura_satoru"
+        "Кадзиура Сатору"
       ],
       "facts": [],
       "id": "kadziura_satoru",
@@ -652,8 +645,7 @@
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
-        "recovery/HOT.json",
-        "s08.text.026"
+        "recovery/HOT.json"
       ]
     },
     "kage_doppelganger": {
@@ -1189,14 +1181,24 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+          "seen": "s08.text.027",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-          "state": "Молчит. Седьмой запор цел.",
+          "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; mentions earlier one-minute disgust Shiki voluntarily gave her and ironic fact he too sealed",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
+          "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
+        },
+        {
+          "fears": "Ничего человеческого. Ей противна неподвижность.",
+          "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+          "stance": "Противник, который говорит правду, когда правда ей выгодна.",
+          "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; mentions earlier one-minute disgust Shiki voluntarily gave her and ironic fact he too sealed",
           "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "recovery/HOT.json",
+        "s08.text.027"
       ]
     },
     "night_icu_physician": {
@@ -4155,6 +4157,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.027",
         "s08.text.026"
       ]
     },
@@ -7031,13 +7034,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shiki",
+          "holder": "hospital",
           "since": "s08.text.002",
-          "turn": "s08.text.002"
+          "turn": "s08.text.027"
         }
       ],
       "sources": [
-        "s08.text.002"
+        "s08.text.027"
       ]
     },
     "shiki_upper_clothing": {
@@ -7054,11 +7057,11 @@
         {
           "holder": "shiki",
           "since": "s08.text.002",
-          "turn": "s08.text.026"
+          "turn": "s08.text.027"
         }
       ],
       "sources": [
-        "s08.text.026"
+        "s08.text.027"
       ]
     },
     "takagi_ren": {
@@ -7518,11 +7521,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "06:06, recipient6 remains ventilated on ongoing S17 with improved bronchial patency after nsp-delta-targeted intervention; long-term efficacy, residual implanted stroma origins and dependency unknown, immediate rescue sub-arc closed with partial success at heavy cost to Shiki. Shiki reclaimed clothes and equipment, asked for cot"
+          "state": "06:18 Shiki is in his current layered dark combat outfit with all potentially exposed hand/forearm/neck/legs and partial shoulders wrapped, hood remains down; using two ward cloth-wrap packages plus own, accounting due, extra stock not delivered. Nemera privately comments on self-interested and conflicting human fears and hospit"
         }
       ],
       "sources": [
-        "s08.text.026"
+        "s08.text.027"
       ]
     },
     "thread:sanction": {
@@ -7843,19 +7846,19 @@
   "links": [
     {
       "from": "shiki_upper_clothing",
-      "source": "s08.text.026",
+      "source": "s08.text.027",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
     },
     {
       "from": "shiki_hospital_gown_gloves",
-      "source": "s08.text.002",
+      "source": "s08.text.027",
       "status": "projected",
-      "to": "shiki",
+      "to": "hospital",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 576
+  "source_turns_indexed": 577
 }

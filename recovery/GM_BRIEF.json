@@ -6,19 +6,19 @@
  "checks": [
   {
    "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.015",
-   "turn": "s08.text.023"
+   "text": "nemera: offscreen knows+ requires knowledge_events with source/channel",
+   "turn": "s08.text.027"
   },
   {
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`).",
-   "turn": "s08.text.026"
+   "turn": "s08.text.027"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.026",
+  "cursor": "s08.text.027",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -27,12 +27,13 @@
   },
   "focus": [
    "recipient6",
-   "kadziura_satoru",
+   "nemera",
    "place:8a0569cc4112e23e",
-   "orderly",
-   "thread:order"
+   "thread:lower_hospital",
+   "thread:nemera",
+   "thread:pact"
   ],
-  "focus_bytes": 3474,
+  "focus_bytes": 3722,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -51,26 +52,21 @@
   "gone": [],
   "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
   "things": {
-   "shiki_hospital_gown_gloves": {
-    "holder": "shiki",
-    "since": "s08.text.002",
-    "turn": "s08.text.002"
-   },
    "shiki_upper_clothing": {
     "holder": "shiki",
     "since": "s08.text.002",
-    "turn": "s08.text.026"
+    "turn": "s08.text.027"
    }
   }
  },
  "cursor": {
-  "at": "0006-10-03T06:06:00",
+  "at": "0006-10-03T06:18:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.026",
+  "id": "s08.text.027",
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с палатой №6",
-  "time": "06:06"
+  "time": "06:18"
  },
- "digest": "58a6b9828b358c25edaf417e836b32cb61b30aa67a3d0cc5c0984436685755f8",
+ "digest": "6fa8c8394556eb112b2349102471d705e03564bbf4dbae6498da3ea3eecc0170",
  "entity_memory": {
   "activated": [
    {
@@ -121,33 +117,25 @@
   "total_activated": 1
  },
  "evidence_graph": {
-  "edges": [
-   {
-    "actor": "kadziura_satoru",
-    "from": "s08.text.007",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.025"
-   }
-  ],
+  "edges": [],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
  "fight": {
   "dice": [
-   34,
-   45,
-   83,
-   55,
-   53,
+   65,
+   8,
+   95,
+   84,
+   39,
+   40,
+   73,
+   82,
    13,
-   76,
-   6,
-   79,
-   66,
-   6,
-   6
+   32,
+   11,
+   50
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -182,14 +170,14 @@
    },
    {
     "facts": [],
-    "id": "kadziura_satoru",
+    "id": "nemera",
     "kind": "npc",
     "operational_cues": {
-     "source": "recovery/cast/kadziura_satoru.json",
+     "source": "recovery/cast/nemera.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик созн",
-      "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17"
+      "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+      "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; me"
      }
     }
    },
@@ -208,15 +196,14 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "orderly",
-    "kind": "npc",
-    "label": "Неустановленный санитар резиденции",
+    "id": "thread:lower_hospital",
+    "kind": "thread",
+    "label": "lower hospital",
     "operational_cues": {
-     "source": "recovery/cast/orderly.json",
+     "source": "s05.text.031",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "body": "Прибежал с полевым набором, открывал упаковки и готовил венозный доступ",
-      "role": "Подсобный медперсонал при Кагэ"
+      "state": "Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Нижнего госпиталя по сообщению Шики, их судьбы не объявлять подтверждённо спасёнными, пока нет фактиче"
      }
     },
     "status": "no_verified_facts"
@@ -226,14 +213,31 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "thread:order",
+    "id": "thread:nemera",
     "kind": "thread",
-    "label": "order",
+    "label": "nemera",
     "operational_cues": {
-     "source": "s05.text.017",
+     "source": "s05.text.043",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "state": "Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям ка"
+      "state": "Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпита"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "thread:pact",
+    "kind": "thread",
+    "label": "pact",
+    "operational_cues": {
+     "source": "recovery/HOT.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
      }
     },
     "status": "no_verified_facts"
@@ -245,7 +249,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 5
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -258,13 +262,13 @@
  "horror": {
   "due": null,
   "npcs": {
-   "kadziura_satoru": {
-    "does": "Draws practical room boundaries and directs nurse to bring cloth supplies, but does not rebuke her disgust toward Shiki.",
-    "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "A bizarre ability that saved one boy is now an occupational and social fear undermining ward confidence; clinical care continues but public tolerance erodes.",
-    "stage": 4,
-    "step": "необратимость"
+   "nemera": {
+    "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched.",
+    "lever": "Ничего человеческого. Ей противна неподвижность.",
+    "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
+    "reads": "Human fear makes staff preserve dangerous material, seek protection and exercise authority in conflicting ways; their choices offer her information about confinement and control.",
+    "stage": 1,
+    "step": "примета"
    }
   },
   "quiet": 0,
@@ -279,17 +283,19 @@
    }
   ],
   "rule": "campaigns/shiki/ref/HORROR.md",
-  "worn": []
+  "worn": [
+   "пелерина"
+  ]
  },
  "last": {
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 26,
+   "appearances": 34,
    "facets": 0,
    "need": 5,
-   "npc": "kadziura_satoru",
+   "npc": "nemera",
    "tier": "deep"
   }
  ],
@@ -298,7 +304,7 @@
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
-   "kadziura_satoru"
+   "nemera"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": [
@@ -306,12 +312,6 @@
     "clock_id": "arakawa_supply_audit",
     "due": "0006-10-03T08:15:00",
     "owner": "Аракава Дзюн",
-    "status": "unresolved_actor_or_non_npc_owner"
-   },
-   {
-    "clock_id": "s17_cast_comparison",
-    "due": "0006-10-03T06:10:00",
-    "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "status": "unresolved_actor_or_non_npc_owner"
    },
    {
@@ -402,84 +402,57 @@
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
-  "kadziura_satoru": {
+  "nemera": {
    "alignment": {
-    "breaking_point": "При реальном скором ухудшении может согласиться на рискованный индивидуальный эксперимент",
-    "code": "NG",
-    "line": "Не вводит неподтверждённый носитель четырём больным по одному обещанию",
-    "order": "Врачебная ответственность выше формального протокола, но не отменяет безопасности"
+    "breaking_point": "Реальный шанс свободы может привести к опасной сделке либо неожиданной верности своему слову",
+    "code": "CN",
+    "line": "Не признаёт над собой правосудия тюремщика",
+    "order": "Отрицает право чужой системы замков навсегда определять её бытие"
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
    "look": {
-    "внешность": "крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза",
-    "возраст": "около 50 (1283)",
-    "пол": "мужской"
+    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.nemera.look"
    },
-   "prior_disclosure_ids": [
-    "s08.text.007",
-    "s08.text.009",
-    "s08.text.010",
-    "s08.text.015",
-    "s08.text.016",
-    "s08.text.022",
-    "s08.text.023",
-    "s08.text.025"
-   ],
    "prior_disclosures": [
     {
-     "at": "0006-10-03T02:54:00",
-     "sha256": "2af415a76d3366e8c7a94fd420809cc2a5b6907fa2485e3b280df59d54f179e2",
+     "at": "0006-10-03T06:18:00",
+     "sha256": "e9c688eecc42e545e30a55f15db9749fb17bb02f75d0baaf72bc3b2faff21be5",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.007"
-    },
-    {
-     "at": "0006-10-03T05:49:00",
-     "sha256": "f35e79db6d9672caa8923182879ae692927bc1c1f621612de68c914416418edf",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.023"
-    },
-    {
-     "at": "0006-10-03T06:01:00",
-     "sha256": "2cddfbe7404ca02a7889ee4395810093a29e28bffdd06e8f80a29b1e275a4531",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.025"
+     "turn": "s08.text.027"
     }
    ],
    "profile": {
-    "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
-    "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-    "first": "s07.text.033",
+    "fears": "Ничего человеческого. Ей противна неподвижность.",
+    "first": "s04.text.037",
+    "hides": "См. offscreen.truth.nemera.",
     "knows": [
-     "05:49 duty doctor explicitly confirms to Shiki that internal committee notice contains his name, witnessed Byoton, blood anomaly and precautionary contact warning, sent without his consent, while full lab resul",
-     "At 05:51 Shiki announces he will personally complain to medical and medical ethics commissions about unauthorized release, alludes to undisclosed documents and claims he and Kage are aware of broader concerning",
-     "06:01 Shiki directly invokes status jōnin of Kusa to formally demand destruction of his 2 blood samples and confidentiality of clinical analyses as private and potentially secret; if not immediately destroyed h",
-     "06:02 Shiki took his clothing and medical belt, asked to change in a ward and acquire extra cloth wrapping bandages, offered to pay. Other workers recoil from visible stage6 appearance, but no confirmed airborn"
+     "Только то, что Шики говорит ей по четвёртому каналу, и механику своей стороны замков",
+     "Не видит, не слышит, памяти не читает",
+     "Имя Шики и то, что он врач",
+     "06:18 Shiki mentally asks Nemera for her opinion of humans after he experienced revulsion and records dispute. Through his pre-existing one-way granted sensory access she has heard staff openly insult and avoid"
     ],
-    "knows_ref": "memory/npc/kadziura_satoru.md",
-    "knows_total": 8,
-    "leverage": "Ответственный врач координирует решения и доступ к четырём картам, назначает врачей по отдельным пациентам и ночные обходы",
+    "knows_ref": "memory/npc/nemera.md",
+    "leverage": "Знает Ситон и Бётон изнутри: они выросли из её давления. Знает, что врачи госпиталя делали с носителями.",
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.026",
-      "what": "Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные."
+      "turn": "s08.text.027",
+      "what": "Шики перевязал кисти, предплечья, часть плеч, шею и ноги, облачился в свою форму с опущенным капюшоном. Немера через прежнее чувственное окно высказала независимый взгляд на страх и распоряжения людей"
      }
     ],
-    "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 26,
-    "name": "Кадзиура Сатору",
-    "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.026",
-    "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "06:06 escorts Shiki to earlier observation room, authorizes private use to change, refuses occupied ICU room6, requests additional cotton cloth wrapping supplies for paid release through accounting. Has seen staff recoil and insulting talk; enforces medical duties but doesn't make them feign affection or prevent prejudice. Preserves sealed blood samples and patient6 records, treats patient6 airway as limited positive outcome with unresolved S17 dependence.",
+    "memory_file": "archive/npc-memory/nemera.json",
+    "memory_total": 34,
+    "name": "Немера (Невыписанная)",
+    "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+    "seen": "s08.text.027",
+    "stance": "Противник, который говорит правду, когда правда ей выгодна.",
+    "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; mentions earlier one-minute disgust Shiki voluntarily gave her and ironic fact he too sealed Nemera away. No sensory, mental, motor or pact boundary changes; remains unfreed and independently interested in future human attempts to use Shiki.",
     "status": "present_profile",
     "tier": "deep",
-    "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
-    "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
+    "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
+    "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
    },
    "source_ref": "archive/session-*-turns.jsonl"
   }
@@ -488,45 +461,43 @@
   {
    "id": "s08.text.026",
    "line": "Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные. Медицинская арка №6 завершена частичным успехом."
+  },
+  {
+   "id": "s08.text.027",
+   "line": "Шики перевязал кисти, предплечья, часть плеч, шею и ноги, облачился в свою форму с опущенным капюшоном. Немера через прежнее чувственное окно высказала независимый взгляд на страх и распоряжения людей; запоры неизменны."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "At 06:06 Shiki with collected clothing and integrated medical gear in adjacent observation room, wearing previous hospital gown and gloves until player chooses to change; two packs of cloth bandages on chair, additional order to stock pending paid release. Kadz at outer doorway exiting; nurse and orderly back in corridor/staff post. Recipient6 in ICU room6 on ventilator/S17. Blood samples locked in Kadz office. Shiki severely chakra depleted but physically fully functional with intact max-stage6 skin.",
-  "pressure": "Shiki's outward max-stage6 uncanny appearance has now made ordinary hospital staff openly hostile and avoid touching or sharing rooms; Kadz places practical restrictions and does not force staff to respect Shiki socially. Personal equipment reclaimed; blood privacy issue and ethics review still open.",
-  "situation": "06:02-06:06 03.10: Shiki collects own dark upper-clothing and medical belt/gear from assigned place outside ICU room6, asks Kadz permission to change inside ward and to buy extra cloth wrapping bandages. Does not yet put gear on or wrap body. Kadz disallows changing inside sterile occupied ICU room6, grants privacy in previously used adjacent observation room. An ICU nurse sees Shiki's deathly gray cold but INTACT skin, dark vessels at neck, and smells close-range metal/iodine/old bandages/grave soil; she recoils, expresses sharp hostility about the alleged contagion risk and Shiki still moving through medical ward. A male ward orderly sees Shiki and retreats in discomfort; his actual reaction is visible and is not an established transmission danger. Kadz is curt, holds medical boundary but does not falsely affirm airborne infection; despite soldierly clinical detachment he refuses to reprimand two staff for personal comments expressing disgust and desire for Shiki to leave. Nurse is still professionally responsive to a clear order: fetches two packs of cotton cloth wrapping bandages, sets on chair in observation room refusing direct handover, and has requisitioned additional stock for billed paid release; payment/quantity not processed yet and packages are offered, NOT automatically owned by Shiki. Kadz leaves door ajar for user to close/undress at will, and no additional user action assumed. He notes recipient6 airway improvement persists in visual clinical check but ongoing S17/ventilation dependence and unknown graft origin, long-term gene edits unproven. The two near-black Shiki blood vials remain secured separately in Kadz office awaiting resolution of formal destruction petition; hospital log audit at ~07:05 pending. No direct skin or blood exposure occurred. No "
+  "positions": "06:18 Shiki alone in closed observation room, fully dressed in current neat black layered battle garb with hood down and long white hair uncovered, hands/fingers, whole forearms, parts upper arms, neck and legs securely cloth wrapped, medical equipment belt and tools in place. Former medical gown and gloves left in observation room. Two ward cloth-wrap packs consumed plus own wrapping material, invoice due at ward post; additional requested supplies still pending. Nemera communicates only through previously granted sensory/semantic channel while held behind seven seals. Other staff in corridor, Kadz elsewhere managing ward and source record.",
+  "pressure": "Visible corpse-like appearance may be partially masked by wraps but near scent and uncovered face remain; other staff independently suspicious. Nemera uses Shiki's direct question to compare unequal human reactions and tease the irony of his seven locks. No change in pact stage6 or Nenmera captivity; limited chakra after collapse.",
+  "situation": "03.10 06:07–06:18: Shiki closes observation room door, voluntarily removes hospital gown and gloves, uses his own wraps plus the two cotton-cloth bandage packets offered by ward to cover fingers/hands, full forearms and portions of upper arms, neck, exposed lower limbs, leaving enough joint flexibility for hand seals; applies his sole current dark layered Kusa shinobi robe/pelerine, high collar and medical belt/senbon tools, HOOD DOWN and white hair visible. Skin remains COMPLETELY INTACT beneath, temperature ~29.4C, corpse-like pale-gray but no peeling/flaking/necrotic spots. The wraps physically block routine bare-skin contact but do not stop internal pact or guarantee sterility if damaged. Shiki asks mentally 'Немера, что сейчас скажешь про людей?'. Nemera answers through EXISTING deliberate one-way sensory access + semantic two-way bridge: she remembers Shiki voluntarily lending exactly one minute of disgust from earlier, analyzes distinct staff motives for recoil and data control, compares hospital notes to doors/locks she knew in Lower Hospital, finds irony Shiki also imprisons her, and expresses curiosity how humans behave when next needing Shiki's help. She neither reads his mind nor seeks additional access, movement/pact seven binding seals unchanged. Nurse knocks at 06:18 to say cotton wrap invoice will be processed at post, additional packets from stock not yet delivered; she leaves without encounter. Shiki has not paid yet; account pending for use of the two ward-provided bandage packs. At 06:10 offscreen Kadz + hospital laboratory completed assigned morphological comparison of recipient6 cast samples with available archive: insufficient comparable reference specimens for definitive identification of same donor/source; no true provenance determined, result o"
  },
  "shiki": {
-  "body": "05:46 03.10.1283 conscious, still severely chakra depleted, otherwise fully functional and physically competent at max pact STAGE6. Intact cold pale-gray skin no peeling, no spots, no scabs, no flakes, no visible necrosis. Core 29.3-29.4C, HR52 sinus BP108/66; near-black functional blood, chakra-filament networks across circulation/interstitial/lymph and organs, normal oxygen delivery, cognition, muscles, healing capacity. Direct bare skin to bare living skin, fresh blood to open wound/mucosa potentially contagious only; not through clothing, gloves, dry blood, air, smell, or objects. Near scent iron/iodine/old bandages/grave soil. Seven locks closed. Tiny ischemic unassimilated bronchial biopsy still in left deltoid.",
+  "body": "06:18 03.10 Shiki's stage6 max-state blood, core low temperature, wholly intact grayish skin and clothed contagious contact mechanics unchanged; severe chakra depletion persists. He wraps hands/fingers/forearms completely and partial shoulders, neck and legs with cotton bandages and puts on established neat charcoal-black layered combat attire, medical kit and belt, hood DOWN, white hair exposed. Cloth blocks direct skin contact in covered regions; not a magical cure or full restoration. Zero Genome remains 5/5, seven locks unchanged, isolated old biopsy within left deltoid ischemic after prior chakra collapse.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
  "source_passages": {
-  "s08.text.007": {
-   "gm_excerpt": "*Вторник, 3 октября 1283 года. 02:40–02:54.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Я начну регенерацию, аккуратно там, где смогу без риска, — сказал Шики.\n\n**Кадзиура Сатору** поднялся со стула. При этих словах его взгляд на мгновение задержался на руках Шики, а пальцы сильнее сжали край истории болезни.\n\n— Покажите, какие участки отвечают, — произнёс он. — Я буду следить за вентиляцией и кровотечением.\n\nОн отступил к монитору и назвал анестезиологу прежние показатели, чтобы тот записал их до вмешательства.\n\nМедицинская чакра изме\n[... sou…",
-   "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
-   "source": "archive/session-008-turns.jsonl"
-  },
-  "s08.text.025": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 05:54.**\n\n*Кусагакуре. Центральный госпиталь. Палата наблюдения.*\n\n— Видимо, она не была на комиссии по этике. Одних наблюдений там будет недостаточно.\n\nКадзиура промолчал.\n\n**Шики:**\n\n— Отведите меня к моему снаряжению. А образцы моей крови я официально прошу уничтожить. Как дзёнин Кусы. Моя кровь и результаты анализов относятся ко мне, являются частью моей частной жизни и моих тайн.\n\nОн указал на закрытые пробирки.\n\n— Если вы не готовы, ищите основания для сохранения. Главное — не выпускайте их в свет.\n\n***\n\nКа\n[... sou…",
-   "player": "Видимо не была на комиссии по этике. Наблюдений там будет недостаточно. Отведите меня к моему снаряжению, а образцы моей крови. Я официально прошу уничтожить как дзенин, моя кровь и мои анализы относятся ко мне и являются частью моей частно",
+  "s08.text.027": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:07.**\n\n*Кусагакуре. Центральный госпиталь. Палата наблюдения.*\n\nЗамок щёлкнул.\n\nШики снял больничный халат, затем перчатки. На столе лежали упаковки хлопчатобумажных бинтов, собственные перевязочные материалы и чёрное снаряжение.\n\nБез одежды изменения тела были заметны гораздо отчётливее.\n\nПод цельной, мертвенно-бледной кожей проступали почти чёрные сосуды. Их ветвления не вполне соответствовали человеческой анатомии: некоторые линии уходили в глубину, некоторые соединялись с семью запирающими контурами на гру\n[... sou…",
+   "player": "#закрываю дверь снимаю больничную одежду и перематываю все открытые участки, руки полностью все предплечье и часть плеча, шею, ноги и надеваю свое снаряжение, капюшон не накидываю, мысленно при этом процессе# Немера, что сейчас скажешь про ",
    "source": "archive/session-008-turns.jsonl"
   }
  },
  "source_passages_ref": "archive/session-*-turns.jsonl",
  "source_passages_truncated": true,
- "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "1ffbcb31b94ee4757e9b3b5d09169954309f478d",
-  "turn": "s08.text.026"
+  "sha": "d6d0666589137571291bdfb3f3e446cb2551c380",
+  "turn": "s08.text.027"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "kadziura_satoru": "memory/npc/kadziura_satoru.md"
+   "nemera": "memory/npc/nemera.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
@@ -534,21 +505,10 @@
  "world": {
   "clocks": [
    {
-    "due": "0006-10-03T06:10:00",
-    "id": "s17_cast_comparison",
-    "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 4.0,
-    "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
-    "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
-    "source": "recovery/GM_ONLY.json:offscreen.clocks.s17_cast_comparison",
-    "status": "scheduled",
-    "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
-   },
-   {
     "due": "0006-10-03T07:05:00",
     "id": "medical_notice_registry_trace",
     "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа.",
-    "minutes": 59.0,
+    "minutes": 47.0,
     "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
     "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.medical_notice_registry_trace",
@@ -559,18 +519,18 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 129.0,
+    "minutes": 117.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
     "status": "scheduled",
-    "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанн…"
+    "what": "Самостоятельная проверка доступных ему бумаг по личному снабжению С-17, цепь назначений и подтверждений каждой дозы. Не искать Реестр невыписанных."
    },
    {
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без вы…",
-    "minutes": 204.0,
+    "minutes": 192.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",
