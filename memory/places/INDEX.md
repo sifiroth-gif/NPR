@@ -153,3 +153,4 @@
 - Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
 - Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
 - Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
+- Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 1 ход(ов), s08–s08
