@@ -77,6 +77,7 @@
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
 - Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 2 ход(ов), s06–s06
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -150,4 +151,3 @@
 - Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
 - Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 1 ход(ов), s08–s08
