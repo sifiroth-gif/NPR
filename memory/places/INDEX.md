@@ -33,11 +33,11 @@
 - Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
+- Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 6 ход(ов), s08–s08
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
-- Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s08–s08
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04

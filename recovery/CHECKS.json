@@ -1,12 +1,12 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.035",
+ "cursor": "s08.text.036",
  "fold_errors": [],
  "checks": [
   {
-   "turn": "s08.text.033",
-   "kind": "intent",
-   "text": "намерение shift_blame: статус partial_success"
+   "turn": "s08.text.036",
+   "kind": "write",
+   "text": "Запись хода: review: нужен только predecessor, novelty_contrast, sources не пиши; d.scene.situation 1719 знаков: только перемена и то, что нужно следующему ходу, до 600; знания NPC — в knows+, не в situation; вся запись сверх сцены 6800 знаков (норма до 4000); крупнее всего: cast 2563, scene 2539; state у akihiro длиннее 400 знаков: одна-две фразы о перемене."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

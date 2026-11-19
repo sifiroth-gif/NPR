@@ -70,15 +70,15 @@
  },
  "checks": [
   {
-   "kind": "intent",
-   "text": "намерение shift_blame: статус partial_success",
-   "turn": "s08.text.033"
+   "kind": "write",
+   "text": "Запись хода: review: нужен только predecessor, novelty_contrast, sources не пиши; d.scene.situation 1719 знаков: только перемена и то, что нужно следующему ходу, до 600; знания NPC — в knows+, не в situation; вся запись сверх сцены 6800 знаков (норма до 4000); крупнее всего: cast 2563, scene 2539; state у akihiro длиннее 400 знаков: одна-две фразы о перемене.",
+   "turn": "s08.text.036"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.035",
+  "cursor": "s08.text.036",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -86,15 +86,13 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "seina",
-   "place:44fbe9adb51ae417",
    "akihiro",
-   "nemera",
-   "thread:nemera",
+   "place:44fbe9adb51ae417",
+   "seina",
    "thread:pact",
    "thread:parents"
   ],
-  "focus_bytes": 3774,
+  "focus_bytes": 2775,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -121,13 +119,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T07:37:00",
+  "at": "0006-10-03T07:39:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.035",
+  "id": "s08.text.036",
   "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-  "time": "07:37"
+  "time": "07:39"
  },
- "digest": "6851d74a9e5812f391378320cb6869aaafc044e4179125efb91e9b53a357fd4f",
+ "digest": "cfa46c93c6d1ce4817bacaf4c1acdd7d15aa3b8a2ad69cd791ac676dc2620e10",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -138,11 +136,11 @@
  "evidence_graph": {
   "edges": [
    {
-    "actor": "seina",
-    "from": "s08.text.031",
+    "actor": "akihiro",
+    "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.033"
+    "to": "s08.text.031"
    }
   ],
   "nodes": [],
@@ -150,26 +148,26 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Кирисава Сэйна — слышал(а) с s05.text.030."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Мугами Акихиро — слышал(а) с s05.text.030."
  ],
  "fight": {
   "chakra": {
    "state": "пусто",
-   "value": 8.5
+   "value": 8.7
   },
   "dice": [
-   29,
-   28,
-   64,
-   2,
-   84,
-   42,
-   81,
-   26,
-   56,
-   71,
-   4,
-   50
+   3,
+   89,
+   91,
+   20,
+   31,
+   91,
+   92,
+   25,
+   43,
+   79,
+   22,
+   22
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -180,14 +178,14 @@
   "activated": [
    {
     "facts": [],
-    "id": "seina",
+    "id": "akihiro",
     "kind": "npc",
     "operational_cues": {
-     "source": "recovery/cast/seina.json",
+     "source": "recovery/cast/akihiro.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
-      "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета"
+      "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
+      "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны"
      }
     }
    },
@@ -206,50 +204,15 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "akihiro",
+    "id": "seina",
     "kind": "npc",
-    "label": "Мугами Акихиро",
+    "label": "Кирисава Сэйна",
     "operational_cues": {
-     "source": "recovery/cast/akihiro.json",
+     "source": "recovery/cast/seina.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
-      "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "nemera",
-    "kind": "npc",
-    "label": "Немера (Невыписанная)",
-    "operational_cues": {
-     "source": "recovery/cast/nemera.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-      "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her form"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "thread:nemera",
-    "kind": "thread",
-    "label": "nemera",
-    "operational_cues": {
-     "source": "s08.text.029",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "03 Oct 06:26: Shiki directly asserts septuple seals weakened during earlier chakra-coma enough to be broken by Nemera. This player-established correction overrides Nemera"
+      "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
+      "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета"
      }
     },
     "status": "no_verified_facts"
@@ -295,7 +258,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 7
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -309,13 +272,13 @@
  "horror": {
   "due": null,
   "npcs": {
-   "seina": {
-    "does": "Records the hypothesis as attributed, locks samples, refuses technique stress test, and answers Akihiro's supply question from private office.",
-    "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
-    "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "She must distinguish observation from explanation and maintain both patient confidentiality and ordinary clinic function; no evidence for a new intrusion or sample request.",
-    "stage": 2,
-    "step": "пересмотр"
+   "akihiro": {
+    "does": "Does not touch son, interrogates Seina about secured samples, decides to inform Nao of visit, demands direct explanation of predictability from Shiki.",
+    "lever": "проверку снабжения, которая найдёт его старые поставки",
+    "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
+    "reads": "What was alarming two days ago is accelerating; father can neither control the contract nor trust hospital/state custody of biological records.",
+    "stage": 1,
+    "step": "примета"
    }
   },
   "quiet": 0,
@@ -330,18 +293,29 @@
    }
   ],
   "rule": "campaigns/shiki/ref/HORROR.md",
-  "worn": []
+  "worn": [
+   "волосы",
+   "сжал"
+  ]
  },
  "last": {
   "source": "recovery/TURN.json"
  },
- "needs_profile": [],
+ "needs_profile": [
+  {
+   "appearances": 165,
+   "facets": 4,
+   "need": 5,
+   "npc": "akihiro",
+   "tier": "deep"
+  }
+ ],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
-   "seina"
+   "akihiro"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": [
@@ -455,130 +429,142 @@
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
-  "seina": {
+  "akihiro": {
    "alignment": {
-    "breaking_point": "При угрозе пациентам может нарушить запрет властей",
+    "breaking_point": "При угрозе Нао/Шики может скрыть вещественные следы от следствия",
     "code": "NG",
-    "line": "Не допускает неосмотрительного вмешательства в собственной клинике",
-    "order": "Медицина и личный профессиональный кодекс важнее приказов"
+    "line": "Не продаст семейную тайну из простого страха за положение",
+    "order": "Важнее семья и профессиональная добросовестность, чем послушание власти"
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "dynamics": {
     "committed_or_paused_intents": [
      {
-      "against_shiki": "её заключение описывает его кровь и тело — второй документ о Шики уйдёт в чужие руки",
-      "due": "0006-10-03T16:00:00",
-      "flaw": "уверена в своей правоте и не спрашивает согласия Шики на то, что считает правильным",
-      "goal": "превратить утечку медицинских данных Шики в дело против Центрального госпиталя",
-      "id": "expose_leak",
-      "if_unopposed": "к вечеру заключение лежит у юриста, а копия — у того, кто платит юристу",
-      "next": "составить письменное заключение о состоянии Шики шестой стадии как доказательство нарушения врачебной тайны и показать его знакомому юристу УВБ",
+      "against_shiki": "исчезнувшие бумаги выглядят как вина семьи",
+      "due": "0006-10-04T10:00:00",
+      "flaw": "молчит до последнего, даже когда молчание хуже правды",
+      "goal": "закрыть дом и аптеку от слухов после утечки",
+      "id": "close_house",
+      "if_unopposed": "к проверке в доме чисто — и подозрительно чисто",
+      "next": "убрать из аптеки документы о старых поставках, пока не пришли с вопросами",
       "source_turn": "keeper",
+      "status": "committed"
+     },
+     {
+      "against_shiki": "Нао узнает о визите даже без самостоятельного решения Шики известить её",
+      "due": "0006-10-03T08:10:00",
+      "flaw": "Раздражение и страх могут сделать его слова резче и менее точными, чем он рассчитывает",
+      "goal": "Сообщить Нао, что Шики вернулся в клинику и он серьёзно изменился, но не рассказывать за сына непроверенные детали",
+      "id": "tell_nao",
+      "if_unopposed": "Нао получит от мужа фактическое сообщение о появлении сына и необычайной перемене, и самостоятельно решит, когда говорить с ним",
+      "next": "Найти Нао после окончания разговора и уведомить о встрече",
+      "source_turn": "s08.text.036",
       "status": "committed"
      }
     ],
     "pressure_pairs": [
      {
       "anchor": {
-       "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
-       "mask": "сухая точность и деловитость там, где ей страшно"
+       "deep_fear": "проверку снабжения, которая найдёт его старые поставки",
+       "mask": "сдержанная деловитость"
       },
       "kind": "mask_under_pressure",
-      "status": "possibility_to_test_not_a_fact"
-     },
-     {
-      "anchor": {
-       "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
-       "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление"
-      },
-      "kind": "boundary_under_pressure",
       "status": "possibility_to_test_not_a_fact"
      }
     ],
     "psyche_facets": {
-     "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
-     "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление",
-     "decides": "по пациенту и праву: сначала человек на столе, потом закон, учреждение последним",
-     "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
-     "mask": "сухая точность и деловитость там, где ей страшно"
+     "contradiction": "гордится сыном и боится его",
+     "decides": "молча и практично: сначала защитить дом и дело",
+     "deep_fear": "проверку снабжения, которая найдёт его старые поставки",
+     "mask": "сдержанная деловитость"
     },
     "unclocked_intents": [
-     "expose_leak"
+     "close_house",
+     "tell_nao"
     ]
    },
    "look": {
-    "внешность": "32 года, собранная, усталость врача в спокойном лице"
+    "внешность": "Взрослый человек с руками, пахнущими порошками и растительными маслами"
    },
+   "prior_disclosure_ids": [
+    "s08.text.007",
+    "s08.text.010",
+    "s08.text.016",
+    "s08.text.022",
+    "s08.text.023",
+    "s08.text.027",
+    "s08.text.031"
+   ],
    "prior_disclosures": [
+    {
+     "at": "0006-10-03T02:54:00",
+     "sha256": "2af415a76d3366e8c7a94fd420809cc2a5b6907fa2485e3b280df59d54f179e2",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.007"
+    },
+    {
+     "at": "0006-10-03T06:18:00",
+     "sha256": "ad221f464f615dc8f9f806c86dc35de314bb743b656c7c6725763a006f9962b7",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.027"
+    },
     {
      "at": "0006-10-03T07:03:00",
      "sha256": "585ee0774abc6abb1f820eab4894d692841ef0d7ac26f79472a6a1a8c4902c14",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.031"
-    },
-    {
-     "at": "0006-10-03T07:18:00",
-     "sha256": "4e15ab8c6e31b378644a976bb880512602592764fb0674e173b16e130ddc5ab4",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.032"
-    },
-    {
-     "at": "0006-10-03T07:36:00",
-     "sha256": "2dc4c0505d567dc3858ad891c52c911f119e28b118bbe49c7300094ccc5162be",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.033"
     }
    ],
    "profile": {
-    "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [давняя запись: сверяй со state]",
-    "fears": "Вред людям кабинета и срыв медицинской работы",
-    "first": "s04.text.065",
+    "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство. [давняя запись: сверяй со state]",
+    "fears": "Резкие изменения облика сына и возможная беда",
+    "first": "s04.text.002",
     "inner": {},
     "knows": [
-     "03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his ",
-     "07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that",
-     "03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly pe",
-     "07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; n"
+     "Мужчина с фонарём был у водостока соседнего дома и ушёл в переулок, заметив взгляд из окна.",
+     "Шики собирается ночевать у родителей.",
+     "Мужчина с фонарём — новый сосед, его погреб залит, водосток забит корнями семейного лекарственного растения; сосед требует возмещения ремонта.",
+     "03 Oct 07:38 through Seina calling his name and inviting him into her private clinic office, Akihiro sees Shiki physically alive but dramatically changed to fully corpse-gray face, white hair, bandaged neck and"
     ],
-    "knows_ref": "memory/npc/seina.md",
+    "knows_ref": "memory/npc/akihiro.md",
     "knows_total": 8,
-    "leverage": "Медицинские знания, прошлое с семьёй Мугами",
+    "leverage": "Лекарственные рецептуры, семейное знание Шики",
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.034",
-      "what": "Шики предположил, что изменение организма связано со встроенными Бётоном и Шитоном. Сэйна отметила это как гипотезу и отказалась провоцировать техники при истощении. В канон закреплён чёрный, сам по с"
+      "turn": "s08.text.036",
+      "what": "Шики отказался скрываться от родителей и поправил обмотки. Сэйна позвала Акихиро; тот увидел предельную перемену сына, отказался от прикосновения, расспросил о тайне образцов и спросил, насколько сам "
      }
     ],
-    "memory_file": "archive/npc-memory/seina.json",
-    "memory_total": 39,
-    "name": "Кирисава Сэйна",
-    "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-    "seen": "s08.text.035",
-    "stance": "На текущем ходе не видела Шики, реакция ещё впереди [давняя запись: сверяй со state]",
-    "state": "07:37 records Byoton/Shiton as Shiki's working mechanistic hypothesis alongside private smear comparisons without concluding causality; declines to provoke new ninjutsu tests while chakra recovery is incomplete. Keeps both 01 Oct and 03 Oct blood and resulting slides separately in locked private cabinet with no outside disclosure. Hears Akihiro request old drug-issue ledger from front supplies.",
+    "memory_file": "archive/npc-memory/akihiro.json",
+    "memory_total": 165,
+    "name": "Мугами Акихиро",
+    "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
+    "seen": "s08.text.036",
+    "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
+    "state": "07:39 father Akihiro, interrupted while locating a misplaced routine medicine issue ledger, has seen his son stage6 for the first time and was shocked. Does not touch him; recalls threat of forged medical record requests, asks about samples and challenges him about whether he understands the Pact's present limits. He intends to tell Nao that Shiki has arrived, not to replace Shiki's account. Remains alone with Shiki in private room.",
     "status": "present_profile",
     "tier": "deep",
-    "voice": "Сдержанная точная медицинская речь",
-    "wants": "Поддерживать независимую медицинскую практику"
+    "voice": "Сдержанная речь, срыв при волнении",
+    "wants": "Сохранить спокойствие семьи и работу клиники"
    },
    "source_ref": "archive/session-*-turns.jsonl"
   }
  },
  "recent_turns": [
   {
-   "id": "s08.text.034",
-   "line": "Шики предположил, что изменение организма связано со встроенными Бётоном и Шитоном. Сэйна отметила это как гипотезу и отказалась провоцировать техники при истощении. В канон закреплён чёрный, сам по себе безопасный цвет чакры Шики."
+   "id": "s08.text.036",
+   "line": "Шики отказался скрываться от родителей и поправил обмотки. Сэйна позвала Акихиро; тот увидел предельную перемену сына, отказался от прикосновения, расспросил о тайне образцов и спросил, насколько сам Шики понимает пределы Договора."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "07:37 Shiki in private medical exam room with Seina. Seina back beside desk and locked specimen cabinet, having privately safeguarded both dated specimens; father Akihiro is audible in outer clinic inventory area, not in room and unaware of Shiki's arrival. No personnel have seen black chakra used in this turn; no contact risk exposure.",
-  "pressure": "Seina explicitly distinguishes Shiki's kekkei genkai causation hypothesis from established observations and defers exhausting technical provocation; private research retains material risks and boundaries. Akihiro is on site independently working supplies, giving an ordinary possible encounter with a parent who knows stage3 but not the new stage6 changes.",
-  "situation": "03.10.1283 07:36–07:37, Kusa Seina private medical office. Shiki states a conjecture that his recent physical and blood changes reflect effects of integrated Byoton and Shiton kekkei genkai, not necessarily the holding capacity of Nemera's seven locks. Seina recalls prior disclosure that he acquired both through Pact (01 Oct s05) and her own October 1 sparse dark-strand red-blood smear versus Oct3 denser near-black lattice after overloaded Byoton medical technique; she records two kekkei genkai as Shiki's unverified hypothesis rather than proven etiology. She declines to provoke a new test using Shiki's almost exhausted chakra and distinguishes examination from experimenting on abilities. She seals already collected 01 Oct and Oct3 separate confidential blood specimens and private notes back into her own locked cabinet; no disclosure outside clinic. From outer supply/administrative area of Seina's established clinic, Shiki's father Akihiro calls asking where old pharmacy delivery/issue ledger is, sees empty folder, and grumbles about misfiled papers. Nothing supports a deliberate stolen ledger or new conspiratorial link: his unrelated supply records simply are not immediately located. Akihiro has no knowledge that Shiki is in Seina's private room, unless someone informs him. Seina suggests parents be informed if Shiki is staying and notes Shiki did not answer about seal integrity, but she does not force his choice. Shiki has NOT demonstrated the newly corrected black chakra: OOC fixed its actual visual property for future seen techniques, not an in-world fact granted to Seina. All seven locks currently intact, despite prior transient weakening during collapse, sealed Nemera unchanged. Shiki intact cold corpse-pale skin wrapped and gloved, hood down, fully mobile though "
+  "positions": "07:39 Shiki in teacher Seina's private medical office, wraps adjusted, black combat attire with hood down and full-fingered gloves; father Akihiro alone with him near desk after washing hands, not physically touching. Seina just returned to patients outside private room, Nao absent from clinic. Seina's old and new Shiki blood specimens remain separately under lock in cabinet; father's empty ledger folder on desk.",
+  "pressure": "Father's protective alarm turns into direct, unsentimental challenge about whether Shiki understands his own Pact; the mother may soon hear of the new bodily change independently from father. Seina's independent ethics/privacy ambitions and past clinic file seizure attempts are an unresolved risk but not yet manifested.",
+  "situation": "03 Oct 1283 07:37-07:39 in Seina's private clinic room. Shiki says that his parents will worry but he will not hide from them and adjusts his cloth forearm wraps around prior small sterile puncture. Seina calls father Akihiro, who was already working in outer clinic inventory and looking for a missing ordinary pharmacy ledger; no proof of theft or conspiracy. Akihiro enters with empty inventory folder, sees Shiki's stage6 corpse-cold intact face, long white hair, black layered gear, cloth wraps and full finger gloves, and is visibly shaken. He challenges Seina about worsening body condition, recalls earlier s05 disclosure of Pact and danger of direct touch; starts to reach to his son then independently stops before contact. Akihiro inquires whether Seina retained Shiki's blood; she confirms private old 01 Oct and new 03 Oct samples remain locked and reiterates no release without Shiki's permission. The father explicitly fears a new forged authority demand as seen in previous raid, but no new raid, unauthorized retrieval or leak is presented here. Seina leaves room to address patients; father washes powder from hands, says he will inform Nao Shiki has come but will not narrate his body in his stead, asks Shiki whether he himself understands the Pact's capabilities or each day produces another unpredictable change. Player hasn't answered. Nao is not yet present or informed directly; no new bodily effect, samples leave cabinets or newly spent chakra. Seina's independent contemplated use of confidential notes for external ethics/legal challenge remains latent; she didn't disclose the secret intent. All seven locks intact; extremely depleted but recovering chakra ~8.5 and all controls unchanged."
  },
  "shiki": {
   "body": "Current maximal Pact stage6 and physical health unchanged: intact gray corpse-cold skin beneath bandages, near black blood, no epidermal necrosis or debris, full purposeful function but still very depleted chakra. VISIBLE CHAKRA IS NOW BLACK (not blue) for every school including safe medical ninjutsu; color is not independently harmful or infectious and its outward ominousness may frighten witnesses; there has been no chakra manifestation in this turn.",
@@ -587,14 +573,14 @@
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
  "source_passages": {
+  "s08.text.007": {
+   "gm_excerpt": "*Вторник, 3 октября 1283 года. 02:40–02:54.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Я начну регенерацию, аккуратно там, где смогу без риска, — сказал Шики.\n\n**Кадзиура Сатору** поднялся со стула. При этих словах его взгляд на мгновение задержался на руках Шики, а пальцы сильнее сжали край истории болезни.\n\n— Покажите, какие участки отвечают, — произнёс он. — Я буду следить за вентиляцией и кровотечением.\n\nОн отступил к монитору и назвал анестезиологу прежние показатели, чтобы тот записал их до вмешательства.\n\nМедицинская чакра изме\n[... sou…",
+   "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
+   "source": "archive/session-008-turns.jsonl"
+  },
   "s08.text.031": {
    "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:49.**\n\n*Кусагакуре. Врачебный кабинет Кирисавы Сэйны.*\n\n— Не опасно. Я подожду, пока вы закончите. Поговорить нужно.\n\nСэйна внимательно посмотрела на Шики.\n\n— Хорошо. Но к тебе я пока прикасаться не буду.\n\nОна вернулась к Кэйдзи, пододвинула табурет к смотровой кушетке и указала на его левую ногу.\n\nШики обратился к старому знакомому:\n\n— Кэйдзи, а пока я жду, расскажешь, что в мире творится?\n\n— Что в мире?\n\nКэйдзи фыркнул.\n\n— Мы пять лет не виделись, и ты спрашиваешь это так, будто я каждое утро получаю сводку \n[... sou…",
    "player": "Не опасно. Я подожду пока вы закончите. Поговорить нужно. Кэйдзи, а пока я жду, рассжешь что в мире творится?",
-   "source": "archive/session-008-turns.jsonl"
-  },
-  "s08.text.033": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:19.**\n\n*Кусагакуре. Частный кабинет Кирисавы Сэйны.*\n\n— Это побочные эффекты Договора, — пояснил Шики.\n\nОн рассказал наставнице об общей закономерности изменений: каждый новый этап воздействия Договора перестраивал тело глубже предыдущего. Последний переход оказался особенно резким. Мертвенный цвет кожи, понижение температуры, изменение крови и запах возникли после предельного напряжения Бётона и медицинской чакры. При этом утраты функций он не ощущал.\n\n— Кровь я дам.\n\nСэйна некоторое время смотрела на пробу, \n[... sou…",
-   "player": "#Рассказ о об этом как о побочных эффектах договора, общая информация# кровь я дам",
    "source": "archive/session-008-turns.jsonl"
   }
  },
@@ -604,13 +590,13 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "502fa3111ea7f6d5742d7833432b264db417ab77",
-  "turn": "s08.text.035"
+  "sha": "12f89c5af481680481033c27168f22e3729d4e1e",
+  "turn": "s08.text.036"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "seina": "memory/npc/seina.md"
+   "akihiro": "memory/npc/akihiro.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
@@ -621,7 +607,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 38.0,
+    "minutes": 36.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -632,7 +618,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним.",
-    "minutes": 113.0,
+    "minutes": 111.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",

@@ -1,7 +1,7 @@
 # Кирисава Сэйна · `seina`
 
 псевдонимы: Кирисава, Сэйна
-вид: npc · впервые: s04.text.065 · последний раз: s08.text.035 · сейчас в сцене
+вид: npc · впервые: s04.text.065 · последний раз: s08.text.036 · вне сцены
 
 ## Постоянное
 - внешность: 32 года, собранная, усталость врача в спокойном лице [campaigns/shiki/roster.json]
@@ -20,7 +20,7 @@
 - голос: Сдержанная точная медицинская речь [s04.text.065]
 
 ## Сейчас
-- положение: 07:37 records Byoton/Shiton as Shiki's working mechanistic hypothesis alongside private smear comparisons without concluding causality; declines to provoke new ninjutsu tests while chakra recovery is incomplete. Keeps both 01 Oct and 03 Oct blood and resulting slides separately in locked private cabinet with no outside disclosure. Hears Akihiro request old drug-issue ledger from front supplies. [s08.text.034]
+- положение: 07:39 Seina invited Akihiro from ordinary clinic supply duties after Shiki said he would not hide from parents. She confirmed both private specimens are still secured and returned to outer patients, leaving Shiki to decide what to share with his father. Her earlier promised confidentiality and autonomous intent toward hospital medical-privacy dispute persist; no dossier has been transferred. [s08.text.036]
 - вид в последней сцене: Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [s05.text.014]
 
 ## Граница знаний

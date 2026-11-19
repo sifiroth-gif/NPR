@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.035",
+ "cursor": "s08.text.036",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -697,6 +697,16 @@
      "flaw": "молчит до последнего, даже когда молчание хуже правды",
      "against_shiki": "исчезнувшие бумаги выглядят как вина семьи",
      "if_unopposed": "к проверке в доме чисто — и подозрительно чисто"
+    },
+    "tell_nao": {
+     "goal": "Сообщить Нао, что Шики вернулся в клинику и он серьёзно изменился, но не рассказывать за сына непроверенные детали",
+     "next": "Найти Нао после окончания разговора и уведомить о встрече",
+     "due": "0006-10-03T08:10:00",
+     "flaw": "Раздражение и страх могут сделать его слова резче и менее точными, чем он рассчитывает",
+     "against_shiki": "Нао узнает о визите даже без самостоятельного решения Шики известить её",
+     "if_unopposed": "Нао получит от мужа фактическое сообщение о появлении сына и необычайной перемене, и самостоятельно решит, когда говорить с ним",
+     "status": "committed",
+     "turn": "s08.text.036"
     }
    },
    "dread": {
@@ -709,29 +719,32 @@
       "change": "калибровка",
       "saw": "A routine medicine issue ledger is not where Akihiro expected and a folder on the indicated shelf is empty.",
       "does": "Asks Seina from corridor for its location and continues looking."
+     },
+     {
+      "turn": "s08.text.036",
+      "at": "0006-10-03T07:39:00",
+      "change": "подтвердилось",
+      "saw": "He now sees his known son physically alive and functional despite intact corpse-gray skin and full protective wrapping after earlier Pact disclosure.",
+      "does": "Does not touch son, interrogates Seina about secured samples, decides to inform Nao of visit, demands direct explanation of predictability from Shiki."
      }
     ],
-    "reads": "Likely clerical misfiling in a busy practice, not proof of document theft.",
-    "does": "Asks Seina from corridor for its location and continues looking.",
-    "turn": "s08.text.034",
+    "reads": "What was alarming two days ago is accelerating; father can neither control the contract nor trust hospital/state custody of biological records.",
+    "does": "Does not touch son, interrogates Seina about secured samples, decides to inform Nao of visit, demands direct explanation of predictability from Shiki.",
+    "turn": "s08.text.036",
     "step": "примета"
-   }
+   },
+   "intent_done": []
   }
  },
  "checks": [
   {
-   "turn": "s08.text.033",
-   "kind": "intent",
-   "text": "намерение shift_blame: статус partial_success"
+   "turn": "s08.text.036",
+   "kind": "write",
+   "text": "Запись хода: review: нужен только predecessor, novelty_contrast, sources не пиши; d.scene.situation 1719 знаков: только перемена и то, что нужно следующему ходу, до 600; знания NPC — в knows+, не в situation; вся запись сверх сцены 6800 знаков (норма до 4000); крупнее всего: cast 2563, scene 2539; state у akihiro длиннее 400 знаков: одна-две фразы о перемене."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.029",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.030",
     "look": [
@@ -760,9 +773,21 @@
     "turn": "s08.text.034",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s08.text.036",
+    "look": [
+     "волосы"
+    ],
+    "soma": [
+     "сжал"
+    ]
    }
   ],
-  "worn": [],
+  "worn": [
+   "волосы",
+   "сжал"
+  ],
   "quiet": 0,
   "log": [
    {
@@ -1063,10 +1088,11 @@
  "will": {
   "seed": "b77c1bd431424992",
   "streak": {
-   "seina": 4
+   "akihiro": 0
   },
   "touched": {
-   "night_icu_physician": "s08.text.033"
+   "night_icu_physician": "s08.text.033",
+   "akihiro": "s08.text.036"
   }
  }
 }
