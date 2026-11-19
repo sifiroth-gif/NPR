@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import inquiry, lore, will
+from . import dread, inquiry, lore, will
 
 PATH = "recovery/NEXT.json"
 TARGET_BYTES = 9000
@@ -98,6 +98,22 @@ def must(hot, always_present=()):
     трёх пунктов, каждый — одно конкретное действие в этой сцене или записи.
     """
     out = inquiry.must(hot)
+    present = (hot.get("scene") or {}).get("present") or []
+    for key, row in dread.pending(hot, present, always_present)[:2]:
+        name = will._name(hot, key)
+        known = ((hot.get("_psyche") or {}).get(key) or {}).get("dread")
+        if row.get("need") and known:
+            out.append(f"Реакция на Шики: {name} рядом с {row.get('since')}, в этой встрече реакции нет. "
+                       f"Прежде — {dread.summary(hot, key)}. Что изменилось после увиденного сегодня и что "
+                       f"из этого сделано здесь: сдвиг, hold или down — d.cast.{key}.dread.")
+        elif row.get("need"):
+            out.append(f"Реакция на Шики: {name} рядом с {row.get('since')}, отношение к Шики не сыграно. "
+                       "Что видит и знает о Шики, как объясняет это по своему опыту и что из этого делает "
+                       "здесь — решение, оговорка, проверка, расчёт; равнодушие тоже выбор. Запиши "
+                       f"d.cast.{key}.dread: saw, reads, does, stage ({dread.summary(hot, key)}).")
+        else:
+            out.append(f"{name} {row.get('quiet')} хода рядом с Шики без новой реакции: увидел новое — сдвиг "
+                       f"в поступке и d.cast.{key}.dread; нет — dread.hold с тем, что подтвердилось.")
     for key, name, plan in will.due_here(hot, always_present)[:1]:
         out.append(f"{will._name(hot, key)} рядом, а срок плана «{_short(plan.get('next') or plan.get('goal'), 120)}» "
                    f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
@@ -137,11 +153,15 @@ def build(hot, brief, checks, entries, always_present=()):
                          "hits": [f"{h.get('rule')}: «{_short(h.get('quote'), 90)}»" for h in last[0].get("hits", [])[:3]]}
     people = {}
     for key in present:
+        if key in always_present:
+            continue
+        entry = {"name": lore._name(hot, key), "reaction": dread.summary(hot, key)}
         lines = _will_line(hot, key)
         if lines:
-            people[key] = {"name": lore._name(hot, key), "will": lines}
+            entry["will"] = lines
+        people[key] = entry
     if people:
-        pack["present_will"] = people
+        pack["present"] = people
     fences = lore.fences(hot, entries, present)
     if fences:
         pack["fences"] = fences

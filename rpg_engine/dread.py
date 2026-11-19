@@ -29,7 +29,7 @@ from __future__ import annotations
 from . import prose_lint
 
 LADDER = (
-    ("тревога", "Врождённая тревога без причины. Человек ищет объяснение и находит ложное; телом — не больше одного штриха за сцену."),
+    ("впечатление", "Человек видит Шики и объясняет его по своему опыту: болезнь, рана, слух, запретное искусство — или не придаёт значения. Ауры нет; телом — не больше одного штриха за сцену."),
     ("примета", "NPC замечает конкретный факт о Шики: поступок, точность, знание, последствие прежнего действия. Он запоминает его и проверяет."),
     ("пересмотр", "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается."),
     ("поступок", "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики."),
@@ -131,11 +131,25 @@ def after_turn(hot, turn, inner, delta):
     turn_id = turn["id"]
     state = hot.setdefault("_horror", {})
     cast = hot.get("cast") or {}
+    skip = set(turn.get("_always") or ())
     present = [k for k in ((hot.get("scene") or {}).get("present") or [])
-               if k != "shiki" and k in cast]
+               if k != "shiki" and k in cast and k not in skip]
     fed = any(valid((inner.get(k) or {}).get("dread")) for k in inner)
+    # Реакция каждого присутствующего на Шики: первая — в ту же встречу, дальше —
+    # при новом увиденном. Общая заметка d.horror её не заменяет: с s08.058 ведущий
+    # закрывал счётчик фразой «реакций обычных людей нет», пока рядом были люди.
+    react = state.setdefault("react", {})
+    for key in list(react):
+        if key not in present:
+            react.pop(key)
+    for key in present:
+        row = react.setdefault(key, {"since": turn_id, "need": True, "quiet": 0})
+        if valid((inner.get(key) or {}).get("dread")):
+            row.update(need=False, quiet=0, last=turn_id)
+        else:
+            row["quiet"] = int(row.get("quiet", 0)) + 1
     if delta.get("horror"):
-        fed = True
+        fed = fed or not present
         log = state.setdefault("log", [])
         log[:] = [x for x in log if x.get("turn") != turn_id]
         log.append({"turn": turn_id, "what": _short(delta["horror"], 300)})
@@ -150,10 +164,9 @@ def after_turn(hot, turn, inner, delta):
                 since = (state.get("due") or {}).get("since", turn_id)
                 state["due"] = {"since": since, "npcs": present, "quiet": state["quiet"]}
                 _check(hot, turn_id, "horror",
-                       f"{state['quiet']} ход(а) подряд рядом с Шики никто не изменился. "
-                       f"Проверь, есть ли у кого-то из {', '.join(present)} причина измениться: увиденное, "
-                       "услышанное, цена близости к Шики. Есть — дай ступень dread или нарушение знакомого "
-                       "(d.horror). Нет причины — затишье честнее нагнетания по расписанию.")
+                       f"{state['quiet']} ход(а) подряд рядом с Шики ни у кого не записана реакция на него "
+                       f"({', '.join(present)}). Что каждый увидел и решил — d.cast.<id>.dread; d.horror "
+                       "её не заменяет. Нового не было — dread.hold с тем, что подтвердилось.")
     motifs = prose_lint.motifs(turn.get("gm") or "")
     recent = [m for m in state.get("motifs", []) if m.get("turn") != turn_id]
     recent.append({"turn": turn_id, **motifs})
@@ -187,6 +200,41 @@ def seed_motifs(hot, rows):
             counts[name] = counts.get(name, 0) + 1
     state["worn"] = sorted(name for name, n in counts.items() if n >= 2)
     return True
+
+
+def pending(hot, present, always_present=()):
+    """Присутствующие без реакции на Шики: [(ключ, строка состояния)] — новые первыми."""
+    react = (hot.get("_horror") or {}).get("react") or {}
+    rows = []
+    for key in present:
+        row = react.get(key)
+        if key == "shiki" or key in always_present or not row:
+            continue
+        if row.get("need") and row.get("quiet", 0) >= 1:
+            rows.append((0, key, row))
+        elif row.get("quiet", 0) >= QUIET_MAX:
+            rows.append((1, key, row))
+    rows.sort(key=lambda r: (r[0], -r[2].get("quiet", 0)))
+    return [(key, row) for _, key, row in rows]
+
+
+def summary(hot, key):
+    """Одна строка: ступень, как он видит Шики, что делает; рычаг."""
+    profile = (hot.get("_psyche") or {}).get(key) or {}
+    card = (hot.get("cast") or {}).get(key) or {}
+    dread = profile.get("dread") or {}
+    lever = (profile.get("psyche") or {}).get("deep_fear") or card.get("fears") or ""
+    bits = []
+    if dread:
+        stage = int(dread.get("stage", 0))
+        bits.append(f"{LADDER[stage][0]}: {dread.get('reads') or ''}".strip(": "))
+        if dread.get("does"):
+            bits.append(f"делает: {dread['does']}")
+    else:
+        bits.append("реакции на Шики ещё нет")
+    if lever:
+        bits.append(f"рычаг: {_short(lever, 120)}")
+    return _short("; ".join(bits), 330)
 
 
 def brief(hot, present):

@@ -108,3 +108,58 @@ class WorldFoldTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PresenceFoldTest(unittest.TestCase):
+    setUp, tearDown = test_hot.HotFilesTest.setUp, test_hot.HotFilesTest.tearDown
+    git, commit, put = test_hot.HotFilesTest.git, test_hot.HotFilesTest.commit, test_hot.HotFilesTest.put
+
+    def present(self):
+        return json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))["scene"]["present"]
+
+    def test_speakers_rejoin_the_scene_and_must_ask_for_their_reaction(self):
+        self.put(turn(45, "0006-10-01T07:14:00", d={"scene": {"present": ["shiki"]}}))
+        hot.fold(self.root)
+        self.assertEqual(self.present(), ["shiki"])
+        self.put(turn(46, "0006-10-01T07:15:00", gm="**Хаясэ Нори:** — Опять вы.\n\n**Служащая архива:** — Распишитесь.",
+                      d={"scene": {}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.assertEqual(self.present(), ["shiki", "nori"])
+        pack = json.loads((self.root / nextpack.PATH).read_text(encoding="utf-8"))
+        self.assertTrue(any(m.startswith("Реакция на Шики: Хаясэ Нори") for m in pack["must"]))
+        self.assertIn("nori", pack["present"])
+        # Безымянный, но повторяющийся голос на втором ходу получает карточку и входит в сцену.
+        self.put(turn(47, "0006-10-01T07:16:00", gm="**Служащая архива:** — Следующий.",
+                      d={"scene": {}, "cast": {"nori": {"dread": {"saw": "Шики расписался кровью",
+                                                                 "reads": "он не врач", "does": "отступила к двери",
+                                                                 "stage": 1}}}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        state = json.loads((self.root / hot.HOT_PATH).read_text(encoding="utf-8"))
+        self.assertIn("sluzhashchaya_arkhiva", state["scene"]["present"])
+        self.assertEqual(state["cast"]["sluzhashchaya_arkhiva"]["name"], "Служащая архива")
+        pack = json.loads((self.root / nextpack.PATH).read_text(encoding="utf-8"))
+        self.assertFalse(any("Хаясэ Нори рядом" in m for m in pack["must"]), "Нори уже отреагировала")
+        # Молчащий добавленный кодом уходит через три хода; записанных ведущим код не трогает.
+        for n in (48, 49, 50):
+            self.put(turn(n, f"0006-10-01T07:{n - 31}:00", gm="Тишина.", d={"scene": {}}))
+            hot.fold(self.root)
+        self.assertEqual(self.present(), ["shiki"])
+
+    def test_gm_written_present_wins(self):
+        self.put(turn(45, "0006-10-01T07:14:00", gm="**Хаясэ Нори:** — Я ухожу.",
+                      d={"scene": {"present": ["shiki", "tetsu"]}}))
+        hot.fold(self.root)
+        self.assertEqual(self.present(), ["shiki", "tetsu"])
+
+
+class TruthIndexTest(unittest.TestCase):
+    setUp, tearDown = test_hot.HotFilesTest.setUp, test_hot.HotFilesTest.tearDown
+    git, commit, put = test_hot.HotFilesTest.git, test_hot.HotFilesTest.commit, test_hot.HotFilesTest.put
+
+    def test_new_truth_key_out_of_alphabetical_order_does_not_break_the_save(self):
+        big = {f"z_fact_{n}": "длинная скрытая правда " * 20 for n in range(8)}
+        self.put(turn(45, "0006-10-01T07:14:00", d={"scene": {}, "truth": big}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.put(turn(46, "0006-10-01T07:15:00", d={"scene": {}, "truth": {"a_kurome": "отдельная сущность"}}))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        self.assertTrue(hot.check(self.root)["ok"])

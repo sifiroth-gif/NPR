@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, inquiry, lore, nextpack, npc_memory, plot, prose_lint, will
+from . import continuity_guard, dread, fight, inquiry, lore, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -454,6 +454,17 @@ def apply_turn(hot, turn):
     # Психика, отношения, чувство и намерения NPC не попадают в открытую карточку.
     public_delta, inner = npc_memory.split_patch(hot, delta, turn["id"])
     _apply_delta(hot, public_delta, turn)
+    if not ooc:
+        # Состав и карточки-заготовки, восстановленные свёрткой по подписям реплик.
+        for key, card in (turn.get("_cards_auto") or {}).items():
+            have = hot.setdefault("cast", {}).setdefault(key, dict(card))
+            if not have.get("name") and card.get("name"):
+                have["name"] = card["name"]
+        scene_patch = delta.get("scene") if isinstance(delta.get("scene"), dict) else {}
+        presence.update(hot, turn, number, "present" in scene_patch)
+        for key in (hot.get("scene") or {}).get("present") or []:
+            if key in hot.get("cast", {}):
+                hot["cast"][key]["seen"] = turn["id"]
     hot.setdefault("_checks", []).extend(fight.apply(hot, delta, turn, pool))
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
@@ -785,7 +796,9 @@ def _read_state(state_dir):
         preview = offscreen.get("truth_preview", {})
         if not isinstance(preview, dict) or any(loaded.get(k) != v for k, v in preview.items()):
             raise ValueError("GM_ONLY truth preview does not match full archive")
-        if offscreen.get("truth_index") and list(loaded) != offscreen["truth_index"]:
+        # Порядок ключей не важен: архив сжимается с sort_keys, а индекс раньше
+        # писался в порядке вставки — новый ключ «не в конец алфавита» ломал свёртку (s08.065).
+        if offscreen.get("truth_index") and set(loaded) != set(offscreen["truth_index"]):
             raise ValueError("GM_ONLY truth index differs from full archive")
         offscreen = dict(offscreen)
         offscreen.pop("truth_zlib64")
@@ -852,7 +865,7 @@ def _split_state(hot):
             offscreen["truth_zlib64"] = base64.b64encode(
                 zlib.compress(truth_bytes, level=9)).decode("ascii")
             offscreen["truth_preview"] = dict(reversed(list(recent.items())))
-            offscreen["truth_index"] = list(truth)
+            offscreen["truth_index"] = sorted(truth)
     public["offscreen"] = {"see": SECRET_PATH, "due": len(offscreen.get("due_now", [])),
                            "clocks": len(offscreen.get("clocks", {}))}
     secret = {"schema": SECRET_SCHEMA,
@@ -896,7 +909,8 @@ def _write_cast(state_dir, hot):
 def _recall_cast(state_dir, hot, turn):
     """Возвращает в состав отложенную карточку, если ход снова трогает этого NPC."""
     delta = turn.get("d") or {}
-    wanted = set(delta.get("cast") or {}) | set((delta.get("scene") or {}).get("present") or [])
+    wanted = set(delta.get("cast") or {}) | set((delta.get("scene") or {}).get("present") or []) | \
+        set(turn.get("_spoke") or []) | set((hot.get("scene") or {}).get("present") or [])
     for key in wanted:
         target = Path(state_dir) / CAST_DIR / f"{key}.json"
         if key not in hot.get("cast", {}) and target.is_file():
@@ -1036,6 +1050,8 @@ def fold(state_dir):
     _load_stats(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
     lore_entries = lore.load(state_dir)
+    always = _always_present(state_dir)
+    names = presence.roster(state_dir, hot)
     applied = []
     amended = []
     archived = None
@@ -1073,6 +1089,13 @@ def fold(state_dir):
             if archived is None:
                 archived = _archived_cards(state_dir)
             name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)
+            # Состав по подписям реплик, если ведущий не записал present (код не правит его запись).
+            spoke, unnamed = presence.voices(turn, names, always)
+            cards = presence.auto_cards(hot, turn, unnamed, names)
+            # Говорящий без имени в карточке или вовсе без карточки (есть только страница вики).
+            for key in spoke:
+                cards.setdefault(key, {"name": presence.display(names, key), "auto": True})
+            turn["_spoke"], turn["_cards_auto"], turn["_always"] = spoke + [k for k in cards if k not in spoke], cards, always
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):
                 # Перед тем как убрать NPC из состава, сохраняем его карточку и тайну.

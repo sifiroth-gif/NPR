@@ -57,9 +57,23 @@ class ObligationTest(unittest.TestCase):
         self.assertEqual(brief["due"]["quiet"], 4)
         self.assertIsNone(brief["npcs"]["nori"]["stage"])
         self.assertEqual(brief["npcs"]["nori"]["lever"], "потерять дело")
+        # Общая заметка d.horror не заменяет реакцию людей рядом с Шики.
         dread.after_turn(h, {"id": "t5", "gm": "…"}, {}, {"horror": "печать на двери оказалась вскрыта изнутри"})
+        self.assertIn("due", h["_horror"])
+        self.assertEqual([k for k, _ in dread.pending(h, ["shiki", "nori", "tetsu"])], ["nori", "tetsu"])
+        reaction = {"nori": {"dread": {"saw": "Шики вскрыл печать без инструмента", "reads": "он опаснее её дела",
+                                       "does": "переписала акт", "stage": 1}}}
+        dread.after_turn(h, {"id": "t6", "gm": "…"}, reaction, {})
         self.assertNotIn("due", h["_horror"])
         self.assertEqual(h["_horror"]["quiet"], 0)
+        self.assertEqual([k for k, _ in dread.pending(h, ["shiki", "nori", "tetsu"])], ["tetsu"])
+        self.assertIn("впечатление", dread.summary(h, "nori") + dread.LADDER[0][0])
+
+    def test_general_horror_note_counts_only_without_people(self):
+        h = fresh()
+        h["scene"]["present"] = ["shiki"]
+        dread.after_turn(h, {"id": "t1", "gm": "…"}, {}, {"horror": "в доме кто-то был"})
+        self.assertEqual(h["_horror"].get("quiet", 0), 0)
 
     def test_scene_without_npcs_does_not_count(self):
         h = fresh()
