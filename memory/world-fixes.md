@@ -1,4 +1,4 @@
-# Поправки игрока к миру и ведению (18)
+# Поправки игрока к миру и ведению (19)
 
 Те, что не относятся к одной странице. Более поздняя сильнее ранней.
 
@@ -20,3 +20,4 @@
 - s07.text.038: Direct OOC correction 18.11.2026: Shiki did NOT reveal his Byoton kekkei genkai or creation source to Kadziura in prior s07.text.037; GM erroneous phrases were removed. No NPC may infer this secret from the carrier explanation or tube alone.
 - s07.text.038: 03.10.1283 01:35: player explicitly transferred physical second experiment tube to Kadziura to investigate; transferred vial no longer in Shiki's pocket.
 - s08.text.005: Коррекция OOC игрока 18.11.2026 на основании archive/session-005-source.md: реципиент С-17 №6 — мальчик, подросток примерно 16 лет, найденный в корпусе №3 в медицинском контейнере с аппаратной поддержкой дыхания и непрерывной инфузией С-17. Фраза «худощавый мужчина» в s08.text.002 — ошибка ведущего и не описывает возраст и пол пациента. Сыгранная реанимация и меры поддержки не аннулируются.
+- s08.text.057: Выражать такие реакции ФИЛИГРАННО, подтекстом, индивидуальными поступками и последствиями, а не прямыми репликами «он живой?», «я боюсь тебя» или массовой дрожью и одинаковым отступлением; избегать терапевтических пояснений. Исправление действует с настоящего хода и дальше, не продвигает игровое время.
