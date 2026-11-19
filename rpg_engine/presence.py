@@ -79,13 +79,14 @@ def roster(state_dir, hot):
             continue
         raw.setdefault(path.stem, []).extend([card.get("name")] + list(card.get("aliases") or []))
     for key, profile in (hot.get("_psyche") or {}).items():
-        if isinstance(profile, dict) and profile.get("name"):
-            raw.setdefault(key, []).append(profile["name"])
+        if isinstance(profile, dict):
+            raw.setdefault(key, []).append(profile.get("name"))
     npc_dir = Path(state_dir) / "memory/npc"
     for path in sorted(npc_dir.glob("*.md")) if npc_dir.is_dir() else ():
         if "." not in path.stem:
             raw.setdefault(path.stem, []).extend(_wiki_names(path))
-    return {k: _entry(v) for k, v in raw.items() if any(v)}
+    # Ключ без имени тоже в списке: подпись найдёт его по транслитерации ключа.
+    return {k: _entry(v) for k, v in raw.items()}
 
 
 def resolve(label, names):
@@ -98,7 +99,16 @@ def resolve(label, names):
         return exact[0]
     words = {w for w in clean.split() if len(w) >= 3}
     partial = [k for k, e in names.items() if words & e["parts"]]
-    return partial[0] if len(partial) == 1 else None
+    if len(partial) == 1:
+        return partial[0]
+    # Карточка без имени (ведущий завёл только ключ): «Мориока Хидэаки» → morioka_hideaki.
+    def soft(part):
+        return part.replace("kh", "h").replace("-", "_")
+    slugs = {soft(slug(w)) for w in clean.split() if len(w) >= 4}
+    scored = sorted(((len(slugs & {soft(p) for p in k.split("_")}), k) for k in names), reverse=True)
+    if scored and scored[0][0] and (len(scored) == 1 or scored[0][0] > scored[1][0]):
+        return scored[0][1]
+    return None
 
 
 VOICE = re.compile(r"\*\*([^*\n:]{2,48}):\*\*\s*[*_]*\s*[—–]")
@@ -122,8 +132,10 @@ def voices(turn, names, always_present=()):
         if key:
             if key not in always_present and key not in keys:
                 keys.append(key)
-        elif not _is_background(_clean(label)) and _clean(label) not in unknown:
-            unknown.append(_clean(label))
+        else:
+            shown = " ".join(re.sub(r"\(.*?\)", " ", label).split(",")[0].split())
+            if not _is_background(_clean(label)) and shown and shown not in unknown:
+                unknown.append(shown)
     return keys, unknown
 
 
@@ -155,7 +167,8 @@ def auto_cards(hot, turn, unknown, names):
     """Повторяющийся безымянный голос → {ключ: карточка-заготовка}."""
     seen = hot.setdefault("fold", {}).setdefault("voices", {})
     made = {}
-    for label in unknown:
+    for shown in unknown:
+        label = _clean(shown)
         row = seen.setdefault(label, {"turns": [], "first": turn["id"]})
         if turn["id"] not in row["turns"]:
             row["turns"] = (row["turns"] + [turn["id"]])[-4:]
@@ -164,7 +177,7 @@ def auto_cards(hot, turn, unknown, names):
         key = slug(label).replace("-", "_")[:40]
         if key in names:
             continue
-        made[key] = {"name": label[:1].upper() + label[1:], "role": "по подписи в сцене",
+        made[key] = {"name": shown[:1].upper() + shown[1:], "role": "по подписи в сцене",
                      "first": row["first"], "auto": True}
         names[key] = _entry([made[key]["name"]])
         seen.pop(label, None)

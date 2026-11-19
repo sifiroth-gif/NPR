@@ -201,6 +201,17 @@ def review(hot, turn, entries, present_before, present_after):
     return notes
 
 
+def first_sight(hot, entries):
+    """Впервые увидевшие/услышавшие в последнем свёрнутом ходе: [(запись, [имена], ход)]."""
+    fresh = (hot.get("fold") or {}).get("lore_new") or []
+    out = []
+    for entry in entries:
+        rows = [r for r in fresh if r.get("entry") == entry["id"]]
+        if rows:
+            out.append((entry, [_name(hot, r["key"]) for r in rows], rows[-1]["turn"]))
+    return out
+
+
 def fences(hot, entries, present):
     """Строки для присутствующих: кто владеет, кто слышал, кто нет."""
     out = []

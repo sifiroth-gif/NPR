@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, inquiry, lore, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import claims, continuity_guard, directives, dread, fight, inquiry, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -1048,10 +1048,14 @@ def fold(state_dir):
     hot, before = _read_state(state_dir)
     ensure_npc_memory(state_dir, hot)
     _load_stats(state_dir, hot)
+    alias = merge.aliases(state_dir)
+    merge.apply(state_dir, hot, alias)
     turns, errors = collect_turns(state_dir, hot)
     lore_entries = lore.load(state_dir)
     always = _always_present(state_dir)
     names = presence.roster(state_dir, hot)
+    lore_new = []
+    visited = None
     applied = []
     amended = []
     archived = None
@@ -1067,6 +1071,7 @@ def fold(state_dir):
             if incoming <= current and (
                     not amendment or hot.get("fold", {}).get("turn_digest") == fingerprint):
                 continue
+            merge.redirect(turn, alias)   # после отпечатка: идемпотентность не зависит от слияний
             # Проверка источников, знаний NPC и наступивших сроков. Сцена уже
             # показана игроку: отказ свернуть её лишь разорвал бы память. Поэтому
             # содержательные замечания записываются, а не останавливают свёртку.
@@ -1115,9 +1120,18 @@ def fold(state_dir):
                     checks.append({"turn": turn["id"], "kind": "name", "text": note})
                 present_after = list((hot.get("scene") or {}).get("present") or [])
                 checks.extend(lore.review(hot, turn, lore_entries, present_before, present_after))
-                lore.track(hot, turn, lore_entries, list(dict.fromkeys(present_before + present_after)))
+                # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
+                witnesses = [k for k in dict.fromkeys(present_before + present_after) if k not in always]
+                lore_new.extend({"entry": e, "key": k, "turn": turn["id"]} for e, k in
+                                lore.track(hot, turn, lore_entries, witnesses))
                 checks.extend(_write_notes(hot, turn))
                 checks.extend(inquiry.track(hot, turn))
+                if visited is None:
+                    visited = claims.places(state_dir)
+                if turn.get("place"):
+                    visited.add(str(turn["place"]).casefold())
+                checks.extend(claims.review(turn, visited))
+                directives.capture(hot, turn)
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
     # Never publish a partly accepted batch. All turns remain in Git history
@@ -1166,6 +1180,10 @@ def fold(state_dir):
     hot["_checks"].extend(will.review(hot, applied))
     # Заготовки хранителя — после ходов: исправление хода (amend) восстанавливает
     # снимок без них, и прямую правку HOT оно бы стёрло.
+    if applied:
+        hot.setdefault("fold", {})["lore_new"] = lore_new   # впервые увидевшие — для NEXT.must
+    merge.apply(state_dir, hot, alias)   # снимок amend мог вернуть лишний ключ
+    merge.names(state_dir, hot)
     will.seed(state_dir, hot)
     will.fill_names(state_dir, hot)
     _keeper_fill(state_dir, hot)

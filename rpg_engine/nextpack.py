@@ -14,10 +14,10 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import dread, inquiry, lore, will
+from . import directives, dread, inquiry, lore, will
 
 PATH = "recovery/NEXT.json"
-TARGET_BYTES = 9000
+TARGET_BYTES = 12000
 HARD_BYTES = 14000
 DUE_HOURS = 6
 FIELD = 170
@@ -91,13 +91,17 @@ def _due(hot, brief, always_present=()):
     return [text for _, text in out][:8]
 
 
-def must(hot, always_present=()):
+def must(hot, always_present=(), entries=None):
     """Обязательное на этот ход: короткий список вместо десятка советов.
 
     Замечания ведущий пропускал по 12 ходов подряд (s08.053–062); здесь не больше
     трёх пунктов, каждый — одно конкретное действие в этой сцене или записи.
     """
     out = inquiry.must(hot)
+    for entry, names, turn in lore.first_sight(hot, entries or [])[:1]:
+        out.append(f"След увиденного: {', '.join(names[:5])} впервые столкнулись с «{entry.get('title') or entry['id']}» "
+                   f"({turn}). Это не проходит за ход: {entry.get('first_sight') or 'вопросы, отрицание, страх, слух'} "
+                   "— в этой сцене и за кадром; запиши в их dread.")
     present = (hot.get("scene") or {}).get("present") or []
     for key, row in dread.pending(hot, present, always_present)[:2]:
         name = will._name(hot, key)
@@ -119,13 +123,14 @@ def must(hot, always_present=()):
                    f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
                    f"запиши d.cast.{key}.intent.{name}: status и outcome.")
     for key, last in will.without_plan(hot)[:2]:
-        out.append(f"У {will._name(hot, key)} закрыт план «{_short(last.get('goal'), 80)}» "
+        plan = last.get("goal") or last.get("outcome") or last.get("next") or last.get("key")
+        out.append(f"У {will._name(hot, key)} закрыт план «{_short(plan, 80)}» "
                    f"({last.get('status')}), нового нет: впиши d.cast.{key}.intent.<ключ> — goal, next, due, "
                    "flaw, if_unopposed. Что он делает дальше сам?")
     return out[:3]
 
 
-def build(hot, brief, checks, entries, always_present=()):
+def build(hot, brief, checks, entries, always_present=(), rules=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -137,7 +142,9 @@ def build(hot, brief, checks, entries, always_present=()):
         "turn_file": (brief.get("turn_file") or {}).get("sha"),
         "fold_errors": checks.get("fold_errors") or [],
     }
-    duty = must(hot, always_present)
+    if rules:
+        pack["directives"] = dict(rules, rule="Поправки игрока к ведению: выше GM_CORE и навыка, исполнять до отмены.")
+    duty = must(hot, always_present, entries)
     if duty:
         pack["must"] = duty
     happened = will.offscreen(hot)
@@ -204,7 +211,7 @@ def _write(state_dir, pack):
 
 
 def write(state_dir, hot, brief, checks, always_present=()):
-    pack = build(hot, brief, checks, lore.load(state_dir), always_present)
+    pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot))
     _write(state_dir, pack)
     return pack
 
