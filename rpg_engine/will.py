@@ -99,6 +99,23 @@ def seed(state_dir, hot):
                 facets[facet] = str(value)[:300]
                 changed.append(key)
         active = profile.setdefault("intent", {})
+        # Поправка хранителя: план уже сыгран, а статус потерян (до починки статусов
+        # «done» откатывался в «committed»). Закрывается, только если ещё активен.
+        for name, fix in (will.get("close") or {}).items():
+            if name in active and isinstance(fix, dict):
+                entry = dict(active.pop(name))
+                entry["status"] = npc_memory.status_of(fix.get("status") or "fulfilled")
+                entry["outcome"] = str(fix.get("outcome") or npc_memory.default_outcome(entry))[:240]
+                log = profile.setdefault("intent_done", [])
+                log.append({"key": name, "at": fix.get("at") or entry.get("due"), **entry, "by": "keeper"})
+                del log[:-npc_memory.LOG_KEEP]
+                event = {"npc": key, "name": profile.get("name") or _name(hot, key), "plan": name,
+                         "at": fix.get("at") or entry.get("due"), "status": entry["status"],
+                         "outcome": entry["outcome"], "turn": (hot.get("cursor") or {}).get("id"), "shown": 0}
+                if entry.get("against_shiki"):
+                    event["against_shiki"] = str(entry["against_shiki"])[:200]
+                state.setdefault("happened", []).append(event)
+                changed.append(key)
         done = {d.get("key") for d in profile.get("intent_done") or []}
         for name, agenda in (will.get("intent") or {}).items():
             if not isinstance(agenda, dict) or name in done:
@@ -154,13 +171,7 @@ def review(hot, turns):
     def note(text):
         notes.append({"turn": turn_id, "kind": "will", "text": text})
 
-    if now:
-        for key, name, agenda, due in agendas(hot):
-            if due and due <= now:
-                flaw = f" Его слабость: {agenda['flaw']}." if agenda.get("flaw") else ""
-                note(f"За кадром: «{_name(hot, key)}» собирался «{agenda.get('next') or agenda.get('goal')}» "
-                     f"к {agenda.get('due')}. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, "
-                     f"сменил тактику.{flaw} Запиши d.cast.{key}.intent.{name} (status, next, due) и след в мире.")
+    # Просроченные планы отсутствующих исполняет advance(), присутствующих — must в NEXT.
     if turns:
         streak = _state(hot).get("streak") or {}
         for key, count in streak.items():
@@ -182,6 +193,94 @@ def review(hot, turns):
     return notes
 
 
+# ---------------------------------------------------------------- мир идёт сам
+
+GRACE_HOURS = 1            # час игрового времени после срока: ведущий успевает решить сам
+ROLL_FULL, ROLL_PARTIAL = 65, 85   # 1–65 сбылся, 66–85 наполовину, 86–100 сорвался по слабости
+HAPPENED_KEEP = 30
+SHOW_FOLDS = 3             # сколько свёрток событие висит в NEXT.offscreen
+
+
+def _roll(key, plan, due):
+    digest = hashlib.sha256(f"{key}|{plan}|{due}".encode("utf-8")).hexdigest()
+    return int(digest[:8], 16) % 100 + 1
+
+
+def advance(hot, always_present=()):
+    """Просроченный план отсутствующего NPC исполняется сам: мир не ждёт ведущего.
+
+    Ведущий решает исход сам, если запишет status и outcome до срока и часа после.
+    Иначе бросок: сбылся по ``if_unopposed``, наполовину или сорвался по ``flaw``.
+    Присутствующие и всегда присутствующие (Немера) не решаются за кадром — их ход
+    играется в сцене, ведущему приходит обязательный пункт.
+    """
+    now = _parse((hot.get("cursor") or {}).get("at"))
+    if not now:
+        return []
+    present = set((hot.get("scene") or {}).get("present") or []) | set(always_present)
+    history = _state(hot).setdefault("happened", [])
+    events = []
+    for key, name, plan, due in agendas(hot):
+        if not due or key in present or due + timedelta(hours=GRACE_HOURS) > now:
+            continue
+        roll = _roll(key, name, plan.get("due"))
+        status = "fulfilled" if roll <= ROLL_FULL else "partial" if roll <= ROLL_PARTIAL else "failed"
+        entry = dict(plan, status=status)
+        entry["outcome"] = npc_memory.default_outcome(entry)[:240]
+        profile = hot["_psyche"][key]
+        profile["intent"].pop(name, None)
+        done = profile.setdefault("intent_done", [])
+        done.append({"key": name, "at": plan.get("due"), **entry, "by": "world", "roll": roll,
+                     "turn": (hot.get("cursor") or {}).get("id")})
+        del done[:-npc_memory.LOG_KEEP]
+        event = {"npc": key, "name": _name(hot, key), "plan": name, "at": plan.get("due"), "status": status,
+                 "outcome": entry["outcome"], "turn": (hot.get("cursor") or {}).get("id"), "shown": 0}
+        if plan.get("against_shiki"):
+            event["against_shiki"] = str(plan["against_shiki"])[:200]
+        history.append(event)
+        events.append(event)
+    del history[:-HAPPENED_KEEP]
+    return events
+
+
+def offscreen(hot):
+    """Случившееся за кадром за последние свёртки — для NEXT; счётчик показа растёт."""
+    out = []
+    for event in _state(hot).get("happened") or []:
+        if event.get("shown", 0) >= SHOW_FOLDS:
+            continue
+        event["shown"] = event.get("shown", 0) + 1
+        word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
+        text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {event['name']} ({word}): {event['outcome']}"
+        if event.get("against_shiki"):
+            text += f" Против Шики: {event['against_shiki']}"
+        out.append(text)
+    return out
+
+
+def due_here(hot, always_present=()):
+    """Присутствующие, чей срок прошёл: их ход играется в этой сцене."""
+    now = _parse((hot.get("cursor") or {}).get("at"))
+    present = set((hot.get("scene") or {}).get("present") or []) | set(always_present)
+    return [(key, name, plan) for key, name, plan, due in agendas(hot)
+            if now and due and due <= now and key in present]
+
+
+def without_plan(hot):
+    """Значимые NPC, чей последний план закрыт, а нового нет: кому дать следующий шаг."""
+    out = []
+    for key, profile in (hot.get("_psyche") or {}).items():
+        if not isinstance(profile, dict) or not profile.get("intent_done"):
+            continue
+        if any(isinstance(a, dict) and a.get("status", "committed") in ("committed", "paused")
+               for a in (profile.get("intent") or {}).values()):
+            continue
+        last = profile["intent_done"][-1]
+        out.append((str(last.get("turn") or ""), key, last))
+    out.sort(reverse=True)
+    return [(key, last) for _, key, last in out]
+
+
 # ---------------------------------------------------------------- выдача ведущему
 
 def view(hot, key):
@@ -196,13 +295,13 @@ def view(hot, key):
     return out
 
 
-def soon(hot, hours=SOON_HOURS):
+def soon(hot, hours=SOON_HOURS, always_present=()):
     """Чужие планы, чей срок наступит в ближайшие сутки или уже прошёл."""
     now = _parse((hot.get("cursor") or {}).get("at"))
     if not now:
         return []
     horizon = now + timedelta(hours=hours)
-    present = set((hot.get("scene") or {}).get("present") or [])
+    present = set((hot.get("scene") or {}).get("present") or []) | set(always_present)
     return [{"npc": key, "name": _name(hot, key), "plan": name,
              **{f: str(a[f])[:170] for f in ("next", "due", "if_unopposed", "against_shiki") if a.get(f)},
              "overdue": due <= now}

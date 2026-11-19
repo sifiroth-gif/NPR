@@ -40,7 +40,20 @@ REL_DIMS = ("trust", "fear", "respect", "debt", "grievance", "attachment", "depe
 REL_RANGE = 5
 FACETS = ("temper", "values", "deep_fear", "needs", "contradiction", "defense",
           "habits", "boundary", "mask", "decides")
-INTENT_STATUS = ("committed", "paused", "fulfilled", "abandoned")
+INTENT_STATUS = ("committed", "paused", "fulfilled", "partial", "failed", "abandoned")
+# Ведущий пишет статус своими словами. Раньше «done», «in_progress», «partial_success»
+# молча возвращались в «committed» — закрытые планы воскресали, а мир стоял.
+STATUS_ALIASES = {
+    "active": "committed", "in_progress": "committed", "ongoing": "committed", "pending": "committed",
+    "blocked": "paused", "stalled": "paused", "waiting": "paused", "on_hold": "paused",
+    "done": "fulfilled", "success": "fulfilled", "succeeded": "fulfilled", "completed": "fulfilled",
+    "complete": "fulfilled", "happened": "fulfilled", "resolved": "fulfilled",
+    "partial_success": "partial", "partially": "partial", "mixed": "partial",
+    "failure": "failed", "fail": "failed", "foiled": "failed", "thwarted": "failed",
+    "cancelled": "abandoned", "canceled": "abandoned", "dropped": "abandoned", "dead": "abandoned",
+}
+CLOSED = ("fulfilled", "partial", "failed", "abandoned")
+PASSIVE = re.compile(r"^\s*(дожд|жд[её]т|ждать|ожид|сохран|продолжа|наблюда|оставаться|не\s)", re.I)
 CHANNELS = ("present", "witnessed", "told", "document", "inferred", "rumor", "mentioned")
 STABLE = ("wants", "fears", "voice")
 INNER_KEYS = ("mem", "rel", "affect", "intent", "psyche", "why", "dread")
@@ -238,6 +251,43 @@ def _relation(hot, profile, patch, turn_id):
             _check(hot, turn_id, "rel", f"сдвиг отношения к {target} без why")
 
 
+SUCCESSOR_HOURS = 12
+
+
+def _later(at, hours):
+    try:
+        return (_dt.datetime.fromisoformat(str(at)) + _dt.timedelta(hours=hours)).isoformat()
+    except ValueError:
+        return None
+
+
+def status_of(value):
+    raw = str(value or "committed").strip().lower().replace(" ", "_").replace("-", "_")
+    return STATUS_ALIASES.get(raw, raw)
+
+
+def default_outcome(entry):
+    """Исход без слов ведущего: план сбылся — его последствия; сорвался — по слабости."""
+    status = entry.get("status")
+    goal = entry.get("goal") or entry.get("next") or ""
+    if status == "fulfilled":
+        return entry.get("if_unopposed") or f"добился: {goal}"
+    if status == "partial":
+        flaw = f"; слабость оставила след: {entry['flaw']}" if entry.get("flaw") else ""
+        return f"наполовину: {entry.get('if_unopposed') or goal}{flaw}"
+    if status == "failed":
+        return f"сорвалось — {entry.get('flaw') or 'помешали'}; цель «{goal}» остаётся"
+    return f"оставил: {goal}"
+
+
+def _successor_key(active, done, key):
+    used = set(active) | {d.get("key") for d in done}
+    n = 2
+    while f"{key}_{n}" in used:
+        n += 1
+    return f"{key}_{n}"
+
+
 def _intents(hot, profile, patch, turn_id, at):
     active = profile.setdefault("intent", {})
     done = profile.setdefault("intent_done", [])
@@ -247,19 +297,45 @@ def _intents(hot, profile, patch, turn_id, at):
             continue
         if isinstance(value, str):
             value = {"goal": value}
-        entry = active.get(key, {})
+        entry = dict(active.get(key, {}))
+        before_next = entry.get("next")
         entry.update({k: _short(v, 240) for k, v in value.items() if isinstance(v, str)})
-        entry.setdefault("status", "committed")
+        entry["status"] = status_of(entry.get("status"))
         if entry["status"] not in INTENT_STATUS:
-            _check(hot, turn_id, "intent", f"намерение {key}: статус {entry['status']}")
+            _check(hot, turn_id, "intent", f"намерение {key}: статус «{entry['status']}» непонятен — "
+                   f"оставлен активным; закрыть: fulfilled, partial, failed, abandoned")
             entry["status"] = "committed"
         entry["turn"] = turn_id
-        if entry["status"] in ("fulfilled", "abandoned"):
+        if entry["status"] in CLOSED:
+            if not value.get("outcome"):
+                entry["outcome"] = _short(default_outcome(entry), 240)
+                _check(hot, turn_id, "intent", f"план {key} закрыт без outcome — принято: «{entry['outcome']}». "
+                       "outcome — что изменилось в мире")
+            # Новый «next» при закрытии — следующий план того же человека, а не подпись к старому.
+            successor = value.get("next") if isinstance(value.get("next"), str) and value.get("next") != before_next else None
+            closed = {k: v for k, v in entry.items() if k not in ("next", "due")} if successor else entry
+            if successor:
+                closed["next"] = before_next
             active.pop(key, None)
-            done.append({"key": key, "at": at, **entry})
+            done.append({"key": key, "at": at, **closed})
             del done[:-LOG_KEEP]
+            if successor:
+                plan = {"goal": entry.get("goal", ""), "next": _short(successor, 240), "status": "committed",
+                        "turn": turn_id, "after": key}
+                for field in ("flaw", "against_shiki"):
+                    if entry.get(field):
+                        plan[field] = entry[field]
+                # Без нового срока следующий шаг — через полдня игрового времени, не «когда-нибудь».
+                plan["due"] = value.get("due") if isinstance(value.get("due"), str) else _later(at, SUCCESSOR_HOURS)
+                active[_successor_key(active, done, key)] = plan
+                entry = plan
+            else:
+                continue
         else:
             active[key] = entry
+        if PASSIVE.match(entry.get("next") or ""):
+            _check(hot, turn_id, "intent", f"план {key}: «{entry['next'][:80]}» — ожидание, а не шаг. "
+                   "Что он делает сам, пока ждёт: давит, ищет, торгуется, ошибается?")
 
 
 def _tier(hot, key):

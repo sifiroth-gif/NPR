@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import lore, will
+from . import inquiry, lore, will
 
 PATH = "recovery/NEXT.json"
 TARGET_BYTES = 9000
@@ -72,7 +72,7 @@ def _will_line(hot, key):
     return lines
 
 
-def _due(hot, brief):
+def _due(hot, brief, always_present=()):
     now = _parse((hot.get("cursor") or {}).get("at"))
     horizon = now + timedelta(hours=DUE_HOURS) if now else None
     out = []
@@ -81,16 +81,35 @@ def _due(hot, brief):
         if due and horizon and due <= horizon:
             out.append((due, f"{_clock(clock['due'])} {clock.get('owner') or ''}: {_short(clock.get('what'))}"
                              f" → если никто не помешает: {_short(clock.get('if_unopposed'), 140)}"))
-    for item in will.soon(hot, hours=DUE_HOURS):
+    for item in will.soon(hot, hours=DUE_HOURS, always_present=always_present):
         due = _parse(item.get("due"))
+        decide = (due + timedelta(hours=will.GRACE_HOURS)).strftime("%H:%M") if due else "?"
         out.append((due or datetime.max, f"{_clock(item.get('due'))} {item['name']}: {_short(item.get('next'))}"
-                                         f" → {_short(item.get('if_unopposed'), 140)}"
-                                         + (" (просрочено)" if item.get("overdue") else "")))
+                                         f" → {_short(item.get('if_unopposed'), 140)} (не решишь до {decide} — "
+                                         "решит бросок)"))
     out.sort(key=lambda x: x[0])
     return [text for _, text in out][:8]
 
 
-def build(hot, brief, checks, entries):
+def must(hot, always_present=()):
+    """Обязательное на этот ход: короткий список вместо десятка советов.
+
+    Замечания ведущий пропускал по 12 ходов подряд (s08.053–062); здесь не больше
+    трёх пунктов, каждый — одно конкретное действие в этой сцене или записи.
+    """
+    out = inquiry.must(hot)
+    for key, name, plan in will.due_here(hot, always_present)[:1]:
+        out.append(f"{will._name(hot, key)} рядом, а срок плана «{_short(plan.get('next') or plan.get('goal'), 120)}» "
+                   f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
+                   f"запиши d.cast.{key}.intent.{name}: status и outcome.")
+    for key, last in will.without_plan(hot)[:2]:
+        out.append(f"У {will._name(hot, key)} закрыт план «{_short(last.get('goal'), 80)}» "
+                   f"({last.get('status')}), нового нет: впиши d.cast.{key}.intent.<ключ> — goal, next, due, "
+                   "flaw, if_unopposed. Что он делает дальше сам?")
+    return out[:3]
+
+
+def build(hot, brief, checks, entries, always_present=()):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -101,8 +120,17 @@ def build(hot, brief, checks, entries):
         "place": cursor.get("place"),
         "turn_file": (brief.get("turn_file") or {}).get("sha"),
         "fold_errors": checks.get("fold_errors") or [],
-        "checks": [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []],
     }
+    duty = must(hot, always_present)
+    if duty:
+        pack["must"] = duty
+    happened = will.offscreen(hot)
+    if happened:
+        pack["offscreen"] = {"rule": "Случилось без Шики, он этого не знает. Это факт мира: последствия "
+                                     "встречаются там, куда дойдёт канал — слух, документ, человек, перемена; "
+                                     "исход, требующий встречи с Шики, случается в ближайшей возможной сцене.",
+                             "events": happened}
+    pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []]
     last = ((hot.get("lint") or {}).get("recent") or [])[-1:]
     if last and last[0].get("id") == cursor.get("id") and last[0].get("verdict") != "чисто":
         pack["prose"] = {"verdict": last[0].get("verdict"),
@@ -117,7 +145,7 @@ def build(hot, brief, checks, entries):
     fences = lore.fences(hot, entries, present)
     if fences:
         pack["fences"] = fences
-    due = _due(hot, brief)
+    due = _due(hot, brief, always_present)
     if due:
         pack["due"] = due
     fight = brief.get("fight") or {}
@@ -155,8 +183,8 @@ def _write(state_dir, pack):
     return True
 
 
-def write(state_dir, hot, brief, checks):
-    pack = build(hot, brief, checks, lore.load(state_dir))
+def write(state_dir, hot, brief, checks, always_present=()):
+    pack = build(hot, brief, checks, lore.load(state_dir), always_present)
     _write(state_dir, pack)
     return pack
 
