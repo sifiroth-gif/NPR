@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.077: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.076: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.075: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.074: Немера (Невыписанная) (`npc/nemera`)
@@ -56,4 +57,3 @@
 - s08.text.020: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
 - s08.text.019: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
 - s08.text.018: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
-- s08.text.017: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), поправки игрока: 1
