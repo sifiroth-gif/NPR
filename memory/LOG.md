@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.053: Хаясэ Нори (`npc/nori`), Мугами Акихиро (`npc/akihiro`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), Аракава Дзюн (`npc/arakawa`)
 - s08.text.052: вещь `foreign_observation_case`, линия `order`, поправки игрока: 2
 - s08.text.051: линия `order`
 - s08.text.050: линия `order`
@@ -54,4 +55,3 @@
 - s07.text.034: Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s07.text.033: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
 - s07.text.032: Аракава Дзюн (`npc/arakawa`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
-- s07.text.031: Аракава Дзюн (`npc/arakawa`)

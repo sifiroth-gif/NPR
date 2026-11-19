@@ -1,20 +1,19 @@
 {
   "current_focus": [
-    "place:e60ba566b2745ec5"
+    "place:a830525fc489e6a2"
   ],
-  "cursor": "s08.text.052",
+  "cursor": "s08.text.053",
   "focus_byte_limit": 6600,
-  "focus_bytes": 521,
-  "index_entities": 378,
-  "index_source_records": 601,
-  "indexed_cursor": "s08.text.052",
+  "focus_bytes": 452,
+  "index_entities": 380,
+  "index_source_records": 602,
+  "indexed_cursor": "s08.text.053",
   "kinds": {
-    "canon": 2,
-    "clock": 2,
+    "clock": 5,
     "entity": 1,
     "item": 5,
     "npc": 50,
-    "place": 294,
+    "place": 295,
     "thread": 24
   },
   "missing_critical": [],
@@ -27,19 +26,25 @@
     {
       "at_1": true,
       "at_5": true,
-      "id": "canon:s08.text.052:0",
-      "kind": "canon"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "canon:s08.text.052:1",
-      "kind": "canon"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
       "id": "clock:arakawa_supply_audit",
+      "kind": "clock"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:home_intrusion",
+      "kind": "clock"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:privacy_record_missing",
+      "kind": "clock"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:s17_ampoule_accounting",
       "kind": "clock"
     },
     {
@@ -518,9 +523,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 82,
-  "self_query_at_5": 82,
-  "self_query_count": 82,
+  "self_query_at_1": 83,
+  "self_query_at_5": 83,
+  "self_query_count": 83,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
