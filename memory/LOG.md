@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.035: поправки игрока: 1
 - s08.text.034: Кирисава Сэйна (`npc/seina`), Мугами Акихиро (`npc/akihiro`), линия `medical_family`, поправки игрока: 1
 - s08.text.033: Кирисава Сэйна (`npc/seina`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `medical_family`
 - s08.text.032: Кирисава Сэйна (`npc/seina`), линия `medical_family`
@@ -59,4 +60,3 @@
 - s07.text.016: Аракава Дзюн (`npc/arakawa`)
 - s07.text.015: Аракава Дзюн (`npc/arakawa`)
 - s07.text.014: Аракава Дзюн (`npc/arakawa`), Охрана Аракавы (`npc/arakawa_guard`)
-- s07.text.013: Аракава Дзюн (`npc/arakawa`)
