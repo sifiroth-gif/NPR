@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint, will
+from . import continuity_guard, dread, fight, lore, nextpack, npc_memory, plot, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -40,6 +40,11 @@ SECRET_PATH = "recovery/GM_ONLY.json"   # скрытая правда, зака�
 UNDO_PATH = "recovery/UNDO.GM_ONLY.json"   # снимок для amend последнего хода: отдельно, чтобы GM_ONLY читался целиком
 SECRET_SCHEMA = "npr-gm-only/2"
 CHECKS_PATH = "recovery/CHECKS.json"   # замечания свёртки: ведущий читает перед новой сценой
+# Запись хода — не пересказ сцены: длинная бухгалтерия задерживает ответ ведущего.
+SITUATION_NORM = 600
+SITUATION_MAX = 900
+STATE_MAX = 400
+BOOKKEEPING_NORM = 4000    # весь ход сверх gm и player: сейчас медиана около 8000, больше самой сцены
 CHECKS_KEEP = 16
 
 TURN_ID = re.compile(r"s(\d{2})\.text\.(\d{3,4})")
@@ -262,6 +267,10 @@ def _apply_delta(hot, delta, turn):
             continue
         card = hot.setdefault("cast", {}).setdefault(key, {})
         _merge(card, patch)
+        # С какого хода стоит отношение и вид: давнее не выдаётся за нынешнее.
+        for field in ("stance", "body", "state"):
+            if field in patch and patch[field] is not None:
+                card.setdefault("since", {})[field] = turn_id
         if len(card.get("knows", [])) > KNOWS_LIMIT:
             card["knows"] = card["knows"][-KNOWS_LIMIT:]
         card["seen"] = turn_id
@@ -920,13 +929,52 @@ def _archived_cards(state_dir):
     return out
 
 
+def _checks_payload(hot):
+    return {"schema": "npr-checks/1", "cursor": (hot.get("cursor") or {}).get("id"),
+            "fold_errors": (hot.get("fold") or {}).get("errors", []),
+            "checks": hot.get("_checks", []),
+            "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом "
+                    "(d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."}
+
+
+def _write_notes(hot, turn):
+    """Замечание kind=write: запись хода длиннее нужного или страницы читаются повторно."""
+    if turn.get("kind") == "ooc":
+        return []
+    notes = []
+    extra = sorted(set(turn.get("review") or {}) - {"predecessor"})
+    if extra:
+        notes.append(f"review: нужен только predecessor, {', '.join(extra)} не пиши")
+    delta = turn.get("d") or {}
+    situation = str(((delta.get("scene") or {}) if isinstance(delta.get("scene"), dict) else {}).get("situation") or "")
+    if len(situation) > SITUATION_MAX:
+        notes.append(f"d.scene.situation {len(situation)} знаков: только перемена и то, что нужно "
+                     f"следующему ходу, до {SITUATION_NORM}; знания NPC — в knows+, не в situation")
+    extra_chars = len(json.dumps({k: v for k, v in turn.items() if k not in ("gm", "player")},
+                                 ensure_ascii=False))
+    if extra_chars > BOOKKEEPING_NORM:
+        parts = sorted(((len(json.dumps(v, ensure_ascii=False)), k) for k, v in delta.items()), reverse=True)[:3]
+        notes.append(f"вся запись сверх сцены {extra_chars} знаков (норма до {BOOKKEEPING_NORM}); крупнее всего: "
+                     + ", ".join(f"{k} {n}" for n, k in parts))
+    long_state = [k for k, v in (delta.get("cast") or {}).items()
+                  if isinstance(v, dict) and len(str(v.get("state") or "")) > STATE_MAX]
+    if long_state:
+        notes.append(f"state у {', '.join(long_state)} длиннее {STATE_MAX} знаков: одна-две фразы о перемене")
+    read = [str(r) for r in turn.get("read") or []]
+    fold_info = hot.setdefault("fold", {})
+    again = [r for r in read if r in (fold_info.get("last_read") or [])]
+    fold_info["last_read"] = read
+    if again:
+        notes.append(f"повторно открыты {', '.join(again)}: страница уже в этом чате, перед ходом "
+                     "достаточно recovery/NEXT.json")
+    if not notes:
+        return []
+    return [{"turn": turn["id"], "kind": "write", "text": "Запись хода: " + "; ".join(notes) + "."}]
+
+
 def _write_checks(state_dir, hot):
     """Короткий открытый файл замечаний: читается за один запрос перед новой сценой."""
-    payload = {"schema": "npr-checks/1", "cursor": (hot.get("cursor") or {}).get("id"),
-               "fold_errors": (hot.get("fold") or {}).get("errors", []),
-               "checks": hot.get("_checks", []),
-               "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом "
-                       "(d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."}
+    payload = _checks_payload(hot)
     path = Path(state_dir) / CHECKS_PATH
     body = _dump(payload)
     if not path.is_file() or path.read_text(encoding="utf-8") != body:
@@ -977,6 +1025,7 @@ def fold(state_dir):
     ensure_npc_memory(state_dir, hot)
     _load_stats(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
+    lore_entries = lore.load(state_dir)
     applied = []
     amended = []
     archived = None
@@ -1004,6 +1053,8 @@ def fold(state_dir):
             sources = [x for x in primary if x["id"] != turn["id"]]
             sources += [x for x in applied if x["id"] != turn["id"]]
             base = _amend_base(hot, turn) if amendment else hot
+            present_before = list((base.get("scene") or {}).get("present") or []) + \
+                [k for k in policy.get("always_present") or [] if isinstance(k, str)]
             review_notes = live_scene.validate_admission(
                 base, turn, policy=policy, accepted=sources)
             # Already published prose cannot be retracted by an asynchronous fold;
@@ -1029,6 +1080,10 @@ def fold(state_dir):
                     checks.append({"turn": turn["id"], "kind": "review", "text": note})
                 for note in name_notes:
                     checks.append({"turn": turn["id"], "kind": "name", "text": note})
+                present_after = list((hot.get("scene") or {}).get("present") or [])
+                checks.extend(lore.review(hot, turn, lore_entries, present_before, present_after))
+                lore.track(hot, turn, lore_entries, list(dict.fromkeys(present_before + present_after)))
+                checks.extend(_write_notes(hot, turn))
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
     # Never publish a partly accepted batch. All turns remain in Git history
@@ -1039,6 +1094,8 @@ def fold(state_dir):
         stale.setdefault("fold", {})["errors"] = errors
         _write_state(state_dir, stale, stale_before)
         _write_checks(state_dir, stale)
+        nextpack.write_blocked(state_dir, stale["cursor"].get("id"), errors, rule=(
+            "Ход не свёрнут: исправь его тем же id с amend по fold_errors. До этого память стоит."))
         return {"status": "rejected", "cursor": stale["cursor"].get("id"),
                 "applied": [], "errors": errors, "due": 0}
     refresh(hot)
@@ -1076,6 +1133,7 @@ def fold(state_dir):
     # Заготовки хранителя — после ходов: исправление хода (amend) восстанавливает
     # снимок без них, и прямую правку HOT оно бы стёрло.
     will.seed(state_dir, hot)
+    will.fill_names(state_dir, hot)
     _keeper_fill(state_dir, hot)
     _cap_cards(hot)
     _tidy_checks(hot)
@@ -1103,7 +1161,9 @@ def fold(state_dir):
     ledger = entity_memory.rebuild(state_dir)
     memory_index = general_memory.save(state_dir, hot, ledger=ledger)
     memory_quality.save(state_dir, hot, memory_index)
-    live_scene.write(brief_path, live_scene.build_for_state(hot, accepted, state_dir))
+    brief = live_scene.build_for_state(hot, accepted, state_dir)
+    live_scene.write(brief_path, brief)
+    nextpack.write(state_dir, hot, brief, _checks_payload(hot))
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
@@ -1297,4 +1357,6 @@ def record_blocked(state_dir, problems, attempted=None):
     body = _dump(payload)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(body, encoding="utf-8")
+    nextpack.write_blocked(state_dir, payload.get("cursor"), problems, kind="state_errors",
+                           rule=payload["state_errors_rule"])
     return payload

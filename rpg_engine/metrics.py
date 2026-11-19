@@ -12,7 +12,8 @@ from pathlib import Path
 
 START_READS = {"main": ("AGENTS.md", "campaigns/shiki/GM_CORE.md", "campaigns/shiki/SHIKI.md",
                         "skills/dark-literary-gm/SKILL.md"),
-               "state": ("recovery/GM_BRIEF.json", "recovery/CHECKS.json", "memory/INDEX.md")}
+               "state": ("recovery/GM_BRIEF.json", "recovery/NEXT.json", "memory/INDEX.md")}
+TURN_READ = "recovery/NEXT.json"   # единственное чтение ведущего перед обычным ходом
 
 
 def _session(turn_id):
@@ -62,6 +63,7 @@ def collect(state_dir, source_root=None):
             "npc_autonomy": autonomy(state_dir),
             "control_questions": {k: evaluation.get(k) for k in ("passed", "total", "score")},
             "start_read_bytes": {"total": sum(sizes.values()), "files": sizes},
+            "turn_read_bytes": (state_dir / TURN_READ).stat().st_size if (state_dir / TURN_READ).is_file() else None,
             "hot_bytes": (state_dir / "recovery/HOT.json").stat().st_size
             if (state_dir / "recovery/HOT.json").is_file() else None,
             "active_events": len(events), "events_without_end": endless,
@@ -78,17 +80,32 @@ def pace(state_dir, last=20):
     import statistics
     import subprocess
     try:
-        out = subprocess.run(["git", "-C", str(state_dir), "log", "--format=%ct %s", f"-{last * 3}",
+        out = subprocess.run(["git", "-C", str(state_dir), "log", "--format=%H %ct %s", f"-{last * 3}",
                               "--", "recovery/TURN.json"], capture_output=True, text=True, check=True).stdout
     except (OSError, subprocess.CalledProcessError):
         return None
-    plays = []
+    plays, commits = [], {}
     for line in out.splitlines():
-        stamp, _, subject = line.partition(" ")
+        sha, _, rest = line.partition(" ")
+        stamp, _, subject = rest.partition(" ")
         match = re.match(r"Play (s\d+\.text\.\d+)", subject)
         if match:
             plays.append((int(stamp), match.group(1)))
+            commits[match.group(1)] = sha
     plays = sorted(plays)[-last:]
+    # Запись хода без текста сцены (бухгалтерия) и прочитанные страницы: то, что
+    # ведущий делает сверх самой сцены.
+    write, reads = [], []
+    for _, turn_id in plays:
+        try:
+            raw = subprocess.run(["git", "-C", str(state_dir), "show", f"{commits[turn_id]}:recovery/TURN.json"],
+                                 capture_output=True, text=True, check=True).stdout
+            turn = json.loads(raw)
+        except (OSError, subprocess.CalledProcessError, ValueError):
+            continue
+        write.append(len(json.dumps({k: v for k, v in turn.items() if k not in ("gm", "player")},
+                                    ensure_ascii=False)))
+        reads.append(len(turn.get("read") or []))
     gaps = [(b[0] - a[0]) / 60 for a, b in zip(plays, plays[1:])
             if a[1][:3] == b[1][:3] and 0 < b[0] - a[0] < 6 * 3600]
     lengths = {}
@@ -104,6 +121,8 @@ def pace(state_dir, last=20):
     return {"turns": len(plays), "minutes_between_turns_median": round(statistics.median(gaps), 1),
             "minutes_p90": round(gaps[int(0.9 * (len(gaps) - 1))], 1),
             "gm_chars_median": int(statistics.median(chars)) if chars else None,
+            "bookkeeping_chars_median": int(statistics.median(write)) if write else None,
+            "pages_read_per_turn": round(statistics.mean(reads), 1) if reads else None,
             "note": "полный цикл: чтение игрока, его заявка и подготовка сцены"}
 
 
