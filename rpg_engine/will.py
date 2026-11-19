@@ -53,6 +53,22 @@ def _name(hot, key):
     return card.get("name") or profile.get("name") or key
 
 
+def fill_names(state_dir, hot):
+    """Имя для каждого NPC с волей: карточка уходит из HOT, когда он покидает сцену."""
+    for key, profile in (hot.get("_psyche") or {}).items():
+        if not isinstance(profile, dict) or profile.get("name") or not profile.get("intent"):
+            continue
+        name = ((hot.get("cast") or {}).get(key) or {}).get("name")
+        if not name:
+            try:
+                path = Path(state_dir) / "recovery/cast" / f"{key}.json"
+                name = json.loads(path.read_text(encoding="utf-8")).get("name")
+            except (OSError, ValueError):
+                name = None
+        if name:
+            profile["name"] = name
+
+
 # ---------------------------------------------------------------- заготовка хранителя
 
 def seed(state_dir, hot):

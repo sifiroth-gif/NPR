@@ -561,7 +561,8 @@ def _read_checks(store, turns):
                      [_order(h.get("turn")) for h in store[key].get("history") or []]
             before = [b for b in before if b < (session, seq)]
             last = max(before) if before else None
-            if last is None or last[0] != session or seq - last[1] > RETURN_GAP:
+            # Без прежнего следа это новое лицо, а не вернувшееся: страницы ещё нет.
+            if last is not None and (last[0] != session or seq - last[1] > RETURN_GAP):
                 returning.append(key)
         for key in returning[:3]:
             entity = store[key]

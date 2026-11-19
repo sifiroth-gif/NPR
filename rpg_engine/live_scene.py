@@ -60,6 +60,9 @@ def _cast(hot, actor):
         val = card[k]
         profile[k] = ([_short(x, 210) for x in val[-8:]]
                       if isinstance(val, list) else _short(val, 850))
+        if k in ("stance", "body") and isinstance(profile[k], str):
+            since = (card.get("since") or {}).get(k)
+            profile[k] += f" [{since}]" if since else " [давняя запись: сверяй со state]"
     # The live packet is private, but do not drop distinctions between
     # a source-backed NPC belief and an unverified descriptive note.
     provenance = card.get("knowledge_provenance")
@@ -120,6 +123,11 @@ def build_for_state(hot, turns, state_dir):
                     node.setdefault("look", {})[field] = _short(match.group(1), 260)
         if not (node.get("look") or {}).get("внешность"):
             node.setdefault("look", {})["внешность"] = f"не записан: опиши при первой возможности и внеси в d.cast.{actor}.look"
+    # Редкое знание: кто владеет, кто слышал — до реплик, а не после.
+    from . import lore
+    fences = lore.fences(hot, lore.load(state_dir), (hot.get("scene") or {}).get("present") or [])
+    if fences:
+        result["fences"] = fences
     # Blob SHA записанного TURN.json: ведущий пишет следующий ход без его чтения.
     turn_path = Path(state_dir) / "recovery/TURN.json"
     if turn_path.is_file():
