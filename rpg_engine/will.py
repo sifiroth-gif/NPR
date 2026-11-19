@@ -253,7 +253,7 @@ def offscreen(hot):
         word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
         text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {event['name']} ({word}): {event['outcome']}"
         if event.get("against_shiki"):
-            text += f" Против Шики: {event['against_shiki']}"
+            text += ("" if text.endswith((".", "!", "?", "…", ")")) else ".") + f" Против Шики: {event['against_shiki']}"
         out.append(text)
     return out
 
