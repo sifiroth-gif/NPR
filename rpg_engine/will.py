@@ -114,7 +114,8 @@ def seed(state_dir, hot):
                          "outcome": entry["outcome"], "turn": (hot.get("cursor") or {}).get("id"), "shown": 0}
                 if entry.get("against_shiki"):
                     event["against_shiki"] = str(entry["against_shiki"])[:200]
-                state.setdefault("happened", []).append(event)
+                if not fix.get("onscreen"):   # сыгранное при Шики — не новость мира для offscreen
+                    state.setdefault("happened", []).append(event)
                 changed.append(key)
         done = {d.get("key") for d in profile.get("intent_done") or []}
         for name, agenda in (will.get("intent") or {}).items():
@@ -251,7 +252,8 @@ def offscreen(hot):
             continue
         event["shown"] = event.get("shown", 0) + 1
         word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
-        text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {event['name']} ({word}): {event['outcome']}"
+        name = event["name"] if event.get("name") and event["name"] != event.get("npc") else _name(hot, event.get("npc"))
+        text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {name} ({word}): {event['outcome']}"
         if event.get("against_shiki"):
             text += ("" if text.endswith((".", "!", "?", "…", ")")) else ".") + f" Против Шики: {event['against_shiki']}"
         out.append(text)

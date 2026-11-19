@@ -211,11 +211,16 @@ def _apply_cast(store, key, patch, turn_id, changes):
     stable = {}
     if patch.get("look"):
         stable["внешность"] = patch["look"]
-    for field, value in (patch.get("facts") or {}).items():
+    facts = patch.get("facts") or {}
+    if isinstance(facts, (list, tuple)):   # ведущий пишет и списком: это сведения, а не именованные черты
+        facts = {"сведения": "; ".join(_text(x) for x in facts if _text(x))}
+    elif not isinstance(facts, dict):
+        facts = {"сведения": facts}
+    for field, value in facts.items():
         stable[_text(field)] = value
     for field, value in stable.items():
         series = entity["stable"].setdefault(field, [])
-        if _push(series, value, turn_id):
+        if _push(series, value, turn_id) and field != "сведения":
             changes.append((key, field, series[-2], series[-1]))
     for field, _label in CHARACTER:
         if patch.get(field):
@@ -305,27 +310,46 @@ def _match(store, names):
     return None
 
 
+def _absorb(main, extra):
+    """Переносит запись лишнего ключа в основную: недостающее дополняется, повторы не множатся."""
+    main["aliases"] = list(dict.fromkeys(main["aliases"] + [extra["id"]] + extra["aliases"]))
+    if not main["name"] or main["name"] == main["id"]:
+        main["name"] = extra["name"] or main["name"]
+    for field in ("stable", "character"):
+        for label, series in extra[field].items():
+            main[field].setdefault(label, series)
+    for label, value in extra["now"].items():
+        main["now"].setdefault(label, value)
+    for item in extra["knows"]:
+        _add_unique(main["knows"], item["v"], item["src"])
+    seen = {(h.get("turn"), h.get("what")) for h in main["history"]}
+    main["history"] += [h for h in extra["history"] if (h.get("turn"), h.get("what")) not in seen]
+    for k, v in extra["gm"].items():
+        main["gm"].setdefault(k, v)
+    _seen(main, extra["first"])
+    _seen(main, extra["last"])
+    main["sources"] = list(dict.fromkeys(main["sources"] + extra["sources"]))
+
+
+def _merge_aliases(store, aliases):
+    """Ключи, слитые хранителем (memory/_curated/merge.json), — одна страница."""
+    for extra_key, main_key in aliases.items():
+        if extra_key in store and extra_key != main_key:
+            extra = store.pop(extra_key)
+            if main_key in store:
+                _absorb(store[main_key], extra)
+            else:
+                extra["id"] = main_key
+                store[main_key] = extra
+
+
 def _merge_same_names(store):
     """Сводит записи одного человека под разными ключами (по полному имени)."""
     by_name = {}
     for key in sorted(store, key=lambda k: (store[k]["first"] is None, k)):
         name = _norm(store[key]["name"])
         if name and name in by_name and store[key]["kind"] == store[by_name[name]]["kind"]:
-            main, extra = store[by_name[name]], store.pop(key)
-            main["aliases"] = list(dict.fromkeys(main["aliases"] + [extra["id"]] + extra["aliases"]))
-            for field in ("stable", "character"):
-                for label, series in extra[field].items():
-                    main[field].setdefault(label, series)
-            for label, value in extra["now"].items():
-                main["now"].setdefault(label, value)
-            for item in extra["knows"]:
-                _add_unique(main["knows"], item["v"], item["src"])
-            main["history"] += extra["history"]
-            for k, v in extra["gm"].items():
-                main["gm"].setdefault(k, v)
-            _seen(main, extra["first"])
-            _seen(main, extra["last"])
-            main["sources"] = list(dict.fromkeys(main["sources"] + extra["sources"]))
+            _absorb(store[by_name[name]], store.pop(key))
         elif name:
             by_name[name] = key
 
@@ -360,7 +384,7 @@ def build(state_dir, hot, source_root=None):
     """Собирает реестр сущностей из всех источников. Ничего не пишет."""
     state_dir = Path(state_dir)
     root = Path(source_root) if source_root else Path(__file__).resolve().parents[1]
-    store, changes = {}, []
+    store, changes, skipped = {}, [], []
     roster = _read_json(root / ROSTER, {}) or {}
     _merge_roster(store, roster)
     deltas = _all_deltas(state_dir)
@@ -371,7 +395,12 @@ def build(state_dir, hot, source_root=None):
         for key, patch in (d.get("cast") or {}).items():
             if key in PLAYERS:
                 continue
-            _apply_cast(store, key, patch, turn_id, changes if not row.get("curated") else [])
+            try:
+                _apply_cast(store, key, patch, turn_id, changes if not row.get("curated") else [])
+            except (AttributeError, TypeError, ValueError) as exc:   # одна кривая запись не гасит всю вики
+                skipped.append({"turn": turn_id, "kind": "wiki",
+                                "text": f"d.cast.{key} не разобран ({type(exc).__name__}: {exc}); "
+                                        f"страница собрана без этой правки, исправь ход amend."})
         for key, patch in (d.get("things") or {}).items():
             if isinstance(patch, dict):
                 things.setdefault(key, []).append({"turn": turn_id, "patch": patch})
@@ -407,8 +436,12 @@ def build(state_dir, hot, source_root=None):
     for key, psyche in (hot.get("_psyche") or {}).items():
         if key in store and psyche:
             store[key]["gm"]["psyche"] = psyche
+    from . import merge
+    _merge_aliases(store, merge.aliases(state_dir))
     _merge_same_names(store)
     _auto_aliases(store)
+    for entity in store.values():   # один эпизод из двух источников — одна строка
+        entity["history"] = list({(h.get("turn"), h.get("what")): h for h in entity["history"]}.values())
     conversations, unplaced = talk.collect(state_dir, store)
     for key, entries in conversations.items():
         store[key]["talk"] = entries
@@ -433,7 +466,7 @@ def build(state_dir, hot, source_root=None):
     where = places.collect(state_dir, {k: e["talk"] for k, e in store.items() if e.get("talk")})
     return {"schema": SCHEMA, "cursor": (hot.get("cursor") or {}).get("id"),
             "entities": store, "things": things, "threads": threads,
-            "fixes": fixes, "changes": changes, "places": where, "recent": [r for r in deltas if not r.get("curated")][-LOG_TURNS:]}
+            "fixes": fixes, "changes": changes, "skipped": skipped, "places": where, "recent": [r for r in deltas if not r.get("curated")][-LOG_TURNS:]}
 
 
 # ----------------------------------------------------------------- проверка нового хода
@@ -1030,4 +1063,4 @@ def write(state_dir, hot, source_root=None, new_turns=()):
             "index_bytes": sizes.get(f"{DIR}/INDEX.md", 0),
             "largest_page": max(sizes.items(), key=lambda kv: kv[1]) if sizes else None,
             "fixes_total": len(registry["fixes"]),
-            "checks": turn_checks(registry, list(new_turns))}
+            "checks": turn_checks(registry, list(new_turns)) + registry["skipped"]}

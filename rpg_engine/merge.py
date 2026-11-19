@@ -31,13 +31,27 @@ def aliases(state_dir):
 
 
 def names(state_dir, hot):
-    """Имя основного ключа от хранителя («names»): заготовка по подписи могла его исказить."""
+    """Имя ключа от хранителя («names»): карточка без имени или заготовка по подписи.
+
+    Правит и отложенную карточку в recovery/cast, если человека сейчас нет в сцене.
+    """
     for key, name in (_seed(state_dir).get("names") or {}).items():
+        if not isinstance(name, str):
+            continue
         card = (hot.get("cast") or {}).get(key)
-        if isinstance(card, dict) and isinstance(name, str):
+        if isinstance(card, dict):
             card["name"] = name
+        else:
+            path = Path(state_dir) / "recovery/cast" / f"{key}.json"
+            try:
+                stored = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                stored = None
+            if isinstance(stored, dict) and stored.get("name") != name:
+                stored["name"] = name
+                path.write_text(json.dumps(stored, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         profile = (hot.get("_psyche") or {}).get(key)
-        if isinstance(profile, dict) and isinstance(name, str):
+        if isinstance(profile, dict):
             profile["name"] = name
 
 
