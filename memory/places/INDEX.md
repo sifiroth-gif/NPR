@@ -155,3 +155,4 @@
 - Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
 - Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, дом Шики · `places/kusagakure-dom-shiki` · 1 ход(ов), s08–s08
+- Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
