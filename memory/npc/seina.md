@@ -1,7 +1,7 @@
 # Кирисава Сэйна · `seina`
 
 псевдонимы: Кирисава, Сэйна
-вид: npc · впервые: s04.text.065 · последний раз: s08.text.031 · сейчас в сцене
+вид: npc · впервые: s04.text.065 · последний раз: s08.text.032 · сейчас в сцене
 
 ## Постоянное
 - внешность: 32 года, собранная, усталость врача в спокойном лице [campaigns/shiki/roster.json]
@@ -20,13 +20,13 @@
 - голос: Сдержанная точная медицинская речь [s04.text.065]
 
 ## Сейчас
-- положение: 07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample materials from private cupboard, sits down to hear his intended topic; she has seen his dramatic bodily transformation but no independent knowledge of ICU lab tests or ethical complaint. [s08.text.031]
+- положение: 07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and destruction request. Seina wore protective gloves and performed limited non-invasive exam, confirmed slow ~50 pulse but functional alert motor and reflex systems; low temperature from Shiki's report, clinic device cannot measure accurately. On direct question about older blood sample from 01 Oct she unlocks original preserved red blood she drew then, shows independently prepared 02 Oct smear with preserved recognizable blood cells and dark threadlike structures of uncertain source, no general lab results completed, no external transmission. Will not contact central hospital for samples without his permission. [s08.text.032]
 - вид в последней сцене: Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [s05.text.014]
 
 ## Граница знаний
 - Знает лишь то, что испытал, услышал или получил по службе. Не знает Нулевой Геном и мотивов Шики без отдельного источника.
 
-## Знает (последние 23 из 23)
+## Знает (последние 24 из 24)
 - Шики вернулся в кабинет заметно исхудавшим, предупредил о возможном нападении; причины облика и противник ей неизвестны. [s04.text.066]
 - Шики по собственной заявке помог стабилизировать слизистую гортани медицинской чакрой; после вмешательства SpO2 91%, давление начало повышаться. [s05.text.014]
 - Посетитель от имени Центрального управления требует списки пациентов за три дня, его полномочия не подтверждены. [s05.text.014]
@@ -50,6 +50,7 @@
 - Шики сообщил, что отсутствие свежих обычных анализов намеренно, но не раскрыл причины и тайные источники. [s05.text.035]
 - 06:49 03.10 Shiki returned unannounced to Seina's private clinic physically alive and mobile but with significantly worsened corpse-like gray complexion, neck and arms hidden beneath fabric, fingered shinobi gloves and unusual nearby odor; she had previously seen stage3 and received Shiki's disclosure of Pact/Nemera earlier, but DOES NOT know stage6 cause or today's ICU events. Keiji says Shiki treated his left knee in July 1278 during Chunin exam. [s08.text.030]
 - 03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his second-hand news and heard his account of Shiki treating him without payment in 1278. [s08.text.031]
+- 07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that direct bare-skin/fresh blood contact might harm and that central-hospital staff reported his private blood/capability data without consent. He explicitly asks her to privately examine him and asks whereabouts/results of her original 01 Oct blood sample. [s08.text.032]
 
 ## Поправки игрока
 - s04.text.065: Кирисава Сэйна — установленная в campaigns/shiki/lore.json наставница Мугами Шики с детства, медицинская тюнин. Позднее ПРЯМОЕ уточнение игрока s04.text.065: старый частный медицинский кабинет Кирисавы Сэйны в Кусагакуре продолжает работать, в нём по-прежнему работают родители Шики — Мугами Акихиро и Мугами Нао.
@@ -59,8 +60,7 @@
 - s06.text.038: 17.11.2026, прямое исправление прежней оценки: эталон неожиданных многоуровневых раскрытий — линия Кабуто в ПЕРВОЙ сессии. 07.07.1278 первые беседы после боя Шики с Ёрои; Шики заметил несоответствия мимики и знания Кабуто о медкрыле; 21.07.1278 Шики разобрал странное оформление второй команды Травы, пять переглядываний и сигналы пальцев, позднее состоялись медтренировки. 19.09.1278 Кабуто направи…
 - полный текст поправок: `archive/shiki-canon.jsonl`
 
-## История (последние 8 из 36)
-- s05.text.033 0006-10-01T23:15:00: Шики объяснил отцу, что перенёс запоры из необходимости; физической слабости не чувствует, но отмечает небольшое эмоциональное притупление и срыв при угрозе близким. Сэйна не установила причину. Семья спорит о хранении его биомедицинских данных; Нао спрашивае…
+## История (последние 8 из 37)
 - s05.text.034 0006-10-01T23:19:00: Шики запретил передачу биообразцов за пределы клиники. Сэйна заперла их, показала последнюю обычную кровь в своей картотеке — 18.07.1279 (новый датированный факт сцены). Тайной лаборатории и происхождения линий Хаку/Ходзуки она не знает; Нао зовёт Шики домой.
 - s05.text.035 0006-10-01T23:22:00: Шики подтвердил Сэйне, что анализы 18.07.1279 — последние реальные обычные, и это намеренно. Нао сказала, что хочет его видеть дома; Акихиро готов идти. У больного третьей палаты десатурация, Сэйна ушла к нему.
 - s05.text.036 0006-10-01T23:53:00: Шики согласился прийти домой с Нао и Акихиро. Родители накрыли ужин и заговорили о саде. Нао предложила ему старую комнату. Акихиро заметил незнакомца с фонарём у соседского водостока, направился выяснить, кто он.
@@ -68,7 +68,8 @@
 - s06.text.046 0006-10-02T22:47:00: Раздельная генетическая проверка С-17 выявила две клеточные линии и одну гетерокарионную клетку с ядрами генотипов А и Б. Архивный профиль пересаженной кисти Инабы с высокой вероятностью совпал с линией Б культуры. Такаги сам сорвал подозрительную внеплановую…
 - s08.text.030 0006-10-03T06:49:00: Шики, предупредив медсестру об опасности кожи, оплатил бинты и ушёл из госпиталя. У наставницы Сэйны он неожиданно встретил Кэйдзи из Конохи — пациента, чьё колено вылечил на экзамене пять лет назад. Сэйна заметила новую перемену Шики.
 - s08.text.031 0006-10-03T07:03:00: Шики дождался осмотра Кэйдзи, расспросил его о переменах в Конохе, Суне, на границах и слухах об Акацуки. Кэйдзи рассказал о своей службе и старой помощи Шики, затем ушёл. Сэйна осталась с Шики наедине и достала его закрытую карту.
-- ранее: 28 эпизодов, полностью в `archive/npc-memory/seina.json`
+- s08.text.032 0006-10-03T07:18:00: Шики попросил Сэйну тайно обследовать его и рассказал о ночном коллапсе, крови и жалобе. Сэйна провела осмотр без голого контакта и показала сохранённую частную пробу крови 01.10 с предварительным мазком: тёмные нити существовали ещё до последнего вмешательст…
+- ранее: 29 эпизодов, полностью в `archive/npc-memory/seina.json`
 
 ## Разговоры с Шики: 26 ходов (s02, s04, s05, s08)
 - дословно по ходам: `memory/npc/seina.talk.md`

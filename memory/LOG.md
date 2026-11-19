@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.032: Кирисава Сэйна (`npc/seina`), линия `medical_family`
 - s08.text.031: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `keiji_reunion`, план сюжета
 - s08.text.030: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `shiki_confidentiality`, план сюжета
 - s08.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera`, линия `shiki_confidentiality`, план сюжета, поправки игрока: 1

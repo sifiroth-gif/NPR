@@ -9,7 +9,7 @@
     "name": "Дежурная врач охраняемого отделения",
     "next": "в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес",
     "npc": "night_icu_physician",
-    "overdue": false,
+    "overdue": true,
     "plan": "shift_blame"
    },
    {
@@ -68,11 +68,17 @@
   "hard_bytes": 48000,
   "target_bytes": 32000
  },
- "checks": [],
+ "checks": [
+  {
+   "kind": "will",
+   "text": "За кадром: «Дежурная врач охраняемого отделения» собирался «в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес» к 0006-10-03T07:05:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: страх делает её ложь слишком аккуратной: в журнале не хватает одного перенаправления. Запиши d.cast.night_icu_physician.intent.shift_blame (status, next, due) и след в мире.",
+   "turn": "s08.text.032"
+  }
+ ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.031",
+  "cursor": "s08.text.032",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -80,15 +86,15 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
+   "recipient6",
    "seina",
    "place:44fbe9adb51ae417",
-   "keiji",
    "nemera",
    "thread:nemera",
    "thread:pact",
    "thread:parents"
   ],
-  "focus_bytes": 3514,
+  "focus_bytes": 4174,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -115,22 +121,72 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T07:03:00",
+  "at": "0006-10-03T07:18:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.031",
+  "id": "s08.text.032",
   "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-  "time": "07:03"
+  "time": "07:18"
  },
- "digest": "112a73af98dec2638690aa173ad6223eff3e013483afa2c3a4795b7d52c9a109",
+ "digest": "85c89584eb2a358c9cdce086ca1bc9d24ea5eac8e72b54c37e6cf028402bc205",
  "entity_memory": {
-  "activated": [],
+  "activated": [
+   {
+    "activated_by": "scene",
+    "facts": [
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "age_at_discovery",
+      "id": "recipient6:identity:age-discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "примерно шестнадцать лет",
+      "visibility": "gm_only"
+     },
+     {
+      "also_sources": [
+       "s05.text.019"
+      ],
+      "authority": "played_source",
+      "field": "discovery",
+      "id": "recipient6:history:discovery:source-s05",
+      "recorded_at": "0006-10-01T22:12:00",
+      "source": "archive/session-005-source.md:L3057",
+      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
+      "visibility": "gm_only"
+     },
+     {
+      "authority": "player_correction",
+      "field": "sex",
+      "id": "recipient6:identity:sex:source-s08",
+      "source": "archive/shiki-canon.jsonl:s08.text.005",
+      "value": "мальчик (мужской пол)",
+      "visibility": "gm_only"
+     }
+    ],
+    "id": "recipient6",
+    "label": "Реципиент № 6",
+    "rule": "No absent demographic or biographical attribute may be guessed.",
+    "status": "source_bound"
+   }
+  ],
   "conflicts": [],
   "rule": "Entity attributes are claims with sources, not prose suggestions.",
   "schema": "npr-entity-ledger/1",
-  "total_activated": 0
+  "total_activated": 1
  },
  "evidence_graph": {
-  "edges": [],
+  "edges": [
+   {
+    "actor": "seina",
+    "from": "s08.text.031",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s08.text.032"
+   }
+  ],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
@@ -138,21 +194,21 @@
  "fight": {
   "chakra": {
    "state": "пусто",
-   "value": 5.1
+   "value": 6.6
   },
   "dice": [
-   18,
-   5,
-   3,
-   19,
-   61,
-   50,
-   12,
-   93,
    96,
-   9,
-   87,
-   50
+   97,
+   8,
+   4,
+   38,
+   92,
+   40,
+   84,
+   60,
+   7,
+   71,
+   83
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -161,6 +217,30 @@
  "format": "NPR-LIVE-SCENE/1",
  "general_memory": {
   "activated": [
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [
+     {
+      "field": "age_at_discovery",
+      "source": "archive/session-005-source.md:L3057"
+     },
+     {
+      "field": "discovery",
+      "source": "archive/session-005-source.md:L3057"
+     },
+     {
+      "field": "sex",
+      "source": "archive/shiki-canon.jsonl:s08.text.005"
+     }
+    ],
+    "facts_ref": "entity_memory.activated[recipient6].facts",
+    "id": "recipient6",
+    "kind": "entity",
+    "label": "Реципиент № 6",
+    "status": "verified_facts"
+   },
    {
     "facts": [],
     "id": "seina",
@@ -182,23 +262,6 @@
     "id": "place:44fbe9adb51ae417",
     "kind": "place",
     "label": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "keiji",
-    "kind": "npc",
-    "label": "keiji",
-    "operational_cues": {
-     "source": "recovery/cast/keiji.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal"
-     }
-    },
     "status": "no_verified_facts"
    },
    {
@@ -292,10 +355,10 @@
   "due": null,
   "npcs": {
    "seina": {
-    "does": "Finishes independent knee exam, sends Keiji with written findings, draws Shiki's confidential charts from lock and invites him to state his business.",
+    "does": "Keeps old labeled blood sample locked and private, shows a limited 02 Oct microscopy chart, documents guarded exam in confidential paper chart and asks Shiki to decide whether and how to proceed with old material.",
     "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
     "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "She must maintain her usual clinical work and later address her former pupil's unmistakable transformation and established privacy commitments.",
+    "reads": "She cannot explain cause or guarantee ordinary clinical interpretation; more invasive sampling or distributing biological data would violate the exact confidence he now requires.",
     "stage": 2,
     "step": "пересмотр"
    }
@@ -333,12 +396,6 @@
     "clock_id": "arakawa_supply_audit",
     "due": "0006-10-03T08:15:00",
     "owner": "Аракава Дзюн",
-    "status": "unresolved_actor_or_non_npc_owner"
-   },
-   {
-    "clock_id": "medical_notice_registry_trace",
-    "due": "0006-10-03T07:05:00",
-    "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
     "status": "unresolved_actor_or_non_npc_owner"
    },
    {
@@ -502,10 +559,17 @@
    "prior_disclosures": [
     {
      "at": "0006-10-03T07:03:00",
-     "sha256": "d34b2073e20df2430f4e1d3d2695fac3893fd79903997d6666004f0cae50bb2c",
+     "sha256": "585ee0774abc6abb1f820eab4894d692841ef0d7ac26f79472a6a1a8c4902c14",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.031"
+    },
+    {
+     "at": "0006-10-03T07:18:00",
+     "sha256": "458a2c0426b4442068630a29a00453177a8faee436e70b608943f5d655e7f383",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.032"
     }
    ],
    "profile": {
@@ -514,10 +578,10 @@
     "first": "s04.text.065",
     "inner": {},
     "knows": [
-     "Шики запретил отправлять образцы за пределы частной клиники; Сэйна обязалась соблюдать это ограничение.",
      "Шики сообщил, что отсутствие свежих обычных анализов намеренно, но не раскрыл причины и тайные источники.",
      "06:49 03.10 Shiki returned unannounced to Seina's private clinic physically alive and mobile but with significantly worsened corpse-like gray complexion, neck and arms hidden beneath fabric, fingered shinobi gl",
-     "03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his "
+     "03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his ",
+     "07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that"
     ],
     "knows_ref": "memory/npc/seina.md",
     "knows_total": 8,
@@ -525,17 +589,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.031",
-      "what": "Шики дождался осмотра Кэйдзи, расспросил его о переменах в Конохе, Суне, на границах и слухах об Акацуки. Кэйдзи рассказал о своей службе и старой помощи Шики, затем ушёл. Сэйна осталась с Шики наедин"
+      "turn": "s08.text.032",
+      "what": "Шики попросил Сэйну тайно обследовать его и рассказал о ночном коллапсе, крови и жалобе. Сэйна провела осмотр без голого контакта и показала сохранённую частную пробу крови 01.10 с предварительным маз"
      }
     ],
     "memory_file": "archive/npc-memory/seina.json",
-    "memory_total": 36,
+    "memory_total": 37,
     "name": "Кирисава Сэйна",
     "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-    "seen": "s08.text.031",
+    "seen": "s08.text.032",
     "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-    "state": "07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample materials from private cupboard, sits down to hear his intended topic; she has seen his dramatic bodily transformation but no independent knowledge of ICU lab tests or ethical complaint.",
+    "state": "07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and destruction request. Seina wore protective gloves and performed limited non-invasive exam, confirmed slow ~50 pulse but functional alert motor and reflex systems; low temperature from Shiki's report, clinic device cannot measure accurately. On direct question about older blood sample from 01 Oct she unlocks original preserved red blood she drew then, shows independently prepared 02 Oct smear with preserved recognizable blood cells and dark threadlike structures of uncertain source, no general lab results completed, no external transmission. Will not contact central hospital for samples",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Сдержанная точная медицинская речь",
@@ -546,15 +610,15 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.031",
-   "line": "Шики дождался осмотра Кэйдзи, расспросил его о переменах в Конохе, Суне, на границах и слухах об Акацуки. Кэйдзи рассказал о своей службе и старой помощи Шики, затем ушёл. Сэйна осталась с Шики наедине и достала его закрытую карту."
+   "id": "s08.text.032",
+   "line": "Шики попросил Сэйну тайно обследовать его и рассказал о ночном коллапсе, крови и жалобе. Сэйна провела осмотр без голого контакта и показала сохранённую частную пробу крови 01.10 с предварительным мазком: тёмные нити существовали ещё до последнего вмешательства."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "07:03 private medical room of Seina's Kusa clinic: Keiji just left with signed knee note, Seina sits behind her desk with Shiki's locked confidential file and separate 01 Oct blood sampling papers withdrawn from her secured cabinet. Shiki remains in room as previously dressed, with no direct skin contact, may take a seat if he chooses. Clinic other patients outside room, staff and parents not presumed present. Kadz retains sealed fresh black blood samples and pending petition at central hospital.",
-  "pressure": "Seina has only first-hand view of Shiki's dramatically changed corpse-like stage6 appearance and past disclosures about Nemera; awaits conversation and is not obliged to reassure or agree. Keiji's older medical debt shaped his reaction without erasing his unease, and broad Konoha rumors are of uncertain reliability. Formal blood/privacy case in hospital continues independently.",
-  "situation": "03 Oct 1283 06:49–07:03. Shiki tells Seina 'Не опасно' about standing nearby, says he will wait for Keiji's exam and wants to talk with her afterwards. He asks Keiji to tell him what is happening in wider world. Seina accepts he may stay at safe distance but avoids physical touch and resumes proper inspection of Keiji's old left knee. Keiji, Konoha shinobi age around18 whom Shiki treated on 02 Jul 1278, discusses from own perspective Konoha Fifth Hokage Tsunade dealing with old guard and medical reform, more escort work, Sand reconciliation and rumors of youthful Kazekage, partial rumors about black cloaks and red clouds/Akatsuki as cross-border missing shinobi, unresolved Sasuke Uchiha departure, increased minor border criminal activity and costly cargo security; all gossip/second-hand is presented as such, not omniscient facts or forced central conspiratorial connection. Keiji personally accompanies medicinal shipment to Kusa, says on that independent run merchant changed declared recipient three times; not evidence of any relationship to S17 or Kusa investigations. Seina examines chronic left lateral ligament; no gross rupture, some increased laxity vs other leg under stress and remaining discomfort after overuse; gives written report and guidance to get assessment after return, no instant cure. Keiji voluntarily recalls Shiki treated him free as foreign genin, grateful despite recoil from current max Pact appearance, declines touch and leaves clinic after receiving recommendation ~07:03, neither reports on Shiki's condition to authorities nor forms allegiance. Seina washes her hands, retrieves Shiki's private clinical chart and separate locked-file materials from sample taken 01 Oct 1283 23:02 at her clinic; results not read or invented and privacy obligation unchan"
+  "positions": "07:18 Seina and Shiki alone in Seina's private medical office. Seina wearing medical gloves behind desk, old sealed 01 October Shiki blood sample and handwritten microscopy sketches on her desk within view of Shiki; earlier 1279 clinical comparison notes in locked medical file. Shiki still fully dressed with cloth wraps and full-finger gloves, hood down, physically functioning with low chakra; no incision or diagnostic blood drawn. Other patients and staff outside room, no additional entrants. Kadz hospital separately holds TWO near-black 03 Oct blood tubes under seal, ethics complaint ongoing.",
+  "pressure": "Before major stage6 dark-blood deterioration, earlier sealed red blood already yielded a visually abnormal filamentlike pattern in Seina's partial private examination, which could potentially be valuable baseline but not prove cause. Seina is clinically troubled but bound by confidentiality, requests clear future arrangement about retaining/testing old specimen. Hospital registration trace progressing independently at 07:05, not yet disclosed to Shiki.",
+  "situation": "03.10.1283 07:04–07:18 private clinical examination at Seina's clinic. Shiki asks Seina for a SECRET private exam, no material sharing, no direct bare hand/skin contact, and volunteers GENERAL current history: overnight chakra-controlled Byoton experiment treating recipient6, extreme chakra exhaustion and loss of consciousness, 29C body temperature, almost black blood, intact corpse-gray skin with fully retained physical/cognitive abilities, precautions against direct bare-skin contact and fresh blood, hospital unauthorized notice about his own clinical state and request to destroy hospital specimens. This does NOT include unspoken Nemera 06:19-06:26 conversation, Kage secret decisions, offscreen logs or private donor/genetics process details. Seina privately agrees to keep protocol and old samples in HER own locked clinic; notes that external specialist assays require separate agreement and refuses unauthorized sharing. Wearing gloves throughout, she conducts permissible noninvasive examination of eyes, reflexes, motor coordination, breathing and cardiac rhythm without uncovering bandages or taking new blood; Shiki is cooperative per request but no unauthorized invasive test. Pulse roughly 50-52 sinus, purposeful movement, reflexes, ventilation, cognition preserved; conventional thermometer cannot accurately read anomalous low temperature, so she records the temperature as Shiki's report and not her verified measurement. She tells him apparent ordinary severe hypothermia is incompatible with his functional state, cannot assign disease cause confidently. Shiki asks precisely about old blood drawn at mentor clinic on night 01 Oct amid attack; Seina unlocks original separately kept labeled 01 Oct clinical blood container and shows copy of her local preliminary 02 Oct smea"
  },
  "shiki": {
   "body": "06:26 wearing existing completely wrapped hands/forearms, neck, upper arms and legs beneath tidy dark combat uniform and pelerine, full-finger shinobi gloves added over wrapped hands; hood remains DOWN, white hair visible, stage6 physiology unchanged, body and skills functional but chakra reserves still depleted.",
@@ -567,6 +631,11 @@
    "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:49.**\n\n*Кусагакуре. Врачебный кабинет Кирисавы Сэйны.*\n\n— Не опасно. Я подожду, пока вы закончите. Поговорить нужно.\n\nСэйна внимательно посмотрела на Шики.\n\n— Хорошо. Но к тебе я пока прикасаться не буду.\n\nОна вернулась к Кэйдзи, пододвинула табурет к смотровой кушетке и указала на его левую ногу.\n\nШики обратился к старому знакомому:\n\n— Кэйдзи, а пока я жду, расскажешь, что в мире творится?\n\n— Что в мире?\n\nКэйдзи фыркнул.\n\n— Мы пять лет не виделись, и ты спрашиваешь это так, будто я каждое утро получаю сводку \n[... sou…",
    "player": "Не опасно. Я подожду пока вы закончите. Поговорить нужно. Кэйдзи, а пока я жду, рассжешь что в мире творится?",
    "source": "archive/session-008-turns.jsonl"
+  },
+  "s08.text.032": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:04.**\n\n*Кусагакуре. Частный врачебный кабинет Кирисавы Сэйны.*\n\n— Обследуете меня? Только тайно, без передачи материалов. И не касайтесь меня голыми руками. Общую информацию я расскажу.\n\nСэйна молча открыла ящик, достала коробку перчаток и положила перед собой.\n\n— В прошлый раз ты уже запретил мне передавать твою кровь. Я помню.\n\nОна надела перчатки.\n\n— Осмотр проведу здесь. Протокол останется в моей закрытой картотеке, результаты никому не отправлю. Для исследований, которые нельзя выполнить собственными сред\n[... sou…",
+   "player": "Обследуете меня, но тайно без передачи материалов? И ещё, не касаетесь меня голыми руками. Общую информацию я расскажу #в общем что происходит с Шики он рассказывает# и ещё, что с той порцией крови которую вы взяли у меня в ночь нападения?",
+   "source": "archive/session-008-turns.jsonl"
   }
  },
  "source_passages_ref": "archive/session-*-turns.jsonl",
@@ -575,8 +644,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e2ba937c9150188e52dc82a6e02028cea536d3c2",
-  "turn": "s08.text.031"
+  "sha": "6458b58da06b0257e21710f315889dc670534a90",
+  "turn": "s08.text.032"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -589,21 +658,10 @@
  "world": {
   "clocks": [
    {
-    "due": "0006-10-03T07:05:00",
-    "id": "medical_notice_registry_trace",
-    "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа.",
-    "minutes": 2.0,
-    "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
-    "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
-    "source": "recovery/GM_ONLY.json:offscreen.clocks.medical_notice_registry_trace",
-    "status": "scheduled",
-    "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки"
-   },
-   {
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 72.0,
+    "minutes": 57.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -613,13 +671,13 @@
    {
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
-    "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без вы…",
-    "minutes": 147.0,
+    "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним.",
+    "minutes": 132.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",
     "status": "scheduled",
-    "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его зап…"
+    "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов"
    }
   ],
   "due_now": [],

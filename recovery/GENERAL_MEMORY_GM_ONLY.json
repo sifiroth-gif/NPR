@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.031",
+  "cursor": "s08.text.032",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -335,24 +335,18 @@
     "clock:medical_notice_registry_trace": {
       "aliases": [
         "clock:medical notice registry trace",
-        "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки",
+        "medical notice registry trace",
         "medical_notice_registry_trace"
       ],
       "facts": [],
       "id": "clock:medical_notice_registry_trace",
       "kind": "clock",
-      "label": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки",
+      "label": "medical notice registry trace",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "due": "0006-10-03T07:05:00",
-          "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
-          "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказател"
-        }
-      ],
+      "projections": [],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "s08.text.032"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -727,8 +721,7 @@
       ],
       "sources": [
         "recovery/cast/keiji.json",
-        "recovery/HOT.json",
-        "s08.text.031"
+        "recovery/HOT.json"
       ]
     },
     "kuroda_mayu": {
@@ -2717,8 +2710,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.031",
-        "s08.text.030"
+        "s08.text.032",
+        "s08.text.030",
+        "s08.text.031"
       ]
     },
     "place:453c1d7e7dfbb4dc": {
@@ -7019,9 +7013,9 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.031",
+          "seen": "s08.text.032",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample",
+          "state": "07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and de",
           "voice": "Сдержанная точная медицинская речь",
           "wants": "Поддерживать независимую медицинскую практику"
         },
@@ -7029,14 +7023,14 @@
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:03 Seina completes her examination of Keiji's old knee and writes clinically limited conclusion with residual laxity and referral back to Konoha, then sees him leave. With Shiki waiting, she takes out his confidential medical record and locked 01 Oct sample",
+          "state": "07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and de",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s08.text.031"
+        "s08.text.032"
       ]
     },
     "senior_orderly": {
@@ -7438,11 +7432,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "23:15 Нао, Акихиро, Сэйна знают полную тайну Немеры, крови и изменённых органов Шики. Шики сказал о субъективно немного притуплённых эмоциях, отсутствии физической слабости и единичной ярости при угрозе семье. Никакого медицински установленного причинного объяснения эмоционального изменения НЕТ. Нао ожидает его решение, кто имее"
+          "state": "03.10.1283 07:18 Shiki privately briefed his longtime clinical mentor Kirisawa Seina on latest 03 Oct stage6 after Byoton intervention in ICU and requested fully confidential exam avoiding any ungloved touching. Seina cooperated, tested normal intact reflex/cognition/purposeful motor and ~50 pulse with low temp only from Shiki h"
         }
       ],
       "sources": [
-        "s05.text.033"
+        "s08.text.032"
       ]
     },
     "thread:nemera": {
@@ -7941,5 +7935,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 581
+  "source_turns_indexed": 582
 }

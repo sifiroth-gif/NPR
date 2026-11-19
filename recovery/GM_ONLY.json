@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.031",
+ "cursor": "s08.text.032",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -12,13 +12,6 @@
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов."
    },
-   "medical_notice_registry_trace": {
-    "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
-    "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки",
-    "due": "0006-10-03T07:05:00",
-    "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
-    "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа."
-   },
    "shiki_blood_disposal_request": {
     "owner": "Кадзиура Сатору",
     "what": "Обеспечить раздельно опечатанное хранение двух проб крови Мугами, запрет несанкционированного доступа, и получить оформленное решение по его запросу об уничтожении образцов и границах сохранения результатов анализов",
@@ -28,12 +21,6 @@
    }
   },
   "resolved": [
-   {
-    "id": "thread:attire",
-    "at": "0006-10-03T03:09:00",
-    "turn": "s08.text.012",
-    "outcome": "Закрыта покупка и первое надевание актуального костюма 02.10.1283; одежда остаётся действующей по карточке Шики, вещам и continuity/SHIKI_ATTIRE_CURRENT_1283_10_02.md."
-   },
    {
     "id": "clock:s17_implanted_biopsy_viability",
     "at": "0006-10-03T03:17:00",
@@ -68,6 +55,13 @@
     "turn": "s08.text.027",
     "outcome": "06:10 03.10: ICU and hospital lab completed requested morphological comparison of recipient6 bronchial casts with archived S17 recipient samples. Comparability of surviving archive material is insufficient to establish identical tissue provenance or a shared donor; no imaginary donor identified. Inconclusive outcome retained in patient6 case for Kadziura, not spontaneously communicated to Shiki.",
     "what": "Сопоставить морфологию бронхиальных слепков №6 с архивными материалами других реципиентов С-17, проверить различия и происхождение патологического процесса без априорной причинности."
+   },
+   {
+    "id": "clock:medical_notice_registry_trace",
+    "at": "0006-10-03T07:18:00",
+    "turn": "s08.text.032",
+    "outcome": "03.10.1283 ~07:05 Hospital internal registration clerk produced the available outgoing-transmission and internal-viewing routing entries for Kadz's signed audit request. Entries support delivery from ward through internal registration to medical commission and have gaps in per-person reading/copy history; cannot determine or exclude unofficial forwarding from those gaps. Duty physician retains report copy and Kadz can later inspect the response, but Shiki and Seina do NOT yet know it.",
+    "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки"
    }
   ],
   "due_now": [],
@@ -420,11 +414,18 @@
       "change": "рост",
       "saw": "Shiki remained nearby throughout another patient's examination, offering little about his new gray-cold appearance but respecting the clinician's need to finish treating Keiji first.",
       "does": "Finishes independent knee exam, sends Keiji with written findings, draws Shiki's confidential charts from lock and invites him to state his business."
+     },
+     {
+      "turn": "s08.text.032",
+      "at": "0006-10-03T07:18:00",
+      "change": "подтвердилось",
+      "saw": "Shiki's corpse-like extreme body temperature by his account and a normal measured low pulse contradict standard hypothermia, while his preserved purposeful motor and thinking defy normal human pathol…",
+      "does": "Keeps old labeled blood sample locked and private, shows a limited 02 Oct microscopy chart, documents guarded exam in confidential paper chart and asks Shiki to decide whether and how to proceed with…"
      }
     ],
-    "reads": "She must maintain her usual clinical work and later address her former pupil's unmistakable transformation and established privacy commitments.",
-    "does": "Finishes independent knee exam, sends Keiji with written findings, draws Shiki's confidential charts from lock and invites him to state his business.",
-    "turn": "s08.text.031",
+    "reads": "She cannot explain cause or guarantee ordinary clinical interpretation; more invasive sampling or distributing biological data would violate the exact confidence he now requires.",
+    "does": "Keeps old labeled blood sample locked and private, shows a limited 02 Oct microscopy chart, documents guarded exam in confidential paper chart and asks Shiki to decide whether and how to proceed with old material.",
+    "turn": "s08.text.032",
     "step": "пересмотр"
    },
    "psyche": {
@@ -684,14 +685,15 @@
    }
   }
  },
- "checks": [],
+ "checks": [
+  {
+   "turn": "s08.text.032",
+   "kind": "will",
+   "text": "За кадром: «Дежурная врач охраняемого отделения» собирался «в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес» к 0006-10-03T07:05:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: страх делает её ложь слишком аккуратной: в журнале не хватает одного перенаправления. Запиши d.cast.night_icu_physician.intent.shift_blame (status, next, due) и след в мире."
+  }
+ ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.026",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.027",
     "look": [
@@ -724,6 +726,11 @@
    },
    {
     "turn": "s08.text.031",
+    "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.032",
     "look": [],
     "soma": []
    }
@@ -1031,7 +1038,7 @@
  "will": {
   "seed": "b77c1bd431424992",
   "streak": {
-   "seina": 1
+   "seina": 2
   },
   "touched": {}
  }
