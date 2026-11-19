@@ -68,7 +68,7 @@ class WillTest(unittest.TestCase):
         self.assertEqual(will.advance(h), [], "решённое не решается дважды")
         shown = will.offscreen(h)
         self.assertIn("Кадзиура", shown[0])
-        self.assertIn("Против Шики: вина ляжет на Шики", shown[0])
+        self.assertIn(". Против Шики: вина ляжет на Шики", shown[0])
         for _ in range(will.SHOW_FOLDS - 1):
             will.offscreen(h)
         self.assertEqual(will.offscreen(h), [])

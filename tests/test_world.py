@@ -98,7 +98,7 @@ class WorldFoldTest(unittest.TestCase):
         self.assertEqual(hot.fold(self.root)["errors"], [])
         pack = json.loads((self.root / nextpack.PATH).read_text(encoding="utf-8"))
         self.assertIn("Хаясэ Нори", pack["offscreen"]["events"][0])
-        self.assertIn("Против Шики: улика против Шики", pack["offscreen"]["events"][0])
+        self.assertIn("реестр у Нори. Против Шики: улика против Шики", pack["offscreen"]["events"][0])
         self.assertTrue(any("Хаясэ Нори" in m and "нового нет" in m for m in pack["must"]))
         public = (self.root / hot.HOT_PATH).read_text(encoding="utf-8")
         self.assertNotIn("реестр у Нори", public, "исход за кадром — только в GM_ONLY")
