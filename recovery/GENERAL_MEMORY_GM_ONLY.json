@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.021",
+  "cursor": "s08.text.022",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -261,54 +261,6 @@
         "recovery/cast/archive_roof_fugitive.json"
       ]
     },
-    "canon:s08.text.021:0": {
-      "aliases": [
-        "canon:s08.text.021:0",
-        "Позднее прямое авторское решение: к пробуждению 03.10.1283 05:46 Договор Семи запоров достиг максимальной стадии 6 после перегруза Бётона и медицинской чакры; это авторское повышен"
-      ],
-      "facts": [],
-      "id": "canon:s08.text.021:0",
-      "kind": "canon",
-      "label": "Позднее прямое авторское решение: к пробуждению 03.10.1283 05:46 Договор Семи запоров достиг максимальной стадии 6 после перегруза Бётона и медицинской чакры; это авторское повышен",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.021"
-      ]
-    },
-    "canon:s08.text.021:1": {
-      "aliases": [
-        "canon:s08.text.021:1",
-        "Последняя поправка игрока к s08.text.021, сообщена при следующей заявке s08.text.022: кожа Шики полностью ЦЕЛЬНАЯ; не отслаивается, не осыпается, нет некротических пятен, язв, серы"
-      ],
-      "facts": [],
-      "id": "canon:s08.text.021:1",
-      "kind": "canon",
-      "label": "Последняя поправка игрока к s08.text.021, сообщена при следующей заявке s08.text.022: кожа Шики полностью ЦЕЛЬНАЯ; не отслаивается, не осыпается, нет некротических пятен, язв, серы",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.021"
-      ]
-    },
-    "canon:s08.text.021:2": {
-      "aliases": [
-        "canon:s08.text.021:2",
-        "Постоянный фенотип максимальной стадии: температура центральных тканей ~29,3–29,4°C, синусовый ритм ~52, давление 108/66, полноценные функции сердца, нервной системы, кровообращени"
-      ],
-      "facts": [],
-      "id": "canon:s08.text.021:2",
-      "kind": "canon",
-      "label": "Постоянный фенотип максимальной стадии: температура центральных тканей ~29,3–29,4°C, синусовый ритм ~52, давление 108/66, полноценные функции сердца, нервной системы, кровообращени",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.021"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -401,40 +353,6 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
-      ]
-    },
-    "clock:shiki_biopsy_ischemia": {
-      "aliases": [
-        "clock:shiki biopsy ischemia",
-        "shiki biopsy ischemia",
-        "shiki_biopsy_ischemia"
-      ],
-      "facts": [],
-      "id": "clock:shiki_biopsy_ischemia",
-      "kind": "clock",
-      "label": "shiki biopsy ischemia",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.021"
-      ]
-    },
-    "clock:shiki_unconscious_observation": {
-      "aliases": [
-        "clock:shiki unconscious observation",
-        "shiki unconscious observation",
-        "shiki_unconscious_observation"
-      ],
-      "facts": [],
-      "id": "clock:shiki_unconscious_observation",
-      "kind": "clock",
-      "label": "shiki unconscious observation",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.021"
       ]
     },
     "courier_unknown": {
@@ -636,7 +554,7 @@
       "id": "kadziura_satoru",
       "kind": "npc",
       "label": "Кадзиура Сатору",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0006-10-03T01:14:00",
@@ -644,13 +562,6 @@
           "source": "archive/session-007-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s07.text.033"
-        },
-        {
-          "at": "0006-10-03T03:31:00",
-          "excerpt": "Тяжёлые брови опустились, глаза сузились. Когда он заговорил, в низком голосе появилась непривычная резкость. **Кадзиура Сатору:** — Я прекрасно помню, чей это пациент. Он резко захлопнул папку. — И мне не требуется напоминать, кто подписывал назначения, когда",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.019"
         },
         {
           "at": "0006-10-03T04:12:00",
@@ -665,6 +576,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.021"
+        },
+        {
+          "at": "0006-10-03T05:48:00",
+          "excerpt": "официальный медицинский рапорт о чрезвычайном вмешательстве и направила уведомление врачебной комиссии. Это разные вещи. **Кадзиура Сатору:** — Покажите формулировку. **Дежурная врач:** — Вы уже её читали. **Кадзиура Сатору:** — Покажите ещё раз. Его голос ста",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.022"
         }
       ],
       "projections": [
@@ -672,9 +590,9 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s08.text.021",
+          "seen": "s08.text.022",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded tra",
+          "state": "05:48 sees Shiki stand up unaided, cold intact skin and proper coordination despite continued low chakra; hears tentative warning of bare skin toxicity and user's question about formal legal accusation. He insists controlled transfer of unusual blood specimens",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         },
@@ -682,14 +600,14 @@
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded tra",
+          "state": "05:48 sees Shiki stand up unaided, cold intact skin and proper coordination despite continued low chakra; hears tentative warning of bare skin toxicity and user's question about formal legal accusation. He insists controlled transfer of unusual blood specimens",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
         "recovery/cast/kadziura_satoru.json",
         "recovery/HOT.json",
-        "s08.text.021"
+        "s08.text.022"
       ]
     },
     "kage_doppelganger": {
@@ -1252,9 +1170,9 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.021",
+          "seen": "s08.text.022",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric temperature and darkened blood with intact skin and intent to supplement her already issued medical-committee report, disputes with Kadz over who contr",
+          "state": "05:48 directly tells Shiki she filed an official internal medical incident report (not charges), identifies its precise content and states she knows of no formal investigation or arrest. She independently retains duplicate report and plans to record his unveri",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         },
@@ -1262,14 +1180,14 @@
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric temperature and darkened blood with intact skin and intent to supplement her already issued medical-committee report, disputes with Kadz over who contr",
+          "state": "05:48 directly tells Shiki she filed an official internal medical incident report (not charges), identifies its precise content and states she knows of no formal investigation or arrest. She independently retains duplicate report and plans to record his unveri",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
         "recovery/cast/night_icu_physician.json",
         "recovery/HOT.json",
-        "s08.text.021"
+        "s08.text.022"
       ]
     },
     "nori": {
@@ -3090,6 +3008,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.022",
         "s08.text.021"
       ]
     },
@@ -6752,7 +6671,7 @@
       "id": "recipient6",
       "kind": "entity",
       "label": "Реципиент № 6",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0001-07-28T18:22:00",
@@ -6760,13 +6679,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.011"
-        },
-        {
-          "at": "0006-10-03T03:21:00",
-          "excerpt": "х. Только сейчас у нас впервые появилось основание считать, что мишень действительно присутствует в тканях шестого. Он повернул к себе лист с нарисованными клеточными популяциями. **Кадзиура Сатору:** — Начнём со второго варианта. Вы говорите об уничтожении чу",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.016"
         },
         {
           "at": "0006-10-03T03:24:00",
@@ -6781,6 +6693,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.018"
+        },
+        {
+          "at": "0006-10-03T05:48:00",
+          "excerpt": "ру:** — Покажите ещё раз. Его голос стал ниже. В нём появилась интонация, которой до сих пор не было даже при обсуждении смерти шестого реципиента. Она развернула лист. **Дежурная врач:** — «Экспериментальное введение биологического агента в организм несоверше",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.022"
         }
       ],
       "projections": [],
@@ -6858,8 +6777,7 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6",
-        "s17_recipient_6"
+        "Реципиент № 6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -6886,7 +6804,7 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s08.text.021",
+          "seen": "s08.text.022",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         },
         {
@@ -6896,8 +6814,7 @@
       ],
       "sources": [
         "recovery/cast/s17_recipient_6.json",
-        "recovery/HOT.json",
-        "s08.text.021"
+        "recovery/HOT.json"
       ]
     },
     "sayu": {
@@ -7530,11 +7447,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03 Oct 1283 05:46 patient6 has maintained early positive airway outcome after Shiki Byoton+medical repair but ventilator and S17 remain; SpO2 ~96 lower FiO2, no new inspected casts. In adjacent room Shiki awakens after severe chakra depletion as pact MAX stage6 corpse-like, with cold intact gray skin but fully physiologically fu"
+          "state": "05:48 Shiki stood up fully functionally with stage6 cold INTACT skin and near-black potentially contact-infectious blood; still low chakra. He said direct skin touching may poison/necrotize another's cells, no confirmed disclosure about fresh-blood-to-wound hazard. Night-duty doctor confirmed she had sent an internal medical inc"
         }
       ],
       "sources": [
-        "s08.text.021"
+        "s08.text.022"
       ]
     },
     "thread:sanction": {
@@ -7869,5 +7786,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 571
+  "source_turns_indexed": 572
 }

@@ -7,18 +7,18 @@
   {
    "kind": "review",
    "text": "review.sources must refer to exact prior played turns",
-   "turn": "s08.text.020"
+   "turn": "s08.text.022"
   },
   {
    "kind": "review",
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010, s08.text.016",
-   "turn": "s08.text.020"
+   "turn": "s08.text.022"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.021",
+  "cursor": "s08.text.022",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -65,13 +65,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T05:46:00",
+  "at": "0006-10-03T05:48:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.021",
+  "id": "s08.text.022",
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
-  "time": "05:46"
+  "time": "05:48"
  },
- "digest": "17e14ec50eec4c47ae643c75ac77635c4fbed99adecb6032940a7137aa1d313a",
+ "digest": "d316b7f8f7093375dcdb4e861422684ad3641e71b3d8283299970ea2dced7f4f",
  "entity_memory": {
   "activated": [
    {
@@ -128,14 +128,14 @@
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.016"
+    "to": "s08.text.022"
    },
    {
     "actor": "night_icu_physician",
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.016"
+    "to": "s08.text.022"
    }
   ],
   "nodes": [],
@@ -144,18 +144,18 @@
  },
  "fight": {
   "dice": [
-   29,
-   60,
-   2,
-   1,
-   66,
-   40,
-   12,
-   50,
-   7,
-   68,
-   33,
-   75
+   41,
+   58,
+   27,
+   19,
+   55,
+   78,
+   90,
+   37,
+   88,
+   14,
+   4,
+   95
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -275,18 +275,18 @@
   "due": null,
   "npcs": {
    "kadziura_satoru": {
-    "does": "Keeps blood and tissue samples under sealed control and documented custody, uses gloves, demands clear answer about direct staff exposure.",
+    "does": "Orders strict documented custody for samples and refuses informal release even to committee.",
     "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "His usual distinction of living patient vs cadaver is no longer clinically reliable, and his staff may be exposed to unknown contact biology while committee requests records.",
+    "reads": "The hospital's institutional process can claim access to Shiki's specimens and information without approval; Kadz's signature makes him personally accountable.",
     "stage": 4,
     "step": "необратимость"
    },
    "night_icu_physician": {
-    "does": "Requests explicit hospital reporting and refuses to treat new findings as ordinary, while following barrier precautions.",
+    "does": "Shows and keeps an independent accurate duplicate of internal event report, commits to writing Shiki's warning as unverified assertion.",
     "lever": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "Institutional classification and staff safety fail if this organism is treated as a standard living patient without special records.",
+    "reads": "Precise documentation and preserved report copy are her leverage to protect patients and herself from retrospective suppression.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -315,21 +315,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 21,
+   "appearances": 22,
    "facets": 0,
    "need": 5,
    "npc": "kadziura_satoru",
    "tier": "deep"
   },
   {
-   "appearances": 16,
+   "appearances": 17,
    "facets": 0,
    "need": 5,
    "npc": "night_icu_physician",
    "tier": "deep"
   },
   {
-   "appearances": 13,
+   "appearances": 14,
    "facets": 0,
    "need": 3,
    "npc": "s17_recipient_6",
@@ -383,8 +383,8 @@
     ],
     "parent": "main",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
-    "scenes": 8,
-    "scenes_left": 4,
+    "scenes": 9,
+    "scenes_left": 3,
     "threads": [
      "s17_survivors",
      "arakawa_treatment"
@@ -482,7 +482,8 @@
     "s08.text.009",
     "s08.text.010",
     "s08.text.015",
-    "s08.text.016"
+    "s08.text.016",
+    "s08.text.022"
    ],
    "prior_disclosures": [
     {
@@ -493,18 +494,18 @@
      "turn": "s08.text.007"
     },
     {
-     "at": "0006-10-03T03:18:00",
-     "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.015"
-    },
-    {
      "at": "0006-10-03T03:21:00",
      "sha256": "5f6dc63ae358114cd80f0396e1c6215524463baac0260fd8bc9fcb1e1aa34d6d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.016"
+    },
+    {
+     "at": "0006-10-03T05:48:00",
+     "sha256": "0cdc3b6d95be1947b478228d482addaaa16a32ed0faec943e86fe84e84abc394",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.022"
     }
    ],
    "profile": {
@@ -512,10 +513,10 @@
     "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "first": "s07.text.033",
     "knows": [
-     "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, c",
      "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no lo",
      "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle",
-     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite"
+     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite",
+     "05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shik"
     ],
     "knows_ref": "memory/npc/kadziura_satoru.md",
     "knows_total": 8,
@@ -523,17 +524,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.021",
-      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
+      "turn": "s08.text.022",
+      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, "
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 21,
+    "memory_total": 22,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.021",
+    "seen": "s08.text.022",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated.",
+    "state": "05:48 sees Shiki stand up unaided, cold intact skin and proper coordination despite continued low chakra; hears tentative warning of bare skin toxicity and user's question about formal legal accusation. He insists controlled transfer of unusual blood specimens with chain of custody; agrees that the duty doctor's report accurately documents clinical action and his own signature, but disapproves uncontrolled sharing.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -551,7 +552,8 @@
     "s08.text.009",
     "s08.text.010",
     "s08.text.015",
-    "s08.text.016"
+    "s08.text.016",
+    "s08.text.022"
    ],
    "prior_disclosures": [
     {
@@ -562,18 +564,18 @@
      "turn": "s08.text.007"
     },
     {
-     "at": "0006-10-03T03:18:00",
-     "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.015"
-    },
-    {
      "at": "0006-10-03T03:21:00",
      "sha256": "5f6dc63ae358114cd80f0396e1c6215524463baac0260fd8bc9fcb1e1aa34d6d",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.016"
+    },
+    {
+     "at": "0006-10-03T05:48:00",
+     "sha256": "0cdc3b6d95be1947b478228d482addaaa16a32ed0faec943e86fe84e84abc394",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.022"
     }
    ],
    "profile": {
@@ -581,10 +583,10 @@
     "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
     "first": "s07.text.033",
     "knows": [
-     "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
      "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
      "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
-     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmissi"
+     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmissi",
+     "At 05:48 Shiki explicitly says his bare skin contact may cause poisoning/necrosis/cell death, he does NOT KNOW actual fresh-blood effect or underlying Pact transmissibility. He believes she might have accused h"
     ],
     "knows_ref": "memory/npc/night_icu_physician.md",
     "knows_total": 8,
@@ -592,17 +594,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.021",
-      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
+      "turn": "s08.text.022",
+      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, "
      }
     ],
     "memory_file": "archive/npc-memory/night_icu_physician.json",
-    "memory_total": 16,
+    "memory_total": 17,
     "name": "Дежурная врач охраняемого отделения",
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-    "seen": "s08.text.021",
+    "seen": "s08.text.022",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-    "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric temperature and darkened blood with intact skin and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer.",
+    "state": "05:48 directly tells Shiki she filed an official internal medical incident report (not charges), identifies its precise content and states she knows of no formal investigation or arrest. She independently retains duplicate report and plans to record his unverified statement that bare skin contact may be dangerous.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -617,7 +619,15 @@
     "возраст": "примерно шестнадцать лет",
     "пол": "мальчик (мужской пол)"
    },
-   "prior_disclosures": [],
+   "prior_disclosures": [
+    {
+     "at": "0006-10-03T05:48:00",
+     "sha256": "0cdc3b6d95be1947b478228d482addaaa16a32ed0faec943e86fe84e84abc394",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.022"
+    }
+   ],
    "profile": {
     "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
     "first": "s08.text.006",
@@ -628,32 +638,33 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.021",
-      "what": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°"
+      "turn": "s08.text.022",
+      "what": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, "
      }
     ],
     "memory_file": "archive/npc-memory/s17_recipient_6.json",
-    "memory_total": 13,
+    "memory_total": 14,
     "name": "Реципиент № 6",
     "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-    "seen": "s08.text.021",
+    "seen": "s08.text.022",
     "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory muscle function; long-term CRISPR safety unproven.",
     "status": "present_profile",
     "tier": "developed"
-   }
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   }
  },
  "recent_turns": [
   {
-   "id": "s08.text.021",
-   "line": "Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена."
+   "id": "s08.text.022",
+   "line": "Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует описи перед "
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "05:46 Shiki fully conscious on separate hospital observation bed, skin intact and mortuary-pale, no flakes or lesions; severe chakra deficit but body otherwise functional. Kadz in gloves next to bed with blood vials and medical records, duty physician by door with internal notification, recipient6 in separate ICU on S17/ventilation.",
-  "pressure": "Maximum pact stage6 manifested in unnaturally cold intact body and near-black blood, unknown direct-contact risk to staff. Duty doctor already issued medical-notice to hospital commission, not criminal charges. Kadz wishes to protect patient and own clinic control. Patient6 still ventilated on S17.",
-  "situation": "03.10.1283 05:46, amended scene: Shiki wakes after collapse at 04:12 with pact at player-mandated MAX stage6, seven locks still closed, profoundly depleted chakra without functional loss of body capabilities. Blood at 04:26 and 05:32 darkened to near-black, microfilament chakra networks extend in blood, microvasculature, marrow, organ plasma and lymph/interstitium, adequate oxygenation, hemostasis and cellular metabolic function. Core body temp 29.3-29.4 C, 52/min sinus, BP108/66, preserved circulation/cognition. Skin appears corpse-gray and cold but COMPLETELY INTACT: no epidermal slough, peeling, necrotic patches or tissue fragments and no biological evidence of superficial necrosis; earlier such detail was explicitly RETCONNED by player. Scent in face-to-face proximity iron/iodine/old bandages/grave soil, no infectious aerosols. Specific direct bare skin-skin and fresh blood into wound/mucosa contagion possible, unproven to hospital doctors. Clinicians only saw remarkable blood tests and low temperature with intact skin; duty doctor issued internal hospital biomedical incident notice, NO formal legal accusation or criminal investigation known. Kadz controlling sample transfer chain of custody. Earlier 04:25 deltoid isolated donor biopsy becomes ischemic after chakra stopped, no assimilation. Recipient6 still intubated/sedated, on ordinary S17 and ventilator, SpO2 ~96 on decreased O2, no new bronchial casts, weak diaphragm. Clinicians remain autonomous and can follow reports. Kadz asks Shiki whether blood exposure through open wound is dangerous."
+  "positions": "Shiki standing beside the observation cot, fully intact skin at pact max stage6, very low chakra, exceptionally cold but otherwise strong and able to move. Kadz at bedside in gloves with sample custody files, duty physician close to doorway holding independent duplicate report. Two sealed near-black blood vials safely in room. Recipient6 sedated and ventilated nearby.",
+  "pressure": "Documented medical incident has reached hospital committee; public discussion of unknown direct-contact hazard and unknown CRISPR long-term risk may produce review or political leverage, not yet formal charges. Duty doctor maintains independent copy and autonomy, Kadz guards sample transfer chain. Shiki now knows he is not currently detained or formally charged.",
+  "situation": "05:48 03.10 Shiki, awake with profoundly low chakra but otherwise physically functional, stands up unaided from observation cot. Stage6 cold gray-white epidermis remains wholly intact with no sloughing, scabs or necrotic spots (player-corrected prior turn). He says he does not know what fresh blood in staff wound will do; he warned not to touch his bare skin because direct skin contact may cause necrosis or poisoning with cell death, presented as his own tentative assessment, not verified medically. Addressing night ICU physician, Shiki asks if she has laid formal charges and placed him under investigation. She bluntly says no: she is not investigator, no criminal charge or arrest is known; she DID file formal medical incident report and internal notice to medical commission. She reads accurate text: experimental delivery of biological agent to minor with signed Kadziura clinical authorization, Shiki named practitioner, immediate result positive, long-term safety unknown, independent review requested. Committee received notification but has not to her knowledge opened formal review or legal inquiry. She keeps independent copy and will document Shiki's latest claim of hazardous bare-skin contact as unverified self-report. Kadz criticizes unguarded information release, but accepts report as clinically accurate and prohibits passing both preserved near-black blood tubes out of lab chain without documented handover. No physical restraint, no formal criminal charges, no unseen police/committee decision invented. Patient6 remains in ICU on S17, ventilator support, at last stable SpO2 96 on reduced oxygen; child's long-term edit effects unknown."
  },
  "shiki": {
   "body": "05:46 03.10.1283 conscious, still severely chakra depleted, otherwise fully functional and physically competent at max pact STAGE6. Intact cold pale-gray skin no peeling, no spots, no scabs, no flakes, no visible necrosis. Core 29.3-29.4C, HR52 sinus BP108/66; near-black functional blood, chakra-filament networks across circulation/interstitial/lymph and organs, normal oxygen delivery, cognition, muscles, healing capacity. Direct bare skin to bare living skin, fresh blood to open wound/mucosa potentially contagious only; not through clothing, gloves, dry blood, air, smell, or objects. Near scent iron/iodine/old bandages/grave soil. Seven locks closed. Tiny ischemic unassimilated bronchial biopsy still in left deltoid.",
@@ -667,9 +678,9 @@
    "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
    "source": "archive/session-008-turns.jsonl"
   },
-  "s08.text.016": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 03:19.**\n\n*Кусагакуре. Центральный госпиталь. Палата № 6.*\n\n**Шики:**\n\n— Я уже говорил. Экспериментальный носитель — это, по сути, вирус РНК-природы. Вирусный вектор с CRISPR-комплексом. А оценка — это эксперимент. Лечение методом генетических ножниц.\n\n— Есть и другой вариант. Я могу аккуратно, клетка за клеткой, до изнеможения уничтожать весь имплантат. Но последствия… Я не могу их предсказать ни в одном из вариантов.\n\nКадзиура положил карандаш поперёк истории болезни.\n\n**Кадзиура Сатору:**\n\n— Помню, Мугами. Пом\n[... sou…",
-   "player": "Я уже говорил. Экспериментальный носитель это по сути вирус - РНК природы. вирусный вектор с CRISPR-комплексом. А оценка - это эксперимент, лечение методом генетических ножниц. Есть и другой вектор я могу аккуратно по клетке до изнеможения ",
+  "s08.text.022": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 05:48.**\n\n*Кусагакуре. Центральный госпиталь. Палата наблюдения.*\n\n**Шики:**\n\n— Не знаю. Я просил не…\n\nОн поднялся с кушетки.\n\nКадзиура машинально протянул руку, но остановился прежде, чем коснулся его плеча.\n\nШики стоял самостоятельно. При движении кожа оставалась совершенно целой: холодная, мертвенно-бледная, с чернильными сосудами под поверхностью. Ни язв, ни следов отслоения. Только облик человека, в чьих жилах, казалось, давно перестала течь человеческая кровь.\n\nМонитор продолжал регистрировать редкие, прави\n[... sou…",
+   "player": "Не знаю. Я просил не #встаю с кушктки# не касаться голыми руками кожи, это опасно, по виду некроз или отравление с отмиранием клеток #мастеру давай ка кожа не отслаивается, это следы и прочее не нужно# есть ещё кое что #на дежурную# вы выдв",
    "source": "archive/session-008-turns.jsonl"
   }
  },
@@ -679,8 +690,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8fad1eb327cde1afc9d7a0af4b0f06c38e4d7079",
-  "turn": "s08.text.021"
+  "sha": "2f86b00c9f9b73e1c541fa3551ea7dc72dac9f95",
+  "turn": "s08.text.022"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -698,7 +709,7 @@
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 24.0,
+    "minutes": 22.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.s17_cast_comparison",
@@ -709,7 +720,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 149.0,
+    "minutes": 147.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -758,8 +769,8 @@
    },
    "s17_survivors": {
     "source": "memory/threads/s17_survivors.md",
-    "state": "03 Oct 1283 05:46 patient6 has maintained early positive airway outcome after Shiki Byoton+medical repair but ventilator and S17 remain; SpO2 ~96 lower FiO2, no new inspected casts. In adjacent room Shiki awakens after …",
-    "turn": "s08.text.021"
+    "state": "05:48 Shiki stood up fully functionally with stage6 cold INTACT skin and near-black potentially contact-infectious blood; still low chakra. He said direct skin touching may poison/necrotize another's cells, no confirmed…",
+    "turn": "s08.text.022"
    },
    "tetsu": {
     "source": "memory/threads/tetsu.md",

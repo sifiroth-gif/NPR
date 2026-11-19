@@ -1,7 +1,7 @@
 # Кадзиура Сатору · `kadziura_satoru`
 
 псевдонимы: Кадзиура, Сатору
-вид: npc · впервые: s07.text.033 · последний раз: s08.text.021 · сейчас в сцене
+вид: npc · впервые: s07.text.033 · последний раз: s08.text.022 · сейчас в сцене
 
 ## Постоянное
 - внешность: крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза [s07.text.033]
@@ -17,10 +17,10 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated. [s08.text.021]
+- положение: 05:48 sees Shiki stand up unaided, cold intact skin and proper coordination despite continued low chakra; hears tentative warning of bare skin toxicity and user's question about formal legal accusation. He insists controlled transfer of unusual blood specimens with chain of custody; agrees that the duty doctor's report accurately documents clinical action and his own signature, but disapproves uncontrolled sharing. [s08.text.022]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
-## Знает (последние 18 из 18)
+## Знает (последние 19 из 19)
 - Четверо подтверждённых выживших реципиентов С-17 находятся под его координацией в охраняемом отделении. [s07.text.033]
 - Реципиент №6 нуждается в аппаратной респираторной поддержке и текущем лечении; дыхательная функция последние сутки нестабильна. [s07.text.033]
 - Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача. [s07.text.033]
@@ -39,9 +39,9 @@
 - Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no long-term safety data. [s08.text.019]
 - Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowledge of hidden pact or Zero Genome granted. [s08.text.020]
 - Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite extraordinary metabolic indicators, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals. [s08.text.021]
+- 05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shiki's estimate, not proven mechanism. [s08.text.022]
 
-## История (последние 8 из 21)
-- s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.
+## История (последние 8 из 22)
 - s08.text.015 0006-10-03T03:18:00: Нулевой Геном расщепил хирургические нити и полностью восстановил руку Шики, сохранив биоптат. Шики раскрыл Кадзиуре данные: в поражённом бронхе №6 чужеродная строма с nsp-δ вызывает разрушение эпителия через НСП-δ.
 - s08.text.016 0006-10-03T03:21:00: Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носителя и запросил сведения о его распространении.
 - s08.text.017 0006-10-03T03:24:00: Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражение», не применён.
@@ -49,11 +49,12 @@
 - s08.text.019 0006-10-03T03:31:00: Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было.
 - s08.text.020 0006-10-03T04:12:00: Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения.
 - s08.text.021 0006-10-03T05:46:00: Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена.
-- ранее: 13 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
+- s08.text.022 0006-10-03T05:48:00: Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…
+- ранее: 14 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
 
-## Разговоры с Шики: 12 ходов (s08)
+## Разговоры с Шики: 13 ходов (s08)
 - дословно по ходам: `memory/npc/kadziura_satoru.talk.md`
-- s08.text.020: Шики — «Бётон заражение: воспроизведение патогена держать...не могу....не трогайте...меня...голыми рук.....»; Кадзиура Сатору — «»
 - s08.text.021: Шики — «»; Кадзиура Сатору — «»
+- s08.text.022: Шики — «Не знаю. Я просил не не касаться голыми руками кожи, это опасно, по виду некроз или отравление с отмиранием клеток есть ещё кое что вы выдвинули мне официально…»; Кадзиура Сатору — «»
 
 Ход целиком: `archive/turns/sNN/<id>.md`.

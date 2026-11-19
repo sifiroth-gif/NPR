@@ -3,7 +3,7 @@
 Где Шики бывал в сыгранных сессиях. Описание места — на его странице.
 
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
-- Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 40 ход(ов), s02–s08
+- Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 41 ход(ов), s02–s08
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 27 ход(ов), s02–s06
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 19 ход(ов), s07–s07

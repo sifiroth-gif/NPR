@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.022: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
 - s08.text.021: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`, поправки игрока: 3
 - s08.text.020: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
 - s08.text.019: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Реципиент № 6 (`npc/s17_recipient_6`), линия `s17_survivors`
@@ -57,4 +58,3 @@
 - s07.text.003: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
 - s07.text.002: Неизвестный в сером медицинском плаще (`npc/courier_unknown`), Курода Маю (`npc/kuroda_mayu`)
 - s07.text.001: Курода Маю (`npc/kuroda_mayu`), Неизвестный в сером медицинском плаще (`npc/courier_unknown`)
-- s06.text.046: Курода Маю (`npc/kuroda_mayu`), Мастер фуиндзюцу охраны Кусагакуре (`npc/fuin_master_v7`), Такаги Рэн (`npc/takagi_ren`), линия `v7`
