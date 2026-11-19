@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.023",
+ "cursor": "s08.text.024",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -18,6 +18,13 @@
     "due": "0006-10-03T06:10:00",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов."
+   },
+   "medical_notice_registry_trace": {
+    "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
+    "what": "Запросить регистрационный маршрут, список первичных адресатов, копий, перенаправлений и доступов к полному тексту внутреннего медицинского уведомления о Мугами Шики; не принимать отсутствие записи как доказательство отсутствия утечки",
+    "due": "0006-10-03T07:05:00",
+    "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
+    "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа."
    }
   },
   "resolved": [
@@ -133,13 +140,6 @@
     "since": "s08.text.006",
     "log": [
      {
-      "turn": "s08.text.017",
-      "at": "0006-10-03T03:24:00",
-      "change": "рост",
-      "saw": "Shiki, after prior rapid wound closure and self-biopsy analysis, declared he could introduce his own engineered viral vector into living recipient6 without the stored vial (s08.text.017).",
-      "does": "He suspends experimental patient interventions until controllability is clarified, allows night physician to document potentially dangerous claim in separate medical report."
-     },
-     {
       "turn": "s08.text.019",
       "at": "0006-10-03T03:31:00",
       "change": "подтвердилось",
@@ -173,11 +173,18 @@
       "change": "подтвердилось",
       "saw": "A staff physician has openly admitted sending altered blood observations and named elemental technique of a dangerous shinobi to a review body without his consent.",
       "does": "Documents outgoing report provenance and restricts subsequent disclosures within his clinical authority, without pretending to retrieve delivered documents."
+     },
+     {
+      "turn": "s08.text.024",
+      "at": "0006-10-03T05:51:00",
+      "change": "подтвердилось",
+      "saw": "Shiki openly warns that doctors' internal dissemination might reach interested parties while citing Kage and unidentified sensitive documents; duty physician admits ordinary registration path.",
+      "does": "Orders formal tracing of document receipt, copying and access before any further release, personally signs order and separates medical files."
      }
     ],
-    "reads": "The confidentiality breach dispute now risks hospital governance and possible external interest, while the signed experimental intervention remains his clinical responsibility.",
-    "does": "Documents outgoing report provenance and restricts subsequent disclosures within his clinical authority, without pretending to retrieve delivered documents.",
-    "turn": "s08.text.023",
+    "reads": "A clinical notice about a shinobi's unseen biological ability can become a tool for those seeking leverage over him and hospital survivors, with uncertain political access.",
+    "does": "Orders formal tracing of document receipt, copying and access before any further release, personally signs order and separates medical files.",
+    "turn": "s08.text.024",
     "step": "необратимость"
    }
   },
@@ -186,13 +193,6 @@
     "stage": 4,
     "since": "s08.text.017",
     "log": [
-     {
-      "turn": "s08.text.017",
-      "at": "0006-10-03T03:24:00",
-      "change": "калибровка",
-      "saw": "Shiki publicly claimed in ICU he can initiate viral biological exposure inside a patient by chakra without physical vial s08.text.017, after she witnessed self-implantation and tissue repair s08.text…",
-      "does": "Creates a separate recorded statement of Shiki's claim and advocates suspending experimental exposure."
-     },
      {
       "turn": "s08.text.019",
       "at": "0006-10-03T03:31:00",
@@ -227,11 +227,18 @@
       "change": "подтвердилось",
       "saw": "Shiki precisely challenged whether the doctor disclosed HIS private health observations without his consent, rather than claiming legal arrest; she could not rely on the clinical trial report alone a…",
       "does": "Unequivocally admits the content and absence of consent, provides report to view, holds ground on her own rationale."
+     },
+     {
+      "turn": "s08.text.024",
+      "at": "0006-10-03T05:51:00",
+      "change": "подтвердилось",
+      "saw": "Shiki threatens formal ethics review of disclosure and says Kage knows broader developments; Kadz starts investigating registry circulation of her report.",
+      "does": "Takes signed request to registry to document notice trajectory while continuing to preserve her original report and independent copy."
      }
     ],
-    "reads": "Now faces potential complaint/clinical audit and conflict over confidentiality after having notified hospital committee on staff safety grounds.",
-    "does": "Unequivocally admits the content and absence of consent, provides report to view, holds ground on her own rationale.",
-    "turn": "s08.text.023",
+    "reads": "Her decision might be assessed as overbroad confidentiality breach, despite genuine safety concern; official chain could involve persons she didn't anticipate.",
+    "does": "Takes signed request to registry to document notice trajectory while continuing to preserve her original report and independent copy.",
+    "turn": "s08.text.024",
     "step": "необратимость"
    }
   },
@@ -322,11 +329,6 @@
  "horror": {
   "motifs": [
    {
-    "turn": "s08.text.018",
-    "look": [],
-    "soma": []
-   },
-   {
     "turn": "s08.text.019",
     "look": [],
     "soma": []
@@ -353,6 +355,11 @@
    },
    {
     "turn": "s08.text.023",
+    "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.024",
     "look": [],
     "soma": []
    }
@@ -401,7 +408,7 @@
     "status": "active",
     "opened": "s08.text.012",
     "opened_at": "0006-10-03T03:09:00",
-    "scenes": 10,
+    "scenes": 11,
     "title": "Два источника и чужой долг",
     "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
     "endings": [
@@ -424,7 +431,7 @@
      "Сроки 03:20 записи поступления, 03:23 жизнеспособность биоптата, 06:10 сравнение слепков и 08:15 документы Аракавы; время на OOC не сдвигается.",
      "Не объявлять автоматически ни источник поражения, ни гетерокарион интеграцией ДНК, ни получение геномной программы из-за имплантации."
     ],
-    "last": "s08.text.023"
+    "last": "s08.text.024"
    },
    "side_seal_records": {
     "id": "side_seal_records",

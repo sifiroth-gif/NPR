@@ -1,7 +1,7 @@
 # Кадзиура Сатору · `kadziura_satoru`
 
 псевдонимы: Кадзиура, Сатору
-вид: npc · впервые: s07.text.033 · последний раз: s08.text.023 · сейчас в сцене
+вид: npc · впервые: s07.text.033 · последний раз: s08.text.024 · сейчас в сцене
 
 ## Постоянное
 - внешность: крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза [s07.text.033]
@@ -17,10 +17,10 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 05:49 independently distinguishes private health information about Shiki from record of treatment of recipient6, demands documented list of recipients and justification and orders no further disclosures without separate decision. Keeps original samples in medical unit by documented custody, takes responsibility for his own authorization but does not declare automatic legal wrongdoing. [s08.text.023]
+- положение: 05:51 accepts clinical documentation must remain but fears uncontrolled circulation of named Byoton and blood details. Signs actionable registry-access audit request and orders duty doctor to lodge it; does not know or imply proof of extra recipients, Kage's actual separate review or leaked other documents. Stays with Shiki and prepares to respond based on factual trace. [s08.text.024]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
-## Знает (последние 20 из 20)
+## Знает (последние 21 из 21)
 - Четверо подтверждённых выживших реципиентов С-17 находятся под его координацией в охраняемом отделении. [s07.text.033]
 - Реципиент №6 нуждается в аппаратной респираторной поддержке и текущем лечении; дыхательная функция последние сутки нестабильна. [s07.text.033]
 - Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача. [s07.text.033]
@@ -41,9 +41,9 @@
 - Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite extraordinary metabolic indicators, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals. [s08.text.021]
 - 05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shiki's estimate, not proven mechanism. [s08.text.022]
 - 05:49 duty doctor explicitly confirms to Shiki that internal committee notice contains his name, witnessed Byoton, blood anomaly and precautionary contact warning, sent without his consent, while full lab results and actual blood samples were not included. [s08.text.023]
+- At 05:51 Shiki announces he will personally complain to medical and medical ethics commissions about unauthorized release, alludes to undisclosed documents and claims he and Kage are aware of broader concerning trajectory, without naming details. Kadz now learns physician sent sensitive named information via internal hospital registration with unknown exact read/copy permissions. [s08.text.024]
 
-## История (последние 8 из 23)
-- s08.text.016 0006-10-03T03:21:00: Шики раскрыл Кадзиуре природу РНК-вектора CRISPR и альтернативу последовательного уничтожения чужеродных клеток. Кадзиура отверг разрушение как первую линию, выбрал проверку носителя и запросил сведения о его распространении.
+## История (последние 8 из 24)
 - s08.text.017 0006-10-03T03:24:00: Шики объявил Кадзиуре о способности самостоятельно заразить №6 созданным им вектором без пробирки; врачи встревожены, Кадзиура запретил новый опыт до прояснения контроля. В канон введён Бётон «Заражение», не применён.
 - s08.text.018 0006-10-03T03:28:00: Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение.
 - s08.text.019 0006-10-03T03:31:00: Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было.
@@ -51,11 +51,12 @@
 - s08.text.021 0006-10-03T05:46:00: Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена.
 - s08.text.022 0006-10-03T05:48:00: Шики встал, пояснил лишь предполагаемый риск некроза или токсического поражения при контакте голой кожи, спросил дежурную об обвинении. Она подтвердила только официальный медицинский рапорт комиссии, без известного следствия или задержания; Кадзиура требует о…
 - s08.text.023 0006-10-03T05:49:00: Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…
-- ранее: 15 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
+- s08.text.024 0006-10-03T05:51:00: Шики объявил о будущей претензии и предупредил об угрозе распространения данных за пределы комиссии. Кадзиура поручил установить маршрут и круг доступа к уведомлению; дежурная не отозвала рапорт, но начала проверку.
+- ранее: 16 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
 
-## Разговоры с Шики: 14 ходов (s08)
+## Разговоры с Шики: 15 ходов (s08)
 - дословно по ходам: `memory/npc/kadziura_satoru.talk.md`
-- s08.text.022: Шики — «Не знаю. Я просил не не касаться голыми руками кожи, это опасно, по виду некроз или отравление с отмиранием клеток есть ещё кое что вы выдвинули мне официально…»; Кадзиура Сатору — «»
 - s08.text.023: Шики — «Я спрашивал о другом. Вы передали им мои личные данные не связанные с экспериментальным воздействием? Вы сказали в том числе: "Указала наблюдавшуюся технику, и…»; Кадзиура Сатору — «»
+- s08.text.024: Шики — «Да, я составлю собственную претензию относительно ваших действий в отношении моих личных данных. Особенно сейчас, когда документы ... Не важно. Этому действию …»; Кадзиура Сатору — «»
 
 Ход целиком: `archive/turns/sNN/<id>.md`.

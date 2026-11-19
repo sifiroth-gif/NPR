@@ -4,16 +4,19 @@
     "kadziura_satoru",
     "night_icu_physician",
     "s17_recipient_6",
-    "place:5270dd69fc81a58d"
+    "place:5270dd69fc81a58d",
+    "thread:order",
+    "thread:pact",
+    "thread:s17_survivors"
   ],
-  "cursor": "s08.text.023",
+  "cursor": "s08.text.024",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3857,
-  "index_entities": 361,
-  "index_source_records": 573,
-  "indexed_cursor": "s08.text.023",
+  "focus_bytes": 5254,
+  "index_entities": 362,
+  "index_source_records": 574,
+  "indexed_cursor": "s08.text.024",
   "kinds": {
-    "clock": 2,
+    "clock": 3,
     "entity": 1,
     "item": 4,
     "npc": 49,
@@ -31,6 +34,12 @@
       "at_1": true,
       "at_5": true,
       "id": "clock:arakawa_supply_audit",
+      "kind": "clock"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:medical_notice_registry_trace",
       "kind": "clock"
     },
     {
@@ -491,9 +500,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 77,
-  "self_query_at_5": 77,
-  "self_query_count": 77,
+  "self_query_at_1": 78,
+  "self_query_at_5": 78,
+  "self_query_count": 78,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
