@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.044",
+  "cursor": "s08.text.045",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -48,9 +48,9 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s08.text.042",
+          "seen": "s08.text.045",
           "stance": "Встревожен, не знает причин",
-          "state": "Утром 03.10 около 08:13 сообщает Шики через дверь, где дополнительный перевязочный набор, и уходит из клиники, намереваясь связаться с Нао. Не вмешивается в лечение.",
+          "state": "08:25 told Nao that Shiki returned greatly changed; 08:36 accepts her demand for inventoried custody of older pharmacy papers and begins writing the inventory.",
           "voice": "Сдержанная речь, срыв при волнении",
           "wants": "Сохранить спокойствие семьи и работу клиники"
         },
@@ -58,13 +58,14 @@
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
           "stance": "Встревожен, не знает причин",
-          "state": "Утром 03.10 около 08:13 сообщает Шики через дверь, где дополнительный перевязочный набор, и уходит из клиники, намереваясь связаться с Нао. Не вмешивается в лечение.",
+          "state": "08:25 told Nao that Shiki returned greatly changed; 08:36 accepts her demand for inventoried custody of older pharmacy papers and begins writing the inventory.",
           "wants": "Сохранить спокойствие семьи и работу клиники"
         }
       ],
       "sources": [
         "recovery/cast/akihiro.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s08.text.045"
       ]
     },
     "arai_mitiko": {
@@ -1135,15 +1136,24 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s05.text.044",
+          "seen": "s08.text.045",
           "stance": "Сдержанная клиническая настороженность",
-          "state": "Утром 02.10 принесла Шики горячий настой и лепёшки, сообщила, что Сэйна вечером хочет обсудить анализы. Вышла, не слышала подробностей Нори; занята домашними делами.",
+          "state": "08:36 In Seina's reception near Shiki, maintains quiet distance and doesn't touch or publicly interrogate him about the Pact. Supports securing pharmacy records only with inventory and Seina's additional custody; proposes to sit with her son briefly while sort",
           "voice": "Тихая прямая речь",
+          "wants": "Понять изменения сына, не упуская его самостоятельности"
+        },
+        {
+          "fears": "Непонятная перемена состояния Шики",
+          "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
+          "stance": "Сдержанная клиническая настороженность",
+          "state": "08:36 In Seina's reception near Shiki, maintains quiet distance and doesn't touch or publicly interrogate him about the Pact. Supports securing pharmacy records only with inventory and Seina's additional custody; proposes to sit with her son briefly while sort",
           "wants": "Понять изменения сына, не упуская его самостоятельности"
         }
       ],
       "sources": [
-        "recovery/cast/nao.json"
+        "recovery/cast/nao.json",
+        "recovery/HOT.json",
+        "s08.text.045"
       ]
     },
     "nemera": {
@@ -1175,7 +1185,8 @@
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения"
+        "Дежурная врач охраняемого отделения",
+        "night_icu_physician"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -1188,15 +1199,24 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.033",
+          "seen": "s08.text.045",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "Offscreen 07:05–07:20 after Kadziura's registry trace request she supplied careful version naming commission as official original addressee and hospital office as registry recipient, omitting one internal redirect. This is a strategic, fear-driven selective ac",
+          "state": "Offscreen by 08:30 provided a guarded answer characterizing registry copy as routine administration and sidestepping one internal forwarding entry; this incomplete account becomes the first official written reconstruction subject to later challenge by availabl",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
+          "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
+        },
+        {
+          "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
+          "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
+          "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
+          "state": "Offscreen by 08:30 provided a guarded answer characterizing registry copy as routine administration and sidestepping one internal forwarding entry; this incomplete account becomes the first official written reconstruction subject to later challenge by availabl",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json"
+        "recovery/cast/night_icu_physician.json",
+        "recovery/HOT.json",
+        "s08.text.045"
       ]
     },
     "nori": {
@@ -3127,6 +3147,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s08.text.045",
         "s08.text.038",
         "s08.text.039"
       ]
@@ -5620,10 +5641,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.044",
         "s08.text.041",
         "s08.text.042",
-        "s08.text.043"
+        "s08.text.043",
+        "s08.text.044"
       ]
     },
     "place:ca8dd7c91b21f899": {
@@ -7985,5 +8006,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 593
+  "source_turns_indexed": 594
 }
