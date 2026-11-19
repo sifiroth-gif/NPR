@@ -11,14 +11,14 @@
   },
   {
    "kind": "plot",
-   "text": "Событие «Два источника и чужой долг» (`ch08_tissue_debt`) на пределе (12 из 12 сцен): разреши следующей сценой одной из концовок: Получены проверяемые клинические и лабораторные результаты, определены реальные границы лечения и происхождения хотя бы одного источника. / Пациент и/или источники сохранились с неизбежной ценой, но причинность и зависимость раскрыты лишь частично. / Невосполнимая потеря пациента, ткани, документа или доступа меняет дальнейшее расследование; никакой компенсации задним числом. / Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения.. Новых преград не вводи; продолжение — новым событием.",
-   "turn": "s08.text.025"
+   "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`).",
+   "turn": "s08.text.026"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.025",
+  "cursor": "s08.text.026",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -28,10 +28,11 @@
   "focus": [
    "recipient6",
    "kadziura_satoru",
-   "place:e282ecc6d8237346",
-   "thread:pact"
+   "place:8a0569cc4112e23e",
+   "orderly",
+   "thread:order"
   ],
-  "focus_bytes": 2868,
+  "focus_bytes": 3474,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -58,18 +59,18 @@
    "shiki_upper_clothing": {
     "holder": "shiki",
     "since": "s08.text.002",
-    "turn": "s08.text.025"
+    "turn": "s08.text.026"
    }
   }
  },
  "cursor": {
-  "at": "0006-10-03T06:01:00",
+  "at": "0006-10-03T06:06:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.025",
-  "place": "Кусагакуре, Центральный госпиталь, место для личных вещей у палаты реанимации №6",
-  "time": "06:01"
+  "id": "s08.text.026",
+  "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с палатой №6",
+  "time": "06:06"
  },
- "digest": "525206b3d6530b7928ebd2c238bc8394f4b91c9eac69a086b4a1e5fa7158cae6",
+ "digest": "58a6b9828b358c25edaf417e836b32cb61b30aa67a3d0cc5c0984436685755f8",
  "entity_memory": {
   "activated": [
    {
@@ -135,18 +136,18 @@
  },
  "fight": {
   "dice": [
-   75,
-   35,
-   73,
-   27,
-   58,
-   27,
-   95,
-   63,
-   43,
-   17,
+   34,
+   45,
+   83,
+   55,
+   53,
+   13,
+   76,
+   6,
    79,
-   14
+   66,
+   6,
+   6
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -197,9 +198,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:e282ecc6d8237346",
+    "id": "place:8a0569cc4112e23e",
     "kind": "place",
-    "label": "Кусагакуре, Центральный госпиталь, место для личных вещей у палаты реанимации №6",
+    "label": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с палатой №6",
     "status": "no_verified_facts"
    },
    {
@@ -207,14 +208,32 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "thread:pact",
-    "kind": "thread",
-    "label": "pact",
+    "id": "orderly",
+    "kind": "npc",
+    "label": "Неустановленный санитар резиденции",
     "operational_cues": {
-     "source": "recovery/HOT.json",
+     "source": "recovery/cast/orderly.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
+      "body": "Прибежал с полевым набором, открывал упаковки и готовил венозный доступ",
+      "role": "Подсобный медперсонал при Кагэ"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "thread:order",
+    "kind": "thread",
+    "label": "order",
+    "operational_cues": {
+     "source": "s05.text.017",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям ка"
      }
     },
     "status": "no_verified_facts"
@@ -226,7 +245,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 4
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -240,10 +259,10 @@
   "due": null,
   "npcs": {
    "kadziura_satoru": {
-    "does": "Signs formal request copy and locks both specimens in documented limited access compartment, personally taking key; refuses immediate destruction despite pressure.",
+    "does": "Draws practical room boundaries and directs nurse to bring cloth supplies, but does not rebuke her disgust toward Shiki.",
     "lever": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "He must preserve enough specimens to defend treatment and clinical continuity, but sample ownership and accidental circulation could invite interested power brokers or put staff at risk.",
+    "reads": "A bizarre ability that saved one boy is now an occupational and social fear undermining ward confidence; clinical care continues but public tolerance erodes.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -267,7 +286,7 @@
  },
  "needs_profile": [
   {
-   "appearances": 25,
+   "appearances": 26,
    "facets": 0,
    "need": 5,
    "npc": "kadziura_satoru",
@@ -311,35 +330,6 @@
  },
  "plot": {
   "active": [
-   {
-    "at_limit": true,
-    "endings": [
-     "Получены проверяемые клинические и лабораторные результаты, определены реальные границы лечения и происхождения хотя бы одного источника.",
-     "Пациент и/или источники сохранились с неизбежной ценой, но причинность и зависимость раскрыты лишь частично.",
-     "Невосполнимая потеря пациента, ткани, документа или доступа меняет дальнейшее расследование; никакой компенсации задним числом.",
-     "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
-    ],
-    "id": "ch08_tissue_debt",
-    "kind": "chapter",
-    "limit": {
-     "scenes": 12,
-     "until": "0006-10-08T00:00:00"
-    },
-    "notes": [
-     "Непосредственная точка продолжения: 03.10.1283 03:09, биоптат №6 имплантирован в левую дельтовидную мышцу Шики; Нулевой Геном ещё не применён к образцу.",
-     "Сроки 03:20 записи поступления, 03:23 жизнеспособность биоптата, 06:10 сравнение слепков и 08:15 документы Аракавы; время на OOC не сдвигается.",
-     "Не объявлять автоматически ни источник поражения, ни гетерокарион интеграцией ДНК, ни получение геномной программы из-за имплантации."
-    ],
-    "parent": "main",
-    "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
-    "scenes": 12,
-    "scenes_left": 0,
-    "threads": [
-     "s17_survivors",
-     "arakawa_treatment"
-    ],
-    "title": "Два источника и чужой долг"
-   },
    {
     "endings_ref": "recovery/GM_ONLY.json:plot.events.side_seal_records",
     "id": "side_seal_records",
@@ -453,7 +443,7 @@
     },
     {
      "at": "0006-10-03T06:01:00",
-     "sha256": "12c3b4c906b217f06f3449d1dd5a23b10ba204cc188d51a5bddfccfeccad7e7f",
+     "sha256": "2cddfbe7404ca02a7889ee4395810093a29e28bffdd06e8f80a29b1e275a4531",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.025"
@@ -464,10 +454,10 @@
     "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
     "first": "s07.text.033",
     "knows": [
-     "05:48 Shiki said he does not know what will happen if his blood enters an open wound; warned that direct bare skin contact may look like necrosis/poisoning with death of contacted cells. Kadz knows this as Shik",
      "05:49 duty doctor explicitly confirms to Shiki that internal committee notice contains his name, witnessed Byoton, blood anomaly and precautionary contact warning, sent without his consent, while full lab resul",
      "At 05:51 Shiki announces he will personally complain to medical and medical ethics commissions about unauthorized release, alludes to undisclosed documents and claims he and Kage are aware of broader concerning",
-     "06:01 Shiki directly invokes status jōnin of Kusa to formally demand destruction of his 2 blood samples and confidentiality of clinical analyses as private and potentially secret; if not immediately destroyed h"
+     "06:01 Shiki directly invokes status jōnin of Kusa to formally demand destruction of his 2 blood samples and confidentiality of clinical analyses as private and potentially secret; if not immediately destroyed h",
+     "06:02 Shiki took his clothing and medical belt, asked to change in a ward and acquire extra cloth wrapping bandages, offered to pay. Other workers recoil from visible stage6 appearance, but no confirmed airborn"
     ],
     "knows_ref": "memory/npc/kadziura_satoru.md",
     "knows_total": 8,
@@ -475,17 +465,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.025",
-      "what": "Шики официально потребовал уничтожить собственные образцы крови и сохранить тайну анализов, попросил вернуть снаряжение. Кадзиура зарегистрировал запрос, отказал в немедленном уничтожении, опечатал дв"
+      "turn": "s08.text.026",
+      "what": "Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные."
      }
     ],
     "memory_file": "archive/npc-memory/kadziura_satoru.json",
-    "memory_total": 25,
+    "memory_total": 26,
     "name": "Кадзиура Сатору",
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-    "seen": "s08.text.025",
+    "seen": "s08.text.026",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "06:01 independently declines instant destruction as jeopardizing legitimate recipient6 treatment/evidence account, writes and signs formal patient request receipt and gives Shiki copy; seals both near-black blood samples with logged chain in separate locked office compartment, restricts access and requires written requests. Personally escorts Shiki to retained upper clothes at room6; still responsible for ventilated S17 teen. Orders both outbound and view-access registry logs without declaring outside leak.",
+    "state": "06:06 escorts Shiki to earlier observation room, authorizes private use to change, refuses occupied ICU room6, requests additional cotton cloth wrapping supplies for paid release through accounting. Has seen staff recoil and insulting talk; enforces medical duties but doesn't make them feign affection or prevent prejudice. Preserves sealed blood samples and patient6 records, treats patient6 airway as limited positive outcome with unresolved S17 dependence.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -496,15 +486,15 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.025",
-   "line": "Шики официально потребовал уничтожить собственные образцы крови и сохранить тайну анализов, попросил вернуть снаряжение. Кадзиура зарегистрировал запрос, отказал в немедленном уничтожении, опечатал две пробы отдельно и отвёл Шики к его одежде у палаты №6."
+   "id": "s08.text.026",
+   "line": "Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные. Медицинская арка №6 завершена частичным успехом."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "06:01 Shiki stood at assigned clothing place outside ICU room6 with Kadz, not yet dressed in removed upper garments; clothing and integrated medical belt available there under Shiki control. Two black-blood Shiki specimens in sealed labeled metal case in separate lockable cabinet in Kadz's office, signed custody documentation; original experimental CRISPR carrier in different locked compartment; Kadz has keys. Duty physician absent at registry. Patient6 in adjacent ICU, mechanically ventilated receiving S17.",
-  "pressure": "A formal written destruction/limited access request by Shiki has been accepted with Kadz-signed copy, but no destruction or chart deletion done; Kadz's continuing legal-medical retention and sealed custody is testable and vulnerable to future written orders. Hospital registry audit needs access and outward-transmission logs; no finding yet. Shiki remains depleted chakra at max pact stage6 with wholly intact corpse-gray skin and contact risk.",
-  "situation": "03 Oct 1283, 05:54–06:01. Shiki remarks night-duty doctor apparently lacks ethics commission experience and warns observations will not suffice; requests escort to his personal gear and formally demands destruction of his own biological blood specimens and analysis material as private professional/classified information of Kusa jōnin. If destruction cannot be immediately executed he explicitly demands retention be justified and specimens never released. Kadz refuses to destroy immediately, explicitly distinguishes two physical blood samples, already performed laboratory measurements, clinical record and recipient6 treatment documentation. As senior treating physician he personally records Shiki's official request for destruction/privacy restrictions and gives Shiki personally signed copy, does not erase chart or report. He invokes evidence-integrity concern for his own physician responsibility and promises an independent written decision on future disposal, no falsely guaranteed destruction. Kadz summons protected specimen case, has nurse enter chain-of-custody record, seals BOTH physical near-black Shiki blood tubes in separate protected metal cassette, personally secures them in distinct locked compartment of HIS office near previously locked experimental vector; he retains key. No external laboratory shipping, no unauthorized release, no new tests initiated. He tells Shiki he will require written request with named recipient, purpose and chain of custody before any compelled future release, and cannot promise unlimited power to refuse official lawful orders. Escort then takes fully mobile but chakra-exhausted Shiki to assigned personal-garment place outside room6 from s08.text.002; his previously removed dark overclothing, pelerine, medical gear and belt are still th"
+  "positions": "At 06:06 Shiki with collected clothing and integrated medical gear in adjacent observation room, wearing previous hospital gown and gloves until player chooses to change; two packs of cloth bandages on chair, additional order to stock pending paid release. Kadz at outer doorway exiting; nurse and orderly back in corridor/staff post. Recipient6 in ICU room6 on ventilator/S17. Blood samples locked in Kadz office. Shiki severely chakra depleted but physically fully functional with intact max-stage6 skin.",
+  "pressure": "Shiki's outward max-stage6 uncanny appearance has now made ordinary hospital staff openly hostile and avoid touching or sharing rooms; Kadz places practical restrictions and does not force staff to respect Shiki socially. Personal equipment reclaimed; blood privacy issue and ethics review still open.",
+  "situation": "06:02-06:06 03.10: Shiki collects own dark upper-clothing and medical belt/gear from assigned place outside ICU room6, asks Kadz permission to change inside ward and to buy extra cloth wrapping bandages. Does not yet put gear on or wrap body. Kadz disallows changing inside sterile occupied ICU room6, grants privacy in previously used adjacent observation room. An ICU nurse sees Shiki's deathly gray cold but INTACT skin, dark vessels at neck, and smells close-range metal/iodine/old bandages/grave soil; she recoils, expresses sharp hostility about the alleged contagion risk and Shiki still moving through medical ward. A male ward orderly sees Shiki and retreats in discomfort; his actual reaction is visible and is not an established transmission danger. Kadz is curt, holds medical boundary but does not falsely affirm airborne infection; despite soldierly clinical detachment he refuses to reprimand two staff for personal comments expressing disgust and desire for Shiki to leave. Nurse is still professionally responsive to a clear order: fetches two packs of cotton cloth wrapping bandages, sets on chair in observation room refusing direct handover, and has requisitioned additional stock for billed paid release; payment/quantity not processed yet and packages are offered, NOT automatically owned by Shiki. Kadz leaves door ajar for user to close/undress at will, and no additional user action assumed. He notes recipient6 airway improvement persists in visual clinical check but ongoing S17/ventilation dependence and unknown graft origin, long-term gene edits unproven. The two near-black Shiki blood vials remain secured separately in Kadz office awaiting resolution of formal destruction petition; hospital log audit at ~07:05 pending. No direct skin or blood exposure occurred. No "
  },
  "shiki": {
   "body": "05:46 03.10.1283 conscious, still severely chakra depleted, otherwise fully functional and physically competent at max pact STAGE6. Intact cold pale-gray skin no peeling, no spots, no scabs, no flakes, no visible necrosis. Core 29.3-29.4C, HR52 sinus BP108/66; near-black functional blood, chakra-filament networks across circulation/interstitial/lymph and organs, normal oxygen delivery, cognition, muscles, healing capacity. Direct bare skin to bare living skin, fresh blood to open wound/mucosa potentially contagious only; not through clothing, gloves, dry blood, air, smell, or objects. Near scent iron/iodine/old bandages/grave soil. Seven locks closed. Tiny ischemic unassimilated bronchial biopsy still in left deltoid.",
@@ -530,8 +520,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e3523b10724c87c073d310fa5d8fa40ba5f352d7",
-  "turn": "s08.text.025"
+  "sha": "1ffbcb31b94ee4757e9b3b5d09169954309f478d",
+  "turn": "s08.text.026"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -547,7 +537,7 @@
     "due": "0006-10-03T06:10:00",
     "id": "s17_cast_comparison",
     "if_unopposed": "Лаборатория сообщит подтверждённые отличия или нехватку сопоставимых проб, не фантазировать на основе отсутствующих материалов.",
-    "minutes": 9.0,
+    "minutes": 4.0,
     "owner": "Кадзиура Сатору и лаборатория Центрального госпиталя",
     "signs": "Образцы переданы на углублённое исследование; назначение Кадзиуры и сопоставление с сохранёнными биоматериалами.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.s17_cast_comparison",
@@ -558,7 +548,7 @@
     "due": "0006-10-03T07:05:00",
     "id": "medical_notice_registry_trace",
     "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа.",
-    "minutes": 64.0,
+    "minutes": 59.0,
     "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
     "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.medical_notice_registry_trace",
@@ -569,7 +559,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 134.0,
+    "minutes": 129.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -580,7 +570,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без вы…",
-    "minutes": 209.0,
+    "minutes": 204.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",
@@ -591,8 +581,6 @@
   "due_now": [],
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
-   "v7",
-   "order",
    "sanction",
    "lower_hospital",
    "nemera",
@@ -609,7 +597,9 @@
    "personal_archive",
    "anbu_transfer",
    "medical_family",
-   "kabuto_letter"
+   "kabuto_letter",
+   "arakawa_treatment",
+   "s17_survivors"
   ],
   "secret_topics": [
    "target_correction",
@@ -622,20 +612,20 @@
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
   "threads": {
-   "arakawa_treatment": {
-    "source": "memory/threads/arakawa_treatment.md",
-    "state": "03.10 00:53 после одного местного Бётон-вмешательства в трансплантат Аракавы: объективное частичное улучшение при остаточных спазмах, независимость от С-17 ещё не доказана. Шики создал ВТОРУЮ пробирку для собственной да…",
-    "turn": "s07.text.029"
-   },
-   "s17_survivors": {
-    "source": "memory/threads/s17_survivors.md",
-    "state": "06:01 Shiki officially requests destruction of both blood samples and protection of private analysis, Kadz refuses instant destruction but records request, gives signed copy, locks TWO intact physical specimens separate…",
-    "turn": "s08.text.025"
+   "order": {
+    "source": "memory/threads/order.md",
+    "state": "Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям канцелярии за 30.09–01.10, в обход общего ЦУ, лично.",
+    "turn": "s05.text.017"
    },
    "tetsu": {
     "source": "memory/threads/tetsu.md",
     "state": "Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты.",
     "turn": "s04.text.064"
+   },
+   "v7": {
+    "source": "memory/threads/v7.md",
+    "state": "02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги: один погибший защитник, один раненый, один нападающий задержан, остальные отступили. Маточная культура и реестр на месте у Такаги. В 23:12 Шики слыш…",
+    "turn": "s07.text.017"
    }
   }
  }

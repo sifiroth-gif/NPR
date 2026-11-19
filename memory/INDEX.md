@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s08.text.025`
+# Карта мира NPR · на ходе `s08.text.026`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -157,7 +157,7 @@
 - `medical_family` — 23:15 Нао, Акихиро, Сэйна знают полную тайну Немеры, крови и изменённ… · `threads/medical_family`
 - `kabuto_letter` — ОТКРЫТАЯ ОТЛОЖЕННАЯ СЮЖЕТНАЯ НИТЬ: 19.09.1278 в кабинете Кирисавы Сэй… · `threads/kabuto_letter`
 - `arakawa_treatment` — 03.10 00:53 после одного местного Бётон-вмешательства в трансплантат … · `threads/arakawa_treatment`
-- `s17_survivors` — 06:01 Shiki officially requests destruction of both blood samples and… · `threads/s17_survivors`
+- `s17_survivors` — 06:06, recipient6 remains ventilated on ongoing S17 with improved bro… · `threads/s17_survivors`
 
 ## Вещи (4)
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`

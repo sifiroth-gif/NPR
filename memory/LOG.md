@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.026: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`, план сюжета
 - s08.text.025: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`
 - s08.text.024: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
 - s08.text.023: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`

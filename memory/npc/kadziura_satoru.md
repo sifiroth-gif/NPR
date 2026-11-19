@@ -1,7 +1,7 @@
 # Кадзиура Сатору · `kadziura_satoru`
 
 псевдонимы: Кадзиура, Сатору
-вид: npc · впервые: s07.text.033 · последний раз: s08.text.025 · сейчас в сцене
+вид: npc · впервые: s07.text.033 · последний раз: s08.text.026 · сейчас в сцене
 
 ## Постоянное
 - внешность: крупный мужчина с покатыми плечами; коротко стриженные седеющие волосы, тяжёлый подбородок, спокойные внимательные глаза [s07.text.033]
@@ -17,10 +17,10 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 06:01 independently declines instant destruction as jeopardizing legitimate recipient6 treatment/evidence account, writes and signs formal patient request receipt and gives Shiki copy; seals both near-black blood samples with logged chain in separate locked office compartment, restricts access and requires written requests. Personally escorts Shiki to retained upper clothes at room6; still responsible for ventilated S17 teen. Orders both outbound and view-access registry logs without declaring outside leak. [s08.text.025]
+- положение: 06:06 escorts Shiki to earlier observation room, authorizes private use to change, refuses occupied ICU room6, requests additional cotton cloth wrapping supplies for paid release through accounting. Has seen staff recoil and insulting talk; enforces medical duties but doesn't make them feign affection or prevent prejudice. Preserves sealed blood samples and patient6 records, treats patient6 airway as limited positive outcome with unresolved S17 dependence. [s08.text.026]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
-## Знает (последние 22 из 22)
+## Знает (последние 23 из 23)
 - Четверо подтверждённых выживших реципиентов С-17 находятся под его координацией в охраняемом отделении. [s07.text.033]
 - Реципиент №6 нуждается в аппаратной респираторной поддержке и текущем лечении; дыхательная функция последние сутки нестабильна. [s07.text.033]
 - Шики участвовал в обнаружении этих больных по материалам переданных медицинских сведений; сейчас он появился в отделении и спросил ответственного врача. [s07.text.033]
@@ -43,9 +43,9 @@
 - 05:49 duty doctor explicitly confirms to Shiki that internal committee notice contains his name, witnessed Byoton, blood anomaly and precautionary contact warning, sent without his consent, while full lab results and actual blood samples were not included. [s08.text.023]
 - At 05:51 Shiki announces he will personally complain to medical and medical ethics commissions about unauthorized release, alludes to undisclosed documents and claims he and Kage are aware of broader concerning trajectory, without naming details. Kadz now learns physician sent sensitive named information via internal hospital registration with unknown exact read/copy permissions. [s08.text.024]
 - 06:01 Shiki directly invokes status jōnin of Kusa to formally demand destruction of his 2 blood samples and confidentiality of clinical analyses as private and potentially secret; if not immediately destroyed he demands robust restriction and documentary retention basis. Shiki requests escort to gear. [s08.text.025]
+- 06:02 Shiki took his clothing and medical belt, asked to change in a ward and acquire extra cloth wrapping bandages, offered to pay. Other workers recoil from visible stage6 appearance, but no confirmed airborne risk. [s08.text.026]
 
-## История (последние 8 из 25)
-- s08.text.018 0006-10-03T03:28:00: Шики пояснил: чакра контролирует распространение созданного вирусного вектора; после её отвода доставленный комплекс действует, но РНК не самокопируется и здоровые клетки якобы недоступны. Кадзиура оформил лишь подготовку, не введение.
+## История (последние 8 из 26)
 - s08.text.019 0006-10-03T03:31:00: Шики потребовал решения Кадзиуры до истощения чакры через 1–1,5 часа. Кадзиура под собственную ответственность подписал разрешение на экспериментальное подавление nsp-δ в известном очаге №6; введения ещё не было.
 - s08.text.020 0006-10-03T04:12:00: Шики применил одноручный Бётон «Заражение» для введения созданного им CRISPR-вектора в бронхи №6, другой рукой удалял НСП-δ и регенерировал эпителий. Проходимость восстановилась, ИВЛ и С-17 продолжаются. Шики упал без сознания от истощения.
 - s08.text.021 0006-10-03T05:46:00: Переписанное пробуждение 05:46: по прямому авторскому решению Договор сразу достиг абсолютной стадии 6. Кровь Шики почти чёрная и заразна при прямом контакте, кожа поверхностно разлагается, тело 29,4°C, но органы и способности работают. Чакра истощена.
@@ -53,11 +53,12 @@
 - s08.text.023 0006-10-03T05:49:00: Шики выяснил, что дежурная врач без его согласия отправила комиссии персональные сведения об аномальной крови и технике Бётона вместе с медицинским рапортом; она признала факт, обосновала опасностью, Кадзиура потребовал описи получателей и ограничил последующ…
 - s08.text.024 0006-10-03T05:51:00: Шики объявил о будущей претензии и предупредил об угрозе распространения данных за пределы комиссии. Кадзиура поручил установить маршрут и круг доступа к уведомлению; дежурная не отозвала рапорт, но начала проверку.
 - s08.text.025 0006-10-03T06:01:00: Шики официально потребовал уничтожить собственные образцы крови и сохранить тайну анализов, попросил вернуть снаряжение. Кадзиура зарегистрировал запрос, отказал в немедленном уничтожении, опечатал две пробы отдельно и отвёл Шики к его одежде у палаты №6.
-- ранее: 17 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
+- s08.text.026 0006-10-03T06:06:00: Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные. Медицинская арка №6 завершена частичным успехом.
+- ранее: 18 эпизодов, полностью в `archive/npc-memory/kadziura_satoru.json`
 
-## Разговоры с Шики: 16 ходов (s08)
+## Разговоры с Шики: 17 ходов (s08)
 - дословно по ходам: `memory/npc/kadziura_satoru.talk.md`
-- s08.text.024: Шики — «Да, я составлю собственную претензию относительно ваших действий в отношении моих личных данных. Особенно сейчас, когда документы ... Не важно. Этому действию …»; Кадзиура Сатору — «»
 - s08.text.025: Шики — «Видимо не была на комиссии по этике. Наблюдений там будет недостаточно. Отведите меня к моему снаряжению, а образцы моей крови. Я официально прошу уничтожить к…»; Кадзиура Сатору — «»
+- s08.text.026: Шики — «я могу переодеться в палате? А ещё мне нужны обмоточные бинты тканевые, у вас есть, я готов приобрести, моих мне не хватит»; Кадзиура Сатору — «»
 
 Ход целиком: `archive/turns/sNN/<id>.md`.

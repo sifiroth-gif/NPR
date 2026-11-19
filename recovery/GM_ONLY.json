@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.025",
+ "cursor": "s08.text.026",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -147,13 +147,6 @@
     "since": "s08.text.006",
     "log": [
      {
-      "turn": "s08.text.020",
-      "at": "0006-10-03T04:12:00",
-      "change": "подтвердилось",
-      "saw": "A named unfamiliar disease element Byoton manifests in front of him during a simultaneous regeneration; its user faints after delivering treatment.",
-      "does": "Catches fainting Shiki only by clothing and directs barrier-protected clinical observation while continuing ICU management."
-     },
-     {
       "turn": "s08.text.021",
       "at": "0006-10-03T05:46:00",
       "change": "подтвердилось",
@@ -187,11 +180,18 @@
       "change": "подтвердилось",
       "saw": "Shiki, a Kusa jōnin with near-black blood and frightening biological technique, has formally claimed secrecy and control over his samples while refusing uncontrolled release.",
       "does": "Signs formal request copy and locks both specimens in documented limited access compartment, personally taking key; refuses immediate destruction despite pressure."
+     },
+     {
+      "turn": "s08.text.026",
+      "at": "0006-10-03T06:06:00",
+      "change": "подтвердилось",
+      "saw": "Nurse openly recoils from Shiki's intact but corpse-like appearance and scent, criticizes his presence; more staff avoid contact despite no proof of airborne transmission.",
+      "does": "Draws practical room boundaries and directs nurse to bring cloth supplies, but does not rebuke her disgust toward Shiki."
      }
     ],
-    "reads": "He must preserve enough specimens to defend treatment and clinical continuity, but sample ownership and accidental circulation could invite interested power brokers or put staff at risk.",
-    "does": "Signs formal request copy and locks both specimens in documented limited access compartment, personally taking key; refuses immediate destruction despite pressure.",
-    "turn": "s08.text.025",
+    "reads": "A bizarre ability that saved one boy is now an occupational and social fear undermining ward confidence; clinical care continues but public tolerance erodes.",
+    "does": "Draws practical room boundaries and directs nurse to bring cloth supplies, but does not rebuke her disgust toward Shiki.",
+    "turn": "s08.text.026",
     "step": "необратимость"
    }
   },
@@ -328,21 +328,13 @@
    "text": "missing earliest/latest prior NPC disclosure source: s08.text.015"
   },
   {
-   "turn": "s08.text.025",
+   "turn": "s08.text.026",
    "kind": "plot",
-   "text": "Событие «Два источника и чужой долг» (`ch08_tissue_debt`) на пределе (12 из 12 сцен): разреши следующей сценой одной из концовок: Получены проверяемые клинические и лабораторные результаты, определены реальные границы лечения и происхождения хотя бы одного источника. / Пациент и/или источники сохранились с неизбежной ценой, но причинность и зависимость раскрыты лишь частично. / Невосполнимая потеря пациента, ткани, документа или доступа меняет дальнейшее расследование; никакой компенсации задним числом. / Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения.. Новых преград не вводи; продолжение — новым событием."
+   "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.020",
-    "look": [
-     "сосуды",
-     "глаза"
-    ],
-    "soma": []
-   },
    {
     "turn": "s08.text.021",
     "look": [
@@ -370,6 +362,11 @@
     "look": [
      "пелерина"
     ],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.026",
+    "look": [],
     "soma": []
    }
   ],
@@ -410,37 +407,6 @@
      "У В-7 уже был конкретный исход нападения 02.10: штурм не повторять как несостоявшийся.",
      "Действия и исходы NPC самостоятельны; провал, гибель, бездействие и выбор иной цели допустимы без сюжетных иммунитетов."
     ]
-   },
-   "ch08_tissue_debt": {
-    "id": "ch08_tissue_debt",
-    "kind": "chapter",
-    "status": "active",
-    "opened": "s08.text.012",
-    "opened_at": "0006-10-03T03:09:00",
-    "scenes": 12,
-    "title": "Два источника и чужой долг",
-    "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
-    "endings": [
-     "Получены проверяемые клинические и лабораторные результаты, определены реальные границы лечения и происхождения хотя бы одного источника.",
-     "Пациент и/или источники сохранились с неизбежной ценой, но причинность и зависимость раскрыты лишь частично.",
-     "Невосполнимая потеря пациента, ткани, документа или доступа меняет дальнейшее расследование; никакой компенсации задним числом.",
-     "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
-    ],
-    "limit": {
-     "scenes": 12,
-     "until": "0006-10-08T00:00:00"
-    },
-    "parent": "main",
-    "threads": [
-     "s17_survivors",
-     "arakawa_treatment"
-    ],
-    "notes": [
-     "Непосредственная точка продолжения: 03.10.1283 03:09, биоптат №6 имплантирован в левую дельтовидную мышцу Шики; Нулевой Геном ещё не применён к образцу.",
-     "Сроки 03:20 записи поступления, 03:23 жизнеспособность биоптата, 06:10 сравнение слепков и 08:15 документы Аракавы; время на OOC не сдвигается.",
-     "Не объявлять автоматически ни источник поражения, ни гетерокарион интеграцией ДНК, ни получение геномной программы из-за имплантации."
-    ],
-    "last": "s08.text.025"
    },
    "side_seal_records": {
     "id": "side_seal_records",
@@ -674,7 +640,20 @@
      "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
     ]
    }
-  }
+  },
+  "closed": [
+   {
+    "id": "ch08_tissue_debt",
+    "kind": "chapter",
+    "title": "Два источника и чужой долг",
+    "question": "Что удастся достоверно узнать о происхождении линий С-17, повреждении реципиента №6 и устойчивости существующего лечения, пока другие стороны сохраняют собственные интересы?",
+    "parent": "main",
+    "outcome": "Partial, costly outcome. In donor-like nsp-delta-expressing stromal cells of one confirmed right bronchial recipient6 lesion, targeted CRISPR suppression and direct medical protein removal/bronchial regeneration improved patency and stopped visible slough. Patient6 remains S17/ventilator-dependent and foreign graft origin and off-target/long-term effects unproven; isolated biopsy in Shiki shoulder ischemic; intense use caused Shiki blackout, maximal stage6 transformation with dangerous blood, private clinical data disclosure and hospital mistrust. The line's critical treatment decision and immediate result are settled; surviving S17 investigation and confidentiality fallout continue as new separate circumstances.",
+    "turn": "s08.text.026",
+    "at": "0006-10-03T06:06:00",
+    "scenes": 12
+   }
+  ]
  },
  "fight": {}
 }
