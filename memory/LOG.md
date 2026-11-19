@@ -2,8 +2,17 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.090: morioka_khideaki (`npc/morioka_khideaki`), Такаги Рэн (`npc/takagi_ren`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1
+- s08.text.089: Такаги Рэн (`npc/takagi_ren`), Мастер фуиндзюцу охраны Кусагакуре (`npc/fuin_master_v7`), Мориока Хидэаки (`npc/morioka_hideaki`)
+- s08.text.088: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`)
+- s08.text.087: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`), поправки игрока: 1
+- s08.text.086: morioka_khideaki (`npc/morioka_khideaki`), Мориока Хидэаки (`npc/morioka_hideaki`), Аракава Дзюн (`npc/arakawa`), Такаги Рэн (`npc/takagi_ren`)
+- s08.text.085: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), Медик у панели В-7 (`npc/medical_panel_operator`), Медик в очках из группы Мориоки (`npc/medical_spectacles`), Старший сопровождающий Мориоки (`npc/morioka_escort_leader`)
+- s08.text.084: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Транспортник госпиталя (`npc/hospital_transporter`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`)
+- s08.text.083: Такаги Рэн (`npc/takagi_ren`), Транспортник госпиталя (`npc/hospital_transporter`), Дежурная администратор госпиталя (`npc/hospital_night_admin`)
+- s08.text.082: Такаги Рэн (`npc/takagi_ren`), Транспортник госпиталя (`npc/hospital_transporter`), Дежурная администратор госпиталя (`npc/hospital_night_admin`)
 - s08.text.081: Такаги Рэн (`npc/takagi_ren`), Мугами Акихиро (`npc/akihiro`)
-- s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), morioka_hideaki (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)
+- s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), Мориока Хидэаки (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)
 - s08.text.079: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.078: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.077: Немера (Невыписанная) (`npc/nemera`)
@@ -27,7 +36,7 @@
 - s08.text.059: Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.058: Такаги Рэн (`npc/takagi_ren`)
 - s08.text.057: поправки игрока: 3
-- s08.text.056: Такаги Рэн (`npc/takagi_ren`), morioka_hideaki (`npc/morioka_hideaki`), вещь `personal_paper_reports`, поправки игрока: 1
+- s08.text.056: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `personal_paper_reports`, поправки игрока: 1
 - s08.text.055: Такаги Рэн (`npc/takagi_ren`), вещь `personal_paper_reports`
 - s08.text.054: вещь `personal_paper_reports`, вещь `stolen_house_plan`, линия `order`, поправки игрока: 2
 - s08.text.053: Хаясэ Нори (`npc/nori`), Мугами Акихиро (`npc/akihiro`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), Аракава Дзюн (`npc/arakawa`)
@@ -48,12 +57,3 @@
 - s08.text.033: Кирисава Сэйна (`npc/seina`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `medical_family`
 - s08.text.032: Кирисава Сэйна (`npc/seina`), линия `medical_family`
 - s08.text.031: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `keiji_reunion`, план сюжета
-- s08.text.030: Кэйдзи (`npc/keiji`), Кирисава Сэйна (`npc/seina`), линия `shiki_confidentiality`, план сюжета
-- s08.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera`, линия `shiki_confidentiality`, план сюжета, поправки игрока: 1
-- s08.text.028: Немера (Невыписанная) (`npc/nemera`), линия `nemera`
-- s08.text.027: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, вещь `shiki_hospital_gown_gloves`, линия `s17_survivors`, план сюжета
-- s08.text.026: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`, план сюжета
-- s08.text.025: Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_upper_clothing`, линия `s17_survivors`
-- s08.text.024: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`
-- s08.text.023: Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), линия `s17_survivors`
-- s08.text.022: Кадзиура Сатору (`npc/kadziura_satoru`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `s17_survivors`

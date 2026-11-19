@@ -306,12 +306,12 @@
     "clinic_assistant": {
       "aliases": [
         "clinic assistant",
-        "clinic_assistant"
+        "Помощник клиники Сэйны"
       ],
       "facts": [],
       "id": "clinic_assistant",
       "kind": "npc",
-      "label": "clinic_assistant",
+      "label": "Помощник клиники Сэйны",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -559,12 +559,12 @@
     "hospital_night_admin": {
       "aliases": [
         "hospital night admin",
-        "hospital_night_admin"
+        "Дежурная администратор госпиталя"
       ],
       "facts": [],
       "id": "hospital_night_admin",
       "kind": "npc",
-      "label": "hospital_night_admin",
+      "label": "Дежурная администратор госпиталя",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -580,12 +580,12 @@
     "hospital_pass_custodian": {
       "aliases": [
         "hospital pass custodian",
-        "hospital_pass_custodian"
+        "Хранитель лабораторных пропусков госпиталя"
       ],
       "facts": [],
       "id": "hospital_pass_custodian",
       "kind": "npc",
-      "label": "hospital_pass_custodian",
+      "label": "Хранитель лабораторных пропусков госпиталя",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -600,12 +600,12 @@
     "hospital_transporter": {
       "aliases": [
         "hospital transporter",
-        "hospital_transporter"
+        "Транспортник госпиталя"
       ],
       "facts": [],
       "id": "hospital_transporter",
       "kind": "npc",
-      "label": "hospital_transporter",
+      "label": "Транспортник госпиталя",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -759,14 +759,44 @@
     },
     "keiji": {
       "aliases": [
-        "keiji"
+        "keiji",
+        "Кэйдзи"
       ],
       "facts": [],
       "id": "keiji",
       "kind": "npc",
-      "label": "keiji",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Кэйдзи",
+      "mention_count": 8,
+      "mentions": [
+        {
+          "at": "0001-07-02T12:57:00",
+          "excerpt": "* — Слушайте. Мы не просим лечить бесплатно. У меня нога повреждена, а до конца этапа ещё несколько дней. Если ваш медик может хотя бы посмотреть… **Такэру, резко\\:** — Кэйдзи\\! **Кэйдзи\\:** — Что?\\! **Такэру\\:** — Мы не знаем этих людей. Кэйдзи зло выдохнул. ",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.049"
+        },
+        {
+          "at": "0001-07-02T13:20:00",
+          "excerpt": "колена, ситуация серьёзнее. Но здесь, в полевых условиях, я не могу достоверно сказать, есть ли они. Кэйдзи осторожно убрал стопу с земли. Он уже собирался проверить ногу ещё раз, но последние слова заставили его остановиться. Пальцы зависли над коленом. Затем",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.054"
+        },
+        {
+          "at": "0006-10-03T06:49:00",
+          "excerpt": "ади, хотя несколько прядей по-прежнему достигали плеч. Лицо стало уже, скулы — резче. Протектор Листа висел на шее, как и прежде. **Кэйдзи.** Пять лет назад Шики встретил его у Центральной башни сорок четвёртого полигона. Тогда тринадцатилетний генин сидел на ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.030"
+        },
+        {
+          "at": "0006-10-03T07:03:00",
+          "excerpt": "Не опасно. Я подожду пока вы закончите. Поговорить нужно. Кэйдзи, а пока я жду, рассжешь что в мире творится? **Вторник, 3 октября 1283 года. 06:49.** *Кусагакуре. Врачебный кабинет Кирисавы Сэйны.* — Не опасно. Я подожду, пока вы закон",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.031"
+        }
+      ],
       "projections": [
         {
           "seen": "s08.text.063",
@@ -1051,12 +1081,13 @@
     "medical_panel_operator": {
       "aliases": [
         "medical panel operator",
+        "Медик у панели В-7",
         "medical_panel_operator"
       ],
       "facts": [],
       "id": "medical_panel_operator",
       "kind": "npc",
-      "label": "medical_panel_operator",
+      "label": "Медик у панели В-7",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -1072,12 +1103,12 @@
     "medical_spectacles": {
       "aliases": [
         "medical spectacles",
-        "medical_spectacles"
+        "Медик в очках из группы Мориоки"
       ],
       "facts": [],
       "id": "medical_spectacles",
       "kind": "npc",
-      "label": "medical_spectacles",
+      "label": "Медик в очках из группы Мориоки",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -1201,12 +1232,12 @@
     "morioka_escort_leader": {
       "aliases": [
         "morioka escort leader",
-        "morioka_escort_leader"
+        "Старший сопровождающий Мориоки"
       ],
       "facts": [],
       "id": "morioka_escort_leader",
       "kind": "npc",
-      "label": "morioka_escort_leader",
+      "label": "Старший сопровождающий Мориоки",
       "mention_count": 0,
       "mentions": [],
       "projections": [
@@ -1221,13 +1252,12 @@
     "morioka_hideaki": {
       "aliases": [
         "morioka hideaki",
-        "Мориока хидэаки",
         "Мориока Хидэаки"
       ],
       "facts": [],
       "id": "morioka_hideaki",
       "kind": "npc",
-      "label": "Мориока хидэаки",
+      "label": "Мориока Хидэаки",
       "mention_count": 11,
       "mentions": [
         {
@@ -8090,11 +8120,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03.10 00:53 после одного местного Бётон-вмешательства в трансплантат Аракавы: объективное частичное улучшение при остаточных спазмах, независимость от С-17 ещё не доказана. Шики создал ВТОРУЮ пробирку для собственной дальнейшей работы, она его и никому не передана. Аракава допустил возможную реакцию поставщиков на пропуск дозы, "
+          "state": "Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти без новой дозы С-17; полного выздоровления нет (s08.text.086). Вторая пробирка Бётон-носителя у Шики, никому не передана (s07.text.028–029)."
         }
       ],
       "sources": [
-        "s07.text.029"
+        "keeper@s08.text.090"
       ]
     },
     "thread:case19T": {
@@ -8110,11 +8140,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Нори знает о личной закрытой проверке главы, но по-прежнему официально отстранена. Шики обусловил принятие статуса специального медэксперта именно её будущим официальным назначением; ни её восстановление, ни статус Шики не произошли."
+          "state": "Личная закрытая проверка Кагэ идёт. Нори официально отстранена, журнал допуска пропал (s08.text.053). Статус медэксперта Шики не оформлен: он обусловил его назначением Нори (s05.text.028)."
         }
       ],
       "sources": [
-        "s05.text.028"
+        "keeper@s08.text.090"
       ]
     },
     "thread:central_visitors": {
@@ -8136,48 +8166,6 @@
       ],
       "sources": [
         "s05.text.016"
-      ]
-    },
-    "thread:chemical_hazard": {
-      "aliases": [
-        "thread:chemical hazard",
-        "chemical hazard",
-        "chemical_hazard"
-      ],
-      "facts": [],
-      "id": "thread:chemical_hazard",
-      "kind": "thread",
-      "label": "chemical hazard",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "В заднем дворе остатки водореактивного реагента в жёлобе выделяют едкий пар; дверь клиники закрыта и снизу уплотнена. На нижнем люке трое с ожогами слизистых, коллектор перекрывают, группа в пути."
-        }
-      ],
-      "sources": [
-        "s05.text.004"
-      ]
-    },
-    "thread:clinic_breathing_emergency": {
-      "aliases": [
-        "thread:clinic breathing emergency",
-        "clinic breathing emergency",
-        "clinic_breathing_emergency"
-      ],
-      "facts": [],
-      "id": "thread:clinic_breathing_emergency",
-      "kind": "thread",
-      "label": "clinic breathing emergency",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Шики пришёл по зову и совместно с Сэйной улучшил проходимость гортани пациента с подозрением на анафилаксию после антибиотика, на адреналине/кислороде/инфузии. Дыхание улучшилось, SpO2 91%, отёк не полностью исчез; Сэйна остаётся наблюдать, риск возврата."
-        }
-      ],
-      "sources": [
-        "s05.text.014"
       ]
     },
     "thread:forbidden_arts": {
@@ -8222,27 +8210,6 @@
         "s06.text.038"
       ]
     },
-    "thread:keiji_reunion": {
-      "aliases": [
-        "thread:keiji reunion",
-        "keiji reunion",
-        "keiji_reunion"
-      ],
-      "facts": [],
-      "id": "thread:keiji_reunion",
-      "kind": "thread",
-      "label": "keiji reunion",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "03.10 07:03 Konoha shinobi Keiji (~18), saved by Shiki's July 1278 free medical repair of old left lateral knee ligament, came independently to Seina with ongoing overuse knee ache during herb supply escort. Seina documented no gross tear but mild residual laxity, sent for Konoha follow-up. Keiji shared only partially verified K"
-        }
-      ],
-      "sources": [
-        "s08.text.031"
-      ]
-    },
     "thread:lower_hospital": {
       "aliases": [
         "thread:lower hospital",
@@ -8264,27 +8231,6 @@
         "s05.text.031"
       ]
     },
-    "thread:medical_family": {
-      "aliases": [
-        "thread:medical family",
-        "medical family",
-        "medical_family"
-      ],
-      "facts": [],
-      "id": "thread:medical_family",
-      "kind": "thread",
-      "label": "medical family",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "07:44 Akihiro knows of confidential Seina testing and hears Shiki's request to stop conversations about his dangerous appearance; father accepts topic boundary, chooses to secure general clinic supply ledgers after customer gossip and past forged orders. Nao not yet told/seen Shiki today. Seina continues working and keeps Shiki'"
-        }
-      ],
-      "sources": [
-        "s08.text.037"
-      ]
-    },
     "thread:nemera": {
       "aliases": [
         "thread:nemera",
@@ -8298,32 +8244,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03 Oct 06:26: Shiki directly asserts septuple seals weakened during earlier chakra-coma enough to be broken by Nemera. This player-established correction overrides Nemera's earlier 'no opportunity' statement; Nemera admits that account was convenient and does not conclusively explain why she chose not to escape. Seven locks rema"
+          "state": "Семь запоров целы; Шики утверждает, что они ослабевали в чакровой коме, Немера не объяснила, почему не ушла (s08.text.029). Сделка 04.10 01:08: она получила единоличное восприятие всех чувств на 60 с и дала формулу Ситона «Посмертная матрица»; освоение не начато (s08.text.076). Знает о цели Шики — наследственность Учиха (s08.tex"
         }
       ],
       "sources": [
-        "s08.text.029"
-      ]
-    },
-    "thread:nori_meet": {
-      "aliases": [
-        "thread:nori meet",
-        "nori meet",
-        "nori_meet"
-      ],
-      "facts": [],
-      "id": "thread:nori_meet",
-      "kind": "thread",
-      "label": "nori meet",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Нори охраняет арестованных и изъятые предметы в клинике. Она НЕ знает, что Шики направлялся или уже прибыл к Кагэ; прошлого ложного знания о его маршруте не существовало."
-        }
-      ],
-      "sources": [
-        "s05.text.017"
+        "keeper@s08.text.090"
       ]
     },
     "thread:order": {
@@ -8379,32 +8304,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "04.10 00:13 Шики добровольно прибыл на крыльцо родителей, Нао и Акихиро дома и спорят о принесённом Нао заключении Сэйны; никто ещё не обсуждал с Шики его данные в этом визите."
+          "state": "04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получила у Сэйны заключение (s08.text.067) и решила искать второе врачебное мнение; Акихиро утром изымет из клиники под опись оригиналы старых аптечных накладных (s08.text.070–071)."
         }
       ],
       "sources": [
-        "s08.text.066"
-      ]
-    },
-    "thread:personal_archive": {
-      "aliases": [
-        "thread:personal archive",
-        "personal archive",
-        "personal_archive"
-      ],
-      "facts": [],
-      "id": "thread:personal_archive",
-      "kind": "thread",
-      "label": "personal archive",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Личный ограниченный допуск Шики к МХ–VII/19 подписан и лежит у края стола, пока не взят."
-        }
-      ],
-      "sources": [
-        "s05.text.025"
+        "keeper@s08.text.090"
       ]
     },
     "thread:s17_survivors": {
@@ -8421,31 +8325,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "06:18 Shiki is in his current layered dark combat outfit with all potentially exposed hand/forearm/neck/legs and partial shoulders wrapped, hood remains down; using two ward cloth-wrap packages plus own, accounting due, extra stock not delivered. Nemera privately comments on self-interested and conflicting human fears and hospit"
+          "state": "Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный результат не обращён, исход не доказан (s08.text.027). В бронхе №6 чужеродная строма с nsp-δ (s08.text.013–015)."
         }
       ],
       "sources": [
-        "s08.text.027"
-      ]
-    },
-    "thread:sanction": {
-      "aliases": [
-        "thread:sanction",
-        "sanction"
-      ],
-      "facts": [],
-      "id": "thread:sanction",
-      "kind": "thread",
-      "label": "sanction",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "В 09:30 получен формально действующий документ резиденции, подпись/печать подлинна по официальной проверке, но Кагэ лично заявку не читал. До 10:30 В-7 остаётся на хранении УВБ. Нори возражает."
-        }
-      ],
-      "sources": [
-        "s04.text.051"
+        "keeper@s08.text.090"
       ]
     },
     "thread:secret_lab": {
@@ -8462,11 +8346,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "К 21:02 Шики скрытно покинул тайную лабораторию, оставив биомассу в закрытых ёмкостях, и незамеченным прибыл в Кусагакуре; теперь на личной связи с Нори."
+          "state": "Тайная лаборатория Шики, помощников нет; биомасса оставлена в закрытых ёмкостях (s04.text.063). О лаборатории и происхождении линий Хаку/Ходзуки не знает никто, Сэйна тоже (s05.text.034)."
         }
       ],
       "sources": [
-        "s04.text.063"
+        "keeper@s08.text.090"
       ]
     },
     "thread:sharingan": {
@@ -8503,11 +8387,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "06:27 hospital ICU nurse recorded Shiki's exact line 'Контакт кожа к коже опасен, но можете проверить' after he set down a pen while wearing fully covering gloves. Pen and objects do not transmit pact disease; no touch exposure. Shiki paid outstanding invoice for two cotton wraps and collected receipt, then left hospital, carryi"
+          "state": "Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожение зарегистрирован, не исполнен (s08.text.025). Курода сделала позднюю поправку о «загрязнении пробами Шики» — исходный журнал её опровергает (s08.text.080–081). Сэйна хранит частные пробы 01.10 и 03.10 под замком (s08.text.032–033). Две жалобы о врачебной тайн"
         }
       ],
       "sources": [
-        "s08.text.030"
+        "keeper@s08.text.090"
       ]
     },
     "thread:tetsu": {
@@ -8523,11 +8407,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты."
+          "state": "Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7, убийство отрицает (s07.text.013). Тело для вскрытия Шики так и не получил; причина смерти не установлена."
         }
       ],
       "sources": [
-        "s04.text.064"
+        "keeper@s08.text.090"
       ]
     },
     "thread:v7": {
@@ -8542,22 +8426,22 @@
       "mentions": [],
       "projections": [
         {
-          "state": "02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги: один погибший защитник, один раненый, один нападающий задержан, остальные отступили. Маточная культура и реестр на месте у Такаги. В 23:12 Шики слышал только сообщение о нападении, погибших и удержании поста. Отдельный генетический анализ Куроды С-17 остаётся"
+          "state": "04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); подключён автономный холодовой модуль, в питающем гнезде найдена нештатная перемычка (s08.text.089). Выдачу реестра Такаги заблокировал (s08.text.081). Генетика Куроды: генотипы А/Б, линия Б вероятно от донорской кисти Инабы (s07.text.017)."
         }
       ],
       "sources": [
-        "s07.text.017"
+        "keeper@s08.text.090"
       ]
     },
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "unknown_masked_prisoner"
+        "Неизвестный пленный в маске"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
       "kind": "npc",
-      "label": "unknown_masked_prisoner",
+      "label": "Неизвестный пленный в маске",
       "mention_count": 0,
       "mentions": [],
       "projections": [

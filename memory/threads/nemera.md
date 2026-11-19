@@ -1,8 +1,8 @@
 # Линия `nemera`
 
-- state: 03 Oct 06:26: Shiki directly asserts septuple seals weakened during earlier chakra-coma enough to be broken by Nemera. This player-established correction overrides Nemera's earlier 'no opportunity' statement; Nemera admits that account was convenient and does not conclusively explain why she chose not to escape. Seven locks remain intact after recovery, no sensory/motor privilege changes; she still desires exit.
+- state: Семь запоров целы; Шики утверждает, что они ослабевали в чакровой коме, Немера не объяснила, почему не ушла (s08.text.029). Сделка 04.10 01:08: она получила единоличное восприятие всех чувств на 60 с и дала формулу Ситона «Посмертная матрица»; освоение не начато (s08.text.076). Знает о цели Шики — наследственность Учиха (s08.text.078–079).
 - last_known: s04.text.047
-- turn: s08.text.029
+- turn: keeper@s08.text.090
 
 ## Изменения по ходам
 - s04.text.049: state: Немера — нечеловеческая сущность за семью замками. По разрешённому четвёртому каналу предложила наставничество в Ситоне/Бётоне при обмене на подробные истинные наблюдения. Не видит и не слышит внешнюю лабораторию. Запоры стабильны.; last_known: s04.text.047

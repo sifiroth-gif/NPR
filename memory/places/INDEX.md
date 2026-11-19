@@ -3,7 +3,7 @@
 Где Шики бывал в сыгранных сессиях. Описание места — на его странице.
 
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
-- Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 48 ход(ов), s02–s08
+- Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 50 ход(ов), s02–s08
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
@@ -35,6 +35,7 @@
 - Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
+- Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
@@ -52,6 +53,7 @@
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
+- Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 3 ход(ов), s08–s08
 - Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
 - Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
@@ -76,7 +78,6 @@
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 2 ход(ов), s05–s05
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
 - Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
-- Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 2 ход(ов), s06–s06
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01

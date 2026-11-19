@@ -1,7 +1,7 @@
 # Линия `s17_survivors`
 
-- state: 06:18 Shiki is in his current layered dark combat outfit with all potentially exposed hand/forearm/neck/legs and partial shoulders wrapped, hood remains down; using two ward cloth-wrap packages plus own, accounting due, extra stock not delivered. Nemera privately comments on self-interested and conflicting human fears and hospital desire to retain his blood, but has no knowledge of secret Kage issues. At 06:10 ICU cast morphology comparison from hospital archive inconclusive for common tissue source due inadequate comparable reference material. Recipient6 still ventilated/S17, first improved bronchial result not reversed, long-term outcome unproven. Shiki stage6 and depleted chakra unchanged; two near-black blood specimen tubes under Kadz protected custody, destruction and confidentiality inquiry pending.
-- turn: s08.text.027
+- state: Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный результат не обращён, исход не доказан (s08.text.027). В бронхе №6 чужеродная строма с nsp-δ (s08.text.013–015).
+- turn: keeper@s08.text.090
 
 ## Изменения по ходам
 - s08.text.010: state: 03.10 02:56 Shiki proposed undisclosed self-experiment to improve survival chance for recipient #6, not an action yet; Kadz requests exact description and safety of uninterrupted ongoing support. Teen on same assisted ventilation and S17; prior SpO2 96% persists, unchanged clinical status, no new testing or medication.

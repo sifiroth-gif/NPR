@@ -47,7 +47,7 @@
    {
     "due": "0006-10-04T08:00:00",
     "if_unopposed": "Создаст официальный след, усложняющий действия Шики.",
-    "name": "hospital_night_admin",
+    "name": "Дежурная администратор госпиталя",
     "next": "Переслать возражение начальнику медицинского управления и потребовать письменного указания о хранении.",
     "npc": "hospital_night_admin",
     "overdue": false,
@@ -68,17 +68,6 @@
   {
    "kind": "write",
    "text": "Запись хода: вся запись сверх сцены 4998 знаков (норма до 4000); крупнее всего: cast 2040, scene 922, shiki 516.",
-   "turn": "s08.text.090"
-  },
-  {
-   "kind": "wiki",
-   "since": "s08.text.082",
-   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'",
-   "turn": "s08.text.090"
-  },
-  {
-   "kind": "wiki",
-   "text": "Вики не обновилась: AttributeError: 'list' object has no attribute 'items'",
    "turn": "s08.text.090"
   }
  ],
@@ -137,7 +126,7 @@
   "place": "Кусагакуре, подземное хранилище УВБ, В-7",
   "time": "06:43"
  },
- "digest": "9021fca36a63cc5bf5086ed69807f4d4a454a4505e55b328eec76a0c2e8638c3",
+ "digest": "53efa383a08c451334f0f162eec5125893265b42c44de09616caf0a758bfb6c5",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -358,11 +347,29 @@
     "scenes_left": 5,
     "threads": [
      "tetsu",
+     "v7",
      "order",
-     "sanction",
+     "central_visitors",
      "case19T"
     ],
     "title": "Цепь приказа"
+   },
+   {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality",
+    "id": "side_family_confidentiality",
+    "kind": "side",
+    "limit": {
+     "scenes": 4
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality",
+    "question": "Кто и с какими проверяемыми последствиями сможет получить доступ к уже взятым образцам и закрытой медицинской информации Шики?",
+    "scenes": 0,
+    "scenes_left": 4,
+    "threads": [
+     "parents",
+     "shiki_confidentiality"
+    ],
+    "title": "Дом и врачебная тайна"
    },
    {
     "endings": [
@@ -401,24 +408,9 @@
   },
   "queued": [
    {
-    "id": "side_clinic_aftercare",
-    "kind": "side",
-    "title": "Последствия у клиники"
-   },
-   {
-    "id": "side_family_confidentiality",
-    "kind": "side",
-    "title": "Дом и врачебная тайна"
-   },
-   {
     "id": "side_lower_hospital",
     "kind": "side",
     "title": "Нижний госпиталь"
-   },
-   {
-    "id": "side_nemera",
-    "kind": "side",
-    "title": "Семь запоров"
    },
    {
     "id": "side_shiki_goals",
@@ -440,25 +432,6 @@
    "dynamics": {
     "committed_or_paused_intents": [
      {
-      "due": "0006-10-04T06:12:00",
-      "flaw": "Зависимость делает его уязвимым и заставляет рисковать.",
-      "goal": "Получить культуру С-17 либо избавление от зависимости.",
-      "id": "force_transfer_2",
-      "next": "Торговаться с Шики о лечении и при согласии передать вызывающее распоряжение конечному адресату.",
-      "source_turn": "s08.text.085",
-      "status": "committed"
-     },
-     {
-      "due": "0006-10-04T06:38:00",
-      "flaw": "Зависимость вынуждает рисковать.",
-      "goal": "Получить лечение и затем дать обещанные сведения.",
-      "id": "buy_treatment",
-      "if_unopposed": "Согласится на вмешательство после объяснения.",
-      "next": "Попросить Шики выполнить медицинскую часть договора и раскрыть известных распорядителей снабжения.",
-      "source_turn": "s08.text.089",
-      "status": "committed"
-     },
-     {
       "due": "0006-10-04T06:55:00",
       "flaw": "Сопровождение уже уведомило начальство.",
       "goal": "Передать сведения и получить личную защиту.",
@@ -474,8 +447,6 @@
      "deep_fear": "Снабжение прекратят после раскрытия имён."
     },
     "unclocked_intents": [
-     "force_transfer_2",
-     "buy_treatment",
      "testify_2"
     ]
    },
@@ -715,7 +686,6 @@
   "due_now": [],
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
-   "v7",
    "lower_hospital",
    "nemera",
    "pact",
@@ -723,19 +693,13 @@
    "sharingan",
    "secret_lab",
    "parents",
-   "nori_meet",
-   "chemical_hazard",
-   "clinic_breathing_emergency",
    "central_visitors",
    "case19T",
-   "personal_archive",
    "anbu_transfer",
-   "medical_family",
    "kabuto_letter",
    "arakawa_treatment",
    "s17_survivors",
-   "shiki_confidentiality",
-   "keiji_reunion"
+   "shiki_confidentiality"
   ],
   "secret_topics": [
    "target_correction",
@@ -753,15 +717,15 @@
     "state": "16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил из жилища лишь дублирующие бумаги и черновики, все уникальные оригиналы сохранил. Прибор наблюдения изъят, заказчик и источник утечки по-прежнему неи…",
     "turn": "s08.text.054"
    },
-   "sanction": {
-    "source": "memory/threads/sanction.md",
-    "state": "В 09:30 получен формально действующий документ резиденции, подпись/печать подлинна по официальной проверке, но Кагэ лично заявку не читал. До 10:30 В-7 остаётся на хранении УВБ. Нори возражает.",
-    "turn": "s04.text.051"
-   },
    "tetsu": {
     "source": "memory/threads/tetsu.md",
-    "state": "Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах смерти Шики не получил. В 21:03 Нори находится дома и хочет обсудить дело вне прослушиваемой частоты.",
-    "turn": "s04.text.064"
+    "state": "Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7, убийство отрицает (s07.text.013). Тело для вскрытия Шики так и не получил; причина смерти не установлена.",
+    "turn": "keeper@s08.text.090"
+   },
+   "v7": {
+    "source": "memory/threads/v7.md",
+    "state": "04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); подключён автономный холодовой модуль, в питающем гнезде найдена нештатная перемычка (s08.text.089). Выдачу реестра Такаги заблокировал (s08.text.081)…",
+    "turn": "keeper@s08.text.090"
    }
   }
  }
