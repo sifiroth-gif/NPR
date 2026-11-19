@@ -4,7 +4,7 @@
 
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
 - Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 48 ход(ов), s02–s08
-- Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 30 ход(ов), s02–s08
+- Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 31 ход(ов), s02–s08
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 19 ход(ов), s07–s07
