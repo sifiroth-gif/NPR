@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.032",
+ "cursor": "s08.text.033",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -267,15 +267,16 @@
    "intent": {
     "shift_blame": {
      "status": "committed",
-     "turn": "keeper",
+     "turn": "s08.text.033",
      "goal": "чтобы утечку данных Шики нашли не на ней",
-     "next": "в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес",
-     "due": "0006-10-03T07:05:00",
+     "next": "Продолжить утверждать, что копия для канцелярии была штатной регистрацией, и при вопросах о неполном маршруте ссылаться на служебные отметки самой канцелярии, не обсуждая ещё одно перенаправление; риск расхождения со следами журнала сохран…",
+     "due": "0006-10-03T08:30:00",
      "flaw": "страх делает её ложь слишком аккуратной: в журнале не хватает одного перенаправления",
      "against_shiki": "канцелярия, куда она переведёт вину, — та самая, где за деньги выносят бланки",
      "if_unopposed": "ложный маршрут становится официальным, настоящий получатель не ищется"
     }
-   }
+   },
+   "intent_done": []
   },
   "s17_recipient_6": {
    "name": "Реципиент № 6",
@@ -421,11 +422,18 @@
       "change": "подтвердилось",
       "saw": "Shiki's corpse-like extreme body temperature by his account and a normal measured low pulse contradict standard hypothermia, while his preserved purposeful motor and thinking defy normal human pathol…",
       "does": "Keeps old labeled blood sample locked and private, shows a limited 02 Oct microscopy chart, documents guarded exam in confidential paper chart and asks Shiki to decide whether and how to proceed with…"
+     },
+     {
+      "turn": "s08.text.033",
+      "at": "0006-10-03T07:36:00",
+      "change": "подтвердилось",
+      "saw": "Seina drew Shiki's almost black blood via intact protected system and viewed a denser strange threadlike intercellular network compared with his old red blood, despite preserved living function.",
+      "does": "Retains new specimen separately under key and does not share to public labs or family; asks Shiki for distinction between max somatic stage and seal strength."
      }
     ],
-    "reads": "She cannot explain cause or guarantee ordinary clinical interpretation; more invasive sampling or distributing biological data would violate the exact confidence he now requires.",
-    "does": "Keeps old labeled blood sample locked and private, shows a limited 02 Oct microscopy chart, documents guarded exam in confidential paper chart and asks Shiki to decide whether and how to proceed with old material.",
-    "turn": "s08.text.032",
+    "reads": "Directly held blood could itself be valuable or dangerous, but confidentiality is her professional obligation and established promise; the clinical ceiling of Pact remains unknown.",
+    "does": "Retains new specimen separately under key and does not share to public labs or family; asks Shiki for distinction between max somatic stage and seal strength.",
+    "turn": "s08.text.033",
     "step": "пересмотр"
    },
    "psyche": {
@@ -687,24 +695,13 @@
  },
  "checks": [
   {
-   "turn": "s08.text.032",
-   "kind": "will",
-   "text": "За кадром: «Дежурная врач охраняемого отделения» собирался «в ответе на запрос Кадзиуры о маршруте уведомления указать копию в канцелярию как первичный адрес» к 0006-10-03T07:05:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: страх делает её ложь слишком аккуратной: в журнале не хватает одного перенаправления. Запиши d.cast.night_icu_physician.intent.shift_blame (status, next, due) и след в мире."
+   "turn": "s08.text.033",
+   "kind": "intent",
+   "text": "намерение shift_blame: статус partial_success"
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.027",
-    "look": [
-     "ворот",
-     "пелерина",
-     "капюшон",
-     "волосы",
-     "капюшон"
-    ],
-    "soma": []
-   },
    {
     "turn": "s08.text.028",
     "look": [],
@@ -733,11 +730,14 @@
     "turn": "s08.text.032",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s08.text.033",
+    "look": [],
+    "soma": []
    }
   ],
-  "worn": [
-   "волосы"
-  ],
+  "worn": [],
   "quiet": 0,
   "log": [
    {
@@ -1038,8 +1038,11 @@
  "will": {
   "seed": "b77c1bd431424992",
   "streak": {
-   "seina": 2
+   "seina": 3,
+   "night_icu_physician": 0
   },
-  "touched": {}
+  "touched": {
+   "night_icu_physician": "s08.text.033"
+  }
  }
 }

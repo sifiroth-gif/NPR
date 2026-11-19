@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.032",
+  "cursor": "s08.text.033",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -330,23 +330,6 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
-      ]
-    },
-    "clock:medical_notice_registry_trace": {
-      "aliases": [
-        "clock:medical notice registry trace",
-        "medical notice registry trace",
-        "medical_notice_registry_trace"
-      ],
-      "facts": [],
-      "id": "clock:medical_notice_registry_trace",
-      "kind": "clock",
-      "label": "medical notice registry trace",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.032"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -714,14 +697,10 @@
         {
           "seen": "s08.text.031",
           "state": "07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal/political news as hearsay with Shiki and memories of unpaid Chunin exam knee treatment in"
-        },
-        {
-          "state": "07:03 Konoha escort shinobi Keiji, around 18, received Seina's exam of persistently symptomatic left knee, with mild residual laxity but no gross tear; he shared personal/political news as hearsay with Shiki and memories of unpaid Chunin exam knee treatment in"
         }
       ],
       "sources": [
-        "recovery/cast/keiji.json",
-        "recovery/HOT.json"
+        "recovery/cast/keiji.json"
       ]
     },
     "kuroda_mayu": {
@@ -1188,7 +1167,8 @@
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения"
+        "Дежурная врач охраняемого отделения",
+        "night_icu_physician"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -1201,15 +1181,16 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.024",
+          "seen": "s08.text.033",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-          "state": "05:51 independently defends staff safety rationale and accuracy of original report while acknowledging possible excess disclosed clinical detail; accepts she may have to explain herself to committee and refuses to retract documentation. Under Kadziura signed i",
+          "state": "Offscreen 07:05–07:20 after Kadziura's registry trace request she supplied careful version naming commission as official original addressee and hospital office as registry recipient, omitting one internal redirect. This is a strategic, fear-driven selective ac",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
           "wants": "Сохранить жизнь тяжёлых больных и обеспечить документальную непрерывность лечения"
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json"
+        "recovery/cast/night_icu_physician.json",
+        "s08.text.033"
       ]
     },
     "nori": {
@@ -2710,9 +2691,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.032",
+        "s08.text.033",
         "s08.text.030",
-        "s08.text.031"
+        "s08.text.031",
+        "s08.text.032"
       ]
     },
     "place:453c1d7e7dfbb4dc": {
@@ -7013,9 +6995,9 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.032",
+          "seen": "s08.text.033",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and de",
+          "state": "07:36 heard Shiki himself attribute the progression of extreme cold, near black blood and uncanny phenotype to side effects of Pact after maximum exertion; accepted limited confidential blood-draw permission. With double gloves and barrier technique Seina acqu",
           "voice": "Сдержанная точная медицинская речь",
           "wants": "Поддерживать независимую медицинскую практику"
         },
@@ -7023,14 +7005,14 @@
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "07:18 Seina agrees to strictly private examination of Shiki without bare skin touch or uncontrolled testing. Personally hears general account of 03 Oct Byoton experimental rescue, blackout, body cooling and blood turning almost black, plus report breach and de",
+          "state": "07:36 heard Shiki himself attribute the progression of extreme cold, near black blood and uncanny phenotype to side effects of Pact after maximum exertion; accepted limited confidential blood-draw permission. With double gloves and barrier technique Seina acqu",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s08.text.032"
+        "s08.text.033"
       ]
     },
     "senior_orderly": {
@@ -7432,11 +7414,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03.10.1283 07:18 Shiki privately briefed his longtime clinical mentor Kirisawa Seina on latest 03 Oct stage6 after Byoton intervention in ICU and requested fully confidential exam avoiding any ungloved touching. Seina cooperated, tested normal intact reflex/cognition/purposeful motor and ~50 pulse with low temp only from Shiki h"
+          "state": "07:36 Shiki privately attributed stage6 dramatic cold, near-black blood and changes to progressive Pact side effects in general and consented to small confidential new blood draw. Seina used closed sterile sampling with gloves, covered puncture and sealed new sample locally; compared with red Oct01 old stored sample. New black b"
         }
       ],
       "sources": [
-        "s08.text.032"
+        "s08.text.033"
       ]
     },
     "thread:nemera": {
@@ -7935,5 +7917,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 582
+  "source_turns_indexed": 583
 }
