@@ -76,10 +76,10 @@ jobs:
               git -C _state reset -q --hard FETCH_HEAD
               git -C _state clean -q -fd -- recovery archive
               python -m rpg_engine hot-blocked --state-dir _state --check "$RUNNER_TEMP/check.json" --turn "$cursor" > /dev/null
-              git -C _state add -- recovery/CHECKS.json
+              git -C _state add -- recovery/CHECKS.json recovery/NEXT.json
             else
               git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json \
-                recovery/CHECKS.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
+                recovery/CHECKS.json recovery/NEXT.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
             fi
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
