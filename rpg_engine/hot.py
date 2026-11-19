@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint
+from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -449,6 +449,7 @@ def apply_turn(hot, turn):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
     npc_memory.apply(hot, turn, inner)
+    will.track(hot, turn, inner)
     dread.after_turn(hot, turn, inner, delta)
     continuity_guard.check_turn(hot, turn)
     refresh(hot)
@@ -766,6 +767,7 @@ def _read_state(state_dir):
     hot["_horror"] = dict(secret.get("horror") or {})
     hot["_plot"] = dict(secret.get("plot") or {})
     hot["_fight"] = dict(secret.get("fight") or {})
+    hot["_will"] = dict(secret.get("will") or {})
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -783,6 +785,7 @@ def _split_state(hot):
     horror = public.pop("_horror", {})
     plot_state = public.pop("_plot", {})
     fight_state = public.pop("_fight", {})
+    will_state = public.pop("_will", {})
     public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -820,7 +823,7 @@ def _split_state(hot):
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
               "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
-              "checks": checks, "horror": horror, "plot": plot_state, "fight": fight_state,
+              "checks": checks, "horror": horror, "plot": plot_state, "fight": fight_state, "will": will_state,
               "undo": undo}
     return public, secret
 
@@ -948,6 +951,7 @@ def fold(state_dir):
     hot, before = _read_state(state_dir)
     ensure_npc_memory(state_dir, hot)
     _load_stats(state_dir, hot)
+    will.seed(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
     applied = []
     amended = []
@@ -1042,8 +1046,9 @@ def fold(state_dir):
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
     # Замечания плана — текущее состояние, не события: каждая свёртка заменяет прежние.
-    hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") != "plot"]
+    hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") not in ("plot", "will")]
     hot["_checks"].extend(plot.review(hot, applied))
+    hot["_checks"].extend(will.review(hot, applied))
     _cap_cards(hot)
     _tidy_checks(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)
