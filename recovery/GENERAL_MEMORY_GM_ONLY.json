@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.063",
+  "cursor": "s08.text.065",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -56,8 +56,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json",
-        "s08.text.063"
+        "recovery/cast/akihiro.json"
       ]
     },
     "arai_mitiko": {
@@ -155,8 +154,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/arakawa.json",
-        "s08.text.063"
+        "recovery/cast/arakawa.json"
       ]
     },
     "arakawa_guard": {
@@ -309,40 +307,6 @@
       ],
       "sources": [
         "recovery/cast/clinic_assistant.json"
-      ]
-    },
-    "clock:arakawa_supply_audit": {
-      "aliases": [
-        "clock:arakawa supply audit",
-        "arakawa supply audit",
-        "arakawa_supply_audit"
-      ],
-      "facts": [],
-      "id": "clock:arakawa_supply_audit",
-      "kind": "clock",
-      "label": "arakawa supply audit",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.063"
-      ]
-    },
-    "clock:shiki_blood_disposal_request": {
-      "aliases": [
-        "clock:shiki blood disposal request",
-        "shiki blood disposal request",
-        "shiki_blood_disposal_request"
-      ],
-      "facts": [],
-      "id": "clock:shiki_blood_disposal_request",
-      "kind": "clock",
-      "label": "shiki blood disposal request",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.063"
       ]
     },
     "courier_unknown": {
@@ -711,15 +675,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/keiji.json",
-        "s08.text.063"
+        "recovery/cast/keiji.json"
       ]
     },
     "kuroda_mayu": {
       "aliases": [
         "kuroda mayu",
-        "Курода Маю",
-        "kuroda_mayu"
+        "Курода Маю"
       ],
       "facts": [],
       "id": "kuroda_mayu",
@@ -768,8 +730,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kuroda_mayu.json",
-        "s08.text.063"
+        "recovery/cast/kuroda_mayu.json"
       ]
     },
     "kusa_head": {
@@ -1067,8 +1028,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/minase.json",
-        "s08.text.063"
+        "recovery/cast/minase.json"
       ]
     },
     "missing_guard": {
@@ -1172,8 +1132,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s08.text.063"
+        "recovery/cast/nao.json"
       ]
     },
     "nemera": {
@@ -1191,15 +1150,24 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s08.text.029",
+          "seen": "s08.text.065",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-          "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her former claim of no possibility was a convenient lie/evasion. She did not escape. Her exact mot",
+          "state": "23:54 получила мысленное отсроченное «подумаю» на предложение о передаче техники за минуту чувства и слово Куромэ как возможное предположение о её личности. Ответила, противопоставляя погребальную традицию Куромэ собственному сохранению незавершённого. Не полу",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
+          "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
+        },
+        {
+          "fears": "Ничего человеческого. Ей противна неподвижность.",
+          "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+          "stance": "Противник, который говорит правду, когда правда ей выгодна.",
+          "state": "23:54 получила мысленное отсроченное «подумаю» на предложение о передаче техники за минуту чувства и слово Куромэ как возможное предположение о её личности. Ответила, противопоставляя погребальную традицию Куромэ собственному сохранению незавершённого. Не полу",
           "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "recovery/HOT.json",
+        "s08.text.065"
       ]
     },
     "night_icu_physician": {
@@ -1282,8 +1250,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nori.json",
-        "s08.text.063"
+        "recovery/cast/nori.json"
       ]
     },
     "orderly": {
@@ -3016,6 +2983,26 @@
       "projections": [],
       "sources": [
         "s05.text.054"
+      ]
+    },
+    "place:4c907710b1f1b261": {
+      "aliases": [
+        "place:4c907710b1f1b261",
+        "Кусагакуре, Управление печатей, закрытый читальный зал",
+        "Кусагакуре",
+        "Управление печатей",
+        "закрытый читальный зал"
+      ],
+      "facts": [],
+      "id": "place:4c907710b1f1b261",
+      "kind": "place",
+      "label": "Кусагакуре, Управление печатей, закрытый читальный зал",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.065",
+        "s08.text.064"
       ]
     },
     "place:4d2fb21d364d6d8f": {
@@ -7337,30 +7324,63 @@
         }
       ],
       "sources": [
-        "recovery/cast/seina.json",
-        "s08.text.063"
+        "recovery/cast/seina.json"
       ]
     },
     "sekido_tadao": {
       "aliases": [
         "sekido tadao",
+        "Сэкидо Тадао",
         "sekido_tadao"
       ],
       "facts": [],
       "id": "sekido_tadao",
       "kind": "npc",
-      "label": "sekido_tadao",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Сэкидо Тадао",
+      "mention_count": 29,
+      "mentions": [
+        {
+          "at": "0006-09-27T06:38:24",
+          "excerpt": "ляра с печатями. Он остановился, увидев Хасэ на полу возле стеллажа и Шики рядом с ним. **Прибывший специалист\\:** — Техник пространственного отдела, Сэкидо Тадао. Кто проводил осмотр? Касива повернулась к нему. Её плечи немного опустились — впервые с появлени",
+          "source": "archive/session-003-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s03.text.056"
+        },
+        {
+          "at": "0006-10-03T23:47:00",
+          "excerpt": "хтонические божества. Сэкидо уже собирался убрать последний каталог. Теперь он оставил его на столе. **Сэкидо Тадао:** — Тогда я искал не там. Он повернулся к служащей. **Сэкидо Тадао:** — Верните религиозные каталоги. Принесите описи древних погребальных свят",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.063"
+        },
+        {
+          "at": "0006-10-03T23:53:00",
+          "excerpt": "годня вам предоставили доступ к связанным материалам по распоряжению Сэкидо-сама. Именно это я и указала. **Сэкидо Тадао:** — Верно. Служащая положила перед ним журнал. **Служащая архива:** — В таком случае ваша подпись здесь, пожалуйста. Вы приняли решение о ",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.064"
+        },
+        {
+          "at": "0006-10-03T23:54:00",
+          "excerpt": "о Шики сопоставляет её с древними хтоническими существами. За пределами внутренней связи Сэкидо обратился к Шики. **Сэкидо Тадао:** — Мугами-сан, ваши выписки готовы к выносу. Разрешение и регистрационную карточку тоже забирайте. Я закрываю зал. На столе лежал",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.065"
+        }
+      ],
       "projections": [
         {
-          "seen": "s08.text.063",
-          "state": "23:47 обеспечил Шики сверхурочную археологическую справку по хтоническим культам вне линии Уцуро, принимает на себя ответственность за выдачу."
+          "seen": "s08.text.065",
+          "state": "23:54 завершает архивное обслуживание и готов закрыть зал после ухода Шики; не слышал мысленного разговора Шики и Немеры."
+        },
+        {
+          "state": "23:54 завершает архивное обслуживание и готов закрыть зал после ухода Шики; не слышал мысленного разговора Шики и Немеры."
         }
       ],
       "sources": [
         "recovery/cast/sekido_tadao.json",
-        "s08.text.063"
+        "recovery/HOT.json",
+        "s08.text.065"
       ]
     },
     "senior_orderly": {
@@ -7451,8 +7471,7 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн",
-        "takagi_ren"
+        "Такаги Рэн"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -7502,8 +7521,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json",
-        "s08.text.063"
+        "recovery/cast/takagi_ren.json"
       ]
     },
     "tetsu": {
@@ -8309,5 +8327,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 611
+  "source_turns_indexed": 613
 }
