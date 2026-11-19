@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.051",
+ "cursor": "s08.text.052",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -64,7 +64,9 @@
     "what": "Закончить манипуляции с неизвестным громоздким предметом в пристройке и попытаться уйти, пока один участник задерживает Шики угрозой ножа"
    }
   ],
-  "due_now": [],
+  "due_now": [
+   "arakawa_supply_audit"
+  ],
   "truth_zlib64": "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",
   "truth_preview": {
    "resident": "Уполномоченный резиденции, который ночью «рассматривал» ходатайство, тянет время: его имя тоже на пластине. Кагэ ходатайства не видел.",
@@ -772,28 +774,33 @@
  },
  "checks": [
   {
-   "turn": "s08.text.049",
-   "kind": "player",
-   "text": "реплика игрока вошла в сцену на 38%: слова Шики переносятся в прозу полностью и в заданном порядке"
+   "turn": "s08.text.052",
+   "kind": "things",
+   "text": "foreign_observation_case: изменён предмет вне учёта; введён без проверки прежнего состояния"
   },
   {
-   "turn": "s08.text.051",
+   "turn": "s08.text.052",
+   "kind": "review",
+   "text": "time jump crossed unreviewed NPC clock deadlines: arakawa_supply_audit"
+  },
+  {
+   "turn": "s08.text.052",
    "kind": "will",
    "text": "За кадром: «Мугами Акихиро» собирался «Нао самостоятельно пришла в клинику к сыну» к 0006-10-03T08:25:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: Раздражение и страх могут сделать его слова резче и менее точными, чем он рассчитывает. Запиши d.cast.akihiro.intent.tell_nao (status, next, due) и след в мире."
   },
   {
-   "turn": "s08.text.051",
+   "turn": "s08.text.052",
    "kind": "will",
    "text": "За кадром: «Дежурная врач охраняемого отделения» собирался «Ссылаться на канцелярские регистрационные отметки при дальнейших вопросах, умалчивая о перенаправлении» к 0006-10-03T08:30:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: страх делает её ложь слишком аккуратной: в журнале не хватает одного перенаправления. Запиши d.cast.night_icu_physician.intent.shift_blame (status, next, due) и след в мире."
+  },
+  {
+   "turn": "s08.text.052",
+   "kind": "will",
+   "text": "За кадром: «Кадзиура Сатору» собирался «подать заведующему рапорт: вмешательство Мугами было разрешено устно, последствия — под его ответственность» к 0006-10-03T09:00:00. Он не ждёт Шики: реши, что вышло — удалось, сорвалось, сменил тактику. Его слабость: доверяет подписям начальства и отдаёт бумаги по служебному запросу, не проверяя, кто на самом деле спрашивает. Запиши d.cast.kadziura_satoru.intent.cover_ward (status, next, due) и след в мире."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.046",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.047",
     "look": [],
@@ -822,6 +829,11 @@
    },
    {
     "turn": "s08.text.051",
+    "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.052",
     "look": [],
     "soma": []
    }
@@ -870,7 +882,7 @@
     "status": "active",
     "opened": "s08.text.012",
     "opened_at": "0006-10-03T03:09:00",
-    "scenes": 5,
+    "scenes": 6,
     "title": "Цена служебной печати",
     "question": "Какой проверяемый результат дадут уже начатые служебные проверки, прошлые нападения и следы распоряжений, и кто сумеет удержать либо утратить доказательства?",
     "endings": [
@@ -900,7 +912,7 @@
      "Налёт на В-7 уже отражён с потерями: использовать последствия и судьбы сторон, не повторять штурм.",
      "Фактическое действие Аракавы, Такаги, Нори и канцелярии зависит от их знания и часов."
     ],
-    "last": "s08.text.051"
+    "last": "s08.text.052"
    },
    "side_clinic_aftercare": {
     "id": "side_clinic_aftercare",
@@ -1072,7 +1084,7 @@
     "status": "active",
     "opened": "s08.text.029",
     "opened_at": "0006-10-03T06:26:00",
-    "scenes": 5,
+    "scenes": 6,
     "title": "Цепь приказа",
     "question": "Кто конкретно инициировал попытки устранить Шики, с какими полномочиями, мотивом и каналом сведений?",
     "endings": [
@@ -1095,7 +1107,7 @@
     "notes": [
      "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
     ],
-    "last": "s08.text.051"
+    "last": "s08.text.052"
    }
   },
   "closed": [

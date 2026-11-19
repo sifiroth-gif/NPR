@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.051",
+  "cursor": "s08.text.052",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -261,6 +261,38 @@
         "recovery/cast/archive_roof_fugitive.json"
       ]
     },
+    "canon:s08.text.052:0": {
+      "aliases": [
+        "canon:s08.text.052:0",
+        "Прямое уточнение игрока s08.text.052: Хётон Шики — редкий кеккей генкай Хаку, полностью ассимилированный его Нулевым Геномом (умение hyoton 4,5); не трактовать как стандартное водн"
+      ],
+      "facts": [],
+      "id": "canon:s08.text.052:0",
+      "kind": "canon",
+      "label": "Прямое уточнение игрока s08.text.052: Хётон Шики — редкий кеккей генкай Хаку, полностью ассимилированный его Нулевым Геномом (умение hyoton 4,5); не трактовать как стандартное водн",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.052"
+      ]
+    },
+    "canon:s08.text.052:1": {
+      "aliases": [
+        "canon:s08.text.052:1",
+        "Исправление введённого мастером без основания ящика s08.text.047–051: он не известная Шики собственность и не прежний личный предмет; это чужой ранее установленный в наружной хозяй"
+      ],
+      "facts": [],
+      "id": "canon:s08.text.052:1",
+      "kind": "canon",
+      "label": "Исправление введённого мастером без основания ящика s08.text.047–051: он не известная Шики собственность и не прежний личный предмет; это чужой ранее установленный в наружной хозяй",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.052"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -380,6 +412,27 @@
       ],
       "sources": [
         "recovery/cast/courier_unknown.json"
+      ]
+    },
+    "foreign_observation_case": {
+      "aliases": [
+        "foreign observation case"
+      ],
+      "facts": [],
+      "id": "foreign_observation_case",
+      "kind": "item",
+      "label": "foreign observation case",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "patrol",
+          "since": "s08.text.052",
+          "turn": "s08.text.052"
+        }
+      ],
+      "sources": [
+        "s08.text.052"
       ]
     },
     "front_unknown": {
@@ -3380,9 +3433,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.051",
         "s08.text.047",
-        "s08.text.048"
+        "s08.text.048",
+        "s08.text.051"
       ]
     },
     "place:62366af58e6cc7d5": {
@@ -6185,6 +6238,24 @@
         "s03.text.099"
       ]
     },
+    "place:e60ba566b2745ec5": {
+      "aliases": [
+        "place:e60ba566b2745ec5",
+        "Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики",
+        "Кусагакуре",
+        "боковой переулок и хозяйственная пристройка дома Мугами Шики"
+      ],
+      "facts": [],
+      "id": "place:e60ba566b2745ec5",
+      "kind": "place",
+      "label": "Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.052"
+      ]
+    },
     "place:e775269f2b66955f": {
       "aliases": [
         "place:e775269f2b66955f",
@@ -7586,11 +7657,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "У Шики в руках схема его дома с планировкой внутренних комнат и пометой на хозпристройке «Извлечь целиком. Не вскрывать на месте», штамп частично стёрт. Третий утверждает, что получил готовую схему, источник не назвал. Патруль прибыл на место; жертва ампутации доставлению медикам, остальные задержаны фактически, происхождение за"
+          "state": "09:00 патруль обнаружил: деревянный ящик с железной окантовкой не является вещью Шики, это заранее скрытно установленный в доступной наружной пристройке комплект внешнего наблюдения за подходом и доступным чакровым фоном. Свежие крепежные отверстия подтверждают установку. Злоумышленники хотели его забрать; неизвестен заказчик и "
         }
       ],
       "sources": [
-        "s08.text.051"
+        "s08.text.052"
       ]
     },
     "thread:pact": {
@@ -8027,6 +8098,13 @@
       "type": "held_by"
     },
     {
+      "from": "foreign_observation_case",
+      "source": "s08.text.052",
+      "status": "projected",
+      "to": "patrol",
+      "type": "held_by"
+    },
+    {
       "from": "clock:arakawa_supply_audit",
       "source": "recovery/GM_ONLY.json",
       "status": "projected",
@@ -8035,5 +8113,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 600
+  "source_turns_indexed": 601
 }

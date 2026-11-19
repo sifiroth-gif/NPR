@@ -1,19 +1,20 @@
 {
   "current_focus": [
-    "place:5ec8b4484d813447"
+    "place:e60ba566b2745ec5"
   ],
-  "cursor": "s08.text.051",
+  "cursor": "s08.text.052",
   "focus_byte_limit": 6600,
-  "focus_bytes": 488,
-  "index_entities": 374,
-  "index_source_records": 600,
-  "indexed_cursor": "s08.text.051",
+  "focus_bytes": 521,
+  "index_entities": 378,
+  "index_source_records": 601,
+  "indexed_cursor": "s08.text.052",
   "kinds": {
+    "canon": 2,
     "clock": 2,
     "entity": 1,
-    "item": 4,
+    "item": 5,
     "npc": 50,
-    "place": 293,
+    "place": 294,
     "thread": 24
   },
   "missing_critical": [],
@@ -23,6 +24,18 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.052:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.052:1",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -40,6 +53,12 @@
       "at_5": true,
       "id": "recipient6",
       "kind": "entity"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "foreign_observation_case",
+      "kind": "item"
     },
     {
       "at_1": true,
@@ -499,9 +518,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 79,
-  "self_query_at_5": 79,
-  "self_query_count": 79,
+  "self_query_at_1": 82,
+  "self_query_at_5": 82,
+  "self_query_count": 82,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

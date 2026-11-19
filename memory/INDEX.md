@@ -1,9 +1,9 @@
-# Карта мира NPR · на ходе `s08.text.051`
+# Карта мира NPR · на ходе `s08.text.052`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (146) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (147) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (129)
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
@@ -139,7 +139,7 @@
 ## Линии (24)
 - `tetsu` — Тело Тэцу всё ещё не доступно для вскрытия, новых сведений о причинах… · `threads/tetsu`
 - `v7` — 02.10.1283 23:10: налёт на В-7 отражён подготовленным караулом Такаги… · `threads/v7`
-- `order` — У Шики в руках схема его дома с планировкой внутренних комнат и помет… · `threads/order`
+- `order` — 09:00 патруль обнаружил: деревянный ящик с железной окантовкой не явл… · `threads/order`
 - `sanction` — В 09:30 получен формально действующий документ резиденции, подпись/пе… · `threads/sanction`
 - `lower_hospital` — Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Н… · `threads/lower_hospital`
 - `nemera` — 03 Oct 06:26: Shiki directly asserts septuple seals weakened during e… · `threads/nemera`
@@ -162,7 +162,8 @@
 - `shiki_confidentiality` — 06:27 hospital ICU nurse recorded Shiki's exact line 'Контакт кожа к … · `threads/shiki_confidentiality`
 - `keiji_reunion` — 03.10 07:03 Konoha shinobi Keiji (~18), saved by Shiki's July 1278 fr… · `threads/keiji_reunion`
 
-## Вещи (4)
+## Вещи (5)
+- `foreign_observation_case` · `items/foreign_observation_case`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`

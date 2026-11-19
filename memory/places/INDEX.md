@@ -148,3 +148,4 @@
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
 - Кусагакуре, двор и боковой переулок дома Мугами Шики · `places/kusagakure-dvor-i-bokovoy-pereulok-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08
+- Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
