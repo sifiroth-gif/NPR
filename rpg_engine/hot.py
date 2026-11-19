@@ -55,10 +55,11 @@ CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
 RESOLVED_KEEP = 6
 CALENDAR_AHEAD = 14
-# байт; HOT не должен расти без конца. Запас поднят с 72000 на время перехода
-# к постраничной памяти: сбой проверки теперь виден в CHECKS.json, а не молча
-# останавливает свёртку. Норма после межсессионной чистки — меньше 64 КБ.
+# байт. Единый норматив (19.11.2026): выше HOT_LIMIT свёртка блокируется и пишет
+# сбой в CHECKS.json; рабочая норма — до HOT_NORM. Полная память NPC живёт в вики,
+# HOT держит только текущую сцену, свежие знания и эпизоды.
 HOT_LIMIT = 90000
+HOT_NORM = 80000
 LAST_GM_TAIL = 1500  # знаков последнего ответа в HOT; полный текст — в TURN.json и archive/
 
 # Договор семи запоров: ленивый расчёт по игровому времени (PROGRESSION_RULES.json).
@@ -659,6 +660,30 @@ def _archive_canon(state_dir, hot):
         hot["canon_older"] = CANON_ARCHIVE
 
 
+KEEPER_FILL = "memory/_curated/state_fill.json"
+
+
+def _keeper_fill(state_dir, hot):
+    """Поля состояния, которые хранитель задаёт один раз (чакра после обморока и т. п.).
+
+    Заполняет только отсутствующее: что ведущий уже записал ходом, не трогает.
+    """
+    path = Path(state_dir) / KEEPER_FILL
+    if not path.is_file():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return
+    for section, fields in data.items():
+        if section.startswith("_") or not isinstance(fields, dict):
+            continue
+        target = hot.setdefault(section, {})
+        for key, value in fields.items():
+            if key not in target:
+                target[key] = value
+
+
 def _load_stats(state_dir, hot):
     """Уровни умений из листа Шики (HOT.shiki.sheet) — для порогов боя."""
     shiki = hot.get("shiki") or {}
@@ -951,7 +976,6 @@ def fold(state_dir):
     hot, before = _read_state(state_dir)
     ensure_npc_memory(state_dir, hot)
     _load_stats(state_dir, hot)
-    will.seed(state_dir, hot)
     turns, errors = collect_turns(state_dir, hot)
     applied = []
     amended = []
@@ -1049,6 +1073,10 @@ def fold(state_dir):
     hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") not in ("plot", "will")]
     hot["_checks"].extend(plot.review(hot, applied))
     hot["_checks"].extend(will.review(hot, applied))
+    # Заготовки хранителя — после ходов: исправление хода (amend) восстанавливает
+    # снимок без них, и прямую правку HOT оно бы стёрло.
+    will.seed(state_dir, hot)
+    _keeper_fill(state_dir, hot)
     _cap_cards(hot)
     _tidy_checks(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)

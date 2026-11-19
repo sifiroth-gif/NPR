@@ -49,7 +49,8 @@ def _state(hot):
 
 def _name(hot, key):
     card = (hot.get("cast") or {}).get(key) or {}
-    return card.get("name") or key
+    profile = (hot.get("_psyche") or {}).get(key) or {}
+    return card.get("name") or profile.get("name") or key
 
 
 # ---------------------------------------------------------------- заготовка хранителя
@@ -70,6 +71,12 @@ def seed(state_dir, hot):
         if key.startswith("_") or not isinstance(will, dict):
             continue
         profile = hot.setdefault("_psyche", {}).setdefault(key, {})
+        if not (hot.get("cast") or {}).get(key) and not profile.get("name"):
+            card = Path(state_dir) / "recovery/cast" / f"{key}.json"
+            try:
+                profile["name"] = json.loads(card.read_text(encoding="utf-8")).get("name") or key
+            except (OSError, ValueError):
+                pass
         facets = profile.setdefault("psyche", {})
         for facet, value in (will.get("psyche") or {}).items():
             if facet in npc_memory.FACETS and value and not facets.get(facet):
@@ -179,7 +186,9 @@ def soon(hot, hours=SOON_HOURS):
     if not now:
         return []
     horizon = now + timedelta(hours=hours)
+    present = set((hot.get("scene") or {}).get("present") or [])
     return [{"npc": key, "name": _name(hot, key), "plan": name,
-             **{f: a[f] for f in ("next", "due", "if_unopposed", "against_shiki") if a.get(f)},
+             **{f: str(a[f])[:170] for f in ("next", "due", "if_unopposed", "against_shiki") if a.get(f)},
              "overdue": due <= now}
-            for key, name, a, due in agendas(hot) if due and due <= horizon][:8]
+            for key, name, a, due in agendas(hot)
+            if due and due <= horizon and key not in present][:6]   # присутствующие — в present_npcs

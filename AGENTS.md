@@ -37,6 +37,6 @@ GitHub Actions сворачивает ход, обновляет память и
 - Код `rpg_engine/`, тесты `python -m unittest discover -s tests`. Только стандартная библиотека.
 - Живая память: `rpg_engine/hot.py`; общая историческая эвристика: `rpg_engine/heuristic_history.py`, вызывается при `hot-fold` и автоматически в `gm-packet`/`scene-memory`; прямой поиск `history-heuristic`. Устройство: `docs/ARCHITECTURE.md`.
 - Историю на `game-state/shiki` не переписывать и не удалять; исходники сессий хранить дословно в `archive/`.
-- **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. HOT < 90 КБ, `GM_BRIEF` ≤ 48 КБ.
+- **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. HOT: норма до 80 КБ, предел 90; `GM_BRIEF`: цель 32 КБ, предел 48.
 - Этот файл одинаков на `main` и `game-state/shiki`. Размер этого файла, GM_CORE и навыка держат тесты `tests/test_instruction_budget.py`: рост означает, что правило надо заменить, а не добавить.
 - Скрытая правда живёт только в `recovery/GM_ONLY.json` и файлах `*GM_ONLY*`. В `HOT.json`, коммитах, PR и ответах игроку её нет.

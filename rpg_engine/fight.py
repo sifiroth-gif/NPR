@@ -312,10 +312,11 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
         if cost is None:
             _note(notes, turn_id, f"Чакра: у «{item.get('what')}» нет ранга (E–S) или cost.")
             continue
-        label, _penalty = chakra_state(float(chakra["value"]) - spent)
-        if label == "пусто" and str(item.get("rank", "")).upper() in ("A", "S"):
-            _note(notes, turn_id, f"Чакра пуста: техника ранга {item['rank']} «{item.get('what')}» "
-                  "невозможна без внешнего источника.")
+        left = float(chakra["value"]) - spent
+        if cost > left + 0.01:
+            _note(notes, turn_id, f"«{item.get('what')}» стоит {cost:g}, а у Шики {max(left, 0):.0f} из 100: "
+                  "техника срывается, выходит ослабленной или Шики теряет сознание на ней (d.chakra.collapse). "
+                  "Без внешнего источника чакры полной силы не будет.")
         spent += float(cost)
         used.append(item.get("what"))
     spent += BURST_COST * bursts
@@ -327,7 +328,7 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
                           ([f"рывки ×{bursts}"] if bursts else [])}
     if chakra["value"] <= 0:
         chakra["value"] = 0.0
-        if not patch.get("collapse"):
+        if not patch.get("collapse") and before > 0:
             _note(notes, turn_id, f"Чакра Шики исчерпана ({before:.0f} → 0 после «{', '.join(map(str, used)) or 'рывков'}»): "
                   "по канону он теряет сознание; отметь d.chakra.collapse и последствия.")
     if patch.get("collapse"):

@@ -54,6 +54,8 @@ class WillTest(unittest.TestCase):
         self.assertEqual(len(notes), 1)
         self.assertIn("За кадром: «Кадзиура» собирался «переписать лист назначений»", notes[0])
         self.assertIn("доверяет подписи начальства", notes[0])
+        self.assertEqual(will.soon(h), [], "присутствующий NPC — в present_npcs, не в agendas")
+        h["scene"]["present"] = ["shiki"]
         self.assertEqual(will.soon(h)[0]["overdue"], True)
 
     def test_passive_significant_npc_is_asked_about_his_own_move(self):
@@ -86,7 +88,7 @@ class WillFoldTest(unittest.TestCase):
     git, commit, put = test_hot.HotFilesTest.git, test_hot.HotFilesTest.commit, test_hot.HotFilesTest.put
 
     def test_seed_reaches_gm_only_and_brief(self):
-        seed = {"tetsu": {"psyche": {"decides": "по приказу"},
+        seed = {"kabuto": {"psyche": {"decides": "по приказу"},
                           "intent": {"report": {"goal": "доложить", "next": "отнести рапорт",
                                                 "due": "0006-10-01T08:00:00"}}}}
         (self.root / "memory/_curated").mkdir(parents=True, exist_ok=True)
@@ -94,7 +96,7 @@ class WillFoldTest(unittest.TestCase):
         self.put(turn(45, "0006-10-01T07:14:00"))
         self.assertEqual(hot.fold(self.root)["errors"], [])
         secret = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))
-        self.assertEqual(secret["psyche"]["tetsu"]["intent"]["report"]["next"], "отнести рапорт")
+        self.assertEqual(secret["psyche"]["kabuto"]["intent"]["report"]["next"], "отнести рапорт")
         self.assertIn("seed", secret["will"])
         public = (self.root / hot.HOT_PATH).read_text(encoding="utf-8")
         self.assertNotIn("отнести рапорт", public)
@@ -104,3 +106,15 @@ class WillFoldTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KeeperFillTest(unittest.TestCase):
+    def test_fill_only_missing_fields(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "memory/_curated").mkdir(parents=True)
+            (root / hot.KEEPER_FILL).write_text(json.dumps(
+                {"_note": "x", "shiki": {"chakra": {"value": 0}, "body": "не затирать"}}), encoding="utf-8")
+            h = {"shiki": {"body": "записано ведущим"}}
+            hot._keeper_fill(root, h)
+            self.assertEqual(h["shiki"], {"body": "записано ведущим", "chakra": {"value": 0}})

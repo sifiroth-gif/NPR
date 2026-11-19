@@ -82,13 +82,8 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
                         "due": value.get("due"),
                         "status": "unresolved_actor_or_non_npc_owner",
                     })
-        for key, hidden in (hot.get("_psyche") or {}).items():
-            if key in players or key in ordered or key in urgent:
-                continue
-            active = (hidden or {}).get("intent") or {}
-            if any(isinstance(v, dict) and v.get("status") == "committed"
-                   for v in active.values()):
-                urgent.append(key)
+        # Offscreen NPC plans are listed once, compactly, in GM_BRIEF.agendas
+        # (rpg_engine/will.py); their full facets stay in GM_ONLY.
     ordered.extend(x for x in urgent if x not in ordered)
     keep = ordered[:max_actors]
     result = []
