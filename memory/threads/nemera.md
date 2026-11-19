@@ -1,8 +1,8 @@
 # Линия `nemera`
 
-- state: Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпиталя, но не считает Шики добрым. Временно замолчала по собственной воле и хочет слушать дождь до утра. Одностороннее сенсорное окно открыто, моторика/мысли закрыты; новых сделок нет.
+- state: 06:19 03.10: Shiki asked Nemera why she stayed instead of escaping while he was unconscious. She stated all seven locks held despite his chakra exhaustion; she remains imprisoned, still wishes to leave, yet finds his voluntarily shared perception and changed relation to other humans worth observing. She refused to promise loyalty or claim affection. No breach, extra sensory/motor rights, memory reading or bargain; prior channel boundaries preserved.
 - last_known: s04.text.047
-- turn: s05.text.043
+- turn: s08.text.028
 
 ## Изменения по ходам
 - s04.text.049: state: Немера — нечеловеческая сущность за семью замками. По разрешённому четвёртому каналу предложила наставничество в Ситоне/Бётоне при обмене на подробные истинные наблюдения. Не видит и не слышит внешнюю лабораторию. Запоры стабильны.; last_known: s04.text.047
@@ -12,3 +12,4 @@
 - s05.text.041: state: 02.10 02:04 Немера впервые открыто призналась Шики, что жаждет прямого сенсорного восприятия мира, а не только смысловых сигналов, помнит депривацию и контролируемые болевые ощущения Нижнего госпиталя. Она честно предупредила, что доступ к зрению/интероцепции позволит ей собирать знания об уязвимостях Шики. Ждёт ответа, откроет ли он окно. НИКАКОГО нового доступа не получено.
 - s05.text.042: state: 02.10 02:09 Шики закончил модификацию семи запоров с помощью Нулевого Генома: Немера имеет постоянное ОДНОСТОРОННЕЕ полное чувственное наблюдение (зрение слух вкус запах кожа боль температура проприоцепция вестибулярное внутренние ощущения эмоциональная окраска), не читает мысли/память и не управляет движениями или мыслями. Её слабые пробы моторной/исполнительной обратной связи заблокирова…
 - s05.text.043: state: Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпиталя, но не считает Шики добрым. Временно замолчала по собственной воле и хочет слушать дождь до утра. Одностороннее сенсорное окно открыто, моторика/мысли закрыты; новых сделок нет.
+- s08.text.028: state: 06:19 03.10: Shiki asked Nemera why she stayed instead of escaping while he was unconscious. She stated all seven locks held despite his chakra exhaustion; she remains imprisoned, still wishes to leave, yet finds his voluntarily shared perception and changed relation to other humans worth observing. She refused to promise loyalty or claim affection. No breach, extra sensory/motor rights, m…

@@ -6,19 +6,19 @@
  "checks": [
   {
    "kind": "review",
-   "text": "nemera: offscreen knows+ requires knowledge_events with source/channel",
-   "turn": "s08.text.027"
+   "text": "review.sources must refer to exact prior played turns",
+   "turn": "s08.text.028"
   },
   {
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`).",
-   "turn": "s08.text.027"
+   "turn": "s08.text.028"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.027",
+  "cursor": "s08.text.028",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -26,14 +26,12 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "recipient6",
    "nemera",
-   "place:8a0569cc4112e23e",
+   "place:5270dd69fc81a58d",
    "thread:lower_hospital",
-   "thread:nemera",
-   "thread:pact"
+   "thread:nemera"
   ],
-  "focus_bytes": 3722,
+  "focus_bytes": 2089,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -60,82 +58,48 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T06:18:00",
+  "at": "0006-10-03T06:19:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.027",
-  "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с палатой №6",
-  "time": "06:18"
+  "id": "s08.text.028",
+  "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
+  "time": "06:19"
  },
- "digest": "6fa8c8394556eb112b2349102471d705e03564bbf4dbae6498da3ea3eecc0170",
+ "digest": "0ebc6ac3f63e10939ac430c7fa28f29db3a855e748817a65a9c72c0d14aa021a",
  "entity_memory": {
-  "activated": [
-   {
-    "activated_by": "scene",
-    "facts": [
-     {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
-      "field": "age_at_discovery",
-      "id": "recipient6:identity:age-discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "примерно шестнадцать лет",
-      "visibility": "gm_only"
-     },
-     {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
-      "field": "discovery",
-      "id": "recipient6:history:discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
-      "visibility": "gm_only"
-     },
-     {
-      "authority": "player_correction",
-      "field": "sex",
-      "id": "recipient6:identity:sex:source-s08",
-      "source": "archive/shiki-canon.jsonl:s08.text.005",
-      "value": "мальчик (мужской пол)",
-      "visibility": "gm_only"
-     }
-    ],
-    "id": "recipient6",
-    "label": "Реципиент № 6",
-    "rule": "No absent demographic or biographical attribute may be guessed.",
-    "status": "source_bound"
-   }
-  ],
+  "activated": [],
   "conflicts": [],
   "rule": "Entity attributes are claims with sources, not prose suggestions.",
   "schema": "npr-entity-ledger/1",
-  "total_activated": 1
+  "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [],
+  "edges": [
+   {
+    "actor": "nemera",
+    "from": "s08.text.027",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s08.text.028"
+   }
+  ],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
  "fight": {
   "dice": [
-   65,
-   8,
-   95,
-   84,
-   39,
-   40,
-   73,
-   82,
-   13,
-   32,
-   11,
-   50
+   93,
+   85,
+   69,
+   31,
+   29,
+   18,
+   52,
+   17,
+   90,
+   37,
+   94,
+   28
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -145,30 +109,6 @@
  "general_memory": {
   "activated": [
    {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [
-     {
-      "field": "age_at_discovery",
-      "source": "archive/session-005-source.md:L3057"
-     },
-     {
-      "field": "discovery",
-      "source": "archive/session-005-source.md:L3057"
-     },
-     {
-      "field": "sex",
-      "source": "archive/shiki-canon.jsonl:s08.text.005"
-     }
-    ],
-    "facts_ref": "entity_memory.activated[recipient6].facts",
-    "id": "recipient6",
-    "kind": "entity",
-    "label": "Реципиент № 6",
-    "status": "verified_facts"
-   },
-   {
     "facts": [],
     "id": "nemera",
     "kind": "npc",
@@ -177,7 +117,7 @@
      "status": "projection_not_authoritative_fact",
      "values": {
       "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-      "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; me"
+      "state": "06:19 privately answered Shiki's question about why she did not escape during his collapse. She insists the seven binding seals remained shut even while his chakra reserv"
      }
     }
    },
@@ -186,9 +126,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:8a0569cc4112e23e",
+    "id": "place:5270dd69fc81a58d",
     "kind": "place",
-    "label": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с палатой №6",
+    "label": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
     "status": "no_verified_facts"
    },
    {
@@ -217,27 +157,10 @@
     "kind": "thread",
     "label": "nemera",
     "operational_cues": {
-     "source": "s05.text.043",
+     "source": "s08.text.028",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "state": "Шики объяснил, что дал ей доступ к чувствам просто по её просьбе. Немера удивлена прямым согласием без сделки, сравнила его с практиками экспериментаторов Нижнего госпита"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "thread:pact",
-    "kind": "thread",
-    "label": "pact",
-    "operational_cues": {
-     "source": "recovery/HOT.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
+      "state": "06:19 03.10: Shiki asked Nemera why she stayed instead of escaping while he was unconscious. She stated all seven locks held despite his chakra exhaustion; she remains im"
      }
     },
     "status": "no_verified_facts"
@@ -249,7 +172,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 6
+  "total_matched": 4
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -263,10 +186,10 @@
   "due": null,
   "npcs": {
    "nemera": {
-    "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched.",
+    "does": "Refutes premise that weakness alone opened the seals and admits self-interested curiosity without promising allegiance.",
     "lever": "Ничего человеческого. Ей противна неподвижность.",
     "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
-    "reads": "Human fear makes staff preserve dangerous material, seek protection and exercise authority in conflicting ways; their choices offer her information about confinement and control.",
+    "reads": "A future chance to leave, if genuinely presented, would force a conflict between her desire for freedom and interest in the voluntary connection with her captor.",
     "stage": 1,
     "step": "примета"
    }
@@ -288,11 +211,13 @@
   ]
  },
  "last": {
+  "gm_tail": "едостаточно знать, как устроено твоё тело. Я хочу понять, что ты сделаешь, когда окончательно перестанешь быть похожим на тех, среди кого вырос.*\n\n***\n\nСемь запоров оставались неподвижными.\n\n*— Не путай моё любопытство с привязанностью.*\n\nЭта фраза прозвучала отчётливо.\n\n*— Я по-прежнему хочу выйти. Я по-прежнему помню, что ты меня удерживаешь. И …",
+  "player": "Немера, ты ведь могла сбежать когда я ослаб. Почему осталась?",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 34,
+   "appearances": 35,
    "facets": 0,
    "need": 5,
    "npc": "nemera",
@@ -417,10 +342,19 @@
    "prior_disclosures": [
     {
      "at": "0006-10-03T06:18:00",
-     "sha256": "e9c688eecc42e545e30a55f15db9749fb17bb02f75d0baaf72bc3b2faff21be5",
+     "line": "Шики перевязал кисти, предплечья, часть плеч, шею и ноги, облачился в свою форму с опущенным капюшоном. Немера через прежнее чувс…",
+     "sha256": "ad221f464f615dc8f9f806c86dc35de314bb743b656c7c6725763a006f9962b7",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.027"
+    },
+    {
+     "at": "0006-10-03T06:19:00",
+     "line": "Немера ответила Шики, что потеря сознания не раскрыла семь запоров. Она по-прежнему желает свободы, но ценит добровольно данный д…",
+     "sha256": "fe40e1394402287da0c3cf739ecea9d8c5b7b79bd1c172df81e9cc608fec222c",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.028"
     }
    ],
    "profile": {
@@ -440,15 +374,20 @@
       "ch": "present",
       "turn": "s08.text.027",
       "what": "Шики перевязал кисти, предплечья, часть плеч, шею и ноги, облачился в свою форму с опущенным капюшоном. Немера через прежнее чувственное окно высказала независимый взгляд на страх и распоряжения людей"
+     },
+     {
+      "ch": "present",
+      "turn": "s08.text.028",
+      "what": "Немера ответила Шики, что потеря сознания не раскрыла семь запоров. Она по-прежнему желает свободы, но ценит добровольно данный доступ к ощущениям и хочет наблюдать перемены Шики; верности не обещала."
      }
     ],
     "memory_file": "archive/npc-memory/nemera.json",
-    "memory_total": 34,
+    "memory_total": 35,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-    "seen": "s08.text.027",
+    "seen": "s08.text.028",
     "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-    "state": "06:18 replies privately through semantic link to Shiki on humans and their divergent fears, opportunistic needs and tendency to store dangerous things and seal spaces; mentions earlier one-minute disgust Shiki voluntarily gave her and ironic fact he too sealed Nemera away. No sensory, mental, motor or pact boundary changes; remains unfreed and independently interested in future human attempts to use Shiki.",
+    "state": "06:19 privately answered Shiki's question about why she did not escape during his collapse. She insists the seven binding seals remained shut even while his chakra reservoir was exhausted; no real escape opportunity demonstrated. She values sensory freedom Shiki granted without bargaining and wishes to observe what he becomes, but still wants physical freedom and rejects interpreting curiosity as affection or fidelity; no access expansion or past hidden escape attempt established.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
@@ -459,19 +398,19 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.026",
-   "line": "Шики забрал одежду и пояс, попросил уединения и приобрести тканевые бинты. Кадзиура разрешил переодеться в палате наблюдения; медсестра с видимой неприязнью принесла две упаковки и заказала остальные. Медицинская арка №6 завершена частичным успехом."
-  },
-  {
    "id": "s08.text.027",
    "line": "Шики перевязал кисти, предплечья, часть плеч, шею и ноги, облачился в свою форму с опущенным капюшоном. Немера через прежнее чувственное окно высказала независимый взгляд на страх и распоряжения людей; запоры неизменны."
+  },
+  {
+   "id": "s08.text.028",
+   "line": "Немера ответила Шики, что потеря сознания не раскрыла семь запоров. Она по-прежнему желает свободы, но ценит добровольно данный доступ к ощущениям и хочет наблюдать перемены Шики; верности не обещала."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "06:18 Shiki alone in closed observation room, fully dressed in current neat black layered battle garb with hood down and long white hair uncovered, hands/fingers, whole forearms, parts upper arms, neck and legs securely cloth wrapped, medical equipment belt and tools in place. Former medical gown and gloves left in observation room. Two ward cloth-wrap packs consumed plus own wrapping material, invoice due at ward post; additional requested supplies still pending. Nemera communicates only through previously granted sensory/semantic channel while held behind seven seals. Other staff in corridor, Kadz elsewhere managing ward and source record.",
-  "pressure": "Visible corpse-like appearance may be partially masked by wraps but near scent and uncovered face remain; other staff independently suspicious. Nemera uses Shiki's direct question to compare unequal human reactions and tease the irony of his seven locks. No change in pact stage6 or Nenmera captivity; limited chakra after collapse.",
-  "situation": "03.10 06:07–06:18: Shiki closes observation room door, voluntarily removes hospital gown and gloves, uses his own wraps plus the two cotton-cloth bandage packets offered by ward to cover fingers/hands, full forearms and portions of upper arms, neck, exposed lower limbs, leaving enough joint flexibility for hand seals; applies his sole current dark layered Kusa shinobi robe/pelerine, high collar and medical belt/senbon tools, HOOD DOWN and white hair visible. Skin remains COMPLETELY INTACT beneath, temperature ~29.4C, corpse-like pale-gray but no peeling/flaking/necrotic spots. The wraps physically block routine bare-skin contact but do not stop internal pact or guarantee sterility if damaged. Shiki asks mentally 'Немера, что сейчас скажешь про людей?'. Nemera answers through EXISTING deliberate one-way sensory access + semantic two-way bridge: she remembers Shiki voluntarily lending exactly one minute of disgust from earlier, analyzes distinct staff motives for recoil and data control, compares hospital notes to doors/locks she knew in Lower Hospital, finds irony Shiki also imprisons her, and expresses curiosity how humans behave when next needing Shiki's help. She neither reads his mind nor seeks additional access, movement/pact seven binding seals unchanged. Nurse knocks at 06:18 to say cotton wrap invoice will be processed at post, additional packets from stock not yet delivered; she leaves without encounter. Shiki has not paid yet; account pending for use of the two ward-provided bandage packs. At 06:10 offscreen Kadz + hospital laboratory completed assigned morphological comparison of recipient6 cast samples with available archive: insufficient comparable reference specimens for definitive identification of same donor/source; no true provenance determined, result o"
+  "positions": "06:19 Shiki dressed and wrapped in closed hospital observation room, hood down; Nemera still imprisoned behind all seven intact binding circuits, with granted sensory observing and mental semantic exchange only. Clinic staff heard outside; no one physically enters.",
+  "pressure": "The previously instrumental/prisoner bond with Nemera becomes more explicitly ambiguous: she admits no present liberty, enduring desire to escape, voluntary curiosity about Shiki, and will not commit to loyalty. Established clinical, registry and blood-specimen processes continue unchanged.",
+  "situation": "06:18–06:19, 03.10.1283: In locked observation room wearing existing dark costume and cotton wrapping with hood down, Shiki asks Nemera privately through existing semantic link 'Немера, ты ведь могла сбежать когда я ослаб. Почему осталась?' She first challenges premise: at Shiki's unconscious chakra exhaustion all SEVEN binding seal contours still held and none opened; losing muscular/medical reserve differs from dismantling confinement. She voluntarily explains that her desire for freedom remains, but she values the previously voluntary continuous sensory input granted by Shiki, remembers deprivation at the Lower Hospital, and is intensely curious to see what he becomes as doctors recoil despite using his help. Her answer openly disclaims affection and loyalty and leaves future decision if genuine opportunity of freedom emerges unknown. This is her expressed personal account, not proof of future conduct or any retroactive breach attempt. No seal loosening, channel change, additional chakra cost, body action, physical touch, new infection or other NPC encounter. Shiki's chakra still significantly depleted but physiological functionality preserved at max pact6; patient6 stable ventilated on S17, hospital privacy and specimen issues pending."
  },
  "shiki": {
   "body": "06:18 03.10 Shiki's stage6 max-state blood, core low temperature, wholly intact grayish skin and clothed contagious contact mechanics unchanged; severe chakra depletion persists. He wraps hands/fingers/forearms completely and partial shoulders, neck and legs with cotton bandages and puts on established neat charcoal-black layered combat attire, medical kit and belt, hood DOWN, white hair exposed. Cloth blocks direct skin contact in covered regions; not a magical cure or full restoration. Zero Genome remains 5/5, seven locks unchanged, isolated old biopsy within left deltoid ischemic after prior chakra collapse.",
@@ -484,6 +423,11 @@
    "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:07.**\n\n*Кусагакуре. Центральный госпиталь. Палата наблюдения.*\n\nЗамок щёлкнул.\n\nШики снял больничный халат, затем перчатки. На столе лежали упаковки хлопчатобумажных бинтов, собственные перевязочные материалы и чёрное снаряжение.\n\nБез одежды изменения тела были заметны гораздо отчётливее.\n\nПод цельной, мертвенно-бледной кожей проступали почти чёрные сосуды. Их ветвления не вполне соответствовали человеческой анатомии: некоторые линии уходили в глубину, некоторые соединялись с семью запирающими контурами на гру\n[... sou…",
    "player": "#закрываю дверь снимаю больничную одежду и перематываю все открытые участки, руки полностью все предплечье и часть плеча, шею, ноги и надеваю свое снаряжение, капюшон не накидываю, мысленно при этом процессе# Немера, что сейчас скажешь про ",
    "source": "archive/session-008-turns.jsonl"
+  },
+  "s08.text.028": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:18.**\n\n*Центральный госпиталь. Палата наблюдения.*\n\n— Немера, ты ведь могла сбежать, когда я ослаб. Почему осталась?\n\nОтвета не последовало.\n\nТишина за семью запорами отличалась от обычного молчания. Шики ощущал присутствие существа, но не мог определить, куда направлено его внимание.\n\nНаконец знакомый голос возник внутри сознания.\n\n*— Могла?*\n\nВ единственном слове слышалось нечто похожее на любопытство.\n\n*— Ты потерял сознание. Твоя чакра истощилась. Сердце замедлилось, кровь изменилась, температура тела упал\n[... sou…",
+   "player": "Немера, ты ведь могла сбежать когда я ослаб. Почему осталась?",
+   "source": "archive/session-008-turns.jsonl"
   }
  },
  "source_passages_ref": "archive/session-*-turns.jsonl",
@@ -491,8 +435,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "d6d0666589137571291bdfb3f3e446cb2551c380",
-  "turn": "s08.text.027"
+  "sha": "d21d75a30e7740fd67de976b3c4e3efb87bd562a",
+  "turn": "s08.text.028"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -508,7 +452,7 @@
     "due": "0006-10-03T07:05:00",
     "id": "medical_notice_registry_trace",
     "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа.",
-    "minutes": 47.0,
+    "minutes": 46.0,
     "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
     "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.medical_notice_registry_trace",
@@ -519,7 +463,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 117.0,
+    "minutes": 116.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -530,7 +474,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без вы…",
-    "minutes": 192.0,
+    "minutes": 191.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",

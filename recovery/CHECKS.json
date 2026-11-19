@@ -1,13 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.027",
+ "cursor": "s08.text.028",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.015",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010"
-  },
   {
    "turn": "s08.text.016",
    "kind": "review",
@@ -79,7 +74,12 @@
    "text": "nemera: offscreen knows+ requires knowledge_events with source/channel"
   },
   {
-   "turn": "s08.text.027",
+   "turn": "s08.text.028",
+   "kind": "review",
+   "text": "review.sources must refer to exact prior played turns"
+  },
+  {
+   "turn": "s08.text.028",
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }

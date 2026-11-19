@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s08.text.027",
+ "cursor": "s08.text.028",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -255,21 +255,23 @@
       "change": "калибровка",
       "saw": "Through the voluntarily opened sensory window, Nemera experiences human clinicians alternately healing with Shiki's help, hoarding his near-black blood and recoiling from his presence; she herself re…",
       "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched."
+     },
+     {
+      "turn": "s08.text.028",
+      "at": "0006-10-03T06:19:00",
+      "change": "подтвердилось",
+      "saw": "She experienced through granted sensorium Shiki's profound collapse and restoration with seven seals unmoved; heard his direct challenge about why she stayed.",
+      "does": "Refutes premise that weakness alone opened the seals and admits self-interested curiosity without promising allegiance."
      }
     ],
-    "reads": "Human fear makes staff preserve dangerous material, seek protection and exercise authority in conflicting ways; their choices offer her information about confinement and control.",
-    "does": "Offers a nonhuman, self-interested answer comparing contradictory hospital behavior to her own imprisonment; asks for nothing and keeps the seven locks untouched.",
-    "turn": "s08.text.027",
+    "reads": "A future chance to leave, if genuinely presented, would force a conflict between her desire for freedom and interest in the voluntary connection with her captor.",
+    "does": "Refutes premise that weakness alone opened the seals and admits self-interested curiosity without promising allegiance.",
+    "turn": "s08.text.028",
     "step": "примета"
    }
   }
  },
  "checks": [
-  {
-   "turn": "s08.text.015",
-   "kind": "review",
-   "text": "missing earliest/latest prior NPC disclosure source: s08.text.007, s08.text.009, s08.text.010"
-  },
   {
    "turn": "s08.text.016",
    "kind": "review",
@@ -341,18 +343,18 @@
    "text": "nemera: offscreen knows+ requires knowledge_events with source/channel"
   },
   {
-   "turn": "s08.text.027",
+   "turn": "s08.text.028",
+   "kind": "review",
+   "text": "review.sources must refer to exact prior played turns"
+  },
+  {
+   "turn": "s08.text.028",
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Цепь приказа» (`ch09_order_chain`)."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s08.text.022",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s08.text.023",
     "look": [],
@@ -384,6 +386,11 @@
      "волосы",
      "капюшон"
     ],
+    "soma": []
+   },
+   {
+    "turn": "s08.text.028",
+    "look": [],
     "soma": []
    }
   ],
