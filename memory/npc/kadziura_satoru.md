@@ -17,7 +17,7 @@
 - голос: Низкий усталый голос, точная сдержанная речь, мало лишних объяснений [s07.text.033]
 
 ## Сейчас
-- положение: 05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, genuine superficial necrosis and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated. [s08.text.021]
+- положение: 05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated. [s08.text.021]
 - вид в последней сцене: Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам [s07.text.033]
 
 ## Знает (последние 18 из 18)
@@ -38,7 +38,7 @@
 - 03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, claims it cannot spread to healthy cells. He has not witnessed this in patient. [s08.text.018]
 - Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no long-term safety data. [s08.text.019]
 - Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowledge of hidden pact or Zero Genome granted. [s08.text.020]
-- Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, real superficial tissue autolysis and sheet debris despite normal perfusion, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals. [s08.text.021]
+- Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite extraordinary metabolic indicators, extremely low core temperature ~29.4C with slow sinus heart rate, normal blood gases/lactate, and witnessed spontaneous waking. He knows Shiki warned against unprotected touching but DOES NOT know whether or how blood transfers disease, nor the pact or seals. [s08.text.021]
 
 ## История (последние 8 из 21)
 - s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.

@@ -14,7 +14,7 @@
 - голос: Негромко, профессионально, без раболепия и без лишних слов [s07.text.032]
 
 ## Сейчас
-- положение: 05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric physiological state and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer. [s08.text.021]
+- положение: 05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric temperature and darkened blood with intact skin and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer. [s08.text.021]
 - вид в последней сцене: Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает [s07.text.032]
 
 ## Знает (последние 9 из 9)
@@ -26,7 +26,7 @@
 - 03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics. [s08.text.017]
 - 03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal. [s08.text.018]
 - Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why. [s08.text.020]
-- 05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and authentic gray autolysed epidermis; records do not establish transmission, origin or contract. Internal biomedical incident report issued earlier, now to be supplemented with measurements. [s08.text.021]
+- 05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmission, origin or contract. Internal biomedical incident report issued earlier, now to be supplemented with measurements. [s08.text.021]
 
 ## История (последние 8 из 16)
 - s08.text.013 0006-10-03T03:17:00: Шики Нулевым Геномом заживил разрез и исследовал биоптат №6: чужеродная стромальная линия с nsp-δ выделяет НСП-δ; у соседнего эпителия нарушаются Ca²⁺-ответы и межклеточные контакты. Результат известен лишь Шики.

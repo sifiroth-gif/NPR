@@ -71,7 +71,7 @@
   "place": "Кусагакуре, Центральный госпиталь, палата наблюдения рядом с реанимацией",
   "time": "05:46"
  },
- "digest": "f0cc2e20006ef38555b76db32762c76f0388c5aaa0fd1c5f8ec954c1ba8f7609",
+ "digest": "17e14ec50eec4c47ae643c75ac77635c4fbed99adecb6032940a7137aa1d313a",
  "entity_memory": {
   "activated": [
    {
@@ -143,24 +143,19 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fight": {
-  "chakra": {
-   "locked_until": "0006-10-03T06:12:00",
-   "state": "пусто",
-   "value": 0.0
-  },
   "dice": [
-   98,
-   54,
-   24,
-   34,
-   3,
-   41,
-   86,
-   14,
-   27,
-   48,
-   89,
-   65
+   29,
+   60,
+   2,
+   1,
+   66,
+   40,
+   12,
+   50,
+   7,
+   68,
+   33,
+   75
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -520,7 +515,7 @@
      "03:28 heard directly from Shiki that Byoton-undisclosed chakra controls dissemination of engineered RNA-based non-replicating CRISPR vector, which can continue intracellular gene editing after chakra removal, c",
      "Shiki says he can maintain current chakra support and attempt his proposal for only approximately 1–1.5 further hours due prolonged treatment and recent analysis; he has short-term live tissue results but no lo",
      "Shiki publicly said elemental name 'Бётон' with one-handed unfamiliar hand seals while treating #6; Kadz witnessed improved airway patency and Shiki's collapse, and heard 'do not touch me barehanded'. No knowle",
-     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, real superficial tissue autolysis and sheet debris despite normal perfusion, extre"
+     "Between 04:26 and 05:46 doctor measured Shiki blood progressively darkening to near-black with non-fibrin black microfilaments, completely intact corpse-pale cold skin without slough or necrotic lesions despite"
     ],
     "knows_ref": "memory/npc/kadziura_satoru.md",
     "knows_total": 8,
@@ -538,7 +533,7 @@
     "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
     "seen": "s08.text.021",
     "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-    "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, genuine superficial necrosis and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated.",
+    "state": "05:46: Kadz witnesses conscious Shiki with clinically corpse-like temperature, intact deathly-gray skin without necrotic lesions and near-black bloodstream but preserved organ function. Maintains gloves, controls lab chain-of-custody and resists unrecorded transfer of samples to commission; directly asks if fresh blood touching staff wound is dangerous. Remains primary attending for S17 recipient6 who is still ventilated.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -589,7 +584,7 @@
      "03.10 03:24 Shiki claimed ability to deliver/generate a created viral vector in recipient6 independent of stored vial; she has heard no name Byoton and has no evidence or knowledge of its mechanics.",
      "03:28 heard Shiki's claimed RNA vector constraints: chakra-directed propagation, non-self-replicating agent and selective delivery to pathological cells, with downstream activity after chakra withdrawal.",
      "Heard 'Бётон. Заражение: воспроизведение патогена' as spoken Shiki technique name; witnessed unknown one-handed seals and his loss of consciousness; understood bare skin warning but not why.",
-     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and authentic gray autolysed epidermis; records do not establish transmission, origin or contract. I"
+     "05:46 personally sees Shiki awake while core temperature remains 29.4C, near-black blood in protected samples and intact deathly-gray skin without visible necrosis or slough; records do not establish transmissi"
     ],
     "knows_ref": "memory/npc/night_icu_physician.md",
     "knows_total": 8,
@@ -607,7 +602,7 @@
     "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
     "seen": "s08.text.021",
     "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
-    "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric physiological state and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer.",
+    "state": "05:46: retains professional resistance to deeming this safe; documents contradictory measured near-cadaveric temperature and darkened blood with intact skin and intent to supplement her already issued medical-committee report, disputes with Kadz over who controls hospital specimen transfer.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -656,12 +651,12 @@
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "05:46 Shiki has awakened in separate hospital bed, profoundly chakra depleted but physiologically intact even with superficially necrotic skin and extreme cold. His near-black blood samples protected in two sealed vials beside bed. Kadz, gloved, beside him; night duty physician near the door with separate lab and incident record. Recipient6 remains intubated in adjacent ICU room6 receiving ongoing ventilator and S17; anesthetist reports SpO2 96.",
-  "pressure": "Pact reached maximum, overtly corpse-like decomposition and bizarre intact physiology visible to clinicians. Duty physician's internal medical committee notice means exposure of unusual findings is already in motion, but origin and true infection routes remain secret. Severe personal chakra deficit unresolved; treated teenager still ventilator-dependent after bronchial repair.",
-  "situation": "03.10.1283 05:46, REVISED s08.text.021: after Shiki's severe chakra exhaustion and collapse at 04:12, his pact reached maximum STAGE6 instead of formerly written stage5. During unconsciousness between ~04:26 and 05:32 blood samples darkened from dark maroon to almost ink-black with faint red transmitted-light glint, black chakra-responsive filament networks in plasma, red-cell membranes, endothelial glycocalyx and whole organ vascular/interstitial/lymphatic milieu. Surface skin at wrists, clavicles and folds developed genuine limited superficial tissue autolysis/necrosis and soft gray slough while underlying living tissue structurally regenerates fast enough that all motor/sensory/organ function is preserved. Strong close-range scent of metallic iodine, old bandages and grave soil with organic decay, no airborne contagious effect. Shiki's core temperature 29.3–29.4 C, ECG sinus HR52/min and BP108/66; tissue oxygen delivery and coagulation preserved despite normally dangerously hypothermic reading. The pact gives anomalous alternate stability: Shiki appears medically almost cadaveric but consciously awakens with full physiological potential, not full CHAKRA reserves; no preordained disability or loss of intellectual/medical talents. At 04:26 and 05:32 gloved protected staff drew separate samples, recognized darkening blood/non-fibrin filaments, isolated them. Duty doctor had issued bounded internal medical alert to hospital commission and intends to supplement; Kadz refuses uncontrolled handing over samples absent record of chain of custody; doctors are hostile/wary of contagion but DO NOT know hidden contract, its max stage or precise pathways. Shiki's warning to avoid unprotected skin remains a remembered witnessed fact. Kadz asks whether fresh Shiki blood into staff w"
+  "positions": "05:46 Shiki fully conscious on separate hospital observation bed, skin intact and mortuary-pale, no flakes or lesions; severe chakra deficit but body otherwise functional. Kadz in gloves next to bed with blood vials and medical records, duty physician by door with internal notification, recipient6 in separate ICU on S17/ventilation.",
+  "pressure": "Maximum pact stage6 manifested in unnaturally cold intact body and near-black blood, unknown direct-contact risk to staff. Duty doctor already issued medical-notice to hospital commission, not criminal charges. Kadz wishes to protect patient and own clinic control. Patient6 still ventilated on S17.",
+  "situation": "03.10.1283 05:46, amended scene: Shiki wakes after collapse at 04:12 with pact at player-mandated MAX stage6, seven locks still closed, profoundly depleted chakra without functional loss of body capabilities. Blood at 04:26 and 05:32 darkened to near-black, microfilament chakra networks extend in blood, microvasculature, marrow, organ plasma and lymph/interstitium, adequate oxygenation, hemostasis and cellular metabolic function. Core body temp 29.3-29.4 C, 52/min sinus, BP108/66, preserved circulation/cognition. Skin appears corpse-gray and cold but COMPLETELY INTACT: no epidermal slough, peeling, necrotic patches or tissue fragments and no biological evidence of superficial necrosis; earlier such detail was explicitly RETCONNED by player. Scent in face-to-face proximity iron/iodine/old bandages/grave soil, no infectious aerosols. Specific direct bare skin-skin and fresh blood into wound/mucosa contagion possible, unproven to hospital doctors. Clinicians only saw remarkable blood tests and low temperature with intact skin; duty doctor issued internal hospital biomedical incident notice, NO formal legal accusation or criminal investigation known. Kadz controlling sample transfer chain of custody. Earlier 04:25 deltoid isolated donor biopsy becomes ischemic after chakra stopped, no assimilation. Recipient6 still intubated/sedated, on ordinary S17 and ventilator, SpO2 ~96 on decreased O2, no new bronchial casts, weak diaphragm. Clinicians remain autonomous and can follow reports. Kadz asks Shiki whether blood exposure through open wound is dangerous."
  },
  "shiki": {
-  "body": "05:46 03.10.1283 conscious after prolonged chakra collapse; no restoration of spent chakra, but preserved physical strength/movement/medical and cognitive potential. PACT MAXIMUM STAGE6: persistent true superficial autolysis and gray-black corpse-like epidermal slough (not deep disability), function-preserving living structural counterregeneration, core temp 29.3–29.4 C HR52 sinus BP108/66; full perfusion and oxygen delivery by almost-black ink-dark blood with chakra filaments through plasma, microvessels, marrow, organ fluids and lymph. Seen by NPCs as rotting, extremely cold alive body, nearby smell of iodine, iron, old dressings and grave earth. Direct bare living skin contact potentially conveys pact disease; fresh blood dangerous when directly in another's open wound/mucosa. No object/air/odor transmission. Seven seals remain closed, ability ranks unchanged. Former patient6 biopsy remains nonvascularized/ischemic under healed left ",
+  "body": "05:46 03.10.1283 conscious, still severely chakra depleted, otherwise fully functional and physically competent at max pact STAGE6. Intact cold pale-gray skin no peeling, no spots, no scabs, no flakes, no visible necrosis. Core 29.3-29.4C, HR52 sinus BP108/66; near-black functional blood, chakra-filament networks across circulation/interstitial/lymph and organs, normal oxygen delivery, cognition, muscles, healing capacity. Direct bare skin to bare living skin, fresh blood to open wound/mucosa potentially contagious only; not through clothing, gloves, dry blood, air, smell, or objects. Near scent iron/iodine/old bandages/grave soil. Seven locks closed. Tiny ischemic unassimilated bronchial biopsy still in left deltoid.",
   "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -684,7 +679,7 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "cb59728a4501a0130d7ffcb4b2daf5c4ad9bb640",
+  "sha": "8fad1eb327cde1afc9d7a0af4b0f06c38e4d7079",
   "turn": "s08.text.021"
  },
  "wiki": {

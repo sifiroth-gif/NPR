@@ -9,7 +9,7 @@
 - campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json
 
 ## Тело сейчас
-- 05:46 03.10.1283 conscious after prolonged chakra collapse; no restoration of spent chakra, but preserved physical strength/movement/medical and cognitive potential. PACT MAXIMUM STAGE6: persistent true superficial autolysis and gray-black corpse-like epidermal slough (not deep disability), function-preserving living structural counterregeneration, core temp 29.3–29.4 C HR52 sinus BP108/66; full perfusion and oxygen delivery by almost-black ink-dark blood with chakra filaments through plasma, microvessels, marrow, organ fluids and lymph. Seen by NPCs as rotting, extremely cold alive body, nearby smell of iodine, iron, old dressings and grave earth. Direct bare living skin contact potentially conveys pact disease; fresh blood dangerous when directly in another's open wound/mucosa. No object/air/odor transmission. Seven seals remain closed, ability ranks unchanged. Former patient6 biopsy remains nonvascularized/ischemic under healed left deltoid and not genomically assimilated.
+- 05:46 03.10.1283 conscious, still severely chakra depleted, otherwise fully functional and physically competent at max pact STAGE6. Intact cold pale-gray skin no peeling, no spots, no scabs, no flakes, no visible necrosis. Core 29.3-29.4C, HR52 sinus BP108/66; near-black functional blood, chakra-filament networks across circulation/interstitial/lymph and organs, normal oxygen delivery, cognition, muscles, healing capacity. Direct bare skin to bare living skin, fresh blood to open wound/mucosa potentially contagious only; not through clothing, gloves, dry blood, air, smell, or objects. Near scent iron/iodine/old bandages/grave soil. Seven locks closed. Tiny ischemic unassimilated bronchial biopsy still in left deltoid.
 
 ## Внешность
 - 20 лет, дзёнин Кусы, худощавый после договора, светлые холодные глаза, длинные серебристо-белые волосы, тени у глаз, на правом предплечье кольца печати и корневидные линии, тёмные поверхностные сосуды. С 02.10.1283 НОВЫЙ ЕДИНСТВЕННЫЙ АКТУАЛЬНЫЙ КОСТЮМ по авторскому изображению 2851.png: угольно-чёрный глубокий капюшон, многослойная тиснёная пелерина на плечах, высокий чёрный застёгнутый ворот, длинная опрятная многослойная роба с разрезами, украшение на спине в виде растительной вышивки и кисти, широкий ремень с личной металлической пластиной, медицинские сумки/чехлы, сенбоны и хирургические инструменты, тёмные перчатки и обмотки запястий, штаны и сандалии. Обе области предплечий относительно открыты для демонстрации меток и работы медика. Старый костюм отменён.
@@ -53,34 +53,5 @@
 ## Немера
 - Прямое уточнение игрока: односторонний сенсорный мост session-005 включал ВСЕ ощущения Шики, в том числе Нулевой Геном. В s07.text.025 доступ явно открыт/подтверждён на время опыта, Немера была непосредственным наблюдателем. После исследования по заявке Шики закрыта только ветвь Нулевого Генома, остальные чувства и смысловая связь остались; исполнительного контроля нет.
 
-## Chakra
-- value: 
-- at: 0006-10-03T05:46:00
-- locked_until: 0006-10-03T06:12:00
-- state: пусто
-- why: Хранитель: обморок от перерасхода в s08.text.020 (04:12); по канону s08.text.021 чакра сразу не восполняется
-
-## Stats
-- ninjutsu: 4.7
-- taijutsu: 4.5
-- genjutsu: 4.6
-- medical_ninjutsu: 5
-- suiton: 4.8
-- raiton: 4.6
-- futon: 3.8
-- hyoton: 4.5
-- sensory: 4.7
-- zero_genome_mastery: 5
-- shunshin_no_jutsu: 5.5
-- stealth: 5
-- espionage: 4.8
-- field_command: 4.6
-- planning: 4.7
-- physical_strength: 3.8
-- physical_endurance: 4.6
-- chakra_reserves: 4.8
-- chakra_control: 5
-- reflex_and_coordination: 5
-
-## Поправки игрока: 74
+## Поправки игрока: 77
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
