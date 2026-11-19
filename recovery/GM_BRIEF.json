@@ -70,15 +70,15 @@
  },
  "checks": [
   {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4106 знаков (норма до 4000); крупнее всего: cast 1961, scene 1241, threads 436.",
-   "turn": "s08.text.037"
+   "kind": "look",
+   "text": "внешность Шики описана 4 раза (капюшон, волосы, ворот, капюшон). Ужас — в чужом поступке и последствии, а не в облике",
+   "turn": "s08.text.038"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.037",
+  "cursor": "s08.text.038",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -87,11 +87,9 @@
   },
   "focus": [
    "akihiro",
-   "place:44fbe9adb51ae417",
-   "seina",
-   "thread:pact"
+   "place:528c1f0fabb1bc08"
   ],
-  "focus_bytes": 2302,
+  "focus_bytes": 1149,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -118,13 +116,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T07:44:00",
+  "at": "0006-10-03T07:48:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.037",
-  "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-  "time": "07:44"
+  "id": "s08.text.038",
+  "place": "Кусагакуре, частная клиника Кирисавы Сэйны, приёмная",
+  "time": "07:48"
  },
- "digest": "2747c1f09ae11e0d723790e2acb4ea36f94bd75b130364cb7f63b7cc85a6356e",
+ "digest": "c5e8fa954aedce46cd5996963e37c04314706d790fa0150f802d19d0022a4051",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -139,7 +137,7 @@
     "from": "s08.text.007",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s08.text.037"
+    "to": "s08.text.038"
    }
   ],
   "nodes": [],
@@ -152,21 +150,21 @@
  "fight": {
   "chakra": {
    "state": "пусто",
-   "value": 9.2
+   "value": 9.6
   },
   "dice": [
-   15,
-   34,
-   31,
-   48,
-   28,
-   90,
+   43,
+   30,
+   8,
+   76,
    97,
-   23,
-   6,
-   75,
-   86,
-   32
+   72,
+   59,
+   83,
+   49,
+   92,
+   49,
+   22
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -193,44 +191,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:44fbe9adb51ae417",
+    "id": "place:528c1f0fabb1bc08",
     "kind": "place",
-    "label": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "seina",
-    "kind": "npc",
-    "label": "Кирисава Сэйна",
-    "operational_cues": {
-     "source": "recovery/cast/seina.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
-      "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "thread:pact",
-    "kind": "thread",
-    "label": "pact",
-    "operational_cues": {
-     "source": "recovery/HOT.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
-     }
-    },
+    "label": "Кусагакуре, частная клиника Кирисавы Сэйны, приёмная",
     "status": "no_verified_facts"
    }
   ],
@@ -240,7 +203,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 4
+  "total_matched": 2
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -263,7 +226,7 @@
     "step": "примета"
    }
   },
-  "quiet": 0,
+  "quiet": 1,
   "recent": [
    {
     "turn": "s08.text.017",
@@ -275,14 +238,16 @@
    }
   ],
   "rule": "campaigns/shiki/ref/HORROR.md",
-  "worn": []
+  "worn": [
+   "волосы"
+  ]
  },
  "last": {
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 166,
+   "appearances": 167,
    "facets": 4,
    "need": 5,
    "npc": "akihiro",
@@ -482,10 +447,10 @@
     "s08.text.010",
     "s08.text.016",
     "s08.text.022",
-    "s08.text.023",
     "s08.text.027",
     "s08.text.031",
-    "s08.text.037"
+    "s08.text.037",
+    "s08.text.038"
    ],
    "prior_disclosures": [
     {
@@ -496,18 +461,18 @@
      "turn": "s08.text.007"
     },
     {
-     "at": "0006-10-03T07:03:00",
-     "sha256": "585ee0774abc6abb1f820eab4894d692841ef0d7ac26f79472a6a1a8c4902c14",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.031"
-    },
-    {
      "at": "0006-10-03T07:44:00",
-     "sha256": "2273c190c66b72b837e934aaf8bbae86658a0eb3d1b3d8f41c16a754eb00ab6a",
+     "sha256": "3d3482901803c7ca912dcd5faea039fc4a0bf4dbacba00ec92aa91d39a921bdd",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.037"
+    },
+    {
+     "at": "0006-10-03T07:48:00",
+     "sha256": "35174ef49e6b49b253b2bb663df15ed4734a57ad55daa6d23e712f51a4cb0f18",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.038"
     }
    ],
    "profile": {
@@ -527,17 +492,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.037",
-      "what": "Шики попросил отца прекратить разговоры о своей опасности. Акихиро признал право сына на самостоятельность, но не скрывал неприязни к происходящему. Услышал местный слух и решил убрать старые документ"
+      "turn": "s08.text.038",
+      "what": "Шики накинул капюшон, укрыл лицо и пьёт чай в приёмной клиники. Акихиро разбирает старые папки. Рабочий красильни с вероятным ожогом кисти принял Шики за врача и попросил осмотра; Сэйна занята пациент"
      }
     ],
     "memory_file": "archive/npc-memory/akihiro.json",
-    "memory_total": 166,
+    "memory_total": 167,
     "name": "Мугами Акихиро",
     "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-    "seen": "s08.text.037",
+    "seen": "s08.text.038",
     "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
-    "state": "He accepts Shiki's request to stop discussing his altered appearance, but plainly objects to being confused with hostile hospital staff. An unnamed buyer's gossip about a long-haired frightening healer alarms him; he independently decides to move old pharmacy records from shared storeroom to restricted custody, and will inform Nao later.",
+    "state": "07:48 разбирает старые аптечные документы, одна накладная была подшита не туда. Видит сына с надетым капюшоном и чаем в приёмной; затем зовёт Сэйну для рабочего с ожогом, без прежних разговоров о Договоре.",
     "status": "present_profile",
     "tier": "deep",
     "voice": "Сдержанная речь, срыв при волнении",
@@ -548,15 +513,15 @@
  },
  "recent_turns": [
   {
-   "id": "s08.text.037",
-   "line": "Шики попросил отца прекратить разговоры о своей опасности. Акихиро признал право сына на самостоятельность, но не скрывал неприязни к происходящему. Услышал местный слух и решил убрать старые документы о поставках из общей кладовой."
+   "id": "s08.text.038",
+   "line": "Шики накинул капюшон, укрыл лицо и пьёт чай в приёмной клиники. Акихиро разбирает старые папки. Рабочий красильни с вероятным ожогом кисти принял Шики за врача и попросил осмотра; Сэйна занята пациентами."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "07:44 Shiki alone in Seina's private office, full gear and covered skin. Akihiro left toward stockroom, intends to find and secure old pharmacy supply records before approaching Nao; Seina attending patients in outer area. Two private dated blood samples in Seina's locked cabinet.",
-  "pressure": "Vague rumor already circulating near clinic; father protects family and clinic records through his own means and leaves body discussion at player's request. No credible source or larger leak proven.",
-  "situation": "07:40–07:44. Shiki explicitly tells Akihiro Seina will conduct strictly private tests, admits the Pact can surprise him, and requests no more questioning on his supposed threat to others. Akihiro stops discussing Shiki's body, but rejects being equated with hospital staff who wanted to exclude him. In reception an unnamed buyer brings vague rumor about Shiki as strange long-haired clinic doctor; identity and rumor channel unverified. Akihiro refuses gossip and resolves to secure older medicine delivery ledgers from common storage today, fearing repeat of previously forged requisitions. Shiki remains in Seina's office, with no new user actions. No biological samples moved, no infection, no seals changed."
+  "positions": "07:48 Шики у столика приёмной с горячим чаем, капюшон надет, лицо в тени, перчатки закрывают пальцы. Рабочий с поражённой рукой рядом и ожидает ответа. Акихиро у перевязочной, Сэйна внутри с пациентами; аптечные папки на конторке.",
+  "pressure": "Практическое последствие маскировки: незнакомый раненый не узнаёт пугающую внешность Шики и обращается к нему как к вероятному врачу; свободного решения об осмотре или отказе нет.",
+  "situation": "07:46–07:48. Shiki недоволен быстрыми слухами и ложным приписыванием работы в клинике, выходит из кабинета Сэйны, надевает капюшон поверх формы, скрывая лицо и белые волосы, заваривает чай у окна приёмной. Из кладовой возвращается Акихиро, сортирует собственные старые аптечные бумаги. Неизвестный рабочий красильни приходит с мокрым рукавом, болезненной кистью после опрокинутого чана с кипятком и просит Шики осмотреть его, заметив пояс медика. Шики ещё не ответил; Сэйна из перевязочной просит подготовить салфетки."
  },
  "shiki": {
   "body": "Current maximal Pact stage6 and physical health unchanged: intact gray corpse-cold skin beneath bandages, near black blood, no epidermal necrosis or debris, full purposeful function but still very depleted chakra. VISIBLE CHAKRA IS NOW BLACK (not blue) for every school including safe medical ninjutsu; color is not independently harmful or infectious and its outward ominousness may frighten witnesses; there has been no chakra manifestation in this turn.",
@@ -570,9 +535,9 @@
    "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
    "source": "archive/session-008-turns.jsonl"
   },
-  "s08.text.037": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:40.**\n\n*Кусагакуре. Частный врачебный кабинет Кирисавы Сэйны.*\n\n— Отец, я попросил Сэйну проводить анализы секретно. И да, если так можно сказать, то предполагаемый сюрприз. Но прошу, давай меньше разговоров об этом. Я уже наслушался про то, что меня нельзя подпускать к людям.\n\nАкихиро выслушал его до конца.\n\nНа лице отца ещё оставалось выражение, возникшее при первом взгляде на изменившегося сына. Но он больше не рассматривал ни его шею, ни обмотки, ни руки.\n\n— Ладно.\n\nОн взял со стола упавшую ранее папку, пр\n[... sou…",
-   "player": "Отец, я попросил сэйну проводить анализы секретно. И да, если так можно сказать, то предполагаемый сюрприз. Но прошу давай меньше разговоров об этом, я уже наслушался про то что меня нельзя подпускать к людям.",
+  "s08.text.038": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:46.**\n\n*Кусагакуре. Частный врачебный кабинет Кирисавы Сэйны.*\n\n— Быстро слухи ползут, даже место работы сменили уже, — пробормотал Шики.\n\nЗа стеной продолжал ворчать Акихиро. Сначала послышался стук выдвигаемых ящиков, потом тяжёлый скрип шкафа.\n\nШики поднялся, вышел из кабинета наставницы и накинул капюшон.\n\nТёмная ткань скрыла белые волосы и большую часть лица. Высокий ворот закрывал нижнюю половину. Из-под рукавов виднелись только чёрные перчатки, плотно охватывавшие пальцы.\n\nВ приёмной стоял старый медный\n[... sou…",
+   "player": "#Себе под нос# быстро слухи ползут, даже место работы сменили уже. #встаю иду в приемную накидываю капюшон что бы приходящие не видели лица и кожи, делаю себе чай#",
    "source": "archive/session-008-turns.jsonl"
   }
  },
@@ -582,8 +547,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8821c6ce8e448b0d2b62e893e6d84358129428f2",
-  "turn": "s08.text.037"
+  "sha": "0e5932d3041a9498024a185d34d1bfc8dc816a22",
+  "turn": "s08.text.038"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -599,7 +564,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 31.0,
+    "minutes": 27.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -610,7 +575,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним.",
-    "minutes": 106.0,
+    "minutes": 102.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",

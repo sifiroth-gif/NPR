@@ -144,3 +144,4 @@
 - Кусагакуре, подземное хранилище В-7 · `places/kusagakure-podzemnoe-khranilishche-v-7` · 1 ход(ов), s06–s06
 - Кусагакуре, В-7 · `places/kusagakure-v-7` · 1 ход(ов), s06–s06
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
+- Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 1 ход(ов), s08–s08
