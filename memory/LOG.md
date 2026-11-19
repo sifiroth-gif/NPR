@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.050: линия `order`
 - s08.text.049: линия `order`
 - s08.text.047: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), линия `order`
 - s08.text.046: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
@@ -54,4 +55,3 @@
 - s07.text.031: Аракава Дзюн (`npc/arakawa`)
 - s07.text.030: Аракава Дзюн (`npc/arakawa`), поправки игрока: 1
 - s07.text.029: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`
-- s07.text.028: Аракава Дзюн (`npc/arakawa`), линия `arakawa_treatment`

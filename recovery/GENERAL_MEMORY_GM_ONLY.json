@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.049",
+  "cursor": "s08.text.050",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -330,23 +330,6 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
-      ]
-    },
-    "clock:home_intrusion": {
-      "aliases": [
-        "clock:home intrusion",
-        "home intrusion",
-        "home_intrusion"
-      ],
-      "facts": [],
-      "id": "clock:home_intrusion",
-      "kind": "clock",
-      "label": "home intrusion",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.049"
       ]
     },
     "clock:shiki_blood_disposal_request": {
@@ -1481,6 +1464,24 @@
       "sources": [
         "s03.text.029",
         "s03.text.035"
+      ]
+    },
+    "place:0580c495b145678c": {
+      "aliases": [
+        "place:0580c495b145678c",
+        "Кусагакуре, боковой переулок у дома Мугами Шики",
+        "Кусагакуре",
+        "боковой переулок у дома Мугами Шики"
+      ],
+      "facts": [],
+      "id": "place:0580c495b145678c",
+      "kind": "place",
+      "label": "Кусагакуре, боковой переулок у дома Мугами Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.050"
       ]
     },
     "place:05fe7ba0295f8ea0": {
@@ -7584,11 +7585,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "08:54 Шики перехватил троих проникших на территорию его дома. Их мотив и заказчик не установлены; один невредимый сдавшийся может отвечать, тяжело раненый вооружённый истекает кровью, третий оглушён рядом с закрытым железом окованным ящиком, извлечённым из хозпристройки. Связь с ранее неизвестной цепью приказов не доказана."
+          "state": "Утром 03.10 у дома Шики двое задержанных сообщили как неподтверждённые показания: целью был железом окованный ящик в сарае, оглушённый носил план двора с крестом на ящике, посредник заранее знал, что Шики до полудня будет в госпитале. Ни заказчик, ни канал сведений не установлены."
         }
       ],
       "sources": [
-        "s08.text.049"
+        "s08.text.050"
       ]
     },
     "thread:pact": {
@@ -8033,5 +8034,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 598
+  "source_turns_indexed": 599
 }
