@@ -70,15 +70,15 @@
  },
  "checks": [
   {
-   "kind": "look",
-   "text": "внешность Шики описана 4 раза (капюшон, волосы, ворот, капюшон). Ужас — в чужом поступке и последствии, а не в облике",
-   "turn": "s08.text.038"
+   "kind": "soma",
+   "text": "типовые реакции тела: замер, сглотнул, отступил. Замени одним поступком",
+   "turn": "s08.text.039"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.038",
+  "cursor": "s08.text.039",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -87,9 +87,10 @@
   },
   "focus": [
    "akihiro",
+   "seina",
    "place:528c1f0fabb1bc08"
   ],
-  "focus_bytes": 1149,
+  "focus_bytes": 1874,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -116,13 +117,13 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T07:48:00",
+  "at": "0006-10-03T07:49:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.038",
+  "id": "s08.text.039",
   "place": "Кусагакуре, частная клиника Кирисавы Сэйны, приёмная",
-  "time": "07:48"
+  "time": "07:49"
  },
- "digest": "c5e8fa954aedce46cd5996963e37c04314706d790fa0150f802d19d0022a4051",
+ "digest": "ba18eb7e2b0ac011a0361141e35c34abdee5eb315e1fc3aa2a0a584559901627",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -132,6 +133,13 @@
  },
  "evidence_graph": {
   "edges": [
+   {
+    "actor": "seina",
+    "from": "s08.text.031",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s08.text.039"
+   },
    {
     "actor": "akihiro",
     "from": "s08.text.007",
@@ -145,26 +153,26 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Мугами Акихиро — слышал(а) с s05.text.030."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Кирисава Сэйна — слышал(а) с s05.text.030; Мугами Акихиро — слышал(а) с s05.text.030."
  ],
  "fight": {
   "chakra": {
    "state": "пусто",
-   "value": 9.6
+   "value": 9.7
   },
   "dice": [
-   43,
-   30,
-   8,
-   76,
-   97,
-   72,
-   59,
-   83,
-   49,
-   92,
-   49,
-   22
+   11,
+   22,
+   3,
+   98,
+   10,
+   50,
+   9,
+   53,
+   37,
+   79,
+   28,
+   24
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -187,6 +195,19 @@
     }
    },
    {
+    "facts": [],
+    "id": "seina",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/seina.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
+      "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета"
+     }
+    }
+   },
+   {
     "channels": [
      "scene_anchor"
     ],
@@ -203,7 +224,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 2
+  "total_matched": 3
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -224,9 +245,17 @@
     "reads": "Слухи и прежние поддельные распоряжения способны навредить частной практике и семье независимо от реального контактного риска.",
     "stage": 1,
     "step": "примета"
+   },
+   "seina": {
+    "does": "Records the hypothesis as attributed, locks samples, refuses technique stress test, and answers Akihiro's supply question from private office.",
+    "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
+    "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
+    "reads": "She must distinguish observation from explanation and maintain both patient confidentiality and ordinary clinic function; no evidence for a new intrusion or sample request.",
+    "stage": 2,
+    "step": "пересмотр"
    }
   },
-  "quiet": 1,
+  "quiet": 2,
   "recent": [
    {
     "turn": "s08.text.017",
@@ -239,7 +268,8 @@
   ],
   "rule": "campaigns/shiki/ref/HORROR.md",
   "worn": [
-   "волосы"
+   "волосы",
+   "капюшон"
   ]
  },
  "last": {
@@ -247,7 +277,7 @@
  },
  "needs_profile": [
   {
-   "appearances": 167,
+   "appearances": 168,
    "facets": 4,
    "need": 5,
    "npc": "akihiro",
@@ -259,6 +289,7 @@
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
+   "seina",
    "akihiro"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
@@ -469,7 +500,7 @@
     },
     {
      "at": "0006-10-03T07:48:00",
-     "sha256": "35174ef49e6b49b253b2bb663df15ed4734a57ad55daa6d23e712f51a4cb0f18",
+     "sha256": "0a9607933ce119c41be1f0242cc48b8dc0443a86cf9d006d788b24fd1051bebf",
      "source": "archive/session-008-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s08.text.038"
@@ -492,15 +523,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.038",
-      "what": "Шики накинул капюшон, укрыл лицо и пьёт чай в приёмной клиники. Акихиро разбирает старые папки. Рабочий красильни с вероятным ожогом кисти принял Шики за врача и попросил осмотра; Сэйна занята пациент"
+      "turn": "s08.text.039",
+      "what": "Шики открыл обожжённому красильщику часть лица и предложил выбор. Рабочий испугался его облика, но ради сохранения руки прямо согласился на осмотр Шики. Сэйна уступила место, не прикасаясь к руке паци"
      }
     ],
     "memory_file": "archive/npc-memory/akihiro.json",
-    "memory_total": 167,
+    "memory_total": 168,
     "name": "Мугами Акихиро",
     "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-    "seen": "s08.text.038",
+    "seen": "s08.text.039",
     "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
     "state": "07:48 разбирает старые аптечные документы, одна накладная была подшита не туда. Видит сына с надетым капюшоном и чаем в приёмной; затем зовёт Сэйну для рабочего с ожогом, без прежних разговоров о Договоре.",
     "status": "present_profile",
@@ -509,19 +540,139 @@
     "wants": "Сохранить спокойствие семьи и работу клиники"
    },
    "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "seina": {
+   "alignment": {
+    "breaking_point": "При угрозе пациентам может нарушить запрет властей",
+    "code": "NG",
+    "line": "Не допускает неосмотрительного вмешательства в собственной клинике",
+    "order": "Медицина и личный профессиональный кодекс важнее приказов"
+   },
+   "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "against_shiki": "её заключение описывает его кровь и тело — второй документ о Шики уйдёт в чужие руки",
+      "due": "0006-10-03T16:00:00",
+      "flaw": "уверена в своей правоте и не спрашивает согласия Шики на то, что считает правильным",
+      "goal": "превратить утечку медицинских данных Шики в дело против Центрального госпиталя",
+      "id": "expose_leak",
+      "if_unopposed": "к вечеру заключение лежит у юриста, а копия — у того, кто платит юристу",
+      "next": "составить письменное заключение о состоянии Шики шестой стадии как доказательство нарушения врачебной тайны и показать его знакомому юристу УВБ",
+      "source_turn": "keeper",
+      "status": "committed"
+     }
+    ],
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
+       "mask": "сухая точность и деловитость там, где ей страшно"
+      },
+      "kind": "mask_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     },
+     {
+      "anchor": {
+       "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
+       "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление"
+      },
+      "kind": "boundary_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
+    "psyche_facets": {
+     "boundary": "не отдаст больного властям без суда; не солжёт пациенту о диагнозе",
+     "contradiction": "защищает врачебную тайну и готова её нарушить, если тайна прикрывает злоупотребление",
+     "decides": "по пациенту и праву: сначала человек на столе, потом закон, учреждение последним",
+     "deep_fear": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
+     "mask": "сухая точность и деловитость там, где ей страшно"
+    },
+    "unclocked_intents": [
+     "expose_leak"
+    ]
+   },
+   "look": {
+    "внешность": "32 года, собранная, усталость врача в спокойном лице"
+   },
+   "prior_disclosure_ids": [
+    "s08.text.031",
+    "s08.text.032",
+    "s08.text.033",
+    "s08.text.037",
+    "s08.text.038",
+    "s08.text.039"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0006-10-03T07:03:00",
+     "sha256": "585ee0774abc6abb1f820eab4894d692841ef0d7ac26f79472a6a1a8c4902c14",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.031"
+    },
+    {
+     "at": "0006-10-03T07:48:00",
+     "sha256": "0a9607933ce119c41be1f0242cc48b8dc0443a86cf9d006d788b24fd1051bebf",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.038"
+    },
+    {
+     "at": "0006-10-03T07:49:00",
+     "sha256": "7b4c538d1f9ab956e8abf2fa3eb494f830afb09afb99e19dc2d9140679d7f3cc",
+     "source": "archive/session-008-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s08.text.039"
+    }
+   ],
+   "profile": {
+    "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути. [давняя запись: сверяй со state]",
+    "fears": "Вред людям кабинета и срыв медицинской работы",
+    "first": "s04.text.065",
+    "inner": {},
+    "knows": [
+     "03.10 06:49 Shiki said his proximity was not dangerous and asked to speak to Seina after her Konoha patient was finished, no explanation of severe appearance yet. While examining patient Keiji, Seina heard his ",
+     "07:18 Shiki tells Seina directly that his overnight Byoton intervention on patient6 entailed chakra exhaustion/blackout and extreme somatic change to ~29C temp and near-black blood with preserved function, that",
+     "03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly pe",
+     "07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; n"
+    ],
+    "knows_ref": "memory/npc/seina.md",
+    "knows_total": 8,
+    "leverage": "Медицинские знания, прошлое с семьёй Мугами",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s08.text.039",
+      "what": "Шики открыл обожжённому красильщику часть лица и предложил выбор. Рабочий испугался его облика, но ради сохранения руки прямо согласился на осмотр Шики. Сэйна уступила место, не прикасаясь к руке паци"
+     }
+    ],
+    "memory_file": "archive/npc-memory/seina.json",
+    "memory_total": 40,
+    "name": "Кирисава Сэйна",
+    "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
+    "seen": "s08.text.039",
+    "stance": "На текущем ходе не видела Шики, реакция ещё впереди [давняя запись: сверяй со state]",
+    "state": "07:48 продолжает приём пациентов, по известию о новом пострадавшем с горячей водой просит Акихиро подготовить чистые салфетки. Ожог ещё не осматривала.",
+    "status": "present_profile",
+    "tier": "deep",
+    "voice": "Сдержанная точная медицинская речь",
+    "wants": "Поддерживать независимую медицинскую практику"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   }
  },
  "recent_turns": [
   {
-   "id": "s08.text.038",
-   "line": "Шики накинул капюшон, укрыл лицо и пьёт чай в приёмной клиники. Акихиро разбирает старые папки. Рабочий красильни с вероятным ожогом кисти принял Шики за врача и попросил осмотра; Сэйна занята пациентами."
+   "id": "s08.text.039",
+   "line": "Шики открыл обожжённому красильщику часть лица и предложил выбор. Рабочий испугался его облика, но ради сохранения руки прямо согласился на осмотр Шики. Сэйна уступила место, не прикасаясь к руке пациента."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "07:48 Шики у столика приёмной с горячим чаем, капюшон надет, лицо в тени, перчатки закрывают пальцы. Рабочий с поражённой рукой рядом и ожидает ответа. Акихиро у перевязочной, Сэйна внутри с пациентами; аптечные папки на конторке.",
-  "pressure": "Практическое последствие маскировки: незнакомый раненый не узнаёт пугающую внешность Шики и обращается к нему как к вероятному врачу; свободного решения об осмотре или отказе нет.",
-  "situation": "07:46–07:48. Shiki недоволен быстрыми слухами и ложным приписыванием работы в клинике, выходит из кабинета Сэйны, надевает капюшон поверх формы, скрывая лицо и белые волосы, заваривает чай у окна приёмной. Из кладовой возвращается Акихиро, сортирует собственные старые аптечные бумаги. Неизвестный рабочий красильни приходит с мокрым рукавом, болезненной кистью после опрокинутого чана с кипятком и просит Шики осмотреть его, заметив пояс медика. Шики ещё не ответил; Сэйна из перевязочной просит подготовить салфетки."
+  "positions": "07:49 clinic reception: Shiki with hood up at window table and cooling tea; an unnamed 23-year-old dyeworks worker holds up a wet and painful right forearm/hand with exposed erythema near sleeve cuff, waiting for Shiki's answer. Seina standing by treatment table. Two bystanders in waiting room; father Akihiro nearby in supply area.",
+  "pressure": "Worker's fear of Shiki is genuine, but the threat of losing wage labor from a hand injury drives him to accept care. No forced test or player treatment chosen.",
+  "situation": "07:49. Shiki turns his partly hooded face toward the scalded dyeworks laborer and asks whether he wants Shiki to examine his hand. The 23-year-old man recoils at the unusual face yet suffers pain and fears losing work if hand use declines; he explicitly consents to Shiki's examination, with the physician's choice still up to Shiki. Seina appears from treatment room with tools, cautions against ripping stuck wet sleeve fabric, and yields a space by exam table. No one has yet touched the patient's burned skin or used chakra."
  },
  "shiki": {
   "body": "Current maximal Pact stage6 and physical health unchanged: intact gray corpse-cold skin beneath bandages, near black blood, no epidermal necrosis or debris, full purposeful function but still very depleted chakra. VISIBLE CHAKRA IS NOW BLACK (not blue) for every school including safe medical ninjutsu; color is not independently harmful or infectious and its outward ominousness may frighten witnesses; there has been no chakra manifestation in this turn.",
@@ -530,14 +681,14 @@
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
  "source_passages": {
-  "s08.text.007": {
-   "gm_excerpt": "*Вторник, 3 октября 1283 года. 02:40–02:54.*\n\n*Центральный госпиталь Кусагакуре. Палата № 6.*\n\n— Я начну регенерацию, аккуратно там, где смогу без риска, — сказал Шики.\n\n**Кадзиура Сатору** поднялся со стула. При этих словах его взгляд на мгновение задержался на руках Шики, а пальцы сильнее сжали край истории болезни.\n\n— Покажите, какие участки отвечают, — произнёс он. — Я буду следить за вентиляцией и кровотечением.\n\nОн отступил к монитору и назвал анестезиологу прежние показатели, чтобы тот записал их до вмешательства.\n\nМедицинская чакра изме\n[... sou…",
-   "player": "Я начну регенерацию, аккуратно там где смогу без риска #делаю то что заявил и пожалуйста более прозрачно показывай кто что говорит#",
+  "s08.text.031": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:49.**\n\n*Кусагакуре. Врачебный кабинет Кирисавы Сэйны.*\n\n— Не опасно. Я подожду, пока вы закончите. Поговорить нужно.\n\nСэйна внимательно посмотрела на Шики.\n\n— Хорошо. Но к тебе я пока прикасаться не буду.\n\nОна вернулась к Кэйдзи, пододвинула табурет к смотровой кушетке и указала на его левую ногу.\n\nШики обратился к старому знакомому:\n\n— Кэйдзи, а пока я жду, расскажешь, что в мире творится?\n\n— Что в мире?\n\nКэйдзи фыркнул.\n\n— Мы пять лет не виделись, и ты спрашиваешь это так, будто я каждое утро получаю сводку \n[... sou…",
+   "player": "Не опасно. Я подожду пока вы закончите. Поговорить нужно. Кэйдзи, а пока я жду, рассжешь что в мире творится?",
    "source": "archive/session-008-turns.jsonl"
   },
-  "s08.text.038": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:46.**\n\n*Кусагакуре. Частный врачебный кабинет Кирисавы Сэйны.*\n\n— Быстро слухи ползут, даже место работы сменили уже, — пробормотал Шики.\n\nЗа стеной продолжал ворчать Акихиро. Сначала послышался стук выдвигаемых ящиков, потом тяжёлый скрип шкафа.\n\nШики поднялся, вышел из кабинета наставницы и накинул капюшон.\n\nТёмная ткань скрыла белые волосы и большую часть лица. Высокий ворот закрывал нижнюю половину. Из-под рукавов виднелись только чёрные перчатки, плотно охватывавшие пальцы.\n\nВ приёмной стоял старый медный\n[... sou…",
-   "player": "#Себе под нос# быстро слухи ползут, даже место работы сменили уже. #встаю иду в приемную накидываю капюшон что бы приходящие не видели лица и кожи, делаю себе чай#",
+  "s08.text.039": {
+   "gm_excerpt": "**Вторник, 3 октября 1283 года. 07:48.**\n\n*Кусагакуре. Частная клиника Кирисавы Сэйны.*\n\nШики повернулся к рабочему. Свет из окна проник под капюшон, открыв достаточно лица, чтобы тот смог рассмотреть его.\n\n— Могу. Но хотите ли вы этого?\n\nРабочий замер.\n\nОн смотрел на Шики несколько секунд, затем отступил. Пальцы повреждённой руки непроизвольно сжались, и он резко втянул воздух сквозь зубы.\n\n— Что с вашим лицом?..\n\nВопрос вырвался прежде, чем мужчина успел его обдумать.\n\nУ двери перевязочной пожилой пациент поднял голову. Женщина в дорожном пла\n[... sou…",
+   "player": "#поворачиваюсь к нему что бы он смог немного увидеть лицо# могу, но хотите ли вы этого?",
    "source": "archive/session-008-turns.jsonl"
   }
  },
@@ -547,13 +698,14 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "0e5932d3041a9498024a185d34d1bfc8dc816a22",
-  "turn": "s08.text.038"
+  "sha": "dc65c5d73ec042afd07649a13c92876353137518",
+  "turn": "s08.text.039"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "akihiro": "memory/npc/akihiro.md"
+   "akihiro": "memory/npc/akihiro.md",
+   "seina": "memory/npc/seina.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
@@ -564,7 +716,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 27.0,
+    "minutes": 26.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -575,7 +727,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без выдачи проб посторонним.",
-    "minutes": 102.0,
+    "minutes": 101.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",
