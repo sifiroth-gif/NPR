@@ -1,13 +1,8 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.029",
+ "cursor": "s08.text.030",
  "fold_errors": [],
  "checks": [
-  {
-   "turn": "s08.text.016",
-   "kind": "review",
-   "text": "review.sources must refer to exact prior played turns"
-  },
   {
    "turn": "s08.text.016",
    "kind": "review",
@@ -77,6 +72,16 @@
    "turn": "s08.text.028",
    "kind": "review",
    "text": "review.sources must refer to exact prior played turns"
+  },
+  {
+   "turn": "s08.text.030",
+   "kind": "review",
+   "text": "keiji: offscreen knows+ requires knowledge_events with source/channel"
+  },
+  {
+   "turn": "s08.text.030",
+   "kind": "review",
+   "text": "seina: offscreen knows+ requires knowledge_events with source/channel"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

@@ -1,18 +1,18 @@
 # Немера (Невыписанная) · `nemera`
 
 псевдонимы: Немера, Невыписанная
-вид: npc · впервые: s04.text.037 · последний раз: s08.text.029 · сейчас в сцене
+вид: npc · впервые: s04.text.037 · последний раз: s08.text.029 · вне сцены
 
 ## Постоянное
 - не записано. Не выдумывай: открой первый ход персонажа или оставь черту неопределённой; новую черту запиши в d.cast.<id>.facts или look.
 
 ## Характер
-- роль: сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками [recovery/HOT.json]
-- хочет: Выйти. До тех пор изучить тюремщика лучше, чем он изучит её. [recovery/HOT.json]
-- боится: Ничего человеческого. Ей противна неподвижность. [recovery/HOT.json]
-- рычаги: Знает Ситон и Бётон изнутри: они выросли из её давления. Знает, что врачи госпиталя делали с носителями. [recovery/HOT.json]
-- позиция: Противник, который говорит правду, когда правда ей выгодна. [recovery/HOT.json]
-- голос: Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. [recovery/HOT.json]
+- роль: сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками [recovery/cast/nemera.json]
+- хочет: Выйти. До тех пор изучить тюремщика лучше, чем он изучит её. [recovery/cast/nemera.json]
+- боится: Ничего человеческого. Ей противна неподвижность. [recovery/cast/nemera.json]
+- рычаги: Знает Ситон и Бётон изнутри: они выросли из её давления. Знает, что врачи госпиталя делали с носителями. [recovery/cast/nemera.json]
+- позиция: Противник, который говорит правду, когда правда ей выгодна. [recovery/cast/nemera.json]
+- голос: Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. [recovery/cast/nemera.json]
 
 ## Сейчас
 - положение: 06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her former claim of no possibility was a convenient lie/evasion. She did not escape. Her exact motives in staying remain unverifiable; she still wants freedom and retains only previously authorized sensory/semantic access. [s08.text.029]

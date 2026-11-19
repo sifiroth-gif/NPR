@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.029",
+  "cursor": "s08.text.030",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -259,22 +259,6 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
-      ]
-    },
-    "canon:s08.text.029:0": {
-      "aliases": [
-        "canon:s08.text.029:0",
-        "Игрок прямо установил в s08.text.029: при коллапсе Шики в s08.text.020 семь печатей действительно ОСЛАБЛИ вместе с ним, и у Немеры была реальная возможность силой разорвать удержан"
-      ],
-      "facts": [],
-      "id": "canon:s08.text.029:0",
-      "kind": "canon",
-      "label": "Игрок прямо установил в s08.text.029: при коллапсе Шики в s08.text.020 семь печатей действительно ОСЛАБЛИ вместе с ним, и у Немеры была реальная возможность силой разорвать удержан",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s08.text.029"
       ]
     },
     "captive_guard": {
@@ -633,18 +617,10 @@
           "state": "06:06 escorts Shiki to earlier observation room, authorizes private use to change, refuses occupied ICU room6, requests additional cotton cloth wrapping supplies for paid release through accounting. Has seen staff recoil and insulting talk; enforces medical du",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
           "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
-        },
-        {
-          "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
-          "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
-          "state": "06:06 escorts Shiki to earlier observation room, authorizes private use to change, refuses occupied ICU room6, requests additional cotton cloth wrapping supplies for paid release through accounting. Has seen staff recoil and insulting talk; enforces medical du",
-          "wants": "Сохранить жизнь зависимых от лечения больных, контролировать риски, обеспечить работу отделения без вмешательства заказчиков эксперимента"
         }
       ],
       "sources": [
-        "recovery/cast/kadziura_satoru.json",
-        "recovery/HOT.json"
+        "recovery/cast/kadziura_satoru.json"
       ]
     },
     "kage_doppelganger": {
@@ -728,6 +704,31 @@
       ],
       "sources": [
         "recovery/cast/kase.json"
+      ]
+    },
+    "keiji": {
+      "aliases": [
+        "keiji"
+      ],
+      "facts": [],
+      "id": "keiji",
+      "kind": "npc",
+      "label": "keiji",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.030",
+          "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has broken no-jumping advice over years and has not yet had definitive exam. He recognizes Shiki,"
+        },
+        {
+          "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has broken no-jumping advice over years and has not yet had definitive exam. He recognizes Shiki,"
+        }
+      ],
+      "sources": [
+        "recovery/cast/keiji.json",
+        "recovery/HOT.json",
+        "s08.text.030"
       ]
     },
     "kuroda_mayu": {
@@ -1185,19 +1186,10 @@
           "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her former claim of no possibility was a convenient lie/evasion. She did not escape. Her exact mot",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
           "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
-        },
-        {
-          "fears": "Ничего человеческого. Ей противна неподвижность.",
-          "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-          "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her former claim of no possibility was a convenient lie/evasion. She did not escape. Her exact mot",
-          "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "recovery/HOT.json",
-        "s08.text.029"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -2708,6 +2700,24 @@
       "projections": [],
       "sources": [
         "s02.text.141"
+      ]
+    },
+    "place:44fbe9adb51ae417": {
+      "aliases": [
+        "place:44fbe9adb51ae417",
+        "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
+        "Кусагакуре",
+        "частный врачебный кабинет Кирисавы Сэйны"
+      ],
+      "facts": [],
+      "id": "place:44fbe9adb51ae417",
+      "kind": "place",
+      "label": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.030"
       ]
     },
     "place:453c1d7e7dfbb4dc": {
@@ -6972,7 +6982,7 @@
       "id": "seina",
       "kind": "npc",
       "label": "Кирисава Сэйна",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0001-07-07T09:55:00",
@@ -6980,13 +6990,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.110"
-        },
-        {
-          "at": "0006-10-01T23:19:00",
-          "excerpt": "ое доказательство редкого заболевания, которое ему только что запретили исследовать привычным способом. **Кирисава Сэйна:** — Ты существенно ограничиваешь возможности обследования. Она проверила крышку одной из пробирок, поставила её в штатив. — Микроскопия, к",
-          "source": "archive/session-005-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s05.text.034"
         },
         {
           "at": "0006-10-01T23:22:00",
@@ -7001,6 +7004,13 @@
           "source": "archive/session-006-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s06.text.046"
+        },
+        {
+          "at": "0006-10-03T06:49:00",
+          "excerpt": "ова в лицо. Рука опустилась. Кэйдзи медленно сжал пальцы. — Что с тобой случилось? Вопрос прозвучал уже совершенно иначе. *** Из кабинета вышла Кирисава Сэйна. Она держала в руках лист осмотра. Увидев Шики, остановилась так резко, что край бумаги согнулся межд",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.030"
         }
       ],
       "projections": [
@@ -7008,15 +7018,24 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s05.text.035",
+          "seen": "s08.text.030",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
-          "state": "Слышала прямое подтверждение Шики, что последние обычные анализы 18.07.1279 — намеренно, но не знает тайные источники и лабораторию. Закрыла пробы. Ушла к больному после анафилаксии с рвотой и SpO2 90%.",
+          "state": "06:49 after attending to Konoha shinobi Keiji's chronic left knee complaint in her private clinic, Seina sees Shiki arrive visibly radically changed and chooses controlled clinical privacy by closing hallway door. She refuses to touch before Shiki clarifies cu",
           "voice": "Сдержанная точная медицинская речь",
+          "wants": "Поддерживать независимую медицинскую практику"
+        },
+        {
+          "fears": "Вред людям кабинета и срыв медицинской работы",
+          "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
+          "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
+          "state": "06:49 after attending to Konoha shinobi Keiji's chronic left knee complaint in her private clinic, Seina sees Shiki arrive visibly radically changed and chooses controlled clinical privacy by closing hallway door. She refuses to touch before Shiki clarifies cu",
           "wants": "Поддерживать независимую медицинскую практику"
         }
       ],
       "sources": [
-        "recovery/cast/seina.json"
+        "recovery/cast/seina.json",
+        "recovery/HOT.json",
+        "s08.text.030"
       ]
     },
     "senior_orderly": {
@@ -7622,11 +7641,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "03 Oct 06:26 Shiki now submitted and has stamped copies of a formal personal medical confidentiality complaint, sent as two addressed documents to hospital MEDICAL COMMISSION and MEDICAL ETHICS COMMISSION. Complaint concerns unauthorized transmission of his name, Byoton technique label, collapse and blood findings without inform"
+          "state": "06:27 hospital ICU nurse recorded Shiki's exact line 'Контакт кожа к коже опасен, но можете проверить' after he set down a pen while wearing fully covering gloves. Pen and objects do not transmit pact disease; no touch exposure. Shiki paid outstanding invoice for two cotton wraps and collected receipt, then left hospital, carryi"
         }
       ],
       "sources": [
-        "s08.text.029"
+        "s08.text.030"
       ]
     },
     "thread:tetsu": {
@@ -7900,5 +7919,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 579
+  "source_turns_indexed": 580
 }

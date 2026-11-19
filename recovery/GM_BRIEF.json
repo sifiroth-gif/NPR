@@ -6,19 +6,19 @@
  "checks": [
   {
    "kind": "review",
-   "text": "nemera: offscreen knows+ requires knowledge_events with source/channel",
-   "turn": "s08.text.027"
+   "text": "keiji: offscreen knows+ requires knowledge_events with source/channel",
+   "turn": "s08.text.030"
   },
   {
    "kind": "review",
-   "text": "review.sources must refer to exact prior played turns",
-   "turn": "s08.text.028"
+   "text": "seina: offscreen knows+ requires knowledge_events with source/channel",
+   "turn": "s08.text.030"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.029",
+  "cursor": "s08.text.030",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -26,12 +26,15 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "recipient6",
+   "keiji",
+   "seina",
+   "place:44fbe9adb51ae417",
    "nemera",
-   "place:315f1a0b32513edf",
-   "thread:nemera"
+   "thread:nemera",
+   "thread:order",
+   "thread:pact"
   ],
-  "focus_bytes": 2574,
+  "focus_bytes": 3591,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -58,90 +61,40 @@
   }
  },
  "cursor": {
-  "at": "0006-10-03T06:26:00",
+  "at": "0006-10-03T06:49:00",
   "date": "Вторник, 3 октября 1283 года",
-  "id": "s08.text.029",
-  "place": "Кусагакуре, Центральный госпиталь, пост реанимационного отделения",
-  "time": "06:26"
+  "id": "s08.text.030",
+  "place": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
+  "time": "06:49"
  },
- "digest": "892cd0a6e38416c9644c55c970a64af26bc401d9942287e1c06a2d99cbadf583",
+ "digest": "f0b949f7212519dcc82c75fa19d6592a25922babe2a96f2166139d625303db28",
  "entity_memory": {
-  "activated": [
-   {
-    "activated_by": "scene",
-    "facts": [
-     {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
-      "field": "age_at_discovery",
-      "id": "recipient6:identity:age-discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "примерно шестнадцать лет",
-      "visibility": "gm_only"
-     },
-     {
-      "also_sources": [
-       "s05.text.019"
-      ],
-      "authority": "played_source",
-      "field": "discovery",
-      "id": "recipient6:history:discovery:source-s05",
-      "recorded_at": "0006-10-01T22:12:00",
-      "source": "archive/session-005-source.md:L3057",
-      "value": "Обнаружен в закрытом исследовательском корпусе № 3 в узком стальном медицинском контейнере",
-      "visibility": "gm_only"
-     },
-     {
-      "authority": "player_correction",
-      "field": "sex",
-      "id": "recipient6:identity:sex:source-s08",
-      "source": "archive/shiki-canon.jsonl:s08.text.005",
-      "value": "мальчик (мужской пол)",
-      "visibility": "gm_only"
-     }
-    ],
-    "id": "recipient6",
-    "label": "Реципиент № 6",
-    "rule": "No absent demographic or biographical attribute may be guessed.",
-    "status": "source_bound"
-   }
-  ],
+  "activated": [],
   "conflicts": [],
   "rule": "Entity attributes are claims with sources, not prose suggestions.",
   "schema": "npr-entity-ledger/1",
-  "total_activated": 1
+  "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [
-   {
-    "actor": "nemera",
-    "from": "s08.text.027",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s08.text.029"
-   }
-  ],
+  "edges": [],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
  "fight": {
   "dice": [
-   6,
-   24,
-   68,
-   84,
-   81,
+   23,
+   96,
    14,
-   73,
-   62,
-   14,
-   51,
-   16,
-   20
+   17,
+   32,
+   28,
+   71,
+   54,
+   80,
+   13,
+   8,
+   75
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -151,39 +104,27 @@
  "general_memory": {
   "activated": [
    {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [
-     {
-      "field": "age_at_discovery",
-      "source": "archive/session-005-source.md:L3057"
-     },
-     {
-      "field": "discovery",
-      "source": "archive/session-005-source.md:L3057"
-     },
-     {
-      "field": "sex",
-      "source": "archive/shiki-canon.jsonl:s08.text.005"
+    "facts": [],
+    "id": "keiji",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/keiji.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has bro"
      }
-    ],
-    "facts_ref": "entity_memory.activated[recipient6].facts",
-    "id": "recipient6",
-    "kind": "entity",
-    "label": "Реципиент № 6",
-    "status": "verified_facts"
+    }
    },
    {
     "facts": [],
-    "id": "nemera",
+    "id": "seina",
     "kind": "npc",
     "operational_cues": {
-     "source": "recovery/cast/nemera.json",
+     "source": "recovery/cast/seina.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-      "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her form"
+      "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
+      "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета"
      }
     }
    },
@@ -192,9 +133,27 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:315f1a0b32513edf",
+    "id": "place:44fbe9adb51ae417",
     "kind": "place",
-    "label": "Кусагакуре, Центральный госпиталь, пост реанимационного отделения",
+    "label": "Кусагакуре, частный врачебный кабинет Кирисавы Сэйны",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "nemera",
+    "kind": "npc",
+    "label": "Немера (Невыписанная)",
+    "operational_cues": {
+     "source": "recovery/cast/nemera.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
+      "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her form"
+     }
+    },
     "status": "no_verified_facts"
    },
    {
@@ -213,6 +172,40 @@
      }
     },
     "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "thread:order",
+    "kind": "thread",
+    "label": "order",
+    "operational_cues": {
+     "source": "s05.text.017",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Кагэ получил от Шики обвинительные сведения о подменах медицинских и служебных документов и каналах ЦУ. Начал закрытую проверку оригинальных журналов доступа к печатям ка"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "thread:pact",
+    "kind": "thread",
+    "label": "pact",
+    "operational_cues": {
+     "source": "recovery/HOT.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Стадия считается кодом, см. pact. Внешность обыгрывать при каждой близкой встрече и после скачков времени."
+     }
+    },
+    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -221,7 +214,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 4
+  "total_matched": 7
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -234,11 +227,19 @@
  "horror": {
   "due": null,
   "npcs": {
-   "nemera": {
-    "does": "Offers a brief grudging admission without revealing the ultimate motive of staying, no physical escape action attempted.",
-    "lever": "Ничего человеческого. Ей противна неподвижность.",
+   "keiji": {
+    "does": "Stops an attempted greeting handshake, moves back to chair but engages Shiki and recalls his assistance rather than fleeing.",
+    "lever": "",
     "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
-    "reads": "Her ability to deceive about the contours is no longer accepted at face value, which may change future bargaining over imprisonment.",
+    "reads": "This may be the same healer he once trusted, but contact with him now might be biologically dangerous; Seina's reaction reinforces concern.",
+    "stage": 1,
+    "step": "примета"
+   },
+   "seina": {
+    "does": "Closes inner-room door, avoids contact and directly asks Shiki about present safety while telling Keiji to sit.",
+    "lever": "Вред людям кабинета и срыв медицинской работы",
+    "next": "Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
+    "reads": "Her own clinic, established old confidentiality pact and ordinary patient safety require understanding newly increased hazards; she may have to protect both Shiki and waiting Keiji.",
     "stage": 1,
     "step": "примета"
    }
@@ -256,6 +257,7 @@
   ],
   "rule": "campaigns/shiki/ref/HORROR.md",
   "worn": [
+   "волосы",
    "пелерина"
   ]
  },
@@ -264,10 +266,10 @@
  },
  "needs_profile": [
   {
-   "appearances": 36,
+   "appearances": 35,
    "facets": 0,
    "need": 5,
-   "npc": "nemera",
+   "npc": "seina",
    "tier": "deep"
   }
  ],
@@ -276,7 +278,8 @@
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
-   "nemera"
+   "seina",
+   "keiji"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": [
@@ -353,6 +356,23 @@
      "personal_archive"
     ],
     "title": "Цена служебной печати"
+   },
+   {
+    "endings": [
+     "Кэйдзи и Шики узнают друг друга и обмениваются новым знанием, сохраняя личную связь.",
+     "Кэйдзи прерывает контакт из страха, но встреча оставляет последствия.",
+     "Встреча проходит без сближения или важных новых сведений."
+    ],
+    "id": "old_keiji_reunion",
+    "kind": "scene",
+    "limit": {
+     "scenes": 2
+    },
+    "parent": "main",
+    "question": "Как обойдутся друг с другом Шики и Кэйдзи после пяти лет, когда прошлое врачебное доверие сталкивается с нынешней угрозой?",
+    "scenes": 1,
+    "scenes_left": 1,
+    "title": "Пять лет и одно колено"
    }
   ],
   "main": {
@@ -396,86 +416,93 @@
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
-  "nemera": {
+  "keiji": {
+   "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+   "look": {
+    "внешность": "худощавый подросток; светло-каштановые волосы до плеч, узкое лицо, протектор Конохи на шее",
+    "возраст": "около 13",
+    "пол": "мужской"
+   },
+   "prior_disclosures": [],
+   "profile": {
+    "first": "s08.text.030",
+    "knows": [
+     "03.10.1283 06:49 Keiji unexpectedly met Shiki at Kirisawa Seina's private clinic while waiting for assessment of left knee, recognized old medical rescuer from Konoha Chunin exam July 1278, observed his changed"
+    ],
+    "knows_ref": "memory/npc/keiji.md",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s08.text.030",
+      "what": "Шики, предупредив медсестру об опасности кожи, оплатил бинты и ушёл из госпиталя. У наставницы Сэйны он неожиданно встретил Кэйдзи из Конохи — пациента, чьё колено вылечил на экзамене пять лет назад. "
+     }
+    ],
+    "memory_file": "archive/npc-memory/keiji.json",
+    "memory_total": 1,
+    "seen": "s08.text.030",
+    "state": "06:49 visiting Seina in Kusa during escort of medicinal herbal supplies from Konoha, because old left lateral knee ligament injury sometimes hurts after exertion; has broken no-jumping advice over years and has not yet had definitive exam. He recognizes Shiki, recalls unpaid help five years ago, moves to friendly handshake but aborts from odor and corpse-like look; now seated with unresolved anxiety and gratitude.",
+    "status": "present_profile",
+    "tier": "archetypal"
+   }
+  },
+  "seina": {
    "alignment": {
-    "breaking_point": "Реальный шанс свободы может привести к опасной сделке либо неожиданной верности своему слову",
-    "code": "CN",
-    "line": "Не признаёт над собой правосудия тюремщика",
-    "order": "Отрицает право чужой системы замков навсегда определять её бытие"
+    "breaking_point": "При угрозе пациентам может нарушить запрет властей",
+    "code": "NG",
+    "line": "Не допускает неосмотрительного вмешательства в собственной клинике",
+    "order": "Медицина и личный профессиональный кодекс важнее приказов"
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
    "look": {
-    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.nemera.look"
+    "внешность": "32 года, собранная, усталость врача в спокойном лице"
    },
-   "prior_disclosures": [
-    {
-     "at": "0006-10-03T06:18:00",
-     "sha256": "ad221f464f615dc8f9f806c86dc35de314bb743b656c7c6725763a006f9962b7",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.027"
-    },
-    {
-     "at": "0006-10-03T06:19:00",
-     "sha256": "7161939d2bf97229f793fc324930e37df968ad35b0e9cd357170bfb70eac48dd",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.028"
-    },
-    {
-     "at": "0006-10-03T06:26:00",
-     "sha256": "bf6eee7f167e595efa16a4c50b294efe0f53505db28aac89ec5857845f619046",
-     "source": "archive/session-008-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s08.text.029"
-    }
-   ],
+   "prior_disclosures": [],
    "profile": {
-    "fears": "Ничего человеческого. Ей противна неподвижность.",
-    "first": "s04.text.037",
-    "hides": "См. offscreen.truth.nemera.",
+    "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
+    "fears": "Вред людям кабинета и срыв медицинской работы",
+    "first": "s04.text.065",
     "knows": [
-     "Только то, что Шики говорит ей по четвёртому каналу, и механику своей стороны замков",
-     "Не видит, не слышит, памяти не читает",
-     "Имя Шики и то, что он врач",
-     "06:18 Shiki mentally asks Nemera for her opinion of humans after he experienced revulsion and records dispute. Through his pre-existing one-way granted sensory access she has heard staff openly insult and avoid"
+     "Последние обычные лабораторные анализы Шики в ЕЁ частной картотеке датированы 18 июля 1279 г.; последующие записи — преимущественно осмотры, нет данных секретной лаборатории.",
+     "Шики запретил отправлять образцы за пределы частной клиники; Сэйна обязалась соблюдать это ограничение.",
+     "Шики сообщил, что отсутствие свежих обычных анализов намеренно, но не раскрыл причины и тайные источники.",
+     "06:49 03.10 Shiki returned unannounced to Seina's private clinic physically alive and mobile but with significantly worsened corpse-like gray complexion, neck and arms hidden beneath fabric, fingered shinobi gl"
     ],
-    "knows_ref": "memory/npc/nemera.md",
-    "leverage": "Знает Ситон и Бётон изнутри: они выросли из её давления. Знает, что врачи госпиталя делали с носителями.",
+    "knows_ref": "memory/npc/seina.md",
+    "knows_total": 8,
+    "leverage": "Медицинские знания, прошлое с семьёй Мугами",
     "memory": [
      {
       "ch": "present",
-      "turn": "s08.text.029",
-      "what": "Шики указал Немере, что во время обморока она могла сорвать ослабевшие замки; она признала слабость и удобство прежнего ответа. На посту Шики получил квитанцию за обмотки и подал две официальные прете"
+      "turn": "s08.text.030",
+      "what": "Шики, предупредив медсестру об опасности кожи, оплатил бинты и ушёл из госпиталя. У наставницы Сэйны он неожиданно встретил Кэйдзи из Конохи — пациента, чьё колено вылечил на экзамене пять лет назад. "
      }
     ],
-    "memory_file": "archive/npc-memory/nemera.json",
-    "memory_total": 36,
-    "name": "Немера (Невыписанная)",
-    "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-    "seen": "s08.text.029",
-    "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-    "state": "06:26 after Shiki directly contradicts her account of collapse-era seal strength she concedes the seven locks did weaken sufficiently to be forcibly breached and her former claim of no possibility was a convenient lie/evasion. She did not escape. Her exact motives in staying remain unverifiable; she still wants freedom and retains only previously authorized sensory/semantic access.",
+    "memory_file": "archive/npc-memory/seina.json",
+    "memory_total": 35,
+    "name": "Кирисава Сэйна",
+    "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
+    "seen": "s08.text.030",
+    "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
+    "state": "06:49 after attending to Konoha shinobi Keiji's chronic left knee complaint in her private clinic, Seina sees Shiki arrive visibly radically changed and chooses controlled clinical privacy by closing hallway door. She refuses to touch before Shiki clarifies current proximity/contact hazard and does not pretend unaware of prior Pact/Nemera disclosure; Keiji in same inner room.",
     "status": "present_profile",
     "tier": "deep",
-    "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
-    "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
+    "voice": "Сдержанная точная медицинская речь",
+    "wants": "Поддерживать независимую медицинскую практику"
+   }
   }
  },
  "recent_turns": [
   {
-   "id": "s08.text.029",
-   "line": "Шики указал Немере, что во время обморока она могла сорвать ослабевшие замки; она признала слабость и удобство прежнего ответа. На посту Шики получил квитанцию за обмотки и подал две официальные претензии о раскрытии личных медицинских данных."
+   "id": "s08.text.030",
+   "line": "Шики, предупредив медсестру об опасности кожи, оплатил бинты и ушёл из госпиталя. У наставницы Сэйны он неожиданно встретил Кэйдзи из Конохи — пациента, чьё колено вылечил на экзамене пять лет назад. Сэйна заметила новую перемену Шики."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "06:26 Shiki at ICU post, fully dressed and wearing opaque fingered shinobi gloves over cloth wraps; hood down. Nurse behind counter with copy of registered complaint, two stamped receipts/copies now with Shiki, payment invoice for bandages on counter unpaid, remaining ordered packages not delivered. Nemera still behind seven presently intact seals. Kadz elsewhere in ward, night duty physician pursuing registry trace; no police or committee decision yet.",
-  "pressure": "Nemera's dissembling about escape during weakened seals is exposed; Shiki files actual documented confidentiality complaint to TWO commissions, which creates an official route and potential adversarial institutional response. The same nurse complies under visible distaste. Raw Shiki blood locked, access investigation pending.",
-  "situation": "03.10 06:20–06:26: Shiki asserts that during his 04:12-05:46 unconscious depleted interval Nemera was able to tear the seven weakened seals and escape, despite her previous dismissive response. The directly stated player fact is canon: seals WEAKENED while he was unconscious and a forced breakthrough was possible; Nemera CHOSE NOT to breach them and now reluctantly admits her previous 'no opportunity' answer was convenient. No past breach, separate action or seal damage occurred; seals now intact. Shiki dons his own full-finger shinobi gloves over previously wrapped hands, enabling safer physical interaction, leaves observation room with hood DOWN and gear equipped, walks to ICU post, explicitly asks for invoice for used cotton bandages and to write formal complaint. The same hostile unnamed female ICU nurse who brought bandages recoils and moves her cup and sterile tools, gives invoice for two used fabric bandage packs and complaint paperwork. Additional stocked bandages still undelivered. Shiki completes a narrow formal complaint asserting unconsented disclosure of his personal blood/health observations and Byoton-associated notification to hospital medical committee, asking review, confidentiality, audit of recipients and medical ethics review, without unearned accusations/proof of outside leak. Nurse reluctantly registers and stamps TWO addressed submissions, to medical and medical ethics commissions, gives stamped receipts/copies to Shiki and places originals in separate closed office envelopes. Nurse voices personal dislike but completes duties. Invoice remains at post UNPAID (Shiki has not voluntarily handed over funds); additional cloth bandage inventory not delivered. Existing sealed near-black blood tubes remain in separate Kadz office locked section; destruct"
+  "positions": "06:49 Shiki entered old private clinic inner office/waiting room of his teacher Seina in Kusa, standing in complete cloth wraps and full-finger gloves under current dark hood-down combat garb. Seina just closed corridor door and stands beside medical exam desk, wary and inquisitive about hazardous proximity. Keiji Konoha shinobi ~18 seated on waiting chair after examining chronic left knee, recognizes Shiki from 1278; wary of smell/appearance but retains personal gratitude. Night hospital nurse at separate hospital post, Shiki blood sealed in Kadziura office, hospital bills paid, two commission complaint copies with Shiki.",
+  "pressure": "Old friend Keiji and old teacher Seina respond to maximal pact transformation in sharply different ways; Seina needs real warning on new contact risk while Keiji remembers the teenager who treated him without charge, now fears his body. Surprise old acquaintance is unrelated to main order-chain plot absent evidence. Hospital staff separately logged Shiki's contact test taunt and paperwork; no immediate external effects.",
+  "situation": "03.10 06:27–06:49: Shiki smiles at hospital ICU nurse and lays previously used pen on counter, warning that skin-to-skin contact is dangerous and she can test if she wishes. He is wearing full-finger gloves/cloth wraps; no bare contact or infection and pen is not contagious. Nurse openly recoils and moves pen into a small tray without touching, after Shiki pays the invoice for already-used cotton fabric wraps and receives payment receipt. She independently writes his exact warning in the ward journal because she perceived it as provocative; no criminal allegation or test. Shiki says goodbye, leaves central hospital, walks across Kusa to his long-standing private medical mentor Kirisawa Seina's clinic/office, reaches at 06:48-06:49. By coincidence a Konoha shinobi KEIJI (from first Chunin exam in Konoha, age13 in 1278, about18 now) is in the inner waiting room/office, asking Seina about recurring pain in his old left knee after minor escort travel with legitimate medical herb supply cargo through Kusa. Keiji's real source scenes s01.text.049-054 show Shiki treated but did not promise fully mature ligament repair, warned no jumps, refused payment and was thanked 'I will remember'; no assumed outcome exam. Keiji now wears Konoha protector at neck, tied back light-brown shoulder-length hair, narrower older face, no invented promotion rank. He recognizes Shiki after 5 years with surprise and gratitude, offers a hand briefly but withdraws on noticing unnaturally cold corpse-like features/bandaged neck and close-range odor. He asks what happened. Seina emerges carrying his knee examination note, recognizes dramatic difference from pact stage3 she previously saw, stops out of touch range but remains clinically direct, confirms she trained Shiki and tells Keiji to sit. Keiji rec"
  },
  "shiki": {
   "body": "06:26 wearing existing completely wrapped hands/forearms, neck, upper arms and legs beneath tidy dark combat uniform and pelerine, full-finger shinobi gloves added over wrapped hands; hood remains DOWN, white hair visible, stage6 physiology unchanged, body and skills functional but chakra reserves still depleted.",
@@ -483,31 +510,19 @@
   "mental_link": "В 23:26:40 по собственной заявке Шики мысленно спросил Немеру о помощи. Немера ответила согласием консультировать по патологическим границам Бётона и жизнеспособным тканям при добровольной передаче результатов Нулевого Генома; не видит его внутренних клеточных данных автоматически. Существующие сенсорный/смысловой мосты сохранены; замки, управление телом и полномочия не изменились.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {
-  "s08.text.027": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:07.**\n\n*Кусагакуре. Центральный госпиталь. Палата наблюдения.*\n\nЗамок щёлкнул.\n\nШики снял больничный халат, затем перчатки. На столе лежали упаковки хлопчатобумажных бинтов, собственные перевязочные материалы и чёрное снаряжение.\n\nБез одежды изменения тела были заметны гораздо отчётливее.\n\nПод цельной, мертвенно-бледной кожей проступали почти чёрные сосуды. Их ветвления не вполне соответствовали человеческой анатомии: некоторые линии уходили в глубину, некоторые соединялись с семью запирающими контурами на гру\n[... sou…",
-   "player": "#закрываю дверь снимаю больничную одежду и перематываю все открытые участки, руки полностью все предплечье и часть плеча, шею, ноги и надеваю свое снаряжение, капюшон не накидываю, мысленно при этом процессе# Немера, что сейчас скажешь про ",
-   "source": "archive/session-008-turns.jsonl"
-  },
-  "s08.text.029": {
-   "gm_excerpt": "**Вторник, 3 октября 1283 года. 06:20.**\n\n*Центральный госпиталь Кусагакуре.*\n\n— Могла. Ты бы могла сорвать эти замки, ведь они ослабли вместе со мной.\n\nСлова Шики достигли Немеры через смысловой канал.\n\n— Ну что ж. Я просто приму твой ответ.\n\nОн натянул шинобийские перчатки с закрытыми пальцами.\n\nТеперь руки были полностью укрыты тканью и кожей.\n\nВ глубине сознания послышался ответ:\n\n*— Да.*\n\nНемера произнесла это после долгого молчания.\n\n*— Замки ослабли. Я могла попытаться разорвать их, пока ты лежал без сознания. Моё прежнее объяснение было\n[... sou…",
-   "player": "Могла, ты бы могла сорвать эти замки, ведь они ослабли вместе со мной. Ну что ж я просто приму твой ответ #надеваю перчатки шиноби закрывающие пальцы и выхожу из палаты и иду на пост за квитанцией и написать претензию#",
-   "source": "archive/session-008-turns.jsonl"
-  }
- },
- "source_passages_ref": "archive/session-*-turns.jsonl",
- "source_passages_truncated": true,
+ "source_passages": {},
  "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e7f30f8002e1a8efba17ee980edd1ba6fdcdf200",
-  "turn": "s08.text.029"
+  "sha": "7bba51728554abf6f2e0f178448cac3e49c173de",
+  "turn": "s08.text.030"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "nemera": "memory/npc/nemera.md"
+   "keiji": "memory/npc/keiji.md",
+   "seina": "memory/npc/seina.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
@@ -518,7 +533,7 @@
     "due": "0006-10-03T07:05:00",
     "id": "medical_notice_registry_trace",
     "if_unopposed": "Регистрационное отделение выдаёт доступные документальные следы, может подтвердить получателей либо ответить неполнотой регистрации; внешнюю утечку нельзя объявлять доказанной без первичного следа.",
-    "minutes": 39.0,
+    "minutes": 16.0,
     "owner": "Дежурная врач Центрального госпиталя, по письменному распоряжению Кадзиуры",
     "signs": "Дежурная врач ушла с письменным распоряжением проверить маршрут документа через внутреннюю регистрацию",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.medical_notice_registry_trace",
@@ -529,7 +544,7 @@
     "due": "0006-10-03T08:15:00",
     "id": "arakawa_supply_audit",
     "if_unopposed": "Аракава поручит или сам проверит доступные бумаги в рамках служебных полномочий; объективные находки требуют существующих документов.",
-    "minutes": 109.0,
+    "minutes": 86.0,
     "owner": "Аракава Дзюн",
     "signs": "03.10 00:53 Аракава объявил о намерении после оценки риска пропуска назначенной дозы.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.arakawa_supply_audit",
@@ -540,7 +555,7 @@
     "due": "0006-10-03T09:30:00",
     "id": "shiki_blood_disposal_request",
     "if_unopposed": "Документально оформит обоснование допустимого срока/цели хранения или решение об уничтожении; без автоматического уничтожения и без вы…",
-    "minutes": 184.0,
+    "minutes": 161.0,
     "owner": "Кадзиура Сатору",
     "signs": "Кадзиура собственноручно подписал приём запроса и поместил обе пробы в отдельное запертое отделение кабинета",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.shiki_blood_disposal_request",
