@@ -82,13 +82,8 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
                         "due": value.get("due"),
                         "status": "unresolved_actor_or_non_npc_owner",
                     })
-        for key, hidden in (hot.get("_psyche") or {}).items():
-            if key in players or key in ordered or key in urgent:
-                continue
-            active = (hidden or {}).get("intent") or {}
-            if any(isinstance(v, dict) and v.get("status") == "committed"
-                   for v in active.values()):
-                urgent.append(key)
+        # Offscreen NPC plans are listed once, compactly, in GM_BRIEF.agendas
+        # (rpg_engine/will.py); their full facets stay in GM_ONLY.
     ordered.extend(x for x in urgent if x not in ordered)
     keep = ordered[:max_actors]
     result = []
@@ -122,6 +117,8 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
                 intents.append({
                     "id": key, "goal": _text(item.get("goal"), 230),
                     "status": item["status"], "source_turn": item.get("turn"),
+                    **{f: _text(item[f], 230) for f in ("next", "due", "flaw", "against_shiki", "if_unopposed")
+                       if item.get(f)},
                 })
         facets = {k: _text(psyche[k], 220) for k in npc_memory.FACETS
                   if isinstance(psyche.get(k), str) and psyche[k].strip()}
@@ -165,7 +162,8 @@ def view(hot, *, present=(), index=None, max_actors=MAX_ACTORS, include_offscree
                 {"wants": identity["wants"], "status": "motivation_not_committed_action"}
                 if identity.get("wants") and not intents and not relevant else None
             ),
-            "rule": "Character may act cruelly, irrationally or self-protectively. "
+            "rule": "Character may act cruelly, irrationally or self-protectively; plans with a passed due "
+                    "were acted on offscreen. "
                     "Pressure pairs are alternative questions, not decisions. "
                     "NPC knows only their source-bound experience. "
                     "Do not auto-advance or resolve any clock here.",

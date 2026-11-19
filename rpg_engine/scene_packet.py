@@ -64,6 +64,10 @@ def _plot(packet):
 def _actors(packet):
     """Retain identity, actions, knowledge and sources; de-duplicate dynamics."""
     present = packet.get("present_npcs") or {}
+    limits = {node.pop("epistemic_limit", None) for node in present.values() if isinstance(node, dict)}
+    limits.discard(None)
+    if len(limits) == 1 and isinstance(packet.get("guards"), dict):
+        packet["guards"]["npc_epistemic_limit"] = limits.pop()   # одно правило на всех, не копия на каждого
     for actor, node in present.items():
         profile = node.get("profile") or {}
         knows = profile.get("knows")
@@ -118,6 +122,10 @@ def _actors(packet):
         if actor in present:
             if detail:
                 present[actor]["dynamics"] = detail
+                inner = (present[actor].get("profile") or {}).get("inner")
+                if isinstance(inner, dict):   # одна копия психики и планов, а не две
+                    inner.pop("psyche", None)
+                    inner.pop("intent", None)
         else:
             background.append({
                 "id": actor, "identity": entry.get("identity_projection") or {},

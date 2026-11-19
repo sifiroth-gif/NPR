@@ -73,9 +73,9 @@ class LiveSceneTests(unittest.TestCase):
         npc = brief["present_npcs"]["arakawa"]
         self.assertNotIn("competence", npc["profile"])
         self.assertNotIn("limits", npc["profile"])
-        self.assertIn("Hearing or repeating terminology is not understanding",
-                      npc["epistemic_limit"])
-        self.assertIn("bluffing", npc["epistemic_limit"])
+        rule = npc.get("epistemic_limit") or brief["guards"]["npc_epistemic_limit"]
+        self.assertIn("Hearing or repeating terminology is not understanding", rule)
+        self.assertIn("bluffing", rule)
 
     def test_explicit_competence_gaps_and_misconceptions_remain_separate(self):
         npc = self.h["cast"]["arakawa"]

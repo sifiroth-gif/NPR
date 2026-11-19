@@ -58,9 +58,71 @@ def collect(state_dir, source_root=None):
             if "- внешность:" not in text and re.match(r"# [А-ЯЁ][а-яё]+( [А-ЯЁ][а-яё]+)? ·", text):
                 no_look.append(page.stem)
     return {"corrections_per_100_turns": per_session,
+            "pace": pace(state_dir),
+            "npc_autonomy": autonomy(state_dir),
             "control_questions": {k: evaluation.get(k) for k in ("passed", "total", "score")},
             "start_read_bytes": {"total": sum(sizes.values()), "files": sizes},
             "hot_bytes": (state_dir / "recovery/HOT.json").stat().st_size
             if (state_dir / "recovery/HOT.json").is_file() else None,
             "active_events": len(events), "events_without_end": endless,
             "named_npc_without_look": sorted(no_look)}
+
+
+def pace(state_dir, last=20):
+    """Скорость игры: минуты между записанными ходами и длина ответа ведущего.
+
+    Время берётся из истории коммитов ``recovery/TURN.json`` (ход записан —
+    сцена показана игроку). Промежуток включает и чтение игрока, и его
+    раздумье, и подготовку сцены ведущим: это полный цикл хода.
+    """
+    import statistics
+    import subprocess
+    try:
+        out = subprocess.run(["git", "-C", str(state_dir), "log", "--format=%ct %s", f"-{last * 3}",
+                              "--", "recovery/TURN.json"], capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    plays = []
+    for line in out.splitlines():
+        stamp, _, subject = line.partition(" ")
+        match = re.match(r"Play (s\d+\.text\.\d+)", subject)
+        if match:
+            plays.append((int(stamp), match.group(1)))
+    plays = sorted(plays)[-last:]
+    gaps = [(b[0] - a[0]) / 60 for a, b in zip(plays, plays[1:])
+            if a[1][:3] == b[1][:3] and 0 < b[0] - a[0] < 6 * 3600]
+    lengths = {}
+    for path in sorted(Path(state_dir, "archive").glob("session-*-turns.jsonl"))[-1:]:
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            if raw.strip():
+                row = json.loads(raw)
+                lengths[row.get("id")] = len(row.get("gm") or "")
+    chars = [lengths[t] for _, t in plays if t in lengths]
+    if not gaps:
+        return {"turns": len(plays)}
+    gaps.sort()
+    return {"turns": len(plays), "minutes_between_turns_median": round(statistics.median(gaps), 1),
+            "minutes_p90": round(gaps[int(0.9 * (len(gaps) - 1))], 1),
+            "gm_chars_median": int(statistics.median(chars)) if chars else None,
+            "note": "полный цикл: чтение игрока, его заявка и подготовка сцены"}
+
+
+def autonomy(state_dir):
+    """Своя воля NPC по сессиям: сколько ходов меняли планы и чем планы кончались."""
+    by_session = {}
+    for path in sorted(Path(state_dir, "archive/deltas").glob("session-*.jsonl")):
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            if not raw.strip():
+                continue
+            row = json.loads(raw)
+            stats = by_session.setdefault(f"s{_session(row.get('id')):02}",
+                                          {"turns_with_plans": 0, "fulfilled": 0, "abandoned": 0})
+            touched = False
+            for patch in ((row.get("d") or {}).get("cast") or {}).values():
+                for agenda in ((patch or {}).get("intent") or {}).values() if isinstance(patch, dict) else []:
+                    touched = True
+                    status = agenda.get("status") if isinstance(agenda, dict) else None
+                    if status in ("fulfilled", "abandoned"):
+                        stats[status] += 1
+            stats["turns_with_plans"] += touched
+    return by_session

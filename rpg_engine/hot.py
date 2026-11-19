@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint
+from . import continuity_guard, dread, fight, npc_memory, plot, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -55,10 +55,11 @@ CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
 RESOLVED_KEEP = 6
 CALENDAR_AHEAD = 14
-# байт; HOT не должен расти без конца. Запас поднят с 72000 на время перехода
-# к постраничной памяти: сбой проверки теперь виден в CHECKS.json, а не молча
-# останавливает свёртку. Норма после межсессионной чистки — меньше 64 КБ.
+# байт. Единый норматив (19.11.2026): выше HOT_LIMIT свёртка блокируется и пишет
+# сбой в CHECKS.json; рабочая норма — до HOT_NORM. Полная память NPC живёт в вики,
+# HOT держит только текущую сцену, свежие знания и эпизоды.
 HOT_LIMIT = 90000
+HOT_NORM = 80000
 LAST_GM_TAIL = 1500  # знаков последнего ответа в HOT; полный текст — в TURN.json и archive/
 
 # Договор семи запоров: ленивый расчёт по игровому времени (PROGRESSION_RULES.json).
@@ -449,6 +450,7 @@ def apply_turn(hot, turn):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
     npc_memory.apply(hot, turn, inner)
+    will.track(hot, turn, inner)
     dread.after_turn(hot, turn, inner, delta)
     continuity_guard.check_turn(hot, turn)
     refresh(hot)
@@ -658,6 +660,30 @@ def _archive_canon(state_dir, hot):
         hot["canon_older"] = CANON_ARCHIVE
 
 
+KEEPER_FILL = "memory/_curated/state_fill.json"
+
+
+def _keeper_fill(state_dir, hot):
+    """Поля состояния, которые хранитель задаёт один раз (чакра после обморока и т. п.).
+
+    Заполняет только отсутствующее: что ведущий уже записал ходом, не трогает.
+    """
+    path = Path(state_dir) / KEEPER_FILL
+    if not path.is_file():
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError:
+        return
+    for section, fields in data.items():
+        if section.startswith("_") or not isinstance(fields, dict):
+            continue
+        target = hot.setdefault(section, {})
+        for key, value in fields.items():
+            if key not in target:
+                target[key] = value
+
+
 def _load_stats(state_dir, hot):
     """Уровни умений из листа Шики (HOT.shiki.sheet) — для порогов боя."""
     shiki = hot.get("shiki") or {}
@@ -766,6 +792,7 @@ def _read_state(state_dir):
     hot["_horror"] = dict(secret.get("horror") or {})
     hot["_plot"] = dict(secret.get("plot") or {})
     hot["_fight"] = dict(secret.get("fight") or {})
+    hot["_will"] = dict(secret.get("will") or {})
     for key, hidden in hot["_hides"].items():
         if key in hot.get("cast", {}):
             hot["cast"][key]["hides"] = hidden
@@ -783,6 +810,7 @@ def _split_state(hot):
     horror = public.pop("_horror", {})
     plot_state = public.pop("_plot", {})
     fight_state = public.pop("_fight", {})
+    will_state = public.pop("_will", {})
     public.pop("_mem_log", None)
     for key, card in public.get("cast", {}).items():
         if "hides" in card:
@@ -820,7 +848,7 @@ def _split_state(hot):
               "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
               "cursor": public.get("cursor", {}).get("id"), "offscreen": offscreen,
               "cast": hides, "npc_knowledge": npc_knowledge, "psyche": psyche,
-              "checks": checks, "horror": horror, "plot": plot_state, "fight": fight_state,
+              "checks": checks, "horror": horror, "plot": plot_state, "fight": fight_state, "will": will_state,
               "undo": undo}
     return public, secret
 
@@ -1042,8 +1070,13 @@ def fold(state_dir):
     _archive_canon(state_dir, hot)
     _trim_inactive_cast(hot)
     # Замечания плана — текущее состояние, не события: каждая свёртка заменяет прежние.
-    hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") != "plot"]
+    hot["_checks"] = [c for c in hot.get("_checks", []) if c.get("kind") not in ("plot", "will")]
     hot["_checks"].extend(plot.review(hot, applied))
+    hot["_checks"].extend(will.review(hot, applied))
+    # Заготовки хранителя — после ходов: исправление хода (amend) восстанавливает
+    # снимок без них, и прямую правку HOT оно бы стёрло.
+    will.seed(state_dir, hot)
+    _keeper_fill(state_dir, hot)
     _cap_cards(hot)
     _tidy_checks(hot)
     wiki_report = _update_wiki(state_dir, hot, applied)
