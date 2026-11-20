@@ -1,22 +1,24 @@
 {
   "current_focus": [
+    "kabuto",
     "kagen_caravan_driver",
     "kagen_caravan_escort",
     "sound_kagen_junior",
     "sound_kagen_senior",
-    "place:873c00ff45a2785f"
+    "place:27acca5c545fbc5f"
   ],
-  "cursor": "s08.text.102",
+  "cursor": "s08.text.103",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2399,
-  "index_entities": 416,
-  "index_source_records": 647,
-  "indexed_cursor": "s08.text.102",
+  "focus_bytes": 3329,
+  "index_entities": 419,
+  "index_source_records": 648,
+  "indexed_cursor": "s08.text.103",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 7,
-    "npc": 68,
-    "place": 323,
+    "npc": 69,
+    "place": 324,
     "thread": 17
   },
   "missing_critical": [],
@@ -26,6 +28,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.103:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -197,6 +205,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "kabuto",
+      "kind": "npc"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "kadziura_satoru",
       "kind": "npc"
     },
@@ -210,12 +224,6 @@
       "at_1": true,
       "at_5": true,
       "id": "kagen_caravan_driver",
-      "kind": "npc"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "kagen_caravan_escort",
       "kind": "npc"
     },
     {
@@ -466,9 +474,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 73,
-  "self_query_at_5": 73,
-  "self_query_count": 73,
+  "self_query_at_1": 74,
+  "self_query_at_5": 74,
+  "self_query_count": 74,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
