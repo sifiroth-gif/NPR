@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.055: Саске Учиха (`npc/sasuke`)
 - s09.text.054: Саске Учиха (`npc/sasuke`)
 - s09.text.053: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`)
 - s09.text.052: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хагуро (`npc/khaguro`), Саске Учиха (`npc/sasuke`), Хирано (`npc/hirano`)
@@ -60,4 +61,3 @@
 - s08.text.104: Кабуто Якуши (`npc/kabuto`), Возница повозки (`npc/kagen_caravan_driver`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Немера (Невыписанная) (`npc/nemera`), Кирисава Сэйна (`npc/seina`)
 - s08.text.103: Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Возница повозки (`npc/kagen_caravan_driver`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s08.text.102: Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Мориока Хидэаки (`npc/morioka_hideaki`)
-- s08.text.101: Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Возница повозки (`npc/kagen_caravan_driver`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Такаги Рэн (`npc/takagi_ren`)
