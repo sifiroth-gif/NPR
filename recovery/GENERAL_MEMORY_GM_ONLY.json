@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.019",
+  "cursor": "s09.text.020",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -713,7 +713,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.019",
+          "seen": "s09.text.020",
           "state": "Согласился на утреннее исследование кости Кимимаро; отложил архив до завтра, оставил образец и ключ Шики, вышел."
         },
         {
@@ -1625,14 +1625,14 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.019"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения"
+        "Дежурная врач охраняемого отделения",
+        "night_icu_physician"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -1645,7 +1645,7 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s08.text.106",
+          "seen": "s09.text.020",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
           "state": "Около 08:30 ссылалась на канцелярскую регистрацию, скрывая пробел маршрута копии.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -1653,7 +1653,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json"
+        "recovery/cast/night_icu_physician.json",
+        "s09.text.020"
       ]
     },
     "nori": {
@@ -1701,7 +1702,7 @@
           "body": "На радио сперва резко переспросила про Кагэ, после объяснила раздражение из-за обхода канцелярии и обдумала опасность утечки; самообладание не упущено, сама поставила просителя под наблюдение.",
           "fears": "Сокрытие доказательств, использование её имени в служебных бумагах",
           "role": "Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7",
-          "seen": "s08.text.105",
+          "seen": "s09.text.020",
           "stance": "Подозрительна, раздражена отстранением, не желает обсуждать опасные подробности по возможно прослушиваемому радио",
           "state": "03.10 к полудню отстранена после запроса журнала, который пропал; известила Шики лично в 14:17.",
           "voice": "Короткие прямые фразы, низкий усталый хриплый голос",
@@ -1709,7 +1710,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/nori.json"
+        "recovery/cast/nori.json",
+        "s09.text.020"
       ]
     },
     "orderly": {
@@ -1747,7 +1749,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1755,13 +1757,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:43:00",
-          "excerpt": "секунд смотрел на него, затем закрыл папку. **Кабуто Якуши:** — Тогда вопрос о раскрытии имени решён. Орочимару-сама распорядился не сообщать его *до* вашего согласия. Вы согласились. Он снова надел очки. **Кабуто Якуши:** — Кимимаро. Клан Кагуя. Имя прозвучал",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.017"
         },
         {
           "at": "0007-10-09T22:46:00",
@@ -1776,6 +1771,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.019"
+        },
+        {
+          "at": "0007-10-09T22:50:00",
+          "excerpt": "table-row> </table> </box> *** В комнате было тихо. Рядом с рабочим столом стоял запечатанный футляр Кимимаро. Там, за двумя пломбами, хранился материал человека, которого Орочимару считал драгоценным даже после смерти. А в руке Шики теперь находилась наследст",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.020"
         }
       ],
       "projections": [
@@ -1785,8 +1787,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json",
-        "s09.text.019"
+        "recovery/cast/orochimaru.json"
       ]
     },
     "patient_airway": {
@@ -2135,10 +2136,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.019",
+        "s09.text.020",
         "s09.text.016",
         "s09.text.017",
-        "s09.text.018"
+        "s09.text.018",
+        "s09.text.019"
       ]
     },
     "place:07a5417b1774e85e": {
@@ -8074,11 +8076,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.016",
-          "turn": "s09.text.019"
+          "turn": "s09.text.020"
         }
       ],
       "sources": [
-        "s09.text.019"
+        "s09.text.020"
       ]
     },
     "post_second_attacker": {
@@ -8294,8 +8296,7 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6",
-        "s17_recipient_6"
+        "Реципиент № 6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -8327,8 +8328,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json",
-        "s09.text.019"
+        "recovery/cast/s17_recipient_6.json"
       ]
     },
     "sasuke": {
@@ -9548,7 +9548,7 @@
     },
     {
       "from": "possible_sasuke_hair",
-      "source": "s09.text.019",
+      "source": "s09.text.020",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -9562,5 +9562,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 668
+  "source_turns_indexed": 669
 }
