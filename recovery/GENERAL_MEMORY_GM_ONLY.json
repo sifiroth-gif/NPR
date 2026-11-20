@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.100",
+  "cursor": "s08.text.101",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -733,6 +733,56 @@
         "recovery/cast/kage_doppelganger.json"
       ]
     },
+    "kagen_caravan_driver": {
+      "aliases": [
+        "kagen caravan driver",
+        "Возница повозки"
+      ],
+      "facts": [],
+      "id": "kagen_caravan_driver",
+      "kind": "npc",
+      "label": "Возница повозки",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.101"
+        }
+      ],
+      "sources": [
+        "recovery/cast/kagen_caravan_driver.json",
+        "s08.text.101"
+      ]
+    },
+    "kagen_caravan_escort": {
+      "aliases": [
+        "kagen caravan escort",
+        "Сопровождающий повозки"
+      ],
+      "facts": [],
+      "id": "kagen_caravan_escort",
+      "kind": "npc",
+      "label": "Сопровождающий повозки",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0006-10-09T15:51:00",
+          "excerpt": "смотрел на него с явным облегчением. Оно длилось недолго. **Старший шиноби Звука:** — Но если начнёшь складывать печати, я не стану выяснять, что именно ты собирался сделать. За его спиной сопровождающий повозки положил ладонь на прикрытую тканью рукоять оружи",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.101"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s08.text.101"
+        }
+      ],
+      "sources": [
+        "recovery/cast/kagen_caravan_escort.json",
+        "s08.text.101"
+      ]
+    },
     "kase": {
       "aliases": [
         "kase",
@@ -1007,8 +1057,7 @@
     "masked_man": {
       "aliases": [
         "masked man",
-        "Человек в маске",
-        "masked_man"
+        "Человек в маске"
       ],
       "facts": [],
       "id": "masked_man",
@@ -1040,13 +1089,11 @@
       ],
       "projections": [
         {
-          "seen": "s08.text.100"
+          "seen": "s08.text.101"
         }
       ],
       "sources": [
-        "recovery/cast/masked_man.json",
-        "recovery/HOT.json",
-        "s08.text.100"
+        "recovery/cast/masked_man.json"
       ]
     },
     "masked_scout": {
@@ -1446,7 +1493,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s08.text.100",
+          "seen": "s08.text.101",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Выслушала смену приоритета Шики и не стала продолжать разговор об Учихах.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
@@ -1455,7 +1502,7 @@
       ],
       "sources": [
         "recovery/cast/nemera.json",
-        "s08.text.100"
+        "s08.text.101"
       ]
     },
     "night_icu_physician": {
@@ -1986,6 +2033,24 @@
       "projections": [],
       "sources": [
         "s06.text.008"
+      ]
+    },
+    "place:0c883e3bca0b885c": {
+      "aliases": [
+        "place:0c883e3bca0b885c",
+        "Страна Звука, площадка перед воротами монастыря Кагэн",
+        "Страна Звука",
+        "площадка перед воротами монастыря Кагэн"
+      ],
+      "facts": [],
+      "id": "place:0c883e3bca0b885c",
+      "kind": "place",
+      "label": "Страна Звука, площадка перед воротами монастыря Кагэн",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.101"
       ]
     },
     "place:0ce82096081b6913": {
@@ -8094,13 +8159,14 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука"
+        "Младший шиноби Звука",
+        "sound_kagen_junior"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
       "kind": "npc",
       "label": "Младший шиноби Звука",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0006-10-09T15:46:00",
@@ -8108,32 +8174,48 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.100"
+        },
+        {
+          "at": "0006-10-09T15:51:00",
+          "excerpt": "сыпались мелкие камешки. Молодой шиноби поднял голову — и увидел фигуру, спускавшуюся между кедрами. **Младший шиноби Звука:** — Старший. Шики вышел из древесной тени. Обе руки были подняты. Ладони открыты. Он спускался прямо к воротам, не пытаясь спрятаться з",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.101"
         }
       ],
       "projections": [
         {
           "fears": "То, что слышно из нижних помещений ночью.",
           "role": "Младший дозорный у подземных ворот.",
-          "seen": "s08.text.100",
+          "seen": "s08.text.101",
+          "state": "Держит кунай чуть сбоку от Шики, подчиняется старшему.",
           "voice": "Негромко, с тревожной поспешностью.",
+          "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
+        },
+        {
+          "fears": "То, что слышно из нижних помещений ночью.",
+          "role": "Младший дозорный у подземных ворот.",
+          "state": "Держит кунай чуть сбоку от Шики, подчиняется старшему.",
           "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
         }
       ],
       "sources": [
         "recovery/cast/sound_kagen_junior.json",
-        "s08.text.100"
+        "recovery/HOT.json",
+        "s08.text.101"
       ]
     },
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука"
+        "Старший шиноби Звука",
+        "sound_kagen_senior"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
       "kind": "npc",
       "label": "Старший шиноби Звука",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0006-10-09T15:46:00",
@@ -8141,20 +8223,35 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.100"
+        },
+        {
+          "at": "0006-10-09T15:51:00",
+          "excerpt": "убокий капюшон скрывал волосы, но при движении из-под него показались несколько длинных серебристых прядей. **Старший шиноби Звука:** — Не ори. Он вытащил короткий меч. **Старший шиноби Звука:** — И не бросайся вперёд. У младшего пересохло во рту. Незнакомец ш",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.101"
         }
       ],
       "projections": [
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s08.text.100",
+          "seen": "s08.text.101",
+          "state": "Остановил чужака с поднятыми руками, удерживая дистанцию, задаёт вопрос об имени и цели. Внимательно следит за прибывшей повозкой.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
+          "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
+        },
+        {
+          "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
+          "role": "Старший охранник входного узла.",
+          "state": "Остановил чужака с поднятыми руками, удерживая дистанцию, задаёт вопрос об имени и цели. Внимательно следит за прибывшей повозкой.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
         }
       ],
       "sources": [
         "recovery/cast/sound_kagen_senior.json",
-        "s08.text.100"
+        "recovery/HOT.json",
+        "s08.text.101"
       ]
     },
     "stolen_house_plan": {
@@ -8181,7 +8278,8 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн"
+        "Такаги Рэн",
+        "takagi_ren"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -8223,7 +8321,7 @@
           "body": "Средних лет/пожилой офицер с короткой седой бородой, тёмный плащ, резидентская повязка на левом плече и служебная печать на шее, следит за руками Нори",
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-          "seen": "s08.text.098",
+          "seen": "s08.text.101",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
           "state": "Услышал сочувствие Шики о сыне, которого упомянул пленный, но не назвал по имени. Получил две пробирки и велел независимо охранять их и проверить первую у Куроды; отпустил Шики, не предпринимая безнадёжного одиночного преследования.",
           "voice": "Сухие короткие приказы без объяснения мотивов, требовательная прямая речь",
@@ -8231,7 +8329,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json"
+        "recovery/cast/takagi_ren.json",
+        "s08.text.101"
       ]
     },
     "tetsu": {
@@ -8731,8 +8830,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/utsuro.json",
-        "s08.text.100"
+        "recovery/cast/utsuro.json"
       ]
     },
     "v7_crossbowman": {
@@ -8906,11 +9004,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.098"
+          "seen": "s08.text.101"
         }
       ],
       "sources": [
-        "recovery/cast/waterfall_trackers.json"
+        "recovery/cast/waterfall_trackers.json",
+        "s08.text.101"
       ]
     }
   },
@@ -8952,5 +9051,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 645
+  "source_turns_indexed": 646
 }
