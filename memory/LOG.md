@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.097: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), план сюжета
 - s08.text.096: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), поправки игрока: 1
 - s08.text.095: Такаги Рэн (`npc/takagi_ren`), tikhiy_porog_seller (`npc/tikhiy_porog_seller`), waterfall_trackers (`npc/waterfall_trackers`)
 - s08.text.094: Такаги Рэн (`npc/takagi_ren`), Глава Кусагакуре (`npc/kusa_head`), hirano_seiji (`npc/hirano_seiji`), план сюжета, поправки игрока: 1
@@ -56,4 +57,3 @@
 - s08.text.042: Мугами Акихиро (`npc/akihiro`)
 - s08.text.040: Кирисава Сэйна (`npc/seina`)
 - s08.text.038: Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
-- s08.text.037: Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), линия `medical_family`
