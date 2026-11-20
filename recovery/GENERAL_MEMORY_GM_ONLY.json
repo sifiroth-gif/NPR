@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.033",
+  "cursor": "s09.text.035",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -701,7 +701,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 43,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -711,40 +711,40 @@
           "turn": "s01.text.011"
         },
         {
-          "at": "0007-12-15T20:47:00",
-          "excerpt": "живу за счёт вашей деревни. Может, наконец стоит подзаработать. Кабуто посмотрел на него поверх очков. **Кабуто Якуши:** — Есть. И даже несколько. **Кабуто Якуши:** — Официальные Книги Бинго составляют разведывательные ведомства. На чёрном рынке всё проще: час",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.031"
-        },
-        {
-          "at": "0007-12-15T20:50:00",
-          "excerpt": "ены способы связи с посредниками, контрольные знаки и условия расчёта. Ни один из контрактов ещё не был принят новым исполнителем. **Кабуто Якуши:** — Первый хорошо оплачивается. Второй требует точности. Третий, вероятно, ближе к вашим научным интересам. Он пе",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.032"
-        },
-        {
           "at": "0007-12-15T20:54:00",
           "excerpt": "ики забрал три объявления из блокнота Кабуто. **Мугами Шики:** — А эти возьму себе. Посмотрю на досуге. **Кабуто Якуши:** — Пожалуйста. Они действительны до исполнения либо отзыва заказчиком. Контакты посредников указаны. Он убрал блокнот. За дверью прозвучали",
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.033"
+        },
+        {
+          "at": "0007-12-18T18:14:00",
+          "excerpt": "ишёл Кабуто. На предметном столе лежал вытянутый фрагмент кости, закреплённый в прозрачной камере с питательной средой. **Кабуто Якуши:** — Какова устойчивость? Шики показал результаты повторных испытаний. Образец пережил несколько последовательных преобразова",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.034"
+        },
+        {
+          "at": "0007-12-18T18:15:00",
+          "excerpt": "медленно убрал ладонь от деревянного футляра. **Старший у повозки:** — Мугами Шики. Это было утверждение. **Кабуто Якуши:** — Совершенно верно. Человек у колеса перестал возиться с брезентом. Третий поднялся с каменного ограждения. Старший произнёс: **Старший ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.035"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.033",
-          "state": "Начал скрытую проверку снабжения комплекса и распорядился сохранить обычный режим дороги, где 18 декабря ожидаются посредники Кири; приказал раздельно охранять и лечить двух пленных."
+          "seen": "s09.text.035",
+          "state": "Отступил с линии проволок и осмотрел пустой фуин-контейнер; не атаковал."
         },
         {
-          "state": "Начал скрытую проверку снабжения комплекса и распорядился сохранить обычный режим дороги, где 18 декабря ожидаются посредники Кири; приказал раздельно охранять и лечить двух пленных."
+          "state": "Отступил с линии проволок и осмотрел пустой фуин-контейнер; не атаковал."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.033"
+        "s09.text.035"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -1056,6 +1056,27 @@
         "s09.text.026"
       ]
     },
+    "kimimaro_functional_cultures": {
+      "aliases": [
+        "kimimaro functional cultures"
+      ],
+      "facts": [],
+      "id": "kimimaro_functional_cultures",
+      "kind": "item",
+      "label": "kimimaro functional cultures",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki_lab",
+          "since": "s09.text.034",
+          "turn": "s09.text.034"
+        }
+      ],
+      "sources": [
+        "s09.text.034"
+      ]
+    },
     "kiri_anbu_mask": {
       "aliases": [
         "kiri anbu mask"
@@ -1101,8 +1122,7 @@
     "kiri_hunter_man": {
       "aliases": [
         "kiri hunter man",
-        "Мужчина с повязкой из Тумана",
-        "kiri_hunter_man"
+        "Мужчина с повязкой из Тумана"
       ],
       "facts": [],
       "id": "kiri_hunter_man",
@@ -1121,15 +1141,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_man.json",
-        "s09.text.033"
+        "recovery/cast/kiri_hunter_man.json"
       ]
     },
     "kiri_hunter_woman": {
       "aliases": [
         "kiri hunter woman",
-        "Женщина со шрамом из Тумана",
-        "kiri_hunter_woman"
+        "Женщина со шрамом из Тумана"
       ],
       "facts": [],
       "id": "kiri_hunter_woman",
@@ -1148,8 +1166,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_woman.json",
-        "s09.text.033"
+        "recovery/cast/kiri_hunter_woman.json"
       ]
     },
     "kiri_hunters": {
@@ -1171,6 +1188,147 @@
       ],
       "sources": [
         "recovery/cast/kiri_hunters.json"
+      ]
+    },
+    "kiri_transfer_carrier": {
+      "aliases": [
+        "kiri transfer carrier",
+        "kiri_transfer_carrier"
+      ],
+      "facts": [],
+      "id": "kiri_transfer_carrier",
+      "kind": "npc",
+      "label": "kiri_transfer_carrier",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.035",
+          "state": "Открыл пустой железный контейнер, по приказу старшего укрылся за стеной станции."
+        },
+        {
+          "state": "Открыл пустой железный контейнер, по приказу старшего укрылся за стеной станции."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kiri_transfer_carrier.json",
+        "recovery/HOT.json",
+        "s09.text.035"
+      ]
+    },
+    "kiri_transfer_senior": {
+      "aliases": [
+        "kiri transfer senior",
+        "Старший у повозки",
+        "kiri_transfer_senior"
+      ],
+      "facts": [],
+      "id": "kiri_transfer_senior",
+      "kind": "npc",
+      "label": "Старший у повозки",
+      "mention_count": 2,
+      "mentions": [
+        {
+          "at": "0007-12-18T18:14:00",
+          "excerpt": "л в руке небольшой деревянный футляр. Когда с южной стороны показались Шики и Кабуто, старший мужчина посмотрел на них. На мгновение задержал взгляд на одежде Шики. Потом убрал футляр за пояс. **Старший у повозки:** — Вы опоздали. Кабуто остановился в нескольк",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.034"
+        },
+        {
+          "at": "0007-12-18T18:15:00",
+          "excerpt": "на открытый участок шеи, на лицо, на руки в перчатках. Он медленно убрал ладонь от деревянного футляра. **Старший у повозки:** — Мугами Шики. Это было утверждение. **Кабуто Якуши:** — Совершенно верно. Человек у колеса перестал возиться с брезентом. Третий под",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.035"
+        }
+      ],
+      "projections": [
+        {
+          "fears": "Сорвать передачу при возможном постороннем наблюдении",
+          "seen": "s09.text.035",
+          "state": "Узнал Шики, велел спутникам отходить, показал пластину номера и сказал, что знает личность конечного покупателя.",
+          "voice": "Короткие деловые требования",
+          "wants": "Получить ожидаемый груз и проверить участников передачи"
+        },
+        {
+          "fears": "Сорвать передачу при возможном постороннем наблюдении",
+          "state": "Узнал Шики, велел спутникам отходить, показал пластину номера и сказал, что знает личность конечного покупателя.",
+          "wants": "Получить ожидаемый груз и проверить участников передачи"
+        }
+      ],
+      "sources": [
+        "recovery/cast/kiri_transfer_senior.json",
+        "recovery/HOT.json",
+        "s09.text.035"
+      ]
+    },
+    "kiri_transfer_token": {
+      "aliases": [
+        "kiri transfer token"
+      ],
+      "facts": [],
+      "id": "kiri_transfer_token",
+      "kind": "item",
+      "label": "kiri transfer token",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kiri_transfer_senior",
+          "since": "s09.text.035",
+          "turn": "s09.text.035"
+        }
+      ],
+      "sources": [
+        "s09.text.035"
+      ]
+    },
+    "kiri_transfer_watch": {
+      "aliases": [
+        "kiri transfer watch",
+        "kiri_transfer_watch"
+      ],
+      "facts": [],
+      "id": "kiri_transfer_watch",
+      "kind": "npc",
+      "label": "kiri_transfer_watch",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.035",
+          "state": "Поднял проволочную удерживающую сеть с печатями между опорами моста, остался у её механизма."
+        },
+        {
+          "state": "Поднял проволочную удерживающую сеть с печатями между опорами моста, остался у её механизма."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kiri_transfer_watch.json",
+        "recovery/HOT.json",
+        "s09.text.035"
+      ]
+    },
+    "kiri_transport_containment": {
+      "aliases": [
+        "kiri transport containment"
+      ],
+      "facts": [],
+      "id": "kiri_transport_containment",
+      "kind": "item",
+      "label": "kiri transport containment",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kiri_transfer_carrier",
+          "since": "s09.text.035",
+          "turn": "s09.text.035"
+        }
+      ],
+      "sources": [
+        "s09.text.035"
       ]
     },
     "kiri_woman_cloak_order": {
@@ -1619,7 +1777,7 @@
         {
           "fears": "Шики: он унёс в себе то, что она сторожила.",
           "role": "полукаменная женщина-хирург Нижнего госпиталя",
-          "seen": "s09.text.022",
+          "seen": "s09.text.034",
           "stance": "Терпит Шики, пока он полезен пациентам.",
           "state": "К 20:00 Шики не найден в доступных местах, Минасэ не смогла вручить своё требование о втором контуре, намерена повторить попытку.",
           "voice": "Операционные команды. С Уцуро на «ты» и по старому имени.",
@@ -1719,7 +1877,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.021",
+          "seen": "s09.text.034",
           "state": "Слышал слова Шики о сыне Такаги; о судьбе ребёнка ничего не знает, только о принципе шантажа. Остался на В-7, вылечен и под охраной."
         }
       ],
@@ -1780,8 +1938,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s09.text.033"
+        "recovery/cast/nao.json"
       ]
     },
     "nemera": {
@@ -1928,7 +2085,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 28,
+      "mention_count": 29,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1936,13 +2093,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-15T20:24:00",
-          "excerpt": "назовите первый источник. **Женщина:** — Я предпочла бы разговаривать с человеком, которого мы искали. Она посмотрела на дверь. **Женщина:** — И без представителей Орочимару. Кабуто улыбнулся. **Кабуто Якуши:** — Боюсь, условия задержания определяете не вы. **",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.027"
         },
         {
           "at": "0007-12-15T20:47:00",
@@ -1957,6 +2107,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.033"
+        },
+        {
+          "at": "0007-12-18T18:14:00",
+          "excerpt": ", а потом когда буду нужен мы пойдем на переправу. #3 дня максимальное приближение к тому что хочет Орочимару желательно вообще это выполнить за это время# **Вторник, 18 декабря 1284 года. 17:38** *Страна Звука. Комплекс Кагэн.* Три дня Шики почти не покидал л",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.034"
         }
       ],
       "projections": [
@@ -2529,6 +2686,26 @@
       "projections": [],
       "sources": [
         "s06.text.006"
+      ]
+    },
+    "place:0f21b251e5fa7c61": {
+      "aliases": [
+        "place:0f21b251e5fa7c61",
+        "Страна Звука, северный тракт, старая переправа",
+        "Страна Звука",
+        "северный тракт",
+        "старая переправа"
+      ],
+      "facts": [],
+      "id": "place:0f21b251e5fa7c61",
+      "kind": "place",
+      "label": "Страна Звука, северный тракт, старая переправа",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.035",
+        "s09.text.034"
       ]
     },
     "place:111c8e907f9470f9": {
@@ -3628,9 +3805,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.033",
         "s09.text.031",
-        "s09.text.032"
+        "s09.text.032",
+        "s09.text.033"
       ]
     },
     "place:44fbe9adb51ae417": {
@@ -8679,8 +8856,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json",
-        "s09.text.033"
+        "recovery/cast/sasuke.json"
       ]
     },
     "sayu": {
@@ -9924,8 +10100,29 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "kimimaro_functional_cultures",
+      "source": "s09.text.034",
+      "status": "projected",
+      "to": "shiki_lab",
+      "type": "held_by"
+    },
+    {
+      "from": "kiri_transport_containment",
+      "source": "s09.text.035",
+      "status": "projected",
+      "to": "kiri_transfer_carrier",
+      "type": "held_by"
+    },
+    {
+      "from": "kiri_transfer_token",
+      "source": "s09.text.035",
+      "status": "projected",
+      "to": "kiri_transfer_senior",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 682
+  "source_turns_indexed": 684
 }

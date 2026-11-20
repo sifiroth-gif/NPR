@@ -1,12 +1,17 @@
-# Карта мира NPR · на ходе `s09.text.033`
+# Карта мира NPR · на ходе `s09.text.035`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (166) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (167) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (149)
+## Персонажи (152)
+- kiri_transfer_carrier —  · `npc/kiri_transfer_carrier` · в сцене
+- kiri_transfer_watch —  · `npc/kiri_transfer_watch` · в сцене
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
+- Старший у повозки — Мужчина заметно старше двух спутников, зимняя дорожная одеж… · `npc/kiri_transfer_senior` · в сцене
+- Минасэ Рэи (Минасэ) — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
+- Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Женщина со шрамом из Тумана — Задержанная сборщица сведений о наследственной способности · `npc/kiri_hunter_woman`
 - Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
 - Мужчина с повязкой из Тумана — Задержанный оперативник, ищет носителя Хётона · `npc/kiri_hunter_man`
@@ -32,8 +37,6 @@
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu`
 - Медик у панели В-7 —  · `npc/medical_panel_operator`
-- Минасэ Рэи (Минасэ) — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
-- Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - hirano_seiji —  · `npc/hirano_seiji`
@@ -175,14 +178,17 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (18)
+## Вещи (21)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`
 - `kimimaro_bone_sample` · `items/kimimaro_bone_sample`
+- `kimimaro_functional_cultures` · `items/kimimaro_functional_cultures`
 - `kiri_anbu_mask` · `items/kiri_anbu_mask`
 - `kiri_bingo_book` · `items/kiri_bingo_book`
+- `kiri_transfer_token` · `items/kiri_transfer_token`
+- `kiri_transport_containment` · `items/kiri_transport_containment`
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`

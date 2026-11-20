@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.035: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), kiri_transfer_watch (`npc/kiri_transfer_watch`), вещь `kiri_transport_containment`, вещь `kiri_transfer_token`
+- s09.text.034: Кабуто Якуши (`npc/kabuto`), Мориока Хидэаки (`npc/morioka_hideaki`), Минасэ Рэи (`npc/minase`), Старший у повозки (`npc/kiri_transfer_senior`), вещь `kimimaro_functional_cultures`, план сюжета
 - s09.text.033: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мугами Нао (`npc/nao`), вещь `private_bounty_announcements`, вещь `kabuto_private_bounty_ledger`
 - s09.text.032: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), вещь `kabuto_private_bounty_ledger`
 - s09.text.031: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `itachi_report_copies`, вещь `kabuto_private_bounty_ledger`
@@ -59,5 +61,3 @@
 - s08.text.084: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Транспортник госпиталя (`npc/hospital_transporter`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`)
 - s08.text.083: Такаги Рэн (`npc/takagi_ren`), Транспортник госпиталя (`npc/hospital_transporter`), Дежурная администратор госпиталя (`npc/hospital_night_admin`)
 - s08.text.082: Такаги Рэн (`npc/takagi_ren`), Транспортник госпиталя (`npc/hospital_transporter`), Дежурная администратор госпиталя (`npc/hospital_night_admin`)
-- s08.text.081: Такаги Рэн (`npc/takagi_ren`), Мугами Акихиро (`npc/akihiro`)
-- s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), Мориока Хидэаки (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)

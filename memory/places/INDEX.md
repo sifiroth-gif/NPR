@@ -82,6 +82,7 @@
 - Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
+- Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 2 ход(ов), s09–s09
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
