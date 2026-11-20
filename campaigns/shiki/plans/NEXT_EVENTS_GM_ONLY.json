@@ -1,0 +1,106 @@
+{
+  "schema": "npr-shiki-next-session-events/1",
+  "access": "GM_ONLY / Keeper preparation. Do not show player; not yet actual events.",
+  "prepared_real_at": "2026-11-20",
+  "closed_session": 8,
+  "next_session": 9,
+  "cursor": "s08.text.106",
+  "at": "0006-10-09T16:17:00",
+  "sources": [
+    "archive/session-008-turns.jsonl#s08.text.100..106",
+    "archive/session-008-index.json",
+    "recovery/NEXT.json",
+    "memory/PLOT.GM_ONLY.md",
+    "memory/npc/kabuto.md",
+    "memory/npc/kagen_patient_adult.md",
+    "memory/npc/nemera.md",
+    "campaigns/shiki/continuity/SESSION_008_TO_009_HANDOFF_1283-10-09.json"
+  ],
+  "priority": [
+    "Direct player statements, NEXT.directives and NEXT.must outrank preparation.",
+    "Shiki's acceptance/refusal/terms are not determined; no offscreen meeting with Orochimaru forced.",
+    "Current active chapter and queued story elements have priority over unrelated new arcs.",
+    "Do not read hidden facts into Kabuto, Sound attendants or Shiki without an actual information channel.",
+    "Once Kabuto's offer is answered or evaded, conclude the beat; do not make five paperwork scenes.",
+    "Next session starts in Kabuto's laboratory after the patient has been removed, no time jump before Shiki's first response."
+  ],
+  "events": [
+    {
+      "id": "s09.kagen_terms",
+      "kind": "scene",
+      "linked_existing_event": "sound_outpost",
+      "status": "candidate",
+      "trigger": "Shiki chooses to answer, refuse, condition or ignore Kabuto's laboratory proposal.",
+      "question": "Which concrete resources and freedom, if any, can Kabuto actually trade without overcoming his own superiors and Shiki's boundaries?",
+      "possible_endings": [
+        "Agreement on verifiable limited terms with real costs and continued autonomy; no automatic surrender of tissue.",
+        "Offer refused or negotiations fail; Kabuto and Shiki retain their independent options.",
+        "Offer interrupted by an unrelated justified decision or event; each side acts on its own priorities.",
+        "No agreement made and Shiki leaves or pursues another task; the proposition has a real expiration."
+      ],
+      "limit": {
+        "scenes": 2
+      },
+      "npc_acts": [
+        "Kabuto can say no, limit resources, deceive about what he controls or test information already legitimately available.",
+        "Sound guards do not become experts on Shiki's biology merely because their superior is interested.",
+        "If Orochimaru is consulted, there must be a real route, time and independent motive rather than instant omniscience."
+      ],
+      "no_retroactive_truth": "What Kabuto said about informing Orochimaru is a claim; do not declare a response arrived before a believable channel and time."
+    },
+    {
+      "id": "s09.kagen_subject",
+      "kind": "side",
+      "linked_existing_event": "sound_outpost",
+      "status": "candidate",
+      "trigger": "The Kagen patient has been transported to the medical section and guards attempt to manage his condition; Shiki is not required to attend.",
+      "question": "What will become of the involuntary response to sound and the patient's ability to resist further experiments?",
+      "possible_endings": [
+        "Medical stabilization and genuine partial evidence about the response, with limits recorded.",
+        "Damage or loss of control creates conflict over the patient, possibly independent of Shiki.",
+        "Patient is transferred, silenced or escapes through plausible actions of actors with resources.",
+        "The source of the response remains unknown; what was observed at 16:17 is not reversed."
+      ],
+      "limit": {
+        "scenes": 3,
+        "until": "0006-10-10T12:00:00"
+      },
+      "npc_acts": [
+        "Kabuto orders sound disabled and continued observation, as already played; future actions respond to the new signal.",
+        "The patient has his own voice, memory and interests; he is not passive exposition.",
+        "Do not assign this sound experiment a causal link to Kusa S-17 or Nemera without evidence."
+      ],
+      "source": "s08.text.106"
+    },
+    {
+      "id": "s09.kusa_afterimage",
+      "kind": "side",
+      "linked_existing_event": "side_nukenin_pursuit",
+      "status": "candidate",
+      "trigger": "The independently documented pursuit and leaks from Kusa advance to their existing dates; Shiki may or may not learn of them.",
+      "question": "Which information or personnel can genuinely cross the distance between the Kusa investigation and Shiki's new whereabouts?",
+      "possible_endings": [
+        "An authenticated lead reaches one of the relevant sides after real travel and leaves verifiable traces.",
+        "Pursuit makes a wrong inference and loses resources or pursues another person.",
+        "Competing factions obstruct each other and the information remains fragmentary.",
+        "No one reaches Shiki before this episode's limit; the campaign does not invent a simultaneous ambush."
+      ],
+      "limit": {
+        "scenes": 3,
+        "until": "0006-10-13T12:00:00"
+      },
+      "npc_acts": [
+        "Honor latest NEXT.offscreen as already occurred but not automatically known to Shiki.",
+        "Do not teleport Kusa officers into Kagen; require a source and travel interval.",
+        "Do not replace existing unknown assassination organizer with Kabuto merely because he appears on screen."
+      ],
+      "source": "NEXT.offscreen events and main chapter ch09_order_chain"
+    }
+  ],
+  "must_do_next_game_turn": [
+    "Execute each NEXT.must only when actually required by the first S09 turn; keeper preparation does not satisfy them.",
+    "Do not invent an action, reply, alignment or pact decision for Shiki.",
+    "Keep all agreed NPC comprehension boundaries and consequences of Shiki's presence.",
+    "Check sound_kagen_senior and Nemera intention only when source- and location-consistent; Minase's next independent plan must be grounded in her existing patients."
+  ]
+}
