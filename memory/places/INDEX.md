@@ -160,3 +160,4 @@
 - Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
 - Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
+- Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
