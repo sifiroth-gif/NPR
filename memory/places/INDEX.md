@@ -165,3 +165,4 @@
 - Страна Звука, площадка перед воротами монастыря Кагэн · `places/strana-zvuka-ploshchadka-pered-vorotami-monastyrya-kagen` · 1 ход(ов), s08–s08
 - Страна Звука, подземные ворота комплекса Отогакуре у монастыря Кагэн · `places/strana-zvuka-podzemnye-vorota-kompleksa-otogakure-u-monastyr` · 1 ход(ов), s08–s08
 - Отогакуре, подземный вход Кагэн · `places/otogakure-podzemnyy-vkhod-kagen` · 1 ход(ов), s08–s08
+- Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
