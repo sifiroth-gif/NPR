@@ -123,7 +123,7 @@ def replay(root, game, rows, digest):
                 "index_turn":old_cursor,"index_blob_sha":memory_sha,
                 "player_input":t["player"],
                 "source_refs":[{"source":SOURCE,"sha256":digest}],
-                "unretrieved":[],"mode":"source_locked_intersession_replay",
+                "unretrieved":[],"mode":"stale_index_plus_current_hot",
             },
         }
         if n==len(rows):
