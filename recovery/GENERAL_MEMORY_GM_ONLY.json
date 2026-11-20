@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.038",
+  "cursor": "s09.text.039",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -701,7 +701,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 48,
+      "mention_count": 49,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -709,13 +709,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-12-18T18:15:20",
-          "excerpt": "н смотрел на разворачивающееся поражение. На каждом из трёх тел возникали сходные изменения — с различной скоростью, но по одному принципу. **Кабуто Якуши:** — Бётон... Название он произнёс негромко, вспомнив рассказ Шики о природе болезни. Старший услышал тол",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.036"
         },
         {
           "at": "0007-12-18T18:20:00",
@@ -730,21 +723,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.038"
+        },
+        {
+          "at": "0007-12-18T20:38:12",
+          "excerpt": "угим почерком. Имя было написано полностью и не повреждено. *** Внизу внезапно оборвались шаги. Раздался глухой удар, затем знакомый голос: **Кабуто Якуши:** — Я бы не советовал подниматься. Послышался шум короткой борьбы. Через мгновение Кабуто появился в две",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.039"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.038",
-          "state": "Согласился сопровождать Шики ради обнаружения источника торговой поставки, обезвредил сторожа и пошёл блокировать задний выход, не атакуя Хасуми."
+          "seen": "s09.text.039",
+          "state": "Сам блокировал охранника у лестницы, вошёл через дверь конторы и отодвинул жаровню, сохранив бумаги; Шики атаковал самостоятельно."
         },
         {
-          "state": "Согласился сопровождать Шики ради обнаружения источника торговой поставки, обезвредил сторожа и пошёл блокировать задний выход, не атакуя Хасуми."
+          "state": "Сам блокировал охранника у лестницы, вошёл через дверь конторы и отодвинул жаровню, сохранив бумаги; Шики атаковал самостоятельно."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.038"
+        "s09.text.039"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -1122,8 +1122,7 @@
     "kiri_hunter_man": {
       "aliases": [
         "kiri hunter man",
-        "Мужчина с повязкой из Тумана",
-        "kiri_hunter_man"
+        "Мужчина с повязкой из Тумана"
       ],
       "facts": [],
       "id": "kiri_hunter_man",
@@ -1142,15 +1141,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_man.json",
-        "s09.text.038"
+        "recovery/cast/kiri_hunter_man.json"
       ]
     },
     "kiri_hunter_woman": {
       "aliases": [
         "kiri hunter woman",
-        "Женщина со шрамом из Тумана",
-        "kiri_hunter_woman"
+        "Женщина со шрамом из Тумана"
       ],
       "facts": [],
       "id": "kiri_hunter_woman",
@@ -1169,8 +1166,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_woman.json",
-        "s09.text.038"
+        "recovery/cast/kiri_hunter_woman.json"
       ]
     },
     "kiri_hunters": {
@@ -1410,13 +1406,14 @@
     "kuroishi_hasumi": {
       "aliases": [
         "kuroishi hasumi",
-        "Хасуми Дзюнъити"
+        "Хасуми Дзюнъити",
+        "kuroishi_hasumi"
       ],
       "facts": [],
       "id": "kuroishi_hasumi",
       "kind": "npc",
       "label": "Хасуми Дзюнъити",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0007-12-18T18:15:20",
@@ -1438,17 +1435,49 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.038"
+        },
+        {
+          "at": "0007-12-18T20:38:12",
+          "excerpt": "ёберные дуги были повреждены; дыхание справа заметно отставало. Он пытался подняться, но правая рука подломилась. **Хасуми Дзюнъити:** — Кто... Он увидел Шики. Сначала — одежду, перчатки, длинные белые волосы. Потом лицо. Хасуми перестал пытаться встать. **Хас",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.039"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.038",
-          "state": "На втором этаже сжигает страницы книги после исчезновения сторожа."
+          "seen": "s09.text.039",
+          "state": "Ударом Шики через окно отброшен в перегородку, болезненная травма груди, на полу в сознании. Попытка сжечь книгу прервана, при виде Шики узнал предполагаемую цель перевозки; протестует против чтения книги."
+        },
+        {
+          "state": "Ударом Шики через окно отброшен в перегородку, болезненная травма груди, на полу в сознании. Попытка сжечь книгу прервана, при виде Шики узнал предполагаемую цель перевозки; протестует против чтения книги."
         }
       ],
       "sources": [
         "recovery/cast/kuroishi_hasumi.json",
-        "s09.text.038"
+        "recovery/HOT.json",
+        "s09.text.039"
+      ]
+    },
+    "kuroishi_ledger": {
+      "aliases": [
+        "kuroishi ledger"
+      ],
+      "facts": [],
+      "id": "kuroishi_ledger",
+      "kind": "item",
+      "label": "kuroishi ledger",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "within_shiki_reach",
+          "since": "s09.text.039",
+          "turn": "s09.text.039"
+        }
+      ],
+      "sources": [
+        "s09.text.039"
       ]
     },
     "kuroishi_visitor": {
@@ -1477,14 +1506,14 @@
         }
       ],
       "sources": [
-        "recovery/cast/kuroishi_visitor.json",
-        "s09.text.038"
+        "recovery/cast/kuroishi_visitor.json"
       ]
     },
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре"
+        "Глава Кусагакуре",
+        "kusa_head"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -1526,7 +1555,7 @@
           "body": "Сначала молча рассматривал сдавленную улыбку Шики и тему семейной привязанности, затем стал значительно внимательнее на слове АНБУ. На заседании был холодно-расчётлив, отложил папку дела, держит письменное назначение только готовым к оформлению при согласии; н",
           "fears": "Потерять власть над УВБ и резиденцией, допустить публичный внутриэлитный кризис",
           "role": "Глава деревни, высшая военная и административная власть Кусы",
-          "seen": "s09.text.023",
+          "seen": "s09.text.039",
           "stance": "Принимает дзёнина Мугами в поздний час, требует объяснить ночной визит; личную заинтересованность и знание Тэцу/В-7 пока не демонстрирует",
           "state": "В верхнем архиве, не присутствует при задержании похитителя в нижнем дворе; сведения может получить позже от Такаги/охраны.",
           "voice": "Сдержанный, короткие вопросы, без любезностей",
@@ -1534,7 +1563,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/kusa_head.json"
+        "recovery/cast/kusa_head.json",
+        "s09.text.039"
       ]
     },
     "masked_handler": {
@@ -1742,7 +1772,8 @@
     "medical_panel_operator": {
       "aliases": [
         "medical panel operator",
-        "Медик у панели В-7"
+        "Медик у панели В-7",
+        "medical_panel_operator"
       ],
       "facts": [],
       "id": "medical_panel_operator",
@@ -1752,12 +1783,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.022",
+          "seen": "s09.text.039",
           "state": "Получил распоряжение о проверке двух независимых лечебных пробирок; не может подтвердить массовую воспроизводимость без исследований."
         }
       ],
       "sources": [
-        "recovery/cast/medical_panel_operator.json"
+        "recovery/cast/medical_panel_operator.json",
+        "s09.text.039"
       ]
     },
     "medical_spectacles": {
@@ -7785,6 +7817,25 @@
         "s01.text.054"
       ]
     },
+    "place:e1844e8397483e36": {
+      "aliases": [
+        "place:e1844e8397483e36",
+        "Страна Звука, северный склад «Куроиси», контора второго этажа",
+        "Страна Звука",
+        "северный склад «Куроиси»",
+        "контора второго этажа"
+      ],
+      "facts": [],
+      "id": "place:e1844e8397483e36",
+      "kind": "place",
+      "label": "Страна Звука, северный склад «Куроиси», контора второго этажа",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.039"
+      ]
+    },
     "place:e2611646fcdaf297": {
       "aliases": [
         "place:e2611646fcdaf297",
@@ -10215,8 +10266,15 @@
       "status": "projected",
       "to": "kabuto",
       "type": "held_by"
+    },
+    {
+      "from": "kuroishi_ledger",
+      "source": "s09.text.039",
+      "status": "projected",
+      "to": "within_shiki_reach",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 687
+  "source_turns_indexed": 688
 }

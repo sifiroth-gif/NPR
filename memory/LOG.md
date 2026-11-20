@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.039: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Медик у панели В-7 (`npc/medical_panel_operator`), Глава Кусагакуре (`npc/kusa_head`), вещь `kuroishi_ledger`, бой
 - s09.text.038: Кабуто Якуши (`npc/kabuto`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Женщина в плаще (`npc/kuroishi_visitor`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`)
 - s09.text.037: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_watch (`npc/kiri_transfer_watch`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), Старший шиноби Звука (`npc/sound_kagen_senior`), план сюжета, бой
 - s09.text.036: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_watch (`npc/kiri_transfer_watch`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), вещь `kiri_transfer_token`, бой
@@ -60,4 +61,3 @@
 - s08.text.088: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`)
 - s08.text.087: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`), поправки игрока: 1
 - s08.text.086: morioka_khideaki (`npc/morioka_khideaki`), Мориока Хидэаки (`npc/morioka_hideaki`), Аракава Дзюн (`npc/arakawa`), Такаги Рэн (`npc/takagi_ren`)
-- s08.text.085: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), Медик у панели В-7 (`npc/medical_panel_operator`), Медик в очках из группы Мориоки (`npc/medical_spectacles`), Старший сопровождающий Мориоки (`npc/morioka_escort_leader`)

@@ -1,16 +1,18 @@
-# Карта мира NPR · на ходе `s09.text.038`
+# Карта мира NPR · на ходе `s09.text.039`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (168) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (169) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (154)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
+- Хасуми Дзюнъити (Хасуми, Дзюнъити) — Мужчина в тёмном служебном халате; прочие черты не установл… · `npc/kuroishi_hasumi` · в сцене
+- Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
+- Медик у панели В-7 —  · `npc/medical_panel_operator`
 - Женщина в плаще — Дорожный плащ, длинный плоский футляр с медицинской печатью. · `npc/kuroishi_visitor`
 - Женщина со шрамом из Тумана — Задержанная сборщица сведений о наследственной способности · `npc/kiri_hunter_woman`
 - Мужчина с повязкой из Тумана — Задержанный оперативник, ищет носителя Хётона · `npc/kiri_hunter_man`
-- Хасуми Дзюнъити (Хасуми, Дзюнъити) — Мужчина в тёмном служебном халате; прочие черты не установл… · `npc/kuroishi_hasumi`
 - kiri_transfer_carrier —  · `npc/kiri_transfer_carrier`
 - kiri_transfer_watch —  · `npc/kiri_transfer_watch`
 - Старший у повозки — Мужчина заметно старше двух спутников, зимняя дорожная одеж… · `npc/kiri_transfer_senior`
@@ -36,9 +38,7 @@
 - Касэ — боец восточного заслона Нори; 26.09 Шики вынул у него осколок из правого предпл… · `npc/kase`
 - Неизвестный взрослый пациент Кагэн — Истощённый мужчина примерно сорока лет, шейный металлически… · `npc/kagen_patient_adult`
 - Кэйдзи — шиноби Конохи (~18 в 1283); в 1278 генин, Шики бесплатно восстановил ему связку… · `npc/keiji`
-- Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu`
-- Медик у панели В-7 —  · `npc/medical_panel_operator`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - hirano_seiji —  · `npc/hirano_seiji`
@@ -180,7 +180,7 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (21)
+## Вещи (22)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -192,6 +192,7 @@
 - `kiri_transfer_token` · `items/kiri_transfer_token`
 - `kiri_transport_containment` · `items/kiri_transport_containment`
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
+- `kuroishi_ledger` · `items/kuroishi_ledger`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `private_bounty_announcements` · `items/private_bounty_announcements`
