@@ -1,8 +1,8 @@
 {
-  "documents": 2327,
+  "documents": 2328,
   "generic_probe_count": 9,
   "generic_probe_hit_at_10": 9,
-  "groups": 10,
+  "groups": 11,
   "indexed_sessions": [
     1,
     2,
@@ -19,65 +19,65 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 125.65,
+  "load_ms": 103.44,
   "probes": [
     {
-      "query_ms": 110.13,
+      "query_ms": 88.13,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 109.1,
+      "query_ms": 89.73,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 108.92,
+      "query_ms": 89.29,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 126.55,
+      "query_ms": 101.76,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 109.9,
+      "query_ms": 90.22,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 109.01,
+      "query_ms": 89.04,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 110.49,
+      "query_ms": 89.96,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 117.53,
+      "query_ms": 95.34,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 114.98,
+      "query_ms": 92.16,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 72,
+  "shards": 73,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -91,6 +91,6 @@
     9
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 110.13,
-  "warm_query_p95_ms": 126.55
+  "warm_query_median_ms": 89.96,
+  "warm_query_p95_ms": 101.76
 }
