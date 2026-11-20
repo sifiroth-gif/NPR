@@ -1,4 +1,4 @@
-# Кабуто Якуши · разговоры с Шики (52 ходов)
+# Кабуто Якуши · разговоры с Шики (53 ходов)
 
 Дословно, по ходам: что персонаж говорил и что в том же ходе слышал от Шики. Это память о сказанном, а не о мыслях. Ход целиком — `archive/turns/sNN/<id>.md`.
 
@@ -6,4 +6,4 @@
 - s01: 30 ходов, s01.text.092–s01.text.148 → `memory/npc/kabuto.talk.s01.md`
 - s02: 9 ходов, s02.text.012–s02.text.024 → `memory/npc/kabuto.talk.s02.md`
 - s08: 4 ходов, s08.text.103–s08.text.106 → `memory/npc/kabuto.talk.s08.md`
-- s09: 9 ходов, s09.text.001–s09.text.010 → `memory/npc/kabuto.talk.s09.md`
+- s09: 10 ходов, s09.text.001–s09.text.011 → `memory/npc/kabuto.talk.s09.md`
