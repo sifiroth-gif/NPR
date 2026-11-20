@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.008",
+  "cursor": "s09.text.009",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -680,7 +680,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 26,
+      "mention_count": 27,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +688,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0006-10-09T16:32:00",
-          "excerpt": "ор Кусы. Тонкая металлическая пластина отражала жёлтый свет потолочной лампы. Кабуто посмотрел на неё. **Кабуто Якуши:** — Помню, почему вы берегли эту тайну. И, полагаю, теперь многие прежние обязательства утратили для вас смысл. **Мугами Шики:** — Сегодня вы",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.006"
         },
         {
           "at": "0006-10-09T22:16:00",
@@ -709,21 +702,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.008"
+        },
+        {
+          "at": "0006-10-09T22:25:00",
+          "excerpt": "дой, пожалуйста. Шики протянул руку. Кабуто перевёл взгляд на раскрытую ладонь, затем на Орочимару. **Кабуто Якуши:** — Воду? **Мугами Шики:** — Это будет ответом на ваш первый вопрос. На лице Орочимару появилось выражение неподдельного интереса. **Орочимару:*",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.009"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.008",
-          "state": "Сопроводил Шики к Орочимару; увидел, как учитель заменил предложенную Кабуто независимую работу требованием совместных исследований и демонстрации."
+          "seen": "s09.text.009",
+          "state": "По приказу Орочимару принёс кувшин питьевой воды. Удерживает ручку, стараясь предоставить Шики захват без касания открытой кожи."
         },
         {
-          "state": "Сопроводил Шики к Орочимару; увидел, как учитель заменил предложенную Кабуто независимую работу требованием совместных исследований и демонстрации."
+          "state": "По приказу Орочимару принёс кувшин питьевой воды. Удерживает ручку, стараясь предоставить Шики захват без касания открытой кожи."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.008"
+        "s09.text.009"
       ]
     },
     "kadziura_satoru": {
@@ -833,7 +833,8 @@
     "kagen_caravan_escort": {
       "aliases": [
         "kagen caravan escort",
-        "Сопровождающий повозки"
+        "Сопровождающий повозки",
+        "kagen_caravan_escort"
       ],
       "facts": [],
       "id": "kagen_caravan_escort",
@@ -858,18 +859,20 @@
       ],
       "projections": [
         {
-          "seen": "s08.text.106",
+          "seen": "s09.text.009",
           "state": "Открыл капсулу с живым пациентом и передал его медику."
         }
       ],
       "sources": [
-        "recovery/cast/kagen_caravan_escort.json"
+        "recovery/cast/kagen_caravan_escort.json",
+        "s09.text.009"
       ]
     },
     "kagen_patient_adult": {
       "aliases": [
         "kagen patient adult",
-        "Неизвестный взрослый пациент Кагэн"
+        "Неизвестный взрослый пациент Кагэн",
+        "kagen_patient_adult"
       ],
       "facts": [],
       "id": "kagen_patient_adult",
@@ -879,12 +882,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.001",
+          "seen": "s09.text.009",
           "state": "В медотсеке снова свело левую кисть; сорвал фиксацию и потребовал снять шейный обруч. По сообщению санитара, утверждает, что слышит собственный голос вдали."
         }
       ],
       "sources": [
-        "recovery/cast/kagen_patient_adult.json"
+        "recovery/cast/kagen_patient_adult.json",
+        "s09.text.009"
       ]
     },
     "kase": {
@@ -1605,8 +1609,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.008"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -1727,7 +1730,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1735,13 +1738,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0006-10-09T16:24:00",
-          "excerpt": "ть их краем чистой салфетки. **Кабуто Якуши:** — Что касается сотрудничества… ваше согласие я принимаю. Орочимару-сама действительно оставляет за собой окончательное решение. И предупреждаю: он может предложить условия, несколько отличающиеся от моих. Кабуто в",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.002"
         },
         {
           "at": "0006-10-09T22:16:00",
@@ -1756,21 +1752,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.008"
+        },
+        {
+          "at": "0006-10-09T22:25:00",
+          "excerpt": "е кувшин с водой, пожалуйста. Шики протянул руку. Кабуто перевёл взгляд на раскрытую ладонь, затем на Орочимару. **Кабуто Якуши:** — Воду? **Мугами Шики:** — Это будет ответом на ваш первый вопрос. На лице Орочимару появилось выражение неподдельного интереса. ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.009"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.008",
-          "state": "Встретил Шики лично, поставил условием лаборатории совместную работу по наследственной модификации, а доступ к редкому материалу — за демонстрацию устойчивой ассимиляции. Спрашивает об истинных исследовательских целях."
+          "seen": "s09.text.009",
+          "state": "Выслушал мотив Шики — интерес к пределу возможностей. Попросил уточнить, продолжит ли тот изменять саму человеческую природу ради дальнейшего открытия; ждёт водной демонстрации."
         },
         {
-          "state": "Встретил Шики лично, поставил условием лаборатории совместную работу по наследственной модификации, а доступ к редкому материалу — за демонстрацию устойчивой ассимиляции. Спрашивает об истинных исследовательских целях."
+          "state": "Выслушал мотив Шики — интерес к пределу возможностей. Попросил уточнить, продолжит ли тот изменять саму человеческую природу ради дальнейшего открытия; ждёт водной демонстрации."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s09.text.008"
+        "s09.text.009"
       ]
     },
     "patient_airway": {
@@ -1849,6 +1852,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s09.text.009",
         "s09.text.008"
       ]
     },
@@ -8496,8 +8500,7 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука",
-        "sound_kagen_junior"
+        "Младший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
@@ -8545,15 +8548,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_junior.json",
-        "s09.text.008"
+        "recovery/cast/sound_kagen_junior.json"
       ]
     },
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука",
-        "sound_kagen_senior"
+        "Старший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -8594,7 +8595,7 @@
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s09.text.008",
+          "seen": "s09.text.009",
           "state": "В переходе к жилому сектору сообщил Кабуто о полученной с пограничного поста ориентировке и интересе внешнего дозора к неизвестному шиноби; не пустил дозор к гостю.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
@@ -8608,8 +8609,7 @@
       ],
       "sources": [
         "recovery/cast/sound_kagen_senior.json",
-        "recovery/HOT.json",
-        "s09.text.008"
+        "recovery/HOT.json"
       ]
     },
     "stolen_house_plan": {
@@ -9427,5 +9427,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 658
+  "source_turns_indexed": 659
 }

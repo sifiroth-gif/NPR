@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.009: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Сопровождающий повозки (`npc/kagen_caravan_escort`)
 - s09.text.008: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), план сюжета
 - s09.text.007: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Орочимару (`npc/orochimaru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `shiki_blood_vial`, план сюжета
 - s09.text.006: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_blood_vial`, линия `kabuto_letter`, план сюжета
@@ -60,4 +61,3 @@
 - s08.text.058: Такаги Рэн (`npc/takagi_ren`)
 - s08.text.057: поправки игрока: 3
 - s08.text.056: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `personal_paper_reports`, поправки игрока: 1
-- s08.text.055: Такаги Рэн (`npc/takagi_ren`), вещь `personal_paper_reports`
