@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.009",
+  "cursor": "s09.text.010",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -259,6 +259,22 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
+      ]
+    },
+    "canon:s09.text.010:0": {
+      "aliases": [
+        "canon:s09.text.010:0",
+        "Хётон «Тысяча летящих ледяных игл»: Шики исполняет левой рукой 3 собственные печати: (1) большой прижат к безымянному, указательный и средний раскрыты узким углом, мизинец вдоль ла"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.010:0",
+      "kind": "canon",
+      "label": "Хётон «Тысяча летящих ледяных игл»: Шики исполняет левой рукой 3 собственные печати: (1) большой прижат к безымянному, указательный и средний раскрыты узким углом, мизинец вдоль ла",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.010"
       ]
     },
     "captive_guard": {
@@ -633,7 +649,8 @@
     "hospital_pass_custodian": {
       "aliases": [
         "hospital pass custodian",
-        "Хранитель лабораторных пропусков госпиталя"
+        "Хранитель лабораторных пропусков госпиталя",
+        "hospital_pass_custodian"
       ],
       "facts": [],
       "id": "hospital_pass_custodian",
@@ -643,11 +660,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.084"
+          "seen": "s09.text.010"
         }
       ],
       "sources": [
-        "recovery/cast/hospital_pass_custodian.json"
+        "recovery/cast/hospital_pass_custodian.json",
+        "s09.text.010"
       ]
     },
     "hospital_transporter": {
@@ -680,7 +698,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +706,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0006-10-09T22:16:00",
-          "excerpt": "ендую прикасаться ко мне без перчаток. К крови тоже. Скорее всего, это опасно. Улыбка Кабуто исчезла. **Кабуто Якуши:** — Насколько опасно? Вопрос прозвучал почти машинально. Но Кабуто не стал дожидаться ответа, чтобы отступить к шкафу с защитными принадлежнос",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.007"
         },
         {
           "at": "0006-10-09T22:23:00",
@@ -709,21 +720,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.009"
+        },
+        {
+          "at": "0006-10-09T22:28:00",
+          "excerpt": "растеклась между досками, обогнула ножку кресла и дошла до края старого ковра. Кабуто отступил, спасая обувь. **Кабуто Якуши:** — Мугами-кун, если вам требовалась вода для техники, можно было… **Мугами Шики:** — Слышали о клане Юки? Страна Воды. Кабуто замолча",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.009",
-          "state": "По приказу Орочимару принёс кувшин питьевой воды. Удерживает ручку, стараясь предоставить Шики захват без касания открытой кожи."
+          "seen": "s09.text.010",
+          "state": "Наблюдал неизвестные одноручные печати Шики, Хётон и частичную гидратацию Ходзуки; резко шагнул вперёд при самонаправленном ледяном залпе, затем отметил необходимость генетической проверки."
         },
         {
-          "state": "По приказу Орочимару принёс кувшин питьевой воды. Удерживает ручку, стараясь предоставить Шики захват без касания открытой кожи."
+          "state": "Наблюдал неизвестные одноручные печати Шики, Хётон и частичную гидратацию Ходзуки; резко шагнул вперёд при самонаправленном ледяном залпе, затем отметил необходимость генетической проверки."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.009"
+        "s09.text.010"
       ]
     },
     "kadziura_satoru": {
@@ -812,7 +830,8 @@
     "kagen_caravan_driver": {
       "aliases": [
         "kagen caravan driver",
-        "Возница повозки"
+        "Возница повозки",
+        "kagen_caravan_driver"
       ],
       "facts": [],
       "id": "kagen_caravan_driver",
@@ -822,19 +841,19 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.106",
+          "seen": "s09.text.010",
           "state": "Открыла груз по приказу Кабуто, подтвердила, что живому человеку не давали воду."
         }
       ],
       "sources": [
-        "recovery/cast/kagen_caravan_driver.json"
+        "recovery/cast/kagen_caravan_driver.json",
+        "s09.text.010"
       ]
     },
     "kagen_caravan_escort": {
       "aliases": [
         "kagen caravan escort",
-        "Сопровождающий повозки",
-        "kagen_caravan_escort"
+        "Сопровождающий повозки"
       ],
       "facts": [],
       "id": "kagen_caravan_escort",
@@ -864,15 +883,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/kagen_caravan_escort.json",
-        "s09.text.009"
+        "recovery/cast/kagen_caravan_escort.json"
       ]
     },
     "kagen_patient_adult": {
       "aliases": [
         "kagen patient adult",
-        "Неизвестный взрослый пациент Кагэн",
-        "kagen_patient_adult"
+        "Неизвестный взрослый пациент Кагэн"
       ],
       "facts": [],
       "id": "kagen_patient_adult",
@@ -887,8 +904,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kagen_patient_adult.json",
-        "s09.text.009"
+        "recovery/cast/kagen_patient_adult.json"
       ]
     },
     "kase": {
@@ -1730,7 +1746,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1738,13 +1754,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0006-10-09T22:16:00",
-          "excerpt": "татив# найдете что-то интересное, скажите хоть. А теперь мне и правда нужно прилечь. Когда господин Орочимару вернётся и даст свой ответ, сообщите мне. Хотя....думаю об этом не зачем было напоминать #иду в комнату ложусь на кровать# **Понедельник, 9 октября 12",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.007"
         },
         {
           "at": "0006-10-09T22:23:00",
@@ -1759,21 +1768,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.009"
+        },
+        {
+          "at": "0006-10-09T22:28:00",
+          "excerpt": "бя но использую частичную гидратацию ходзуки, кстати насколько я помню суйгетцу ходзуки работает на Орочимару или является его пленником. Не помню точно его качество# **Понедельник, 9 октября 1283 года. 22:26** *Страна Звука. Комплекс Кагэн. Бывшая настоятельс",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.009",
-          "state": "Выслушал мотив Шики — интерес к пределу возможностей. Попросил уточнить, продолжит ли тот изменять саму человеческую природу ради дальнейшего открытия; ждёт водной демонстрации."
+          "seen": "s09.text.010",
+          "state": "Видел одноручный Хётон и местную гидратацию Шики, признал две необычные наследственные способности. Сообщил, что Суйгэцу Ходзуки удерживается в его лаборатории. Предложил Шики независимое направление исследования, доступ к оборудованию без дополнительной демон"
         },
         {
-          "state": "Выслушал мотив Шики — интерес к пределу возможностей. Попросил уточнить, продолжит ли тот изменять саму человеческую природу ради дальнейшего открытия; ждёт водной демонстрации."
+          "state": "Видел одноручный Хётон и местную гидратацию Шики, признал две необычные наследственные способности. Сообщил, что Суйгэцу Ходзуки удерживается в его лаборатории. Предложил Шики независимое направление исследования, доступ к оборудованию без дополнительной демон"
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s09.text.009"
+        "s09.text.010"
       ]
     },
     "patient_airway": {
@@ -1852,8 +1868,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.009",
-        "s09.text.008"
+        "s09.text.008",
+        "s09.text.009"
       ]
     },
     "place:010e15096bdc810f": {
@@ -2195,6 +2211,25 @@
       "sources": [
         "s02.text.023",
         "s02.text.024"
+      ]
+    },
+    "place:0b94fce5b4e376d9": {
+      "aliases": [
+        "place:0b94fce5b4e376d9",
+        "Страна Звука, комплекс Кагэн, бывшая настоятельская часть монастыря",
+        "Страна Звука",
+        "комплекс Кагэн",
+        "бывшая настоятельская часть монастыря"
+      ],
+      "facts": [],
+      "id": "place:0b94fce5b4e376d9",
+      "kind": "place",
+      "label": "Страна Звука, комплекс Кагэн, бывшая настоятельская часть монастыря",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.010"
       ]
     },
     "place:0b99f9c7888df2de": {
@@ -8554,7 +8589,8 @@
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука"
+        "Старший шиноби Звука",
+        "sound_kagen_senior"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -8595,7 +8631,7 @@
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s09.text.009",
+          "seen": "s09.text.010",
           "state": "В переходе к жилому сектору сообщил Кабуто о полученной с пограничного поста ориентировке и интересе внешнего дозора к неизвестному шиноби; не пустил дозор к гостю.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
@@ -8609,7 +8645,8 @@
       ],
       "sources": [
         "recovery/cast/sound_kagen_senior.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.010"
       ]
     },
     "stolen_house_plan": {
@@ -9427,5 +9464,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 659
+  "source_turns_indexed": 660
 }

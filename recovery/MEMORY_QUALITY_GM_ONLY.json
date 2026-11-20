@@ -3,20 +3,21 @@
     "kabuto",
     "orochimaru",
     "sound_kagen_senior",
-    "place:008777951953c52a",
+    "place:0b94fce5b4e376d9",
     "shiki_blood_vial"
   ],
-  "cursor": "s09.text.009",
+  "cursor": "s09.text.010",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2492,
-  "index_entities": 428,
-  "index_source_records": 659,
-  "indexed_cursor": "s09.text.009",
+  "focus_bytes": 2589,
+  "index_entities": 430,
+  "index_source_records": 660,
+  "indexed_cursor": "s09.text.010",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 10,
     "npc": 71,
-    "place": 329,
+    "place": 330,
     "thread": 17
   },
   "missing_critical": [],
@@ -26,6 +27,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s09.text.010:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -359,6 +366,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "place:0b94fce5b4e376d9",
+      "kind": "place"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "place:0b99f9c7888df2de",
       "kind": "place"
     },
@@ -372,12 +385,6 @@
       "at_1": true,
       "at_5": true,
       "id": "place:0ce82096081b6913",
-      "kind": "place"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "place:0d0e7b4d91ab8252",
       "kind": "place"
     },
     {
@@ -484,9 +491,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 76,
-  "self_query_at_5": 76,
-  "self_query_count": 76,
+  "self_query_at_1": 77,
+  "self_query_at_5": 77,
+  "self_query_count": 77,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
