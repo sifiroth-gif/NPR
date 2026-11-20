@@ -119,6 +119,9 @@ def seed(state_dir, hot):
                 if not fix.get("onscreen"):   # сыгранное при Шики — не новость мира для offscreen
                     state.setdefault("happened", []).append(event)
                 changed.append(key)
+        for name in will.get("drop") or []:   # перепланировка хранителя: несбывшийся план снимается без следа
+            if active.pop(name, None) is not None:
+                changed.append(key)
         done = {d.get("key") for d in profile.get("intent_done") or []}
         for name, agenda in (will.get("intent") or {}).items():
             if not isinstance(agenda, dict) or name in done:

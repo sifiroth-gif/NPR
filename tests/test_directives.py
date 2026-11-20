@@ -179,3 +179,32 @@ class CanonPlanTest(unittest.TestCase):
         h = {"cursor": {"id": "x", "at": "0006-10-04T07:13:00"}}
         self.assertTrue(keeper.apply(root, h))
         self.assertEqual(h["offscreen"]["truth"]["leak"], "источник")
+
+
+class ReplanTest(unittest.TestCase):
+    def test_keeper_drops_only_unstarted_events(self):
+        from rpg_engine import keeper
+        root = Path(tempfile.mkdtemp())
+        (root / "memory/_curated").mkdir(parents=True)
+        h = {"cursor": {"id": "x", "at": "0006-10-04T07:13:00"},
+             "_plot": {"events": {"later": {"id": "later", "status": "queued", "scenes": 0},
+                                  "live": {"id": "live", "status": "active", "scenes": 2}}}}
+        (root / keeper.SEED).write_text(json.dumps({"plot": {"later": {"drop": True}, "live": {"drop": True}}}),
+                                        encoding="utf-8")
+        keeper.apply(root, h)
+        self.assertNotIn("later", h["_plot"]["events"])
+        self.assertIn("live", h["_plot"]["events"], "начатое событие не снимается")
+
+    def test_will_seed_drops_plan_silently(self):
+        from rpg_engine import will
+        root = Path(tempfile.mkdtemp())
+        (root / "memory/_curated").mkdir(parents=True)
+        h = {"cursor": {"id": "x", "at": "0006-10-04T07:13:00"},
+             "_psyche": {"sasuke": {"name": "Учиха Саске", "intent": {"old": {"due": "0006-10-17T22:00:00"}}}}}
+        (root / will.SEED).write_text(json.dumps({"sasuke": {"drop": ["old"], "intent": {
+            "new": {"goal": "g", "due": "0010-03-10T22:00:00", "canon": "да"}}}}), encoding="utf-8")
+        will.seed(root, h)
+        intent = h["_psyche"]["sasuke"]["intent"]
+        self.assertNotIn("old", intent)
+        self.assertEqual(intent["new"]["due"], "0010-03-10T22:00:00")
+        self.assertFalse(will._state(h).get("happened"), "снятый план не становится новостью мира")
