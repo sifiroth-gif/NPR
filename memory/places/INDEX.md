@@ -6,9 +6,9 @@
 - Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 50 ход(ов), s02–s08
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
+- Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 20 ход(ов), s08–s09
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 19 ход(ов), s07–s07
-- Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 19 ход(ов), s08–s09
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
