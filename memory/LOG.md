@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s09.text.010: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Возница повозки (`npc/kagen_caravan_driver`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`), план сюжета, поправки игрока: 1
+- s09.text.010: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Возница повозки (`npc/kagen_caravan_driver`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`), план сюжета, поправки игрока: 2
 - s09.text.009: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Сопровождающий повозки (`npc/kagen_caravan_escort`)
 - s09.text.008: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), план сюжета
 - s09.text.007: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Орочимару (`npc/orochimaru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `shiki_blood_vial`, план сюжета
