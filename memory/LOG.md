@@ -61,4 +61,3 @@
 - s08.text.052: вещь `foreign_observation_case`, линия `order`, поправки игрока: 2
 - s08.text.051: линия `order`
 - s08.text.050: линия `order`
-- s08.text.049: линия `order`
