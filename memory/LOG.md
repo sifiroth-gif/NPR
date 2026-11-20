@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.058: Саске Учиха (`npc/sasuke`), поправки игрока: 1
 - s09.text.057: Саске Учиха (`npc/sasuke`)
 - s09.text.056: Саске Учиха (`npc/sasuke`), Хагуро (`npc/khaguro`)
 - s09.text.055: Саске Учиха (`npc/sasuke`)
@@ -60,4 +61,3 @@
 - s09.text.001: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Минасэ Рэи (`npc/minase`), план сюжета
 - s08.text.106: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Немера (Невыписанная) (`npc/nemera`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мугами Нао (`npc/nao`)
 - s08.text.105: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Возница повозки (`npc/kagen_caravan_driver`), Немера (Невыписанная) (`npc/nemera`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), поправки игрока: 1
-- s08.text.104: Кабуто Якуши (`npc/kabuto`), Возница повозки (`npc/kagen_caravan_driver`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Немера (Невыписанная) (`npc/nemera`), Кирисава Сэйна (`npc/seina`)
