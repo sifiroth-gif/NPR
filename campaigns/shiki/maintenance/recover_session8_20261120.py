@@ -13,7 +13,7 @@ import shutil
 import sys
 from pathlib import Path
 
-from rpg_engine import compaction, git_state, hot, live_scene, scene_gate, sessions, verification
+from rpg_engine import compaction, git_state, hot, live_scene, nextpack, scene_gate, sessions, verification
 from rpg_engine.engine import Campaign, file_sha256
 
 SOURCE = "archive/session-008-turns.jsonl"
@@ -201,6 +201,10 @@ def derived_memory_close(root, sqlite_revision):
     checks=hot.check(root)
     if not checks.get("ok"):
         raise ValueError("S08 closed checkpoint HOT check failed "+str(checks))
+    packet=nextpack.write(root,state,read_json(root/live_scene.PATH),
+                          read_json(root/"recovery/CHECKS.json"))
+    if packet.get("next_id") != FIRST_NEXT or packet.get("fold_errors"):
+        raise ValueError("NEXT.json failed S09 handoff: "+str(packet.get("next_id")))
     return checks
 
 def main(root):
@@ -216,6 +220,10 @@ def main(root):
             raise ValueError("New play begun: cannot refresh S09 from old source")
         _,accepted=scene_gate.played_turns(root)
         save(root/live_scene.PATH,live_scene.build_for_state(state,accepted,root))
+        nextpack.write(root,state,read_json(root/live_scene.PATH),
+                       read_json(root/"recovery/CHECKS.json"))
+        if read_json(root/nextpack.PATH).get("next_id") != FIRST_NEXT:
+            raise ValueError("Previously closed S09 has wrong next ID")
         print("S08_ALREADY_CLOSED",json.dumps(current,ensure_ascii=False),flush=True)
         return
     assert_live_terminal(root,rows)
