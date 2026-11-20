@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.052: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хагуро (`npc/khaguro`), Саске Учиха (`npc/sasuke`), Хирано (`npc/hirano`)
 - s09.text.051: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`)
 - s09.text.050: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), hirano_seiji (`npc/hirano_seiji`)
 - s09.text.049: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), поправки игрока: 1
@@ -60,4 +61,3 @@
 - s08.text.101: Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Возница повозки (`npc/kagen_caravan_driver`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Такаги Рэн (`npc/takagi_ren`)
 - s08.text.100: Младший шиноби Звука (`npc/sound_kagen_junior`), Старший шиноби Звука (`npc/sound_kagen_senior`), Человек в маске (`npc/masked_man`), Немера (Невыписанная) (`npc/nemera`), Уцуро (`npc/utsuro`), план сюжета
 - s08.text.099: поправки игрока: 1
-- s08.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Такаги Рэн (`npc/takagi_ren`), план сюжета, поправки игрока: 1
