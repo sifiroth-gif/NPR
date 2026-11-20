@@ -161,3 +161,4 @@
 - Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
+- Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
