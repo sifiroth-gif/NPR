@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.044: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`), Кадзиура Сатору (`npc/kadziura_satoru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `medical_case_m12`, вещь `kuroishi_ledger`, план сюжета
 - s09.text.043: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Сиодзаки Масааки (`npc/shiozaki_masaaki`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), вещь `medical_case_m12`, вещь `kijima_route_book`
 - s09.text.042: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), бой
 - s09.text.041: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), kiri_hunters (`npc/kiri_hunters`), Кэйдзи (`npc/keiji`), вещь `kuroishi_ledger`, вещь `medical_case_m12`, план сюжета
@@ -60,4 +61,3 @@
 - s08.text.093: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1
 - s08.text.092: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`), Медик у панели В-7 (`npc/medical_panel_operator`), Хирано (`npc/hirano`)
 - s08.text.091: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Медик у панели В-7 (`npc/medical_panel_operator`), hirano_seiji (`npc/hirano_seiji`)
-- s08.text.090: morioka_khideaki (`npc/morioka_khideaki`), Такаги Рэн (`npc/takagi_ren`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1

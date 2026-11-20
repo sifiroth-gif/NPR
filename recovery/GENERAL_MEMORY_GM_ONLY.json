@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.043",
+  "cursor": "s09.text.044",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -56,8 +56,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json",
-        "s09.text.043"
+        "recovery/cast/akihiro.json"
       ]
     },
     "arai_mitiko": {
@@ -155,8 +154,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/arakawa.json",
-        "s09.text.043"
+        "recovery/cast/arakawa.json"
       ]
     },
     "arakawa_guard": {
@@ -655,7 +653,8 @@
     "hospital_transporter": {
       "aliases": [
         "hospital transporter",
-        "Транспортник госпиталя"
+        "Транспортник госпиталя",
+        "hospital_transporter"
       ],
       "facts": [],
       "id": "hospital_transporter",
@@ -665,12 +664,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.007",
+          "seen": "s09.text.044",
           "state": "Транспортник из госпиталя продолжает добиваться подтверждения, что действовал по выданной накладной."
         }
       ],
       "sources": [
-        "recovery/cast/hospital_transporter.json"
+        "recovery/cast/hospital_transporter.json",
+        "s09.text.044"
       ]
     },
     "itachi_report_copies": {
@@ -703,7 +703,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 53,
+      "mention_count": 54,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -711,13 +711,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-12-18T20:42:00",
-          "excerpt": "— Её зовут Кидзима Суми. Она приезжает за медицинскими отправлениями. Иногда раз в месяц, иногда чаще. **Кабуто Якуши:** — Откуда? **Хасуми Дзюнъити:** — Из Страны Рек. По крайней мере, там зарегистрирована её контора. Она работает с частными исследовательским",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.041"
         },
         {
           "at": "0007-12-18T20:44:00",
@@ -732,21 +725,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.043"
+        },
+        {
+          "at": "0007-12-18T21:05:00",
+          "excerpt": "епарата, два исследовательских свитка и медицинские документы Шики. Кабуто сопоставил номера с журналом. **Кабуто Якуши:** — Всё соответствует описи. Содержимое подтвердило уже установленную картину. Архив наследственных материалов Киригакуре распорядился полу",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.044"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.043",
-          "state": "Дошёл с Шики до «Трёх сосен», приказал наблюдателю следить за задним выходом, лично сверил номер и дату приказа Сиодзаки в журнале. Намерен проверить М-12 прежде ухода Кидзимы."
+          "seen": "s09.text.044",
+          "state": "Сам проверил комплект М-12, закрепил материальные доказательства, передал Кидзиме свидетельство и отпустил её; дальнейшую обработку бумаг взял на себя. Передал Шики письмо Орочимару о демонстрации 20 декабря с живым испытуемым."
         },
         {
-          "state": "Дошёл с Шики до «Трёх сосен», приказал наблюдателю следить за задним выходом, лично сверил номер и дату приказа Сиодзаки в журнале. Намерен проверить М-12 прежде ухода Кидзимы."
+          "state": "Сам проверил комплект М-12, закрепил материальные доказательства, передал Кидзиме свидетельство и отпустил её; дальнейшую обработку бумаг взял на себя. Передал Шики письмо Орочимару о демонстрации 20 декабря с живым испытуемым."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.043"
+        "s09.text.044"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -773,7 +773,8 @@
     "kadziura_satoru": {
       "aliases": [
         "kadziura satoru",
-        "Кадзиура Сатору"
+        "Кадзиура Сатору",
+        "kadziura_satoru"
       ],
       "facts": [],
       "id": "kadziura_satoru",
@@ -815,7 +816,7 @@
           "body": "Около пятидесяти лет, впалые щёки, виски с сединой, расстёгнутая не в ту петлю пуговица халата, чернила на пальцах; из-за близости Шики напряжён подбородок, но медик сознательно переводит внимание к пациентам",
           "fears": "Резкое прекращение жизненной поддержки, новое вредоносное вмешательство, незаконное изъятие пациентов",
           "role": "Старший врач реанимационного отделения Центрального госпиталя, координатор лечения четырёх установленных выживших реципиентов С-17",
-          "seen": "s09.text.006",
+          "seen": "s09.text.044",
           "stance": "In acute critical care prioritizes airway stabilization, allows Shiki bedside examination but requires notice before intervention on ETT.",
           "state": "09:00 подал рапорт об устно разрешённом вмешательстве Шики в случай №6; две опечатанные пробы пока отдельно хранятся, решение об уничтожении требует оформления.",
           "voice": "Низкий усталый голос, точная сдержанная речь, мало лишних объяснений",
@@ -823,7 +824,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/kadziura_satoru.json"
+        "recovery/cast/kadziura_satoru.json",
+        "s09.text.044"
       ]
     },
     "kage_doppelganger": {
@@ -1468,7 +1470,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.043",
+          "seen": "s09.text.044",
           "state": "После уже полученного удара Шики рассёк ему оба ахилловых сухожилия чакровым скальпелем, остановил кровотечение и зарастил трещины двух правых рёбер; сухожилия не восстановлены. Хасуми в сознании, на полу, не способен ходить. Перестал отвечать, отстранился от "
         },
         {
@@ -1492,13 +1494,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "kabuto_access",
+          "holder": "kabuto",
           "since": "s09.text.039",
-          "turn": "s09.text.041"
+          "turn": "s09.text.044"
         }
       ],
       "sources": [
-        "s09.text.041"
+        "s09.text.044"
       ]
     },
     "kuroishi_visitor": {
@@ -1511,7 +1513,7 @@
       "id": "kuroishi_visitor",
       "kind": "npc",
       "label": "Кидзима Суми",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0007-12-18T20:42:00",
@@ -1526,21 +1528,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.043"
+        },
+        {
+          "at": "0007-12-18T21:05:00",
+          "excerpt": "редственные исполнители теперь были подтверждены. Кабуто закрыл последний свиток. **Кабуто Якуши:** — Достаточно. **Кидзима Суми:** — Для чего? **Кабуто Якуши:** — Чтобы эта перевозка больше не состоялась. Он взял сопроводительный лист и поставил на нём отметк",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.044"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.043",
-          "state": "Кидзима сама отменила отправление и предъявила Шики комплект М-12, но пока не передала его фактически и не открыла. Назвала прямой заказ от Сиодзаки Масааки от 5.12, потребование уничтожить исходные накладные и своё решение сохранить их."
+          "seen": "s09.text.044",
+          "state": "Подтвердила передачу М-12 Кабуто под охрану для Шики, получила заверение приёма и не отправилась в Киригакуре. Больше не удерживается, сама выбирает дальнейший путь."
         },
         {
-          "state": "Кидзима сама отменила отправление и предъявила Шики комплект М-12, но пока не передала его фактически и не открыла. Назвала прямой заказ от Сиодзаки Масааки от 5.12, потребование уничтожить исходные накладные и своё решение сохранить их."
+          "state": "Подтвердила передачу М-12 Кабуто под охрану для Шики, получила заверение приёма и не отправилась в Киригакуре. Больше не удерживается, сама выбирает дальнейший путь."
         }
       ],
       "sources": [
         "recovery/cast/kuroishi_visitor.json",
         "recovery/HOT.json",
-        "s09.text.043"
+        "s09.text.044"
       ]
     },
     "kusa_head": {
@@ -1813,13 +1822,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "on_station_counter",
+          "holder": "kabuto",
           "since": "s09.text.041",
-          "turn": "s09.text.043"
+          "turn": "s09.text.044"
         }
       ],
       "sources": [
-        "s09.text.043"
+        "s09.text.044"
       ]
     },
     "medical_panel_operator": {
@@ -2242,7 +2251,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2250,13 +2259,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-18T18:14:00",
-          "excerpt": ", а потом когда буду нужен мы пойдем на переправу. #3 дня максимальное приближение к тому что хочет Орочимару желательно вообще это выполнить за это время# **Вторник, 18 декабря 1284 года. 17:38** *Страна Звука. Комплекс Кагэн.* Три дня Шики почти не покидал л",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.034"
         },
         {
           "at": "0007-12-18T18:20:00",
@@ -2271,6 +2273,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.038"
+        },
+        {
+          "at": "0007-12-18T21:05:00",
+          "excerpt": "накомой — стилизованная змея. Он развернул лист. Дочитал до конца. Затем, не меняясь в лице, сложил его и убрал обратно. **Кабуто Якуши:** — Орочимару-сама прислал распоряжение. Он посмотрел на Шики. **Кабуто Якуши:** — Демонстрация по Кимимаро состоится двадц",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.044"
         }
       ],
       "projections": [
@@ -3725,6 +3734,25 @@
       "projections": [],
       "sources": [
         "s09.text.038"
+      ]
+    },
+    "place:3a766c0c4ce16513": {
+      "aliases": [
+        "place:3a766c0c4ce16513",
+        "Страна Звука, почтовая станция «Три сосны», наружный навес",
+        "Страна Звука",
+        "почтовая станция «Три сосны»",
+        "наружный навес"
+      ],
+      "facts": [],
+      "id": "place:3a766c0c4ce16513",
+      "kind": "place",
+      "label": "Страна Звука, почтовая станция «Три сосны», наружный навес",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.044"
       ]
     },
     "place:3ac4d366342ac1ac": {
@@ -8829,7 +8857,8 @@
     "razvedchik_zvuka": {
       "aliases": [
         "razvedchik zvuka",
-        "Разведчик Звука"
+        "Разведчик Звука",
+        "razvedchik_zvuka"
       ],
       "facts": [],
       "id": "razvedchik_zvuka",
@@ -8855,7 +8884,7 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s09.text.043"
+          "seen": "s09.text.044"
         },
         {
           "role": "по подписи в сцене"
@@ -8863,7 +8892,8 @@
       ],
       "sources": [
         "recovery/cast/razvedchik_zvuka.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.044"
       ]
     },
     "rear_unknown": {
@@ -9407,8 +9437,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shiozaki_masaaki.json",
-        "s09.text.043"
+        "recovery/cast/shiozaki_masaaki.json"
       ]
     },
     "sound_kagen_junior": {
@@ -10411,16 +10440,16 @@
     },
     {
       "from": "kuroishi_ledger",
-      "source": "s09.text.041",
+      "source": "s09.text.044",
       "status": "projected",
-      "to": "kabuto_access",
+      "to": "kabuto",
       "type": "held_by"
     },
     {
       "from": "medical_case_m12",
-      "source": "s09.text.043",
+      "source": "s09.text.044",
       "status": "projected",
-      "to": "on_station_counter",
+      "to": "kabuto",
       "type": "held_by"
     },
     {
@@ -10432,5 +10461,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 692
+  "source_turns_indexed": 693
 }
