@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.032: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), вещь `kabuto_private_bounty_ledger`
 - s09.text.031: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `itachi_report_copies`, вещь `kabuto_private_bounty_ledger`
 - s09.text.030: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kiri_bingo_book`
 - s09.text.029: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `kiri_bingo_book`, вещь `kiri_anbu_mask`
@@ -60,4 +61,3 @@
 - s08.text.081: Такаги Рэн (`npc/takagi_ren`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), Мориока Хидэаки (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)
 - s08.text.079: Немера (Невыписанная) (`npc/nemera`)
-- s08.text.078: Немера (Невыписанная) (`npc/nemera`)
