@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.018",
+  "cursor": "s09.text.019",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -713,7 +713,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.018",
+          "seen": "s09.text.019",
           "state": "Согласился на утреннее исследование кости Кимимаро; отложил архив до завтра, оставил образец и ключ Шики, вышел."
         },
         {
@@ -722,8 +722,7 @@
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s09.text.018"
+        "recovery/HOT.json"
       ]
     },
     "kadziura_satoru": {
@@ -1618,15 +1617,16 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s09.text.016",
+          "seen": "s09.text.019",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-          "state": "В течение года воспринимала доступные ей сенсорные исследования Шики, не получила доступа к закрытой ветви Нулевого Генома, комментировала различие между клеточной смертью и физиологическим прекращением жизни.",
+          "state": "Через общую сенсорную ветвь увидела, что Шики подобрал волос, и прокомментировала малость следа; Нулевой Геном закрыт для её прямого восприятия.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
           "wants": "Выйти. До тех пор изучить тюремщика лучше, чем он изучит её."
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s09.text.019"
       ]
     },
     "night_icu_physician": {
@@ -1747,7 +1747,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1755,13 +1755,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:40:00",
-          "excerpt": "улся к столу. **Кабуто Якуши:** — Впрочем, я пришёл не ради Саске. Он извлёк из папки один лист и положил его перед Шики. **Кабуто Якуши:** — Орочимару-сама изучил результаты вашей работы с посмертными тканями. Теперь он хочет использовать ваш метод в одном со",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.016"
         },
         {
           "at": "0007-10-09T22:43:00",
@@ -1776,16 +1769,24 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.018"
+        },
+        {
+          "at": "0007-10-09T22:47:00",
+          "excerpt": "дом стоял запечатанный футляр с останками Кимимаро Кагуя. Материал мёртвого носителя Сикоцумьяку, предоставленный самим Орочимару. Между пальцами Шики находился совсем другой образец. **У него действительно имелись признаки сохранившейся корневой ткани.** Прои",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.019"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.013",
+          "seen": "s09.text.019",
           "state": "В 1283 предоставил Шики лабораторию, животных и выбранных пленных для самостоятельной работы в изоляции; за год получил отчёты, сохранил право определять доступ к живым материалам и интерес к посмертным методам."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "s09.text.019"
       ]
     },
     "patient_airway": {
@@ -2134,9 +2135,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.018",
+        "s09.text.019",
         "s09.text.016",
-        "s09.text.017"
+        "s09.text.017",
+        "s09.text.018"
       ]
     },
     "place:07a5417b1774e85e": {
@@ -8070,13 +8072,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "",
+          "holder": "shiki",
           "since": "s09.text.016",
-          "turn": "s09.text.016"
+          "turn": "s09.text.019"
         }
       ],
       "sources": [
-        "s09.text.016"
+        "s09.text.019"
       ]
     },
     "post_second_attacker": {
@@ -8292,7 +8294,8 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -8319,12 +8322,13 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s08.text.105",
+          "seen": "s09.text.019",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json"
+        "recovery/cast/s17_recipient_6.json",
+        "s09.text.019"
       ]
     },
     "sasuke": {
@@ -8348,16 +8352,12 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.018",
-          "state": "После исправления Шики признал, что они не сражались, а он видел поединки Шики; приглашает того на тренировочную площадку и покинул лабораторию без согласия на исследования или забора биоматериала."
-        },
-        {
+          "seen": "s09.text.019",
           "state": "После исправления Шики признал, что они не сражались, а он видел поединки Шики; приглашает того на тренировочную площадку и покинул лабораторию без согласия на исследования или забора биоматериала."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json",
-        "recovery/HOT.json"
+        "recovery/cast/sasuke.json"
       ]
     },
     "sayu": {
@@ -8466,8 +8466,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/seina.json",
-        "s09.text.018"
+        "recovery/cast/seina.json"
       ]
     },
     "sekido_tadao": {
@@ -8629,8 +8628,7 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука",
-        "sound_kagen_junior"
+        "Младший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
@@ -8678,8 +8676,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_junior.json",
-        "s09.text.018"
+        "recovery/cast/sound_kagen_junior.json"
       ]
     },
     "sound_kagen_senior": {
@@ -9550,6 +9547,13 @@
       "type": "held_by"
     },
     {
+      "from": "possible_sasuke_hair",
+      "source": "s09.text.019",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
+    },
+    {
       "from": "kimimaro_bone_sample",
       "source": "s09.text.018",
       "status": "projected",
@@ -9558,5 +9562,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 667
+  "source_turns_indexed": 668
 }
