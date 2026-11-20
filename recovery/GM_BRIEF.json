@@ -87,7 +87,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s09.text.059",
+  "cursor": "s09.text.060",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -157,11 +157,11 @@
  "cursor": {
   "at": "0007-12-19T01:32:00",
   "date": "Среда, 19 декабря 1284 года",
-  "id": "s09.text.059",
+  "id": "s09.text.060",
   "place": "Страна Звука, Кагэн, личная комната Шики",
   "time": "01:32"
  },
- "digest": "7f20c18ef18d392413ae51f3786188d803b2ead8a45535714eb3626b3f01b749",
+ "digest": "3cb73e1d9632083689e1e06e5aa71cfceff892caa33bf69e10fdb79c1c203d46",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -200,18 +200,18 @@
    "value": 28.7
   },
   "dice": [
-   19,
-   23,
-   97,
-   18,
-   35,
-   21,
-   49,
-   50,
-   47,
-   92,
-   18,
-   54
+   88,
+   67,
+   44,
+   24,
+   16,
+   65,
+   16,
+   82,
+   4,
+   99,
+   89,
+   73
   ],
   "injuries": {
    "kiri_transfer_carrier": [
@@ -354,7 +354,7 @@
     "step": "необратимость"
    }
   },
-  "quiet": 0,
+  "quiet": 1,
   "recent": [
    {
     "turn": "s08.text.067",
@@ -379,7 +379,7 @@
  },
  "needs_profile": [
   {
-   "appearances": 26,
+   "appearances": 27,
    "facets": 4,
    "need": 5,
    "npc": "sasuke",
@@ -628,7 +628,7 @@
     },
     {
      "at": "0007-12-19T01:32:00",
-     "sha256": "002c7e193b1649653833a67774e6f5f46fa7e4124ad392442b5a135ad40f2120",
+     "sha256": "70279d5635f40b1a975ada7af8080ab6c1137c42fd2f8a364c9104168d5aa81a",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.059"
@@ -644,14 +644,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s09.text.059",
-      "what": "Шики предложил Саске стимулировать стабилизацию его глаз без переписи генома либо пересадить ему свои новые Вечные Мангекё и восстановить себе глаза. Саске не согласился на процедуру; требует полного "
+      "turn": "s09.text.060",
+      "what": "Игрок закрепил изображение 2900.jpg как эталон узора Вечного Мангекё Шики. Оно заменяет ранее придуманную шестилучевую схему; первичный Мангекё и обычный трёхтомоэ сохраняют отдельные рисунки. Игровое"
      }
     ],
     "memory_file": "archive/npc-memory/sasuke.json",
-    "memory_total": 26,
+    "memory_total": 27,
     "name": "Учиха Саске",
-    "seen": "s09.text.059",
+    "seen": "s09.text.060",
     "state": "Выслушал гипотезу о коррекции физиологии без переписи его генома и возможность трансплантации глаз Шики с регенерацией донорских. Готов обсуждать, но сам не даёт согласия ни на операцию, ни на эксперимент, требует раскрыть полные условия.",
     "status": "present_profile",
     "tier": "deep"
@@ -661,8 +661,8 @@
  },
  "recent_turns": [
   {
-   "id": "s09.text.059",
-   "line": "Шики предложил Саске стимулировать стабилизацию его глаз без переписи генома либо пересадить ему свои новые Вечные Мангекё и восстановить себе глаза. Саске не согласился на процедуру; требует полного плана, условий и доказательств переносимости."
+   "id": "s09.text.060",
+   "line": "Игрок закрепил изображение 2900.jpg как эталон узора Вечного Мангекё Шики. Оно заменяет ранее придуманную шестилучевую схему; первичный Мангекё и обычный трёхтомоэ сохраняют отдельные рисунки. Игровое время не сдвинуто."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
@@ -695,8 +695,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "abe82c34e192c9a6b6bb075739c95c0252da5157",
-  "turn": "s09.text.059"
+  "sha": "9e571ba2d0d282830ecdf7004cfaab219d325867",
+  "turn": "s09.text.060"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -732,7 +732,7 @@
    "v7_tapping",
    "vials",
    "visitor_claim",
-   "sasuke_eyes_proposal_pending"
+   "shiki_eternal_mangekyo_visual"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
