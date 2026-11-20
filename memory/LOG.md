@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.025: Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 3
 - s09.text.024: Саске Учиха (`npc/sasuke`), kiri_hunters (`npc/kiri_hunters`), Кэйдзи (`npc/keiji`), поправки игрока: 1
 - s09.text.023: Саске Учиха (`npc/sasuke`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
 - s09.text.022: Саске Учиха (`npc/sasuke`), Минасэ Рэи (`npc/minase`), Медик у панели В-7 (`npc/medical_panel_operator`), вещь `kimimaro_bone_sample`, поправки игрока: 2
@@ -60,4 +61,3 @@
 - s08.text.074: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.073: Немера (Невыписанная) (`npc/nemera`), Мугами Акихиро (`npc/akihiro`), Мугами Нао (`npc/nao`)
 - s08.text.072: Немера (Невыписанная) (`npc/nemera`)
-- s08.text.071: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
