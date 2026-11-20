@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.016",
+  "cursor": "s09.text.017",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -680,7 +680,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 33,
+      "mention_count": 34,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +688,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-10-09T22:35:00",
-          "excerpt": "рату способности к регенерации? Прекращение жизнедеятельности клеток после нарушения их чакровой организации? **Кабуто Якуши:** — И прежде следует отделить пассивное действие крови от направленного применения чакры. Иначе результаты окажутся бесполезны. Орочим",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.013"
         },
         {
           "at": "0007-10-09T22:37:00",
@@ -709,21 +702,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.016"
+        },
+        {
+          "at": "0007-10-09T22:43:00",
+          "excerpt": "и.* **Мугами Шики:** — Да, соглашусь. Кабуто несколько секунд смотрел на него, затем закрыл папку. **Кабуто Якуши:** — Тогда вопрос о раскрытии имени решён. Орочимару-сама распорядился не сообщать его *до* вашего согласия. Вы согласились. Он снова надел очки. ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.016",
-          "state": "После ухода Саске предложил Шики исследовать древний образец от неизвестного владельца наследственной способности; по указанию Орочимару имя раскрывается лишь после согласия, но Кабуто намерен оспорить порядок."
+          "seen": "s09.text.017",
+          "state": "Получил согласие Шики, назвал Кимимаро Кагуя и показал контрольный костный образец; открыл доступ к нему и прежним медицинским данным. Призвал не уничтожать редкую пробу Шитоном до анализа."
         },
         {
-          "state": "После ухода Саске предложил Шики исследовать древний образец от неизвестного владельца наследственной способности; по указанию Орочимару имя раскрывается лишь после согласия, но Кабуто намерен оспорить порядок."
+          "state": "Получил согласие Шики, назвал Кимимаро Кагуя и показал контрольный костный образец; открыл доступ к нему и прежним медицинским данным. Призвал не уничтожать редкую пробу Шитоном до анализа."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.016"
+        "s09.text.017"
       ]
     },
     "kadziura_satoru": {
@@ -991,6 +991,27 @@
       ],
       "sources": [
         "recovery/cast/keiji.json"
+      ]
+    },
+    "kimimaro_bone_sample": {
+      "aliases": [
+        "kimimaro bone sample"
+      ],
+      "facts": [],
+      "id": "kimimaro_bone_sample",
+      "kind": "item",
+      "label": "kimimaro bone sample",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki_lab_controlled_access",
+          "since": "s09.text.017",
+          "turn": "s09.text.017"
+        }
+      ],
+      "sources": [
+        "s09.text.017"
       ]
     },
     "kuroda_mayu": {
@@ -1605,8 +1626,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.016"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -1727,7 +1747,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1735,13 +1755,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:35:00",
-          "excerpt": "с Кагэн. Бывшая настоятельская часть монастыря.* **Мугами Шики:** — Мне понадобятся живые материалы. Орочимару поднял глаза. **Мугами Шики:** — Люди, животные или что-то ещё — неважно. В первую очередь мне необходимо точно установить, что моя кровь, прикоснове",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.013"
         },
         {
           "at": "0007-10-09T22:37:00",
@@ -1756,6 +1769,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.016"
+        },
+        {
+          "at": "0007-10-09T22:43:00",
+          "excerpt": "секунд смотрел на него, затем закрыл папку. **Кабуто Якуши:** — Тогда вопрос о раскрытии имени решён. Орочимару-сама распорядился не сообщать его *до* вашего согласия. Вы согласились. Он снова надел очки. **Кабуто Якуши:** — Кимимаро. Клан Кагуя. Имя прозвучал",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.017"
         }
       ],
       "projections": [
@@ -2114,6 +2134,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s09.text.017",
         "s09.text.016"
       ]
     },
@@ -8326,7 +8347,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.016",
+          "seen": "s09.text.017",
           "state": "После исправления Шики признал, что они не сражались, а он видел поединки Шики; приглашает того на тренировочную площадку и покинул лабораторию без согласия на исследования или забора биоматериала."
         },
         {
@@ -8335,8 +8356,7 @@
       ],
       "sources": [
         "recovery/cast/sasuke.json",
-        "recovery/HOT.json",
-        "s09.text.016"
+        "recovery/HOT.json"
       ]
     },
     "sayu": {
@@ -8661,7 +8681,8 @@
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука"
+        "Старший шиноби Звука",
+        "sound_kagen_senior"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -8702,14 +8723,15 @@
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s09.text.012",
+          "seen": "s09.text.017",
           "state": "В переходе к жилому сектору сообщил Кабуто о полученной с пограничного поста ориентировке и интересе внешнего дозора к неизвестному шиноби; не пустил дозор к гостю.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_senior.json"
+        "recovery/cast/sound_kagen_senior.json",
+        "s09.text.017"
       ]
     },
     "stolen_house_plan": {
@@ -8736,7 +8758,8 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн"
+        "Такаги Рэн",
+        "takagi_ren"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -8778,7 +8801,7 @@
           "body": "Средних лет/пожилой офицер с короткой седой бородой, тёмный плащ, резидентская повязка на левом плече и служебная печать на шее, следит за руками Нори",
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-          "seen": "s08.text.101",
+          "seen": "s09.text.017",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
           "state": "Услышал сочувствие Шики о сыне, которого упомянул пленный, но не назвал по имени. Получил две пробирки и велел независимо охранять их и проверить первую у Куроды; отпустил Шики, не предпринимая безнадёжного одиночного преследования.",
           "voice": "Сухие короткие приказы без объяснения мотивов, требовательная прямая речь",
@@ -8786,7 +8809,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json"
+        "recovery/cast/takagi_ren.json",
+        "s09.text.017"
       ]
     },
     "tetsu": {
@@ -9216,8 +9240,7 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске",
-        "unknown_masked_prisoner"
+        "Неизвестный пленный в маске"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -9231,8 +9254,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json",
-        "s09.text.016"
+        "recovery/cast/unknown_masked_prisoner.json"
       ]
     },
     "utsuro": {
@@ -9526,8 +9548,15 @@
       "status": "projected",
       "to": "kabuto",
       "type": "held_by"
+    },
+    {
+      "from": "kimimaro_bone_sample",
+      "source": "s09.text.017",
+      "status": "projected",
+      "to": "shiki_lab_controlled_access",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 665
+  "source_turns_indexed": 666
 }
