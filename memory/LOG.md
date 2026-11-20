@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.018: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kimimaro_bone_sample`
 - s09.text.017: Кабуто Якуши (`npc/kabuto`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `kimimaro_bone_sample`
 - s09.text.016: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `possible_sasuke_hair`, план сюжета
 - s09.text.015: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`)
@@ -60,4 +61,3 @@
 - s08.text.067: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.066: Сэкидо Тадао (`npc/sekido_tadao`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Уцуро (`npc/utsuro`), линия `parents`
 - s08.text.065: Немера (Невыписанная) (`npc/nemera`), Сэкидо Тадао (`npc/sekido_tadao`)
-- s08.text.064: Сэкидо Тадао (`npc/sekido_tadao`), Немера (Невыписанная) (`npc/nemera`)

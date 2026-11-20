@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.017",
+  "cursor": "s09.text.018",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -680,7 +680,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +688,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-10-09T22:37:00",
-          "excerpt": "Он взглянул на Шики поверх плеча. **Саске Учиха:** — Для меня этого достаточно. Кабуто негромко закрыл папку. **Кабуто Якуши:** — Саске-кун, возможно, стоит уточнить, какое именно участие предлагает Мугами-кун. Здесь проводятся исследования, требующие определё",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.015"
         },
         {
           "at": "0007-10-09T22:40:00",
@@ -709,21 +702,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.017"
+        },
+        {
+          "at": "0007-10-09T22:46:00",
+          "excerpt": "ть прямо сейчас? Может, подождёт до завтра? Кабуто посмотрел на часы, затем на запечатанный футляр. **Кабуто Якуши:** — Кимимаро мёртв уже несколько лет. Ещё одна ночь ничего не изменит. Он взял со стола фотографию покойного, задержался на ней взглядом и убрал",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.018"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.017",
-          "state": "Получил согласие Шики, назвал Кимимаро Кагуя и показал контрольный костный образец; открыл доступ к нему и прежним медицинским данным. Призвал не уничтожать редкую пробу Шитоном до анализа."
+          "seen": "s09.text.018",
+          "state": "Согласился на утреннее исследование кости Кимимаро; отложил архив до завтра, оставил образец и ключ Шики, вышел."
         },
         {
-          "state": "Получил согласие Шики, назвал Кимимаро Кагуя и показал контрольный костный образец; открыл доступ к нему и прежним медицинским данным. Призвал не уничтожать редкую пробу Шитоном до анализа."
+          "state": "Согласился на утреннее исследование кости Кимимаро; отложил архив до завтра, оставил образец и ключ Шики, вышел."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.017"
+        "s09.text.018"
       ]
     },
     "kadziura_satoru": {
@@ -1007,11 +1007,11 @@
         {
           "holder": "shiki_lab_controlled_access",
           "since": "s09.text.017",
-          "turn": "s09.text.017"
+          "turn": "s09.text.018"
         }
       ],
       "sources": [
-        "s09.text.017"
+        "s09.text.018"
       ]
     },
     "kuroda_mayu": {
@@ -1747,7 +1747,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1755,13 +1755,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:37:00",
-          "excerpt": ". Он произнёс это без раздражения. Просто обозначил границу, за которой разговор для него закончился бы. **Саске Учиха:** — У Орочимару хватает людей, которые считают чужие тела своими. Кабуто перестал улыбаться. Из коридора донёсся далёкий стук шагов. За двер",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.015"
         },
         {
           "at": "0007-10-09T22:40:00",
@@ -1776,6 +1769,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.017"
+        },
+        {
+          "at": "0007-10-09T22:46:00",
+          "excerpt": "Без вашего участия ничего с ним делать не станут. Он поднял глаза. **Кабуто Якуши:** — Знаете, Мугами-кун, Орочимару-сама очень редко возвращается к исследованиям умерших подчинённых. Обычно его интересует то, что ещё можно использовать. В коридоре послышались",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.018"
         }
       ],
       "projections": [
@@ -2134,8 +2134,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.017",
-        "s09.text.016"
+        "s09.text.018",
+        "s09.text.016",
+        "s09.text.017"
       ]
     },
     "place:07a5417b1774e85e": {
@@ -8347,7 +8348,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.017",
+          "seen": "s09.text.018",
           "state": "После исправления Шики признал, что они не сражались, а он видел поединки Шики; приглашает того на тренировочную площадку и покинул лабораторию без согласия на исследования или забора биоматериала."
         },
         {
@@ -8457,7 +8458,7 @@
           "body": "Напряжённый рот, пот на виске, экономные движения рук, проверяет монитор, после вмешательства голос становится ровнее, но готова обеспечить дыхательные пути.",
           "fears": "Вред людям кабинета и срыв медицинской работы",
           "role": "Медицинская тюнин, детская наставница Шики, владелица старого частного врачебного кабинета",
-          "seen": "s08.text.104",
+          "seen": "s09.text.018",
           "stance": "На текущем ходе не видела Шики, реакция ещё впереди",
           "state": "К 23:00 подготовила заключение об аномальной клинике Шики для юридической оценки утечки и встречалась с Нао; подробные данные без согласия Шики пока ещё не переданы третьим лицам.",
           "voice": "Сдержанная точная медицинская речь",
@@ -8465,7 +8466,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/seina.json"
+        "recovery/cast/seina.json",
+        "s09.text.018"
       ]
     },
     "sekido_tadao": {
@@ -8627,7 +8629,8 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука"
+        "Младший шиноби Звука",
+        "sound_kagen_junior"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
@@ -8668,21 +8671,21 @@
         {
           "fears": "То, что слышно из нижних помещений ночью.",
           "role": "Младший дозорный у подземных ворот.",
-          "seen": "s09.text.008",
+          "seen": "s09.text.018",
           "state": "Доложил о повторном спазме доставленного; по приказу старшего ушёл обратно на пост.",
           "voice": "Негромко, с тревожной поспешностью.",
           "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_junior.json"
+        "recovery/cast/sound_kagen_junior.json",
+        "s09.text.018"
       ]
     },
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука",
-        "sound_kagen_senior"
+        "Старший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -8730,8 +8733,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_senior.json",
-        "s09.text.017"
+        "recovery/cast/sound_kagen_senior.json"
       ]
     },
     "stolen_house_plan": {
@@ -8758,8 +8760,7 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн",
-        "takagi_ren"
+        "Такаги Рэн"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -8809,8 +8810,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json",
-        "s09.text.017"
+        "recovery/cast/takagi_ren.json"
       ]
     },
     "tetsu": {
@@ -9551,12 +9551,12 @@
     },
     {
       "from": "kimimaro_bone_sample",
-      "source": "s09.text.017",
+      "source": "s09.text.018",
       "status": "projected",
       "to": "shiki_lab_controlled_access",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 666
+  "source_turns_indexed": 667
 }
