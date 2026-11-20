@@ -9,6 +9,7 @@
 ## Кто здесь говорил с Шики
 - Такаги Рэн · `npc/takagi_ren` — 5 ход(ов)
 - Мориока Хидэаки · `npc/morioka_hideaki` — 5 ход(ов)
+- Сопровождающий повозки · `npc/kagen_caravan_escort` — 2 ход(ов)
 - Медик у панели В-7 · `npc/medical_panel_operator` — 1 ход(ов)
 - Старший сопровождающий Мориоки · `npc/morioka_escort_leader` — 1 ход(ов)
 

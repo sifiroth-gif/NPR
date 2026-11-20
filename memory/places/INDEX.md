@@ -163,3 +163,4 @@
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
 - Страна Звука, площадка перед воротами монастыря Кагэн · `places/strana-zvuka-ploshchadka-pered-vorotami-monastyrya-kagen` · 1 ход(ов), s08–s08
+- Страна Звука, подземные ворота комплекса Отогакуре у монастыря Кагэн · `places/strana-zvuka-podzemnye-vorota-kompleksa-otogakure-u-monastyr` · 1 ход(ов), s08–s08
