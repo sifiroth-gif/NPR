@@ -8,8 +8,8 @@
 
 ## Кто здесь говорил с Шики
 - Хасуми Дзюнъити · `npc/kuroishi_hasumi` — 1 ход(ов)
-- Женщина в плаще · `npc/kuroishi_visitor` — 1 ход(ов)
 - Кабуто Якуши · `npc/kabuto` — 1 ход(ов)
+- Кидзима Суми · `npc/kuroishi_visitor` — 1 ход(ов)
 - Старший шиноби Звука · `npc/sound_kagen_senior` — 1 ход(ов)
 
 ## Ходы
