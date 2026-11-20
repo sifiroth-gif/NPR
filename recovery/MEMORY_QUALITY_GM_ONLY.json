@@ -5,19 +5,20 @@
     "kagen_caravan_escort",
     "sound_kagen_junior",
     "sound_kagen_senior",
-    "place:dc70b35b5203da40"
+    "place:289ca7af8427f136"
   ],
-  "cursor": "s08.text.104",
+  "cursor": "s08.text.105",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3110,
-  "index_entities": 419,
-  "index_source_records": 649,
-  "indexed_cursor": "s08.text.104",
+  "focus_bytes": 3101,
+  "index_entities": 421,
+  "index_source_records": 650,
+  "indexed_cursor": "s08.text.105",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 7,
     "npc": 69,
-    "place": 325,
+    "place": 326,
     "thread": 17
   },
   "missing_critical": [],
@@ -27,6 +28,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s08.text.105:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -467,9 +474,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 73,
-  "self_query_at_5": 73,
-  "self_query_count": 73,
+  "self_query_at_1": 74,
+  "self_query_at_5": 74,
+  "self_query_count": 74,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
