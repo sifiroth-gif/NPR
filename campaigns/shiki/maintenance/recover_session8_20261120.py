@@ -68,9 +68,15 @@ def assert_live_terminal(root, rows):
     if folded.get("errors") or folded.get("cursor") != LAST:
         raise ValueError("S08 fold not current: " + str(folded))
     live = read_json(root/"recovery/HOT.json")
-    if live["cursor"].get("id") != LAST or live["cursor"].get("at") != END or \
-       live.get("last",{}).get("gm") != rows[-1]["gm"]:
-        raise ValueError("HOT.json does not match exact accepted S08")
+    last_live = live.get("last") or {}
+    # HOT.last.gm is intentionally compacted to 1500 chars, not the 6563-char
+    # played scene. Compare its original length and suffix; full exact text is
+    # source-locked in TURN.json and archive/session-008-turns.jsonl.
+    if (live["cursor"].get("id") != LAST or live["cursor"].get("at") != END or
+        last_live.get("id") != LAST or
+        last_live.get("gm_chars") != len(rows[-1]["gm"]) or
+        not str(last_live.get("gm","")).endswith(rows[-1]["gm"][-250:])):
+        raise ValueError("HOT compacted terminal scene differs from accepted S08 source")
     nxt = read_json(root/"recovery/NEXT.json")
     if nxt["cursor"] != LAST or nxt.get("fold_errors"):
         raise ValueError("NEXT.json contains unresolved fold error or different turn")
