@@ -6,7 +6,8 @@
 ``memory/_curated/keeper.GM_ONLY.json``::
 
     {"threads": {"ключ": {"closed": "исход"} | {"state": "…"}},
-     "plot": {"ключ": {"closed": "исход"} | {"status": "active", "limit": {...}, "notes": [...]}}}
+     "plot": {"ключ": {"closed": "исход"} | {"status": "active", "limit": {...}, "notes": [...]}},
+     "truth": {"ключ": "скрытый факт мира"}}
 
 Применяется один раз на версию файла, после ходов: сцену событиям не
 засчитывает и сыгранного не переписывает.
@@ -28,7 +29,7 @@ def apply(state_dir, hot):
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
-    body = {k: data.get(k) for k in ("threads", "plot")}
+    body = {k: data.get(k) for k in ("threads", "plot", "truth")}
     digest = hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
     fold = hot.setdefault("fold", {})
     if fold.get("keeper_delta") == digest:
@@ -60,5 +61,9 @@ def apply(state_dir, hot):
         for field in plot.FIELDS:
             if field in patch and patch[field] is not None:
                 event[field] = patch[field]
+    truth = hot.setdefault("offscreen", {}).setdefault("truth", {})
+    for key, fact in (body["truth"] or {}).items():   # скрытая правда хранителя: только GM_ONLY
+        if fact:
+            truth[key] = fact
     fold["keeper_delta"] = digest
     return True

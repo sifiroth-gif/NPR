@@ -31,7 +31,7 @@ from . import npc_memory
 SEED = "memory/_curated/will.GM_ONLY.json"
 PASSIVE_TURNS = 4          # ходов рядом с Шики без собственного шага
 SOON_HOURS = 24
-AGENDA_FIELDS = ("goal", "next", "due", "flaw", "against_shiki", "if_unopposed", "status")
+AGENDA_FIELDS = ("goal", "next", "due", "flaw", "against_shiki", "if_unopposed", "status", "canon")
 DARK = ("Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против "
         "Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.")
 
@@ -87,6 +87,8 @@ def seed(state_dir, hot):
         if key.startswith("_") or not isinstance(will, dict):
             continue
         profile = hot.setdefault("_psyche", {}).setdefault(key, {})
+        if will.get("name") and not profile.get("name"):   # лицо вне сыгранного (канон): имя из заготовки
+            profile["name"] = str(will["name"])[:80]
         if not (hot.get("cast") or {}).get(key) and not profile.get("name"):
             card = Path(state_dir) / "recovery/cast" / f"{key}.json"
             try:
@@ -224,8 +226,11 @@ def advance(hot, always_present=()):
     for key, name, plan, due in agendas(hot):
         if not due or key in present or due + timedelta(hours=GRACE_HOURS) > now:
             continue
-        roll = _roll(key, name, plan.get("due"))
-        status = "fulfilled" if roll <= ROLL_FULL else "partial" if roll <= ROLL_PARTIAL else "failed"
+        if plan.get("canon"):   # каноническое событие: к сроку случается, если его не изменили в игре
+            roll, status = None, "fulfilled"
+        else:
+            roll = _roll(key, name, plan.get("due"))
+            status = "fulfilled" if roll <= ROLL_FULL else "partial" if roll <= ROLL_PARTIAL else "failed"
         entry = dict(plan, status=status)
         entry["outcome"] = npc_memory.default_outcome(entry)[:240]
         profile = hot["_psyche"][key]
