@@ -1,0 +1,85 @@
+name: Shiki S8 to S9 checked intersession
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/shiki-session8-to9.yml"
+      - "campaigns/shiki/maintenance/recover_session8_20261120.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npr-shiki-game-state-write
+  cancel-in-progress: false
+
+jobs:
+  close-session:
+    if: github.repository == 'sifiroth-gif/NPR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Engine and memory tests
+        run: python -m unittest discover -s tests -q
+      - name: Checkout private accepted S8 ledger and cold checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git worktree add --detach "$RUNNER_TEMP/shiki8" refs/remotes/origin/game-state/shiki
+          test -f "$RUNNER_TEMP/shiki8/campaign.sqlite"
+          test -f "$RUNNER_TEMP/shiki8/state.json"
+          test -f "$RUNNER_TEMP/shiki8/archive/session-008-turns.jsonl"
+          test -f "$RUNNER_TEMP/shiki8/recovery/NEXT.json"
+          test -f "$RUNNER_TEMP/shiki8/recovery/GM_BRIEF.json"
+      - name: Reconcile 106 exact S8 entries and close/open S9
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python campaigns/shiki/maintenance/recover_session8_20261120.py "$RUNNER_TEMP/shiki8"
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki8/campaign.sqlite" verify --full
+          python -m rpg_engine --db "$RUNNER_TEMP/shiki8/campaign.sqlite" hot-check --state-dir "$RUNNER_TEMP/shiki8"
+          python - <<'PY'
+          import json,os,pathlib
+          root=pathlib.Path(os.environ["RUNNER_TEMP"])/"shiki8"
+          s=json.loads((root/"state.json").read_text())
+          p=json.loads((root/"recovery/NEXT.json").read_text())
+          assert s["session"]==9 and s["at"]=="0006-10-09T16:17:00" and s["ok"]
+          assert p["cursor"]=="s08.text.106" and p["next_id"]=="s09.text.001" and not p["fold_errors"]
+          print("HANDOFF_CURSOR_OK",s["revision"],p["next_id"])
+          PY
+      - name: Publish and read back coherent checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$RUNNER_TEMP/shiki8"
+          git -C "$state" config user.name "github-actions[bot]"
+          git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$state" add -f -- campaign.sqlite state.json recovery/sqlite
+          git -C "$state" add -A -- archive recovery/HOT.json recovery/GM_ONLY.json \
+            recovery/GM_BRIEF.json recovery/NEXT.json recovery/CHECKS.json recovery/UNDO.json \
+            recovery/cast recovery/SCENE_MEMORY_INDEX.json \
+            campaigns/shiki/continuity/SESSION_008_TO_009_HANDOFF_1283-10-09.json
+          if git -C "$state" diff --cached --quiet; then
+            echo "ALREADY_PUBLISHED"
+          else
+            git -C "$state" commit -m "Close Shiki S8 from 106 source-checked entries and open S9"
+            git -C "$state" push origin HEAD:refs/heads/game-state/shiki
+          fi
+          git fetch origin refs/heads/game-state/shiki:refs/remotes/origin/game-state/shiki
+          git show refs/remotes/origin/game-state/shiki:campaign.sqlite > "$RUNNER_TEMP/s9-readback.sqlite"
+          git show refs/remotes/origin/game-state/shiki:state.json > "$RUNNER_TEMP/s9-readback-state.json"
+          cmp "$RUNNER_TEMP/s9-readback.sqlite" "$state/campaign.sqlite"
+          cmp "$RUNNER_TEMP/s9-readback-state.json" "$state/state.json"
+          python -m rpg_engine --db "$RUNNER_TEMP/s9-readback.sqlite" verify --full
+          echo "PUBLISHED_HEAD=$(git rev-parse refs/remotes/origin/game-state/shiki)"
