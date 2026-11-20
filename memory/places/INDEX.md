@@ -17,6 +17,7 @@
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
+- Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 10 ход(ов), s09–s09
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 9 ход(ов), s08–s08
@@ -25,7 +26,6 @@
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
-- Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 8 ход(ов), s09–s09
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02

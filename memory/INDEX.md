@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.044`
+# Карта мира NPR · на ходе `s09.text.046`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -8,8 +8,9 @@
 ## Персонажи (156)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
 - Кидзима Суми (Женщина в плаще, Кидзима) — Дорожный плащ, длинный плоский футляр с медицинской печатью. · `npc/kuroishi_visitor` · в сцене
-- Разведчик Звука (Разведчик) — по подписи в сцене · `npc/razvedchik_zvuka` · в сцене
-- Хасуми Дзюнъити (Хасуми, Дзюнъити) — Мужчина в тёмном служебном халате; прочие черты не установл… · `npc/kuroishi_hasumi` · в сцене
+- Орочимару — саннин, скрытый организатор · `npc/orochimaru` · в сцене
+- Разведчик Звука (Разведчик) — по подписи в сцене · `npc/razvedchik_zvuka`
+- Хасуми Дзюнъити (Хасуми, Дзюнъити) — Мужчина в тёмном служебном халате; прочие черты не установл… · `npc/kuroishi_hasumi`
 - Кадзиура Сатору (Кадзиура, Сатору) — Старший врач реанимационного отделения Центрального госпиталя, координатор лече… · `npc/kadziura_satoru`
 - Транспортник госпиталя —  · `npc/hospital_transporter`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
@@ -34,7 +35,6 @@
 - Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Хаясэ Нори (Хаясэ, Нори) — Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7 · `npc/nori`
-- Орочимару — саннин, скрытый организатор · `npc/orochimaru`
 - Реципиент № 6 (реципиента №6, реципиента № 6) — Выживший участник экспериментов с С-17, мальчик примерно 16 лет · `npc/s17_recipient_6`
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
 - Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
@@ -182,7 +182,7 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (24)
+## Вещи (25)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -202,6 +202,7 @@
 - `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
+- `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `shiki_blood_vial` · `items/shiki_blood_vial`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
