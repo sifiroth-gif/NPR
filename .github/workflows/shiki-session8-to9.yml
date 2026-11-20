@@ -67,7 +67,7 @@ jobs:
           git -C "$state" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C "$state" add -f -- campaign.sqlite state.json recovery/sqlite
           git -C "$state" add -A -- archive recovery/HOT.json recovery/GM_ONLY.json \
-            recovery/GM_BRIEF.json recovery/NEXT.json recovery/CHECKS.json recovery/UNDO.json \
+            recovery/GM_BRIEF.json recovery/NEXT.json recovery/CHECKS.json \
             recovery/cast recovery/SCENE_MEMORY_INDEX.json \
             campaigns/shiki/continuity/SESSION_008_TO_009_HANDOFF_1283-10-09.json
           if git -C "$state" diff --cached --quiet; then
