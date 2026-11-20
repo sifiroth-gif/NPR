@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.015`
+# Карта мира NPR · на ходе `s09.text.016`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -8,8 +8,9 @@
 ## Персонажи (146)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
 - Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke` · в сцене
-- waterfall_trackers —  · `npc/waterfall_trackers`
+- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- waterfall_trackers —  · `npc/waterfall_trackers`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
@@ -37,7 +38,6 @@
 - Хаясэ Нори (Хаясэ, Нори) — Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7 · `npc/nori`
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
 - Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
-- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
 - Человек в маске —  · `npc/masked_man`
 - tikhiy_porog_seller —  · `npc/tikhiy_porog_seller`
@@ -172,10 +172,11 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (10)
+## Вещи (11)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `personal_paper_reports` · `items/personal_paper_reports`
+- `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
 - `shiki_blood_vial` · `items/shiki_blood_vial`

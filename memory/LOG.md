@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.016: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `possible_sasuke_hair`, план сюжета
 - s09.text.015: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`)
 - s09.text.014: поправки игрока: 3
 - s09.text.013: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), линия `sharingan`, план сюжета, поправки игрока: 4
@@ -60,4 +61,3 @@
 - s08.text.065: Немера (Невыписанная) (`npc/nemera`), Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.064: Сэкидо Тадао (`npc/sekido_tadao`), Немера (Невыписанная) (`npc/nemera`)
 - s08.text.063: Сэкидо Тадао (`npc/sekido_tadao`), Кэйдзи (`npc/keiji`), Хаясэ Нори (`npc/nori`), Курода Маю (`npc/kuroda_mayu`), Аракава Дзюн (`npc/arakawa`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Такаги Рэн (`npc/takagi_ren`), Минасэ Рэи (`npc/minase`)
-- s08.text.062: Сэкидо Тадао (`npc/sekido_tadao`)

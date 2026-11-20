@@ -11,8 +11,8 @@
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
+- Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 13 ход(ов), s08–s09
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
-- Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 12 ход(ов), s08–s09
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
