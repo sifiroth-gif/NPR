@@ -157,3 +157,25 @@ class WikiFactsListTest(unittest.TestCase):
         self.assertIn("ночной служащий; ранен", store["porter"]["stable"]["сведения"][-1]["v"])
         wiki._apply_cast(store, "porter", {"facts": ["другое"]}, "s08.text.083", changes)
         self.assertEqual(changes, [], "смена списка сведений — не смена постоянной черты")
+
+
+class CanonPlanTest(unittest.TestCase):
+    def test_canon_plan_happens_without_roll(self):
+        from rpg_engine import will
+        h = {"cursor": {"id": "s09.text.010", "at": "0006-10-20T12:00:00"}, "scene": {"present": []},
+             "_psyche": {"sasuke": {"name": "Учиха Саске", "intent": {
+                 "end_snake": {"status": "committed", "goal": "g", "due": "0006-10-17T22:00:00",
+                               "if_unopposed": "Орочимару мёртв.", "flaw": "f", "canon": "да"}}}}}
+        events = will.advance(h)
+        self.assertEqual(events[0]["status"], "fulfilled")
+        self.assertIn("Орочимару мёртв", events[0]["outcome"])
+        self.assertIsNone(h["_psyche"]["sasuke"]["intent_done"][-1]["roll"])
+
+    def test_keeper_truth_goes_to_hidden_offscreen(self):
+        from rpg_engine import keeper
+        root = Path(tempfile.mkdtemp())
+        (root / "memory/_curated").mkdir(parents=True)
+        (root / keeper.SEED).write_text(json.dumps({"truth": {"leak": "источник"}}, ensure_ascii=False), encoding="utf-8")
+        h = {"cursor": {"id": "x", "at": "0006-10-04T07:13:00"}}
+        self.assertTrue(keeper.apply(root, h))
+        self.assertEqual(h["offscreen"]["truth"]["leak"], "источник")
