@@ -56,6 +56,11 @@ def apply(state_dir, hot):
             if key in events:
                 plot._close(_plot, events, key, patch["closed"], turn, at)
             continue
+        if patch.get("drop"):   # перепланировка: снимается только ни разу не начатое событие
+            event = events.get(key) or {}
+            if event.get("status") == "queued" and not event.get("scenes"):
+                events.pop(key)
+            continue
         event = events.setdefault(key, {"id": key, "kind": patch.get("kind") or "side", "status": "queued",
                                         "opened": turn, "opened_at": at, "scenes": 0})
         for field in plot.FIELDS:
