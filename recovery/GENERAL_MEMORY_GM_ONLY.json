@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.030",
+  "cursor": "s09.text.031",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -671,6 +671,27 @@
         "recovery/cast/hospital_transporter.json"
       ]
     },
+    "itachi_report_copies": {
+      "aliases": [
+        "itachi report copies"
+      ],
+      "facts": [],
+      "id": "itachi_report_copies",
+      "kind": "item",
+      "label": "itachi report copies",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "sasuke",
+          "since": "s09.text.031",
+          "turn": "s09.text.031"
+        }
+      ],
+      "sources": [
+        "s09.text.031"
+      ]
+    },
     "kabuto": {
       "aliases": [
         "kabuto",
@@ -680,7 +701,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 40,
+      "mention_count": 41,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +709,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-12-15T20:33:00",
-          "excerpt": "е поверхностных сосудов. Кожа между ними побледнела. Женщина судорожно вдохнула. **Женщина со шрамом:** — Что... вы... **Кабуто Якуши:** — Не двигайтесь. На этот раз его голос был совершенно лишён обычной мягкости. Кабуто уже наблюдал последствия контакта с Ши",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.028"
         },
         {
           "at": "0007-12-15T20:40:00",
@@ -709,21 +723,49 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.030"
+        },
+        {
+          "at": "0007-12-15T20:47:00",
+          "excerpt": "живу за счёт вашей деревни. Может, наконец стоит подзаработать. Кабуто посмотрел на него поверх очков. **Кабуто Якуши:** — Есть. И даже несколько. **Кабуто Якуши:** — Официальные Книги Бинго составляют разведывательные ведомства. На чёрном рынке всё проще: час",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.030",
-          "state": "Разъяснил разницу между оперативным S-классом и официальным рангом, велел караулу закрыть комнату изъятых вещей; наблюдает за интересом Саске к странице Итачи."
+          "seen": "s09.text.031",
+          "state": "Ответил, что существуют независимые подпольные биржи наград и посредники в Стране Рисовых Полей; открыл Шики действующую сводку из трёх контрактов, сообщил об условии комиссии, но выбор оставил ему."
         },
         {
-          "state": "Разъяснил разницу между оперативным S-классом и официальным рангом, велел караулу закрыть комнату изъятых вещей; наблюдает за интересом Саске к странице Итачи."
+          "state": "Ответил, что существуют независимые подпольные биржи наград и посредники в Стране Рисовых Полей; открыл Шики действующую сводку из трёх контрактов, сообщил об условии комиссии, но выбор оставил ему."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.030"
+        "s09.text.031"
+      ]
+    },
+    "kabuto_private_bounty_ledger": {
+      "aliases": [
+        "kabuto private bounty ledger"
+      ],
+      "facts": [],
+      "id": "kabuto_private_bounty_ledger",
+      "kind": "item",
+      "label": "kabuto private bounty ledger",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kabuto",
+          "since": "s09.text.031",
+          "turn": "s09.text.031"
+        }
+      ],
+      "sources": [
+        "s09.text.031"
       ]
     },
     "kadziura_satoru": {
@@ -1071,7 +1113,7 @@
         {
           "fears": "Посторонний генетический эксперимент и опасный контакт",
           "role": "Задержанный оперативник, ищет носителя Хётона",
-          "seen": "s09.text.030",
+          "seen": "s09.text.031",
           "state": "Жив, поражение кисти, под медицинским надзором; после обнаружения снаряжения молчит.",
           "voice": "Сухо, насмешливо, с напускной бравадой",
           "wants": "Сохранить имя давшего приказ и выбраться живым"
@@ -1103,7 +1145,7 @@
         {
           "fears": "Передача подопытным без выяснения обстоятельств",
           "role": "Задержанная сборщица сведений о наследственной способности",
-          "seen": "s09.text.030",
+          "seen": "s09.text.031",
           "state": "Жива, с постконтактным сосудистым поражением, вывозится на носилках. Видела, что Книга Бинго найдена.",
           "voice": "Сдержанная, расчётливая, с точными условиями обмена",
           "wants": "Торгом получить доступ к разговору без людей Орочимару и сохранить путь отхода"
@@ -1895,7 +1937,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 26,
+      "mention_count": 27,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1903,13 +1945,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T23:12:00",
-          "excerpt": "ак, будто наследственность — обычный инструмент. — Для меня она может им быть. Саске медленно убрал кунай. — Орочимару за подобную возможность отдал бы половину своих лабораторий. — Но кое-что я могу тебе предложить, — продолжил Шики. — А ты мне. Саске поднял ",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.025"
         },
         {
           "at": "0007-12-15T20:16:00",
@@ -1924,16 +1959,24 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.027"
+        },
+        {
+          "at": "0007-12-15T20:47:00",
+          "excerpt": "рядок тренировок. Он не объяснил, каким образом. *** Кабуто вернулся к разговору с Шики. **Кабуто Якуши:** — Что касается заработка... Орочимару-сама платит за исследования, результаты которых считает полезными. Но вы говорите о независимых доходах, верно? Он ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.026",
+          "seen": "s09.text.031",
           "state": "После результатов костных культур распорядился расширить программу Кимимаро и потребовал работающий образец; не знает о тайных опытах Учиха. Не отпускать двух чужаков из Тумана до выяснения их источников."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "s09.text.031"
       ]
     },
     "patient_airway": {
@@ -3577,6 +3620,25 @@
       "projections": [],
       "sources": [
         "s02.text.141"
+      ]
+    },
+    "place:43aabfe9e05f8ad7": {
+      "aliases": [
+        "place:43aabfe9e05f8ad7",
+        "Страна Звука, Кагэн, караульный корпус, комната изъятых вещей",
+        "Страна Звука",
+        "караульный корпус",
+        "комната изъятых вещей"
+      ],
+      "facts": [],
+      "id": "place:43aabfe9e05f8ad7",
+      "kind": "place",
+      "label": "Страна Звука, Кагэн, караульный корпус, комната изъятых вещей",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.031"
       ]
     },
     "place:44fbe9adb51ae417": {
@@ -7625,8 +7687,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.030",
-        "s09.text.029"
+        "s09.text.029",
+        "s09.text.030"
       ]
     },
     "place:e775269f2b66955f": {
@@ -8543,7 +8605,8 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -8570,12 +8633,13 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s09.text.019",
+          "seen": "s09.text.031",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json"
+        "recovery/cast/s17_recipient_6.json",
+        "s09.text.031"
       ]
     },
     "sasuke": {
@@ -8599,17 +8663,17 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.030",
-          "state": "По собственной инициативе подошёл к открытой странице Итачи, просит Шики передать книгу для изучения дат и передвижений, не интересуется размером его награды."
+          "seen": "s09.text.031",
+          "state": "Получил от Шики доступ к книге, настоял на немедленном копировании страниц Итачи и Кисаме; забрал копии, заявил о намерении изменить порядок собственных тренировок из-за новых сведений. Прервал Кабуто во время разговора, не скрывая раздражения."
         },
         {
-          "state": "По собственной инициативе подошёл к открытой странице Итачи, просит Шики передать книгу для изучения дат и передвижений, не интересуется размером его награды."
+          "state": "Получил от Шики доступ к книге, настоял на немедленном копировании страниц Итачи и Кисаме; забрал копии, заявил о намерении изменить порядок собственных тренировок из-за новых сведений. Прервал Кабуто во время разговора, не скрывая раздражения."
         }
       ],
       "sources": [
         "recovery/cast/sasuke.json",
         "recovery/HOT.json",
-        "s09.text.030"
+        "s09.text.031"
       ]
     },
     "sayu": {
@@ -8718,8 +8782,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/seina.json",
-        "s09.text.030"
+        "recovery/cast/seina.json"
       ]
     },
     "sekido_tadao": {
@@ -8881,8 +8944,7 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука",
-        "sound_kagen_junior"
+        "Младший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
@@ -8930,8 +8992,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_junior.json",
-        "s09.text.030"
+        "recovery/cast/sound_kagen_junior.json"
       ]
     },
     "sound_kagen_senior": {
@@ -9835,8 +9896,22 @@
       "status": "projected",
       "to": "sound_kagen_evidence",
       "type": "held_by"
+    },
+    {
+      "from": "itachi_report_copies",
+      "source": "s09.text.031",
+      "status": "projected",
+      "to": "sasuke",
+      "type": "held_by"
+    },
+    {
+      "from": "kabuto_private_bounty_ledger",
+      "source": "s09.text.031",
+      "status": "projected",
+      "to": "kabuto",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 679
+  "source_turns_indexed": 680
 }
