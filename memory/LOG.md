@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.061: Саске Учиха (`npc/sasuke`)
 - s09.text.060: поправки игрока: 1
 - s09.text.059: Саске Учиха (`npc/sasuke`)
 - s09.text.058: Саске Учиха (`npc/sasuke`), поправки игрока: 1
@@ -60,4 +61,3 @@
 - s09.text.005: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Кэйдзи (`npc/keiji`), Касэ (`npc/kase`), вещь `forehead_protector`, вещь `shiki_upper_clothing`, вещь `shiki_wraps`, линия `kabuto_letter`
 - s09.text.004: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
 - s09.text.002: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Медик у панели В-7 (`npc/medical_panel_operator`)
-- s09.text.001: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Младший шиноби Звука (`npc/sound_kagen_junior`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Минасэ Рэи (`npc/minase`), план сюжета
