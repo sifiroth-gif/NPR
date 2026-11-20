@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.037",
+  "cursor": "s09.text.038",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -701,7 +701,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 47,
+      "mention_count": 48,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -709,13 +709,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-12-18T18:15:00",
-          "excerpt": "медленно убрал ладонь от деревянного футляра. **Старший у повозки:** — Мугами Шики. Это было утверждение. **Кабуто Якуши:** — Совершенно верно. Человек у колеса перестал возиться с брезентом. Третий поднялся с каменного ограждения. Старший произнёс: **Старший ",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.035"
         },
         {
           "at": "0007-12-18T18:15:20",
@@ -730,21 +723,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.037"
+        },
+        {
+          "at": "0007-12-18T20:38:00",
+          "excerpt": "Да, хочу. И сейчас. Пойдёте? Или оставите это мне? Кабуто закрыл футляр с металлической пластиной. **Кабуто Якуши:** — Пойду. Он бросил взгляд на повозку, которую дозорные готовили к отправке. **Кабуто Якуши:** — Вы выясняете, кто собирался купить ваше тело. Я",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.038"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.037",
-          "state": "Увидел, как Шики самостоятельно выключил уже действующую болезнь у трёх поражённых после изъятия сенбонов, при сохранении прежних повреждений. Отключил удерживающие печати, скрутил и передал пленников дозорным. Предложил не ждать утреннего подтверждения и выйт"
+          "seen": "s09.text.038",
+          "state": "Согласился сопровождать Шики ради обнаружения источника торговой поставки, обезвредил сторожа и пошёл блокировать задний выход, не атакуя Хасуми."
         },
         {
-          "state": "Увидел, как Шики самостоятельно выключил уже действующую болезнь у трёх поражённых после изъятия сенбонов, при сохранении прежних повреждений. Отключил удерживающие печати, скрутил и передал пленников дозорным. Предложил не ждать утреннего подтверждения и выйт"
+          "state": "Согласился сопровождать Шики ради обнаружения источника торговой поставки, обезвредил сторожа и пошёл блокировать задний выход, не атакуя Хасуми."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.037"
+        "s09.text.038"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -1122,7 +1122,8 @@
     "kiri_hunter_man": {
       "aliases": [
         "kiri hunter man",
-        "Мужчина с повязкой из Тумана"
+        "Мужчина с повязкой из Тумана",
+        "kiri_hunter_man"
       ],
       "facts": [],
       "id": "kiri_hunter_man",
@@ -1134,20 +1135,22 @@
         {
           "fears": "Посторонний генетический эксперимент и опасный контакт",
           "role": "Задержанный оперативник, ищет носителя Хётона",
-          "seen": "s09.text.033",
+          "seen": "s09.text.038",
           "state": "Под отдельным конвоем переведён под медицинский надзор, не встретился с Шики вновь.",
           "voice": "Сухо, насмешливо, с напускной бравадой",
           "wants": "Сохранить имя давшего приказ и выбраться живым"
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_man.json"
+        "recovery/cast/kiri_hunter_man.json",
+        "s09.text.038"
       ]
     },
     "kiri_hunter_woman": {
       "aliases": [
         "kiri hunter woman",
-        "Женщина со шрамом из Тумана"
+        "Женщина со шрамом из Тумана",
+        "kiri_hunter_woman"
       ],
       "facts": [],
       "id": "kiri_hunter_woman",
@@ -1159,14 +1162,15 @@
         {
           "fears": "Передача подопытным без выяснения обстоятельств",
           "role": "Задержанная сборщица сведений о наследственной способности",
-          "seen": "s09.text.033",
+          "seen": "s09.text.038",
           "state": "Выведена на носилках в отдельное охраняемое медицинское отделение, требует установить и записать в карту ответственность за поражение кисти.",
           "voice": "Сдержанная, расчётливая, с точными условиями обмена",
           "wants": "Торгом получить доступ к разговору без людей Орочимару и сохранить путь отхода"
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_woman.json"
+        "recovery/cast/kiri_hunter_woman.json",
+        "s09.text.038"
       ]
     },
     "kiri_hunters": {
@@ -1208,15 +1212,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_transfer_carrier.json",
-        "s09.text.037"
+        "recovery/cast/kiri_transfer_carrier.json"
       ]
     },
     "kiri_transfer_senior": {
       "aliases": [
         "kiri transfer senior",
-        "Старший у повозки",
-        "kiri_transfer_senior"
+        "Старший у повозки"
       ],
       "facts": [],
       "id": "kiri_transfer_senior",
@@ -1263,8 +1265,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_transfer_senior.json",
-        "s09.text.037"
+        "recovery/cast/kiri_transfer_senior.json"
       ]
     },
     "kiri_transfer_token": {
@@ -1306,8 +1307,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_transfer_watch.json",
-        "s09.text.037"
+        "recovery/cast/kiri_transfer_watch.json"
       ]
     },
     "kiri_transport_containment": {
@@ -1405,6 +1405,80 @@
       ],
       "sources": [
         "recovery/cast/kuroda_mayu.json"
+      ]
+    },
+    "kuroishi_hasumi": {
+      "aliases": [
+        "kuroishi hasumi",
+        "Хасуми Дзюнъити"
+      ],
+      "facts": [],
+      "id": "kuroishi_hasumi",
+      "kind": "npc",
+      "label": "Хасуми Дзюнъити",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0007-12-18T18:15:20",
+          "excerpt": "а отбросил клинок. **Старший у повозки:** — Хасуми! Он выкрикнул имя с такой силой, что отозвалось эхом под мостом. **Старший у повозки:** — Его зовут **Хасуми Дзюнъити**! Он принимает груз в северном отделении торгового дома «Куроиси»! Кабуто внимательно посм",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.036"
+        },
+        {
+          "at": "0007-12-18T18:20:00",
+          "excerpt": "пригрозил возвращением и не потребовал освобождения. Только посмотрел на его перчатки — и отвернулся. Кабуто раскрыл металлическую пластину с номером перевозки. **Кабуто Якуши:** — Хасуми Дзюнъити. Северное отделение «Куроиси». Теперь у нас есть и получатель, ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.037"
+        },
+        {
+          "at": "0007-12-18T20:38:00",
+          "excerpt": "олос служащего. **Служащий «Куроиси»:** — Хасуми-сан, медицинский ящик из южного каравана оставлять в холодном помещении? **Хасуми Дзюнъити:** — Нет. В третью комнату. И запишите повреждённую пломбу, пока я здесь. Он отложил бумаги и подошёл к окну. Человек, ч",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.038"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s09.text.038",
+          "state": "На втором этаже сжигает страницы книги после исчезновения сторожа."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kuroishi_hasumi.json",
+        "s09.text.038"
+      ]
+    },
+    "kuroishi_visitor": {
+      "aliases": [
+        "kuroishi visitor",
+        "Женщина в плаще"
+      ],
+      "facts": [],
+      "id": "kuroishi_visitor",
+      "kind": "npc",
+      "label": "Женщина в плаще",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0007-12-18T20:38:00",
+          "excerpt": "в дорожном плаще. Она несла длинный плоский футляр, опечатанный знаком медицинской службы. Увидев сторожа у ворот, женщина остановилась. **Женщина в плаще:** — Скажите Хасуми, что я забрала своё. Остальное пусть уничтожает сам. Она прошла через ворота и скрыла",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.038"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s09.text.038",
+          "state": "На глазах Шики вышла за ворота, заявив, что забрала своё и остальное Хасуми вправе уничтожить."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kuroishi_visitor.json",
+        "s09.text.038"
       ]
     },
     "kusa_head": {
@@ -2085,7 +2159,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2093,13 +2167,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-15T20:54:00",
-          "excerpt": "вуют последствия событий в Кусагакуре, история В-7, Нижний госпиталь, семейная линия Шики, интересы Орочимару, планы Саске и преследование со стороны Тумана. У NPC есть собственные цели и сроки: они действуют даже без участия Шики, а некоторые события уже заве",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.033"
         },
         {
           "at": "0007-12-18T18:14:00",
@@ -2114,6 +2181,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.037"
+        },
+        {
+          "at": "0007-12-18T20:38:00",
+          "excerpt": "ался купить ваше тело. Я — кто настолько свободно распоряжается людьми и каналами снабжения на территории Орочимару-сама. Он передал старшему дозорному короткое распоряжение. **Кабуто Якуши:** — Пятерых задержанных содержать раздельно. Поражения на руках не вс",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.038"
         }
       ],
       "projections": [
@@ -2704,10 +2778,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.037",
         "s09.text.034",
         "s09.text.035",
-        "s09.text.036"
+        "s09.text.036",
+        "s09.text.037"
       ]
     },
     "place:111c8e907f9470f9": {
@@ -3550,6 +3624,24 @@
       "projections": [],
       "sources": [
         "s05.text.010"
+      ]
+    },
+    "place:3a62621784821063": {
+      "aliases": [
+        "place:3a62621784821063",
+        "Страна Звука, северный склад торгового дома Куроиси",
+        "Страна Звука",
+        "северный склад торгового дома Куроиси"
+      ],
+      "facts": [],
+      "id": "place:3a62621784821063",
+      "kind": "place",
+      "label": "Страна Звука, северный склад торгового дома Куроиси",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.038"
       ]
     },
     "place:3ac4d366342ac1ac": {
@@ -9183,8 +9275,7 @@
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука",
-        "sound_kagen_senior"
+        "Старший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -9232,8 +9323,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_senior.json",
-        "s09.text.037"
+        "recovery/cast/sound_kagen_senior.json"
       ]
     },
     "stolen_house_plan": {
@@ -10128,5 +10218,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 686
+  "source_turns_indexed": 687
 }
