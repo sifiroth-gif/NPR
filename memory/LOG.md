@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.028: Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `kiri_woman_cloak_order`
 - s09.text.027: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), поправки игрока: 2
 - s09.text.026: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Немера (Невыписанная) (`npc/nemera`), kiri_hunters (`npc/kiri_hunters`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Возница повозки (`npc/kagen_caravan_driver`), вещь `kimimaro_bone_sample`, поправки игрока: 3
 - s09.text.025: Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 3
@@ -60,4 +61,3 @@
 - s08.text.077: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.076: Немера (Невыписанная) (`npc/nemera`)
 - s08.text.075: Немера (Невыписанная) (`npc/nemera`)
-- s08.text.074: Немера (Невыписанная) (`npc/nemera`)

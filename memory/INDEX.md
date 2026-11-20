@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.027`
+# Карта мира NPR · на ходе `s09.text.028`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -10,8 +10,9 @@
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
 - Мужчина с повязкой из Тумана — Задержанный оперативник, ищет носителя Хётона · `npc/kiri_hunter_man` · в сцене
 - Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke` · в сцене
-- waterfall_trackers —  · `npc/waterfall_trackers`
+- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- waterfall_trackers —  · `npc/waterfall_trackers`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
 - kiri_hunters —  · `npc/kiri_hunters`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
@@ -33,7 +34,6 @@
 - Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
 - Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
 - Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
-- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - hirano_seiji —  · `npc/hirano_seiji`
@@ -175,10 +175,11 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (12)
+## Вещи (13)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `kimimaro_bone_sample` · `items/kimimaro_bone_sample`
+- `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
