@@ -45,6 +45,11 @@
 - [side] Старая медицинская запись (`side_kabuto_archive`): Проверенная улика, независимое действие Кабуто или адресный интерес Шики к письму 1278 года.
 - [chapter] За чертой (`ch10_outside_the_village`): После завершения ch09_order_chain; герой уже ушёл из Кусы, мир действует независимо.
 - [side] Два сосуда (`side_two_vials`): Одна из двух пробирок со специфическим носителем физически доставлена в независимую лабораторию Куроды либо предпринимается попытка изъятия.
+- [chapter] Сброшенная кожа (`ch11_shed_skin`): Закрыта глава «За чертой» либо до Шики дошла весть о смерти Орочимару или распаде Звука.
+- [side] Охота Тумана (`side_kiri_hunters`): Пара охотников Тумана вошла в Страну Травы (план kiri_hunters.first_pair, 21.10) либо Шики снова показал Хьётон или гидратацию при свидетелях.
+- [side] Красная нить (`side_red_thread`): Шики ищет источник утечки своей карты, входит в закрытый архив Центрального госпиталя, встречает Карин или слышит о девочке из лечебного корпуса.
+- [chapter] Братья (`ch12_brothers`): Вне кадра Саске убил Итачи (12.11, план sasuke.hunt_itachi) либо Шики идёт по следу Учиха.
+- [chapter] Дождь над Листом (`ch13_rain_over_leaf`): Глава «Братья» закрыта и время дошло до зимы 1284 либо до Шики дошла весть о гибели Джирайи или ударе по Конохе.
 
 ## Недавно закрыты
 - s08.text.026: Два источника и чужой долг — Partial, costly outcome. In donor-like nsp-delta-expressing stromal cells of one confirmed right bronchial recipient6 lesion, targeted CRISPR suppression and direct medical protein removal/bronchial regeneration improved patency and stopped visible slough. Patient6 remains S17/ventilator-dependent and foreign graft origin and off-target/long-term effects unproven; isolated biopsy in Shiki shoulder ischemic; intense use caused Shiki blackout, maximal stage6 transformation with dangerous blood, private clinical data disclosure and hospital mistrust. The line's critical treatment decision and immediate result are settled; surviving S17 investigation and confidentiality fallout continue as new separate circumstances.
