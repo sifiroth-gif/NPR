@@ -1,8 +1,8 @@
 {
-  "documents": 2304,
-  "generic_probe_count": 8,
-  "generic_probe_hit_at_10": 8,
-  "groups": 10,
+  "documents": 2305,
+  "generic_probe_count": 9,
+  "generic_probe_hit_at_10": 9,
+  "groups": 11,
   "indexed_sessions": [
     1,
     2,
@@ -11,67 +11,74 @@
     5,
     6,
     7,
-    8
+    8,
+    9
   ],
   "limitations": [
     "Historical first session without a curated played/void index remains review_required",
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 81.82,
+  "load_ms": 105.95,
   "probes": [
     {
-      "query_ms": 67.76,
+      "query_ms": 89.08,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 66.81,
+      "query_ms": 87.69,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 66.83,
+      "query_ms": 86.68,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 76.27,
+      "query_ms": 99.42,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 68.99,
+      "query_ms": 88.0,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 67.12,
+      "query_ms": 87.3,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 67.48,
+      "query_ms": 86.98,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 72.82,
+      "query_ms": 92.68,
       "query_terms": 1,
       "session": 8,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 90.51,
+      "query_terms": 1,
+      "session": 9,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 71,
-  "source_coverage_ok": false,
+  "shards": 72,
+  "source_coverage_ok": true,
   "source_sessions": [
     1,
     2,
@@ -83,9 +90,7 @@
     8,
     9
   ],
-  "unindexed_source_sessions": [
-    9
-  ],
-  "warm_query_median_ms": 67.62,
-  "warm_query_p95_ms": 76.27
+  "unindexed_source_sessions": [],
+  "warm_query_median_ms": 88.0,
+  "warm_query_p95_ms": 99.42
 }
