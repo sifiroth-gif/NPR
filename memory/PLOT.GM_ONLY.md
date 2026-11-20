@@ -48,8 +48,8 @@
 - [side] Охота Тумана (`side_kiri_hunters`): Пара охотников Тумана вошла в Страну Травы (план kiri_hunters.first_pair, 21.10) либо Шики снова показал Хьётон или гидратацию при свидетелях.
 - [side] Красная нить (`side_red_thread`): Шики ищет источник утечки своей карты, входит в закрытый архив Центрального госпиталя, слышит о девочке из лечебного корпуса или оказывается в убежищах Звука (Карин — смотрительница южного).
 - [chapter] Змеиное предложение (`ch11_snake_offer`): Закрыта глава «За чертой» либо посредник Звука вышел на Шики (план kabuto.court_shiki).
-- [chapter] Годы без имени (`ch12_nameless_years`): Закрыто «Змеиное предложение» либо игрок пропускает время.
 - [chapter] Смерть Кадзекагэ (`ch13_kazekage`): Октябрь 1286: Акацуки напали на Сунагакуре (план akatsuki.seize_kazekage) — начало Shippuden.
+- [chapter] Мост Тэнти (`ch14_tenchi`): Конец октября 1286: встреча шпиона Сасори у моста Тэнти в Стране Травы (план kabuto.meet_at_tenchi).
 
 ## Недавно закрыты
 - s08.text.026: Два источника и чужой долг — Partial, costly outcome. In donor-like nsp-delta-expressing stromal cells of one confirmed right bronchial recipient6 lesion, targeted CRISPR suppression and direct medical protein removal/bronchial regeneration improved patency and stopped visible slough. Patient6 remains S17/ventilator-dependent and foreign graft origin and off-target/long-term effects unproven; isolated biopsy in Shiki shoulder ischemic; intense use caused Shiki blackout, maximal stage6 transformation with dangerous blood, private clinical data disclosure and hospital mistrust. The line's critical treatment decision and immediate result are settled; surviving S17 investigation and confidentiality fallout continue as new separate circumstances.
