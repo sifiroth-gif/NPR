@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.047: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`, поправки игрока: 1
 - s09.text.046: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`
 - s09.text.045: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`)
 - s09.text.044: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`), Кадзиура Сатору (`npc/kadziura_satoru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `medical_case_m12`, вещь `kuroishi_ledger`, план сюжета
@@ -60,4 +61,3 @@
 - s08.text.096: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), поправки игрока: 1
 - s08.text.095: Такаги Рэн (`npc/takagi_ren`), tikhiy_porog_seller (`npc/tikhiy_porog_seller`), waterfall_trackers (`npc/waterfall_trackers`)
 - s08.text.094: Такаги Рэн (`npc/takagi_ren`), Глава Кусагакуре (`npc/kusa_head`), hirano_seiji (`npc/hirano_seiji`), план сюжета, поправки игрока: 1
-- s08.text.093: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1
