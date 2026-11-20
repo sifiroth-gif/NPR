@@ -1,1146 +1,778 @@
 {
-  "format": "NPR-LIVE-SCENE/1",
-  "handoff": {
-    "closed": 8,
-    "next_session": 9,
-    "sqlite_revision": 594,
-    "at": "0006-10-09T16:17:00",
-    "last_turn": "s08.text.106",
-    "first_turn": "s09.text.001",
-    "source": "campaigns/shiki/continuity/SESSION_008_TO_009_HANDOFF_1283-10-09.json"
+ "agendas": {
+  "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
+  "soon": [
+   {
+    "due": "0006-10-04T09:00:00",
+    "name": "Немера (Невыписанная)",
+    "next": "Использовать сохранённый сенсорный опыт для самостоятельного исследования отличия прямого восприятия от совместного и искать возможность следующего торга",
+    "npc": "nemera",
+    "overdue": true,
+    "plan": "first_deal_8"
+   },
+   {
+    "due": "0006-10-04T11:54:00",
+    "name": "Немера (Невыписанная)",
+    "next": "Ждать добровольного ответа; наблюдать, что Шики ищет о древних сущностях.",
+    "npc": "nemera",
+    "overdue": true,
+    "plan": "first_deal_3"
+   },
+   {
+    "against_shiki": "каждая сделка — привычка; вторая цена будет выше",
+    "due": "0006-10-04T12:00:00",
+    "name": "Немера (Невыписанная)",
+    "next": "Ждать решения Шики, не повторять навязчиво предложение; при отказе искать другую цену и удобный момент",
+    "npc": "nemera",
+    "overdue": true,
+    "plan": "first_deal_2"
+   },
+   {
+    "due": "0006-10-05T01:00:00",
+    "name": "Немера (Невыписанная)",
+    "next": "Наблюдать, будет ли Шики искать сведения об останках, и выяснить возможный интерес к зрению как новому опыту; не предлагать способности, которых у неё не установлено.",
+    "npc": "nemera",
+    "overdue": true,
+    "plan": "learn_target_3"
+   },
+   {
+    "due": "0006-10-09T16:12:00",
+    "if_unopposed": "Груз проведут внутрь, сохраняя содержимое нераскрытым для Шики.",
+    "name": "Сопровождающий повозки",
+    "next": "Дождаться ослабления внимания охраны и попросить приёмщиков внутри забрать груз без задержки.",
+    "npc": "kagen_caravan_escort",
+    "overdue": true,
+    "plan": "protect_delivery"
+   },
+   {
+    "due": "0006-10-09T17:00:00",
+    "if_unopposed": "Сформулирует ограниченное наблюдение без притязания на скрытое знание.",
+    "name": "Немера (Невыписанная)",
+    "next": "Сопоставить задержку после выключения ноты, не делая недоказанных выводов о механизме.",
+    "npc": "nemera",
+    "overdue": false,
+    "plan": "study_kagen_sound"
+   }
+  ]
+ },
+ "budget": {
+  "hard_bytes": 48000,
+  "target_bytes": 32000
+ },
+ "checks": [
+  {
+   "kind": "horror",
+   "text": "sound_kagen_junior: dread без saw. Страх растёт только из увиденного или полученного по каналу",
+   "turn": "s09.text.001"
   },
-  "cursor": {
-    "id": "s08.text.106",
-    "at": "0006-10-09T16:17:00",
-    "place": "Страна Звука, комплекс Кагэн, исследовательское отделение третьего уровня",
-    "time": "16:17",
-    "date": "Понедельник, 9 октября 1283 года"
+  {
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4024 знаков (норма до 4000); крупнее всего: cast 2149, scene 775, truth 200.",
+   "turn": "s09.text.001"
   },
-  "scene": {
-    "situation": "16:13–16:17 Шики назвал живой груз «материалом». Доставленный истощённый мужчина (~40 лет, шейный обруч) вышел с санитарами, уточнил, что его обещали передать сереброволосому человеку в очках — Кабуто; младший перепутал с Шики. Низкая нота вызвала совпадающие сокращения левой кисти пациента и изолированной мышцы; у пациента задержка после выключения тона, повреждён сустав. Кабуто остановил стимуляцию, распорядился вернуть пациента в медотсек, повторил предложение лаборатории за результаты и сказал, что уведомил Орочимару.",
-    "positions": "16:17 Шики и Кабуто в исследовательской лаборатории Кагэн. Пациент уведён в медотсек без новой звуковой стимуляции. На столе камера с тканью и папка условий. Шики ещё не принял предложение.",
-    "pressure": "Кабуто хочет выяснить совпадение ответов человека и мышцы; утверждает, что сообщил Орочимару о визите. Личность пациента, механизм и содержание уведомления Шики не известны."
+  {
+   "kind": "will",
+   "text": "«Старший шиноби Звука» появляется уже 8 раз, а воли у него нет: задай d.cast.sound_kagen_senior.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
+   "turn": "s09.text.001"
+  }
+ ],
+ "checks_ref": "recovery/CHECKS.json",
+ "context_route": {
+  "budget_bytes": 6600,
+  "cursor": "s09.text.001",
+  "epistemic_rules": {
+   "npc_knowledge": "separate from world truth and from player disclosure",
+   "shiki": "player alone owns Shiki's voluntary decisions",
+   "source_candidate": "retrieve original before treating as canon",
+   "truth": "verified fact requires source and scope"
   },
-  "present_npcs": {
-    "sound_kagen_junior": {
-      "profile": {
-        "name": "Младший шиноби Звука",
-        "role": "Младший дозорный у подземных ворот.",
-        "wants": "Дождаться третьего каравана и не навлечь наказания старшего.",
-        "fears": "То, что слышно из нижних помещений ночью.",
-        "leverage": "Знает местный график снабжения, не знает состава секретных опытов.",
-        "voice": "Негромко, с тревожной поспешностью.",
-        "state": "Признал путаницу: сереброволосый в очках — Кабуто. Выключил звуковую установку.",
-        "seen": "s08.text.106",
-        "tier": "developed",
-        "first": "s08.text.101",
-        "memory_total": 6,
-        "memory": [
-          {
-            "turn": "s08.text.106",
-            "ch": "present",
-            "what": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спа"
-          }
-        ],
-        "memory_file": "archive/npc-memory/sound_kagen_junior.json",
-        "inner": {},
-        "status": "present_profile"
-      },
-      "prior_disclosures": [
-        {
-          "turn": "s08.text.015",
-          "at": "0006-10-03T03:18:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.105",
-          "at": "0006-10-09T16:12:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "823b294156b88422644d91e52db86cd7d45318395f7613cd3a232cd5c6106314",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.106",
-          "at": "0006-10-09T16:17:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "9ae8d65966f7a959c71d09c0cc8795ea59204bd4eabe6e5ab24ec4aeb864730f",
-          "status": "played_candidate_not_automatic_actor_fact"
-        }
-      ],
-      "prior_disclosure_ids": [
-        "s08.text.015",
-        "s08.text.025",
-        "s08.text.031",
-        "s08.text.038",
-        "s08.text.103",
-        "s08.text.104",
-        "s08.text.105",
-        "s08.text.106"
-      ],
-      "source_ref": "archive/session-*-turns.jsonl",
-      "dynamics": {
-        "committed_or_paused_intents": [
-          {
-            "id": "trace_delivery",
-            "goal": "Защитить себя от ответственности за необычную доставку.",
-            "status": "committed",
-            "source_turn": "s08.text.105",
-            "next": "Проверить номер путевого поручения и передать старшему.",
-            "due": "0006-10-09T16:30:00",
-            "flaw": "Низший уровень допуска.",
-            "if_unopposed": "Сообщит известное старшему и не будет задерживаться в медсекторе."
-          }
-        ],
-        "psyche_facets": {
-          "deep_fear": "Оказаться в нижнем секторе одному среди изменённых пациентов.",
-          "boundary": "Не войдёт в запертую камеру без сопровождения.",
-          "decides": "Исполняет указания старших, но передаёт неудобные наблюдения."
-        },
-        "unclocked_intents": [
-          "trace_delivery"
-        ]
-      },
-      "look": {
-        "внешность": "Молодой в серой форме с протектором Отогакуре."
-      }
-    },
-    "sound_kagen_senior": {
-      "profile": {
-        "name": "Старший шиноби Звука",
-        "role": "Старший охранник входного узла.",
-        "wants": "Сохранить дисциплину и провести груз, не привлекая внимания.",
-        "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
-        "leverage": "Контролирует внешний допуск и знает резонансный сигнал ворот.",
-        "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
-        "state": "Шики показал лицо, назвался нукенином и запросил Кабуто. Старший не атаковал, через резонансную пластину связался с руководством. После личного приказа Кабуто убрал оружие и допустил открытие ворот.",
-        "seen": "s08.text.106",
-        "tier": "developed",
-        "first": "s08.text.100",
-        "memory_total": 7,
-        "memory": [
-          {
-            "turn": "s08.text.106",
-            "ch": "present",
-            "what": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спа"
-          }
-        ],
-        "memory_file": "archive/npc-memory/sound_kagen_senior.json",
-        "inner": {},
-        "status": "present_profile"
-      },
-      "prior_disclosures": [
-        {
-          "turn": "s08.text.015",
-          "at": "0006-10-03T03:18:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "7eb9fc263f3b6d4ddfdfe93086abe19a155bb098c16fb08a4d541d58db4d594d",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.105",
-          "at": "0006-10-09T16:12:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "823b294156b88422644d91e52db86cd7d45318395f7613cd3a232cd5c6106314",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.106",
-          "at": "0006-10-09T16:17:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "9ae8d65966f7a959c71d09c0cc8795ea59204bd4eabe6e5ab24ec4aeb864730f",
-          "status": "played_candidate_not_automatic_actor_fact"
-        }
-      ],
-      "prior_disclosure_ids": [
-        "s08.text.015",
-        "s08.text.022",
-        "s08.text.025",
-        "s08.text.031",
-        "s08.text.103",
-        "s08.text.104",
-        "s08.text.105",
-        "s08.text.106"
-      ],
-      "source_ref": "archive/session-*-turns.jsonl",
-      "dynamics": {
-        "committed_or_paused_intents": [
-          {
-            "id": "admit_caravan_2",
-            "goal": "Обеспечить приём груза без утраты контроля над входом.",
-            "status": "committed",
-            "source_turn": "s08.text.103",
-            "next": "Провести транспорт после разъединения разговора и, если нужно, вызвать отдельный караул для разгрузки.",
-            "due": "0006-10-09T16:12:00",
-            "flaw": "Возница и сопровождающий скрывают источник стука и торопятся."
-          }
-        ],
-        "unclocked_intents": [
-          "admit_caravan_2"
-        ]
-      },
-      "look": {
-        "внешность": "Узкое лицо, повреждённое левое ухо, ожоги под двумя отсутствующими ногтями правой руки, короткий меч на спине."
-      }
-    },
-    "kagen_caravan_driver": {
-      "profile": {
-        "name": "Возница повозки",
-        "state": "Открыла груз по приказу Кабуто, подтвердила, что живому человеку не давали воду.",
-        "seen": "s08.text.106",
-        "tier": "developed",
-        "first": "s08.text.101",
-        "memory_total": 6,
-        "memory": [
-          {
-            "turn": "s08.text.106",
-            "ch": "present",
-            "what": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спа"
-          }
-        ],
-        "memory_file": "archive/npc-memory/kagen_caravan_driver.json",
-        "inner": {},
-        "status": "present_profile"
-      },
-      "prior_disclosures": [
-        {
-          "turn": "s08.text.082",
-          "at": "0006-10-04T02:27:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "2e2d23820556dfba66cc9f690fb38002c4f5e48cb92ff793887b03232aa2b626",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.104",
-          "at": "0006-10-09T16:04:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "fcf19bb645708d72e51f7d2f5c226be4686ce089b1a518fcd596e0f75afc2a8b",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.106",
-          "at": "0006-10-09T16:17:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "9ae8d65966f7a959c71d09c0cc8795ea59204bd4eabe6e5ab24ec4aeb864730f",
-          "status": "played_candidate_not_automatic_actor_fact"
-        }
-      ],
-      "prior_disclosure_ids": [
-        "s08.text.082",
-        "s08.text.092",
-        "s08.text.103",
-        "s08.text.104",
-        "s08.text.106"
-      ],
-      "source_ref": "archive/session-*-turns.jsonl",
-      "dynamics": {
-        "committed_or_paused_intents": [
-          {
-            "id": "leave_delivery",
-            "goal": "Получить плату и покинуть объект.",
-            "status": "committed",
-            "source_turn": "s08.text.105",
-            "next": "Потребовать отметку доставки и уйти до темноты.",
-            "due": "0006-10-09T17:00:00",
-            "flaw": "Секретное направление может стать поводом задержать свидетеля.",
-            "if_unopposed": "Уедет после получения платы."
-          }
-        ],
-        "psyche_facets": {
-          "deep_fear": "Оказаться задержанной после сдачи заказа.",
-          "boundary": "Не согласится добровольно стать испытуемой.",
-          "decides": "Довозит груз за деньги и не вмешивается в опыты."
-        },
-        "unclocked_intents": [
-          "leave_delivery"
-        ]
-      },
-      "look": {
-        "внешность": "Женщина в дорожном плаще."
-      }
-    },
-    "kagen_caravan_escort": {
-      "profile": {
-        "name": "Сопровождающий повозки",
-        "state": "Открыл капсулу с живым пациентом и передал его медику.",
-        "seen": "s08.text.106",
-        "tier": "developed",
-        "first": "s08.text.101",
-        "memory_total": 6,
-        "memory": [
-          {
-            "turn": "s08.text.106",
-            "ch": "present",
-            "what": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спа"
-          }
-        ],
-        "memory_file": "archive/npc-memory/kagen_caravan_escort.json",
-        "inner": {},
-        "status": "present_profile"
-      },
-      "prior_disclosures": [
-        {
-          "turn": "s08.text.031",
-          "at": "0006-10-03T07:03:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "585ee0774abc6abb1f820eab4894d692841ef0d7ac26f79472a6a1a8c4902c14",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.104",
-          "at": "0006-10-09T16:04:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "fcf19bb645708d72e51f7d2f5c226be4686ce089b1a518fcd596e0f75afc2a8b",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.106",
-          "at": "0006-10-09T16:17:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "9ae8d65966f7a959c71d09c0cc8795ea59204bd4eabe6e5ab24ec4aeb864730f",
-          "status": "played_candidate_not_automatic_actor_fact"
-        }
-      ],
-      "prior_disclosure_ids": [
-        "s08.text.031",
-        "s08.text.082",
-        "s08.text.085",
-        "s08.text.086",
-        "s08.text.092",
-        "s08.text.103",
-        "s08.text.104",
-        "s08.text.106"
-      ],
-      "source_ref": "archive/session-*-turns.jsonl",
-      "dynamics": {
-        "committed_or_paused_intents": [
-          {
-            "id": "protect_delivery",
-            "goal": "Провести важный груз в комплекс без внешнего досмотра.",
-            "status": "committed",
-            "source_turn": "s08.text.103",
-            "next": "Дождаться ослабления внимания охраны и попросить приёмщиков внутри забрать груз без задержки.",
-            "due": "0006-10-09T16:12:00",
-            "flaw": "Стук внутри кузова на слуху охраны; напряжение с посетителем повышает риск досмотра.",
-            "if_unopposed": "Груз проведут внутрь, сохраняя содержимое нераскрытым для Шики."
-          }
-        ],
-        "unclocked_intents": [
-          "protect_delivery"
-        ]
-      },
-      "look": {
-        "внешность": "Широкоплечий вооружённый мужчина в дорожной одежде."
-      }
-    },
-    "kabuto": {
-      "profile": {
-        "name": "Кабуто Якуши",
-        "state": "Видел реакцию ткани и человека на один тон, выключил стимуляцию, велел сохранить пациента. Предложил Шики лабораторию и сказал об уведомлении Орочимару.",
-        "seen": "s08.text.106",
-        "tier": "developed",
-        "first": "s08.text.103",
-        "memory_total": 4,
-        "memory": [
-          {
-            "turn": "s08.text.106",
-            "ch": "present",
-            "what": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спа"
-          }
-        ],
-        "memory_file": "archive/npc-memory/kabuto.json",
-        "inner": {},
-        "status": "present_profile"
-      },
-      "prior_disclosures": [
-        {
-          "turn": "s08.text.103",
-          "at": "0006-10-09T15:57:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "1fa546b2907a5221b19ce99b54562a57061847a3bdb3ebfa44951a5e010778ed",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.105",
-          "at": "0006-10-09T16:12:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "823b294156b88422644d91e52db86cd7d45318395f7613cd3a232cd5c6106314",
-          "status": "played_candidate_not_automatic_actor_fact"
-        },
-        {
-          "turn": "s08.text.106",
-          "at": "0006-10-09T16:17:00",
-          "source": "archive/session-008-turns.jsonl",
-          "sha256": "9ae8d65966f7a959c71d09c0cc8795ea59204bd4eabe6e5ab24ec4aeb864730f",
-          "status": "played_candidate_not_automatic_actor_fact"
-        }
-      ],
-      "alignment": {
-        "code": "NE",
-        "order": "Правила нужны как маскировка и доступ к архивам",
-        "line": "Не раскрывает источник детской медицинской записи Шики без собственной выгоды",
-        "breaking_point": "Перед риском потерять эксперимент может нарушить приказ наставника"
-      },
-      "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
-      "prior_disclosure_ids": [
-        "s08.text.103",
-        "s08.text.104",
-        "s08.text.105",
-        "s08.text.106"
-      ],
-      "source_ref": "archive/session-*-turns.jsonl",
-      "dynamics": {
-        "committed_or_paused_intents": [
-          {
-            "id": "court_shiki",
-            "goal": "Привести Шики к Орочимару: беглый медик с Нулевым Геномом — ответ на главный вопрос учителя",
-            "status": "committed",
-            "source_turn": "keeper",
-            "next": "Через посредника Звука на границе Травы предложить убежище, лабораторию, тела и линии крови в обмен на работу и образец",
-            "due": "0006-10-28T00:00:00",
-            "flaw": "Ведёт собственную игру и тайно служит Сасори; любопытство сильнее осторожности",
-            "against_shiki": "Для Орочимару Шики — образец и, может быть, запасное тело; честны только до образца",
-            "if_unopposed": "Посредник Звука вышел на след Шики: предложение Орочимару ждёт там, где Шики его найдёт."
-          },
-          {
-            "id": "meet_at_tenchi",
-            "goal": "Встретиться с Сасори у моста Тэнти",
-            "status": "committed",
-            "source_turn": "keeper",
-            "next": "Встретиться с Сасори у моста Тэнти",
-            "due": "0009-10-23T12:00:00",
-            "flaw": "Двойная игра видна тому, кто смотрит",
-            "if_unopposed": "У моста Тэнти в Стране Травы шпион Сасори оказался Кабуто; явился Орочимару; мост рухнул в бою с отрядом Листа, тот нашёл Саске в убежище и ушёл без него."
-          },
-          {
-            "id": "take_the_remains_1287",
-            "goal": "Забрать останки учителя",
-            "status": "committed",
-            "source_turn": "keeper",
-            "next": "Забрать останки учителя",
-            "due": "0010-03-11T06:00:00",
-            "flaw": "Не знает, кто из них двоих победит",
-            "if_unopposed": "Кабуто нашёл останки Орочимару и вживил их себе; чужие клетки начали захватывать его тело."
-          },
-          {
-            "id": "subdue_the_cells_1287",
-            "goal": "Подчинить клетки Орочимару: нужен способ переписать собственный геном — Нулевой Геном Шики",
-            "status": "committed",
-            "source_turn": "keeper",
-            "next": "Подчинить клетки Орочимару: нужен способ переписать собственный геном — Нулевой Геном Шики",
-            "due": "0010-04-01T00:00:00",
-            "flaw": "Клетки торопят: торгуется раньше, чем узнал достаточно, и видно, как он болен",
-            "against_shiki": "Шики для него лекарство и сосуд",
-            "if_unopposed": "Кабуто ищет Шики сам: клетки торопят, предложение теперь его собственное и отчаянное."
-          }
-        ],
-        "psyche_facets": {
-          "deep_fear": "остаться чужим инструментом",
-          "contradiction": "одинок и ценит Шики как единственного равного собеседника, которого готов разобрать",
-          "mask": "вежливость и очки",
-          "decides": "как исследователь: наблюдать, не вмешиваясь, пока данные интересны"
-        },
-        "unclocked_intents": [
-          "court_shiki",
-          "meet_at_tenchi",
-          "take_the_remains_1287",
-          "subdue_the_cells_1287"
-        ],
-        "pressure_pairs": [
-          {
-            "kind": "mask_under_pressure",
-            "anchor": {
-              "mask": "вежливость и очки",
-              "deep_fear": "остаться чужим инструментом"
-            },
-            "status": "possibility_to_test_not_a_fact"
-          }
-        ]
-      },
-      "look": {
-        "внешность": "Очки, спокойная приветливость, обыденная экипировка"
-      }
-    }
-  },
-  "source_passages": {
-    "s08.text.015": {
-      "player": "#нулевой геном: распад швов, полностью излечения рука# кадзиура - сан. #напиши все что было выяснено в чат#",
-      "gm_excerpt": "**Вторник, 3 октября 1283 года. 03:17.**\n\n*Кусагакуре. Центральный госпиталь, реанимация. Палата № 6.*\n\nПод кожей левого плеча вновь развернулась работа Нулевого Генома.\n\nТкани были уже восстановлены. Оставались хирургические нити — чужеродные волокна, проходившие сквозь совершенно здоровую кожу.\n\nШики направил воздействие на их белковую основу. Локальная ферментативная активность изменилась; волокна утратили прочность, расслоились и начали распадаться. Тонкие остатки, уже не удерживаемые тканью, отделились от поверхности. Под ними не осталось \n[... sou…",
-      "source": "archive/session-008-turns.jsonl"
-    },
-    "s08.text.106": {
-      "player": "Но и материал. Да уж",
-      "gm_excerpt": "**Понедельник, 9 октября 1283 года. 16:13.**\n\n*Отогакуре. Подземный комплекс Кагэн. Третий исследовательский уровень.*\n\n**Мугами Шики:** — Но и материал. Да уж.\n\nКабуто посмотрел на герметичную камеру с сокращающейся мышечной тканью.\n\nПотом — на дверь.\n\n**Якуши Кабуто:** — Боюсь, вы переоцениваете мою предусмотрительность, Мугами-кун. Не всё интересное, что попадает в наши лаборатории, предназначено именно вам.\n\nЕго улыбка стала тоньше.\n\n**Якуши Кабуто:** — Хотя в выборе слова вы совершенно правы.\n\nЗа дверью что-то тяжело ударилось о стену.\n\nПо\n[... sou…",
-      "source": "archive/session-008-turns.jsonl"
-    }
-  },
-  "recent_turns": [
-    {
-      "id": "s08.text.106",
-      "line": "Привезённый пациент предназначен Кабуто (серебристые волосы, очки), а не Шики. Мужчина с шейным обручем при звуке двигал рукой тем же рисунком, что и изолированная мышца; после выключения сохранял спазм. Кабуто прекратил стимуляцию, предложил Шики лабораторию в обмен на"
-    }
+  "focus": [
+   "kabuto",
+   "sound_kagen_junior",
+   "sound_kagen_senior",
+   "place:6587d507b59da164"
   ],
-  "evidence_graph": {
-    "nodes": [],
-    "edges": [
-      {
-        "from": "s08.text.015",
-        "to": "s08.text.106",
-        "kind": "chronology_same_actor",
-        "actor": "sound_kagen_junior",
-        "status": "source_order_only"
-      },
-      {
-        "from": "s08.text.015",
-        "to": "s08.text.106",
-        "kind": "chronology_same_actor",
-        "actor": "sound_kagen_senior",
-        "status": "source_order_only"
-      },
-      {
-        "from": "s08.text.082",
-        "to": "s08.text.106",
-        "kind": "chronology_same_actor",
-        "actor": "kagen_caravan_driver",
-        "status": "source_order_only"
-      },
-      {
-        "from": "s08.text.031",
-        "to": "s08.text.106",
-        "kind": "chronology_same_actor",
-        "actor": "kagen_caravan_escort",
-        "status": "source_order_only"
-      },
-      {
-        "from": "s08.text.103",
-        "to": "s08.text.106",
-        "kind": "chronology_same_actor",
-        "actor": "kabuto",
-        "status": "source_order_only"
-      }
-    ],
-    "source": "archive/session-*-turns.jsonl",
-    "scope": "source order only; no semantic entailment"
+  "focus_bytes": 2155,
+  "mode": "scene",
+  "needs_primary_source_review": false,
+  "omitted_critical": [],
+  "omitted_present_actors": [],
+  "read_levels": {
+   "L0": "source-bound entity facts and current scene identities",
+   "L1": "open relevant cast, equipment, process and psyche projections on demand",
+   "L2": "open exact archived turn and testimony before historical truth claims"
   },
-  "world": {
-    "clocks": [],
-    "due_now": [],
-    "threads": {
-      "tetsu": {
-        "state": "Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7, убийство отрицает (s07.text.013). Тело для вскрытия Шики так и не получил; причина смерти не установлена.",
-        "source": "memory/threads/tetsu.md",
-        "turn": "keeper@s08.text.090"
-      },
-      "v7": {
-        "state": "04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); подключён автономный холодовой модуль, в питающем гнезде найдена нештатная перемычка (s08.text.089). Выдачу реестра Такаги заблокировал (s08.text.081)…",
-        "source": "memory/threads/v7.md",
-        "turn": "keeper@s08.text.090"
-      },
-      "order": {
-        "state": "16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил из жилища лишь дублирующие бумаги и черновики, все уникальные оригиналы сохранил. Прибор наблюдения изъят, заказчик и источник утечки по-прежнему неи…",
-        "source": "memory/threads/order.md",
-        "turn": "s08.text.054"
-      }
-    },
-    "secrets_in": "recovery/GM_ONLY.json",
-    "secret_topics": [
-      "v7_destruction",
-      "v7_maintenance",
-      "v7_personal_targeting",
-      "v7_tapping",
-      "vials",
-      "visitor_claim"
-    ],
-    "no_automatic_conclusion": true,
-    "omitted_thread_ids": [
-      "lower_hospital",
-      "nemera",
-      "pact",
-      "forbidden_arts",
-      "sharingan",
-      "secret_lab",
-      "parents",
-      "central_visitors",
-      "case19T",
-      "anbu_transfer",
-      "kabuto_letter",
-      "arakawa_treatment",
-      "s17_survivors",
-      "shiki_confidentiality"
-    ],
-    "thread_sources": "memory/INDEX.md"
-  },
-  "plot": {
-    "main": {
-      "title": "Чужая ткань",
-      "question": "Кто распоряжается чужой живой тканью, зависимыми людьми, реестрами и приказами об устранении свидетелей, и как изменится эта система вследствие самостоятельных действий её участников?"
-    },
-    "active": [
-      {
-        "id": "ch09_order_chain",
-        "kind": "chapter",
-        "title": "Цепь приказа",
-        "parent": "main",
-        "question": "Кто конкретно инициировал попытки устранить Шики, с какими полномочиями, мотивом и каналом сведений?",
-        "limit": {
-          "scenes": 12
-        },
-        "scenes": 7,
-        "scenes_left": 5,
-        "threads": [
-          "tetsu",
-          "v7",
-          "order",
-          "central_visitors",
-          "case19T"
-        ],
-        "endings": [
-          "Заказчик, исполнители, мотив и путь передачи приказа доказаны либо честно разделены на установленные и неизвестные звенья.",
-          "Доказан один участок цепи, а иные участники самостоятельно сохранили либо изменили контроль.",
-          "Возможность доказать личный приказ потеряна вследствие событий; реальные последствия сохраняются.",
-          "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
-        ],
-        "notes": [
-          "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
-        ]
-      },
-      {
-        "id": "side_family_confidentiality",
-        "kind": "side",
-        "title": "Дом и врачебная тайна",
-        "question": "Кто и с какими проверяемыми последствиями сможет получить доступ к уже взятым образцам и закрытой медицинской информации Шики?",
-        "limit": {
-          "scenes": 4
-        },
-        "scenes": 0,
-        "scenes_left": 4,
-        "threads": [
-          "parents",
-          "shiki_confidentiality"
-        ],
-        "endings_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality",
-        "notes_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality"
-      },
-      {
-        "id": "side_nukenin_pursuit",
-        "kind": "side",
-        "title": "Перечёркнутый знак",
-        "parent": "main",
-        "question": "Кто и какой ценой сможет отыскать и воздействовать на самопровозглашённого нукенина Шики после разрушения С-17, если он сам не принимает ничью сторону?",
-        "limit": {
-          "scenes": 6,
-          "until": "0006-10-09T20:00:00"
-        },
-        "scenes": 3,
-        "scenes_left": 3,
-        "threads": [
-          "order",
-          "v7"
-        ],
-        "endings_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit",
-        "notes_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit"
-      },
-      {
-        "id": "side_seal_records",
-        "kind": "side",
-        "title": "Цена служебной печати",
-        "parent": "main",
-        "question": "Какой проверяемый результат дадут уже начатые служебные проверки, прошлые нападения и следы распоряжений, и кто сумеет удержать либо утратить доказательства?",
-        "limit": {
-          "scenes": 9,
-          "until": "0006-10-10T00:00:00"
-        },
-        "scenes": 7,
-        "scenes_left": 2,
-        "threads": [
-          "tetsu",
-          "v7",
-          "order",
-          "sanction",
-          "nori_meet",
-          "central_visitors",
-          "case19T",
-          "personal_archive"
-        ],
-        "endings": [
-          "Цепь конкретных документов, доступов и исполнителей подтверждена с указанием степени доказанности; последствия для полномочий реальны.",
-          "Часть следов установлена, но ответственность и судьба документов остаются предметом отдельных действий.",
-          "Доказательства уничтожены, подменены или стали недоступны; политический и личный ущерб фиксируются.",
-          "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
-        ],
-        "notes_ref": "recovery/GM_ONLY.json:plot.events.side_seal_records"
-      },
-      {
-        "id": "sound_outpost",
-        "kind": "side",
-        "title": "Там, где слышен один звук",
-        "parent": "main",
-        "question": "Что станет с действующим скрытым объектом Отогакуре и кем он контролируется в 1283 году?",
-        "limit": {
-          "scenes": 5,
-          "until": "0006-10-13T00:00:00"
-        },
-        "scenes": 1,
-        "scenes_left": 4,
-        "endings_ref": "recovery/GM_ONLY.json:plot.events.sound_outpost",
-        "notes_ref": "recovery/GM_ONLY.json:plot.events.sound_outpost"
-      },
-      {
-        "id": "rice_field_killing",
-        "kind": "scene",
-        "title": "Тело в оросительном канале",
-        "parent": "main",
-        "question": "Какое следствие получит убийство неизвестного самурая на северной окраине страны?",
-        "limit": {
-          "scenes": 2
-        },
-        "scenes": 1,
-        "scenes_left": 1,
-        "endings": [
-          "Убийцы скрываются с вещами пленного, местные замалчивают происшествие.",
-          "Местные или дорожные люди обнаруживают след и начинают собственные поиски.",
-          "Свидетельство либо оставленные вещи дают установить лишь часть совершившегося.",
-          "Событие остаётся без расследования и исчезает из доступных Шики сведений."
-        ],
-        "notes_ref": "recovery/GM_ONLY.json:plot.events.rice_field_killing"
-      }
-    ],
-    "queued": [
-      {
-        "id": "side_lower_hospital",
-        "kind": "side",
-        "title": "Нижний госпиталь"
-      },
-      {
-        "id": "side_shiki_goals",
-        "kind": "side",
-        "title": "Личные дела Шики"
-      },
-      {
-        "id": "side_kabuto_archive",
-        "kind": "side",
-        "title": "Старая медицинская запись"
-      },
-      {
-        "id": "ch10_outside_the_village",
-        "kind": "chapter",
-        "title": "За чертой"
-      },
-      {
-        "id": "side_two_vials",
-        "kind": "side",
-        "title": "Два сосуда"
-      },
-      {
-        "id": "side_kiri_hunters",
-        "kind": "side",
-        "title": "Охота Тумана"
-      },
-      {
-        "id": "side_red_thread",
-        "kind": "side",
-        "title": "Красная нить"
-      },
-      {
-        "id": "ch11_snake_offer",
-        "kind": "chapter",
-        "title": "Змеиное предложение"
-      },
-      {
-        "id": "ch13_kazekage",
-        "kind": "chapter",
-        "title": "Смерть Кадзекагэ"
-      },
-      {
-        "id": "ch14_tenchi",
-        "kind": "chapter",
-        "title": "Мост Тэнти"
-      }
-    ],
-    "queued_ref": "recovery/GM_ONLY.json:plot.events",
-    "source": "recovery/GM_ONLY.json:plot",
-    "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя."
-  },
-  "fight": {
-    "dice": [
-      85,
-      53,
-      55,
-      43,
-      10,
-      46,
-      82,
-      0,
-      40,
-      88,
-      89,
-      20
-    ],
-    "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай.",
-    "ref": "campaigns/shiki/ref/COMBAT.md",
-    "chakra": {
-      "value": 100.0,
-      "state": "готов",
-      "last": {
-        "turn": "s08.text.093",
-        "spent": 35.0,
-        "what": [
-          "Бётон: первая пробирка лечебного носителя (до точки реткона)",
-          "Хьётон: уничтожение С-17 в В-7 (до точки реткона)",
-          "Быстрое скрытное перемещение",
-          "Разрушение затвора и опор собственной лаборатории"
-        ]
-      }
-    }
-  },
-  "agendas": {
-    "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
-    "soon": [
-      {
-        "npc": "nemera",
-        "name": "Немера (Невыписанная)",
-        "plan": "first_deal_8",
-        "next": "Использовать сохранённый сенсорный опыт для самостоятельного исследования отличия прямого восприятия от совместного и искать возможность следующего торга",
-        "due": "0006-10-04T09:00:00",
-        "overdue": true
-      },
-      {
-        "npc": "nemera",
-        "name": "Немера (Невыписанная)",
-        "plan": "first_deal_3",
-        "next": "Ждать добровольного ответа; наблюдать, что Шики ищет о древних сущностях.",
-        "due": "0006-10-04T11:54:00",
-        "overdue": true
-      },
-      {
-        "npc": "nemera",
-        "name": "Немера (Невыписанная)",
-        "plan": "first_deal_2",
-        "next": "Ждать решения Шики, не повторять навязчиво предложение; при отказе искать другую цену и удобный момент",
-        "due": "0006-10-04T12:00:00",
-        "against_shiki": "каждая сделка — привычка; вторая цена будет выше",
-        "overdue": true
-      },
-      {
-        "npc": "nemera",
-        "name": "Немера (Невыписанная)",
-        "plan": "learn_target_3",
-        "next": "Наблюдать, будет ли Шики искать сведения об останках, и выяснить возможный интерес к зрению как новому опыту; не предлагать способности, которых у неё не установлено.",
-        "due": "0006-10-05T01:00:00",
-        "overdue": true
-      },
-      {
-        "npc": "nemera",
-        "name": "Немера (Невыписанная)",
-        "plan": "study_kagen_sound",
-        "next": "Сопоставить задержку после выключения ноты, не делая недоказанных выводов о механизме.",
-        "due": "0006-10-09T17:00:00",
-        "if_unopposed": "Сформулирует ограниченное наблюдение без притязания на скрытое знание.",
-        "overdue": false
-      },
-      {
-        "npc": "kagen_patient_adult",
-        "name": "Неизвестный взрослый пациент Кагэн",
-        "plan": "avoid_sound_test",
-        "next": "Просить санитаров не включать звук и рассказать, кто его продал.",
-        "due": "0006-10-09T17:15:00",
-        "if_unopposed": "Останется под наблюдением, но не свободен.",
-        "overdue": false
-      }
+  "schema": "npr-context-routing/1",
+  "status": "focused",
+  "time_advance_requires_world_review": false,
+  "unindexed_present_actors": []
+ },
+ "continuity": {
+  "gone": [],
+  "rule": "Вещь, рана, число и место меняются только через d.things was→now.",
+  "things": {
+   "shiki_upper_clothing": {
+    "holder": "shiki",
+    "since": "s08.text.002",
+    "turn": "s08.text.027"
+   }
+  }
+ },
+ "cursor": {
+  "at": "0006-10-09T16:20:00",
+  "date": "Понедельник, 9 октября 1283 года",
+  "id": "s09.text.001",
+  "place": "Страна Звука, комплекс Кагэн, исследовательское отделение третьего уровня",
+  "time": "16:20"
+ },
+ "digest": "b373965e5157bf628e5ae7ecc03cf2819b4a2468b34d554ab45f709ddf268f58",
+ "entity_memory": {
+  "activated": [],
+  "conflicts": [],
+  "rule": "Entity attributes are claims with sources, not prose suggestions.",
+  "schema": "npr-entity-ledger/1",
+  "total_activated": 0
+ },
+ "evidence_graph": {
+  "edges": [],
+  "nodes": [],
+  "scope": "source order only; no semantic entailment",
+  "source": "archive/session-*-turns.jsonl"
+ },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Кабуто Якуши — не слышал(а); Старший шиноби Звука — не слышал(а); Младший шиноби Звука — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Кабуто Якуши — не слышал(а); Старший шиноби Звука — не слышал(а); Младший шиноби Звука — не слышал(а)."
+ ],
+ "fight": {
+  "chakra": {
+   "last": {
+    "spent": 35.0,
+    "turn": "s08.text.093",
+    "what": [
+     "Бётон: первая пробирка лечебного носителя (до точки реткона)",
+     "Хьётон: уничтожение С-17 в В-7 (до точки реткона)",
+     "Быстрое скрытное перемещение",
+     "Разрушение затвора и опор собственной лаборатории"
     ]
+   },
+   "state": "готов",
+   "value": 100.0
   },
-  "wiki": {
-    "scene": "memory/SCENE.md",
-    "index": "memory/INDEX.md",
-    "present": {
-      "sound_kagen_junior": "memory/npc/sound_kagen_junior.md",
-      "sound_kagen_senior": "memory/npc/sound_kagen_senior.md",
-      "kagen_caravan_driver": "memory/npc/kagen_caravan_driver.md",
-      "kagen_caravan_escort": "memory/npc/kagen_caravan_escort.md",
-      "kabuto": "memory/npc/kabuto.md"
-    },
-    "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай."
-  },
-  "continuity": {
-    "things": {
-      "shiki_upper_clothing": {
-        "since": "s08.text.002",
-        "holder": "shiki",
-        "turn": "s08.text.027"
-      }
-    },
-    "gone": [],
-    "rule": "Вещь, рана, число и место меняются только через d.things was→now."
-  },
-  "horror": {
-    "rule": "campaigns/shiki/ref/HORROR.md",
-    "npcs": {
-      "sound_kagen_junior": {
-        "stage": 4,
-        "step": "необратимость",
-        "reads": "Опасается наказания за ошибку.",
-        "does": "Отключил звук.",
-        "lever": "Оказаться в нижнем секторе одному среди изменённых пациентов.",
-        "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх."
-      },
-      "sound_kagen_senior": {
-        "stage": 4,
-        "step": "необратимость",
-        "reads": "Шики не похож на обычного беглеца, а личный интерес Кабуто подтверждает важность, но не делает его безопасным.",
-        "does": "Передал имя лично Кабуто, подчинился приказу не связывать и пропустить, не пытаясь самостоятельно схватить Шики.",
-        "lever": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
-        "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх."
-      },
-      "kagen_caravan_driver": {
-        "stage": 3,
-        "step": "поступок",
-        "reads": "Вмешательство в переговоры опасно.",
-        "does": "Сдала человека и отступила от разговора.",
-        "lever": "Оказаться задержанной после сдачи заказа.",
-        "next": "NPC принимает решение, которое нельзя отменить: предательство, бегство, союз, покушение, служение. Мир отвечает на это сам."
-      },
-      "kagen_caravan_escort": {
-        "stage": 3,
-        "step": "поступок",
-        "reads": "Нельзя рисковать боем у ворот.",
-        "does": "Передал груз и не тронул Шики.",
-        "lever": "",
-        "next": "NPC принимает решение, которое нельзя отменить: предательство, бегство, союз, покушение, служение. Мир отвечает на это сам."
-      },
-      "kabuto": {
-        "stage": 4,
-        "step": "необратимость",
-        "reads": "Шики понимает цену живого материала, но не обещал подчиниться. Попытка насилия над ним непредсказуема.",
-        "does": "Отменил опыт и повторил предложение сотрудничества.",
-        "lever": "остаться чужим инструментом",
-        "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх."
-      }
-    },
-    "quiet": 0,
-    "due": null,
-    "worn": [
-      "волосы",
-      "дрожь",
-      "капюшон",
-      "побледнел"
+  "dice": [
+   63,
+   62,
+   61,
+   70,
+   60,
+   5,
+   14,
+   60,
+   18,
+   14,
+   98,
+   38
+  ],
+  "ref": "campaigns/shiki/ref/COMBAT.md",
+  "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
+ },
+ "fold_errors": [],
+ "format": "NPR-LIVE-SCENE/1",
+ "general_memory": {
+  "activated": [
+   {
+    "facts": [],
+    "id": "kabuto",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/kabuto.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Отсоединил акустический преобразователь, наблюдал повторное сокращение ткани, предъявил Шики датированную карточку образца и запросил оценку."
+     }
+    }
+   },
+   {
+    "facts": [],
+    "id": "sound_kagen_junior",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/sound_kagen_junior.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "role": "Младший дозорный у подземных ворот.",
+      "state": "Доложил о повторном спазме доставленного; по приказу старшего ушёл обратно на пост."
+     }
+    }
+   },
+   {
+    "facts": [],
+    "id": "sound_kagen_senior",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/sound_kagen_senior.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "role": "Старший охранник входного узла.",
+      "state": "Провёл повозку, передал пациента приёмщикам, выставил двоих у медотсека и лично остался контролировать дверь лаборатории."
+     }
+    }
+   },
+   {
+    "channels": [
+     "scene_anchor"
     ],
-    "recent": [
-      {
-        "turn": "s08.text.067",
-        "what": "Обычная человеческая отчуждённость в семье проявляется не паникой: мать получает медицинский отчёт за спиной сына, отец противопоставляет ей контроль распространения данных и собственные документы, оба воспринимают Шики как субъект разговора, но действуют из различных страхов."
+    "facts": [],
+    "id": "place:6587d507b59da164",
+    "kind": "place",
+    "label": "Страна Звука, комплекс Кагэн, исследовательское отделение третьего уровня",
+    "status": "no_verified_facts"
+   }
+  ],
+  "conflicts": [],
+  "level": 0,
+  "omitted": 0,
+  "omitted_priority_entities": [],
+  "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
+  "schema": "npr-general-memory/1",
+  "total_matched": 4
+ },
+ "guards": {
+  "clock_deadlines_are_real": true,
+  "no_npc_knowledge_without_channel": true,
+  "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
+  "player_owns_shiki": true,
+  "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
+ },
+ "handoff": null,
+ "horror": {
+  "due": null,
+  "npcs": {
+   "kabuto": {
+    "does": "Открывает дату старого образца и проверяет профессиональный интерес Шики вместо требования материала.",
+    "lever": "остаться чужим инструментом",
+    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
+    "reads": "Чужой медик может оказаться полезным и непредсказуемым участником исследования.",
+    "stage": 4,
+    "step": "необратимость"
+   },
+   "sound_kagen_junior": {
+    "does": "Отключил звук.",
+    "lever": "Оказаться в нижнем секторе одному среди изменённых пациентов.",
+    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
+    "reads": "Опасается наказания за ошибку.",
+    "stage": 4,
+    "step": "необратимость"
+   },
+   "sound_kagen_senior": {
+    "does": "Отправил младшего на пост, сам остался у лаборатории и усилил охрану пациента.",
+    "lever": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
+    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
+    "reads": "Задержать Шики без воли Кабуто будет опаснее, чем держать под наблюдением.",
+    "stage": 4,
+    "step": "необратимость"
+   }
+  },
+  "quiet": 0,
+  "recent": [
+   {
+    "turn": "s08.text.067",
+    "what": "Обычная человеческая отчуждённость в семье проявляется не паникой: мать получает медицинский отчёт за спиной сына, отец противопоставляет ей контроль распространения данных и собственные документы, оба воспринимают Шики как субъект разговора, но действуют из различных страхов."
+   },
+   {
+    "turn": "s08.text.068",
+    "what": "Различие реакции родителей проявилось в конфликте решений: Нао пытается прогнозировать развитие состояния и убирает заключение, Акихиро требует чётких правил безопасности и сохраняет право проверить попытку доступа к аптечным бумагам."
+   },
+   {
+    "turn": "s08.text.070",
+    "what": "Родители не сглаживают проблему: Нао рассматривает второе мнение даже ценой нового раскрытия данных, а Акихиро защищает семейные бумаги через изменение цепи хранения, при этом оба перестали требовать от Шики знаний, которых у него нет."
+   }
+  ],
+  "rule": "campaigns/shiki/ref/HORROR.md",
+  "worn": [
+   "волосы",
+   "дрожь",
+   "капюшон",
+   "побледнел"
+  ]
+ },
+ "last": {
+  "source": "recovery/TURN.json"
+ },
+ "needs_profile": [
+  {
+   "appearances": 8,
+   "facets": 0,
+   "need": 3,
+   "npc": "sound_kagen_senior",
+   "tier": "developed"
+  }
+ ],
+ "npc_dynamics": {
+  "actors": [],
+  "omitted_actor_ids": [],
+  "overdue_owner_ids": [],
+  "present_inline": [
+   "kabuto",
+   "sound_kagen_senior",
+   "sound_kagen_junior"
+  ],
+  "source": "recovery/GM_ONLY.json:psyche",
+  "unresolved_clock_owners": []
+ },
+ "plot": {
+  "active": [
+   {
+    "endings": [
+     "Заказчик, исполнители, мотив и путь передачи приказа доказаны либо честно разделены на установленные и неизвестные звенья.",
+     "Доказан один участок цепи, а иные участники самостоятельно сохранили либо изменили контроль.",
+     "Возможность доказать личный приказ потеряна вследствие событий; реальные последствия сохраняются.",
+     "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
+    ],
+    "id": "ch09_order_chain",
+    "kind": "chapter",
+    "limit": {
+     "scenes": 12
+    },
+    "notes": [
+     "Ни Аракаву, ни Мориоку, ни Кабуто не назначать заказчиком без сыгранного источника."
+    ],
+    "parent": "main",
+    "question": "Кто конкретно инициировал попытки устранить Шики, с какими полномочиями, мотивом и каналом сведений?",
+    "scenes": 7,
+    "scenes_left": 5,
+    "threads": [
+     "tetsu",
+     "v7",
+     "order",
+     "central_visitors",
+     "case19T"
+    ],
+    "title": "Цепь приказа"
+   },
+   {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality",
+    "id": "side_family_confidentiality",
+    "kind": "side",
+    "limit": {
+     "scenes": 4
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_family_confidentiality",
+    "question": "Кто и с какими проверяемыми последствиями сможет получить доступ к уже взятым образцам и закрытой медицинской информации Шики?",
+    "scenes": 0,
+    "scenes_left": 4,
+    "threads": [
+     "parents",
+     "shiki_confidentiality"
+    ],
+    "title": "Дом и врачебная тайна"
+   },
+   {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit",
+    "id": "side_nukenin_pursuit",
+    "kind": "side",
+    "limit": {
+     "scenes": 6,
+     "until": "0006-10-09T20:00:00"
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_nukenin_pursuit",
+    "parent": "main",
+    "question": "Кто и какой ценой сможет отыскать и воздействовать на самопровозглашённого нукенина Шики после разрушения С-17, если он сам не принимает ничью сторону?",
+    "scenes": 3,
+    "scenes_left": 3,
+    "threads": [
+     "order",
+     "v7"
+    ],
+    "title": "Перечёркнутый знак"
+   },
+   {
+    "endings": [
+     "Цепь конкретных документов, доступов и исполнителей подтверждена с указанием степени доказанности; последствия для полномочий реальны.",
+     "Часть следов установлена, но ответственность и судьба документов остаются предметом отдельных действий.",
+     "Доказательства уничтожены, подменены или стали недоступны; политический и личный ущерб фиксируются.",
+     "Ничего нового доказательно не установлено; последствия и утраченные возможности фиксируются без вымышленного разрешения."
+    ],
+    "id": "side_seal_records",
+    "kind": "side",
+    "limit": {
+     "scenes": 9,
+     "until": "0006-10-10T00:00:00"
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.side_seal_records",
+    "parent": "main",
+    "question": "Какой проверяемый результат дадут уже начатые служебные проверки, прошлые нападения и следы распоряжений, и кто сумеет удержать либо утратить доказательства?",
+    "scenes": 7,
+    "scenes_left": 2,
+    "threads": [
+     "tetsu",
+     "v7",
+     "order",
+     "sanction",
+     "nori_meet",
+     "central_visitors",
+     "case19T",
+     "personal_archive"
+    ],
+    "title": "Цена служебной печати"
+   },
+   {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.sound_outpost",
+    "id": "sound_outpost",
+    "kind": "side",
+    "limit": {
+     "scenes": 5,
+     "until": "0006-10-13T00:00:00"
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.sound_outpost",
+    "parent": "main",
+    "question": "Что станет с действующим скрытым объектом Отогакуре и кем он контролируется в 1283 году?",
+    "scenes": 2,
+    "scenes_left": 3,
+    "title": "Там, где слышен один звук"
+   },
+   {
+    "endings": [
+     "Убийцы скрываются с вещами пленного, местные замалчивают происшествие.",
+     "Местные или дорожные люди обнаруживают след и начинают собственные поиски.",
+     "Свидетельство либо оставленные вещи дают установить лишь часть совершившегося.",
+     "Событие остаётся без расследования и исчезает из доступных Шики сведений."
+    ],
+    "id": "rice_field_killing",
+    "kind": "scene",
+    "limit": {
+     "scenes": 2
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.rice_field_killing",
+    "parent": "main",
+    "question": "Какое следствие получит убийство неизвестного самурая на северной окраине страны?",
+    "scenes": 1,
+    "scenes_left": 1,
+    "title": "Тело в оросительном канале"
+   }
+  ],
+  "main": {
+   "question": "Кто распоряжается чужой живой тканью, зависимыми людьми, реестрами и приказами об устранении свидетелей, и как изменится эта система вследствие самостоятельных действий её участников?",
+   "title": "Чужая ткань"
+  },
+  "queued": [
+   {
+    "id": "side_lower_hospital",
+    "kind": "side",
+    "title": "Нижний госпиталь"
+   },
+   {
+    "id": "side_shiki_goals",
+    "kind": "side",
+    "title": "Личные дела Шики"
+   },
+   {
+    "id": "side_kabuto_archive",
+    "kind": "side",
+    "title": "Старая медицинская запись"
+   },
+   {
+    "id": "ch10_outside_the_village",
+    "kind": "chapter",
+    "title": "За чертой"
+   },
+   {
+    "id": "side_two_vials",
+    "kind": "side",
+    "title": "Два сосуда"
+   },
+   {
+    "id": "side_kiri_hunters",
+    "kind": "side",
+    "title": "Охота Тумана"
+   },
+   {
+    "id": "side_red_thread",
+    "kind": "side",
+    "title": "Красная нить"
+   },
+   {
+    "id": "ch11_snake_offer",
+    "kind": "chapter",
+    "title": "Змеиное предложение"
+   },
+   {
+    "id": "ch13_kazekage",
+    "kind": "chapter",
+    "title": "Смерть Кадзекагэ"
+   },
+   {
+    "id": "ch14_tenchi",
+    "kind": "chapter",
+    "title": "Мост Тэнти"
+   }
+  ],
+  "queued_ref": "recovery/GM_ONLY.json:plot.events",
+  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
+  "source": "recovery/GM_ONLY.json:plot"
+ },
+ "present_npcs": {
+  "kabuto": {
+   "alignment": {
+    "breaking_point": "Перед риском потерять эксперимент может нарушить приказ наставника",
+    "code": "NE",
+    "line": "Не раскрывает источник детской медицинской записи Шики без собственной выгоды",
+    "order": "Правила нужны как маскировка и доступ к архивам"
+   },
+   "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "against_shiki": "Для Орочимару Шики — образец и, может быть, запасное тело; честны только до образца",
+      "due": "0006-10-28T00:00:00",
+      "flaw": "Ведёт собственную игру и тайно служит Сасори; любопытство сильнее осторожности",
+      "goal": "Привести Шики к Орочимару: беглый медик с Нулевым Геномом — ответ на главный вопрос учителя",
+      "id": "court_shiki",
+      "if_unopposed": "Посредник Звука вышел на след Шики: предложение Орочимару ждёт там, где Шики его найдёт.",
+      "next": "Через посредника Звука на границе Травы предложить убежище, лабораторию, тела и линии крови в обмен на работу и образец",
+      "source_turn": "keeper",
+      "status": "committed"
+     },
+     {
+      "due": "0009-10-23T12:00:00",
+      "flaw": "Двойная игра видна тому, кто смотрит",
+      "goal": "Встретиться с Сасори у моста Тэнти",
+      "id": "meet_at_tenchi",
+      "if_unopposed": "У моста Тэнти в Стране Травы шпион Сасори оказался Кабуто; явился Орочимару; мост рухнул в бою с отрядом Листа, тот нашёл Саске в убежище и ушёл без него.",
+      "next": "Встретиться с Сасори у моста Тэнти",
+      "source_turn": "keeper",
+      "status": "committed"
+     },
+     {
+      "due": "0010-03-11T06:00:00",
+      "flaw": "Не знает, кто из них двоих победит",
+      "goal": "Забрать останки учителя",
+      "id": "take_the_remains_1287",
+      "if_unopposed": "Кабуто нашёл останки Орочимару и вживил их себе; чужие клетки начали захватывать его тело.",
+      "next": "Забрать останки учителя",
+      "source_turn": "keeper",
+      "status": "committed"
+     },
+     {
+      "against_shiki": "Шики для него лекарство и сосуд",
+      "due": "0010-04-01T00:00:00",
+      "flaw": "Клетки торопят: торгуется раньше, чем узнал достаточно, и видно, как он болен",
+      "goal": "Подчинить клетки Орочимару: нужен способ переписать собственный геном — Нулевой Геном Шики",
+      "id": "subdue_the_cells_1287",
+      "if_unopposed": "Кабуто ищет Шики сам: клетки торопят, предложение теперь его собственное и отчаянное.",
+      "next": "Подчинить клетки Орочимару: нужен способ переписать собственный геном — Нулевой Геном Шики",
+      "source_turn": "keeper",
+      "status": "committed"
+     }
+    ],
+    "pressure_pairs": [
+     {
+      "anchor": {
+       "deep_fear": "остаться чужим инструментом",
+       "mask": "вежливость и очки"
       },
-      {
-        "turn": "s08.text.068",
-        "what": "Различие реакции родителей проявилось в конфликте решений: Нао пытается прогнозировать развитие состояния и убирает заключение, Акихиро требует чётких правил безопасности и сохраняет право проверить попытку доступа к аптечным бумагам."
-      },
-      {
-        "turn": "s08.text.070",
-        "what": "Родители не сглаживают проблему: Нао рассматривает второе мнение даже ценой нового раскрытия данных, а Акихиро защищает семейные бумаги через изменение цепи хранения, при этом оба перестали требовать от Шики знаний, которых у него нет."
-      }
+      "kind": "mask_under_pressure",
+      "status": "possibility_to_test_not_a_fact"
+     }
+    ],
+    "psyche_facets": {
+     "contradiction": "одинок и ценит Шики как единственного равного собеседника, которого готов разобрать",
+     "decides": "как исследователь: наблюдать, не вмешиваясь, пока данные интересны",
+     "deep_fear": "остаться чужим инструментом",
+     "mask": "вежливость и очки"
+    },
+    "unclocked_intents": [
+     "court_shiki",
+     "meet_at_tenchi",
+     "take_the_remains_1287",
+     "subdue_the_cells_1287"
     ]
-  },
-  "checks": [
-    {
-      "turn": "s08.text.106",
-      "kind": "horror",
-      "text": "kabuto: ступень 4→3 прыжком; лестница идёт по одной ступени за ход"
-    },
-    {
-      "turn": "s08.text.106",
-      "kind": "write",
-      "text": "Запись хода: вся запись сверх сцены 5950 знаков (норма до 4000); крупнее всего: cast 3803, scene 939, truth 434."
-    }
-  ],
-  "fold_errors": [],
-  "needs_profile": [
-    {
-      "npc": "sound_kagen_senior",
-      "tier": "developed",
-      "facets": 0,
-      "need": 3,
-      "appearances": 7
-    },
-    {
-      "npc": "kagen_caravan_escort",
-      "tier": "developed",
-      "facets": 0,
-      "need": 3,
-      "appearances": 6
-    }
-  ],
-  "shiki": {
-    "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json",
-    "body": "После нескольких часов скрытого поиска; чакра не расходовалась на боевые техники.",
-    "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
-    "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены."
-  },
-  "last": {
-    "source": "recovery/TURN.json"
-  },
-  "guards": {
-    "player_owns_shiki": true,
-    "no_repeated_revelations_without_new_source": true,
-    "no_npc_knowledge_without_channel": true,
-    "clock_deadlines_are_real": true,
-    "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn",
-    "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically."
-  },
-  "entity_memory": {
-    "schema": "npr-entity-ledger/1",
-    "activated": [],
-    "total_activated": 0,
-    "conflicts": [],
-    "rule": "Entity attributes are claims with sources, not prose suggestions."
-  },
-  "general_memory": {
-    "schema": "npr-general-memory/1",
-    "level": 0,
-    "activated": [
-      {
-        "id": "kabuto",
-        "kind": "npc",
-        "facts": [],
-        "operational_cues": {
-          "values": {
-            "state": "Видел реакцию ткани и человека на один тон, выключил стимуляцию, велел сохранить пациента. Предложил Шики лабораторию и сказал об уведомлении Орочимару."
-          },
-          "source": "recovery/cast/kabuto.json",
-          "status": "projection_not_authoritative_fact"
-        }
-      },
-      {
-        "id": "kagen_caravan_driver",
-        "kind": "npc",
-        "facts": [],
-        "operational_cues": {
-          "values": {
-            "state": "Открыла груз по приказу Кабуто, подтвердила, что живому человеку не давали воду."
-          },
-          "source": "recovery/cast/kagen_caravan_driver.json",
-          "status": "projection_not_authoritative_fact"
-        }
-      },
-      {
-        "id": "kagen_caravan_escort",
-        "kind": "npc",
-        "facts": [],
-        "operational_cues": {
-          "values": {
-            "state": "Открыл капсулу с живым пациентом и передал его медику."
-          },
-          "source": "recovery/cast/kagen_caravan_escort.json",
-          "status": "projection_not_authoritative_fact"
-        }
-      },
-      {
-        "id": "sound_kagen_junior",
-        "kind": "npc",
-        "facts": [],
-        "operational_cues": {
-          "values": {
-            "role": "Младший дозорный у подземных ворот.",
-            "state": "Признал путаницу: сереброволосый в очках — Кабуто. Выключил звуковую установку."
-          },
-          "source": "recovery/cast/sound_kagen_junior.json",
-          "status": "projection_not_authoritative_fact"
-        }
-      },
-      {
-        "id": "sound_kagen_senior",
-        "kind": "npc",
-        "facts": [],
-        "operational_cues": {
-          "values": {
-            "role": "Старший охранник входного узла.",
-            "state": "Шики показал лицо, назвался нукенином и запросил Кабуто. Старший не атаковал, через резонансную пластину связался с руководством. После личного приказа Кабуто убрал оружи"
-          },
-          "source": "recovery/cast/sound_kagen_senior.json",
-          "status": "projection_not_authoritative_fact"
-        }
-      },
-      {
-        "id": "place:6587d507b59da164",
-        "kind": "place",
-        "label": "Страна Звука, комплекс Кагэн, исследовательское отделение третьего уровня",
-        "channels": [
-          "scene_anchor"
-        ],
-        "facts": [],
-        "status": "no_verified_facts"
-      }
+   },
+   "look": {
+    "внешность": "Очки, спокойная приветливость, обыденная экипировка"
+   },
+   "prior_disclosures": [],
+   "profile": {
+    "first": "s08.text.103",
+    "inner": {},
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s09.text.001",
+      "what": "Начало 9-й сессии: ткань повторно сократилась без акустического преобразователя. Открыта дата пробы 03.10; пациент сообщает о втором голосе. Старший завершил приём груза и выставил охрану."
+     }
     ],
-    "omitted_priority_entities": [],
-    "total_matched": 6,
-    "omitted": 0,
-    "conflicts": [],
-    "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon."
+    "memory_file": "archive/npc-memory/kabuto.json",
+    "memory_total": 5,
+    "name": "Кабуто Якуши",
+    "seen": "s09.text.001",
+    "state": "Отсоединил акустический преобразователь, наблюдал повторное сокращение ткани, предъявил Шики датированную карточку образца и запросил оценку.",
+    "status": "present_profile",
+    "tier": "developed"
+   }
   },
-  "context_route": {
-    "schema": "npr-context-routing/1",
-    "mode": "scene",
-    "cursor": "s08.text.106",
-    "focus": [
-      "kabuto",
-      "kagen_caravan_driver",
-      "kagen_caravan_escort",
-      "sound_kagen_junior",
-      "sound_kagen_senior",
-      "place:6587d507b59da164"
+  "sound_kagen_junior": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0006-10-09T16:30:00",
+      "flaw": "Низший уровень допуска.",
+      "goal": "Защитить себя от ответственности за необычную доставку.",
+      "id": "trace_delivery",
+      "if_unopposed": "Сообщит известное старшему и не будет задерживаться в медсекторе.",
+      "next": "Проверить номер путевого поручения и передать старшему.",
+      "source_turn": "s08.text.105",
+      "status": "committed"
+     }
     ],
-    "unindexed_present_actors": [],
-    "omitted_present_actors": [],
-    "omitted_critical": [],
-    "needs_primary_source_review": false,
-    "time_advance_requires_world_review": false,
-    "read_levels": {
-      "L0": "source-bound entity facts and current scene identities",
-      "L1": "open relevant cast, equipment, process and psyche projections on demand",
-      "L2": "open exact archived turn and testimony before historical truth claims"
+    "psyche_facets": {
+     "boundary": "Не войдёт в запертую камеру без сопровождения.",
+     "decides": "Исполняет указания старших, но передаёт неудобные наблюдения.",
+     "deep_fear": "Оказаться в нижнем секторе одному среди изменённых пациентов."
     },
-    "epistemic_rules": {
-      "truth": "verified fact requires source and scope",
-      "npc_knowledge": "separate from world truth and from player disclosure",
-      "source_candidate": "retrieve original before treating as canon",
-      "shiki": "player alone owns Shiki's voluntary decisions"
-    },
-    "budget_bytes": 6600,
-    "focus_bytes": 3092,
-    "status": "focused"
-  },
-  "npc_dynamics": {
-    "actors": [],
-    "present_inline": [
-      "sound_kagen_junior",
-      "sound_kagen_senior",
-      "kagen_caravan_driver",
-      "kagen_caravan_escort",
-      "kabuto"
+    "unclocked_intents": [
+     "trace_delivery"
+    ]
+   },
+   "look": {
+    "внешность": "Молодой в серой форме с протектором Отогакуре."
+   },
+   "prior_disclosures": [],
+   "profile": {
+    "fears": "То, что слышно из нижних помещений ночью.",
+    "first": "s08.text.101",
+    "inner": {},
+    "leverage": "Знает местный график снабжения, не знает состава секретных опытов.",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s09.text.001",
+      "what": "Начало 9-й сессии: ткань повторно сократилась без акустического преобразователя. Открыта дата пробы 03.10; пациент сообщает о втором голосе. Старший завершил приём груза и выставил охрану."
+     }
     ],
-    "omitted_actor_ids": [],
-    "overdue_owner_ids": [],
-    "unresolved_clock_owners": [],
-    "source": "recovery/GM_ONLY.json:psyche"
+    "memory_file": "archive/npc-memory/sound_kagen_junior.json",
+    "memory_total": 7,
+    "name": "Младший шиноби Звука",
+    "role": "Младший дозорный у подземных ворот.",
+    "seen": "s09.text.001",
+    "state": "Доложил о повторном спазме доставленного; по приказу старшего ушёл обратно на пост.",
+    "status": "present_profile",
+    "tier": "developed",
+    "voice": "Негромко, с тревожной поспешностью.",
+    "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
+   }
   },
-  "source_passages_truncated": true,
-  "source_passages_ref": "archive/session-*-turns.jsonl",
-  "checks_ref": "recovery/CHECKS.json",
-  "recent_turns_ref": "recovery/TURN.json",
-  "budget": {
-    "target_bytes": 32000,
-    "hard_bytes": 48000
+  "sound_kagen_senior": {
+   "look": {
+    "внешность": "Узкое лицо, повреждённое левое ухо, ожоги под двумя отсутствующими ногтями правой руки, короткий меч на спине."
+   },
+   "prior_disclosures": [],
+   "profile": {
+    "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
+    "first": "s08.text.100",
+    "leverage": "Контролирует внешний допуск и знает резонансный сигнал ворот.",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s09.text.001",
+      "what": "Начало 9-й сессии: ткань повторно сократилась без акустического преобразователя. Открыта дата пробы 03.10; пациент сообщает о втором голосе. Старший завершил приём груза и выставил охрану."
+     }
+    ],
+    "memory_file": "archive/npc-memory/sound_kagen_senior.json",
+    "memory_total": 8,
+    "name": "Старший шиноби Звука",
+    "role": "Старший охранник входного узла.",
+    "seen": "s09.text.001",
+    "state": "Провёл повозку, передал пациента приёмщикам, выставил двоих у медотсека и лично остался контролировать дверь лаборатории.",
+    "status": "present_profile",
+    "tier": "developed",
+    "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
+    "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
+   }
+  }
+ },
+ "recent_turns": [
+  {
+   "id": "s09.text.001",
+   "line": "Начало 9-й сессии: ткань повторно сократилась без акустического преобразователя. Открыта дата пробы 03.10; пациент сообщает о втором голосе. Старший завершил приём груза и выставил охрану."
+  }
+ ],
+ "recent_turns_ref": "recovery/TURN.json",
+ "scene": {
+  "positions": "Шики и Кабуто у регистратора в лаборатории; старший у её двери, младший отправлен обратно на пост, санитар на пороге; пациент в медотсеке.",
+  "pressure": "Кабуто хочет исследовать причину спонтанного ответа ткани; старший удерживает контроль над перевозкой и охраной; пациент сорвал фиксацию.",
+  "situation": "К 16:20 в лаборатории Кагэн зарегистрировано новое сокращение изолированной мышцы после отсоединения акустического преобразователя. Кабуто показал этикетку образца с датой 03.10.1283, на шесть дней раньше доставки пациента. Младший сообщил о повторном спазме пациента. Санитар принёс слова пациента о голосе, похожем на собственный, из дальнего коридора. Кабуто ожидает реакции Шики."
+ },
+ "shiki": {
+  "body": "После нескольких часов скрытого поиска; чакра не расходовалась на боевые техники.",
+  "genome": "Нулевой Геном 5/5. Полноценная способность изучать живой чужой генетический материал, добровольно абсорбировать/ассимилировать чужие геномные программы в собственные ткани, функционально испытывать их и закреплять признаки переписью собственных хромосом. Собственные программы Хьётона Хаку и частичной гидратации Ходзуки стабильно встроены по всему организму; отдельно интегрирован и контролируется фрагмент ткани каменной твари. Долговременное новое усвоение Аракавы не подтверждено/не выполняется автоматически.",
+  "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
+  "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
+ },
+ "source_passages": {},
+ "target_exceeded": true,
+ "turn_file": {
+  "path": "recovery/TURN.json",
+  "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
+  "sha": "4443dee1dbd3e5e0539e937d0048596b823947a8",
+  "turn": "s09.text.001"
+ },
+ "wiki": {
+  "index": "memory/INDEX.md",
+  "present": {
+   "kabuto": "memory/npc/kabuto.md",
+   "sound_kagen_junior": "memory/npc/sound_kagen_junior.md",
+   "sound_kagen_senior": "memory/npc/sound_kagen_senior.md"
   },
-  "target_exceeded": true,
-  "over_budget": true,
-  "fences": [
-    "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Младший шиноби Звука — не слышал(а); Старший шиноби Звука — не слышал(а); Возница повозки — не слышал(а); Сопровождающий повозки — не слышал(а); Кабуто Якуши — не слышал(а).",
-    "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Младший шиноби Звука — не слышал(а); Старший шиноби Звука — не слышал(а); Возница повозки — не слышал(а); Сопровождающий повозки — не слышал(а); Кабуто Якуши — не слышал(а)."
+  "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
+  "scene": "memory/SCENE.md"
+ },
+ "world": {
+  "clocks": [],
+  "due_now": [],
+  "no_automatic_conclusion": true,
+  "omitted_thread_ids": [
+   "lower_hospital",
+   "nemera",
+   "pact",
+   "forbidden_arts",
+   "sharingan",
+   "secret_lab",
+   "parents",
+   "central_visitors",
+   "case19T",
+   "anbu_transfer",
+   "kabuto_letter",
+   "arakawa_treatment",
+   "s17_survivors",
+   "shiki_confidentiality"
   ],
-  "turn_file": {
-    "path": "recovery/TURN.json",
-    "sha": "692536082485d6163f95820193074467e52592bd",
-    "turn": "s08.text.106",
-    "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json."
-  },
-  "digest": "8f8e4775fb3b454fdd4e4d3dc0ec02fbd66147d1ae8df9af9d26d513ff59a7cd"
+  "secret_topics": [
+   "v7_maintenance",
+   "v7_personal_targeting",
+   "v7_tapping",
+   "vials",
+   "visitor_claim",
+   "kagen_sample_date"
+  ],
+  "secrets_in": "recovery/GM_ONLY.json",
+  "thread_sources": "memory/INDEX.md",
+  "threads": {
+   "order": {
+    "source": "memory/threads/order.md",
+    "state": "16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил из жилища лишь дублирующие бумаги и черновики, все уникальные оригиналы сохранил. Прибор наблюдения изъят, заказчик и источник утечки по-прежнему неи…",
+    "turn": "s08.text.054"
+   },
+   "tetsu": {
+    "source": "memory/threads/tetsu.md",
+    "state": "Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7, убийство отрицает (s07.text.013). Тело для вскрытия Шики так и не получил; причина смерти не установлена.",
+    "turn": "keeper@s08.text.090"
+   },
+   "v7": {
+    "source": "memory/threads/v7.md",
+    "state": "04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); подключён автономный холодовой модуль, в питающем гнезде найдена нештатная перемычка (s08.text.089). Выдачу реестра Такаги заблокировал (s08.text.081)…",
+    "turn": "keeper@s08.text.090"
+   }
+  }
+ }
 }

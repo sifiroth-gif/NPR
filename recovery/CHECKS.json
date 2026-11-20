@@ -1,37 +1,22 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s08.text.106",
+ "cursor": "s09.text.001",
  "fold_errors": [],
  "checks": [
   {
-   "turn": "s08.text.104",
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4723 знаков (норма до 4000); крупнее всего: cast 2503, scene 820, truth 321."
-  },
-  {
-   "turn": "s08.text.104",
-   "kind": "read",
-   "text": "«Реципиент № 6» вернулся в сцену, а его страница `npc/s17_recipient_6` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/s17_recipient_6.talk`)."
-  },
-  {
-   "turn": "s08.text.105",
-   "kind": "intent",
-   "text": "намерение first_deal_7: статус «changed» непонятен — оставлен активным; закрыть: fulfilled, partial, failed, abandoned"
-  },
-  {
-   "turn": "s08.text.105",
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 6062 знаков (норма до 4000); крупнее всего: cast 3575, scene 860, truth 718."
-  },
-  {
-   "turn": "s08.text.106",
+   "turn": "s09.text.001",
    "kind": "horror",
-   "text": "kabuto: ступень 4→3 прыжком; лестница идёт по одной ступени за ход"
+   "text": "sound_kagen_junior: dread без saw. Страх растёт только из увиденного или полученного по каналу"
   },
   {
-   "turn": "s08.text.106",
+   "turn": "s09.text.001",
    "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 5950 знаков (норма до 4000); крупнее всего: cast 3803, scene 939, truth 434."
+   "text": "Запись хода: вся запись сверх сцены 4024 знаков (норма до 4000); крупнее всего: cast 2149, scene 775, truth 200."
+  },
+  {
+   "turn": "s09.text.001",
+   "kind": "will",
+   "text": "«Старший шиноби Звука» появляется уже 8 раз, а воли у него нет: задай d.cast.sound_kagen_senior.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
