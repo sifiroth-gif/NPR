@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.006",
+  "cursor": "s09.text.007",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -653,7 +653,8 @@
     "hospital_transporter": {
       "aliases": [
         "hospital transporter",
-        "Транспортник госпиталя"
+        "Транспортник госпиталя",
+        "hospital_transporter"
       ],
       "facts": [],
       "id": "hospital_transporter",
@@ -663,12 +664,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s08.text.084",
+          "seen": "s09.text.007",
           "state": "Транспортник из госпиталя продолжает добиваться подтверждения, что действовал по выданной накладной."
         }
       ],
       "sources": [
-        "recovery/cast/hospital_transporter.json"
+        "recovery/cast/hospital_transporter.json",
+        "s09.text.007"
       ]
     },
     "kabuto": {
@@ -680,7 +682,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 24,
+      "mention_count": 25,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -688,13 +690,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0006-10-09T16:25:00",
-          "excerpt": "новений Кабуто рассматривал его лицо. Затем медленно отпустил ручку и повернулся к нему всем корпусом. **Кабуто Якуши:** — Да. На этот раз ответ последовал без обычной вежливой оговорки. **Кабуто Якуши:** — Пять лет назад я хотел получить вашу кровь, потому чт",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.004"
         },
         {
           "at": "0006-10-09T16:27:00",
@@ -709,28 +704,34 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.006"
+        },
+        {
+          "at": "0006-10-09T22:16:00",
+          "excerpt": "ендую прикасаться ко мне без перчаток. К крови тоже. Скорее всего, это опасно. Улыбка Кабуто исчезла. **Кабуто Якуши:** — Насколько опасно? Вопрос прозвучал почти машинально. Но Кабуто не стал дожидаться ответа, чтобы отступить к шкафу с защитными принадлежнос",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.007"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.006",
-          "state": "Увидел прямой забор и почти чёрную кровь Шики в закупоренной пробирке, оставшейся в руке владельца. Разделил данные старой разведывательной ориентировки, детской медкарты и сообщения от 08.10, указал их ограниченный источник. Попытался оценить изменившуюся лоя"
+          "seen": "s09.text.007",
+          "state": "В перчатках принял пробирку в контейнер; предварительно исследовал: клетки жизнеспособны, в плазме тёмные чакросвязанные структуры. Сообщил о возвращении Орочимару и условии личной встречи."
         },
         {
-          "state": "Увидел прямой забор и почти чёрную кровь Шики в закупоренной пробирке, оставшейся в руке владельца. Разделил данные старой разведывательной ориентировки, детской медкарты и сообщения от 08.10, указал их ограниченный источник. Попытался оценить изменившуюся лоя"
+          "state": "В перчатках принял пробирку в контейнер; предварительно исследовал: клетки жизнеспособны, в плазме тёмные чакросвязанные структуры. Сообщил о возвращении Орочимару и условии личной встречи."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s09.text.006"
+        "s09.text.007"
       ]
     },
     "kadziura_satoru": {
       "aliases": [
         "kadziura satoru",
-        "Кадзиура Сатору",
-        "kadziura_satoru"
+        "Кадзиура Сатору"
       ],
       "facts": [],
       "id": "kadziura_satoru",
@@ -780,8 +781,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kadziura_satoru.json",
-        "s09.text.006"
+        "recovery/cast/kadziura_satoru.json"
       ]
     },
     "kage_doppelganger": {
@@ -1607,8 +1607,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.006"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -1718,6 +1717,27 @@
       ],
       "sources": [
         "recovery/cast/orderly.json"
+      ]
+    },
+    "orochimaru": {
+      "aliases": [
+        "orochimaru"
+      ],
+      "facts": [],
+      "id": "orochimaru",
+      "kind": "npc",
+      "label": "orochimaru",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.007",
+          "state": "Вечером вернулся на объект Кагэн; по докладу Кабуто дал Шики временное право остаться и исследовать, личную беседу назначит сейчас или утром по выбору гостя."
+        }
+      ],
+      "sources": [
+        "recovery/cast/orochimaru.json",
+        "s09.text.007"
       ]
     },
     "patient_airway": {
@@ -4909,8 +4929,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.006",
-        "s09.text.005"
+        "s09.text.007",
+        "s09.text.005",
+        "s09.text.006"
       ]
     },
     "place:82deab402789196f": {
@@ -8349,13 +8370,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shiki",
+          "holder": "kabuto",
           "since": "s09.text.006",
-          "turn": "s09.text.006"
+          "turn": "s09.text.007"
         }
       ],
       "sources": [
-        "s09.text.006"
+        "s09.text.007"
       ]
     },
     "shiki_hospital_gown_gloves": {
@@ -8520,7 +8541,7 @@
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s09.text.006",
+          "seen": "s09.text.007",
           "state": "Сначала распорядился о парном посте у комнаты Шики; после возражения Кабуто снял этот пост, сохранил контроль входа в лабораторный сектор.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
@@ -8535,7 +8556,7 @@
       "sources": [
         "recovery/cast/sound_kagen_senior.json",
         "recovery/HOT.json",
-        "s09.text.006"
+        "s09.text.007"
       ]
     },
     "stolen_house_plan": {
@@ -9346,12 +9367,12 @@
     },
     {
       "from": "shiki_blood_vial",
-      "source": "s09.text.006",
+      "source": "s09.text.007",
       "status": "projected",
-      "to": "shiki",
+      "to": "kabuto",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 656
+  "source_turns_indexed": 657
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.007: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Орочимару (`npc/orochimaru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `shiki_blood_vial`, план сюжета
 - s09.text.006: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_blood_vial`, линия `kabuto_letter`, план сюжета
 - s09.text.005: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Кэйдзи (`npc/keiji`), Касэ (`npc/kase`), вещь `forehead_protector`, вещь `shiki_upper_clothing`, вещь `shiki_wraps`, линия `kabuto_letter`
 - s09.text.004: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
@@ -60,4 +61,3 @@
 - s08.text.056: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `personal_paper_reports`, поправки игрока: 1
 - s08.text.055: Такаги Рэн (`npc/takagi_ren`), вещь `personal_paper_reports`
 - s08.text.054: вещь `personal_paper_reports`, вещь `stolen_house_plan`, линия `order`, поправки игрока: 2
-- s08.text.053: Хаясэ Нори (`npc/nori`), Мугами Акихиро (`npc/akihiro`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Кадзиура Сатору (`npc/kadziura_satoru`), Аракава Дзюн (`npc/arakawa`)
