@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.021",
+  "cursor": "s09.text.022",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -259,6 +259,38 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
+      ]
+    },
+    "canon:s09.text.022:0": {
+      "aliases": [
+        "canon:s09.text.022:0",
+        "Прямое уточнение игрока 20.11.2026: всем Учиха свойственна наследственная предрасположенность к Катону. Вместе с полученной Шики донорской матрицей Саске эта предрасположенность за"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.022:0",
+      "kind": "canon",
+      "label": "Прямое уточнение игрока 20.11.2026: всем Учиха свойственна наследственная предрасположенность к Катону. Вместе с полученной Шики донорской матрицей Саске эта предрасположенность за",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.022"
+      ]
+    },
+    "canon:s09.text.022:1": {
+      "aliases": [
+        "canon:s09.text.022:1",
+        "По заявке игрока 20.11.2026 Шики сознательно продолжает в фоновом режиме перепись собственных хромосом по матрице Учиха во всём организме. В 23:04 процесс идёт, охват части соматич"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.022:1",
+      "kind": "canon",
+      "label": "По заявке игрока 20.11.2026 Шики сознательно продолжает в фоновом режиме перепись собственных хромосом по матрице Учиха во всём организме. В 23:04 процесс идёт, охват части соматич",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.022"
       ]
     },
     "captive_guard": {
@@ -1000,13 +1032,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shiki_lab_controlled_access",
+          "holder": "shiki_lab_cold_storage",
           "since": "s09.text.017",
-          "turn": "s09.text.018"
+          "turn": "s09.text.022"
         }
       ],
       "sources": [
-        "s09.text.018"
+        "s09.text.022"
       ]
     },
     "kuroda_mayu": {
@@ -1325,7 +1357,8 @@
     "medical_panel_operator": {
       "aliases": [
         "medical panel operator",
-        "Медик у панели В-7"
+        "Медик у панели В-7",
+        "medical_panel_operator"
       ],
       "facts": [],
       "id": "medical_panel_operator",
@@ -1335,12 +1368,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.002",
+          "seen": "s09.text.022",
           "state": "Получил распоряжение о проверке двух независимых лечебных пробирок; не может подтвердить массовую воспроизводимость без исследований."
         }
       ],
       "sources": [
-        "recovery/cast/medical_panel_operator.json"
+        "recovery/cast/medical_panel_operator.json",
+        "s09.text.022"
       ]
     },
     "medical_spectacles": {
@@ -1434,7 +1468,7 @@
         {
           "fears": "Шики: он унёс в себе то, что она сторожила.",
           "role": "полукаменная женщина-хирург Нижнего госпиталя",
-          "seen": "s09.text.001",
+          "seen": "s09.text.022",
           "stance": "Терпит Шики, пока он полезен пациентам.",
           "state": "К 20:00 Шики не найден в доступных местах, Минасэ не смогла вручить своё требование о втором контуре, намерена повторить попытку.",
           "voice": "Операционные команды. С Уцуро на «ты» и по старому имени.",
@@ -1442,7 +1476,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/minase.json"
+        "recovery/cast/minase.json",
+        "s09.text.022"
       ]
     },
     "missing_guard": {
@@ -1495,8 +1530,7 @@
     "morioka_hideaki": {
       "aliases": [
         "morioka hideaki",
-        "Мориока Хидэаки",
-        "morioka_hideaki"
+        "Мориока Хидэаки"
       ],
       "facts": [],
       "id": "morioka_hideaki",
@@ -1540,8 +1574,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/morioka_hideaki.json",
-        "s09.text.021"
+        "recovery/cast/morioka_hideaki.json"
       ]
     },
     "nao": {
@@ -1597,8 +1630,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s09.text.021"
+        "recovery/cast/nao.json"
       ]
     },
     "nemera": {
@@ -1624,8 +1656,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.021"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -1746,7 +1777,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1754,13 +1785,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:46:00",
-          "excerpt": "Без вашего участия ничего с ним делать не станут. Он поднял глаза. **Кабуто Якуши:** — Знаете, Мугами-кун, Орочимару-сама очень редко возвращается к исследованиям умерших подчинённых. Обычно его интересует то, что ещё можно использовать. В коридоре послышались",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.018"
         },
         {
           "at": "0007-10-09T22:47:00",
@@ -1775,6 +1799,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.020"
+        },
+        {
+          "at": "0007-10-09T23:04:00",
+          "excerpt": "показать свои исследования. Я хочу увидеть результат, который можно использовать в бою. Он бросил сенбон к ногам манекена. **Саске Учиха:** — Орочимару постоянно говорит о наследственных способностях. О том, что тело определяет предел возможностей шиноби. Саск",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.022"
         }
       ],
       "projections": [
@@ -2133,12 +2164,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.021",
         "s09.text.016",
         "s09.text.017",
         "s09.text.018",
         "s09.text.019",
-        "s09.text.020"
+        "s09.text.020",
+        "s09.text.021"
       ]
     },
     "place:07a5417b1774e85e": {
@@ -5306,6 +5337,25 @@
         "s01.text.142"
       ]
     },
+    "place:8ddc8fb023175fee": {
+      "aliases": [
+        "place:8ddc8fb023175fee",
+        "Страна Звука, комплекс Кагэн, внутренний тренировочный двор",
+        "Страна Звука",
+        "комплекс Кагэн",
+        "внутренний тренировочный двор"
+      ],
+      "facts": [],
+      "id": "place:8ddc8fb023175fee",
+      "kind": "place",
+      "label": "Страна Звука, комплекс Кагэн, внутренний тренировочный двор",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.022"
+      ]
+    },
     "place:8ea7dab6d4a701e4": {
       "aliases": [
         "place:8ea7dab6d4a701e4",
@@ -8350,12 +8400,17 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.019",
-          "state": "После исправления Шики признал, что они не сражались, а он видел поединки Шики; приглашает того на тренировочную площадку и покинул лабораторию без согласия на исследования или забора биоматериала."
+          "seen": "s09.text.022",
+          "state": "Тренируется ночью во внутреннем дворе Кагэн, самостоятельно выполнил Гокакю, подготовил манекен и кунаи. Заметил прибывшего Шики; спросил о результатах и предложил показать реально боевое применение исследований."
+        },
+        {
+          "state": "Тренируется ночью во внутреннем дворе Кагэн, самостоятельно выполнил Гокакю, подготовил манекен и кунаи. Заметил прибывшего Шики; спросил о результатах и предложил показать реально боевое применение исследований."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json"
+        "recovery/cast/sasuke.json",
+        "recovery/HOT.json",
+        "s09.text.022"
       ]
     },
     "sayu": {
@@ -9553,12 +9608,12 @@
     },
     {
       "from": "kimimaro_bone_sample",
-      "source": "s09.text.018",
+      "source": "s09.text.022",
       "status": "projected",
-      "to": "shiki_lab_controlled_access",
+      "to": "shiki_lab_cold_storage",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 670
+  "source_turns_indexed": 671
 }
