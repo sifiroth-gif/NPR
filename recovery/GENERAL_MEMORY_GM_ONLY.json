@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.023",
+  "cursor": "s09.text.024",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -259,6 +259,22 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
+      ]
+    },
+    "canon:s09.text.024:0": {
+      "aliases": [
+        "canon:s09.text.024:0",
+        "09.10.1284 Шики продемонстрировал Хётон «Ледяные зеркала» (поле из 12 боковых и нескольких верхних зеркал; пока без перемещения в них или атак). Оригинальные печати одной левой рук"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.024:0",
+      "kind": "canon",
+      "label": "09.10.1284 Шики продемонстрировал Хётон «Ледяные зеркала» (поле из 12 боковых и нескольких верхних зеркал; пока без перемещения в них или атак). Оригинальные печати одной левой рук",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.024"
       ]
     },
     "captive_guard": {
@@ -980,12 +996,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.005",
+          "seen": "s09.text.024",
           "state": "Утром 03.10 рассказал старшему сопровождающему каравана про изменившегося медика Кусагакуре, запись попала в дорожный рапорт, Шики пока не осведомлён."
         }
       ],
       "sources": [
-        "recovery/cast/keiji.json"
+        "recovery/cast/keiji.json",
+        "s09.text.024"
       ]
     },
     "kimimaro_bone_sample": {
@@ -1009,11 +1026,31 @@
         "s09.text.022"
       ]
     },
+    "kiri_hunters": {
+      "aliases": [
+        "kiri hunters",
+        "kiri_hunters"
+      ],
+      "facts": [],
+      "id": "kiri_hunters",
+      "kind": "npc",
+      "label": "kiri_hunters",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.024"
+        }
+      ],
+      "sources": [
+        "recovery/cast/kiri_hunters.json",
+        "s09.text.024"
+      ]
+    },
     "kuroda_mayu": {
       "aliases": [
         "kuroda mayu",
-        "Курода Маю",
-        "kuroda_mayu"
+        "Курода Маю"
       ],
       "facts": [],
       "id": "kuroda_mayu",
@@ -1062,15 +1099,13 @@
         }
       ],
       "sources": [
-        "recovery/cast/kuroda_mayu.json",
-        "s09.text.023"
+        "recovery/cast/kuroda_mayu.json"
       ]
     },
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре",
-        "kusa_head"
+        "Глава Кусагакуре"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -1120,8 +1155,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kusa_head.json",
-        "s09.text.023"
+        "recovery/cast/kusa_head.json"
       ]
     },
     "masked_handler": {
@@ -1746,7 +1780,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 22,
+      "mention_count": 23,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -1754,13 +1788,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-10-09T22:50:00",
-          "excerpt": "table-row> </table> </box> *** В комнате было тихо. Рядом с рабочим столом стоял запечатанный футляр Кимимаро. Там, за двумя пломбами, хранился материал человека, которого Орочимару считал драгоценным даже после смерти. А в руке Шики теперь находилась наследст",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.020"
         },
         {
           "at": "0007-10-09T23:04:00",
@@ -1775,6 +1802,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.023"
+        },
+        {
+          "at": "0007-10-09T23:10:00",
+          "excerpt": "есть этот геном) #печати# хётон ледяные зеркала. #поле формирования завершаю технику# я уверен что Орочимару захочет себе эту способность. Но можно ли ее передать, я не знаю. **Вторник, 9 октября 1284 года. 23:09** *Страна Звука. Кагэн. Ночной тренировочный дв",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.024"
         }
       ],
       "projections": [
@@ -5322,8 +5356,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.023",
-        "s09.text.022"
+        "s09.text.022",
+        "s09.text.023"
       ]
     },
     "place:8ea7dab6d4a701e4": {
@@ -7826,6 +7860,24 @@
         "s01.text.124"
       ]
     },
+    "place:f04cc18692fea801": {
+      "aliases": [
+        "place:f04cc18692fea801",
+        "Страна Звука, Кагэн, ночной тренировочный двор",
+        "Страна Звука",
+        "ночной тренировочный двор"
+      ],
+      "facts": [],
+      "id": "place:f04cc18692fea801",
+      "kind": "place",
+      "label": "Страна Звука, Кагэн, ночной тренировочный двор",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.024"
+      ]
+    },
     "place:f4500c0ac878606b": {
       "aliases": [
         "place:f4500c0ac878606b",
@@ -8370,17 +8422,17 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.023",
-          "state": "Ночью во дворе Кагэн сообщил Шики, что Итачи уничтожил клан и родителей, оставил его в живых и приказал ненавидеть; цель Саске — убить Итачи, для этого нужна сила. Активировал Шаринган с тремя томоэ. Разобрал указание Шики на недоступные ему способности, спрос"
+          "seen": "s09.text.024",
+          "state": "Узнал оригинальную технику Хаку по собственному опыту боя на мосту Страны Волн. Увидел другие, одноручные печати Шики и черную видимую чакру; бросил кунай в зеркало, не разбив его. Услышав заявление о перестройке собственного генома, спрашивает, получен ли Хёт"
         },
         {
-          "state": "Ночью во дворе Кагэн сообщил Шики, что Итачи уничтожил клан и родителей, оставил его в живых и приказал ненавидеть; цель Саске — убить Итачи, для этого нужна сила. Активировал Шаринган с тремя томоэ. Разобрал указание Шики на недоступные ему способности, спрос"
+          "state": "Узнал оригинальную технику Хаку по собственному опыту боя на мосту Страны Волн. Увидел другие, одноручные печати Шики и черную видимую чакру; бросил кунай в зеркало, не разбив его. Услышав заявление о перестройке собственного генома, спрашивает, получен ли Хёт"
         }
       ],
       "sources": [
         "recovery/cast/sasuke.json",
         "recovery/HOT.json",
-        "s09.text.023"
+        "s09.text.024"
       ]
     },
     "sayu": {
@@ -9585,5 +9637,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 672
+  "source_turns_indexed": 673
 }
