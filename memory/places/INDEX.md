@@ -158,3 +158,4 @@
 - Кусагакуре, дом Шики · `places/kusagakure-dom-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
 - Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
+- Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08

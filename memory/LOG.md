@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.095: Такаги Рэн (`npc/takagi_ren`), tikhiy_porog_seller (`npc/tikhiy_porog_seller`), waterfall_trackers (`npc/waterfall_trackers`)
 - s08.text.094: Такаги Рэн (`npc/takagi_ren`), Глава Кусагакуре (`npc/kusa_head`), hirano_seiji (`npc/hirano_seiji`), план сюжета, поправки игрока: 1
 - s08.text.093: Такаги Рэн (`npc/takagi_ren`), Мориока Хидэаки (`npc/morioka_hideaki`), Медик у панели В-7 (`npc/medical_panel_operator`), поправки игрока: 1
 - s08.text.092: Мориока Хидэаки (`npc/morioka_hideaki`), Такаги Рэн (`npc/takagi_ren`), Медик у панели В-7 (`npc/medical_panel_operator`), Хирано (`npc/hirano`)
@@ -56,4 +57,3 @@
 - s08.text.038: Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
 - s08.text.037: Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), линия `medical_family`
 - s08.text.036: Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
-- s08.text.035: поправки игрока: 1

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s08.text.094",
+  "cursor": "s08.text.095",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -561,12 +561,11 @@
       ],
       "projections": [
         {
-          "seen": "s08.text.094"
+          "seen": "s08.text.095"
         }
       ],
       "sources": [
-        "recovery/cast/hirano.json",
-        "recovery/HOT.json"
+        "recovery/cast/hirano.json"
       ]
     },
     "hirano_seiji": {
@@ -1323,7 +1322,7 @@
       ],
       "projections": [
         {
-          "seen": "s08.text.094",
+          "seen": "s08.text.095",
           "state": "Слышал слова Шики о сыне Такаги; о судьбе ребёнка ничего не знает, только о принципе шантажа. Остался на В-7, вылечен и под охраной."
         },
         {
@@ -4453,6 +4452,25 @@
         "s01.text.073"
       ]
     },
+    "place:7a1b0e158d77c86b": {
+      "aliases": [
+        "place:7a1b0e158d77c86b",
+        "Страна Водопадов, посёлок Тихий Порог, торговая улица",
+        "Страна Водопадов",
+        "посёлок Тихий Порог",
+        "торговая улица"
+      ],
+      "facts": [],
+      "id": "place:7a1b0e158d77c86b",
+      "kind": "place",
+      "label": "Страна Водопадов, посёлок Тихий Порог, торговая улица",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s08.text.095"
+      ]
+    },
     "place:7ac77ca854d6436d": {
       "aliases": [
         "place:7ac77ca854d6436d",
@@ -4616,7 +4634,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s08.text.094",
         "s08.text.093"
       ]
     },
@@ -8003,7 +8020,8 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн"
+        "Такаги Рэн",
+        "takagi_ren"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -8045,7 +8063,7 @@
           "body": "Средних лет/пожилой офицер с короткой седой бородой, тёмный плащ, резидентская повязка на левом плече и служебная печать на шее, следит за руками Нори",
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-          "seen": "s08.text.094",
+          "seen": "s08.text.095",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
           "state": "Услышал сочувствие Шики о сыне, которого упомянул пленный, но не назвал по имени. Получил две пробирки и велел независимо охранять их и проверить первую у Куроды; отпустил Шики, не предпринимая безнадёжного одиночного преследования.",
           "voice": "Сухие короткие приказы без объяснения мотивов, требовательная прямая речь",
@@ -8061,7 +8079,8 @@
       ],
       "sources": [
         "recovery/cast/takagi_ren.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s08.text.095"
       ]
     },
     "tetsu": {
@@ -8468,6 +8487,27 @@
         "keeper@s08.text.090"
       ]
     },
+    "tikhiy_porog_seller": {
+      "aliases": [
+        "tikhiy porog seller",
+        "tikhiy_porog_seller"
+      ],
+      "facts": [],
+      "id": "tikhiy_porog_seller",
+      "kind": "npc",
+      "label": "tikhiy_porog_seller",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.095"
+        }
+      ],
+      "sources": [
+        "recovery/cast/tikhiy_porog_seller.json",
+        "s08.text.095"
+      ]
+    },
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
@@ -8701,6 +8741,27 @@
       "sources": [
         "recovery/cast/wagon_occupant_unknown.json"
       ]
+    },
+    "waterfall_trackers": {
+      "aliases": [
+        "waterfall trackers",
+        "waterfall_trackers"
+      ],
+      "facts": [],
+      "id": "waterfall_trackers",
+      "kind": "npc",
+      "label": "waterfall_trackers",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s08.text.095"
+        }
+      ],
+      "sources": [
+        "recovery/cast/waterfall_trackers.json",
+        "s08.text.095"
+      ]
     }
   },
   "links": [
@@ -8741,5 +8802,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 641
+  "source_turns_indexed": 642
 }
