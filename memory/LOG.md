@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.014: поправки игрока: 3
 - s09.text.013: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), линия `sharingan`, план сюжета, поправки игрока: 4
 - s09.text.012: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), hirano_seiji (`npc/hirano_seiji`), Хирано (`npc/hirano`)
 - s09.text.011: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), поправки игрока: 2
@@ -60,4 +61,3 @@
 - s08.text.063: Сэкидо Тадао (`npc/sekido_tadao`), Кэйдзи (`npc/keiji`), Хаясэ Нори (`npc/nori`), Курода Маю (`npc/kuroda_mayu`), Аракава Дзюн (`npc/arakawa`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Такаги Рэн (`npc/takagi_ren`), Минасэ Рэи (`npc/minase`)
 - s08.text.062: Сэкидо Тадао (`npc/sekido_tadao`)
 - s08.text.061: Сэкидо Тадао (`npc/sekido_tadao`), поправки игрока: 1
-- s08.text.060: Сэкидо Тадао (`npc/sekido_tadao`)

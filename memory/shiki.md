@@ -84,8 +84,8 @@
 - field_command: 4.6
 - planning: 4.7
 - physical_strength: 3.8
-- physical_endurance: 4.8
-- chakra_reserves: 5
+- physical_endurance: 4.6
+- chakra_reserves: 4.8
 - chakra_control: 5
 - reflex_and_coordination: 5
 
@@ -112,5 +112,5 @@
 ## Research_goal
 - По прямому OOC запросу игрока — получить подлинный генетический материал линии Учиха; цель не сообщена автоматически NPC, образец пока не получен.
 
-## Поправки игрока: 102
+## Поправки игрока: 105
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
