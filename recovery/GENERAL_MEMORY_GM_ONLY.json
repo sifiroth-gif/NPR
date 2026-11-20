@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.053",
+  "cursor": "s09.text.054",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -1073,7 +1073,7 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s09.text.053"
+          "seen": "s09.text.054"
         },
         {
           "role": "по подписи в сцене"
@@ -2286,7 +2286,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 39,
+      "mention_count": 40,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2294,13 +2294,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-19T00:32:00",
-          "excerpt": "шуек. Жёлтые глаза остановились на Шики. Змея высунула язык. Раз. Другой. Её голова опустилась ниже. **Змея:** — Не Орочимару. Голос был низким, сухим. Слова сопровождались негромким шипением. **Змея:** — Но договор настоящий. Она проползла вперёд, оставляя на",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.049"
         },
         {
           "at": "0007-12-19T00:33:00",
@@ -2315,6 +2308,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.051"
+        },
+        {
+          "at": "0007-12-19T00:46:00",
+          "excerpt": "#тихо но что бы Саске услышал# ты же понимаешь что Орочимару не тренирует тебя просто так? И что его цель и твоя могут разительно отличаться? **Среда, 19 декабря 1284 года. 00:45** *Страна Звука. Кагэн. Тренировочный комплекс.* *",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.054"
         }
       ],
       "projections": [
@@ -5757,6 +5757,24 @@
         "s01.text.021"
       ]
     },
+    "place:868b84a5ef5b8d4e": {
+      "aliases": [
+        "place:868b84a5ef5b8d4e",
+        "Страна Звука, Кагэн, тренировочный зал",
+        "Страна Звука",
+        "тренировочный зал"
+      ],
+      "facts": [],
+      "id": "place:868b84a5ef5b8d4e",
+      "kind": "place",
+      "label": "Страна Звука, Кагэн, тренировочный зал",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.054"
+      ]
+    },
     "place:86e3ecb04fb85fe3": {
       "aliases": [
         "place:86e3ecb04fb85fe3",
@@ -6143,9 +6161,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.053",
         "s09.text.051",
-        "s09.text.052"
+        "s09.text.052",
+        "s09.text.053"
       ]
     },
     "place:94b5396642574165": {
@@ -9171,8 +9189,7 @@
     "ryuchido_first_serpent": {
       "aliases": [
         "ryuchido first serpent",
-        "Хагуро",
-        "ryuchido_first_serpent"
+        "Хагуро"
       ],
       "facts": [],
       "id": "ryuchido_first_serpent",
@@ -9216,8 +9233,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/ryuchido_first_serpent.json",
-        "s09.text.053"
+        "recovery/cast/ryuchido_first_serpent.json"
       ]
     },
     "ryuchido_summoning_scroll": {
@@ -9300,17 +9316,17 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.053",
-          "state": "После ухода Хагуро самостоятельно предложил Шики продолжить тренировку мечом в соседнем зале без Кабуто; с тренировочным мечом у прохода."
+          "seen": "s09.text.054",
+          "state": "Услышал тихое предупреждение Шики об Орочимару. Признал собственную осведомлённость о намерении Орочимару забрать тело Учиха, цель использовать обучение для мести Итачи и намерение противостоять захвату. Прямо отказался считать себя автоматически союзником Шик"
         },
         {
-          "state": "После ухода Хагуро самостоятельно предложил Шики продолжить тренировку мечом в соседнем зале без Кабуто; с тренировочным мечом у прохода."
+          "state": "Услышал тихое предупреждение Шики об Орочимару. Признал собственную осведомлённость о намерении Орочимару забрать тело Учиха, цель использовать обучение для мести Итачи и намерение противостоять захвату. Прямо отказался считать себя автоматически союзником Шик"
         }
       ],
       "sources": [
         "recovery/cast/sasuke.json",
         "recovery/HOT.json",
-        "s09.text.053"
+        "s09.text.054"
       ]
     },
     "sayu": {
@@ -10635,5 +10651,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 702
+  "source_turns_indexed": 703
 }
