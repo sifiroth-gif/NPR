@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.048",
+  "cursor": "s09.text.049",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -259,6 +259,22 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
+      ]
+    },
+    "canon:s09.text.049:0": {
+      "aliases": [
+        "canon:s09.text.049:0",
+        "19.12.1284 Шики впервые успешно выполнил Кучиёсэ но Дзюцу по действующему контракту Рьючидо; стандартные печати Кабан→Собака→Птица→Обезьяна→Баран, кровь на земле; явилась говорящая"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.049:0",
+      "kind": "canon",
+      "label": "19.12.1284 Шики впервые успешно выполнил Кучиёсэ но Дзюцу по действующему контракту Рьючидо; стандартные печати Кабан→Собака→Птица→Обезьяна→Баран, кровь на земле; явилась говорящая",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.049"
       ]
     },
     "captive_guard": {
@@ -633,8 +649,7 @@
     "hospital_pass_custodian": {
       "aliases": [
         "hospital pass custodian",
-        "Хранитель лабораторных пропусков госпиталя",
-        "hospital_pass_custodian"
+        "Хранитель лабораторных пропусков госпиталя"
       ],
       "facts": [],
       "id": "hospital_pass_custodian",
@@ -648,8 +663,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hospital_pass_custodian.json",
-        "s09.text.048"
+        "recovery/cast/hospital_pass_custodian.json"
       ]
     },
     "hospital_transporter": {
@@ -736,7 +750,7 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.048",
+          "seen": "s09.text.049",
           "state": "Получил самостоятельное поручение обеспечить образцы и выяснить, кто преждевременно привёз сопротивляющегося испытуемого. Шики в тренировочном комплексе больше не сопровождает."
         },
         {
@@ -745,8 +759,7 @@
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s09.text.048"
+        "recovery/HOT.json"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -1429,8 +1442,7 @@
     "kuroishi_hasumi": {
       "aliases": [
         "kuroishi hasumi",
-        "Хасуми Дзюнъити",
-        "kuroishi_hasumi"
+        "Хасуми Дзюнъити"
       ],
       "facts": [],
       "id": "kuroishi_hasumi",
@@ -1474,8 +1486,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kuroishi_hasumi.json",
-        "s09.text.048"
+        "recovery/cast/kuroishi_hasumi.json"
       ]
     },
     "kuroishi_ledger": {
@@ -2241,7 +2252,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2249,13 +2260,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-19T00:21:00",
-          "excerpt": "онтракт призыва со змеями… Для меня это будет второй контракт. Если, конечно, я получу ваше согласие. Орочимару перестал улыбаться. Не от недовольства. Скорее, потому что просьба оказалась неожиданно интересной. **Орочимару:** — Второй? Он медленно повторил сл",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.046"
         },
         {
           "at": "0007-12-19T00:22:00",
@@ -2270,11 +2274,18 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.048"
+        },
+        {
+          "at": "0007-12-19T00:32:00",
+          "excerpt": "шуек. Жёлтые глаза остановились на Шики. Змея высунула язык. Раз. Другой. Её голова опустилась ниже. **Змея:** — Не Орочимару. Голос был низким, сухим. Слова сопровождались негромким шипением. **Змея:** — Но договор настоящий. Она проползла вперёд, оставляя на",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.049"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.048",
+          "seen": "s09.text.049",
           "state": "Принял просьбу Шики позвать на исследование, когда испытуемый будет готов. Сам распорядился о сравнительных образцах и приказал сохранить руки испытуемого целыми; не препятствовал уходу Шики."
         },
         {
@@ -2283,8 +2294,7 @@
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "recovery/HOT.json",
-        "s09.text.048"
+        "recovery/HOT.json"
       ]
     },
     "patient_airway": {
@@ -7783,6 +7793,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s09.text.049",
         "s09.text.048"
       ]
     },
@@ -9104,6 +9115,36 @@
       ],
       "sources": [
         "recovery/cast/residence_courier_v7.json"
+      ]
+    },
+    "ryuchido_first_serpent": {
+      "aliases": [
+        "ryuchido first serpent",
+        "Змея Рьючидо"
+      ],
+      "facts": [],
+      "id": "ryuchido_first_serpent",
+      "kind": "npc",
+      "label": "Змея Рьючидо",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0007-12-19T00:32:00",
+          "excerpt": "становился у дверей, увидев огромную змею. **Ход Шики.** Шики впервые применил Кучиёсэ по новому договору: на площадке возникла разумная десятиметровая змея Рьючидо. Она признала договор, но спросила о цели вызова и пока не обещает подчинения. Из соседнего зал",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.049"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s09.text.049",
+          "state": "Впервые призвана на тренировочный круг Кагэн. Признала действительность призыва и достаточность чакры, заинтересовалась запахом и необычной физиологией Шики, спросила о цели вызова. Не нападала и не обещала подчинения."
+        }
+      ],
+      "sources": [
+        "recovery/cast/ryuchido_first_serpent.json",
+        "s09.text.049"
       ]
     },
     "ryuchido_summoning_scroll": {
@@ -10516,5 +10557,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 697
+  "source_turns_indexed": 698
 }

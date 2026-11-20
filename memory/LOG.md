@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.049: Змея Рьючидо (`npc/ryuchido_first_serpent`), поправки игрока: 1
 - s09.text.048: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`)
 - s09.text.047: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`, поправки игрока: 1
 - s09.text.046: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`
@@ -60,4 +61,3 @@
 - s08.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Такаги Рэн (`npc/takagi_ren`), план сюжета, поправки игрока: 1
 - s08.text.097: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), план сюжета
 - s08.text.096: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), поправки игрока: 1
-- s08.text.095: Такаги Рэн (`npc/takagi_ren`), tikhiy_porog_seller (`npc/tikhiy_porog_seller`), waterfall_trackers (`npc/waterfall_trackers`)
