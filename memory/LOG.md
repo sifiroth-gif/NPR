@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.021: Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s09.text.020: Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), вещь `possible_sasuke_hair`
 - s09.text.019: Немера (Невыписанная) (`npc/nemera`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `possible_sasuke_hair`
 - s09.text.018: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kimimaro_bone_sample`
@@ -60,4 +61,3 @@
 - s08.text.070: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.069: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.068: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
-- s08.text.067: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
