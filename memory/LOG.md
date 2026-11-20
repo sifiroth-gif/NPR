@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s08.text.099: поправки игрока: 1
 - s08.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Такаги Рэн (`npc/takagi_ren`), план сюжета, поправки игрока: 1
 - s08.text.097: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), план сюжета
 - s08.text.096: Такаги Рэн (`npc/takagi_ren`), Уцуро (`npc/utsuro`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), поправки игрока: 1

@@ -58,11 +58,6 @@
  },
  "checks": [
   {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4804 знаков (норма до 4000); крупнее всего: cast 1300, scene 952, plot 869.",
-   "turn": "s08.text.098"
-  },
-  {
    "kind": "new_character",
    "text": "В сцене говорит «молодой самурай» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
    "turn": "s08.text.098"
@@ -76,7 +71,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s08.text.098",
+  "cursor": "s08.text.099",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -116,11 +111,11 @@
  "cursor": {
   "at": "0006-10-09T07:23:00",
   "date": "Понедельник, 9 октября 1283 года",
-  "id": "s08.text.098",
+  "id": "s08.text.099",
   "place": "Страна Рисовых Полей, северная окраина, холм над рисовыми террасами и дорогой в селение",
   "time": "07:23"
  },
- "digest": "f559c4ad3c676d10ae4efa79dc6bc4edc7c9e78d570505d68ca7dd3ca120615c",
+ "digest": "a2d847b4fa172b38e81c13c1a5ac8e5da306fda6522aba99ab69b0969218aeb5",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -162,18 +157,18 @@
    "value": 100.0
   },
   "dice": [
-   1,
-   51,
-   7,
-   53,
-   63,
-   41,
-   35,
-   62,
-   67,
-   51,
-   71,
-   37
+   9,
+   43,
+   91,
+   13,
+   44,
+   28,
+   83,
+   28,
+   47,
+   94,
+   56,
+   13
   ],
   "ref": "campaigns/shiki/ref/COMBAT.md",
   "rules": "Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: внезапность +0…+1, позиция -1…+1, подготовка +0…+1, укрытие -1…+1, дистанция -1…+1, местность -1…+1, численность -1…+1, знание +0…+0.5, ужас +0…+0.5, помеха -1…+0. Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай."
@@ -525,7 +520,7 @@
     "memory_file": "archive/npc-memory/masked_man.json",
     "memory_total": 1,
     "name": "Человек в маске",
-    "seen": "s08.text.098",
+    "seen": "s08.text.099",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -571,8 +566,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "aeafc77c541e42cb60b14c5c220ec3cb61a45a2a",
-  "turn": "s08.text.098"
+  "sha": "d3f301da6ede592be9eeabf2d7da2ee89808bd65",
+  "turn": "s08.text.099"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -603,12 +598,12 @@
    "shiki_confidentiality"
   ],
   "secret_topics": [
+   "v7_destruction",
    "v7_maintenance",
    "v7_personal_targeting",
    "v7_tapping",
    "vials",
-   "iron_country_samurai",
-   "rice_field_roadside_killing"
+   "rice_fields_sound_country"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
