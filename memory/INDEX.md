@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.032`
+# Карта мира NPR · на ходе `s09.text.033`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,10 +6,11 @@
 - места · `places/INDEX` (166) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (149)
-- Женщина со шрамом из Тумана — Задержанная сборщица сведений о наследственной способности · `npc/kiri_hunter_woman` · в сцене
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
-- Мужчина с повязкой из Тумана — Задержанный оперативник, ищет носителя Хётона · `npc/kiri_hunter_man` · в сцене
-- Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke` · в сцене
+- Женщина со шрамом из Тумана — Задержанная сборщица сведений о наследственной способности · `npc/kiri_hunter_woman`
+- Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
+- Мужчина с повязкой из Тумана — Задержанный оперативник, ищет носителя Хётона · `npc/kiri_hunter_man`
+- Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Хаясэ Нори (Хаясэ, Нори) — Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7 · `npc/nori`
 - Орочимару — саннин, скрытый организатор · `npc/orochimaru`
@@ -33,7 +34,6 @@
 - Медик у панели В-7 —  · `npc/medical_panel_operator`
 - Минасэ Рэи (Минасэ) — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
 - Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
-- Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - hirano_seiji —  · `npc/hirano_seiji`
@@ -175,7 +175,7 @@
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 
-## Вещи (17)
+## Вещи (18)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -186,6 +186,7 @@
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
+- `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
 - `shiki_blood_vial` · `items/shiki_blood_vial`

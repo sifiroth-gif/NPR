@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.033: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мугами Нао (`npc/nao`), вещь `private_bounty_announcements`, вещь `kabuto_private_bounty_ledger`
 - s09.text.032: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), вещь `kabuto_private_bounty_ledger`
 - s09.text.031: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `itachi_report_copies`, вещь `kabuto_private_bounty_ledger`
 - s09.text.030: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kiri_bingo_book`
@@ -60,4 +61,3 @@
 - s08.text.082: Такаги Рэн (`npc/takagi_ren`), Транспортник госпиталя (`npc/hospital_transporter`), Дежурная администратор госпиталя (`npc/hospital_night_admin`)
 - s08.text.081: Такаги Рэн (`npc/takagi_ren`), Мугами Акихиро (`npc/akihiro`)
 - s08.text.080: Такаги Рэн (`npc/takagi_ren`), Курода Маю (`npc/kuroda_mayu`), Мориока Хидэаки (`npc/morioka_hideaki`), Немера (Невыписанная) (`npc/nemera`)
-- s08.text.079: Немера (Невыписанная) (`npc/nemera`)
