@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.080: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), hirano_seiji (`npc/hirano_seiji`), Аракава Дзюн (`npc/arakawa`), линия `black_caravan`
 - s09.text.079: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Орочимару (`npc/orochimaru`), Глава Кусагакуре (`npc/kusa_head`), линия `black_caravan`
 - s09.text.078: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Осава Гэнсэй (`npc/osawa_gensei`), линия `ch09_order_chain`, план сюжета
 - s09.text.077: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), линия `ch09_order_chain`, план сюжета
@@ -61,4 +62,3 @@
 - s09.text.023: Саске Учиха (`npc/sasuke`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
 - s09.text.022: Саске Учиха (`npc/sasuke`), Минасэ Рэи (`npc/minase`), Медик у панели В-7 (`npc/medical_panel_operator`), вещь `kimimaro_bone_sample`, поправки игрока: 2
 - s09.text.021: Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), Мориока Хидэаки (`npc/morioka_hideaki`)
-- s09.text.020: Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), вещь `possible_sasuke_hair`
