@@ -10,20 +10,7 @@ sys.path.insert(0, str(ROOT))
 from rpg_engine import hot, prose_lint  # noqa: E402
 
 SKILL = ROOT / "skills/dark-literary-gm"
-BUDGET = {
-    "AGENTS.md": 6000,
-    "campaigns/shiki/GM_CORE.md": 16000,
-    "skills/dark-literary-gm/SKILL.md": 8000,
-    "campaigns/shiki/ref/MEDICINE.md": 6000,
-    "campaigns/shiki/ref/COMBAT.md": 6000,
-    "campaigns/shiki/ref/KNOWLEDGE.md": 6000,
-    "campaigns/shiki/ref/MEMORY.md": 6000,
-    "campaigns/shiki/ref/HORROR.md": 6000,
-    "campaigns/shiki/BOOT.md": 2000,
-    "campaigns/shiki/SHIKI.md": 8000,
-    "campaigns/shiki/ref/TECHNIQUES.md": 10000,
-    "campaigns/shiki/ref/COMBAT.md": 8000,
-}
+from rpg_engine.limits import RULES as BUDGET  # noqa: E402  — пределы в одном месте
 
 
 class InstructionBudgetTest(unittest.TestCase):

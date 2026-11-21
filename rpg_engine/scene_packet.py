@@ -11,8 +11,7 @@ from copy import deepcopy
 import json
 
 
-TARGET_BYTES = 32_000
-HARD_BYTES = 48_000
+from .limits import BRIEF_HARD as HARD_BYTES, BRIEF_TARGET as TARGET_BYTES  # noqa: E402
 MAX_PASSAGES = 4
 MAX_THREAD_DETAILS = 3
 
