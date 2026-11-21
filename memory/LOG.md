@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.093: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), линия `black_caravan`
 - s09.text.092: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Сано Гэндзи (`npc/signalshchik`), линия `black_caravan`
 - s09.text.091: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дежурный врач приёмного отделения (`npc/seventh_well_duty_physician`), линия `black_caravan`, поправки игрока: 1
 - s09.text.090: Мацуда (`npc/matsuda`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Миура Томо (`npc/miura_tomo`), Тамура Рэйка (`npc/tamura_reika`), линия `black_caravan`, поправки игрока: 1
@@ -60,4 +61,3 @@
 - s09.text.036: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_watch (`npc/kiri_transfer_watch`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), вещь `kiri_transfer_token`, бой
 - s09.text.035: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), kiri_transfer_watch (`npc/kiri_transfer_watch`), вещь `kiri_transport_containment`, вещь `kiri_transfer_token`
 - s09.text.034: Кабуто Якуши (`npc/kabuto`), Мориока Хидэаки (`npc/morioka_hideaki`), Минасэ Рэи (`npc/minase`), Старший у повозки (`npc/kiri_transfer_senior`), вещь `kimimaro_functional_cultures`, план сюжета
-- s09.text.033: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мугами Нао (`npc/nao`), вещь `private_bounty_announcements`, вещь `kabuto_private_bounty_ledger`

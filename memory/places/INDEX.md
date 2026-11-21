@@ -190,3 +190,4 @@
 - Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
 - Седьмой колодец, двор комплекса Кэйсин перед архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-arkhivom-p-4` · 1 ход(ов), s09–s09
 - Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
+- Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
