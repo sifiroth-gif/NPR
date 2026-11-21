@@ -1,14 +1,15 @@
-# Карта мира NPR · на ходе `s09.text.067`
+# Карта мира NPR · на ходе `s09.text.068`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (174) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (175) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (159)
-- Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto` · в сцене
+## Персонажи (160)
 - Наёмник у шахты — по подписи в сцене · `npc/naemnik_u_shakhty` · в сцене
+- Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto`
 - Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
@@ -166,7 +167,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (17)
+## Линии (19)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — 04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); … · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -184,8 +185,10 @@
 - `arakawa_treatment` — Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти… · `threads/arakawa_treatment`
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
+- `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
+- `tamura_return` — 10.09.1286 Тамура, свободная после побега, передала письмо Шики через… · `threads/tamura_return`
 
-## Вещи (29)
+## Вещи (31)
 - `bounty_notices` · `items/bounty_notices`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
@@ -211,7 +214,9 @@
 - `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `shiki_blood_vial` · `items/shiki_blood_vial`
+- `shiki_finances` · `items/shiki_finances`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
 - `stolen_house_plan` · `items/stolen_house_plan`
+- `sumi_sword` · `items/sumi_sword`
