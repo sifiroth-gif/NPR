@@ -343,6 +343,22 @@
         "s09.text.067"
       ]
     },
+    "canon:s10.text.052:0": {
+      "aliases": [
+        "canon:s10.text.052:0",
+        "Прямая поправка игрока (OOC, 21.11.2026): весь внешний вид Шики в Режиме отшельника по последнему утверждённому изображению, включая изменённую длину и укладку волос, изменённый кр"
+      ],
+      "facts": [],
+      "id": "canon:s10.text.052:0",
+      "kind": "canon",
+      "label": "Прямая поправка игрока (OOC, 21.11.2026): весь внешний вид Шики в Режиме отшельника по последнему утверждённому изображению, включая изменённую длину и укладку волос, изменённый кр",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.052"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -1389,7 +1405,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -1397,13 +1413,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-03-04T07:35:00",
-          "excerpt": "size=\"xs\" weight=\"medium\">4 МАРТА 1287 ГОДА · 07:35</text> ### Рьючидо. Внутреннее святилище Голос Хакудзя-сэннин постепенно теряет значение. Голос Немеры — тоже. Шики не разрывает связь с ней. Он лишь перестаёт обращать внимание на слова, которые по этой связ",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.048"
         },
         {
           "at": "0010-03-04T07:41:00",
@@ -1418,6 +1427,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.050"
+        },
+        {
+          "at": "0010-03-04T07:42:00",
+          "excerpt": "энергии имеет странные разрывы. Режим мудреца не делает эти области понятнее. Он позволяет заметить само несоответствие. *** Хакудзя-сэннин молчит. Змея чуть приподняла голову, когда Шики начал вставать. Теперь её раздвоенный язык неподвижен. Она видела первон",
+          "source": "recovery/TURN.json",
+          "status": "source_candidate_only",
+          "turn": "s10.text.052"
         }
       ],
       "projections": [
@@ -2567,7 +2583,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s10.text.052"
       ]
     },
     "night_icu_physician": {
@@ -8026,6 +8043,24 @@
         "s01.text.047"
       ]
     },
+    "place:ac729093bb5efbef": {
+      "aliases": [
+        "place:ac729093bb5efbef",
+        "Рьючидо, внутреннее святилище, учебная площадка",
+        "внутреннее святилище",
+        "учебная площадка"
+      ],
+      "facts": [],
+      "id": "place:ac729093bb5efbef",
+      "kind": "place",
+      "label": "Рьючидо, внутреннее святилище, учебная площадка",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.052"
+      ]
+    },
     "place:ad9133f0089ffacd": {
       "aliases": [
         "place:ad9133f0089ffacd",
@@ -12204,7 +12239,8 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин"
+        "Белая Змея / Хакудзя-сэннин",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -12223,7 +12259,8 @@
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s10.text.052"
       ]
     }
   },
@@ -12328,5 +12365,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 798
+  "source_turns_indexed": 799
 }
