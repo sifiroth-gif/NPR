@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.066: Нагаэ Рокуто (`npc/nagae_rokuto`), Орочимару (`npc/orochimaru`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `rokuto_head`, линия `nagae_rokuto_contract`, бой, поправки игрока: 1
 - s09.text.065: Нагаэ Рокуто (`npc/nagae_rokuto`), Кабуто Якуши (`npc/kabuto`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), бой
 - s09.text.064: Нагаэ Рокуто (`npc/nagae_rokuto`), линия `nagae_rokuto_contract`, бой
 - s09.text.063: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `private_bounties`, линия `kagen_residency`
@@ -61,4 +62,3 @@
 - s09.text.009: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Сопровождающий повозки (`npc/kagen_caravan_escort`)
 - s09.text.008: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), план сюжета
 - s09.text.007: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Орочимару (`npc/orochimaru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `shiki_blood_vial`, план сюжета
-- s09.text.006: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_blood_vial`, линия `kabuto_letter`, план сюжета

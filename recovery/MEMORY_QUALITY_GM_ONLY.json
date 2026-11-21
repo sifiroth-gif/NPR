@@ -1,27 +1,20 @@
 {
   "current_focus": [
-    "kabuto",
     "nagae_rokuto",
-    "orochimaru",
-    "place:5820e8821405ea96",
-    "kabuto_private_bounty_ledger",
-    "kiri_transfer_token",
-    "kiri_woman_cloak_order",
-    "kuroishi_ledger",
-    "medical_case_m12",
-    "ryuchido_summoning_scroll"
+    "place:46a113d77ea19e56"
   ],
-  "cursor": "s09.text.065",
+  "cursor": "s09.text.066",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3859,
-  "index_entities": 482,
-  "index_source_records": 714,
-  "indexed_cursor": "s09.text.065",
+  "focus_bytes": 1001,
+  "index_entities": 485,
+  "index_source_records": 715,
+  "indexed_cursor": "s09.text.066",
   "kinds": {
+    "canon": 1,
     "entity": 1,
-    "item": 26,
+    "item": 27,
     "npc": 85,
-    "place": 352,
+    "place": 353,
     "thread": 18
   },
   "missing_critical": [],
@@ -31,6 +24,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s09.text.066:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -160,6 +159,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "rokuto_head",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "ryuchido_summoning_scroll",
       "kind": "item"
     },
@@ -173,12 +178,6 @@
       "at_1": true,
       "at_5": true,
       "id": "shiki_hospital_gown_gloves",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "shiki_upper_clothing",
       "kind": "item"
     },
     {
@@ -579,9 +578,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 91,
-  "self_query_at_5": 91,
-  "self_query_count": 91,
+  "self_query_at_1": 92,
+  "self_query_at_5": 92,
+  "self_query_count": 92,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

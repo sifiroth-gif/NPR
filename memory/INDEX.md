@@ -1,14 +1,16 @@
-# Карта мира NPR · на ходе `s09.text.065`
+# Карта мира NPR · на ходе `s09.text.066`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (172) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (173) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (158)
-- Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
 - Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto` · в сцене
-- Орочимару — саннин, скрытый организатор · `npc/orochimaru` · в сцене
+- Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto`
+- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
+- Орочимару — саннин, скрытый организатор · `npc/orochimaru`
+- Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
 - waterfall_trackers —  · `npc/waterfall_trackers`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
 - Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke`
@@ -46,8 +48,6 @@
 - Реципиент № 6 (реципиента №6, реципиента № 6) — Выживший участник экспериментов с С-17, мальчик примерно 16 лет · `npc/s17_recipient_6`
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
 - Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
-- Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
-- Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
 - Сопровождающий повозки — Широкоплечий вооружённый мужчина в дорожной одежде. · `npc/kagen_caravan_escort`
@@ -183,9 +183,9 @@
 - `arakawa_treatment` — Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти… · `threads/arakawa_treatment`
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
-- `nagae_rokuto_contract` — Принят к исполнению; 24.12.1284 заказчик подтвердил открытый заказ и … · `threads/nagae_rokuto_contract`
+- `nagae_rokuto_contract` — Цель мертва, Шики получил голову Рокуто как доказательство; награда 2… · `threads/nagae_rokuto_contract`
 
-## Вещи (26)
+## Вещи (27)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -206,6 +206,7 @@
 - `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
+- `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `shiki_blood_vial` · `items/shiki_blood_vial`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`

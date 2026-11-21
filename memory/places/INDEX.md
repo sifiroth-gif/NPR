@@ -174,3 +174,4 @@
 - Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
 - Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
 - Страна Звука, лесная дорога за западным периметром Кагэн · `places/strana-zvuka-lesnaya-doroga-za-zapadnym-perimetrom-kagen` · 1 ход(ов), s09–s09
+- Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
