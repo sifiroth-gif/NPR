@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.005: Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мугами Нао (`npc/nao`)
 - s10.text.004: Тамура Рэйка (`npc/tamura_reika`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хаясэ Нори (`npc/nori`)
 - s10.text.003: Тамура Рэйка (`npc/tamura_reika`), Мориока Хидэаки (`npc/morioka_hideaki`), Реципиент № 6 (`npc/s17_recipient_6`)
 - s10.text.002: Тамура Рэйка (`npc/tamura_reika`)
@@ -60,4 +61,3 @@
 - s09.text.050: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), hirano_seiji (`npc/hirano_seiji`)
 - s09.text.049: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), поправки игрока: 1
 - s09.text.048: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`)
-- s09.text.047: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`, поправки игрока: 1
