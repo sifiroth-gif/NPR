@@ -119,7 +119,7 @@ jobs:
               git -C _state add -- recovery/CHECKS.json recovery/NEXT.json
             else
               git -C _state add -A -- recovery/HOT.json recovery/GM_ONLY.json recovery/GM_BRIEF.json \
-                recovery/CHECKS.json recovery/NEXT.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/cast archive memory
+                recovery/CHECKS.json recovery/NEXT.json recovery/UNDO.GM_ONLY.json recovery/ENTITY_LEDGER_GM_ONLY.json recovery/GENERAL_MEMORY_GM_ONLY.json recovery/MEMORY_QUALITY_GM_ONLY.json recovery/PACE.json recovery/cast archive memory
             fi
             # Протокол ноль: ожидающая кодовая команда игрока. Сейчас только пробный
             # прогон — пишет recovery/ZERO_REPORT.md и гасит команду, игру не трогает.
