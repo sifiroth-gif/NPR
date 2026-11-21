@@ -3,6 +3,7 @@
 - since: s08.text.002
 - holder: hospital
 - turn: s08.text.027
+- в архиве: с s09.text.083
 
 ## Изменения по ходам
 - s08.text.002: was: worn:; now: worn: True; holder: shiki

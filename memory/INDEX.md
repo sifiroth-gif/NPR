@@ -176,23 +176,14 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (25)
+## Линии (16)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — По полностью прочитанным документам №1184 сеть С-17 продолжила работу… · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
-- `lower_hospital` — Уцуро продолжает лечение и подготовку перевозки зависимых пациентов Н… · `threads/lower_hospital`
-- `nemera` — Семь запоров целы; Шики утверждает, что они ослабевали в чакровой ком… · `threads/nemera`
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
-- `forbidden_arts` — Шики с 19:54 до 20:21 направлял ОБЩУЮ природу Ситона на тела и остатк… · `threads/forbidden_arts`
-- `sharingan` — Октябрь 1284: Шики по OOC намерению хочет получить подлинный генетиче… · `threads/sharingan`
-- `secret_lab` — Тайная лаборатория Шики, помощников нет; биомасса оставлена в закрыты… · `threads/secret_lab`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `central_visitors` — Неизвестный проситель от имени Центрального управления потребовал спи… · `threads/central_visitors`
 - `case19T` — Личная закрытая проверка Кагэ идёт. Нори официально отстранена, журна… · `threads/case19T`
-- `anbu_transfer` — Шики сообщил личное НАМЕРЕНИЕ позже подать установленный рапорт о пер… · `threads/anbu_transfer`
-- `kabuto_letter` — В разговоре Кабуто подтвердил наличие ориентировки до экзамена 1278, … · `threads/kabuto_letter`
-- `arakawa_treatment` — Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти… · `threads/arakawa_treatment`
-- `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `tamura_return` — 10.09.1286 Тамура, свободная после побега, передала письмо Шики через… · `threads/tamura_return`
@@ -202,6 +193,9 @@
 - `black_caravan` — 14.02.1287 07:04:28: после четырёх рывков Шуншина Шики блокировал сиг… · `threads/black_caravan`
 - `tamura_inquiry` — По поручению Шики Дзэн через несколько дней сообщит посетительнице, ч… · `threads/tamura_inquiry`
 - `ch09_order_chain` — 14.02.1287 устно от Фурукавы при Шики и Хосине: Осава Гэнсэй (59) вла… · `threads/ch09_order_chain`
+
+## Давние линии (9, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`
 
 ## Вещи (36)
 - `black_caravan_contract` · `items/black_caravan_contract`

@@ -2,6 +2,7 @@
 
 - state: Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный результат не обращён, исход не доказан (s08.text.027). В бронхе №6 чужеродная строма с nsp-δ (s08.text.013–015).
 - turn: keeper@s08.text.090
+- в архиве: с s09.text.083
 
 ## Изменения по ходам
 - s08.text.010: state: 03.10 02:56 Shiki proposed undisclosed self-experiment to improve survival chance for recipient #6, not an action yet; Kadz requests exact description and safety of uninterrupted ongoing support. Teen on same assisted ventilation and S17; prior SpO2 96% persists, unchanged clinical status, no new testing or medication.
