@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.073",
+  "cursor": "s09.text.074",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2062,7 +2062,7 @@
       "id": "minagi_zen",
       "kind": "npc",
       "label": "Минаги Дзэн",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-02-12T16:29:00",
@@ -2077,26 +2077,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.073"
+        },
+        {
+          "at": "0010-02-12T16:33:00",
+          "excerpt": "сы и отказывался принимать пищу. Приёмный врач установил, что он жив и способен двигаться. Других подробностей в отчёте не было. **Минаги Дзэн:** — Заметьте, оба нападения были направлены именно на пленника. Ни денег, ни документов не взяли. И убить его не пыт",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.074"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "seen": "s09.text.073",
-          "state": "Принял увеличение комиссии до 10% с первого выполненного заказа через него за подробное описание потенциального покупателя сведений. Отдал бумагу со знаком связи, отказался от отдельной платы за сведения.",
+          "seen": "s09.text.074",
+          "state": "Согласился после паузы связаться с женщиной через западную почту, выдав, будто изменил решение о продаже сведений; пока не обещал конкретного места и ждёт безопасных деталей. Раскрыл Шики полные условия №1184; просит окончательного подтверждения.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         },
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "state": "Принял увеличение комиссии до 10% с первого выполненного заказа через него за подробное описание потенциального покупателя сведений. Отдал бумагу со знаком связи, отказался от отдельной платы за сведения.",
+          "state": "Согласился после паузы связаться с женщиной через западную почту, выдав, будто изменил решение о продаже сведений; пока не обещал конкретного места и ждёт безопасных деталей. Раскрыл Шики полные условия №1184; просит окончательного подтверждения.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         }
       ],
       "sources": [
         "recovery/cast/minagi_zen.json",
         "recovery/HOT.json",
-        "s09.text.073"
+        "s09.text.074"
       ]
     },
     "minase": {
@@ -2290,7 +2297,8 @@
     "nagae_rokuto": {
       "aliases": [
         "nagae rokuto",
-        "Нагаэ Рокуто"
+        "Нагаэ Рокуто",
+        "nagae_rokuto"
       ],
       "facts": [],
       "id": "nagae_rokuto",
@@ -2329,12 +2337,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.068",
+          "seen": "s09.text.074",
           "state": "Погиб 24.12.1284, его голову предъявили за награду; как мёртвый не имеет новых активных действий."
         }
       ],
       "sources": [
-        "recovery/cast/nagae_rokuto.json"
+        "recovery/cast/nagae_rokuto.json",
+        "s09.text.074"
       ]
     },
     "nao": {
@@ -2416,8 +2425,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.073"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -2538,7 +2546,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 51,
+      "mention_count": 52,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2546,13 +2554,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0009-09-10T21:17:00",
-          "excerpt": "шести миллионов рё, полученных за контракты начиная с Рокуто, сохранилось **39 миллионов**. Большая часть денег находилась в защищённом хранилище убежища. *** ### VIII. Мир не стоял на месте За двадцать месяцев изменился не только Шики. В Кагэн Орочимару продо",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.068"
         },
         {
           "at": "0010-02-10T21:17:00",
@@ -2567,6 +2568,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.072"
+        },
+        {
+          "at": "0010-02-12T16:33:00",
+          "excerpt": "живым | **Заказчик:** закрытое исследовательское объединение «Кэйсин». Не связано с известными посреднику объектами Орочимару. **Пункт отправления:** старая грузовая станция Хакусэки на северо-восточной окраине Страны Ветра. **Пункт прибытия:** охраняемый иссл",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.074"
         }
       ],
       "projections": [
@@ -5957,6 +5965,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s09.text.074",
         "s09.text.073"
       ]
     },
@@ -10379,14 +10388,13 @@
     "tamura_reika": {
       "aliases": [
         "tamura reika",
-        "Тамура Рэйка",
-        "tamura_reika"
+        "Тамура Рэйка"
       ],
       "facts": [],
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10394,13 +10402,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0007-12-20T19:53:00",
-          "excerpt": ":** — Ваши объявления. Он передал их Шики. На первом значился **Нагаэ Рокуто** — 27,5 миллиона рё. Устранение или захват. На втором — **Тамура Рэйка**, 18 миллионов. Только живой захват. На третьем — архив **«Белая смола»**, 9,5 миллиона. Возврат оригинальных ",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.063"
         },
         {
           "at": "0007-12-25T11:32:00",
@@ -10415,6 +10416,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.068"
+        },
+        {
+          "at": "0010-02-12T16:33:00",
+          "excerpt": "#беру контракт на 55 миллионов, читаю# *Мастеру: да, Шики вполне может узнать её по описанию. Это **Тамура Рэйка**, специалист по фуиндзюцу, которую он захватил живой за 18 миллионов рё и передал заказчику. Впоследствии она сбежала и прислала Шики письмо. Черн",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.074"
         }
       ],
       "projections": [
@@ -10427,8 +10435,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tamura_reika.json",
-        "s09.text.073"
+        "recovery/cast/tamura_reika.json"
       ]
     },
     "tetsu": {
@@ -10527,6 +10534,27 @@
       ],
       "sources": [
         "keeper@s08.text.090"
+      ]
+    },
+    "thread:black_caravan": {
+      "aliases": [
+        "thread:black caravan",
+        "black caravan",
+        "black_caravan"
+      ],
+      "facts": [],
+      "id": "thread:black_caravan",
+      "kind": "thread",
+      "label": "black caravan",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "Шики выбрал и прочитал предложение №1184, 55 млн рё за шестидневную доставку живого мужчины в запечатанной подавляющей камере. 14.02.1287 05:30 отправление из Хакусэки (северо-восток Страны Ветра), прибытие комплекс «Седьмой колодец» (юго-запад Страны Рек), заказчик «Кэйсин». Два возчика, три вооружённых охранника; два прошлых н"
+        }
+      ],
+      "sources": [
+        "s09.text.074"
       ]
     },
     "thread:black_market_new_contracts": {
@@ -10859,6 +10887,27 @@
         "s09.text.068"
       ]
     },
+    "thread:tamura_inquiry": {
+      "aliases": [
+        "thread:tamura inquiry",
+        "tamura inquiry",
+        "tamura_inquiry"
+      ],
+      "facts": [],
+      "id": "thread:tamura_inquiry",
+      "kind": "thread",
+      "label": "tamura inquiry",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "По поручению Шики Дзэн через несколько дней сообщит посетительнице, что передумал и готов продать информацию. Передачи адреса и назначения встречи пока не было."
+        }
+      ],
+      "sources": [
+        "s09.text.074"
+      ]
+    },
     "thread:tamura_return": {
       "aliases": [
         "thread:tamura return",
@@ -10963,7 +11012,8 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске"
+        "Неизвестный пленный в маске",
+        "unknown_masked_prisoner"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -10973,11 +11023,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.066"
+          "seen": "s09.text.074"
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json"
+        "recovery/cast/unknown_masked_prisoner.json",
+        "s09.text.074"
       ]
     },
     "utsuro": {
@@ -11421,5 +11472,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 722
+  "source_turns_indexed": 723
 }
