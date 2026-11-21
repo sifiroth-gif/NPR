@@ -122,7 +122,7 @@ def seed(state_dir, hot):
         for name in will.get("drop") or []:   # перепланировка хранителя: несбывшийся план снимается без следа
             if active.pop(name, None) is not None:
                 changed.append(key)
-        done = {d.get("key") for d in profile.get("intent_done") or []}
+        done = {d.get("key") for d in profile.get("intent_done") or []} | set(profile.get("done_keys") or [])
         for name, agenda in (will.get("intent") or {}).items():
             if not isinstance(agenda, dict) or name in done:
                 continue
@@ -205,6 +205,7 @@ GRACE_HOURS = 1            # час игрового времени после �
 ROLL_FULL, ROLL_PARTIAL = 65, 85   # 1–65 сбылся, 66–85 наполовину, 86–100 сорвался по слабости
 HAPPENED_KEEP = 30
 SHOW_FOLDS = 3             # сколько свёрток событие висит в NEXT.offscreen
+NEWS_DAYS = 14             # событие старше двух игровых недель в NEXT не показывается
 
 
 def _roll(key, plan, due):
@@ -255,8 +256,13 @@ def advance(hot, always_present=()):
 def offscreen(hot):
     """Случившееся за кадром за последние свёртки — для NEXT; счётчик показа растёт."""
     out = []
+    now = _parse((hot.get("cursor") or {}).get("at"))
     for event in _state(hot).get("happened") or []:
         if event.get("shown", 0) >= SHOW_FOLDS:
+            continue
+        at = _parse(event.get("at"))
+        if now and at and (now - at).days > NEWS_DAYS:   # давнее — уже не новость: в архив при старении
+            event["shown"] = SHOW_FOLDS
             continue
         event["shown"] = event.get("shown", 0) + 1
         word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
