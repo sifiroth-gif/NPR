@@ -7,7 +7,7 @@
 Репозиторий `sifiroth-gif/NPR`. Ветка `main`: правила и код. Ветка `game-state/shiki`: живое сохранение. Инструкция проекта внешнего чата: `campaigns/shiki/BOOT.md`.
 
 **Старт нового чата — один пакет параллельных чтений:**
-1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `campaigns/shiki/ref/TECHNIQUES.md` и `skills/dark-literary-gm/SKILL.md` (main): правила, Шики, арсенал, проза.
+1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `campaigns/shiki/ref/TECHNIQUES.md`, `campaigns/shiki/ref/NEMERA.md`, `skills/dark-literary-gm/SKILL.md` и `skills/dark-literary-gm/references/horror-masters.md` (main): правила, Шики, арсенал, Немера, проза.
 2. `recovery/GM_BRIEF.json`, `recovery/NEXT.json`, `memory/INDEX.md` (game-state/shiki): сцена, облик, знания и воля присутствующих, сроки; о любом NPC и месте — страница из INDEX. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
 3. `recovery/TURN.json` — только при конфликте sha; `recovery/HOT.json`/`recovery/GM_ONLY.json` — по необходимости.
 4. `archive/heuristic-recall/manifest.json` — **только при адресном историческом поиске**. README/AGENTS — при первом входе или тех. работе.

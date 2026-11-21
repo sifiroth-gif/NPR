@@ -117,7 +117,18 @@ _RULES = [
     ("pc_inner", N, 3, r"\bШики (?:почувствовал|ощутил|испытал|испытывал) (?:страх|тревог\w+|облегчени\w+|вин\w+|"
                        r"стыд|гнев|злость|жалость|сочувстви\w+|раздражени\w+|благодарност\w+|уважени\w+)"),
 ]
+# Ориентиры Лавкрафт, По, Кинг (поправка игрока 21.11.2026): ужас не называют, его показывают.
+_RULES += [
+    ("horror_label", N, 2, r"\b(?:ужасающ\w*|ужасн\w+|жутк\w+|кошмарн\w+|зловещ\w+|леденящ\w+(?: душу| кровь)?|"
+                           r"кровь (?:стыла|застыла|стынет)|мурашки (?:побежали|пробежали))"),
+    ("ineffable", N, 2, r"\b(?:неописуем\w+|невыразим\w+|не поддава\w+ описани\w+|словами не (?:передать|описать)|"
+                        r"не (?:было|находилось|нашлось) слов)"),
+]
 RULES = [(rule, scope, weight, re.compile(pattern, re.I | re.M)) for rule, scope, weight, pattern in _RULES]
+
+# По: ритм. Одинаковые по длине предложения подряд — монотонность, ужас не нарастает.
+RHYTHM_MIN_SENTENCES = 10
+RHYTHM_MIN_SPREAD = 0.3
 
 # «не X, а Y»: по одному разу допустимо, плотность выдаёт манеру.
 _NEG_PARALLEL = re.compile(r"\bне [^,.;:!?—\n]{2,60}, а [^,.;!?\n]{2,}", re.I)
@@ -138,6 +149,9 @@ ADVICE = {
     "neg_parallel": "Слишком много «не X, а Y». Утверждай прямо.",
     "look": "Облик Шики — не источник ужаса. Одна деталь при первой встрече или перемене; страх — в чужом решении.",
     "soma": "Не перечисляй дрожь, пульс, сглатывание. Один поступок человека вместо трёх реакций тела.",
+    "horror_label": "Не называй жуть (Лавкрафт, Кинг): дай предмет, звук, запах, след — страшное частями и через свидетеля.",
+    "ineffable": "Вместо «неописуемого» покажи, где ломается описание: цвет без имени, число, что не сходится, угол.",
+    "rhythm": "Ритм (По): чередуй длинную фразу наблюдения с короткой фразой удара; одинаковая длина гасит страх.",
 }
 
 _BOX = re.compile(r"<box\b.*?</box>", re.S)
@@ -250,6 +264,14 @@ def lint(text):
     if words >= 150 and neg * per_1000 > NEG_PARALLEL_PER_1000:
         hits.append({"rule": "neg_parallel", "weight": 2, "where": N,
                      "quote": f"{neg} конструкций «не X, а Y» на {words} слов"})
+    lengths = [len(_WORD.findall(m.group(0))) for kind, line in _segments(text or "") if kind == N
+               for m in _SENTENCE.finditer(line) if _WORD.search(m.group(0))]
+    if len(lengths) >= RHYTHM_MIN_SENTENCES:
+        mean = sum(lengths) / len(lengths)
+        spread = (sum((x - mean) ** 2 for x in lengths) / len(lengths)) ** 0.5 / max(mean, 1)
+        if spread < RHYTHM_MIN_SPREAD:
+            hits.append({"rule": "rhythm", "weight": 2, "where": N,
+                         "quote": f"{len(lengths)} предложений почти одной длины (~{round(mean)} слов)"})
     found = motifs(text)
     if len(found["look"]) > 1:
         hits.append({"rule": "look", "weight": 2 * (len(found["look"]) - 1), "where": N,
