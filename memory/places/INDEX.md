@@ -90,6 +90,7 @@
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
+- Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -187,6 +188,5 @@
 - Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
 - Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
-- Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 1 ход(ов), s09–s09
 - Седьмой колодец, двор комплекса Кэйсин перед архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-arkhivom-p-4` · 1 ход(ов), s09–s09
 - Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
