@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.082: Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), линия `black_caravan`, бой, поправки игрока: 2
 - s09.text.081: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дзиро (`npc/jiro_caravan_guard`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `north_tripwire`, вещь `front_wagon_frame`, линия `black_caravan`, бой, поправки игрока: 1
 - s09.text.080: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), hirano_seiji (`npc/hirano_seiji`), Аракава Дзюн (`npc/arakawa`), линия `black_caravan`
 - s09.text.079: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Орочимару (`npc/orochimaru`), Глава Кусагакуре (`npc/kusa_head`), линия `black_caravan`
@@ -61,4 +62,3 @@
 - s09.text.025: Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 3
 - s09.text.024: Саске Учиха (`npc/sasuke`), kiri_hunters (`npc/kiri_hunters`), Кэйдзи (`npc/keiji`), поправки игрока: 1
 - s09.text.023: Саске Учиха (`npc/sasuke`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
-- s09.text.022: Саске Учиха (`npc/sasuke`), Минасэ Рэи (`npc/minase`), Медик у панели В-7 (`npc/medical_panel_operator`), вещь `kimimaro_bone_sample`, поправки игрока: 2
