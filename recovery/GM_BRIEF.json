@@ -51,45 +51,30 @@
    "turn": "s09.text.083"
   },
   {
-   "kind": "name",
-   "text": "matsuda_p4: имя «Мацуда» уже носит matsuda",
-   "turn": "s09.text.088"
-  },
-  {
    "kind": "will",
    "text": "«Миура Томо» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Заработать, остаться живым, не потерять лицо из-за младшего подчинения.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s09.text.088"
+   "turn": "s09.text.089"
   },
   {
    "kind": "will",
    "text": "«Миура Томо» появляется уже 5 раз, а воли у него нет: задай d.cast.miura_tomo.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s09.text.088"
+   "turn": "s09.text.089"
   },
   {
    "kind": "will",
    "text": "«Фурукава Кёдзи» появляется уже 12 раз, а воли у него нет: задай d.cast.caravan_prisoner.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s09.text.088"
+   "turn": "s09.text.089"
   },
   {
    "kind": "will",
    "text": "«Мацуда» появляется уже 6 раз, а воли у него нет: задай d.cast.matsuda.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s09.text.088"
-  },
-  {
-   "kind": "read",
-   "text": "«Неустановленный архивариус верхнего административного архива» вернулся в сцену, а его страница `npc/archive_custodian` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/archive_custodian.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s09.text.088"
-  },
-  {
-   "kind": "read",
-   "text": "«Мацуда» вернулся в сцену, а его страница `npc/matsuda` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/matsuda.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s09.text.088"
+   "turn": "s09.text.089"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s09.text.088",
+  "cursor": "s09.text.089",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -207,11 +192,11 @@
  "cursor": {
   "at": "0010-02-19T16:42:00",
   "date": "Пятница, 19 февраля 1287 года",
-  "id": "s09.text.088",
+  "id": "s09.text.089",
   "place": "Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4",
   "time": "16:42"
  },
- "digest": "79d21381036860a0c4986d3edb60e0185218d416661af1fb974e5f60c28144fe",
+ "digest": "72ce3c76bf8ccfaab3a702e38a9fa8a9dacef663cd9b6db35b77254387859ba9",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -278,18 +263,18 @@
    "value": 100.0
   },
   "dice": [
-   78,
-   42,
-   57,
-   42,
-   35,
-   72,
-   11,
-   10,
-   62,
-   85,
-   62,
-   71
+   84,
+   51,
+   95,
+   28,
+   6,
+   7,
+   84,
+   65,
+   68,
+   53,
+   73,
+   29
   ],
   "injuries": {
    "miura_tomo": [
@@ -769,7 +754,7 @@
     },
     {
      "at": "0010-02-19T16:42:00",
-     "sha256": "833220a11a90d8f3258f45a01b14f9af6b137d2a2c68a14028b3a6e9dabbc312",
+     "sha256": "84ff94101e8e1c10c81a67aeda7f420a114148e36a2f42085373941465e8c9c0",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.088"
@@ -787,7 +772,7 @@
     "memory_file": "archive/npc-memory/caravan_prisoner.json",
     "memory_total": 12,
     "name": "Фурукава Кёдзи",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "state": "Услышал обещание Шики помнить; при разногласии указал 11 листов. Узнал архивариуса Мацуду, спросил, кто сказал ей о его смерти девятого. Сдерживается, опасаясь новых срабатываний ошейника.",
     "status": "present_profile",
     "tier": "developed"
@@ -842,7 +827,7 @@
     },
     {
      "at": "0010-02-19T16:42:00",
-     "sha256": "833220a11a90d8f3258f45a01b14f9af6b137d2a2c68a14028b3a6e9dabbc312",
+     "sha256": "84ff94101e8e1c10c81a67aeda7f420a114148e36a2f42085373941465e8c9c0",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.088"
@@ -863,7 +848,7 @@
     "memory_file": "archive/npc-memory/hoshina_ken.json",
     "memory_total": 13,
     "name": "Хосина Кэн",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "state": "Не согласился на приём по неверной описи; держит исходный пакет и контролирует выдачу живого F-04 до расписки.",
     "status": "present_profile",
     "tier": "developed",
@@ -928,7 +913,7 @@
     "memory_file": "archive/npc-memory/jiro_caravan_guard.json",
     "memory_total": 6,
     "name": "Дзиро",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "state": "Сам предложил зафиксировать состояние Фурукавы для защиты охраны.",
     "status": "present_profile",
     "tier": "developed",
@@ -953,7 +938,7 @@
    "prior_disclosures": [
     {
      "at": "0010-02-19T16:42:00",
-     "sha256": "833220a11a90d8f3258f45a01b14f9af6b137d2a2c68a14028b3a6e9dabbc312",
+     "sha256": "84ff94101e8e1c10c81a67aeda7f420a114148e36a2f42085373941465e8c9c0",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.088"
@@ -980,7 +965,7 @@
     "memory_total": 6,
     "name": "Мацуда",
     "role": "Неформальный наблюдатель Нори после её отстранения, бывший подчинённый",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "stance": "Лоялен Нори, действует осторожно [давняя запись: сверяй со state]",
     "status": "present_profile",
     "tier": "developed",
@@ -1016,7 +1001,7 @@
     },
     {
      "at": "0010-02-19T16:42:00",
-     "sha256": "833220a11a90d8f3258f45a01b14f9af6b137d2a2c68a14028b3a6e9dabbc312",
+     "sha256": "84ff94101e8e1c10c81a67aeda7f420a114148e36a2f42085373941465e8c9c0",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.088"
@@ -1035,7 +1020,7 @@
     "memory_file": "archive/npc-memory/miura_tomo.json",
     "memory_total": 5,
     "name": "Миура Томо",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "state": "Прибыл без новых ран, хочет получить плату и оставить службу.",
     "status": "present_profile",
     "tier": "developed",
@@ -1075,7 +1060,7 @@
     },
     {
      "at": "0010-02-19T16:42:00",
-     "sha256": "833220a11a90d8f3258f45a01b14f9af6b137d2a2c68a14028b3a6e9dabbc312",
+     "sha256": "84ff94101e8e1c10c81a67aeda7f420a114148e36a2f42085373941465e8c9c0",
      "source": "archive/session-009-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s09.text.088"
@@ -1094,7 +1079,7 @@
     "memory_total": 1,
     "name": "Принимающий служащий",
     "role": "по подписи в сцене",
-    "seen": "s09.text.088",
+    "seen": "s09.text.089",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -1137,8 +1122,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "2dd64279815738a8872447851c33a8b8d985e258",
-  "turn": "s09.text.088"
+  "sha": "e9706ff90adfd8887dc39783ace373f5b04ff1ad",
+  "turn": "s09.text.089"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1185,12 +1170,12 @@
    "ch09_order_chain"
   ],
   "secret_topics": [
+   "v7_destruction",
    "v7_maintenance",
    "v7_personal_targeting",
    "v7_tapping",
    "vials",
-   "visitor_claim",
-   "p4_incoming_packet_discrepancy"
+   "visitor_claim"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
