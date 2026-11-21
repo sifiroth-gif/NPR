@@ -89,6 +89,7 @@
 - Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
+- Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -181,4 +182,3 @@
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
-- Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 1 ход(ов), s09–s09

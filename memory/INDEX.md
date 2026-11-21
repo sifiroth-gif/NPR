@@ -1,15 +1,18 @@
-# Карта мира NPR · на ходе `s09.text.080`
+# Карта мира NPR · на ходе `s09.text.081`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (180) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (167)
+## Персонажи (168)
+- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner` · в сцене
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken` · в сцене
+- Дзиро — Молодой охранник каравана, внешность кроме возраста ещё не … · `npc/jiro_caravan_guard`
+- Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
+- Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
 - hirano_seiji —  · `npc/hirano_seiji`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
-- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - Орочимару — саннин, скрытый организатор · `npc/orochimaru`
 - Осава Гэнсэй (Осава, Гэнсэй) — Личную внешность Шики не видел, описание не установлено. · `npc/osawa_gensei`
@@ -57,8 +60,6 @@
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Хаясэ Нори (Хаясэ, Нори) — Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7 · `npc/nori`
 - Реципиент № 6 (реципиента №6, реципиента № 6) — Выживший участник экспериментов с С-17, мальчик примерно 16 лет · `npc/s17_recipient_6`
-- Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
-- Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
 - Сопровождающий повозки — Широкоплечий вооружённый мужчина в дорожной одежде. · `npc/kagen_caravan_escort`
 - Человек в маске —  · `npc/masked_man`
@@ -197,16 +198,17 @@
 - `black_market_new_contracts` — 12.02.1287 у Минаги Дзэна доступны непринимавшиеся заказы: Сайдзэн Гэ… · `threads/black_market_new_contracts`
 - `unknown_buyer_mask` — Брокер описал женщину ~30 лет с тёмными волосами, надрывом левой мочк… · `threads/unknown_buyer_mask`
 - `minagi_commission` — Шики согласовал 10% комиссии Дзэну вместо обычных 5%, только с первог… · `threads/minagi_commission`
-- `black_caravan` — Шики Шаринганом выявил 3 участника скоординированной засады: юг арбал… · `threads/black_caravan`
+- `black_caravan` — 14.02 07:04:09 засада раскрыта громким предупреждением Шики. Кунай с … · `threads/black_caravan`
 - `tamura_inquiry` — По поручению Шики Дзэн через несколько дней сообщит посетительнице, ч… · `threads/tamura_inquiry`
 - `ch09_order_chain` — 14.02.1287 устно от Фурукавы при Шики и Хосине: Осава Гэнсэй (59) вла… · `threads/ch09_order_chain`
 
-## Вещи (34)
+## Вещи (36)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
+- `front_wagon_frame` · `items/front_wagon_frame`
 - `inquiry_contact_token` · `items/inquiry_contact_token`
 - `itachi_report_copies` · `items/itachi_report_copies`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`
@@ -220,6 +222,7 @@
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `kuroishi_ledger` · `items/kuroishi_ledger`
 - `medical_case_m12` · `items/medical_case_m12`
+- `north_tripwire` · `items/north_tripwire`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `private_bounties` · `items/private_bounties`

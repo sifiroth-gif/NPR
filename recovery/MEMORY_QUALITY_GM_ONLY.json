@@ -1,19 +1,22 @@
 {
   "current_focus": [
+    "caravan_prisoner",
     "hoshina_ken",
-    "place:52c5a18e986ac3ad"
+    "place:52c5a18e986ac3ad",
+    "jiro_caravan_guard"
   ],
-  "cursor": "s09.text.080",
+  "cursor": "s09.text.081",
   "focus_byte_limit": 6600,
-  "focus_bytes": 1064,
-  "index_entities": 518,
-  "index_source_records": 729,
-  "indexed_cursor": "s09.text.080",
+  "focus_bytes": 2150,
+  "index_entities": 522,
+  "index_source_records": 730,
+  "indexed_cursor": "s09.text.081",
   "kinds": {
+    "canon": 1,
     "clock": 1,
     "entity": 1,
-    "item": 34,
-    "npc": 95,
+    "item": 36,
+    "npc": 96,
     "place": 362,
     "thread": 25
   },
@@ -24,6 +27,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s09.text.081:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -64,6 +73,12 @@
       "at_1": true,
       "at_5": true,
       "id": "foreign_observation_case",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "front_wagon_frame",
       "kind": "item"
     },
     {
@@ -147,6 +162,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "north_tripwire",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "personal_paper_reports",
       "kind": "item"
     },
@@ -166,18 +187,6 @@
       "at_1": true,
       "at_5": true,
       "id": "private_bounty_announcements",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "recipient6_airway_cast_followup",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "recipient6_airway_cast_sample",
       "kind": "item"
     },
     {
@@ -614,9 +623,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 98,
-  "self_query_at_5": 98,
-  "self_query_count": 98,
+  "self_query_at_1": 99,
+  "self_query_at_5": 99,
+  "self_query_count": 99,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
