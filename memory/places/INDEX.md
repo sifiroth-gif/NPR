@@ -194,3 +194,4 @@
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 1 ход(ов), s09–s09
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
+- Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 1 ход(ов), s09–s09

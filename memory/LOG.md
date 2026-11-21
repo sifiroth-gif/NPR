@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.101: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Реципиент № 6 (`npc/s17_recipient_6`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), линия `nemera_symbiosis`, линия `reika_meeting`, поправки игрока: 1
 - s09.text.100: Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), Сано Гэндзи (`npc/signalshchik`), линия `nemera_symbiosis`
 - s09.text.099: Немера (Невыписанная) (`npc/nemera`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), линия `nemera_symbiosis`
 - s09.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `nemera_symbiosis`, поправки игрока: 1
@@ -60,4 +61,3 @@
 - s09.text.044: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`), Кадзиура Сатору (`npc/kadziura_satoru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `medical_case_m12`, вещь `kuroishi_ledger`, план сюжета
 - s09.text.043: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Сиодзаки Масааки (`npc/shiozaki_masaaki`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), вещь `medical_case_m12`, вещь `kijima_route_book`
 - s09.text.042: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), бой
-- s09.text.041: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), kiri_hunters (`npc/kiri_hunters`), Кэйдзи (`npc/keiji`), вещь `kuroishi_ledger`, вещь `medical_case_m12`, план сюжета
