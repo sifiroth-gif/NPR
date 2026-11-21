@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.020: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Уцуро (`npc/utsuro`)
 - s10.text.018: Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Кэйдзи (`npc/keiji`)
 - s10.text.017: Тамура Рэйка (`npc/tamura_reika`), kiri_hunters (`npc/kiri_hunters`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`)
 - s10.text.016: Тамура Рэйка (`npc/tamura_reika`), Курода Маю (`npc/kuroda_mayu`), Старший у повозки (`npc/kiri_transfer_senior`)
@@ -59,4 +60,3 @@
 - s09.text.065: Нагаэ Рокуто (`npc/nagae_rokuto`), Кабуто Якуши (`npc/kabuto`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), бой
 - s09.text.064: Нагаэ Рокуто (`npc/nagae_rokuto`), линия `nagae_rokuto_contract`, бой
 - s09.text.063: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `private_bounties`, линия `kagen_residency`
-- s09.text.062: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), линия `kimimaro_research`

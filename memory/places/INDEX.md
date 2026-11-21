@@ -62,6 +62,7 @@
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
+- Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 3 ход(ов), s09–s10
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
 - Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
@@ -93,7 +94,6 @@
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
-- Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 2 ход(ов), s09–s10
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
