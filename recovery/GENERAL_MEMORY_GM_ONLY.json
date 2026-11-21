@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.007",
+  "cursor": "s10.text.008",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -173,8 +173,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/arakawa.json",
-        "s10.text.007"
+        "recovery/cast/arakawa.json"
       ]
     },
     "arakawa_guard": {
@@ -2517,8 +2516,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.007"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -2683,8 +2681,7 @@
     "osawa_gensei": {
       "aliases": [
         "osawa gensei",
-        "Осава Гэнсэй",
-        "osawa_gensei"
+        "Осава Гэнсэй"
       ],
       "facts": [],
       "id": "osawa_gensei",
@@ -2701,8 +2698,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/osawa_gensei.json",
-        "s10.text.007"
+        "recovery/cast/osawa_gensei.json"
       ]
     },
     "p4_archivist_matsuda": {
@@ -7227,7 +7223,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.007",
+        "s10.text.008",
         "s09.text.101",
         "s09.text.102",
         "s10.text.001",
@@ -7235,7 +7231,8 @@
         "s10.text.003",
         "s10.text.004",
         "s10.text.005",
-        "s10.text.006"
+        "s10.text.006",
+        "s10.text.007"
       ]
     },
     "place:9ffc64ff69edb6a9": {
@@ -10873,7 +10870,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10881,13 +10878,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:47:00",
-          "excerpt": "ия.** **Шики:** — Нет. Мне нужны были деньги. Всё просто. Рэйка смотрит на него несколько секунд. **Тамура Рэйка:** — Восемнадцать миллионов. Она произносит сумму почти ласково, с той осторожностью, с какой пробуют языком болезненный зуб. **Тамура Рэйка:** — Я",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.005"
         },
         {
           "at": "0010-02-27T15:48:00",
@@ -10902,26 +10892,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.007"
+        },
+        {
+          "at": "0010-02-27T15:50:00",
+          "excerpt": "ие через чакру. И да, ты уже видела: она у меня чёрная. Не пугайся. Согласна? Рэйка не сразу отвечает. **Тамура Рэйка:** — Опасно... Она смотрит на закрытые перчатками кисти, потом на лицо Шики. **Тамура Рэйка:** — Для меня или для тебя? Вопрос остаётся между ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.008"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.007",
-          "state": "Вытянула правую кисть ладонью вверх для обследования. Разрешила касание кисти, но требует предупреждения перед вводом чакры и отдельного разрешения на удаление тканей и операцию.",
+          "seen": "s10.text.008",
+          "state": "Дала ограниченное согласие на диагностический осмотр чёрной чакрой Шики с правом остановить его словом. Операцию и вмешательство пока запрещает.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "Вытянула правую кисть ладонью вверх для обследования. Разрешила касание кисти, но требует предупреждения перед вводом чакры и отдельного разрешения на удаление тканей и операцию.",
+          "state": "Дала ограниченное согласие на диагностический осмотр чёрной чакрой Шики с правом остановить его словом. Операцию и вмешательство пока запрещает.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.007"
+        "s10.text.008"
       ]
     },
     "tetsu": {
@@ -11585,5 +11582,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 756
+  "source_turns_indexed": 757
 }
