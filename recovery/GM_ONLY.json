@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s09.text.089",
+ "cursor": "s09.text.090",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -3371,7 +3371,17 @@
    }
   },
   "tamura_reika": {
-   "intent": {},
+   "intent": {
+    "direct_message": {
+     "goal": "Связаться с Шики без риска повторного захвата.",
+     "next": "Проверить ответ через западную почту Минаги.",
+     "due": "0010-02-25T18:00:00",
+     "flaw": "Не знает местонахождение Шики.",
+     "if_unopposed": "Получит частичный канал для разговора.",
+     "status": "committed",
+     "turn": "s09.text.090"
+    }
+   },
    "intent_done": [
     {
      "key": "settle_capture_debt",
@@ -3664,7 +3674,25 @@
     "does": "Объявил Хосине, что после доставки покинет службу, даже при двойной оплате.",
     "turn": "s09.text.085",
     "step": "пересмотр"
-   }
+   },
+   "intent": {
+    "leave_after_payment": {
+     "goal": "Покинуть службу после оплаты.",
+     "next": "Получить долю у Хосины и уйти из комплекса.",
+     "due": "0010-02-19T20:00:00",
+     "flaw": "Подпись приёмщика задержана.",
+     "if_unopposed": "Завершит работу и уйдёт.",
+     "status": "committed",
+     "turn": "s09.text.090"
+    }
+   },
+   "intent_done": [],
+   "psyche": {
+    "decides": "Берёт плату за законченное сопровождение и уходит.",
+    "deep_fear": "Снова оказаться расходным охранником чужой программы.",
+    "boundary": "Не согласится на новый рейс Кэйсин."
+   },
+   "name": "Миура Томо"
   },
   "signalshchik": {
    "dread": {
@@ -3723,23 +3751,68 @@
    }
   },
   "matsuda": {},
-  "prinimayushchiy_sluzhashchiy": {}
+  "prinimayushchiy_sluzhashchiy": {
+   "dread": {
+    "stage": 1,
+    "since": "s09.text.090",
+    "log": [
+     {
+      "turn": "s09.text.090",
+      "at": "0010-02-19T16:43:00",
+      "change": "калибровка",
+      "saw": "У Шики погас Шаринган, предъявлен действительный контракт независимого исполнителя.",
+      "does": "Дал конкретный ответ и настоял на официальной сверке."
+     }
+    ],
+    "reads": "Ошибочная подпись при неизвестном наёмнике грозит ответственностью.",
+    "does": "Дал конкретный ответ и настоял на официальной сверке.",
+    "turn": "s09.text.090",
+    "step": "примета"
+   }
+  },
+  "p4_archivist_matsuda": {
+   "dread": {
+    "stage": 1,
+    "since": "s09.text.090",
+    "log": [
+     {
+      "turn": "s09.text.090",
+      "at": "0010-02-19T16:43:00",
+      "change": "калибровка",
+      "saw": "Видела отключение алых знаков Шарингана и изменённые предплечья Шики.",
+      "does": "Потребовала проверки при свидетелях."
+     }
+    ],
+    "reads": "Независимый наёмник опасен, но расхождение в описи опаснее лично для неё.",
+    "does": "Потребовала проверки при свидетелях.",
+    "turn": "s09.text.090",
+    "step": "примета"
+   },
+   "intent": {
+    "verify_11": {
+     "goal": "Установить документальное расхождение до приёмки.",
+     "next": "Сверить исходные 11 листов с приходной книгой П-4 при начальнике и свидетелях.",
+     "due": "0010-02-19T17:30:00",
+     "flaw": "Приёмщик удерживает книгу.",
+     "if_unopposed": "Зафиксирует расхождение до передачи.",
+     "status": "committed",
+     "turn": "s09.text.090"
+    }
+   },
+   "intent_done": [],
+   "psyche": {
+    "decides": "Опирается на письменный след и собственные полномочия.",
+    "deep_fear": "Стать крайней за подмену.",
+    "boundary": "Не подпишет чужую недостачу."
+   },
+   "name": "Мацуда (архивариус П-4)"
+  }
  },
  "checks": [
   {
    "turn": "s09.text.083",
    "kind": "fight",
    "text": "Бросок «Четырьмя рывками Шуншина перерезать беглецу выход через скалы до его отрыва от охранника»: порог 80, по формуле 88 (перевес +2.5)."
-  },
-  {
-   "turn": "s09.text.087",
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4542 знаков (норма до 4000); крупнее всего: cast 2601, scene 736, truth 248."
-  },
-  {
-   "turn": "s09.text.087",
-   "kind": "new_character",
-   "text": "В сцене говорит «принимающий служащий» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."
   },
   {
    "turn": "s09.text.088",
@@ -3757,33 +3830,28 @@
    "text": "«Мацуда» вернулся в сцену, а его страница `npc/matsuda` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/matsuda.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики."
   },
   {
-   "turn": "s09.text.089",
-   "kind": "will",
-   "text": "«Миура Томо» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Заработать, остаться живым, не потерять лицо из-за младшего подчинения.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
+   "turn": "s09.text.090",
+   "kind": "name",
+   "text": "p4_archivist_matsuda: часть имени (Мацуда) совпадает с matsuda"
   },
   {
-   "turn": "s09.text.089",
-   "kind": "will",
-   "text": "«Миура Томо» появляется уже 5 раз, а воли у него нет: задай d.cast.miura_tomo.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "turn": "s09.text.090",
+   "kind": "name",
+   "text": "p4_archivist_matsuda: часть имени (Мацуда) совпадает с matsuda_p4"
   },
   {
-   "turn": "s09.text.089",
-   "kind": "will",
-   "text": "«Фурукава Кёдзи» появляется уже 12 раз, а воли у него нет: задай d.cast.caravan_prisoner.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "turn": "s09.text.090",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4625 знаков (норма до 4000); крупнее всего: cast 2496, scene 834, threads 291."
   },
   {
-   "turn": "s09.text.089",
+   "turn": "s09.text.090",
    "kind": "will",
-   "text": "«Мацуда» появляется уже 6 раз, а воли у него нет: задай d.cast.matsuda.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "text": "«Фурукава Кёдзи» появляется уже 13 раз, а воли у него нет: задай d.cast.caravan_prisoner.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s09.text.082",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s09.text.083",
     "look": [
@@ -3814,6 +3882,11 @@
     "soma": [
      "побледнел"
     ]
+   },
+   {
+    "turn": "s09.text.090",
+    "look": [],
+    "soma": []
    }
   ],
   "worn": [],
@@ -3848,36 +3921,38 @@
    "hoshina_ken": {
     "since": "s09.text.076",
     "need": false,
-    "quiet": 3,
+    "quiet": 4,
     "last": "s09.text.084"
    },
    "jiro_caravan_guard": {
     "since": "s09.text.082",
     "need": false,
-    "quiet": 2,
+    "quiet": 3,
     "last": "s09.text.085"
    },
    "miura_tomo": {
     "since": "s09.text.084",
     "need": false,
-    "quiet": 2,
+    "quiet": 3,
     "last": "s09.text.085"
    },
    "caravan_prisoner": {
     "since": "s09.text.085",
     "need": false,
-    "quiet": 1,
+    "quiet": 2,
     "last": "s09.text.087"
-   },
-   "matsuda": {
-    "since": "s09.text.088",
-    "need": true,
-    "quiet": 1
    },
    "prinimayushchiy_sluzhashchiy": {
     "since": "s09.text.088",
-    "need": true,
-    "quiet": 1
+    "need": false,
+    "quiet": 0,
+    "last": "s09.text.090"
+   },
+   "p4_archivist_matsuda": {
+    "since": "s09.text.090",
+    "need": false,
+    "quiet": 0,
+    "last": "s09.text.090"
    }
   }
  },
@@ -4478,12 +4553,13 @@
  "will": {
   "seed": "7811d99de4f41feb",
   "streak": {
-   "hoshina_ken": 1,
-   "jiro_caravan_guard": 1,
-   "miura_tomo": 4,
-   "caravan_prisoner": 1,
-   "matsuda": 1,
-   "prinimayushchiy_sluzhashchiy": 1
+   "hoshina_ken": 2,
+   "jiro_caravan_guard": 2,
+   "miura_tomo": 0,
+   "caravan_prisoner": 2,
+   "prinimayushchiy_sluzhashchiy": 2,
+   "p4_archivist_matsuda": 0,
+   "tamura_reika": 0
   },
   "touched": {
    "night_icu_physician": "s09.text.083",
@@ -4528,7 +4604,7 @@
    "ryuchido_first_serpent": "s09.text.078",
    "sasuke": "s09.text.071",
    "nagae_rokuto": "s09.text.077",
-   "tamura_reika": "s09.text.073",
+   "tamura_reika": "s09.text.090",
    "akatsuki": "s09.text.071",
    "jiraiya": "s09.text.071",
    "pain": "s09.text.071",
@@ -4538,59 +4614,10 @@
    "caravan_prisoner": "s09.text.087",
    "osawa_gensei": "s09.text.078",
    "signalshchik": "s09.text.085",
-   "jiro_caravan_guard": "s09.text.087"
+   "jiro_caravan_guard": "s09.text.087",
+   "p4_archivist_matsuda": "s09.text.090",
+   "miura_tomo": "s09.text.090"
   },
-  "happened": [
-   {
-    "npc": "signalshchik",
-    "name": "Сано Гэндзи",
-    "plan": "retrieve_aid",
-    "at": "0010-02-15T12:00:00",
-    "status": "fulfilled",
-    "outcome": "Попытается привести помощь к водосборнику.",
-    "turn": "s09.text.087",
-    "shown": 3
-   },
-   {
-    "npc": "tamura_reika",
-    "name": "Тамура Рэйка",
-    "plan": "find_shiki_without_capture",
-    "at": "0010-02-15T18:00:00",
-    "status": "partial",
-    "outcome": "наполовину: Получит ответ, если кто-то пошлёт знак; иначе станет искать новые сведения через торговцев.; слабость оставила след: Брокер мог передать знак самому Шики и тем самым лишить Рэйку преимущества.",
-    "turn": "s09.text.087",
-    "shown": 3
-   },
-   {
-    "npc": "minagi_zen",
-    "name": "Минаги Дзэн",
-    "plan": "keep_neutral_market",
-    "at": "0010-02-15T18:00:00",
-    "status": "fulfilled",
-    "outcome": "Передаст через западную почту предложение переговоров; никаких адресов не продаст.",
-    "turn": "s09.text.087",
-    "shown": 3
-   },
-   {
-    "npc": "hirano_seiji",
-    "name": "hirano_seiji",
-    "plan": "revoke_furukawa_passes",
-    "at": "0010-02-17T16:00:00",
-    "status": "failed",
-    "outcome": "сорвалось — Существуют подлинные независимые экземпляры документов; нынешние поступки Шики Хирано неизвестны.; цель «Отрезать доступ к старой сети снабжения С-17 через прежние полномочия Фурукавы.» остаётся",
-    "turn": "s09.text.087",
-    "shown": 3
-   },
-   {
-    "npc": "night_icu_physician",
-    "name": "Дежурная врач охраняемого отделения",
-    "plan": "protect_patient_chart_chain",
-    "at": "0010-02-19T15:00:00",
-    "status": "fulfilled",
-    "outcome": "Установит какие записи сохранились без подмены, не узнавая о действиях Шики в Стране Ветра.",
-    "turn": "s09.text.087",
-    "shown": 3
-   }
-  ]
+  "happened": []
  }
 }

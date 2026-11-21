@@ -3,25 +3,27 @@
     "caravan_prisoner",
     "hoshina_ken",
     "jiro_caravan_guard",
-    "matsuda",
     "miura_tomo",
+    "p4_archivist_matsuda",
     "prinimayushchiy_sluzhashchiy",
-    "place:e023835de39469f7",
+    "place:64bcaa182b4e9f8e",
+    "matsuda",
     "matsuda_p4",
     "signaller_contract_tube"
   ],
-  "cursor": "s09.text.089",
+  "cursor": "s09.text.090",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3877,
-  "index_entities": 505,
-  "index_source_records": 736,
-  "indexed_cursor": "s09.text.089",
+  "focus_bytes": 4492,
+  "index_entities": 508,
+  "index_source_records": 737,
+  "indexed_cursor": "s09.text.090",
   "kinds": {
+    "canon": 1,
     "clock": 1,
     "entity": 1,
     "item": 17,
-    "npc": 102,
-    "place": 368,
+    "npc": 103,
+    "place": 369,
     "thread": 16
   },
   "missing_critical": [],
@@ -31,6 +33,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s09.text.090:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -531,9 +539,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 83,
-  "self_query_at_5": 83,
-  "self_query_count": 83,
+  "self_query_at_1": 84,
+  "self_query_at_5": 84,
+  "self_query_count": 84,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

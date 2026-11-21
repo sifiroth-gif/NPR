@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.090: Мацуда (`npc/matsuda`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Миура Томо (`npc/miura_tomo`), Тамура Рэйка (`npc/tamura_reika`), линия `black_caravan`, поправки игрока: 1
 - s09.text.088: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), matsuda_p4 (`npc/matsuda_p4`), линия `black_caravan`
 - s09.text.087: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Мориока Хидэаки (`npc/morioka_hideaki`), линия `black_caravan`
 - s09.text.086: поправки игрока: 1
@@ -60,4 +61,3 @@
 - s09.text.033: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мугами Нао (`npc/nao`), вещь `private_bounty_announcements`, вещь `kabuto_private_bounty_ledger`
 - s09.text.032: Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), вещь `kabuto_private_bounty_ledger`
 - s09.text.031: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `itachi_report_copies`, вещь `kabuto_private_bounty_ledger`
-- s09.text.030: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kiri_bingo_book`
