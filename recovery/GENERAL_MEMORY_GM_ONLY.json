@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.025",
+  "cursor": "s10.text.026",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-02T10:57:00",
-          "excerpt": "Эх. Опять ремонт. Да Хагуро, я решу проблему дома и встретимся снова, согласен? <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 10:57</text> ### Верховья Сирана. Убежище «Чёрный",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.023"
         },
         {
           "at": "0010-03-04T06:37:00",
@@ -1367,23 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
+        },
+        {
+          "at": "0010-03-04T06:39:00",
+          "excerpt": "ие. **Итикисимахимэ:** — Химэ-сама... Она пробует обращение на вкус. **Итикисимахимэ:** — Как воспитанно. Хагуро, где ты нашёл такого прелестного человека? **Хагуро:** — Снаружи. **Итикисимахимэ:** — Это многое объясняет. Она спускается ещё на две ступени и ос",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.026"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.025",
-          "state": "Снаружи ворот Рьючидо, не проводит гостя внутрь после передачи Итикисимахимэ."
+          "seen": "s10.text.026",
+          "state": "Остаётся снаружи ворот Рьючидо; гостя не сопровождает внутрь."
         },
         {
           "role": "по подписи в сцене",
-          "state": "Снаружи ворот Рьючидо, не проводит гостя внутрь после передачи Итикисимахимэ."
+          "state": "Остаётся снаружи ворот Рьючидо; гостя не сопровождает внутрь."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
         "recovery/HOT.json",
-        "s10.text.025"
+        "s10.text.026"
       ]
     },
     "kiri_bingo_book": {
@@ -4119,6 +4119,23 @@
       "projections": [],
       "sources": [
         "s06.text.004"
+      ]
+    },
+    "place:322d8acd73668553": {
+      "aliases": [
+        "place:322d8acd73668553",
+        "Рьючидо, внешние врата и порог зала первого испытания",
+        "внешние врата и порог зала первого испытания"
+      ],
+      "facts": [],
+      "id": "place:322d8acd73668553",
+      "kind": "place",
+      "label": "Рьючидо, внешние врата и порог зала первого испытания",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.026"
       ]
     },
     "place:34d4bac523bcf36a": {
@@ -10345,13 +10362,14 @@
     "ryuchido_first_serpent": {
       "aliases": [
         "ryuchido first serpent",
-        "Хагуро"
+        "Хагуро",
+        "ryuchido_first_serpent"
       ],
       "facts": [],
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10359,13 +10377,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-02T10:57:00",
-          "excerpt": "Эх. Опять ремонт. Да Хагуро, я решу проблему дома и встретимся снова, согласен? <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 10:57</text> ### Верховья Сирана. Убежище «Чёрный",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.023"
         },
         {
           "at": "0010-03-04T06:37:00",
@@ -10380,28 +10391,41 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
+        },
+        {
+          "at": "0010-03-04T06:39:00",
+          "excerpt": "ие. **Итикисимахимэ:** — Химэ-сама... Она пробует обращение на вкус. **Итикисимахимэ:** — Как воспитанно. Хагуро, где ты нашёл такого прелестного человека? **Хагуро:** — Снаружи. **Итикисимахимэ:** — Это многое объясняет. Она спускается ещё на две ступени и ос",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.004",
+          "seen": "s10.text.026",
+          "state": "Принял объяснение Шики, что исцеление — естественная работа врача и предложенная им цена за разговор; выслушал шутку «Доктор Смерть». Возвратился в Рьючидо по собственной воле, без конфликта и новых условий; показ Рьючидо перенесён на неопределённое будущее по"
+        },
+        {
           "state": "Принял объяснение Шики, что исцеление — естественная работа врача и предложенная им цена за разговор; выслушал шутку «Доктор Смерть». Возвратился в Рьючидо по собственной воле, без конфликта и новых условий; показ Рьючидо перенесён на неопределённое будущее по"
         }
       ],
       "sources": [
-        "recovery/cast/ryuchido_first_serpent.json"
+        "recovery/cast/ryuchido_first_serpent.json",
+        "recovery/HOT.json",
+        "s10.text.026"
       ]
     },
     "ryuchido_gate_woman": {
       "aliases": [
         "ryuchido gate woman",
-        "Итикисимахимэ"
+        "Итикисимахимэ",
+        "ryuchido_gate_woman"
       ],
       "facts": [],
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -10409,24 +10433,34 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
+        },
+        {
+          "at": "0010-03-04T06:39:00",
+          "excerpt": "Итикисимахимэ прошу простить, но могу я назывыаатб вас Химэ-сама? <text color=\"secondary\" size=\"xs\" weight=\"medium\">4 МАРТА 1287 ГОДА · 06:39</text> ### Рьючидо. Внешние врата **",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.025",
-          "state": "На ступенях внешних ворот перед Шики; открыла проход между вращающимися каменными окружностями и ждёт решения гостя."
+          "seen": "s10.text.026",
+          "state": "У порога зала первого испытания, пригласила Шики внутрь и разрешила обращаться «Химэ-сама». Не раскрыла детали испытания."
+        },
+        {
+          "state": "У порога зала первого испытания, пригласила Шики внутрь и разрешила обращаться «Химэ-сама». Не раскрыла детали испытания."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
-        "s10.text.025"
+        "recovery/HOT.json",
+        "s10.text.026"
       ]
     },
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6",
-        "s17_recipient_6"
+        "Реципиент № 6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -10458,8 +10492,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json",
-        "s10.text.025"
+        "recovery/cast/s17_recipient_6.json"
       ]
     },
     "sasuke": {
@@ -11712,5 +11745,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 773
+  "source_turns_indexed": 774
 }
