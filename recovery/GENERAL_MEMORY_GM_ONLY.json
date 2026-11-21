@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.071",
+  "cursor": "s09.text.072",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -19,8 +19,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akatsuki.json",
-        "s09.text.071"
+        "recovery/cast/akatsuki.json"
       ]
     },
     "akihiro": {
@@ -302,22 +301,6 @@
         "s09.text.067"
       ]
     },
-    "canon:s09.text.071:0": {
-      "aliases": [
-        "canon:s09.text.071:0",
-        "Прямая хронологическая поправка s09.text.071: Naruto Shippuden стартует в МАРТЕ 1287 возвращением Наруто в Коноху (рабочая точка 10.03.1287). ОКТЯБРЬ 1286 как начало — ОТМЕНЁН. Что"
-      ],
-      "facts": [],
-      "id": "canon:s09.text.071:0",
-      "kind": "canon",
-      "label": "Прямая хронологическая поправка s09.text.071: Naruto Shippuden стартует в МАРТЕ 1287 возвращением Наруто в Коноху (рабочая точка 10.03.1287). ОКТЯБРЬ 1286 как начало — ОТМЕНЁН. Что",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s09.text.071"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -370,8 +353,7 @@
       "aliases": [
         "clock:naruto returns konoha",
         "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto",
-        "naruto_returns_konoha",
-        "naruto returns konoha"
+        "naruto_returns_konoha"
       ],
       "facts": [],
       "id": "clock:naruto_returns_konoha",
@@ -387,8 +369,7 @@
         }
       ],
       "sources": [
-        "recovery/GM_ONLY.json",
-        "s09.text.071"
+        "recovery/GM_ONLY.json"
       ]
     },
     "courier_unknown": {
@@ -434,8 +415,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/danzo.json",
-        "s09.text.071"
+        "recovery/cast/danzo.json"
       ]
     },
     "forehead_protector": {
@@ -810,8 +790,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "s09.text.071"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "kabuto": {
@@ -861,8 +840,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s09.text.071"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -2053,6 +2031,39 @@
         "recovery/cast/messenger_injured.json"
       ]
     },
+    "minagi_zen": {
+      "aliases": [
+        "minagi zen",
+        "Минаги Дзэн"
+      ],
+      "facts": [],
+      "id": "minagi_zen",
+      "kind": "npc",
+      "label": "Минаги Дзэн",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-02-12T16:29:00",
+          "excerpt": "дел худой мужчина лет пятидесяти, с короткими седыми волосами и глубоким ожогом на левой стороне шеи. Его звали **Минаги Дзэн**. Он представлял несколько независимых заказчиков, принимал деньги на хранение и следил, чтобы исполнители не убивали покупателей пре",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.072"
+        }
+      ],
+      "projections": [
+        {
+          "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
+          "seen": "s09.text.072",
+          "state": "Предложил три задания и сообщил о недавней попытке купить местонахождение Шики за 5 млн. В присутствии охраны соблюдает деловой нейтралитет.",
+          "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
+          "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
+        }
+      ],
+      "sources": [
+        "recovery/cast/minagi_zen.json",
+        "s09.text.072"
+      ]
+    },
     "minase": {
       "aliases": [
         "minase",
@@ -2362,7 +2373,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s09.text.068",
+          "seen": "s09.text.072",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Разрешённый чувственный мост сохранён; слышала рассказ Шики Саске о себе и знает, что тот теперь опасается запечатанной сущности; Нулевой Геном и тайная программа Учиха остаются для неё закрыты.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
@@ -2370,7 +2381,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s09.text.072"
       ]
     },
     "night_icu_physician": {
@@ -2491,7 +2503,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 50,
+      "mention_count": 51,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2499,13 +2511,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-20T19:53:00",
-          "excerpt": "йти. Но да, я собираюсь. Возьму с собой только то, с чем пришёл, и три объявления, переданных Кабуто. Орочимару улыбнулся. **Орочимару:** — Не говорил, Шики-кун. Он обошёл операционный стол, коснулся ногтем крышки камеры с костной культурой. **Орочимару:** — Н",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.063"
         },
         {
           "at": "0009-09-10T21:17:00",
@@ -2520,6 +2525,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.071"
+        },
+        {
+          "at": "0010-02-12T16:29:00",
+          "excerpt": ". *** Дзэн положил ладонь на последний лист. — Для третьего поручения заказчик отдельно указал, что не желает иметь дела с людьми Орочимару. Он посмотрел на Шики. — Это не вопрос о ваших знакомствах. Я лишь предупреждаю. Из-за окна донёсся грохот падающего жел",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.072"
         }
       ],
       "projections": [
@@ -2548,8 +2560,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/pain.json",
-        "s09.text.071"
+        "recovery/cast/pain.json"
       ]
     },
     "patient_airway": {
@@ -5366,10 +5377,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.071",
         "s09.text.068",
         "s09.text.069",
-        "s09.text.070"
+        "s09.text.070",
+        "s09.text.071"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -5710,6 +5721,25 @@
       "projections": [],
       "sources": [
         "s07.text.009"
+      ]
+    },
+    "place:7781dfab1aa545a4": {
+      "aliases": [
+        "place:7781dfab1aa545a4",
+        "Страна Рек, Нижний Сиран, кабинет посредника у речной пристани",
+        "Страна Рек",
+        "Нижний Сиран",
+        "кабинет посредника у речной пристани"
+      ],
+      "facts": [],
+      "id": "place:7781dfab1aa545a4",
+      "kind": "place",
+      "label": "Страна Рек, Нижний Сиран, кабинет посредника у речной пристани",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.072"
       ]
     },
     "place:77f6c647258e2be3": {
@@ -9768,8 +9798,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json",
-        "s09.text.071"
+        "recovery/cast/sasuke.json"
       ]
     },
     "sayu": {
@@ -10444,6 +10473,27 @@
         "keeper@s08.text.090"
       ]
     },
+    "thread:black_market_new_contracts": {
+      "aliases": [
+        "thread:black market new contracts",
+        "black market new contracts",
+        "black_market_new_contracts"
+      ],
+      "facts": [],
+      "id": "thread:black_market_new_contracts",
+      "kind": "thread",
+      "label": "black market new contracts",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "12.02.1287 у Минаги Дзэна доступны непринимавшиеся заказы: Сайдзэн Гэнго, бывший дзёнин Ивы, убийство/захват за 38 млн; уничтожение склада «Красная вода» с пленными за 31 млн; сопровождение живого пленника из Страны Ветра за 55 млн. Комиссия 5%."
+        }
+      ],
+      "sources": [
+        "s09.text.072"
+      ]
+    },
     "thread:case19T": {
       "aliases": [
         "thread:case19T",
@@ -10773,6 +10823,27 @@
         "keeper@s08.text.090"
       ]
     },
+    "thread:unknown_buyer_mask": {
+      "aliases": [
+        "thread:unknown buyer mask",
+        "unknown buyer mask",
+        "unknown_buyer_mask"
+      ],
+      "facts": [],
+      "id": "thread:unknown_buyer_mask",
+      "kind": "thread",
+      "label": "unknown buyer mask",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "10.02.1287 неизвестный предлагал брокеру 5 млн за местонахождение беловолосого человека с новой чёрной маской и проводящим мечом. Дзэн утверждает, что отказал. Покупатель и действительные мотивы не установлены."
+        }
+      ],
+      "sources": [
+        "s09.text.072"
+      ]
+    },
     "thread:v7": {
       "aliases": [
         "thread:v7"
@@ -10877,7 +10948,7 @@
           "body": "Серебристые волосы, закрытые глаза под тёмной повязкой, ровные швы вдоль шеи, угольно-чёрная ладонь со светлыми огнями, худое чрезмерно высокое тело",
           "fears": "Потерять роль наставника, влияние Немеры и последствия оставленных пациентов",
           "role": "Демон медицины, смерти и болезни, кровный призыв Шики",
-          "seen": "s09.text.070",
+          "seen": "s09.text.072",
           "stance": "Соперничает за влияние на Шики, скрывает причину гибели госпитальных пациентов, допускает их смерть ради собственной выгоды.",
           "state": "К 00:00 скрыл от Минасэ и Шики связь состояния четырёх зависимых пациентов с ранее извлечённым вторым контуром. К полуночи распорядился оформить уже произошедшую гибель четырёх как прекращение поддержки, забрав их тела в свой сектор Нижнего госпиталя, не созда",
           "voice": "Низкий размеренный нечеловеческий голос, старые врачебные обороты, может недоговаривать",
@@ -10885,7 +10956,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/utsuro.json"
+        "recovery/cast/utsuro.json",
+        "s09.text.072"
       ]
     },
     "v7_crossbowman": {
@@ -11059,11 +11131,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.070"
+          "seen": "s09.text.072"
         }
       ],
       "sources": [
-        "recovery/cast/waterfall_trackers.json"
+        "recovery/cast/waterfall_trackers.json",
+        "s09.text.072"
       ]
     }
   },
@@ -11266,5 +11339,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 720
+  "source_turns_indexed": 721
 }

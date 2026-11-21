@@ -1,21 +1,21 @@
 {
   "current_focus": [
-    "place:6c7a0d1a1458d1c6"
+    "place:7781dfab1aa545a4",
+    "minagi_zen"
   ],
-  "cursor": "s09.text.071",
+  "cursor": "s09.text.072",
   "focus_byte_limit": 6600,
-  "focus_bytes": 505,
-  "index_entities": 499,
-  "index_source_records": 720,
-  "indexed_cursor": "s09.text.071",
+  "focus_bytes": 1020,
+  "index_entities": 502,
+  "index_source_records": 721,
+  "indexed_cursor": "s09.text.072",
   "kinds": {
-    "canon": 1,
     "clock": 1,
     "entity": 1,
     "item": 31,
-    "npc": 91,
-    "place": 355,
-    "thread": 19
+    "npc": 92,
+    "place": 356,
+    "thread": 21
   },
   "missing_critical": [],
   "notes": [
@@ -24,12 +24,6 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "canon:s09.text.071:0",
-      "kind": "canon"
-    },
     {
       "at_1": true,
       "at_5": true,
@@ -489,6 +483,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:black_market_new_contracts",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:case19T",
       "kind": "thread"
     },
@@ -585,14 +585,20 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:unknown_buyer_mask",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:v7",
       "kind": "thread"
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 94,
-  "self_query_at_5": 94,
-  "self_query_count": 94,
+  "self_query_at_1": 95,
+  "self_query_at_5": 95,
+  "self_query_count": 95,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
