@@ -466,6 +466,8 @@ def build(state_dir, hot, source_root=None):
     where = places.collect(state_dir, {k: e["talk"] for k, e in store.items() if e.get("talk")})
     return {"schema": SCHEMA, "cursor": (hot.get("cursor") or {}).get("id"),
             "entities": store, "things": things, "threads": threads,
+            "aged_threads": _aged(state_dir, "threads.jsonl", hot.get("threads")),
+            "aged_things": _aged(state_dir, "things.jsonl", hot.get("things")),
             "fixes": fixes, "changes": changes, "skipped": skipped, "places": where, "recent": [r for r in deltas if not r.get("curated")][-LOG_TURNS:]}
 
 
@@ -602,7 +604,8 @@ def _read_checks(store, turns):
             notes.append({"turn": turn["id"], "kind": "read",
                           "text": f"«{entity['name']}» вернулся в сцену, а его страница `npc/{key}` не открыта "
                                   f"(поле read хода). Открой её до следующей реплики: облик, что знает, "
-                                  f"что говорил (`npc/{key}.talk`)."})
+                                  f"что говорил (`npc/{key}.talk`). Игрок давние описания забывает "
+                                  f"(s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики."})
     return notes
 
 
@@ -895,6 +898,12 @@ def _log_page(registry):
     return "\n".join(lines) + "\n"
 
 
+def _aged(state_dir, name, live):
+    """Ушедшее из HOT в archive/aged/: страница остаётся, с пометкой."""
+    from . import aging
+    return {k: row for k, row in aging.load(state_dir, name).items() if k and k not in (live or {})}
+
+
 def _index_page(hot, registry):
     store = registry["entities"]
     cursor = (hot.get("cursor") or {}).get("id")
@@ -932,6 +941,9 @@ def _index_page(hot, registry):
         for key, value in threads.items():
             state = _text((value or {}).get("state") if isinstance(value, dict) else value, 70)
             lines.append(f"- `{key}` — {state} · `threads/{key}`")
+    aged = registry.get("aged_threads") or {}
+    if aged:
+        lines += ["", f"## Давние линии ({len(aged)}, в архиве)", ", ".join(f"`threads/{k}`" for k in sorted(aged))]
     things = set(hot.get("things") or {}) | set(registry["things"])
     if things:
         lines += ["", f"## Вещи ({len(things)})"]
@@ -1022,8 +1034,17 @@ def render(state_dir, hot, registry):
             files[f"{DIR}/{folder}/{key}.GM_ONLY.md"] = secret
     for key, value in (hot.get("threads") or {}).items():
         files[f"{DIR}/threads/{key}.md"] = _thread_page(key, value, registry["threads"].get(key, []))
-    for key in set(hot.get("things") or {}) | set(registry["things"]):
-        files[f"{DIR}/items/{key}.md"] = _item_page(key, (hot.get("things") or {}).get(key),
+    for key, row in (registry.get("aged_threads") or {}).items():
+        value = row.get("value")
+        value = dict(value, **{"в архиве": f"с {row.get('aged_at')}"}) if isinstance(value, dict) else value
+        files[f"{DIR}/threads/{key}.md"] = _thread_page(key, value, registry["threads"].get(key, []))
+    aged_things = registry.get("aged_things") or {}
+    for key in set(hot.get("things") or {}) | set(registry["things"]) | set(aged_things):
+        value = (hot.get("things") or {}).get(key)
+        if value is None and key in aged_things:
+            value = aged_things[key].get("value")
+            value = dict(value, **{"в архиве": f"с {aged_things[key].get('aged_at')}"}) if isinstance(value, dict) else value
+        files[f"{DIR}/items/{key}.md"] = _item_page(key, value if isinstance(value, dict) else None,
                                                    registry["things"].get(key, []))
     placed = {(f.get("turn"), f.get("rule")) for e in store.values() for f in e["fixes"]}
     placed |= {(f.get("turn"), f.get("rule")) for f in _shiki_fixes(registry["fixes"])}

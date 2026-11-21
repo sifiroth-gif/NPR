@@ -327,6 +327,13 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     if _bytes(packet) > target_bytes:
         # Do not lose deadlines or characters; safe reduction of optional indices.
         packet["recent_turns"] = (packet.get("recent_turns") or [])[-1:]
+    # Последняя ступень: длинные описания укорачиваются, ключи, сроки и ссылки на источник целы.
+    for section, limit in (("continuity", 180), ("horror", 180), ("general_memory", 160),
+                           ("present_npcs", 220), ("fight", 160), ("world", 220), ("plot", 260)):
+        if _bytes(packet) <= target_bytes:
+            break
+        if section in packet:
+            packet[section] = _shorten(packet[section], limit)
     packet["budget"] = {"target_bytes": target_bytes, "hard_bytes": hard_bytes}
     if _bytes(packet) > target_bytes:
         packet["target_exceeded"] = True
@@ -335,6 +342,18 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     else:
         packet.pop("over_budget", None)
     return packet
+
+
+def _shorten(value, limit):
+    """Строки длиннее limit — до limit с многоточием; структура и ключи прежние."""
+    if isinstance(value, str):
+        return value if len(value) <= limit else value[:limit - 1].rstrip() + "…"
+    if isinstance(value, list):
+        return [_shorten(v, limit) for v in value]
+    if isinstance(value, dict):
+        return {k: (v if k in ("source", "source_ref", "turn", "id", "due", "at", "sha256") else _shorten(v, limit))
+                for k, v in value.items()}
+    return value
 
 
 STATE_CHECKS = ("plot", "fight", "memory", "will")

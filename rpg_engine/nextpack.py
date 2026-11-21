@@ -24,7 +24,8 @@ FIELD = 170
 RULE = ("Это всё, что нужно прочитать перед обычным ходом: остальное уже в чате. Страницу memory/ "
         "открывай только для NPC, впервые входящего в сцену в этом чате, или по вопросу о прошлом; "
         "прочитанное в этом чате не перечитывай. cursor не равен твоему последнему ходу — свёртка "
-        "отстала: открой CHECKS.json.")
+        "отстала: открой CHECKS.json. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
+        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, по желанию.")
 
 
 def _short(text, limit=FIELD):
@@ -136,7 +137,7 @@ def must(hot, always_present=(), entries=None):
     return out[:3]
 
 
-def build(hot, brief, checks, entries, always_present=(), rules=None):
+def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -153,12 +154,15 @@ def build(hot, brief, checks, entries, always_present=(), rules=None):
     duty = must(hot, always_present, entries)
     if duty:
         pack["must"] = duty
-    happened = will.offscreen(hot)
+    if happened is None:
+        happened = will.offscreen(hot)
     if happened:
         pack["offscreen"] = {"rule": "Случилось без Шики, он этого не знает. Это факт мира: последствия "
                                      "встречаются там, куда дойдёт канал — слух, документ, человек, перемена; "
                                      "исход, требующий встречи с Шики, случается в ближайшей возможной сцене.",
                              "events": happened}
+    if echoed:
+        pack["echo"] = echoed
     pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []]
     last = ((hot.get("lint") or {}).get("recent") or [])[-1:]
     if last and last[0].get("id") == cursor.get("id") and last[0].get("verdict") != "чисто":
@@ -216,8 +220,9 @@ def _write(state_dir, pack):
     return True
 
 
-def write(state_dir, hot, brief, checks, always_present=()):
-    pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot))
+def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None):
+    pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot),
+                 happened=happened, echoed=echoed)
     _write(state_dir, pack)
     return pack
 

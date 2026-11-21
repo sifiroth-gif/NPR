@@ -96,6 +96,10 @@ def parser():
     blocked.add_argument("--state-dir", type=Path, required=True)
     blocked.add_argument("--check", type=Path, required=True, help="hot-check JSON output")
     blocked.add_argument("--turn", default=None, help="turn the failed fold attempted")
+    closer = sub.add_parser("session-close", help="close the current session from its verbatim turn log")
+    closer.add_argument("--state-dir", type=Path, required=True)
+    closer.add_argument("--session", type=int)
+    closer.add_argument("--pending", action="store_true", help="only if recovery/SESSION_CLOSE.json asks")
     zero = sub.add_parser("protocol-zero", help="run a pending Protocol Zero command (dry run only)")
     zero.add_argument("--state-dir", type=Path, required=True)
     backfill = sub.add_parser("npc-backfill", help="rebuild NPC episode memory from the verbatim session logs")
@@ -346,6 +350,11 @@ def run(args):
         case "hot-blocked":
             report = read_json(args.check)
             return hot.record_blocked(args.state_dir, report.get("problems") or [], args.turn)
+        case "session-close":
+            from . import session_close
+            if args.pending:
+                return session_close.handle(args.state_dir) or {"result": "idle"}
+            return session_close.close(args.state_dir, args.session)
         case "protocol-zero":
             from . import protocol_zero
             return protocol_zero.handle(args.state_dir) or {"result": "idle"}
