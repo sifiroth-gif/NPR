@@ -9,8 +9,8 @@
 ## Кто здесь говорил с Шики
 - Дзиро · `npc/jiro_caravan_guard` — 1 ход(ов)
 - Хосина Кэн · `npc/hoshina_ken` — 1 ход(ов)
-- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
 - Фурукава Кёдзи · `npc/caravan_prisoner` — 1 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
 - Миура Томо · `npc/miura_tomo` — 1 ход(ов)
 
 ## Ходы
