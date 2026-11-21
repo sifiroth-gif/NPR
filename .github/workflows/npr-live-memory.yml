@@ -15,6 +15,7 @@ on:
       - "recovery/ENTITY_SEED_GM_ONLY.json"
       - "recovery/FAST_SCENE.json"
       - "recovery/ZERO.json"
+      - "recovery/SESSION_CLOSE.json"
   workflow_dispatch:
 
 permissions:
@@ -89,6 +90,16 @@ jobs:
               if [ -e "_state/$f" ]; then git -C _state add -- "$f"; fi
             done
             zero=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['result'])" "$RUNNER_TEMP/zero.json")
+            # Закрытие сессии по заявке ведущего (recovery/SESSION_CLOSE.json): дословный журнал
+            # в холодный архив, глубокая разгрузка памяти, NEXT нового номера. Сбой — только отчёт.
+            closing=idle
+            if [ "$mode" = ok ]; then
+              python -m rpg_engine session-close --state-dir _state --pending | tee "$RUNNER_TEMP/close.json"
+              closing=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['result'])" "$RUNNER_TEMP/close.json")
+              if [ "$closing" != idle ]; then
+                git -C _state add -A -- recovery archive memory campaign.sqlite state.json campaigns/shiki/continuity
+              fi
+            fi
             if git -C _state diff --cached --quiet; then
               echo "HOT_CURRENT"
               break
@@ -97,6 +108,8 @@ jobs:
               git -C _state commit -q -m "Fold refused after $cursor: see recovery/CHECKS.json"
             elif [ "$mode" = broken ]; then
               git -C _state commit -q -m "Fold blocked at $cursor by state check: see recovery/CHECKS.json"
+            elif [ "$closing" = closed ]; then
+              git -C _state commit -q -m "Close session at $cursor: verbatim journal archived, memory consolidated"
             elif [ "$zero" != idle ]; then
               git -C _state commit -q -m "Protocol zero ($zero) at $cursor: see recovery/ZERO_REPORT.md"
             else

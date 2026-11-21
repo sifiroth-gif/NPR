@@ -7,7 +7,7 @@
 Репозиторий `sifiroth-gif/NPR`. Ветка `main`: правила и код. Ветка `game-state/shiki`: живое сохранение. Инструкция проекта внешнего чата: `campaigns/shiki/BOOT.md`.
 
 **Старт нового чата — один пакет параллельных чтений:**
-1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md` и `skills/dark-literary-gm/SKILL.md` (main): правила, Шики, проза.
+1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `campaigns/shiki/ref/TECHNIQUES.md` и `skills/dark-literary-gm/SKILL.md` (main): правила, Шики, арсенал, проза.
 2. `recovery/GM_BRIEF.json`, `recovery/NEXT.json`, `memory/INDEX.md` (game-state/shiki): сцена, облик, знания и воля присутствующих, сроки; о любом NPC и месте — страница из INDEX. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
 3. `recovery/TURN.json` — только при конфликте sha; `recovery/HOT.json`/`recovery/GM_ONLY.json` — по необходимости.
 4. `archive/heuristic-recall/manifest.json` — **только при адресном историческом поиске**. README/AGENTS — при первом входе или тех. работе.
@@ -38,4 +38,5 @@ GitHub Actions сворачивает ход, обновляет память и
 - **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. HOT: норма до 80 КБ, предел 90; `GM_BRIEF`: цель 32 КБ, предел 48.
 - Этот файл одинаков на `main` и `game-state/shiki`. Размер этого файла, GM_CORE и навыка держат тесты `tests/test_instruction_budget.py`: рост означает, что правило надо заменить, а не добавить.
 - Скрытая правда живёт только в `recovery/GM_ONLY.json` и файлах `*GM_ONLY*`. В `HOT.json`, коммитах, PR и ответах игроку её нет.
+- **Память и история:** старение HOT/GM_ONLY в `archive/aged/` каждой свёрткой, эхо прошлого `NEXT.echo`, закрытие сессии одной командой (`recovery/SESSION_CLOSE.json`) — `docs/KEEPER.md`.
 - **Протокол ноль** (`rpg_engine/protocol_zero.py`): кодовая команда игрока → ведущий пишет её в `recovery/ZERO.json` → свёртка пишет `recovery/ZERO_REPORT.md` и гасит команду. Сейчас только пробный прогон: план архива (`archive/shiki-ГГГГММДД`) и очистки, игра не меняется; настоящее очищение — `LIVE`, отдельно. Фраза хранится только хешем — не записывать её в репозиторий.
