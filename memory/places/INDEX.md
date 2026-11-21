@@ -64,6 +64,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
+- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 3 ход(ов), s10–s10
 - Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
 - Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
@@ -98,7 +99,6 @@
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
 - Рьючидо, внутреннее святилище Белой Змеи · `places/ryuchido-vnutrennee-svyatilishche-beloy-zmei` · 2 ход(ов), s10–s10
-- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 2 ход(ов), s10–s10
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
