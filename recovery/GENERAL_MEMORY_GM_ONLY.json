@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.002",
+  "cursor": "s10.text.003",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1021,7 +1021,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 60,
+      "mention_count": 61,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1029,13 +1029,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0007-12-19T00:31:00",
-          "excerpt": "равнительные образцы. И проверь, почему наш гость так настойчиво пытается разрушить собственную камеру. **Кабуто Якуши:** — Сначала выясню, кто разрешил привезти его раньше срока. В голосе Кабуто прозвучало раздражение. Орочимару лишь улыбнулся. Шики вышел. За",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.048"
         },
         {
           "at": "0007-12-20T19:06:00",
@@ -1050,6 +1043,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.063"
+        },
+        {
+          "at": "0010-02-27T15:44:00",
+          "excerpt": "контрольный знак посреднической сети и порядок получения восемнадцати миллионов. Объявление я получил от Кабуто Якуши, когда покидал Звук. При имени Кабуто пальцы Тамуры перестают двигаться. Она некоторое время смотрит на Шики, затем произносит: **Тамура Рэйка",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.003"
         }
       ],
       "projections": [
@@ -2304,7 +2304,8 @@
     "morioka_hideaki": {
       "aliases": [
         "morioka hideaki",
-        "Мориока Хидэаки"
+        "Мориока Хидэаки",
+        "morioka_hideaki"
       ],
       "facts": [],
       "id": "morioka_hideaki",
@@ -2343,12 +2344,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.087",
+          "seen": "s10.text.003",
           "state": "Слышал слова Шики о сыне Такаги; о судьбе ребёнка ничего не знает, только о принципе шантажа. Остался на В-7, вылечен и под охраной."
         }
       ],
       "sources": [
-        "recovery/cast/morioka_hideaki.json"
+        "recovery/cast/morioka_hideaki.json",
+        "s10.text.003"
       ]
     },
     "naemnik_u_shakhty": {
@@ -7223,10 +7225,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.002",
+        "s10.text.003",
         "s09.text.101",
         "s09.text.102",
-        "s10.text.001"
+        "s10.text.001",
+        "s10.text.002"
       ]
     },
     "place:9ffc64ff69edb6a9": {
@@ -10262,7 +10265,8 @@
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -10289,12 +10293,13 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s09.text.082",
+          "seen": "s10.text.003",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json"
+        "recovery/cast/s17_recipient_6.json",
+        "s10.text.003"
       ]
     },
     "sasuke": {
@@ -10864,7 +10869,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10872,13 +10877,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:42:00",
-          "excerpt": "ловно услышала что-то гораздо более неприятное, чем ожидала. Потом рассмеялась. Один короткий выдох. Без веселья. **Тамура Рэйка:** — Да. Она опустила руку с обрывком печати. — Очень хочу. Ветер трепал край её накидки. Женщина переставила ногу, но не вышла за ",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.102"
         },
         {
           "at": "0010-02-27T15:42:00",
@@ -10893,26 +10891,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.002"
+        },
+        {
+          "at": "0010-02-27T15:44:00",
+          "excerpt": "имени Кабуто пальцы Тамуры перестают двигаться. Она некоторое время смотрит на Шики, затем произносит: **Тамура Рэйка:** — Кабуто Якуши... Имя она повторяет медленно, словно проверяя его на узнаваемость. **Тамура Рэйка:** — Значит, хотя бы одно имя у меня тепе",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.003"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.002",
-          "state": "Выждала минуту, убрала бумажную полоску с камня и прямо спросила, удалось ли Шики что-то вспомнить.",
+          "seen": "s10.text.003",
+          "state": "Услышала имя Кабуто и наличие контрольного знака; потребовала документ.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "Выждала минуту, убрала бумажную полоску с камня и прямо спросила, удалось ли Шики что-то вспомнить.",
+          "state": "Услышала имя Кабуто и наличие контрольного знака; потребовала документ.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.002"
+        "s10.text.003"
       ]
     },
     "tetsu": {
@@ -11576,5 +11581,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 751
+  "source_turns_indexed": 752
 }

@@ -44,6 +44,7 @@
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 5 ход(ов), s09–s09
+- Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 5 ход(ов), s09–s10
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
@@ -52,7 +53,6 @@
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
-- Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 4 ход(ов), s09–s10
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
