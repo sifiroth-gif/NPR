@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.069: поправки игрока: 2
 - s09.text.068: Тамура Рэйка (`npc/tamura_reika`), Наёмник у шахты (`npc/naemnik_u_shakhty`), Немера (Невыписанная) (`npc/nemera`), Нагаэ Рокуто (`npc/nagae_rokuto`), вещь `sumi_sword`, вещь `shiki_finances`, линия `tamura_reika_bounty`, линия `white_resin_archive`, линия `shiki_underground_career`, линия `tamura_return`, поправки игрока: 6
 - s09.text.067: Немера (Невыписанная) (`npc/nemera`), Нагаэ Рокуто (`npc/nagae_rokuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `rokuto_head`, вещь `rokuto_bounty_payment`, вещь `bounty_notices`, линия `nagae_rokuto_contract`
 - s09.text.066: Нагаэ Рокуто (`npc/nagae_rokuto`), Орочимару (`npc/orochimaru`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `rokuto_head`, линия `nagae_rokuto_contract`, бой, поправки игрока: 1
@@ -61,4 +62,3 @@
 - s09.text.012: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), hirano_seiji (`npc/hirano_seiji`), Хирано (`npc/hirano`)
 - s09.text.011: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), поправки игрока: 2
 - s09.text.010: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Возница повозки (`npc/kagen_caravan_driver`), Хранитель лабораторных пропусков госпиталя (`npc/hospital_pass_custodian`), план сюжета, поправки игрока: 2
-- s09.text.009: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), Сопровождающий повозки (`npc/kagen_caravan_escort`)
