@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.072`
+# Карта мира NPR · на ходе `s09.text.073`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,9 +6,10 @@
 - места · `places/INDEX` (176) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (164)
-- waterfall_trackers —  · `npc/waterfall_trackers`
-- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
+- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
+- waterfall_trackers —  · `npc/waterfall_trackers`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
 - akatsuki —  · `npc/akatsuki`
 - jiraiya —  · `npc/jiraiya`
@@ -18,7 +19,6 @@
 - Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke`
 - Наёмник у шахты — по подписи в сцене · `npc/naemnik_u_shakhty`
 - Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto`
-- Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
 - Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Орочимару — саннин, скрытый организатор · `npc/orochimaru`
@@ -171,7 +171,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (21)
+## Линии (22)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — 04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); … · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -192,12 +192,14 @@
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `tamura_return` — 10.09.1286 Тамура, свободная после побега, передала письмо Шики через… · `threads/tamura_return`
 - `black_market_new_contracts` — 12.02.1287 у Минаги Дзэна доступны непринимавшиеся заказы: Сайдзэн Гэ… · `threads/black_market_new_contracts`
-- `unknown_buyer_mask` — 10.02.1287 неизвестный предлагал брокеру 5 млн за местонахождение бел… · `threads/unknown_buyer_mask`
+- `unknown_buyer_mask` — Брокер описал женщину ~30 лет с тёмными волосами, надрывом левой мочк… · `threads/unknown_buyer_mask`
+- `minagi_commission` — Шики согласовал 10% комиссии Дзэну вместо обычных 5%, только с первог… · `threads/minagi_commission`
 
-## Вещи (31)
+## Вещи (32)
 - `bounty_notices` · `items/bounty_notices`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
+- `inquiry_contact_token` · `items/inquiry_contact_token`
 - `itachi_report_copies` · `items/itachi_report_copies`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`
 - `kijima_route_book` · `items/kijima_route_book`

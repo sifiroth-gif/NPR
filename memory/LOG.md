@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.073: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `inquiry_contact_token`, линия `minagi_commission`, линия `unknown_buyer_mask`
 - s09.text.072: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `black_market_new_contracts`, линия `unknown_buyer_mask`
 - s09.text.071: akatsuki (`npc/akatsuki`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), jiraiya (`npc/jiraiya`), pain (`npc/pain`), Данзо Шимура (`npc/danzo`), план сюжета, поправки игрока: 1
 - s09.text.070: waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), поправки игрока: 2
@@ -61,4 +62,3 @@
 - s09.text.016: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `possible_sasuke_hair`, план сюжета
 - s09.text.015: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`)
 - s09.text.014: поправки игрока: 3
-- s09.text.013: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), линия `sharingan`, план сюжета, поправки игрока: 4

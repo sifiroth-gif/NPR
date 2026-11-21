@@ -1,21 +1,21 @@
 {
   "current_focus": [
-    "place:7781dfab1aa545a4",
-    "minagi_zen"
+    "minagi_zen",
+    "place:7a3db143d57a03e2"
   ],
-  "cursor": "s09.text.072",
+  "cursor": "s09.text.073",
   "focus_byte_limit": 6600,
-  "focus_bytes": 1020,
-  "index_entities": 502,
-  "index_source_records": 721,
-  "indexed_cursor": "s09.text.072",
+  "focus_bytes": 1066,
+  "index_entities": 505,
+  "index_source_records": 722,
+  "indexed_cursor": "s09.text.073",
   "kinds": {
     "clock": 1,
     "entity": 1,
-    "item": 31,
+    "item": 32,
     "npc": 92,
-    "place": 356,
-    "thread": 21
+    "place": 357,
+    "thread": 22
   },
   "missing_critical": [],
   "notes": [
@@ -52,6 +52,12 @@
       "at_1": true,
       "at_5": true,
       "id": "foreign_observation_case",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "inquiry_contact_token",
       "kind": "item"
     },
     {
@@ -172,12 +178,6 @@
       "at_1": true,
       "at_5": true,
       "id": "rokuto_head",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "ryuchido_summoning_scroll",
       "kind": "item"
     },
     {
@@ -519,6 +519,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:minagi_commission",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:nemera",
       "kind": "thread"
     },
@@ -596,9 +602,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 95,
-  "self_query_at_5": 95,
-  "self_query_count": 95,
+  "self_query_at_1": 96,
+  "self_query_at_5": 96,
+  "self_query_count": 96,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
