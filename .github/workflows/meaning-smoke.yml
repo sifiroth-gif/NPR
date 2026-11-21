@@ -1,0 +1,39 @@
+name: Meaning smoke (temporary)
+on:
+  push:
+    branches: ["meaning-recall"]
+    paths: [".github/workflows/meaning-smoke.yml"]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --disable-pip-version-check -q -r requirements-meaning.txt
+      - run: python -m rpg_engine meaning-fetch --dir .npr-meaning
+      - name: Encode and time
+        env:
+          NPR_MEANING_MODEL: ${{ github.workspace }}/.npr-meaning
+        run: |
+          nproc
+          python - <<'PY'
+          import time
+          from rpg_engine import meaning
+          enc = meaning.encoder()
+          assert enc is not None, "encoder unavailable"
+          q = enc(["query: кто совершил измену"])[0]
+          docs = ["passage: Кайто признался, что продал маршрут каравана людям в сером — предал своих.",
+                  "passage: Дождь шёл всю ночь, Шики чинил ремень сумки.",
+                  "passage: Сэйна осмотрела рану и наложила швы при свече."]
+          vs = enc(docs)
+          sims = [sum(a*b for a, b in zip(q, v)) for v in vs]
+          print("sims", [round(s, 4) for s in sims], "dim", len(q))
+          assert sims[0] == max(sims)
+          text = ("Шики шёл вдоль стены, и тени от фонарей ложились на мокрый камень. " * 30)[:1200]
+          batch = ["passage: " + text] * 64
+          t = time.time(); enc(batch); dt = time.time() - t
+          print(f"64 chunks of 1200 chars: {dt:.1f}s, {64/dt:.1f} chunks/s")
+          PY
