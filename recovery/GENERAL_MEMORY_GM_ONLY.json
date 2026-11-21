@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.040",
+  "cursor": "s10.text.041",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2517,8 +2517,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.040"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -7116,6 +7115,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s10.text.041",
         "s10.text.040"
       ]
     },
@@ -10641,7 +10641,7 @@
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -10649,13 +10649,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
-        },
-        {
-          "at": "0010-03-04T07:08:00",
-          "excerpt": "ошечными насечками. Они образуют концентрические круги вокруг центрального изображения раскрытой пасти. Итикисимахимэ наблюдает. Поначалу с тем же ленивым интересом, с каким смотрела на маленькую змею под скатертью. Затем откладывает палочки и перестаёт улыбат",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.029"
         },
         {
           "at": "0010-03-04T07:09:00",
@@ -10670,6 +10663,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.031"
+        },
+        {
+          "at": "0010-03-04T07:29:25",
+          "excerpt": "ак обращаться… Она произносит слова медленно, словно припоминает давно забытый обычай. **Белая Змея:** — Итикисимахимэ, Тагорихимэ, Тагицухимэ. Полагаю, ты уже успел раздать моим девочкам достаточно почтительных обращений. Из глубины её груди доносится низкое,",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.041"
         }
       ],
       "projections": [
@@ -11026,7 +11026,8 @@
     "sound_kagen_junior": {
       "aliases": [
         "sound kagen junior",
-        "Младший шиноби Звука"
+        "Младший шиноби Звука",
+        "sound_kagen_junior"
       ],
       "facts": [],
       "id": "sound_kagen_junior",
@@ -11067,21 +11068,28 @@
         {
           "fears": "То, что слышно из нижних помещений ночью.",
           "role": "Младший дозорный у подземных ворот.",
-          "seen": "s09.text.100",
+          "seen": "s10.text.041",
           "state": "Доложил о повторном спазме доставленного; по приказу старшего ушёл обратно на пост.",
           "voice": "Негромко, с тревожной поспешностью.",
+          "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
+        },
+        {
+          "fears": "То, что слышно из нижних помещений ночью.",
+          "role": "Младший дозорный у подземных ворот.",
+          "state": "Доложил о повторном спазме доставленного; по приказу старшего ушёл обратно на пост.",
           "wants": "Дождаться третьего каравана и не навлечь наказания старшего."
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_junior.json"
+        "recovery/cast/sound_kagen_junior.json",
+        "recovery/HOT.json",
+        "s10.text.041"
       ]
     },
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука",
-        "sound_kagen_senior"
+        "Старший шиноби Звука"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -11129,8 +11137,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_senior.json",
-        "s10.text.040"
+        "recovery/cast/sound_kagen_senior.json"
       ]
     },
     "south_crossbowman": {
@@ -11252,7 +11259,7 @@
       "id": "tagitsuhime",
       "kind": "npc",
       "label": "Тагицухимэ",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-03-04T07:21:00",
@@ -11260,13 +11267,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.037"
-        },
-        {
-          "at": "0010-03-04T07:22:00",
-          "excerpt": "**Мугами Шики:** — Предположение не то. Я пришёл в том числе за сэндзюцу, но это не основная причина. Тагицухимэ перестаёт улыбаться. Тонкие струи, поднимавшиеся из озера, застывают в воздухе. За водяной завесой по-прежнему виден мост, но его отражение уже исч",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.038"
         },
         {
           "at": "0010-03-04T07:23:00",
@@ -11281,11 +11281,18 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.040"
+        },
+        {
+          "at": "0010-03-04T07:29:25",
+          "excerpt": "сит слова медленно, словно припоминает давно забытый обычай. **Белая Змея:** — Итикисимахимэ, Тагорихимэ, Тагицухимэ. Полагаю, ты уже успел раздать моим девочкам достаточно почтительных обращений. Из глубины её груди доносится низкое, скрипучее подобие смеха. ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.041"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.040",
+          "seen": "s10.text.041",
           "state": "Осталась у озера; знает от Шики имя Немеры и утверждение о её автономии, не видела её."
         },
         {
@@ -11294,8 +11301,7 @@
       ],
       "sources": [
         "recovery/cast/tagitsuhime.json",
-        "recovery/HOT.json",
-        "s10.text.040"
+        "recovery/HOT.json"
       ]
     },
     "tagorihime": {
@@ -11307,7 +11313,7 @@
       "id": "tagorihime",
       "kind": "npc",
       "label": "Тагорихимэ",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-03-04T07:12:00",
@@ -11315,13 +11321,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.031"
-        },
-        {
-          "at": "0010-03-04T07:21:00",
-          "excerpt": "ext> ### Рьючидо. Галерея переменчивого камня **Мугами Шики:** — Пойдём. Ты сказала, что проведёшь. Тагорихимэ останавливается посреди коридора. Шики достаёт обмотки, тщательно закрывает правую кисть и запястье, поверх надевает полную перчатку. Пальцы теперь п",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.037"
         },
         {
           "at": "0010-03-04T07:22:00",
@@ -11336,11 +11335,18 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.039"
+        },
+        {
+          "at": "0010-03-04T07:29:25",
+          "excerpt": "Она произносит слова медленно, словно припоминает давно забытый обычай. **Белая Змея:** — Итикисимахимэ, Тагорихимэ, Тагицухимэ. Полагаю, ты уже успел раздать моим девочкам достаточно почтительных обращений. Из глубины её груди доносится низкое, скрипучее подо",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.041"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.040",
+          "seen": "s10.text.041",
           "state": "Покинула Зал неподвижной воды, вернулась в свою каменную галерею; возмущена тем, что Тагицухимэ показала запрещённый нижний слой гостю."
         },
         {
@@ -12002,13 +12008,14 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея"
+        "Белая Змея",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
       "kind": "npc",
       "label": "Белая Змея",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0007-12-19T00:37:00",
@@ -12016,13 +12023,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.051"
-        },
-        {
-          "at": "0010-03-02T10:55:00",
-          "excerpt": "держать больше, но сила не научит тебя равновесию. Его язык касается воздуха. **Хагуро:** — В Рьючидо этим знанием владеет Белая Змея-мудрец. Она решает, кого испытывать. Я могу показать дорогу, как и обещал. Но моё обещание не означает, что она согласится теб",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.021"
         },
         {
           "at": "0010-03-02T10:56:00",
@@ -12037,17 +12037,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.040"
+        },
+        {
+          "at": "0010-03-04T07:29:25",
+          "excerpt": "### Рьючидо. Внутреннее святилище **Мугами Шики:** — Ох, хотелось бы сначала понять, как обращаться? Белая Змея умолкает. Несколько мгновений её жёлтые глаза неподвижно рассматривают Шики. Затем огромное тело сдвигается, и по каменному возвышению проходит сухо",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.041"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.040",
+          "seen": "s10.text.041",
+          "state": "На возвышении, пригласила Шики подойти и рассказать, что привлекло его в Рьючидо; не требует проявления Немеры."
+        },
+        {
           "state": "На возвышении, пригласила Шики подойти и рассказать, что привлекло его в Рьючидо; не требует проявления Немеры."
         }
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
-        "s10.text.040"
+        "recovery/HOT.json",
+        "s10.text.041"
       ]
     }
   },
@@ -12152,5 +12163,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 788
+  "source_turns_indexed": 789
 }
