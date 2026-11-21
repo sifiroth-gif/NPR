@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.020",
+  "cursor": "s10.text.021",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0007-12-19T00:41:00",
-          "excerpt": "эн. Тренировочный комплекс.* **Мугами Шики:** — Опусти голову ко мне, дай осмотрю твой рубец и глаз. Хагуро замер. Его язык на мгновение показался между клыками. **Хагуро:** — Зачем? Однако он уже опускал голову. Медленно, сохраняя возможность в любой момент о",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.052"
         },
         {
           "at": "0007-12-19T00:44:00",
@@ -1367,23 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.020"
+        },
+        {
+          "at": "0010-03-02T10:55:00",
+          "excerpt": "г у «Чёрного створа» **Мугами Шики:** — Вопрос. Что такое природная чакра и что такое режим мудреца? Хагуро перестаёт шевелить хвостом. Его жёлтые глаза внимательно изучают Шики. **Хагуро:** — Природная *чакра*? Ты начинаешь с неправильного названия. Змея пово",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.021"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.020",
-          "state": "Физически призван на открытый каменистый берег возле «Чёрного створа»; сохранил свободную волю, насторожен изменившимся ощущением от Шики, не обнаружил угрозы, спросил о цели встречи."
+          "seen": "s10.text.021",
+          "state": "Призван на каменистый берег у «Чёрного створа» и разговаривает с Шики; ответил о природной энергии, настороженно оценивает намерения шиноби."
         },
         {
           "role": "по подписи в сцене",
-          "state": "Физически призван на открытый каменистый берег возле «Чёрного створа»; сохранил свободную волю, насторожен изменившимся ощущением от Шики, не обнаружил угрозы, спросил о цели встречи."
+          "state": "Призван на каменистый берег у «Чёрного створа» и разговаривает с Шики; ответил о природной энергии, настороженно оценивает намерения шиноби."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
         "recovery/HOT.json",
-        "s10.text.020"
+        "s10.text.021"
       ]
     },
     "kiri_bingo_book": {
@@ -2523,8 +2523,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.020"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -5393,6 +5392,25 @@
       "projections": [],
       "sources": [
         "s01.text.151"
+      ]
+    },
+    "place:5a7d140d365f22ed": {
+      "aliases": [
+        "place:5a7d140d365f22ed",
+        "Страна Рек, верховья Сирана, каменистый берег у убежища «Чёрный створ»",
+        "Страна Рек",
+        "верховья Сирана",
+        "каменистый берег у убежища «Чёрный створ»"
+      ],
+      "facts": [],
+      "id": "place:5a7d140d365f22ed",
+      "kind": "place",
+      "label": "Страна Рек, верховья Сирана, каменистый берег у убежища «Чёрный створ»",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.021"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -10279,7 +10297,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10287,13 +10305,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0007-12-19T00:41:00",
-          "excerpt": "эн. Тренировочный комплекс.* **Мугами Шики:** — Опусти голову ко мне, дай осмотрю твой рубец и глаз. Хагуро замер. Его язык на мгновение показался между клыками. **Хагуро:** — Зачем? Однако он уже опускал голову. Медленно, сохраняя возможность в любой момент о",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.052"
         },
         {
           "at": "0007-12-19T00:44:00",
@@ -10308,6 +10319,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.020"
+        },
+        {
+          "at": "0010-03-02T10:55:00",
+          "excerpt": "г у «Чёрного створа» **Мугами Шики:** — Вопрос. Что такое природная чакра и что такое режим мудреца? Хагуро перестаёт шевелить хвостом. Его жёлтые глаза внимательно изучают Шики. **Хагуро:** — Природная *чакра*? Ты начинаешь с неправильного названия. Змея пово",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.021"
         }
       ],
       "projections": [
@@ -11346,8 +11364,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/utsuro.json",
-        "s10.text.020"
+        "recovery/cast/utsuro.json"
       ]
     },
     "v7_crossbowman": {
@@ -11630,5 +11647,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 768
+  "source_turns_indexed": 769
 }
