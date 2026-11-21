@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.001",
+  "cursor": "s10.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2516,8 +2516,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.001"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -2705,8 +2704,7 @@
     "p4_archivist_matsuda": {
       "aliases": [
         "p4 archivist matsuda",
-        "Мацуда (архивариус П-4)",
-        "p4_archivist_matsuda"
+        "Мацуда (архивариус П-4)"
       ],
       "facts": [],
       "id": "p4_archivist_matsuda",
@@ -2725,8 +2723,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/p4_archivist_matsuda.json",
-        "s10.text.001"
+        "recovery/cast/p4_archivist_matsuda.json"
       ]
     },
     "pain": {
@@ -7226,9 +7223,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.001",
+        "s10.text.002",
         "s09.text.101",
-        "s09.text.102"
+        "s09.text.102",
+        "s10.text.001"
       ]
     },
     "place:9ffc64ff69edb6a9": {
@@ -9921,8 +9919,7 @@
     "prinimayushchiy_sluzhashchiy": {
       "aliases": [
         "prinimayushchiy sluzhashchiy",
-        "Принимающий служащий",
-        "prinimayushchiy_sluzhashchiy"
+        "Принимающий служащий"
       ],
       "facts": [],
       "id": "prinimayushchiy_sluzhashchiy",
@@ -9967,8 +9964,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/prinimayushchiy_sluzhashchiy.json",
-        "s10.text.001"
+        "recovery/cast/prinimayushchiy_sluzhashchiy.json"
       ]
     },
     "private_bounties": {
@@ -10868,7 +10864,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10876,13 +10872,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:41:00",
-          "excerpt": "ты. Немера впервые могла оставить следы своих действий вне чужого тела. И впервые ей не требовалось сохранять их. *** **Суббота, 27 февраля 1287 года. 15:41** *Страна Огня. Долина Завершения. Голова Учихи Мадары.* Тамура Рэйка стояла у трёх приготовленных печа",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.101"
         },
         {
           "at": "0010-02-27T15:42:00",
@@ -10897,26 +10886,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.001"
+        },
+        {
+          "at": "0010-02-27T15:43:00",
+          "excerpt": "в объявлении. Затем — передача пленницы. Восемнадцать миллионов рё. Условие живого захвата выполнено. **Тамура Рэйка, тогда:** — Ты ведь понимаешь, почему им нужен именно живой человек? И немного позднее: **Тамура Рэйка:** — Тогда запомни моё лицо. За этими сл",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.002"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.001",
-          "state": "Держит руку на своей защитной печати и ждёт сведений о приёмщике; намерена искать его без помощи Шики после ответа.",
+          "seen": "s10.text.002",
+          "state": "Выждала минуту, убрала бумажную полоску с камня и прямо спросила, удалось ли Шики что-то вспомнить.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "Держит руку на своей защитной печати и ждёт сведений о приёмщике; намерена искать его без помощи Шики после ответа.",
+          "state": "Выждала минуту, убрала бумажную полоску с камня и прямо спросила, удалось ли Шики что-то вспомнить.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.001"
+        "s10.text.002"
       ]
     },
     "tetsu": {
@@ -11580,5 +11576,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 750
+  "source_turns_indexed": 751
 }
