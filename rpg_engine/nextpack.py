@@ -99,6 +99,9 @@ def _due(hot, brief, always_present=()):
     return [text for _, text in out][:8]
 
 
+RECENT_TURNS = 40   # план просят у тех, кто был в игре не дальше стольких ходов назад
+
+
 def must(hot, always_present=(), entries=None):
     """Обязательное на этот ход: короткий список вместо десятка советов.
 
@@ -130,10 +133,15 @@ def must(hot, always_present=(), entries=None):
         out.append(f"{will._name(hot, key)} рядом, а срок плана «{_short(plan.get('next') or plan.get('goal'), 120)}» "
                    f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
                    f"запиши d.cast.{key}.intent.{name}: status и outcome.")
-    # Новый план — только тем, кто значим для Шики: встречал его, имеет характер или шёл против него.
+    # Новый план — только тем, кто значим для Шики (встречал его, имеет характер или шёл против него)
+    # и был в игре недавно: давно ушедшему пациенту план не нужен.
+    from .aging import _ordinal
+    now = _ordinal((hot.get("cursor") or {}).get("id")) or 0
+    touched = (will._state(hot).get("touched") or {})
     significant = [(k, l) for k, l in will.without_plan(hot)
-                   if l.get("against_shiki") or any(((hot.get("_psyche") or {}).get(k) or {}).get(f)
-                                                    for f in ("dread", "psyche"))]
+                   if (l.get("against_shiki") or any(((hot.get("_psyche") or {}).get(k) or {}).get(f)
+                                                     for f in ("dread", "psyche")))
+                   and now - (_ordinal(touched.get(k)) or 0) <= RECENT_TURNS]
     for key, last in significant[:1]:
         plan = last.get("goal") or last.get("outcome") or last.get("next") or last.get("key")
         out.append(f"У {will._name(hot, key)} закрыт план «{_short(plan, 80)}» "

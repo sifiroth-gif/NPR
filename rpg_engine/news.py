@@ -25,9 +25,12 @@ from pathlib import Path
 from . import aging
 from .heuristic_history import stem, tokens
 
-PULSE = 8            # ходов без вести — мир напоминает о себе
+PULSE = 8            # ходов без вести — мир напоминает о себе…
+PULSE_HOURS = 3      # …если и игровых часов прошло столько (плотная сцена в час — не повод)
 JUMP_HOURS = 6       # скачок игрового времени — повод для вести
-HOLD = 3             # ходов держится поручение довести весть
+HOLD = 3             # ходов держится поручение довести весть…
+HOLD_HOURS = 3       # …и игровых часов; в закрытой плотной сцене весть ждёт выхода
+HOLD_MAX = 12        # но не дольше стольких ходов
 LONG = 12            # ходов в одной сцене — мир входит в неё
 TOP = 5              # весомых событий за кадром в NEXT.offscreen
 MIN_WEIGHT = 1
@@ -134,15 +137,16 @@ def step(hot, applied):
             state["delivered"] += 1
             _mark(hot, current, "delivered")
             state.pop("current")
-            state["last"] = now
-        elif now - int(current.get("set") or now) >= HOLD:
+            state["last"], state["last_at"] = now, cursor.get("at")
+        elif _expired(current, now, at):
             state["missed"] += 1
             _mark(hot, current, "missed")
             state.pop("current")
-            state["last"] = now
-    # Темп: сколько ходов подряд одна сцена (место и присутствующие).
+            state["last"], state["last_at"] = now, cursor.get("at")
+    # Темп: сколько ходов подряд одна сцена (место до первой точки и присутствующие).
     scene = hot.get("scene") or {}
-    key = json.dumps([cursor.get("place"), sorted(scene.get("present") or [])], ensure_ascii=False)
+    root = str(cursor.get("place") or "").split(". ", 1)[0]
+    key = json.dumps([root, sorted(scene.get("present") or [])], ensure_ascii=False)
     if played:
         if state.get("scene_key") == key:
             state["scene_turns"] = int(state.get("scene_turns") or 0) + len(played)
@@ -154,7 +158,9 @@ def step(hot, applied):
     if (hot.get("_fight") or {}).get("active"):
         return _view(state)
     jump = bool(played and previous and at and (at - previous).total_seconds() >= JUMP_HOURS * 3600)
-    quiet = now - int(state.get("last") or now) >= PULSE
+    since = _parse(state.get("last_at"))
+    quiet = now - int(state.get("last") or now) >= PULSE and (
+        not since or not at or (at - since).total_seconds() >= PULSE_HOURS * 3600)
     long = int(state.get("scene_turns") or 0) >= LONG and now - int(state.get("nudged") or -10**6) >= LONG
     if state.get("current") or not (jump or quiet or long):
         return _view(state)
@@ -162,19 +168,31 @@ def step(hot, applied):
     if candidates:
         event = candidates[0]
         state["current"] = {"text": _text(event, hot)[:400], "markers": _markers(event, hot), "set": now,
+                            "set_at": cursor.get("at"),
                             "npc": event.get("npc"), "plan": event.get("plan"), "at": event.get("at"),
                             "why": "скачок времени" if jump else "долгая сцена" if long else "давно без вестей"}
         event["news"] = "offered"
         state["offered"] += 1
-        state["last"] = now
+        state["last"], state["last_at"] = now, cursor.get("at")
         if long:
             state["nudged"] = now
         return _view(state)
     if long:
         state["nudged"] = now
-        return {"must": (f"Сцена идёт {state['scene_turns']} ходов. Пусть мир войдёт в неё сам — чужой человек, "
-                         "весть, помеха или наступивший срок, — не решая за Шики; игрок волен продолжить.")}
+        return {"must": (f"Сцена идёт {state['scene_turns']} ходов. Понятое игроком сожми до результата и цены "
+                         "одним ходом; пусть мир войдёт в сцену сам — чужой человек, весть, помеха или наступивший "
+                         "срок, — не решая за Шики; игрок волен продолжить.")}
     return _view(state)
+
+
+def _expired(current, now, at):
+    """Весть снята: прошло HOLD ходов и HOLD_HOURS игровых часов — или HOLD_MAX ходов."""
+    turns = now - int(current.get("set") or now)
+    if turns >= HOLD_MAX:
+        return True
+    since = _parse(current.get("set_at"))
+    hours_ok = not since or not at or (at - since).total_seconds() >= HOLD_HOURS * 3600
+    return turns >= HOLD and hours_ok
 
 
 def _mark(hot, current, status):

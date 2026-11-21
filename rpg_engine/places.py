@@ -99,13 +99,13 @@ def page(key, item, names):
         lines += ["## Обстановка: отрывок из первых ходов здесь", f"> {item['description']}",
                   f"- источник: {item.get('described_in')}", ""]
     if item["people"]:
-        people = sorted(item["people"].items(), key=lambda kv: -kv[1])[:20]
+        people = sorted(item["people"].items(), key=lambda kv: (-kv[1], kv[0]))[:20]   # ничьи — по ключу: без дрожи
         lines += ["## Кто здесь говорил с Шики"]
         lines += [f"- {names.get(k, k)} · `npc/{k}` — {n} ход(ов)" for k, n in people]
         lines.append("")
     if len(item["variants"]) > 1:
         lines += ["## Как место записано в ходах"]
-        lines += [f"- {v} ({n})" for v, n in sorted(item["variants"].items(), key=lambda kv: -kv[1])[:12]]
+        lines += [f"- {v} ({n})" for v, n in sorted(item["variants"].items(), key=lambda kv: (-kv[1], kv[0]))[:12]]
         lines.append("")
     lines += ["## Ходы"]
     lines += [f"- {t['id']} {t['at']}" for t in turns[-15:]]
@@ -116,7 +116,7 @@ def page(key, item, names):
 
 def index_page(places):
     lines = ["# Места", "", "Где Шики бывал в сыгранных сессиях. Описание места — на его странице.", ""]
-    for key, item in sorted(places.items(), key=lambda kv: -len(kv[1]["turns"])):
+    for key, item in sorted(places.items(), key=lambda kv: (-len(kv[1]["turns"]), kv[0])):
         turns = item["turns"]
         lines.append(f"- {item['name']} · `places/{key}` · {len(turns)} ход(ов), "
                      f"{turns[0]['id'][:3]}–{turns[-1]['id'][:3]}")

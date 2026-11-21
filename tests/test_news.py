@@ -62,9 +62,21 @@ class StepTest(unittest.TestCase):
         hot["cursor"].update(at="0010-03-04T10:00:00")
         self.assertIsNotNone(news.step(hot, [{"id": "s10.text.010", "gm": "."}]))
         for n in range(11, 11 + news.HOLD):
-            hot["cursor"].update(id=f"s10.text.{n:03}", at=f"0010-03-04T10:{n:02}:00")
+            hot["cursor"].update(id=f"s10.text.{n:03}", at=f"0010-03-04T{n:02}:00:00")
             news.step(hot, [{"id": f"s10.text.{n:03}", "gm": "Шики молча работал."}])
         self.assertEqual(hot["_will"]["news"]["missed"], 1)
+
+    def test_dense_scene_keeps_news_until_hours_pass(self):
+        hot = _hot(happened=[_event("minagi_zen", "Минаги Дзэн продал адрес сторожки.", status="failed",
+                                    name="Минаги Дзэн")])
+        news.step(hot, [{"id": "s10.text.010", "gm": "."}])
+        hot["cursor"].update(at="0010-03-04T10:00:00")
+        news.step(hot, [{"id": "s10.text.010", "gm": "."}])
+        for n in range(11, 11 + news.HOLD + 2):   # плотная сцена: минуты, не часы
+            hot["cursor"].update(id=f"s10.text.{n:03}", at=f"0010-03-04T10:{n:02}:00")
+            news.step(hot, [{"id": f"s10.text.{n:03}", "gm": "Испытание продолжается."}])
+        self.assertEqual(hot["_will"]["news"]["missed"], 0)
+        self.assertIn("current", hot["_will"]["news"])
 
     def test_long_scene_lets_the_world_in(self):
         hot = _hot()

@@ -122,12 +122,18 @@ def _near(state_dir, context_text, pool):
     return {f"history:{rid}": NEAR_BONUS * (1 - rank / NEAR) for rank, (rid, _) in enumerate(found or [])}
 
 
-def _used(current, texts):
-    """Вплетено: в новом тексте ведущего — редкие слова или имена эха."""
+def _used(state, texts):
+    """Вплетено: в новом тексте ведущего — то, чего в сцене не было, когда эхо выбрали.
+
+    Общие со сценой слова эха (по ним его и нашли) ничего не доказывают: они и так
+    звучат в следующем ходе. Считаются только «свежие» основы — имена и редкие
+    слова давней нити, которых не было в контексте сцены.
+    """
+    fresh = state.get("fresh")
+    if not fresh:
+        return False
     words = {stem(w) for text in texts for w in tokens(text) if len(w) >= 4}
-    marks = [stem(w.strip().casefold()) for w in str(current.get("echoes") or "").split(",") if w.strip()]
-    marks += [stem(w.casefold()) for w in NAME.findall(" " + str(current.get("what") or ""))]
-    return sum(1 for m in set(marks) if m and m in words) >= 2
+    return any(m in words for m in fresh)
 
 
 def _present(hot):
@@ -157,7 +163,7 @@ def pick(state_dir, hot, texts=()):
     if state.get("at") == cursor:          # свёртка без нового хода: то же эхо
         return state.get("current")
     current = state.get("current")
-    if current and texts and _used(current, texts):
+    if current and texts and _used(state, texts):
         state["used_count"] = int(state.get("used_count") or 0) + 1
         current = state["current"] = None
     if current and state.get("last") is not None and now - state["last"] < HOLD:
@@ -203,6 +209,9 @@ def pick(state_dir, hot, texts=()):
         return None
     _, kind, key, source, text, shared = best
     state["last"], used[key] = now, now
+    names = {stem(w.casefold()) for w in NAME.findall(" " + text)} - COMMON
+    rare = {stem(w) for w in tokens(text) if len(w) >= 6}
+    state["fresh"] = sorted((names | rare) - set(context))[:12]
     state["offered"] = int(state.get("offered") or 0) + 1
     state["used"] = dict(sorted(used.items(), key=lambda kv: kv[1])[-60:])
     state["current"] = {"kind": kind, "from": source, "what": " ".join(str(text).split())[:220],

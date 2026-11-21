@@ -19,9 +19,11 @@ TURN = re.compile(r"s(\d{2})\.text\.(\d{3,4})")
 SESSION_SPAN = 120          # приблизительная длина сессии в ходах для сравнения через сессии
 
 NORMAL = {"thread_age": 40, "thing_age": 40, "knows": 12, "pact_events": 10, "intent_done": 3,
-          "dread_log": 3, "plot_closed": 8}
+          "dread_log": 3, "plot_closed": 8, "dormant": 120}
 TIGHT = {"thread_age": 15, "thing_age": 15, "knows": 6, "pact_events": 5, "intent_done": 1,
-         "dread_log": 2, "plot_closed": 4}
+         "dread_log": 2, "plot_closed": 4, "dormant": 60}
+# dormant: NPC не появлялся столько ходов и без живого плана — его история сжимается до последнего
+# исполненного плана и последней записи страха (полностью — в archive/aged, вернётся — восстановится по нужде).
 DONE_BRIEF = ("key", "at", "status", "outcome", "turn", "by")   # закрытый план: исход без всего плана
 
 
@@ -59,6 +61,7 @@ def load(state_dir, name):
     return rows
 
 
+CLOSED = ("fulfilled", "partial", "failed", "abandoned")
 ALWAYS = ("shiki", "nemera")   # Шики и та, что в нём, присутствуют всегда: их линии и вещи не стареют
 
 
@@ -154,12 +157,19 @@ def _pass(state_dir, hot, w):
 
     # Скрытое (GM_ONLY): истории планов и страха, исполненное за кадром, закрытый сюжет.
     plans, fears = [], []
+    now = _ordinal(turn) or 0
+    touched = ((hot.get("_will") or {}).get("touched") or {})
     for key, profile in (hot.get("_psyche") or {}).items():
         if not isinstance(profile, dict):
             continue
+        live_plan = any(isinstance(p, dict) and p.get("status") not in CLOSED
+                        for p in (profile.get("intent") or {}).values())
+        seen = _ordinal(touched.get(key))
+        dormant = (key not in present and not live_plan and seen is not None and now - seen >= w["dormant"])
+        keep_done, keep_log = (1, 1) if dormant else (w["intent_done"], w["dread_log"])
         done = profile.get("intent_done")
-        if isinstance(done, list) and len(done) > w["intent_done"]:
-            old, profile["intent_done"] = done[:-w["intent_done"]], done[-w["intent_done"]:]
+        if isinstance(done, list) and len(done) > keep_done:
+            old, profile["intent_done"] = done[:-keep_done], done[-keep_done:]
             plans += [{"key": f"{key}:{d.get('key')}", "npc": key, "value": d, "aged_at": turn} for d in old]
             # Ключи исполненного остаются: заготовка хранителя не воскресит закрытый план.
             profile["done_keys"] = list(dict.fromkeys((profile.get("done_keys") or []) +
@@ -170,8 +180,8 @@ def _pass(state_dir, hot, w):
                                       for i, d in enumerate(profile["intent_done"])]
         dread = profile.get("dread")
         log = dread.get("log") if isinstance(dread, dict) else None
-        if isinstance(log, list) and len(log) > w["dread_log"]:
-            old, dread["log"] = log[:-w["dread_log"]], log[-w["dread_log"]:]
+        if isinstance(log, list) and len(log) > keep_log:
+            old, dread["log"] = log[:-keep_log], log[-keep_log:]
             fears += [{"key": f"{key}:{i}", "npc": key, "value": v, "aged_at": turn} for i, v in enumerate(old)]
     _append(state_dir, "npc-plans.GM_ONLY.jsonl", plans)
     _append(state_dir, "npc-dread.GM_ONLY.jsonl", fears)
