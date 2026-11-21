@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.024",
+  "cursor": "s10.text.025",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-02T10:56:00",
-          "excerpt": "Хагуро, мне нравится сила. Причем если она интересная нравится ещё больше. Поэтому да на оба вопроса. <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 10:56</t",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.022"
         },
         {
           "at": "0010-03-02T10:57:00",
@@ -1367,23 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.024"
+        },
+        {
+          "at": "0010-03-04T06:38:00",
+          "excerpt": "о на мгновение показываются бледные чешуйчатые кольца. **Незнакомка:** — Меня можешь называть Итикисимахимэ. Хагуро опускает голову чуть ниже. **Хагуро:** — Он мой гость. **Итикисимахимэ:** — Ты это уже говорил. Она поворачивается к Хагуро. **Итикисимахимэ:** ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.025"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.024",
-          "state": "Физически сопровождает Шики у внешних ворот Рьючидо после двухдневного перехода; предупредил, что право прохода дальше от него не зависит."
+          "seen": "s10.text.025",
+          "state": "Снаружи ворот Рьючидо, не проводит гостя внутрь после передачи Итикисимахимэ."
         },
         {
           "role": "по подписи в сцене",
-          "state": "Физически сопровождает Шики у внешних ворот Рьючидо после двухдневного перехода; предупредил, что право прохода дальше от него не зависит."
+          "state": "Снаружи ворот Рьючидо, не проводит гостя внутрь после передачи Итикисимахимэ."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
         "recovery/HOT.json",
-        "s10.text.024"
+        "s10.text.025"
       ]
     },
     "kiri_bingo_book": {
@@ -2523,8 +2523,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.024"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -5042,6 +5041,23 @@
       "projections": [],
       "sources": [
         "s09.text.083"
+      ]
+    },
+    "place:4f48b82ff3fd3971": {
+      "aliases": [
+        "place:4f48b82ff3fd3971",
+        "Рьючидо, внешние врата Пещеры Драконьей Земли",
+        "внешние врата Пещеры Драконьей Земли"
+      ],
+      "facts": [],
+      "id": "place:4f48b82ff3fd3971",
+      "kind": "place",
+      "label": "Рьючидо, внешние врата Пещеры Драконьей Земли",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.025"
       ]
     },
     "place:4f922e209950b381": {
@@ -10335,7 +10351,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10343,13 +10359,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-02T10:56:00",
-          "excerpt": "Хагуро, мне нравится сила. Причем если она интересная нравится ещё больше. Поэтому да на оба вопроса. <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 10:56</t",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.022"
         },
         {
           "at": "0010-03-02T10:57:00",
@@ -10364,6 +10373,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.024"
+        },
+        {
+          "at": "0010-03-04T06:38:00",
+          "excerpt": "о на мгновение показываются бледные чешуйчатые кольца. **Незнакомка:** — Меня можешь называть Итикисимахимэ. Хагуро опускает голову чуть ниже. **Хагуро:** — Он мой гость. **Итикисимахимэ:** — Ты это уже говорил. Она поворачивается к Хагуро. **Итикисимахимэ:** ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.025"
         }
       ],
       "projections": [
@@ -10379,29 +10395,38 @@
     "ryuchido_gate_woman": {
       "aliases": [
         "ryuchido gate woman",
-        "ryuchido_gate_woman"
+        "Итикисимахимэ"
       ],
       "facts": [],
       "id": "ryuchido_gate_woman",
       "kind": "npc",
-      "label": "ryuchido_gate_woman",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Итикисимахимэ",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-03-04T06:38:00",
+          "excerpt": "ног из-под него на мгновение показываются бледные чешуйчатые кольца. **Незнакомка:** — Меня можешь называть Итикисимахимэ. Хагуро опускает голову чуть ниже. **Хагуро:** — Он мой гость. **Итикисимахимэ:** — Ты это уже говорил. Она поворачивается к Хагуро. **Ити",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.025"
+        }
+      ],
       "projections": [
         {
-          "seen": "s10.text.024",
-          "state": "На каменных ступенях у входа в Рьючидо; пока не назвала имени, ждёт от Шики представления."
+          "seen": "s10.text.025",
+          "state": "На ступенях внешних ворот перед Шики; открыла проход между вращающимися каменными окружностями и ждёт решения гостя."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
-        "s10.text.024"
+        "s10.text.025"
       ]
     },
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
-        "Реципиент № 6"
+        "Реципиент № 6",
+        "s17_recipient_6"
       ],
       "facts": [],
       "id": "s17_recipient_6",
@@ -10428,12 +10453,13 @@
         {
           "body": "Худощавый подросток, выраженная мышечная слабость, дыхательная недостаточность; исторически обнаружен в медицинском контейнере корпуса №3 на аппаратах и инфузии С-17.",
           "role": "Выживший участник экспериментов с С-17, мальчик примерно 16 лет",
-          "seen": "s10.text.003",
+          "seen": "s10.text.025",
           "state": "05:46 sedated teenage patient6 in ICU, bronchial epithelium remains intact in examined airways after Shiki targeted treatment, SpO2 about 96 on less FiO2, no returned bronchial casts; still S17 and ventilator-dependent with insufficient spontaneous respiratory"
         }
       ],
       "sources": [
-        "recovery/cast/s17_recipient_6.json"
+        "recovery/cast/s17_recipient_6.json",
+        "s10.text.025"
       ]
     },
     "sasuke": {
@@ -11686,5 +11712,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 772
+  "source_turns_indexed": 773
 }

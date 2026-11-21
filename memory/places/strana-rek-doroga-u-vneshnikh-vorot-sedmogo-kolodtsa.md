@@ -7,11 +7,11 @@
 - источник: s09.text.093
 
 ## Кто здесь говорил с Шики
-- Миура Томо · `npc/miura_tomo` — 1 ход(ов)
-- Мацуда · `npc/matsuda` — 1 ход(ов)
 - Хосина Кэн · `npc/hoshina_ken` — 1 ход(ов)
-- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
+- Мацуда · `npc/matsuda` — 1 ход(ов)
 - Дзиро · `npc/jiro_caravan_guard` — 1 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
+- Миура Томо · `npc/miura_tomo` — 1 ход(ов)
 
 ## Ходы
 - s09.text.093 0010-02-19T17:12:00

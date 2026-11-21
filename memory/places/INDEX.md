@@ -196,3 +196,4 @@
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
+- Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
