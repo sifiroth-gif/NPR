@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s09.text.101: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Уцуро (`npc/utsuro`), линия `nemera_symbiosis`, линия `reika_meeting`, поправки игрока: 1
+- s09.text.101: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Кирисава Сэйна (`npc/seina`), линия `nemera_symbiosis`, линия `reika_meeting`, поправки игрока: 1
 - s09.text.100: Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), Сано Гэндзи (`npc/signalshchik`), линия `nemera_symbiosis`
 - s09.text.099: Немера (Невыписанная) (`npc/nemera`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), линия `nemera_symbiosis`
 - s09.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `nemera_symbiosis`, поправки игрока: 1
