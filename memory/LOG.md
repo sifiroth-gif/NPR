@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s10.text.049: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 1
 - s10.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
 - s10.text.047: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой
@@ -60,4 +61,3 @@
 - s09.text.095: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), waterfall_trackers (`npc/waterfall_trackers`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `reika_meeting`
 - s09.text.094: Минаги Дзэн (`npc/minagi_zen`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `black_caravan`
 - s09.text.093: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), линия `black_caravan`
-- s09.text.092: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Сано Гэндзи (`npc/signalshchik`), линия `black_caravan`
