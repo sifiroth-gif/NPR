@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.097: Немера (Невыписанная) (`npc/nemera`)
 - s09.text.096: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `cash_1184`, вещь `contract_1184_docs`, линия `shiki_training`, линия `shiki_finances`
 - s09.text.095: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), waterfall_trackers (`npc/waterfall_trackers`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `reika_meeting`
 - s09.text.094: Минаги Дзэн (`npc/minagi_zen`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `black_caravan`
@@ -60,4 +61,3 @@
 - s09.text.040: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Курода Маю (`npc/kuroda_mayu`), вещь `kuroishi_ledger`
 - s09.text.039: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Медик у панели В-7 (`npc/medical_panel_operator`), Глава Кусагакуре (`npc/kusa_head`), вещь `kuroishi_ledger`, бой
 - s09.text.038: Кабуто Якуши (`npc/kabuto`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кидзима Суми (`npc/kuroishi_visitor`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`)
-- s09.text.037: Кабуто Якуши (`npc/kabuto`), Старший у повозки (`npc/kiri_transfer_senior`), kiri_transfer_watch (`npc/kiri_transfer_watch`), kiri_transfer_carrier (`npc/kiri_transfer_carrier`), Старший шиноби Звука (`npc/sound_kagen_senior`), план сюжета, бой
