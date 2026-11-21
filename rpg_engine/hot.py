@@ -609,6 +609,15 @@ def _dump(data):
     return json.dumps(data, ensure_ascii=False, indent=1) + "\n"
 
 
+def _dump_hot(data):
+    """Compact the live machine-state losslessly; full human-readable context is in wiki/archives.
+
+    The former indentation pushed a valid HOT above the 90 KB fold gate.
+    Preserve all values, ordering and Ukrainian/Russian text; no semantic trimming.
+    """
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
 def _append_log(state_dir, session, turns):
     path = Path(state_dir) / f"archive/session-{session:03}-turns.jsonl"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -892,7 +901,7 @@ def _write_state(state_dir, hot, before=("", "")):
     state_dir = Path(state_dir)
     public, secret = _split_state(hot)
     undo_text = _dump({"schema": "npr-undo/1", "access": secret["access"], "undo": secret.pop("undo")})
-    texts = (_dump(public), _dump(secret))
+    texts = (_dump_hot(public), _dump(secret))
     for path, text, old in zip((HOT_PATH, SECRET_PATH), texts, before):
         if text != old:
             (state_dir / path).parent.mkdir(parents=True, exist_ok=True)
