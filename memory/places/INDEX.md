@@ -33,6 +33,7 @@
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
 - Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
+- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 7 ход(ов), s10–s10
 - Кусагакуре, Крыльцо дома Мугами Шики · `places/kusagakure-kryltso-doma-mugami-shiki` · 6 ход(ов), s02–s02
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
@@ -40,7 +41,6 @@
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 6 ход(ов), s09–s10
-- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 6 ход(ов), s10–s10
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03

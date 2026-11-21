@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
 - s10.text.047: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой
 - s10.text.046: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой
 - s10.text.045: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`)
@@ -60,4 +61,3 @@
 - s09.text.093: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), линия `black_caravan`
 - s09.text.092: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Сано Гэндзи (`npc/signalshchik`), линия `black_caravan`
 - s09.text.091: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дежурный врач приёмного отделения (`npc/seventh_well_duty_physician`), линия `black_caravan`, поправки игрока: 1
-- s09.text.090: Мацуда (`npc/matsuda`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Миура Томо (`npc/miura_tomo`), Тамура Рэйка (`npc/tamura_reika`), линия `black_caravan`, поправки игрока: 1

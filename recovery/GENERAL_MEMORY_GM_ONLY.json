@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.047",
+  "cursor": "s10.text.048",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1389,7 +1389,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -1397,13 +1397,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-03-04T07:32:30",
-          "excerpt": "Внутри них Немера молчит несколько секунд — достаточно долго, чтобы Шики услышал скрежет огромной чешуи Хакудзя-сэннин по камню. *Немера: «Да».* Одно слово. Без колебаний. *«Я хочу знать, что происходит с живым, когда в него входит энергия самого мира. И что п",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.045"
         },
         {
           "at": "0010-03-04T07:33:00",
@@ -1418,6 +1411,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.047"
+        },
+        {
+          "at": "0010-03-04T07:35:00",
+          "excerpt": "size=\"xs\" weight=\"medium\">4 МАРТА 1287 ГОДА · 07:35</text> ### Рьючидо. Внутреннее святилище Голос Хакудзя-сэннин постепенно теряет значение. Голос Немеры — тоже. Шики не разрывает связь с ней. Он лишь перестаёт обращать внимание на слова, которые по этой связ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.048"
         }
       ],
       "projections": [
@@ -2567,14 +2567,14 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s10.text.047"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения"
+        "Дежурная врач охраняемого отделения",
+        "night_icu_physician"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -2587,7 +2587,7 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s10.text.005",
+          "seen": "s10.text.048",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
           "state": "Около 08:30 ссылалась на канцелярскую регистрацию, скрывая пробел маршрута копии.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -2595,7 +2595,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json"
+        "recovery/cast/night_icu_physician.json",
+        "s10.text.048"
       ]
     },
     "nori": {
@@ -7002,6 +7003,24 @@
       "projections": [],
       "sources": [
         "s03.text.037"
+      ]
+    },
+    "place:8bf2702ed9c6fbda": {
+      "aliases": [
+        "place:8bf2702ed9c6fbda",
+        "Рьючидо, внутреннее святилище, каменная окружность первого испытания",
+        "внутреннее святилище",
+        "каменная окружность первого испытания"
+      ],
+      "facts": [],
+      "id": "place:8bf2702ed9c6fbda",
+      "kind": "place",
+      "label": "Рьючидо, внутреннее святилище, каменная окружность первого испытания",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.048"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -12161,13 +12180,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s10.text.047",
-          "state": "Наблюдает первую стабильную ограниченную циркуляцию природной энергии у Шики; подтвердила прохождение первой проверки и открыла каменную окружность для следующего этапа."
+          "seen": "s10.text.048",
+          "state": "Уменьшила доступность природной энергии каменной окружностью; наблюдает Шики в глубокой неподвижности без возобновления окаменения."
         }
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
-        "s10.text.047"
+        "s10.text.048"
       ]
     }
   },
@@ -12272,5 +12291,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 795
+  "source_turns_indexed": 796
 }
