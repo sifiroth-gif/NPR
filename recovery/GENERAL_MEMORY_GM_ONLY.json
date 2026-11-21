@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.094",
+  "cursor": "s09.text.095",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2082,7 +2082,7 @@
       "id": "minagi_zen",
       "kind": "npc",
       "label": "Минаги Дзэн",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0010-02-12T16:29:00",
@@ -2090,13 +2090,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.072"
-        },
-        {
-          "at": "0010-02-12T16:33:00",
-          "excerpt": "сы и отказывался принимать пищу. Приёмный врач установил, что он жив и способен двигаться. Других подробностей в отчёте не было. **Минаги Дзэн:** — Заметьте, оба нападения были направлены именно на пленника. Ни денег, ни документов не взяли. И убить его не пыт",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.074"
         },
         {
           "at": "0010-02-14T05:26:00",
@@ -2111,26 +2104,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.094"
+        },
+        {
+          "at": "0010-02-20T18:29:00",
+          "excerpt": "рез семь дней. Страна Огня, Долина Завершения, голова Учихи Мадары. Я буду один. Костяшка остановилась. **Минаги Дзэн:** — Долина Завершения... Он посмотрел на Шики. На белые волосы, чёрную маску, открытые предплечья. Затем осторожно положил костяшку обратно. ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.095"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "seen": "s09.text.094",
-          "state": "Лично выплатил Шики 49,5 млн рё по №1184 наличными после проверки контрольного знака; новых комиссий не брал. Уведомил о ранее отправленном через западную почту предложении контакта женщине; адреса Шики не сообщил.",
+          "seen": "s09.text.095",
+          "state": "Подтвердил пересчёт: полная сумма 49,5 млн. По просьбе Шики отправил через западную почту сообщение для прежней посетительницы: 27.02.1287, Долина Завершения, голова Учихи Мадары, «Я буду один»; время не определено. Не раскрыл адреса Шики другим лицам.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         },
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "state": "Лично выплатил Шики 49,5 млн рё по №1184 наличными после проверки контрольного знака; новых комиссий не брал. Уведомил о ранее отправленном через западную почту предложении контакта женщине; адреса Шики не сообщил.",
+          "state": "Подтвердил пересчёт: полная сумма 49,5 млн. По просьбе Шики отправил через западную почту сообщение для прежней посетительницы: 27.02.1287, Долина Завершения, голова Учихи Мадары, «Я буду один»; время не определено. Не раскрыл адреса Шики другим лицам.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         }
       ],
       "sources": [
         "recovery/cast/minagi_zen.json",
         "recovery/HOT.json",
-        "s09.text.094"
+        "s09.text.095"
       ]
     },
     "minase": {
@@ -2495,7 +2495,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s09.text.084",
+          "seen": "s09.text.095",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Разрешённый чувственный мост сохранён; слышала рассказ Шики Саске о себе и знает, что тот теперь опасается запечатанной сущности; Нулевой Геном и тайная программа Учиха остаются для неё закрыты.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
@@ -2503,14 +2503,14 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s09.text.095"
       ]
     },
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения",
-        "night_icu_physician"
+        "Дежурная врач охраняемого отделения"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -2531,8 +2531,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json",
-        "s09.text.094"
+        "recovery/cast/night_icu_physician.json"
       ]
     },
     "nori": {
@@ -9004,6 +9003,25 @@
         "s01.text.019"
       ]
     },
+    "place:e5c06329829b6da7": {
+      "aliases": [
+        "place:e5c06329829b6da7",
+        "Страна Рек, Нижний Сиран, контора Минаги Дзэна",
+        "Страна Рек",
+        "Нижний Сиран",
+        "контора Минаги Дзэна"
+      ],
+      "facts": [],
+      "id": "place:e5c06329829b6da7",
+      "kind": "place",
+      "label": "Страна Рек, Нижний Сиран, контора Минаги Дзэна",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.095"
+      ]
+    },
     "place:e5c79e312d4dffac": {
       "aliases": [
         "place:e5c79e312d4dffac",
@@ -10846,7 +10864,8 @@
     "tamura_reika": {
       "aliases": [
         "tamura reika",
-        "Тамура Рэйка"
+        "Тамура Рэйка",
+        "tamura_reika"
       ],
       "facts": [],
       "id": "tamura_reika",
@@ -10886,14 +10905,15 @@
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s09.text.090",
+          "seen": "s09.text.095",
           "state": "10 февраля 1287 лично приходила к Дзэну под дорожной маскировкой, предложила 5 млн рё за местонахождение Шики и оставила знак для обратной связи. Брокер не сообщил адрес, а 12 февраля отдал знак Шики. Шики её личность из рассказа пока не установил.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
-        "recovery/cast/tamura_reika.json"
+        "recovery/cast/tamura_reika.json",
+        "s09.text.095"
       ]
     },
     "tetsu": {
@@ -10950,23 +10970,6 @@
       ],
       "sources": [
         "recovery/cast/tetsu.json"
-      ]
-    },
-    "thread:black_caravan": {
-      "aliases": [
-        "thread:black caravan",
-        "black caravan",
-        "black_caravan"
-      ],
-      "facts": [],
-      "id": "thread:black_caravan",
-      "kind": "thread",
-      "label": "black caravan",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s09.text.094"
       ]
     },
     "thread:black_market_new_contracts": {
@@ -11131,6 +11134,27 @@
       ],
       "sources": [
         "keeper@s08.text.090"
+      ]
+    },
+    "thread:reika_meeting": {
+      "aliases": [
+        "thread:reika meeting",
+        "reika meeting",
+        "reika_meeting"
+      ],
+      "facts": [],
+      "id": "thread:reika_meeting",
+      "kind": "thread",
+      "label": "reika meeting",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "20 февраля Шики предложил неизвестной ему по подтверждённому имени женщине, покупавшей сведения о нём через Минаги (внешняя личность — Тамура Рэйка), встречу 27 февраля 1287 в Стране Огня, Долине Завершения, на голове статуи Учихи Мадары; обещал прийти один; час не назван. Минаги отправил записку западной почтой в тот же день, ф"
+        }
+      ],
+      "sources": [
+        "s09.text.095"
       ]
     },
     "thread:shiki_confidentiality": {
@@ -11300,7 +11324,8 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске"
+        "Неизвестный пленный в маске",
+        "unknown_masked_prisoner"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -11310,11 +11335,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.074"
+          "seen": "s09.text.095"
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json"
+        "recovery/cast/unknown_masked_prisoner.json",
+        "s09.text.095"
       ]
     },
     "utsuro": {
@@ -11544,11 +11570,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.072"
+          "seen": "s09.text.095"
         }
       ],
       "sources": [
-        "recovery/cast/waterfall_trackers.json"
+        "recovery/cast/waterfall_trackers.json",
+        "s09.text.095"
       ]
     }
   },
@@ -11667,5 +11694,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 741
+  "source_turns_indexed": 742
 }
