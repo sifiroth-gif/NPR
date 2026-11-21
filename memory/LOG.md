@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.017: Тамура Рэйка (`npc/tamura_reika`), kiri_hunters (`npc/kiri_hunters`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`)
 - s10.text.016: Тамура Рэйка (`npc/tamura_reika`), Курода Маю (`npc/kuroda_mayu`), Старший у повозки (`npc/kiri_transfer_senior`)
 - s10.text.015: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Кидзима Суми (`npc/kuroishi_visitor`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`)
 - s10.text.014: Тамура Рэйка (`npc/tamura_reika`)
@@ -60,4 +61,3 @@
 - s09.text.062: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), линия `kimimaro_research`
 - s09.text.061: Саске Учиха (`npc/sasuke`)
 - s09.text.060: поправки игрока: 1
-- s09.text.059: Саске Учиха (`npc/sasuke`)
