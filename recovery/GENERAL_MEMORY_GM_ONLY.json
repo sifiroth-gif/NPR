@@ -1,8 +1,28 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.070",
+  "cursor": "s09.text.071",
   "entities": {
+    "akatsuki": {
+      "aliases": [
+        "akatsuki"
+      ],
+      "facts": [],
+      "id": "akatsuki",
+      "kind": "npc",
+      "label": "akatsuki",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.071"
+        }
+      ],
+      "sources": [
+        "recovery/cast/akatsuki.json",
+        "s09.text.071"
+      ]
+    },
     "akihiro": {
       "aliases": [
         "akihiro",
@@ -282,36 +302,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s09.text.070:0": {
+    "canon:s09.text.071:0": {
       "aliases": [
-        "canon:s09.text.070:0",
-        "s09.text.070: по прямому редизайну игрока ОТМЕНА «Мумё» и «Кёкай» обеих версий 068/069; вместо них глазные уникальные техники Магацухи (левый, Бётон, системный тератогенный рост жи"
+        "canon:s09.text.071:0",
+        "Прямая хронологическая поправка s09.text.071: Naruto Shippuden стартует в МАРТЕ 1287 возвращением Наруто в Коноху (рабочая точка 10.03.1287). ОКТЯБРЬ 1286 как начало — ОТМЕНЁН. Что"
       ],
       "facts": [],
-      "id": "canon:s09.text.070:0",
+      "id": "canon:s09.text.071:0",
       "kind": "canon",
-      "label": "s09.text.070: по прямому редизайну игрока ОТМЕНА «Мумё» и «Кёкай» обеих версий 068/069; вместо них глазные уникальные техники Магацухи (левый, Бётон, системный тератогенный рост жи",
+      "label": "Прямая хронологическая поправка s09.text.071: Naruto Shippuden стартует в МАРТЕ 1287 возвращением Наруто в Коноху (рабочая точка 10.03.1287). ОКТЯБРЬ 1286 как начало — ОТМЕНЁН. Что",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.070"
-      ]
-    },
-    "canon:s09.text.070:1": {
-      "aliases": [
-        "canon:s09.text.070:1",
-        "s09.text.070: Сусаноо Шики снова НЕПОЛНЫЙ, только частичный скелет с рёбрами, руками, головой/пластинами при усилении; полная бронированная форма 12–18 м s09.text.069 ОТМЕНЕНА. Вне"
-      ],
-      "facts": [],
-      "id": "canon:s09.text.070:1",
-      "kind": "canon",
-      "label": "s09.text.070: Сусаноо Шики снова НЕПОЛНЫЙ, только частичный скелет с рёбрами, руками, головой/пластинами при усилении; полная бронированная форма 12–18 м s09.text.069 ОТМЕНЕНА. Вне",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s09.text.070"
+        "s09.text.071"
       ]
     },
     "captive_guard": {
@@ -362,6 +366,31 @@
         "recovery/cast/clinic_assistant.json"
       ]
     },
+    "clock:naruto_returns_konoha": {
+      "aliases": [
+        "clock:naruto returns konoha",
+        "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto",
+        "naruto_returns_konoha",
+        "naruto returns konoha"
+      ],
+      "facts": [],
+      "id": "clock:naruto_returns_konoha",
+      "kind": "clock",
+      "label": "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "due": "0010-03-10T09:00:00",
+          "owner": "Наруто Узумаки и Джирайя",
+          "what": "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto"
+        }
+      ],
+      "sources": [
+        "recovery/GM_ONLY.json",
+        "s09.text.071"
+      ]
+    },
     "courier_unknown": {
       "aliases": [
         "courier unknown",
@@ -387,6 +416,26 @@
       ],
       "sources": [
         "recovery/cast/courier_unknown.json"
+      ]
+    },
+    "danzo": {
+      "aliases": [
+        "danzo"
+      ],
+      "facts": [],
+      "id": "danzo",
+      "kind": "npc",
+      "label": "danzo",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.071"
+        }
+      ],
+      "sources": [
+        "recovery/cast/danzo.json",
+        "s09.text.071"
       ]
     },
     "forehead_protector": {
@@ -745,6 +794,26 @@
         "s09.text.031"
       ]
     },
+    "jiraiya": {
+      "aliases": [
+        "jiraiya"
+      ],
+      "facts": [],
+      "id": "jiraiya",
+      "kind": "npc",
+      "label": "jiraiya",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.071"
+        }
+      ],
+      "sources": [
+        "recovery/cast/jiraiya.json",
+        "s09.text.071"
+      ]
+    },
     "kabuto": {
       "aliases": [
         "kabuto",
@@ -787,12 +856,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.066",
+          "seen": "s09.text.071",
           "state": "Передал Шики три копии частных объявлений с контактами; оставил необязательный канал связи на подоконнике. Напомнил о награде Киригакуре, не сопровождал Шики."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "s09.text.071"
       ]
     },
     "kabuto_private_bounty_ledger": {
@@ -2421,7 +2491,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 49,
+      "mention_count": 50,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2429,13 +2499,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0007-12-20T19:06:00",
-          "excerpt": "В без двенадцати минут полудня Кабуто постучал в дверь Шики. **Кабуто Якуши:** — Испытуемый подготовлен. Орочимару-сама ждёт нас. *** ### Последний опыт **12:08. Операционная № 2.** Мужчина на операционном столе был в сознании. Молодой шиноби с выбритым затылк",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.062"
         },
         {
           "at": "0007-12-20T19:53:00",
@@ -2450,6 +2513,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.068"
+        },
+        {
+          "at": "0010-02-10T21:17:00",
+          "excerpt": "жище, контракты и способности остаются в силе. Похищение Гаары, события моста Тэнти, конфликт Саске с Орочимару и последующие канонические линии также сдвигаются, чтобы сохранить последовательность событий. Мир продолжает действовать самостоятельно. Поправка х",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.071"
         }
       ],
       "projections": [
@@ -2460,6 +2530,26 @@
       ],
       "sources": [
         "recovery/cast/orochimaru.json"
+      ]
+    },
+    "pain": {
+      "aliases": [
+        "pain"
+      ],
+      "facts": [],
+      "id": "pain",
+      "kind": "npc",
+      "label": "pain",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.071"
+        }
+      ],
+      "sources": [
+        "recovery/cast/pain.json",
+        "s09.text.071"
       ]
     },
     "patient_airway": {
@@ -5276,9 +5366,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.070",
+        "s09.text.071",
         "s09.text.068",
-        "s09.text.069"
+        "s09.text.069",
+        "s09.text.070"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -9672,12 +9763,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.064",
+          "seen": "s09.text.071",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json"
+        "recovery/cast/sasuke.json",
+        "s09.text.071"
       ]
     },
     "sayu": {
@@ -10793,8 +10885,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/utsuro.json",
-        "s09.text.070"
+        "recovery/cast/utsuro.json"
       ]
     },
     "v7_crossbowman": {
@@ -10972,8 +11063,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/waterfall_trackers.json",
-        "s09.text.070"
+        "recovery/cast/waterfall_trackers.json"
       ]
     }
   },
@@ -11176,5 +11266,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 719
+  "source_turns_indexed": 720
 }
