@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.028: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хаясэ Нори (`npc/nori`)
 - s10.text.027: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`)
 - s10.text.026: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`)
 - s10.text.025: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), Реципиент № 6 (`npc/s17_recipient_6`)
@@ -59,4 +60,3 @@
 - s09.text.073: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `inquiry_contact_token`, линия `minagi_commission`, линия `unknown_buyer_mask`
 - s09.text.072: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `black_market_new_contracts`, линия `unknown_buyer_mask`
 - s09.text.071: akatsuki (`npc/akatsuki`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), jiraiya (`npc/jiraiya`), pain (`npc/pain`), Данзо Шимура (`npc/danzo`), план сюжета, поправки игрока: 1
-- s09.text.070: waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), поправки игрока: 2

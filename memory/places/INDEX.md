@@ -94,6 +94,7 @@
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
+- Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -198,4 +199,3 @@
 - Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
 - Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
 - Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
-- Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 1 ход(ов), s10–s10
