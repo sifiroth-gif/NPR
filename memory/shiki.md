@@ -132,5 +132,8 @@
 - manifest_cost_per_minute: 1
 - range_meters: 5
 
-## Поправки игрока: 139
+## Age
+- 23
+
+## Поправки игрока: 140
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
