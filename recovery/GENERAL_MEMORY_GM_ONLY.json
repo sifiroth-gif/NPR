@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.026",
+  "cursor": "s10.text.027",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T06:37:00",
-          "excerpt": "#ремонт и снова вызов Хагуро что бы отправиться в пещеру# <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 11:04</text> ### Страна Рек. «Чёрный створ» Неисправность обнаруживается",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.024"
         },
         {
           "at": "0010-03-04T06:38:00",
@@ -1367,23 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.026"
+        },
+        {
+          "at": "0010-03-04T06:40:00",
+          "excerpt": "ворота закрываются с тяжёлым глухим стуком. Последнее, что видно через сужающуюся щель, — жёлтый глаз Хагуро. Итикисимахимэ идёт впереди. Её шаги почти неслышны. Иногда подол платья касается пола, и тогда раздаётся негромкое шуршание чешуи. В зале накрыты низк",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.027"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.026",
-          "state": "Остаётся снаружи ворот Рьючидо; гостя не сопровождает внутрь."
+          "seen": "s10.text.027",
+          "state": "Остался снаружи закрывшихся ворот первого испытания Рьючидо; больше не видит Шики непосредственно."
         },
         {
           "role": "по подписи в сцене",
-          "state": "Остаётся снаружи ворот Рьючидо; гостя не сопровождает внутрь."
+          "state": "Остался снаружи закрывшихся ворот первого испытания Рьючидо; больше не видит Шики непосредственно."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
         "recovery/HOT.json",
-        "s10.text.026"
+        "s10.text.027"
       ]
     },
     "kiri_bingo_book": {
@@ -3156,6 +3156,23 @@
       "projections": [],
       "sources": [
         "s01.text.017"
+      ]
+    },
+    "place:084f8691d6c5021d": {
+      "aliases": [
+        "place:084f8691d6c5021d",
+        "Рьючидо, зал первого испытания",
+        "зал первого испытания"
+      ],
+      "facts": [],
+      "id": "place:084f8691d6c5021d",
+      "kind": "place",
+      "label": "Рьючидо, зал первого испытания",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.027"
       ]
     },
     "place:0993c1470d2b9dbd": {
@@ -10362,14 +10379,13 @@
     "ryuchido_first_serpent": {
       "aliases": [
         "ryuchido first serpent",
-        "Хагуро",
-        "ryuchido_first_serpent"
+        "Хагуро"
       ],
       "facts": [],
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10377,13 +10393,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T06:37:00",
-          "excerpt": "#ремонт и снова вызов Хагуро что бы отправиться в пещеру# <text color=\"secondary\" size=\"xs\" weight=\"medium\">2 МАРТА 1287 ГОДА · 11:04</text> ### Страна Рек. «Чёрный створ» Неисправность обнаруживается",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.024"
         },
         {
           "at": "0010-03-04T06:38:00",
@@ -10398,6 +10407,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.026"
+        },
+        {
+          "at": "0010-03-04T06:40:00",
+          "excerpt": "ворота закрываются с тяжёлым глухим стуком. Последнее, что видно через сужающуюся щель, — жёлтый глаз Хагуро. Итикисимахимэ идёт впереди. Её шаги почти неслышны. Иногда подол платья касается пола, и тогда раздаётся негромкое шуршание чешуи. В зале накрыты низк",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.027"
         }
       ],
       "projections": [
@@ -10411,8 +10427,7 @@
       ],
       "sources": [
         "recovery/cast/ryuchido_first_serpent.json",
-        "recovery/HOT.json",
-        "s10.text.026"
+        "recovery/HOT.json"
       ]
     },
     "ryuchido_gate_woman": {
@@ -10425,7 +10440,7 @@
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -10440,21 +10455,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.026"
+        },
+        {
+          "at": "0010-03-04T06:40:00",
+          "excerpt": "закрываются с тяжёлым глухим стуком. Последнее, что видно через сужающуюся щель, — жёлтый глаз Хагуро. Итикисимахимэ идёт впереди. Её шаги почти неслышны. Иногда подол платья касается пола, и тогда раздаётся негромкое шуршание чешуи. В зале накрыты низкие стол",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.027"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.026",
-          "state": "У порога зала первого испытания, пригласила Шики внутрь и разрешила обращаться «Химэ-сама». Не раскрыла детали испытания."
+          "seen": "s10.text.027",
+          "state": "В облике Итикисимахимэ сидит у центрального столика первого испытания, ест из общего блюда, предложила гостю трапезу, не раскрывая механизма испытания."
         },
         {
-          "state": "У порога зала первого испытания, пригласила Шики внутрь и разрешила обращаться «Химэ-сама». Не раскрыла детали испытания."
+          "state": "В облике Итикисимахимэ сидит у центрального столика первого испытания, ест из общего блюда, предложила гостю трапезу, не раскрывая механизма испытания."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
         "recovery/HOT.json",
-        "s10.text.026"
+        "s10.text.027"
       ]
     },
     "s17_recipient_6": {
@@ -11745,5 +11767,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 774
+  "source_turns_indexed": 775
 }
