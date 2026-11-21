@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.029: Итикисимахимэ (`npc/ryuchido_gate_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.028: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хаясэ Нори (`npc/nori`)
 - s10.text.027: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`)
 - s10.text.026: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`)
@@ -59,4 +60,3 @@
 - s09.text.074: Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `black_caravan`, линия `tamura_inquiry`
 - s09.text.073: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `inquiry_contact_token`, линия `minagi_commission`, линия `unknown_buyer_mask`
 - s09.text.072: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `black_market_new_contracts`, линия `unknown_buyer_mask`
-- s09.text.071: akatsuki (`npc/akatsuki`), Кабуто Якуши (`npc/kabuto`), Саске Учиха (`npc/sasuke`), jiraiya (`npc/jiraiya`), pain (`npc/pain`), Данзо Шимура (`npc/danzo`), план сюжета, поправки игрока: 1
