@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.001: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`)
 - s09.text.102: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Уцуро (`npc/utsuro`), линия `reika_meeting`
 - s09.text.101: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Кирисава Сэйна (`npc/seina`), линия `nemera_symbiosis`, линия `reika_meeting`, поправки игрока: 1
 - s09.text.100: Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), Сано Гэндзи (`npc/signalshchik`), линия `nemera_symbiosis`
@@ -60,4 +61,3 @@
 - s09.text.046: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `ryuchido_summoning_scroll`
 - s09.text.045: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`)
 - s09.text.044: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Разведчик Звука (`npc/razvedchik_zvuka`), Кадзиура Сатору (`npc/kadziura_satoru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `medical_case_m12`, вещь `kuroishi_ledger`, план сюжета
-- s09.text.043: Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Сиодзаки Масааки (`npc/shiozaki_masaaki`), Аракава Дзюн (`npc/arakawa`), Мугами Акихиро (`npc/akihiro`), вещь `medical_case_m12`, вещь `kijima_route_book`

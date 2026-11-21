@@ -1,5 +1,5 @@
 {
-  "documents": 2452,
+  "documents": 2453,
   "generic_probe_count": 9,
   "generic_probe_hit_at_10": 9,
   "groups": 11,
@@ -19,58 +19,58 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 135.17,
+  "load_ms": 131.42,
   "probes": [
     {
-      "query_ms": 118.82,
+      "query_ms": 117.66,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 117.49,
+      "query_ms": 116.95,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 117.95,
+      "query_ms": 117.49,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 135.55,
+      "query_ms": 134.21,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 146.62,
+      "query_ms": 141.27,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 116.89,
+      "query_ms": 116.3,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 117.62,
+      "query_ms": 117.6,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 127.06,
+      "query_ms": 125.96,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 124.54,
+      "query_ms": 122.56,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
@@ -78,7 +78,7 @@
   ],
   "schema": "npr-recall-audit/1",
   "shards": 77,
-  "source_coverage_ok": true,
+  "source_coverage_ok": false,
   "source_sessions": [
     1,
     2,
@@ -88,9 +88,12 @@
     6,
     7,
     8,
-    9
+    9,
+    10
   ],
-  "unindexed_source_sessions": [],
-  "warm_query_median_ms": 118.82,
-  "warm_query_p95_ms": 146.62
+  "unindexed_source_sessions": [
+    10
+  ],
+  "warm_query_median_ms": 117.66,
+  "warm_query_p95_ms": 141.27
 }
