@@ -1,8 +1,8 @@
 {
-  "documents": 2513,
+  "documents": 2515,
   "generic_probe_count": 10,
   "generic_probe_hit_at_10": 10,
-  "groups": 12,
+  "groups": 11,
   "indexed_sessions": [
     1,
     2,
@@ -20,71 +20,71 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 135.39,
+  "load_ms": 102.0,
   "probes": [
     {
-      "query_ms": 119.52,
+      "query_ms": 88.75,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 120.1,
+      "query_ms": 88.16,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 118.71,
+      "query_ms": 87.85,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 135.92,
+      "query_ms": 100.44,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 145.4,
+      "query_ms": 108.06,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 118.44,
+      "query_ms": 87.63,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 121.78,
+      "query_ms": 88.46,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 130.51,
+      "query_ms": 95.02,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 126.26,
+      "query_ms": 94.23,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 121.45,
+      "query_ms": 88.89,
       "query_terms": 1,
       "session": 10,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 80,
+  "shards": 79,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -99,6 +99,6 @@
     10
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 121.62,
-  "warm_query_p95_ms": 145.4
+  "warm_query_median_ms": 88.82,
+  "warm_query_p95_ms": 108.06
 }

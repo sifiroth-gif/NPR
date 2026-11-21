@@ -92,22 +92,12 @@
    "kind": "fight",
    "text": "Бросок «Устойчивая клеточная адаптация к обычным биологическим и химическим ядам под руководством Белой Змеи»: записан исход «успех», по кости 43 и порогу 72 — «чисто». Результат не смягчается и не перебрасывается.",
    "turn": "s10.text.057"
-  },
-  {
-   "kind": "player",
-   "text": "реплика игрока вошла в сцену на 44%: слова Шики переносятся в прозу полностью и в заданном порядке",
-   "turn": "s10.text.057"
-  },
-  {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 5743 знаков (норма до 4000); крупнее всего: cast 2033, canon+ 1260, scene 682.",
-   "turn": "s10.text.057"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s10.text.057",
+  "cursor": "s10.text.058",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -226,11 +216,11 @@
  "cursor": {
   "at": "0010-03-04T08:23:00",
   "date": "Четверг, 4 марта 1287 года",
-  "id": "s10.text.057",
+  "id": "s10.text.058",
   "place": "Рьючидо, внутреннее святилище, бассейн змеиных ядов",
   "time": "08:23"
  },
- "digest": "f28d93eb576f025f482f43c80d8114065dcd0685edfdac7a12c4e55336b00ee2",
+ "digest": "e0f56bf8516ca4e10484f051dbc1fb0452adb273fd8743458eb607491fe17f1c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -269,18 +259,18 @@
    "value": 84.73
   },
   "dice": [
-   74,
-   14,
-   85,
-   91,
-   48,
-   38,
+   60,
+   21,
+   19,
+   65,
+   98,
+   12,
+   64,
+   32,
+   79,
+   19,
    76,
-   88,
-   47,
-   9,
-   87,
-   0
+   33
   ],
   "injuries": {
    "shiki": [
@@ -640,7 +630,7 @@
     },
     {
      "at": "0010-03-04T08:23:00",
-     "sha256": "b43f89e864d7f7064daecbc97317b07b1f9ed28a8201679ddc5bfb58704d5395",
+     "sha256": "235130bb4639d76fcc1ec45a985c7417e48c606fe46a6c91c3d4f80576e28a1c",
      "source": "archive/session-010-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s10.text.057"
@@ -659,7 +649,7 @@
     "memory_file": "archive/npc-memory/white_snake_sage.json",
     "memory_total": 14,
     "name": "Белая Змея / Хакудзя-сэннин",
-    "seen": "s10.text.057",
+    "seen": "s10.text.058",
     "state": "Начала обучение Шики змеиному ядовитому сендзюцу у бассейна во внутреннем святилище. Показала две техники, проведённые испытания обычными ядами подтвердили иммунитет. Не знает Нулевого Генома и способа клеточного закреп…",
     "status": "present_profile",
     "tier": "developed"
@@ -703,8 +693,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "9f0e6b3d6b45bbad3a9ff723015613fdaed223e1",
-  "turn": "s10.text.057"
+  "sha": "4f1bbf12462872ba4703a211fad414d779fc77ac",
+  "turn": "s10.text.058"
  },
  "wiki": {
   "index": "memory/INDEX.md",
