@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.078: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Осава Гэнсэй (`npc/osawa_gensei`), линия `ch09_order_chain`, план сюжета
 - s09.text.077: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), линия `ch09_order_chain`, план сюжета
 - s09.text.076: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Нагаэ Рокуто (`npc/nagae_rokuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `black_caravan_manifest`, линия `v7`, план сюжета
 - s09.text.075: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `black_caravan_contract`, линия `black_caravan`, линия `v7`, план сюжета, поправки игрока: 1
@@ -61,4 +62,3 @@
 - s09.text.021: Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s09.text.020: Хаясэ Нори (`npc/nori`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), вещь `possible_sasuke_hair`
 - s09.text.019: Немера (Невыписанная) (`npc/nemera`), Реципиент № 6 (`npc/s17_recipient_6`), Орочимару (`npc/orochimaru`), вещь `possible_sasuke_hair`
-- s09.text.018: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kimimaro_bone_sample`
