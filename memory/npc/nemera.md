@@ -1,7 +1,7 @@
 # Немера (Невыписанная) · `nemera`
 
 псевдонимы: Немера, Невыписанная
-вид: npc · впервые: s04.text.037 · последний раз: s10.text.047 · вне сцены
+вид: npc · впервые: s04.text.037 · последний раз: s10.text.049 · вне сцены
 
 ## Постоянное
 - сделка 04.10.1283: за 60 секунд единоличного восприятия всех чувств Шики дала формулу Шитона «Посмертная матрица» (s08.text.076) [s08.text.076]
@@ -15,7 +15,7 @@
 - голос: Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь». [recovery/cast/nemera.json]
 
 ## Сейчас
-- положение: Семь запоров целы, своего канала не открывала; по общему сенсорному каналу почувствовала, что природная энергия теперь проходит мимо запоров без нарастающего давления. [s10.text.047]
+- положение: Отдельная воля, пассивно наблюдает первое включение Режима мудреца через общий сенсорный канал; не передавала чакру и не нарушала семь запоров, в глубине её внутреннего мира прошла слабая вибрация. [s10.text.049]
 
 ## Знает (последние 8 из 8)
 - 06:18 Shiki mentally asks Nemera for her opinion of humans after he experienced revulsion and records dispute. Through his pre-existing one-way granted sensory access she has heard staff openly insult and avoid him, seen Kadziura secure his blood, knows duty physician openly admitted sending medical note and he warned against touching skin; she does NOT know Shiki's undisclosed personal thoughts or Kage's investigation. She has now seen his wrapping and costume via sensory window. [s08.text.027]

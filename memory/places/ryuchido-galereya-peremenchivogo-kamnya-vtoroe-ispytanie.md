@@ -8,8 +8,8 @@
 
 ## Кто здесь говорил с Шики
 - Тагорихимэ · `npc/tagorihime` — 1 ход(ов)
-- Кидзима Суми · `npc/kuroishi_visitor` — 1 ход(ов)
 - Итикисимахимэ · `npc/ryuchido_gate_woman` — 1 ход(ов)
+- Кидзима Суми · `npc/kuroishi_visitor` — 1 ход(ов)
 
 ## Ходы
 - s10.text.031 0010-03-04T07:12:00

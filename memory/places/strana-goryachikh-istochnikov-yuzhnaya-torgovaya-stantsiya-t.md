@@ -7,8 +7,8 @@
 - источник: s09.text.067
 
 ## Кто здесь говорил с Шики
-- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
 - Наёмник у шахты · `npc/naemnik_u_shakhty` — 1 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
 
 ## Ходы
 - s09.text.067 0007-12-25T11:32:00
