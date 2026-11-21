@@ -187,3 +187,4 @@
 - Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
 - Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
+- Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 1 ход(ов), s09–s09
