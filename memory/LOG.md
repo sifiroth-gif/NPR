@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.022: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.021: Хагуро (`npc/khaguro`)
 - s10.text.020: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Уцуро (`npc/utsuro`)
 - s10.text.018: Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Кэйдзи (`npc/keiji`)
@@ -59,4 +60,3 @@
 - s09.text.067: Немера (Невыписанная) (`npc/nemera`), Нагаэ Рокуто (`npc/nagae_rokuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `rokuto_head`, вещь `rokuto_bounty_payment`, вещь `bounty_notices`, линия `nagae_rokuto_contract`
 - s09.text.066: Нагаэ Рокуто (`npc/nagae_rokuto`), Орочимару (`npc/orochimaru`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `rokuto_head`, линия `nagae_rokuto_contract`, бой, поправки игрока: 1
 - s09.text.065: Нагаэ Рокуто (`npc/nagae_rokuto`), Кабуто Якуши (`npc/kabuto`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), бой
-- s09.text.064: Нагаэ Рокуто (`npc/nagae_rokuto`), линия `nagae_rokuto_contract`, бой

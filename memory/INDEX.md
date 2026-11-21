@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.021`
+# Карта мира NPR · на ходе `s10.text.022`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -181,7 +181,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (13)
+## Линии (12)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — По полностью прочитанным документам №1184 сеть С-17 продолжила работу… · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -191,13 +191,12 @@
 - `case19T` — Личная закрытая проверка Кагэ идёт. Нори официально отстранена, журна… · `threads/case19T`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
-- `reika_meeting` — 27.02 15:42 Рэйка объяснила, что добивается не только признания Шики,… · `threads/reika_meeting`
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
 
-## Давние линии (15, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/unknown_buyer_mask`
+## Давние линии (16, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/unknown_buyer_mask`
 
 ## Вещи (39)
 - `black_caravan_contract` · `items/black_caravan_contract`

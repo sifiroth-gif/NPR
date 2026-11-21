@@ -4,8 +4,8 @@
 
 ## Кто здесь говорил с Шики
 - Дзиро · `npc/jiro_caravan_guard` — 1 ход(ов)
-- Фурукава Кёдзи · `npc/caravan_prisoner` — 1 ход(ов)
 - Хосина Кэн · `npc/hoshina_ken` — 1 ход(ов)
+- Фурукава Кёдзи · `npc/caravan_prisoner` — 1 ход(ов)
 
 ## Ходы
 - s09.text.080 0010-02-14T07:04:00
