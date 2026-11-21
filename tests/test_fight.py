@@ -91,12 +91,12 @@ class FightTest(unittest.TestCase):
         h = state()
         notes = play(h, 45, {"fight": {"start": "x", "bursts": 5}})[1]
         self.assertTrue(any("5 жёстких рывков" in n for n in notes))
-        self.assertEqual(h["shiki"]["chakra"]["value"], 80 + 6 * (2 / 60) - 15)
+        self.assertEqual(h["shiki"]["chakra"]["value"], round(80 + 6 * (2 / 60) - 5 * 0.75, 2))
 
     def test_chakra_spend_collapse_lockout_and_regen(self):
         h = state()
         play(h, 45, {"chakra": {"spend": [{"what": "Бётон: Заражение", "rank": "B"},
-                                          {"what": "регенерация", "cost": 70}]}}, at="0006-10-01T07:10:00")
+                                          {"what": "регенерация", "cost": 350}]}}, at="0006-10-01T07:10:00")
         self.assertEqual(h["shiki"]["chakra"]["value"], 0.0)
         notes = play(h, 46, {"chakra": {"collapse": True}}, at="0006-10-01T07:10:00")[1]
         self.assertEqual(notes, [])
@@ -110,7 +110,7 @@ class FightTest(unittest.TestCase):
 
     def test_spending_past_zero_asks_for_collapse(self):
         h = state()
-        h["shiki"]["chakra"]["value"] = 10
+        h["shiki"]["chakra"]["value"] = 3
         notes = play(h, 45, {"chakra": {"spend": [{"what": "Плачущие Бубоны", "rank": "B"}]}},
                      at="0006-10-01T07:10:00")[1]
         self.assertTrue(any("исчерпана" in n for n in notes))
