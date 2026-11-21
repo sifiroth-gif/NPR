@@ -60,4 +60,3 @@
 - s09.text.064: Нагаэ Рокуто (`npc/nagae_rokuto`), линия `nagae_rokuto_contract`, бой
 - s09.text.063: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `private_bounties`, линия `kagen_residency`
 - s09.text.062: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), линия `kimimaro_research`
-- s09.text.061: Саске Учиха (`npc/sasuke`)
