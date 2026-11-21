@@ -1256,17 +1256,13 @@ def fold(state_dir):
     memory_quality.save(state_dir, hot, memory_index)
     brief = live_scene.build_for_state(hot, accepted, state_dir)
     live_scene.write(brief_path, brief)
-    near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
-                        secret_bytes=len(texts[1].encode("utf-8")))
-    nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
-                   echoed=echoed, near=near)
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
-    heuristic = None
+    heuristic = meaning_report = None
     if (state_dir / "archive").is_dir():
         from . import heuristic_history, recall_audit
-        heuristic = heuristic_history.save(
-            Path(__file__).resolve().parents[1], state_dir)
+        engine_root = Path(__file__).resolve().parents[1]
+        heuristic = heuristic_history.save(engine_root, state_dir)
         # Validate coverage of every existing session, source-shard checksums,
         # and warm search timings in the same ordinary gameplay fold.
         report = recall_audit.audit(state_dir)
@@ -1274,12 +1270,35 @@ def fold(state_dir):
         stats_path.write_text(
             json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n",
             encoding="utf-8")
+        meaning_report = _recall_layer(engine_root, state_dir, hot)
+    from . import recall_request
+    near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
+                        secret_bytes=len(texts[1].encode("utf-8")))
+    nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
+                   echoed=echoed, near=near, recall=recall_request.view(state_dir, hot))
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
-            "heuristic_history": heuristic, "wiki": wiki_report,
+            "heuristic_history": heuristic, "meaning": meaning_report, "wiki": wiki_report,
             "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
+
+
+def _recall_layer(engine_root, state_dir, hot):
+    """Смысловые векторы и ответ на запрос памяти ведущего; сбой не останавливает свёртку."""
+    from . import meaning, recall_request
+    report = {}
+    try:
+        report = meaning.update(engine_root, state_dir)
+    except Exception as exc:  # производный слой
+        report = {"status": "error", "error": f"{type(exc).__name__}: {exc}"}
+    try:
+        answered = recall_request.handle(engine_root, state_dir, hot)
+        if answered is not None:
+            report["recall"] = answered.get("error") or answered.get("mode")
+    except Exception as exc:
+        report["recall"] = f"error: {type(exc).__name__}: {exc}"
+    return report
 
 
 def _update_wiki(state_dir, hot, applied):

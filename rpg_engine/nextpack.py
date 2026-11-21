@@ -24,7 +24,9 @@ RULE = ("Это всё, что нужно прочитать перед обыч
         "открывай только для NPC, впервые входящего в сцену в этом чате, или по вопросу о прошлом; "
         "прочитанное в этом чате не перечитывай. cursor не равен твоему последнему ходу — свёртка "
         "отстала: открой CHECKS.json. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
-        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: вплети через деталь, документ, человека или слух, если ложится естественно.")
+        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: вплети через деталь, документ, человека или слух, если ложится естественно. "
+        "Нужно давнее прошлое — запиши recovery/RECALL.json {\"q\": [\"вопрос\"]}: поиск по словам и смыслу по всем "
+        "сессиям, ответ — NEXT.recall к следующему ходу.")
 
 
 def _short(text, limit=FIELD):
@@ -136,7 +138,8 @@ def must(hot, always_present=(), entries=None):
     return out[:3]
 
 
-def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None):
+def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None,
+          recall=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -162,6 +165,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                              "events": happened}
     if echoed:
         pack["echo"] = echoed
+    if recall:
+        pack["recall"] = recall
     if near:
         pack["limits"] = near
     # Замечания к прошлым ходам ведущий уже видел: в пакет — к последнему ходу и о текущем состоянии.
@@ -215,6 +220,9 @@ def _fit(pack):
         pack["due"].pop()
     while _size(pack) > HARD_BYTES and len(pack.get("checks") or []) > 3:
         pack["checks"].pop(0)
+    for answer in (pack.get("recall") or {}).get("answers") or []:   # полный ответ — в файле
+        if _size(pack) > HARD_BYTES and len(answer.get("top") or []) > 1:
+            answer["top"] = answer["top"][:1]
     if _size(pack) > HARD_BYTES:   # сам пакет за пределом и ужать нечего — сказать игроку
         from . import limits
         item = {"key": "next", "what": f"пакет хода NEXT (байт): {_size(pack)} из {HARD_BYTES}",
@@ -236,9 +244,9 @@ def _write(state_dir, pack):
     return True
 
 
-def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None):
+def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None, recall=None):
     pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot),
-                 happened=happened, echoed=echoed, near=near)
+                 happened=happened, echoed=echoed, near=near, recall=recall)
     _write(state_dir, pack)
     return pack
 

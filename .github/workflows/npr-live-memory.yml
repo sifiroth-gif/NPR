@@ -4,6 +4,8 @@ name: Shiki live memory fold
 # Этот процесс сворачивает его в recovery/HOT.json, recovery/GM_ONLY.json,
 # дословный журнал archive/session-NNN-turns.jsonl, хронику и карточки NPC.
 # Коммиты, сделанные GITHUB_TOKEN, новых запусков не вызывают: петли нет.
+# Смысловой слой памяти (rpg_engine/meaning.py): модель e5-small закреплённой
+# ревизии кешируется; без неё поиск идёт только по словам.
 
 on:
   push:
@@ -17,7 +19,15 @@ on:
       - "recovery/ZERO.json"
       - "recovery/SESSION_CLOSE.json"
       - "recovery/MEMORY_TRIM.json"
+      - "recovery/RECALL.json"
   workflow_dispatch:
+    inputs:
+      meaning_budget:
+        description: "Сколько кусков истории закодировать по смыслу за запуск (полная сборка — 100000)"
+        default: "48"
+      probe:
+        description: "Пробный вопрос к памяти: ответ только в журнал запуска"
+        default: ""
 
 permissions:
   contents: write
@@ -30,7 +40,7 @@ jobs:
   fold:
     if: github.repository == 'sifiroth-gif/NPR'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,10 +56,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: _engine/requirements-meaning.txt
+      - name: Meaning runtime (optional)
+        continue-on-error: true
+        run: pip install --disable-pip-version-check -q -r _engine/requirements-meaning.txt
+      - name: Meaning model cache
+        id: model-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .npr-meaning
+          key: npr-meaning-e5small-ffdcc22a
+      - name: Meaning model (optional)
+        id: model-fetch
+        if: steps.model-cache.outputs.cache-hit != 'true'
+        continue-on-error: true
+        env:
+          PYTHONPATH: ${{ github.workspace }}/_engine
+        run: python -m rpg_engine meaning-fetch --dir .npr-meaning
+      - name: Keep the model
+        if: steps.model-cache.outputs.cache-hit != 'true' && steps.model-fetch.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .npr-meaning
+          key: npr-meaning-e5small-ffdcc22a
       - name: Fold turns into HOT, verbatim log, chronicle and cast cards
         shell: bash
         env:
           PYTHONPATH: ${{ github.workspace }}/_engine
+          NPR_MEANING_MODEL: ${{ github.workspace }}/.npr-meaning
+          NPR_MEANING_BUDGET: ${{ inputs.meaning_budget || '48' }}
+          PROBE: ${{ inputs.probe }}
         run: |
           set -euo pipefail
           git -C _state config user.name "github-actions[bot]"
@@ -87,7 +124,8 @@ jobs:
             # Протокол ноль: ожидающая кодовая команда игрока. Сейчас только пробный
             # прогон — пишет recovery/ZERO_REPORT.md и гасит команду, игру не трогает.
             python -m rpg_engine protocol-zero --state-dir _state | tee "$RUNNER_TEMP/zero.json"
-            for f in recovery/ZERO.json recovery/ZERO_REPORT.md recovery/MEMORY_TRIM.json recovery/LIMITS.json; do
+            for f in recovery/ZERO.json recovery/ZERO_REPORT.md recovery/MEMORY_TRIM.json recovery/LIMITS.json \
+                     recovery/RECALL.json recovery/RECALL_ANSWER.json; do
               if [ -e "_state/$f" ]; then git -C _state add -- "$f"; fi
             done
             zero=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['result'])" "$RUNNER_TEMP/zero.json")
@@ -127,6 +165,10 @@ jobs:
             echo "Concurrent state update, reloading"
             sleep 2
           done
+          python -c "import json,sys;print('meaning:', json.load(open(sys.argv[1])).get('meaning'))" "$RUNNER_TEMP/fold.json"
+          if [ -n "${PROBE:-}" ]; then
+            python -m rpg_engine recall-ask "$PROBE" --state-dir _state --limit 5
+          fi
           python - "$RUNNER_TEMP/fold.json" "$RUNNER_TEMP/check.json" <<'PY'
           import json, sys
           fold, check = (json.load(open(p)) for p in sys.argv[1:3])
