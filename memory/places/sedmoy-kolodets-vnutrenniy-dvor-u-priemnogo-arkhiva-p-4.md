@@ -4,10 +4,10 @@
 
 ## Кто здесь говорил с Шики
 - Хосина Кэн · `npc/hoshina_ken` — 1 ход(ов)
-- Миура Томо · `npc/miura_tomo` — 1 ход(ов)
-- Дежурный врач приёмного отделения · `npc/seventh_well_duty_physician` — 1 ход(ов)
-- Мацуда · `npc/matsuda` — 1 ход(ов)
 - Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
+- Мацуда · `npc/matsuda` — 1 ход(ов)
+- Дежурный врач приёмного отделения · `npc/seventh_well_duty_physician` — 1 ход(ов)
+- Миура Томо · `npc/miura_tomo` — 1 ход(ов)
 - Фурукава Кёдзи · `npc/caravan_prisoner` — 1 ход(ов)
 
 ## Ходы
