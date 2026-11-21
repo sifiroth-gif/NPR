@@ -96,6 +96,7 @@
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
+- Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -206,4 +207,3 @@
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
-- Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 1 ход(ов), s10–s10
