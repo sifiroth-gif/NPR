@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.093",
+  "cursor": "s09.text.094",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -723,7 +723,7 @@
       "id": "hirano",
       "kind": "npc",
       "label": "Хирано",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0006-09-22T21:18:52",
@@ -731,13 +731,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.106"
-        },
-        {
-          "at": "0010-02-14T06:59:00",
-          "excerpt": "имущественно в Стране Рек. Именно он утвердил программу использования живых реципиентов для поддержания донорских клеточных линий. — Хирано Сэйдзи руководил производством и распределением. Он имел право распоряжаться сотрудниками, закупать охрану и останавлива",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.078"
         },
         {
           "at": "0010-02-19T17:06:00",
@@ -752,6 +745,13 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.093"
+        },
+        {
+          "at": "0010-02-20T18:26:00",
+          "excerpt": "жали мешки риса, а из прибрежных харчевен доносились голоса людей, которых не интересовали ни С-17, ни Хирано Сэйдзи. Контора Минаги Дзэна по-прежнему находилась над складом красильщика. Шики поднялся по узкой лестнице и вошёл. За столом сидел худой седоволосы",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.094"
         }
       ],
       "projections": [
@@ -786,8 +786,7 @@
     "hoshina_ken": {
       "aliases": [
         "hoshina ken",
-        "Хосина Кэн",
-        "hoshina_ken"
+        "Хосина Кэн"
       ],
       "facts": [],
       "id": "hoshina_ken",
@@ -834,8 +833,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hoshina_ken.json",
-        "s09.text.093"
+        "recovery/cast/hoshina_ken.json"
       ]
     },
     "hospital_night_admin": {
@@ -943,8 +941,7 @@
     "jiro_caravan_guard": {
       "aliases": [
         "jiro caravan guard",
-        "Дзиро",
-        "jiro_caravan_guard"
+        "Дзиро"
       ],
       "facts": [],
       "id": "jiro_caravan_guard",
@@ -991,8 +988,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/jiro_caravan_guard.json",
-        "s09.text.093"
+        "recovery/cast/jiro_caravan_guard.json"
       ]
     },
     "kabuto": {
@@ -2079,13 +2075,14 @@
     "minagi_zen": {
       "aliases": [
         "minagi zen",
-        "Минаги Дзэн"
+        "Минаги Дзэн",
+        "minagi_zen"
       ],
       "facts": [],
       "id": "minagi_zen",
       "kind": "npc",
       "label": "Минаги Дзэн",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-02-12T16:29:00",
@@ -2093,13 +2090,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.072"
-        },
-        {
-          "at": "0010-02-12T16:31:00",
-          "excerpt": "Сиран. Контора Минаги Дзэна.* **Мугами Шики:** — Десять процентов. И описание того, кто меня искал. Минаги Дзэн медленно положил счётную косточку на стол. — Вы предлагаете мне вдвое больше моей обычной комиссии за сведения, которые я всё равно собирался вам пр",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.073"
         },
         {
           "at": "0010-02-12T16:33:00",
@@ -2114,19 +2104,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.075"
+        },
+        {
+          "at": "0010-02-20T18:26:00",
+          "excerpt": "езал под воротником. Деревянные счёты лежали перед ним, как и при первой встрече. Минаги поднял голову. **Минаги Дзэн:** — Мугами. Я видел подтверждение ещё вчера. Он убрал счёты в ящик. — Пятьдесят пять миллионов. Живой груз доставлен. Ни одной претензии от з",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.094"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "seen": "s09.text.077",
-          "state": "Согласился после паузы связаться с женщиной через западную почту, выдав, будто изменил решение о продаже сведений; пока не обещал конкретного места и ждёт безопасных деталей. Раскрыл Шики полные условия №1184; просит окончательного подтверждения.",
+          "seen": "s09.text.094",
+          "state": "Лично выплатил Шики 49,5 млн рё по №1184 наличными после проверки контрольного знака; новых комиссий не брал. Уведомил о ранее отправленном через западную почту предложении контакта женщине; адреса Шики не сообщил.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
+          "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
+        },
+        {
+          "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
+          "state": "Лично выплатил Шики 49,5 млн рё по №1184 наличными после проверки контрольного знака; новых комиссий не брал. Уведомил о ранее отправленном через западную почту предложении контакта женщине; адреса Шики не сообщил.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         }
       ],
       "sources": [
-        "recovery/cast/minagi_zen.json"
+        "recovery/cast/minagi_zen.json",
+        "recovery/HOT.json",
+        "s09.text.094"
       ]
     },
     "minase": {
@@ -2214,8 +2218,7 @@
     "miura_tomo": {
       "aliases": [
         "miura tomo",
-        "Миура Томо",
-        "miura_tomo"
+        "Миура Томо"
       ],
       "facts": [],
       "id": "miura_tomo",
@@ -2262,8 +2265,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/miura_tomo.json",
-        "s09.text.093"
+        "recovery/cast/miura_tomo.json"
       ]
     },
     "morioka_escort_leader": {
@@ -2507,7 +2509,8 @@
     "night_icu_physician": {
       "aliases": [
         "night icu physician",
-        "Дежурная врач охраняемого отделения"
+        "Дежурная врач охраняемого отделения",
+        "night_icu_physician"
       ],
       "facts": [],
       "id": "night_icu_physician",
@@ -2520,7 +2523,7 @@
           "body": "Уставшая, лицо со следами маски, крепко держит истории, при виде изменившегося Шики напрягается и прячет фамилии под ладонью, однако не отступает",
           "fears": "Необоснованное вмешательство/незаконный перевод, внезапная дыхательная остановка зависимых пациентов",
           "role": "Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17",
-          "seen": "s09.text.083",
+          "seen": "s09.text.094",
           "stance": "Допускает медицинский осмотр Шики по его удостоверению, но требует объяснить план и документировать вмешательства; сохраняет автономное медицинское решение",
           "state": "Около 08:30 ссылалась на канцелярскую регистрацию, скрывая пробел маршрута копии.",
           "voice": "Негромко, профессионально, без раболепия и без лишних слов",
@@ -2528,7 +2531,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/night_icu_physician.json"
+        "recovery/cast/night_icu_physician.json",
+        "s09.text.094"
       ]
     },
     "nori": {
@@ -2710,8 +2714,7 @@
     "p4_archivist_matsuda": {
       "aliases": [
         "p4 archivist matsuda",
-        "Мацуда (архивариус П-4)",
-        "p4_archivist_matsuda"
+        "Мацуда (архивариус П-4)"
       ],
       "facts": [],
       "id": "p4_archivist_matsuda",
@@ -2730,8 +2733,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/p4_archivist_matsuda.json",
-        "s09.text.093"
+        "recovery/cast/p4_archivist_matsuda.json"
       ]
     },
     "pain": {
@@ -9554,6 +9556,25 @@
         "s01.text.120"
       ]
     },
+    "place:f5983ffc439f400e": {
+      "aliases": [
+        "place:f5983ffc439f400e",
+        "Страна Рек, Нижний Сиран, контора Минаги Дзэна у речной пристани",
+        "Страна Рек",
+        "Нижний Сиран",
+        "контора Минаги Дзэна у речной пристани"
+      ],
+      "facts": [],
+      "id": "place:f5983ffc439f400e",
+      "kind": "place",
+      "label": "Страна Рек, Нижний Сиран, контора Минаги Дзэна у речной пристани",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.094"
+      ]
+    },
     "place:f64175f0bdc9e22e": {
       "aliases": [
         "place:f64175f0bdc9e22e",
@@ -9808,8 +9829,7 @@
     "prinimayushchiy_sluzhashchiy": {
       "aliases": [
         "prinimayushchiy sluzhashchiy",
-        "Принимающий служащий",
-        "prinimayushchiy_sluzhashchiy"
+        "Принимающий служащий"
       ],
       "facts": [],
       "id": "prinimayushchiy_sluzhashchiy",
@@ -9854,8 +9874,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/prinimayushchiy_sluzhashchiy.json",
-        "s09.text.093"
+        "recovery/cast/prinimayushchiy_sluzhashchiy.json"
       ]
     },
     "private_bounties": {
@@ -10947,7 +10966,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.093"
+        "s09.text.094"
       ]
     },
     "thread:black_market_new_contracts": {
@@ -11648,5 +11667,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 740
+  "source_turns_indexed": 741
 }
