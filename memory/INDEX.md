@@ -1,12 +1,15 @@
-# Карта мира NPR · на ходе `s09.text.066`
+# Карта мира NPR · на ходе `s09.text.067`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (173) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (174) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (158)
+## Персонажи (159)
 - Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto` · в сцене
+- Наёмник у шахты — по подписи в сцене · `npc/naemnik_u_shakhty` · в сцене
+- Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto`
 - Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Орочимару — саннин, скрытый организатор · `npc/orochimaru`
@@ -39,7 +42,6 @@
 - kiri_transfer_carrier —  · `npc/kiri_transfer_carrier`
 - kiri_transfer_watch —  · `npc/kiri_transfer_watch`
 - Старший у повозки — Мужчина заметно старше двух спутников, зимняя дорожная одеж… · `npc/kiri_transfer_senior`
-- Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
 - Минасэ Рэи (Минасэ) — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
 - Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
@@ -48,7 +50,6 @@
 - Реципиент № 6 (реципиента №6, реципиента № 6) — Выживший участник экспериментов с С-17, мальчик примерно 16 лет · `npc/s17_recipient_6`
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
 - Младший шиноби Звука — Младший дозорный у подземных ворот. · `npc/sound_kagen_junior`
-- Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
 - Сопровождающий повозки — Широкоплечий вооружённый мужчина в дорожной одежде. · `npc/kagen_caravan_escort`
 - Человек в маске —  · `npc/masked_man`
@@ -165,7 +166,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (18)
+## Линии (17)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — 04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); … · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -183,9 +184,9 @@
 - `arakawa_treatment` — Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти… · `threads/arakawa_treatment`
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
-- `nagae_rokuto_contract` — Цель мертва, Шики получил голову Рокуто как доказательство; награда 2… · `threads/nagae_rokuto_contract`
 
-## Вещи (27)
+## Вещи (29)
+- `bounty_notices` · `items/bounty_notices`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -206,6 +207,7 @@
 - `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
+- `rokuto_bounty_payment` · `items/rokuto_bounty_payment`
 - `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `shiki_blood_vial` · `items/shiki_blood_vial`

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.066",
+  "cursor": "s09.text.067",
   "entities": {
     "akihiro": {
       "aliases": [
@@ -261,20 +261,25 @@
         "recovery/cast/archive_roof_fugitive.json"
       ]
     },
-    "canon:s09.text.066:0": {
+    "bounty_notices": {
       "aliases": [
-        "canon:s09.text.066:0",
-        "Поправка игрока s09.text.066: в боевых и иных сценах, когда Шаринган Шики активен, давать заметно больше конкретного чувственного и функционального описания действующей формы (алый"
+        "bounty notices"
       ],
       "facts": [],
-      "id": "canon:s09.text.066:0",
-      "kind": "canon",
-      "label": "Поправка игрока s09.text.066: в боевых и иных сценах, когда Шаринган Шики активен, давать заметно больше конкретного чувственного и функционального описания действующей формы (алый",
+      "id": "bounty_notices",
+      "kind": "item",
+      "label": "bounty notices",
       "mention_count": 0,
       "mentions": [],
-      "projections": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s09.text.067",
+          "turn": "s09.text.067"
+        }
+      ],
       "sources": [
-        "s09.text.066"
+        "s09.text.067"
       ]
     },
     "captive_guard": {
@@ -2098,6 +2103,46 @@
         "recovery/cast/morioka_hideaki.json"
       ]
     },
+    "naemnik_u_shakhty": {
+      "aliases": [
+        "naemnik u shakhty",
+        "Наёмник у шахты"
+      ],
+      "facts": [],
+      "id": "naemnik_u_shakhty",
+      "kind": "npc",
+      "label": "Наёмник у шахты",
+      "mention_count": 2,
+      "mentions": [
+        {
+          "at": "0007-12-24T16:47:00",
+          "excerpt": ". *** Двое возле шахты не побежали. Они переглянулись. Один медленно положил меч на землю. Второй продолжал держать оружие, хотя острие уже опустилось. **Наёмник у шахты:** — Мы можем забрать своих? Он смотрел на тела возле подъёмной башни. **Наёмник у шахты:*",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.066"
+        },
+        {
+          "at": "0007-12-25T11:32:00",
+          "excerpt": "тракт# **Понедельник, 24 декабря 1284 года. 16:48** *Страна Горячих Источников. Рудник Куромори.* **Наёмник у шахты:** — Так можно? Шики не стал задерживаться возле него. Он подошёл к освобождённому торговцу и рассёк верёвку, стягивавшую его запястья. Мужчина ",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.067"
+        }
+      ],
+      "projections": [
+        {
+          "role": "по подписи в сцене",
+          "seen": "s09.text.067"
+        },
+        {
+          "role": "по подписи в сцене"
+        }
+      ],
+      "sources": [
+        "recovery/cast/naemnik_u_shakhty.json",
+        "recovery/HOT.json"
+      ]
+    },
     "nagae_rokuto": {
       "aliases": [
         "nagae rokuto",
@@ -2108,7 +2153,7 @@
       "id": "nagae_rokuto",
       "kind": "npc",
       "label": "Нагаэ Рокуто",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -2116,13 +2161,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0007-12-24T16:46:00",
-          "excerpt": "#выполнение контракта нагаэ рокуто# **Понедельник, 24 декабря 1284 года. 16:38** *Страна Горячих Источников. Ущелье Куромори.* Снег здесь почти не держался. Горячая вода выходила из трещин в скалах,",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.064"
         },
         {
           "at": "0007-12-24T16:46:05",
@@ -2137,11 +2175,18 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.066"
+        },
+        {
+          "at": "0007-12-25T11:32:00",
+          "excerpt": "начала осмотрел бумагу. Затем посмотрел на брезент. **Служащий:** — Доказательство исполнения? Узел был развязан. На стол положили голову Нагаэ Рокуто. Служащий перестал дышать через нос. Он осторожно отогнул край ткани, осмотрел старый рубец на нижней челюсти",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.066",
+          "seen": "s09.text.067",
           "state": "Убит и обезглавлен Шики в центральном дворе Куромори; его проволочный механизм сработал, но не остановил противника."
         },
         {
@@ -2151,7 +2196,7 @@
       "sources": [
         "recovery/cast/nagae_rokuto.json",
         "recovery/HOT.json",
-        "s09.text.066"
+        "s09.text.067"
       ]
     },
     "nao": {
@@ -2225,7 +2270,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками",
-          "seen": "s09.text.028",
+          "seen": "s09.text.067",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Разрешённый чувственный мост сохранён; слышала рассказ Шики Саске о себе и знает, что тот теперь опасается запечатанной сущности; Нулевой Геном и тайная программа Учиха остаются для неё закрыты.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит.",
@@ -2233,7 +2278,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s09.text.067"
       ]
     },
     "night_icu_physician": {
@@ -2392,8 +2438,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json",
-        "s09.text.066"
+        "recovery/cast/orochimaru.json"
       ]
     },
     "patient_airway": {
@@ -4739,6 +4784,25 @@
       "projections": [],
       "sources": [
         "s01.text.147"
+      ]
+    },
+    "place:562444418d7247f6": {
+      "aliases": [
+        "place:562444418d7247f6",
+        "Страна Горячих Источников, южная торговая станция «Трёх переправ», караванный двор",
+        "Страна Горячих Источников",
+        "южная торговая станция «Трёх переправ»",
+        "караванный двор"
+      ],
+      "facts": [],
+      "id": "place:562444418d7247f6",
+      "kind": "place",
+      "label": "Страна Горячих Источников, южная торговая станция «Трёх переправ», караванный двор",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.067"
       ]
     },
     "place:5776e4e73e8ae4a8": {
@@ -9394,6 +9458,27 @@
         "recovery/cast/residence_courier_v7.json"
       ]
     },
+    "rokuto_bounty_payment": {
+      "aliases": [
+        "rokuto bounty payment"
+      ],
+      "facts": [],
+      "id": "rokuto_bounty_payment",
+      "kind": "item",
+      "label": "rokuto bounty payment",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s09.text.067",
+          "turn": "s09.text.067"
+        }
+      ],
+      "sources": [
+        "s09.text.067"
+      ]
+    },
     "rokuto_head": {
       "aliases": [
         "rokuto head"
@@ -9406,13 +9491,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shiki",
+          "holder": "three_crossings_agent",
           "since": "s09.text.066",
-          "turn": "s09.text.066"
+          "turn": "s09.text.067"
         }
       ],
       "sources": [
-        "s09.text.066"
+        "s09.text.067"
       ]
     },
     "ryuchido_first_serpent": {
@@ -9904,7 +9989,8 @@
     "sound_kagen_senior": {
       "aliases": [
         "sound kagen senior",
-        "Старший шиноби Звука"
+        "Старший шиноби Звука",
+        "sound_kagen_senior"
       ],
       "facts": [],
       "id": "sound_kagen_senior",
@@ -9945,14 +10031,15 @@
         {
           "fears": "Невыполнение распоряжений внутреннего начальства и последствия осведомлённости младшего.",
           "role": "Старший охранник входного узла.",
-          "seen": "s09.text.037",
+          "seen": "s09.text.067",
           "state": "В переходе к жилому сектору сообщил Кабуто о полученной с пограничного поста ориентировке и интересе внешнего дозора к неизвестному шиноби; не пустил дозор к гостю.",
           "voice": "Коротко, с раздражённой привычкой пресекать вопросы.",
           "wants": "Сохранить дисциплину и провести груз, не привлекая внимания."
         }
       ],
       "sources": [
-        "recovery/cast/sound_kagen_senior.json"
+        "recovery/cast/sound_kagen_senior.json",
+        "s09.text.067"
       ]
     },
     "stolen_house_plan": {
@@ -9979,8 +10066,7 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн",
-        "takagi_ren"
+        "Такаги Рэн"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -10030,8 +10116,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json",
-        "s09.text.066"
+        "recovery/cast/takagi_ren.json"
       ]
     },
     "tetsu": {
@@ -10248,13 +10333,9 @@
       "label": "nagae rokuto contract",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "state": "Цель мертва, Шики получил голову Рокуто как доказательство; награда 27,5 млн рё ещё не востребована и не выплачена."
-        }
-      ],
+      "projections": [],
       "sources": [
-        "s09.text.066"
+        "s09.text.067"
       ]
     },
     "thread:nemera": {
@@ -10482,8 +10563,7 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске",
-        "unknown_masked_prisoner"
+        "Неизвестный пленный в маске"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -10497,8 +10577,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json",
-        "s09.text.066"
+        "recovery/cast/unknown_masked_prisoner.json"
       ]
     },
     "utsuro": {
@@ -10907,12 +10986,26 @@
     },
     {
       "from": "rokuto_head",
-      "source": "s09.text.066",
+      "source": "s09.text.067",
+      "status": "projected",
+      "to": "three_crossings_agent",
+      "type": "held_by"
+    },
+    {
+      "from": "rokuto_bounty_payment",
+      "source": "s09.text.067",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
+    },
+    {
+      "from": "bounty_notices",
+      "source": "s09.text.067",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 715
+  "source_turns_indexed": 716
 }
