@@ -183,3 +183,4 @@
 - Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
 - Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
+- Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
