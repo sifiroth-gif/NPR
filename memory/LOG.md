@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.016: Тамура Рэйка (`npc/tamura_reika`), Курода Маю (`npc/kuroda_mayu`), Старший у повозки (`npc/kiri_transfer_senior`)
 - s10.text.015: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Кидзима Суми (`npc/kuroishi_visitor`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`)
 - s10.text.014: Тамура Рэйка (`npc/tamura_reika`)
 - s10.text.013: Тамура Рэйка (`npc/tamura_reika`), Минасэ Рэи (`npc/minase`), Медик у панели В-7 (`npc/medical_panel_operator`)
@@ -60,4 +61,3 @@
 - s09.text.061: Саске Учиха (`npc/sasuke`)
 - s09.text.060: поправки игрока: 1
 - s09.text.059: Саске Учиха (`npc/sasuke`)
-- s09.text.058: Саске Учиха (`npc/sasuke`), поправки игрока: 1
