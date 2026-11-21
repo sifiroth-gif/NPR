@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.074",
+  "cursor": "s09.text.075",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -280,6 +280,27 @@
         "recovery/cast/archive_roof_fugitive.json"
       ]
     },
+    "black_caravan_contract": {
+      "aliases": [
+        "black caravan contract"
+      ],
+      "facts": [],
+      "id": "black_caravan_contract",
+      "kind": "item",
+      "label": "black caravan contract",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s09.text.075",
+          "turn": "s09.text.075"
+        }
+      ],
+      "sources": [
+        "s09.text.075"
+      ]
+    },
     "bounty_notices": {
       "aliases": [
         "bounty notices"
@@ -299,6 +320,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s09.text.075:0": {
+      "aliases": [
+        "canon:s09.text.075:0",
+        "Поправка s09.text.075: новый контракт №1184 ведёт к конкретной проверяемой развязке В-7 и С-17, включая распорядителей, заказ на изъятие и попытки устранения свидетелей; не создава"
+      ],
+      "facts": [],
+      "id": "canon:s09.text.075:0",
+      "kind": "canon",
+      "label": "Поправка s09.text.075: новый контракт №1184 ведёт к конкретной проверяемой развязке В-7 и С-17, включая распорядителей, заказ на изъятие и попытки устранения свидетелей; не создава",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.075"
       ]
     },
     "captive_guard": {
@@ -325,6 +362,28 @@
       ],
       "sources": [
         "recovery/cast/captive_guard.json"
+      ]
+    },
+    "caravan_prisoner": {
+      "aliases": [
+        "caravan prisoner",
+        "Неизвестный пленник №1184"
+      ],
+      "facts": [],
+      "id": "caravan_prisoner",
+      "kind": "npc",
+      "label": "Неизвестный пленник №1184",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s09.text.075",
+          "state": "Просил сохранить реестр, боится Седьмого колодца."
+        }
+      ],
+      "sources": [
+        "recovery/cast/caravan_prisoner.json",
+        "s09.text.075"
       ]
     },
     "clinic_assistant": {
@@ -631,7 +690,7 @@
       "id": "hirano",
       "kind": "npc",
       "label": "Хирано",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0006-09-22T21:18:52",
@@ -639,13 +698,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.106"
-        },
-        {
-          "at": "0006-10-04T06:49:00",
-          "excerpt": "При сопротивлении задержать. Из трубки ответили. **Такаги Рэн:** — Ещё двоих — к управлению закрытого снабжения. Хирано Сэйдзи. Сохранить его служебные каналы, установить местонахождение. Если попытается уничтожить имущество или покинуть деревню — задержать. О",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.091"
         },
         {
           "at": "0006-10-04T06:53:00",
@@ -660,6 +712,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.093"
+        },
+        {
+          "at": "0010-02-14T05:26:00",
+          "excerpt": "ментов, расчётный срок автономной работы, допуски к транспортировке и контрольные номера. И подпись ответственного за медицинское снабжение. **Хирано Сэйдзи.** Имя, которое Шики уже слышал почти четыре года назад. Тогда, в Кусагакуре, Мориока назвал Хирано рук",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.075"
         }
       ],
       "projections": [
@@ -689,6 +748,31 @@
       ],
       "sources": [
         "recovery/cast/hirano_seiji.json"
+      ]
+    },
+    "hoshina_ken": {
+      "aliases": [
+        "hoshina ken",
+        "Хосина Кэн"
+      ],
+      "facts": [],
+      "id": "hoshina_ken",
+      "kind": "npc",
+      "label": "Хосина Кэн",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "fears": "Умереть из-за чужой тайны.",
+          "seen": "s09.text.075",
+          "state": "Показал Шики открытые документы, не препятствует их чтению.",
+          "voice": "Сдержанная практичная речь.",
+          "wants": "Доставить пленника живым и получить плату."
+        }
+      ],
+      "sources": [
+        "recovery/cast/hoshina_ken.json",
+        "s09.text.075"
       ]
     },
     "hospital_night_admin": {
@@ -2055,14 +2139,13 @@
     "minagi_zen": {
       "aliases": [
         "minagi zen",
-        "Минаги Дзэн",
-        "minagi_zen"
+        "Минаги Дзэн"
       ],
       "facts": [],
       "id": "minagi_zen",
       "kind": "npc",
       "label": "Минаги Дзэн",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-02-12T16:29:00",
@@ -2084,12 +2167,19 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.074"
+        },
+        {
+          "at": "0010-02-14T05:26:00",
+          "excerpt": "февраля 1287 года. 16:35** *Страна Рек. Нижний Сиран.* — Да. Давненько я не занимался сопровождением. Минаги Дзэн взял металлическую печать. — Тогда вспомните, что при сопровождении платят не за количество убитых. Платят за то, что груз прибудет туда, куда дол",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.075"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "seen": "s09.text.074",
+          "seen": "s09.text.075",
           "state": "Согласился после паузы связаться с женщиной через западную почту, выдав, будто изменил решение о продаже сведений; пока не обещал конкретного места и ждёт безопасных деталей. Раскрыл Шики полные условия №1184; просит окончательного подтверждения.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
@@ -2102,8 +2192,7 @@
       ],
       "sources": [
         "recovery/cast/minagi_zen.json",
-        "recovery/HOT.json",
-        "s09.text.074"
+        "recovery/HOT.json"
       ]
     },
     "minase": {
@@ -2297,8 +2386,7 @@
     "nagae_rokuto": {
       "aliases": [
         "nagae rokuto",
-        "Нагаэ Рокуто",
-        "nagae_rokuto"
+        "Нагаэ Рокуто"
       ],
       "facts": [],
       "id": "nagae_rokuto",
@@ -2342,8 +2430,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nagae_rokuto.json",
-        "s09.text.074"
+        "recovery/cast/nagae_rokuto.json"
       ]
     },
     "nao": {
@@ -5965,8 +6052,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.074",
-        "s09.text.073"
+        "s09.text.073",
+        "s09.text.074"
       ]
     },
     "place:7ac77ca854d6436d": {
@@ -8325,6 +8412,24 @@
         "s09.text.050"
       ]
     },
+    "place:dc6542345d23e554": {
+      "aliases": [
+        "place:dc6542345d23e554",
+        "Страна Ветра, грузовая станция Хакусэки",
+        "Страна Ветра",
+        "грузовая станция Хакусэки"
+      ],
+      "facts": [],
+      "id": "place:dc6542345d23e554",
+      "kind": "place",
+      "label": "Страна Ветра, грузовая станция Хакусэки",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.075"
+      ]
+    },
     "place:dc70b35b5203da40": {
       "aliases": [
         "place:dc70b35b5203da40",
@@ -10332,7 +10437,8 @@
     "takagi_ren": {
       "aliases": [
         "takagi ren",
-        "Такаги Рэн"
+        "Такаги Рэн",
+        "takagi_ren"
       ],
       "facts": [],
       "id": "takagi_ren",
@@ -10374,7 +10480,7 @@
           "body": "Средних лет/пожилой офицер с короткой седой бородой, тёмный плащ, резидентская повязка на левом плече и служебная печать на шее, следит за руками Нори",
           "fears": "Исчезновение ключевого свидетеля, подмена улик в присутствии отстранённой капитана и людей УВБ, публичный провал безопасности главы",
           "role": "Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из резиденции",
-          "seen": "s09.text.066",
+          "seen": "s09.text.075",
           "stance": "Жёстко требует передачи и идентификации; Шики официально обещана охрана, Нори служебно отстранена",
           "state": "Услышал сочувствие Шики о сыне, которого упомянул пленный, но не назвал по имени. Получил две пробирки и велел независимо охранять их и проверить первую у Куроды; отпустил Шики, не предпринимая безнадёжного одиночного преследования.",
           "voice": "Сухие короткие приказы без объяснения мотивов, требовательная прямая речь",
@@ -10382,7 +10488,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/takagi_ren.json"
+        "recovery/cast/takagi_ren.json",
+        "s09.text.075"
       ]
     },
     "tamura_reika": {
@@ -10550,11 +10657,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Шики выбрал и прочитал предложение №1184, 55 млн рё за шестидневную доставку живого мужчины в запечатанной подавляющей камере. 14.02.1287 05:30 отправление из Хакусэки (северо-восток Страны Ветра), прибытие комплекс «Седьмой колодец» (юго-запад Страны Рек), заказчик «Кэйсин». Два возчика, три вооружённых охранника; два прошлых н"
+          "state": "Договор №1184 принят, 14.02.1287 перед отправлением в Хакусэки в ведомости «Кэйсин» Шики видит обозначения В-7/С-17 и подпись Хирано Сэйдзи, ещё один открытый лист — полный список прошлых рейсов, доступен для немедленного чтения. Выплата ещё не произведена."
         }
       ],
       "sources": [
-        "s09.text.074"
+        "s09.text.075"
       ]
     },
     "thread:black_market_new_contracts": {
@@ -10982,11 +11089,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); подключён автономный холодовой модуль, в питающем гнезде найдена нештатная перемычка (s08.text.089). Выдачу реестра Такаги заблокировал (s08.text.081). Генетика Куроды: генотипы А/Б, линия Б вероятно от донорской кисти Инабы (s07.text.017)."
+          "state": "Новая внешняя документальная связь с В-7/С-17 и Хирано в документах «Кэйсин». Маточник В-7 был уничтожен Шики 1283; производственные ответвления и независимые образцы не отменены."
         }
       ],
       "sources": [
-        "keeper@s08.text.090"
+        "s09.text.075"
       ]
     },
     "tikhiy_porog_seller": {
@@ -11012,8 +11119,7 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске",
-        "unknown_masked_prisoner"
+        "Неизвестный пленный в маске"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -11027,8 +11133,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json",
-        "s09.text.074"
+        "recovery/cast/unknown_masked_prisoner.json"
       ]
     },
     "utsuro": {
@@ -11469,8 +11574,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "black_caravan_contract",
+      "source": "s09.text.075",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 723
+  "source_turns_indexed": 724
 }

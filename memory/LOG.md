@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.075: Хосина Кэн (`npc/hoshina_ken`), Неизвестный пленник №1184 (`npc/caravan_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `black_caravan_contract`, линия `black_caravan`, линия `v7`, план сюжета, поправки игрока: 1
 - s09.text.074: Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `black_caravan`, линия `tamura_inquiry`
 - s09.text.073: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `inquiry_contact_token`, линия `minagi_commission`, линия `unknown_buyer_mask`
 - s09.text.072: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `black_market_new_contracts`, линия `unknown_buyer_mask`
@@ -61,4 +62,3 @@
 - s09.text.018: Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kimimaro_bone_sample`
 - s09.text.017: Кабуто Якуши (`npc/kabuto`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `kimimaro_bone_sample`
 - s09.text.016: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `possible_sasuke_hair`, план сюжета
-- s09.text.015: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`)

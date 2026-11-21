@@ -1,20 +1,22 @@
 {
   "current_focus": [
     "minagi_zen",
-    "place:7a3db143d57a03e2"
+    "place:dc6542345d23e554",
+    "hirano"
   ],
-  "cursor": "s09.text.074",
+  "cursor": "s09.text.075",
   "focus_byte_limit": 6600,
-  "focus_bytes": 1066,
-  "index_entities": 507,
-  "index_source_records": 723,
-  "indexed_cursor": "s09.text.074",
+  "focus_bytes": 1154,
+  "index_entities": 512,
+  "index_source_records": 724,
+  "indexed_cursor": "s09.text.075",
   "kinds": {
+    "canon": 1,
     "clock": 1,
     "entity": 1,
-    "item": 32,
-    "npc": 92,
-    "place": 357,
+    "item": 33,
+    "npc": 94,
+    "place": 358,
     "thread": 24
   },
   "missing_critical": [],
@@ -27,6 +29,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "canon:s09.text.075:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "clock:naruto_returns_konoha",
       "kind": "clock"
     },
@@ -35,6 +43,12 @@
       "at_5": true,
       "id": "recipient6",
       "kind": "entity"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "black_caravan_contract",
+      "kind": "item"
     },
     {
       "at_1": true,
@@ -177,12 +191,6 @@
     {
       "at_1": true,
       "at_5": true,
-      "id": "rokuto_head",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
       "id": "akatsuki",
       "kind": "npc"
     },
@@ -232,6 +240,12 @@
       "at_1": true,
       "at_5": true,
       "id": "captive_guard",
+      "kind": "npc"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "caravan_prisoner",
       "kind": "npc"
     },
     {
@@ -297,6 +311,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "hoshina_ken",
+      "kind": "npc"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "hospital_night_admin",
       "kind": "npc"
     },
@@ -310,18 +330,6 @@
       "at_1": true,
       "at_5": true,
       "id": "hospital_transporter",
-      "kind": "npc"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "jiraiya",
-      "kind": "npc"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "kabuto",
       "kind": "npc"
     },
     {
@@ -614,9 +622,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 98,
-  "self_query_at_5": 98,
-  "self_query_count": 98,
+  "self_query_at_1": 99,
+  "self_query_at_5": 99,
+  "self_query_count": 99,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
