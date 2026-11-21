@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.013",
+  "cursor": "s10.text.014",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2028,8 +2028,7 @@
     "medical_panel_operator": {
       "aliases": [
         "medical panel operator",
-        "Медик у панели В-7",
-        "medical_panel_operator"
+        "Медик у панели В-7"
       ],
       "facts": [],
       "id": "medical_panel_operator",
@@ -2044,8 +2043,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/medical_panel_operator.json",
-        "s10.text.013"
+        "recovery/cast/medical_panel_operator.json"
       ]
     },
     "medical_spectacles": {
@@ -2200,8 +2198,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/minase.json",
-        "s10.text.013"
+        "recovery/cast/minase.json"
       ]
     },
     "missing_guard": {
@@ -7017,8 +7014,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.013",
-        "s10.text.012"
+        "s10.text.014",
+        "s10.text.012",
+        "s10.text.013"
       ]
     },
     "place:96124167cc04d176": {
@@ -10896,7 +10894,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10904,13 +10902,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:55:00",
-          "excerpt": "сё примерно час. Рэйка смотрит на него с выражением, которое постепенно становится почти оскорблённым. **Тамура Рэйка:** — Я прекрасно понимаю, что такое полевой хирург. Она приподнимает повреждённую руку. **Тамура Рэйка:** — У меня просто никогда не было возм",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.011"
         },
         {
           "at": "0010-02-27T16:51:00",
@@ -10925,26 +10916,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.013"
+        },
+        {
+          "at": "0010-02-27T16:56:00",
+          "excerpt": "о пальца. **Мугами Шики:** — Каким таким? Она поднимает глаза. Алый Шаринган неподвижно смотрит на неё. **Тамура Рэйка:** — Когда мы встретились на мельницах, ты выглядел иначе. Она слегка поворачивает руку, чтобы рассмотреть обозначенный участок. **Тамура Рэй",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.014"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.013",
-          "state": "У стола с кистью тылом вверх. Увидела у Шики Шаринган с тремя томоэ, источник не знает. Согласна на план с новокаином, без гендзюцу; просит показать линию разреза.",
+          "seen": "s10.text.014",
+          "state": "Правая кисть тылом вверх на чистом полотне; указала место и подтвердила согласие на конкретный разрез и анестезию. Спрашивает, что изменило Шики, но не требует ответа.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "У стола с кистью тылом вверх. Увидела у Шики Шаринган с тремя томоэ, источник не знает. Согласна на план с новокаином, без гендзюцу; просит показать линию разреза.",
+          "state": "Правая кисть тылом вверх на чистом полотне; указала место и подтвердила согласие на конкретный разрез и анестезию. Спрашивает, что изменило Шики, но не требует ответа.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.013"
+        "s10.text.014"
       ]
     },
     "tetsu": {
@@ -11608,5 +11606,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 762
+  "source_turns_indexed": 763
 }
