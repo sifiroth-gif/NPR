@@ -24,7 +24,7 @@ RULE = ("Это всё, что нужно прочитать перед обыч
         "открывай только для NPC, впервые входящего в сцену в этом чате, или по вопросу о прошлом; "
         "прочитанное в этом чате не перечитывай. cursor не равен твоему последнему ходу — свёртка "
         "отстала: открой CHECKS.json. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
-        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: вплети через деталь, документ, человека или слух, если ложится естественно. "
+        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: вплети в ближайшие ходы деталью, документом, человеком или слухом. "
         "Нужно давнее прошлое — запиши recovery/RECALL.json {\"q\": [\"вопрос\"]}: поиск по словам и смыслу по всем "
         "сессиям, ответ — NEXT.recall к следующему ходу.")
 
@@ -130,16 +130,21 @@ def must(hot, always_present=(), entries=None):
         out.append(f"{will._name(hot, key)} рядом, а срок плана «{_short(plan.get('next') or plan.get('goal'), 120)}» "
                    f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
                    f"запиши d.cast.{key}.intent.{name}: status и outcome.")
-    for key, last in will.without_plan(hot)[:2]:
+    # Новый план — только тем, кто значим для Шики: встречал его, имеет характер или шёл против него.
+    significant = [(k, l) for k, l in will.without_plan(hot)
+                   if l.get("against_shiki") or any(((hot.get("_psyche") or {}).get(k) or {}).get(f)
+                                                    for f in ("dread", "psyche"))]
+    for key, last in significant[:1]:
         plan = last.get("goal") or last.get("outcome") or last.get("next") or last.get("key")
         out.append(f"У {will._name(hot, key)} закрыт план «{_short(plan, 80)}» "
                    f"({last.get('status')}), нового нет: впиши d.cast.{key}.intent.<ключ> — goal, next, due, "
-                   "flaw, if_unopposed. Что он делает дальше сам?")
+                   "flaw, if_unopposed. Исход — видимая перемена мира, что может дойти до Шики (приезд, сделка, "
+                   "исчезновение, слух, смерть), не «получит перечень, но не…».")
     return out[:3]
 
 
 def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None,
-          recall=None):
+          recall=None, news=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -154,6 +159,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     if rules:
         pack["directives"] = dict(rules, rule="Поправки игрока к ведению: выше GM_CORE и навыка, исполнять до отмены.")
     duty = must(hot, always_present, entries)
+    if news and news.get("must"):   # мир доходит до Шики: весть или чужой шаг в затянувшейся сцене
+        duty = [news["must"]] + duty[:2]
     if duty:
         pack["must"] = duty
     if happened is None:
@@ -244,9 +251,10 @@ def _write(state_dir, pack):
     return True
 
 
-def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None, recall=None):
+def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None, recall=None,
+          news=None):
     pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot),
-                 happened=happened, echoed=echoed, near=near, recall=recall)
+                 happened=happened, echoed=echoed, near=near, recall=recall, news=news)
     _write(state_dir, pack)
     return pack
 

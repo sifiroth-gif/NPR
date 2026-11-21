@@ -1211,6 +1211,7 @@ def fold(state_dir):
     # Мир не ждёт ведущего: просроченные планы отсутствующих исполняются сами
     # (GM_ONLY will.happened → NEXT.offscreen).
     will.advance(hot, _always_present(state_dir))
+    hot["_checks"].extend(plot.schedule(hot))   # главы со сроком мира открываются сами
     _cap_cards(hot)
     # Давнее — из оперативной памяти в archive/aged/ (и на страницы вики); у предела — строже.
     measure = lambda h: len(_dump_hot(_split_state(h)[0]).encode("utf-8"))
@@ -1232,10 +1233,19 @@ def fold(state_dir):
         _, accepted = scene_gate.played_turns(state_dir)
         hot.setdefault("scene", {})["npc_disclosures_to_player"] = (
             scene_gate.compact_disclosure_cues(hot, accepted))
+    # Вести мира и темп сцены: весомое за кадром доходит до Шики пунктом must.
+    from . import news
+    try:
+        news_item = news.step(hot, applied)
+    except Exception as exc:   # производное: сбой не останавливает свёртку
+        news_item = None
+        hot.setdefault("_checks", []).append({"turn": hot.get("cursor", {}).get("id"), "kind": "will",
+                                              "text": f"вести мира не собраны: {type(exc).__name__}"})
     # Счётчик показа новостей мира растёт до записи состояния, иначе событие висит в NEXT вечно.
     happened = will.offscreen(hot)
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
-        echoed = echo.pick(state_dir, hot)
+        echoed = echo.pick(state_dir, hot, texts=[f"{t.get('gm') or ''} {t.get('line') or ''}" for t in applied
+                                                  if t.get("kind") not in ("ooc", "technical", "void")])
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
         echoed = None
         hot.setdefault("_checks", []).append({"turn": hot.get("cursor", {}).get("id"), "kind": "echo",
@@ -1275,7 +1285,8 @@ def fold(state_dir):
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
                         secret_bytes=len(texts[1].encode("utf-8")))
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
-                   echoed=echoed, near=near, recall=recall_request.view(state_dir, hot))
+                   echoed=echoed, near=near, recall=recall_request.view(state_dir, hot), news=news_item)
+    news.write_pace(state_dir, hot)
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
