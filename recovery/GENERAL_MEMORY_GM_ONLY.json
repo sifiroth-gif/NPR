@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.086",
+  "cursor": "s09.text.087",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -372,13 +372,14 @@
     "caravan_prisoner": {
       "aliases": [
         "caravan prisoner",
-        "Фурукава Кёдзи"
+        "Фурукава Кёдзи",
+        "caravan_prisoner"
       ],
       "facts": [],
       "id": "caravan_prisoner",
       "kind": "npc",
       "label": "Фурукава Кёдзи",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-02-14T05:30:00",
@@ -393,20 +394,28 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.084"
+        },
+        {
+          "at": "0010-02-19T16:40:00",
+          "excerpt": "не попытался его перехватить. Утром второго дня Фурукава потребовал открыть передаточное отверстие. **Фурукава Кёдзи:** — Мне нужна бумага. И человек, который удостоверит, что я прибыл в здравом уме. **Хосина Кэн:** — Доехать сначала нужно. **Фурукава Кёдзи:**",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.087"
         }
       ],
       "projections": [
         {
-          "seen": "s09.text.086",
-          "state": "Весь день молчал, принимал пищу и воду; ошейник не издавал слышимых щелчков. Не знает о договоре Сано."
+          "seen": "s09.text.087",
+          "state": "Доставлен живым, сознание сохранено; подробностей договора Сано не знает. У ворот напомнил Шики о показаниях."
         },
         {
-          "state": "Весь день молчал, принимал пищу и воду; ошейник не издавал слышимых щелчков. Не знает о договоре Сано."
+          "state": "Доставлен живым, сознание сохранено; подробностей договора Сано не знает. У ворот напомнил Шики о показаниях."
         }
       ],
       "sources": [
         "recovery/cast/caravan_prisoner.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.087"
       ]
     },
     "clinic_assistant": {
@@ -776,13 +785,14 @@
     "hoshina_ken": {
       "aliases": [
         "hoshina ken",
-        "Хосина Кэн"
+        "Хосина Кэн",
+        "hoshina_ken"
       ],
       "facts": [],
       "id": "hoshina_ken",
       "kind": "npc",
       "label": "Хосина Кэн",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-02-14T05:29:00",
@@ -790,13 +800,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.076"
-        },
-        {
-          "at": "0010-02-14T07:04:28",
-          "excerpt": "дьмой колодец. **Миура Томо:** — Кто нанял? Пленный посмотрел на Шики. **Сигнальщик:** — Если назову, вы меня убьёте? Снизу донёсся голос Хосины. **Хосина Кэн, издали:** — ТОМO! ОТВЕТЬ! **Миура Томо:** — ЖИВОЙ! ОДНОГО ВЗЯЛИ! Несколько секунд спустя Хосина отве",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.083"
         },
         {
           "at": "0010-02-14T07:05:00",
@@ -811,25 +814,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.085"
+        },
+        {
+          "at": "0010-02-19T16:40:00",
+          "excerpt": "**Фурукава Кёдзи:** — Мне нужна бумага. И человек, который удостоверит, что я прибыл в здравом уме. **Хосина Кэн:** — Доехать сначала нужно. **Фурукава Кёдзи:** — Именно поэтому я прошу сейчас. Дзиро, стоявший возле повозки, неожиданно вмешался. **Дзиро:** — К",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.087"
         }
       ],
       "projections": [
         {
           "fears": "Умереть из-за чужой тайны.",
-          "seen": "s09.text.086",
-          "state": "Проверил и удерживает договор, отвёл колонну, обошёл ловушку, организовал ремонт и лагерь. Решил не сообщать Фурукаве о признании.",
+          "seen": "s09.text.087",
+          "state": "Довёз колонну без новых атак, принял ответственность за переговоры о передаче.",
           "voice": "Сдержанная практичная речь.",
           "wants": "Доставить пленника живым и получить плату."
         },
         {
           "fears": "Умереть из-за чужой тайны.",
-          "state": "Проверил и удерживает договор, отвёл колонну, обошёл ловушку, организовал ремонт и лагерь. Решил не сообщать Фурукаве о признании.",
+          "state": "Довёз колонну без новых атак, принял ответственность за переговоры о передаче.",
           "wants": "Доставить пленника живым и получить плату."
         }
       ],
       "sources": [
         "recovery/cast/hoshina_ken.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.087"
       ]
     },
     "hospital_night_admin": {
@@ -937,13 +948,14 @@
     "jiro_caravan_guard": {
       "aliases": [
         "jiro caravan guard",
-        "Дзиро"
+        "Дзиро",
+        "jiro_caravan_guard"
       ],
       "facts": [],
       "id": "jiro_caravan_guard",
       "kind": "npc",
       "label": "Дзиро",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0006-09-27T17:19:00",
@@ -951,13 +963,6 @@
           "source": "archive/session-003-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s03.text.105"
-        },
-        {
-          "at": "0010-02-14T07:04:09",
-          "excerpt": "Дзиро стой караван стоять #громко# я вижу вас всех #кунай с райтоном что бы перерезать нить ловушки# мастеру: более явное обозначение говорящих и напомни мне все техники которыми в",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.081"
         },
         {
           "at": "0010-02-14T07:04:19",
@@ -972,25 +977,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.085"
+        },
+        {
+          "at": "0010-02-19T16:40:00",
+          "excerpt": "авом уме. **Хосина Кэн:** — Доехать сначала нужно. **Фурукава Кёдзи:** — Именно поэтому я прошу сейчас. Дзиро, стоявший возле повозки, неожиданно вмешался. **Дзиро:** — Кэн, а ведь если он приедет туда полоумным, нам скажут, что это мы с ним сделали. Хосина вн",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.087"
         }
       ],
       "projections": [
         {
           "fears": "Быть использованным как расходный разведчик.",
-          "seen": "s09.text.086",
-          "state": "Перевязал Икэду, в дороге молчит и занимается упряжью.",
+          "seen": "s09.text.087",
+          "state": "Сам предложил зафиксировать состояние Фурукавы для защиты охраны.",
           "voice": "Резкие спонтанные возражения.",
           "wants": "Выжить и сохранить лицо перед старшим."
         },
         {
           "fears": "Быть использованным как расходный разведчик.",
-          "state": "Перевязал Икэду, в дороге молчит и занимается упряжью.",
+          "state": "Сам предложил зафиксировать состояние Фурукавы для защиты охраны.",
           "wants": "Выжить и сохранить лицо перед старшим."
         }
       ],
       "sources": [
         "recovery/cast/jiro_caravan_guard.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.087"
       ]
     },
     "kabuto": {
@@ -2159,13 +2172,14 @@
     "miura_tomo": {
       "aliases": [
         "miura tomo",
-        "Миура Томо"
+        "Миура Томо",
+        "miura_tomo"
       ],
       "facts": [],
       "id": "miura_tomo",
       "kind": "npc",
       "label": "Миура Томо",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-02-14T07:04:28",
@@ -2187,25 +2201,33 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.085"
+        },
+        {
+          "at": "0010-02-19T16:40:00",
+          "excerpt": "ина достал транспортные документы. **Хосина Кэн:** — Приехали. Даже с запасом. Миура снял дорожную повязку и вытер лицо. **Миура Томо:** — Получаем деньги и убираемся отсюда. Навстречу каравану вышли четверо вооружённых охранников и принимающий служащий в длин",
+          "source": "archive/session-009-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s09.text.087"
         }
       ],
       "projections": [
         {
           "fears": "Ненужная гибель при чужой операции.",
-          "seen": "s09.text.086",
-          "state": "После захвата Сано и окончания засады заявил Хосине об уходе после контракта.",
+          "seen": "s09.text.087",
+          "state": "Прибыл без новых ран, хочет получить плату и оставить службу.",
           "voice": "Резкие, сухие и раздражённые реплики.",
           "wants": "Заработать, остаться живым, не потерять лицо из-за младшего подчинения."
         },
         {
           "fears": "Ненужная гибель при чужой операции.",
-          "state": "После захвата Сано и окончания засады заявил Хосине об уходе после контракта.",
+          "state": "Прибыл без новых ран, хочет получить плату и оставить службу.",
           "wants": "Заработать, остаться живым, не потерять лицо из-за младшего подчинения."
         }
       ],
       "sources": [
         "recovery/cast/miura_tomo.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s09.text.087"
       ]
     },
     "morioka_escort_leader": {
@@ -2231,7 +2253,8 @@
     "morioka_hideaki": {
       "aliases": [
         "morioka hideaki",
-        "Мориока Хидэаки"
+        "Мориока Хидэаки",
+        "morioka_hideaki"
       ],
       "facts": [],
       "id": "morioka_hideaki",
@@ -2270,12 +2293,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.034",
+          "seen": "s09.text.087",
           "state": "Слышал слова Шики о сыне Такаги; о судьбе ребёнка ничего не знает, только о принципе шантажа. Остался на В-7, вылечен и под охраной."
         }
       ],
       "sources": [
-        "recovery/cast/morioka_hideaki.json"
+        "recovery/cast/morioka_hideaki.json",
+        "s09.text.087"
       ]
     },
     "naemnik_u_shakhty": {
@@ -4705,7 +4729,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s09.text.086",
         "s09.text.085"
       ]
     },
@@ -7552,6 +7575,24 @@
         "s08.text.079"
       ]
     },
+    "place:b2b649569d3cbaf4": {
+      "aliases": [
+        "place:b2b649569d3cbaf4",
+        "Седьмой колодец, центральные ворота комплекса Кэйсин",
+        "Седьмой колодец",
+        "центральные ворота комплекса Кэйсин"
+      ],
+      "facts": [],
+      "id": "place:b2b649569d3cbaf4",
+      "kind": "place",
+      "label": "Седьмой колодец, центральные ворота комплекса Кэйсин",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.087"
+      ]
+    },
     "place:b2e1923ecec4740a": {
       "aliases": [
         "place:b2e1923ecec4740a",
@@ -9943,27 +9984,6 @@
         "recovery/cast/ryuchido_first_serpent.json"
       ]
     },
-    "ryuchido_summoning_scroll": {
-      "aliases": [
-        "ryuchido summoning scroll"
-      ],
-      "facts": [],
-      "id": "ryuchido_summoning_scroll",
-      "kind": "item",
-      "label": "ryuchido summoning scroll",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s09.text.046",
-          "turn": "s09.text.047"
-        }
-      ],
-      "sources": [
-        "s09.text.047"
-      ]
-    },
     "s17_recipient_6": {
       "aliases": [
         "s17 recipient 6",
@@ -10717,11 +10737,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Договор подтвердил три оплаченные Фурукавой попытки освобождения за 12 млн. Хосина оставил Сано и перевязанного Икэду у водосборника, удерживает договор, от Фурукавы скрывает признание. Колонна возобновила путь 07:43, ночлег 19:10; пять дней до пункта назначения."
+          "state": "19.02 16:40 прибытие к Седьмому колодцу без новых столкновений. Приёмщик подтвердил П-4 как регистр сопроводительных документов. Передача и оплата не завершены."
         }
       ],
       "sources": [
-        "s09.text.085"
+        "s09.text.087"
       ]
     },
     "thread:black_market_new_contracts": {
@@ -11344,13 +11364,6 @@
       "type": "held_by"
     },
     {
-      "from": "ryuchido_summoning_scroll",
-      "source": "s09.text.047",
-      "status": "projected",
-      "to": "orochimaru",
-      "type": "held_by"
-    },
-    {
       "from": "private_bounties",
       "source": "s09.text.063",
       "status": "projected",
@@ -11429,5 +11442,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 734
+  "source_turns_indexed": 735
 }

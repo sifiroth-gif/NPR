@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.087: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Мориока Хидэаки (`npc/morioka_hideaki`), линия `black_caravan`
 - s09.text.086: поправки игрока: 1
 - s09.text.085: Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Дзиро (`npc/jiro_caravan_guard`), Сано Гэндзи (`npc/signalshchik`), Икэда (`npc/south_crossbowman`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `signaller_contract_tube`, вещь `front_wagon_frame`, линия `black_caravan`
 - s09.text.084: south_signaller (`npc/south_signaller`), Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), вещь `signaller_contract_tube`, линия `black_caravan`
@@ -61,4 +62,3 @@
 - s09.text.030: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `kiri_bingo_book`
 - s09.text.029: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `kiri_bingo_book`, вещь `kiri_anbu_mask`
 - s09.text.028: Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `kiri_woman_cloak_order`
-- s09.text.027: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), поправки игрока: 2
