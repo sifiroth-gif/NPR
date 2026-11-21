@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.017",
+  "cursor": "s10.text.018",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1321,12 +1321,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.041",
+          "seen": "s10.text.018",
           "state": "Утром 03.10 рассказал старшему сопровождающему каравана про изменившегося медика Кусагакуре, запись попала в дорожный рапорт, Шики пока не осведомлён."
         }
       ],
       "sources": [
-        "recovery/cast/keiji.json"
+        "recovery/cast/keiji.json",
+        "s10.text.018"
       ]
     },
     "khaguro": {
@@ -1403,7 +1404,8 @@
     "kiri_hunter_man": {
       "aliases": [
         "kiri hunter man",
-        "Мужчина с повязкой из Тумана"
+        "Мужчина с повязкой из Тумана",
+        "kiri_hunter_man"
       ],
       "facts": [],
       "id": "kiri_hunter_man",
@@ -1415,21 +1417,21 @@
         {
           "fears": "Посторонний генетический эксперимент и опасный контакт",
           "role": "Задержанный оперативник, ищет носителя Хётона",
-          "seen": "s09.text.038",
+          "seen": "s10.text.018",
           "state": "Под отдельным конвоем переведён под медицинский надзор, не встретился с Шики вновь.",
           "voice": "Сухо, насмешливо, с напускной бравадой",
           "wants": "Сохранить имя давшего приказ и выбраться живым"
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_man.json"
+        "recovery/cast/kiri_hunter_man.json",
+        "s10.text.018"
       ]
     },
     "kiri_hunter_woman": {
       "aliases": [
         "kiri hunter woman",
-        "Женщина со шрамом из Тумана",
-        "kiri_hunter_woman"
+        "Женщина со шрамом из Тумана"
       ],
       "facts": [],
       "id": "kiri_hunter_woman",
@@ -1448,8 +1450,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunter_woman.json",
-        "s10.text.017"
+        "recovery/cast/kiri_hunter_woman.json"
       ]
     },
     "kiri_hunters": {
@@ -1470,8 +1471,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_hunters.json",
-        "s10.text.017"
+        "recovery/cast/kiri_hunters.json"
       ]
     },
     "kiri_transfer_carrier": {
@@ -4862,6 +4862,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s10.text.018",
         "s09.text.096"
       ]
     },
@@ -7017,12 +7018,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.017",
         "s10.text.012",
         "s10.text.013",
         "s10.text.014",
         "s10.text.015",
-        "s10.text.016"
+        "s10.text.016",
+        "s10.text.017"
       ]
     },
     "place:96124167cc04d176": {
@@ -10893,8 +10894,7 @@
     "tamura_reika": {
       "aliases": [
         "tamura reika",
-        "Тамура Рэйка",
-        "tamura_reika"
+        "Тамура Рэйка"
       ],
       "facts": [],
       "id": "tamura_reika",
@@ -10941,8 +10941,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tamura_reika.json",
-        "s10.text.017"
+        "recovery/cast/tamura_reika.json"
       ]
     },
     "tetsu": {
@@ -11606,5 +11605,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 766
+  "source_turns_indexed": 767
 }
