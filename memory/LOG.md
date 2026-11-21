@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.099: Немера (Невыписанная) (`npc/nemera`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), линия `nemera_symbiosis`
 - s09.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `nemera_symbiosis`, поправки игрока: 1
 - s09.text.097: Немера (Невыписанная) (`npc/nemera`)
 - s09.text.096: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `cash_1184`, вещь `contract_1184_docs`, линия `shiki_training`, линия `shiki_finances`
@@ -60,4 +61,3 @@
 - s09.text.042: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), бой
 - s09.text.041: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Кидзима Суми (`npc/kuroishi_visitor`), kiri_hunters (`npc/kiri_hunters`), Кэйдзи (`npc/keiji`), вещь `kuroishi_ledger`, вещь `medical_case_m12`, план сюжета
 - s09.text.040: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Курода Маю (`npc/kuroda_mayu`), вещь `kuroishi_ledger`
-- s09.text.039: Хасуми Дзюнъити (`npc/kuroishi_hasumi`), Кабуто Якуши (`npc/kabuto`), Медик у панели В-7 (`npc/medical_panel_operator`), Глава Кусагакуре (`npc/kusa_head`), вещь `kuroishi_ledger`, бой

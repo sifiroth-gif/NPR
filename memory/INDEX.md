@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s09.text.098`
+# Карта мира NPR · на ходе `s09.text.099`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,8 +6,10 @@
 - места · `places/INDEX` (192) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (174)
-- waterfall_trackers —  · `npc/waterfall_trackers`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
+- Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
+- Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
+- waterfall_trackers —  · `npc/waterfall_trackers`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
 - Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Принимающий служащий — по подписи в сцене · `npc/prinimayushchiy_sluzhashchiy`
@@ -36,8 +38,6 @@
 - Осава Гэнсэй (Осава, Гэнсэй) — Личную внешность Шики не видел, описание не установлено. · `npc/osawa_gensei`
 - Хагуро (Змея Рьючидо) — по подписи в сцене · `npc/khaguro`
 - Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto`
-- Старший шиноби Звука — Старший охранник входного узла. · `npc/sound_kagen_senior`
-- Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
 - akatsuki —  · `npc/akatsuki`
 - jiraiya —  · `npc/jiraiya`
 - pain —  · `npc/pain`
@@ -200,7 +200,7 @@
 - `reika_meeting` — 20 февраля Шики предложил неизвестной ему по подтверждённому имени же… · `threads/reika_meeting`
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
-- `nemera_symbiosis` — 25.02 10:17 Шики полностью изменил принцип семи удерживающих Немеру к… · `threads/nemera_symbiosis`
+- `nemera_symbiosis` — 25.02 10:18 Немера прямо объяснила смысл своей фразы: седьмой контур … · `threads/nemera_symbiosis`
 
 ## Давние линии (9, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`
