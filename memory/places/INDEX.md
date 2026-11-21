@@ -185,3 +185,4 @@
 - Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
 - Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
 - Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
+- Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09

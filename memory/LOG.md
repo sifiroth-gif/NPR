@@ -2,7 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s09.text.084: Сано Гэндзи (`npc/south_signaller`), Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), вещь `signaller_contract_tube`, линия `black_caravan`
+- s09.text.085: Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Дзиро (`npc/jiro_caravan_guard`), Сано Гэндзи (`npc/signalshchik`), Икэда (`npc/south_crossbowman`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `signaller_contract_tube`, вещь `front_wagon_frame`, линия `black_caravan`
+- s09.text.084: south_signaller (`npc/south_signaller`), Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), вещь `signaller_contract_tube`, линия `black_caravan`
 - s09.text.083: Миура Томо (`npc/miura_tomo`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `black_caravan`, бой
 - s09.text.082: Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), линия `black_caravan`, бой, поправки игрока: 2
 - s09.text.081: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дзиро (`npc/jiro_caravan_guard`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `north_tripwire`, вещь `front_wagon_frame`, линия `black_caravan`, бой, поправки игрока: 1
@@ -61,4 +62,3 @@
 - s09.text.028: Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), вещь `kiri_woman_cloak_order`
 - s09.text.027: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Женщина со шрамом из Тумана (`npc/kiri_hunter_woman`), Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), поправки игрока: 2
 - s09.text.026: Саске Учиха (`npc/sasuke`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Немера (Невыписанная) (`npc/nemera`), kiri_hunters (`npc/kiri_hunters`), Сопровождающий повозки (`npc/kagen_caravan_escort`), Возница повозки (`npc/kagen_caravan_driver`), вещь `kimimaro_bone_sample`, поправки игрока: 3
-- s09.text.025: Саске Учиха (`npc/sasuke`), Немера (Невыписанная) (`npc/nemera`), Касэ (`npc/kase`), Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 3
