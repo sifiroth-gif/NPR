@@ -11,8 +11,8 @@
 - Саске Учиха · `npc/sasuke` — 10 ход(ов)
 - Младший шиноби Звука · `npc/sound_kagen_junior` — 3 ход(ов)
 - Орочимару · `npc/orochimaru` — 3 ход(ов)
-- Женщина со шрамом из Тумана · `npc/kiri_hunter_woman` — 3 ход(ов)
 - Старший шиноби Звука · `npc/sound_kagen_senior` — 2 ход(ов)
+- Женщина со шрамом из Тумана · `npc/kiri_hunter_woman` — 2 ход(ов)
 - Неизвестный взрослый пациент Кагэн · `npc/kagen_patient_adult` — 1 ход(ов)
 - Мужчина с повязкой из Тумана · `npc/kiri_hunter_man` — 1 ход(ов)
 
