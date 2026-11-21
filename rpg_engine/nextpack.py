@@ -17,8 +17,7 @@ from pathlib import Path
 from . import directives, dread, inquiry, lore, will
 
 PATH = "recovery/NEXT.json"
-TARGET_BYTES = 12000
-HARD_BYTES = 14000
+from .limits import NEXT_HARD as HARD_BYTES, NEXT_TARGET as TARGET_BYTES  # noqa: E402
 DUE_HOURS = 6
 FIELD = 170
 RULE = ("Это всё, что нужно прочитать перед обычным ходом: остальное уже в чате. Страницу memory/ "
@@ -137,7 +136,7 @@ def must(hot, always_present=(), entries=None):
     return out[:3]
 
 
-def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None):
+def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -163,6 +162,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                              "events": happened}
     if echoed:
         pack["echo"] = echoed
+    if near:
+        pack["limits"] = near
     pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []]
     last = ((hot.get("lint") or {}).get("recent") or [])[-1:]
     if last and last[0].get("id") == cursor.get("id") and last[0].get("verdict") != "чисто":
@@ -220,9 +221,9 @@ def _write(state_dir, pack):
     return True
 
 
-def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None):
+def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None):
     pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot),
-                 happened=happened, echoed=echoed)
+                 happened=happened, echoed=echoed, near=near)
     _write(state_dir, pack)
     return pack
 
@@ -237,5 +238,13 @@ def write_blocked(state_dir, cursor, errors, *, kind="fold_errors", rule):
     pack["cursor"] = cursor
     pack[kind] = list(errors)
     pack["blocked_rule"] = rule
+    if any("разросся" in str(e) for e in errors):   # предел памяти: игрок должен знать сразу
+        from . import limits
+        pack["limits"] = {"items": [{"key": "hot", "what": "оперативная память переполнена — память после ходов "
+                                                           "не обновляется", "acts": [limits.ACT_TRIM, limits.ACT_CLOSE,
+                                                                                     limits.ACT_RAISE], "over": True}],
+                          "tell": True,
+                          "rule": "Скажи игроку сейчас одной строкой вне игры: память не обновляется из-за предела, "
+                                  "и предложи варианты из acts; выбор игрока исполни. Ходы не потеряны."}
     _write(state_dir, pack)
     return pack

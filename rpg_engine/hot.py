@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import aging, claims, echo, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import aging, claims, echo, limits, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -63,8 +63,8 @@ CALENDAR_AHEAD = 14
 # байт. Единый норматив (19.11.2026): выше HOT_LIMIT свёртка блокируется и пишет
 # сбой в CHECKS.json; рабочая норма — до HOT_NORM. Полная память NPC живёт в вики,
 # HOT держит только текущую сцену, свежие знания и эпизоды.
-HOT_LIMIT = 90000
-HOT_NORM = 80000
+HOT_LIMIT = limits.HOT_LIMIT   # пределы — в rpg_engine/limits.py
+HOT_NORM = limits.HOT_NORM
 LAST_GM_TAIL = 1500  # знаков последнего ответа в HOT; полный текст — в TURN.json и archive/
 
 # Договор семи запоров: ленивый расчёт по игровому времени (PROGRESSION_RULES.json).
@@ -1213,8 +1213,12 @@ def fold(state_dir):
     will.advance(hot, _always_present(state_dir))
     _cap_cards(hot)
     # Давнее — из оперативной памяти в archive/aged/ (и на страницы вики); у предела — строже.
-    aged = aging.apply(state_dir, hot, size=lambda h: len(_dump_hot(_split_state(h)[0]).encode("utf-8")),
-                       limit=HOT_NORM)
+    measure = lambda h: len(_dump_hot(_split_state(h)[0]).encode("utf-8"))
+    aged = aging.apply(state_dir, hot, size=measure, limit=HOT_NORM)
+    if limits.trim_requested(state_dir):   # игрок выбрал строгую разгрузку сейчас
+        extra = aging._pass(state_dir, hot, aging.TIGHT)
+        aged = {k: aged.get(k, 0) + extra.get(k, 0) for k in set(aged) | set(extra) if aged.get(k, 0) + extra.get(k, 0)}
+        aged["by_request"] = 1
     if aged:
         hot.setdefault("fold", {})["aged"] = aged
     _tidy_checks(hot)
@@ -1230,6 +1234,9 @@ def fold(state_dir):
             scene_gate.compact_disclosure_cues(hot, accepted))
     # Счётчик показа новостей мира растёт до записи состояния, иначе событие висит в NEXT вечно.
     happened = will.offscreen(hot)
+    public, secret = _split_state(hot)
+    near = limits.check(state_dir, hot, hot_bytes=len(_dump_hot(public).encode("utf-8")),
+                        secret_bytes=len(_dump({k: v for k, v in secret.items() if k != "undo"}).encode("utf-8")))
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
         echoed = echo.pick(state_dir, hot)
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
@@ -1253,7 +1260,7 @@ def fold(state_dir):
     brief = live_scene.build_for_state(hot, accepted, state_dir)
     live_scene.write(brief_path, brief)
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
-                   echoed=echoed)
+                   echoed=echoed, near=near)
     # Historical recall is refreshed by the *same* existing fold and committed
     # in archive/ with the verbatim journal; no detached optional sidecar job.
     heuristic = None
