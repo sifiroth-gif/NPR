@@ -7,8 +7,8 @@
 - источник: s09.text.043
 
 ## Кто здесь говорил с Шики
-- Кидзима Суми · `npc/kuroishi_visitor` — 2 ход(ов)
 - Кабуто Якуши · `npc/kabuto` — 2 ход(ов)
+- Кидзима Суми · `npc/kuroishi_visitor` — 2 ход(ов)
 - Разведчик Звука · `npc/razvedchik_zvuka` — 1 ход(ов)
 - Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 1 ход(ов)
 

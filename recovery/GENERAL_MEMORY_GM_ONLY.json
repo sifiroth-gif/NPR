@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.042",
+  "cursor": "s10.text.043",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:23:00",
-          "excerpt": "Я сказал Хагуро что хочу силы. Это правда. Он также спросил для исследования, я ответил да и это правда. Но слово \"исследование\" #зловещая ухмылка# удобное. Первично, мне просто жуть как ин",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.039"
         },
         {
           "at": "0010-03-04T07:29:00",
@@ -1367,6 +1360,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
+        },
+        {
+          "at": "0010-03-04T07:31:00",
+          "excerpt": "олодное удовольствие. **Хакудзя-сэннин:** — Наш договор позволяет звать. Откликнуться или отказать — дело змеи. Хагуро, надо полагать, тебе это уже объяснил. Она отводит взгляд к каменным фигурам. **Хакудзя-сэннин:** — Теперь о риске. Хвост осторожно обвивает ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.043"
         }
       ],
       "projections": [
@@ -1389,7 +1389,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -1404,12 +1404,19 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
+        },
+        {
+          "at": "0010-03-04T07:31:00",
+          "excerpt": "го для человека. У нас было одно совместное исследование. Я попросил вместо денег контракт со змеями. Хакудзя-сэннин перестаёт покачивать головой. **Мугами Шики:** — А риски сендзюцу… прозрачны. Но кто не рискует, тот… хах. **Хакудзя-сэннин:** — Дольше живёт. ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.043"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.042"
+          "seen": "s10.text.043"
         },
         {
           "role": "по подписи в сцене"
@@ -1417,7 +1424,8 @@
       ],
       "sources": [
         "recovery/cast/khakudzya_sennin.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s10.text.043"
       ]
     },
     "kiri_bingo_book": {
@@ -2549,15 +2557,16 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s10.text.040",
+          "seen": "s10.text.043",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
-          "state": "Сама решила не показываться Тагицухимэ. Внутренне сообщила Шики, что третья сестра слишком назойлива; ощутила усиление необычной внешней силы у святилища.",
+          "state": "Внутренне отметила, что предлагаемая природная энергия похожа на ощущавшуюся в известняковых туннелях. Не проявилась и не дала согласия вмешиваться в пробу.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
           "wants": "По собственному высказыванию Шики: не просто выйти из тюрьмы, а иметь собственную волю и прямое, независимое восприятие мира, не нуждаясь в разрешении хозяина; до того — изучать Шики. Это её заявленная цель, не доказанная степень откровенности."
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json"
+        "recovery/cast/nemera.json",
+        "s10.text.043"
       ]
     },
     "night_icu_physician": {
@@ -2678,7 +2687,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 54,
+      "mention_count": 55,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -2686,13 +2695,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-02-12T16:33:00",
-          "excerpt": "живым | **Заказчик:** закрытое исследовательское объединение «Кэйсин». Не связано с известными посреднику объектами Орочимару. **Пункт отправления:** старая грузовая станция Хакусэки на северо-восточной окраине Страны Ветра. **Пункт прибытия:** охраняемый иссл",
-          "source": "archive/session-009-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s09.text.074"
         },
         {
           "at": "0010-02-27T15:46:00",
@@ -2707,6 +2709,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
+        },
+        {
+          "at": "0010-03-04T07:31:00",
+          "excerpt": "сухой обстоятельностью, что собственная шутка, кажется, её совершенно не забавляет. **Хакудзя-сэннин:** — Орочимару тоже любил говорить о риске. Особенно когда рисковали другие. Белая голова опускается ближе к Шики. **Хакудзя-сэннин:** — Любопытный расчёт. Ты ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.043"
         }
       ],
       "projections": [
@@ -7571,6 +7580,24 @@
         "s10.text.011"
       ]
     },
+    "place:9ea87187b4d9f80b": {
+      "aliases": [
+        "place:9ea87187b4d9f80b",
+        "Рьючидо, внутреннее святилище, у возвышения Хакудзя-сэннин",
+        "внутреннее святилище",
+        "у возвышения Хакудзя-сэннин"
+      ],
+      "facts": [],
+      "id": "place:9ea87187b4d9f80b",
+      "kind": "place",
+      "label": "Рьючидо, внутреннее святилище, у возвышения Хакудзя-сэннин",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.043"
+      ]
+    },
     "place:9ffc64ff69edb6a9": {
       "aliases": [
         "place:9ffc64ff69edb6a9",
@@ -10649,7 +10676,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10657,13 +10684,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:23:00",
-          "excerpt": "Я сказал Хагуро что хочу силы. Это правда. Он также спросил для исследования, я ответил да и это правда. Но слово \"исследование\" #зловещая ухмылка# удобное. Первично, мне просто жуть как ин",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.039"
         },
         {
           "at": "0010-03-04T07:29:00",
@@ -10678,6 +10698,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
+        },
+        {
+          "at": "0010-03-04T07:31:00",
+          "excerpt": "олодное удовольствие. **Хакудзя-сэннин:** — Наш договор позволяет звать. Откликнуться или отказать — дело змеи. Хагуро, надо полагать, тебе это уже объяснил. Она отводит взгляд к каменным фигурам. **Хакудзя-сэннин:** — Теперь о риске. Хвост осторожно обвивает ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.043"
         }
       ],
       "projections": [
@@ -10872,11 +10899,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.101"
+          "seen": "s10.text.043"
         }
       ],
       "sources": [
-        "recovery/cast/seina.json"
+        "recovery/cast/seina.json",
+        "s10.text.043"
       ]
     },
     "sekido_tadao": {
@@ -11078,8 +11106,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/signalshchik.json",
-        "s10.text.042"
+        "recovery/cast/signalshchik.json"
       ]
     },
     "sound_kagen_junior": {
@@ -11342,16 +11369,12 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.042",
-          "state": "Осталась у озера; знает от Шики имя Немеры и утверждение о её автономии, не видела её."
-        },
-        {
+          "seen": "s10.text.043",
           "state": "Осталась у озера; знает от Шики имя Немеры и утверждение о её автономии, не видела её."
         }
       ],
       "sources": [
-        "recovery/cast/tagitsuhime.json",
-        "recovery/HOT.json"
+        "recovery/cast/tagitsuhime.json"
       ]
     },
     "tagorihime": {
@@ -12054,7 +12077,8 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин"
+        "Белая Змея / Хакудзя-сэннин",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -12064,17 +12088,17 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s10.text.042",
-          "state": "На возвышении перед приблизившимся Шики; показала три каменные фигуры, предложила проверить пригодность к сендзюцу, спросила о знакомстве с Орочимару."
+          "seen": "s10.text.043",
+          "state": "Предлагает испытание через укус на каменной площадке, не приступала; чувствует два разных ритма чакры в теле Шики."
         },
         {
-          "state": "На возвышении перед приблизившимся Шики; показала три каменные фигуры, предложила проверить пригодность к сендзюцу, спросила о знакомстве с Орочимару."
+          "state": "Предлагает испытание через укус на каменной площадке, не приступала; чувствует два разных ритма чакры в теле Шики."
         }
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
         "recovery/HOT.json",
-        "s10.text.042"
+        "s10.text.043"
       ]
     }
   },
@@ -12179,5 +12203,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 790
+  "source_turns_indexed": 791
 }

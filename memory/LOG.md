@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.043: Хакудзя-сэннин (`npc/khakudzya_sennin`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Кирисава Сэйна (`npc/seina`)
 - s10.text.042: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сано Гэндзи (`npc/signalshchik`)
 - s10.text.041: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Младший шиноби Звука (`npc/sound_kagen_junior`)
 - s10.text.040: Тагицухимэ (`npc/tagitsuhime`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старший шиноби Звука (`npc/sound_kagen_senior`)
@@ -59,4 +60,3 @@
 - s09.text.088: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), matsuda_p4 (`npc/matsuda_p4`), линия `black_caravan`
 - s09.text.087: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Миура Томо (`npc/miura_tomo`), Мориока Хидэаки (`npc/morioka_hideaki`), линия `black_caravan`
 - s09.text.086: поправки игрока: 1
-- s09.text.085: Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Дзиро (`npc/jiro_caravan_guard`), Сано Гэндзи (`npc/signalshchik`), Икэда (`npc/south_crossbowman`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `signaller_contract_tube`, вещь `front_wagon_frame`, линия `black_caravan`

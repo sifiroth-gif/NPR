@@ -98,6 +98,7 @@
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
 - Рьючидо, внутреннее святилище Белой Змеи · `places/ryuchido-vnutrennee-svyatilishche-beloy-zmei` · 2 ход(ов), s10–s10
+- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 2 ход(ов), s10–s10
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
@@ -209,4 +210,3 @@
 - Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, Зал неподвижной воды у моста · `places/ryuchido-zal-nepodvizhnoy-vody-u-mosta` · 1 ход(ов), s10–s10
-- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 1 ход(ов), s10–s10
