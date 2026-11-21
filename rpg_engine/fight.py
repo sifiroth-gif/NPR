@@ -51,9 +51,11 @@ SEVERITY = {"лёгкая": 0, "средняя": 0.5, "тяжёлая": 1, "кр
 MORALE = {"steady": 0, "shaken": 0.5, "breaking": 1, "broken": 1}
 ACTIVE = "active"
 
-# Чакра Шики: шкала 0–100.
-COST = {"E": 2, "D": 4, "C": 8, "B": 15, "A": 25, "S": 40}
-BURST_COST = 3
+# Чакра Шики: шкала 0–100. Цена ЛЮБОЙ техники, включая явный cost, снижена в 4 раза.
+MAX_CHAKRA = 100.0
+TECHNIQUE_COST_SCALE = 0.25
+COST = {"E": 2, "D": 4, "C": 8, "B": 15, "A": 25, "S": 40}  # базовая цена до множителя
+BURST_COST = 3 * TECHNIQUE_COST_SCALE
 REGEN_PER_HOUR = 6
 LOCKOUT_HOURS = 2         # после обморока чакра не восполняется сразу (канон s08.text.021)
 CHAKRA_STATES = ((60, "готов", 0), (30, "напряжение", -0.5), (10, "на исходе", -1), (0, "пусто", -2))
@@ -287,7 +289,8 @@ def _regen(hot, at):
     if locked and locked > start:
         start = min(locked, now)
     hours = max(0.0, (now - start).total_seconds() / 3600)
-    chakra["value"] = round(min(100.0, float(chakra["value"]) + REGEN_PER_HOUR * hours), 1)
+    chakra["value"] = round(min(MAX_CHAKRA, float(chakra["value"]) + REGEN_PER_HOUR * hours), 2)
+    chakra["max"] = MAX_CHAKRA
     chakra["at"] = at
     chakra["state"] = chakra_state(chakra["value"])[0]
     if locked and now >= locked:
@@ -301,17 +304,22 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
         return
     patch = patch if isinstance(patch, dict) else {}
     if "set" in patch:
-        chakra = shiki["chakra"] = {"value": float(patch["set"]), "at": at, "why": patch.get("why", "")}
+        chakra = shiki["chakra"] = {**(chakra if isinstance(chakra, dict) else {}),
+                                   "value": max(0.0, min(MAX_CHAKRA, float(patch["set"]))),
+                                   "max": MAX_CHAKRA, "at": at, "why": patch.get("why", "")}
     if not isinstance(chakra, dict):
         return
+    chakra["max"] = MAX_CHAKRA
+    chakra["value"] = max(0.0, min(MAX_CHAKRA, float(chakra["value"])))
     spent, used = 0.0, []
     for item in patch.get("spend") or []:
         if not isinstance(item, dict):
             continue
-        cost = item.get("cost") if isinstance(item.get("cost"), (int, float)) else COST.get(str(item.get("rank", "")).upper())
-        if cost is None:
+        base_cost = item.get("cost") if isinstance(item.get("cost"), (int, float)) else COST.get(str(item.get("rank", "")).upper())
+        if base_cost is None:
             _note(notes, turn_id, f"Чакра: у «{item.get('what')}» нет ранга (E–S) или cost.")
             continue
+        cost = float(base_cost) * TECHNIQUE_COST_SCALE
         left = float(chakra["value"]) - spent
         if cost > left + 0.01:
             _note(notes, turn_id, f"«{item.get('what')}» стоит {cost:g}, а у Шики {max(left, 0):.0f} из 100: "
@@ -321,7 +329,7 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
         used.append(item.get("what"))
     spent += BURST_COST * bursts
     before = float(chakra["value"])
-    chakra["value"] = round(before - spent, 1)
+    chakra["value"] = round(before - spent, 2)
     chakra["at"] = at
     if used or bursts:
         chakra["last"] = {"turn": turn_id, "spent": spent, "what": [u for u in used if u] +
