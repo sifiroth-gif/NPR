@@ -180,3 +180,4 @@
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
+- Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
