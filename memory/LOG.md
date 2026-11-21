@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.007: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Аракава Дзюн (`npc/arakawa`), Осава Гэнсэй (`npc/osawa_gensei`)
 - s10.text.006: Тамура Рэйка (`npc/tamura_reika`), Минаги Дзэн (`npc/minagi_zen`), Глава Кусагакуре (`npc/kusa_head`)
 - s10.text.005: Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мугами Нао (`npc/nao`)
 - s10.text.004: Тамура Рэйка (`npc/tamura_reika`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хаясэ Нори (`npc/nori`)
@@ -60,4 +61,3 @@
 - s09.text.052: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хагуро (`npc/khaguro`), Саске Учиха (`npc/sasuke`), Хирано (`npc/hirano`)
 - s09.text.051: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`)
 - s09.text.050: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Саске Учиха (`npc/sasuke`), Дежурная администратор госпиталя (`npc/hospital_night_admin`), hirano_seiji (`npc/hirano_seiji`)
-- s09.text.049: ryuchido_first_serpent (`npc/ryuchido_first_serpent`), поправки игрока: 1
