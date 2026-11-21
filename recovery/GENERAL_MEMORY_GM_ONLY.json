@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.032",
+  "cursor": "s10.text.033",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1708,7 +1708,7 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.032",
+          "seen": "s10.text.033",
           "state": "Отпущена после передачи комплекта; дальнейших контактов с Шики в этой сцене нет."
         },
         {
@@ -1718,14 +1718,13 @@
       "sources": [
         "recovery/cast/kuroishi_visitor.json",
         "recovery/HOT.json",
-        "s10.text.032"
+        "s10.text.033"
       ]
     },
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре",
-        "kusa_head"
+        "Глава Кусагакуре"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -1783,8 +1782,7 @@
       ],
       "sources": [
         "recovery/cast/kusa_head.json",
-        "recovery/HOT.json",
-        "s10.text.032"
+        "recovery/HOT.json"
       ]
     },
     "masked_handler": {
@@ -5773,6 +5771,24 @@
       "projections": [],
       "sources": [
         "s06.text.025"
+      ]
+    },
+    "place:667b37d6bc3480ba": {
+      "aliases": [
+        "place:667b37d6bc3480ba",
+        "Рьючидо, галерея переменчивого камня, у колонны",
+        "галерея переменчивого камня",
+        "у колонны"
+      ],
+      "facts": [],
+      "id": "place:667b37d6bc3480ba",
+      "kind": "place",
+      "label": "Рьючидо, галерея переменчивого камня, у колонны",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.033"
       ]
     },
     "place:66983b6e16224f67": {
@@ -10548,7 +10564,7 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.032",
+          "seen": "s10.text.033",
           "state": "В зале первого испытания, после выхода Шики осталась у стола и уже передала Тагорихимэ факты его уборки и кормления Суми."
         },
         {
@@ -11128,7 +11144,7 @@
       "id": "tagorihime",
       "kind": "npc",
       "label": "Тагорихимэ",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-04T07:12:00",
@@ -11143,21 +11159,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.032"
+        },
+        {
+          "at": "0010-03-04T07:13:04",
+          "excerpt": ":** — Разрешением — да. Испытанием? Хах, нет. Ты только что сказала, что можешь всё менять. А значит… Тагорихимэ приподнимает бровь. **Тагорихимэ:** — А значит? В глазах Шики раскрывается Вечный Мангекё. По алой радужке разворачиваются переплетённые чёрные спи",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.032",
-          "state": "Сидит на каменном выступе рядом с развилкой и намерена независимо продолжать менять конфигурацию галереи, не обещает вести Шики."
+          "seen": "s10.text.033",
+          "state": "В человеческом облике без травм удерживается Шики у колонны; руки и корпус обездвижены, согласия проводить не дала. Сохраняет самообладание и возможность попытаться сменить форму."
         },
         {
-          "state": "Сидит на каменном выступе рядом с развилкой и намерена независимо продолжать менять конфигурацию галереи, не обещает вести Шики."
+          "state": "В человеческом облике без травм удерживается Шики у колонны; руки и корпус обездвижены, согласия проводить не дала. Сохраняет самообладание и возможность попытаться сменить форму."
         }
       ],
       "sources": [
         "recovery/cast/tagorihime.json",
         "recovery/HOT.json",
-        "s10.text.032"
+        "s10.text.033"
       ]
     },
     "takagi_ren": {
@@ -11909,5 +11932,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 780
+  "source_turns_indexed": 781
 }

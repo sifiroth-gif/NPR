@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.033: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), бой
 - s10.text.032: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), Глава Кусагакуре (`npc/kusa_head`)
 - s10.text.031: sumi (`npc/sumi`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Тагорихимэ (`npc/tagorihime`), Минасэ Рэи (`npc/minase`), Кидзима Суми (`npc/kuroishi_visitor`)
 - s10.text.030: Итикисимахимэ (`npc/ryuchido_gate_woman`), sumi (`npc/sumi`), Мугами Нао (`npc/nao`)
@@ -59,4 +60,3 @@
 - s09.text.078: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Осава Гэнсэй (`npc/osawa_gensei`), линия `ch09_order_chain`, план сюжета
 - s09.text.077: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), линия `ch09_order_chain`, план сюжета
 - s09.text.076: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Нагаэ Рокуто (`npc/nagae_rokuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `black_caravan_manifest`, линия `v7`, план сюжета
-- s09.text.075: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `black_caravan_contract`, линия `black_caravan`, линия `v7`, план сюжета, поправки игрока: 1
