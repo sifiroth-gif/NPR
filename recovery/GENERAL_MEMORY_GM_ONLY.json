@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s09.text.095",
+  "cursor": "s09.text.096",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -419,6 +419,27 @@
         "recovery/cast/caravan_prisoner.json"
       ]
     },
+    "cash_1184": {
+      "aliases": [
+        "cash 1184"
+      ],
+      "facts": [],
+      "id": "cash_1184",
+      "kind": "item",
+      "label": "cash 1184",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s09.text.096",
+          "turn": "s09.text.096"
+        }
+      ],
+      "sources": [
+        "s09.text.096"
+      ]
+    },
     "clinic_assistant": {
       "aliases": [
         "clinic assistant",
@@ -462,6 +483,27 @@
       ],
       "sources": [
         "recovery/GM_ONLY.json"
+      ]
+    },
+    "contract_1184_docs": {
+      "aliases": [
+        "contract 1184 docs"
+      ],
+      "facts": [],
+      "id": "contract_1184_docs",
+      "kind": "item",
+      "label": "contract 1184 docs",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s09.text.096",
+          "turn": "s09.text.096"
+        }
+      ],
+      "sources": [
+        "s09.text.096"
       ]
     },
     "courier_unknown": {
@@ -2075,8 +2117,7 @@
     "minagi_zen": {
       "aliases": [
         "minagi zen",
-        "Минаги Дзэн",
-        "minagi_zen"
+        "Минаги Дзэн"
       ],
       "facts": [],
       "id": "minagi_zen",
@@ -2120,17 +2161,10 @@
           "state": "Подтвердил пересчёт: полная сумма 49,5 млн. По просьбе Шики отправил через западную почту сообщение для прежней посетительницы: 27.02.1287, Долина Завершения, голова Учихи Мадары, «Я буду один»; время не определено. Не раскрыл адреса Шики другим лицам.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
-        },
-        {
-          "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "state": "Подтвердил пересчёт: полная сумма 49,5 млн. По просьбе Шики отправил через западную почту сообщение для прежней посетительницы: 27.02.1287, Долина Завершения, голова Учихи Мадары, «Я буду один»; время не определено. Не раскрыл адреса Шики другим лицам.",
-          "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         }
       ],
       "sources": [
-        "recovery/cast/minagi_zen.json",
-        "recovery/HOT.json",
-        "s09.text.095"
+        "recovery/cast/minagi_zen.json"
       ]
     },
     "minase": {
@@ -2503,8 +2537,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nemera.json",
-        "s09.text.095"
+        "recovery/cast/nemera.json"
       ]
     },
     "night_icu_physician": {
@@ -2713,7 +2746,8 @@
     "p4_archivist_matsuda": {
       "aliases": [
         "p4 archivist matsuda",
-        "Мацуда (архивариус П-4)"
+        "Мацуда (архивариус П-4)",
+        "p4_archivist_matsuda"
       ],
       "facts": [],
       "id": "p4_archivist_matsuda",
@@ -2725,14 +2759,15 @@
         {
           "fears": "Стать виновной в исчезновении листов.",
           "role": "Архивариус П-4 комплекса Кэйсин",
-          "seen": "s09.text.093",
+          "seen": "s09.text.096",
           "state": "Приняла от Шики устную просьбу передать Хирано «пламенный привет»; внесла дословную формулу в исходящее сообщение, ещё не отправленное и не доставленное.",
           "voice": "Короткая требовательная речь, особенно о числах.",
           "wants": "Не отвечать за чужие исправления реестра."
         }
       ],
       "sources": [
-        "recovery/cast/p4_archivist_matsuda.json"
+        "recovery/cast/p4_archivist_matsuda.json",
+        "s09.text.096"
       ]
     },
     "pain": {
@@ -4810,6 +4845,25 @@
       "projections": [],
       "sources": [
         "s09.text.093"
+      ]
+    },
+    "place:4c7f3f73c7fee790": {
+      "aliases": [
+        "place:4c7f3f73c7fee790",
+        "Страна Рек, верховья Сирана, убежище «Чёрный створ»",
+        "Страна Рек",
+        "верховья Сирана",
+        "убежище «Чёрный створ»"
+      ],
+      "facts": [],
+      "id": "place:4c7f3f73c7fee790",
+      "kind": "place",
+      "label": "Страна Рек, верховья Сирана, убежище «Чёрный створ»",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s09.text.096"
       ]
     },
     "place:4c907710b1f1b261": {
@@ -9847,7 +9901,8 @@
     "prinimayushchiy_sluzhashchiy": {
       "aliases": [
         "prinimayushchiy sluzhashchiy",
-        "Принимающий служащий"
+        "Принимающий служащий",
+        "prinimayushchiy_sluzhashchiy"
       ],
       "facts": [],
       "id": "prinimayushchiy_sluzhashchiy",
@@ -9887,12 +9942,13 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s09.text.093",
+          "seen": "s09.text.096",
           "state": "Видел, как Мацуда зарегистрировала послание для Хирано, не стал препятствовать; Шики ушёл."
         }
       ],
       "sources": [
-        "recovery/cast/prinimayushchiy_sluzhashchiy.json"
+        "recovery/cast/prinimayushchiy_sluzhashchiy.json",
+        "s09.text.096"
       ]
     },
     "private_bounties": {
@@ -10864,8 +10920,7 @@
     "tamura_reika": {
       "aliases": [
         "tamura reika",
-        "Тамура Рэйка",
-        "tamura_reika"
+        "Тамура Рэйка"
       ],
       "facts": [],
       "id": "tamura_reika",
@@ -10912,8 +10967,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tamura_reika.json",
-        "s09.text.095"
+        "recovery/cast/tamura_reika.json"
       ]
     },
     "tetsu": {
@@ -11178,6 +11232,48 @@
         "keeper@s08.text.090"
       ]
     },
+    "thread:shiki_finances": {
+      "aliases": [
+        "thread:shiki finances",
+        "shiki finances",
+        "shiki_finances"
+      ],
+      "facts": [],
+      "id": "thread:shiki_finances",
+      "kind": "thread",
+      "label": "shiki finances",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного створа: 39 млн прежний остаток и 49,5 млн выплата 1184."
+        }
+      ],
+      "sources": [
+        "s09.text.096"
+      ]
+    },
+    "thread:shiki_training": {
+      "aliases": [
+        "thread:shiki training",
+        "shiki training",
+        "shiki_training"
+      ],
+      "facts": [],
+      "id": "thread:shiki_training",
+      "kind": "thread",
+      "label": "shiki training",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближнего боя с Суми и переходами от Шуншина к защите и контратаке. К 25.02 07:10 владение мечом 3,6/5 (было 3,5); новые техники не освоены, чакра 100/100, Договор и семь запоров неизменны."
+        }
+      ],
+      "sources": [
+        "s09.text.096"
+      ]
+    },
     "thread:shiki_underground_career": {
       "aliases": [
         "thread:shiki underground career",
@@ -11324,8 +11420,7 @@
     "unknown_masked_prisoner": {
       "aliases": [
         "unknown masked prisoner",
-        "Неизвестный пленный в маске",
-        "unknown_masked_prisoner"
+        "Неизвестный пленный в маске"
       ],
       "facts": [],
       "id": "unknown_masked_prisoner",
@@ -11339,8 +11434,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/unknown_masked_prisoner.json",
-        "s09.text.095"
+        "recovery/cast/unknown_masked_prisoner.json"
       ]
     },
     "utsuro": {
@@ -11574,8 +11668,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/waterfall_trackers.json",
-        "s09.text.095"
+        "recovery/cast/waterfall_trackers.json"
       ]
     }
   },
@@ -11691,8 +11784,22 @@
       "status": "projected",
       "to": "hoshina_ken",
       "type": "held_by"
+    },
+    {
+      "from": "cash_1184",
+      "source": "s09.text.096",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
+    },
+    {
+      "from": "contract_1184_docs",
+      "source": "s09.text.096",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 742
+  "source_turns_indexed": 743
 }

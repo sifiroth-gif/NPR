@@ -1,21 +1,21 @@
-# Карта мира NPR · на ходе `s09.text.095`
+# Карта мира NPR · на ходе `s09.text.096`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (189) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (190) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (174)
-- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen` · в сцене
+- Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
+- Принимающий служащий — по подписи в сцене · `npc/prinimayushchiy_sluzhashchiy`
 - waterfall_trackers —  · `npc/waterfall_trackers`
+- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
 - Неизвестный пленный в маске —  · `npc/unknown_masked_prisoner`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность, заперта в Шики за семью замками · `npc/nemera`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Дзиро — Молодой охранник каравана, внешность кроме возраста ещё не … · `npc/jiro_caravan_guard`
-- Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Миура Томо (Миура, Томо) — Охранник каравана, мужчина с короткими тёмными волосами, до… · `npc/miura_tomo`
-- Принимающий служащий — по подписи в сцене · `npc/prinimayushchiy_sluzhashchiy`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
 - Сано Гэндзи (Сано, Гэндзи) — по подписи в сцене · `npc/signalshchik`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
@@ -181,7 +181,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (16)
+## Линии (18)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — По полностью прочитанным документам №1184 сеть С-17 продолжила работу… · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -198,14 +198,18 @@
 - `tamura_inquiry` — По поручению Шики Дзэн через несколько дней сообщит посетительнице, ч… · `threads/tamura_inquiry`
 - `ch09_order_chain` — 14.02.1287 устно от Фурукавы при Шики и Хосине: Осава Гэнсэй (59) вла… · `threads/ch09_order_chain`
 - `reika_meeting` — 20 февраля Шики предложил неизвестной ему по подтверждённому имени же… · `threads/reika_meeting`
+- `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
+- `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 
 ## Давние линии (9, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`
 
-## Вещи (37)
+## Вещи (39)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
+- `cash_1184` · `items/cash_1184`
+- `contract_1184_docs` · `items/contract_1184_docs`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `front_wagon_frame` · `items/front_wagon_frame`
