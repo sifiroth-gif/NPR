@@ -5,6 +5,10 @@
 линиях и вещах, долго не тронутых линиях, эпизодах прошлых сессий — то, что
 созвучно нынешней сцене по редким словам, и не чаще раза в несколько ходов
 кладёт одну нить в ``NEXT.echo``. Вплетать или нет — решает ведущий.
+
+Если доступен смысловой слой (``meaning``), эпизоды прошлых сессий, близкие
+сцене по смыслу, получают надбавку и проходят при одной общей редкой основе
+вместо двух: смысл без хотя бы одного общего редкого слова эхом не считается.
 """
 from __future__ import annotations
 
@@ -28,6 +32,8 @@ COMMON = frozenset(stem(w) for w in (
     "человек людей можно нельзя когда тогда снова опять почти около рядом перед кроме деревни "
     "деревня страна страны стране ходом ходов игрок ведущий").split())
 RULE = "Необязательно: вплети, если ложится естественно; связь не объявляй."
+NEAR = 8           # сколько ближайших по смыслу эпизодов получают надбавку
+NEAR_BONUS = 4.0   # надбавка ближайшему; дальше — по убыванию ранга
 
 
 def _stems(text):
@@ -90,6 +96,20 @@ def _history(state_dir, hot, now):
         yield ("эпизод", f"history:{rid}", rid, f"{row.get('headline')} {row.get('preview')}", 0.8)
 
 
+def _near(state_dir, context_text, pool):
+    """Надбавка эпизодам прошлых сессий, ближайшим к сцене по смыслу; без слоя — пусто."""
+    keys = {c[1] for c in pool if c[0] == "эпизод"}
+    if not keys:
+        return {}
+    try:
+        from . import meaning
+        found = meaning.search(state_dir, context_text, limit=NEAR,
+                               allow=lambda rid: f"history:{rid}" in keys)
+    except Exception:  # производный слой не мешает эху
+        return {}
+    return {f"history:{rid}": NEAR_BONUS * (1 - rank / NEAR) for rank, (rid, _) in enumerate(found or [])}
+
+
 def pick(state_dir, hot):
     """Одна давняя нить для NEXT.echo или None; состояние — в HOT.fold.echo."""
     cursor = (hot.get("cursor") or {}).get("id")
@@ -113,13 +133,15 @@ def pick(state_dir, hot):
         for base in found:
             df[base] = df.get(base, 0) + 1
     total = max(1, len(pool))
+    near = _near(state_dir, context_text, pool)
     best = None
     for (kind, key, source, text, weight), found in zip(pool, found_all):
         shared = [s for s in context if s in found]
-        if len(shared) < MIN_SHARED:
+        bonus = near.get(key, 0.0)
+        if len(shared) < (1 if bonus else MIN_SHARED):
             continue
         rarity = {s: math.log((total + 1) / (df.get(s, 0) + 1)) * (1.5 if s in names else 1.0) for s in shared}
-        score = (sum(rarity.values()) + (0.5 if kind == "линия" else 0)) * weight
+        score = (sum(rarity.values()) + (0.5 if kind == "линия" else 0)) * weight + bonus
         if score < MIN_SCORE or max(rarity.values()) < math.log((total + 1) / 4):
             continue
         if best is None or score > best[0]:

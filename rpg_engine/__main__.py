@@ -100,6 +100,16 @@ def parser():
     closer.add_argument("--state-dir", type=Path, required=True)
     closer.add_argument("--session", type=int)
     closer.add_argument("--pending", action="store_true", help="only if recovery/SESSION_CLOSE.json asks")
+    fetch_model = sub.add_parser("meaning-fetch", help="download the pinned meaning model (CI cache)")
+    fetch_model.add_argument("--dir", type=Path, required=True)
+    sense = sub.add_parser("meaning-update", help="encode missing meaning vectors for the history index")
+    sense.add_argument("--state-dir", type=Path, required=True)
+    sense.add_argument("--budget", type=int)
+    asked = sub.add_parser("recall-ask", help="search all sessions by words and meaning, with links")
+    asked.add_argument("question")
+    asked.add_argument("--state-dir", type=Path, required=True)
+    asked.add_argument("--session", type=int, action="append", default=[])
+    asked.add_argument("--limit", type=int, default=6)
     zero = sub.add_parser("protocol-zero", help="run a pending Protocol Zero command (dry run only)")
     zero.add_argument("--state-dir", type=Path, required=True)
     backfill = sub.add_parser("npc-backfill", help="rebuild NPC episode memory from the verbatim session logs")
@@ -355,6 +365,16 @@ def run(args):
             if args.pending:
                 return session_close.handle(args.state_dir) or {"result": "idle"}
             return session_close.close(args.state_dir, args.session)
+        case "meaning-fetch":
+            from . import meaning
+            return meaning.fetch(args.dir)
+        case "meaning-update":
+            from . import meaning
+            return meaning.update(Path(__file__).resolve().parents[1], args.state_dir, budget=args.budget)
+        case "recall-ask":
+            from . import recall_request
+            return recall_request.ask(Path(__file__).resolve().parents[1], args.state_dir, args.question,
+                                      limit=args.limit, sessions=args.session)
         case "protocol-zero":
             from . import protocol_zero
             return protocol_zero.handle(args.state_dir) or {"result": "idle"}
