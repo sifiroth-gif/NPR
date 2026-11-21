@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.057: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Касэ (`npc/kase`), бой, поправки игрока: 3
 - s10.text.056: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Фурукава Кёдзи (`npc/caravan_prisoner`), поправки игрока: 1
 - s10.text.055: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Минаги Дзэн (`npc/minagi_zen`)
 - s10.text.054: Минаги Дзэн (`npc/minagi_zen`)
@@ -60,4 +61,3 @@
 - s09.text.102: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Уцуро (`npc/utsuro`), линия `reika_meeting`
 - s09.text.101: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), Кирисава Сэйна (`npc/seina`), линия `nemera_symbiosis`, линия `reika_meeting`, поправки игрока: 1
 - s09.text.100: Немера (Невыписанная) (`npc/nemera`), Младший шиноби Звука (`npc/sound_kagen_junior`), Сано Гэндзи (`npc/signalshchik`), линия `nemera_symbiosis`
-- s09.text.099: Немера (Невыписанная) (`npc/nemera`), Такаги Рэн (`npc/takagi_ren`), Старший шиноби Звука (`npc/sound_kagen_senior`), линия `nemera_symbiosis`
