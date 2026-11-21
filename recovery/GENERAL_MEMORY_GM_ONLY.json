@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.009",
+  "cursor": "s10.text.010",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -807,7 +807,8 @@
     "hoshina_ken": {
       "aliases": [
         "hoshina ken",
-        "Хосина Кэн"
+        "Хосина Кэн",
+        "hoshina_ken"
       ],
       "facts": [],
       "id": "hoshina_ken",
@@ -847,14 +848,15 @@
       "projections": [
         {
           "fears": "Умереть из-за чужой тайны.",
-          "seen": "s09.text.093",
+          "seen": "s10.text.010",
           "state": "Попрощался с Шики; остаётся со своими людьми и дорожным журналом до отправления.",
           "voice": "Сдержанная практичная речь.",
           "wants": "Доставить пленника живым и получить плату."
         }
       ],
       "sources": [
-        "recovery/cast/hoshina_ken.json"
+        "recovery/cast/hoshina_ken.json",
+        "s10.text.010"
       ]
     },
     "hospital_night_admin": {
@@ -962,7 +964,8 @@
     "jiro_caravan_guard": {
       "aliases": [
         "jiro caravan guard",
-        "Дзиро"
+        "Дзиро",
+        "jiro_caravan_guard"
       ],
       "facts": [],
       "id": "jiro_caravan_guard",
@@ -1002,14 +1005,15 @@
       "projections": [
         {
           "fears": "Быть использованным как расходный разведчик.",
-          "seen": "s09.text.093",
+          "seen": "s10.text.010",
           "state": "Подтвердил слова Хосины об отказе от таких перевозок; остался с командой у повозок.",
           "voice": "Резкие спонтанные возражения.",
           "wants": "Выжить и сохранить лицо перед старшим."
         }
       ],
       "sources": [
-        "recovery/cast/jiro_caravan_guard.json"
+        "recovery/cast/jiro_caravan_guard.json",
+        "s10.text.010"
       ]
     },
     "kabuto": {
@@ -2231,8 +2235,7 @@
     "miura_tomo": {
       "aliases": [
         "miura tomo",
-        "Миура Томо",
-        "miura_tomo"
+        "Миура Томо"
       ],
       "facts": [],
       "id": "miura_tomo",
@@ -2279,8 +2282,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/miura_tomo.json",
-        "s10.text.009"
+        "recovery/cast/miura_tomo.json"
       ]
     },
     "morioka_escort_leader": {
@@ -2392,8 +2394,7 @@
     "nagae_rokuto": {
       "aliases": [
         "nagae rokuto",
-        "Нагаэ Рокуто",
-        "nagae_rokuto"
+        "Нагаэ Рокуто"
       ],
       "facts": [],
       "id": "nagae_rokuto",
@@ -2437,8 +2438,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nagae_rokuto.json",
-        "s10.text.009"
+        "recovery/cast/nagae_rokuto.json"
       ]
     },
     "nao": {
@@ -7227,7 +7227,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.009",
+        "s10.text.010",
         "s09.text.101",
         "s09.text.102",
         "s10.text.001",
@@ -7237,7 +7237,8 @@
         "s10.text.005",
         "s10.text.006",
         "s10.text.007",
-        "s10.text.008"
+        "s10.text.008",
+        "s10.text.009"
       ]
     },
     "place:9ffc64ff69edb6a9": {
@@ -10875,7 +10876,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10883,13 +10884,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:49:00",
-          "excerpt": "шенно целую кожу Шики. Последние тонкие волокна исчезают без следа. Рэйка наблюдает за этим, не моргая. **Тамура Рэйка:** — Она тебя слушается. Её взгляд остаётся на плече ещё несколько мгновений. **Шики:** — Я не сказал, что слушается. Я попросил. Рэйка ничег",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.007"
         },
         {
           "at": "0010-02-27T15:50:00",
@@ -10904,26 +10898,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.009"
+        },
+        {
+          "at": "0010-02-27T15:54:00",
+          "excerpt": "ести по коже маленький круг. Движение срывается на середине. Она повторяет его. С тем же результатом. **Тамура Рэйка:** — Я уже два года думаю, Мугами. Она сжимает кулак. **Тамура Рэйка:** — Первое время после побега мне казалось, что они оставили внутри руки ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.010"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.009",
-          "state": "Обследование правой кисти завершено; повреждения не изменены. Спрашивает Шики, можно ли освободить сухожилие без разреза.",
+          "seen": "s10.text.010",
+          "state": "Самостоятельно решила предложить операцию в подготовленном ею месте на своих условиях; подобрала сумку и ждёт принятия условий Шики.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "Обследование правой кисти завершено; повреждения не изменены. Спрашивает Шики, можно ли освободить сухожилие без разреза.",
+          "state": "Самостоятельно решила предложить операцию в подготовленном ею месте на своих условиях; подобрала сумку и ждёт принятия условий Шики.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.009"
+        "s10.text.010"
       ]
     },
     "tetsu": {
@@ -11587,5 +11588,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 758
+  "source_turns_indexed": 759
 }
