@@ -203,7 +203,7 @@
   "place": "Страна Огня, Долина Завершения, голова статуи Учихи Мадары",
   "time": "15:42"
  },
- "digest": "e144de9c8287df90e6a5bcc3cb0271aa6937ea0149e4a1cf3a467821aee86e5c",
+ "digest": "26dccf8e478630f8c6ccf477924853cec70ba5d36ec75ac608c6b8e514e6dbe6",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -256,26 +256,6 @@
    52
   ],
   "injuries": {
-   "miura_tomo": [
-    {
-     "at": "0010-02-14T07:04:28",
-     "lost": "поверхностные кровоточащие порезы; движения сохранены",
-     "severity": "лёгкая",
-     "turn": "s09.text.083",
-     "what": "каменная осыпь при попытке перехвата сигнальщика",
-     "where": "левое предплечье и лицо"
-    }
-   ],
-   "north_trapper": [
-    {
-     "at": "0010-02-14T07:04:19",
-     "lost": "Умер от разрушения сердца.",
-     "severity": "критическая",
-     "turn": "s09.text.082",
-     "what": "Точный смертельный удар мечом «Суми» после третьего Шуншина",
-     "where": "грудь, сердце"
-    }
-   ],
    "shiki": [
     {
      "at": "0007-12-24T16:47:00",
@@ -284,16 +264,6 @@
      "turn": "s09.text.066",
      "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
      "where": "наружная сторона левого бедра"
-    }
-   ],
-   "south_crossbowman": [
-    {
-     "at": "0010-02-14T07:04:19",
-     "lost": "Рука сломана, вероятны повреждения рёбер; стрелять и двигаться в бою не способен.",
-     "severity": "тяжёлая",
-     "turn": "s09.text.082",
-     "what": "Сильный удар Водяного дракона, обломки скалы и падение",
-     "where": "левая рука, грудь и туловище"
     }
    ]
   },
@@ -366,7 +336,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-02-27T15:42:00",
+  "closed": 9,
+  "first_turn": "s10.text.001",
+  "last_turn": "s09.text.102",
+  "next_session": 10,
+  "source": "campaigns/shiki/continuity/SESSION_009_TO_010_HANDOFF.json",
+  "sqlite_revision": 693
+ },
  "horror": {
   "due": null,
   "npcs": {
@@ -694,12 +672,6 @@
    "case19T",
    "shiki_confidentiality",
    "shiki_underground_career",
-   "tamura_return",
-   "black_market_new_contracts",
-   "unknown_buyer_mask",
-   "minagi_commission",
-   "tamura_inquiry",
-   "ch09_order_chain",
    "reika_meeting",
    "shiki_training",
    "shiki_finances",

@@ -181,7 +181,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (19)
+## Линии (13)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — По полностью прочитанным документам №1184 сеть С-17 продолжила работу… · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -191,19 +191,13 @@
 - `case19T` — Личная закрытая проверка Кагэ идёт. Нори официально отстранена, журна… · `threads/case19T`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
-- `tamura_return` — 10.09.1286 Тамура, свободная после побега, передала письмо Шики через… · `threads/tamura_return`
-- `black_market_new_contracts` — 12.02.1287 у Минаги Дзэна доступны непринимавшиеся заказы: Сайдзэн Гэ… · `threads/black_market_new_contracts`
-- `unknown_buyer_mask` — Брокер описал женщину ~30 лет с тёмными волосами, надрывом левой мочк… · `threads/unknown_buyer_mask`
-- `minagi_commission` — Шики согласовал 10% комиссии Дзэну вместо обычных 5%, только с первог… · `threads/minagi_commission`
-- `tamura_inquiry` — По поручению Шики Дзэн через несколько дней сообщит посетительнице, ч… · `threads/tamura_inquiry`
-- `ch09_order_chain` — 14.02.1287 устно от Фурукавы при Шики и Хосине: Осава Гэнсэй (59) вла… · `threads/ch09_order_chain`
 - `reika_meeting` — 27.02 15:42 Рэйка объяснила, что добивается не только признания Шики,… · `threads/reika_meeting`
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
 
-## Давние линии (9, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`
+## Давние линии (15, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/unknown_buyer_mask`
 
 ## Вещи (39)
 - `black_caravan_contract` · `items/black_caravan_contract`
