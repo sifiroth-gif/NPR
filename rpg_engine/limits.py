@@ -37,6 +37,7 @@ RULES = {
 }
 
 TRIM_REQUEST = "recovery/MEMORY_TRIM.json"
+STATE = "recovery/LIMITS.json"   # когда что сказано игроку: отдельно от HOT, пишется после всех замеров
 ACT_CLOSE = "закрыть сессию — дословный журнал уйдёт в архив, память разгрузится (recovery/SESSION_CLOSE.json {\"close\": true})"
 ACT_TRIM = "строгая разгрузка сейчас — давнее уйдёт в архив раньше срока (recovery/MEMORY_TRIM.json {\"trim\": true})"
 ACT_RAISE = "поднять предел — это делает хранитель (разработчик), попроси его"
@@ -49,7 +50,8 @@ def _ordinal(turn_id):
 
 
 def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
-    """Что подходит к пределу. Возвращает пакет для NEXT.limits или None; память показа — в HOT.fold."""
+    """Что подходит к пределу. Возвращает пакет для NEXT.limits или None; память показа — recovery/LIMITS.json."""
+    import json
     state_dir, engine = Path(state_dir), Path(engine)
     items = []
 
@@ -61,10 +63,9 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
 
     add("hot", "оперативная память (HOT, байт)", hot_bytes, HOT_LIMIT, [ACT_CLOSE, ACT_TRIM, ACT_RAISE])
     add("gm_only", "скрытая память (GM_ONLY, байт)", secret_bytes, GM_ONLY_NORM, [ACT_CLOSE, ACT_TRIM])
-    for name, limit, key in (("recovery/GM_BRIEF.json", BRIEF_HARD, "brief"), ("recovery/NEXT.json", NEXT_HARD, "next")):
-        path = state_dir / name
-        if path.is_file():
-            add(key, f"{name.split('/')[-1]} (байт)", path.stat().st_size, limit, [ACT_CLOSE, ACT_TRIM, ACT_RAISE])
+    brief = state_dir / "recovery/GM_BRIEF.json"   # к этому моменту свёртка уже записала свежую сводку
+    if brief.is_file():
+        add("brief", "сводка ведущего GM_BRIEF (байт)", brief.stat().st_size, BRIEF_HARD, [ACT_CLOSE, ACT_TRIM, ACT_RAISE])
     for name, limit in RULES.items():
         path = engine / name
         if path.is_file():
@@ -75,16 +76,23 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
     if seq >= SESSION_TURNS * WARN:
         items.append({"key": "session", "what": f"сессия идёт {seq} ходов (рекомендуется до {SESSION_TURNS})",
                       "acts": [ACT_CLOSE], "over": seq > SESSION_TURNS})
-    said = hot.setdefault("fold", {}).setdefault("limits_said", {})
+    path = state_dir / STATE
+    try:
+        said = json.loads(path.read_text(encoding="utf-8")).get("said") or {}
+    except (OSError, ValueError, AttributeError):
+        said = {}
     for key in list(said):
         if key not in {i["key"] for i in items}:
             said.pop(key)   # снова в норме: при следующем подходе сказать заново
-    if not items:
-        return None
     now = _ordinal(cursor) or 0
     tell = [i for i in items if now - said.get(i["key"], -10**6) >= REMIND_TURNS]
     for item in tell:
         said[item["key"]] = now
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"schema": "npr-limits/1", "said": said}, ensure_ascii=False, indent=1) + "\n",
+                    encoding="utf-8")
+    if not items:
+        return None
     return {"items": items, "tell": bool(tell),
             "rule": ("Предел близко. " + ("Скажи игроку ОДНОЙ короткой строкой вне игры после сцены (сцену не прерывай): "
                      "что подходит к пределу и варианты из acts на выбор; выбор игрока исполни."

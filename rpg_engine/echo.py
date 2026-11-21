@@ -27,8 +27,7 @@ COMMON = frozenset(stem(w) for w in (
     "которые нужно сейчас своей своих своим своего свою очень более менее всего всех также "
     "человек людей можно нельзя когда тогда снова опять почти около рядом перед кроме деревни "
     "деревня страна страны стране ходом ходов игрок ведущий").split())
-RULE = ("Эхо прошлого, необязательно: давняя нить созвучна сцене. Вплети, только если ложится естественно — "
-        "деталь, документ, человек, слух; связь не объявляй, пусть игрок найдёт её сам. Не подходит — пропусти.")
+RULE = "Необязательно: вплети, если ложится естественно; связь не объявляй."
 
 
 def _stems(text):
@@ -133,6 +132,6 @@ def pick(state_dir, hot):
     _, kind, key, source, text, shared = best
     state["last"], used[key] = now, now
     state["used"] = dict(sorted(used.items(), key=lambda kv: kv[1])[-60:])
-    state["current"] = {"kind": kind, "from": source, "what": " ".join(str(text).split())[:280],
+    state["current"] = {"kind": kind, "from": source, "what": " ".join(str(text).split())[:220],
                         "echoes": ", ".join(shared[:4]), "rule": RULE}
     return state["current"]
