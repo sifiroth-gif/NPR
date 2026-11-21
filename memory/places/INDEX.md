@@ -206,3 +206,4 @@
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
+- Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 1 ход(ов), s10–s10

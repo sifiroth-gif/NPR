@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.037: Тагорихимэ (`npc/tagorihime`), Тагицухимэ (`npc/tagitsuhime`), Хагуро (`npc/khaguro`)
 - s10.text.036: Тагорихимэ (`npc/tagorihime`), kiri_hunters (`npc/kiri_hunters`), бой
 - s10.text.035: Тагорихимэ (`npc/tagorihime`), Старший у повозки (`npc/kiri_transfer_senior`), бой
 - s10.text.034: Тагорихимэ (`npc/tagorihime`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Курода Маю (`npc/kuroda_mayu`), бой
@@ -59,4 +60,3 @@
 - s09.text.082: Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), линия `black_caravan`, бой, поправки игрока: 2
 - s09.text.081: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дзиро (`npc/jiro_caravan_guard`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `north_tripwire`, вещь `front_wagon_frame`, линия `black_caravan`, бой, поправки игрока: 1
 - s09.text.080: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), hirano_seiji (`npc/hirano_seiji`), Аракава Дзюн (`npc/arakawa`), линия `black_caravan`
-- s09.text.079: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Орочимару (`npc/orochimaru`), Глава Кусагакуре (`npc/kusa_head`), линия `black_caravan`
