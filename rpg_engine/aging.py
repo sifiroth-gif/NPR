@@ -59,10 +59,13 @@ def load(state_dir, name):
     return rows
 
 
+ALWAYS = ("shiki", "nemera")   # Шики и та, что в нём, присутствуют всегда: их линии и вещи не стареют
+
+
 def _in_play(hot):
     """Что нужно сейчас: присутствующие, линии действующих событий, слова сцены."""
     scene = hot.get("scene") or {}
-    present = set(scene.get("present") or [])
+    present = set(scene.get("present") or []) | set(ALWAYS)
     live_threads = set()
     for event in ((hot.get("_plot") or {}).get("events") or {}).values():
         if isinstance(event, dict) and event.get("status") == "active":
@@ -96,6 +99,8 @@ def _pass(state_dir, hot, w):
         age = _age(hot, (value or {}).get("turn") if isinstance(value, dict) else None)
         if age is None:   # без отметки хода: считаем по последнему известному упоминанию
             age = _age(hot, (value or {}).get("last_known")) if isinstance(value, dict) else None
+        if key.startswith(ALWAYS):
+            continue
         if age is not None and age >= w["thread_age"] and key not in live_threads and not _mentioned(key, text):
             gone.append({"key": key, "value": threads.pop(key), "aged_at": turn})
     _append(state_dir, "threads.jsonl", gone)
@@ -108,7 +113,7 @@ def _pass(state_dir, hot, w):
         value = value if isinstance(value, dict) else {"value": value}
         holder = value.get("holder")
         age = _age(hot, value.get("turn") or value.get("since"))
-        if holder == "shiki" or holder in present or _mentioned(key, text):
+        if holder in present or key.startswith(ALWAYS) or _mentioned(key, text):
             continue
         if age is not None and age >= w["thing_age"]:
             gone.append({"key": key, "value": things.pop(key), "aged_at": turn})

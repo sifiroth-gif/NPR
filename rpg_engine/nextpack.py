@@ -195,6 +195,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["dice"] = fight["dice"]
     if fight.get("chakra"):
         pack["chakra"] = fight["chakra"]
+    nemera = ((hot.get("shiki") or {}).get("nemera_chakra"))
+    if isinstance(nemera, dict) and nemera.get("value") is not None:   # её запас отдельно от сотни Шики
+        pack.setdefault("chakra", {})["nemera"] = {k: nemera[k] for k in ("value", "max", "range_meters") if k in nemera}
     if fight.get("active"):
         pack["fight"] = {k: v for k, v in fight.items() if k not in ("dice", "rules", "ref")}
     pack["rule"] = RULE
@@ -212,11 +215,11 @@ def _fit(pack):
         pack["due"].pop()
     while _size(pack) > HARD_BYTES and len(pack.get("checks") or []) > 3:
         pack["checks"].pop(0)
-    if _size(pack) >= HARD_BYTES * 0.9:   # сам пакет у предела — по его собственному размеру
+    if _size(pack) > HARD_BYTES:   # сам пакет за пределом и ужать нечего — сказать игроку
         from . import limits
         item = {"key": "next", "what": f"пакет хода NEXT (байт): {_size(pack)} из {HARD_BYTES}",
-                "acts": [limits.ACT_CLOSE, limits.ACT_TRIM, limits.ACT_RAISE], "over": _size(pack) > HARD_BYTES}
-        near = pack.setdefault("limits", {"items": [], "tell": item["over"],
+                "acts": [limits.ACT_CLOSE, limits.ACT_TRIM, limits.ACT_RAISE], "over": True}
+        near = pack.setdefault("limits", {"items": [], "tell": True,
                                           "rule": "Предел близко. Скажи игроку ОДНОЙ короткой строкой вне игры после "
                                                   "сцены: что подходит к пределу и варианты из acts; выбор игрока исполни."})
         near["items"].append(item)

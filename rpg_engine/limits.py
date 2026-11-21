@@ -28,6 +28,8 @@ RULES = {
     "skills/dark-literary-gm/SKILL.md": 9000,
     "campaigns/shiki/SHIKI.md": 10000,
     "campaigns/shiki/ref/TECHNIQUES.md": 12000,
+    "campaigns/shiki/ref/NEMERA.md": 8000,
+    "skills/dark-literary-gm/references/horror-masters.md": 6000,
     "campaigns/shiki/BOOT.md": 2400,
     "campaigns/shiki/ref/MEDICINE.md": 7000,
     "campaigns/shiki/ref/COMBAT.md": 9000,
@@ -38,10 +40,10 @@ RULES = {
 
 TRIM_REQUEST = "recovery/MEMORY_TRIM.json"
 STATE = "recovery/LIMITS.json"   # когда что сказано игроку: отдельно от HOT, пишется после всех замеров
-ACT_CLOSE = "закрыть сессию — дословный журнал уйдёт в архив, память разгрузится (recovery/SESSION_CLOSE.json {\"close\": true})"
-ACT_TRIM = "строгая разгрузка сейчас — давнее уйдёт в архив раньше срока (recovery/MEMORY_TRIM.json {\"trim\": true})"
-ACT_RAISE = "поднять предел — это делает хранитель (разработчик), попроси его"
-ACT_RULE = "заменить правило вместо добавления или перенести часть в справочник campaigns/shiki/ref/"
+ACT_CLOSE = "закрыть сессию (SESSION_CLOSE.json)"
+ACT_TRIM = "разгрузить сейчас (MEMORY_TRIM.json)"
+ACT_RAISE = "поднять предел (хранитель)"
+ACT_RULE = "заменить правило или перенести в ref/"
 
 
 def _ordinal(turn_id):
@@ -93,10 +95,13 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
                     encoding="utf-8")
     if not items:
         return None
-    return {"items": items, "tell": bool(tell),
-            "rule": ("Предел близко. " + ("Скажи игроку ОДНОЙ короткой строкой вне игры после сцены (сцену не прерывай): "
-                     "что подходит к пределу и варианты из acts на выбор; выбор игрока исполни."
-                     if tell else "Игроку уже сказано; повторять не нужно, пока он не спросит."))}
+    if not tell:   # уже сказано: коротко, без вариантов
+        return {"items": [{"key": i["key"], "what": i["what"]} for i in items], "tell": False}
+    return {"items": items, "tell": True,
+            "rule": ("Предел близко. Скажи игроку ОДНОЙ короткой строкой вне игры после сцены (сцену не прерывай): "
+                     "что подходит к пределу и варианты из acts на выбор; выбор игрока исполни: "
+                     "закрыть сессию — recovery/SESSION_CLOSE.json {\"close\": true}; разгрузить — "
+                     "recovery/MEMORY_TRIM.json {\"trim\": true}; поднять предел — просит хранителя игрок.")}
 
 
 def trim_requested(state_dir):
