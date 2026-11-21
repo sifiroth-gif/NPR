@@ -7,10 +7,10 @@
 - источник: s09.text.088
 
 ## Кто здесь говорил с Шики
-- Хосина Кэн · `npc/hoshina_ken` — 2 ход(ов)
-- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 2 ход(ов)
-- Мацуда · `npc/matsuda` — 2 ход(ов)
 - Фурукава Кёдзи · `npc/caravan_prisoner` — 2 ход(ов)
+- Хосина Кэн · `npc/hoshina_ken` — 2 ход(ов)
+- Мацуда · `npc/matsuda` — 2 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 2 ход(ов)
 - Неустановленный архивариус верхнего административного архива · `npc/archive_custodian` — 1 ход(ов)
 - Дзиро · `npc/jiro_caravan_guard` — 1 ход(ов)
 

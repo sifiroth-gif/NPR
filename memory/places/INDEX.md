@@ -11,8 +11,8 @@
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 19 ход(ов), s07–s07
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
-- Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
+- Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 12 ход(ов), s10–s10
@@ -20,194 +20,194 @@
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
+- Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 9 ход(ов), s08–s08
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
-- Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 9 ход(ов), s08–s08
-- Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 8 ход(ов), s01–s01
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
+- Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 8 ход(ов), s01–s01
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
-- Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
+- Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
-- Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
+- Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
-- Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
-- Кусагакуре, Крыльцо дома Мугами Шики · `places/kusagakure-kryltso-doma-mugami-shiki` · 6 ход(ов), s02–s02
+- Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
-- Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
-- Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
+- Кусагакуре, Крыльцо дома Мугами Шики · `places/kusagakure-kryltso-doma-mugami-shiki` · 6 ход(ов), s02–s02
+- Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
+- Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 6 ход(ов), s09–s10
-- Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
-- Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
-- Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
+- Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 5 ход(ов), s09–s09
-- Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
-- Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
-- Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
+- Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
+- Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
-- Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
-- Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
+- Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
-- Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
-- Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
+- Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
+- Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
+- Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
+- Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
+- Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
 - Конохагакуре, Центральный госпитальный блок · `places/konokhagakure-tsentralnyy-gospitalnyy-blok` · 3 ход(ов), s02–s02
-- Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
+- Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
-- Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
+- Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
-- Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
-- Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
-- Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
+- Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
-- Конохагакуре, Тренировочная площадка за госпиталем · `places/konokhagakure-trenirovochnaya-ploshchadka-za-gospitalem` · 2 ход(ов), s01–s01
-- Конохагакуре, Тренировочный полигон за восточной оградой госпиталя · `places/konokhagakure-trenirovochnyy-poligon-za-vostochnoy-ogradoy-g` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский читальный зал восточного госпиталя · `places/konokhagakure-meditsinskiy-chitalnyy-zal-vostochnogo-gospita` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный кабинет восточного госпиталя · `places/konokhagakure-meditsinskiy-uchebnyy-kabinet-vostochnogo-gosp` · 2 ход(ов), s01–s01
+- Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
+- Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
+- Конохагакуре, Тренировочная площадка за госпиталем · `places/konokhagakure-trenirovochnaya-ploshchadka-za-gospitalem` · 2 ход(ов), s01–s01
+- Конохагакуре, Тренировочный полигон за восточной оградой госпиталя · `places/konokhagakure-trenirovochnyy-poligon-za-vostochnoy-ogradoy-g` · 2 ход(ов), s01–s01
+- Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
 - Конохагакуре, Западный медицинский переход · `places/konokhagakure-zapadnyy-meditsinskiy-perekhod` · 2 ход(ов), s02–s02
-- Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
-- Кусагакуре, Северный вход в старый водоотвод · `places/kusagakure-severnyy-vkhod-v-staryy-vodootvod` · 2 ход(ов), s02–s02
+- Кусагакуре, частный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s04
+- Кусагакуре, частный медицинский кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-meditsinskiy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s05
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Кусагакуре, Дом семьи Суга · `places/kusagakure-dom-semi-suga` · 2 ход(ов), s03–s03
-- Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
-- Кусагакуре, Старая насосная станция · `places/kusagakure-staraya-nasosnaya-stantsiya` · 2 ход(ов), s03–s03
+- Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 2 ход(ов), s05–s05
+- Кусагакуре, северный проезд УВБ возле повозки · `places/kusagakure-severnyy-proezd-uvb-vozle-povozki` · 2 ход(ов), s05–s05
+- Кусагакуре, Северный вход в старый водоотвод · `places/kusagakure-severnyy-vkhod-v-staryy-vodootvod` · 2 ход(ов), s02–s02
+- Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
 - Кусагакуре, собственный дом Магами Шики · `places/kusagakure-sobstvennyy-dom-magami-shiki` · 2 ход(ов), s04–s04
+- Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
+- Кусагакуре, Старая насосная станция · `places/kusagakure-staraya-nasosnaya-stantsiya` · 2 ход(ов), s03–s03
+- Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
+- Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
+- Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
+- Рьючидо, внутреннее святилище Белой Змеи · `places/ryuchido-vnutrennee-svyatilishche-beloy-zmei` · 2 ход(ов), s10–s10
+- Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
+- Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
+- Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
+- Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
+- Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
+- Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
+- Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
-- Кусагакуре, частный медицинский кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-meditsinskiy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s05
-- Кусагакуре, частный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s04
-- Кусагакуре, северный проезд УВБ возле повозки · `places/kusagakure-severnyy-proezd-uvb-vozle-povozki` · 2 ход(ов), s05–s05
-- Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 2 ход(ов), s05–s05
-- Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
-- Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
-- Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
-- Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
-- Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
-- Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
-- Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
-- Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
-- Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
-- Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
-- Рьючидо, внутреннее святилище Белой Змеи · `places/ryuchido-vnutrennee-svyatilishche-beloy-zmei` · 2 ход(ов), s10–s10
-- Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
-- Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
-- Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
-- Конохагакуре, Горящая гостиница · `places/konokhagakure-goryashchaya-gostinitsa` · 1 ход(ов), s01–s01
-- Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
-- Конохагакуре, Двор пострадавшей гостиницы · `places/konokhagakure-dvor-postradavshey-gostinitsy` · 1 ход(ов), s01–s01
-- Конохагакуре, Тренировочная площадка за восточной оградой госпиталя · `places/konokhagakure-trenirovochnaya-ploshchadka-za-vostochnoy-ogra` · 1 ход(ов), s01–s01
-- Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01
-- Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
-- Медицинский учебный кабинет · `places/meditsinskiy-uchebnyy-kabinet` · 1 ход(ов), s01–s01
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
-- Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01
-- Медицинский тренировочный зал · `places/meditsinskiy-trenirovochnyy-zal` · 1 ход(ов), s01–s01
-- Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01
+- Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
-- Медицинский читальный зал · `places/meditsinskiy-chitalnyy-zal` · 1 ход(ов), s01–s01
 - Коноха, Западный тренировочный полигон · `places/konokha-zapadnyy-trenirovochnyy-poligon` · 1 ход(ов), s02–s02
+- Конохагакуре, Двор пострадавшей гостиницы · `places/konokhagakure-dvor-postradavshey-gostinitsy` · 1 ход(ов), s01–s01
+- Конохагакуре, Горящая гостиница · `places/konokhagakure-goryashchaya-gostinitsa` · 1 ход(ов), s01–s01
+- Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
+- Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01
+- Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
+- Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01
+- Конохагакуре, Тренировочная площадка за восточной оградой госпиталя · `places/konokhagakure-trenirovochnaya-ploshchadka-za-vostochnoy-ogra` · 1 ход(ов), s01–s01
 - Конохагакуре, Трибуна участников · `places/konokhagakure-tribuna-uchastnikov` · 1 ход(ов), s02–s02
-- Конохагакуре, Западное медицинское крыло главной арены · `places/konokhagakure-zapadnoe-meditsinskoe-krylo-glavnoy-areny` · 1 ход(ов), s02–s02
+- Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
 - Конохагакуре, Временная резиденция делегации Кусагакуре · `places/konokhagakure-vremennaya-rezidentsiya-delegatsii-kusagakure` · 1 ход(ов), s02–s02
-- Кусагакуре, Управление оперативной службы · `places/kusagakure-upravlenie-operativnoy-sluzhby` · 1 ход(ов), s02–s02
-- Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
-- Кусагакуре, Штаб управления безопасности · `places/kusagakure-shtab-upravleniya-bezopasnosti` · 1 ход(ов), s02–s02
-- Кусагакуре, Управление безопасности · `places/kusagakure-upravlenie-bezopasnosti` · 1 ход(ов), s02–s02
-- Кусагакуре, Заброшенный исследовательский корпус № 3 · `places/kusagakure-zabroshennyy-issledovatelskiy-korpus-n-3` · 1 ход(ов), s02–s02
-- Кусагакуре, Внутренний двор исследовательского корпуса № 3 · `places/kusagakure-vnutrenniy-dvor-issledovatelskogo-korpusa-n-3` · 1 ход(ов), s02–s02
-- Кусагакуре, Южный медицинский квартал · `places/kusagakure-yuzhnyy-meditsinskiy-kvartal` · 1 ход(ов), s02–s02
-- Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
+- Конохагакуре, Западное медицинское крыло главной арены · `places/konokhagakure-zapadnoe-meditsinskoe-krylo-glavnoy-areny` · 1 ход(ов), s02–s02
+- Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
+- Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, Боковой проход возле дома Мугами Шики · `places/kusagakure-bokovoy-prokhod-vozle-doma-mugami-shiki` · 1 ход(ов), s02–s02
-- Кусагакуре, У входа в дом Мугами Шики · `places/kusagakure-u-vkhoda-v-dom-mugami-shiki` · 1 ход(ов), s02–s02
-- Кусагакуре, Крыльцо дома Шики · `places/kusagakure-kryltso-doma-shiki` · 1 ход(ов), s02–s02
-- Кусагакуре, Старый водоотвод за западным корпусом госпиталя · `places/kusagakure-staryy-vodootvod-za-zapadnym-korpusom-gospitalya` · 1 ход(ов), s02–s02
-- Кусагакуре, Восточный смотровой колодец старого коллектора · `places/kusagakure-vostochnyy-smotrovoy-kolodets-starogo-kollektora` · 1 ход(ов), s03–s03
-- Кусагакуре, От северного водоотвода к восточным воротам · `places/kusagakure-ot-severnogo-vodootvoda-k-vostochnym-vorotam` · 1 ход(ов), s03–s03
-- Кусагакуре, Восточная хозяйственная калитка школы · `places/kusagakure-vostochnaya-khozyaystvennaya-kalitka-shkoly` · 1 ход(ов), s03–s03
-- Кусагакуре, Крыша складского строения у восточной школы · `places/kusagakure-krysha-skladskogo-stroeniya-u-vostochnoy-shkoly` · 1 ход(ов), s03–s03
-- Кусагакуре, От восточного канала к архивному корпусу управления шиноби · `places/kusagakure-ot-vostochnogo-kanala-k-arkhivnomu-korpusu-upravl` · 1 ход(ов), s03–s03
-- Неизвестное подземное сооружение, Внешний приёмный предел · `places/neizvestnoe-podzemnoe-sooruzhenie-vneshniy-priemnyy-predel` · 1 ход(ов), s03–s03
-- Неизвестное подземное сооружение, Диагностический шлюз Седьмой палаты · `places/neizvestnoe-podzemnoe-sooruzhenie-diagnosticheskiy-shlyuz-se` · 1 ход(ов), s03–s03
-- Седьмая палата, Внешний приёмный предел · `places/sedmaya-palata-vneshniy-priemnyy-predel` · 1 ход(ов), s03–s03
-- Кусагакуре, От дома Шики — к медицинскому архиву при госпитале · `places/kusagakure-ot-doma-shiki-k-meditsinskomu-arkhivu-pri-gospita` · 1 ход(ов), s03–s03
-- Кусагакуре, Западная санитарная линия · `places/kusagakure-zapadnaya-sanitarnaya-liniya` · 1 ход(ов), s03–s03
-- Кусагакуре, Западный распределительный узел · `places/kusagakure-zapadnyy-raspredelitelnyy-uzel` · 1 ход(ов), s03–s03
-- Кусагакуре, Нижний ярус западного санитарного коллектора · `places/kusagakure-nizhniy-yarus-zapadnogo-sanitarnogo-kollektora` · 1 ход(ов), s03–s03
-- Кусагакуре, Западный коллектор · `places/kusagakure-zapadnyy-kollektor` · 1 ход(ов), s03–s03
-- Кусагакуре, Западный санитарный коллектор · `places/kusagakure-zapadnyy-sanitarnyy-kollektor` · 1 ход(ов), s03–s03
-- Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
-- Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/lichnaya-taynaya-laboratoriya-shiki-lesistye-kholmy-severo-z` · 1 ход(ов), s04–s04
-- Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
-- Кусагакуре, улица перед управлением внутренней безопасности · `places/kusagakure-ulitsa-pered-upravleniem-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04
-- Кусагакуре, улица у управления внутренней безопасности · `places/kusagakure-ulitsa-u-upravleniya-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04
-- Кусагакуре, внутри дома Магами Шики · `places/kusagakure-vnutri-doma-magami-shiki` · 1 ход(ов), s04–s04
-- Тайная лаборатория Шики, известняковые галереи северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-galerei-severo-zap` · 1 ход(ов), s04–s04
-- Тайная лаборатория Шики, известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-galereya-severo-z` · 1 ход(ов), s04–s04
-- Тайная лаборатория Шики, известняковая водосборная галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-vodosbornaya-gale` · 1 ход(ов), s04–s04
-- Тайная лаборатория Шики, известняковые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-kholmy-severo-zapa` · 1 ход(ов), s04–s04
-- Кусагакуре, западный водоотвод · `places/kusagakure-zapadnyy-vodootvod` · 1 ход(ов), s04–s04
-- Кусагакуре, тёмный проход у западного водоотводного канала · `places/kusagakure-temnyy-prokhod-u-zapadnogo-vodootvodnogo-kanala` · 1 ход(ов), s04–s04
-- Кусагакуре, задний двор клиники Кирисавы Сэйны возле закрытой задней двери · `places/kusagakure-zadniy-dvor-kliniki-kirisavy-seyny-vozle-zakrytoy` · 1 ход(ов), s05–s05
-- Кусагакуре, личный кабинет главы деревни · `places/kusagakure-lichnyy-kabinet-glavy-derevni` · 1 ход(ов), s05–s05
-- Кусагакуре, дорога из резиденции к медицинскому кварталу · `places/kusagakure-doroga-iz-rezidentsii-k-meditsinskomu-kvartalu` · 1 ход(ов), s05–s05
-- Кусагакуре, кабинет Сэйны · `places/kusagakure-kabinet-seyny` · 1 ход(ов), s05–s05
 - Кусагакуре, дом родителей Мугами · `places/kusagakure-dom-roditeley-mugami` · 1 ход(ов), s05–s05
+- Кусагакуре, дом Шики · `places/kusagakure-dom-shiki` · 1 ход(ов), s08–s08
+- Кусагакуре, дорога из резиденции к медицинскому кварталу · `places/kusagakure-doroga-iz-rezidentsii-k-meditsinskomu-kvartalu` · 1 ход(ов), s05–s05
+- Кусагакуре, двор и боковой переулок дома Мугами Шики · `places/kusagakure-dvor-i-bokovoy-pereulok-doma-mugami-shiki` · 1 ход(ов), s08–s08
+- Кусагакуре, кабинет Сэйны · `places/kusagakure-kabinet-seyny` · 1 ход(ов), s05–s05
+- Кусагакуре, Крыльцо дома Шики · `places/kusagakure-kryltso-doma-shiki` · 1 ход(ов), s02–s02
+- Кусагакуре, Крыша складского строения у восточной школы · `places/kusagakure-krysha-skladskogo-stroeniya-u-vostochnoy-shkoly` · 1 ход(ов), s03–s03
+- Кусагакуре, личный кабинет главы деревни · `places/kusagakure-lichnyy-kabinet-glavy-derevni` · 1 ход(ов), s05–s05
+- Кусагакуре, Нижний ярус западного санитарного коллектора · `places/kusagakure-nizhniy-yarus-zapadnogo-sanitarnogo-kollektora` · 1 ход(ов), s03–s03
+- Кусагакуре, От дома Шики — к медицинскому архиву при госпитале · `places/kusagakure-ot-doma-shiki-k-meditsinskomu-arkhivu-pri-gospita` · 1 ход(ов), s03–s03
+- Кусагакуре, От северного водоотвода к восточным воротам · `places/kusagakure-ot-severnogo-vodootvoda-k-vostochnym-vorotam` · 1 ход(ов), s03–s03
+- Кусагакуре, От восточного канала к архивному корпусу управления шиноби · `places/kusagakure-ot-vostochnogo-kanala-k-arkhivnomu-korpusu-upravl` · 1 ход(ов), s03–s03
+- Кусагакуре, подземное хранилище В-7 · `places/kusagakure-podzemnoe-khranilishche-v-7` · 1 ход(ов), s06–s06
+- Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
+- Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
 - Кусагакуре, северный хозяйственный квартал · `places/kusagakure-severnyy-khozyaystvennyy-kvartal` · 1 ход(ов), s05–s05
 - Кусагакуре, северный проезд УВБ у старой котельной · `places/kusagakure-severnyy-proezd-uvb-u-staroy-kotelnoy` · 1 ход(ов), s05–s05
 - Кусагакуре, северный служебный проезд УВБ у повозки · `places/kusagakure-severnyy-sluzhebnyy-proezd-uvb-u-povozki` · 1 ход(ов), s05–s05
-- Кусагакуре, подземное хранилище В-7 · `places/kusagakure-podzemnoe-khranilishche-v-7` · 1 ход(ов), s06–s06
-- Кусагакуре, В-7 · `places/kusagakure-v-7` · 1 ход(ов), s06–s06
+- Кусагакуре, Штаб управления безопасности · `places/kusagakure-shtab-upravleniya-bezopasnosti` · 1 ход(ов), s02–s02
+- Кусагакуре, Старый водоотвод за западным корпусом госпиталя · `places/kusagakure-staryy-vodootvod-za-zapadnym-korpusom-gospitalya` · 1 ход(ов), s02–s02
+- Кусагакуре, тёмный проход у западного водоотводного канала · `places/kusagakure-temnyy-prokhod-u-zapadnogo-vodootvodnogo-kanala` · 1 ход(ов), s04–s04
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
-- Кусагакуре, двор и боковой переулок дома Мугами Шики · `places/kusagakure-dvor-i-bokovoy-pereulok-doma-mugami-shiki` · 1 ход(ов), s08–s08
-- Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08
-- Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
-- Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
-- Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
 - Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
-- Кусагакуре, дом Шики · `places/kusagakure-dom-shiki` · 1 ход(ов), s08–s08
-- Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
-- Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
-- Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08
-- Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
-- Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
-- Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
-- Страна Звука, площадка перед воротами монастыря Кагэн · `places/strana-zvuka-ploshchadka-pered-vorotami-monastyrya-kagen` · 1 ход(ов), s08–s08
-- Страна Звука, подземные ворота комплекса Отогакуре у монастыря Кагэн · `places/strana-zvuka-podzemnye-vorota-kompleksa-otogakure-u-monastyr` · 1 ход(ов), s08–s08
+- Кусагакуре, У входа в дом Мугами Шики · `places/kusagakure-u-vkhoda-v-dom-mugami-shiki` · 1 ход(ов), s02–s02
+- Кусагакуре, улица перед управлением внутренней безопасности · `places/kusagakure-ulitsa-pered-upravleniem-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04
+- Кусагакуре, улица у управления внутренней безопасности · `places/kusagakure-ulitsa-u-upravleniya-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04
+- Кусагакуре, Управление безопасности · `places/kusagakure-upravlenie-bezopasnosti` · 1 ход(ов), s02–s02
+- Кусагакуре, Управление оперативной службы · `places/kusagakure-upravlenie-operativnoy-sluzhby` · 1 ход(ов), s02–s02
+- Кусагакуре, В-7 · `places/kusagakure-v-7` · 1 ход(ов), s06–s06
+- Кусагакуре, Внутренний двор исследовательского корпуса № 3 · `places/kusagakure-vnutrenniy-dvor-issledovatelskogo-korpusa-n-3` · 1 ход(ов), s02–s02
+- Кусагакуре, внутри дома Магами Шики · `places/kusagakure-vnutri-doma-magami-shiki` · 1 ход(ов), s04–s04
+- Кусагакуре, Восточная хозяйственная калитка школы · `places/kusagakure-vostochnaya-khozyaystvennaya-kalitka-shkoly` · 1 ход(ов), s03–s03
+- Кусагакуре, Восточный смотровой колодец старого коллектора · `places/kusagakure-vostochnyy-smotrovoy-kolodets-starogo-kollektora` · 1 ход(ов), s03–s03
+- Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
+- Кусагакуре, Южный медицинский квартал · `places/kusagakure-yuzhnyy-meditsinskiy-kvartal` · 1 ход(ов), s02–s02
+- Кусагакуре, Заброшенный исследовательский корпус № 3 · `places/kusagakure-zabroshennyy-issledovatelskiy-korpus-n-3` · 1 ход(ов), s02–s02
+- Кусагакуре, задний двор клиники Кирисавы Сэйны возле закрытой задней двери · `places/kusagakure-zadniy-dvor-kliniki-kirisavy-seyny-vozle-zakrytoy` · 1 ход(ов), s05–s05
+- Кусагакуре, Западная санитарная линия · `places/kusagakure-zapadnaya-sanitarnaya-liniya` · 1 ход(ов), s03–s03
+- Кусагакуре, Западный коллектор · `places/kusagakure-zapadnyy-kollektor` · 1 ход(ов), s03–s03
+- Кусагакуре, Западный распределительный узел · `places/kusagakure-zapadnyy-raspredelitelnyy-uzel` · 1 ход(ов), s03–s03
+- Кусагакуре, Западный санитарный коллектор · `places/kusagakure-zapadnyy-sanitarnyy-kollektor` · 1 ход(ов), s03–s03
+- Кусагакуре, западный водоотвод · `places/kusagakure-zapadnyy-vodootvod` · 1 ход(ов), s04–s04
+- Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
+- Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/lichnaya-taynaya-laboratoriya-shiki-lesistye-kholmy-severo-z` · 1 ход(ов), s04–s04
+- Медицинский читальный зал · `places/meditsinskiy-chitalnyy-zal` · 1 ход(ов), s01–s01
+- Медицинский тренировочный зал · `places/meditsinskiy-trenirovochnyy-zal` · 1 ход(ов), s01–s01
+- Медицинский учебный кабинет · `places/meditsinskiy-uchebnyy-kabinet` · 1 ход(ов), s01–s01
+- Неизвестное подземное сооружение, Диагностический шлюз Седьмой палаты · `places/neizvestnoe-podzemnoe-sooruzhenie-diagnosticheskiy-shlyuz-se` · 1 ход(ов), s03–s03
+- Неизвестное подземное сооружение, Внешний приёмный предел · `places/neizvestnoe-podzemnoe-sooruzhenie-vneshniy-priemnyy-predel` · 1 ход(ов), s03–s03
 - Отогакуре, подземный вход Кагэн · `places/otogakure-podzemnyy-vkhod-kagen` · 1 ход(ов), s08–s08
-- Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
-- Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
-- Страна Звука, лесная дорога за западным периметром Кагэн · `places/strana-zvuka-lesnaya-doroga-za-zapadnym-perimetrom-kagen` · 1 ход(ов), s09–s09
+- Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
+- Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
+- Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
+- Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
+- Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
+- Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
+- Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
+- Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 1 ход(ов), s10–s10
+- Рьючидо, Зал неподвижной воды у моста · `places/ryuchido-zal-nepodvizhnoy-vody-u-mosta` · 1 ход(ов), s10–s10
+- Рьючидо, зал первого испытания перед открытой лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkrytoy-lestnitsey` · 1 ход(ов), s10–s10
+- Рьючидо, зал первого испытания перед открывшейся лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkryvsheysya-lestnits` · 1 ход(ов), s10–s10
+- Седьмая палата, Внешний приёмный предел · `places/sedmaya-palata-vneshniy-priemnyy-predel` · 1 ход(ов), s03–s03
+- Седьмой колодец, двор комплекса Кэйсин перед архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-arkhivom-p-4` · 1 ход(ов), s09–s09
+- Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
+- Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
+- Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
+- Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
-- Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
-- Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
-- Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
-- Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
-- Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
-- Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
-- Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
-- Седьмой колодец, двор комплекса Кэйсин перед архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-arkhivom-p-4` · 1 ход(ов), s09–s09
-- Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
-- Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
-- Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
-- Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
-- Рьючидо, зал первого испытания перед открывшейся лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkryvsheysya-lestnits` · 1 ход(ов), s10–s10
-- Рьючидо, зал первого испытания перед открытой лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkrytoy-lestnitsey` · 1 ход(ов), s10–s10
-- Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
-- Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
-- Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
-- Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
-- Рьючидо, Зал неподвижной воды у моста · `places/ryuchido-zal-nepodvizhnoy-vody-u-mosta` · 1 ход(ов), s10–s10
-- Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 1 ход(ов), s10–s10
+- Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
+- Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
+- Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
+- Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
+- Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
+- Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
+- Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
+- Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
+- Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
+- Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08
+- Страна Звука, лесная дорога за западным периметром Кагэн · `places/strana-zvuka-lesnaya-doroga-za-zapadnym-perimetrom-kagen` · 1 ход(ов), s09–s09
+- Страна Звука, площадка перед воротами монастыря Кагэн · `places/strana-zvuka-ploshchadka-pered-vorotami-monastyrya-kagen` · 1 ход(ов), s08–s08
+- Страна Звука, подземные ворота комплекса Отогакуре у монастыря Кагэн · `places/strana-zvuka-podzemnye-vorota-kompleksa-otogakure-u-monastyr` · 1 ход(ов), s08–s08
+- Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
+- Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
+- Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
+- Тайная лаборатория Шики, известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-galereya-severo-z` · 1 ход(ов), s04–s04
+- Тайная лаборатория Шики, известняковая водосборная галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-vodosbornaya-gale` · 1 ход(ов), s04–s04
+- Тайная лаборатория Шики, известняковые галереи северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-galerei-severo-zap` · 1 ход(ов), s04–s04
+- Тайная лаборатория Шики, известняковые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-kholmy-severo-zapa` · 1 ход(ов), s04–s04
+- Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
+- Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
+- Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
