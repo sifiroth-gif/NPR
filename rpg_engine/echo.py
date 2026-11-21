@@ -31,7 +31,9 @@ COMMON = frozenset(stem(w) for w in (
     "которые нужно сейчас своей своих своим своего свою очень более менее всего всех также "
     "человек людей можно нельзя когда тогда снова опять почти около рядом перед кроме деревни "
     "деревня страна страны стране ходом ходов игрок ведущий").split())
-RULE = "Необязательно: вплети, если ложится естественно; связь не объявляй."
+RULE = ("Давнее, созвучное сцене: вплети в ближайшие ходы, когда ляжет, — деталью, документом, человеком, "
+        "слухом; связь не объявляй.")
+HOLD = 4           # столько ходов эхо держится в NEXT, пока не вплетено
 NEAR = 8           # сколько ближайших по смыслу эпизодов получают надбавку
 NEAR_BONUS = 4.0   # надбавка ближайшему; дальше — по убыванию ранга
 
@@ -57,6 +59,16 @@ def _context(hot):
         if isinstance(event, dict) and event.get("status") == "active":
             parts.append(event.get("title"))
     return " ".join(str(p) for p in parts if p)
+
+
+def _about_present(candidate, present):
+    """Нить о присутствующем NPC — это сама сцена, а не забытое прошлое."""
+    keys, names = present
+    _, key, _, text, _ = candidate
+    tail = key.split(":", 1)[-1].casefold()
+    if any(part in tail for k in keys for part in k.split("_") if len(part) >= 4):
+        return True
+    return bool({stem(w.casefold()) for w in NAME.findall(" " + str(text))} & names)
 
 
 def _candidates(state_dir, hot):
@@ -110,8 +122,33 @@ def _near(state_dir, context_text, pool):
     return {f"history:{rid}": NEAR_BONUS * (1 - rank / NEAR) for rank, (rid, _) in enumerate(found or [])}
 
 
-def pick(state_dir, hot):
-    """Одна давняя нить для NEXT.echo или None; состояние — в HOT.fold.echo."""
+def _used(current, texts):
+    """Вплетено: в новом тексте ведущего — редкие слова или имена эха."""
+    words = {stem(w) for text in texts for w in tokens(text) if len(w) >= 4}
+    marks = [stem(w.strip().casefold()) for w in str(current.get("echoes") or "").split(",") if w.strip()]
+    marks += [stem(w.casefold()) for w in NAME.findall(" " + str(current.get("what") or ""))]
+    return sum(1 for m in set(marks) if m and m in words) >= 2
+
+
+def _present(hot):
+    """Ключи и основы имён присутствующих: их нити — сама сцена, не давнее."""
+    cast = hot.get("cast") or {}
+    keys, names = set(), set()
+    for key in (hot.get("scene") or {}).get("present") or []:
+        if key in ("shiki", "player"):
+            continue
+        keys.add(str(key).casefold())
+        name = (cast.get(key) or {}).get("name") or ((hot.get("_psyche") or {}).get(key) or {}).get("name") or ""
+        names.update(stem(w.casefold()) for w in NAME.findall(" " + name))
+    return keys, names - COMMON
+
+
+def pick(state_dir, hot, texts=()):
+    """Одна давняя нить для NEXT.echo или None; состояние — в HOT.fold.echo.
+
+    Эхо держится до HOLD ходов, пока ведущий его не вплёл, — один ход в NEXT
+    оказывался слишком коротким, чтобы сцена успела к нему повернуть.
+    """
     cursor = (hot.get("cursor") or {}).get("id")
     now = aging._ordinal(cursor)
     if now is None:
@@ -119,14 +156,23 @@ def pick(state_dir, hot):
     state = hot.setdefault("fold", {}).setdefault("echo", {})
     if state.get("at") == cursor:          # свёртка без нового хода: то же эхо
         return state.get("current")
+    current = state.get("current")
+    if current and texts and _used(current, texts):
+        state["used_count"] = int(state.get("used_count") or 0) + 1
+        current = state["current"] = None
+    if current and state.get("last") is not None and now - state["last"] < HOLD:
+        state["at"] = cursor
+        return current
     if state.get("last") is not None and now - state["last"] < GAP:
         state["current"], state["at"] = None, cursor
         return None
     context_text = _context(hot)
+    present = _present(hot)
     context = _stems(context_text)
     names = {stem(w.casefold()) for w in NAME.findall(" " + context_text)}
     used = state.setdefault("used", {})
-    pool = [c for c in _candidates(state_dir, hot) if now - used.get(c[1], -10**6) >= COOLDOWN]
+    pool = [c for c in _candidates(state_dir, hot) if now - used.get(c[1], -10**6) >= COOLDOWN
+            and not _about_present(c, present)]
     found_all = [_stems(c[3]) for c in pool]
     df = {}
     for found in found_all:
@@ -139,6 +185,10 @@ def pick(state_dir, hot):
         shared = [s for s in context if s in found]
         bonus = near.get(key, 0.0)
         if len(shared) < (1 if bonus else MIN_SHARED):
+            continue
+        # Эпизод прошлого созвучен через лицо или место, а не через общее ремесло
+        # («стерилизация» в двух операциях — совпадение, не эхо).
+        if kind == "эпизод" and not ({stem(w.casefold()) for w in NAME.findall(" " + text)} & set(shared)):
             continue
         rarity = {s: math.log((total + 1) / (df.get(s, 0) + 1)) * (1.5 if s in names else 1.0) for s in shared}
         score = (sum(rarity.values()) + (0.5 if kind == "линия" else 0)) * weight + bonus
@@ -153,6 +203,7 @@ def pick(state_dir, hot):
         return None
     _, kind, key, source, text, shared = best
     state["last"], used[key] = now, now
+    state["offered"] = int(state.get("offered") or 0) + 1
     state["used"] = dict(sorted(used.items(), key=lambda kv: kv[1])[-60:])
     state["current"] = {"kind": kind, "from": source, "what": " ".join(str(text).split())[:220],
                         "echoes": ", ".join(shared[:4]), "rule": RULE}

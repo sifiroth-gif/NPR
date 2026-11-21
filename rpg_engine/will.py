@@ -196,6 +196,15 @@ def review(hot, turns):
             if card.get("tier") in ("developed", "deep") and not profile.get("psyche") and not profile.get("intent"):
                 note(f"«{_name(hot, key)}» появляется уже {card.get('memory_total', 0)} раз, а воли у него нет: "
                      f"задай d.cast.{key}.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.")
+    from . import news
+    for turn in turns or []:
+        for key, own in (((turn.get("d") or {}).get("cast") or {}).items()):
+            for name, plan in ((own or {}).get("intent") or {}).items() if isinstance(own, dict) else ():
+                result = plan.get("if_unopposed") if isinstance(plan, dict) else None
+                if result and news.dry(result):
+                    note(f"План «{name}» у «{_name(hot, key)}»: исход — бумага («{str(result)[:90]}»). Перепиши "
+                         f"d.cast.{key}.intent.{name}.if_unopposed видимой переменой мира, которая может дойти до "
+                         "Шики: кто пришёл, исчез, продал, сжёг, объявил, нанял, умер.")
     return notes
 
 
@@ -247,6 +256,8 @@ def advance(hot, always_present=()):
                  "outcome": entry["outcome"], "turn": (hot.get("cursor") or {}).get("id"), "shown": 0}
         if plan.get("against_shiki"):
             event["against_shiki"] = str(plan["against_shiki"])[:200]
+        if plan.get("canon"):
+            event["canon"] = True
         history.append(event)
         events.append(event)
     del history[:-HAPPENED_KEEP]
@@ -254,7 +265,8 @@ def advance(hot, always_present=()):
 
 
 def offscreen(hot):
-    """Случившееся за кадром за последние свёртки — для NEXT; счётчик показа растёт."""
+    """Случившееся за кадром за последние свёртки — для NEXT: весомое первым, мелочь счётом."""
+    from . import news
     out = []
     now = _parse((hot.get("cursor") or {}).get("at"))
     for event in _state(hot).get("happened") or []:
@@ -267,11 +279,12 @@ def offscreen(hot):
         event["shown"] = event.get("shown", 0) + 1
         word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
         name = event["name"] if event.get("name") and event["name"] != event.get("npc") else _name(hot, event.get("npc"))
-        text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {name} ({word}): {event['outcome']}"
+        tag = "" if str(event["outcome"]).casefold().startswith(word) else f" ({word})"
+        text = f"{str(event.get('at') or '')[5:16].replace('T', ' ')} {name}{tag}: {event['outcome']}"
         if event.get("against_shiki"):
             text += ("" if text.endswith((".", "!", "?", "…", ")")) else ".") + f" Против Шики: {event['against_shiki']}"
-        out.append(text)
-    return out
+        out.append((news.weight(hot, event), text))
+    return news.offscreen(hot, out)
 
 
 def due_here(hot, always_present=()):

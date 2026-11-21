@@ -16,8 +16,13 @@
       "street": {"kind": "scene", "title": "уличный торговец"},
       "theft": {"touch": true},
       "street": {"closed": "Торговец ушёл ни с чем."},
-      "ch3": {"kind": "chapter", "parent": "main", "status": "queued", "trigger": "…"}
+      "ch3": {"kind": "chapter", "parent": "main", "status": "queued", "trigger": "…"},
+      "ch4": {"kind": "chapter", "status": "queued", "starts": "0010-03-12T03:00:00"}
     }}
+
+``starts`` — срок мира: глава в очереди открывается сама, когда игровое время
+его достигло (канон не ждёт, пока закончится прежняя глава); за трое суток
+до срока ведущему приходит напоминание подводить мир.
 """
 from __future__ import annotations
 
@@ -28,7 +33,8 @@ ACTIVE_LIMIT = 5                 # побочные события и случа
 SCENE_DEFAULT = {"scenes": 2}    # случайная сцена — один-два обмена
 CLOSED_KEEP = 60
 FIELDS = ("kind", "title", "question", "endings", "limit", "phase", "parent", "threads",
-          "trigger", "notes", "status")
+          "trigger", "notes", "status", "starts")
+SOON_HOURS = 72                  # глава со сроком мира: за трое суток — подводить мир
 
 RULES = (
     "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, "
@@ -125,7 +131,7 @@ def _over(event, now):
 
 
 def _label(event):
-    return f"«{event.get('title') or event.get('question') or event['id']}» (`{event['id']}`)"
+    return f"«{event.get('title') or event.get('question') or event.get('id')}» (`{event.get('id')}`)"
 
 
 def review(hot, turns):
@@ -183,6 +189,36 @@ def review(hot, turns):
     return notes
 
 
+def schedule(hot):
+    """Главы со сроком мира: открыть наступившие, напомнить о близких. Замечания kind=plot."""
+    plot, events = _events(hot)
+    cursor = hot.get("cursor") or {}
+    now, turn_id = _parse(cursor.get("at")), cursor.get("id")
+    notes = []
+    if not now:
+        return notes
+    for event in events.values():
+        starts = _parse(event.get("starts"))
+        if event.get("status") != "queued" or not starts:
+            continue
+        if starts <= now:
+            event["status"], event["opened"], event["opened_at"] = "active", turn_id, cursor.get("at")
+            event.setdefault("scenes", 0)
+            older = [e for e in events.values() if e is not event and e.get("kind") == event.get("kind") == "chapter"
+                     and e.get("status") == "active"]
+            text = (f"Открылась {_label(event)} — срок мира {event['starts'][:16].replace('T', ' ')}: события идут "
+                    "без Шики; доведи их до него вестью, слухом или людьми.")
+            if older:
+                text += f" Прежняя {_label(older[0])} — разреши ближайшей сценой одной из концовок."
+            notes.append({"turn": turn_id, "kind": "plot", "text": text})
+        elif (starts - now).total_seconds() <= SOON_HOURS * 3600:
+            hours = int((starts - now).total_seconds() // 3600)
+            notes.append({"turn": turn_id, "kind": "plot",
+                          "text": f"Через {hours} ч начнётся {_label(event)}: подводи мир — слухи, знаки, люди "
+                                  "в пути; прежние нити сворачивай."})
+    return notes
+
+
 def _stale_threads(hot):
     """Линии HOT.threads, не менявшиеся две сессии и не привязанные к событию."""
     session = int(hot.get("session") or 0)
@@ -212,7 +248,7 @@ def brief(hot):
         if limit.get("scenes"):
             left = max(0, int(limit["scenes"]) - int(event.get("scenes") or 0))
         item = {k: event.get(k) for k in ("id", "kind", "title", "question", "endings", "limit",
-                                          "phase", "parent", "threads", "notes") if event.get(k)}
+                                          "phase", "parent", "threads", "notes", "starts") if event.get(k)}
         item["scenes"] = event.get("scenes", 0)
         if left is not None:
             item["scenes_left"] = left
@@ -223,7 +259,7 @@ def brief(hot):
     active = [view(e) for e in events.values() if e.get("status") == "active" and e.get("kind") != "main"]
     order = {"chapter": 0, "side": 1, "scene": 2}
     active.sort(key=lambda e: (order.get(e["kind"], 3), e["id"]))
-    queued = [{k: e.get(k) for k in ("id", "kind", "title", "trigger", "parent") if e.get(k)}
+    queued = [{k: e.get(k) for k in ("id", "kind", "title", "trigger", "parent", "starts") if e.get(k)}
               for e in events.values() if e.get("status") == "queued"]
     main = events.get("main")
     return {"rules": RULES,

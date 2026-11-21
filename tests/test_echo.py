@@ -31,7 +31,19 @@ class EchoTest(unittest.TestCase):
         self.assertIn("Хирано", got["what"])
         self.assertEqual(echo.pick(self.root, hot), got, "та же свёртка — то же эхо")
         hot["cursor"]["id"] = "s09.text.085"
+        self.assertEqual(echo.pick(self.root, hot, texts=["Тихо."]), got, "не вплетено — держится HOLD ходов")
+        hot["cursor"]["id"] = "s09.text.086"
+        woven = ["У водосборника Шики вспомнил подпись Хирано на старом контракте."]
+        self.assertIsNone(echo.pick(self.root, hot, texts=woven), "вплетено — снято, новое не раньше GAP")
+        self.assertEqual(hot["fold"]["echo"]["used_count"], 1)
+        hot["cursor"]["id"] = "s09.text.088"
         self.assertIsNone(echo.pick(self.root, hot), "не чаще раза в GAP ходов")
+
+    def test_thread_of_present_npc_is_not_an_echo(self):
+        hot = _hot()
+        hot["scene"]["present"] = ["shiki", "hirano_seiji"]
+        hot["cast"] = {"hirano_seiji": {"name": "Хирано Сэйдзи"}}
+        self.assertIsNone(echo.pick(self.root, hot), "Хирано в сцене — его нить не давнее")
 
     def test_no_echo_without_resonance(self):
         self.assertIsNone(echo.pick(self.root, _hot(situation="Тихая ночь, дождь стучит по крыше.")))
