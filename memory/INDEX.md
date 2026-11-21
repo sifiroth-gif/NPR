@@ -1,16 +1,17 @@
-# Карта мира NPR · на ходе `s09.text.061`
+# Карта мира NPR · на ходе `s09.text.064`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (170) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (172) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (157)
-- Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke` · в сцене
+## Персонажи (158)
+- Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto` · в сцене
+- Орочимару — саннин, скрытый организатор · `npc/orochimaru` · в сцене
+- Нагаэ Рокуто (Нагаэ, Рокуто) — Высокий широкоплечий мужчина около сорока, короткие тёмные … · `npc/nagae_rokuto`
+- Саске Учиха (Саске, Учиха) — генин, участник · `npc/sasuke`
 - Хагуро (Змея Рьючидо) — по подписи в сцене · `npc/khaguro`
 - Хирано — задержанный; шесть лет страдал двигательными нарушениями, принимал препарат · `npc/hirano`
-- Кабуто Якуши (Кабуто, Якуши) — генин, участник · `npc/kabuto`
-- Орочимару — саннин, скрытый организатор · `npc/orochimaru`
 - hirano_seiji —  · `npc/hirano_seiji`
 - Дежурная администратор госпиталя —  · `npc/hospital_night_admin`
 - Хасуми Дзюнъити (Хасуми, Дзюнъити) — Мужчина в тёмном служебном халате; прочие черты не установл… · `npc/kuroishi_hasumi`
@@ -164,7 +165,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (17)
+## Линии (18)
 - `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
 - `v7` — 04.10 06:43: культура С-17 на В-7 под контролем Шики (s08.text.085); … · `threads/v7`
 - `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
@@ -182,8 +183,9 @@
 - `arakawa_treatment` — Аракава по звонку Мориоки подтвердил частичное улучшение правой кисти… · `threads/arakawa_treatment`
 - `s17_survivors` — Реципиент №6 на ИВЛ, зависим от С-17: первый улучшенный бронхиальный … · `threads/s17_survivors`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
+- `nagae_rokuto_contract` — Принят к исполнению; 24.12.1284 заказчик подтвердил открытый заказ и … · `threads/nagae_rokuto_contract`
 
-## Вещи (25)
+## Вещи (26)
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `itachi_report_copies` · `items/itachi_report_copies`
@@ -200,6 +202,7 @@
 - `medical_case_m12` · `items/medical_case_m12`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
+- `private_bounties` · `items/private_bounties`
 - `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`

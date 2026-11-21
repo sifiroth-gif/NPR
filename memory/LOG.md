@@ -2,6 +2,9 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s09.text.064: Нагаэ Рокуто (`npc/nagae_rokuto`), линия `nagae_rokuto_contract`, бой
+- s09.text.063: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `private_bounties`, линия `kagen_residency`
+- s09.text.062: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), линия `kimimaro_research`
 - s09.text.061: Саске Учиха (`npc/sasuke`)
 - s09.text.060: поправки игрока: 1
 - s09.text.059: Саске Учиха (`npc/sasuke`)
@@ -59,5 +62,3 @@
 - s09.text.007: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Орочимару (`npc/orochimaru`), Транспортник госпиталя (`npc/hospital_transporter`), вещь `shiki_blood_vial`, план сюжета
 - s09.text.006: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Кадзиура Сатору (`npc/kadziura_satoru`), вещь `shiki_blood_vial`, линия `kabuto_letter`, план сюжета
 - s09.text.005: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Кэйдзи (`npc/keiji`), Касэ (`npc/kase`), вещь `forehead_protector`, вещь `shiki_upper_clothing`, вещь `shiki_wraps`, линия `kabuto_letter`
-- s09.text.004: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Глава Кусагакуре (`npc/kusa_head`), Курода Маю (`npc/kuroda_mayu`)
-- s09.text.002: Кабуто Якуши (`npc/kabuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), Немера (Невыписанная) (`npc/nemera`), Медик у панели В-7 (`npc/medical_panel_operator`)
