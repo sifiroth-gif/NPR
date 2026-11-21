@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.053: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 1
 - s10.text.052: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Мориока Хидэаки (`npc/morioka_hideaki`)
@@ -60,4 +61,3 @@
 - s09.text.098: Немера (Невыписанная) (`npc/nemera`), waterfall_trackers (`npc/waterfall_trackers`), Уцуро (`npc/utsuro`), линия `nemera_symbiosis`, поправки игрока: 1
 - s09.text.097: Немера (Невыписанная) (`npc/nemera`)
 - s09.text.096: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `cash_1184`, вещь `contract_1184_docs`, линия `shiki_training`, линия `shiki_finances`
-- s09.text.095: Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), waterfall_trackers (`npc/waterfall_trackers`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `reika_meeting`
