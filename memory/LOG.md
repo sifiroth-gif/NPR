@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.040: Тагицухимэ (`npc/tagitsuhime`), Немера (Невыписанная) (`npc/nemera`), Белая Змея (`npc/white_snake_sage`), Старший шиноби Звука (`npc/sound_kagen_senior`)
 - s10.text.039: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`), hirano_seiji (`npc/hirano_seiji`)
 - s10.text.038: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`)
 - s10.text.037: Тагорихимэ (`npc/tagorihime`), Тагицухимэ (`npc/tagitsuhime`), Хагуро (`npc/khaguro`)
@@ -59,4 +60,3 @@
 - s09.text.085: Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Дзиро (`npc/jiro_caravan_guard`), Сано Гэндзи (`npc/signalshchik`), Икэда (`npc/south_crossbowman`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `signaller_contract_tube`, вещь `front_wagon_frame`, линия `black_caravan`
 - s09.text.084: south_signaller (`npc/south_signaller`), Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), вещь `signaller_contract_tube`, линия `black_caravan`
 - s09.text.083: Миура Томо (`npc/miura_tomo`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `black_caravan`, бой
-- s09.text.082: Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), линия `black_caravan`, бой, поправки игрока: 2
