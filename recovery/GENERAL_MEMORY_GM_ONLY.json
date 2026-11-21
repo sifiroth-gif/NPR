@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.030",
+  "cursor": "s10.text.031",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1675,7 +1675,8 @@
     "kuroishi_visitor": {
       "aliases": [
         "kuroishi visitor",
-        "Кидзима Суми"
+        "Кидзима Суми",
+        "kuroishi_visitor"
       ],
       "facts": [],
       "id": "kuroishi_visitor",
@@ -1707,7 +1708,7 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.030",
+          "seen": "s10.text.031",
           "state": "Отпущена после передачи комплекта; дальнейших контактов с Шики в этой сцене нет."
         },
         {
@@ -1716,7 +1717,8 @@
       ],
       "sources": [
         "recovery/cast/kuroishi_visitor.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s10.text.031"
       ]
     },
     "kusa_head": {
@@ -2195,7 +2197,7 @@
         {
           "fears": "Шики: он унёс в себе то, что она сторожила.",
           "role": "полукаменная женщина-хирург Нижнего госпиталя",
-          "seen": "s10.text.013",
+          "seen": "s10.text.031",
           "stance": "Терпит Шики, пока он полезен пациентам.",
           "state": "К 20:00 Шики не найден в доступных местах, Минасэ не смогла вручить своё требование о втором контуре, намерена повторить попытку.",
           "voice": "Операционные команды. С Уцуро на «ты» и по старому имени.",
@@ -2203,7 +2205,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/minase.json"
+        "recovery/cast/minase.json",
+        "s10.text.031"
       ]
     },
     "missing_guard": {
@@ -2495,8 +2498,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s10.text.030"
+        "recovery/cast/nao.json"
       ]
     },
     "nemera": {
@@ -5798,6 +5800,23 @@
       "projections": [],
       "sources": [
         "s06.text.032"
+      ]
+    },
+    "place:69b9536eeae5b1d0": {
+      "aliases": [
+        "place:69b9536eeae5b1d0",
+        "Рьючидо, Галерея переменчивого камня (второе испытание)",
+        "Галерея переменчивого камня (второе испытание)"
+      ],
+      "facts": [],
+      "id": "place:69b9536eeae5b1d0",
+      "kind": "place",
+      "label": "Рьючидо, Галерея переменчивого камня (второе испытание)",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.031"
       ]
     },
     "place:69fd028a181cbec7": {
@@ -10470,7 +10489,7 @@
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -10478,13 +10497,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
-        },
-        {
-          "at": "0010-03-04T06:41:00",
-          "excerpt": "атком розоватой ткани у основания. Пока невозможно определить, как он туда попал. За спиной раздаётся голос Итикисимахимэ. **Итикисимахимэ:** — Ты что-то ищешь, Шики? Она по-прежнему сидит возле центрального стола. Поставленная перед ней чаша уже наполовину пу",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.028"
         },
         {
           "at": "0010-03-04T07:08:00",
@@ -10499,21 +10511,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.030"
+        },
+        {
+          "at": "0010-03-04T07:12:00",
+          "excerpt": "т к хозяйственной нише, где теперь достаточно чисто, чтобы укрыться между двумя плотно придвинутыми корзинами. Итикисимахимэ провожает её взглядом. **Итикисимахимэ:** — Ну конечно. Теперь она ещё и запомнит твоё имя. Она поворачивается к открытой лестнице. **И",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.030",
-          "state": "Стоит у выхода из завершённого первого испытания, разрешила Суми взять мясо у Шики и приказала покинуть зал после еды."
+          "seen": "s10.text.031",
+          "state": "В зале первого испытания, после выхода Шики осталась у стола и уже передала Тагорихимэ факты его уборки и кормления Суми."
         },
         {
-          "state": "Стоит у выхода из завершённого первого испытания, разрешила Суми взять мясо у Шики и приказала покинуть зал после еды."
+          "state": "В зале первого испытания, после выхода Шики осталась у стола и уже передала Тагорихимэ факты его уборки и кормления Суми."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
         "recovery/HOT.json",
-        "s10.text.030"
+        "s10.text.031"
       ]
     },
     "s17_recipient_6": {
@@ -11045,13 +11064,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s10.text.030",
-          "state": "На полу перед Шики, ждёт предложенный кусок мяса; не съела его ещё и не подошла к руке."
+          "seen": "s10.text.031",
+          "state": "Наелась предложенного Шики мяса, укрылась между корзинами хозяйственной ниши первого испытания; услышала его имя и произнесла его."
         }
       ],
       "sources": [
         "recovery/cast/sumi.json",
-        "s10.text.030"
+        "s10.text.031"
       ]
     },
     "sumi_sword": {
@@ -11074,6 +11093,27 @@
       ],
       "sources": [
         "s09.text.068"
+      ]
+    },
+    "tagorihime": {
+      "aliases": [
+        "tagorihime"
+      ],
+      "facts": [],
+      "id": "tagorihime",
+      "kind": "npc",
+      "label": "tagorihime",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s10.text.031",
+          "state": "Стоит у колонны в подвижной галерее Рьючидо; самостоятельно активировала ускоренное движение каменных блоков и предложила Шики найти путь к следующему залу."
+        }
+      ],
+      "sources": [
+        "recovery/cast/tagorihime.json",
+        "s10.text.031"
       ]
     },
     "takagi_ren": {
@@ -11825,5 +11865,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 778
+  "source_turns_indexed": 779
 }

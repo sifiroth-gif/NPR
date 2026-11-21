@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.031: sumi (`npc/sumi`), Итикисимахимэ (`npc/ryuchido_gate_woman`), tagorihime (`npc/tagorihime`), Минасэ Рэи (`npc/minase`), Кидзима Суми (`npc/kuroishi_visitor`)
 - s10.text.030: Итикисимахимэ (`npc/ryuchido_gate_woman`), sumi (`npc/sumi`), Мугами Нао (`npc/nao`)
 - s10.text.029: Итикисимахимэ (`npc/ryuchido_gate_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.028: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хаясэ Нори (`npc/nori`)
@@ -59,4 +60,3 @@
 - s09.text.076: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Нагаэ Рокуто (`npc/nagae_rokuto`), Старший шиноби Звука (`npc/sound_kagen_senior`), вещь `black_caravan_manifest`, линия `v7`, план сюжета
 - s09.text.075: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Такаги Рэн (`npc/takagi_ren`), вещь `black_caravan_contract`, линия `black_caravan`, линия `v7`, план сюжета, поправки игрока: 1
 - s09.text.074: Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), Неизвестный пленный в маске (`npc/unknown_masked_prisoner`), линия `black_caravan`, линия `tamura_inquiry`
-- s09.text.073: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `inquiry_contact_token`, линия `minagi_commission`, линия `unknown_buyer_mask`
