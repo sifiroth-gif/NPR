@@ -24,7 +24,7 @@ RULE = ("Это всё, что нужно прочитать перед обыч
         "открывай только для NPC, впервые входящего в сцену в этом чате, или по вопросу о прошлом; "
         "прочитанное в этом чате не перечитывай. cursor не равен твоему последнему ходу — свёртка "
         "отстала: открой CHECKS.json. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
-        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, по желанию.")
+        "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: вплети через деталь, документ, человека или слух, если ложится естественно.")
 
 
 def _short(text, limit=FIELD):
@@ -164,7 +164,11 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["echo"] = echoed
     if near:
         pack["limits"] = near
-    pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []]
+    # Замечания к прошлым ходам ведущий уже видел: в пакет — к последнему ходу и о текущем состоянии.
+    state_kinds = ("plot", "fight", "memory", "will", "echo")
+    pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []
+                      if c.get("turn") in (None, cursor.get("id")) or c.get("kind") in state_kinds and
+                      c.get("turn") == cursor.get("id")]
     last = ((hot.get("lint") or {}).get("recent") or [])[-1:]
     if last and last[0].get("id") == cursor.get("id") and last[0].get("verdict") != "чисто":
         pack["prose"] = {"verdict": last[0].get("verdict"),
@@ -208,6 +212,14 @@ def _fit(pack):
         pack["due"].pop()
     while _size(pack) > HARD_BYTES and len(pack.get("checks") or []) > 3:
         pack["checks"].pop(0)
+    if _size(pack) >= HARD_BYTES * 0.9:   # сам пакет у предела — по его собственному размеру
+        from . import limits
+        item = {"key": "next", "what": f"пакет хода NEXT (байт): {_size(pack)} из {HARD_BYTES}",
+                "acts": [limits.ACT_CLOSE, limits.ACT_TRIM, limits.ACT_RAISE], "over": _size(pack) > HARD_BYTES}
+        near = pack.setdefault("limits", {"items": [], "tell": item["over"],
+                                          "rule": "Предел близко. Скажи игроку ОДНОЙ короткой строкой вне игры после "
+                                                  "сцены: что подходит к пределу и варианты из acts; выбор игрока исполни."})
+        near["items"].append(item)
     return pack
 
 

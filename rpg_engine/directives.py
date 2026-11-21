@@ -96,7 +96,8 @@ def view(state_dir, hot):
         sources = d.get("from") or []
         covered |= {_norm(x) for x in ([sources] if isinstance(sources, str) else sources)}
     recent = [d for d in hot.get("directives") or []
-              if cursor - _seq(d.get("turn")) <= RECENT_TURNS and _norm(d["text"]) not in covered]
+              if cursor - _seq(d.get("turn")) <= RECENT_TURNS and _norm(d["text"]) not in covered
+              and _norm(d.get("turn") or "") not in covered]   # поправка уже стала постоянной (from: ход)
     out = {}
     if keep:
         out["standing"] = [f"{d['text']} ({d.get('since', '')})".replace(" ()", "") for d in keep]

@@ -1234,9 +1234,6 @@ def fold(state_dir):
             scene_gate.compact_disclosure_cues(hot, accepted))
     # Счётчик показа новостей мира растёт до записи состояния, иначе событие висит в NEXT вечно.
     happened = will.offscreen(hot)
-    public, secret = _split_state(hot)
-    near = limits.check(state_dir, hot, hot_bytes=len(_dump_hot(public).encode("utf-8")),
-                        secret_bytes=len(_dump({k: v for k, v in secret.items() if k != "undo"}).encode("utf-8")))
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
         echoed = echo.pick(state_dir, hot)
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
@@ -1259,6 +1256,8 @@ def fold(state_dir):
     memory_quality.save(state_dir, hot, memory_index)
     brief = live_scene.build_for_state(hot, accepted, state_dir)
     live_scene.write(brief_path, brief)
+    near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
+                        secret_bytes=len(texts[1].encode("utf-8")))
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
                    echoed=echoed, near=near)
     # Historical recall is refreshed by the *same* existing fold and committed
