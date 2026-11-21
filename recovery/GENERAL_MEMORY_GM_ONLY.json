@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.038",
+  "cursor": "s10.text.039",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -797,11 +797,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s10.text.011"
+          "seen": "s10.text.039"
         }
       ],
       "sources": [
-        "recovery/cast/hirano_seiji.json"
+        "recovery/cast/hirano_seiji.json",
+        "recovery/HOT.json",
+        "s10.text.039"
       ]
     },
     "hoshina_ken": {
@@ -1338,7 +1340,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1348,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:09:00",
-          "excerpt": "ленно прижимает голову к полу. **Суми:** — Химэ-сама. Голос у неё тонкий, шипящий, совсем не похожий на низкий рокот Хагуро. **Итикисимахимэ:** — Разве я разрешала тебе возвращаться к столу? **Суми:** — Нет, Химэ-сама. **Итикисимахимэ:** — Тогда почему ты здес",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.030"
         },
         {
           "at": "0010-03-04T07:13:00",
@@ -1367,6 +1362,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.038"
+        },
+        {
+          "at": "0010-03-04T07:23:00",
+          "excerpt": "Я сказал Хагуро что хочу силы. Это правда. Он также спросил для исследования, я ответил да и это правда. Но слово \"исследование\" #зловещая ухмылка# удобное. Первично, мне просто жуть как ин",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.039"
         }
       ],
       "projections": [
@@ -8363,6 +8365,23 @@
         "s05.text.004"
       ]
     },
+    "place:bfabc0c7e1f2a217": {
+      "aliases": [
+        "place:bfabc0c7e1f2a217",
+        "Рьючидо, Зал неподвижной воды у моста",
+        "Зал неподвижной воды у моста"
+      ],
+      "facts": [],
+      "id": "place:bfabc0c7e1f2a217",
+      "kind": "place",
+      "label": "Рьючидо, Зал неподвижной воды у моста",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.039"
+      ]
+    },
     "place:c039c6302045cd0b": {
       "aliases": [
         "place:c039c6302045cd0b",
@@ -10556,7 +10575,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10564,13 +10583,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:09:00",
-          "excerpt": "ленно прижимает голову к полу. **Суми:** — Химэ-сама. Голос у неё тонкий, шипящий, совсем не похожий на низкий рокот Хагуро. **Итикисимахимэ:** — Разве я разрешала тебе возвращаться к столу? **Суми:** — Нет, Химэ-сама. **Итикисимахимэ:** — Тогда почему ты здес",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.030"
         },
         {
           "at": "0010-03-04T07:13:00",
@@ -10585,6 +10597,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.038"
+        },
+        {
+          "at": "0010-03-04T07:23:00",
+          "excerpt": "Я сказал Хагуро что хочу силы. Это правда. Он также спросил для исследования, я ответил да и это правда. Но слово \"исследование\" #зловещая ухмылка# удобное. Первично, мне просто жуть как ин",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.039"
         }
       ],
       "projections": [
@@ -11215,7 +11234,7 @@
       "id": "tagitsuhime",
       "kind": "npc",
       "label": "Тагицухимэ",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-04T07:21:00",
@@ -11230,21 +11249,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.038"
+        },
+        {
+          "at": "0010-03-04T07:23:00",
+          "excerpt": "ному тону. **Мугами Шики:** — Но слово «исследование» удобное. Первично мне просто жуть как интересно. Тагицухимэ долго смотрит на него. Затем начинает смеяться. Не насмешливо. Она смеётся с совершенно искренним удовольствием, прикрыв рот ладонью. **Тагицухимэ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.039"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.038",
-          "state": "В Зале неподвижной воды рассеяла иллюзорную завесу, открыла вид на каменный мост и временно отложила испытание; ожидает ответа о главном мотиве гостя."
+          "seen": "s10.text.039",
+          "state": "Сама показала гостю запрещённый для посетителей нижний слой озера и его возможную живую структуру, затем скрыла его и открыла мост к Белой Змее; не препятствует проходу."
         },
         {
-          "state": "В Зале неподвижной воды рассеяла иллюзорную завесу, открыла вид на каменный мост и временно отложила испытание; ожидает ответа о главном мотиве гостя."
+          "state": "Сама показала гостю запрещённый для посетителей нижний слой озера и его возможную живую структуру, затем скрыла его и открыла мост к Белой Змее; не препятствует проходу."
         }
       ],
       "sources": [
         "recovery/cast/tagitsuhime.json",
         "recovery/HOT.json",
-        "s10.text.038"
+        "s10.text.039"
       ]
     },
     "tagorihime": {
@@ -11256,7 +11282,7 @@
       "id": "tagorihime",
       "kind": "npc",
       "label": "Тагорихимэ",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-03-04T07:12:00",
@@ -11264,13 +11290,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.031"
-        },
-        {
-          "at": "0010-03-04T07:14:00",
-          "excerpt": "МАРТА 1287 ГОДА · 07:14</text> ### Рьючидо. Галерея переменчивого камня Шики освобождает одну руку Тагорихимэ. Вторую продолжает удерживать, не позволяя ей развернуться. Она немедленно сгибает свободный локоть. Пальцы складываются в непривычную последовательно",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.036"
         },
         {
           "at": "0010-03-04T07:21:00",
@@ -11285,21 +11304,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.038"
+        },
+        {
+          "at": "0010-03-04T07:23:00",
+          "excerpt": "ть дорогу. А ты, оказывается, пришёл просто потому, что однажды услышал о месте, которого никогда не видел. **Тагорихимэ:** — Ты упускаешь подробность о том, как именно он находит дорогу. **Тагицухимэ:** — Ничуть. Она улыбается сестре. **Тагицухимэ:** — Просто",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.039"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.038",
-          "state": "Рядом с уступом, при разговоре о мотиве гостя промолчала; сохранила память о нападении и контактном поражении."
+          "seen": "s10.text.039",
+          "state": "Покинула Зал неподвижной воды, вернулась в свою каменную галерею; возмущена тем, что Тагицухимэ показала запрещённый нижний слой гостю."
         },
         {
-          "state": "Рядом с уступом, при разговоре о мотиве гостя промолчала; сохранила память о нападении и контактном поражении."
+          "state": "Покинула Зал неподвижной воды, вернулась в свою каменную галерею; возмущена тем, что Тагицухимэ показала запрещённый нижний слой гостю."
         }
       ],
       "sources": [
         "recovery/cast/tagorihime.json",
         "recovery/HOT.json",
-        "s10.text.038"
+        "s10.text.039"
       ]
     },
     "takagi_ren": {
@@ -12051,5 +12077,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 786
+  "source_turns_indexed": 787
 }

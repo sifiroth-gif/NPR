@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.039: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`), hirano_seiji (`npc/hirano_seiji`)
 - s10.text.038: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`)
 - s10.text.037: Тагорихимэ (`npc/tagorihime`), Тагицухимэ (`npc/tagitsuhime`), Хагуро (`npc/khaguro`)
 - s10.text.036: Тагорихимэ (`npc/tagorihime`), kiri_hunters (`npc/kiri_hunters`), бой
@@ -59,4 +60,3 @@
 - s09.text.084: south_signaller (`npc/south_signaller`), Хосина Кэн (`npc/hoshina_ken`), Миура Томо (`npc/miura_tomo`), Фурукава Кёдзи (`npc/caravan_prisoner`), Немера (Невыписанная) (`npc/nemera`), Мугами Нао (`npc/nao`), вещь `signaller_contract_tube`, линия `black_caravan`
 - s09.text.083: Миура Томо (`npc/miura_tomo`), Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), линия `black_caravan`, бой
 - s09.text.082: Хосина Кэн (`npc/hoshina_ken`), Дзиро (`npc/jiro_caravan_guard`), Фурукава Кёдзи (`npc/caravan_prisoner`), Реципиент № 6 (`npc/s17_recipient_6`), Хаясэ Нори (`npc/nori`), линия `black_caravan`, бой, поправки игрока: 2
-- s09.text.081: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Дзиро (`npc/jiro_caravan_guard`), Младший шиноби Звука (`npc/sound_kagen_junior`), Кирисава Сэйна (`npc/seina`), вещь `north_tripwire`, вещь `front_wagon_frame`, линия `black_caravan`, бой, поправки игрока: 1
