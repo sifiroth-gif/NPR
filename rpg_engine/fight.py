@@ -83,6 +83,9 @@ def dice(hot):
     return [int.from_bytes(digest[2 * i:2 * i + 2], "big") % 100 for i in range(DICE)]
 
 
+GRADE = ("чисто", "успех", "с ценой", "провал")   # от лучшего к худшему
+
+
 def outcome(p, value):
     if value < p - 25:
         return "чисто"
@@ -242,7 +245,8 @@ def _rolls(hot, delta, turn_id, pool, notes):
                 _note(notes, turn_id, f"{label}: перевес {total:+} — исход решается без броска.")
         if isinstance(p, (int, float)):
             expected = outcome(p, value)
-            if roll.get("result") and roll["result"] != expected:
+            # Замечание — только смягчённому исходу: записать хуже кости не значит переиграть бросок.
+            if roll.get("result") in GRADE and GRADE.index(roll["result"]) < GRADE.index(expected):
                 _note(notes, turn_id, f"{label}: записан исход «{roll['result']}», по кости {value} "
                       f"и порогу {p} — «{expected}». Результат не смягчается и не перебрасывается.")
             record = {"turn": turn_id, "what": roll.get("what"), "p": p, "value": value, "result": expected}

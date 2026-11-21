@@ -33,10 +33,13 @@ class EchoTest(unittest.TestCase):
         hot["cursor"]["id"] = "s09.text.085"
         self.assertEqual(echo.pick(self.root, hot, texts=["Тихо."]), got, "не вплетено — держится HOLD ходов")
         hot["cursor"]["id"] = "s09.text.086"
-        woven = ["У водосборника Шики вспомнил подпись Хирано на старом контракте."]
+        self.assertEqual(echo.pick(self.root, hot, texts=["Хирано, водосборник, контракты."]), got,
+                         "общие со сценой слова — не доказательство, что эхо вплетено")
+        hot["cursor"]["id"] = "s09.text.087"
+        woven = ["Шики вспомнил о закрытых поставках через старый узел."]
         self.assertIsNone(echo.pick(self.root, hot, texts=woven), "вплетено — снято, новое не раньше GAP")
         self.assertEqual(hot["fold"]["echo"]["used_count"], 1)
-        hot["cursor"]["id"] = "s09.text.088"
+        hot["cursor"]["id"] = "s09.text.089"
         self.assertIsNone(echo.pick(self.root, hot), "не чаще раза в GAP ходов")
 
     def test_thread_of_present_npc_is_not_an_echo(self):

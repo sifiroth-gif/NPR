@@ -12,7 +12,7 @@ ENGINE = Path(__file__).resolve().parents[1]
 
 HOT_NORM = 95_000            # рабочая норма HOT, байт; выше — строгое старение
 HOT_LIMIT = 110_000          # выше — свёртка блокируется
-GM_ONLY_NORM = 400_000       # скрытая часть: только предупреждение
+GM_ONLY_NORM = 450_000       # скрытая часть: только предупреждение
 BRIEF_TARGET = 36_000        # GM_BRIEF: цель
 BRIEF_HARD = 56_000          # GM_BRIEF: предел
 NEXT_TARGET = 14_000         # пакет хода: цель
