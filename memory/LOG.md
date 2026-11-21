@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.035: Тагорихимэ (`npc/tagorihime`), Старший у повозки (`npc/kiri_transfer_senior`), бой
 - s10.text.034: Тагорихимэ (`npc/tagorihime`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Курода Маю (`npc/kuroda_mayu`), бой
 - s10.text.033: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), бой
 - s10.text.032: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), Глава Кусагакуре (`npc/kusa_head`)
@@ -59,4 +60,3 @@
 - s09.text.080: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), hirano_seiji (`npc/hirano_seiji`), Аракава Дзюн (`npc/arakawa`), линия `black_caravan`
 - s09.text.079: Хосина Кэн (`npc/hoshina_ken`), Фурукава Кёдзи (`npc/caravan_prisoner`), Орочимару (`npc/orochimaru`), Глава Кусагакуре (`npc/kusa_head`), линия `black_caravan`
 - s09.text.078: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Осава Гэнсэй (`npc/osawa_gensei`), линия `ch09_order_chain`, план сюжета
-- s09.text.077: Фурукава Кёдзи (`npc/caravan_prisoner`), Хосина Кэн (`npc/hoshina_ken`), Минаги Дзэн (`npc/minagi_zen`), Нагаэ Рокуто (`npc/nagae_rokuto`), линия `ch09_order_chain`, план сюжета

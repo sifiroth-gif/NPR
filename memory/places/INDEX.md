@@ -204,3 +204,4 @@
 - Рьючидо, зал первого испытания перед открытой лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkrytoy-lestnitsey` · 1 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
+- Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
