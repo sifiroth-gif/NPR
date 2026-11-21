@@ -1,8 +1,8 @@
 {
-  "documents": 2429,
+  "documents": 2430,
   "generic_probe_count": 9,
   "generic_probe_hit_at_10": 9,
-  "groups": 11,
+  "groups": 10,
   "indexed_sessions": [
     1,
     2,
@@ -19,65 +19,65 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 96.86,
+  "load_ms": 83.53,
   "probes": [
     {
-      "query_ms": 85.38,
+      "query_ms": 70.91,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 84.16,
+      "query_ms": 69.16,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 84.34,
+      "query_ms": 69.91,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 97.31,
+      "query_ms": 79.02,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 103.85,
+      "query_ms": 85.46,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 84.73,
+      "query_ms": 71.47,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 85.06,
+      "query_ms": 71.99,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 90.23,
+      "query_ms": 74.61,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 89.08,
+      "query_ms": 73.55,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 76,
+  "shards": 75,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -91,6 +91,6 @@
     9
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 85.38,
-  "warm_query_p95_ms": 103.85
+  "warm_query_median_ms": 71.99,
+  "warm_query_p95_ms": 85.46
 }

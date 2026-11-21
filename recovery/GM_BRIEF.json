@@ -37,51 +37,20 @@
  },
  "checks": [
   {
-   "kind": "contradiction",
-   "text": "signaller_contract_tube.state: в сыгранном «Закрытый металлический футляр у стены прохода; Сано утверждает, что внутри копия договора с подписью Фурукавы и платёжная отметка. Не вскрыт.», ход исходит из «Футляр у стены прохода, договор не вскрыт.» (с s09.text.084)",
-   "turn": "s09.text.085"
-  },
-  {
-   "kind": "contradiction",
-   "text": "front_wagon_frame.state: в сыгранном «Тяжёлый арбалетный болт пробил деревянную раму над левым передним колесом. Доска раскололась, ось на месте, колесо пока вращается.», ход исходит из «Доска рамы над левым колесом расколота тяжёлым болтом, ось цела.» (с s09.text.081)",
-   "turn": "s09.text.085"
-  },
-  {
-   "kind": "horror",
-   "text": "hoshina_ken: dread без saw. Страх растёт только из увиденного или полученного по каналу",
-   "turn": "s09.text.085"
-  },
-  {
-   "kind": "horror",
-   "since": "s09.text.082",
-   "text": "caravan_prisoner: dread без saw. Страх растёт только из увиденного или полученного по каналу",
-   "turn": "s09.text.085"
-  },
-  {
-   "kind": "player",
-   "text": "реплика игрока вошла в сцену на 24%: слова Шики переносятся в прозу полностью и в заданном порядке",
-   "turn": "s09.text.085"
-  },
-  {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 5436 знаков (норма до 4000); крупнее всего: cast 2685, scene 909, things 513.",
-   "turn": "s09.text.085"
-  },
-  {
    "kind": "will",
    "text": "«Дзиро» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Выжить и сохранить лицо перед старшим.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s09.text.085"
+   "turn": "s09.text.086"
   },
   {
    "kind": "will",
    "text": "«Дзиро» появляется уже 4 раз, а воли у него нет: задай d.cast.jiro_caravan_guard.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s09.text.085"
+   "turn": "s09.text.086"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s09.text.085",
+  "cursor": "s09.text.086",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -197,11 +166,11 @@
  "cursor": {
   "at": "0010-02-14T19:10:00",
   "date": "Воскресенье, 14 февраля 1287 года",
-  "id": "s09.text.085",
+  "id": "s09.text.086",
   "place": "Страна Ветра, лагерь среди каменных глыб в восточных предгорьях",
   "time": "19:10"
  },
- "digest": "e40572fc5fad08070d78b0014ff8c224bba2079c81bb970e42929ed247e80fbd",
+ "digest": "fa335b82618245bcda43f846418cfa4431e5f68d22fb43e07f24683fdedb20ab",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -254,18 +223,18 @@
    "value": 100.0
   },
   "dice": [
+   8,
+   40,
+   54,
+   13,
    14,
-   72,
-   99,
-   81,
-   59,
-   60,
-   91,
-   11,
-   88,
-   91,
-   4,
-   21
+   27,
+   84,
+   37,
+   76,
+   3,
+   41,
+   9
   ],
   "injuries": {
    "miura_tomo": [
@@ -746,7 +715,7 @@
     "memory_file": "archive/npc-memory/caravan_prisoner.json",
     "memory_total": 10,
     "name": "Фурукава Кёдзи",
-    "seen": "s09.text.085",
+    "seen": "s09.text.086",
     "state": "Весь день молчал, принимал пищу и воду; ошейник не издавал слышимых щелчков. Не знает о договоре Сано.",
     "status": "present_profile",
     "tier": "developed"
@@ -820,7 +789,7 @@
     "memory_file": "archive/npc-memory/hoshina_ken.json",
     "memory_total": 11,
     "name": "Хосина Кэн",
-    "seen": "s09.text.085",
+    "seen": "s09.text.086",
     "state": "Проверил и удерживает договор, отвёл колонну, обошёл ловушку, организовал ремонт и лагерь. Решил не сообщать Фурукаве о признании.",
     "status": "present_profile",
     "tier": "developed",
@@ -855,7 +824,7 @@
     "memory_file": "archive/npc-memory/jiro_caravan_guard.json",
     "memory_total": 4,
     "name": "Дзиро",
-    "seen": "s09.text.085",
+    "seen": "s09.text.086",
     "state": "Перевязал Икэду, в дороге молчит и занимается упряжью.",
     "status": "present_profile",
     "tier": "developed",
@@ -897,7 +866,7 @@
     "memory_file": "archive/npc-memory/miura_tomo.json",
     "memory_total": 3,
     "name": "Миура Томо",
-    "seen": "s09.text.085",
+    "seen": "s09.text.086",
     "state": "После захвата Сано и окончания засады заявил Хосине об уходе после контракта.",
     "status": "present_profile",
     "tier": "archetypal",
@@ -943,8 +912,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "c7be71164ba19601fd4cee01a7995181e35db534",
-  "turn": "s09.text.085"
+  "sha": "6f9cd5f51211c658064606b2a0e25983a8a9e4bc",
+  "turn": "s09.text.086"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -989,12 +958,12 @@
    "ch09_order_chain"
   ],
   "secret_topics": [
+   "v7_destruction",
    "v7_maintenance",
    "v7_personal_targeting",
    "v7_tapping",
    "vials",
-   "visitor_claim",
-   "caravan_contract_verified"
+   "visitor_claim"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",

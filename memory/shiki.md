@@ -130,5 +130,5 @@
 ## Knows_older
 - archive/aged/shiki-knows.jsonl
 
-## Поправки игрока: 132
+## Поправки игрока: 133
 - полностью в `memory/shiki-fixes.md`; при споре прав более поздний ход
