@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.010",
+  "cursor": "s10.text.011",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -372,7 +372,8 @@
     "caravan_prisoner": {
       "aliases": [
         "caravan prisoner",
-        "Фурукава Кёдзи"
+        "Фурукава Кёдзи",
+        "caravan_prisoner"
       ],
       "facts": [],
       "id": "caravan_prisoner",
@@ -411,12 +412,13 @@
       ],
       "projections": [
         {
-          "seen": "s09.text.092",
+          "seen": "s10.text.011",
           "state": "Жив, ориентировка сохранена, передан медотделению после медицинской расписки; ошейник не вскрывали."
         }
       ],
       "sources": [
-        "recovery/cast/caravan_prisoner.json"
+        "recovery/cast/caravan_prisoner.json",
+        "s10.text.011"
       ]
     },
     "cash_1184": {
@@ -797,18 +799,18 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.080"
+          "seen": "s10.text.011"
         }
       ],
       "sources": [
-        "recovery/cast/hirano_seiji.json"
+        "recovery/cast/hirano_seiji.json",
+        "s10.text.011"
       ]
     },
     "hoshina_ken": {
       "aliases": [
         "hoshina ken",
-        "Хосина Кэн",
-        "hoshina_ken"
+        "Хосина Кэн"
       ],
       "facts": [],
       "id": "hoshina_ken",
@@ -855,8 +857,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hoshina_ken.json",
-        "s10.text.010"
+        "recovery/cast/hoshina_ken.json"
       ]
     },
     "hospital_night_admin": {
@@ -964,8 +965,7 @@
     "jiro_caravan_guard": {
       "aliases": [
         "jiro caravan guard",
-        "Дзиро",
-        "jiro_caravan_guard"
+        "Дзиро"
       ],
       "facts": [],
       "id": "jiro_caravan_guard",
@@ -1012,8 +1012,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/jiro_caravan_guard.json",
-        "s10.text.010"
+        "recovery/cast/jiro_caravan_guard.json"
       ]
     },
     "kabuto": {
@@ -7227,7 +7226,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.010",
+        "s10.text.011",
         "s09.text.101",
         "s09.text.102",
         "s10.text.001",
@@ -7238,7 +7237,8 @@
         "s10.text.006",
         "s10.text.007",
         "s10.text.008",
-        "s10.text.009"
+        "s10.text.009",
+        "s10.text.010"
       ]
     },
     "place:9ffc64ff69edb6a9": {
@@ -10876,7 +10876,7 @@
       "id": "tamura_reika",
       "kind": "npc",
       "label": "Тамура Рэйка",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0007-12-15T20:50:00",
@@ -10884,13 +10884,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.032"
-        },
-        {
-          "at": "0010-02-27T15:50:00",
-          "excerpt": "ие через чакру. И да, ты уже видела: она у меня чёрная. Не пугайся. Согласна? Рэйка не сразу отвечает. **Тамура Рэйка:** — Опасно... Она смотрит на закрытые перчатками кисти, потом на лицо Шики. **Тамура Рэйка:** — Для меня или для тебя? Вопрос остаётся между ",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.008"
         },
         {
           "at": "0010-02-27T15:52:00",
@@ -10905,26 +10898,33 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.010"
+        },
+        {
+          "at": "0010-02-27T15:55:00",
+          "excerpt": "сё примерно час. Рэйка смотрит на него с выражением, которое постепенно становится почти оскорблённым. **Тамура Рэйка:** — Я прекрасно понимаю, что такое полевой хирург. Она приподнимает повреждённую руку. **Тамура Рэйка:** — У меня просто никогда не было возм",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.011"
         }
       ],
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.010",
-          "state": "Самостоятельно решила предложить операцию в подготовленном ею месте на своих условиях; подобрала сумку и ждёт принятия условий Шики.",
+          "seen": "s10.text.011",
+          "state": "Собирается спуститься и самостоятельно подготовить сторожку у западного отводного канала к 17:55. Сохраняет контроль над условиями операции; ожидает решения Шики.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         },
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "state": "Самостоятельно решила предложить операцию в подготовленном ею месте на своих условиях; подобрала сумку и ждёт принятия условий Шики.",
+          "state": "Собирается спуститься и самостоятельно подготовить сторожку у западного отводного канала к 17:55. Сохраняет контроль над условиями операции; ожидает решения Шики.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
         }
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
         "recovery/HOT.json",
-        "s10.text.010"
+        "s10.text.011"
       ]
     },
     "tetsu": {
@@ -11588,5 +11588,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 759
+  "source_turns_indexed": 760
 }
