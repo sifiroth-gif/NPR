@@ -44,13 +44,13 @@
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
+- Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 5 ход(ов), s10–s10
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 5 ход(ов), s09–s09
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
-- Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 4 ход(ов), s10–s10
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
