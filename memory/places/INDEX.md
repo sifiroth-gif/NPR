@@ -179,6 +179,7 @@
 - Неизвестное подземное сооружение, Диагностический шлюз Седьмой палаты · `places/neizvestnoe-podzemnoe-sooruzhenie-diagnosticheskiy-shlyuz-se` · 1 ход(ов), s03–s03
 - Неизвестное подземное сооружение, Внешний приёмный предел · `places/neizvestnoe-podzemnoe-sooruzhenie-vneshniy-priemnyy-predel` · 1 ход(ов), s03–s03
 - Отогакуре, подземный вход Кагэн · `places/otogakure-podzemnyy-vkhod-kagen` · 1 ход(ов), s08–s08
+- Передовой пост Сунагакуре, сухая долина на дороге к Стране Ветра · `places/peredovoy-post-sunagakure-sukhaya-dolina-na-doroge-k-strane-` · 1 ход(ов), s11–s11
 - Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
