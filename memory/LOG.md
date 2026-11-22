@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.062: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`)
 - s10.text.061: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`)
 - s10.text.060: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`), бой, поправки игрока: 1
 - s10.text.059: Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.005: Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), Мугами Нао (`npc/nao`)
 - s10.text.004: Тамура Рэйка (`npc/tamura_reika`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`), Хаясэ Нори (`npc/nori`)
 - s10.text.003: Тамура Рэйка (`npc/tamura_reika`), Мориока Хидэаки (`npc/morioka_hideaki`), Реципиент № 6 (`npc/s17_recipient_6`)
-- s10.text.002: Тамура Рэйка (`npc/tamura_reika`)
