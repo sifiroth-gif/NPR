@@ -193,6 +193,7 @@
 - Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
 - Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
 - Северная переправа, граница Страны Травы · `places/severnaya-pereprava-granitsa-strany-travy` · 1 ход(ов), s11–s11
+- Северная переправа, северная граница Страны Травы · `places/severnaya-pereprava-severnaya-granitsa-strany-travy` · 1 ход(ов), s11–s11
 - Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
 - Старая переправа, граница Страны Травы · `places/staraya-pereprava-granitsa-strany-travy` · 1 ход(ов), s11–s11
 - Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01

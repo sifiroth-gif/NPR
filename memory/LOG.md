@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.026: Савара (`npc/suna_advance_tracker`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
 - s11.text.025: Ито (`npc/suna_wounded_scout`), Савара (`npc/suna_advance_tracker`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
 - s11.text.024: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`)
 - s11.text.023: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), kusa_border_officer (`npc/kusa_border_officer`), Аракава Дзюн (`npc/arakawa`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
@@ -61,4 +62,3 @@
 - s10.text.098: Тамура Рэйка (`npc/tamura_reika`), план сюжета, поправки игрока: 1
 - s10.text.097: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `hoshina_journal_1184`
 - s10.text.096: Тамура Рэйка (`npc/tamura_reika`)
-- s10.text.095: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `hoshina_journal_1184`, поправки игрока: 1
