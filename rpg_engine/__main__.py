@@ -100,6 +100,8 @@ def parser():
     closer.add_argument("--state-dir", type=Path, required=True)
     closer.add_argument("--session", type=int)
     closer.add_argument("--pending", action="store_true", help="only if recovery/SESSION_CLOSE.json asks")
+    marks = sub.add_parser("marks-audit", help="list NPC cards that share the same distinctive marks")
+    marks.add_argument("--state-dir", type=Path, required=True)
     fetch_model = sub.add_parser("meaning-fetch", help="download the pinned meaning model (CI cache)")
     fetch_model.add_argument("--dir", type=Path, required=True)
     sense = sub.add_parser("meaning-update", help="encode missing meaning vectors for the history index")
@@ -365,6 +367,13 @@ def run(args):
             if args.pending:
                 return session_close.handle(args.state_dir) or {"result": "idle"}
             return session_close.close(args.state_dir, args.session)
+        case "marks-audit":
+            from . import npc_memory
+            from .hot import _archived_cards
+            hot_path = args.state_dir / "recovery/HOT.json"
+            live = json.loads(hot_path.read_text(encoding="utf-8")).get("cast") or {} if hot_path.is_file() else {}
+            cards = dict(_archived_cards(args.state_dir)) | live
+            return npc_memory.marks_audit(sorted(cards.items()))
         case "meaning-fetch":
             from . import meaning
             return meaning.fetch(args.dir)
