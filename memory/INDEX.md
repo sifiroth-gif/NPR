@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.089`
+# Карта мира NPR · на ходе `s10.text.090`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,10 +6,10 @@
 - места · `places/INDEX` (210) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (181)
+- Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken` · в сцене
 - Касэ — боец восточного заслона Нори; 26.09 Шики вынул у него осколок из правого предпл… · `npc/kase`
-- Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
@@ -200,7 +200,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (39)
+## Вещи (40)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -209,6 +209,7 @@
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `front_wagon_frame` · `items/front_wagon_frame`
+- `hoshina_journal_1184` · `items/hoshina_journal_1184`
 - `inquiry_contact_token` · `items/inquiry_contact_token`
 - `itachi_report_copies` · `items/itachi_report_copies`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`

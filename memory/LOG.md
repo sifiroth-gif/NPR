@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.090: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), вещь `hoshina_journal_1184`
 - s10.text.089: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Касэ (`npc/kase`), план сюжета
 - s10.text.088: поправки игрока: 1
 - s10.text.087: Морита Кай (`npc/p4_marked_hunter`), Касэ (`npc/kase`)
@@ -60,4 +61,3 @@
 - s10.text.033: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), бой
 - s10.text.032: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), Глава Кусагакуре (`npc/kusa_head`)
 - s10.text.031: sumi (`npc/sumi`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Тагорихимэ (`npc/tagorihime`), Минасэ Рэи (`npc/minase`), Кидзима Суми (`npc/kuroishi_visitor`)
-- s10.text.030: Итикисимахимэ (`npc/ryuchido_gate_woman`), sumi (`npc/sumi`), Мугами Нао (`npc/nao`)
