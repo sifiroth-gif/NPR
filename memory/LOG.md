@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.084: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета
 - s10.text.083: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
 - s10.text.082: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), Немера (Невыписанная) (`npc/nemera`), Хагуро (`npc/khaguro`), план сюжета, бой
 - s10.text.081: Хосина Кэн (`npc/hoshina_ken`), Немера (Невыписанная) (`npc/nemera`), Морита Кай (`npc/p4_marked_hunter`), план сюжета
@@ -61,4 +62,3 @@
 - s10.text.027: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`)
 - s10.text.026: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`)
 - s10.text.025: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), Реципиент № 6 (`npc/s17_recipient_6`)
-- s10.text.024: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
