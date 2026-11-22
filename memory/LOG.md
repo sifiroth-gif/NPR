@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.007: Аракава Дзюн (`npc/arakawa`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `arakawa_patient_ampoule`
 - s11.text.006: Аракава Дзюн (`npc/arakawa`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
 - s11.text.005: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
 - s11.text.004: поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.079: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
 - s10.text.078: поправки игрока: 2
 - s10.text.077: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), поправки игрока: 3
-- s10.text.076: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)

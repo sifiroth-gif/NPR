@@ -1,19 +1,20 @@
-# Карта мира NPR · на ходе `s11.text.006`
+# Карта мира NPR · на ходе `s11.text.007`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (213) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (214) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (188)
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Служащий западной почты — Приёмщик частных отправлений · `npc/west_siran_mail_clerk` · в сцене
+- Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Принимающий служащий — по подписи в сцене · `npc/prinimayushchiy_sluzhashchiy`
 - Сэно Фуми (Сэно, Фуми) — торговка у сельской развилки Кусы · `npc/road_villager_fumi`
 - Сугихара Рэндзо (Старший врач, Сугихара) — Пожилой врач в очках, белый халат поверх тёмной формы, мета… · `npc/seventh_well_senior_physician`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
-- Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Хирано Сэйдзи (Хирано, Сэйдзи) — Мужчина за сорок, короткие седые волосы, впалые щёки, хромо… · `npc/hirano_seiji`
 - Курихара Наото (Курихара, Наото) — Худощавый мужчина около сорока; короткие волосы с сединой, … · `npc/kurihara_naoto`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
@@ -27,7 +28,6 @@
 - Хагуро (Змея Рьючидо) — по подписи в сцене · `npc/khaguro`
 - Эндо Хадзимэ (Эндо, Хадзимэ) — Пожилой расчётчик, около 60 лет, бесцветные брови, чернила … · `npc/endo_hajime`
 - Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
-- Служащий западной почты — Приёмщик частных отправлений · `npc/west_siran_mail_clerk`
 - Итикисимахимэ — Женщина в длинном светлом одеянии, волосы собраны высоко, н… · `npc/ryuchido_gate_woman`
 - Тагорихимэ — Женский облик: длинные тёмные волосы почти до пола, серо-зе… · `npc/tagorihime`
 - Тагицухимэ — Женщина в длинном светлом одеянии, босиком стоит на гладкой… · `npc/tagitsuhime`
@@ -207,7 +207,8 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (47)
+## Вещи (48)
+- `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
