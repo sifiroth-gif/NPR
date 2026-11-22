@@ -225,4 +225,5 @@
 - Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
 - Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
+- Второй передовой пост Сунагакуре, каменный тракт на пути к Стране Ветра · `places/vtoroy-peredovoy-post-sunagakure-kamennyy-trakt-na-puti-k-st` · 1 ход(ов), s11–s11
 - За пределами Кусагакуре, старая переправа и дорожная развилка · `places/za-predelami-kusagakure-staraya-pereprava-i-dorozhnaya-razvi` · 1 ход(ов), s11–s11

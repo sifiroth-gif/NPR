@@ -10,6 +10,7 @@
 - Баки · `npc/baki` — 1 ход(ов)
 - Савара · `npc/suna_advance_tracker` — 1 ход(ов)
 - Ито · `npc/suna_wounded_scout` — 1 ход(ов)
+- Связной Песка · `npc/svyaznoy_peska` — 1 ход(ов)
 
 ## Ходы
 - s11.text.027 0010-03-13T11:26:00

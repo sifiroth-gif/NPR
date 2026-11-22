@@ -5,19 +5,21 @@
     "razvedchik_zvuka",
     "suna_advance_tracker",
     "suna_wounded_scout",
-    "place:f86426c3c042417b"
+    "svyaznoy_peska",
+    "place:d79e7ffd6d53090d"
   ],
-  "cursor": "s11.text.027",
+  "cursor": "s11.text.028",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3341,
-  "index_entities": 614,
-  "index_source_records": 890,
-  "indexed_cursor": "s11.text.027",
+  "focus_bytes": 3604,
+  "index_entities": 617,
+  "index_source_records": 891,
+  "indexed_cursor": "s11.text.028",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 20,
-    "npc": 126,
-    "place": 459,
+    "npc": 127,
+    "place": 460,
     "thread": 8
   },
   "missing_critical": [],
@@ -27,6 +29,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s11.text.028:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -491,9 +499,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 76,
-  "self_query_at_5": 77,
-  "self_query_count": 77,
+  "self_query_at_1": 77,
+  "self_query_at_5": 78,
+  "self_query_count": 78,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
