@@ -75,6 +75,10 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
                 [ACT_RULE, ACT_RAISE])
     cursor = (hot.get("cursor") or {}).get("id") or ""
     seq = int(cursor.rsplit(".", 1)[-1]) if cursor[-3:].isdigit() else 0
+    # Closing a session preserves the final played cursor until the next turn.
+    # Its 129 turns must not count as 129 turns of the newly opened session.
+    if (hot.get("handoff") or {}).get("last_turn") == cursor:
+        seq = 0
     if seq >= SESSION_TURNS * WARN:
         items.append({"key": "session", "what": f"сессия идёт {seq} ходов (рекомендуется до {SESSION_TURNS})",
                       "acts": [ACT_CLOSE], "over": seq > SESSION_TURNS})
