@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.016: Аракава Дзюн (`npc/arakawa`), Касэ (`npc/kase`)
 - s11.text.015: Аракава Дзюн (`npc/arakawa`), Курихара Наото (`npc/kurihara_naoto`), вещь `arakawa_transport_copy`
 - s11.text.014: Аракава Дзюн (`npc/arakawa`)
 - s11.text.013: Аракава Дзюн (`npc/arakawa`), Минаги Дзэн (`npc/minagi_zen`)
@@ -60,4 +61,3 @@
 - s10.text.089: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Касэ (`npc/kase`), план сюжета
 - s10.text.088: поправки игрока: 1
 - s10.text.087: Морита Кай (`npc/p4_marked_hunter`), Касэ (`npc/kase`)
-- s10.text.085: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), план сюжета
