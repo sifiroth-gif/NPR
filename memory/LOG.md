@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.037: Баки (`npc/baki`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.036: Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.035: Канкуро (`npc/kankuro`), Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), план сюжета
 - s11.text.034: Сакура Харуно (`npc/sakura`), Канкуро (`npc/kankuro`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), план сюжета
@@ -61,4 +62,3 @@
 - s10.text.109: Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хагуро (`npc/khaguro`), план сюжета
 - s10.text.108: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `reika_1285_receipt_copy`
 - s10.text.107: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), план сюжета
-- s10.text.106: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`, вещь `minagi_receipts`
