@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.129",
+  "cursor": "s11.text.001",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -343,22 +343,6 @@
         "s09.text.067"
       ]
     },
-    "canon:s10.text.129:0": {
-      "aliases": [
-        "canon:s10.text.129:0",
-        "Прямая поправка игрока: Шики — нукенин Кусагакуре класса S с наградой 49 000 000 рё; возвращение не означает выбора явного подхода к официальному посту или обнаружения."
-      ],
-      "facts": [],
-      "id": "canon:s10.text.129:0",
-      "kind": "canon",
-      "label": "Прямая поправка игрока: Шики — нукенин Кусагакуре класса S с наградой 49 000 000 рё; возвращение не означает выбора явного подхода к официальному посту или обнаружения.",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s10.text.129"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -481,24 +465,18 @@
     "clock:naruto_returns_konoha": {
       "aliases": [
         "clock:naruto returns konoha",
-        "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto",
+        "naruto returns konoha",
         "naruto_returns_konoha"
       ],
       "facts": [],
       "id": "clock:naruto_returns_konoha",
       "kind": "clock",
-      "label": "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto",
+      "label": "naruto returns konoha",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "due": "0010-03-10T09:00:00",
-          "owner": "Наруто Узумаки и Джирайя",
-          "what": "Возвращение Наруто в Коноху после тренировок с Джирайей, начало основных событий второй части Naruto"
-        }
-      ],
+      "projections": [],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "s11.text.001"
       ]
     },
     "contract_1184_docs": {
@@ -2764,7 +2742,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s10.text.129",
+          "seen": "s11.text.001",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "10.03 у медкорпуса самостоятельно попыталась проверить питающую фуин-ветвь в пределах пяти метров, но ход скрылся в камне. Отступила без прикосновения к защите; следует с Шики.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -2780,8 +2758,7 @@
       ],
       "sources": [
         "recovery/cast/nemera.json",
-        "recovery/HOT.json",
-        "s10.text.129"
+        "recovery/HOT.json"
       ]
     },
     "night_icu_physician": {
@@ -4569,6 +4546,26 @@
       "projections": [],
       "sources": [
         "s10.text.098"
+      ]
+    },
+    "place:2fd004c1aa5b52bd": {
+      "aliases": [
+        "place:2fd004c1aa5b52bd",
+        "Страна Травы, сельские предместья Кусагакуре, сельская развилка у колодца, вдали от внешнего дозора",
+        "Страна Травы",
+        "сельские предместья Кусагакуре",
+        "сельская развилка у колодца",
+        "вдали от внешнего дозора"
+      ],
+      "facts": [],
+      "id": "place:2fd004c1aa5b52bd",
+      "kind": "place",
+      "label": "Страна Травы, сельские предместья Кусагакуре, сельская развилка у колодца, вдали от внешнего дозора",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s11.text.001"
       ]
     },
     "place:315f1a0b32513edf": {
@@ -11722,8 +11719,7 @@
     },
     "reika_direct_comm_plate": {
       "aliases": [
-        "reika direct comm plate",
-        "Пластинка прямой связи"
+        "reika direct comm plate"
       ],
       "facts": [],
       "id": "reika_direct_comm_plate",
@@ -11765,6 +11761,32 @@
       ],
       "sources": [
         "recovery/cast/residence_courier_v7.json"
+      ]
+    },
+    "road_villager_fumi": {
+      "aliases": [
+        "road villager fumi",
+        "Сэно Фуми"
+      ],
+      "facts": [],
+      "id": "road_villager_fumi",
+      "kind": "npc",
+      "label": "Сэно Фуми",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "fears": "оказаться рядом с разыскиваемым нукенином и навлечь возмездие на ребёнка.",
+          "role": "торговка у сельской развилки Кусы",
+          "seen": "s11.text.001",
+          "state": "Сняла лист розыска и пошла по тропе к дозору вместе с сыном; с Шики не говорила.",
+          "voice": "Короткие бытовые фразы без почтительности.",
+          "wants": "Уберечь сына, сообщить о подозрительном человеке и, если сведения подтвердятся, получить вознаграждение."
+        }
+      ],
+      "sources": [
+        "recovery/cast/road_villager_fumi.json",
+        "s11.text.001"
       ]
     },
     "rokuto_bounty_payment": {
@@ -12775,7 +12797,7 @@
       "projections": [
         {
           "fears": "Снова оказаться живым материалом под контролем исследователей.",
-          "seen": "s10.text.129",
+          "seen": "s11.text.001",
           "state": "Приняла рабочую пластинку связи Шики, самостоятельно ушла по следу Котани. Согласилась по своей воле уничтожать подтверждённые изолированные С-17, реципиентов не трогает.",
           "voice": "Тихо, точно, с сухой злостью.",
           "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
@@ -12783,7 +12805,7 @@
       ],
       "sources": [
         "recovery/cast/tamura_reika.json",
-        "s10.text.129"
+        "s11.text.001"
       ]
     },
     "tetsu": {
@@ -13266,8 +13288,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/white_snake_sage.json",
-        "s10.text.129"
+        "recovery/cast/white_snake_sage.json"
       ]
     }
   },
@@ -13393,5 +13414,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 866
+  "source_turns_indexed": 867
 }
