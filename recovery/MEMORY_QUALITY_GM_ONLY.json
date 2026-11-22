@@ -5,22 +5,23 @@
     "nemera",
     "p4_archivist_matsuda",
     "tamura_reika",
-    "place:79744fc92eb644ca",
+    "place:fcade4ffd18b8f28",
     "hoshina_journal_1184",
     "reika_1285_receipt_copy"
   ],
   "cursor": "s10.text.129",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3917,
-  "index_entities": 588,
+  "focus_bytes": 3930,
+  "index_entities": 590,
   "index_source_records": 866,
   "indexed_cursor": "s10.text.129",
   "kinds": {
+    "canon": 1,
     "clock": 1,
     "entity": 1,
     "item": 22,
     "npc": 118,
-    "place": 439,
+    "place": 440,
     "thread": 7
   },
   "missing_critical": [],
@@ -30,6 +31,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s10.text.129:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -506,9 +513,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 79,
-  "self_query_count": 79,
+  "self_query_at_1": 79,
+  "self_query_at_5": 80,
+  "self_query_count": 80,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
