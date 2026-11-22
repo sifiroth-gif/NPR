@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.078: поправки игрока: 2
 - s10.text.077: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), поправки игрока: 3
 - s10.text.076: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
 - s10.text.075: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Тагорихимэ (`npc/tagorihime`)
@@ -60,4 +61,3 @@
 - s10.text.022: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.021: Хагуро (`npc/khaguro`)
 - s10.text.020: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Уцуро (`npc/utsuro`)
-- s10.text.018: Мужчина с повязкой из Тумана (`npc/kiri_hunter_man`), Кэйдзи (`npc/keiji`)

@@ -65,6 +65,11 @@
  "checks": [
   {
    "kind": "fight",
+   "text": "Бросок «Четырьмя рывками Шуншина перерезать беглецу выход через скалы до его отрыва от охранника»: порог 80, по формуле 88 (перевес +2.5).",
+   "turn": "s09.text.083"
+  },
+  {
+   "kind": "fight",
    "text": "Бросок «Кратковременное глазное гендзюцу «Чужой шаг» при непосредственном удержании Тагорихимэ»: порог 68, по формуле 59 (перевес +0.6).",
    "turn": "s10.text.034"
   },
@@ -92,22 +97,12 @@
    "kind": "fight",
    "text": "Бросок «Полное безоперационное излечение локальной чакровой контаминации у клыка Хакудзя-сэннин»: взята кость 63, по порядку была 41 (GM_BRIEF.fight.dice[0]). Кости берут подряд, не выбирают.",
    "turn": "s10.text.072"
-  },
-  {
-   "kind": "look",
-   "text": "внешность Шики описана 4 раза (волосы, корни, капюшон+пелерина+ворот, волосы). Ужас — в чужом поступке и последствии, а не в облике",
-   "turn": "s10.text.077"
-  },
-  {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4730 знаков (норма до 4000); крупнее всего: canon+ 2696, cast 677, scene 389.",
-   "turn": "s10.text.077"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s10.text.077",
+  "cursor": "s10.text.078",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -227,11 +222,11 @@
  "cursor": {
   "at": "0010-03-04T09:45:00",
   "date": "Четверг, 4 марта 1287 года",
-  "id": "s10.text.077",
+  "id": "s10.text.078",
   "place": "Рьючидо, внешние врата",
   "time": "09:45"
  },
- "digest": "2a48c2eb2f071c6206f7a1f8e0277a952c7749045d2ab37aa1fcf4e5f7a5126d",
+ "digest": "1ec1bfefc9fff8cf4be3940283501e660f549b843cd4f743e91de945ca46444a",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -277,18 +272,18 @@
    "value": 66.93
   },
   "dice": [
-   14,
-   50,
-   13,
-   86,
-   61,
-   10,
-   70,
+   47,
+   17,
+   54,
+   81,
+   67,
    19,
-   82,
-   53,
-   9,
-   15
+   47,
+   7,
+   45,
+   84,
+   67,
+   50
   ],
   "injuries": {
    "shiki": [
@@ -655,7 +650,7 @@
     },
     {
      "at": "0010-03-04T09:45:00",
-     "sha256": "8591c36ef826556a2773c1fb6bff78f6d542d7631f0141a5138f64c5ab2e5a9b",
+     "sha256": "d13f9bb71bf27f9210d9e3fb891e4cbea55432230ac22bb46a339f012ce97f72",
      "source": "archive/session-010-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s10.text.077"
@@ -680,7 +675,7 @@
     "memory_total": 18,
     "name": "Хагуро",
     "role": "по подписи в сцене",
-    "seen": "s10.text.077",
+    "seen": "s10.text.078",
     "state": "У внешних ворот, открыто признал, что недооценил успехи Шики; спросил о знании Белой Змеи.",
     "status": "present_profile",
     "tier": "deep"
@@ -725,7 +720,7 @@
     },
     {
      "at": "0010-03-04T09:45:00",
-     "sha256": "8591c36ef826556a2773c1fb6bff78f6d542d7631f0141a5138f64c5ab2e5a9b",
+     "sha256": "d13f9bb71bf27f9210d9e3fb891e4cbea55432230ac22bb46a339f012ce97f72",
      "source": "archive/session-010-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s10.text.077"
@@ -748,7 +743,7 @@
     "memory_file": "archive/npc-memory/ryuchido_gate_woman.json",
     "memory_total": 14,
     "name": "Итикисимахимэ",
-    "seen": "s10.text.077",
+    "seen": "s10.text.078",
     "state": "У открытых ворот язвительно прервала разговор; физического контакта нет.",
     "status": "present_profile",
     "tier": "developed"
@@ -792,8 +787,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "86893ee133916da5a1b1916fb12adefa96ea7142",
-  "turn": "s10.text.077"
+  "sha": "66e1920988847621a317b8aff9f1b0a008017d8b",
+  "turn": "s10.text.078"
  },
  "wiki": {
   "index": "memory/INDEX.md",
