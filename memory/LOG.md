@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.087: Морита Кай (`npc/p4_marked_hunter`), Касэ (`npc/kase`)
 - s10.text.085: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), план сюжета
 - s10.text.084: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета
 - s10.text.083: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
@@ -60,4 +61,3 @@
 - s10.text.030: Итикисимахимэ (`npc/ryuchido_gate_woman`), sumi (`npc/sumi`), Мугами Нао (`npc/nao`)
 - s10.text.029: Итикисимахимэ (`npc/ryuchido_gate_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.028: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хаясэ Нори (`npc/nori`)
-- s10.text.027: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`)
