@@ -100,6 +100,8 @@ def parser():
     closer.add_argument("--state-dir", type=Path, required=True)
     closer.add_argument("--session", type=int)
     closer.add_argument("--pending", action="store_true", help="only if recovery/SESSION_CLOSE.json asks")
+    told = sub.add_parser("memory-repair-told", help="remove false 'told' episodes left by plan-only patches")
+    told.add_argument("--state-dir", type=Path, required=True)
     marks = sub.add_parser("marks-audit", help="list NPC cards that share the same distinctive marks")
     marks.add_argument("--state-dir", type=Path, required=True)
     fetch_model = sub.add_parser("meaning-fetch", help="download the pinned meaning model (CI cache)")
@@ -367,6 +369,9 @@ def run(args):
             if args.pending:
                 return session_close.handle(args.state_dir) or {"result": "idle"}
             return session_close.close(args.state_dir, args.session)
+        case "memory-repair-told":
+            from . import npc_memory
+            return npc_memory.repair_told(args.state_dir)
         case "marks-audit":
             from . import npc_memory
             from .hot import _archived_cards
