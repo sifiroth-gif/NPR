@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.117: Курихара Наото (`npc/kurihara_naoto`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s10.text.116: Курихара Наото (`npc/kurihara_naoto`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Немера (Невыписанная) (`npc/nemera`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
 - s10.text.115: Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Касиваги Масато (`npc/kashiwagi_masato`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.114: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Касиваги Масато (`npc/kashiwagi_masato`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`)
@@ -60,4 +61,3 @@
 - s10.text.060: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`), бой, поправки игрока: 1
 - s10.text.059: Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 1
 - s10.text.058: Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 2
-- s10.text.057: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Касэ (`npc/kase`), бой, поправки игрока: 3
