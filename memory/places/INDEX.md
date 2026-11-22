@@ -30,13 +30,13 @@
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
+- Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 8 ход(ов), s10–s10
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
 - Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
-- Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 7 ход(ов), s10–s10
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
