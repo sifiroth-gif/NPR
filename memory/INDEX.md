@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s11.text.014`
+# Карта мира NPR · на ходе `s11.text.015`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -8,6 +8,7 @@
 ## Персонажи (189)
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Курихара Наото (Курихара, Наото) — Худощавый мужчина около сорока; короткие волосы с сединой, … · `npc/kurihara_naoto`
 - Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
 - Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Неустановленный наблюдатель у западного шлюза — Скрытое наблюдение за встречей Аракавы; принадлежность пока не установлена. · `npc/sluice_hidden_watcher`
@@ -21,7 +22,6 @@
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Хирано Сэйдзи (Хирано, Сэйдзи) — Мужчина за сорок, короткие седые волосы, впалые щёки, хромо… · `npc/hirano_seiji`
-- Курихара Наото (Курихара, Наото) — Худощавый мужчина около сорока; короткие волосы с сединой, … · `npc/kurihara_naoto`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Сотрудник снабжения — по подписи в сцене · `npc/sotrudnik_snabzheniya`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
@@ -208,8 +208,9 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (48)
+## Вещи (49)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
+- `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
