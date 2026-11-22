@@ -89,6 +89,7 @@
 - Кусагакуре, собственный дом Мугами Шики · `places/kusagakure-sobstvennyy-dom-mugami-shiki` · 2 ход(ов), s08–s08
 - Кусагакуре, Старая насосная станция · `places/kusagakure-staraya-nasosnaya-stantsiya` · 2 ход(ов), s03–s03
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
+- Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 2 ход(ов), s08–s10
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 2 ход(ов), s10–s10
@@ -143,7 +144,6 @@
 - Кусагакуре, Старый водоотвод за западным корпусом госпиталя · `places/kusagakure-staryy-vodootvod-za-zapadnym-korpusom-gospitalya` · 1 ход(ов), s02–s02
 - Кусагакуре, тёмный проход у западного водоотводного канала · `places/kusagakure-temnyy-prokhod-u-zapadnogo-vodootvodnogo-kanala` · 1 ход(ов), s04–s04
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
-- Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, У входа в дом Мугами Шики · `places/kusagakure-u-vkhoda-v-dom-mugami-shiki` · 1 ход(ов), s02–s02
 - Кусагакуре, улица перед управлением внутренней безопасности · `places/kusagakure-ulitsa-pered-upravleniem-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04
 - Кусагакуре, улица у управления внутренней безопасности · `places/kusagakure-ulitsa-u-upravleniya-vnutrenney-bezopasnosti` · 1 ход(ов), s04–s04

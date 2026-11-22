@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.128`
+# Карта мира NPR · на ходе `s10.text.129`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -207,7 +207,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (45)
+## Вещи (46)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -239,6 +239,7 @@
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
 - `reika_1285_receipt_copy` · `items/reika_1285_receipt_copy`
+- `reika_direct_comm_plate` · `items/reika_direct_comm_plate`
 - `rokuto_bounty_payment` · `items/rokuto_bounty_payment`
 - `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`

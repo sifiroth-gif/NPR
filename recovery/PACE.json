@@ -1,17 +1,20 @@
 {
  "schema": "npr-pace/1",
- "cursor": "s10.text.128",
+ "cursor": "s10.text.129",
  "scene": {
   "turns": 1,
-  "since": "s10.text.128"
+  "since": "s10.text.129"
  },
- "chapters": [],
- "next_chapters": [
+ "chapters": [
   {
    "id": "ch13_kazekage",
    "title": "Смерть Кадзекагэ",
-   "starts": "0010-03-12T03:00:00"
-  },
+   "scenes": 0,
+   "limit": 6,
+   "last_touched": null
+  }
+ ],
+ "next_chapters": [
   {
    "id": "ch14_tenchi",
    "title": "Мост Тэнти",
@@ -21,14 +24,19 @@
    "id": "ch15_shed_skin",
    "title": "Сброшенная кожа",
    "starts": "0010-08-10T22:00:00"
+  },
+  {
+   "id": "ch16_brothers",
+   "title": "Братья",
+   "starts": "0010-09-02T00:00:00"
   }
  ],
  "news": {
-  "offered": 5,
+  "offered": 6,
   "delivered": 4,
   "missed": 1,
-  "pending": 0,
-  "carrying": false
+  "pending": 7,
+  "carrying": true
  },
  "echo": {
   "offered": 18,
