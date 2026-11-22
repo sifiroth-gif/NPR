@@ -218,6 +218,7 @@
 - Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
 - Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
 - Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
+- Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 1 ход(ов), s11–s11
 - Тайная лаборатория Шики, известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-galereya-severo-z` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, известняковая водосборная галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-vodosbornaya-gale` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, известняковые галереи северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-galerei-severo-zap` · 1 ход(ов), s04–s04
