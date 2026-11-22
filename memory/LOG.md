@@ -61,4 +61,3 @@
 - s10.text.029: Итикисимахимэ (`npc/ryuchido_gate_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.028: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хаясэ Нори (`npc/nori`)
 - s10.text.027: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`)
-- s10.text.026: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), ryuchido_first_serpent (`npc/ryuchido_first_serpent`)
