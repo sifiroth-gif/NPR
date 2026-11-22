@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.033: Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Канкуро (`npc/kankuro`), Савара (`npc/suna_advance_tracker`), план сюжета
 - s11.text.032: Баки (`npc/baki`), Канкуро (`npc/kankuro`), Савара (`npc/suna_advance_tracker`)
 - s11.text.031: Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Канкуро (`npc/kankuro`)
 - s11.text.030: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), Баки (`npc/baki`), Канкуро (`npc/kankuro`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Разведчик Звука (`npc/razvedchik_zvuka`), план сюжета
@@ -61,4 +62,3 @@
 - s10.text.105: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета, поправки игрока: 1
 - s10.text.104: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.103: Тамура Рэйка (`npc/tamura_reika`), Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
-- s10.text.102: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`, вещь `shiki_medical_kit`, план сюжета
