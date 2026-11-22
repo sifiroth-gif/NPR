@@ -65,6 +65,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
+- Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 3 ход(ов), s10–s10
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
@@ -97,7 +98,6 @@
 - Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
-- Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 2 ход(ов), s10–s10
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
