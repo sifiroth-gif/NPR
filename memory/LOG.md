@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.119: hirano_seiji (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Сотрудник снабжения (`npc/sotrudnik_snabzheniya`), Хосина Кэн (`npc/hoshina_ken`)
 - s10.text.118: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Касэ (`npc/kase`)
 - s10.text.117: Курихара Наото (`npc/kurihara_naoto`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s10.text.116: Курихара Наото (`npc/kurihara_naoto`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Немера (Невыписанная) (`npc/nemera`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
@@ -60,4 +61,3 @@
 - s10.text.062: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`)
 - s10.text.061: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`)
 - s10.text.060: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`), бой, поправки игрока: 1
-- s10.text.059: Неизвестный взрослый пациент Кагэн (`npc/kagen_patient_adult`), поправки игрока: 1
