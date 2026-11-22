@@ -1114,6 +1114,8 @@ def fold(state_dir):
             if archived is None:
                 archived = _archived_cards(state_dir)
             name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)
+            if turn.get("kind") not in ("ooc", "technical", "void"):
+                name_notes += npc_memory.check_marks(base, turn, archived, _always_present(state_dir))
             # Состав по подписям реплик, если ведущий не записал present (код не правит его запись).
             spoke, unnamed = presence.voices(turn, names, always)
             cards = presence.auto_cards(hot, turn, unnamed, names)

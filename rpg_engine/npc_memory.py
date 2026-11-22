@@ -148,6 +148,125 @@ def check_names(hot, delta, turn_id, archived=()):
     return notes
 
 
+# ------------------------------------------------------- приметы (s10.text.083–088)
+# Морита описал заказчицу приметами, которые раньше Минаги дал женщине, оказавшейся
+# Тамурой Рэйкой (надорванная левая мочка, негнущийся левый указательный палец).
+# Ведущий не связал их и спорил с игроком три хода. Отличительная примета — часть тела
+# с особенностью; одна и та же у двух людей — либо это один человек, либо ошибка.
+
+_BODY = (("мочка", r"мочк"), ("ухо", r"у[хш][оаеуи]?$|уш[иек]"), ("палец", r"пал(ец|ьц)"),
+         ("указательный", r"указательн"), ("мизинец", r"мизин"), ("безымянный", r"безымян"),
+         ("кисть", r"кист"), ("запястье", r"запяст"), ("бровь", r"бров"), ("зуб", r"зуб"), ("губа", r"губ"),
+         ("щека", r"щ[её]к"), ("скула", r"скул"), ("челюсть", r"челюст"), ("переносица", r"переносиц"),
+         ("ладонь", r"ладон"), ("ноготь", r"ногт|ногот"), ("глаз", r"глаз"), ("веко", r"век[оауи]$"),
+         ("нос", r"нос[аеуо]?$"), ("подбородок", r"подбород"), ("висок", r"вис(ок|к)"), ("шея", r"ше[яиюе]$"),
+         ("лоб", r"лб[уаео]?$|^лоб$"), ("нога", r"ног[аиуе]?$"), ("колено", r"колен"), ("предплечье", r"предплеч"),
+         ("плечо", r"плеч"), ("голова", r"голов"), ("волосы", r"волос"))
+_SIDE = (("L", r"лев(ый|ая|ое|ом|ого|ой|ую|ым|ые|ых|ому)$|слева$"),
+         ("R", r"прав(ый|ая|ое|ом|ого|ой|ую|ым|ые|ых|ому)$|справа$"))
+_ODD = (("надрыв", r"надорв|надрыв|разорван|вырван|порван"), ("шрам", r"шрам|рубц|рубец|рубцов"),
+        ("ожог", r"ожог|обожж"), ("перелом", r"сломан|искривл|сросш|сросл|кривой|кривая"),
+        ("нет", r"\bнет\b|отсутств|ампутир|культ|обрубл|без (мизинца|пальца|уха|глаза|кисти)"),
+        ("протез", r"протез"), ("бельмо", r"бельм"), ("знак", r"татуир|клейм|выжжен"),
+        ("родинка", r"родин"), ("хромота", r"хрома|хромо"),
+        ("скованность", r"не сгиба|не разгиба|негнущ|почти не (испол|сгиб|двиг|шевел)|онемел|парализ|неподвиж"),
+        ("рассечение", r"рассеч|расщеп"), ("выбит", r"выбит|золот\w* зуб|металлическ\w* зуб"),
+        ("седина", r"сед\w* прядь|сед\w* прядью|сед\w* полос"), ("разноглазие", r"разного цвета|разноцвет"))
+
+
+def _concepts(clause):
+    """(части тела, стороны, особые приметы) фразы: повреждение или странность части тела."""
+    body, sides = set(), set()
+    lowered = (clause or "").casefold()
+    for word in re.findall(r"[а-яё]{2,}", lowered):
+        part = next((name for name, rx in _BODY if re.match(rx, word)), None)
+        side = next((name for name, rx in _SIDE if re.match(rx, word)), None)
+        if part:
+            body.add(part)
+        elif side:
+            sides.add(side)
+    odd = {name for name, rx in _ODD if re.search(rx, lowered)}
+    return body, sides, odd
+
+
+def marks_of(text):
+    """Приметы из описания: часть тела с повреждением или странностью («надорвана мочка»)."""
+    out = []
+    for clause in re.split(r"[.;:!?()\n—]|,\s", text or ""):
+        body, sides, odd = _concepts(clause)
+        if body and odd:
+            out.append((clause.strip(), (body, sides, odd)))
+    return out
+
+
+def _card_text(card):
+    parts = [card.get("look"), card.get("body")]
+    facts = card.get("facts")
+    parts += list(facts.values()) if isinstance(facts, dict) else [facts]
+    return " ".join(str(x) for x in parts if x)
+
+
+def _same_mark(a, b, loose=False):
+    """Одна примета: та же часть тела с той же странностью — и та же сторона или вторая часть тела.
+
+    ``loose`` — для новой карточки: зеркальная примета («ожог слева на шее» и «справа») —
+    тоже повтор приёма, у разных людей приметы должны различаться.
+    """
+    body, odd = a[0] & b[0], a[2] & b[2]
+    return bool(body and odd and (loose or a[1] & b[1] or len(body) >= 2))
+
+
+def marks_audit(cards):
+    """Пары карточек с одинаковыми или зеркальными приметами — для хранителя."""
+    registry = [(key, card.get("name") or key, marks_of(_card_text(card))) for key, card in cards
+                if isinstance(card, dict)]
+    pairs = []
+    for i, (key, name, mine) in enumerate(registry):
+        for other, other_name, theirs in registry[i + 1:]:
+            hit = next(((m, t) for m, ms in mine for t, ts in theirs if _same_mark(ms, ts, loose=True)), None)
+            if hit:
+                pairs.append({"a": key, "a_name": name, "a_mark": hit[0][:90],
+                              "b": other, "b_name": other_name, "b_mark": hit[1][:90]})
+    return pairs
+
+
+def check_marks(hot, turn, archived=(), always=()):
+    """Чужие приметы в ходе: у отсутствующего NPC или у новой карточки — замечание."""
+    delta = turn.get("d") or {}
+    cast_delta = delta.get("cast") or {}
+    present = set((hot.get("scene") or {}).get("present") or []) | set(cast_delta) | set(always) | {"shiki"}
+    cards = {}
+    for key, card in list(archived) + list((hot.get("cast") or {}).items()):
+        if isinstance(card, dict):
+            cards[key] = card
+    registry = {key: marks_of(_card_text(card)) for key, card in cards.items()}
+    notes = []
+    # Новая карточка с чужими приметами.
+    for key, patch in cast_delta.items():
+        if not isinstance(patch, dict) or key in cards:
+            continue
+        mine = marks_of(_card_text(patch))
+        for other, theirs in registry.items():
+            hit = next((m for m, ms in mine for t, ts in theirs if _same_mark(ms, ts, loose=True)), None)
+            if hit:
+                name = cards[other].get("name") or other
+                notes.append(f"{key}: примета «{hit[:80]}» уже есть у {name} ({other}). Один человек — "
+                             f"веди как {other}; другой — дай ему свои приметы.")
+                break
+    # Приметы отсутствующего NPC в тексте хода: это он?
+    text_marks = marks_of(f"{turn.get('gm') or ''}\n{turn.get('line') or ''}")
+    for other, theirs in registry.items():
+        if other in present or not theirs:
+            continue
+        hit = next((m for m, ms in text_marks for t, ts in theirs if _same_mark(ms, ts)), None)
+        if hit:
+            name = cards[other].get("name") or other
+            notes.append(f"В ходе приметы {name} ({other}): «{hit[:90]}». Если это {name} — называй и веди "
+                         f"как {other}, сверив `memory/npc/{other}.md`; если другой человек — смени приметы, "
+                         "чужие не повторяй.")
+    return notes[:3]
+
+
 def _proper_words(name):
     words = re.findall(r"[А-ЯЁA-Z][а-яёa-z\-]{2,}", name or "")
     if re.search(r"(?:^|\s)[а-яё]", name or ""):
