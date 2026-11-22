@@ -5,6 +5,7 @@
 ## Кто здесь говорил с Шики
 - Минаги Дзэн · `npc/minagi_zen` — 9 ход(ов)
 - Тамура Рэйка · `npc/tamura_reika` — 9 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 3 ход(ов)
 - Эндо Хадзимэ · `npc/endo_hajime` — 2 ход(ов)
 - Морита Кай · `npc/p4_marked_hunter` — 2 ход(ов)
 - Немера (Невыписанная) · `npc/nemera` — 1 ход(ов)

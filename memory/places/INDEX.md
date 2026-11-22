@@ -166,6 +166,7 @@
 - Кусагакуре, западный медицинский квартал · `places/kusagakure-zapadnyy-meditsinskiy-kvartal` · 1 ход(ов), s11–s11
 - Кусагакуре, Западный распределительный узел · `places/kusagakure-zapadnyy-raspredelitelnyy-uzel` · 1 ход(ов), s03–s03
 - Кусагакуре, Западный санитарный коллектор · `places/kusagakure-zapadnyy-sanitarnyy-kollektor` · 1 ход(ов), s03–s03
+- Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 1 ход(ов), s11–s11
 - Кусагакуре, западный водоотвод · `places/kusagakure-zapadnyy-vodootvod` · 1 ход(ов), s04–s04
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/lichnaya-taynaya-laboratoriya-shiki-lesistye-kholmy-severo-z` · 1 ход(ов), s04–s04
