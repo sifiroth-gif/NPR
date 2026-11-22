@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.095: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `hoshina_journal_1184`, поправки игрока: 1
 - s10.text.094: Тамура Рэйка (`npc/tamura_reika`), Служащий западной почты (`npc/west_siran_mail_clerk`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
 - s10.text.093: Морита Кай (`npc/p4_marked_hunter`), Служащий западной почты (`npc/west_siran_mail_clerk`), поправки игрока: 1
 - s10.text.092: Немера (Невыписанная) (`npc/nemera`), Морита Кай (`npc/p4_marked_hunter`), Служащий западной почты (`npc/west_siran_mail_clerk`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `sluice_saboteur_remains`, план сюжета
@@ -60,4 +61,3 @@
 - s10.text.038: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`)
 - s10.text.037: Тагорихимэ (`npc/tagorihime`), Тагицухимэ (`npc/tagitsuhime`), Хагуро (`npc/khaguro`)
 - s10.text.036: Тагорихимэ (`npc/tagorihime`), kiri_hunters (`npc/kiri_hunters`), бой
-- s10.text.035: Тагорихимэ (`npc/tagorihime`), Старший у повозки (`npc/kiri_transfer_senior`), бой
