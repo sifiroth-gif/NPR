@@ -26,7 +26,7 @@ from . import aging
 from .heuristic_history import stem, tokens
 
 PULSE = 8            # ходов без вести — мир напоминает о себе…
-PULSE_HOURS = 3      # …если и игровых часов прошло столько (плотная сцена в час — не повод)
+PULSE_HOURS = 1      # …если прошёл и игровой час (плотная сцена в минуты — не повод)
 JUMP_HOURS = 6       # скачок игрового времени — повод для вести
 HOLD = 3             # ходов держится поручение довести весть…
 HOLD_HOURS = 3       # …и игровых часов; в закрытой плотной сцене весть ждёт выхода
@@ -72,11 +72,9 @@ def weight(hot, event):
 def _text(event, hot):
     from . import will
     name = event.get("name") if event.get("name") and event["name"] != event.get("npc") else will._name(hot, event.get("npc"))
-    word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event.get("status"), "")
     when = str(event.get("at") or "")[5:16].replace("T", " ")
     outcome = str(event.get("outcome") or "")
-    tag = f" ({word})" if word and not event.get("canon") and not outcome.casefold().startswith(word) else ""
-    text = f"{when} {name}{tag}: {outcome}"
+    text = f"{when[3:5]}.{when[:2]} {when[6:]} — {name}. {outcome}"
     if event.get("against_shiki"):
         text += f" Против Шики: {event['against_shiki']}"
     return " ".join(text.split())
@@ -155,14 +153,17 @@ def step(hot, applied):
     previous = _parse(state.get("at"))
     state["at"] = cursor.get("at")
     state.setdefault("last", now)
+    state.setdefault("start_at", cursor.get("at"))
     if (hot.get("_fight") or {}).get("active"):
         return _view(state)
     jump = bool(played and previous and at and (at - previous).total_seconds() >= JUMP_HOURS * 3600)
+    # Новые игровые сутки без вести — тоже повод: мир не молчит дольше дня.
+    day = bool(played and at and since_day(state) and at.date() > since_day(state))
     since = _parse(state.get("last_at"))
     quiet = now - int(state.get("last") or now) >= PULSE and (
         not since or not at or (at - since).total_seconds() >= PULSE_HOURS * 3600)
     long = int(state.get("scene_turns") or 0) >= LONG and now - int(state.get("nudged") or -10**6) >= LONG
-    if state.get("current") or not (jump or quiet or long):
+    if state.get("current") or not (jump or quiet or long or day):
         return _view(state)
     candidates = pending(hot)
     if candidates:
@@ -170,7 +171,8 @@ def step(hot, applied):
         state["current"] = {"text": _text(event, hot)[:400], "markers": _markers(event, hot), "set": now,
                             "set_at": cursor.get("at"),
                             "npc": event.get("npc"), "plan": event.get("plan"), "at": event.get("at"),
-                            "why": "скачок времени" if jump else "долгая сцена" if long else "давно без вестей"}
+                            "why": "скачок времени" if jump else "долгая сцена" if long else
+                                   "новые сутки" if day else "давно без вестей"}
         event["news"] = "offered"
         state["offered"] += 1
         state["last"], state["last_at"] = now, cursor.get("at")
@@ -183,6 +185,12 @@ def step(hot, applied):
                          "одним ходом; пусть мир войдёт в сцену сам — чужой человек, весть, помеха или наступивший "
                          "срок, — не решая за Шики; игрок волен продолжить.")}
     return _view(state)
+
+
+def since_day(state):
+    """Дата последней вести (или точки отсчёта) — для правила «не дольше суток без вести»."""
+    value = _parse(state.get("last_at") or state.get("start_at"))
+    return value.date() if value else None
 
 
 def _expired(current, now, at):
@@ -207,8 +215,9 @@ def _view(state):
     if not current:
         return None
     long = state.get("scene_turns", 0) >= LONG
-    return {"must": (f"Весть мира: {current['text']} — доведи до Шики в ближайшие {HOLD} хода, к месту, {CHANNEL}. "
-                     "Не объявляй «новость»: Шики слышит часть, с искажением, и сам решает, что с ней делать."
+    return {"must": (f"Весть мира — {current['text']} Доведи до Шики в ближайшие {HOLD} хода одним видимым фактом "
+                     f"(кто пришёл, что пропало, кто ранен, что говорят), {CHANNEL}. Не сочиняй новую интригу и не "
+                     "объявляй «новость»: Шики слышит часть, с искажением, и сам решает, что делать."
                      + (f" Сцена идёт {state['scene_turns']} ходов — повод." if long else "")),
             "why": current.get("why")}
 

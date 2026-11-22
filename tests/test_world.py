@@ -31,7 +31,7 @@ class IntentStatusTest(unittest.TestCase):
         self.assertEqual(prof["intent"]["report"]["status"], "committed")
         notes = self.apply(prof, {"report": {"status": "partial_success"}})
         self.assertEqual(prof["intent_done"][-1]["status"], "partial")
-        self.assertIn("наполовину: глава знает о Шики", prof["intent_done"][-1]["outcome"])
+        self.assertIn("Добился лишь части: глава знает о Шики", prof["intent_done"][-1]["outcome"])
         self.assertTrue(any("закрыт без outcome" in n for n in notes))
 
     def test_new_next_on_close_becomes_the_next_plan(self):

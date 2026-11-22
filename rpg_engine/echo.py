@@ -209,8 +209,11 @@ def pick(state_dir, hot, texts=()):
         return None
     _, kind, key, source, text, shared = best
     state["last"], used[key] = now, now
+    # «Свежие» приметы давней нити: имена и по-настоящему редкие слова (≤2 источников из
+    # всего пула), которых не было в сцене. Обычные длинные слова («который», «сейчас»)
+    # звучат в любом ходе и вплетённым эхо не делают.
     names = {stem(w.casefold()) for w in NAME.findall(" " + text)} - COMMON
-    rare = {stem(w) for w in tokens(text) if len(w) >= 6}
+    rare = {stem(w) for w in tokens(text) if len(w) >= 6 and df.get(stem(w), 0) <= 2}
     state["fresh"] = sorted((names | rare) - set(context))[:12]
     state["offered"] = int(state.get("offered") or 0) + 1
     state["used"] = dict(sorted(used.items(), key=lambda kv: kv[1])[-60:])
