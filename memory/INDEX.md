@@ -1,19 +1,19 @@
-# Карта мира NPR · на ходе `s11.text.001`
+# Карта мира NPR · на ходе `s11.text.002`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (212) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (213) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (188)
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Сугихара Рэндзо (Старший врач, Сугихара) — Пожилой врач в очках, белый халат поверх тёмной формы, мета… · `npc/seventh_well_senior_physician`
 - Сэно Фуми (Сэно, Фуми) — торговка у сельской развилки Кусы · `npc/road_villager_fumi`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Хирано Сэйдзи (Хирано, Сэйдзи) — Мужчина за сорок, короткие седые волосы, впалые щёки, хромо… · `npc/hirano_seiji`
 - Курихара Наото (Курихара, Наото) — Худощавый мужчина около сорока; короткие волосы с сединой, … · `npc/kurihara_naoto`
-- Сугихара Рэндзо (Старший врач, Сугихара) — Пожилой врач в очках, белый халат поверх тёмной формы, мета… · `npc/seventh_well_senior_physician`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Сотрудник снабжения — по подписи в сцене · `npc/sotrudnik_snabzheniya`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
@@ -207,7 +207,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (46)
+## Вещи (47)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -254,3 +254,4 @@
 - `sluice_saboteur_remains` · `items/sluice_saboteur_remains`
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`
+- `traveller_cloak` · `items/traveller_cloak`

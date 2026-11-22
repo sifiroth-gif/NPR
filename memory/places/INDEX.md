@@ -156,6 +156,7 @@
 - Кусагакуре, Восточная хозяйственная калитка школы · `places/kusagakure-vostochnaya-khozyaystvennaya-kalitka-shkoly` · 1 ход(ов), s03–s03
 - Кусагакуре, Восточный смотровой колодец старого коллектора · `places/kusagakure-vostochnyy-smotrovoy-kolodets-starogo-kollektora` · 1 ход(ов), s03–s03
 - Кусагакуре, южная часть деревни · `places/kusagakure-yuzhnaya-chast-derevni` · 1 ход(ов), s08–s08
+- Кусагакуре, южные кварталы · `places/kusagakure-yuzhnye-kvartaly` · 1 ход(ов), s11–s11
 - Кусагакуре, Южный медицинский квартал · `places/kusagakure-yuzhnyy-meditsinskiy-kvartal` · 1 ход(ов), s02–s02
 - Кусагакуре, Заброшенный исследовательский корпус № 3 · `places/kusagakure-zabroshennyy-issledovatelskiy-korpus-n-3` · 1 ход(ов), s02–s02
 - Кусагакуре, задний двор клиники Кирисавы Сэйны возле закрытой задней двери · `places/kusagakure-zadniy-dvor-kliniki-kirisavy-seyny-vozle-zakrytoy` · 1 ход(ов), s05–s05

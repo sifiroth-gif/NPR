@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s11.text.001",
+  "cursor": "s11.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -460,23 +460,6 @@
       ],
       "sources": [
         "recovery/cast/clinic_assistant.json"
-      ]
-    },
-    "clock:naruto_returns_konoha": {
-      "aliases": [
-        "clock:naruto returns konoha",
-        "naruto returns konoha",
-        "naruto_returns_konoha"
-      ],
-      "facts": [],
-      "id": "clock:naruto_returns_konoha",
-      "kind": "clock",
-      "label": "naruto returns konoha",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s11.text.001"
       ]
     },
     "contract_1184_docs": {
@@ -2742,7 +2725,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s11.text.001",
+          "seen": "s11.text.002",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "10.03 у медкорпуса самостоятельно попыталась проверить питающую фуин-ветвь в пределах пяти метров, но ход скрылся в камне. Отступила без прикосновения к защите; следует с Шики.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -9519,6 +9502,25 @@
         "s02.text.099"
       ]
     },
+    "place:c65b951ee5c98608": {
+      "aliases": [
+        "place:c65b951ee5c98608",
+        "Кусагакуре, южные кварталы, улица у старого колокола",
+        "Кусагакуре",
+        "южные кварталы",
+        "улица у старого колокола"
+      ],
+      "facts": [],
+      "id": "place:c65b951ee5c98608",
+      "kind": "place",
+      "label": "Кусагакуре, южные кварталы, улица у старого колокола",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s11.text.002"
+      ]
+    },
     "place:c75881de9ed753ab": {
       "aliases": [
         "place:c75881de9ed753ab",
@@ -11785,8 +11787,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/road_villager_fumi.json",
-        "s11.text.001"
+        "recovery/cast/road_villager_fumi.json"
       ]
     },
     "rokuto_bounty_payment": {
@@ -12167,7 +12168,8 @@
     "seventh_well_senior_physician": {
       "aliases": [
         "seventh well senior physician",
-        "Сугихара Рэндзо"
+        "Сугихара Рэндзо",
+        "seventh_well_senior_physician"
       ],
       "facts": [],
       "id": "seventh_well_senior_physician",
@@ -12206,12 +12208,13 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.121",
+          "seen": "s11.text.002",
           "state": "Остался с Курихарой в Д-3, зафиксировав письменный отказ от перевода."
         }
       ],
       "sources": [
-        "recovery/cast/seventh_well_senior_physician.json"
+        "recovery/cast/seventh_well_senior_physician.json",
+        "s11.text.002"
       ]
     },
     "shiki_finances": {
@@ -12228,11 +12231,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.068",
-          "turn": "s10.text.106"
+          "turn": "s11.text.002"
         }
       ],
       "sources": [
-        "s10.text.106"
+        "s11.text.002"
       ]
     },
     "shiki_medical_kit": {
@@ -12756,8 +12759,7 @@
     "tamura_reika": {
       "aliases": [
         "tamura reika",
-        "Тамура Рэйка",
-        "tamura_reika"
+        "Тамура Рэйка"
       ],
       "facts": [],
       "id": "tamura_reika",
@@ -12804,8 +12806,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tamura_reika.json",
-        "s11.text.001"
+        "recovery/cast/tamura_reika.json"
       ]
     },
     "tetsu": {
@@ -13027,6 +13028,27 @@
       ],
       "sources": [
         "recovery/cast/tikhiy_porog_seller.json"
+      ]
+    },
+    "traveller_cloak": {
+      "aliases": [
+        "traveller cloak"
+      ],
+      "facts": [],
+      "id": "traveller_cloak",
+      "kind": "item",
+      "label": "traveller cloak",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s11.text.002",
+          "turn": "s11.text.002"
+        }
+      ],
+      "sources": [
+        "s11.text.002"
       ]
     },
     "unknown_masked_prisoner": {
@@ -13358,7 +13380,7 @@
     },
     {
       "from": "shiki_finances",
-      "source": "s10.text.106",
+      "source": "s11.text.002",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -13411,8 +13433,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "traveller_cloak",
+      "source": "s11.text.002",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 867
+  "source_turns_indexed": 868
 }
