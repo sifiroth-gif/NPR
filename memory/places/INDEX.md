@@ -11,9 +11,9 @@
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 19 ход(ов), s07–s07
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
+- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 16 ход(ов), s10–s10
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
-- Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 15 ход(ов), s10–s10
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
