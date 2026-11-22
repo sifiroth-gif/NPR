@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.107`
+# Карта мира NPR · на ходе `s10.text.108`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,15 +6,15 @@
 - места · `places/INDEX` (210) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (183)
-- endo_hajime — Мужчина около шестидесяти, бесцветные брови, чернила на лев… · `npc/endo_hajime` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika` · в сцене
+- Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
+- Эндо Хадзимэ (Эндо, Хадзимэ) — Пожилой расчётчик, около 60 лет, бесцветные брови, чернила … · `npc/endo_hajime`
 - Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
 - Касэ — боец восточного заслона Нори; 26.09 Шики вынул у него осколок из правого предпл… · `npc/kase`
-- Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
 - Служащий западной почты — Приёмщик частных отправлений · `npc/west_siran_mail_clerk`
 - Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
@@ -202,7 +202,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (43)
+## Вещи (44)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -233,6 +233,7 @@
 - `private_bounty_announcements` · `items/private_bounty_announcements`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
+- `reika_1285_receipt_copy` · `items/reika_1285_receipt_copy`
 - `rokuto_bounty_payment` · `items/rokuto_bounty_payment`
 - `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`

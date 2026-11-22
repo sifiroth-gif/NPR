@@ -2,7 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s10.text.107: Тамура Рэйка (`npc/tamura_reika`), endo_hajime (`npc/endo_hajime`), план сюжета
+- s10.text.108: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `reika_1285_receipt_copy`
+- s10.text.107: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), план сюжета
 - s10.text.106: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`, вещь `minagi_receipts`
 - s10.text.105: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета, поправки игрока: 1
 - s10.text.104: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s10.text.049: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 1
-- s10.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
