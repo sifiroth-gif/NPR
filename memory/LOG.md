@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.011: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s11.text.010: Аракава Дзюн (`npc/arakawa`), Немера (Невыписанная) (`npc/nemera`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), вещь `arakawa_patient_ampoule`, поправки игрока: 1
 - s11.text.009: Аракава Дзюн (`npc/arakawa`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
 - s11.text.008: Аракава Дзюн (`npc/arakawa`), Сэно Фуми (`npc/road_villager_fumi`), Служащий западной почты (`npc/west_siran_mail_clerk`)
@@ -60,4 +61,3 @@
 - s10.text.083: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
 - s10.text.082: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), Немера (Невыписанная) (`npc/nemera`), Хагуро (`npc/khaguro`), план сюжета, бой
 - s10.text.081: Хосина Кэн (`npc/hoshina_ken`), Немера (Невыписанная) (`npc/nemera`), Морита Кай (`npc/p4_marked_hunter`), план сюжета
-- s10.text.080: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)

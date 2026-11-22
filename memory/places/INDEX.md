@@ -91,6 +91,7 @@
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 2 ход(ов), s11–s11
+- Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 2 ход(ов), s11–s11
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 2 ход(ов), s10–s10
@@ -166,7 +167,6 @@
 - Кусагакуре, западный медицинский квартал · `places/kusagakure-zapadnyy-meditsinskiy-kvartal` · 1 ход(ов), s11–s11
 - Кусагакуре, Западный распределительный узел · `places/kusagakure-zapadnyy-raspredelitelnyy-uzel` · 1 ход(ов), s03–s03
 - Кусагакуре, Западный санитарный коллектор · `places/kusagakure-zapadnyy-sanitarnyy-kollektor` · 1 ход(ов), s03–s03
-- Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 1 ход(ов), s11–s11
 - Кусагакуре, западный водоотвод · `places/kusagakure-zapadnyy-vodootvod` · 1 ход(ов), s04–s04
 - Лес смерти, Полигон №44 · `places/les-smerti-poligon-n44` · 1 ход(ов), s01–s01
 - Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/lichnaya-taynaya-laboratoriya-shiki-lesistye-kholmy-severo-z` · 1 ход(ов), s04–s04
