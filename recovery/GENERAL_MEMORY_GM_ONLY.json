@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.078",
+  "cursor": "s10.text.079",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:31:00",
-          "excerpt": "олодное удовольствие. **Хакудзя-сэннин:** — Наш договор позволяет звать. Откликнуться или отказать — дело змеи. Хагуро, надо полагать, тебе это уже объяснил. Она отводит взгляд к каменным фигурам. **Хакудзя-сэннин:** — Теперь о риске. Хвост осторожно обвивает ",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.043"
         },
         {
           "at": "0010-03-04T09:44:30",
@@ -1367,22 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.077"
+        },
+        {
+          "at": "0010-03-06T04:12:00",
+          "excerpt": "Да Хагуро, но я и не пытался скрываться, а теперь, мне нужно вернуться, поможешь? <text color=\"secondary\" size=\"xs\">4 марта 1287 года · 09:45</text> ### Рьючидо. Внешние врата **Муг",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.079"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.078",
-          "state": "У внешних ворот, открыто признал, что недооценил успехи Шики; спросил о знании Белой Змеи."
+          "seen": "s10.text.079",
+          "state": "У берега у «Чёрного створа» 06.03 04:12, доставил Шики обратно через горные тоннели. Перед отъездом самостоятельно сообщил старшей сторожевой змее о самостоятельном отростке из плеча Шики для доклада старшим; не обязан ждать или сопровождать дальше."
         },
         {
           "role": "по подписи в сцене",
-          "state": "У внешних ворот, открыто признал, что недооценил успехи Шики; спросил о знании Белой Змеи."
+          "state": "У берега у «Чёрного створа» 06.03 04:12, доставил Шики обратно через горные тоннели. Перед отъездом самостоятельно сообщил старшей сторожевой змее о самостоятельном отростке из плеча Шики для доклада старшим; не обязан ждать или сопровождать дальше."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s10.text.079"
       ]
     },
     "khakudzya_sennin": {
@@ -4028,6 +4029,25 @@
       "projections": [],
       "sources": [
         "s08.text.103"
+      ]
+    },
+    "place:2857c82cd14617c7": {
+      "aliases": [
+        "place:2857c82cd14617c7",
+        "Страна Рек, верховья Сирана, каменистый берег у «Чёрного створа»",
+        "Страна Рек",
+        "верховья Сирана",
+        "каменистый берег у «Чёрного створа»"
+      ],
+      "facts": [],
+      "id": "place:2857c82cd14617c7",
+      "kind": "place",
+      "label": "Страна Рек, верховья Сирана, каменистый берег у «Чёрного створа»",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.079"
       ]
     },
     "place:289ca7af8427f136": {
@@ -7333,7 +7353,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.078",
         "s10.text.076",
         "s10.text.077"
       ]
@@ -10869,7 +10888,7 @@
       "id": "recipient6",
       "kind": "entity",
       "label": "Реципиент № 6",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0001-07-28T18:22:00",
@@ -10877,13 +10896,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.011"
-        },
-        {
-          "at": "0006-10-03T05:49:00",
-          "excerpt": "Шики. Впервые за весь разговор её лицо изменилось так, словно она осознала, что спор идёт совсем не о судьбе шестого пациента. **Дежурная врач:** — Да. Одно слово прозвучало совершенно отчётливо. — Я передала информацию об изменении вашей крови, о необычном ха",
-          "source": "archive/session-008-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s08.text.023"
         },
         {
           "at": "0006-10-03T05:51:00",
@@ -10898,6 +10910,13 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.025"
+        },
+        {
+          "at": "0010-03-06T04:12:00",
+          "excerpt": "а подмыла уступ, и огромное тело уже не может пройти прежним путём. Змея находит обход через старое сухое русло. К утру шестого марта горы наконец расступаются. Хагуро выходит из заросшего оврага на каменистый берег. Сквозь редкий туман проступает знакомая изв",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.079"
         }
       ],
       "projections": [],
@@ -10962,7 +10981,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10970,13 +10989,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:31:00",
-          "excerpt": "олодное удовольствие. **Хакудзя-сэннин:** — Наш договор позволяет звать. Откликнуться или отказать — дело змеи. Хагуро, надо полагать, тебе это уже объяснил. Она отводит взгляд к каменным фигурам. **Хакудзя-сэннин:** — Теперь о риске. Хвост осторожно обвивает ",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.043"
         },
         {
           "at": "0010-03-04T09:44:30",
@@ -10991,6 +11003,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.077"
+        },
+        {
+          "at": "0010-03-06T04:12:00",
+          "excerpt": "Да Хагуро, но я и не пытался скрываться, а теперь, мне нужно вернуться, поможешь? <text color=\"secondary\" size=\"xs\">4 марта 1287 года · 09:45</text> ### Рьючидо. Внешние врата **Муг",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.079"
         }
       ],
       "projections": [
@@ -11006,13 +11025,14 @@
     "ryuchido_gate_woman": {
       "aliases": [
         "ryuchido gate woman",
-        "Итикисимахимэ"
+        "Итикисимахимэ",
+        "ryuchido_gate_woman"
       ],
       "facts": [],
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -11020,13 +11040,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
-        },
-        {
-          "at": "0010-03-04T09:44:00",
-          "excerpt": "Посуда стоит там, где Шики оставил её после первого испытания. Возле хозяйственной ниши лежит сложенное полотенце. Итикисимахимэ сидит на краю одного из столов, поджав босую ногу. Её высоко собранные волосы небрежно выбились из причёски. Она поворачивается к в",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.075"
         },
         {
           "at": "0010-03-04T09:44:30",
@@ -11041,20 +11054,24 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.077"
+        },
+        {
+          "at": "0010-03-06T04:12:00",
+          "excerpt": "им именно так. Сторожевая змея некоторое время смотрит на Шики, затем склоняет голову и уходит за ворота. **Итикисимахимэ:** — Вот теперь матушке будет что послушать. **Хагуро:** — Я сообщил то, что видел. Остальное меня не касается. Он поворачивается к Шики. ",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.079"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.078",
-          "state": "У открытых ворот язвительно прервала разговор; физического контакта нет."
-        },
-        {
-          "state": "У открытых ворот язвительно прервала разговор; физического контакта нет."
+          "seen": "s10.text.079",
+          "state": "Осталась у ворот Рьючидо; слышала, что Хагуро передал старшей сторожевой змее сведения о неизвестном самостоятельном отростке спутника Шики."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
-        "recovery/HOT.json"
+        "s10.text.079"
       ]
     },
     "s17_recipient_6": {
@@ -12486,5 +12503,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 818
+  "source_turns_indexed": 819
 }
