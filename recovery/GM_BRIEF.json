@@ -87,16 +87,10 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "hirano_seiji",
-   "khirano_seydzi",
    "nemera",
-   "p4_archivist_matsuda",
-   "tamura_reika",
-   "place:e9d74a1d60b96e54",
-   "hoshina_journal_1184",
-   "reika_1285_receipt_copy"
+   "place:e9d74a1d60b96e54"
   ],
-  "focus_bytes": 4014,
+  "focus_bytes": 1411,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -150,12 +144,6 @@
     "since": "s09.text.005",
     "turn": "s09.text.005"
    },
-   "hoshina_journal_1184": {
-    "holder": "tamura_reika",
-    "since": "s10.text.090",
-    "state": "Оригинал №1184 в кожаном футляре Рэйки вместе с её выпиской о содержании в сети «Кэйсин».",
-    "turn": "s10.text.097"
-   },
    "inquiry_contact_token": {
     "holder": "shiki",
     "since": "s09.text.073",
@@ -191,12 +179,6 @@
     "since": "s09.text.033",
     "state": "Три объявления с контактами: Нагаэ Рокуто 27,5 млн рё, Тамура Рэйка 18 млн рё, архив «Белая смола» 9,5 млн рё. Взяты для ознакомления; ни один заказ не принят.",
     "turn": "s09.text.033"
-   },
-   "reika_1285_receipt_copy": {
-    "holder": "tamura_reika",
-    "since": "s10.text.108",
-    "state": "Заверенная Эндо копия финансовой приёмки весны 1285 с подписью Касиваги Масато; подлинник остаётся в расчётном архиве Эндо.",
-    "turn": "s10.text.108"
    },
    "rokuto_bounty_payment": {
     "holder": "shiki",
@@ -236,7 +218,7 @@
   "place": "Страна Травы, сельские предместья Кусагакуре, вдали от внешнего дозора",
   "time": "14:10"
  },
- "digest": "181719d7158f5783ef5b3ca2d77683e9c01c402ba2da77469f2ac359bc3344ce",
+ "digest": "3bead236db6f9f0c2e66f2f97841b5a81dde3a9b74dab7fca7ab3a5b12b99fcb",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -247,29 +229,8 @@
  "evidence_graph": {
   "edges": [
    {
-    "actor": "tamura_reika",
-    "from": "s10.text.001",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s10.text.128"
-   },
-   {
     "actor": "nemera",
     "from": "s10.text.001",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s10.text.128"
-   },
-   {
-    "actor": "p4_archivist_matsuda",
-    "from": "s10.text.100",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s10.text.128"
-   },
-   {
-    "actor": "khirano_seydzi",
-    "from": "s10.text.100",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s10.text.128"
@@ -280,8 +241,7 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Тамура Рэйка — слышал(а) с s09.text.101; hirano_seiji — слышал(а) с s10.text.127; Мацуда (архивариус П-4) — слышал(а) с s10.text.127; Хирано Сэйдзи — слышал(а) с s10.text.127.",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Тамура Рэйка — не слышал(а); Немера (Невыписанная) — не слышал(а); hirano_seiji — не слышал(а); Мацуда (архивариус П-4) — не слышал(а); Хирано Сэйдзи — не слышал(а)."
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Немера (Невыписанная) — не слышал(а)."
  ],
  "fight": {
   "chakra": {
@@ -345,30 +305,6 @@
   "activated": [
    {
     "facts": [],
-    "id": "hirano_seiji",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/hirano_seiji.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "После уничтожения П-4 услышал от Шики о двух пробах лечебного носителя в Кусе и лечении чиновников. Письменно решил проверить результаты Мориоки/Аракавы и запр…"
-     }
-    }
-   },
-   {
-    "facts": [],
-    "id": "khirano_seydzi",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/khirano_seydzi.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "role": "по подписи в сцене"
-     }
-    }
-   },
-   {
-    "facts": [],
     "id": "nemera",
     "kind": "npc",
     "operational_cues": {
@@ -381,31 +317,6 @@
     }
    },
    {
-    "facts": [],
-    "id": "p4_archivist_matsuda",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/p4_archivist_matsuda.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "role": "Архивариус П-4 комплекса Кэйсин",
-      "state": "Осталась при регистрах П-4, заставила Хирано письменно оговорить запрет несанкционированного изъятия лечебных проб."
-     }
-    }
-   },
-   {
-    "facts": [],
-    "id": "tamura_reika",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/tamura_reika.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Приняла рабочую пластинку связи Шики, самостоятельно ушла по следу Котани. Согласилась по своей воле уничтожать подтверждённые изолированные С-17, реципиентов…"
-     }
-    }
-   },
-   {
     "channels": [
      "scene_anchor"
     ],
@@ -413,40 +324,6 @@
     "id": "place:e9d74a1d60b96e54",
     "kind": "place",
     "label": "Страна Травы, сельские предместья Кусагакуре, вдали от внешнего дозора",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "hoshina_journal_1184",
-    "kind": "item",
-    "label": "hoshina journal 1184",
-    "operational_cues": {
-     "source": "s10.text.097",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tamura_reika"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "reika_1285_receipt_copy",
-    "kind": "item",
-    "label": "reika 1285 receipt copy",
-    "operational_cues": {
-     "source": "s10.text.108",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tamura_reika"
-     }
-    },
     "status": "no_verified_facts"
    }
   ],
@@ -456,7 +333,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 8
+  "total_matched": 2
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -478,43 +355,11 @@
  "horror": {
   "due": null,
   "npcs": {
-   "hirano_seiji": {
-    "does": "Не задерживал уход, запросил проверку лечения и запретил самовольное изъятие образцов.",
-    "lever": "Утрата контроля над получателями и раскрытие маршрутов.",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "Пытаться остановить Шики смертельно опасно; выживание и контроль над пациентами теперь связаны с независимым лекарством.",
-    "stage": 4,
-    "step": "необратимость"
-   },
-   "khirano_seydzi": {
-    "does": "Дал уйти и распорядился искать проверяемую альтернативу С-17.",
-    "lever": "Стать единственным виновным перед Осавой или погибнуть из-за Шики.",
-    "next": "Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "Знакомой медицинской классификации этой силы нет; конфликт грозит смертью.",
-    "stage": 2,
-    "step": "пересмотр"
-   },
    "nemera": {
     "does": "Разорвала верхнюю линию, сохранив нижнюю.",
     "lever": "неподвижность навсегда",
     "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
     "reads": "Система опасна для неё, но запор уничтожен.",
-    "stage": 4,
-    "step": "необратимость"
-   },
-   "p4_archivist_matsuda": {
-    "does": "Не преследовала Шики, сохранила журнал и потребовала письменного распоряжения.",
-    "lever": "Стать крайней за подмену.",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "На такую угрозу архивная процедура не рассчитана; теперь документировать действия опасных людей важнее всего.",
-    "stage": 4,
-    "step": "необратимость"
-   },
-   "tamura_reika": {
-    "does": "Пошла с Шики, отдельно настояла, что будет искать и допрашивать Котани сама.",
-    "lever": "Снова стать подневольным живым инструментом фуин.",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "Открытая сила Шики освобождает документы, но собственный разговор с Котани она никому не уступит.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -540,25 +385,13 @@
  "last": {
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 57,
-   "facets": 3,
-   "need": 5,
-   "npc": "tamura_reika",
-   "tier": "deep"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
-   "tamura_reika",
-   "nemera",
-   "hirano_seiji",
-   "p4_archivist_matsuda",
-   "khirano_seydzi"
+   "nemera"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": [
@@ -570,7 +403,6 @@
    }
   ]
  },
- "over_budget": true,
  "plot": {
   "active": [
    {
@@ -695,141 +527,6 @@
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
-  "hirano_seiji": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-03-10T19:00:00",
-      "flaw": "Осава может отозвать его полномочия.",
-      "goal": "Остановить производство С-17, не оставшись единственным виновным перед Осавой.",
-      "id": "halt_s17_supply",
-      "if_unopposed": "Медкорпус и склады получат приказ прекратить культивирование и выдадут подтверждения, пациентские препараты учтут отдельно.",
-      "next": "Запросить письменное подтверждение остановки медкорпуса и складов, отдельно проверить запасы пациентов.",
-      "source_turn": "s10.text.127",
-      "status": "committed"
-     },
-     {
-      "due": "0010-03-11T10:00:00",
-      "flaw": "Без полномочий Кусы сведения и препарат могут не выдать.",
-      "goal": "Добыть проверяемый путь лечения зависимых пациентов без восстановления С-17.",
-      "id": "verify_kusa_therapy",
-      "if_unopposed": "В канцелярию Кусы поступит подписанный запрос Хирано о лечебных образцах и двух пациентах.",
-      "next": "Послать официальный запрос медслужбе Кусы и проверить заключения Мориоки и Аракавы.",
-      "source_turn": "s10.text.128",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не выдаст конечного адресата без выгоды.",
-     "decides": "Применяет власть над поставками как рычаг.",
-     "deep_fear": "Утрата контроля над получателями и раскрытие маршрутов."
-    },
-    "unclocked_intents": [
-     "halt_s17_supply",
-     "verify_kusa_therapy"
-    ]
-   },
-   "look": {
-    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.hirano_seiji.look"
-   },
-   "prior_disclosures": [],
-   "profile": {
-    "first": "s08.text.091",
-    "inner": {},
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s10.text.129",
-      "what": "Шики расстался с Рэйкой, передал прямую связь и двинулся в Кусу. 12.03 достиг лишь сельских предместий: посты не видели его, тревоги нет; место дома не достигнуто. В Суне 03:00 Дейдара и Сасори похити"
-     }
-    ],
-    "memory_file": "archive/npc-memory/hirano_seiji.json",
-    "memory_total": 12,
-    "seen": "s10.text.129",
-    "state": "После уничтожения П-4 услышал от Шики о двух пробах лечебного носителя в Кусе и лечении чиновников. Письменно решил проверить результаты Мориоки/Аракавы и запросить сведения об образцах.",
-    "status": "present_profile",
-    "tier": "developed"
-   }
-  },
-  "khirano_seydzi": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-03-10T19:00:00",
-      "flaw": "Осава может отменить приказ.",
-      "goal": "Остановить местное выращивание С-17.",
-      "id": "stop_local_cultivation",
-      "if_unopposed": "Склады и лаборатория подпишут подтверждения получения запрета на культивирование.",
-      "next": "Проверить подтверждения принятия запрета лабораторией и складами.",
-      "source_turn": "s10.text.127",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не приказывает убивать зависимых пациентов.",
-     "decides": "Сохраняет собственную жизнь и доказательства, если приходится — жертвует программой.",
-     "deep_fear": "Стать единственным виновным перед Осавой или погибнуть из-за Шики."
-    },
-    "unclocked_intents": [
-     "stop_local_cultivation"
-    ]
-   },
-   "look": {
-    "внешность": "Мужчина за сорок, короткие седые волосы, впалые щёки, хромота, трость, кожаный футляр."
-   },
-   "prior_disclosure_ids": [
-    "s10.text.100",
-    "s10.text.101",
-    "s10.text.110",
-    "s10.text.114",
-    "s10.text.124",
-    "s10.text.125",
-    "s10.text.126",
-    "s10.text.128"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-03-08T08:01:00",
-     "sha256": "83fdb49aaa3029a711e0de255ef2234109b2852aaed5e940e82dd68a2de86cd7",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.100"
-    },
-    {
-     "at": "0010-03-10T17:15:00",
-     "sha256": "65551fa7fb8cb7c4d6df2b4286696c68940925ec682db9e7a4368d2571690d2e",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.126"
-    },
-    {
-     "at": "0010-03-10T17:20:00",
-     "sha256": "499c5f66e1755ed78cdef2d0664b5ee1e82d0eea97da0260fead1d689e68e397",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.128"
-    }
-   ],
-   "profile": {
-    "first": "s10.text.123",
-    "inner": {},
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s10.text.129",
-      "what": "Шики расстался с Рэйкой, передал прямую связь и двинулся в Кусу. 12.03 достиг лишь сельских предместий: посты не видели его, тревоги нет; место дома не достигнуто. В Суне 03:00 Дейдара и Сасори похити"
-     }
-    ],
-    "memory_file": "archive/npc-memory/khirano_seydzi.json",
-    "memory_total": 7,
-    "name": "Хирано Сэйдзи",
-    "role": "по подписи в сцене",
-    "seen": "s10.text.129",
-    "status": "present_profile",
-    "tier": "developed"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
   "nemera": {
    "alignment": {
     "breaking_point": "Реальный шанс свободы может привести к опасной сделке либо неожиданной верности своему слову",
@@ -951,182 +648,6 @@
     "wants": "По собственному высказыванию Шики: не просто выйти из тюрьмы, а иметь собственную волю и прямое, независимое восприятие мира, не нуждаясь в разрешении хозяина; до того — изучать Шики. Это её заявленная цель, не доказанн…"
    },
    "source_ref": "archive/session-*-turns.jsonl"
-  },
-  "p4_archivist_matsuda": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-03-10T19:00:00",
-      "flaw": "Администрация может изъять листы.",
-      "goal": "Защитить реестр контрольных проб.",
-      "id": "preserve_s17_ledger",
-      "if_unopposed": "В П-4 появится заверенная копия описи с тремя пробами и историей доступа.",
-      "next": "Сделать заверенную копию сегодняшней описи.",
-      "source_turn": "s10.text.125",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не подпишет чужую недостачу.",
-     "decides": "Опирается на письменный след и собственные полномочия.",
-     "deep_fear": "Стать крайней за подмену."
-    },
-    "unclocked_intents": [
-     "preserve_s17_ledger"
-    ]
-   },
-   "look": {
-    "внешность": "Женщина в тёмной служебной одежде с ключами на поясе и папкой под мышкой.",
-    "пол": "женский"
-   },
-   "prior_disclosure_ids": [
-    "s10.text.100",
-    "s10.text.104",
-    "s10.text.105",
-    "s10.text.108",
-    "s10.text.124",
-    "s10.text.125",
-    "s10.text.126",
-    "s10.text.128"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-03-08T08:01:00",
-     "sha256": "83fdb49aaa3029a711e0de255ef2234109b2852aaed5e940e82dd68a2de86cd7",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.100"
-    },
-    {
-     "at": "0010-03-10T17:15:00",
-     "sha256": "65551fa7fb8cb7c4d6df2b4286696c68940925ec682db9e7a4368d2571690d2e",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.126"
-    },
-    {
-     "at": "0010-03-10T17:20:00",
-     "sha256": "499c5f66e1755ed78cdef2d0664b5ee1e82d0eea97da0260fead1d689e68e397",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.128"
-    }
-   ],
-   "profile": {
-    "fears": "Стать виновной в исчезновении листов.",
-    "first": "s09.text.090",
-    "inner": {},
-    "leverage": "Владеет ключами архива и контрольными книгами.",
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s10.text.129",
-      "what": "Шики расстался с Рэйкой, передал прямую связь и двинулся в Кусу. 12.03 достиг лишь сельских предместий: посты не видели его, тревоги нет; место дома не достигнуто. В Суне 03:00 Дейдара и Сасори похити"
-     }
-    ],
-    "memory_file": "archive/npc-memory/p4_archivist_matsuda.json",
-    "memory_total": 13,
-    "name": "Мацуда (архивариус П-4)",
-    "role": "Архивариус П-4 комплекса Кэйсин",
-    "seen": "s10.text.129",
-    "state": "Осталась при регистрах П-4, заставила Хирано письменно оговорить запрет несанкционированного изъятия лечебных проб.",
-    "status": "present_profile",
-    "tier": "developed",
-    "voice": "Короткая требовательная речь, особенно о числах.",
-    "wants": "Не отвечать за чужие исправления реестра."
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
-  "tamura_reika": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-03-11T12:00:00",
-      "flaw": "Касиваги знает только финансовое звено.",
-      "goal": "Установить начальника группы фуиндзюцу, куда её передали после продажи.",
-      "id": "identify_closed_fuinsquad",
-      "if_unopposed": "Получит имя начальника или конкретного свидетеля отказа назвать его.",
-      "next": "Спросить осведомлённых сотрудников медснабжения о руководителе, начиная с Касиваги и врача.",
-      "source_turn": "s10.text.115",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не сдастся на эксперименты добровольно, даже Шики не доверяет до конца.",
-     "decides": "Сохраняет свободу и охотится за документами о заказчиках; на риск идёт осознанно.",
-     "deep_fear": "Снова стать подневольным живым инструментом фуин."
-    },
-    "unclocked_intents": [
-     "identify_closed_fuinsquad"
-    ]
-   },
-   "look": {
-    "внешность": "В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 год, сухощавая, подвижные пальцы с въевшимися следами чернил. Надорванная мочка левого уха (будто вырвали серьгу); левый указательный палец почти не сгибается; на людях — серо-синий платок на тёмных во"
-   },
-   "prior_disclosure_ids": [
-    "s10.text.001",
-    "s10.text.003",
-    "s10.text.005",
-    "s10.text.006",
-    "s10.text.124",
-    "s10.text.125",
-    "s10.text.126",
-    "s10.text.128"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-02-27T15:42:00",
-     "sha256": "f1f768a84703c1dcde4a5a00fb27bf88f9b42b5a696ff7dd2a6e54392adbe636",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.001"
-    },
-    {
-     "at": "0010-03-10T17:15:00",
-     "sha256": "65551fa7fb8cb7c4d6df2b4286696c68940925ec682db9e7a4368d2571690d2e",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.126"
-    },
-    {
-     "at": "0010-03-10T17:20:00",
-     "sha256": "499c5f66e1755ed78cdef2d0664b5ee1e82d0eea97da0260fead1d689e68e397",
-     "source": "archive/session-010-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s10.text.128"
-    }
-   ],
-   "profile": {
-    "fears": "Снова оказаться живым материалом под контролем исследователей.",
-    "first": "s09.text.068",
-    "inner": {},
-    "knows": [
-     "Шики раскрыл ложь Рэйки о незнании заранее согласованного плана взрыва.",
-     "Шики скрывает жильё и лабораторию за внешним водосбросом, вход защищён четырьмя фуин. Его изменённое лицо отшельника Рэйка впервые отчётливо увидела 08.03; в почте видела лишь неполные признаки, не распознав.",
-     "Шики заявляет о желании уничтожить людей структуры «Кэйсин» независимо от участия Рэйки; самостоятельного способа покинуть убежище ей не предоставил.",
-     "Шики рассказал ей обо всём известном расследовании: Инаба, Идзуми и 19-Т, Тэцу, Нори, Аракава, Мориока, Такаги, В-7 и С-17, генетическая культура, nsp-δ, Хирано, уничтожение маточника, 9 перевозок к «Кэйсин», Ф"
-    ],
-    "knows_ref": "memory/npc/tamura_reika.md",
-    "knows_total": 8,
-    "leverage": "Знает торговую цепочку своего пленения и владеет фуиндзюцу.",
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s10.text.129",
-      "what": "Шики расстался с Рэйкой, передал прямую связь и двинулся в Кусу. 12.03 достиг лишь сельских предместий: посты не видели его, тревоги нет; место дома не достигнуто. В Суне 03:00 Дейдара и Сасори похити"
-     }
-    ],
-    "memory_file": "archive/npc-memory/tamura_reika.json",
-    "memory_total": 57,
-    "name": "Тамура Рэйка",
-    "seen": "s10.text.129",
-    "state": "Приняла рабочую пластинку связи Шики, самостоятельно ушла по следу Котани. Согласилась по своей воле уничтожать подтверждённые изолированные С-17, реципиентов не трогает.",
-    "status": "present_profile",
-    "tier": "deep",
-    "voice": "Тихо, точно, с сухой злостью.",
-    "wants": "Вернуть свободу действий и предъявить счёт человеку, передавшему её покупателю."
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
   }
  },
  "recent_turns": [
@@ -1171,11 +692,7 @@
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "hirano_seiji": "memory/npc/hirano_seiji.md",
-   "khirano_seydzi": "memory/npc/khirano_seydzi.md",
-   "nemera": "memory/npc/nemera.md",
-   "p4_archivist_matsuda": "memory/npc/p4_archivist_matsuda.md",
-   "tamura_reika": "memory/npc/tamura_reika.md"
+   "nemera": "memory/npc/nemera.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"

@@ -8,7 +8,7 @@
 
 ## Кто здесь говорил с Шики
 - Тамура Рэйка · `npc/tamura_reika` — 20 ход(ов)
-- Хирано Сэйдзи · `npc/khirano_seydzi` — 11 ход(ов)
+- Хирано Сэйдзи · `npc/hirano_seiji` — 11 ход(ов)
 - Мацуда (архивариус П-4) · `npc/p4_archivist_matsuda` — 8 ход(ов)
 - Сугихара Рэндзо · `npc/seventh_well_senior_physician` — 8 ход(ов)
 - Курихара Наото · `npc/kurihara_naoto` — 6 ход(ов)
