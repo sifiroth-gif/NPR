@@ -110,6 +110,19 @@ class ScheduleTest(unittest.TestCase):
         self.assertIn("Прежняя «Цепь приказа»", notes[0]["text"])
 
 
+class FormTest(unittest.TestCase):
+    def test_unsigned_lines_make_the_turn_rewrite_and_next_carries_the_form(self):
+        from rpg_engine import hot as hot_module
+        text = "**Морита Кай:** — Условия изменились.\n\nОн выходит.\n\n— Мугами.\n\n— Я вернусь за телом."
+        report = hot_module._lint(text)
+        self.assertEqual(report["verdict"], "переписать")
+        self.assertIn("реплик без подписи: 2", report["hits"][0]["quote"])
+        self.assertEqual(hot_module._lint("**Мугами Шики:** — Иди.\n\n**Ход Шики.**")["hits"], [])
+        pack = nextpack.build(_hot(), {"cursor": {"id": "s10.text.010"}}, {}, [])
+        self.assertIn("**Полное имя:** — Текст", pack["form"])
+        self.assertIn("присутствие Шики", pack["form"])
+
+
 class PlanAndNextTest(unittest.TestCase):
     def test_paperwork_plan_gets_a_note(self):
         hot = _hot()
