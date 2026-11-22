@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.008: Аракава Дзюн (`npc/arakawa`), Сэно Фуми (`npc/road_villager_fumi`), Служащий западной почты (`npc/west_siran_mail_clerk`)
 - s11.text.007: Аракава Дзюн (`npc/arakawa`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `arakawa_patient_ampoule`
 - s11.text.006: Аракава Дзюн (`npc/arakawa`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
 - s11.text.005: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.080: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.079: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
 - s10.text.078: поправки игрока: 2
-- s10.text.077: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), поправки игрока: 3

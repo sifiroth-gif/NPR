@@ -161,6 +161,7 @@
 - Кусагакуре, Заброшенный исследовательский корпус № 3 · `places/kusagakure-zabroshennyy-issledovatelskiy-korpus-n-3` · 1 ход(ов), s02–s02
 - Кусагакуре, задний двор клиники Кирисавы Сэйны возле закрытой задней двери · `places/kusagakure-zadniy-dvor-kliniki-kirisavy-seyny-vozle-zakrytoy` · 1 ход(ов), s05–s05
 - Кусагакуре, Западная санитарная линия · `places/kusagakure-zapadnaya-sanitarnaya-liniya` · 1 ход(ов), s03–s03
+- Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 1 ход(ов), s11–s11
 - Кусагакуре, Западный коллектор · `places/kusagakure-zapadnyy-kollektor` · 1 ход(ов), s03–s03
 - Кусагакуре, западный медицинский квартал · `places/kusagakure-zapadnyy-meditsinskiy-kvartal` · 1 ход(ов), s11–s11
 - Кусагакуре, Западный распределительный узел · `places/kusagakure-zapadnyy-raspredelitelnyy-uzel` · 1 ход(ов), s03–s03
