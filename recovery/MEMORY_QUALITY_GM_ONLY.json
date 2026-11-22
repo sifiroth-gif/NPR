@@ -1,6 +1,7 @@
 {
   "current_focus": [
     "baki",
+    "chiyo_caravan",
     "kakashi",
     "kankuro",
     "naruto",
@@ -8,19 +9,20 @@
     "sakura",
     "suna_advance_tracker",
     "svyaznoy_peska",
-    "place:fe99b12cdbc034c2"
+    "place:8d1d12980db9d524"
   ],
-  "cursor": "s11.text.038",
+  "cursor": "s11.text.039",
   "focus_byte_limit": 6600,
-  "focus_bytes": 4933,
-  "index_entities": 619,
-  "index_source_records": 901,
-  "indexed_cursor": "s11.text.038",
+  "focus_bytes": 5095,
+  "index_entities": 624,
+  "index_source_records": 902,
+  "indexed_cursor": "s11.text.039",
   "kinds": {
+    "canon": 2,
     "entity": 1,
     "item": 18,
-    "npc": 130,
-    "place": 463,
+    "npc": 132,
+    "place": 464,
     "thread": 7
   },
   "missing_critical": [],
@@ -30,6 +32,18 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s11.text.039:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s11.text.039:1",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -207,6 +221,18 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "chiyo",
+      "kind": "npc"
+    },
+    {
+      "at_1": false,
+      "at_5": true,
+      "id": "chiyo_caravan",
+      "kind": "npc"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "clinic_assistant",
       "kind": "npc"
     },
@@ -274,18 +300,6 @@
       "at_1": true,
       "at_5": true,
       "id": "hoshina_ken",
-      "kind": "npc"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "hospital_night_admin",
-      "kind": "npc"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "hospital_pass_custodian",
       "kind": "npc"
     },
     {
@@ -476,9 +490,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 73,
-  "self_query_at_5": 74,
-  "self_query_count": 74,
+  "self_query_at_1": 74,
+  "self_query_at_5": 76,
+  "self_query_count": 76,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
