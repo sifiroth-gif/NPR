@@ -12,7 +12,7 @@
 - Мацуда (архивариус П-4) · `npc/p4_archivist_matsuda` — 8 ход(ов)
 - Сугихара Рэндзо · `npc/seventh_well_senior_physician` — 8 ход(ов)
 - Курихара Наото · `npc/kurihara_naoto` — 6 ход(ов)
-- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 4 ход(ов)
+- Принимающий служащий · `npc/prinimayushchiy_sluzhashchiy` — 3 ход(ов)
 - Касиваги Масато · `npc/kashiwagi_masato` — 2 ход(ов)
 - Сотрудник снабжения · `npc/sotrudnik_snabzheniya` — 2 ход(ов)
 - Немера (Невыписанная) · `npc/nemera` — 1 ход(ов)
