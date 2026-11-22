@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.122: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), hirano_seiji (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `s17_early_shiki_aliquot`
 - s10.text.121: Курихара Наото (`npc/kurihara_naoto`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Тамура Рэйка (`npc/tamura_reika`), hirano_seiji (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.120: hirano_seiji (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Фурукава Кёдзи (`npc/caravan_prisoner`)
 - s10.text.119: hirano_seiji (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Сотрудник снабжения (`npc/sotrudnik_snabzheniya`), Хосина Кэн (`npc/hoshina_ken`)
@@ -60,4 +61,3 @@
 - s10.text.065: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.064: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.063: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
-- s10.text.062: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Тагицухимэ (`npc/tagitsuhime`)
