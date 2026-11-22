@@ -78,6 +78,15 @@ class StepTest(unittest.TestCase):
         self.assertEqual(hot["_will"]["news"]["missed"], 0)
         self.assertIn("current", hot["_will"]["news"])
 
+    def test_new_day_without_news_opens_a_pulse(self):
+        hot = _hot(happened=[_event("minagi_zen", "Минаги Дзэн продал адрес сторожки.", status="failed",
+                                    name="Минаги Дзэн")], at="0010-03-04T22:00:00")
+        news.step(hot, [{"id": "s10.text.010", "gm": "."}])
+        hot["cursor"].update(id="s10.text.011", at="0010-03-05T01:00:00")
+        item = news.step(hot, [{"id": "s10.text.011", "gm": "Полночь прошла."}])
+        self.assertEqual(item["why"], "новые сутки")
+        self.assertIn("01.03 12:00 — Минаги Дзэн.", item["must"])
+
     def test_long_scene_lets_the_world_in(self):
         hot = _hot()
         for n in range(1, news.LONG + 1):

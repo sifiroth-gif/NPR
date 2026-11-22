@@ -272,12 +272,14 @@ def default_outcome(entry):
     goal = entry.get("goal") or entry.get("next") or ""
     if status == "fulfilled":
         return entry.get("if_unopposed") or f"добился: {goal}"
+    goal = goal.rstrip(" .")
     if status == "partial":
-        flaw = f"; слабость оставила след: {entry['flaw']}" if entry.get("flaw") else ""
-        return f"наполовину: {entry.get('if_unopposed') or goal}{flaw}"
+        flaw = f" Помешала его слабость: {str(entry['flaw']).rstrip(' .')}." if entry.get("flaw") else ""
+        return f"Добился лишь части: {str(entry.get('if_unopposed') or goal).rstrip(' .')}.{flaw}"
     if status == "failed":
-        return f"сорвалось — {entry.get('flaw') or 'помешали'}; цель «{goal}» остаётся"
-    return f"оставил: {goal}"
+        why = f" Подвела его слабость: {str(entry['flaw']).rstrip(' .')}." if entry.get("flaw") else " Ему помешали."
+        return f"Сорвалось: {goal}.{why} Цель остаётся."
+    return f"Оставил: {goal}."
 
 
 def _successor_key(active, done, key):
