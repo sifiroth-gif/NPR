@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.062",
+  "cursor": "s10.text.063",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1389,7 +1389,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -1397,13 +1397,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-03-04T09:19:00",
-          "excerpt": "s\" weight=\"medium\">4 марта 1287 года · 09:19</text> ### Рьючидо. Внутреннее святилище Следующий час Хакудзя-сэннин посвящает практике. На этот раз она не предлагает Шики постичь очередную философскую истину. В каменном бассейне появляются два поддерживаемых се",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.060"
         },
         {
           "at": "0010-03-04T09:21:00",
@@ -1418,6 +1411,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.062"
+        },
+        {
+          "at": "0010-03-04T09:22:00",
+          "excerpt": "22</text> ### Рьючидо. Внутреннее святилище **Шики:** — У всех есть свои тайны. Сколько мы знакомы? Хакудзя-сэннин некоторое время смотрит на него. Затем её огромная голова опускается чуть ниже. **Хакудзя-сэннин:** — Меньше двух часов. Она издаёт негромкий сме",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.063"
         }
       ],
       "projections": [
@@ -9248,6 +9248,23 @@
         "s04.text.027"
       ]
     },
+    "place:d5e1d2908e8bebbc": {
+      "aliases": [
+        "place:d5e1d2908e8bebbc",
+        "Рьючидо, внутреннее святилище",
+        "внутреннее святилище"
+      ],
+      "facts": [],
+      "id": "place:d5e1d2908e8bebbc",
+      "kind": "place",
+      "label": "Рьючидо, внутреннее святилище",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.063"
+      ]
+    },
     "place:d643ebbca231a7b4": {
       "aliases": [
         "place:d643ebbca231a7b4",
@@ -11586,7 +11603,7 @@
       ],
       "projections": [
         {
-          "seen": "s10.text.062",
+          "seen": "s10.text.063",
           "state": "После распоряжения матери задержалась у галереи и ответила Шики о его внешней реакции при виде дна, подчеркнув собственную неуверенность в его чувствах. После прекращения разговора ушла; затвор нижнего прохода закрыт."
         },
         {
@@ -11595,8 +11612,7 @@
       ],
       "sources": [
         "recovery/cast/tagitsuhime.json",
-        "recovery/HOT.json",
-        "s10.text.062"
+        "recovery/HOT.json"
       ]
     },
     "tagorihime": {
@@ -12310,17 +12326,17 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s10.text.062",
-          "state": "Выслушала дочь, пресекла разговор о дне озера; побудила Шики высказать своё предположение о том, почему нижний слой запрещено показывать."
+          "seen": "s10.text.063",
+          "state": "После вопроса Шики отказалась выспрашивать догадку, оставила нижнее озеро под запретом. Отошла, открыв ему выход. Образцы ядов убраны с открытой площадки в закрытый каменный резервуар бассейна."
         },
         {
-          "state": "Выслушала дочь, пресекла разговор о дне озера; побудила Шики высказать своё предположение о том, почему нижний слой запрещено показывать."
+          "state": "После вопроса Шики отказалась выспрашивать догадку, оставила нижнее озеро под запретом. Отошла, открыв ему выход. Образцы ядов убраны с открытой площадки в закрытый каменный резервуар бассейна."
         }
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
         "recovery/HOT.json",
-        "s10.text.062"
+        "s10.text.063"
       ]
     }
   },
@@ -12425,5 +12441,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 805
+  "source_turns_indexed": 806
 }
