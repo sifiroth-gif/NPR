@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.113: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
 - s10.text.112: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.111: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Морита Кай (`npc/p4_marked_hunter`), бой
 - s10.text.110: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Тамура Рэйка (`npc/tamura_reika`)
@@ -60,4 +61,3 @@
 - s10.text.056: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Фурукава Кёдзи (`npc/caravan_prisoner`), поправки игрока: 1
 - s10.text.055: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Минаги Дзэн (`npc/minagi_zen`)
 - s10.text.054: Минаги Дзэн (`npc/minagi_zen`)
-- s10.text.053: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 1
