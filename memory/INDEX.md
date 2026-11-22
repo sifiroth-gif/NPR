@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s11.text.018`
+# Карта мира NPR · на ходе `s11.text.019`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -9,6 +9,7 @@
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa` · в сцене
 - Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Сэно Фуми (Сэно, Фуми) — торговка у сельской развилки Кусы · `npc/road_villager_fumi`
 - Неустановленный наблюдатель у западного шлюза — Скрытое наблюдение за встречей Аракавы; принадлежность пока не установлена. · `npc/sluice_hidden_watcher`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Хирано Сэйдзи (Хирано, Сэйдзи) — Мужчина за сорок, короткие седые волосы, впалые щёки, хромо… · `npc/hirano_seiji`
@@ -19,7 +20,6 @@
 - Служащий западной почты — Приёмщик частных отправлений · `npc/west_siran_mail_clerk`
 - Дежурная врач охраняемого отделения — Врач-дежурант Центрального госпиталя, выжившие реципиенты серии С-17 · `npc/night_icu_physician`
 - Тацумори Идзуми (Тацумори, Идзуми) — специальный дзёнин оперативной службы · `npc/tatsumori_izumi`
-- Сэно Фуми (Сэно, Фуми) — торговка у сельской развилки Кусы · `npc/road_villager_fumi`
 - Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Принимающий служащий — по подписи в сцене · `npc/prinimayushchiy_sluzhashchiy`
 - Сугихара Рэндзо (Старший врач, Сугихара) — Пожилой врач в очках, белый халат поверх тёмной формы, мета… · `npc/seventh_well_senior_physician`
@@ -209,7 +209,7 @@
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
 
-## Вещи (49)
+## Вещи (50)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -252,6 +252,7 @@
 - `shiki_finances` · `items/shiki_finances`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
 - `shiki_medical_kit` · `items/shiki_medical_kit`
+- `shiki_s17_report_folder` · `items/shiki_s17_report_folder`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
 - `signaller_contract_tube` · `items/signaller_contract_tube`

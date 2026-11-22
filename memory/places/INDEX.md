@@ -83,6 +83,7 @@
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Кусагакуре, Дом семьи Суга · `places/kusagakure-dom-semi-suga` · 2 ход(ов), s03–s03
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 2 ход(ов), s05–s05
+- Кусагакуре, северный хозяйственный квартал · `places/kusagakure-severnyy-khozyaystvennyy-kvartal` · 2 ход(ов), s05–s11
 - Кусагакуре, северный проезд УВБ возле повозки · `places/kusagakure-severnyy-proezd-uvb-vozle-povozki` · 2 ход(ов), s05–s05
 - Кусагакуре, Северный вход в старый водоотвод · `places/kusagakure-severnyy-vkhod-v-staryy-vodootvod` · 2 ход(ов), s02–s02
 - Кусагакуре, служебный двор старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-starogo-administrativnogo-kryla` · 2 ход(ов), s06–s06
@@ -141,7 +142,6 @@
 - Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
 - Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
 - Кусагакуре, северная насосная станция · `places/kusagakure-severnaya-nasosnaya-stantsiya` · 1 ход(ов), s11–s11
-- Кусагакуре, северный хозяйственный квартал · `places/kusagakure-severnyy-khozyaystvennyy-kvartal` · 1 ход(ов), s05–s05
 - Кусагакуре, северный проезд УВБ у старой котельной · `places/kusagakure-severnyy-proezd-uvb-u-staroy-kotelnoy` · 1 ход(ов), s05–s05
 - Кусагакуре, северный служебный проезд УВБ у повозки · `places/kusagakure-severnyy-sluzhebnyy-proezd-uvb-u-povozki` · 1 ход(ов), s05–s05
 - Кусагакуре, Штаб управления безопасности · `places/kusagakure-shtab-upravleniya-bezopasnosti` · 1 ход(ов), s02–s02

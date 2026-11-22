@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.019: Аракава Дзюн (`npc/arakawa`), Курода Маю (`npc/kuroda_mayu`), Сэно Фуми (`npc/road_villager_fumi`), вещь `shiki_s17_report_folder`, план сюжета
 - s11.text.018: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Курода Маю (`npc/kuroda_mayu`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `arakawa_transport_copy`, линия `v7`, план сюжета
 - s11.text.017: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Хирано Сэйдзи (`npc/hirano_seiji`)
 - s11.text.016: Аракава Дзюн (`npc/arakawa`), Касэ (`npc/kase`)
@@ -61,4 +62,3 @@
 - s10.text.091: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), план сюжета
 - s10.text.090: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), вещь `hoshina_journal_1184`
 - s10.text.089: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Касэ (`npc/kase`), план сюжета
-- s10.text.088: поправки игрока: 1
