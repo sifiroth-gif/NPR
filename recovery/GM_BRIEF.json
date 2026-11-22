@@ -46,6 +46,16 @@
  },
  "checks": [
   {
+   "kind": "fight",
+   "text": "Бросок «Убить диверсанта до активации заряда»: порог 88, по формуле 95 (перевес +3.0).",
+   "turn": "s10.text.082"
+  },
+  {
+   "kind": "fight",
+   "text": "Бросок «Убить диверсанта до активации заряда»: перевес +3.0 — исход решается без броска.",
+   "turn": "s10.text.082"
+  },
+  {
    "kind": "things",
    "text": "reika_direct_comm_plate: изменён предмет вне учёта; введён без проверки прежнего состояния",
    "turn": "s10.text.129"
@@ -53,26 +63,6 @@
   {
    "kind": "write",
    "text": "Запись хода: вся запись сверх сцены 4052 знаков (норма до 4000); крупнее всего: cast 1182, scene 848, truth 379.",
-   "turn": "s10.text.129"
-  },
-  {
-   "kind": "plot",
-   "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Смерть Кадзекагэ» (`ch13_kazekage`).",
-   "turn": "s10.text.129"
-  },
-  {
-   "kind": "will",
-   "text": "«Тамура Рэйка» 14 ход(ов) рядом с Шики только отвечает. Его цель: «Установить начальника группы фуиндзюцу, куда её передали после продажи.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s10.text.129"
-  },
-  {
-   "kind": "will",
-   "text": "«Мацуда (архивариус П-4)» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Защитить реестр контрольных проб.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s10.text.129"
-  },
-  {
-   "kind": "plot",
-   "text": "Открылась «Смерть Кадзекагэ» (`ch13_kazekage`) — срок мира 0010-03-12 03:00: события идут без Шики; доведи их до него вестью, слухом или людьми.",
    "turn": "s10.text.129"
   },
   {
@@ -246,7 +236,7 @@
   "place": "Страна Травы, сельские предместья Кусагакуре, вдали от внешнего дозора",
   "time": "14:10"
  },
- "digest": "095609548a15fe6f42f8adcc77c529a280150ce2bbaff4066f333ccda3441a95",
+ "digest": "181719d7158f5783ef5b3ca2d77683e9c01c402ba2da77469f2ac359bc3344ce",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -476,7 +466,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-03-12T14:10:00",
+  "closed": 10,
+  "first_turn": "s11.text.001",
+  "last_turn": "s10.text.129",
+  "next_session": 11,
+  "source": "campaigns/shiki/continuity/SESSION_010_TO_011_HANDOFF.json",
+  "sqlite_revision": 811
+ },
  "horror": {
   "due": null,
   "npcs": {
@@ -1207,12 +1205,12 @@
    "shiki_finances"
   ],
   "secret_topics": [
+   "v7_maintenance",
+   "v7_personal_targeting",
    "v7_tapping",
    "vials",
    "visitor_claim",
-   "ward_lock_broken",
-   "kazekage_attack",
-   "kusa_no_detection"
+   "ward_lock_broken"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
