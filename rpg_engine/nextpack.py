@@ -163,7 +163,7 @@ def must(hot, always_present=(), entries=None):
 
 
 def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None,
-          recall=None, news=None):
+          recall=None, news=None, extra=None):
     cursor = brief.get("cursor") or {}
     present = [k for k in (hot.get("scene") or {}).get("present") or [] if k != lore.SHIKI]
     pack = {
@@ -190,6 +190,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                                      "исход, требующий встречи с Шики, случается в ближайшей возможной сцене.",
                              "events": happened}
     pack["form"] = FORM
+    for key in ("canon_review", "canon", "style"):   # канон к сцене и образец манеры (hot._canon_and_style)
+        if (extra or {}).get(key):
+            pack[key] = extra[key]
     if echoed:
         pack["echo"] = echoed
     if recall:
@@ -247,6 +250,10 @@ def _fit(pack):
         pack["due"].pop()
     while _size(pack) > HARD_BYTES and len(pack.get("checks") or []) > 3:
         pack["checks"].pop(0)
+    if _size(pack) > HARD_BYTES:            # образец манеры — первым из необязательного
+        pack.pop("style", None)
+    while _size(pack) > HARD_BYTES and len((pack.get("canon") or {}).get("items") or []) > 1:
+        pack["canon"]["items"].pop()
     for answer in (pack.get("recall") or {}).get("answers") or []:   # полный ответ — в файле
         if _size(pack) > HARD_BYTES and len(answer.get("top") or []) > 1:
             answer["top"] = answer["top"][:1]
@@ -272,9 +279,9 @@ def _write(state_dir, pack):
 
 
 def write(state_dir, hot, brief, checks, always_present=(), happened=None, echoed=None, near=None, recall=None,
-          news=None):
+          news=None, extra=None):
     pack = build(hot, brief, checks, lore.load(state_dir), always_present, directives.view(state_dir, hot),
-                 happened=happened, echoed=echoed, near=near, recall=recall, news=news)
+                 happened=happened, echoed=echoed, near=near, recall=recall, news=news, extra=extra)
     _write(state_dir, pack)
     return pack
 

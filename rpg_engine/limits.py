@@ -43,6 +43,8 @@ STATE = "recovery/LIMITS.json"   # когда что сказано игроку
 ACT_CLOSE = "закрыть сессию (SESSION_CLOSE.json)"
 ACT_TRIM = "разгрузить сейчас (MEMORY_TRIM.json)"
 ACT_RAISE = "поднять предел (хранитель)"
+ACT_CHAT = "открыть новый чат: сессия продолжится с NEXT.next_id, правила перечитаются"
+CHAT_TURNS = 50          # ходов в одном чате ведущего, после которых правила вымываются (s10.text.093)
 ACT_RULE = "заменить правило или перенести в ref/"
 
 
@@ -82,6 +84,11 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
     if seq >= SESSION_TURNS * WARN:
         items.append({"key": "session", "what": f"сессия идёт {seq} ходов (рекомендуется до {SESSION_TURNS})",
                       "acts": [ACT_CLOSE], "over": seq > SESSION_TURNS})
+    chat = (hot.get("fold") or {}).get("chat") or {}
+    if int(chat.get("turns") or 0) >= CHAT_TURNS * WARN:
+        items.append({"key": "chat", "what": f"чат ведущего идёт {chat['turns']} ходов (с {chat.get('since')}): "
+                                             "правила со старта вымываются, вёрстка и канон теряются",
+                      "acts": [ACT_CHAT], "over": chat["turns"] > CHAT_TURNS})
     path = state_dir / STATE
     try:
         said = json.loads(path.read_text(encoding="utf-8")).get("said") or {}

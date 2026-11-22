@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import aging, claims, echo, limits, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import aging, canon, claims, echo, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -1128,6 +1128,8 @@ def fold(state_dir):
             name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)
             if turn.get("kind") not in ("ooc", "technical", "void"):
                 name_notes += npc_memory.check_marks(base, turn, archived, _always_present(state_dir))
+                # Сторож канона и уход манеры — только при нарушении: чистый ход ничего не добавляет.
+                hot.setdefault("_checks", []).extend(canon.guard(state_dir, turn) + style.drift(state_dir, turn))
             # Состав по подписям реплик, если ведущий не записал present (код не правит его запись).
             spoke, unnamed = presence.voices(turn, names, always)
             cards = presence.auto_cards(hot, turn, unnamed, names)
@@ -1296,10 +1298,12 @@ def fold(state_dir):
             encoding="utf-8")
         meaning_report = _recall_layer(engine_root, state_dir, hot)
     from . import recall_request
+    extra = _canon_and_style(state_dir, hot, applied)
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
                         secret_bytes=len(texts[1].encode("utf-8")))
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
-                   echoed=echoed, near=near, recall=recall_request.view(state_dir, hot), news=news_item)
+                   echoed=echoed, near=near, recall=recall_request.view(state_dir, hot), news=news_item,
+                   extra=extra)
     news.write_pace(state_dir, hot)
     return {"status": "updated" if changed else "current",
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
@@ -1307,6 +1311,39 @@ def fold(state_dir):
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
             "heuristic_history": heuristic, "meaning": meaning_report, "wiki": wiki_report,
             "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
+
+
+def _canon_and_style(state_dir, hot, applied):
+    """Свод канона, канон к сцене, сверка раз в 20 ходов, эталоны и образец манеры; длина чата."""
+    engine_root = Path(__file__).resolve().parents[1]
+    extra = {}
+    _count_chat(hot, applied)
+    for name, step in (("canon_digest", lambda: canon.digest(state_dir)),
+                       ("canon", lambda: canon.for_scene(state_dir, hot, applied, engine_root)),
+                       ("canon_review", lambda: canon.review(state_dir, hot)),
+                       ("style_tagged", lambda: style.tag(state_dir, applied)),
+                       ("style", lambda: style.sample(state_dir, hot, applied))):
+        try:
+            value = step()
+        except Exception as exc:   # производное: сбой не останавливает свёртку
+            hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
+                                                  "text": f"{name}: {type(exc).__name__}: {exc}"})
+            continue
+        if value and name in ("canon", "canon_review", "style"):
+            extra[name] = value
+    return extra
+
+
+def _count_chat(hot, applied):
+    """Ходов в нынешнем чате ведущего: метка "chat": "new" в TURN, чтение GM_CORE или новая сессия — с нуля."""
+    chat = hot.setdefault("fold", {}).setdefault("chat", {"turns": 0})
+    for turn in applied or []:
+        session = str(turn.get("id") or "").split(".", 1)[0]
+        fresh = turn.get("chat") == "new" or any(str(r).endswith("GM_CORE.md") for r in turn.get("read") or [])
+        if fresh or chat.get("session") != session:
+            chat.update(since=turn.get("id"), turns=0, session=session)
+        chat["turns"] = int(chat.get("turns") or 0) + 1
+    return chat
 
 
 def _recall_layer(engine_root, state_dir, hot):
