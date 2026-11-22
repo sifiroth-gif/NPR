@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.105: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета, поправки игрока: 1
 - s10.text.104: Минаги Дзэн (`npc/minagi_zen`), Тамура Рэйка (`npc/tamura_reika`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.103: Тамура Рэйка (`npc/tamura_reika`), Минаги Дзэн (`npc/minagi_zen`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s10.text.102: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`, вещь `shiki_medical_kit`, план сюжета
@@ -60,4 +61,3 @@
 - s10.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
 - s10.text.047: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой
 - s10.text.046: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой
-- s10.text.045: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`)
