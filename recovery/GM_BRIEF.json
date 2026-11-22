@@ -97,7 +97,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s10.text.067",
+  "cursor": "s10.text.068",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -216,11 +216,11 @@
  "cursor": {
   "at": "0010-03-04T09:24:20",
   "date": "Четверг, 4 марта 1287 года",
-  "id": "s10.text.067",
+  "id": "s10.text.068",
   "place": "Рьючидо, внутреннее святилище, у Хакудзя-сэннин",
   "time": "09:24"
  },
- "digest": "f8c32ffacac91313be8d0fccbe2ac2a43373267730b1c48b3e2225dca7e480a3",
+ "digest": "55090c39eae071856e62db22cdb291efae0d89ca1143befa5857c7f92ba42d07",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -261,18 +261,18 @@
    "value": 69.86
   },
   "dice": [
-   45,
+   57,
+   87,
+   47,
+   7,
+   42,
    17,
-   80,
-   1,
-   60,
-   82,
-   48,
-   10,
-   80,
-   21,
-   12,
-   34
+   59,
+   88,
+   0,
+   61,
+   68,
+   60
   ],
   "injuries": {
    "shiki": [
@@ -626,7 +626,7 @@
     },
     {
      "at": "0010-03-04T09:24:20",
-     "sha256": "1786fb79577196bb62440c9139335f2cabfb2283f70822b9ff8cd27cd43f3d68",
+     "sha256": "ae12ba333af9836c2e95e406a078a18cf416ff47ebba6e75129290de0814c50c",
      "source": "archive/session-010-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s10.text.067"
@@ -649,7 +649,7 @@
     "memory_file": "archive/npc-memory/white_snake_sage.json",
     "memory_total": 22,
     "name": "Белая Змея / Хакудзя-сэннин",
-    "seen": "s10.text.067",
+    "seen": "s10.text.068",
     "state": "После включения Шарингана Шики резко отстранилась и узнала рисунок Учиха у шиноби Травы. Разрешает удаление локального очага из слизистой, но требует сначала объяснить находку и профилактику новой контаминации.",
     "status": "present_profile",
     "tier": "deep"
@@ -693,8 +693,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "f1c50d095fe2a6dcc7a2a86a61f2fc4d86d66bb0",
-  "turn": "s10.text.067"
+  "sha": "bf5092ffc507910393aaabce164142f0e8d6d386",
+  "turn": "s10.text.068"
  },
  "wiki": {
   "index": "memory/INDEX.md",
