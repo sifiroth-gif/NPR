@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.081`
+# Карта мира NPR · на ходе `s10.text.082`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -9,8 +9,8 @@
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Преследователь с медной биркой — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter` · в сцене
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken` · в сцене
-- Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Хагуро (Змея Рьючидо) — по подписи в сцене · `npc/khaguro`
+- Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Итикисимахимэ — Женщина в длинном светлом одеянии, волосы собраны высоко, н… · `npc/ryuchido_gate_woman`
 - Тагорихимэ — Женский облик: длинные тёмные волосы почти до пола, серо-зе… · `npc/tagorihime`
 - Тагицухимэ — Женщина в длинном светлом одеянии, босиком стоит на гладкой… · `npc/tagitsuhime`
@@ -188,22 +188,17 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (12)
-- `tetsu` — Тэцу мёртв (s04.text.051). Аракава признал, что сам послал его за В-7… · `threads/tetsu`
-- `v7` — По полностью прочитанным документам №1184 сеть С-17 продолжила работу… · `threads/v7`
-- `order` — 16:28. План дома находится у патруля с 09:01 в КС-318/83. Шики удалил… · `threads/order`
+## Линии (7)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
-- `central_visitors` — Неизвестный проситель от имени Центрального управления потребовал спи… · `threads/central_visitors`
-- `case19T` — Личная закрытая проверка Кагэ идёт. Нори официально отстранена, журна… · `threads/case19T`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
 
-## Давние линии (16, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/unknown_buyer_mask`
+## Давние линии (21, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
 ## Вещи (39)
 - `black_caravan_contract` · `items/black_caravan_contract`

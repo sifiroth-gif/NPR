@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.082: Хосина Кэн (`npc/hoshina_ken`), Преследователь с медной биркой (`npc/p4_marked_hunter`), Немера (Невыписанная) (`npc/nemera`), Хагуро (`npc/khaguro`), план сюжета, бой
 - s10.text.081: Хосина Кэн (`npc/hoshina_ken`), Немера (Невыписанная) (`npc/nemera`), Преследователь с медной биркой (`npc/p4_marked_hunter`), план сюжета
 - s10.text.080: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.079: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
@@ -61,4 +62,3 @@
 - s10.text.025: Итикисимахимэ (`npc/ryuchido_gate_woman`), Хагуро (`npc/khaguro`), Реципиент № 6 (`npc/s17_recipient_6`)
 - s10.text.024: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
 - s10.text.023: Хагуро (`npc/khaguro`), Такаги Рэн (`npc/takagi_ren`)
-- s10.text.022: Хагуро (`npc/khaguro`), Немера (Невыписанная) (`npc/nemera`)
