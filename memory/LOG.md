@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.073: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.072: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), бой
 - s10.text.071: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.070: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
@@ -60,4 +61,3 @@
 - s10.text.016: Тамура Рэйка (`npc/tamura_reika`), Курода Маю (`npc/kuroda_mayu`), Старший у повозки (`npc/kiri_transfer_senior`)
 - s10.text.015: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Кидзима Суми (`npc/kuroishi_visitor`), Хасуми Дзюнъити (`npc/kuroishi_hasumi`)
 - s10.text.014: Тамура Рэйка (`npc/tamura_reika`)
-- s10.text.013: Тамура Рэйка (`npc/tamura_reika`), Минасэ Рэи (`npc/minase`), Медик у панели В-7 (`npc/medical_panel_operator`)
