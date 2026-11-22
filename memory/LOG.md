@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.098: Тамура Рэйка (`npc/tamura_reika`), план сюжета, поправки игрока: 1
 - s10.text.097: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `hoshina_journal_1184`
 - s10.text.096: Тамура Рэйка (`npc/tamura_reika`)
 - s10.text.095: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `hoshina_journal_1184`, поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.041: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Младший шиноби Звука (`npc/sound_kagen_junior`)
 - s10.text.040: Тагицухимэ (`npc/tagitsuhime`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старший шиноби Звука (`npc/sound_kagen_senior`)
 - s10.text.039: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`), hirano_seiji (`npc/hirano_seiji`)
-- s10.text.038: Тагицухимэ (`npc/tagitsuhime`), Тагорихимэ (`npc/tagorihime`)
