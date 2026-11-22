@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.013: Аракава Дзюн (`npc/arakawa`), Минаги Дзэн (`npc/minagi_zen`)
 - s11.text.012: Аракава Дзюн (`npc/arakawa`)
 - s11.text.011: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Мориока Хидэаки (`npc/morioka_hideaki`)
 - s11.text.010: Аракава Дзюн (`npc/arakawa`), Немера (Невыписанная) (`npc/nemera`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), вещь `arakawa_patient_ampoule`, поправки игрока: 1
@@ -60,4 +61,3 @@
 - s10.text.085: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), план сюжета
 - s10.text.084: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета
 - s10.text.083: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
-- s10.text.082: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), Немера (Невыписанная) (`npc/nemera`), Хагуро (`npc/khaguro`), план сюжета, бой

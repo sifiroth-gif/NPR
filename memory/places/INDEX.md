@@ -144,6 +144,7 @@
 - Кусагакуре, северный служебный проезд УВБ у повозки · `places/kusagakure-severnyy-sluzhebnyy-proezd-uvb-u-povozki` · 1 ход(ов), s05–s05
 - Кусагакуре, Штаб управления безопасности · `places/kusagakure-shtab-upravleniya-bezopasnosti` · 1 ход(ов), s02–s02
 - Кусагакуре, Старый водоотвод за западным корпусом госпиталя · `places/kusagakure-staryy-vodootvod-za-zapadnym-korpusom-gospitalya` · 1 ход(ов), s02–s02
+- Кусагакуре, старый западный шлюз · `places/kusagakure-staryy-zapadnyy-shlyuz` · 1 ход(ов), s11–s11
 - Кусагакуре, тёмный проход у западного водоотводного канала · `places/kusagakure-temnyy-prokhod-u-zapadnogo-vodootvodnogo-kanala` · 1 ход(ов), s04–s04
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
 - Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
