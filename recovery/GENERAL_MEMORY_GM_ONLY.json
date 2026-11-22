@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s10.text.075",
+  "cursor": "s10.text.076",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1338,7 +1338,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -1346,13 +1346,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:29:00",
-          "excerpt": "изиться к возвышению, когда раздаётся голос — глубокий, хрипловатый, с нечеловечески долгими паузами между словами. **Белая Змея:** — Хагуро привёл человека. Голова слегка поворачивается. **Белая Змея:** — Итикисима осталась без угощения. Тагори — без послушно",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.040"
         },
         {
           "at": "0010-03-04T07:30:00",
@@ -1367,17 +1360,30 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.043"
+        },
+        {
+          "at": "0010-03-04T09:44:30",
+          "excerpt": "Конечно конечно. А что Хагуро ушел? <text color=\"secondary\" size=\"xs\">4 марта 1287 года · 09:44</text> ### Рьючидо. Внешние врата **Мугами Шики:** — Конечно, конечно. А что, Хагуро ушёл? **Итикисимахи",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.076"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.037",
-          "state": "Остался снаружи закрывшихся ворот первого испытания Рьючидо; больше не видит Шики непосредственно."
+          "seen": "s10.text.076",
+          "state": "У внешних ворот, на уступе; увидел Шики в устойчивом Режиме отшельника, спросил об итогах обучения. Не считает себя обязанным караулить призывателя; собственные дела у ворот продолжаются."
+        },
+        {
+          "role": "по подписи в сцене",
+          "state": "У внешних ворот, на уступе; увидел Шики в устойчивом Режиме отшельника, спросил об итогах обучения. Не считает себя обязанным караулить призывателя; собственные дела у ворот продолжаются."
         }
       ],
       "sources": [
-        "recovery/cast/khaguro.json"
+        "recovery/cast/khaguro.json",
+        "recovery/HOT.json",
+        "s10.text.076"
       ]
     },
     "khakudzya_sennin": {
@@ -5245,8 +5251,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s10.text.075",
-        "s10.text.025"
+        "s10.text.025",
+        "s10.text.075"
       ]
     },
     "place:4f922e209950b381": {
@@ -7312,6 +7318,23 @@
       "projections": [],
       "sources": [
         "s06.text.023"
+      ]
+    },
+    "place:93ccf9d9bf271e88": {
+      "aliases": [
+        "place:93ccf9d9bf271e88",
+        "Рьючидо, внешние врата",
+        "внешние врата"
+      ],
+      "facts": [],
+      "id": "place:93ccf9d9bf271e88",
+      "kind": "place",
+      "label": "Рьючидо, внешние врата",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s10.text.076"
       ]
     },
     "place:940d8fab17235733": {
@@ -10938,7 +10961,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -10946,13 +10969,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-03-04T07:29:00",
-          "excerpt": "изиться к возвышению, когда раздаётся голос — глубокий, хрипловатый, с нечеловечески долгими паузами между словами. **Белая Змея:** — Хагуро привёл человека. Голова слегка поворачивается. **Белая Змея:** — Итикисима осталась без угощения. Тагори — без послушно",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.040"
         },
         {
           "at": "0010-03-04T07:30:00",
@@ -10967,6 +10983,13 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.043"
+        },
+        {
+          "at": "0010-03-04T09:44:30",
+          "excerpt": "Конечно конечно. А что Хагуро ушел? <text color=\"secondary\" size=\"xs\">4 марта 1287 года · 09:44</text> ### Рьючидо. Внешние врата **Мугами Шики:** — Конечно, конечно. А что, Хагуро ушёл? **Итикисимахи",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.076"
         }
       ],
       "projections": [
@@ -10989,7 +11012,7 @@
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -10997,13 +11020,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
-        },
-        {
-          "at": "0010-03-04T07:12:00",
-          "excerpt": "т к хозяйственной нише, где теперь достаточно чисто, чтобы укрыться между двумя плотно придвинутыми корзинами. Итикисимахимэ провожает её взглядом. **Итикисимахимэ:** — Ну конечно. Теперь она ещё и запомнит твоё имя. Она поворачивается к открытой лестнице. **И",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.031"
         },
         {
           "at": "0010-03-04T07:29:25",
@@ -11018,21 +11034,28 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.075"
+        },
+        {
+          "at": "0010-03-04T09:44:30",
+          "excerpt": "09:44</text> ### Рьючидо. Внешние врата **Мугами Шики:** — Конечно, конечно. А что, Хагуро ушёл? **Итикисимахимэ:** — С порога? Давно. Ты ведь заставил его ждать почти три часа. Она пожимает плечами. **Итикисимахимэ:** — Хотя Хагуро не из тех, кто станет терпе",
+          "source": "archive/session-010-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s10.text.076"
         }
       ],
       "projections": [
         {
-          "seen": "s10.text.075",
-          "state": "В зале первого испытания увидела Шики возвращающимся в новом облике змеиного отшельника; открыла внешние врата, осталась внутри."
+          "seen": "s10.text.076",
+          "state": "У внешнего порога; сообщила Шики, что Хагуро не стоял под дверью и не обязался ждать. Усмехнулась, когда тот сам появился."
         },
         {
-          "state": "В зале первого испытания увидела Шики возвращающимся в новом облике змеиного отшельника; открыла внешние врата, осталась внутри."
+          "state": "У внешнего порога; сообщила Шики, что Хагуро не стоял под дверью и не обязался ждать. Усмехнулась, когда тот сам появился."
         }
       ],
       "sources": [
         "recovery/cast/ryuchido_gate_woman.json",
         "recovery/HOT.json",
-        "s10.text.075"
+        "s10.text.076"
       ]
     },
     "s17_recipient_6": {
@@ -11691,8 +11714,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tagorihime.json",
-        "s10.text.075"
+        "recovery/cast/tagorihime.json"
       ]
     },
     "takagi_ren": {
@@ -12345,8 +12367,7 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин",
-        "white_snake_sage"
+        "Белая Змея / Хакудзя-сэннин"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -12361,8 +12382,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/white_snake_sage.json",
-        "s10.text.075"
+        "recovery/cast/white_snake_sage.json"
       ]
     }
   },
@@ -12467,5 +12487,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 816
+  "source_turns_indexed": 817
 }

@@ -173,6 +173,7 @@
 - Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
+- Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 1 ход(ов), s10–s10
 - Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
 - Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
 - Рьючидо, Зал неподвижной воды у моста · `places/ryuchido-zal-nepodvizhnoy-vody-u-mosta` · 1 ход(ов), s10–s10
