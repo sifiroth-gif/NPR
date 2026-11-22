@@ -220,3 +220,4 @@
 - Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
 - Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
+- За пределами Кусагакуре, старая дорожная развилка у переправы · `places/za-predelami-kusagakure-staraya-dorozhnaya-razvilka-u-perepr` · 1 ход(ов), s11–s11

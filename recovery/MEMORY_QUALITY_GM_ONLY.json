@@ -1,23 +1,26 @@
 {
   "current_focus": [
-    "arakawa",
-    "kuroda_mayu",
+    "baki",
+    "kankuro",
     "kusa_head",
     "nemera",
-    "place:63870fb6be4cae32"
+    "razvedchik_zvuka",
+    "place:278fd12dd78c8c43",
+    "hoshina_ken"
   ],
-  "cursor": "s11.text.020",
+  "cursor": "s11.text.021",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3909,
-  "index_entities": 604,
-  "index_source_records": 883,
-  "indexed_cursor": "s11.text.020",
+  "focus_bytes": 4090,
+  "index_entities": 610,
+  "index_source_records": 884,
+  "indexed_cursor": "s11.text.021",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 22,
-    "npc": 120,
-    "place": 453,
-    "thread": 8
+    "npc": 123,
+    "place": 454,
+    "thread": 9
   },
   "missing_critical": [],
   "notes": [
@@ -26,6 +29,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s11.text.021:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -455,6 +464,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:case19T",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:nemera_symbiosis",
       "kind": "thread"
     },
@@ -502,9 +517,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 79,
-  "self_query_count": 79,
+  "self_query_at_1": 80,
+  "self_query_at_5": 81,
+  "self_query_count": 81,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

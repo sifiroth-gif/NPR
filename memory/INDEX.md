@@ -1,15 +1,19 @@
-# Карта мира NPR · на ходе `s11.text.020`
+# Карта мира NPR · на ходе `s11.text.021`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (218) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (219) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (189)
-- Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa` · в сцене
+## Персонажи (190)
+- Баки — дзёнин, куратор команды Суны · `npc/baki` · в сцене
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head` · в сцене
-- Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu` · в сцене
+- Канкуро — генин, участник · `npc/kankuro` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Разведчик Звука (Разведчик) — по подписи в сцене · `npc/razvedchik_zvuka` · в сцене
+- suna_advance_tracker — Худощавая обветренная женщина-шиноби из Сунагакуре, на пояс… · `npc/suna_advance_tracker`
+- Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
+- Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu`
 - Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter`
 - Сэно Фуми (Сэно, Фуми) — торговка у сельской развилки Кусы · `npc/road_villager_fumi`
 - Неустановленный наблюдатель у западного шлюза — Скрытое наблюдение за встречей Аракавы; принадлежность пока не установлена. · `npc/sluice_hidden_watcher`
@@ -76,7 +80,6 @@
 - Хирано — задержанный; шесть лет страдал двигательными нарушениями, принимал препарат · `npc/hirano`
 - Дежурная администратор госпиталя —  · `npc/hospital_night_admin`
 - Хранитель лабораторных пропусков госпиталя —  · `npc/hospital_pass_custodian`
-- Разведчик Звука (Разведчик) — по подписи в сцене · `npc/razvedchik_zvuka`
 - Кадзиура Сатору (Кадзиура, Сатору) — Старший врач реанимационного отделения Центрального госпиталя, координатор лече… · `npc/kadziura_satoru`
 - Транспортник госпиталя —  · `npc/hospital_transporter`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
@@ -151,7 +154,6 @@
 - Анко Митараши (Анко, Митараши) — токубэцу-дзёнин, второй этап · `npc/anko`
 - Асума Сарутоби (Асума) — дзёнин, наставник Команды 10 · `npc/asuma`
 - Асумага Тосэ (Асумага, Тосэ) — дзёнин-руководитель группы · `npc/kusa_leader`
-- Баки — дзёнин, куратор команды Суны · `npc/baki`
 - Баю — генин, участник · `npc/baiu`
 - Гаара — генин, участник · `npc/gaara`
 - Гэнма Ширануи (Гэнма, Ширануи) — токубэцу-дзёнин, финалы · `npc/genma`
@@ -162,7 +164,6 @@
 - Ино Яманака (Яманака) — генин, участница · `npc/ino`
 - Кагари — генин, участник · `npc/kagari`
 - Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 · `npc/kakashi`
-- Канкуро — генин, участник · `npc/kankuro`
 - Кацура Сэйдзи (Кацура) — генин, участник · `npc/kusa_rival1`
 - Киба Инудзука (Киба, Инудзука) — генин, участник · `npc/kiba`
 - Кин Цути (Цути) — генин, участница · `npc/kin`
@@ -196,7 +197,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (8)
+## Линии (9)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
@@ -205,9 +206,10 @@
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
 - `v7` — 12.03.1287 Шики уничтожил известные запасные клеточные ткани линии В-… · `threads/v7`
+- `case19T` — С 12.03.1287 после передачи Шики документальной папки лично Кагэ расс… · `threads/case19T`
 
-## Давние линии (20, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
+## Давние линии (19, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
 
 ## Вещи (50)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
