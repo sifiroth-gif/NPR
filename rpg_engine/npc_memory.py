@@ -55,6 +55,8 @@ STATUS_ALIASES = {
 CLOSED = ("fulfilled", "partial", "failed", "abandoned")
 PASSIVE = re.compile(r"^\s*(дожд|жд[её]т|ждать|ожид|сохран|продолжа|наблюда|оставаться|не\s)", re.I)
 CHANNELS = ("present", "witnessed", "told", "document", "inferred", "rumor", "mentioned")
+BOOKKEEPING = frozenset(("intent", "psyche", "why"))   # запись за кадром, не опыт NPC
+ALWAYS_WITNESS = ("nemera",)                          # сенсорная связь: переживает всё с Шики
 STABLE = ("wants", "fears", "voice")
 INNER_KEYS = ("mem", "rel", "affect", "intent", "psyche", "why", "dread")
 CARD_FIRST = 1      # самый ранний эпизод в карточке: откуда NPC знает Шики
@@ -283,7 +285,12 @@ def apply(hot, turn, inner):
         return
     present = [k for k in (hot.get("scene") or {}).get("present") or []
                if k in (hot.get("cast") or {})]
-    touched = set(present) | {k for k in inner if k in (hot.get("cast") or {})}
+    # Отсутствующий NPC «узнал» сцену, только если запись хода говорит о его опыте (память,
+    # отношение, чувство, страх). План и характер (intent, psyche) ведущий пишет за кадром по
+    # просьбе NEXT.must — это не эпизод: иначе NPC «помнит» сцены, где его не было (Мориока и
+    # допрос Мориты, s10.text.084; 216 из 345 таких «узнал» до починки).
+    touched = set(present) | {k for k, own in inner.items() if k in (hot.get("cast") or {})
+                              and (k in ALWAYS_WITNESS or not set(own) <= BOOKKEEPING)}
     line = _short(turn.get("line") or "", 260)
     for key in sorted(touched):
         card = hot["cast"][key]
@@ -657,3 +664,60 @@ def load_episodes(state_dir, key):
     if not path.is_file():
         return []
     return json.loads(path.read_text(encoding="utf-8")).get("episodes", [])
+
+
+def repair_told(state_dir):
+    """Хранитель: убрать ложные «узнал» — эпизоды отсутствующих NPC от записи только плана.
+
+    Сверяет каждый эпизод ``told`` с дельтой его хода в ``archive/deltas``: если для этого
+    NPC там был лишь intent/psyche/why, эпизод убирается из архива памяти, карточки в
+    recovery/cast и HOT.json; ``memory_total`` уменьшается на столько же.
+    """
+    import glob
+    import json as _json
+    import os
+    state_dir = Path(state_dir)
+    deltas = {}
+    for path in glob.glob(str(state_dir / "archive/deltas/session-*.jsonl")):
+        for line in Path(path).read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                row = _json.loads(line)
+                deltas[row["id"]] = row.get("d") or {}
+
+    def false(key, episode):
+        if episode.get("ch") != "told" or key in ALWAYS_WITNESS:
+            return False
+        patch = ((deltas.get(episode.get("turn")) or {}).get("cast") or {}).get(key)
+        return isinstance(patch, dict) and bool(patch) and set(patch) <= BOOKKEEPING
+
+    removed = {}
+    for path in glob.glob(str(state_dir / "archive/npc-memory/*.json")):
+        key = os.path.basename(path)[:-5]
+        data = _json.loads(Path(path).read_text(encoding="utf-8"))
+        kept = [e for e in data.get("episodes") or [] if not false(key, e)]
+        if len(kept) != len(data.get("episodes") or []):
+            removed[key] = len(data["episodes"]) - len(kept)
+            data["episodes"] = kept
+            Path(path).write_text(_json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    def fix_card(key, card):
+        memory = card.get("memory")
+        if not isinstance(memory, list):
+            return False
+        kept = [e for e in memory if not false(key, e)]
+        if len(kept) == len(memory):
+            return False
+        card["memory"] = kept
+        card["memory_total"] = max(len(kept), int(card.get("memory_total") or 0) - removed.get(key, len(memory) - len(kept)))
+        return True
+
+    for path in glob.glob(str(state_dir / "recovery/cast/*.json")):
+        key = os.path.basename(path)[:-5]
+        card = _json.loads(Path(path).read_text(encoding="utf-8"))
+        if fix_card(key, card):
+            Path(path).write_text(_json.dumps(card, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    hot_path = state_dir / "recovery/HOT.json"
+    hot = _json.loads(hot_path.read_text(encoding="utf-8"))
+    if any([fix_card(k, c) for k, c in (hot.get("cast") or {}).items() if isinstance(c, dict)]):
+        hot_path.write_text(_json.dumps(hot, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return {"removed": sum(removed.values()), "npcs": len(removed), "top": sorted(removed.items(), key=lambda kv: -kv[1])[:10]}
