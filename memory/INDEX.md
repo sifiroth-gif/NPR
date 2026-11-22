@@ -201,7 +201,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (8)
+## Линии (7)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
@@ -209,10 +209,9 @@
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
-- `v7` — 12.03.1287 Шики уничтожил известные запасные клеточные ткани линии В-… · `threads/v7`
 
-## Давние линии (20, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
+## Давние линии (21, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
 ## Вещи (50)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`

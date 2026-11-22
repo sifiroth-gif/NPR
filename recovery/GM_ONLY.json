@@ -365,14 +365,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "secure_patient_duplicate_transfer",
-     "at": "0010-03-11T16:00:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: В независимом больничном журнале появится запись о получении заключения либо об отказе; врач отделения сможет её проверить. Помешала его слабость: Копию могут задержать при регистрации и затребовать проверку подписи.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "keep_patient_conclusions_accessible",
      "at": "0010-03-13T09:00:00",
      "goal": "Оставить доступными лечащим врачам два заверенных заключения по пациентам С-17 после частично сорвавшегося сохранения оригиналов.",
@@ -398,7 +390,8 @@
     "transfer_clinical_shift_unchanged",
     "patient_safe_transfer",
     "preserve_new_ward_records",
-    "secure_duplicate_ward_certification"
+    "secure_duplicate_ward_certification",
+    "secure_patient_duplicate_transfer"
    ]
   },
   "s17_recipient_6": {
@@ -472,13 +465,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "test_independent_sensing",
-     "at": "0010-03-12T20:48:00",
-     "status": "failed",
-     "outcome": "Шики покинул западный шлюз в 18:18, до срока плана в 18:20; Немера не успела исследовать мокрый камень у шлюза, выбрала испытать другой доступный материал позже.",
-     "turn": "s11.text.020"
-    },
-    {
      "key": "test_own_tactile_link",
      "at": "0010-03-13T17:36:00",
      "goal": "Научиться отличать собственное тактильное восприятие от получаемого через Шики и постепенно выбирать его источники самостоятельно.",
@@ -513,7 +499,8 @@
     "inspect_spillway_traces",
     "examine_departure_latch",
     "observe_reika_broker",
-    "probe_medical_feeder"
+    "probe_medical_feeder",
+    "test_independent_sensing"
    ],
    "drift": [
     {
@@ -680,14 +667,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "return_dose_and_document_cure",
-     "at": "0010-03-12T20:30:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: В западном медотделении будет зарегистрирован возврат ампулы С-17 и медицинский осмотр с подтверждением восстановленной функции руки; эти записи станут известны отделу снабжения. Помешала его слабость: Бывший инспектор х",
-     "turn": "s11.text.021",
-     "by": "world"
-    },
-    {
      "key": "request_independent_cure_attestation",
      "at": "0010-03-13T16:00:00",
      "goal": "Добиться независимой фиксации полного выздоровления без распространения личных сведений врача Шики по снабженческой сети.",
@@ -736,7 +715,8 @@
     "seek_shiki_treatment",
     "survive_confrontation",
     "secure_documented_exit",
-    "negotiate_diagnosis_and_exchange"
+    "negotiate_diagnosis_and_exchange",
+    "return_dose_and_document_cure"
    ]
   },
   "kusa_head": {
@@ -750,14 +730,6 @@
    },
    "intent": {},
    "intent_done": [
-    {
-     "key": "seal_permit_register",
-     "at": "0010-03-06T10:00:00",
-     "status": "fulfilled",
-     "outcome": "У административного окна Кусагакуре появится видимая печать и объявление о приостановке спорных пропусков, люди будут задержаны у входа; это станет доступно Шики только через путь сведений.",
-     "turn": "s10.text.092",
-     "by": "world"
-    },
     {
      "key": "independent_19t_review",
      "at": "0010-03-13T07:30:00",
@@ -779,7 +751,8 @@
     "contain_v7_failure",
     "retain_partial_control",
     "separate_secure_archives",
-    "consolidate_administration"
+    "consolidate_administration",
+    "seal_permit_register"
    ],
    "dread": {
     "stage": 2,
@@ -972,14 +945,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "submit_clinical_contamination_addendum",
-     "at": "0010-03-07T16:00:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: В госпитальном архиве появится подписанный Куродой новый документ с датой и указанием границ методики; дежурный хранитель засвидетельствует получение. Помешала его слабость: Архив уже становился целью вмешательств, а доб",
-     "turn": "s10.text.092",
-     "by": "world"
-    },
-    {
      "key": "preserve_independent_lab_proof",
      "at": "0010-03-12T21:30:00",
      "goal": "Сохранить достоверные независимые данные о произошедшем разрушении контрольного образца С-17 и об условиях его хранения.",
@@ -999,7 +964,8 @@
     "audit_sample_chain",
     "defend_control_log",
     "protect_original_sample_log",
-    "preserve_s17_chain_copy"
+    "preserve_s17_chain_copy",
+    "submit_clinical_contamination_addendum"
    ],
    "dread": {
     "stage": 2,
@@ -1111,14 +1077,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "take_witness_guard_post",
-     "at": "0010-03-12T20:00:00",
-     "status": "fulfilled",
-     "outcome": "Касэ займёт вечерний пост у внутренней регистратуры безопасности, сменив назначенного туда шиноби; посещающие регистратуру свидетели будут встречать именно его.",
-     "turn": "s11.text.021",
-     "by": "world"
-    },
-    {
      "key": "secure_night_registry",
      "at": "0010-03-13T06:30:00",
      "goal": "Удержать внутреннюю регистратуру свидетелей от несанкционированной выдачи документов без силовой погони со слабой рукой.",
@@ -1140,7 +1098,8 @@
     "limited_field_return",
     "seek_left_hand_post",
     "request_field_reassignment",
-    "seek_noncombat_assignment"
+    "seek_noncombat_assignment",
+    "take_witness_guard_post"
    ]
   },
   "nao": {
@@ -1334,14 +1293,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "secure_independent_testimony",
-     "at": "0010-03-12T20:30:00",
-     "status": "failed",
-     "outcome": "Сорвалось: Добиться официально защищённых показаний о принудительных поставках Хирано после сорвавшейся доставки к следствию. Подвела его слабость: Продолжает зависеть от малого круга людей, за которыми могут наблюдать участники сети снабже",
-     "turn": "s11.text.021",
-     "by": "world"
-    },
-    {
      "key": "secure_independent_medical_testimony",
      "at": "0010-03-13T12:00:00",
      "goal": "Вывести сведения о принудительных выдачах С-17 из зависимого от снабженцев канала, несмотря на провал защищённой передачи.",
@@ -1400,7 +1351,8 @@
     "audit_witness_seals",
     "lodge_external_seal_record",
     "provide_testimony_to_izumi",
-    "seek_protected_hearing"
+    "seek_protected_hearing",
+    "secure_independent_testimony"
    ]
   },
   "hospital_pass_custodian": {
@@ -1562,14 +1514,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "verify_kusa_therapy",
-     "at": "0010-03-11T10:00:00",
-     "status": "fulfilled",
-     "outcome": "В канцелярию Кусы поступит подписанный запрос Хирано о лечебных образцах и двух пациентах.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "verify_therapeutic_result_in_kusa",
      "at": "0010-03-13T12:00:00",
      "goal": "Проверить возможность самостоятельного лечения зависимых реципиентов С-17 без воспроизводства его культур.",
@@ -1598,7 +1542,8 @@
     "pressure_outside_supply_witness",
     "preserve_s17_controls",
     "halt_s17_supply",
-    "stop_local_cultivation"
+    "stop_local_cultivation",
+    "verify_kusa_therapy"
    ],
    "dread": {
     "stage": 4,
@@ -2683,14 +2628,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "clarify_summons_obligation",
-     "at": "0010-03-08T18:00:00",
-     "status": "fulfilled",
-     "outcome": "У внешних ворот появится знак ограниченных обязательств Хагуро, заметный при следующем визите Шики.",
-     "turn": "s10.text.103",
-     "by": "world"
-    },
-    {
      "key": "defend_refusal_rights",
      "at": "0010-03-13T12:00:00",
      "goal": "Закрепить перед стражами Рьючидо право Хагуро не отвечать за чужие призывы и чужие побочные сущности.",
@@ -2714,7 +2651,8 @@
    "done_keys": [
     "escort_shiki_to_ryuchido",
     "report_second_companion",
-    "warn_senior_about_double_presence"
+    "warn_senior_about_double_presence",
+    "clarify_summons_obligation"
    ]
   },
   "nagae_rokuto": {
@@ -2881,14 +2819,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "reconcile_prohibited_borrowers",
-     "at": "0010-03-10T17:00:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: Контора внесёт запретных заёмщиков в книгу и отклонит заявки по известным связям; отказ станет известен просителям. Помешала его слабость: Номинальные держатели могут скрывать настоящих заказчиков.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "check_collateral_chain",
      "at": "0010-03-13T15:00:00",
      "goal": "Размещать часть доверенных Шики 58 млн рё в обеспеченных займах, соблюдая запрет на кредитование «Кэйсин».",
@@ -2910,7 +2840,8 @@
     "track_mail",
     "protect_contact_chain",
     "broker_second_counter",
-    "negotiate_secure_deposit"
+    "negotiate_secure_deposit",
+    "reconcile_prohibited_borrowers"
    ],
    "psyche": {
     "decides": "Берегёт нейтралитет и платёжеспособность конторы прежде чьей-либо дружбы.",
@@ -2921,14 +2852,6 @@
   "hoshina_ken": {
    "intent": {},
    "intent_done": [
-    {
-     "key": "file_caravan_casualty_claim",
-     "at": "0010-03-12T18:00:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: В книге артели появится заявление Хосины либо письменный отказ, доступный перевозчикам. Помешала его слабость: Слабость после кровопотери, наниматели могут оспорить данные.",
-     "turn": "s11.text.018",
-     "by": "world"
-    },
     {
      "key": "petition_guard_families",
      "at": "0010-03-14T12:00:00",
@@ -2978,7 +2901,8 @@
     "secure_next_contract",
     "survive_broker_ambush",
     "protect_remaining_guards",
-    "register_original_transfer"
+    "register_original_transfer",
+    "file_caravan_casualty_claim"
    ],
    "psyche": {
     "decides": "Сначала сохраняет людей и подтверждающие бумаги, затем деньги; не превращает служебную обязанность в личную вендетту.",
@@ -2989,14 +2913,6 @@
   "caravan_prisoner": {
    "intent": {},
    "intent_done": [
-    {
-     "key": "copy_collar_marks",
-     "at": "0010-03-11T14:00:00",
-     "status": "fulfilled",
-     "outcome": "В карте Ф-04 появится слепок либо официальный отказ, заметный медперсоналу.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
     {
      "key": "preserve_necklace_evidence_copy",
      "at": "0010-03-13T17:00:00",
@@ -3045,7 +2961,8 @@
     "preserve_witness",
     "duplicate_1184_evidence",
     "protect_medical_deposition",
-    "request_medical_receipt"
+    "request_medical_receipt",
+    "copy_collar_marks"
    ],
    "psyche": {
     "decides": "Дозирует опасные воспоминания; предпочитает документы личным заверениям.",
@@ -3276,14 +3193,6 @@
    },
    "intent_done": [
     {
-     "key": "preserve_external_refusal",
-     "at": "0010-03-11T10:00:00",
-     "status": "fulfilled",
-     "outcome": "В журнале караула появится запись либо отказ, доступный служащим поста.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "route_independent_receipt",
      "at": "0010-03-13T17:00:00",
      "goal": "Получить архивное подтверждение уже заявленного отказа в третьей подписи приёмки по №1184, несмотря на лишение доступа к журналу.",
@@ -3308,7 +3217,8 @@
     "register_close",
     "hold_audit_trail",
     "personal_audit_copy",
-    "secure_receipt_witness"
+    "secure_receipt_witness",
+    "preserve_external_refusal"
    ]
   },
   "p4_archivist_matsuda": {
@@ -3339,14 +3249,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "preserve_s17_ledger",
-     "at": "0010-03-10T19:00:00",
-     "status": "failed",
-     "outcome": "Сорвалось: Защитить реестр контрольных проб. Подвела его слабость: Администрация может изъять листы. Цель остаётся.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "record_missing_registry",
      "at": "0010-03-13T10:00:00",
      "goal": "Восстановить доказательную цепочку реестра проб П-4 после административного изъятия.",
@@ -3372,7 +3274,8 @@
     "relay_message",
     "preserve_p4_copy",
     "audit_source_manifest",
-    "preserve_amendment_trail"
+    "preserve_amendment_trail",
+    "preserve_s17_ledger"
    ]
   },
   "seventh_well_duty_physician": {
@@ -3595,14 +3498,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "trace_bogus_p4_employer",
-     "at": "0010-03-12T18:00:00",
-     "status": "fulfilled",
-     "outcome": "В западной почте появится запрос Мориты с датой, приёмщик или наниматель узнают о его поисках.",
-     "turn": "s11.text.018",
-     "by": "world"
-    },
-    {
      "key": "trace_false_p4_employer",
      "at": "0010-03-13T17:00:00",
      "goal": "После успешной сверки поддельной бирки П-4 выяснить личность заказчика, не подставляясь под второй контракт.",
@@ -3646,7 +3541,8 @@
     "take_manifest",
     "avoid_retribution",
     "broker_shiki_sale",
-    "retrieve_partner"
+    "retrieve_partner",
+    "trace_bogus_p4_employer"
    ]
   },
   "west_siran_mail_clerk": {
@@ -3763,14 +3659,6 @@
    },
    "intent_done": [
     {
-     "key": "protect_kurihara",
-     "at": "0010-03-10T18:00:00",
-     "status": "failed",
-     "outcome": "Сорвалось: Зафиксировать отказ Курихары от принудительного перевода. Подвела его слабость: Администрация может отстранить врача. Цель остаётся.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "collect_patient_refusals",
      "at": "0010-03-13T11:00:00",
      "goal": "Сохранить документальное подтверждение отказа от принудительного перевода пациентов и независимость врачебного решения.",
@@ -3790,7 +3678,10 @@
     "deep_fear": "Повторить принудительную шестую операцию.",
     "boundary": "Не подписывать новую операцию без согласия пациента."
    },
-   "name": "Сугихара Рэндзо"
+   "name": "Сугихара Рэндзо",
+   "done_keys": [
+    "protect_kurihara"
+   ]
   },
   "kurihara_naoto": {
    "dread": {
@@ -3820,14 +3711,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "seek_independent_review",
-     "at": "0010-03-11T10:00:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: В палату Д-3 явится врач другого отделения и внесёт независимый осмотр в историю Курихары. Помешала его слабость: Второй врач может подчиняться снабжению.",
-     "turn": "s10.text.129",
-     "by": "world"
-    },
-    {
      "key": "secure_second_medical_opinion",
      "at": "0010-03-13T14:00:00",
      "goal": "Получить независимое заключение о состоянии трансплантированных тканей, не попав под новое принудительное вмешательство.",
@@ -3849,7 +3732,8 @@
    },
    "name": "Курихара Наото",
    "done_keys": [
-    "sign_refusal"
+    "sign_refusal",
+    "seek_independent_review"
    ]
   },
   "sotrudnik_snabzheniya": {
@@ -3892,14 +3776,6 @@
    "intent": {},
    "intent_done": [
     {
-     "key": "recover_stall_goods",
-     "at": "0010-03-12T17:20:00",
-     "status": "partial",
-     "outcome": "Добился лишь части: Торговое место у развилки опустеет, женщина перенесёт товар к жилым дворам, где её знают. Помешала его слабость: Спешит из-за опасения потерять выручку и может оставить часть товара без присмотра.",
-     "turn": "s11.text.018",
-     "by": "world"
-    },
-    {
      "key": "reopen_local_stall_with_son",
      "at": "0010-03-13T09:30:00",
      "goal": "Возобновить торговлю в знакомых соседских дворах и не подвергать семилетнего сына опасности.",
@@ -3916,7 +3792,8 @@
    ],
    "name": "Сэно Фуми",
    "done_keys": [
-    "report_road_sighting"
+    "report_road_sighting",
+    "recover_stall_goods"
    ]
   },
   "sluice_hidden_watcher": {
@@ -3951,20 +3828,6 @@
    },
    "intent_done": [
     {
-     "key": "escort_unnamed_medic_to_suna",
-     "at": "0010-03-12T21:51:00",
-     "status": "partial",
-     "outcome": "Савара направила Баки полное имя нукенина до допуска, решение о сопровождении зависит от намерения Шики и ответа Баки.",
-     "turn": "s11.text.026"
-    },
-    {
-     "key": "secure_baki_decision",
-     "at": "0010-03-13T11:26:00",
-     "status": "fulfilled",
-     "outcome": "13.03 на передовой пост пришло личное распоряжение Баки сопровождать Мугами к госпиталю без задержания по пути; допуск к Канкуро решит медицинское командование.",
-     "turn": "s11.text.027"
-    },
-    {
      "key": "escort_shiki_to_hospital",
      "at": "0010-03-14T16:12:00",
      "goal": "Доставить согласившегося помочь Канкуро врача Мугами к госпиталю Суны до ухудшения состояния пациента, не потерять отряд и не допустить преждевременного конфликта.",
@@ -3981,13 +3844,6 @@
     "stage": 4,
     "since": "s11.text.022",
     "log": [
-     {
-      "turn": "s11.text.030",
-      "at": "0010-03-14T16:12:00",
-      "change": "рост",
-      "saw": "Услышала непосредственное признание Шики о проживании год у убийцы Четвёртого Кадзекагэ и его намерении использовать собственный организм для анализа яда.",
-      "does": "Передала сведения командованию и не сорвала лечение."
-     },
      {
       "turn": "s11.text.031",
       "at": "0010-03-14T16:24:00",
@@ -4012,7 +3868,9 @@
    "done_keys": [
     "pursue_abductors_without_clearance",
     "protect_wounded_subordinate",
-    "save_ito_and_seek_treatment_for_kankuro"
+    "save_ito_and_seek_treatment_for_kankuro",
+    "escort_unnamed_medic_to_suna",
+    "secure_baki_decision"
    ],
    "psyche": {
     "decides": "Как старший разведчик сохраняет приказ и подчинённых даже тогда, когда это заставляет принять лично неприятный риск.",
@@ -4061,13 +3919,6 @@
     "stage": 4,
     "since": "s11.text.021",
     "log": [
-     {
-      "turn": "s11.text.030",
-      "at": "0010-03-14T16:12:00",
-      "change": "рост",
-      "saw": "Внешние змеиные признаки у бывшего участника экзамена и достоверный донесённый рассказ о контракте от Орочимару.",
-      "does": "Разрешил доступ к пациенту без навязанного метода."
-     },
      {
       "turn": "s11.text.031",
       "at": "0010-03-14T16:24:00",
@@ -4135,13 +3986,6 @@
     "since": "s11.text.021",
     "log": [
      {
-      "turn": "s11.text.021",
-      "at": "0010-03-12T21:39:20",
-      "change": "калибровка",
-      "saw": "Шики не видел; Канкуро находится в Суне.",
-      "does": "Продолжает получать лечение в Суне; непосредственного контакта с Шики нет."
-     },
-     {
       "turn": "s11.text.034",
       "at": "0010-03-14T17:02:00",
       "change": "рост",
@@ -4193,13 +4037,6 @@
     "stage": 4,
     "since": "s11.text.023",
     "log": [
-     {
-      "turn": "s11.text.024",
-      "at": "0010-03-12T21:41:00",
-      "change": "рост",
-      "saw": "Змеиный облик неизвестного врача и сообщение о чёрной медицинской чакре.",
-      "does": "Лично разрешил лечить себя."
-     },
      {
       "turn": "s11.text.025",
       "at": "0010-03-12T21:47:00",
@@ -4263,13 +4100,6 @@
     "stage": 3,
     "since": "s11.text.033",
     "log": [
-     {
-      "turn": "s11.text.033",
-      "at": "0010-03-14T16:33:00",
-      "change": "калибровка",
-      "saw": "Сакура увидела старого знакомого Шики со змеиными глазами и чешуёй, в халате, услышала выводы о трёхфракционном яде и от Баки узнала о проглатывании образца без последствий.",
-      "does": "Прервала расспросы о прошлом ради пациента, провела своё исследование и предложила совместную работу."
-     },
      {
       "turn": "s11.text.034",
       "at": "0010-03-14T17:02:00",
@@ -4359,26 +4189,6 @@
    "turn": "s11.text.035",
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, shiki_training, shiki_finances, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"])."
-  },
-  {
-   "turn": "s11.text.035",
-   "kind": "will",
-   "text": "«Немера (Невыписанная)» 7 ход(ов) рядом с Шики только отвечает. Его цель: «По собственному высказыванию Шики: не просто выйти из тюрьмы, а иметь собственную волю и прямое, независимое восприятие мира, не нуждаясь в разрешении хозяина; до того — изучать Шики. Это её заявленная цель, не доказанная степень откровенности.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
-  },
-  {
-   "turn": "s11.text.035",
-   "kind": "will",
-   "text": "«Савара» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Не допустить, чтобы страх перед Мугами или спор о награде сорвал лечение Канкуро до решения врача.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
-  },
-  {
-   "turn": "s11.text.035",
-   "kind": "will",
-   "text": "«Связной Песка» 8 ход(ов) рядом с Шики только отвечает. Его цель: «не записана». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
-  },
-  {
-   "turn": "s11.text.035",
-   "kind": "will",
-   "text": "«Связной Песка» появляется уже 8 раз, а воли у него нет: задай d.cast.svyaznoy_peska.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
   }
  ],
  "horror": {
