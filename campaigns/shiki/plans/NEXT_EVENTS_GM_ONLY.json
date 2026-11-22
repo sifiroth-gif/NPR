@@ -1,106 +1,93 @@
 {
   "schema": "npr-shiki-next-session-events/1",
-  "access": "GM_ONLY / Keeper preparation. Do not show player; not yet actual events.",
-  "prepared_real_at": "2026-11-20",
-  "closed_session": 8,
-  "next_session": 9,
-  "cursor": "s08.text.106",
-  "at": "0006-10-09T16:17:00",
+  "access": "GM_ONLY. Keeper preparation, not a played turn and not a compulsory plot.",
+  "prepared_real_at": "2026-11-22",
+  "closed_session": 10,
+  "next_session": 11,
+  "cursor": "s10.text.129",
+  "at": "0010-03-12T14:10:00",
   "sources": [
-    "archive/session-008-turns.jsonl#s08.text.100..106",
-    "archive/session-008-index.json",
-    "recovery/NEXT.json",
+    "archive/session-010-turns.jsonl#s10.text.117..129",
+    "archive/session-010-index.json",
+    "campaigns/shiki/continuity/SESSION_010_TO_011_HANDOFF.json",
     "memory/PLOT.GM_ONLY.md",
-    "memory/npc/kabuto.md",
-    "memory/npc/kagen_patient_adult.md",
-    "memory/npc/nemera.md",
-    "campaigns/shiki/continuity/SESSION_008_TO_009_HANDOFF_1283-10-09.json"
+    "memory/npc/tamura_reika.md",
+    "memory/npc/hirano_seiji.md",
+    "recovery/NEXT.json"
   ],
-  "priority": [
-    "Direct player statements, NEXT.directives and NEXT.must outrank preparation.",
-    "Shiki's acceptance/refusal/terms are not determined; no offscreen meeting with Orochimaru forced.",
-    "Current active chapter and queued story elements have priority over unrelated new arcs.",
-    "Do not read hidden facts into Kabuto, Sound attendants or Shiki without an actual information channel.",
-    "Once Kabuto's offer is answered or evaded, conclude the beat; do not make five paperwork scenes.",
-    "Next session starts in Kabuto's laboratory after the patient has been removed, no time jump before Shiki's first response."
+  "binding": [
+    "Do not decide Shiki's next approach or expose him to the guard post: he is not identified, no alarm has been raised and he is still outside the village.",
+    "Late amendment s10.text.129 supersedes the invented checkpoint encounter, wanted poster and any house entry.",
+    "Shiki's reputation is in professional Bingo-book and pursuit channels, not public posters and certainly not an omniscient village network.",
+    "World events happen autonomously. Shiki only learns by credible sources with time, distance and bias. His player does not control NPCs.",
+    "The Suna attack already occurred 12.03 03:00; Shiki only heard an unsourced trade rumor about a missing Kazekage and road restrictions. Never tell him Deidara, Sasori or details until obtained.",
+    "Shiki's identifying association with S-17 and personal targeting may be known to some participants from what they directly witnessed; never leak source facts to geographically absent NPC by convenience.",
+    "NEW_EVENTS are contingent continuations within existing arcs, not three compulsory episodes; no fixed deaths, no script immunity, no invented obstacle after a correct deduction.",
+    "Stale scene.present in the s10.129 handoff must be corrected to nemera only; Reika, Hirano and Matsuda physically remained near the P-4/Seventh Well area. A stale presence-based NEXT.must is not an in-scene fact."
   ],
   "events": [
     {
-      "id": "s09.kagen_terms",
+      "id": "s11.kusa_border_of_exile",
       "kind": "scene",
-      "linked_existing_event": "sound_outpost",
+      "parent": "ch13_kazekage",
       "status": "candidate",
-      "trigger": "Shiki chooses to answer, refuse, condition or ignore Kabuto's laboratory proposal.",
-      "question": "Which concrete resources and freedom, if any, can Kabuto actually trade without overcoming his own superiors and Shiki's boundaries?",
-      "possible_endings": [
-        "Agreement on verifiable limited terms with real costs and continued autonomy; no automatic surrender of tissue.",
-        "Offer refused or negotiations fail; Kabuto and Shiki retain their independent options.",
-        "Offer interrupted by an unrelated justified decision or event; each side acts on its own priorities.",
-        "No agreement made and Shiki leaves or pursues another task; the proposition has a real expiration."
+      "trigger": "Only when Shiki chooses an approach from the Kusa outskirts, or genuinely waits and world time passes.",
+      "question": "What consequences follow Shiki's actually chosen method of entering, observing, contacting or avoiding his former village?",
+      "endings": [
+        "He crosses/observes without being discovered and gains only what is reachable by that route; hidden events elsewhere continue.",
+        "A source-backed observer detects a meaningful trace, not his identity by fiat; response and costs follow the observer's resources.",
+        "Shiki chooses not to enter or leaves; the village proceeds without him.",
+        "A prior concrete alarm or pursuit mechanism, if evidenced, changes the cost without taking his agency."
       ],
       "limit": {
         "scenes": 2
       },
-      "npc_acts": [
-        "Kabuto can say no, limit resources, deceive about what he controls or test information already legitimately available.",
-        "Sound guards do not become experts on Shiki's biology merely because their superior is interested.",
-        "If Orochimaru is consulted, there must be a real route, time and independent motive rather than instant omniscience."
-      ],
-      "no_retroactive_truth": "What Kabuto said about informing Orochimaru is a claim; do not declare a response arrived before a believable channel and time."
+      "risk": "The village seeks an S-rank fugitive with a 49m ryo bounty, but has neither public wanted posters everywhere nor supernatural detection."
     },
     {
-      "id": "s09.kagen_subject",
+      "id": "s11.kusa_chain_unfinished",
       "kind": "side",
-      "linked_existing_event": "sound_outpost",
+      "parent": "ch09_order_chain",
       "status": "candidate",
-      "trigger": "The Kagen patient has been transported to the medical section and guards attempt to manage his condition; Shiki is not required to attend.",
-      "question": "What will become of the involuntary response to sound and the patient's ability to resist further experiments?",
-      "possible_endings": [
-        "Medical stabilization and genuine partial evidence about the response, with limits recorded.",
-        "Damage or loss of control creates conflict over the patient, possibly independent of Shiki.",
-        "Patient is transferred, silenced or escapes through plausible actions of actors with resources.",
-        "The source of the response remains unknown; what was observed at 16:17 is not reversed."
+      "trigger": "A credible person/document/communication connects the P-4 shutdown and old Kusa evidence to Shiki or an actor Shiki meets.",
+      "question": "Who can preserve, lose or weaponize the established records and medical samples after the documented actions at P-4?",
+      "endings": [
+        "One existing document or witness becomes accessible with an independently checkable provenance and yields only its own knowledge.",
+        "A participant retains or hides an important record; a real gap remains.",
+        "An independent authority obstructs or reuses an existing channel; the outcome produces an observable political/medical cost.",
+        "No new evidence reaches Shiki; offscreen actors record their own choices and costs rather than waiting for him."
       ],
       "limit": {
         "scenes": 3,
-        "until": "0006-10-10T12:00:00"
+        "until": "0010-03-16T23:59:00"
       },
-      "npc_acts": [
-        "Kabuto orders sound disabled and continued observation, as already played; future actions respond to the new signal.",
-        "The patient has his own voice, memory and interests; he is not passive exposition.",
-        "Do not assign this sound experiment a causal link to Kusa S-17 or Nemera without evidence."
-      ],
-      "source": "s08.text.106"
+      "guard": "Do not decide the unknown organizer of personalized attacks by association; do not retroactively restore destroyed P-4 cultures, reverse treatment or assume records of all derivative shipments are complete."
     },
     {
-      "id": "s09.kusa_afterimage",
+      "id": "s11.kazekage_aftershock",
       "kind": "side",
-      "linked_existing_event": "side_nukenin_pursuit",
+      "parent": "ch13_kazekage",
       "status": "candidate",
-      "trigger": "The independently documented pursuit and leaks from Kusa advance to their existing dates; Shiki may or may not learn of them.",
-      "question": "Which information or personnel can genuinely cross the distance between the Kusa investigation and Shiki's new whereabouts?",
-      "possible_endings": [
-        "An authenticated lead reaches one of the relevant sides after real travel and leaves verifiable traces.",
-        "Pursuit makes a wrong inference and loses resources or pursues another person.",
-        "Competing factions obstruct each other and the information remains fragmentary.",
-        "No one reaches Shiki before this episode's limit; the campaign does not invent a simultaneous ambush."
+      "trigger": "The Suna crisis causes material shifts through established travel/mercenary/communications channels; Shiki is free to ignore it.",
+      "question": "Which verifiable consequences of the already-occurring Kazekage abduction can reach Shiki's world before the ongoing Suna chapter reaches its endpoint?",
+      "endings": [
+        "A second independent source corroborates part of the trade rumor, with travel time and residual uncertainty.",
+        "Travel, prices or competing missions change due to risk; the change is visible but not an exposition dump.",
+        "The Suna conflict runs without Shiki and produces its own canon-compatible outcome; Shiki remains uninvolved.",
+        "The rumor proves partly wrong in secondary details even though the underlying attack occurred."
       ],
       "limit": {
         "scenes": 3,
-        "until": "0006-10-13T12:00:00"
+        "until": "0010-03-20T23:59:00"
       },
-      "npc_acts": [
-        "Honor latest NEXT.offscreen as already occurred but not automatically known to Shiki.",
-        "Do not teleport Kusa officers into Kagen; require a source and travel interval.",
-        "Do not replace existing unknown assassination organizer with Kabuto merely because he appears on screen."
-      ],
-      "source": "NEXT.offscreen events and main chapter ch09_order_chain"
+      "guard": "Do not use a headline or narrator aside to hand Shiki the attackers' identities; make world news a material effect of autonomous actors."
     }
   ],
-  "must_do_next_game_turn": [
-    "Execute each NEXT.must only when actually required by the first S09 turn; keeper preparation does not satisfy them.",
-    "Do not invent an action, reply, alignment or pact decision for Shiki.",
-    "Keep all agreed NPC comprehension boundaries and consequences of Shiki's presence.",
-    "Check sound_kagen_senior and Nemera intention only when source- and location-consistent; Minase's next independent plan must be grounded in her existing patients."
+  "carry_next": [
+    "Apply actual NEXT.must for absent actors as offscreen plans, not dialogue in Kusa. The last scene has Nemera only.",
+    "Keep Reika's independent search and direct communication possible, without mandatory contact.",
+    "Keep ongoing S-17, family confidentiality, Lower Hospital and old instruction chain separate until source-backed proof connects them.",
+    "Reinforce user correction: no invented thinking, words, routes, fear or cooperation by Shiki. Plot and NPC decisions may be cruel or strategic.",
+    "Keep genre as intense cosmic/body horror, not bureaucratic procedural; return old details with deeper causal meaning rather than add fresh plot clutter."
   ]
 }
