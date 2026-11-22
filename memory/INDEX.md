@@ -1,14 +1,16 @@
-# Карта мира NPR · на ходе `s11.text.017`
+# Карта мира NPR · на ходе `s11.text.018`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (217) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (218) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (189)
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa` · в сцене
+- Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Неустановленный наблюдатель у западного шлюза — Скрытое наблюдение за встречей Аракавы; принадлежность пока не установлена. · `npc/sluice_hidden_watcher`
+- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Хирано Сэйдзи (Хирано, Сэйдзи) — Мужчина за сорок, короткие седые волосы, впалые щёки, хромо… · `npc/hirano_seiji`
 - Касэ — боец восточного заслона Нори; 26.09 Шики вынул у него осколок из правого предпл… · `npc/kase`
 - Курихара Наото (Курихара, Наото) — Худощавый мужчина около сорока; короткие волосы с сединой, … · `npc/kurihara_naoto`
@@ -23,7 +25,6 @@
 - Сугихара Рэндзо (Старший врач, Сугихара) — Пожилой врач в очках, белый халат поверх тёмной формы, мета… · `npc/seventh_well_senior_physician`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
-- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Сотрудник снабжения — по подписи в сцене · `npc/sotrudnik_snabzheniya`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
 - Касиваги Масато (Касиваги, Масато) — Около 50, невысокий, зачёсанные волосы, серый костюм, кольц… · `npc/kashiwagi_masato`
@@ -42,7 +43,6 @@
 - kiri_hunters —  · `npc/kiri_hunters`
 - Старший у повозки — Мужчина заметно старше двух спутников, зимняя дорожная одеж… · `npc/kiri_transfer_senior`
 - Кидзима Суми (Женщина в плаще, Кидзима) — Дорожный плащ, длинный плоский футляр с медицинской печатью. · `npc/kuroishi_visitor`
-- Курода Маю (Курода) — Молекулярный биолог, ответственная за дежурную профильную лабораторию молекуляр… · `npc/kuroda_mayu`
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - sumi — Небольшая чёрная змея длиной чуть больше человеческого пред… · `npc/sumi`
 - Минасэ Рэи (Минасэ) — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
@@ -196,7 +196,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник · `npc/shino`
 - Шиоре — генин, участница · `npc/shiore`
 
-## Линии (7)
+## Линии (8)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
@@ -204,9 +204,10 @@
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
+- `v7` — 12.03.1287 Шики уничтожил известные запасные клеточные ткани линии В-… · `threads/v7`
 
-## Давние линии (21, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
+## Давние линии (20, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
 
 ## Вещи (49)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`

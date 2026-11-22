@@ -140,6 +140,7 @@
 - Кусагакуре, подземное хранилище В-7 · `places/kusagakure-podzemnoe-khranilishche-v-7` · 1 ход(ов), s06–s06
 - Кусагакуре, подземный пост УВБ · `places/kusagakure-podzemnyy-post-uvb` · 1 ход(ов), s08–s08
 - Кусагакуре, родительский дом семьи Мугами · `places/kusagakure-roditelskiy-dom-semi-mugami` · 1 ход(ов), s08–s08
+- Кусагакуре, северная насосная станция · `places/kusagakure-severnaya-nasosnaya-stantsiya` · 1 ход(ов), s11–s11
 - Кусагакуре, северный хозяйственный квартал · `places/kusagakure-severnyy-khozyaystvennyy-kvartal` · 1 ход(ов), s05–s05
 - Кусагакуре, северный проезд УВБ у старой котельной · `places/kusagakure-severnyy-proezd-uvb-u-staroy-kotelnoy` · 1 ход(ов), s05–s05
 - Кусагакуре, северный служебный проезд УВБ у повозки · `places/kusagakure-severnyy-sluzhebnyy-proezd-uvb-u-povozki` · 1 ход(ов), s05–s05
