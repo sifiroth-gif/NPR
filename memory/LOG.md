@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.005: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
 - s11.text.004: поправки игрока: 1
 - s11.text.003: Сэно Фуми (`npc/road_villager_fumi`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
 - s11.text.002: Сугихара Рэндзо (`npc/seventh_well_senior_physician`), вещь `traveller_cloak`, вещь `shiki_finances`
@@ -60,4 +61,3 @@
 - s10.text.077: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), поправки игрока: 3
 - s10.text.076: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`)
 - s10.text.075: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Тагорихимэ (`npc/tagorihime`)
-- s10.text.074: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)

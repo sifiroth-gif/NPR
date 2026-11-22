@@ -76,13 +76,23 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, shiki_training, shiki_finances, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s11.text.004"
+   "turn": "s11.text.005"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «вечный мангеке» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s11.text.005"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «зрачок остается вертикальным всегда» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s11.text.005"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s11.text.004",
+  "cursor": "s11.text.005",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -224,11 +234,11 @@
  "cursor": {
   "at": "0010-03-12T14:32:00",
   "date": "Пятница, 12 марта 1287 года",
-  "id": "s11.text.004",
+  "id": "s11.text.005",
   "place": "Кусагакуре, южные кварталы, улица у старого колокола",
   "time": "14:32"
  },
- "digest": "9728b45aca41f0436afd7dd19abe33bc06a167893dda084c942bb538d029de5e",
+ "digest": "0d2d8eec788b419cd5b9d9f69ee3ee6f7b120a56761d968bdf77789a43988bce",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -258,18 +268,18 @@
    "value": 100.0
   },
   "dice": [
-   72,
-   18,
-   56,
-   82,
-   69,
-   0,
-   39,
    6,
-   34,
-   70,
-   32,
-   4
+   20,
+   57,
+   83,
+   23,
+   50,
+   20,
+   41,
+   91,
+   29,
+   77,
+   29
   ],
   "injuries": {
    "shiki": [
@@ -614,7 +624,7 @@
     "memory_total": 132,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/…",
-    "seen": "s11.text.004",
+    "seen": "s11.text.005",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "10.03 у медкорпуса самостоятельно попыталась проверить питающую фуин-ветвь в пределах пяти метров, но ход скрылся в камне. Отступила без прикосновения к защите; следует с Шики.",
     "status": "present_profile",
@@ -643,11 +653,12 @@
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
  "source_passages": {},
+ "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "16ffc5b18c0c419ea9687005b24cef4e97e5e566",
-  "turn": "s11.text.004"
+  "sha": "7470be5c1eae0469b4d32e6ac01cbc92e565ac95",
+  "turn": "s11.text.005"
  },
  "wiki": {
   "index": "memory/INDEX.md",
