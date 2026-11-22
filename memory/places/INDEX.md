@@ -7,7 +7,7 @@
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 26 ход(ов), s09–s09
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09
-- Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 21 ход(ов), s09–s10
+- Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 22 ход(ов), s09–s10
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 20 ход(ов), s10–s10
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01

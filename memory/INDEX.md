@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s10.text.101`
+# Карта мира NPR · на ходе `s10.text.102`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -201,7 +201,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (41)
+## Вещи (42)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -237,6 +237,7 @@
 - `shiki_blood_vial` · `items/shiki_blood_vial`
 - `shiki_finances` · `items/shiki_finances`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
+- `shiki_medical_kit` · `items/shiki_medical_kit`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
 - `signaller_contract_tube` · `items/signaller_contract_tube`
