@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s10.text.129: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `reika_direct_comm_plate`, план сюжета, поправки игрока: 1
+- s10.text.129: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `reika_direct_comm_plate`, план сюжета, поправки игрока: 1
 - s10.text.128: hirano_seiji (`npc/hirano_seiji`), Хирано Сэйдзи (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.127: Тамура Рэйка (`npc/tamura_reika`), hirano_seiji (`npc/hirano_seiji`), Хирано Сэйдзи (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.126: hirano_seiji (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), план сюжета
