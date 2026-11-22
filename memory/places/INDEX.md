@@ -42,10 +42,10 @@
 - Кусагакуре, Медицинский архив госпиталя · `places/kusagakure-meditsinskiy-arkhiv-gospitalya` · 6 ход(ов), s03–s03
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 6 ход(ов), s10–s10
+- Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 6 ход(ов), s09–s10
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
-- Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 5 ход(ов), s09–s09
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05

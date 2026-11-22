@@ -1,13 +1,15 @@
-# Карта мира NPR · на ходе `s10.text.091`
+# Карта мира NPR · на ходе `s10.text.092`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (210) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (181)
+## Персонажи (182)
 - Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Служащий западной почты — Приёмщик частных отправлений · `npc/west_siran_mail_clerk` · в сцене
+- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
 - Касэ — боец восточного заслона Нори; 26.09 Шики вынул у него осколок из правого предпл… · `npc/kase`
 - Тамура Рэйка (Тамура, Рэйка) — В прошлом специалист фуиндзюцу из закрытых объектов; 29–31 … · `npc/tamura_reika`
@@ -19,7 +21,6 @@
 - Тагорихимэ — Женский облик: длинные тёмные волосы почти до пола, серо-зе… · `npc/tagorihime`
 - Тагицухимэ — Женщина в длинном светлом одеянии, босиком стоит на гладкой… · `npc/tagitsuhime`
 - Неизвестный взрослый пациент Кагэн — Истощённый мужчина примерно сорока лет, шейный металлически… · `npc/kagen_patient_adult`
-- Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
 - Мацуда (архивариус П-4) — Архивариус П-4 комплекса Кэйсин · `npc/p4_archivist_matsuda`
 - Хакудзя-сэннин — по подписи в сцене · `npc/khakudzya_sennin`
@@ -200,7 +201,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (40)
+## Вещи (41)
 - `black_caravan_contract` · `items/black_caravan_contract`
 - `black_caravan_manifest` · `items/black_caravan_manifest`
 - `bounty_notices` · `items/bounty_notices`
@@ -239,5 +240,6 @@
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
 - `signaller_contract_tube` · `items/signaller_contract_tube`
+- `sluice_saboteur_remains` · `items/sluice_saboteur_remains`
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`

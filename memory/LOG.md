@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.092: Немера (Невыписанная) (`npc/nemera`), Морита Кай (`npc/p4_marked_hunter`), Служащий западной почты (`npc/west_siran_mail_clerk`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `sluice_saboteur_remains`, план сюжета
 - s10.text.091: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), план сюжета
 - s10.text.090: Хосина Кэн (`npc/hoshina_ken`), Морита Кай (`npc/p4_marked_hunter`), вещь `hoshina_journal_1184`
 - s10.text.089: Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`), Касэ (`npc/kase`), план сюжета
@@ -60,4 +61,3 @@
 - s10.text.035: Тагорихимэ (`npc/tagorihime`), Старший у повозки (`npc/kiri_transfer_senior`), бой
 - s10.text.034: Тагорихимэ (`npc/tagorihime`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Курода Маю (`npc/kuroda_mayu`), бой
 - s10.text.033: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), бой
-- s10.text.032: Тагорихимэ (`npc/tagorihime`), Кидзима Суми (`npc/kuroishi_visitor`), Глава Кусагакуре (`npc/kusa_head`)
