@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.069: поправки игрока: 1
 - s10.text.068: поправки игрока: 1
 - s10.text.067: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s10.text.066: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
@@ -60,4 +61,3 @@
 - s10.text.012: Тамура Рэйка (`npc/tamura_reika`)
 - s10.text.011: Тамура Рэйка (`npc/tamura_reika`), Фурукава Кёдзи (`npc/caravan_prisoner`), hirano_seiji (`npc/hirano_seiji`)
 - s10.text.010: Тамура Рэйка (`npc/tamura_reika`), Дзиро (`npc/jiro_caravan_guard`), Хосина Кэн (`npc/hoshina_ken`)
-- s10.text.009: Тамура Рэйка (`npc/tamura_reika`), Нагаэ Рокуто (`npc/nagae_rokuto`), Миура Томо (`npc/miura_tomo`)
