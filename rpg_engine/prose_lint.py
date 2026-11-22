@@ -152,8 +152,10 @@ ADVICE = {
     "horror_label": "Не называй жуть (Лавкрафт, Кинг): дай предмет, звук, запах, след — страшное частями и через свидетеля.",
     "ineffable": "Вместо «неописуемого» покажи, где ломается описание: цвет без имени, число, что не сходится, угол.",
     "rhythm": "Ритм (По): чередуй длинную фразу наблюдения с короткой фразой удара; одинаковая длина гасит страх.",
+    "speaker": "Каждая реплика — с подписью в начале: **Полное имя:** — Текст. Голое тире и «— …, — сказал он» не годятся.",
 }
 
+_BARE = re.compile(r"^\s*[—–]\s*[^\s—–*]")
 _BOX = re.compile(r"<box\b.*?</box>", re.S)
 _TAG = re.compile(r"<[^>\n]{1,200}>")
 _SENTENCE = re.compile(r"[^.!?…\n]+[.!?…]*")
@@ -287,6 +289,19 @@ def lint(text):
     verdict = "чисто" if score < 4 else ("шум" if score < 12 else "переписать")
     return {"words": words, "score": score, "verdict": verdict, "by_rule": by_rule, "hits": hits,
             "advice": {rule: ADVICE[rule] for rule in by_rule}}
+
+
+def speakers(text):
+    """Вёрстка реплик кампании (GM_CORE §7): каждая — «**Имя:** — Текст».
+
+    Строка, начатая тире, — реплика без подписи; «— …, — сказал он» тоже. Общий линтер прозы
+    такой формы не требует, поэтому проверка отдельная: её добавляет свёртка (s10.text.093–099).
+    """
+    bare = [line.strip() for line in re.split(r"\n", text or "") if _BARE.match(line)]
+    if not bare:
+        return None
+    return {"rule": "speaker", "weight": 3 * len(bare), "where": N,
+            "quote": f"реплик без подписи: {len(bare)}, например «{_quote(bare[0], 0, len(bare[0]), 60)}»"}
 
 
 def render(report):

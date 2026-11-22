@@ -436,7 +436,7 @@ def apply_turn(hot, turn):
                        "awaiting": turn.get("awaiting", "player")})
         cursor.update(heading(turn["at"], year_offset=hot.get("calendar", {}).get("year_offset", 1277)))
         hot["last"] = _last_entry(turn)
-        report = prose_lint.lint(turn["gm"])
+        report = _lint(turn["gm"])
         lint = hot.setdefault("lint", {})
         recent = [r for r in lint.get("recent", []) if r["id"] != turn["id"]]
         recent.append({"id": turn["id"], "score": report["score"], "verdict": report["verdict"],
@@ -690,6 +690,18 @@ def _archive_canon(state_dir, hot):
 
 
 KEEPER_FILL = "memory/_curated/state_fill.json"
+
+
+def _lint(text):
+    """Линтер прозы и вёрстка реплик кампании: реплика без подписи сразу делает вердикт «переписать»."""
+    report = prose_lint.lint(text)
+    bare = prose_lint.speakers(text)
+    if bare:
+        report["hits"].insert(0, bare)
+        report["by_rule"]["speaker"] = report["by_rule"].get("speaker", 0) + 1
+        report["advice"]["speaker"] = prose_lint.ADVICE["speaker"]
+        report["verdict"] = "переписать"
+    return report
 
 
 def _keeper_fill(state_dir, hot):
@@ -1386,7 +1398,7 @@ def bootstrap(state_dir, seed):
     hot["last"] = _last_entry(latest)
     totals, recent = {}, []
     for turn in ordered:
-        report = prose_lint.lint(turn["gm"])
+        report = _lint(turn["gm"])
         for rule, count in report["by_rule"].items():
             totals[rule] = totals.get(rule, 0) + count
         recent.append({"id": turn["id"], "score": report["score"], "verdict": report["verdict"],
