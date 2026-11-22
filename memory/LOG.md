@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s10.text.110: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Тамура Рэйка (`npc/tamura_reika`)
 - s10.text.109: Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хагуро (`npc/khaguro`), план сюжета
 - s10.text.108: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), Мориока Хидэаки (`npc/morioka_hideaki`), вещь `reika_1285_receipt_copy`
 - s10.text.107: Тамура Рэйка (`npc/tamura_reika`), Эндо Хадзимэ (`npc/endo_hajime`), план сюжета
@@ -60,4 +61,3 @@
 - s10.text.053: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 1
 - s10.text.052: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s10.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
-- s10.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Мориока Хидэаки (`npc/morioka_hideaki`)
