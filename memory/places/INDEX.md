@@ -65,6 +65,7 @@
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
+- Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
@@ -82,7 +83,6 @@
 - Кусагакуре, частный медицинский кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-meditsinskiy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s05
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 2 ход(ов), s08–s08
 - Кусагакуре, Дом семьи Суга · `places/kusagakure-dom-semi-suga` · 2 ход(ов), s03–s03
-- Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 2 ход(ов), s05–s05
 - Кусагакуре, северный хозяйственный квартал · `places/kusagakure-severnyy-khozyaystvennyy-kvartal` · 2 ход(ов), s05–s11
 - Кусагакуре, северный проезд УВБ возле повозки · `places/kusagakure-severnyy-proezd-uvb-vozle-povozki` · 2 ход(ов), s05–s05
 - Кусагакуре, Северный вход в старый водоотвод · `places/kusagakure-severnyy-vkhod-v-staryy-vodootvod` · 2 ход(ов), s02–s02
