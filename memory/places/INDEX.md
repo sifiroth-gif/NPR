@@ -212,6 +212,7 @@
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, нижний каменный уступ у реки · `places/strana-rek-nizhniy-kamennyy-ustup-u-reki` · 1 ход(ов), s11–s11
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
+- Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 1 ход(ов), s12–s12
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
@@ -221,7 +222,6 @@
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
 - Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
 - Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
-- Страна Ветра, ворота Сунагакуре · `places/strana-vetra-vorota-sunagakure` · 1 ход(ов), s12–s12
 - Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
 - Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
 - Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08

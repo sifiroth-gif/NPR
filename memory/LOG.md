@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s12.text.008: Баки (`npc/baki`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
+- s12.text.008: Наруто Узумаки (`npc/naruto`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.007: поправки игрока: 1
 - s12.text.006: Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.005: Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`)
