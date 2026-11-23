@@ -238,6 +238,17 @@ def view(hot, key, met, entries, session, tier_line=None):
     seen = facts_known(hot, entries, key, traits=True)
     if seen:   # уже видел — не «впервые», не удивляется заново
         parts.append("видел: " + ", ".join(f"{t} {_short_turn(w, session)}" for t, w in seen[:5]))
+    # A reviewed absence from a specific episode is evidence too. Do not
+    # confuse it with "never saw this technique" in any other encounter.
+    excluded = []
+    for entry in entries:
+        rule = entry.get("_visual_witness") or {}
+        for episode, audit in (rule.get("episodes") or {}).items():
+            if _session(episode) <= session and key in (audit.get("known_non_witnesses") or []):
+                label = entry.get("short") or entry.get("title") or entry["id"]
+                excluded.append(f"{label} в {episode}")
+    if excluded:
+        parts.append("не видел в данном эпизоде: " + ", ".join(excluded[:2]))
     together = _together(met, key, session)
     if together:   # где NPC был рядом с Шики в этой сессии — помнит это (память карточки хранит лишь края)
         parts.append("в сессии вместе: " + ", ".join(together))
