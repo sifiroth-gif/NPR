@@ -803,7 +803,7 @@ def _keeper_fill(state_dir, hot):
     resync = data.get("resync") if isinstance(data.get("resync"), dict) else None
     if resync and resync.get("id") and fold.get("resync_done") != resync["id"]:
         fold["resync_done"] = resync["id"]
-        fold["resync"] = {"id": resync["id"], "since": (hot.get("cursor") or {}).get("id"), "left": RESYNC_TURNS,
+        fold["resync"] = {"id": resync["id"], "since": ((hot.get("cursor") or {}).get("id"), "left": RESYNC_TURNS,
                           "note": str(resync.get("note") or "")[:400]}
     fixes = [f for f in data.get("fix") or [] if isinstance(f, dict) and isinstance(f.get("path"), list)]
     fix_digest = hashlib.sha256(json.dumps(fixes, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
@@ -1176,6 +1176,9 @@ def fold(state_dir):
     archive_rows = acquaint.turns(state_dir)
     met = acquaint.index(state_dir, names, archive_rows, acquaint.generic(state_dir, hot))
     acquaint.backfill(state_dir, hot, lore_entries, names, archive_rows)
+    # Derived "saw it" cache may include actors from a different simultaneous
+    # fight. Audit the *source episode*, not roster membership, before reuse.
+    lore.reconcile_visual_memory(hot, lore_entries)
     skill_seed = expertise.load(state_dir)
     canon_arcs = arcs.load(state_dir)
     favor.seed(hot, archive_rows, names, always)   # окно подыгрывания сразу, не с нуля
@@ -1369,8 +1372,9 @@ def fold(state_dir):
                                                   if t.get("kind") not in ("ooc", "technical", "void")])
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
         echoed = None
-        hot.setdefault("_checks", []).append({"turn": hot.get("cursor", {}).get("id"), "kind": "echo",
+        hot.setdefault("_checks", []).append({"turn": hot.get("cursor") or {}).get("id"), "kind": "echo",
                                               "text": f"эхо прошлого не собрано: {type(exc).__name__}"})
+    lore.reconcile_visual_memory(hot, lore_entries)
     texts, changed = _write_state(state_dir, hot, before)
     # Build even for an older already-folded checkpoint when a new policy
     # activates the cache. No revision, source canon or game clock is changed.
