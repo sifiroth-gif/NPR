@@ -152,9 +152,10 @@ def close(root, number=None):
     # Глубокая разгрузка: строгое старение, затем пакет нового номера.
     state, _ = hot._read_state(root)
     state["_undo"] = None
-    aged = aging._pass(root, state, aging.TIGHT)
+    # Передача — до старения: закрытая сессия становится прошлой, строгий проход разгружает и её.
     state["handoff"] = {"closed": number, "next_session": number + 1, "sqlite_revision": audit["revision"],
                         "at": last["at"], "last_turn": last["id"], "first_turn": first_next, "source": handoff_path}
+    aged = aging._pass(root, state, aging.TIGHT)
     state.setdefault("fold", {})["consolidated"] = {"session": number, "aged": {k: v for k, v in aged.items() if v}}
     hot.refresh(state)
     hot._write_state(root, state)

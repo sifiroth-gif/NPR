@@ -88,6 +88,10 @@ def _session_of(turn_id):
 def _this_session(hot, turn_id):
     """Запись текущей сессии: в оперативной памяти до её конца, в каком бы проходе ни было старение."""
     now = _session_of((hot.get("cursor") or {}).get("id"))
+    # Закрытие сессии (session_close): закрываемая уже прошлая — её и разгружает строгий проход.
+    handoff = hot.get("handoff") or {}
+    if now is not None and handoff.get("closed") == now and handoff.get("next_session"):
+        now = int(handoff["next_session"])
     return now is not None and _session_of(turn_id) == now
 
 

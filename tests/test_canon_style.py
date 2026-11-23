@@ -60,6 +60,47 @@ class CanonTest(unittest.TestCase):
         self.assertIsNone(canon.review(state, {"cursor": {"id": "s11.text.021"}}))
 
 
+class LookTest(unittest.TestCase):
+    LOOKS = [{"who": "Мугами Шики", "names": "Шики|Мугами", "nouns": "подрост\\w*|юнош\\w*",
+              "wrong": "темноволос\\w*|(тёмн|темн|чёрн|черн)\\w* волос", "trait": "серебристо-белые волосы с 1278",
+              "source": "s01.text.093"},
+             {"who": "Гаара", "names": "Гаар", "wrong": "рыж\\w*", "trait": "красные волосы", "source": "s11.text.053"}]
+
+    def _state(self):
+        state = _state()
+        (state / canon.CURATED).write_text(json.dumps(dict(CURATED, looks=self.LOOKS), ensure_ascii=False),
+                                           encoding="utf-8")
+        return state
+
+    def test_wrong_trait_is_caught_in_old_photo_too(self):
+        # s11.text.077: старое фото «темноволосого подростка» Шики, хотя волосы белые с s01.text.093.
+        state = self._state()
+        gm = ("Какаши развернул книгу к Шики.\n\nНа пожелтевшем листе находилась старая фотография.\n\n"
+              "Пятнадцатилетний темноволосый подросток с протектором Кусагакуре.")
+        notes = canon.guard(state, {"id": "s11.text.077", "gm": gm})
+        self.assertEqual(len(notes), 1)
+        self.assertIn("серебристо-белые", notes[0]["text"])
+        self.assertIn("фото", notes[0]["text"])
+        self.assertEqual(canon.guard(state, {"id": "s11.text.078", "gm": "Гаара поднял руку. Рыжий закат."}), [],
+                         "другое предложение — не о нём")
+        self.assertTrue(canon.guard(state, {"id": "s11.text.079", "gm": "Рыжие волосы Гаары слиплись."}))
+        self.assertEqual(canon.guard(state, {"id": "s11.text.080", "gm": "У Шики за спиной стояла темноволосая женщина."}),
+                         [], "темноволосая женщина рядом с Шики — не он")
+        # near: однозначная черта — хватит имени рядом (s11.text.076: «его рыжих волос» после поправки s11.text.053).
+        looks = [dict(self.LOOKS[1], wrong="рыж\\w* волос\\w*", near=True)]
+        (state / canon.CURATED).write_text(json.dumps(dict(CURATED, looks=looks), ensure_ascii=False), encoding="utf-8")
+        self.assertTrue(canon.guard(state, {"id": "s11.text.081", "gm": "Гаара лежал на камне.\n\nСолнце касалось его рыжих волос."}))
+
+    def test_digest_and_scene_line(self):
+        state = self._state()
+        canon.digest(state)
+        text = (state / canon.DIGEST).read_text(encoding="utf-8")
+        self.assertIn("## Облик — постоянные черты", text)
+        h = {"cursor": {"id": "s11.text.003"}, "scene": {"present": ["shiki", "gaara"]}, "cast": {"gaara": {"name": "Гаара"}}}
+        got = canon.for_scene(state, h, [], ROOT)
+        self.assertEqual(sum(i.startswith("Облик") for i in got["items"]), 1, "одна строка облика за ход")
+
+
 class ChatTest(unittest.TestCase):
     def test_long_chat_is_told(self):
         h = {"cursor": {"id": "s11.text.046"}}
