@@ -209,6 +209,7 @@
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Рек, дорога к южному перевалу · `places/strana-rek-doroga-k-yuzhnomu-perevalu` · 1 ход(ов), s12–s12
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
+- Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 1 ход(ов), s12–s12
 - Страна Рек, нижний каменный уступ у реки · `places/strana-rek-nizhniy-kamennyy-ustup-u-reki` · 1 ход(ов), s11–s11
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
