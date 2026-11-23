@@ -64,45 +64,45 @@
  },
  "checks": [
   {
-   "kind": "horror",
-   "text": "sakura: dread без saw. Страх растёт только из увиденного или полученного по каналу",
-   "turn": "s11.text.074"
-  },
-  {
-   "kind": "horror",
-   "text": "chiyo: dread без saw. Страх растёт только из увиденного или полученного по каналу",
-   "turn": "s11.text.074"
-  },
-  {
-   "kind": "look",
-   "text": "внешность Шики описана 2 раза (волосы, волосы). Ужас — в чужом поступке и последствии, а не в облике",
-   "turn": "s11.text.074"
-  },
-  {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 5607 знаков (норма до 4000); крупнее всего: cast 2406, scene 868, plot 625.",
-   "turn": "s11.text.074"
-  },
-  {
-   "kind": "read",
-   "text": "«Разведчик Звука» вернулся в сцену, а его страница `npc/razvedchik_zvuka` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/razvedchik_zvuka.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s11.text.074"
-  },
-  {
    "kind": "plot",
    "text": "У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом. Следующая в очереди: «Мост Тэнти» (`ch14_tenchi`).",
-   "turn": "s11.text.074"
+   "turn": "s11.text.075"
   },
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, shiki_training, shiki_finances, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s11.text.074"
+   "turn": "s11.text.075"
+  },
+  {
+   "kind": "will",
+   "text": "«Немера (Невыписанная)» 13 ход(ов) рядом с Шики только отвечает. Его цель: «Исследовать прямое чувственное отличие собственного осязания Немеры от переживания через чакровую связь с Шики.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s11.text.075"
+  },
+  {
+   "kind": "will",
+   "text": "«Сакура Харуно» 5 ход(ов) рядом с Шики только отвечает. Его цель: «Найти путь к Саске через шпиона в окружении Орочимару.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s11.text.075"
+  },
+  {
+   "kind": "will",
+   "text": "«Наруто Узумаки» 6 ход(ов) рядом с Шики только отвечает. Его цель: «Вернуть Гаару и после завершения спасения добиться от Шики или через собственный поиск сведений о Саске.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s11.text.075"
+  },
+  {
+   "kind": "will",
+   "text": "«Нэдзи Хьюга» появляется уже 11 раз, а воли у него нет: задай d.cast.neji.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
+   "turn": "s11.text.075"
+  },
+  {
+   "kind": "will",
+   "text": "«Разведчик Звука» появляется уже 14 раз, а воли у него нет: задай d.cast.razvedchik_zvuka.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
+   "turn": "s11.text.075"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s11.text.074",
+  "cursor": "s11.text.075",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -245,11 +245,11 @@
  "cursor": {
   "at": "0010-03-15T08:48:21",
   "date": "Понедельник, 15 марта 1287 года",
-  "id": "s11.text.074",
+  "id": "s11.text.075",
   "place": "Страна Рек, каменный уступ над рекой, рядом со спасённым Гаарой",
   "time": "08:48"
  },
- "digest": "3e11ee6a17624cdad1c6e0f1aa66a7fc6c6ba3e61fc05628c40c380284eb91fa",
+ "digest": "1e03c89fafdd906d587d49e18c0415cb50f618fdee672a5dd106f3fead551171",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -330,18 +330,18 @@
    "value": 9.48
   },
   "dice": [
-   8,
-   22,
-   56,
-   7,
-   41,
-   84,
-   41,
+   42,
+   16,
+   0,
+   24,
+   14,
+   65,
    82,
-   36,
-   50,
-   71,
-   16
+   6,
+   37,
+   81,
+   77,
+   31
   ],
   "injuries": {
    "deidara": [
@@ -884,7 +884,7 @@
     "memory_file": "archive/npc-memory/chiyo.json",
     "memory_total": 31,
     "name": "Тиё",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "Жива после незавершённого Кисё Тэнсэй, очень ослаблена; услышала песню Шики и вспомнила, как Сасори давал имена куклам и пытался заменить родных куклами.",
     "status": "present_profile",
     "tier": "deep"
@@ -928,7 +928,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -946,7 +946,7 @@
     "memory_file": "archive/npc-memory/gaara.json",
     "memory_total": 2,
     "name": "Гаара",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "В сознании, дышит самостоятельно, сильно ослаблен, остаточная связь Шукаку тяжело повреждена. Узнал Шики по давнему экзамену и поблагодарил за помощь.",
     "status": "present_profile",
     "tier": "archetypal"
@@ -998,7 +998,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1017,7 +1017,7 @@
     "memory_file": "archive/npc-memory/kakashi.json",
     "memory_total": 20,
     "name": "Какаши Хатакэ",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "Услышал шутку Шики о награде Кири за живого с сохранением тканей и ответил отказом продавать временного союзника. Память о внезапном Шарингане не отпустил, перед разведчиками Суны назвал его спасателем. Услышал от Сакур…",
     "status": "present_profile",
     "tier": "deep"
@@ -1084,7 +1084,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1103,7 +1103,7 @@
     "memory_file": "archive/npc-memory/naruto.json",
     "memory_total": 22,
     "name": "Наруто Узумаки",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "Услышал мрачную колыбельную Шики и пояснил Гааре, что Шики вместе с ним, Сакурой и Тиё помог спасению; при этом продолжает заботиться о Гааре.",
     "status": "present_profile",
     "tier": "deep"
@@ -1138,7 +1138,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1156,7 +1156,7 @@
     "memory_file": "archive/npc-memory/neji.json",
     "memory_total": 11,
     "name": "Нэдзи Хьюга",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "Бьякуганом заметил исчезновение природной энергии из каналов Шики при сохранённых змеиных признаках и сообщил Сакуре; остаётся наблюдателем.",
     "status": "present_profile",
     "tier": "developed"
@@ -1242,7 +1242,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1289,7 +1289,7 @@
     "memory_total": 196,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/…",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "Самостоятельно вывела отросток, изучила прямое различие влажного и сухого камня и отметила, что её осязание сохранилось после угасания режима отшельника Шики; запас чакры не передавала.",
     "status": "present_profile",
@@ -1330,7 +1330,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1349,7 +1349,7 @@
     "memory_total": 14,
     "name": "Разведчик Звука",
     "role": "по подписи в сцене",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "status": "present_profile",
     "tier": "developed"
    },
@@ -1408,7 +1408,7 @@
     },
     {
      "at": "0010-03-15T08:48:21",
-     "sha256": "e784e5ab245de3350840785f355f56e56da8592a9f85e082fdd9da1ace4d16fe",
+     "sha256": "f23a7b2d1486457e722fb08c806732d35176a8c46e1ef3b452af85df7c401329",
      "source": "archive/session-011-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s11.text.074"
@@ -1427,7 +1427,7 @@
     "memory_file": "archive/npc-memory/sakura.json",
     "memory_total": 37,
     "name": "Сакура Харуно",
-    "seen": "s11.text.074",
+    "seen": "s11.text.075",
     "state": "Узнала песню из палаты Канкуро, осторожно не стала прикасаться к коже Шики без необходимости. Передала Какаши сведения Сасори: агент у Орочимару, мост Тэнти 25 марта в полдень.",
     "status": "present_profile",
     "tier": "deep"
@@ -1471,8 +1471,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "6136e79fd249fced5bc55835648ecd318965f83f",
-  "turn": "s11.text.074"
+  "sha": "27ee531ab869482ebb228a4575142e5fcd3c4b63",
+  "turn": "s11.text.075"
  },
  "wiki": {
   "index": "memory/INDEX.md",

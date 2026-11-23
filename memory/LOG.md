@@ -59,4 +59,3 @@
 - s11.text.018: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Курода Маю (`npc/kuroda_mayu`), Фурукава Кёдзи (`npc/caravan_prisoner`), вещь `arakawa_transport_copy`, линия `v7`, план сюжета
 - s11.text.017: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Хирано Сэйдзи (`npc/hirano_seiji`)
 - s11.text.016: Аракава Дзюн (`npc/arakawa`), Касэ (`npc/kase`)
-- s11.text.015: Аракава Дзюн (`npc/arakawa`), Курихара Наото (`npc/kurihara_naoto`), вещь `arakawa_transport_copy`
