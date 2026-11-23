@@ -54,4 +54,3 @@
 - s11.text.055: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Наруто Узумаки (`npc/naruto`), Савара (`npc/suna_advance_tracker`), план сюжета, бой
 - s11.text.054: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Наруто Узумаки (`npc/naruto`), Баки (`npc/baki`), план сюжета
 - s11.text.053: поправки игрока: 1
-- s11.text.052: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Дейдара (`npc/deidara`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Канкуро (`npc/kankuro`), план сюжета
