@@ -235,6 +235,7 @@
 - Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
 - Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
 - Сунагакуре, граница торгового и административного кварталов · `places/sunagakure-granitsa-torgovogo-i-administrativnogo-kvartalov` · 1 ход(ов), s12–s12
+- Сунагакуре, мост через канал · `places/sunagakure-most-cherez-kanal` · 1 ход(ов), s12–s12
 - Сунагакуре, развилка перед административным кварталом · `places/sunagakure-razvilka-pered-administrativnym-kvartalom` · 1 ход(ов), s12–s12
 - Сунагакуре, старый торговый квартал · `places/sunagakure-staryy-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11
