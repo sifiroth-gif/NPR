@@ -80,11 +80,11 @@
 - reflex_and_coordination: 5
 
 ## Chakra
-- value: 31.25
-- at: 0010-03-15T08:40:55
-- state: напряжение
+- value: 29.25
+- at: 0010-03-15T08:40:57
+- state: на исходе
 - why: Немера добровольно передала Шики 20 единиц своей чакры со скоростью 10 ед/сек за две секунды
-- last: turn: s11.text.063; spent: 16.25; what: Гендзюцу «Чужой шаг» через Вечный Мангекё, не действует на зрительную механическую систему Сасори; Неполное скелетное Сусаноо: рёбра и защитная рука
+- last: turn: s11.text.064; spent: 2.0; what: Катон: Великий огненный шар
 - max: 100.0
 
 ## Knows_plus
@@ -127,13 +127,13 @@
 - archive/aged/shiki-knows.jsonl
 
 ## Nemera_chakra
-- value: 478
+- value: 476
 - max: 500
 - regen_per_hour: 4
 - transfer_per_second: 10
 - manifest_cost_per_minute: 1
 - range_meters: 5
-- at: 0010-03-15T08:40:55
+- at: 0010-03-15T08:40:57
 - last: received_by_shiki: 20
 
 ## Age
