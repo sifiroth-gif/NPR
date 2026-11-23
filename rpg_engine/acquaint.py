@@ -299,8 +299,17 @@ def backfill(state_dir, hot, entries, names, rows=None):
             wield = set(entry.get("wield") or [])
             known = lore.heard(hot, entry)
             book = hot.setdefault("lore", {}).setdefault(entry["id"], {})
-            for key in sorted(people):
-                if key in wield or key in known or key in book:
+            candidates = people
+            if entry.get("_visual_witness"):
+                # Historical high-impact feats must be independently audited.
+                # A named NPC in a transcript can be miles from the technique.
+                audit = ((entry["_visual_witness"].get("episodes") or {})
+                         .get(row["id"]) or {})
+                candidates = set(audit.get("witnessed_by") or [])
+            for key in sorted(candidates):
+                if (key in wield or key in known or key in book or
+                        (entry.get("_visual_witness") and
+                         not lore.verified_visual_witness(hot, entry, key, row["id"]))):
                     continue
                 book[key] = row["id"]
                 added.setdefault(entry["id"], []).append(key)
