@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s12.text.027`
+# Карта мира NPR · на ходе `s12.text.028`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -210,7 +210,7 @@
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
-- `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
+- `nemera_symbiosis` — Немера не вмешивалась в мирный разговор с ребёнком и его отцом, предп… · `threads/nemera_symbiosis`
 
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

@@ -116,6 +116,7 @@
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
+- Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 2 ход(ов), s12–s12
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
@@ -233,7 +234,6 @@
 - Страна Звука (Рисовых Полей), лесистый склон над монастырём Кагэн и подземным входом Отогакуре · `places/strana-zvuka-risovykh-poley-lesistyy-sklon-nad-monastyrem-ka` · 1 ход(ов), s08–s08
 - Страна Звука, северный склад торгового дома Куроиси · `places/strana-zvuka-severnyy-sklad-torgovogo-doma-kuroisi` · 1 ход(ов), s09–s09
 - Страна Звука, у входа в комплекс Кагэн · `places/strana-zvuka-u-vkhoda-v-kompleks-kagen` · 1 ход(ов), s08–s08
-- Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11
 - Тайная лаборатория Шики, известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-galereya-severo-z` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, известняковая водосборная галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-vodosbornaya-gale` · 1 ход(ов), s04–s04
