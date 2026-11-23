@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from rpg_engine import acquaint, expertise, favor, hot, lore, nextpack, presence
+from rpg_engine import acquaint, expertise, favor, hot, lore, nextpack, presence, scene_packet
 
 FACT = {"id": "fact_orochimaru", "kind": "fact", "title": "Год у Орочимару", "short": "год у Орочимару",
         "patterns": [r"(?:жил|прожил)\w*[^.!?\n]{0,40}(?:у|с|при)\s+орочимару"], "wield": ["shiki", "orochimaru"]}
@@ -194,6 +194,16 @@ class PresenceAndCacheTest(unittest.TestCase):
         self.assertLessEqual(len(json.dumps(out, ensure_ascii=False).encode("utf-8")), hot.DISCLOSURE_BYTES)
         self.assertIn("npc11", out)                      # уходят давние, свежие остаются
         self.assertNotIn("npc1", out)
+
+    def test_slim_actor_keeps_the_core(self):
+        actor = {"profile": {"name": "Баки", "state": "ждёт" * 100, "memory": ["x"] * 9, "inner": "y"},
+                 "dynamics": {"a": 1}, "prior_disclosures": [1, 2], "alignment": {"a": 1}, "alignment_ref": "ref"}
+        scene_packet._slim(actor, "baki")
+        self.assertEqual(sorted(actor["profile"]), ["name", "state"])
+        self.assertLessEqual(len(actor["profile"]["state"]), 200)
+        self.assertEqual(actor["profile_ref"], "memory/npc/baki.md")
+        self.assertNotIn("dynamics", actor)
+        self.assertNotIn("alignment", actor)
 
     def test_keeper_fix(self):
         state = {"cast": {"sakura": {"facts": ["медик", "Встречала Шики на экзамене"]}}}
