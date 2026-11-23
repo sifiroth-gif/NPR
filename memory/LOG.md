@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.074: Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Гаара (`npc/gaara`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 2
 - s11.text.073: Гаара (`npc/gaara`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой, поправки игрока: 1
 - s11.text.072: Гаара (`npc/gaara`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 1
 - s11.text.071: Гаара (`npc/gaara`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Дейдара (`npc/deidara`), план сюжета, бой, поправки игрока: 1
@@ -59,4 +60,3 @@
 - s11.text.017: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Хирано Сэйдзи (`npc/hirano_seiji`)
 - s11.text.016: Аракава Дзюн (`npc/arakawa`), Касэ (`npc/kase`)
 - s11.text.015: Аракава Дзюн (`npc/arakawa`), Курихара Наото (`npc/kurihara_naoto`), вещь `arakawa_transport_copy`
-- s11.text.014: Аракава Дзюн (`npc/arakawa`)
