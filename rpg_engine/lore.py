@@ -265,7 +265,9 @@ def track(hot, turn, entries, present, names=None):
                 continue
             # A global roster is not a sightline: a character may be chasing
             # another enemy elsewhere while still listed as "present".
-            if is_fact(entry) and names is not None and key not in in_scene:
+            if (is_fact(entry) and names is not None and key not in in_scene
+                    and not (entry.get("_visual_witness") and
+                             verified_visual_witness(hot, entry, key, turn["id"]))):
                 continue
             if (entry.get("_visual_witness") and
                     not verified_visual_witness(hot, entry, key, turn["id"])):
