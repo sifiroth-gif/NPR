@@ -1372,7 +1372,7 @@ def fold(state_dir):
                                                   if t.get("kind") not in ("ooc", "technical", "void")])
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
         echoed = None
-        hot.setdefault("_checks", []).append({"turn": hot.get("cursor") or {}).get("id"), "kind": "echo",
+        hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "echo",
                                               "text": f"эхо прошлого не собрано: {type(exc).__name__}"})
     lore.reconcile_visual_memory(hot, lore_entries)
     texts, changed = _write_state(state_dir, hot, before)
