@@ -60,4 +60,3 @@
 - s10.text.123: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Немера (Невыписанная) (`npc/nemera`), Курихара Наото (`npc/kurihara_naoto`), вещь `s17_early_shiki_aliquot`, поправки игрока: 1
 - s10.text.122: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `s17_early_shiki_aliquot`
 - s10.text.121: Курихара Наото (`npc/kurihara_naoto`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
-- s10.text.120: Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Фурукава Кёдзи (`npc/caravan_prisoner`)
