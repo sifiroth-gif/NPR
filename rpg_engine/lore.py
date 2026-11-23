@@ -47,14 +47,33 @@ NEAR = 60          # знаков от термина до оборота уме
 SHIKI = "shiki"
 
 
+def _visual_rules():
+    """Source-scoped sightlines: authored review, not inferred from roster membership.
+
+    Lives in the code branch, outside mutable campaign memory. A stale HOT
+    `lore` entry is a candidate only; it is not an eyewitness certificate.
+    """
+    path = Path(__file__).resolve().parents[1] / "campaigns/shiki/KNOWLEDGE_POLICY.json"
+    try:
+        return (json.loads(path.read_text(encoding="utf-8"))
+                .get("visual_witness_scopes") or {})
+    except (OSError, ValueError):
+        return {}
+
+
 def load(state_dir):
     path = Path(state_dir) / SEED
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return []
-    return [e for e in data.get("entries") or [] if isinstance(e, dict) and e.get("id")
-            and (e.get("terms") or e.get("patterns"))]
+    rules = _visual_rules()
+    entries = [e for e in data.get("entries") or [] if isinstance(e, dict) and e.get("id")
+               and (e.get("terms") or e.get("patterns"))]
+    for entry in entries:
+        if entry["id"] in rules and entry.get("kind") == "trait":
+            entry["_visual_witness"] = rules[entry["id"]]
+    return entries
 
 
 def is_fact(entry):
@@ -122,16 +141,75 @@ def _name(hot, key):
     return card.get("name") or profile.get("name") or key
 
 
+def verified_visual_witness(hot, entry, actor, source):
+    """A trait is *seen* only with an authenticated actor/event sightline.
+
+    Historical curator rows audit specific episodes. New episodes require a
+    current-turn `knowledge_events` witness route, not a narrative mention or
+    a previous, possibly erroneous `lore` cache entry.
+    """
+    rule = entry.get("_visual_witness")
+    if not rule:
+        return True
+    source = str(source or "")
+    episode = (rule.get("episodes") or {}).get(source)
+    if episode is not None:
+        return (actor in (episode.get("witnessed_by") or [])
+                and actor not in (episode.get("known_non_witnesses") or []))
+    card = ((hot.get("cast") or {}).get(actor) or {})
+    return any(isinstance(e, dict) and e.get("claim") == entry["id"]
+               and e.get("channel") == "witness"
+               and e.get("source") == source and e.get("turn") == source
+               for e in card.get("knowledge_provenance") or [])
+
+
 def heard(hot, entry):
-    """Кто слышал: заготовка хранителя + отмеченное кодом по ходам."""
-    out = dict(entry.get("heard") or {})
+    """Actor-specific knowledge; high-impact visual feats require proof.
+
+    A previously auto-filled "seen" record is not itself evidence. For strict
+    sightline traits only named verified witnesses survive in NEXT.present.
+    """
+    candidates = dict(entry.get("heard") or {})
     for key, turn in ((hot.get("lore") or {}).get(entry["id"]) or {}).items():
-        out.setdefault(key, turn)
-    # Сведение пришло по каналу: ведущий записал его в knows+ карточки (донесение, слух, документ).
+        candidates.setdefault(key, turn)
+    if entry.get("_visual_witness"):
+        out = {key: source for key, source in candidates.items()
+               if verified_visual_witness(hot, entry, key, source)}
+        for key, card in (hot.get("cast") or {}).items():
+            for event in (card or {}).get("knowledge_provenance") or []:
+                if (isinstance(event, dict) and event.get("claim") == entry["id"]
+                        and event.get("channel") == "witness"
+                        and verified_visual_witness(hot, entry, key, event.get("source"))):
+                    out.setdefault(key, event["source"])
+        return out
+    # Oral knowledge through a sourced report is different from witnessing a
+    # visual feat. It never silently becomes "видел".
+    out = candidates
     for key, card in (hot.get("cast") or {}).items():
         if key not in out and any(mentions(entry, k) for k in (card or {}).get("knows") or []):
             out[key] = "knows+"
     return out
+
+
+def reconcile_visual_memory(hot, entries):
+    """Remove derivative, unsupported eyewitness rows; never edit play history.
+
+    The operation is idempotent. Verified scenes remain in the provenance
+    index; missing evidence is not converted into an invented eyewitness.
+    """
+    removed = {}
+    store = hot.get("lore") or {}
+    for entry in entries:
+        if not entry.get("_visual_witness"):
+            continue
+        current = store.get(entry["id"]) or {}
+        invalid = {actor: source for actor, source in current.items()
+                   if not verified_visual_witness(hot, entry, actor, source)}
+        if invalid:
+            for actor in invalid:
+                current.pop(actor, None)
+            removed[entry["id"]] = invalid
+    return removed
 
 
 INNER = ("немера", "уцуро")   # голоса внутри Шики: их слышит только он
@@ -185,7 +263,12 @@ def track(hot, turn, entries, present, names=None):
         for key in present:
             if key == SHIKI or key in wield or key in known:
                 continue
+            # A global roster is not a sightline: a character may be chasing
+            # another enemy elsewhere while still listed as "present".
             if is_fact(entry) and names is not None and key not in in_scene:
+                continue
+            if (entry.get("_visual_witness") and
+                    not verified_visual_witness(hot, entry, key, turn["id"])):
                 continue
             book[key] = turn["id"]
             added.append((entry["id"], key))
@@ -320,6 +403,15 @@ def fences(hot, entries, present):
     if not people:
         return out
     for entry in entries:
+        if entry.get("_visual_witness"):
+            known = heard(hot, entry)
+            people_seen = [_name(hot, key) + " (" + str(known[key]) + ")" for key in people if key in known]
+            people_unknown = [_name(hot, key) for key in people if key not in known]
+            out.append(f"{entry.get('title') or entry['id']}: непосредственно видели — "
+                       f"{', '.join(people_seen) or 'нет подтверждённых свидетелей'}; "
+                       f"нет подтверждения наблюдения — {', '.join(people_unknown) or 'никого'}. "
+                       "Присутствие в отряде и запись lore без источника не доказывают видимость.")
+            continue
         if is_fact(entry):
             continue        # сведения о Шики — построчно по людям (acquaint.view)
         wield = set(entry.get("wield") or [])
