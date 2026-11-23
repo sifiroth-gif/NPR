@@ -4,19 +4,22 @@
     "nemera",
     "sakura",
     "sasori",
-    "place:fcd327ae808eead8"
+    "place:9e8a1ba1a4919bef",
+    "orochimaru"
   ],
-  "cursor": "s11.text.064",
+  "cursor": "s11.text.065",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2945,
-  "index_entities": 646,
-  "index_source_records": 923,
-  "indexed_cursor": "s11.text.064",
+  "focus_bytes": 3407,
+  "index_entities": 649,
+  "index_source_records": 924,
+  "indexed_cursor": "s11.text.065",
   "kinds": {
+    "canon": 1,
+    "clock": 1,
     "entity": 1,
     "item": 18,
     "npc": 139,
-    "place": 481,
+    "place": 482,
     "thread": 7
   },
   "missing_critical": [],
@@ -26,6 +29,18 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s11.text.065:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:tenchi_contact",
+      "kind": "clock"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -472,9 +487,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 73,
-  "self_query_at_5": 74,
-  "self_query_count": 74,
+  "self_query_at_1": 75,
+  "self_query_at_5": 76,
+  "self_query_count": 76,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
