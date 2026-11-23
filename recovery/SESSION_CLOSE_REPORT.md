@@ -1,7 +1,7 @@
-# Сессия 10 закрыта
+# Сессия 11 закрыта
 
-- Сыграно ходов: 117, внеигровых: 12; последний — s10.text.129.
-- Дословный архив: `archive/session-010.md`; передача: `campaigns/shiki/continuity/SESSION_010_TO_011_HANDOFF.json`.
+- Сыграно ходов: 68, внеигровых: 11; последний — s11.text.077.
+- Дословный архив: `archive/session-011.md`; передача: `campaigns/shiki/continuity/SESSION_011_TO_012_HANDOFF.json`.
 - Выгрузки чата: нет.
-- Разгружено из оперативной памяти: {'things': 1, 'pact_events': 1, 'npc_plans': 70, 'npc_dread': 33, 'world_events': 9, 'plot_closed': 3}; HOT 93385 байт.
-- Следующий ход: s11.text.001.
+- Разгружено из оперативной памяти: {'threads': 1, 'things': 1, 'npc_plans': 10, 'npc_dread': 68}; HOT 113183 байт.
+- Следующий ход: s12.text.001.

@@ -17,7 +17,7 @@
 - Дейдара — Молодой светловолосый подрывник в чёрном плаще с красными о… · `npc/deidara`
 - Сасори Красных Песков (Сасори, Красных) — Встречен в боевом корпусе Хируко: сгорбленная массивная кук… · `npc/sasori`
 - Аракава Дзюн (Аракава, Дзюн) — Инспектор Центрального управления Кусагакуре, ранее требовал выдачи В-7 и получ… · `npc/arakawa`
-- Мориока Хидэаки (Мориока, Хидэаки) —  · `npc/morioka_hideaki`
+- Мориока Хидэаки (Мориока, Хидэаки) — Мужчина за пятьдесят, сухой, в строгой одежде чиновника сна… · `npc/morioka_hideaki`
 - Фурукава Кёдзи (Неизвестный пленник №1184, Пленник Ф-04 (предположительно Фурукава)) — Мужчина около пятидесяти лет с короткими седыми волосами, з… · `npc/caravan_prisoner`
 - Хосина Кэн (Хосина) — Около 40, короткие волосы и щетина, повреждена левая кисть,… · `npc/hoshina_ken`
 - Морита Кай (Преследователь с медной биркой, Морита) — Старший из двух вооружённых у водосброса. · `npc/p4_marked_hunter`
@@ -99,7 +99,7 @@
 - Кадзиура Сатору (Кадзиура, Сатору) — Старший врач реанимационного отделения Центрального госпиталя, координатор лече… · `npc/kadziura_satoru`
 - Транспортник госпиталя —  · `npc/hospital_transporter`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
-- Сиодзаки Масааки (Сиодзаки, Масааки) —  · `npc/shiozaki_masaaki`
+- Сиодзаки Масааки (Сиодзаки, Масааки) — Лично не появлялся: известен Шики лишь по подписи в дорожно… · `npc/shiozaki_masaaki`
 - kiri_transfer_carrier —  · `npc/kiri_transfer_carrier`
 - kiri_transfer_watch —  · `npc/kiri_transfer_watch`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
@@ -204,7 +204,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (8)
+## Линии (7)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
@@ -212,10 +212,9 @@
 - `shiki_training` — 21–24.02.1287 в Чёрном створе Шики отдохнул и провёл тренировку ближн… · `threads/shiki_training`
 - `shiki_finances` — 25.02.1287 все 88,5 млн рё наличными в защищённом хранилище Чёрного с… · `threads/shiki_finances`
 - `nemera_symbiosis` — Канон s09.text.101 исправлен: независимый резерв Немеры 500/500, восс… · `threads/nemera_symbiosis`
-- `v7` — 12.03.1287 Шики уничтожил известные запасные клеточные ткани линии В-… · `threads/v7`
 
-## Давние линии (20, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`
+## Давние линии (21, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
 ## Вещи (50)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
