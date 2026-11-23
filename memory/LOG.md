@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.063: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s11.text.062: Сасори Красных Песков (`npc/sasori`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), план сюжета, бой, поправки игрока: 1
 - s11.text.061: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета, бой
 - s11.text.060: Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), план сюжета, бой
@@ -59,4 +60,3 @@
 - s11.text.006: Аракава Дзюн (`npc/arakawa`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
 - s11.text.005: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
 - s11.text.004: поправки игрока: 1
-- s11.text.003: Сэно Фуми (`npc/road_villager_fumi`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
