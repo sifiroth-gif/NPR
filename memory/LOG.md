@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.054: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Наруто Узумаки (`npc/naruto`), Баки (`npc/baki`), план сюжета
 - s11.text.053: поправки игрока: 1
 - s11.text.052: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Дейдара (`npc/deidara`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Канкуро (`npc/kankuro`), план сюжета
 - s11.text.050: itachi_puppet (`npc/itachi_puppet`), Немера (Невыписанная) (`npc/nemera`), Саске Учиха (`npc/sasuke`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), план сюжета, бой
@@ -59,4 +60,3 @@
 - s10.text.126: Хирано Сэйдзи (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s10.text.125: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.124: Хирано Сэйдзи (`npc/hirano_seiji`), khirano_seydzi (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `s17_early_shiki_aliquot`
-- s10.text.123: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Немера (Невыписанная) (`npc/nemera`), Курихара Наото (`npc/kurihara_naoto`), вещь `s17_early_shiki_aliquot`, поправки игрока: 1
