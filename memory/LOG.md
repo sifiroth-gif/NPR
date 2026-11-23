@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.072: Гаара (`npc/gaara`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 1
 - s11.text.071: Гаара (`npc/gaara`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Дейдара (`npc/deidara`), план сюжета, бой, поправки игрока: 1
 - s11.text.070: Дейдара (`npc/deidara`), Нэдзи Хьюга (`npc/neji`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s11.text.069: Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Сакура Харуно (`npc/sakura`), Сасори Красных Песков (`npc/sasori`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -59,4 +60,3 @@
 - s11.text.015: Аракава Дзюн (`npc/arakawa`), Курихара Наото (`npc/kurihara_naoto`), вещь `arakawa_transport_copy`
 - s11.text.014: Аракава Дзюн (`npc/arakawa`)
 - s11.text.013: Аракава Дзюн (`npc/arakawa`), Минаги Дзэн (`npc/minagi_zen`)
-- s11.text.012: Аракава Дзюн (`npc/arakawa`)
