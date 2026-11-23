@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import aging, canon, claims, echo, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import acquaint, aging, canon, claims, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -704,6 +704,34 @@ def _lint(text):
     return report
 
 
+def _apply_fix(hot, fix):
+    """{"path": ["cast", "sakura", "facts"], "match": "встречала", "value": "…"}: нет пути — ничего."""
+    *head, last = fix["path"]
+    node = hot
+    for step in head:
+        node = node.get(step) if isinstance(node, dict) else None
+        if node is None:
+            return False
+    if not isinstance(node, dict) or last not in node:
+        return False
+    target, match, value = node[last], fix.get("match"), fix.get("value")
+    if isinstance(target, list) and match:
+        hits = [i for i, item in enumerate(target) if match in str(item)]
+        for i in reversed(hits):
+            if value is None:
+                target.pop(i)
+            else:
+                target[i] = value
+        return bool(hits)
+    if isinstance(target, str) and match:
+        if match not in target:
+            return False
+        node[last] = target.replace(match, value or "")
+        return True
+    node[last] = value
+    return True
+
+
 def _keeper_fill(state_dir, hot):
     """Поля состояния, которые хранитель задаёт один раз (чакра после обморока и т. п.).
 
@@ -727,8 +755,17 @@ def _keeper_fill(state_dir, hot):
             if isinstance(fields, dict):
                 hot.setdefault(section, {}).update(fields)
         fold["keeper_replace"] = digest
+    # «fix»: точечная поправка хранителя по пути (строка факта в карточке NPC), один раз на версию.
+    # s11.text.033: в facts Сакуры ведущий записал «встречала Шики на экзамене» — встреч не было.
+    fixes = [f for f in data.get("fix") or [] if isinstance(f, dict) and isinstance(f.get("path"), list)]
+    fix_digest = hashlib.sha256(json.dumps(fixes, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
+    if fixes and fold.get("keeper_fix") != fix_digest:
+        for fix in fixes:
+            _apply_fix(hot, fix)
+        fold["keeper_fix"] = fix_digest
+        _recall_cast(state_dir, hot, {})   # поправленный состав — с карточками из recovery/cast
     for section, fields in data.items():
-        if section.startswith("_") or section == "replace" or not isinstance(fields, dict):
+        if section.startswith("_") or section in ("replace", "fix") or not isinstance(fields, dict):
             continue
         target = hot.setdefault(section, {})
         for key, value in fields.items():
@@ -1087,6 +1124,12 @@ def fold(state_dir):
     always = _always_present(state_dir)
     names = presence.roster(state_dir, hot)
     lore_new = []
+    # Знакомство с Шики по всем сессиям и уровень речи медиков — для проверок реплик NPC.
+    archive_rows = acquaint.turns(state_dir)
+    met = acquaint.index(state_dir, names, archive_rows, acquaint.generic(state_dir, hot))
+    acquaint.backfill(state_dir, hot, lore_entries, names, archive_rows)
+    skill_seed = expertise.load(state_dir)
+    favor.seed(hot, archive_rows, names, always)   # окно подыгрывания сразу, не с нуля
     visited = None
     applied = []
     amended = []
@@ -1156,10 +1199,15 @@ def fold(state_dir):
                     checks.append({"turn": turn["id"], "kind": "name", "text": note})
                 present_after = list((hot.get("scene") or {}).get("present") or [])
                 checks.extend(lore.review(hot, turn, lore_entries, present_before, present_after))
+                # Кто откуда знает Шики, речь не по уровню, мир не подыгрывает.
+                checks.extend(acquaint.review(hot, turn, met, names, always))
+                checks.extend(expertise.review(hot, turn, names, skill_seed, always))
+                checks.extend(favor.track(hot, turn, names, always))
+                checks.extend(presence.prune_silent(hot, turn, int(hot.get("cursor", {}).get("seq", 0)), names, always))
                 # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
                 witnesses = [k for k in dict.fromkeys(present_before + present_after) if k not in always]
                 lore_new.extend({"entry": e, "key": k, "turn": turn["id"]} for e, k in
-                                lore.track(hot, turn, lore_entries, witnesses))
+                                lore.track(hot, turn, lore_entries, witnesses, names))
                 checks.extend(_write_notes(hot, turn))
                 checks.extend(inquiry.track(hot, turn))
                 if visited is None:
@@ -1247,8 +1295,8 @@ def fold(state_dir):
         # activating the integrated pre-scene gate.
         from . import scene_gate
         _, accepted = scene_gate.played_turns(state_dir)
-        hot.setdefault("scene", {})["npc_disclosures_to_player"] = (
-            scene_gate.compact_disclosure_cues(hot, accepted))
+        hot.setdefault("scene", {})["npc_disclosures_to_player"] = _disclosures(
+            scene_gate.compact_disclosure_cues(hot, accepted, per_actor=4), _always_present(state_dir))
     # Вести мира и темп сцены: весомое за кадром доходит до Шики пунктом must.
     from . import news
     try:
@@ -1259,6 +1307,7 @@ def fold(state_dir):
                                               "text": f"вести мира не собраны: {type(exc).__name__}"})
     # Счётчик показа новостей мира растёт до записи состояния, иначе событие висит в NEXT вечно.
     happened = will.offscreen(hot)
+    favor_item = favor.must(hot)   # до записи: пауза между напоминаниями хранится в HOT
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
         echoed = echo.pick(state_dir, hot, texts=[f"{t.get('gm') or ''} {t.get('line') or ''}" for t in applied
                                                   if t.get("kind") not in ("ooc", "technical", "void")])
@@ -1299,6 +1348,9 @@ def fold(state_dir):
         meaning_report = _recall_layer(engine_root, state_dir, hot)
     from . import recall_request
     extra = _canon_and_style(state_dir, hot, applied)
+    extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
+    if favor_item:
+        extra["favor"] = favor_item
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
                         secret_bytes=len(texts[1].encode("utf-8")))
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
@@ -1332,6 +1384,46 @@ def _canon_and_style(state_dir, hot, applied):
         if value and name in ("canon", "canon_review", "style"):
             extra[name] = value
     return extra
+
+
+DISCLOSURE_BYTES = 6000   # указатели источников в HOT.scene: при девяти NPC в сцене было 21 869 байт
+
+
+def _disclosures(cues, always=()):
+    """Кэш указателей «что NPC уже раскрыл» в пределах DISCLOSURE_BYTES; полный — в GM_BRIEF.
+
+    s11.text.040: девять человек в составе по восемь указателей — HOT перевалил 110 КБ,
+    свёртка встала. Всегда присутствующая Немера — не собеседник; строки короче;
+    сверх бюджета уходят те, чьё последнее раскрытие давнее.
+    """
+    out = {}
+    for actor, rows in (cues or {}).items():
+        if actor in always:
+            continue
+        out[actor] = [{**row, "line": str(row.get("line") or "")[:160]} for row in rows]
+    def size():
+        return len(json.dumps(out, ensure_ascii=False).encode("utf-8"))
+    from .aging import _ordinal
+    while out and size() > DISCLOSURE_BYTES:
+        oldest = min(out, key=lambda a: max((_ordinal(r.get("turn")) or 0) for r in out[a]))
+        out.pop(oldest)
+    return out
+
+
+def _knows(state_dir, hot, met, entries, seed):
+    """NEXT.present.<id>.knows: знакомство до сессии, сведения о Шики, уровень речи медика."""
+    always = set(_always_present(state_dir))
+    session = int(hot.get("session") or 0)
+    out = {}
+    for key in (hot.get("scene") or {}).get("present") or []:
+        if key == lore.SHIKI or key in always:
+            continue
+        try:
+            out[key] = acquaint.view(hot, key, met, entries, session, expertise.tier_line(hot, seed, key))
+        except Exception as exc:   # производное: сбой не останавливает свёртку
+            hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
+                                                  "text": f"knows {key}: {type(exc).__name__}: {exc}"})
+    return out
 
 
 def _count_chat(hot, applied):

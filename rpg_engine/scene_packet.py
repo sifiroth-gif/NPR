@@ -333,6 +333,19 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
             break
         if section in packet:
             packet[section] = _shorten(packet[section], limit)
+    # Жёсткий предел. s11.text.039: девять человек в сцене — 78 КБ при пределе 56. Крупнейшие из
+    # присутствующих сжимаются до сути (кто, чего хочет, боится, где стоит); полное — на странице NPC.
+    actors = packet.get("present_npcs") or {}
+    for actor_id in sorted(actors, key=lambda a: -_bytes(actors[a])):
+        if _bytes(packet) <= hard_bytes - SLIM_RESERVE:
+            break
+        _slim(actors[actor_id], actor_id)
+    for section, limit in (("horror", 120), ("continuity", 120), ("general_memory", 120), ("agendas", 140),
+                           ("plot", 180), ("world", 160), ("checks", 200)):
+        if _bytes(packet) <= hard_bytes - SLIM_RESERVE:
+            break
+        if section in packet:
+            packet[section] = _shorten(packet[section], limit)
     packet["budget"] = {"target_bytes": target_bytes, "hard_bytes": hard_bytes}
     if _bytes(packet) > target_bytes:
         packet["target_exceeded"] = True
@@ -341,6 +354,21 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     else:
         packet.pop("over_budget", None)
     return packet
+
+
+SLIM_RESERVE = 7000   # облик и fences добавляются после сжатия (live_scene.build_for_state)
+SLIM_KEEP = ("name", "role", "state", "stance", "wants", "fears", "leverage", "voice", "status", "tier", "seen")
+
+
+def _slim(actor, actor_id):
+    """Присутствующий в сжатом виде: суть карточки и ссылка на полную страницу."""
+    for key in ("dynamics", "prior_disclosures", "policy"):
+        actor.pop(key, None)
+    if actor.get("alignment_ref"):
+        actor.pop("alignment", None)   # мировоззрение — по ссылке
+    profile = actor.get("profile") or {}
+    actor["profile"] = {k: _shorten(v, 200) for k, v in profile.items() if k in SLIM_KEEP}
+    actor["profile_ref"] = f"memory/npc/{actor_id}.md"
 
 
 def _shorten(value, limit):

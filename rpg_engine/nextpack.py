@@ -106,8 +106,10 @@ FORM = ("Перед записью сверь ответ: 1) шапка <text co
         "### место; 2) каждая реплика — **Полное имя:** — Текст, без голого тире и без «— …, — сказал он»; слова "
         "Шики из заявки — дословно, с подписью **Мугами Шики:**; 3) присутствие Шики в каждой сцене: как его видят и "
         "что из этого делают люди — холод, чёрная чакра, змеиные глаза, невозможное (GM_CORE §5), страх — в их "
-        "поступке; 4) проза по навыку и horror-masters: факт, ритм, необратимость, без толкований и словаря заботы; "
-        "5) последняя строка — **Ход Шики.**")
+        "поступке; влияние — не одобрение: похвала редка, уступка — по своей причине и с ценой; 4) NPC говорит "
+        "только своё (present.<id>.knows): нет общего прошлого с Шики, которого не было, нет его тайн без канала, "
+        "медик говорит языком своего мира, а не словами Шики; 5) проза по навыку и horror-masters: факт, ритм, "
+        "необратимость, без толкований и словаря заботы; 6) последняя строка — **Ход Шики.**")
 
 
 RECENT_TURNS = 40   # план просят у тех, кто был в игре не дальше стольких ходов назад
@@ -178,6 +180,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     if rules:
         pack["directives"] = dict(rules, rule="Поправки игрока к ведению: выше GM_CORE и навыка, исполнять до отмены.")
     duty = must(hot, always_present, entries)
+    if (extra or {}).get("favor"):   # мир не подыгрывает: окно похвал и уступок перекошено (favor.must)
+        duty = [extra["favor"]] + duty[:2]
     if news and news.get("must"):   # мир доходит до Шики: весть или чужой шаг в затянувшейся сцене
         duty = [news["must"]] + duty[:2]
     if duty:
@@ -213,6 +217,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         if key in always_present:
             continue
         entry = {"name": lore._name(hot, key), "reaction": dread.summary(hot, key)}
+        knows = ((extra or {}).get("knows") or {}).get(key)
+        if knows:   # знакомство до сессии и сведения о Шики (acquaint.view): чего NPC не знает — не говорит
+            entry["knows"] = knows
         lines = _will_line(hot, key)
         if lines:
             entry["will"] = lines
@@ -252,6 +259,9 @@ def _fit(pack):
         pack["checks"].pop(0)
     if _size(pack) > HARD_BYTES:            # образец манеры — первым из необязательного
         pack.pop("style", None)
+    for person in (pack.get("present") or {}).values():   # знание о Шики — короче, но не прочь
+        if _size(pack) > HARD_BYTES and len(person.get("knows") or "") > 160:
+            person["knows"] = person["knows"][:159].rstrip() + "…"
     while _size(pack) > HARD_BYTES and len((pack.get("canon") or {}).get("items") or []) > 1:
         pack["canon"]["items"].pop()
     for answer in (pack.get("recall") or {}).get("answers") or []:   # полный ответ — в файле

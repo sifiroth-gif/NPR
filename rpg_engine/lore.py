@@ -17,6 +17,13 @@
   кто не слышал; это читается до реплик, а не после;
 * ``review`` — после хода смотрит реплики NPC с термином: говорит тот, кто не
   слышал, или не владеющий собирается применить, испытать, измерить.
+
+Запись ``"kind": "fact"`` — сведение о самом Шики (год у Орочимару, учил Саске,
+донор С-17). Узнаётся так же: был рядом, когда прозвучало, или получил по каналу
+(``knows+`` в карточке). У сведения вместо слов могут быть ``patterns`` —
+регулярные выражения: «жил у Орочимару» не ловится одним словом. Догадка
+(«возможно», «кажется», вопрос) — не утечка: спросить и предположить NPC вправе.
+Сведения не выводятся в ``fences`` — их показывает ``acquaint.view`` по людям.
 """
 from __future__ import annotations
 
@@ -46,7 +53,17 @@ def load(state_dir):
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return []
-    return [e for e in data.get("entries") or [] if isinstance(e, dict) and e.get("id") and e.get("terms")]
+    return [e for e in data.get("entries") or [] if isinstance(e, dict) and e.get("id")
+            and (e.get("terms") or e.get("patterns"))]
+
+
+def is_fact(entry):
+    return entry.get("kind") == "fact"
+
+
+# Предположение и вопрос — не знание: «возможно, вы учились у змей», «вы жили у Орочимару?»
+GUESS = re.compile(r"(?<![\wё])(?:может|возможно|кажется|предполож\w*|вероятно|похоже|не знаю|допустим|"
+                   r"полагаю|наверное|если|слышал\w*,? будто|говорят)(?![\wё])", re.I)
 
 
 def _norm(text):
@@ -58,13 +75,34 @@ def _terms(entry):
     return [_norm(t) for t in entry.get("terms") or [] if str(t).strip()]
 
 
+_COMPILED = {}
+
+
 def _pattern(entry):
     # Термин — начало слова: «Бётона», «Шитоном», но не «бетонном» и не середина слова.
-    return re.compile(r"(?<![\wё])(" + "|".join(re.escape(t) for t in _terms(entry)) + ")", re.I)
+    key = (tuple(_terms(entry)), tuple(str(p) for p in entry.get("patterns") or []))
+    if key not in _COMPILED:
+        parts = [r"(?<![\wё])(?:" + re.escape(t) + ")" for t in key[0]]
+        parts += [f"(?:{p})" for p in key[1] if p.strip()]
+        _COMPILED[key] = re.compile("|".join(parts) or r"(?!x)x", re.I)
+    return _COMPILED[key]
 
 
 def mentions(entry, text):
-    return bool(_terms(entry)) and bool(_pattern(entry).search(_norm(text)))
+    return bool(_terms(entry) or entry.get("patterns")) and bool(_pattern(entry).search(_norm(text)))
+
+
+def _guess(line, entry):
+    """Сведение звучит в вопросе или предположении: «Вы жили у Орочимару?», «возможно, сендзюцу»."""
+    for match in _pattern(entry).finditer(_norm(line)):
+        start = max(line.rfind(".", 0, match.start()), line.rfind("!", 0, match.start())) + 1
+        ends = [i for i in (line.find(".", match.end()), line.find("!", match.end()),
+                            line.find("?", match.end())) if i >= 0]
+        sentence = line[start:(min(ends) + 1) if ends else len(line)]
+        if "?" in sentence or GUESS.search(sentence):
+            continue
+        return False
+    return True
 
 
 def _name(hot, key):
@@ -80,23 +118,62 @@ def heard(hot, entry):
     out = dict(entry.get("heard") or {})
     for key, turn in ((hot.get("lore") or {}).get(entry["id"]) or {}).items():
         out.setdefault(key, turn)
+    # Сведение пришло по каналу: ведущий записал его в knows+ карточки (донесение, слух, документ).
+    for key, card in (hot.get("cast") or {}).items():
+        if key not in out and any(mentions(entry, k) for k in (card or {}).get("knows") or []):
+            out[key] = "knows+"
     return out
 
 
-def track(hot, turn, entries, present):
-    """Отмечает присутствующих не-владельцев рядом с прозвучавшим термином."""
+INNER = ("немера", "уцуро")   # голоса внутри Шики: их слышит только он
+
+
+def heard_text(turn, names=None):
+    """Что прозвучало вслух: речь Шики из заявки и подписанные реплики, кроме голосов внутри Шики.
+
+    Сведение о Шики узнают ушами: повествование («змеиные черты режима отшельника») и
+    мысли курсивом свидетелю недоступны — в отличие от увиденной техники.
+    """
+    player = re.sub(r"#[^#]*#", " ", str(turn.get("player") or ""))
+    player = re.sub(r"(?is)\bмастеру\b.*?(?=\bпо игре\b|$)", " ", player)
+    player = re.sub(r"(?i)\bпо игре\s*:", " ", player)
+    parts = [player]
+    for raw in str(turn.get("gm") or "").split("\n"):
+        label = re.match(r"^\s*\*\*([^*\n]{2,48}?)(?:\\)?:\*\*\s*[*_]*\s*[—–-]\s*(.*)$", raw)
+        if label and not any(n in _norm(label.group(1)) for n in INNER):
+            parts.append(label.group(2))
+    return "\n".join(parts)
+
+
+def track(hot, turn, entries, present, names=None):
+    """Отмечает присутствующих не-владельцев рядом с прозвучавшим термином (сведение — только вслух).
+
+    Сведение о Шики слышит лишь тот, кто в этом ходе говорит или назван в сцене: в составе
+    s11.text.040 на тракте числились Баки и Канкуро, оставшиеся в Суне, — тайну они не слышали.
+    """
     if turn.get("kind") == "ooc":
         return []
+    from .presence import _named
+    in_scene = set(turn.get("_spoke") or [])
+    if names is not None:
+        in_scene |= {k for k in present if _named(names.get(k) or {}, turn.get("gm"))}
     text = f"{turn.get('player', '')}\n{turn.get('gm', '')}"
+    spoken = None
     added = []
     for entry in entries:
-        if not mentions(entry, text):
+        if is_fact(entry):
+            spoken = heard_text(turn) if spoken is None else spoken
+            if not mentions(entry, spoken):
+                continue
+        elif not mentions(entry, text):
             continue
         wield = set(entry.get("wield") or [])
         known = heard(hot, entry)
         book = hot.setdefault("lore", {}).setdefault(entry["id"], {})
         for key in present:
             if key == SHIKI or key in wield or key in known:
+                continue
+            if is_fact(entry) and names is not None and key not in in_scene:
                 continue
             book[key] = turn["id"]
             added.append((entry["id"], key))
@@ -171,16 +248,26 @@ def review(hot, turn, entries, present_before, present_after):
         title = entry.get("title") or entry["id"]
         flagged = None
         for who, line in hits:
+            if is_fact(entry) and _guess(line, entry):
+                continue        # спросить или предположить вправе каждый
             candidates = [who] if who else others
             unheard = [k for k in candidates if k not in before and not from_shiki]
             if unheard and len(unheard) == len(candidates):
                 names = ", ".join(_name(hot, k) for k in unheard)
-                notes.append({"turn": turn["id"], "kind": "lore", "text":
-                              f"Утечка знания: в реплике «{line[:140]}» звучит {title}, но {names} "
-                              f"об этом не слышал(а). Откуда знание? Владеют только {_wielders(hot, entry)}; "
-                              f"слышали — по ходам в fences."})
+                if is_fact(entry):
+                    text = (f"Знание о Шики без источника: в реплике «{line[:140]}» — «{title}», но {names} "
+                            "этого от Шики не слышал(а) и по каналу не получал(а). Покажи канал в сцене "
+                            "(донесение, слух, документ — и knows+ в карточке) или пусть не знает: спросит, "
+                            "ошибётся, промолчит.")
+                else:
+                    text = (f"Утечка знания: в реплике «{line[:140]}» звучит {title}, но {names} "
+                            f"об этом не слышал(а). Откуда знание? Владеют только {_wielders(hot, entry)}; "
+                            f"слышали — по ходам в fences.")
+                notes.append({"turn": turn["id"], "kind": "lore", "text": text})
                 flagged = line
                 break
+        if is_fact(entry):
+            continue            # «применить» сведение нельзя — проверка умения только для техник
         for who, line in hits:
             if line == flagged:
                 continue
@@ -206,6 +293,8 @@ def first_sight(hot, entries):
     fresh = (hot.get("fold") or {}).get("lore_new") or []
     out = []
     for entry in entries:
+        if is_fact(entry):
+            continue        # услышанное о Шики — не «увиденное впервые»
         rows = [r for r in fresh if r.get("entry") == entry["id"]]
         if rows:
             out.append((entry, [_name(hot, r["key"]) for r in rows], rows[-1]["turn"]))
@@ -219,6 +308,8 @@ def fences(hot, entries, present):
     if not people:
         return out
     for entry in entries:
+        if is_fact(entry):
+            continue        # сведения о Шики — построчно по людям (acquaint.view)
         wield = set(entry.get("wield") or [])
         known = heard(hot, entry)
         parts = []
