@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.010: Баки (`npc/baki`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.009: Гаара (`npc/gaara`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.008: Наруто Узумаки (`npc/naruto`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.007: поправки игрока: 1
@@ -56,4 +57,3 @@
 - s11.text.032: Баки (`npc/baki`), Канкуро (`npc/kankuro`), Савара (`npc/suna_advance_tracker`)
 - s11.text.031: Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Канкуро (`npc/kankuro`)
 - s11.text.030: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), Баки (`npc/baki`), Канкуро (`npc/kankuro`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Разведчик Звука (`npc/razvedchik_zvuka`), план сюжета
-- s11.text.029: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), Связной Песка (`npc/svyaznoy_peska`), Разведчик Звука (`npc/razvedchik_zvuka`)
