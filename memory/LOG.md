@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.066: поправки игрока: 1
 - s11.text.065: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой, поправки игрока: 1
 - s11.text.064: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Немера (Невыписанная) (`npc/nemera`), Аракава Дзюн (`npc/arakawa`), план сюжета, бой
 - s11.text.063: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
@@ -59,4 +60,3 @@
 - s11.text.009: Аракава Дзюн (`npc/arakawa`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`)
 - s11.text.008: Аракава Дзюн (`npc/arakawa`), Сэно Фуми (`npc/road_villager_fumi`), Служащий западной почты (`npc/west_siran_mail_clerk`)
 - s11.text.007: Аракава Дзюн (`npc/arakawa`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), вещь `arakawa_patient_ampoule`
-- s11.text.006: Аракава Дзюн (`npc/arakawa`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
