@@ -380,6 +380,58 @@ def review(hot, turn, entries, present_before, present_after):
                               f"{_wielders(hot, entry)}. {names} {verb} лишь пересказ Шики: сами не применят, "
                               f"не испытают, не измерят — могут только просить, спрашивать или бояться."})
                 break
+    notes.extend(sightline_claim_review(hot, turn, entries, people))
+    return notes
+
+
+
+_SIGHT_VERB = re.compile(r"\b(?:видел[аи]?|наблюдал[аи]?|заметил[аи]?)\b", re.I)
+
+
+def _claimed_witnesses(hot, phrase, speaker, people, entry):
+    """Resolve 'Naruto saw X' and 'I saw X' without borrowing speaker knowledge."""
+    out = set()
+    for match in _SIGHT_VERB.finditer(phrase):
+        if re.search(r"\bне\s+$", phrase[:match.start()], re.I):
+            continue
+        after = phrase[match.end():match.end() + 110]
+        if not mentions(entry, after) or "?" in after.split(".", 1)[0]:
+            continue
+        before = phrase[max(0, match.start() - 70):match.start()]
+        if re.search(r"\bя\s+(?:сам(?:а)?\s+)?$", before, re.I):
+            if speaker:
+                out.add(speaker)
+            continue
+        for actor in people:
+            tokens = set(re.findall(r"[а-яёa-z]{4,}", _name(hot, actor).casefold()))
+            if any(re.search(r"(?<![\wё])" + re.escape(word) +
+                             r"\s+(?:сам(?:а)?\s+)?$", before.casefold())
+                   for word in tokens):
+                out.add(actor)
+    return out
+
+
+def sightline_claim_review(hot, turn, entries, people):
+    """Check explicit visual attributions; speaker knowledge cannot authorize a third party."""
+    notes = []
+    strict = [e for e in entries if e.get("_visual_witness")]
+    if not strict or turn.get("kind") == "ooc":
+        return notes
+    for raw in str(turn.get("gm") or "").splitlines():
+        label = re.match(r"^\s*\*\*([^*\n]{2,48}?):\*\*\s*(?:[*_])?\s*[—–-]\s*(.*)$", raw)
+        speaker = _speaker(hot, label.group(1), people) if label else None
+        phrase = label.group(2) if label else raw
+        for entry in strict:
+            if not mentions(entry, phrase):
+                continue
+            known = heard(hot, entry)
+            for target in _claimed_witnesses(hot, phrase, speaker, people, entry):
+                if target not in known:
+                    notes.append({"turn": turn.get("id"), "kind": "lore",
+                                  "text": f"Недоказанное личное свидетельство: {_name(hot, target)} "
+                                          f"якобы видел(а) {entry.get('title') or entry['id']} "
+                                          f"в «{phrase[:130]}», но проверенного эпизода наблюдения "
+                                          "для этого персонажа нет. Проверь место, время и канал."})
     return notes
 
 
