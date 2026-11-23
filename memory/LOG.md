@@ -61,4 +61,3 @@
 - s10.text.114: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Касиваги Масато (`npc/kashiwagi_masato`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`)
 - s10.text.113: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
 - s10.text.112: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
-- s10.text.111: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Морита Кай (`npc/p4_marked_hunter`), бой

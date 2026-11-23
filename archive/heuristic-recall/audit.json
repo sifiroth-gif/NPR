@@ -2,7 +2,7 @@
   "documents": 2650,
   "generic_probe_count": 11,
   "generic_probe_hit_at_10": 11,
-  "groups": 13,
+  "groups": 12,
   "indexed_sessions": [
     1,
     2,
@@ -21,77 +21,77 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 149.74,
+  "load_ms": 91.26,
   "probes": [
     {
-      "query_ms": 131.43,
+      "query_ms": 73.03,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 129.45,
+      "query_ms": 73.2,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 129.34,
+      "query_ms": 72.69,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 150.32,
+      "query_ms": 83.63,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 167.68,
+      "query_ms": 93.31,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 131.76,
+      "query_ms": 74.39,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 130.34,
+      "query_ms": 73.88,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 138.6,
+      "query_ms": 78.2,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 137.29,
+      "query_ms": 78.36,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 131.66,
+      "query_ms": 73.84,
       "query_terms": 1,
       "session": 10,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 136.78,
+      "query_ms": 73.82,
       "query_terms": 1,
       "session": 11,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 86,
+  "shards": 85,
   "source_coverage_ok": true,
   "source_sessions": [
     1,
@@ -107,6 +107,6 @@
     11
   ],
   "unindexed_source_sessions": [],
-  "warm_query_median_ms": 131.76,
-  "warm_query_p95_ms": 167.68
+  "warm_query_median_ms": 73.88,
+  "warm_query_p95_ms": 93.31
 }
