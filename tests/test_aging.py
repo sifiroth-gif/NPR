@@ -57,6 +57,27 @@ class SessionKeepTest(unittest.TestCase):
         self.assertIn("lost", hot["threads"])
         self.assertEqual(aging.restore(state, hot, 11), {})   # повторно — ничего
 
+    def test_closing_session_is_past_for_the_strict_pass(self):
+        # Межсессионный переход: закрываемая сессия разгружается, как любая прошлая.
+        state = Path(tempfile.mkdtemp())
+        log = [{"turn": f"s11.text.{i:03d}", "saw": "y"} for i in range(1, 9)]
+        hot = {"cursor": {"id": "s11.text.079"}, "handoff": {"closed": 11, "next_session": 12},
+               "_psyche": {"chiyo": {"dread": {"log": list(log)}, "intent_done": []}}}
+        aging._pass(state, hot, aging.TIGHT)
+        self.assertEqual(len(hot["_psyche"]["chiyo"]["dread"]["log"]), aging.TIGHT["dread_log"])
+        self.assertTrue(aging._this_session(hot, "s12.text.001"))
+        hot["handoff"] = {"closed": 10, "next_session": 11}   # прошлая передача не мешает текущей сессии
+        self.assertTrue(aging._this_session(hot, "s11.text.050"))
+
+    def test_session_closed_on_an_ooc_turn_opens_the_next_number(self):
+        # s11.text.079 — внеигровой; последний сыгранный — 077. Ждём s12.text.001, а не s11.text.080.
+        from rpg_engine import nextpack
+        hot = {"session": 11, "cursor": {"id": "s11.text.079", "seq": 79},
+               "handoff": {"closed": 11, "next_session": 12, "last_turn": "s11.text.077", "first_turn": "s12.text.001"}}
+        self.assertEqual(nextpack.next_id(hot), "s12.text.001")
+        hot["handoff"] = {"closed": 10, "last_turn": "s10.text.129", "first_turn": "s11.text.001"}
+        self.assertEqual(nextpack.next_id(hot), "s11.text.080")
+
 
 class CanonJunkTest(unittest.TestCase):
     def test_single_letter_rules_are_not_corrections(self):

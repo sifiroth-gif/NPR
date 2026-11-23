@@ -16,7 +16,11 @@
 
 Заготовка хранителя — ``memory/_curated/canon.json``: ``consolidated`` (до какого хода
 поправки уже в правилах), ``superseded`` {ход: каким заменён}, ``forbid`` [{pattern, why}],
-``identities`` [{a, b, source}].
+``identities`` [{a, b, source}], ``looks`` [{who, names, nouns, wrong, trait, source, near}] —
+постоянный облик (23.11.2026, s11.text.077: старое фото Шики «темноволосым», хотя волосы белые с
+s01.text.093): сторож ловит неверную черту в одном предложении с именем или с родовым словом
+(«подросток») при имени рядом — в любом времени, и на фото, в записи, в воспоминании;
+``near`` — черта однозначна (цвет волос Гаары), хватит имени рядом («его рыжих волос», s11.text.076).
 """
 from __future__ import annotations
 
@@ -32,6 +36,7 @@ CURATED = "memory/_curated/canon.json"
 DIGEST = "memory/CANON.md"
 TECHNIQUES = "campaigns/shiki/ref/TECHNIQUES.md"
 REVIEW = 20          # ходов между сверками канона
+LOOK_NEAR = 400      # знаков вокруг предложения, где ищется имя для родового слова («подросток»)
 REPEAT = 10          # строка канона к сцене не чаще раза в столько ходов
 ITEMS, ITEM_CHARS = 3, 180
 TOPICS = (
@@ -75,7 +80,56 @@ def curated(state_dir):
     except ValueError:
         data = {}
     return {"consolidated": data.get("consolidated"), "superseded": dict(data.get("superseded") or {}),
-            "forbid": list(data.get("forbid") or []), "identities": list(data.get("identities") or [])}
+            "forbid": list(data.get("forbid") or []), "identities": list(data.get("identities") or []),
+            "looks": [x for x in data.get("looks") or [] if isinstance(x, dict) and x.get("wrong") and x.get("names")]}
+
+
+def _sentence(text, start, end):
+    left = max(text.rfind(c, 0, start) for c in ".!?…\n") + 1
+    rights = [i for i in (text.find(c, end) for c in ".!?…\n") if i >= 0]
+    return left, (min(rights) + 1 if rights else len(text))
+
+
+# Между чертой и именем — другой человек или чужое «её/его»: черта не о нём («её чёрные волосы», «темноволосая женщина»).
+OTHER = re.compile(r"\b(её|его|их|ей|ему)\b|женщин|мужчин|стари|девушк|девочк|ребён|ребен|человек|шиноби|незнаком|"
+                   r"страж|солдат|торгов|служанк|медсестр|лекар|куноичи|охранник|дозорн|разведчик", re.I)
+LOOK_TIE, LOOK_NOUN = 60, 30   # знаков от черты до имени / до родового слова
+
+
+def _tied(sent, start, end, rx, reach):
+    """Имя (или родовое слово) рядом с чертой [start, end) в предложении, без другого человека между ними."""
+    for hit in rx.finditer(sent):
+        gap = sent[min(hit.end(), end):max(hit.start(), start)]
+        if abs(hit.start() - start) <= reach and not OTHER.search(gap):
+            return True
+    return False
+
+
+def look_hits(cur, text):
+    """Неверная постоянная черта облика: [(look, отрывок)]. Черта привязана к имени в том же
+    предложении — или к родовому слову («подросток», «юноша») при имени рядом (LOOK_NEAR):
+    так ловится и старое фото, запись, воспоминание."""
+    out = []
+    for look in cur.get("looks") or []:
+        try:
+            wrong, names = re.compile(look["wrong"], re.I), re.compile(look["names"])
+            nouns = re.compile(look["nouns"], re.I) if look.get("nouns") else None
+        except (re.error, TypeError):
+            continue
+        for match in wrong.finditer(text):
+            left, right = _sentence(text, match.start(), match.end())
+            sent, start, end = text[left:right], match.start() - left, match.end() - left
+            head = OTHER.search(sent[end:end + LOOK_NOUN])   # «темноволосая женщина» — черта другого человека
+            own = [m.start() for m in (names.search(sent[end:end + LOOK_NOUN]),
+                                       nouns and nouns.search(sent[end:end + LOOK_NOUN])) if m]
+            if head and not (own and min(own) < head.start()):
+                continue
+            near = text[max(0, left - LOOK_NEAR):right + LOOK_NEAR]
+            if (look.get("near") and names.search(near)) or _tied(sent, start, end, names, LOOK_TIE) or \
+                    (nouns and _tied(sent, start, end, nouns, LOOK_NOUN) and names.search(near)):
+                out.append((look, " ".join(sent.split())))
+                break
+    return out
 
 
 def _names(text):
@@ -134,6 +188,11 @@ def digest(state_dir):
     if cur["identities"]:
         lines += ["## Тождества людей", ""]
         lines += [f"- **{i.get('a')}** = {i.get('b')} ({i.get('source')})" for i in cur["identities"]]
+        lines.append("")
+    if cur["looks"]:
+        lines += ["## Облик — постоянные черты", "",
+                  "Во всех временах — и на старом фото, в записи, в воспоминании, — пока сцена не показала перемену.", ""]
+        lines += [f"- **{x.get('who')}**: {x.get('trait')} ({x.get('source')})" for x in cur["looks"]]
         lines.append("")
     lines += ["## Отменено — не использовать", ""]
     lines += [f"- {f.get('label') or f.get('pattern')}: {f.get('why')}" for f in cur["forbid"]]
@@ -210,6 +269,11 @@ def for_scene(state_dir, hot, applied, engine_root):
         card = (hot.get("cast") or {}).get(key) or {}
         names |= {w for w in re.findall(r"[А-ЯЁ][а-яё]{3,}", str(card.get("name") or ""))}
     picked = []
+    for look in cur["looks"]:              # облик присутствующего — одна строка за ход, не чаще раза в REPEAT
+        key = f"look:{look.get('who')}"
+        if key not in shown and (look.get("who") == "Мугами Шики" or any(re.search(look["names"], n) for n in names)):
+            picked.append((key, f"Облик {look.get('who')}: {look.get('trait')} ({look.get('source')})"))
+            break
     for ident in cur["identities"]:
         text = f"{ident.get('a')} = {ident.get('b')} ({ident.get('source')})"
         if any(n in text for n in names) and f"id:{ident.get('a')}" not in shown:
@@ -281,6 +345,12 @@ def guard(state_dir, turn):
             notes.append({"turn": turn["id"], "kind": "canon",
                           "text": f"Канон: «…{_short(text[start:match.end() + 40], 110)}» — {rule.get('why')}. "
                                   "Исправь следующим ходом, не переписывая показанное молча."})
+    for look, sent in look_hits(curated(state_dir), text):
+        notes.append({"turn": turn["id"], "kind": "canon",
+                      "text": f"Облик: «{_short(sent, 120)}» — {look.get('who')}: {look.get('trait')} "
+                              f"({look.get('source')}). Облик постоянен и в прошлом (фото, запись, воспоминание), "
+                              "пока сцена не показала перемену; NPC не подтверждает неверное. Сверь с первоисточником "
+                              "и исправь следующим ходом."})
     return notes[:3]
 
 

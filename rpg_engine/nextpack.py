@@ -52,7 +52,9 @@ def next_id(hot):
     # The cold session is already closed while the last accepted narrative
     # cursor still belongs to the preceding session. Do not advertise
     # s08.text.107 at a verified S08 -> S09 handoff.
-    if handoff.get("last_turn") == cursor.get("id") and handoff.get("first_turn"):
+    # Сессия может кончаться внеигровым ходом (s11.text.079 после сыгранного 077): закрыта та же сессия — новый номер.
+    closed_here = str(handoff.get("closed")) == str(hot.get("session")) and handoff.get("closed") is not None
+    if (handoff.get("last_turn") == cursor.get("id") or closed_here) and handoff.get("first_turn"):
         return handoff["first_turn"]
     try:
         return f"s{int(hot.get('session', 0)):02d}.text.{int(cursor.get('seq', 0)) + 1:03d}"
