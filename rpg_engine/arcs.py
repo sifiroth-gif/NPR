@@ -20,7 +20,8 @@ s11.text.041–042: отряд Какаши дошёл до убежища Ак�
 * ``track`` — после хода: все ``keys`` в тексте — событие «идёт» (started), закрывает его
   запись ведущего ``d.arc.<id>``: ``"played"`` или ``"changed: причина"``. Порядок канона
   (``step``): дошли до события — всё, что раньше, случилось (offscreen) или отмечено пропуском.
-  ``fixed`` — опорное событие: изменить его может только прямое решение игрока.
+  Дошли до события раньше срока прежнего — законное расхождение: ведущий решает исход из сыгранного
+  и показывает игроку причину (``changed``).
   Сцена дошла до ``before`` (вход в убежище), а событие до него не сыграно —
   замечание kind=arc: канон пропущен.
 * ``advance`` — событие ``offscreen`` (без Шики: бой Гая, извлечение) по сроку
@@ -61,14 +62,11 @@ PLAYER = re.compile(r"игрок|поправк\w* игрока|по заявк�
 
 
 def valid_change(why, fixed=False):
-    """Изменение канона принимается, только если его причина — поступок Шики, а не разминка во времени и месте.
-
-    Опорное событие (``fixed``: смерть Гаары после извлечения, жертва Тиё) меняет только прямое решение
-    игрока: s11.text.071 «Гаара вырван до 10:00 — извлечение не завершится» оставил Гаару живым вопреки канону.
+    """Изменение канона принимается, если его причина — поступок Шики (или решение игрока), а не разминка
+    во времени и месте. Отряд успел раньше срока — законная причина (игрок, 23.11.2026: «Гаара жив,
+    потому что вход разрушили раньше его смерти»); ``fixed`` оставлен для совместимости и ничего не запрещает.
     """
     text = str(why or "")
-    if fixed and not PLAYER.search(text):
-        return False
     return bool(AGENCY.search(text) or PLAYER.search(text)) and not EVASION.search(text)
 
 
@@ -90,7 +88,16 @@ def _close_earlier(state, arc, beat, turn_id, at, notes):
         row = state.get(earlier["id"]) or {}
         if row.get("status") in STATUSES:
             continue
-        if earlier.get("offscreen"):
+        due = _parse(earlier.get("due"))
+        if earlier.get("offscreen") and due and _parse(at) and _parse(at) < due:
+            # Дошли раньше срока: по канону оно уже случилось, здесь — нет (скорость Шики). Это законное
+            # расхождение, не ошибка (игрок, 23.11.2026: «Гаара жив, потому что вход разрушили раньше его смерти»).
+            notes.append({"turn": turn_id, "kind": "arc", "text":
+                          f"Расхождение с каноном по времени: «{beat.get('title')}» случилось раньше срока «{earlier.get('title')}» "
+                          f"({due.strftime('%d.%m %H:%M')}); по канону к этому моменту — {earlier.get('canon')} Здесь — нет: отряд "
+                          "успел раньше. Реши исход из сыгранного, покажи игроку его причину в сцене и запиши "
+                          f"d.arc.{earlier['id']}: \"changed: причина\"; иначе в срок событие случится само."})
+        elif earlier.get("offscreen"):
             state[earlier["id"]] = {"status": "offscreen", "turn": turn_id, "at": at, "why": f"раньше «{beat['id']}»",
                                     "told": False}
         elif row.get("status") == "started":
@@ -164,11 +171,14 @@ def track(hot, turn, arcs):
             continue
         if status in STATUSES:
             state[key] = {"status": status, "turn": turn["id"], "why": why[:200]}
+            if status == "changed":
+                state[key]["shown"] = False   # причину расхождения — игроку в сцене, один ход
             moved.append(key)
     text = f"{turn.get('place') or ''}\n{turn.get('gm') or ''}".casefold()
     now = _parse(turn.get("at"))
     notes = notes_early
     _delivered(state, beats_by_id, turn["id"], text)
+    _shown(state, turn["id"])
     for arc, beat in _beats(arcs):
         if _done(state, beat):
             continue
@@ -197,6 +207,13 @@ def track(hot, turn, arcs):
         arc = next(a for a, b in _beats(arcs) if b["id"] == key)
         _close_earlier(state, arc, beats_by_id[key], turn["id"], turn.get("at"), notes)
     return notes
+
+
+def _shown(state, turn_id):
+    """Расхождение с каноном показано ходом после записи (must стоял один ход)."""
+    for row in state.values():
+        if isinstance(row, dict) and row.get("shown") is False and row.get("turn") != turn_id:
+            row["shown"] = turn_id
 
 
 def _delivered(state, beats, turn_id, text):
@@ -318,6 +335,9 @@ def must(hot, arcs):
     state = _state(hot)
     for _, beat in _beats(arcs):
         row = state.get(beat["id"]) or {}
+        if row.get("status") == "changed" and row.get("shown") is False:
+            return (f"Расхождение с каноном «{beat.get('title')}»: {row.get('why')}. Покажи игроку эту причину в сцене — "
+                    "тем, что видит Шики, или словами участника; без неё игрок примет исход за ошибку.")
         if row.get("status") == "offscreen" and row.get("told") is False:
             waiting = int(row.get("waiting") or 0)
             head = (f"Случившееся без Шики так и не дошло до игрока ({waiting} ход.)" if waiting
