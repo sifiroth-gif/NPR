@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.027: Канкуро (`npc/kankuro`)
 - s12.text.026: Гаара (`npc/gaara`), Канкуро (`npc/kankuro`)
 - s12.text.025: Канкуро (`npc/kankuro`), Немера (Невыписанная) (`npc/nemera`), вещь `gaara_private_letter`
 - s12.text.024: Канкуро (`npc/kankuro`)
@@ -56,4 +57,3 @@
 - s11.text.049: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Саске Учиха (`npc/sasuke`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Наруто Узумаки (`npc/naruto`), план сюжета, бой
 - s11.text.048: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Майто Гай (`npc/gai`), план сюжета, бой
 - s11.text.047: поправки игрока: 1
-- s11.text.046: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), план сюжета, бой
