@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.004: Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), Гаара (`npc/gaara`), Наруто Узумаки (`npc/naruto`), Нэдзи Хьюга (`npc/neji`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_wraps`, план сюжета
 - s12.text.003: Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s12.text.002: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Гаара (`npc/gaara`), Нэдзи Хьюга (`npc/neji`)
 - s12.text.001: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), план сюжета
@@ -56,4 +57,3 @@
 - s11.text.026: Савара (`npc/suna_advance_tracker`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
 - s11.text.025: Ито (`npc/suna_wounded_scout`), Савара (`npc/suna_advance_tracker`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
 - s11.text.024: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), kusa_border_officer (`npc/kusa_border_officer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`), Хосина Кэн (`npc/hoshina_ken`)
-- s11.text.023: Савара (`npc/suna_advance_tracker`), Ито (`npc/suna_wounded_scout`), kusa_border_officer (`npc/kusa_border_officer`), Аракава Дзюн (`npc/arakawa`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`)
