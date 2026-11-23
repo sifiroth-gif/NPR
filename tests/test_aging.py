@@ -83,3 +83,23 @@ class CanonPlusStringTest(unittest.TestCase):
             pass   # прочие поля дельты здесь не важны
         rules = [c["rule"] for c in state.get("canon", [])]
         self.assertEqual(rules, ["Ранний прорыв Шики сорвал извлечение: Гаара жив."])
+
+
+class ResyncTest(unittest.TestCase):
+    def test_keeper_resync_is_a_must_until_reread(self):
+        import json
+        from rpg_engine import hot as hot_module
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / hot_module.KEEPER_FILL
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({"resync": {"id": "r1", "note": "Гаара жив."}}), encoding="utf-8")
+            state = {"session": 11, "cursor": {"id": "s11.text.074"}}
+            hot_module._keeper_fill(tmp, state)
+            item = hot_module.resync_item(state)
+            self.assertIn("archive/session-011-chronicle.md", item)
+            self.assertIn("Гаара жив.", item)
+            hot_module._keeper_fill(tmp, state)                       # тот же id — не заново
+            hot_module._resync_seen(state, {"id": "s11.text.075", "read": ["campaigns/shiki/GM_CORE.md"]})
+            self.assertIsNone(hot_module.resync_item(state))
+            hot_module._keeper_fill(tmp, state)
+            self.assertIsNone(hot_module.resync_item(state))

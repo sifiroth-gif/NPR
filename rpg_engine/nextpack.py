@@ -190,6 +190,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         duty = [news["must"]] + duty[:2]
     if (extra or {}).get("arc_must"):   # канон арки просрочен рядом с Шики (arcs.must)
         duty = [extra["arc_must"]] + duty[:2]
+    if (extra or {}).get("resync"):     # перечитать стартовый пакет в нынешнем чате (hot.resync_item)
+        duty = [extra["resync"]] + duty[:2]
     if duty:
         pack["must"] = duty
     if happened is None:

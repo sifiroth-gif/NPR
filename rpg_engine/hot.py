@@ -738,6 +738,35 @@ def _apply_fix(hot, fix):
     return True
 
 
+RESYNC_TURNS = 2   # ходов, пока висит просьба перечитать (снимается раньше, если ведущий перечитал)
+RESYNC_READ = ("GM_CORE.md", "SHIKI.md", "ref/TECHNIQUES.md", "ref/NEMERA.md", "ref/COMBAT.md",
+               "memory/CANON.md", "recovery/GM_BRIEF.json")
+
+
+def resync_item(hot):
+    """Пункт must: перечитать стартовый пакет в нынешнем чате, как в новом."""
+    pending = (hot.get("fold") or {}).get("resync")
+    if not pending:
+        return None
+    session = int(hot.get("session") or 0)
+    files = ", ".join(RESYNC_READ) + f", archive/session-{session:03d}-chronicle.md"
+    note = f" {pending['note']}" if pending.get("note") else ""
+    return ("Обнови картину в этом чате, как в новом (игрок не может открыть новый чат): одним пакетом перечитай "
+            f"{files}. Сыгранное, канон и память NPC — по этим файлам, а не по памяти чата.{note} В TURN этого хода — "
+            "\"chat\": \"new\" и read с прочитанным.")
+
+
+def _resync_seen(hot, turn):
+    """Ведущий перечитал (chat: new или GM_CORE в read) или прошло RESYNC_TURNS ходов — просьба снята."""
+    pending = (hot.get("fold") or {}).get("resync")
+    if not pending or turn.get("kind") in ("ooc", "technical", "void"):
+        return
+    fresh = turn.get("chat") == "new" or any(str(r).endswith("GM_CORE.md") for r in turn.get("read") or [])
+    pending["left"] = int(pending.get("left") or 0) - 1
+    if fresh or pending["left"] <= 0:
+        hot["fold"].pop("resync", None)
+
+
 def _keeper_fill(state_dir, hot):
     """Поля состояния, которые хранитель задаёт один раз (чакра после обморока и т. п.).
 
@@ -770,6 +799,12 @@ def _keeper_fill(state_dir, hot):
         from . import aging
         fold["restored_aged"] = restore.get("id")
         fold["restored_report"] = aging.restore(state_dir, hot, restore["session"])
+    # «resync»: игрок не может открыть новый чат (23.11.2026) — ведущий перечитывает стартовый пакет в нынешнем.
+    resync = data.get("resync") if isinstance(data.get("resync"), dict) else None
+    if resync and resync.get("id") and fold.get("resync_done") != resync["id"]:
+        fold["resync_done"] = resync["id"]
+        fold["resync"] = {"id": resync["id"], "since": (hot.get("cursor") or {}).get("id"), "left": RESYNC_TURNS,
+                          "note": str(resync.get("note") or "")[:400]}
     fixes = [f for f in data.get("fix") or [] if isinstance(f, dict) and isinstance(f.get("path"), list)]
     fix_digest = hashlib.sha256(json.dumps(fixes, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
     if fixes and fold.get("keeper_fix") != fix_digest:
@@ -1221,6 +1256,7 @@ def fold(state_dir):
                 checks.extend(arcs.track(hot, turn, canon_arcs))   # канон арки: сыграно, пропущено
                 fight.track_arsenal(hot, turn)                      # пущенные в ход приёмы именных
                 checks.extend(fight.nemera_turn(hot, turn))         # Немера не ждёт просьбы
+                _resync_seen(hot, turn)                             # перечитал ли ведущий стартовый пакет
                 checks.extend(presence.prune_silent(hot, turn, int(hot.get("cursor", {}).get("seq", 0)), names, always))
                 # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
                 witnesses = [k for k in dict.fromkeys(present_before + present_after) if k not in always]
@@ -1371,6 +1407,7 @@ def fold(state_dir):
     extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
     if favor_item:
         extra["favor"] = favor_item
+    extra["resync"] = resync_item(hot)
     extra["arc"] = arcs.view(hot, canon_arcs)
     extra["arc_must"] = arcs.must(hot, canon_arcs)
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
