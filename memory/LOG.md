@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.018: Канкуро (`npc/kankuro`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.017: Немера (Невыписанная) (`npc/nemera`), Канкуро (`npc/kankuro`), Гаара (`npc/gaara`), линия `shiki_finances`, план сюжета
 - s12.text.016: Наруто Узумаки (`npc/naruto`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.015: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`)
@@ -55,4 +56,3 @@
 - s11.text.040: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), chiyo_caravan (`npc/chiyo_caravan`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.039: Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 2
 - s11.text.038: Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Канкуро (`npc/kankuro`), Связной Песка (`npc/svyaznoy_peska`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s11.text.037: Баки (`npc/baki`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
