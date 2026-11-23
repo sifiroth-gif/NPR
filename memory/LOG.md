@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.049: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Саске Учиха (`npc/sasuke`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Наруто Узумаки (`npc/naruto`), план сюжета, бой
 - s11.text.048: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Майто Гай (`npc/gai`), план сюжета, бой
 - s11.text.047: поправки игрока: 1
 - s11.text.046: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), план сюжета, бой
@@ -60,4 +61,3 @@
 - s10.text.121: Курихара Наото (`npc/kurihara_naoto`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.120: Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Фурукава Кёдзи (`npc/caravan_prisoner`)
 - s10.text.119: Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Сотрудник снабжения (`npc/sotrudnik_snabzheniya`), Хосина Кэн (`npc/hoshina_ken`)
-- s10.text.118: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Курихара Наото (`npc/kurihara_naoto`), Касэ (`npc/kase`)
