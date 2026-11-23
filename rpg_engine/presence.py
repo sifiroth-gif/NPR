@@ -22,6 +22,10 @@ from .wiki import ROLE_STEMS, _is_background
 
 SHIKI = "shiki"
 TITLE_WORDS = {"мастер", "господин", "госпожа", "доктор", "глава", "сама", "сан", "кун", "тян", "сенсей"}
+# «Связной Песка», «Офицер Травы»: деревня с заглавной — не имя. Иначе «Врач Песка» находил связного,
+# а каждое «Песка» в повествовании числилось встречей с ним (acquaint).
+GEO_STEMS = ("песк", "трав", "лист", "туман", "облак", "камн", "камен", "звук", "дожд", "водопад", "кусагакур",
+             "сунагакур", "конох", "киригакур", "кумогакур", "ивагакур", "отогакур", "амэгакур")
 AUTO_AFTER = 2       # ходов с подписью без карточки — и карточка-заготовка
 FORGET = 3           # ходов без реплики — и добавленный кодом уходит из состава
 
@@ -36,6 +40,12 @@ def _clean(label):
     return _norm(text)
 
 
+def word_is_first(name, word):
+    """Первое слово имени («Песков Ёсио») — имя; после должности («Связной Песка») — деревня."""
+    words = re.findall(r"[\wё-]+", name)
+    return bool(words) and words[0] == word
+
+
 def _entry(names):
     names = [str(n) for n in names if n and str(n).strip()]
     proper = set()
@@ -44,7 +54,8 @@ def _entry(names):
             low = word.casefold()
             # Часть имени — только собственное имя: с заглавной и не должность/роль.
             if word[:1].isupper() and len(low) >= 3 and low not in TITLE_WORDS \
-                    and not any(stem in low for stem in ROLE_STEMS):
+                    and not any(stem in low for stem in ROLE_STEMS) \
+                    and not (low.startswith(GEO_STEMS) and not word_is_first(name, word)):
                 proper.add(low)
     return {"display": names[0] if names else "", "forms": [_norm(n) for n in names], "parts": proper}
 
@@ -182,3 +193,47 @@ def auto_cards(hot, turn, unknown, names):
         names[key] = _entry([made[key]["name"]])
         seen.pop(label, None)
     return made
+
+
+SILENT = 5           # ходов без реплики и без имени в тексте — человек ушёл из сцены
+
+
+def _named(entry, gm):
+    words = set(re.findall(r"[а-яёa-z]{4,}", str(gm or "").casefold()))
+    for part in entry.get("parts") or ():
+        stem = part if len(part) <= 5 else part[:-1]
+        if len(stem) >= 4 and any(w.startswith(stem) for w in words):
+            return True
+    return False
+
+
+def prune_silent(hot, turn, seq, names, always_present=()):
+    """Убирает из состава того, кого SILENT ходов нет ни в репликах, ни в тексте сцены.
+
+    s11.text.039: на тракте за Суной в составе оставались Баки, Канкуро и связной,
+    оставшиеся в госпитале. Состав питает реакции, волю и знание NPC в NEXT —
+    лишние люди начинают «присутствовать» и говорить. Возвращает замечание.
+    """
+    if turn.get("kind") in ("ooc", "technical", "void"):
+        return []
+    scene = hot.setdefault("scene", {})
+    present = list(scene.get("present") or [])
+    seen = hot.setdefault("fold", {}).setdefault("present_seen", {})
+    spoke = set(turn.get("_spoke") or [])
+    gm = turn.get("gm")
+    for key in present:
+        if key == SHIKI or key in always_present:
+            continue
+        if key in spoke or _named(names.get(key) or {}, gm) or key not in seen:
+            seen[key] = seq
+    gone = [k for k in present if k not in (SHIKI, *always_present) and seq - int(seen.get(k, seq)) >= SILENT]
+    for key in list(seen):
+        if key not in present or key in gone:
+            seen.pop(key, None)
+    if not gone:
+        return []
+    scene["present"] = [k for k in present if k not in gone]
+    shown = ", ".join(display(names, k) for k in gone)
+    return [{"turn": turn.get("id"), "kind": "presence", "text":
+             f"Из состава сцены убраны {shown}: {SILENT} ходов ни реплики, ни упоминания. Если кто-то рядом — "
+             "впиши его в d.scene.present и дай ему действовать."}]

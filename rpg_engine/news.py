@@ -47,6 +47,12 @@ STATE_RULE = ("Числа для разбора ведения (OOC): отвеч
               "Без извинений, покаяния и оценок себя: длину сцены выбирает игрок, ведущий отвечает за мир вокруг.")
 
 
+def _favor(hot):
+    """Окно «мир не подыгрывает» (favor.py): похвалы, уступки, без цены, трение — для разбора."""
+    from . import favor
+    return favor.totals(hot)
+
+
 def dry(text):
     """Канцелярский исход: бумага и оговорка вместо перемены мира."""
     text = str(text or "")
@@ -249,6 +255,7 @@ def write_pace(state_dir, hot):
             "news": {k: state.get(k, 0) for k in ("offered", "delivered", "missed")}
                     | {"pending": len(pending(hot)), "carrying": bool(state.get("current"))},
             "echo": {"offered": echo.get("offered", 0), "used": echo.get("used_count", 0)},
+            "favor": _favor(hot),
             "rule": STATE_RULE}
     path = Path(state_dir) / PATH
     body = json.dumps(pace, ensure_ascii=False, indent=1) + "\n"
