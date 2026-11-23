@@ -80,11 +80,11 @@
 - reflex_and_coordination: 5
 
 ## Chakra
-- value: 28.23
-- at: 0010-03-15T08:43:18
+- value: 21.98
+- at: 0010-03-15T08:43:21
 - state: на исходе
 - why: Немера добровольно передала Шики 20 единиц своей чакры со скоростью 10 ед/сек за две секунды
-- last: turn: s11.text.068; spent: 1.25; what: Нулевой Геном: локальное клеточное восстановление и гемостаз поверхностного пореза предплечья
+- last: turn: s11.text.070; spent: 6.25; what: Глазное гендзюцу «Чужой шаг», отражено подготовленным левым глазом Дейдары
 - max: 100.0
 
 ## Knows_plus
@@ -127,13 +127,13 @@
 - archive/aged/shiki-knows.jsonl
 
 ## Nemera_chakra
-- value: 476
+- value: 474
 - max: 500
 - regen_per_hour: 4
 - transfer_per_second: 10
 - manifest_cost_per_minute: 1
 - range_meters: 5
-- at: 0010-03-15T08:40:57
+- at: 0010-03-15T08:43:21
 - last: received_by_shiki: 20
 
 ## Age

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.070: Дейдара (`npc/deidara`), Нэдзи Хьюга (`npc/neji`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s11.text.069: Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Сакура Харуно (`npc/sakura`), Сасори Красных Песков (`npc/sasori`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s11.text.068: Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Сасори Красных Песков (`npc/sasori`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s11.text.067: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -59,4 +60,3 @@
 - s11.text.013: Аракава Дзюн (`npc/arakawa`), Минаги Дзэн (`npc/minagi_zen`)
 - s11.text.012: Аракава Дзюн (`npc/arakawa`)
 - s11.text.011: Аракава Дзюн (`npc/arakawa`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), Мориока Хидэаки (`npc/morioka_hideaki`)
-- s11.text.010: Аракава Дзюн (`npc/arakawa`), Немера (Невыписанная) (`npc/nemera`), Неустановленный наблюдатель у западного шлюза (`npc/sluice_hidden_watcher`), вещь `arakawa_patient_ampoule`, поправки игрока: 1
