@@ -1,8 +1,8 @@
 {
-  "documents": 2692,
+  "documents": 2693,
   "generic_probe_count": 11,
   "generic_probe_hit_at_10": 11,
-  "groups": 12,
+  "groups": 13,
   "indexed_sessions": [
     1,
     2,
@@ -21,78 +21,78 @@
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 98.84,
+  "load_ms": 152.04,
   "probes": [
     {
-      "query_ms": 83.48,
+      "query_ms": 132.52,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 83.04,
+      "query_ms": 132.54,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 83.28,
+      "query_ms": 131.4,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 94.4,
+      "query_ms": 153.8,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 106.43,
+      "query_ms": 174.86,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 86.31,
+      "query_ms": 133.68,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 85.25,
+      "query_ms": 131.99,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 87.08,
+      "query_ms": 140.2,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 87.67,
+      "query_ms": 138.49,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 84.55,
+      "query_ms": 134.06,
       "query_terms": 1,
       "session": 10,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 84.3,
+      "query_ms": 134.64,
       "query_terms": 1,
       "session": 11,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 86,
-  "source_coverage_ok": true,
+  "shards": 87,
+  "source_coverage_ok": false,
   "source_sessions": [
     1,
     2,
@@ -104,9 +104,12 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
-  "unindexed_source_sessions": [],
-  "warm_query_median_ms": 85.25,
-  "warm_query_p95_ms": 106.43
+  "unindexed_source_sessions": [
+    12
+  ],
+  "warm_query_median_ms": 134.06,
+  "warm_query_p95_ms": 174.86
 }
