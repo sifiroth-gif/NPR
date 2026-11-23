@@ -204,6 +204,7 @@
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
+- Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 1 ход(ов), s11–s11
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
