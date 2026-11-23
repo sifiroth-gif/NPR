@@ -58,11 +58,11 @@ class AgingTest(unittest.TestCase):
         hot = {"cursor": {"id": "s09.text.083"}, "scene": {"present": ["shiki"], "situation": "v7 рядом"},
                "threads": {"old": {"state": "x", "turn": "s08.text.010"}, "v7": {"state": "y", "turn": "s08.text.010"},
                            "fresh": {"state": "z", "turn": "s09.text.080"}},
-               "_psyche": {"n": {"intent_done": [{"key": f"p{i}", "goal": "g", "status": "fulfilled"} for i in range(6)]}}}
+               "_psyche": {"n": {"intent_done": [{"key": f"p{i}", "goal": "g", "status": "fulfilled"} for i in range(10)]}}}
         report = aging.apply(root, hot)
         self.assertEqual(set(hot["threads"]), {"v7", "fresh"})
         self.assertEqual(report["threads"], 1)
         self.assertIn("old", aging.load(root, "threads.jsonl"))
-        self.assertEqual(len(hot["_psyche"]["n"]["intent_done"]), 3)
+        self.assertEqual(len(hot["_psyche"]["n"]["intent_done"]), aging.NORMAL["intent_done"])
         self.assertIn("p0", hot["_psyche"]["n"]["done_keys"])
         self.assertNotIn("goal", hot["_psyche"]["n"]["intent_done"][0], "старые исходы — кратко")

@@ -341,7 +341,7 @@ def _canon(root, state):
                 continue
             row = json.loads(line)
             rule = row.get("rule", "")
-            if not rule:
+            if not rule or len(str(rule).strip()) < 8:   # обрывки из одной буквы (s11.text.073)
                 continue
             out.append(_entry(key=f"canon.{lineno:05d}", source="archive/shiki-canon.jsonl",
                               body=rule, headline=row.get("turn", ""),

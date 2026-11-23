@@ -54,7 +54,7 @@ MONTHS = ("января", "февраля", "марта", "апреля", "ма�
 
 LINE_LIMIT = 320
 KNOWS_LIMIT = 8       # в HOT — последние; все знания на странице memory/npc/<id>.md
-CHRONICLE_IN_HOT = 4
+CHRONICLE_IN_HOT = 10   # 23.11.2026: было 4 — ведущий терял ход сессии; полная хроника — archive/session-NNN-chronicle.md
 CANON_IN_HOT = 6
 CANON_ARCHIVE = "archive/shiki-canon.jsonl"
 LINT_KEEP = 3
@@ -345,7 +345,13 @@ def _apply_delta(hot, delta, turn):
             raise TurnError("pact_stage_floor must be an integer stage in range")
         pact = hot.setdefault("pact", {})
         pact["stage_floor"] = max(int(pact.get("stage_floor", 0)), floor)
-    for item in delta.get("canon+") or []:
+    additions = delta.get("canon+") or []
+    if isinstance(additions, str):
+        # s11.text.073: строка вместо списка разошлась по буквам — 54 «поправки» из одной буквы в каноне.
+        additions = [additions]
+    for item in additions:
+        if not str(item).strip() or len(str(item).strip()) < 8:
+            continue
         entry = {"turn": turn_id, "rule": item}
         if entry not in hot.setdefault("canon", []):
             hot["canon"].append(entry)
@@ -757,6 +763,13 @@ def _keeper_fill(state_dir, hot):
         fold["keeper_replace"] = digest
     # «fix»: точечная поправка хранителя по пути (строка факта в карточке NPC), один раз на версию.
     # s11.text.033: в facts Сакуры ведущий записал «встречала Шики на экзамене» — встреч не было.
+    # «restore_aged»: вернуть из archive/aged ушедшее во время сессии (игрок, 23.11.2026: продолжить сессию,
+    # а не закрывать; разгрузки увели её же память). Один раз на id.
+    restore = data.get("restore_aged") if isinstance(data.get("restore_aged"), dict) else None
+    if restore and restore.get("session") and fold.get("restored_aged") != restore.get("id"):
+        from . import aging
+        fold["restored_aged"] = restore.get("id")
+        fold["restored_report"] = aging.restore(state_dir, hot, restore["session"])
     fixes = [f for f in data.get("fix") or [] if isinstance(f, dict) and isinstance(f.get("path"), list)]
     fix_digest = hashlib.sha256(json.dumps(fixes, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
     if fixes and fold.get("keeper_fix") != fix_digest:

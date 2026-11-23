@@ -58,7 +58,8 @@ def load(state_dir):
                 row = json.loads(line)
             except ValueError:
                 continue
-            if row.get("rule"):
+            # Обрывки из одной буквы (s11.text.073: d.canon+ строкой разошёлся по символам) — не поправки.
+            if row.get("rule") and len(str(row["rule"]).strip()) >= 8:
                 rows.append({"turn": str(row.get("turn") or ""), "rule": str(row["rule"]), "line": number})
     seen = {}
     for row in rows:                       # ключ записи: ход#номер (за один ход бывает несколько поправок)
