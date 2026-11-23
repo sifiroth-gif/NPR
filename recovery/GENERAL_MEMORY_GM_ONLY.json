@@ -217,6 +217,27 @@
         "recovery/cast/arakawa_guard.json"
       ]
     },
+    "arakawa_patient_ampoule": {
+      "aliases": [
+        "arakawa patient ampoule"
+      ],
+      "facts": [],
+      "id": "arakawa_patient_ampoule",
+      "kind": "item",
+      "label": "arakawa patient ampoule",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "Аракава Дзюн",
+          "since": "s11.text.007",
+          "turn": "s11.text.010"
+        }
+      ],
+      "sources": [
+        "s11.text.010"
+      ]
+    },
     "arakawa_transport_copy": {
       "aliases": [
         "arakawa transport copy"
@@ -385,6 +406,27 @@
       ],
       "sources": [
         "s09.text.075"
+      ]
+    },
+    "black_caravan_manifest": {
+      "aliases": [
+        "black caravan manifest"
+      ],
+      "facts": [],
+      "id": "black_caravan_manifest",
+      "kind": "item",
+      "label": "black caravan manifest",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "Глава Кусагакуре, личный запираемый ящик резиденции в папке 19-Т",
+          "since": "s09.text.076",
+          "turn": "s11.text.020"
+        }
+      ],
+      "sources": [
+        "s11.text.020"
       ]
     },
     "bounty_notices": {
@@ -14862,6 +14904,25 @@
         "s09.text.068"
       ]
     },
+    "thread:v7": {
+      "aliases": [
+        "thread:v7"
+      ],
+      "facts": [],
+      "id": "thread:v7",
+      "kind": "thread",
+      "label": "v7",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "12.03.1287 Шики уничтожил известные запасные клеточные ткани линии В-7/С-17 в диагностической лаборатории Куроды (резервная ампула и 4 фиксированных препарата) и все зарегистрированные тканевые препараты С-17 в архиве госпиталя; на северном подземном производстве уничтожены 6 активных культур НС-4. Общее исчезновение С-17 НЕ под"
+        }
+      ],
+      "sources": [
+        "s11.text.018"
+      ]
+    },
     "tikhiy_porog_seller": {
       "aliases": [
         "tikhiy porog seller",
@@ -14880,6 +14941,27 @@
       ],
       "sources": [
         "recovery/cast/tikhiy_porog_seller.json"
+      ]
+    },
+    "traveller_cloak": {
+      "aliases": [
+        "traveller cloak"
+      ],
+      "facts": [],
+      "id": "traveller_cloak",
+      "kind": "item",
+      "label": "traveller cloak",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "у ног Шики на камнях старой переправы",
+          "since": "s11.text.002",
+          "turn": "s11.text.022"
+        }
+      ],
+      "sources": [
+        "s11.text.022"
       ]
     },
     "unknown_masked_prisoner": {
@@ -15270,6 +15352,27 @@
       "source": "s11.text.020",
       "status": "projected",
       "to": "Глава Кусагакуре, запертый личный ящик в кабинете резиденции",
+      "type": "held_by"
+    },
+    {
+      "from": "arakawa_patient_ampoule",
+      "source": "s11.text.010",
+      "status": "projected",
+      "to": "Аракава Дзюн",
+      "type": "held_by"
+    },
+    {
+      "from": "black_caravan_manifest",
+      "source": "s11.text.020",
+      "status": "projected",
+      "to": "Глава Кусагакуре, личный запираемый ящик резиденции в папке 19-Т",
+      "type": "held_by"
+    },
+    {
+      "from": "traveller_cloak",
+      "source": "s11.text.022",
+      "status": "projected",
+      "to": "у ног Шики на камнях старой переправы",
       "type": "held_by"
     }
   ],
