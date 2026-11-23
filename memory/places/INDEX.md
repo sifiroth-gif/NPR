@@ -104,6 +104,7 @@
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Старая переправа, северная граница Страны Травы · `places/staraya-pereprava-severnaya-granitsa-strany-travy` · 2 ход(ов), s11–s11
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
+- Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
 - Страна Травы, сельские предместья Кусагакуре · `places/strana-travy-selskie-predmestya-kusagakure` · 2 ход(ов), s10–s11
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
@@ -204,7 +205,6 @@
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
-- Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 1 ход(ов), s11–s11
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02

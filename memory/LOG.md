@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.043: Немера (Невыписанная) (`npc/nemera`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Тиё (`npc/chiyo`), план сюжета
 - s11.text.041: chiyo_caravan (`npc/chiyo_caravan`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.040: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), chiyo_caravan (`npc/chiyo_caravan`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.039: Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 2
@@ -60,4 +61,3 @@
 - s10.text.115: Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Касиваги Масато (`npc/kashiwagi_masato`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.114: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Касиваги Масато (`npc/kashiwagi_masato`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`)
 - s10.text.113: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)
-- s10.text.112: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
