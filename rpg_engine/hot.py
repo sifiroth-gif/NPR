@@ -803,7 +803,7 @@ def _keeper_fill(state_dir, hot):
     resync = data.get("resync") if isinstance(data.get("resync"), dict) else None
     if resync and resync.get("id") and fold.get("resync_done") != resync["id"]:
         fold["resync_done"] = resync["id"]
-        fold["resync"] = {"id": resync["id"], "since": ((hot.get("cursor") or {}).get("id"), "left": RESYNC_TURNS,
+        fold["resync"] = {"id": resync["id"], "since": (hot.get("cursor") or {}).get("id"), "left": RESYNC_TURNS,
                           "note": str(resync.get("note") or "")[:400]}
     fixes = [f for f in data.get("fix") or [] if isinstance(f, dict) and isinstance(f.get("path"), list)]
     fix_digest = hashlib.sha256(json.dumps(fixes, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
