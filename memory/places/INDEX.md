@@ -18,8 +18,8 @@
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 16 ход(ов), s09–s10
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
+- Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 14 ход(ов), s12–s12
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
-- Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 13 ход(ов), s12–s12
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02

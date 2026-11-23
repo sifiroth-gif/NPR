@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.024: Канкуро (`npc/kankuro`)
 - s12.text.023: Канкуро (`npc/kankuro`)
 - s12.text.022: Канкуро (`npc/kankuro`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.021: Канкуро (`npc/kankuro`), Гаара (`npc/gaara`)
@@ -56,4 +57,3 @@
 - s11.text.046: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), план сюжета, бой
 - s11.text.045: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), itachi_puppet (`npc/itachi_puppet`), план сюжета, бой
 - s11.text.044: Майто Гай (`npc/gai`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Какаши Хатакэ (`npc/kakashi`), Ито (`npc/suna_wounded_scout`), план сюжета
-- s11.text.043: Немера (Невыписанная) (`npc/nemera`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Тиё (`npc/chiyo`), план сюжета
