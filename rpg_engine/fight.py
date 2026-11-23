@@ -13,6 +13,7 @@
 from __future__ import annotations
 
 import hashlib
+from pathlib import Path
 import json
 from datetime import datetime
 
@@ -50,6 +51,46 @@ MODS = {"внезапность": (0, 1), "позиция": (-1, 1), "подго
 SEVERITY = {"лёгкая": 0, "средняя": 0.5, "тяжёлая": 1, "критическая": 2}
 MORALE = {"steady": 0, "shaken": 0.5, "breaking": 1, "broken": 1}
 ACTIVE = "active"
+
+# Именной противник (поправка игрока 23.11.2026: «бои были лёгкие; дальше именные и сильные — честно,
+# противник может прервать действие Шики и действовать между его действиями»).
+ROSTER = "campaigns/shiki/ref/FOES.json"
+NAMED_RANKS = ("elite", "kage")
+NAMED_EDGE_CAP = 2.0       # перевес Шики против именного — не выше: p ≤ 80, всегда бросок
+LONG_BONUS = 1.0           # длинное действие Шики (печати, призыв, сбор природной чакры, лечение) — окно
+DEFENSE = {"genjutsu": "genjutsu", "taijutsu": "reaction", "weapons": "reaction", "ninjutsu": "reaction",
+           "speed": "speed", "shunshin": "speed", "reaction": "reaction", "strength": "strength",
+           "sensory": "stealth", "stealth": "sensory"}
+_ROSTER = None
+
+
+def roster():
+    """Карточки именных противников канона: {ключ: {names, skills, traits}}."""
+    global _ROSTER
+    if _ROSTER is None:
+        try:
+            path = Path(__file__).resolve().parents[1] / ROSTER
+            _ROSTER = json.loads(path.read_text(encoding="utf-8")).get("foes") or {}
+        except (OSError, ValueError):
+            _ROSTER = {}
+    return _ROSTER
+
+
+def canon_card(key, foe):
+    """Карточка канона по ключу, по полю canon или по имени."""
+    cards = roster()
+    ref = foe.get("canon") or key
+    if ref in cards:
+        return ref, cards[ref]
+    name = str(foe.get("name") or "").casefold().strip()
+    for ref, card in cards.items():
+        if name and any(name == str(n).casefold() for n in card.get("names") or []):
+            return ref, card
+    return None, None
+
+
+def named(foe):
+    return bool(foe.get("named") or foe.get("canon") or foe.get("rank") in NAMED_RANKS)
 
 # Чакра Шики: шкала 0–100. Цена ЛЮБОЙ техники, включая явный cost, снижена в 4 раза.
 MAX_CHAKRA = 100.0
@@ -163,8 +204,41 @@ def edge(hot, roll):
         if morale:
             parts["мораль противника"] = morale
     total = round(sum(parts.values()), 2)
+    if foe and named(foe) and total > NAMED_EDGE_CAP:
+        parts["именной противник"] = round(NAMED_EDGE_CAP - total, 2)
+        total = NAMED_EDGE_CAP
     p = max(5, min(95, round(50 + 15 * total)))
     return total, p, parts
+
+
+def foe_edge(hot, roll):
+    """Бросок противника (``by``): его умение − защита Шики + поправки; ``long`` — Шики в длинном действии."""
+    foe = (((hot.get("_fight") or {}).get("active") or {}).get("foes") or {}).get(roll.get("by")) or {}
+    if not foe:
+        return None
+    skill = roll.get("skill") or ("speed" if roll.get("interrupt") else "taijutsu")
+    theirs = foe_level(foe, skill)
+    defend = roll.get("vs_skill") or ("speed" if roll.get("interrupt") else DEFENSE.get(skill, "reaction"))
+    mine = shiki_level(hot, defend)
+    if mine is None:
+        mine = shiki_level(hot, "reaction") or 5.0
+    parts = {"умение противника": theirs, "защита Шики": -mine}
+    if roll.get("long"):
+        parts["длинное действие Шики"] = LONG_BONUS
+    for name, value in (roll.get("mods") or {}).items():
+        low, high = MODS.get(name, (0, 0))
+        parts[name] = max(low, min(high, float(value)))
+    penalty = _wound_penalty((hot.get("injuries") or {}).get("shiki"))
+    if penalty and defend in PHYSICAL_SKILLS:
+        parts["раны Шики"] = penalty
+    hurt = _wound_penalty((hot.get("injuries") or {}).get(roll.get("by")))
+    if hurt:
+        parts["раны противника"] = -min(hurt, 1)
+    morale = MORALE.get(foe.get("morale"), 0)
+    if morale:
+        parts["мораль противника"] = -morale
+    total = round(sum(parts.values()), 2)
+    return total, max(5, min(95, round(50 + 15 * total))), parts
 
 
 # ---------- применение хода ----------
@@ -192,10 +266,16 @@ def apply(hot, delta, turn, pool):
             if isinstance(foe, dict):
                 card = active["foes"].setdefault(key, {"status": ACTIVE, "morale": "steady"})
                 card.update({k: v for k, v in foe.items() if v is not None})
+                _canonize(key, card, turn_id, notes)
     elif data and not data.get("end") and (data.get("foes") or data.get("wounds")):
         _note(notes, turn_id, "d.fight без открытого боя: начни его полем start.")
+    if active and not data and turn.get("kind") not in ("ooc", "technical", "void") and _named_active(active):
+        _note(notes, turn_id, "Бой с именным противником идёт, а d.fight в ходе нет: обмен не записан — "
+              "его ход, кости и раны пропали.")
 
-    _rolls(hot, delta, turn_id, pool, notes)
+    rolled = _rolls(hot, delta, turn_id, pool, notes)
+    if active and data and not data.get("end"):
+        _review_exchange(active, rolled, data, turn_id, notes)
     _wounds(hot, data.get("wounds"), turn_id, at)
     for item in delta.get("heal") or data.get("heal") or []:
         _heal(hot, item, turn_id)
@@ -218,9 +298,51 @@ def apply(hot, delta, turn, pool):
     return notes
 
 
+def _canonize(key, card, turn_id, notes):
+    """Именной противник по карточке канона: умения не ниже FOES.json."""
+    ref, canon = canon_card(key, card)
+    if not canon:
+        return
+    card["canon"], card["named"] = ref, True
+    skills = dict(card.get("skills") or {})
+    raised = []
+    for skill, value in (canon.get("skills") or {}).items():
+        mine = skills.get(skill)
+        if not isinstance(mine, (int, float)) or mine < value:
+            if isinstance(mine, (int, float)):
+                raised.append(f"{skill} {mine:g}→{value:g}")
+            skills[skill] = value
+    card["skills"] = skills
+    card.setdefault("traits", canon.get("traits") or [])
+    if raised:
+        _note(notes, turn_id, f"«{card.get('name') or key}»: умения ниже канона подняты ({', '.join(raised)}) — "
+              f"карточка ref/FOES.json «{ref}».")
+
+
+def _named_active(active):
+    return [k for k, f in (active.get("foes") or {}).items() if f.get("status", ACTIVE) == ACTIVE and named(f)]
+
+
+def _review_exchange(active, rolled, data, turn_id, notes):
+    """Именной противник в каждом обмене действует сам; против него — бросок, а не авто-успех."""
+    for key in _named_active(active):
+        foe = active["foes"][key]
+        name = foe.get("name") or key
+        own = [r for r in rolled if r.get("by") == key]
+        acted = own or key in (data.get("foe_actions") or {})
+        if not acted:
+            _note(notes, turn_id, f"Именной противник «{name}» в этом обмене не действовал: у него свой ход "
+                  f"каждый обмен — прервать длинное действие Шики, ударить между его шагами, сменить позицию, "
+                  f"уйти. Кость d.rolls с \"by\": \"{key}\" (interrupt, long) или d.fight.foe_actions.{key}.")
+        if not [r for r in rolled if r.get("vs") == key and not r.get("by")] and not own:
+            _note(notes, turn_id, f"Против «{name}» в обмене нет ни одной кости: с именным противником исход "
+                  "решает бросок, перевес Шики не выше +2.")
+
+
 def _rolls(hot, delta, turn_id, pool, notes):
     rolls = list(delta.get("rolls") or []) + list(((delta.get("fight") or {}) if isinstance(delta.get("fight"), dict) else {}).get("rolls") or [])
     active = (hot.get("_fight") or {}).get("active")
+    done = []
     for index, roll in enumerate(rolls):
         if not isinstance(roll, dict):
             continue
@@ -232,7 +354,8 @@ def _rolls(hot, delta, turn_id, pool, notes):
             _note(notes, turn_id, f"{label}: взята кость {roll.get('value')}, по порядку была {pool[index]} "
                   f"(GM_BRIEF.fight.dice[{index}]). Кости берут подряд, не выбирают.")
         value = pool[index]
-        computed = edge(hot, roll)
+        done.append(roll)
+        computed = foe_edge(hot, roll) if roll.get("by") else edge(hot, roll)
         if computed is None:
             if roll.get("skill") and not isinstance(roll.get("level"), (int, float)):
                 _note(notes, turn_id, f"{label}: умения «{roll.get('skill')}» нет в листе — укажи level.")
@@ -241,7 +364,7 @@ def _rolls(hot, delta, turn_id, pool, notes):
             total, p, _parts = computed
             if isinstance(roll.get("p"), (int, float)) and abs(roll["p"] - p) > 3:
                 _note(notes, turn_id, f"{label}: порог {roll['p']}, по формуле {p} (перевес {total:+}).")
-            if total >= 3:
+            if total >= 3 and not roll.get("by"):
                 _note(notes, turn_id, f"{label}: перевес {total:+} — исход решается без броска.")
         if isinstance(p, (int, float)):
             expected = outcome(p, value)
@@ -250,9 +373,12 @@ def _rolls(hot, delta, turn_id, pool, notes):
                 _note(notes, turn_id, f"{label}: записан исход «{roll['result']}», по кости {value} "
                       f"и порогу {p} — «{expected}». Результат не смягчается и не перебрасывается.")
             record = {"turn": turn_id, "what": roll.get("what"), "p": p, "value": value, "result": expected}
+            if roll.get("by"):
+                record["by"] = roll["by"]
             if active is not None:
                 active["rolls"] = (active.get("rolls") or []) + [record]
                 del active["rolls"][:-ROLLS_KEEP]
+    return done
 
 
 def _wounds(hot, wounds, turn_id, at):
@@ -386,7 +512,12 @@ def _close(state, outcome_text, turn_id, at):
 RULES = ("Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: "
          "what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); "
          "перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом "
-         "невозможно. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; иначе провал. Поправки: "
+         "невозможно; против именного противника (named, ref/FOES.json) бросок всегда, перевес не выше +2. "
+         "Именной противник действует каждый обмен сам: его кость — d.rolls с by (id), skill, interrupt "
+         "(прервать действие Шики между шагами заявки), long (Шики в длинном действии: печати, призыв, сбор "
+         "природной чакры, лечение — +1 противнику); p считает код (tempo в fight.active.foes). Прерванная заявка "
+         "обрывается на этом шаге — дальше окно игрока. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; "
+         "иначе провал (для by — исход противника). Поправки: "
          + ", ".join(f"{k} {lo:+g}…{hi:+g}" for k, (lo, hi) in MODS.items())
          + ". Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай.")
 
@@ -406,12 +537,24 @@ def brief(hot):
         result["active"] = {
             "id": active["id"], "place": active.get("place"), "exchanges": active.get("exchanges", 0),
             "exchanges_left": max(0, EXCHANGE_LIMIT - int(active.get("exchanges") or 0)),
-            "foes": {k: {**v, "levels": {s: foe_level(v, s) for s in ("speed", "taijutsu", "ninjutsu", "genjutsu", "sensory")}}
+            "foes": {k: {**v, "levels": {s: foe_level(v, s) for s in ("speed", "taijutsu", "ninjutsu", "genjutsu", "sensory")},
+                         **({"tempo": tempo(hot, v)} if named(v) else {})}
                      for k, v in active["foes"].items()},
             "recent_rolls": active.get("rolls", [])[-4:]}
     if state.get("closed"):
         result["last_fight"] = state["closed"][-1]
     return result
+
+
+def tempo(hot, foe):
+    """Окна именного противника против Шики: прерывание длинного и быстрого действия, свой ход."""
+    mine = shiki_level(hot, "speed") or 5.0
+    speed = foe_level(foe, "speed")
+    long_p = max(5, min(95, round(50 + 15 * (speed - mine + LONG_BONUS))))
+    quick_p = max(5, min(95, round(50 + 15 * (foe_level(foe, "reaction") - mine))))
+    extra = " и ещё один между шагами заявки" if speed >= mine - 0.5 else ""
+    return (f"свой ход каждый обмен{extra}; прервать длинное действие Шики — p {long_p}, "
+            f"вклиниться в быстрое — p {quick_p}; Шики против него — бросок всегда, перевес ≤ +2")
 
 
 def scene_lines(hot):
