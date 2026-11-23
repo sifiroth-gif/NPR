@@ -69,6 +69,15 @@ class SessionKeepTest(unittest.TestCase):
         hot["handoff"] = {"closed": 10, "next_session": 11}   # прошлая передача не мешает текущей сессии
         self.assertTrue(aging._this_session(hot, "s11.text.050"))
 
+    def test_session_closed_on_an_ooc_turn_opens_the_next_number(self):
+        # s11.text.079 — внеигровой; последний сыгранный — 077. Ждём s12.text.001, а не s11.text.080.
+        from rpg_engine import nextpack
+        hot = {"session": 11, "cursor": {"id": "s11.text.079", "seq": 79},
+               "handoff": {"closed": 11, "next_session": 12, "last_turn": "s11.text.077", "first_turn": "s12.text.001"}}
+        self.assertEqual(nextpack.next_id(hot), "s12.text.001")
+        hot["handoff"] = {"closed": 10, "last_turn": "s10.text.129", "first_turn": "s11.text.001"}
+        self.assertEqual(nextpack.next_id(hot), "s11.text.080")
+
 
 class CanonJunkTest(unittest.TestCase):
     def test_single_letter_rules_are_not_corrections(self):

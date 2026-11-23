@@ -162,10 +162,15 @@ def close(root, number=None):
     _, accepted = scene_gate.played_turns(root)
     live_scene.write(root / live_scene.PATH, live_scene.build_for_state(state, accepted, root))
     hot._write_checks(root, state)
+    # Пакет нового номера — полной свёрткой без новых ходов: с просьбой хранителя перечитать стартовый
+    # пакет (resync), аркой канона, знанием присутствующих и каноном к сцене (раньше NEXT выходил без них).
+    refold = hot.fold(root)
+    if refold.get("errors"):
+        raise ValueError(f"свёртка после закрытия: {refold['errors']}")
     checked = hot.check(root)
     if not checked.get("ok"):
         raise ValueError(f"проверка HOT после закрытия: {checked}")
-    pack = nextpack.write(root, state, _read(root / live_scene.PATH), _read(root / "recovery/CHECKS.json"))
+    pack = _read(root / "recovery/NEXT.json")
     if pack.get("next_id") != first_next:
         raise ValueError(f"NEXT ждёт {pack.get('next_id')}, а не {first_next}")
     final = {"format": git_state.FORMAT, **game.verify(), "sha256": file_sha256(game.path)}
