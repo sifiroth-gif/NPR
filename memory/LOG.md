@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.044: Майто Гай (`npc/gai`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Какаши Хатакэ (`npc/kakashi`), Ито (`npc/suna_wounded_scout`), план сюжета
 - s11.text.043: Немера (Невыписанная) (`npc/nemera`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Тиё (`npc/chiyo`), план сюжета
 - s11.text.041: chiyo_caravan (`npc/chiyo_caravan`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.040: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), chiyo_caravan (`npc/chiyo_caravan`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
@@ -60,4 +61,3 @@
 - s10.text.116: Курихара Наото (`npc/kurihara_naoto`), Тамура Рэйка (`npc/tamura_reika`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Немера (Невыписанная) (`npc/nemera`), Дежурная врач охраняемого отделения (`npc/night_icu_physician`), план сюжета
 - s10.text.115: Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Касиваги Масато (`npc/kashiwagi_masato`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.114: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Касиваги Масато (`npc/kashiwagi_masato`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`)
-- s10.text.113: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`)

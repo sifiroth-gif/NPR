@@ -204,6 +204,7 @@
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
+- Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
