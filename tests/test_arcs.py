@@ -102,3 +102,46 @@ class ArcsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+ORDERED = [{"id": "k", "title": "Казекагэ", "from": "0010-03-12T03:00:00", "until": "0010-03-18T00:00:00",
+            "beats": [
+                {"id": "extract", "step": 1, "offscreen": True, "fixed": True, "due": "0010-03-15T10:00:00",
+                 "title": "Шукаку извлечён", "canon": "Гаара мёртв."},
+                {"id": "seals", "step": 2, "due": "0010-03-15T10:30:00", "title": "Пять печатей",
+                 "canon": "Печати сняты.", "keys": ["печат", "гай"]},
+                {"id": "deidara", "step": 3, "due": "0010-03-15T11:00:00", "title": "Дейдара улетает",
+                 "canon": "Погоня.", "keys": ["дейдар", "птиц"]},
+                {"id": "sasori", "step": 3, "due": "0010-03-15T11:00:00", "title": "Сасори", "canon": "Бой.",
+                 "keys": ["сасори", "хируко"]}]}]
+
+
+class CanonOrderTest(unittest.TestCase):
+    def test_later_beat_closes_earlier_offscreen(self):
+        # s11.text.043/071: печати сняты, а извлечение «впереди» — Гаару нашли живым.
+        hot = state("0010-03-15T08:29:00")
+        arcs.track(hot, turn("s11.text.043", "0010-03-15T08:29:00", "Гай снимает печать."), ORDERED)
+        canon = hot["_plot"]["canon"]
+        self.assertEqual(canon["seals"]["status"], "started")
+        self.assertEqual(canon["extract"]["status"], "offscreen")
+        self.assertIn("Шукаку извлечён: Гаара мёртв.", arcs.view(hot, ORDERED)["happened"])
+
+    def test_mention_is_not_the_outcome(self):
+        # s11.text.052: «птица Дейдары» в пещере закрыла погоню за 17 ходов до неё.
+        hot = state("0010-03-15T08:35:00")
+        arcs.track(hot, turn("s11.text.052", "0010-03-15T08:35:00", "Дейдара сидел на глиняной птице."), ORDERED)
+        self.assertEqual(hot["_plot"]["canon"]["deidara"]["status"], "started")
+        self.assertTrue(any(x.startswith("[deidara] (идёт") for x in arcs.view(hot, ORDERED)["next"]))
+        arcs.track(hot, turn("s11.text.054", "0010-03-15T08:37:00", "Хвост Хируко. Сасори ударил."), ORDERED)
+        self.assertEqual(hot["_plot"]["canon"]["deidara"]["status"], "started")   # тот же шаг — параллельно
+
+    def test_fixed_beat_changes_only_by_player(self):
+        hot = state("0010-03-15T08:44:00")
+        why = "changed: Шики вырвал Гаару до завершения, ритуал не завершится"
+        notes = arcs.track(hot, turn("s11.text.071", "0010-03-15T08:44:00", "Гаара жив.", {"arc": {"extract": why}}),
+                           ORDERED)
+        self.assertIn("опорное событие канона", notes[0]["text"])
+        self.assertNotIn("extract", hot["_plot"]["canon"])
+        arcs.track(hot, turn("s11.text.072", "0010-03-15T08:45:00", "…",
+                             {"arc": {"extract": "changed: по прямому решению игрока Шики спас Гаару"}}), ORDERED)
+        self.assertEqual(hot["_plot"]["canon"]["extract"]["status"], "changed")

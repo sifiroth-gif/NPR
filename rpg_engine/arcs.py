@@ -17,8 +17,10 @@ s11.text.041–042: отряд Какаши дошёл до убежища Ак�
 
 Код:
 
-* ``track`` — после хода отмечает событие сыгранным, если в тексте все его
-  ``keys``; запись ведущего ``d.arc.<id>``: ``"played"`` или ``"changed: причина"``.
+* ``track`` — после хода: все ``keys`` в тексте — событие «идёт» (started), закрывает его
+  запись ведущего ``d.arc.<id>``: ``"played"`` или ``"changed: причина"``. Порядок канона
+  (``step``): дошли до события — всё, что раньше, случилось (offscreen) или отмечено пропуском.
+  ``fixed`` — опорное событие: изменить его может только прямое решение игрока.
   Сцена дошла до ``before`` (вход в убежище), а событие до него не сыграно —
   замечание kind=arc: канон пропущен.
 * ``advance`` — событие ``offscreen`` (без Шики: бой Гая, извлечение) по сроку
@@ -54,10 +56,47 @@ RULE = ("Автономия мира выше сцены Шики: событи�
         "Сыгранное — d.arc.<id>: \"played\". Случившееся без Шики (happened) доходит до него следом.")
 
 
-def valid_change(why):
-    """Изменение канона принимается, только если его причина — поступок Шики, а не разминка во времени и месте."""
+PLAYER = re.compile(r"игрок|поправк\w* игрока|по заявке игрока", re.I)
+
+
+def valid_change(why, fixed=False):
+    """Изменение канона принимается, только если его причина — поступок Шики, а не разминка во времени и месте.
+
+    Опорное событие (``fixed``: смерть Гаары после извлечения, жертва Тиё) меняет только прямое решение
+    игрока: s11.text.071 «Гаара вырван до 10:00 — извлечение не завершится» оставил Гаару живым вопреки канону.
+    """
     text = str(why or "")
-    return bool(AGENCY.search(text)) and not EVASION.search(text)
+    if fixed and not PLAYER.search(text):
+        return False
+    return bool(AGENCY.search(text) or PLAYER.search(text)) and not EVASION.search(text)
+
+
+def _step(arc, beat):
+    """Порядок канона: события с меньшим step случаются раньше; равный step — одновременно."""
+    if isinstance(beat.get("step"), (int, float)):
+        return beat["step"]
+    return (arc.get("beats") or []).index(beat)
+
+
+def _close_earlier(state, arc, beat, turn_id, at, notes):
+    """Сцена дошла до события — всё, что по канону раньше него, уже случилось или пропущено.
+
+    s11.text.043: пять печатей сняты, а извлечение (срок 10:00) числилось будущим — Гаару нашли живым.
+    """
+    for earlier in arc.get("beats") or []:
+        if not isinstance(earlier, dict) or earlier is beat or _step(arc, earlier) >= _step(arc, beat):
+            continue
+        row = state.get(earlier["id"]) or {}
+        if row.get("status") in STATUSES:
+            continue
+        if earlier.get("offscreen"):
+            state[earlier["id"]] = {"status": "offscreen", "turn": turn_id, "at": at, "why": f"раньше «{beat['id']}»"}
+        elif row.get("status") == "started":
+            state[earlier["id"]] = {"status": "played", "turn": turn_id, "why": f"сцена ушла к «{beat['id']}»"}
+        else:
+            notes.append({"turn": turn_id, "kind": "arc", "text":
+                          f"Канон по порядку: «{earlier.get('title')}» должно было случиться раньше «{beat.get('title')}»: "
+                          f"{earlier.get('canon')} Сыграй его сейчас там, где отряд, или запиши d.arc.{earlier['id']}."})
 
 
 def _parse(value):
@@ -105,18 +144,22 @@ def track(hot, turn, arcs):
         return []
     state = _state(hot)
     notes_early = []
-    ids = {b["id"] for _, b in _beats(arcs)}
+    moved = []
+    beats_by_id = {b["id"]: b for _, b in _beats(arcs)}
+    ids = set(beats_by_id)
     for key, value in ((turn.get("d") or {}).get("arc") or {}).items():
         if key not in ids:
             continue
         text = str(value or "").strip()
         status = text.split(":", 1)[0].strip().casefold()
         why = text.split(":", 1)[1].strip() if ":" in text else ""
-        if status == "changed" and not valid_change(why):
-            notes_early.append(_refused(turn["id"], key, why))
+        beat = beats_by_id[key]
+        if status == "changed" and not valid_change(why, beat.get("fixed")):
+            notes_early.append(_refused(turn["id"], key, why, beat.get("fixed")))
             continue
         if status in STATUSES:
             state[key] = {"status": status, "turn": turn["id"], "why": why[:200]}
+            moved.append(key)
     text = f"{turn.get('place') or ''}\n{turn.get('gm') or ''}".casefold()
     now = _parse(turn.get("at"))
     notes = notes_early
@@ -127,7 +170,11 @@ def track(hot, turn, arcs):
         if start and now and now < start:
             continue
         if _matches(beat, text):
-            state[beat["id"]] = {"status": "played", "turn": turn["id"], "why": "по тексту сцены"}
+            # Упоминание — ещё не исход (s11.text.052: «птица Дейдары» закрыла погоню за 17 ходов до неё).
+            # Событие «идёт» и остаётся в NEXT, пока ведущий не отметит played или сцена не уйдёт дальше.
+            if (state.get(beat["id"]) or {}).get("status") != "started":
+                state[beat["id"]] = {"status": "started", "turn": turn["id"], "late": 0}
+                moved.append(beat["id"])
             continue
         due = _parse(beat.get("due"))
         if not beat.get("offscreen") and due and now and due <= now:
@@ -140,14 +187,18 @@ def track(hot, turn, arcs):
                           f"({beat.get('where') or 'по пути'}): {beat.get('canon')} Сыграй его следующим ходом "
                           "там, где отряд сейчас, или запиши d.arc."
                           f"{beat['id']}: \"changed: причина\" — что из действий Шики это изменило."})
+    for key in moved:   # дошли до события — всё, что по канону раньше, уже случилось
+        arc = next(a for a, b in _beats(arcs) if b["id"] == key)
+        _close_earlier(state, arc, beats_by_id[key], turn["id"], turn.get("at"), notes)
     return notes
 
 
-def _refused(turn_id, key, why):
+def _refused(turn_id, key, why, fixed=False):
+    tail = (" Это опорное событие канона: изменить его может только прямое решение игрока."
+            if fixed else " Отменить может только поступок Шики, лишивший его цели или средства.")
     return {"turn": turn_id, "kind": "arc", "text":
             f"Изменение канона «{key}» не принято: «{str(why)[:140]}». Опоздание, маршрут, отсутствие Шики "
-            "событие не отменяют — действующее лицо добивается цели иначе и приходит туда, где Шики сейчас. "
-            "Отменить может только поступок Шики, лишивший его цели или средства."}
+            "событие не отменяют — действующее лицо добивается цели иначе и приходит туда, где Шики сейчас." + tail}
 
 
 def revalidate(hot, arcs):
@@ -157,8 +208,9 @@ def revalidate(hot, arcs):
     notes = []
     for key in sorted(ids):
         row = state.get(key) or {}
-        if row.get("status") == "changed" and not valid_change(row.get("why")):
-            notes.append(_refused((hot.get("cursor") or {}).get("id"), key, row.get("why")))
+        beat = next((b for _, b in _beats(arcs) if b["id"] == key), {})
+        if row.get("status") == "changed" and not valid_change(row.get("why"), beat.get("fixed")):
+            notes.append(_refused((hot.get("cursor") or {}).get("id"), key, row.get("why"), beat.get("fixed")))
             state[key] = {"late": int(row.get("late") or 0)}
     return notes
 
@@ -210,8 +262,10 @@ def view(hot, arcs):
         pending = [b for b in arc.get("beats") or [] if isinstance(b, dict) and b.get("id") and not _done(state, b)]
         if not pending:
             continue
-        pending.sort(key=lambda b: (_parse(b.get("due")) or datetime.max))
-        out.setdefault("next", []).extend(f"[{b['id']}] {_line(b, now)}" for b in pending[:AHEAD])
+        pending.sort(key=lambda b: (_step(arc, b), _parse(b.get("due")) or datetime.max))
+        out.setdefault("next", []).extend(
+            f"[{b['id']}]{' (идёт — доведи до канонического итога)' if (state.get(b['id']) or {}).get('status') == 'started' else ''} "
+            f"{_line(b, now)}" for b in pending[:AHEAD])
         out.setdefault("arcs", []).append(arc.get("title") or arc["id"])
     happened = []
     for _, beat in _beats(arcs):

@@ -236,3 +236,46 @@ class NextPackTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+TRAIT = {"id": "trait_black_chakra", "kind": "trait", "title": "Чёрная чакра", "short": "чёрную чакру",
+         "patterns": ["чёрн\\w* чакр"], "wield": ["shiki"]}
+
+
+class SeenAndWhoTest(unittest.TestCase):
+    def test_trait_seen_by_those_in_scene(self):
+        names = names_for(("sakura", "Сакура Харуно"), ("baki", "Баки"))
+        state = {"cast": {}}
+        t = {"id": "s11.text.034", "player": "", "_spoke": [],
+             "gm": "Чёрная чакра Шики легла на ткани. Сакура держала сердце."}
+        self.assertEqual(lore.track(state, t, [TRAIT], ["sakura", "baki"], names), [("trait_black_chakra", "sakura")])
+        met = acquaint.index(None, NAMES, [turn("s11.text.033", "**Сакура Харуно:** — Да."),
+                                           turn("s11.text.034", "Сакура держала сердце."),
+                                           turn("s11.text.054", "**Сакура Харуно:** — Яд!"),
+                                           turn("s11.text.055", "Сакура уклонилась.")])
+        line = acquaint.view(state, "sakura", met, [FACT, TRAIT], 11)
+        self.assertIn("видел: чёрную чакру 034", line)
+        self.assertIn("в сессии вместе: 033–034, 054–055", line)
+
+    def test_canon_person_now_and_character(self):
+        ref, card = __import__("rpg_engine.fight", fromlist=["x"]).canon_card("naruto", {"name": "Наруто Узумаки"})
+        self.assertEqual(ref, "naruto")
+        self.assertIn("вмешивается первым", card["character"])
+
+    def test_wiki_marks_exam_cards_and_applies_keeper_fixes(self):
+        from rpg_engine import wiki
+        store = {}
+        wiki._merge_roster(store, {"cards": [{"id": "sakura", "name": "Сакура", "role": "генин, участница",
+                                              "capabilities": "начальные техники"}]})
+        self.assertIn("(на 1283, экзамен)", store["sakura"]["character"]["role"][0]["v"])
+        root = Path(__file__).resolve().parents[1]
+        wiki._merge_canon_people(store, root)
+        self.assertEqual(list(store["sakura"]["stable"])[0], "сейчас (канон 1287)")
+        self.assertIn("канон", store["sakura"]["character"])
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "memory/_curated").mkdir(parents=True)
+            (Path(tmp) / "memory/_curated/state_fill.json").write_text(json.dumps({"fix": [
+                {"path": ["cast", "sakura", "facts"], "match": "Встречала", "value": "Не встречала."}]}), encoding="utf-8")
+            store["sakura"]["stable"]["сведения"] = [{"v": "Медик. Встречала Шики. Пришла.", "src": "s"}]
+            wiki._apply_keeper_fixes(store, tmp)
+            self.assertEqual(store["sakura"]["stable"]["сведения"][0]["v"], "Медик. Не встречала. Пришла.")

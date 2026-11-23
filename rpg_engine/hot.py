@@ -1429,6 +1429,11 @@ def _knows(state_dir, hot, met, entries, seed):
             continue
         try:
             out[key] = acquaint.view(hot, key, met, entries, session, expertise.tier_line(hot, seed, key))
+            _ref, card = fight.canon_card(key, {"name": ((hot.get("cast") or {}).get(key) or {}).get("name")})
+            if card and (card.get("now") or card.get("character")):
+                # Канонический человек 1287 года, а не карточка экзамена 1283 (s11.text.073: Наруто ждал приглашения).
+                out[f"{key}#who"] = "; ".join(x for x in (card.get("now") and f"сейчас: {card['now']}",
+                                                          card.get("character") and f"характер: {card['character']}") if x)
         except Exception as exc:   # производное: сбой не останавливает свёртку
             hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                                   "text": f"knows {key}: {type(exc).__name__}: {exc}"})
