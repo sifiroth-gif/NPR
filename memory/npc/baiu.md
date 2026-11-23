@@ -3,15 +3,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Скрывает лицо под повязками и головным убором [campaigns/shiki/roster.json]
+- внешность: Скрывает лицо под повязками и головным убором (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Амегакуре [campaigns/shiki/roster.json]
 - команда: Команда Шигурэ [campaigns/shiki/roster.json]
-- способности: Совместные ловушки с иглами и маскировка [campaigns/shiki/roster.json]
-- ограничения: Отдельно от команды менее опасен [campaigns/shiki/roster.json]
+- способности: Совместные ловушки с иглами и маскировка (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Отдельно от команды менее опасен (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Продвинуть команду на экзамене [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Продвинуть команду на экзамене (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Злой сухой юмор [campaigns/shiki/roster.json]
 
 ## Граница знаний

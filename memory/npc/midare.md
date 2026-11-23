@@ -3,15 +3,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Дорожная одежда, защищённые руки [campaigns/shiki/roster.json]
+- внешность: Дорожная одежда, защищённые руки (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Амегакуре [campaigns/shiki/roster.json]
 - команда: Команда Шигурэ [campaigns/shiki/roster.json]
-- способности: Командная засада с метательным оружием [campaigns/shiki/roster.json]
-- ограничения: Ограниченный индивидуальный запас чакры [campaigns/shiki/roster.json]
+- способности: Командная засада с метательным оружием (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Ограниченный индивидуальный запас чакры (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Не отстать от товарищей [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Не отстать от товарищей (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Быстрая сердитая речь [campaigns/shiki/roster.json]
 
 ## Граница знаний

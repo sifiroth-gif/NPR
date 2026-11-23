@@ -4,15 +4,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Малозаметная походка и закрытая шея [campaigns/shiki/roster.json]
+- внешность: Малозаметная походка и закрытая шея (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Кусагакуре [campaigns/shiki/roster.json]
 - команда: Команда Шиоре [campaigns/shiki/roster.json]
-- способности: Тайные знаки, патрульная маскировка [campaigns/shiki/roster.json]
-- ограничения: Силы ниже уровня опытного чунина [campaigns/shiki/roster.json]
+- способности: Тайные знаки, патрульная маскировка (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Силы ниже уровня опытного чунина (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участница [campaigns/shiki/roster.json]
-- хочет: Испытать собственную команду [campaigns/shiki/roster.json]
+- роль: генин, участница (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Испытать собственную команду (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Сдержанные замечания и вопросы [campaigns/shiki/roster.json]
 
 ## Граница знаний

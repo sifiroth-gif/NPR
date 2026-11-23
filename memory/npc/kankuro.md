@@ -3,15 +3,17 @@
 вид: npc · впервые: s11.text.021 · последний раз: s11.text.052 · вне сцены
 
 ## Постоянное
-- внешность: Боевой грим, обмотанная кукла за спиной [campaigns/shiki/roster.json]
+- сейчас (канон 1287): кукловод Суны, старший брат Гаары [campaigns/shiki/ref/FOES.json]
+- внешность: Боевой грим, обмотанная кукла за спиной (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Сунагакуре [campaigns/shiki/roster.json]
 - команда: Команда Бакы [campaigns/shiki/roster.json]
-- способности: Кукольный бой, яды и ловушки [campaigns/shiki/roster.json]
-- ограничения: Без куклы и подготовки становится уязвимее [campaigns/shiki/roster.json]
+- способности: Кукольный бой, яды и ловушки (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Без куклы и подготовки становится уязвимее (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Выиграть и не подвести Суну [campaigns/shiki/roster.json]
+- канонический характер (1287): задиристый и грубоватый, предан брату; гордится куклами [campaigns/shiki/ref/FOES.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Выиграть и не подвести Суну (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Вызывающий, склонен к угрозам, но учитывает силу [campaigns/shiki/roster.json]
 
 ## Сейчас

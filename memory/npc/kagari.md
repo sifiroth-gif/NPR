@@ -3,15 +3,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Мало приметных деталей [campaigns/shiki/roster.json]
+- внешность: Мало приметных деталей (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Амегакуре [campaigns/shiki/roster.json]
 - команда: Команда Оборо [campaigns/shiki/roster.json]
-- способности: Скрытное движение, водные элементы окружения и ловушки [campaigns/shiki/roster.json]
-- ограничения: Нуждается в группе и местности [campaigns/shiki/roster.json]
+- способности: Скрытное движение, водные элементы окружения и ловушки (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Нуждается в группе и местности (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Выжить и повысить ранг [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Выжить и повысить ранг (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Сдержан, говорит после командира [campaigns/shiki/roster.json]
 
 ## Граница знаний

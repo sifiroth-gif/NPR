@@ -4,15 +4,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Низкая, короткая накидка, мокрые запястья [campaigns/shiki/roster.json]
+- внешность: Низкая, короткая накидка, мокрые запястья (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Амегакуре [campaigns/shiki/roster.json]
 - команда: Команда Куроно [campaigns/shiki/roster.json]
-- способности: Простое гендзюцу и разведка [campaigns/shiki/roster.json]
-- ограничения: Слабая медицинская подготовка [campaigns/shiki/roster.json]
+- способности: Простое гендзюцу и разведка (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Слабая медицинская подготовка (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участница [campaigns/shiki/roster.json]
-- хочет: Спасти Рэиго и не допустить позора команды [campaigns/shiki/roster.json]
+- роль: генин, участница (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Спасти Рэиго и не допустить позора команды (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Резкая, при угрозе срывается на обвинения [campaigns/shiki/roster.json]
 
 ## Граница знаний

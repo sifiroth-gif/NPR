@@ -4,15 +4,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Закрывает часть лица, незаметная манера [campaigns/shiki/roster.json]
+- внешность: Закрывает часть лица, незаметная манера (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Конохагакуре [campaigns/shiki/roster.json]
 - команда: Команда Кабуто [campaigns/shiki/roster.json]
-- способности: Поглощение чакры при физическом контакте [campaigns/shiki/roster.json]
-- ограничения: Нужен контакт и достижимая цель [campaigns/shiki/roster.json]
+- способности: Поглощение чакры при физическом контакте (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Нужен контакт и достижимая цель (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Выполнить поручения куратора [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Выполнить поручения куратора (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Короткие колкие фразы [campaigns/shiki/roster.json]
 
 ## Граница знаний

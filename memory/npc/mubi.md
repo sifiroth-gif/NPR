@@ -3,15 +3,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Плащ и закрытое лицо [campaigns/shiki/roster.json]
+- внешность: Плащ и закрытое лицо (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Амегакуре [campaigns/shiki/roster.json]
 - команда: Команда Оборо [campaigns/shiki/roster.json]
-- способности: Засады и координация гендзюцу команды [campaigns/shiki/roster.json]
-- ограничения: Силой уступает опытным дзёнинам [campaigns/shiki/roster.json]
+- способности: Засады и координация гендзюцу команды (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Силой уступает опытным дзёнинам (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Добыть нужные свитки, сохранить команду [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Добыть нужные свитки, сохранить команду (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Низкие короткие ответы [campaigns/shiki/roster.json]
 
 ## Граница знаний

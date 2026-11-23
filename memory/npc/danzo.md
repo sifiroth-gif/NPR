@@ -4,15 +4,15 @@
 вид: npc · впервые: s09.text.071 · последний раз: s09.text.071 · вне сцены
 
 ## Постоянное
-- внешность: Старик с перевязью и закрытой рукой [campaigns/shiki/roster.json]
+- внешность: Старик с перевязью и закрытой рукой (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Конохагакуре [campaigns/shiki/roster.json]
 - команда: Корень АНБУ [campaigns/shiki/roster.json]
-- способности: Интриги, тайная разведка, подчинённая сеть [campaigns/shiki/roster.json]
-- ограничения: Не видит всё и не управляет каждым человеком [campaigns/shiki/roster.json]
+- способности: Интриги, тайная разведка, подчинённая сеть (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Не видит всё и не управляет каждым человеком (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: чиновник скрытых операций [campaigns/shiki/roster.json]
-- хочет: Усилить контроль над Конохой [campaigns/shiki/roster.json]
+- роль: чиновник скрытых операций (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Усилить контроль над Конохой (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Холодные официальные формулировки [campaigns/shiki/roster.json]
 
 ## Граница знаний

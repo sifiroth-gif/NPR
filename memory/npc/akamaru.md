@@ -3,15 +3,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Маленький белый пёс на голове или у куртки хозяина [campaigns/shiki/roster.json]
+- внешность: Маленький белый пёс на голове или у куртки хозяина (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Конохагакуре [campaigns/shiki/roster.json]
 - команда: Команда 8 [campaigns/shiki/roster.json]
-- способности: Тонкий нюх, помощь в комбинированном тайдзюцу [campaigns/shiki/roster.json]
-- ограничения: Зависим от обстановки и сигналов Кибы [campaigns/shiki/roster.json]
+- способности: Тонкий нюх, помощь в комбинированном тайдзюцу (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Зависим от обстановки и сигналов Кибы (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: ниндзюкэн, напарник Кибы [campaigns/shiki/roster.json]
-- хочет: Защищать Кибу [campaigns/shiki/roster.json]
+- роль: ниндзюкэн, напарник Кибы (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Защищать Кибу (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Реагирует лаем, рычанием, движениями [campaigns/shiki/roster.json]
 
 ## Граница знаний

@@ -4,15 +4,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Загорелый, рукава до локтей, практичная форма [campaigns/shiki/roster.json]
+- внешность: Загорелый, рукава до локтей, практичная форма (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Кусагакуре [campaigns/shiki/roster.json]
 - команда: Команда Шиоре [campaigns/shiki/roster.json]
-- способности: Небольшие ловушки и метательное оружие [campaigns/shiki/roster.json]
-- ограничения: Ограниченный опыт [campaigns/shiki/roster.json]
+- способности: Небольшие ловушки и метательное оружие (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Ограниченный опыт (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Пройти без потерь [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Пройти без потерь (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Говорит быстро и с некоторой бравадой [campaigns/shiki/roster.json]
 
 ## Граница знаний

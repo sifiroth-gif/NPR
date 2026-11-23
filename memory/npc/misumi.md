@@ -4,15 +4,15 @@
 вид: npc · сессии 1–3 (экзамен на тюнина) · вне сцены
 
 ## Постоянное
-- внешность: Скрытная поза, тело необычно гибкое [campaigns/shiki/roster.json]
+- внешность: Скрытная поза, тело необычно гибкое (на 1283, экзамен) [campaigns/shiki/roster.json]
 - деревня: Конохагакуре [campaigns/shiki/roster.json]
 - команда: Команда Кабуто [campaigns/shiki/roster.json]
-- способности: Гибкость суставов и обвивание, удержания [campaigns/shiki/roster.json]
-- ограничения: Не абсолютно неуязвим к режущему оружию [campaigns/shiki/roster.json]
+- способности: Гибкость суставов и обвивание, удержания (на 1283, экзамен) [campaigns/shiki/roster.json]
+- ограничения: Не абсолютно неуязвим к режущему оружию (на 1283, экзамен) [campaigns/shiki/roster.json]
 
 ## Характер
-- роль: генин, участник [campaigns/shiki/roster.json]
-- хочет: Пройти испытание, выполнить указания [campaigns/shiki/roster.json]
+- роль: генин, участник (на 1283, экзамен) [campaigns/shiki/roster.json]
+- хочет: Пройти испытание, выполнить указания (на 1283, экзамен) [campaigns/shiki/roster.json]
 - голос: Сдержанная холодность [campaigns/shiki/roster.json]
 
 ## Граница знаний
