@@ -8,7 +8,7 @@
 
 **Старт нового чата — один пакет параллельных чтений:**
 1. `campaigns/shiki/GM_CORE.md`, `campaigns/shiki/SHIKI.md`, `campaigns/shiki/ref/TECHNIQUES.md`, `campaigns/shiki/ref/NEMERA.md`, `skills/dark-literary-gm/SKILL.md` и `skills/dark-literary-gm/references/horror-masters.md` (main): правила, Шики, арсенал, Немера, проза.
-2. `recovery/GM_BRIEF.json`, `recovery/NEXT.json`, `memory/INDEX.md`, `memory/CANON.md` — живой свод канона (game-state/shiki): сцена, облик, знания и воля присутствующих, сроки; о любом NPC и месте — страница из INDEX. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
+2. `recovery/GM_BRIEF.json`, `recovery/NEXT.json`, `memory/INDEX.md`, `memory/CANON.md` — живой свод канона, `archive/session-NNN-chronicle.md` — хроника текущей сессии по ходам (game-state/shiki): сцена, облик, знания и воля присутствующих, сроки; о любом NPC и месте — страница из INDEX. Непустой `fold_errors` — ход не свёрнут: исправь тем же `id` с `amend`.
 3. `recovery/TURN.json` — только при конфликте sha; `recovery/HOT.json`/`recovery/GM_ONLY.json` — по необходимости.
 4. Давнее прошлое (другие сессии) — не листать архив: запиши `recovery/RECALL.json` `{"q": ["вопрос"]}` (до трёх), ответ — `NEXT.recall` к следующему ходу: поиск по словам и смыслу по всем сессиям, со связями. README/AGENTS — при первом входе или тех. работе.
 
@@ -35,7 +35,7 @@ GitHub Actions сворачивает ход, обновляет память и
 - Код `rpg_engine/`, тесты `python -m unittest discover -s tests`. Только стандартная библиотека; исключение — необязательный смысловой слой `meaning.py` (onnxruntime, только в CI, без него поиск по словам).
 - Живая память: `rpg_engine/hot.py`; общая историческая эвристика: `rpg_engine/heuristic_history.py`, вызывается при `hot-fold` и автоматически в `gm-packet`/`scene-memory`; прямой поиск `history-heuristic`. Устройство: `docs/ARCHITECTURE.md`.
 - Историю на `game-state/shiki` не переписывать и не удалять; исходники сессий хранить дословно в `archive/`.
-- **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. Пределы памяти и правил — `rpg_engine/limits.py` (HOT: норма 95 КБ, предел 110; `GM_BRIEF`: цель 36 КБ, предел 56).
+- **После каждой сессии** — порядок хранителя `docs/KEEPER.md`: состояние, `memory-metrics`, облик новых лиц, поправки на страницах, `memory/EVAL.jsonl` и `wiki-eval`, закрытие событий и 2–3 события на следующую сессию. Пределы памяти и правил — `rpg_engine/limits.py` (HOT: норма 150 КБ, предел 180; `GM_BRIEF`: цель 60 КБ, предел 96; текущая сессия не стареет).
 - Этот файл одинаков на `main` и `game-state/shiki`. Размер этого файла, GM_CORE и навыка держат тесты `tests/test_instruction_budget.py` по пределам из `limits.py`: рост означает, что правило надо заменить, а не добавить.
 - Скрытая правда живёт только в `recovery/GM_ONLY.json` и файлах `*GM_ONLY*`. В `HOT.json`, коммитах, PR и ответах игроку её нет.
 - **Память и история:** старение HOT/GM_ONLY в `archive/aged/` каждой свёрткой, эхо прошлого `NEXT.echo`, запрос памяти `recovery/RECALL.json` (слова + смысл + связи, векторы в `archive/meaning/`), закрытие сессии одной командой (`recovery/SESSION_CLOSE.json`) — `docs/KEEPER.md`.
