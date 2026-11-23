@@ -145,3 +145,29 @@ class CanonOrderTest(unittest.TestCase):
         arcs.track(hot, turn("s11.text.072", "0010-03-15T08:45:00", "…",
                              {"arc": {"extract": "changed: по прямому решению игрока Шики спас Гаару"}}), ORDERED)
         self.assertEqual(hot["_plot"]["canon"]["extract"]["status"], "changed")
+
+
+class DeliveryTest(unittest.TestCase):
+    BEATS = [{"id": "k", "title": "К", "from": "0010-03-12T03:00:00", "until": "0010-03-18T00:00:00", "beats": [
+        {"id": "extract", "step": 1, "offscreen": True, "due": "0010-03-15T10:00:00", "title": "Шукаку извлечён",
+         "canon": "Гаара мёртв.", "sign": "гаар\\w*[^.]{0,60}(?:мёртв|не дыш)"},
+        {"id": "seals", "step": 2, "due": "0010-03-15T10:30:00", "title": "Печати", "canon": "Сняты.",
+         "keys": ["печат", "гай"]}]}]
+
+    def test_happened_must_until_shown(self):
+        # s11.text.071: игрок не знал о смерти Гаары — нигде не было сказано.
+        hot = state("0010-03-15T08:29:00")
+        arcs.track(hot, turn("s11.text.043", "0010-03-15T08:29:00", "Гай снимает печать."), self.BEATS)
+        self.assertIn("Случилось без Шики: «Шукаку извлечён»", arcs.must(hot, self.BEATS))
+        arcs.track(hot, turn("s11.text.044", "0010-03-15T08:31:00", "Плита рухнула."), self.BEATS)
+        self.assertIn("так и не дошло до игрока (1 ход.)", arcs.must(hot, self.BEATS))
+        arcs.track(hot, turn("s11.text.045", "0010-03-15T08:33:00",
+                             "Чувства отшельника нашли Гаару: тело не дышит."), self.BEATS)
+        self.assertEqual(hot["_plot"]["canon"]["extract"]["told"], "s11.text.045")
+        self.assertNotIn("Случ", arcs.must(hot, self.BEATS) or "")
+
+    def test_gm_can_mark_told(self):
+        hot = state("0010-03-15T10:05:00")
+        arcs.advance(hot, self.BEATS)
+        arcs.track(hot, turn("s11.text.050", "0010-03-15T10:06:00", "…", {"arc": {"extract": "told"}}), self.BEATS)
+        self.assertEqual(hot["_plot"]["canon"]["extract"]["told"], "s11.text.050")

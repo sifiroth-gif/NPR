@@ -48,12 +48,13 @@ AGENCY = re.compile(r"шики|мугами|немер", re.I)
 AHEAD = 3            # событий арки в NEXT
 LOOKAHEAD_DAYS = 3   # событие следующей арки показывается за столько дней
 HAPPENED_HOURS = 24  # случившееся без Шики висит в NEXT столько игровых часов
-STATUSES = ("played", "changed", "offscreen")
+STATUSES = ("played", "changed", "offscreen")   # «told» — отметка ведущего: случившееся показано игроку
 RULE = ("Автономия мира выше сцены Шики: события арки идут сами в свой срок и по порядку, где бы ни был Шики. "
         "Опоздание, другой маршрут, отсутствие Шики их не отменяют — действующее лицо добивается цели иначе: "
         "находит отряд, догоняет, вмешивается в чужую сцену и может сорвать начатое Шики. Изменить исход "
         "(d.arc.<id>: \"changed: причина\") может только поступок Шики, лишивший его цели или средства. "
-        "Сыгранное — d.arc.<id>: \"played\". Случившееся без Шики (happened) доходит до него следом.")
+        "Сыгранное — d.arc.<id>: \"played\". Случившееся без Шики (happened) показывается игроку сразу тем, что Шики "
+        "видит и чувствует, или следом — участник, весть, след (d.arc.<id>: \"told\"): игрок отвечает только на показанное.")
 
 
 PLAYER = re.compile(r"игрок|поправк\w* игрока|по заявке игрока", re.I)
@@ -90,7 +91,8 @@ def _close_earlier(state, arc, beat, turn_id, at, notes):
         if row.get("status") in STATUSES:
             continue
         if earlier.get("offscreen"):
-            state[earlier["id"]] = {"status": "offscreen", "turn": turn_id, "at": at, "why": f"раньше «{beat['id']}»"}
+            state[earlier["id"]] = {"status": "offscreen", "turn": turn_id, "at": at, "why": f"раньше «{beat['id']}»",
+                                    "told": False}
         elif row.get("status") == "started":
             state[earlier["id"]] = {"status": "played", "turn": turn_id, "why": f"сцена ушла к «{beat['id']}»"}
         else:
@@ -157,12 +159,16 @@ def track(hot, turn, arcs):
         if status == "changed" and not valid_change(why, beat.get("fixed")):
             notes_early.append(_refused(turn["id"], key, why, beat.get("fixed")))
             continue
+        if status == "told" and (state.get(key) or {}).get("status") == "offscreen":
+            state[key]["told"] = turn["id"]
+            continue
         if status in STATUSES:
             state[key] = {"status": status, "turn": turn["id"], "why": why[:200]}
             moved.append(key)
     text = f"{turn.get('place') or ''}\n{turn.get('gm') or ''}".casefold()
     now = _parse(turn.get("at"))
     notes = notes_early
+    _delivered(state, beats_by_id, turn["id"], text)
     for arc, beat in _beats(arcs):
         if _done(state, beat):
             continue
@@ -191,6 +197,31 @@ def track(hot, turn, arcs):
         arc = next(a for a, b in _beats(arcs) if b["id"] == key)
         _close_earlier(state, arc, beats_by_id[key], turn["id"], turn.get("at"), notes)
     return notes
+
+
+def _delivered(state, beats, turn_id, text):
+    """Случившееся без Шики дошло до игрока, если в тексте сцены его видимый след (``sign`` или ``keys``).
+
+    s11.text.071: извлечение и смерть Гаары нигде не прозвучали — игрок узнал о них только из поправки
+    и оспорил исход. Пока след не показан, событие — первый пункт must.
+    """
+    for key, row in state.items():
+        if not isinstance(row, dict) or row.get("status") != "offscreen" or row.get("told", True) is not False:
+            continue
+        beat = beats.get(key) or {}
+        signs = [beat["sign"]] if beat.get("sign") else []
+        if not signs and beat.get("keys"):
+            if all(re.search(k, text, re.I) for k in beat["keys"]):
+                row["told"] = turn_id
+            else:
+                row["waiting"] = int(row.get("waiting") or 0) + 1
+            continue
+        if any(re.search(sign, text, re.I) for sign in signs):
+            row["told"] = turn_id
+        elif signs:
+            row["waiting"] = int(row.get("waiting") or 0) + 1
+        else:
+            row["told"] = "без следа"   # нечего показывать — не держим must
 
 
 def _refused(turn_id, key, why, fixed=False):
@@ -224,7 +255,7 @@ def advance(hot, arcs):
         due = _parse(beat.get("due"))
         if beat.get("offscreen") and due and now and due <= now and not _done(state, beat):
             state[beat["id"]] = {"status": "offscreen", "turn": (hot.get("cursor") or {}).get("id"),
-                                 "at": now.isoformat(), "why": "срок канона"}
+                                 "at": now.isoformat(), "why": "срок канона", "told": False}
             out.append(beat["id"])
     return out
 
@@ -282,9 +313,18 @@ def view(hot, arcs):
 
 
 def must(hot, arcs):
-    """Пункт must: просроченное событие, где Шики рядом, ещё не сыграно."""
+    """Пункт must: случившееся без Шики не дошло до игрока; просроченное событие рядом с Шики не сыграно."""
     now = _now(hot)
     state = _state(hot)
+    for _, beat in _beats(arcs):
+        row = state.get(beat["id"]) or {}
+        if row.get("status") == "offscreen" and row.get("told") is False:
+            waiting = int(row.get("waiting") or 0)
+            head = (f"Случившееся без Шики так и не дошло до игрока ({waiting} ход.)" if waiting
+                    else "Случилось без Шики")
+            return (f"{head}: «{beat.get('title')}» — {beat.get('canon')} Покажи в этом ходе тем, что Шики видит "
+                    "и чувствует (Шаринган, чувства отшельника, Немера), или через участника, весть, след. Игрок "
+                    "отвечает только на то, что ему показали; рядом с Шики — сразу, в этой же сцене.")
     for arc in _active(arcs, now):
         for beat in arc.get("beats") or []:
             if not isinstance(beat, dict) or not beat.get("id") or beat.get("offscreen") or _done(state, beat):
