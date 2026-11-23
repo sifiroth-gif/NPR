@@ -76,3 +76,41 @@ class NamedFoesTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ArsenalNemeraProseTest(unittest.TestCase):
+    def test_arsenal_used_and_left(self):
+        hot = hot_with({"sasori": {"name": "Сасори", "canon": "sasori", "named": True, "status": "active"}})
+        hot["scene"] = {"present": ["chiyo"]}
+        hot["cast"] = {"chiyo": {"name": "Тиё"}}
+        fight.track_arsenal(hot, {"id": "s11.text.061", "gm": "Хируко ударил хвостом. Сенбоны ушли залпом."})
+        used = hot["_fight"]["active"]["used"]["sasori"]
+        self.assertIn("Хируко: хвост с ядом, броня", used)
+        left = fight.arsenal_left(hot, "sasori", fight.roster()["sasori"])
+        self.assertNotIn("Хируко: хвост с ядом, броня", left)
+        brief = fight.brief(hot)["active"]
+        self.assertIn("chiyo", brief["allies"])
+        self.assertIn("десять кукол Тикамацу", brief["allies"]["chiyo"]["arsenal_left"])
+        self.assertIn("Немера", brief["nemera"])
+
+    def test_nemera_acts_every_exchange_and_speaks_on_her_own(self):
+        hot = hot_with({"s": {"name": "Сасори", "named": True, "status": "active"}})
+        hot["cast"] = {"nemera": {"name": "Немера"}}
+        idle = {"id": "s11.text.061", "gm": "Сасори поднял руку.", "d": {"fight": {"foe_state": {}}}}
+        self.assertIn("бездействовала", fight.nemera_turn(hot, idle)[0]["text"])
+        busy = {"id": "s11.text.062", "gm": "Отросток Немеры перехватил клинок.", "d": {"fight": {}}}
+        self.assertEqual(fight.nemera_turn(hot, busy), [])
+        calm = hot_with()
+        calm["_fight"] = {}
+        calm["cast"] = {"nemera": {"name": "Немера"}}
+        notes = [fight.nemera_turn(calm, {"id": f"s11.text.{i:03d}", "gm": "Тишина."}) for i in range(1, 11)]
+        self.assertEqual(sum(1 for n in notes if n), 1)
+        self.assertIn("молчит 10 ходов", notes[-1][0]["text"])
+
+    def test_mechanics_numbers_in_prose(self):
+        from rpg_engine import hot as hot_module, prose_lint
+        self.assertIsNotNone(prose_lint.mechanics("За две секунды двадцать единиц её чакры перешли к Шики."))
+        self.assertIsNone(prose_lint.mechanics("Холод второй чакры пошёл по каналам. Три метра до выхода."))
+        report = hot_module._lint("Чакра Шики: 87/100. " + "Он ждал у выхода. " * 40)
+        self.assertEqual(report["verdict"], "переписать")
+        self.assertIn("mechanics", report["by_rule"])

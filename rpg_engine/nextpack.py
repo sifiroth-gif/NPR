@@ -106,10 +106,12 @@ FORM = ("Перед записью сверь ответ: 1) шапка <text co
         "### место; 2) каждая реплика — **Полное имя:** — Текст, без голого тире и без «— …, — сказал он»; слова "
         "Шики из заявки — дословно, с подписью **Мугами Шики:**; 3) присутствие Шики в каждой сцене: как его видят и "
         "что из этого делают люди — холод, чёрная чакра, змеиные глаза, невозможное (GM_CORE §5), страх — в их "
-        "поступке; влияние — не одобрение: похвала редка, уступка — по своей причине и с ценой; 4) NPC говорит "
+        "поступке; влияние — не одобрение: похвала редка, уступка — по своей причине и с ценой; Немера живёт "
+        "по своему протоколу (ref/NEMERA.md) и не ждёт вызова; 4) NPC говорит "
         "только своё (present.<id>.knows): нет общего прошлого с Шики, которого не было, нет его тайн без канала, "
         "медик говорит языком своего мира, а не словами Шики; 5) проза по навыку и horror-masters: факт, ритм, "
-        "необратимость, без толкований и словаря заботы; 6) последняя строка — **Ход Шики.**")
+        "необратимость, без толкований и словаря заботы; числа механики (единицы чакры, пороги, кости) — только "
+        "в записи хода, в прозе — ощущение; 6) последняя строка — **Ход Шики.**")
 
 
 RECENT_TURNS = 40   # план просят у тех, кто был в игре не дальше стольких ходов назад
@@ -253,6 +255,62 @@ def _size(pack):
     return len(json.dumps(pack, ensure_ascii=False).encode("utf-8"))
 
 
+def _cut(text, limit):
+    text = str(text or "")
+    return text if len(text) <= limit else text[:limit - 1].rstrip() + "…"
+
+
+def _squeeze_fight(pack):
+    fight = pack.get("fight") or {}
+    fight.pop("last_fight", None)
+    injuries = {}
+    for who, wounds in (fight.get("injuries") or {}).items():
+        serious = [f"{w.get('where')}: {w.get('severity')}" for w in wounds
+                   if w.get("severity") in ("средняя", "тяжёлая", "критическая")]
+        light = len(wounds) - len(serious)
+        if serious or light:
+            injuries[who] = serious + ([f"лёгких: {light}"] if light else [])
+    if injuries:
+        fight["injuries"] = injuries
+    active = fight.get("active") or {}
+    if active:
+        active["recent_rolls"] = [{k: (_cut(v, 80) if k == "what" else v) for k, v in r.items()}
+                                  for r in (active.get("recent_rolls") or [])[-2:]]
+
+
+def _squeeze_arc(pack):
+    arc = pack.get("arc") or {}
+    if arc.get("next"):
+        arc["next"] = [_cut(x, 260) for x in arc["next"][:2]]
+    if arc.get("happened"):
+        arc["happened"] = [_cut(x, 200) for x in arc["happened"][:2]]
+
+
+def _squeeze_present(pack):
+    for person in (pack.get("present") or {}).values():
+        for key, value in list(person.items()):
+            if key != "name" and isinstance(value, str):
+                person[key] = _cut(value, 200)
+            elif isinstance(value, list):
+                person[key] = [_cut(v, 160) if isinstance(v, str) else v for v in value[:2]]
+
+
+def _squeeze_minor(pack):
+    pack.pop("echo", None)
+    if pack.get("fences"):
+        pack["fences"] = [_cut(f, 300) if isinstance(f, str) else f for f in pack["fences"][:2]]
+    if pack.get("due"):
+        pack["due"] = pack["due"][:2]
+
+
+def _squeeze_checks(pack):
+    if pack.get("checks"):
+        pack["checks"] = [_cut(c, 220) for c in pack["checks"][-3:]]
+
+
+_SQUEEZE = (_squeeze_fight, _squeeze_minor, _squeeze_arc, _squeeze_checks, _squeeze_present)
+
+
 def _fit(pack):
     """Сначала укорачиваются сроки, затем замечания; ошибки свёртки не трогаются."""
     while _size(pack) > TARGET_BYTES and len(pack.get("due") or []) > 3:
@@ -269,6 +327,12 @@ def _fit(pack):
     for answer in (pack.get("recall") or {}).get("answers") or []:   # полный ответ — в файле
         if _size(pack) > HARD_BYTES and len(answer.get("top") or []) > 1:
             answer["top"] = answer["top"][:1]
+    # s11.text.062: NEXT 33 КБ при пределе 17 — бой, сроки, канон и присутствующие разрослись. Полное — в
+    # GM_BRIEF; здесь — ужатое по порядку, пока не влезет.
+    for step in _SQUEEZE:
+        if _size(pack) <= HARD_BYTES:
+            break
+        step(pack)
     if _size(pack) > HARD_BYTES:   # сам пакет за пределом и ужать нечего — сказать игроку
         from . import limits
         item = {"key": "next", "what": f"пакет хода NEXT (байт): {_size(pack)} из {HARD_BYTES}",
