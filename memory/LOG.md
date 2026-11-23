@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.060: Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), план сюжета, бой
 - s11.text.059: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Фурукава Кёдзи (`npc/caravan_prisoner`), план сюжета, бой
 - s11.text.058: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Хосина Кэн (`npc/hoshina_ken`), план сюжета, бой
 - s11.text.057: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Морита Кай (`npc/p4_marked_hunter`), план сюжета, бой
@@ -59,4 +60,3 @@
 - s11.text.003: Сэно Фуми (`npc/road_villager_fumi`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), поправки игрока: 1
 - s11.text.002: Сугихара Рэндзо (`npc/seventh_well_senior_physician`), вещь `traveller_cloak`, вещь `shiki_finances`
 - s11.text.001: Сэно Фуми (`npc/road_villager_fumi`), Тамура Рэйка (`npc/tamura_reika`)
-- s10.text.129: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `reika_direct_comm_plate`, план сюжета, поправки игрока: 1
