@@ -53,6 +53,7 @@
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
+- Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 5 ход(ов), s12–s12
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
@@ -60,7 +61,6 @@
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
-- Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 4 ход(ов), s12–s12
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02

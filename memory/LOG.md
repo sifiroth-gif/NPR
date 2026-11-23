@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.015: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`)
 - s12.text.014: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`
 - s12.text.013: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`
 - s12.text.011: Гаара (`npc/gaara`), Баки (`npc/baki`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
@@ -55,4 +56,3 @@
 - s11.text.037: Баки (`npc/baki`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.036: Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.035: Канкуро (`npc/kankuro`), Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), план сюжета
-- s11.text.034: Сакура Харуно (`npc/sakura`), Канкуро (`npc/kankuro`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), план сюжета
