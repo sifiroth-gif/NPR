@@ -15,8 +15,10 @@ HOT_LIMIT = 110_000          # выше — свёртка блокируетс�
 GM_ONLY_NORM = 450_000       # скрытая часть: только предупреждение
 BRIEF_TARGET = 36_000        # GM_BRIEF: цель
 BRIEF_HARD = 56_000          # GM_BRIEF: предел
-NEXT_TARGET = 14_000         # пакет хода: цель
-NEXT_HARD = 17_000           # пакет хода: предел
+# Пакет хода: 23.11.2026 в нём появились канон арки, знание присутствующих, арсенал боя, а поправок
+# игрока стало 19 (7,6 КБ) — прежние 14/17 КБ не держались ни одним ходом. Сверх цели код ужимает сам.
+NEXT_TARGET = 20_000         # пакет хода: цель
+NEXT_HARD = 26_000           # пакет хода: предел
 SESSION_TURNS = 120          # длинная сессия: пора закрыть
 WARN = 0.9                   # с какой доли предела предупреждать
 REMIND_TURNS = 15            # одно и то же предупреждение — не чаще раза в 15 ходов
@@ -70,11 +72,11 @@ def check(state_dir, hot, *, hot_bytes, secret_bytes, engine=ENGINE):
     brief = state_dir / "recovery/GM_BRIEF.json"   # к этому моменту свёртка уже записала свежую сводку
     if brief.is_file():
         add("brief", "сводка ведущего GM_BRIEF (байт)", brief.stat().st_size, BRIEF_HARD, [ACT_CLOSE, ACT_TRIM, ACT_RAISE])
-    for name, limit in RULES.items():
+    for name, limit in RULES.items():   # правила держат тесты; игроку — только перерасход
         path = engine / name
-        if path.is_file():
-            add(f"rule:{name}", f"файл правил {name} (знаков)", len(path.read_text(encoding="utf-8")), limit,
-                [ACT_RULE, ACT_RAISE])
+        size = len(path.read_text(encoding="utf-8")) if path.is_file() else 0
+        if size > limit:
+            add(f"rule:{name}", f"файл правил {name} (знаков)", size, limit, [ACT_RULE, ACT_RAISE])
     cursor = (hot.get("cursor") or {}).get("id") or ""
     seq = int(cursor.rsplit(".", 1)[-1]) if cursor[-3:].isdigit() else 0
     # Closing a session preserves the final played cursor until the next turn.

@@ -695,12 +695,12 @@ KEEPER_FILL = "memory/_curated/state_fill.json"
 def _lint(text):
     """Линтер прозы и вёрстка реплик кампании: реплика без подписи сразу делает вердикт «переписать»."""
     report = prose_lint.lint(text)
-    bare = prose_lint.speakers(text)
-    if bare:
-        report["hits"].insert(0, bare)
-        report["by_rule"]["speaker"] = report["by_rule"].get("speaker", 0) + 1
-        report["advice"]["speaker"] = prose_lint.ADVICE["speaker"]
-        report["verdict"] = "переписать"
+    for hit in (prose_lint.speakers(text), prose_lint.mechanics(text)):
+        if hit:   # реплика без подписи, числа механики в прозе — сразу «переписать»
+            report["hits"].insert(0, hit)
+            report["by_rule"][hit["rule"]] = report["by_rule"].get(hit["rule"], 0) + 1
+            report["advice"][hit["rule"]] = prose_lint.ADVICE[hit["rule"]]
+            report["verdict"] = "переписать"
     return report
 
 
@@ -1131,6 +1131,7 @@ def fold(state_dir):
     skill_seed = expertise.load(state_dir)
     canon_arcs = arcs.load(state_dir)
     favor.seed(hot, archive_rows, names, always)   # окно подыгрывания сразу, не с нуля
+    fight.backfill_arsenal(hot, archive_rows)        # бой шёл до учёта арсенала
     visited = None
     applied = []
     amended = []
@@ -1205,6 +1206,8 @@ def fold(state_dir):
                 checks.extend(expertise.review(hot, turn, names, skill_seed, always))
                 checks.extend(favor.track(hot, turn, names, always))
                 checks.extend(arcs.track(hot, turn, canon_arcs))   # канон арки: сыграно, пропущено
+                fight.track_arsenal(hot, turn)                      # пущенные в ход приёмы именных
+                checks.extend(fight.nemera_turn(hot, turn))         # Немера не ждёт просьбы
                 checks.extend(presence.prune_silent(hot, turn, int(hot.get("cursor", {}).get("seq", 0)), names, always))
                 # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
                 witnesses = [k for k in dict.fromkeys(present_before + present_after) if k not in always]

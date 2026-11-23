@@ -15,6 +15,7 @@ from __future__ import annotations
 import hashlib
 from pathlib import Path
 import json
+import re
 from datetime import datetime
 
 DICE = 12
@@ -87,6 +88,84 @@ def canon_card(key, foe):
         if name and any(name == str(n).casefold() for n in card.get("names") or []):
             return ref, card
     return None, None
+
+
+ARSENAL_SHOW = 4          # ещё не пущенных в ход приёмов в NEXT
+NEMERA_QUIET = 10         # ходов без Немеры вне боя — напоминание о её своей воле
+NEMERA = re.compile(r"немер|отрост|втор\w* чакр|за семью", re.I)
+NEMERA_PROTOCOL = ("Немера по своему протоколу (ref/NEMERA.md), без просьбы игрока: в каждом обмене одно-два "
+                   "действия отростков по её выбору — перехват, хватка, отвод удара, ощупывание чакры врага в 5 м; "
+                   "порядок интересов: сохранить сосуд → увидеть предел противника → своё. Может отказать и "
+                   "торговаться, но не исчезает из боя. Её чакра — в записи хода, в прозе без чисел.")
+
+
+def _arsenal_used(card, text):
+    return [name for name, key in card.get("arsenal") or [] if key and re.search(key, text, re.I)]
+
+
+def allies(hot):
+    """Присутствующие союзники с карточкой канона (side: ally): {ключ: (ref, карточка)}."""
+    out = {}
+    for key in (hot.get("scene") or {}).get("present") or []:
+        card = (hot.get("cast") or {}).get(key) or {}
+        ref, canon = canon_card(key, {"name": card.get("name")})
+        if canon and canon.get("side") == "ally":
+            out[key] = (ref, canon)
+    return out
+
+
+def track_arsenal(hot, turn):
+    """Отмечает пущенные в ход приёмы именных противников и союзников по тексту сцены."""
+    active = (hot.get("_fight") or {}).get("active")
+    if not active or turn.get("kind") in ("ooc", "technical", "void"):
+        return
+    text = str(turn.get("gm") or "")
+    used = active.setdefault("used", {})
+    people = {k: canon_card(k, f)[1] for k, f in (active.get("foes") or {}).items() if named(f)}
+    people.update({k: c for k, (_r, c) in allies(hot).items()})
+    for key, card in people.items():
+        if card:
+            fresh = [n for n in _arsenal_used(card, text) if n not in (used.get(key) or [])]
+            if fresh:
+                used[key] = (used.get(key) or []) + fresh
+
+
+def backfill_arsenal(hot, rows, recent=15):
+    """Бой шёл до появления учёта: пущенное в ход по последним сыгранным ходам — один раз."""
+    active = (hot.get("_fight") or {}).get("active")
+    if not active or "used" in active:
+        return
+    active["used"] = {}
+    for row in [r for r in rows if r.get("kind") not in ("ooc", "technical", "void")][-recent:]:
+        track_arsenal(hot, row)
+
+
+def arsenal_left(hot, key, card):
+    used = set((((hot.get("_fight") or {}).get("active") or {}).get("used") or {}).get(key) or [])
+    return [name for name, _k in card.get("arsenal") or [] if name not in used][:ARSENAL_SHOW]
+
+
+def nemera_turn(hot, turn):
+    """Немера не ждёт просьбы: в бою — в каждом обмене, вне боя — замечание после долгого молчания."""
+    if turn.get("kind") in ("ooc", "technical", "void"):
+        return []
+    if "nemera" not in (hot.get("cast") or {}) and not (hot.get("shiki") or {}).get("nemera_chakra"):
+        return []   # до пробуждения Немеры
+    text = str(turn.get("gm") or "")
+    seen = bool(NEMERA.search(text))
+    fold = hot.setdefault("fold", {})
+    fold["nemera_quiet"] = 0 if seen else int(fold.get("nemera_quiet") or 0) + 1
+    active = (hot.get("_fight") or {}).get("active")
+    delta = turn.get("d") or {}
+    if active and not seen and isinstance(delta.get("fight"), dict) and not delta["fight"].get("start"):
+        return [{"turn": turn["id"], "kind": "fight", "text":
+                 "Немера в обмене бездействовала и не видна в сцене. " + NEMERA_PROTOCOL}]
+    if not active and fold["nemera_quiet"] and fold["nemera_quiet"] % NEMERA_QUIET == 0:
+        return [{"turn": turn["id"], "kind": "will", "text":
+                 f"Немера молчит {fold['nemera_quiet']} ходов. У неё своя воля (ref/NEMERA.md): заметила ли она то, "
+                 "что Шики пропустил, назрела ли цена сделки, хочет ли что-то потрогать или выяснить в 5 м? "
+                 "Действует и говорит сама, не по вызову; молчание — тоже её выбор, но видимый."}]
+    return []
 
 
 def named(foe):
@@ -509,6 +588,8 @@ def _close(state, outcome_text, turn_id, at):
 
 # ---------- выдача ведущему ----------
 
+ARSENAL_RULE = ("Именной противник и союзник бьются всем арсеналом по своей цели, не разговором вместо действия: "
+                "arsenal_left — ещё не пущенное в ход; меняй приёмы, ставь ловушки, бей по прикрываемому.")
 RULES = ("Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: "
          "what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); "
          "перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом "
@@ -537,9 +618,15 @@ def brief(hot):
         result["active"] = {
             "id": active["id"], "place": active.get("place"), "exchanges": active.get("exchanges", 0),
             "exchanges_left": max(0, EXCHANGE_LIMIT - int(active.get("exchanges") or 0)),
-            "foes": {k: {**v, "levels": {s: foe_level(v, s) for s in ("speed", "taijutsu", "ninjutsu", "genjutsu", "sensory")},
-                         **({"tempo": tempo(hot, v)} if named(v) else {})}
+            "foes": {k: {**v,
+                         "levels": {s: foe_level(v, s) for s in ("speed", "taijutsu", "ninjutsu", "genjutsu", "sensory")},
+                         **({"tempo": tempo(hot, v)} if named(v) else {}),
+                         **({"arsenal_left": arsenal_left(hot, k, canon_card(k, v)[1])}
+                            if named(v) and canon_card(k, v)[1] else {})}
                      for k, v in active["foes"].items()},
+            "allies": {k: {"name": c.get("names", [k])[0], "arsenal_left": arsenal_left(hot, k, c)}
+                       for k, (_r, c) in allies(hot).items()},
+            "nemera": NEMERA_PROTOCOL, "arsenal_rule": ARSENAL_RULE,
             "recent_rolls": active.get("rolls", [])[-4:]}
     if state.get("closed"):
         result["last_fight"] = state["closed"][-1]
