@@ -109,6 +109,7 @@
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
 - Страна Рек, каменный уступ у реки · `places/strana-rek-kamennyy-ustup-u-reki` · 2 ход(ов), s11–s11
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
+- Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
 - Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
 - Страна Травы, сельские предместья Кусагакуре · `places/strana-travy-selskie-predmestya-kusagakure` · 2 ход(ов), s10–s11
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
@@ -212,7 +213,6 @@
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, нижний каменный уступ у реки · `places/strana-rek-nizhniy-kamennyy-ustup-u-reki` · 1 ход(ов), s11–s11
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
-- Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 1 ход(ов), s12–s12
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
