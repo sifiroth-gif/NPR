@@ -56,4 +56,3 @@
 - s11.text.034: Сакура Харуно (`npc/sakura`), Канкуро (`npc/kankuro`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), план сюжета
 - s11.text.033: Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Канкуро (`npc/kankuro`), Савара (`npc/suna_advance_tracker`), план сюжета
 - s11.text.032: Баки (`npc/baki`), Канкуро (`npc/kankuro`), Савара (`npc/suna_advance_tracker`)
-- s11.text.031: Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Канкуро (`npc/kankuro`)
