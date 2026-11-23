@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.057: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Морита Кай (`npc/p4_marked_hunter`), план сюжета, бой
 - s11.text.056: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), план сюжета, бой, поправки игрока: 1
 - s11.text.055: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Наруто Узумаки (`npc/naruto`), Савара (`npc/suna_advance_tracker`), план сюжета, бой
 - s11.text.054: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Наруто Узумаки (`npc/naruto`), Баки (`npc/baki`), план сюжета
@@ -59,4 +60,3 @@
 - s10.text.129: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), вещь `reika_direct_comm_plate`, план сюжета, поправки игрока: 1
 - s10.text.128: Хирано Сэйдзи (`npc/hirano_seiji`), khirano_seydzi (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.127: Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), khirano_seydzi (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
-- s10.text.126: Хирано Сэйдзи (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), план сюжета
