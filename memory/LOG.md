@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.052: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Дейдара (`npc/deidara`), Сасори Красных Песков (`npc/sasori`), Саске Учиха (`npc/sasuke`), Канкуро (`npc/kankuro`), план сюжета
 - s11.text.050: itachi_puppet (`npc/itachi_puppet`), Немера (Невыписанная) (`npc/nemera`), Саске Учиха (`npc/sasuke`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), план сюжета, бой
 - s11.text.049: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Саске Учиха (`npc/sasuke`), Майто Гай (`npc/gai`), Нэдзи Хьюга (`npc/neji`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Наруто Узумаки (`npc/naruto`), план сюжета, бой
 - s11.text.048: itachi_puppet (`npc/itachi_puppet`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Рок Ли (`npc/lee`), Тэнтэн (`npc/tenten`), Майто Гай (`npc/gai`), план сюжета, бой
@@ -59,4 +60,3 @@
 - s10.text.124: Хирано Сэйдзи (`npc/hirano_seiji`), khirano_seydzi (`npc/khirano_seydzi`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `s17_early_shiki_aliquot`
 - s10.text.123: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Немера (Невыписанная) (`npc/nemera`), Курихара Наото (`npc/kurihara_naoto`), вещь `s17_early_shiki_aliquot`, поправки игрока: 1
 - s10.text.122: Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Хирано Сэйдзи (`npc/hirano_seiji`), Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`), вещь `s17_early_shiki_aliquot`
-- s10.text.121: Курихара Наото (`npc/kurihara_naoto`), Сугихара Рэндзо (`npc/seventh_well_senior_physician`), Тамура Рэйка (`npc/tamura_reika`), Хирано Сэйдзи (`npc/hirano_seiji`), Мацуда (архивариус П-4) (`npc/p4_archivist_matsuda`), Немера (Невыписанная) (`npc/nemera`)
