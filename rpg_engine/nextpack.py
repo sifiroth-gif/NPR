@@ -184,6 +184,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         duty = [extra["favor"]] + duty[:2]
     if news and news.get("must"):   # мир доходит до Шики: весть или чужой шаг в затянувшейся сцене
         duty = [news["must"]] + duty[:2]
+    if (extra or {}).get("arc_must"):   # канон арки просрочен рядом с Шики (arcs.must)
+        duty = [extra["arc_must"]] + duty[:2]
     if duty:
         pack["must"] = duty
     if happened is None:
@@ -194,7 +196,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                                      "исход, требующий встречи с Шики, случается в ближайшей возможной сцене.",
                              "events": happened}
     pack["form"] = FORM
-    for key in ("canon_review", "canon", "style"):   # канон к сцене и образец манеры (hot._canon_and_style)
+    for key in ("arc", "canon_review", "canon", "style"):   # события арки, канон к сцене, образец манеры
         if (extra or {}).get(key):
             pack[key] = extra[key]
     if echoed:

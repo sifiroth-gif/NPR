@@ -28,7 +28,7 @@ import subprocess
 import zlib
 from pathlib import Path
 
-from . import acquaint, aging, canon, claims, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import acquaint, aging, arcs, canon, claims, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -1129,6 +1129,7 @@ def fold(state_dir):
     met = acquaint.index(state_dir, names, archive_rows, acquaint.generic(state_dir, hot))
     acquaint.backfill(state_dir, hot, lore_entries, names, archive_rows)
     skill_seed = expertise.load(state_dir)
+    canon_arcs = arcs.load(state_dir)
     favor.seed(hot, archive_rows, names, always)   # окно подыгрывания сразу, не с нуля
     visited = None
     applied = []
@@ -1203,6 +1204,7 @@ def fold(state_dir):
                 checks.extend(acquaint.review(hot, turn, met, names, always))
                 checks.extend(expertise.review(hot, turn, names, skill_seed, always))
                 checks.extend(favor.track(hot, turn, names, always))
+                checks.extend(arcs.track(hot, turn, canon_arcs))   # канон арки: сыграно, пропущено
                 checks.extend(presence.prune_silent(hot, turn, int(hot.get("cursor", {}).get("seq", 0)), names, always))
                 # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
                 witnesses = [k for k in dict.fromkeys(present_before + present_after) if k not in always]
@@ -1308,6 +1310,7 @@ def fold(state_dir):
     # Счётчик показа новостей мира растёт до записи состояния, иначе событие висит в NEXT вечно.
     happened = will.offscreen(hot)
     favor_item = favor.must(hot)   # до записи: пауза между напоминаниями хранится в HOT
+    arcs.advance(hot, canon_arcs)   # канон без Шики по сроку случается сам
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
         echoed = echo.pick(state_dir, hot, texts=[f"{t.get('gm') or ''} {t.get('line') or ''}" for t in applied
                                                   if t.get("kind") not in ("ooc", "technical", "void")])
@@ -1351,6 +1354,8 @@ def fold(state_dir):
     extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
     if favor_item:
         extra["favor"] = favor_item
+    extra["arc"] = arcs.view(hot, canon_arcs)
+    extra["arc_must"] = arcs.must(hot, canon_arcs)
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
                         secret_bytes=len(texts[1].encode("utf-8")))
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
