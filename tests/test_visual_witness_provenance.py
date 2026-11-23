@@ -51,7 +51,9 @@ class SightlineTests(unittest.TestCase):
         h = state()
         known = lore.heard(h, VISUAL)
         self.assertEqual(set(known), {"sakura", "chiyo"})
-        self.assertNotIn("naruto", acquaint.view(h, "naruto", {}, [VISUAL], 12))
+        naruto_view = acquaint.view(h, "naruto", {}, [VISUAL], 12)
+        self.assertIn("не видел в данном эпизоде: Сусаноо в s11.text.063", naruto_view)
+        self.assertNotIn("видел: Сусаноо 065", naruto_view)
         self.assertIn("видел: Сусаноо 063", acquaint.view(h, "sakura", {}, [VISUAL], 11))
         fence = lore.fences(h, [VISUAL], ["naruto", "kakashi", "sakura"])[0]
         self.assertIn("Сакура Харуно", fence)
