@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.023: Канкуро (`npc/kankuro`)
 - s12.text.022: Канкуро (`npc/kankuro`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.021: Канкуро (`npc/kankuro`), Гаара (`npc/gaara`)
 - s12.text.020: Канкуро (`npc/kankuro`)
