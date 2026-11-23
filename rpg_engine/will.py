@@ -200,6 +200,15 @@ def review(hot, turns):
     for turn in turns or []:
         for key, own in (((turn.get("d") or {}).get("cast") or {}).items()):
             for name, plan in ((own or {}).get("intent") or {}).items() if isinstance(own, dict) else ():
+                closing = str(plan.get("status") or "") if isinstance(plan, dict) else ""
+                outcome = str(plan.get("outcome") or "") if isinstance(plan, dict) else ""
+                from .arcs import EVASION
+                if closing in ("abandoned", "failed", "dropped", "cancelled") and EVASION.search(outcome):
+                    # Автономия мира (поправка игрока 23.11.2026): разминка с Шики плана не отменяет.
+                    note(f"План «{name}» у «{_name(hot, key)}» закрыт разминкой во времени или месте («{outcome[:90]}»). "
+                         "Цель не исчезла: NPC добивается её иначе — ищет, догоняет, приходит туда, где Шики, "
+                         f"вмешивается. Верни d.cast.{key}.intent.{name} в committed с новым next и due или "
+                         "закрой причиной из самого мира.")
                 result = plan.get("if_unopposed") if isinstance(plan, dict) else None
                 if result and news.dry(result):
                     note(f"План «{name}» у «{_name(hot, key)}»: исход — бумага («{str(result)[:90]}»). Перепиши "
