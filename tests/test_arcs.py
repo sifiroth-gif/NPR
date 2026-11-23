@@ -1,13 +1,14 @@
 """Канон Naruto внутри главы: события по сроку и порядку (поправка игрока 23.11.2026, s11.text.041–042)."""
 import unittest
 
-from rpg_engine import arcs, nextpack
+from rpg_engine import arcs, nextpack, will
 
 ARCS = [{"id": "kazekage", "title": "Спасение Кадзекагэ", "from": "0010-03-12T03:00:00", "until": "0010-03-18T00:00:00",
          "beats": [
              {"id": "guy", "offscreen": True, "due": "0010-03-14T10:00:00", "title": "Команда Гая",
               "canon": "Цунадэ отправляет команду Гая."},
              {"id": "itachi", "due": "0010-03-15T08:00:00", "title": "Подставной Итачи", "where": "подступы",
+              "goal": "задержать отряд до конца извлечения",
               "canon": "Итачи задерживает отряд.", "keys": ["итачи"], "before": "внутр\\w* пещер"},
              {"id": "barrier", "due": "0010-03-15T10:30:00", "title": "Пять печатей", "canon": "Гай снимает печати.",
               "keys": ["гай", "печат"]}]}]
@@ -55,6 +56,37 @@ class ArcsTest(unittest.TestCase):
         self.assertNotIn("nope", canon)
         self.assertIsNone(arcs.must(hot, ARCS))
         self.assertEqual(arcs.track(hot, turn("s11.text.045", "0010-03-15T09:10:00", "внутри пещеры"), ARCS), [])
+
+    def test_route_or_lateness_does_not_cancel_canon(self):
+        hot = state("0010-03-15T08:23:00")
+        why = "changed: Шики и отряд шли другим маршрутом, точка перехвата осталась в стороне"
+        notes = arcs.track(hot, turn("s11.text.043", "0010-03-15T08:29:00", "Тишина у печатей.",
+                                     {"arc": {"itachi": why}}), ARCS)
+        self.assertIn("не принято", notes[0]["text"])
+        self.assertEqual(hot["_plot"]["canon"]["itachi"], {"late": 1})
+        item = arcs.must(hot, ARCS)
+        self.assertTrue(item.startswith("Канон опаздывает на 1 ход(а): «Подставной Итачи» открывает этот ход"))
+        self.assertIn("задержать отряд до конца извлечения", item)
+        self.assertIn("сорвать действия Шики", item)
+        arcs.track(hot, turn("s11.text.044", "0010-03-15T08:40:00", "Гай снимает талисман.",
+                             {"arc": {"itachi": "changed: Шики убил его Шитоном до перехвата"}}), ARCS)
+        self.assertEqual(hot["_plot"]["canon"]["itachi"]["status"], "changed")
+
+    def test_old_evasive_change_is_reverted(self):
+        hot = state("0010-03-15T08:40:00")
+        hot["_plot"] = {"canon": {"itachi": {"status": "changed", "why": "отряд шёл по изменённому маршруту"}}}
+        notes = arcs.revalidate(hot, ARCS)
+        self.assertEqual(len(notes), 1)
+        self.assertIsNotNone(arcs.must(hot, ARCS))
+        self.assertFalse(arcs.valid_change("Сражения за Шики не было"))
+        self.assertTrue(arcs.valid_change("Немера сожгла печать до прихода Итачи"))
+
+    def test_npc_plan_is_not_closed_by_a_missed_meeting(self):
+        hot = {"cursor": {"id": "s11.text.044", "at": "0010-03-15T08:40:00"}, "cast": {"baki": {"name": "Баки"}}}
+        t = {"id": "s11.text.044", "d": {"cast": {"baki": {"intent": {"meet": {
+            "status": "abandoned", "outcome": "Не застал Шики, разминулись у ворот"}}}}}}
+        notes = [n for n in will.review(hot, [t]) if "разминкой" in n["text"]]
+        self.assertEqual(len(notes), 1)
 
     def test_arc_outside_window_is_silent(self):
         self.assertEqual(arcs.view(state("0010-02-01T00:00:00"), ARCS), {})

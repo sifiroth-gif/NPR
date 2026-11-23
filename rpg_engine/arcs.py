@@ -34,14 +34,30 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 SEED = "memory/_curated/canon_arcs.GM_ONLY.json"
+# s11.text.043: «changed: отряд шёл другим маршрутом, точка перехвата Итачи осталась в стороне» —
+# событие отменено опозданием и географией. Автономия мира выше сцены Шики (поправка игрока
+# 23.11.2026): действующее лицо добивается цели иначе — находит, догоняет, срывает начатое.
+EVASION = re.compile(
+    r"маршрут|в стороне|разминул|мимо|на другом (?:подходе|пути)|другим путём|другим путем|не встретил|не встрет"
+    r"|не успел|опоздал|не застал|не дождал|не оказалось рядом|не было рядом|не пересекл|точк\w* перехвата"
+    r"|шики (?:не было|ушёл|ушел|отсутствовал|был в другом)|сражени\w* за шики не было|за шики не сыгран"
+    r"|не сыграно|осталось за кадром|не произошло", re.I)
+AGENCY = re.compile(r"шики|мугами|немер", re.I)
 AHEAD = 3            # событий арки в NEXT
 LOOKAHEAD_DAYS = 3   # событие следующей арки показывается за столько дней
 HAPPENED_HOURS = 24  # случившееся без Шики висит в NEXT столько игровых часов
 STATUSES = ("played", "changed", "offscreen")
-RULE = ("Канон Naruto — опорная траектория: события арки идут сами в свой срок и по порядку, даже без Шики. "
-        "Не пропускай и не заменяй выдумкой; изменить исход может только причина из действий Шики или мира — "
-        "тогда d.arc.<id>: \"changed: причина\". Сыгранное отметь d.arc.<id>: \"played\". Случившееся без "
-        "Шики (happened) доходит до него следом: участник, весть, след.")
+RULE = ("Автономия мира выше сцены Шики: события арки идут сами в свой срок и по порядку, где бы ни был Шики. "
+        "Опоздание, другой маршрут, отсутствие Шики их не отменяют — действующее лицо добивается цели иначе: "
+        "находит отряд, догоняет, вмешивается в чужую сцену и может сорвать начатое Шики. Изменить исход "
+        "(d.arc.<id>: \"changed: причина\") может только поступок Шики, лишивший его цели или средства. "
+        "Сыгранное — d.arc.<id>: \"played\". Случившееся без Шики (happened) доходит до него следом.")
+
+
+def valid_change(why):
+    """Изменение канона принимается, только если его причина — поступок Шики, а не разминка во времени и месте."""
+    text = str(why or "")
+    return bool(AGENCY.search(text)) and not EVASION.search(text)
 
 
 def _parse(value):
@@ -88,18 +104,22 @@ def track(hot, turn, arcs):
     if not arcs or turn.get("kind") in ("ooc", "technical", "void"):
         return []
     state = _state(hot)
+    notes_early = []
     ids = {b["id"] for _, b in _beats(arcs)}
     for key, value in ((turn.get("d") or {}).get("arc") or {}).items():
         if key not in ids:
             continue
         text = str(value or "").strip()
         status = text.split(":", 1)[0].strip().casefold()
+        why = text.split(":", 1)[1].strip() if ":" in text else ""
+        if status == "changed" and not valid_change(why):
+            notes_early.append(_refused(turn["id"], key, why))
+            continue
         if status in STATUSES:
-            state[key] = {"status": status, "turn": turn["id"], "why": text.split(":", 1)[1].strip()[:200]
-                          if ":" in text else ""}
+            state[key] = {"status": status, "turn": turn["id"], "why": why[:200]}
     text = f"{turn.get('place') or ''}\n{turn.get('gm') or ''}".casefold()
     now = _parse(turn.get("at"))
-    notes = []
+    notes = notes_early
     for arc, beat in _beats(arcs):
         if _done(state, beat):
             continue
@@ -109,6 +129,10 @@ def track(hot, turn, arcs):
         if _matches(beat, text):
             state[beat["id"]] = {"status": "played", "turn": turn["id"], "why": "по тексту сцены"}
             continue
+        due = _parse(beat.get("due"))
+        if not beat.get("offscreen") and due and now and due <= now:
+            row = state.setdefault(beat["id"], {})
+            row["late"] = int(row.get("late") or 0) + 1   # ходов мимо срока
         gate = beat.get("before")
         if gate and not beat.get("offscreen") and re.search(gate, text, re.I):
             notes.append({"turn": turn["id"], "kind": "arc", "text":
@@ -116,6 +140,26 @@ def track(hot, turn, arcs):
                           f"({beat.get('where') or 'по пути'}): {beat.get('canon')} Сыграй его следующим ходом "
                           "там, где отряд сейчас, или запиши d.arc."
                           f"{beat['id']}: \"changed: причина\" — что из действий Шики это изменило."})
+    return notes
+
+
+def _refused(turn_id, key, why):
+    return {"turn": turn_id, "kind": "arc", "text":
+            f"Изменение канона «{key}» не принято: «{str(why)[:140]}». Опоздание, маршрут, отсутствие Шики "
+            "событие не отменяют — действующее лицо добивается цели иначе и приходит туда, где Шики сейчас. "
+            "Отменить может только поступок Шики, лишивший его цели или средства."}
+
+
+def revalidate(hot, arcs):
+    """Принятые раньше «changed» без поступка Шики возвращаются в ожидание (s11.text.043)."""
+    state = _state(hot)
+    ids = {b["id"] for _, b in _beats(arcs)}
+    notes = []
+    for key in sorted(ids):
+        row = state.get(key) or {}
+        if row.get("status") == "changed" and not valid_change(row.get("why")):
+            notes.append(_refused((hot.get("cursor") or {}).get("id"), key, row.get("why")))
+            state[key] = {"late": int(row.get("late") or 0)}
     return notes
 
 
@@ -193,7 +237,10 @@ def must(hot, arcs):
                 continue
             due = _parse(beat.get("due"))
             if due and now and due <= now:
-                return (f"Канон: «{beat.get('title')}» — срок {due.strftime('%d.%m %H:%M')} прошёл. "
-                        f"{beat.get('canon')} Сыграй в этой сцене (Шики волен вмешаться и изменить исход) "
-                        f"или запиши d.arc.{beat['id']}: \"changed: причина\".")
+                late = int((state.get(beat["id"]) or {}).get("late") or 0)
+                goal = f" Его цель — {beat['goal']}: добивается её там, где Шики и отряд сейчас." if beat.get("goal") else ""
+                head = (f"Канон опаздывает на {late} ход(а): «{beat.get('title')}» открывает этот ход первым абзацем"
+                        if late else f"Канон: «{beat.get('title')}» — срок {due.strftime('%d.%m %H:%M')} прошёл, сыграй сейчас")
+                return (f"{head}. {beat.get('canon')}{goal} Может ворваться в начатое и сорвать действия Шики; "
+                        "Шики волен ответить. Ни маршрут, ни опоздание событие не отменяют.")
     return None
