@@ -18,10 +18,12 @@ AGED_DIR = "archive/aged"
 TURN = re.compile(r"s(\d{2})\.text\.(\d{3,4})")
 SESSION_SPAN = 120          # приблизительная длина сессии в ходах для сравнения через сессии
 
-NORMAL = {"thread_age": 40, "thing_age": 40, "knows": 12, "pact_events": 10, "intent_done": 3,
-          "dread_log": 3, "plot_closed": 8, "dormant": 120}
-TIGHT = {"thread_age": 15, "thing_age": 15, "knows": 6, "pact_events": 5, "intent_done": 1,
-         "dread_log": 2, "plot_closed": 4, "dormant": 60}
+# Окна в ходах. Текущая сессия не стареет ни в каком проходе (``_this_session``): игрок продолжает её,
+# а не закрывает (23.11.2026). Стареет прошлое — сессии назад.
+NORMAL = {"thread_age": 120, "thing_age": 120, "knows": 24, "pact_events": 20, "intent_done": 6,
+          "dread_log": 6, "plot_closed": 12, "dormant": 240}
+TIGHT = {"thread_age": 60, "thing_age": 60, "knows": 12, "pact_events": 10, "intent_done": 3,
+         "dread_log": 3, "plot_closed": 8, "dormant": 120}
 # dormant: NPC не появлялся столько ходов и без живого плана — его история сжимается до последнего
 # исполненного плана и последней записи страха (полностью — в archive/aged, вернётся — восстановится по нужде).
 DONE_BRIEF = ("key", "at", "status", "outcome", "turn", "by")   # закрытый план: исход без всего плана
@@ -78,6 +80,34 @@ def _in_play(hot):
     return present, live_threads, text
 
 
+def _session_of(turn_id):
+    match = TURN.search(str(turn_id or ""))
+    return int(match.group(1)) if match else None
+
+
+def _this_session(hot, turn_id):
+    """Запись текущей сессии: в оперативной памяти до её конца, в каком бы проходе ни было старение."""
+    now = _session_of((hot.get("cursor") or {}).get("id"))
+    return now is not None and _session_of(turn_id) == now
+
+
+def _turn_of(value):
+    if isinstance(value, dict):
+        for key in ("turn", "last_known", "since", "id", "aged_at"):
+            if _session_of(value.get(key)) is not None:
+                return value.get(key)
+    return value if isinstance(value, str) else None
+
+
+def _split_keep(hot, items, keep):
+    """Старое сверх окна — кроме записей текущей сессии: они остаются при любом окне."""
+    if not isinstance(items, list) or len(items) <= keep:
+        return [], items
+    old = [x for x in items[:-keep] if not _this_session(hot, _turn_of(x))]
+    kept = [x for x in items if x not in old]
+    return old, kept
+
+
 def _mentioned(key, text):
     return bool(key) and key in text
 
@@ -104,6 +134,8 @@ def _pass(state_dir, hot, w):
             age = _age(hot, (value or {}).get("last_known")) if isinstance(value, dict) else None
         if key.startswith(ALWAYS):
             continue
+        if _this_session(hot, _turn_of(value)):
+            continue
         if age is not None and age >= w["thread_age"] and key not in live_threads and not _mentioned(key, text):
             gone.append({"key": key, "value": threads.pop(key), "aged_at": turn})
     _append(state_dir, "threads.jsonl", gone)
@@ -118,6 +150,8 @@ def _pass(state_dir, hot, w):
         age = _age(hot, value.get("turn") or value.get("since"))
         if holder in present or key.startswith(ALWAYS) or _mentioned(key, text):
             continue
+        if _this_session(hot, value.get("turn") or value.get("since")):
+            continue
         if age is not None and age >= w["thing_age"]:
             gone.append({"key": key, "value": things.pop(key), "aged_at": turn})
     _append(state_dir, "things.jsonl", gone)
@@ -128,7 +162,7 @@ def _pass(state_dir, hot, w):
     shiki = hot.get("shiki") or {}
     knows = shiki.get("knows")
     if isinstance(knows, list) and len(knows) > w["knows"]:
-        old, shiki["knows"] = knows[:-w["knows"]], knows[-w["knows"]:]
+        old, shiki["knows"] = _split_keep(hot, knows, w["knows"])
         _append(state_dir, "shiki-knows.jsonl", [{"key": f"{turn}:{i}", "value": v, "aged_at": turn}
                                                  for i, v in enumerate(old)])
         shiki["knows_older"] = f"{AGED_DIR}/shiki-knows.jsonl"
@@ -139,7 +173,8 @@ def _pass(state_dir, hot, w):
         entries = injuries[key] if isinstance(injuries[key], list) else [injuries[key]]
         last = max((_ordinal((e or {}).get("turn")) or 0 for e in entries if isinstance(e, dict)), default=0)
         now = _ordinal(turn) or 0
-        if key != "shiki" and key not in present and last and now - last >= w["thing_age"]:
+        if key != "shiki" and key not in present and last and now - last >= w["thing_age"] \
+                and not any(_this_session(hot, (e or {}).get("turn")) for e in entries if isinstance(e, dict)):
             gone.append({"key": key, "value": injuries.pop(key), "aged_at": turn})
     _append(state_dir, "injuries.jsonl", gone)
     report["injuries"] = len(gone)
@@ -149,7 +184,7 @@ def _pass(state_dir, hot, w):
     pact = hot.get("pact") or {}
     events = pact.get("events")
     if isinstance(events, list) and len(events) > w["pact_events"]:
-        old, pact["events"] = events[:-w["pact_events"]], events[-w["pact_events"]:]
+        old, pact["events"] = _split_keep(hot, events, w["pact_events"])
         _append(state_dir, "pact-events.jsonl", [{"key": e.get("id") if isinstance(e, dict) else None,
                                                   "value": e, "aged_at": turn} for e in old])
         pact["events_older"] = f"{AGED_DIR}/pact-events.jsonl"
@@ -169,7 +204,7 @@ def _pass(state_dir, hot, w):
         keep_done, keep_log = (1, 1) if dormant else (w["intent_done"], w["dread_log"])
         done = profile.get("intent_done")
         if isinstance(done, list) and len(done) > keep_done:
-            old, profile["intent_done"] = done[:-keep_done], done[-keep_done:]
+            old, profile["intent_done"] = _split_keep(hot, done, keep_done)
             plans += [{"key": f"{key}:{d.get('key')}", "npc": key, "value": d, "aged_at": turn} for d in old]
             # Ключи исполненного остаются: заготовка хранителя не воскресит закрытый план.
             profile["done_keys"] = list(dict.fromkeys((profile.get("done_keys") or []) +
@@ -181,7 +216,7 @@ def _pass(state_dir, hot, w):
         dread = profile.get("dread")
         log = dread.get("log") if isinstance(dread, dict) else None
         if isinstance(log, list) and len(log) > keep_log:
-            old, dread["log"] = log[:-keep_log], log[-keep_log:]
+            old, dread["log"] = _split_keep(hot, log, keep_log)
             fears += [{"key": f"{key}:{i}", "npc": key, "value": v, "aged_at": turn} for i, v in enumerate(old)]
     _append(state_dir, "npc-plans.GM_ONLY.jsonl", plans)
     _append(state_dir, "npc-dread.GM_ONLY.jsonl", fears)
@@ -202,8 +237,86 @@ def _pass(state_dir, hot, w):
     plot = hot.get("_plot") or {}
     closed = plot.get("closed")
     if isinstance(closed, list) and len(closed) > w["plot_closed"]:
-        old, plot["closed"] = closed[:-w["plot_closed"]], closed[-w["plot_closed"]:]
+        old, plot["closed"] = _split_keep(hot, closed, w["plot_closed"])
         _append(state_dir, "plot-closed.GM_ONLY.jsonl", [{"key": c.get("id"), "value": c, "aged_at": turn}
                                                           for c in old if isinstance(c, dict)])
         report["plot_closed"] = len(old)
+    return report
+
+
+RESTORE = {   # файл архива → куда вернуть
+    "threads.jsonl": "threads", "things.jsonl": "things", "injuries.jsonl": "injuries",
+    "shiki-knows.jsonl": "shiki_knows", "pact-events.jsonl": "pact_events",
+    "npc-plans.GM_ONLY.jsonl": "plans", "npc-dread.GM_ONLY.jsonl": "dread", "plot-closed.GM_ONLY.jsonl": "plot",
+}
+
+
+def _of_session(row, session, kind):
+    """Запись сыграна в этой сессии (давнее, ушедшее по своему возрасту, не возвращается)."""
+    value = row.get("value")
+    if kind == "injuries" and isinstance(value, list):
+        return any(_session_of((e or {}).get("turn")) == int(session) for e in value if isinstance(e, dict))
+    if kind == "pact_events":
+        return _session_of((value or {}).get("id") if isinstance(value, dict) else value) == int(session)
+    source = _turn_of(value) if isinstance(value, dict) else (value if kind == "shiki_knows" else None)
+    if _session_of(source) is not None:
+        return _session_of(source) == int(session)
+    return kind in ("plans", "dread")   # исход плана без отметки хода: история NPC, возвращается
+
+
+def restore(state_dir, hot, session):
+    """Возвращает в HOT/GM_ONLY то, что ушло в архив в ходе сессии ``session`` (разгрузки 23.11.2026).
+
+    Архив не трогается (дописывается только); вернувшееся снова не стареет до конца сессии.
+    Уже показанные вести мира (world-events) не возвращаются: они сыграли.
+    """
+    prefix = f"s{int(session):02d}."
+    report = {}
+    for name, kind in RESTORE.items():
+        path = Path(state_dir) / AGED_DIR / name
+        try:
+            rows = [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines() if x.strip()]
+        except (OSError, ValueError):
+            continue
+        rows = [r for r in rows if str(r.get("aged_at") or "").startswith(prefix) and _of_session(r, session, kind)]
+        back = 0
+        for row in rows:
+            value, key = row.get("value"), row.get("key")
+            if kind in ("threads", "things", "injuries"):
+                box = hot.setdefault(kind, {})
+                if key and key not in box:
+                    box[key] = value
+                    back += 1
+            elif kind == "shiki_knows":
+                knows = hot.setdefault("shiki", {}).setdefault("knows", [])
+                if value not in knows:
+                    knows.insert(0, value)
+                    back += 1
+            elif kind == "pact_events":
+                events = hot.setdefault("pact", {}).setdefault("events", [])
+                if value not in events:
+                    events.insert(0, value)
+                    back += 1
+            elif kind in ("plans", "dread"):
+                profile = (hot.setdefault("_psyche", {})).setdefault(row.get("npc"), {})
+                if kind == "plans":
+                    done = profile.setdefault("intent_done", [])
+                    if not any(isinstance(d, dict) and d.get("key") == (value or {}).get("key")
+                               and d.get("at") == (value or {}).get("at") for d in done):
+                        done.append(value)
+                        done.sort(key=lambda d: str((d or {}).get("at") or ""))
+                        back += 1
+                else:
+                    log = profile.setdefault("dread", {}).setdefault("log", [])
+                    if value not in log:
+                        log.append(value)
+                        log.sort(key=lambda v: _ordinal((v or {}).get("turn")) or 0)
+                        back += 1
+            elif kind == "plot":
+                closed = hot.setdefault("_plot", {}).setdefault("closed", [])
+                if not any(isinstance(c, dict) and c.get("id") == key for c in closed):
+                    closed.append(value)
+                    back += 1
+        if back:
+            report[name] = back
     return report

@@ -108,14 +108,16 @@ def resolve(label, names):
     exact = [k for k, e in names.items() if clean in e["forms"]]
     if len(exact) == 1:
         return exact[0]
-    words = {w for w in clean.split() if len(w) >= 3}
+    # Должность и деревня — не имя: «Разведчик Суны» не «Разведчик Звука» (s11.text.074).
+    plain = [w for w in clean.split() if not any(stem in w for stem in ROLE_STEMS) and not w.startswith(GEO_STEMS)]
+    words = {w for w in plain if len(w) >= 3}
     partial = [k for k, e in names.items() if words & e["parts"]]
     if len(partial) == 1:
         return partial[0]
     # Карточка без имени (ведущий завёл только ключ): «Мориока Хидэаки» → morioka_hideaki.
     def soft(part):
         return part.replace("kh", "h").replace("-", "_")
-    slugs = {soft(slug(w)) for w in clean.split() if len(w) >= 4}
+    slugs = {soft(slug(w)) for w in plain if len(w) >= 4}
     scored = sorted(((len(slugs & {soft(p) for p in k.split("_")}), k) for k in names), reverse=True)
     if scored and scored[0][0] and (len(scored) == 1 or scored[0][0] > scored[1][0]):
         return scored[0][1]
