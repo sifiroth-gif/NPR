@@ -87,16 +87,6 @@
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, shiki_training, shiki_finances, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
    "turn": "s11.text.070"
-  },
-  {
-   "kind": "will",
-   "text": "«Немера (Невыписанная)» 9 ход(ов) рядом с Шики только отвечает. Его цель: «Исследовать прямое чувственное отличие собственного осязания Немеры от переживания через чакровую связь с Шики.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s11.text.070"
-  },
-  {
-   "kind": "will",
-   "text": "«Нэдзи Хьюга» появляется уже 8 раз, а воли у него нет: задай d.cast.neji.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s11.text.070"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
@@ -247,7 +237,7 @@
   "place": "Страна Рек, северное ущелье у убежища Акацуки",
   "time": "08:43"
  },
- "digest": "67bea22a8ae9c7ea5196c507355effabfbbb107b1cae60c8c768f7f316358e64",
+ "digest": "93e3295ad3bc620c70d9310a9fdd9eb8f3cc84c2966af99353041d67f80bb8ed",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -877,14 +867,39 @@
    "look": {
     "внешность": "Молодой светловолосый подрывник в чёрном плаще с красными облаками Акацуки; действует с глиняной птицы."
    },
+   "prior_disclosures": [
+    {
+     "at": "0010-03-15T08:41:00",
+     "sha256": "1305d5cee4fbfde0f48a0e2b0c63282e08a344de2b881ed331d9d19abbb9ac2a",
+     "source": "archive/session-011-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s11.text.065"
+    },
+    {
+     "at": "0010-03-15T08:43:18",
+     "sha256": "816e9f5f20353ae1b33ed9ca0c06e7eebf65424c75b2ad6dad9c9ba936daaa56",
+     "source": "archive/session-011-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s11.text.069"
+    }
+   ],
    "profile": {
+    "first": "s11.text.069",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s11.text.070",
+      "what": "Шики трёхтомоэ Шаринганом пытался «Чужой шаг», но скоуп-глаз Дейдары защитил его. C1 бомбы промахнулись, Немера отбросила одну. Камуи Какаши отнял последнюю руку Дейдары; тот бежит. Наруто поймал пада"
+     }
+    ],
+    "memory_file": "archive/npc-memory/deidara.json",
+    "memory_total": 2,
     "name": "Дейдара",
     "seen": "s11.text.070",
     "state": "Скоупом левого глаза отражено гендзюцу Шики. C1 птицы промахнулись. Камуи Какаши удалил правую руку; Гаара выпал с птицы. Дейдара убегает без рук.",
     "status": "present_profile",
     "tier": "archetypal"
    },
-   "profile_ref": "memory/npc/deidara.md",
    "source_ref": "archive/session-*-turns.jsonl"
   },
   "kakashi": {
