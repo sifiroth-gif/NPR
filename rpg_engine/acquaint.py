@@ -212,11 +212,11 @@ def brief(met, key, session):
     return f"{head} не встречались"
 
 
-def facts_known(hot, entries, key):
-    """[(заголовок, ход)] сведений о Шики, которые этот NPC слышал или получил по каналу."""
+def facts_known(hot, entries, key, traits=False):
+    """[(заголовок, ход)] сведений о Шики, которые NPC слышал (или черт, которые видел — traits=True)."""
     out = []
     for entry in entries:
-        if not lore.is_fact(entry):
+        if not lore.is_fact(entry) or lore.is_trait(entry) != traits:
             continue
         if key in (entry.get("wield") or []):
             out.append((entry.get("short") or entry.get("title") or entry["id"], "свидетель"))
@@ -233,11 +233,36 @@ def view(hot, key, met, entries, session, tier_line=None):
     known = facts_known(hot, entries, key)
     if known:
         parts.append("слышал: " + ", ".join(f"{t} {_short_turn(w, session)}" for t, w in known[:4]))
-    elif any(lore.is_fact(e) for e in entries):
+    elif any(lore.is_fact(e) and not lore.is_trait(e) for e in entries):
         parts.append("тайн Шики не слышал")
+    seen = facts_known(hot, entries, key, traits=True)
+    if seen:   # уже видел — не «впервые», не удивляется заново
+        parts.append("видел: " + ", ".join(f"{t} {_short_turn(w, session)}" for t, w in seen[:5]))
+    together = _together(met, key, session)
+    if together:   # где NPC был рядом с Шики в этой сессии — помнит это (память карточки хранит лишь края)
+        parts.append("в сессии вместе: " + ", ".join(together))
     if tier_line:
         parts.append(tier_line)
     return "; ".join(parts)
+
+
+def _together(met, key, session, limit=4):
+    """Ходы этой сессии рядом с Шики свёрнуты в отрезки: «033–036, 054–065».
+
+    s11.text.073: карточка Сакуры хранила лишь 033 и 071–073 — совместную операцию 034 и бой
+    с Сасори ведущий не видел и «показал» ей чёрную чакру впервые.
+    """
+    row = met.get(key) or {}
+    turns = sorted({int(t.rsplit(".", 1)[-1]) for t in (row.get("spoke") or []) + (row.get("seen") or [])
+                    if _session(t) == session and t.rsplit(".", 1)[-1].isdigit()})
+    spans = []
+    for n in turns:
+        if spans and n - spans[-1][1] <= 2:
+            spans[-1][1] = n
+        else:
+            spans.append([n, n])
+    out = [f"{a:03d}" if a == b else f"{a:03d}–{b:03d}" for a, b in spans]
+    return out[-limit:] if len(out) <= limit else [out[0], "…"] + out[-(limit - 1):]
 
 
 def backfill(state_dir, hot, entries, names, rows=None):
@@ -249,9 +274,11 @@ def backfill(state_dir, hot, entries, names, rows=None):
     rows = rows if rows is not None else turns(state_dir)
     added = {}
     cache = {}
+    stems = _stems(names)
     for row in rows:
         text = lore.heard_text(row, names)
-        hits = [e for e in fresh if lore.mentions(e, text)]
+        full = f"{row.get('player') or ''}\n{row.get('gm') or ''}"
+        hits = [e for e in fresh if lore.mentions(e, full if lore.is_trait(e) else text)]
         if not hits:
             continue
         people = set()
@@ -262,6 +289,12 @@ def backfill(state_dir, hot, entries, names, rows=None):
                 cache[label] = presence.resolve(label, names)
             if cache[label]:
                 people.add(cache[label])
+        if any(lore.is_trait(e) for e in hits):   # видел тот, кто в сцене: говорил или назван
+            gm = str(row.get("gm") or "").casefold()
+            for word in set(re.findall(r"[а-яёa-z]{4,}", gm)):
+                for stem, key in stems.get(word[:4], ()):
+                    if word.startswith(stem):
+                        people.add(key)
         for entry in hits:
             wield = set(entry.get("wield") or [])
             known = lore.heard(hot, entry)

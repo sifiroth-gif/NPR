@@ -42,7 +42,7 @@ NOT_ALIASES = {"глава", "мастер", "охрана", "старший", "
                "неустановленный", "второй", "третий", "раненый", "реципиент"}
 DUE_WINDOW = timedelta(hours=24)
 
-CHARACTER = (("role", "роль"), ("wants", "хочет"), ("fears", "боится"),
+CHARACTER = (("канон", "канонический характер (1287)"), ("role", "роль"), ("wants", "хочет"), ("fears", "боится"),
              ("leverage", "рычаги"), ("stance", "позиция"), ("voice", "голос"))
 NOW = (("state", "положение"), ("body", "вид в последней сцене"))
 ROSTER_STABLE = (("appearance", "внешность"), ("village", "деревня"), ("team", "команда"),
@@ -258,6 +258,61 @@ def _merge_card(store, key, card, source):
         entity["sources"].append(source)
 
 
+ROSTER_DATED = ("внешность", "способности", "ограничения", "role", "wants")   # на 1283 — не нынешнее
+CANON_PEOPLE = "campaigns/shiki/ref/FOES.json"
+
+
+def _merge_canon_people(store, root):
+    """Канонические люди 1287 года: кто сейчас и характер — выше карточек экзамена 1283.
+
+    s11.text.073: страница Сакуры говорила «генин, уступает сильнейшим» — карточка сессий 1–3.
+    """
+    try:
+        cards = json.loads((Path(root) / CANON_PEOPLE).read_text(encoding="utf-8")).get("foes") or {}
+    except (OSError, ValueError):
+        return
+    for key, card in cards.items():
+        if key not in store or not (card.get("now") or card.get("character")):
+            continue
+        entity = store[key]
+        if card.get("now"):   # первой строкой раздела
+            entity["stable"] = {"сейчас (канон 1287)": [{"v": card["now"], "src": CANON_PEOPLE}],
+                                **{k: v for k, v in entity["stable"].items() if k != "сейчас (канон 1287)"}}
+        if card.get("character"):
+            entity["character"] = {"канон": [{"v": card["character"], "src": CANON_PEOPLE}],
+                                   **{k: v for k, v in entity["character"].items() if k != "канон"}}
+
+
+def _apply_keeper_fixes(store, state_dir):
+    """Точечные поправки хранителя (state_fill.json ``fix``) — и на страницах NPC, не только в HOT.
+
+    s11.text.073: в HOT факт Сакуры «встречала Шики на экзамене» был исправлен, а страница,
+    собранная из записей ходов, по-прежнему его показывала.
+    """
+    fill = _read_json(Path(state_dir) / "memory/_curated/state_fill.json", {}) or {}
+    for fix in fill.get("fix") or []:
+        path = fix.get("path") if isinstance(fix, dict) else None
+        if not (isinstance(path, list) and len(path) >= 2 and path[0] == "cast" and path[1] in store):
+            continue
+        match, value = fix.get("match"), fix.get("value")
+        entity = store[path[1]]
+
+        def fixed(text):
+            sentences = [x for x in re.split(r"(?<=[.;])\s+", text) if x]
+            return " ".join(value if match in x and value else x for x in sentences if value or match not in x)
+
+        for section in ("stable", "now", "character"):
+            for field, series in list((entity.get(section) or {}).items()):
+                if isinstance(series, str):
+                    if match and match in series:
+                        entity[section][field] = fixed(series)
+                    continue
+                for row in series if isinstance(series, list) else ():
+                    text = str(row.get("v") or "") if isinstance(row, dict) else ""
+                    if match and match in text:
+                        row["v"] = fixed(text)
+
+
 def _merge_roster(store, roster):
     for card in roster.get("cards") or []:
         key = card.get("id")
@@ -267,10 +322,12 @@ def _merge_roster(store, roster):
         entity["name"] = entity["name"] or _text(card.get("name"))
         for field, label in ROSTER_STABLE:
             if card.get(field) and label not in entity["stable"]:
-                entity["stable"][label] = [{"v": _text(card[field]), "src": ROSTER}]
+                tail = " (на 1283, экзамен)" if label in ROSTER_DATED else ""
+                entity["stable"][label] = [{"v": _text(card[field]) + tail, "src": ROSTER}]
         for field, target in ROSTER_CHARACTER:
             if card.get(field) and not entity["character"].get(target):
-                entity["character"][target] = [{"v": _text(card[field]), "src": ROSTER}]
+                tail = " (на 1283, экзамен)" if target in ROSTER_DATED else ""
+                entity["character"][target] = [{"v": _text(card[field]) + tail, "src": ROSTER}]
         if card.get("relations"):
             entity["stable"].setdefault("связи", [{"v": _text(card["relations"]), "src": ROSTER}])
         entity["boundary"] = entity["boundary"] or _text(card.get("knowledge_boundary"))
@@ -456,6 +513,8 @@ def build(state_dir, hot, source_root=None):
         owner = _match(store, [clock.get("owner")]) if clock.get("owner") else None
         if owner:
             store[owner]["gm"].setdefault("clocks", {})[clock_id] = clock
+    _merge_canon_people(store, root)
+    _apply_keeper_fixes(store, state_dir)
     fixes = _jsonl(state_dir / "archive/shiki-canon.jsonl")
     for entity in store.values():
         forms = [f for f in [entity["name"]] + entity["aliases"] if len(f) >= 4 and not f.isascii()]

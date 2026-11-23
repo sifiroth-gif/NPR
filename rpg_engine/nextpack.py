@@ -107,8 +107,9 @@ FORM = ("Перед записью сверь ответ: 1) шапка <text co
         "Шики из заявки — дословно, с подписью **Мугами Шики:**; 3) присутствие Шики в каждой сцене: как его видят и "
         "что из этого делают люди — холод, чёрная чакра, змеиные глаза, невозможное (GM_CORE §5), страх — в их "
         "поступке; влияние — не одобрение: похвала редка, уступка — по своей причине и с ценой; Немера живёт "
-        "по своему протоколу (ref/NEMERA.md) и не ждёт вызова; 4) NPC говорит "
-        "только своё (present.<id>.knows): нет общего прошлого с Шики, которого не было, нет его тайн без канала, "
+        "по своему протоколу (ref/NEMERA.md) и не ждёт вызова; 4) NPC — тот, кто он в 1287 (present.<id>.who: "
+        "характер канона), и говорит только своё (present.<id>.knows: что слышал и видел, где был рядом): "
+        "нет общего прошлого с Шики, которого не было, нет его тайн без канала, виденное не удивляет заново, "
         "медик говорит языком своего мира, а не словами Шики; 5) проза по навыку и horror-masters: факт, ритм, "
         "необратимость, без толкований и словаря заботы; числа механики (единицы чакры, пороги, кости) — только "
         "в записи хода, в прозе — ощущение; 6) последняя строка — **Ход Шики.**")
@@ -224,6 +225,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         knows = ((extra or {}).get("knows") or {}).get(key)
         if knows:   # знакомство до сессии и сведения о Шики (acquaint.view): чего NPC не знает — не говорит
             entry["knows"] = knows
+        who = ((extra or {}).get("knows") or {}).get(f"{key}#who")
+        if who:     # канонический человек 1287 года: кто он сейчас и каков (ref/FOES.json)
+            entry["who"] = who
         lines = _will_line(hot, key)
         if lines:
             entry["will"] = lines
@@ -286,13 +290,16 @@ def _squeeze_arc(pack):
         arc["happened"] = [_cut(x, 200) for x in arc["happened"][:2]]
 
 
+PRESENT_KEEP = {"knows": 420, "who": 360}   # знание и характер — суть жалоб игрока, режутся последними
+
+
 def _squeeze_present(pack):
     for person in (pack.get("present") or {}).values():
         for key, value in list(person.items()):
             if key != "name" and isinstance(value, str):
-                person[key] = _cut(value, 200)
+                person[key] = _cut(value, PRESENT_KEEP.get(key, 160))
             elif isinstance(value, list):
-                person[key] = [_cut(v, 160) if isinstance(v, str) else v for v in value[:2]]
+                person[key] = [_cut(v, 140) if isinstance(v, str) else v for v in value[:2]]
 
 
 def _squeeze_minor(pack):
@@ -319,9 +326,7 @@ def _fit(pack):
         pack["checks"].pop(0)
     if _size(pack) > HARD_BYTES:            # образец манеры — первым из необязательного
         pack.pop("style", None)
-    for person in (pack.get("present") or {}).values():   # знание о Шики — короче, но не прочь
-        if _size(pack) > HARD_BYTES and len(person.get("knows") or "") > 160:
-            person["knows"] = person["knows"][:159].rstrip() + "…"
+
     while _size(pack) > HARD_BYTES and len((pack.get("canon") or {}).get("items") or []) > 1:
         pack["canon"]["items"].pop()
     for answer in (pack.get("recall") or {}).get("answers") or []:   # полный ответ — в файле

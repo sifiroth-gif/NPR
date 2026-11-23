@@ -58,7 +58,16 @@ def load(state_dir):
 
 
 def is_fact(entry):
-    return entry.get("kind") == "fact"
+    """Сведение или черта самого Шики (не техника): в fences не выводится, показывается по людям."""
+    return entry.get("kind") in ("fact", "trait")
+
+
+def is_trait(entry):
+    """Видимая черта Шики (чёрная чакра, холодное тело): узнаёт тот, кто был в сцене, — глазами, не ушами.
+
+    s11.text.073: Сакура «впервые увидела» чёрную чакру, хотя оперировала Канкуро рядом с ней в s11.text.034.
+    """
+    return entry.get("kind") == "trait"
 
 
 # Предположение и вопрос — не знание: «возможно, вы учились у змей», «вы жили у Орочимару?»
@@ -161,7 +170,10 @@ def track(hot, turn, entries, present, names=None):
     spoken = None
     added = []
     for entry in entries:
-        if is_fact(entry):
+        if is_trait(entry):
+            if not mentions(entry, text):
+                continue
+        elif is_fact(entry):
             spoken = heard_text(turn) if spoken is None else spoken
             if not mentions(entry, spoken):
                 continue
