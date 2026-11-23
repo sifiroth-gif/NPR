@@ -57,4 +57,3 @@
 - s11.text.022: kusa_border_officer (`npc/kusa_border_officer`), Савара (`npc/suna_advance_tracker`), kusa_border_pursuer (`npc/kusa_border_pursuer`), Разведчик Звука (`npc/razvedchik_zvuka`), Морита Кай (`npc/p4_marked_hunter`), Касэ (`npc/kase`), вещь `traveller_cloak`
 - s11.text.021: Глава Кусагакуре (`npc/kusa_head`), Савара (`npc/suna_advance_tracker`), kusa_border_officer (`npc/kusa_border_officer`), kusa_border_pursuer (`npc/kusa_border_pursuer`), Мориока Хидэаки (`npc/morioka_hideaki`), Баки (`npc/baki`), Канкуро (`npc/kankuro`), план сюжета, поправки игрока: 1
 - s11.text.020: Глава Кусагакуре (`npc/kusa_head`), Немера (Невыписанная) (`npc/nemera`), Морита Кай (`npc/p4_marked_hunter`), вещь `shiki_s17_report_folder`, вещь `black_caravan_manifest`, план сюжета
-- s11.text.019: Аракава Дзюн (`npc/arakawa`), Курода Маю (`npc/kuroda_mayu`), Сэно Фуми (`npc/road_villager_fumi`), вещь `shiki_s17_report_folder`, план сюжета
