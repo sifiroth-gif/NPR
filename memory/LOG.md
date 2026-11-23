@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s11.text.040: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Какаши Хатакэ (`npc/kakashi`), chiyo_caravan (`npc/chiyo_caravan`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
 - s11.text.039: Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), план сюжета, поправки игрока: 2
 - s11.text.038: Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Баки (`npc/baki`), Савара (`npc/suna_advance_tracker`), Канкуро (`npc/kankuro`), Связной Песка (`npc/svyaznoy_peska`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s11.text.037: Баки (`npc/baki`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Савара (`npc/suna_advance_tracker`), Связной Песка (`npc/svyaznoy_peska`), план сюжета
@@ -61,4 +62,3 @@
 - s10.text.112: Тамура Рэйка (`npc/tamura_reika`), Немера (Невыписанная) (`npc/nemera`)
 - s10.text.111: Немера (Невыписанная) (`npc/nemera`), Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Морита Кай (`npc/p4_marked_hunter`), бой
 - s10.text.110: Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Тамура Рэйка (`npc/tamura_reika`)
-- s10.text.109: Тамура Рэйка (`npc/tamura_reika`), Принимающий служащий (`npc/prinimayushchiy_sluzhashchiy`), Хагуро (`npc/khaguro`), план сюжета
