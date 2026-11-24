@@ -220,6 +220,7 @@
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, лесной склон над западным подходом к мосту Тэнти · `places/strana-travy-lesnoy-sklon-nad-zapadnym-podkhodom-k-mostu-ten` · 1 ход(ов), s12–s12
+- Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
 - Страна Травы, скрытый лесной гребень над западным подходом к мосту Тэнти · `places/strana-travy-skrytyy-lesnoy-greben-nad-zapadnym-podkhodom-k-` · 1 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
