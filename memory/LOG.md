@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.013: Кэйдзи (`npc/keiji`), Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сай (`npc/sai`), Девятихвостый (`npc/kurama`), линия `tenchi_bridge`, план сюжета
 - s13.text.012: Кэйдзи (`npc/keiji`), Немера (Невыписанная) (`npc/nemera`), вещь `keiji_field_report`
 - s13.text.011: Кэйдзи (`npc/keiji`)
 - s13.text.010: Кэйдзи (`npc/keiji`), линия `tenchi_bridge`, план сюжета
@@ -57,4 +58,3 @@
 - s12.text.060: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`)
 - s12.text.059: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s12.text.058: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), Сиранами (`npc/shiranami`)
-- s12.text.057: Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), бой
