@@ -220,3 +220,152 @@ def pick(state_dir, hot, texts=()):
     state["current"] = {"kind": kind, "from": source, "what": " ".join(str(text).split())[:220],
                         "echoes": ", ".join(shared[:4]), "rule": RULE}
     return state["current"]
+
+
+# --- Давнее присутствующих: историческая память NPC о Шики по теме сцены (24.11.2026) ---------------
+# s12.text.043: Орочимару «впервые» поражён Шаринганом Шики, которого видел ещё в s09; память и мысли
+# NPC просочились в прозу. Эхо выше нарочно молчит о присутствующих («это сама сцена»), а NEXT.knows —
+# лишь сжатые метки. Здесь — эпизоды, которые этот человек прожил рядом с Шики, созвучные нынешней сцене
+# по редким словам и (если есть смысловой слой) по смыслу: его память берётся из них, а не из догадки.
+PAST_TURNS = 2       # давних эпизодов на присутствующего
+PAST_SCENE = 12      # последние ходы — нынешняя сцена, не прошлое
+PAST_CHARS = 190
+PAST_MIN = 4.0       # сумма редкости общих со сценой основ
+PAST_SENTENCE = 4.0  # редкость темы в самом предложении (с надбавкой за имя): ниже — пустое упоминание
+SENTENCE = re.compile(r"[^.!?…\n]+[.!?…]*")
+
+
+def _turn_of(rid):
+    return ".".join(str(rid).split(".")[:3])
+
+
+def _session(row):
+    match = re.match(r"s0*(\d+)\.", str(row.get("id") or ""))
+    return int(match.group(1)) if match else None
+
+
+def _source_text(state_dir, row, cache):
+    src = str(row.get("source") or "")
+    path = Path(state_dir) / src
+    if src not in cache:
+        cache[src] = None
+        try:
+            if src.endswith("-turns.jsonl"):
+                cache[src] = {r.get("id"): r.get("gm") or "" for r in
+                              (json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip())}
+            elif src.endswith(".md"):
+                cache[src] = path.read_text(encoding="utf-8").split("\n")
+        except (OSError, ValueError):
+            pass
+    data = cache[src]
+    if isinstance(data, dict):
+        return data.get(row.get("id")) or ""
+    if isinstance(data, list):
+        return "\n".join(data[max(0, int(row.get("start") or 1) - 1):int(row.get("end") or 0)])
+    return ""
+
+
+META = re.compile(r"(?<![а-яё])(?:мастер\w*|ведущ\w*|канонич\w*|сюжет\w*|игрок\w*|сессии|вне игры)(?![а-яё])", re.I)
+
+
+def _best_sentence(text, name_stems, topic, weight):
+    """Предложение о теме сцены, где этот человек назван (в нём или в предыдущем): его действие или слово.
+    Служебные заметки ведущего («канонические линии сдвигаются») — не память персонажа."""
+    sents = [" ".join(m.group(0).replace("*", "").split()) for m in SENTENCE.finditer(text)]
+    sents = [x for x in sents if len(x) >= 12 and not x.startswith(">") and not META.search(x)]
+    stems = [{stem(w) for w in tokens(x) if len(w) >= 4} for x in sents]
+    best = None
+    for i, (sent, words) in enumerate(zip(sents, stems)):
+        here = bool(words & name_stems)
+        before = i > 0 and bool(stems[i - 1] & name_stems)
+        if not (here or before):
+            continue
+        shared = words & topic if here else (words | stems[i - 1]) & topic
+        if not shared:      # одно имя без темы сцены — не память о ней («За дверью стихли шаги Кабуто»)
+            continue
+        score = sum(weight(x) for x in shared) + (1.5 if here else 0)
+        if best is None or score > best[0]:
+            best = (score, sent if here else f"{sents[i - 1]} {sent}")
+    return best if best and best[0] >= PAST_SENTENCE else None
+
+
+VERBISH = ("ил", "ал", "ял", "ел", "ла", "ли", "ло", "ет", "ит", "ют", "ут", "ат", "ят", "ся", "сь", "ть",
+           "ший", "вший", "ющий", "ящий", "емый", "имый", "но", "ее", "ей")
+TOPIC_DF = 120       # чаще — общее слово хроники, не тема сцены
+
+
+def _topic(context_words, present_names, df):
+    """Основы темы сцены: редкие слова, не имена присутствующих и не глагольные формы."""
+    return {s for s, w in context_words.items() if s not in present_names and int(df.get(s, 0)) <= TOPIC_DF
+            and not str(w).casefold().endswith(VERBISH)}
+
+
+def present_past(state_dir, hot, skip=()):
+    """{key: ["sNN.text.NNN — «…»"]}: до PAST_TURNS эпизодов прошлых сессий каждого присутствующего.
+
+    Только прошлые сессии: нынешняя — в HOT и хронике. Общее со сценой считается без имён
+    присутствующих (иначе любой эпизод, где они упомянуты вместе, «созвучен»): по теме — техникам,
+    вещам, местам, событиям.
+    """
+    path = Path(state_dir) / "archive/heuristic-recall/manifest.json"
+    if not path.is_file():
+        return {}
+    from . import heuristic_history
+    try:
+        index = heuristic_history.load(path)
+    except (OSError, ValueError, KeyError):
+        return {}
+    now = aging._ordinal((hot.get("cursor") or {}).get("id")) or 0
+    context_text = _context(hot)
+    df, total = index.get("df") or {}, max(1, len(index.get("records") or []))
+    cast, out, cache = hot.get("cast") or {}, {}, {}
+    session = int(hot.get("session") or 0)
+    rows = [r for r in index.get("records") or [] if r.get("kind") == "played"
+            and not str(r.get("source") or "").startswith("recovery/")
+            and _session(r) is not None and _session(r) < session]
+    idf = lambda base: math.log((total + 1) / (int(df.get(base, 0)) + 1))
+    keys, present_names = _present(hot)
+    topic = _topic(_stems(context_text), present_names | {stem("шики"), stem("мугами")}, df)
+    for key in (hot.get("scene") or {}).get("present") or []:
+        if key in ("shiki", "player") or key in skip:
+            continue
+        name = (cast.get(key) or {}).get("name") or ((hot.get("_psyche") or {}).get(key) or {}).get("name") or ""
+        name_stems = {stem(w.casefold()) for w in NAME.findall(" " + name)} - COMMON
+        if not name_stems:
+            continue
+        own = []
+        for row in rows:
+            turn = aging._ordinal(_turn_of(row.get("id")))
+            if turn is not None and now - turn < PAST_SCENE:
+                continue
+            terms = set(str(row.get("terms") or "").split())
+            if not terms & name_stems:
+                continue
+            shared = terms & topic
+            rarity = sum(math.log((total + 1) / (int(df.get(s, 0)) + 1)) for s in shared)
+            own.append((rarity, row))
+        near = {}
+        try:
+            from . import meaning
+            ids = {r.get("id") for _, r in own}
+            found = meaning.search(state_dir, context_text, limit=NEAR, allow=lambda rid: rid in ids) or []
+            near = {rid: NEAR_BONUS * (1 - rank / NEAR) for rank, (rid, _) in enumerate(found)}
+        except Exception:   # смысловой слой необязателен
+            near = {}
+        picked, seen = [], set()
+        for score, row in sorted(((s + near.get(r.get("id"), 0.0), r) for s, r in own),
+                                 key=lambda x: -x[0]):
+            turn = _turn_of(row.get("id"))
+            if score < PAST_MIN or turn in seen:
+                continue
+            found = _best_sentence(_source_text(state_dir, row, cache), name_stems, topic, idf)
+            if not found:
+                continue
+            sent = found[1]
+            seen.add(turn)
+            picked.append(f"{turn} — «{sent[:PAST_CHARS - 1] + '…' if len(sent) > PAST_CHARS else sent}»")
+            if len(picked) >= PAST_TURNS:
+                break
+        if picked:
+            out[key] = picked
+    return out

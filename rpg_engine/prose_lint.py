@@ -155,6 +155,8 @@ ADVICE = {
     "speaker": "Каждая реплика — с подписью в начале: **Полное имя:** — Текст. Голое тире и «— …, — сказал он» не годятся.",
     "mechanics": "Числа механики — единицы чакры, проценты, пороги, кости, цена техники — только в записи хода и NEXT. "
                  "В прозе — ощущение: тяжесть в руках, пустота под рёбрами, холод второй чакры в каналах.",
+    "interior": "Мысли, память, знание и выводы NPC — только через то, что доступно Шики: слово, поступок, лицо, "
+                "чакру. «Он знал…», «вспомнил…», «понимал…» о другом — просачивание его головы и мета-знания.",
 }
 
 _BARE = re.compile(r"^\s*[—–]\s*[^\s—–*]")
@@ -326,6 +328,70 @@ def mechanics(text):
         return None
     return {"rule": "mechanics", "weight": 3 * len(found), "where": N,
             "quote": f"числа механики в тексте: {len(found)}, например «{found[0]}»"}
+
+
+# Перспектива (24.11.2026, s12.text.043: «Он знал, почему сам не сумел…», «Воспоминание оказалось
+# почти болезненным…», «Капитан Конохи не знал…»): голова NPC — не канал Шики.
+_COGNITION = re.compile(
+    r"(?<![а-яё])(?:не\s+)?(?:знал[аи]?|понимал[аи]?|понял[аи]?|осознал[аи]?|осознавал[аи]?|вспомнил[аи]?|"
+    r"вспоминал[аи]?|подумал[аи]?|догадал(?:ся|ась|ись)|предпоч[её]л|предпочла|предпочли|сомневал(?:ся|ась)|"
+    r"надеял(?:ся|ась)|опасал(?:ся|ась)|ожидал[аи]?|был[аи]?\s+уверен[аы]?)(?![а-яё])", re.I)
+_RECALL = re.compile(r"(?<![а-яё])(?:воспоминани\w*|в\s+(?:его|её|ее|их)\s+памяти|за\s+годы\s+(?:службы|рядом)|"
+                     r"последний\s+раз,\s+когда)", re.I)
+_HEDGE = re.compile(r"(?<![а-яё])(?:похоже|видимо|кажется|казалось|словно|будто|судя\s+по|по\s+(?:лицу|глазам|"
+                    r"голосу|взгляду)|явно|наверное|должно\s+быть)(?![а-яё])", re.I)
+_LABELED = re.compile(r"^([^—–:]{2,60}):\**\s*[—–]")
+_PRONOUN = re.compile(r"^(?:и\s+|но\s+|а\s+)?(?:он|она|они)(?![а-яё])", re.I)
+SELF = ("Мугами Шики", "Шики", "Немера")
+
+
+def interior(text, names, self_names=SELF):
+    """Мысли, память и выводы NPC в повествовании: подлежащее — названный NPC, «он/она» о нём или
+    безымянное предложение в абзаце о нём. Шики и Немера — свои; «похоже», «по лицу» — взгляд Шики."""
+    people = {}
+    for name in list(names or ()) + list(self_names):
+        for word in str(name).split():
+            if len(word) >= 4:
+                people.setdefault(word[:5].casefold(), name)
+    own = {w[:5].casefold() for n in self_names for w in str(n).split() if len(w) >= 4}
+
+    def named(sentence):
+        out = []
+        for match in re.finditer(r"[А-ЯЁ][а-яё]{3,}", sentence):
+            key = match.group()[:5].casefold()
+            if key in people:
+                out.append((match.start(), people[key], key in own))
+        return out
+
+    found, focus = {}, None
+    text = _TAG.sub("", _BOX.sub("", text or ""))
+    for raw in text.split("\n"):
+        line = raw.strip().strip("*_ ").strip()
+        if not line:
+            continue
+        label = _LABELED.match(line.replace("**", ""))
+        if label or raw.lstrip("*_ ").startswith(("—", "–")):
+            if label:
+                who = named(label.group(1))
+                focus = (who[0][1], who[0][2]) if who else focus
+            continue
+        for match in _SENTENCE.finditer(line):
+            sentence = match.group().strip()
+            who = named(sentence)
+            hit = _COGNITION.search(sentence) or _RECALL.search(sentence)
+            if hit and not _HEDGE.search(sentence):
+                before = [w for w in who if w[0] < hit.start()]
+                subject = (before[0][1], before[0][2]) if before else (
+                    focus if (_PRONOUN.match(sentence) or not who or _RECALL.search(sentence)) else None)
+                if subject and not subject[1] and subject[0] not in found:
+                    found[subject[0]] = _quote(line, match.start() + hit.start(), match.start() + hit.end(), 120)
+            if who:
+                focus = (who[0][1], who[0][2])
+    if not found:
+        return None
+    quotes = [f"{who}: «{q}»" for who, q in list(found.items())[:3]]
+    return {"rule": "interior", "weight": 3 * len(found), "where": N,
+            "quote": f"мысли и память NPC в прозе ({len(found)}): " + "; ".join(quotes)}
 
 
 def render(report):
