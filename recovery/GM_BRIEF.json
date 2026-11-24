@@ -275,7 +275,7 @@
   "place": "Страна Травы, северный тракт, сгоревшая малая сторожевая застава у деревянного моста через овраг",
   "time": "20:01"
  },
- "digest": "de7b7093ba69f4bc9982f25f520ee779139a5b42d31c1d6004a86afa07e6824f",
+ "digest": "fce3f2822a5633d19374c1958e995ad646a61f1c285d8ae87b33240d6baa1bae",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -580,7 +580,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-03-25T20:01:00",
+  "closed": 12,
+  "first_turn": "s13.text.001",
+  "last_turn": "s12.text.104",
+  "next_session": 13,
+  "source": "campaigns/shiki/continuity/SESSION_012_TO_013_HANDOFF.json",
+  "sqlite_revision": 978
+ },
  "horror": {
   "due": null,
   "npcs": {
