@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s12.text.072`
+# Карта мира NPR · на ходе `s12.text.073`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -216,8 +216,8 @@
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `nemera_symbiosis` — 17.03.1287 Немера самостоятельно провела незаметный прямой тактильный… · `threads/nemera_symbiosis`
 - `kabuto_letter` — Шики прибыл к северному указателю до назначенного срока и встретился … · `threads/kabuto_letter`
-- `kabuto_name_source` — Кабуто показывает обрывок с «Невыписанная» и частично видимым «Седьмо… · `threads/kabuto_name_source`
-- `kabuto_tracking_claim` — Кабуто утверждает, что с июля 1278 следил за действиями Шики нерегуля… · `threads/kabuto_tracking_claim`
+- `kabuto_name_source` — Кабуто заявил, что имя «Невыписанная» и упоминание седьмого запора по… · `threads/kabuto_name_source`
+- `kabuto_tracking_claim` — Кабуто признал, что после расставания продолжил нерегулярный сбор све… · `threads/kabuto_tracking_claim`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
