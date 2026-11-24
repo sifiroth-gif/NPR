@@ -464,7 +464,8 @@ def age_of(entry, day):
         if high != low:
             return low, (f"{low} или {high} — день рождения не задан (между {born:%d.%m} и {before:%d.%m}), "
                          f"спроси игрока")
-        birth = f"род. между {born:%d.%m} и {before:%d.%m}.{born.year}"
+        return low, (f"{low} (род. между {born:%d.%m} и {before:%d.%m}.{born.year}; {low + 1} — в этот промежуток, "
+                     f"день не задан — спроси игрока)")
     turn = born.replace(year=day.year)
     if turn < day:
         turn = born.replace(year=day.year + 1)
