@@ -227,11 +227,14 @@ def pick(state_dir, hot, texts=()):
 # NPC просочились в прозу. Эхо выше нарочно молчит о присутствующих («это сама сцена»), а NEXT.knows —
 # лишь сжатые метки. Здесь — эпизоды, которые этот человек прожил рядом с Шики, созвучные нынешней сцене
 # по редким словам и (если есть смысловой слой) по смыслу: его память берётся из них, а не из догадки.
-PAST_TURNS = 2       # давних эпизодов на присутствующего
+PAST_TURNS = 4       # давних эпизодов на присутствующего (игрок, 24.11.2026: «давай 4 эпизода по теме»)
 PAST_SCENE = 12      # последние ходы — нынешняя сцена, не прошлое
 PAST_CHARS = 190
 PAST_MIN = 4.0       # сумма редкости общих со сценой основ
 PAST_SENTENCE = 4.0  # редкость темы в самом предложении (с надбавкой за имя): ниже — пустое упоминание
+PAST_POOL = 400      # смысловой слой: ближайших к сцене записей прошлых сессий за один запрос
+PAST_NEAR = 12       # из них у каждого присутствующего надбавку получают ближайшие
+PAST_MEANING = 10.0  # надбавка ближайшему по смыслу (сравнима с редкостью двух-трёх общих слов)
 SENTENCE = re.compile(r"[^.!?…\n]+[.!?…]*")
 
 
@@ -268,7 +271,7 @@ def _source_text(state_dir, row, cache):
 META = re.compile(r"(?<![а-яё])(?:мастер\w*|ведущ\w*|канонич\w*|сюжет\w*|игрок\w*|сессии|вне игры)(?![а-яё])", re.I)
 
 
-def _best_sentence(text, name_stems, topic, weight):
+def _best_sentence(text, name_stems, topic, weight, loose=False):
     """Предложение о теме сцены, где этот человек назван (в нём или в предыдущем): его действие или слово.
     Служебные заметки ведущего («канонические линии сдвигаются») — не память персонажа."""
     sents = [" ".join(m.group(0).replace("*", "").split()) for m in SENTENCE.finditer(text)]
@@ -281,12 +284,18 @@ def _best_sentence(text, name_stems, topic, weight):
         if not (here or before):
             continue
         shared = words & topic if here else (words | stems[i - 1]) & topic
-        if not shared:      # одно имя без темы сцены — не память о ней («За дверью стихли шаги Кабуто»)
+        if not shared and not loose:   # одно имя без темы сцены — не память о ней («За дверью стихли шаги Кабуто»)
             continue
         score = sum(weight(x) for x in shared) + (1.5 if here else 0)
         if best is None or score > best[0]:
             best = (score, sent if here else f"{sents[i - 1]} {sent}")
-    return best if best and best[0] >= PAST_SENTENCE else None
+    if best and best[0] >= PAST_SENTENCE:
+        return best
+    if loose:   # близко по смыслу, а общих слов нет: его самое содержательное предложение в том ходе
+        rich = [(sum(weight(x) for x in words), sent) for sent, words in zip(sents, stems)
+                if words & name_stems and len(sent) >= 25]
+        return max(rich) if rich else None
+    return None
 
 
 VERBISH = ("ил", "ал", "ял", "ел", "ла", "ли", "ло", "ет", "ит", "ют", "ут", "ат", "ят", "ся", "сь", "ть",
@@ -326,6 +335,14 @@ def present_past(state_dir, hot, skip=()):
     idf = lambda base: math.log((total + 1) / (int(df.get(base, 0)) + 1))
     keys, present_names = _present(hot)
     topic = _topic(_stems(context_text), present_names | {stem("шики"), stem("мугами")}, df)
+    sem = {}
+    try:   # смысловой слой (e5-small в свёртке GitHub Actions): один запрос на сцену
+        from . import meaning
+        allowed = {r.get("id") for r in rows}
+        sem = dict(meaning.search(state_dir, context_text, limit=PAST_POOL, allow=lambda rid: rid in allowed) or [])
+    except Exception:   # слой необязателен: без него — по словам
+        sem = {}
+    hot.setdefault("fold", {})["past"] = {"at": (hot.get("cursor") or {}).get("id"), "meaning": bool(sem)}
     for key in (hot.get("scene") or {}).get("present") or []:
         if key in ("shiki", "player") or key in skip:
             continue
@@ -344,21 +361,16 @@ def present_past(state_dir, hot, skip=()):
             shared = terms & topic
             rarity = sum(math.log((total + 1) / (int(df.get(s, 0)) + 1)) for s in shared)
             own.append((rarity, row))
-        near = {}
-        try:
-            from . import meaning
-            ids = {r.get("id") for _, r in own}
-            found = meaning.search(state_dir, context_text, limit=NEAR, allow=lambda rid: rid in ids) or []
-            near = {rid: NEAR_BONUS * (1 - rank / NEAR) for rank, (rid, _) in enumerate(found)}
-        except Exception:   # смысловой слой необязателен
-            near = {}
+        ranked = sorted((r.get("id") for _, r in own if r.get("id") in sem), key=lambda rid: -sem[rid])
+        near = {rid: PAST_MEANING * (1 - rank / PAST_NEAR) for rank, rid in enumerate(ranked[:PAST_NEAR])}
         picked, seen = [], set()
         for score, row in sorted(((s + near.get(r.get("id"), 0.0), r) for s, r in own),
                                  key=lambda x: -x[0]):
             turn = _turn_of(row.get("id"))
             if score < PAST_MIN or turn in seen:
                 continue
-            found = _best_sentence(_source_text(state_dir, row, cache), name_stems, topic, idf)
+            found = _best_sentence(_source_text(state_dir, row, cache), name_stems, topic, idf,
+                                   loose=row.get("id") in near)
             if not found:
                 continue
             sent = found[1]
