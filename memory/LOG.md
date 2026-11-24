@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.011: Кэйдзи (`npc/keiji`)
 - s13.text.010: Кэйдзи (`npc/keiji`), линия `tenchi_bridge`, план сюжета
 - s13.text.009: план сюжета
 - s13.text.008: план сюжета
@@ -57,4 +58,3 @@
 - s12.text.058: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), Сиранами (`npc/shiranami`)
 - s12.text.057: Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), бой
 - s12.text.056: Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), бой
-- s12.text.055: Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Сай (`npc/sai`), вещь `shiki_hair_markers`, бой
