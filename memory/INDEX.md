@@ -5,7 +5,7 @@
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (263) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (200)
+## Персонажи (201)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto` · в сцене
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
@@ -13,6 +13,7 @@
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai` · в сцене
 - Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura` · в сцене
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato` · в сцене
+- Сиранами — Призыв Орочимару, ранее временно подчинённый обычным Шаринганом Шики. · `npc/shiranami`
 - Девятихвостый — Массивная рыжая лисья морда, огромные красные глаза и белые… · `npc/kurama`
 - Тиё — сопровождающая каравана «Северный тростник» · `npc/chiyo`
 - Гаара — генин, участник (на 1283, экзамен) · `npc/gaara`
@@ -217,7 +218,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (51)
+## Вещи (52)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -259,6 +260,7 @@
 - `s17_early_shiki_aliquot` · `items/s17_early_shiki_aliquot`
 - `shiki_blood_vial` · `items/shiki_blood_vial`
 - `shiki_finances` · `items/shiki_finances`
+- `shiki_hair_markers` · `items/shiki_hair_markers`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
 - `shiki_medical_kit` · `items/shiki_medical_kit`
 - `shiki_s17_report_folder` · `items/shiki_s17_report_folder`
