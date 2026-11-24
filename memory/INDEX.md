@@ -216,7 +216,7 @@
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
-- `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
+- `shiki_underground_career` — «Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и … · `threads/shiki_underground_career`
 - `nemera_symbiosis` — Немера продемонстрировала самостоятельное действие ключа питающего ко… · `threads/nemera_symbiosis`
 - `kabuto_letter` — Шики прибыл к северному указателю до назначенного срока и встретился … · `threads/kabuto_letter`
 - `kabuto_name_source` — Старый обрывок госпиталя у Шики; Немера допускает, что доступ к ней м… · `threads/kabuto_name_source`
