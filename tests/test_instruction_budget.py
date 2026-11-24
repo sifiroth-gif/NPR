@@ -24,6 +24,17 @@ class InstructionBudgetTest(unittest.TestCase):
             text = (ROOT / name).read_text(encoding="utf-8")
             self.assertNotRegex(text, r"(?m)^#+ .*\bP0\b", f"{name}: разделы-заплатки «P0» запрещены")
 
+    def test_source_priority_persists_in_live_rules(self):
+        router = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+        core = (ROOT / "campaigns/shiki/GM_CORE.md").read_text(encoding="utf-8")
+        memory = (ROOT / "docs/GENERAL_MEMORY.md").read_text(encoding="utf-8")
+        for term in ("последний меняющий ход", "Сводка — навигатор", "прямая поправка игрока"):
+            self.assertIn(term, router)
+        for term in ("последнее действительное изменение", "Источник сильнее сводки"):
+            self.assertIn(term, core)
+        for term in ("Ранний первоисточник", "поздняя прямая поправка"):
+            self.assertIn(term, memory)
+
     def test_router_points_to_existing_files(self):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         for path in ("campaigns/shiki/GM_CORE.md", "skills/dark-literary-gm/SKILL.md",
