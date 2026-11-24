@@ -1446,6 +1446,9 @@ def fold(state_dir):
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
             "heuristic_history": heuristic, "meaning": meaning_report, "wiki": wiki_report,
+            # Историческая память присутствующих: работал ли смысловой слой и сколько эпизодов у кого.
+            "past": {"meaning": ((hot.get("fold") or {}).get("past") or {}).get("meaning"),
+                     "episodes": {k: len(v) for k, v in (extra.get("past") or {}).items()}},
             "lint": [(r["id"], r["verdict"]) for r in hot.get("lint", {}).get("recent", [])]}
 
 
