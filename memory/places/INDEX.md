@@ -234,6 +234,7 @@
 - Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
+- Страна Травы, развилка северного тракта за лесным обходом постоялого двора · `places/strana-travy-razvilka-severnogo-trakta-za-lesnym-obkhodom-po` · 1 ход(ов), s12–s12
 - Страна Травы, северная дорога на старой насыпи у постоялого двора · `places/strana-travy-severnaya-doroga-na-staroy-nasypi-u-postoyalogo` · 1 ход(ов), s12–s12
 - Страна Травы, скрытый лесной гребень над западным подходом к мосту Тэнти · `places/strana-travy-skrytyy-lesnoy-greben-nad-zapadnym-podkhodom-k-` · 1 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
