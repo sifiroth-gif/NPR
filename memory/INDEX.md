@@ -1,12 +1,13 @@
-# Карта мира NPR · на ходе `s12.text.092`
+# Карта мира NPR · на ходе `s12.text.093`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (273) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (274) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (205)
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
 - Девятихвостый — Массивная рыжая лисья морда, огромные красные глаза и белые… · `npc/kurama`
 - masked1 —  · `npc/masked1`
@@ -14,7 +15,6 @@
 - masked3 —  · `npc/masked3`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura`
-- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai`
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
@@ -212,7 +212,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (11)
+## Линии (12)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
@@ -224,6 +224,7 @@
 - `sai_note` — Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых на… · `threads/sai_note`
 - `root_silence_seals` — Два бессознательных человека пока спасены от автоматического опасного… · `threads/root_silence_seals`
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
+- `market_shadow` — 25.03 16:46–16:51 Шики по сенсорике заметил слежку одного неизвестног… · `threads/market_shadow`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
