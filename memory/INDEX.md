@@ -1,12 +1,15 @@
-# Карта мира NPR · на ходе `s12.text.097`
+# Карта мира NPR · на ходе `s12.text.098`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (276) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (205)
+## Персонажи (207)
+- Неизвестный шиноби у болот — Мужчина около 35 лет, короткие волосы, серый дорожный жилет… · `npc/market_guard_lead` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Рыночный наблюдатель — Пока скрыт деревьями у развилки; внешность не установлена. · `npc/market_tail_watcher` · в сцене
+- Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
 - Девятихвостый — Массивная рыжая лисья морда, огромные красные глаза и белые… · `npc/kurama`
@@ -15,7 +18,6 @@
 - masked3 —  · `npc/masked3`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura`
-- Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai`
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
 - Сиранами — Призыв Орочимару, ранее временно подчинённый обычным Шаринганом Шики. · `npc/shiranami`
@@ -224,7 +226,7 @@
 - `sai_note` — Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых на… · `threads/sai_note`
 - `root_silence_seals` — Два бессознательных человека пока спасены от автоматического опасного… · `threads/root_silence_seals`
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
-- `market_shadow` — После получения сигнального импульса с берёзы со стороны рынка к Шики… · `threads/market_shadow`
+- `market_shadow` — Шики спросил сопровождавших, почему за ним шли. Старший охранник со с… · `threads/market_shadow`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
