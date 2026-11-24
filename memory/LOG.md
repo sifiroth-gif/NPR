@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.095: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
 - s12.text.094: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
 - s12.text.093: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), линия `market_shadow`
 - s12.text.091: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, вещь `shiki_finances`, вещь `cash_1184`, вещь `market_consumables_25mar`, линия `shiki_underground_career`, поправки игрока: 1
@@ -57,5 +58,3 @@
 - s12.text.039: Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
 - s12.text.038: Гаара (`npc/gaara`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s12.text.037: Гаара (`npc/gaara`), линия `shiki_training`, план сюжета
-- s12.text.036: Гаара (`npc/gaara`)
-- s12.text.035: Гаара (`npc/gaara`), Канкуро (`npc/kankuro`)
