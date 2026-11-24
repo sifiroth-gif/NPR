@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s12.text.104`
+# Карта мира NPR · на ходе `s13.text.001`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -231,7 +231,7 @@
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
 - `market_shadow` — 25.03 17:13 Шики попрощался с двумя рыночными наблюдателями и ушёл се… · `threads/market_shadow`
 - `tenchi_bridge` — Шики 25.03 19:07 услышал от встречного возницы слух со слов переправщ… · `threads/tenchi_bridge`
-- `roadside_attack` — 20:01 Шики завершил лечение двух живых потерпевших, оба пережили непо… · `threads/roadside_attack`
+- `roadside_attack` — Двое вернулись; один отступил за опору моста, другой целится в очнувш… · `threads/roadside_attack`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
