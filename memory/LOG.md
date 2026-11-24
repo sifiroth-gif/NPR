@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.058: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), Сиранами (`npc/shiranami`)
 - s12.text.057: Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), бой
 - s12.text.056: Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), бой
 - s12.text.055: Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Сай (`npc/sai`), вещь `shiki_hair_markers`, бой
@@ -53,4 +54,3 @@
 - s12.text.003: Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s12.text.002: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Гаара (`npc/gaara`), Нэдзи Хьюга (`npc/neji`)
 - s12.text.001: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), план сюжета
-- s11.text.077: Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Тиё (`npc/chiyo`), Разведчик Звука (`npc/razvedchik_zvuka`)
