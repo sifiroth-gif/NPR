@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.074: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), линия `kabuto_name_source`, бой
 - s12.text.073: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `kabuto_tracking_claim`, линия `kabuto_name_source`, бой
 - s12.text.072: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `kabuto_tracking_claim`, линия `kabuto_name_source`
 - s12.text.071: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `kabuto_letter`
@@ -55,4 +56,3 @@
 - s12.text.017: Немера (Невыписанная) (`npc/nemera`), Канкуро (`npc/kankuro`), Гаара (`npc/gaara`), линия `shiki_finances`, план сюжета
 - s12.text.016: Наруто Узумаки (`npc/naruto`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.015: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`)
-- s12.text.014: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`
