@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.104: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
 - s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
 - s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.101: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
@@ -57,4 +58,3 @@
 - s12.text.047: Девятихвостый (`npc/kurama`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.046: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s12.text.045: Немера (Невыписанная) (`npc/nemera`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Ямато (`npc/yamato`), Гаара (`npc/gaara`), бой, поправки игрока: 1
-- s12.text.044: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Кабуто Якуши (`npc/kabuto`), Сай (`npc/sai`), бой
