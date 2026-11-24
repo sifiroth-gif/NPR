@@ -1,9 +1,9 @@
-# Карта мира NPR · на ходе `s12.text.093`
+# Карта мира NPR · на ходе `s12.text.094`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (274) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (275) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (205)
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
@@ -224,12 +224,12 @@
 - `sai_note` — Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых на… · `threads/sai_note`
 - `root_silence_seals` — Два бессознательных человека пока спасены от автоматического опасного… · `threads/root_silence_seals`
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
-- `market_shadow` — 25.03 16:46–16:51 Шики по сенсорике заметил слежку одного неизвестног… · `threads/market_shadow`
+- `market_shadow` — Подтверждено прямым осмотром s12.text.094: преследователь оставил деш… · `threads/market_shadow`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (58)
+## Вещи (59)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -239,6 +239,7 @@
 - `contract_1184_docs` · `items/contract_1184_docs`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
+- `forest_signal_seal` · `items/forest_signal_seal`
 - `front_wagon_frame` · `items/front_wagon_frame`
 - `gaara_private_letter` · `items/gaara_private_letter`
 - `hoshina_journal_1184` · `items/hoshina_journal_1184`
