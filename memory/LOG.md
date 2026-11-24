@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
 - s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.101: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.100: поправки игрока: 1
