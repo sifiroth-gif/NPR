@@ -256,6 +256,7 @@
 - Внутреннее пространство Наруто перед вратами Девятихвостого, внешнее время неподвижно · `places/vnutrennee-prostranstvo-naruto-pered-vratami-devyatikhvostog` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, перед запертой решёткой · `places/vnutrennee-prostranstvo-naruto-pered-zapertoy-reshetkoy` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, снаружи мост Тэнти · `places/vnutrennee-prostranstvo-naruto-snaruzhi-most-tenti` · 1 ход(ов), s12–s12
+- Внутреннее пространство Наруто у печати Девятихвостого · `places/vnutrennee-prostranstvo-naruto-u-pechati-devyatikhvostogo` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто у ворот Девятихвостого · `places/vnutrennee-prostranstvo-naruto-u-vorot-devyatikhvostogo` · 1 ход(ов), s12–s12
 - Внутреннее пространство печати Наруто, у ворот Девятихвостого · `places/vnutrennee-prostranstvo-pechati-naruto-u-vorot-devyatikhvost` · 1 ход(ов), s12–s12
 - Внутреннее пространство печати Наруто, внешнее время неподвижно · `places/vnutrennee-prostranstvo-pechati-naruto-vneshnee-vremya-nepod` · 1 ход(ов), s12–s12
