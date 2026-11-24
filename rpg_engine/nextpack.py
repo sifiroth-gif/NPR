@@ -191,6 +191,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     }
     if rules:
         pack["directives"] = dict(rules, rule="Поправки игрока к ведению: выше GM_CORE и навыка, исполнять до отмены.")
+    if (extra or {}).get("ages"):   # возраст на дату хода от дня рождения (canon.ages_now)
+        pack["ages"] = dict(extra["ages"], rule="Возраст на дату хода от дня рождения: не менять и не брать "
+                                                "из оригинала Naruto; растёт сам с календарём.")
     duty = must(hot, always_present, entries)
     if (extra or {}).get("unease"):  # тревога рядом с Шики пропала (favor.unease_must)
         duty = [extra["unease"]] + duty[:2]

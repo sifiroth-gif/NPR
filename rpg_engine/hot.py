@@ -1430,6 +1430,11 @@ def fold(state_dir):
     unease_item = favor.unease_must(hot)
     if unease_item:
         extra["unease"] = unease_item
+    try:   # возраст по дню рождения на дату хода — растёт сам (canon.json ages)
+        extra["ages"] = canon.ages_now(state_dir, hot)
+    except Exception as exc:
+        hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "canon",
+                                              "text": f"возраст: {type(exc).__name__}: {exc}"})
     extra["resync"] = resync_item(hot)
     try:   # историческая память присутствующих по теме сцены (слова + смысл): NEXT.present.<id>.past
         extra["past"] = echo.present_past(state_dir, hot, skip=set(_always_present(state_dir)))

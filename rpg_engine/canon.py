@@ -81,7 +81,8 @@ def curated(state_dir):
         data = {}
     return {"consolidated": data.get("consolidated"), "superseded": dict(data.get("superseded") or {}),
             "forbid": list(data.get("forbid") or []), "identities": list(data.get("identities") or []),
-            "looks": [x for x in data.get("looks") or [] if isinstance(x, dict) and x.get("wrong") and x.get("names")]}
+            "looks": [x for x in data.get("looks") or [] if isinstance(x, dict) and x.get("wrong") and x.get("names")],
+            "ages": [x for x in data.get("ages") or [] if isinstance(x, dict) and x.get("born") and x.get("names")]}
 
 
 def _sentence(text, start, end):
@@ -103,6 +104,15 @@ def _tied(sent, start, end, rx, reach):
         if abs(hit.start() - start) <= reach and not OTHER.search(gap):
             return True
     return False
+
+
+def _hot_for_age(state_dir, turn):
+    """Дата проверяемого хода — из него самого (at), смещение года — из HOT."""
+    try:
+        hot = json.loads((Path(state_dir) / "recovery/HOT.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        hot = {}
+    return {"cursor": {"at": turn.get("at")}, "calendar": hot.get("calendar") or {}}
 
 
 def look_hits(cur, text):
@@ -188,6 +198,15 @@ def digest(state_dir):
     if cur["identities"]:
         lines += ["## Тождества людей", ""]
         lines += [f"- **{i.get('a')}** = {i.get('b')} ({i.get('source')})" for i in cur["identities"]]
+        lines.append("")
+    if cur["ages"]:
+        lines += ["## Возраст — от дня рождения", "",
+                  "Возраст считается на дату хода по календарю игры и растёт сам (`NEXT.ages`); оригинальные возрасты "
+                  "Naruto здесь не действуют.", ""]
+        for x in cur["ages"]:
+            span = f" — {x['born_before']}" if x.get("born_before") else ""
+            mark = " · выведено из канона, ждёт подтверждения" if x.get("derived") else ""
+            lines.append(f"- **{x.get('who')}**: род. {x.get('born')}{span} ({x.get('source')}){mark}")
         lines.append("")
     if cur["looks"]:
         lines += ["## Облик — постоянные черты", "",
@@ -345,6 +364,11 @@ def guard(state_dir, turn):
             notes.append({"turn": turn["id"], "kind": "canon",
                           "text": f"Канон: «…{_short(text[start:match.end() + 40], 110)}» — {rule.get('why')}. "
                                   "Исправь следующим ходом, не переписывая показанное молча."})
+    for entry, said, age, sent in age_hits(state_dir, _hot_for_age(state_dir, turn), text):
+        notes.append({"turn": turn["id"], "kind": "canon",
+                      "text": f"Возраст: «{_short(sent, 110)}» — {entry.get('who')}: {age} на дату хода "
+                              f"(род. {entry.get('born')}, {entry.get('source')}), не {said}. Возраст считается от дня "
+                              "рождения по календарю игры (NEXT.ages); исправь следующим ходом."})
     for look, sent in look_hits(curated(state_dir), text):
         notes.append({"turn": turn["id"], "kind": "canon",
                       "text": f"Облик: «{_short(sent, 120)}» — {look.get('who')}: {look.get('trait')} "
@@ -364,3 +388,134 @@ def review(state_dir, hot):
     gone = superseded(rows, cur)
     fresh = [r for r in rows if _after(r["turn"], cur.get("consolidated")) and r["key"] not in gone]
     return REVIEW_RULE.format(n=REVIEW, k=len(fresh))
+
+
+# --- Возраст: день рождения и отсчёт по игровому календарю (24.11.2026) ------------------------------
+# Игрок: «Возраст персонажей слетает. Его как-то нужно зафиксировать, но отсчёт должен быть сохранён»
+# (s12.text.059: Наруто — 15, как в оригинальном Shippuden, хотя здесь ему 20). Хранится день рождения
+# (``canon.json`` ``ages``: who, names, born "ГГГГ-ММ-ДД", source; born_before — день не задан, известен
+# промежуток; derived — выведено из канона разницей с Наруто, ждёт подтверждения игрока), возраст код
+# считает на дату хода: растёт сам, когда игровой календарь переходит день рождения.
+import datetime as _dt
+
+YEAR_OFFSET = 1277     # внутренний год 0010 — 1287 (hot.calendar.year_offset)
+_TENS = {"двадцат": 20, "тридцат": 30, "сорок": 40, "пятьдесят": 50, "пятидесят": 50, "шестьдесят": 60,
+         "шестидесят": 60, "семьдесят": 70, "семидесят": 70, "восемьдесят": 80, "восьмидесят": 80,
+         "девяност": 90}
+_TEENS = {"десят": 10, "одиннадцат": 11, "двенадцат": 12, "тринадцат": 13, "четырнадцат": 14, "пятнадцат": 15,
+          "шестнадцат": 16, "семнадцат": 17, "восемнадцат": 18, "девятнадцат": 19}
+_UNITS = {"один": 1, "одна": 1, "одного": 1, "два": 2, "две": 2, "двух": 2, "три": 3, "трёх": 3, "трех": 3,
+          "четыре": 4, "четырёх": 4, "четырех": 4, "пять": 5, "пяти": 5, "шесть": 6, "шести": 6, "семь": 7,
+          "семи": 7, "восемь": 8, "восьми": 8, "девять": 9, "девяти": 9}
+AGE = re.compile(
+    r"(?<![\wё])((?:двадцат|тридцат|сорок|пятьдесят|пятидесят|шестьдесят|шестидесят|семьдесят|семидесят|"
+    r"восемьдесят|восьмидесят|девяност)\w*(?:[\s-]+(?:один|одна|одного|два|две|двух|три|трёх|трех|четыре|"
+    r"четырёх|четырех|пять|пяти|шесть|шести|семь|семи|восемь|восьми|девять|девяти))?|(?:одиннадцат|двенадцат|"
+    r"тринадцат|четырнадцат|пятнадцат|шестнадцат|семнадцат|восемнадцат|девятнадцат|десят)\w*|\d{1,3})"
+    r"(?:[\s-]*(?:лет|года|год)(?![\wё])|-?летн\w*)", re.I)
+
+
+def _number(text):
+    text = str(text).casefold()
+    digits = re.match(r"\d+", text)
+    if digits:
+        return int(digits.group())
+    for base, value in _TEENS.items():
+        if text.startswith(base):
+            return value
+    for base, value in _TENS.items():
+        if text.startswith(base):
+            rest = re.split(r"[\s-]+", text, maxsplit=1)
+            return value + (_UNITS.get(rest[1], 0) if len(rest) > 1 else 0)
+    return None
+
+
+def _date(text):
+    try:
+        return _dt.date.fromisoformat(str(text)[:10])
+    except (TypeError, ValueError):
+        return None
+
+
+def today(hot):
+    """Календарная дата хода: внутренний год + смещение кампании (0010 → 1287)."""
+    at = str((hot.get("cursor") or {}).get("at") or "")
+    offset = int((hot.get("calendar") or {}).get("year_offset") or YEAR_OFFSET)
+    try:
+        moment = _dt.date.fromisoformat(at[:10])
+    except ValueError:
+        return None
+    return moment.replace(year=moment.year + offset)
+
+
+def age_on(born, day):
+    return day.year - born.year - ((day.month, day.day) < (born.month, born.day))
+
+
+def age_of(entry, day):
+    """(возраст, строка): по дню рождения; при неизвестном дне — промежуток, пока он не пройден."""
+    born, before = _date(entry.get("born")), _date(entry.get("born_before"))
+    if not born or not day:
+        return None, ""
+    low = age_on(born, day)
+    birth = f"род. {born:%d.%m}.{born.year}"
+    if before and before > born:
+        high = age_on(before, day)
+        if high != low:
+            return low, (f"{low} или {high} — день рождения не задан (между {born:%d.%m} и {before:%d.%m}), "
+                         f"спроси игрока")
+        birth = f"род. между {born:%d.%m} и {before:%d.%m}.{born.year}"
+    turn = born.replace(year=day.year)
+    if turn < day:
+        turn = born.replace(year=day.year + 1)
+    note = f"{low} ({birth}; {low + 1} — с {turn:%d.%m}.{turn.year})"
+    if entry.get("derived"):
+        note += "; выведено из канона, ждёт подтверждения игрока"
+    return low, note
+
+
+def ages_now(state_dir, hot, keys=None):
+    """{who: строка возраста} — для присутствующих (по именам карточек) и Шики."""
+    cur, day = curated(state_dir), today(hot)
+    if not cur["ages"] or not day:
+        return {}
+    cast = hot.get("cast") or {}
+    present = list(keys if keys is not None else (hot.get("scene") or {}).get("present") or [])
+    names = [str((cast.get(k) or {}).get("name") or k) for k in present]
+    out = {}
+    for entry in cur["ages"]:
+        try:
+            rx = re.compile(entry["names"])
+        except re.error:
+            continue
+        if entry.get("who") == "Мугами Шики" or any(rx.search(n) for n in names):
+            age, note = age_of(entry, day)
+            if age is not None:
+                out[entry.get("who")] = note
+    return out
+
+
+def age_hits(state_dir, hot, text):
+    """[(entry, сказано, верно, отрывок)]: возраст в одном предложении с именем расходится с отсчётом."""
+    cur, day = curated(state_dir), today(hot)
+    out = []
+    if not cur["ages"] or not day:
+        return out
+    for match in AGE.finditer(text or ""):
+        said = _number(match.group(1))
+        left, right = _sentence(text, match.start(), match.end())
+        sent = text[left:right]
+        for entry in cur["ages"]:
+            try:
+                rx = re.compile(entry["names"])
+            except re.error:
+                continue
+            if not _tied(sent, match.start() - left, match.end() - left, rx, LOOK_TIE):
+                continue
+            age, _ = age_of(entry, day)
+            before = _date(entry.get("born_before"))
+            allowed = {age} | ({age_on(before, day)} if before else set()) | ({age - 1, age + 1} if entry.get("derived") else set())
+            if said is not None and age is not None and said not in allowed:
+                out.append((entry, said, age, " ".join(sent.split())))
+            break
+    return out
