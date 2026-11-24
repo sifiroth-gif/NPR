@@ -25,6 +25,7 @@ import hashlib
 import json
 import re
 import subprocess
+import time
 import zlib
 from pathlib import Path
 
@@ -1177,6 +1178,14 @@ def ensure_npc_memory(state_dir, hot):
 
 def fold(state_dir):
     """Сворачивает новые ходы в HOT и архивы. Возвращает краткий отчёт."""
+    _clock = [time.monotonic()]
+    timings = {}
+
+    def mark(name):   # где уходит время свёртки (24.11.2026: в CI 66 с при 16 с локально)
+        now = time.monotonic()
+        timings[name] = round(now - _clock[0], 2)
+        _clock[0] = now
+
     state_dir = Path(state_dir)
     hot, before = _read_state(state_dir)
     ensure_npc_memory(state_dir, hot)
@@ -1199,6 +1208,7 @@ def fold(state_dir):
     canon_arcs = arcs.load(state_dir)
     favor.seed(hot, archive_rows, names, always)   # окно подыгрывания сразу, не с нуля
     fight.backfill_arsenal(hot, archive_rows)        # бой шёл до учёта арсенала
+    mark("setup")
     visited = None
     applied = []
     amended = []
@@ -1360,7 +1370,9 @@ def fold(state_dir):
     if aged:
         hot.setdefault("fold", {})["aged"] = aged
     _tidy_checks(hot)
+    mark("turns")
     wiki_report = _update_wiki(state_dir, hot, applied)
+    mark("wiki")
     _write_checks(state_dir, hot)
     if applied or ((state_dir / "recovery/GATE_POLICY.json").is_file() and
                    not (hot.get("scene") or {}).get("npc_disclosures_to_player")):
@@ -1405,6 +1417,7 @@ def fold(state_dir):
     ledger = entity_memory.rebuild(state_dir)
     memory_index = general_memory.save(state_dir, hot, ledger=ledger)
     memory_quality.save(state_dir, hot, memory_index)
+    mark("general_memory")
     brief = live_scene.build_for_state(hot, accepted, state_dir)
     live_scene.write(brief_path, brief)
     # Historical recall is refreshed by the *same* existing fold and committed
@@ -1413,7 +1426,9 @@ def fold(state_dir):
     if (state_dir / "archive").is_dir():
         from . import heuristic_history, recall_audit
         engine_root = Path(__file__).resolve().parents[1]
+        mark("brief")
         heuristic = heuristic_history.save(engine_root, state_dir)
+        mark("heuristic_index")
         # Validate coverage of every existing session, source-shard checksums,
         # and warm search timings in the same ordinary gameplay fold.
         report = recall_audit.audit(state_dir)
@@ -1421,7 +1436,9 @@ def fold(state_dir):
         stats_path.write_text(
             json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n",
             encoding="utf-8")
+        mark("recall_audit")
         meaning_report = _recall_layer(engine_root, state_dir, hot)
+        mark("meaning")
     from . import recall_request
     extra = _canon_and_style(state_dir, hot, applied)
     extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
@@ -1441,6 +1458,7 @@ def fold(state_dir):
     except Exception as exc:   # производное: сбой не останавливает свёртку
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                               "text": f"past: {type(exc).__name__}: {exc}"})
+    mark("extras")
     extra["arc"] = arcs.view(hot, canon_arcs)
     extra["arc_must"] = arcs.must(hot, canon_arcs)
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
@@ -1449,7 +1467,8 @@ def fold(state_dir):
                    echoed=echoed, near=near, recall=recall_request.view(state_dir, hot), news=news_item,
                    extra=extra)
     news.write_pace(state_dir, hot)
-    return {"status": "updated" if changed else "current",
+    mark("next")
+    return {"status": "updated" if changed else "current", "timings": timings,
             "cursor": hot["cursor"].get("id"), "applied": [t["id"] for t in applied],
             "errors": errors, "due": len(hot["offscreen"].get("due_now", [])),
             "bytes": {"hot": len(texts[0].encode("utf-8")), "gm_only": len(texts[1].encode("utf-8"))},
