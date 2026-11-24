@@ -35,6 +35,14 @@ class InstructionBudgetTest(unittest.TestCase):
         for term in ("Ранний первоисточник", "поздняя прямая поправка"):
             self.assertIn(term, memory)
 
+    def test_nextpack_carries_source_priority_and_conflict_gate(self):
+        from rpg_engine import nextpack
+        self.assertIn("последний меняющий ход", nextpack.SOURCE_PRIORITY)
+        source = (ROOT / "rpg_engine/nextpack.py").read_text(encoding="utf-8")
+        self.assertIn('pack["source_priority"] = SOURCE_PRIORITY', source)
+        self.assertIn('pack["source_review"] = {', source)
+        self.assertIn('"contradiction"', source)
+
     def test_router_points_to_existing_files(self):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         for path in ("campaigns/shiki/GM_CORE.md", "skills/dark-literary-gm/SKILL.md",
