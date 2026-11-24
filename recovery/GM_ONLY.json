@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s13.text.009",
+ "cursor": "s13.text.010",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {
@@ -590,7 +590,7 @@
   },
   "keiji": {
    "dread": {
-    "stage": 1,
+    "stage": 2,
     "since": "s08.text.030",
     "log": [
      {
@@ -599,12 +599,19 @@
       "change": "подтвердилось",
       "saw": "He examined Shiki from a close respectful distance, saw fully wrapped arms/neck, maskless deathlike face and unfamiliar scent while discussing common Konoha affairs.",
       "does": "Gives an account from his own experience without inventing secret facts, leaves civilly with Seina's medical advice and no touch."
+     },
+     {
+      "turn": "s13.text.010",
+      "at": "0010-03-25T20:58:00",
+      "change": "рост",
+      "saw": "Изменившиеся глаза Шики и вооружённую реакцию товарища",
+      "does": "Остановился на расстоянии и встал между Шики и товарищем"
      }
     ],
-    "reads": "He may still trust his memory of Shiki as a competent healer but cannot ignore his new alien outward condition; contact may be unsafe.",
-    "does": "Gives an account from his own experience without inventing secret facts, leaves civilly with Seina's medical advice and no touch.",
-    "turn": "s08.text.031",
-    "step": "примета"
+    "reads": "Помощь Шики в прошлом не снимает риска нынешней встречи, но оправдывает попытку разговора",
+    "does": "Остановился на расстоянии и встал между Шики и товарищем",
+    "turn": "s13.text.010",
+    "step": "пересмотр"
    },
    "psyche": {
     "decides": "быстро и вслух, потом жалеет",
@@ -612,7 +619,33 @@
     "contradiction": "благодарен Шики за колено и боится того, во что тот превратился",
     "mask": "шутки и болтовня"
    },
-   "intent": {},
+   "intent": {
+    "goal": {
+     "goal": "Восстановить связь с отрядом Ямато",
+     "status": "committed",
+     "turn": "s13.text.010"
+    },
+    "next": {
+     "goal": "Получить сведения от Шики и продолжить поиск",
+     "status": "committed",
+     "turn": "s13.text.010"
+    },
+    "due": {
+     "goal": "0010-03-25T22:00:00",
+     "status": "committed",
+     "turn": "s13.text.010"
+    },
+    "flaw": {
+     "goal": "Напряжение внутри группы из-за розыска Шики",
+     "status": "committed",
+     "turn": "s13.text.010"
+    },
+    "if_unopposed": {
+     "goal": "Группа продолжит поиск по доступным сведениям; не знает местоположения убежища.",
+     "status": "committed",
+     "turn": "s13.text.010"
+    }
+   },
    "intent_done": [
     {
      "key": "qualify_old_road_report",
@@ -5354,20 +5387,13 @@
    "text": "реплика игрока вошла в сцену на 17%: слова Шики переносятся в прозу полностью и в заданном порядке"
   },
   {
-   "turn": "s13.text.009",
+   "turn": "s13.text.010",
    "kind": "will",
-   "text": "«Немера (Невыписанная)» 12 ход(ов) рядом с Шики только отвечает. Его цель: «Сохранить свободу собственных наблюдений при добровольном ограничении вреда неугрожающим змеям.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
+   "text": "«Немера (Невыписанная)» 13 ход(ов) рядом с Шики только отвечает. Его цель: «Сохранить свободу собственных наблюдений при добровольном ограничении вреда неугрожающим змеям.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s13.text.004",
-    "look": [],
-    "soma": [
-     "замер"
-    ]
-   },
    {
     "turn": "s13.text.005",
     "look": [],
@@ -5395,6 +5421,13 @@
    {
     "turn": "s13.text.009",
     "look": [],
+    "soma": []
+   },
+   {
+    "turn": "s13.text.010",
+    "look": [
+     "глаза"
+    ],
     "soma": []
    }
   ],
@@ -5426,7 +5459,14 @@
     "what": "Внутренний собеседник не сломал запор и не покорился новой двери, а отказался участвовать до появления второго независимого права сказать «нет»; теперь изменение реальной связи имеет цену для обоих."
    }
   ],
-  "react": {}
+  "react": {
+   "keiji": {
+    "since": "s13.text.010",
+    "need": false,
+    "quiet": 0,
+    "last": "s13.text.010"
+   }
+  }
  },
  "plot": {
   "events": {
@@ -5608,7 +5648,7 @@
     "status": "active",
     "opened": "s12.text.039",
     "opened_at": "0010-03-25T11:54:00",
-    "scenes": 5,
+    "scenes": 6,
     "title": "Мост Тэнти",
     "question": "Сможет ли Коноха к 25 марта найти путь к Саске через встречу с агентом Орочимару, несмотря на действия независимых участников?",
     "endings": [
@@ -5631,7 +5671,7 @@
      "shiki_underground_career"
     ],
     "phase": "Коноха готовится к запланированному событию 25 марта независимо от участия Шики.",
-    "last": "s12.text.091"
+    "last": "s13.text.010"
    },
    "ch15_shed_skin": {
     "id": "ch15_shed_skin",
@@ -6177,13 +6217,14 @@
  "will": {
   "seed": "75bf6bf2c1be9695",
   "streak": {
-   "nemera": 12
+   "nemera": 13,
+   "keiji": 0
   },
   "touched": {
    "night_icu_physician": "s11.text.009",
    "akihiro": "s09.text.043",
    "kadziura_satoru": "s09.text.044",
-   "keiji": "s10.text.018",
+   "keiji": "s13.text.010",
    "nori": "s10.text.028",
    "kuroda_mayu": "s11.text.019",
    "arakawa": "s11.text.064",
@@ -6277,11 +6318,11 @@
    "offered": 17,
    "delivered": 13,
    "missed": 4,
-   "at": "0010-03-25T20:47:00",
+   "at": "0010-03-25T20:58:00",
    "last": 1539,
-   "scene_key": "[\"Страна Травы, северный тракт, развилка севернее сгоревшей заставы\", [\"nemera\"]]",
-   "scene_turns": 3,
-   "scene_since": "s13.text.007",
+   "scene_key": "[\"Страна Травы, северный тракт, развилка севернее сгоревшей заставы\", [\"keiji\", \"nemera\"]]",
+   "scene_turns": 1,
+   "scene_since": "s13.text.010",
    "last_at": "0010-03-25T19:07:00",
    "start_at": "0010-03-06T04:18:02"
   }
