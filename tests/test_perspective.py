@@ -62,6 +62,30 @@ class SmoothingAndMenuTest(unittest.TestCase):
         self.assertIsNone(prose_lint.menu(fine))
 
 
+class UneaseTest(unittest.TestCase):
+    """Игрок, 24.11.2026: больше реакций на Шики по-лавкрафтовски и тревоги, без описаний внешности."""
+
+    def test_calm_streak_asks_for_unease_with_rotating_ways(self):
+        from rpg_engine import favor
+        hot = {"scene": {"present": ["shiki", "yamato", "nemera"]}, "cast": {"yamato": {"name": "Ямато"}}}
+        calm = "Ямато указал на склон. Отряд двинулся по верхней тропе.\n\n**Ход Шики.**"
+        for i in (63, 64):
+            favor.track(hot, {"id": f"s12.text.0{i}", "gm": calm}, {}, ("nemera",))
+        item = favor.unease_must(hot)
+        self.assertIn("2 хода подряд", item)
+        self.assertIn("без описания его облика", item)
+        self.assertEqual(item.count(";") >= 2, True)
+        favor.track(hot, {"id": "s12.text.065", "gm": "Ямато осёкся на полуслове и сказал о погоде."}, {}, ("nemera",))
+        self.assertIsNone(favor.unease_must(hot))
+
+    def test_alone_with_nemera_is_not_calm(self):
+        from rpg_engine import favor
+        hot = {"scene": {"present": ["shiki", "nemera"]}}
+        for i in (63, 64, 65):
+            favor.track(hot, {"id": f"s12.text.0{i}", "gm": "Лес молчал."}, {}, ("nemera",))
+        self.assertIsNone(favor.unease_must(hot))
+
+
 class TraitWitnessTest(unittest.TestCase):
     def test_named_is_not_a_witness_present_is(self):
         rows = [{"id": "s09.text.024", "gm": "— Смотрю на Шаринган Шики, — сказал Саске. Орочимару захочет его.",
