@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.068: Сирамэ (`npc/shirame`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), бой
 - s12.text.067: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), линия `kabuto_name_source`
 - s12.text.066: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), вещь `kabuto_message`, линия `kabuto_letter`
 - s12.text.065: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), бой
@@ -55,4 +56,3 @@
 - s12.text.011: Гаара (`npc/gaara`), Баки (`npc/baki`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s12.text.010: Баки (`npc/baki`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.009: Гаара (`npc/gaara`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Какаши Хатакэ (`npc/kakashi`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`)
-- s12.text.008: Наруто Узумаки (`npc/naruto`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
