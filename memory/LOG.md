@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.090: Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), линия `nemera_symbiosis`
 - s12.text.089: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`, поправки игрока: 1
 - s12.text.088: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.087: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
