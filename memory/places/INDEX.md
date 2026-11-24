@@ -56,6 +56,7 @@
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
+- Страна Травы, заброшенный сушильный двор на подходе к подпольным торговым складам · `places/strana-travy-zabroshennyy-sushilnyy-dvor-na-podkhode-k-podpo` · 5 ход(ов), s12–s12
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
@@ -63,7 +64,6 @@
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
-- Страна Травы, заброшенный сушильный двор на подходе к подпольным торговым складам · `places/strana-travy-zabroshennyy-sushilnyy-dvor-na-podkhode-k-podpo` · 4 ход(ов), s12–s12
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04

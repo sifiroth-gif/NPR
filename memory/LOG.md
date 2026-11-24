@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.088: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.087: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.086: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.085: Немера (Невыписанная) (`npc/nemera`), Девятихвостый (`npc/kurama`), линия `nemera_symbiosis`, линия `kabuto_name_source`
@@ -55,4 +56,3 @@
 - s12.text.035: Гаара (`npc/gaara`), Канкуро (`npc/kankuro`)
 - s12.text.034: Немера (Невыписанная) (`npc/nemera`)
 - s12.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
-- s12.text.028: линия `nemera_symbiosis`
