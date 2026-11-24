@@ -29,6 +29,12 @@ RULE = ("Это всё, что нужно прочитать перед обыч
         "сессиям, ответ — NEXT.recall к следующему ходу.")
 
 
+SOURCE_PRIORITY = ("Приоритет фактов: прямая поправка игрока > сыгранный первоисточник с последующими "
+                   "изменениями > неизменённый канон > проверенная карточка > HOT/NEXT/GM_BRIEF. "
+                   "Перед значимым изменяемым фактом адресно проверь последний меняющий ход; "
+                   "сводка и поиск лишь указатели, отсутствие записи не означает исчезновения.")
+
+
 def _short(text, limit=FIELD):
     text = " ".join(str(text or "").split())
     return text if len(text) <= limit else text[:limit - 1].rstrip() + "…"
@@ -229,6 +235,16 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     pack["checks"] = [f"[{c.get('kind')}] {c.get('text')}" for c in checks.get("checks") or []
                       if c.get("turn") in (None, cursor.get("id")) or c.get("kind") in state_kinds and
                       c.get("turn") == cursor.get("id")]
+    source_conflicts = [c for c in checks.get("checks") or []
+                        if c.get("turn") in (None, cursor.get("id"))
+                        and c.get("kind") in ("contradiction", "historical", "source", "entity_claim")]
+    if source_conflicts:
+        pack["source_review"] = {
+            "required": True,
+            "rule": ("Перед следующим фактическим выводом найди исходный и последний меняющий архивный "
+                     "ход. HOT не определяет победителя конфликта; пустота сводки не значит неизвестность."),
+            "items": [_short(c.get("text"), 220) for c in source_conflicts[:2]],
+        }
     last = ((hot.get("lint") or {}).get("recent") or [])[-1:]
     if last and last[0].get("id") == cursor.get("id") and last[0].get("verdict") != "чисто":
         pack["prose"] = {"verdict": last[0].get("verdict"),
@@ -269,6 +285,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack.setdefault("chakra", {})["nemera"] = {k: nemera[k] for k in ("value", "max", "range_meters") if k in nemera}
     if fight.get("active"):
         pack["fight"] = {k: v for k, v in fight.items() if k not in ("dice", "rules", "ref")}
+    pack["source_priority"] = SOURCE_PRIORITY
     pack["rule"] = RULE
     _fit(pack)
     return pack
