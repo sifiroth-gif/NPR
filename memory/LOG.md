@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s12.text.043: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сай (`npc/sai`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сакура Харуно (`npc/sakura`), план сюжета
+- s12.text.043: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сай (`npc/sai`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сакура Харуно (`npc/sakura`), план сюжета, поправки игрока: 1
 - s12.text.042: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), Немера (Невыписанная) (`npc/nemera`), Канкуро (`npc/kankuro`), план сюжета
 - s12.text.041: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), план сюжета, поправки игрока: 1
 - s12.text.040: Кабуто Якуши (`npc/kabuto`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
