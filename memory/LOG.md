@@ -2,13 +2,14 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s13.text.004: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Немера (Невыписанная) (`npc/nemera`)
-- s13.text.003: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
-- s13.text.002: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
-- s13.text.001: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
-- s12.text.104: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
-- s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
-- s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
+- s13.text.005: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, линия `roadside_attack`
+- s13.text.004: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Немера (Невыписанная) (`npc/nemera`)
+- s13.text.003: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
+- s13.text.002: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
+- s13.text.001: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
+- s12.text.104: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
+- s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Аки (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
+- s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.101: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.100: поправки игрока: 1
 - s12.text.099: Немера (Невыписанная) (`npc/nemera`), Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), линия `market_shadow`, линия `tenchi_bridge`
@@ -57,4 +58,3 @@
 - s12.text.052: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), бой
 - s12.text.051: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), бой
 - s12.text.050: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), бой
-- s12.text.049: Девятихвостый (`npc/kurama`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), бой
