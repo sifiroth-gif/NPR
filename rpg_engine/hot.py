@@ -1427,6 +1427,9 @@ def fold(state_dir):
     extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
     if favor_item:
         extra["favor"] = favor_item
+    unease_item = favor.unease_must(hot)
+    if unease_item:
+        extra["unease"] = unease_item
     extra["resync"] = resync_item(hot)
     try:   # историческая память присутствующих по теме сцены (слова + смысл): NEXT.present.<id>.past
         extra["past"] = echo.present_past(state_dir, hot, skip=set(_always_present(state_dir)))
