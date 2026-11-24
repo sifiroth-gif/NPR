@@ -193,6 +193,12 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         "header": " ".join(x for x in (cursor.get("date"), cursor.get("time")) if x),
         "place": cursor.get("place"),
         "turn_file": (brief.get("turn_file") or {}).get("sha"),
+        # 24.11.2026: ведущий ждал свёртку («ход сыгран, но пока не записан») — свёртка идёт около минуты,
+        # а игрок отвечает быстрее; ходы из истории git код сворачивает по порядку сам.
+        "write": ("Запись не ждёт свёртку. sha — из ответа твоей последней записи TURN.json (turn_file — лишь "
+                  "для первой записи в чате). Если cursor старше твоего последнего хода — свёртка ещё идёт: пиши "
+                  "следующий ход от своего (ID +1, predecessor — твой последний), NEXT прошлого хода в силе. "
+                  "Конфликт sha — одно чтение TURN.json и запись того же хода."),
         "fold_errors": checks.get("fold_errors") or [],
     }
     if rules:

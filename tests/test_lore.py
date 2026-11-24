@@ -76,6 +76,8 @@ class NextFoldTest(unittest.TestCase):
         self.assertEqual(pack["cursor"], "s04.text.045")
         self.assertEqual(pack["next_id"], "s04.text.046")
         self.assertEqual(pack["turn_file"], brief["turn_file"]["sha"])
+        # Свёртка отстаёт от быстрого игрока: ведущий не ждёт её и пишет следующий ход от своего (24.11.2026).
+        self.assertIn("не ждёт свёртку", pack["write"])
         write = [c for c in pack["checks"] if c.startswith("[write]")]
         self.assertEqual(len(write), 1)
         self.assertIn("sources не пиши", write[0])

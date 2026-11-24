@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from hashlib import sha256
+import functools
 import json
 from pathlib import Path
 import re
@@ -32,8 +33,20 @@ def _read(path, default=None):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+@functools.lru_cache(maxsize=8192)
+def _norm_text(value):
+    return " ".join(value.casefold().replace("ё", "е").split())
+
+
 def _norm(value):
-    return " ".join(str(value or "").casefold().replace("ё", "е").split())
+    return _norm_text(str(value or ""))
+
+
+@functools.lru_cache(maxsize=None)
+def _alias_rx(alias):
+    """Скомпилированный шаблон имени: прежде re.search с новой строкой на каждый вызов переполнял
+    кэш модуля re и перекомпилировал тысячи шаблонов за свёртку (38 с из 101, 24.11.2026)."""
+    return re.compile(r"(?<!\w)" + re.escape(alias) + r"(?!\w)")
 
 
 def _tokens(value):
@@ -46,7 +59,7 @@ def _short(value, length=220):
 
 def _match(text, alias):
     alias = _norm(alias)
-    return bool(alias and re.search(r"(?<!\w)" + re.escape(alias) + r"(?!\w)", _norm(text)))
+    return bool(alias and _alias_rx(alias).search(_norm(text)))
 
 
 def _add(entities, key, kind, label, *, aliases=(), source="", projection=None):

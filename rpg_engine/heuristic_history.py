@@ -10,6 +10,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from hashlib import sha256
+import functools
 import json
 import base64
 import math
@@ -47,7 +48,9 @@ def tokens(text):
             if len(w) >= 3 and w.casefold() not in STOP]
 
 
+@functools.lru_cache(maxsize=262144)
 def stem(word):
+    """Основа слова; чистая функция — кэш (24.11.2026: 23 с из 101 на каждой свёртке)."""
     word = word.casefold().replace("ё", "е")
     if len(word) < 5:
         return word
@@ -390,11 +393,12 @@ def _fnv(word, seed):
     return value
 
 
+@functools.lru_cache(maxsize=262144)
 def _locations(word):
     x = _fnv(word, 2166136261)
     y = _fnv(word, 2166136261 ^ 0x9e3779b9) | 1
-    return [((x + i * y + i * i * 0x9e3779b1) & 0xffffffff) % ROUTE_BITS
-            for i in range(ROUTE_HASHES)]
+    return tuple(((x + i * y + i * i * 0x9e3779b1) & 0xffffffff) % ROUTE_BITS
+                 for i in range(ROUTE_HASHES))
 
 
 def _bloom(entries):
