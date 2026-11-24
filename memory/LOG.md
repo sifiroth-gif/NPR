@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s13.text.008: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
+- s13.text.008: план сюжета
 - s13.text.007: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), sirame (`npc/sirame`), линия `roadside_attack`
 - s13.text.006: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Сэйдзо (`npc/road_warden_seidzo`), линия `roadside_attack`
 - s13.text.005: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, линия `roadside_attack`
