@@ -1,24 +1,23 @@
 {
   "current_focus": [
-    "crossbow_ambusher",
     "nemera",
-    "pinned_woman",
+    "place:f588bf19bd732180",
     "road_warden_seidzo",
-    "place:cbcc4c0310b5faa9",
     "seal_boot_scrap",
     "sealing_cloth_scrap"
   ],
-  "cursor": "s13.text.006",
+  "cursor": "s13.text.007",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2997,
-  "index_entities": 734,
-  "index_source_records": 1037,
-  "indexed_cursor": "s13.text.006",
+  "focus_bytes": 2207,
+  "index_entities": 737,
+  "index_source_records": 1038,
+  "indexed_cursor": "s13.text.007",
   "kinds": {
+    "clock": 1,
     "entity": 1,
     "item": 29,
-    "npc": 153,
-    "place": 537,
+    "npc": 154,
+    "place": 538,
     "thread": 14
   },
   "missing_critical": [],
@@ -28,6 +27,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:roadside_patrol",
+      "kind": "clock"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -552,9 +557,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 86,
-  "self_query_at_5": 87,
-  "self_query_count": 87,
+  "self_query_at_1": 87,
+  "self_query_at_5": 88,
+  "self_query_count": 88,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

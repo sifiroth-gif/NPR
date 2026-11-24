@@ -1,15 +1,16 @@
-# Карта мира NPR · на ходе `s13.text.006`
+# Карта мира NPR · на ходе `s13.text.007`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (279) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (210)
-- Аки (Неизвестная женщина под повозкой) — Зажата перевёрнутым кузовом у задней оси, пострадавшая нога… · `npc/pinned_woman` · в сцене
-- Неизвестный арбалетчик — Скрыт между сложенными брёвнами у дровяного навеса, лицо и … · `npc/crossbow_ambusher` · в сцене
+## Персонажи (211)
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
-- Сэйдзо — Пожилой дорожный сторож в выгоревшей форме, прижимает левую… · `npc/road_warden_seidzo` · в сцене
+- sirame —  · `npc/sirame`
+- Аки (Неизвестная женщина под повозкой) — Зажата перевёрнутым кузовом у задней оси, пострадавшая нога… · `npc/pinned_woman`
+- Неизвестный арбалетчик — Скрыт между сложенными брёвнами у дровяного навеса, лицо и … · `npc/crossbow_ambusher`
+- Сэйдзо — Пожилой дорожный сторож в выгоревшей форме, прижимает левую… · `npc/road_warden_seidzo`
 - Неизвестный шиноби у болот — Мужчина около 35 лет, короткие волосы, серый дорожный жилет… · `npc/market_guard_lead`
 - Рыночный наблюдатель — Пока скрыт деревьями у развилки; внешность не установлена. · `npc/market_tail_watcher`
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
@@ -231,7 +232,7 @@
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
 - `market_shadow` — 25.03 17:13 Шики попрощался с двумя рыночными наблюдателями и ушёл се… · `threads/market_shadow`
 - `tenchi_bridge` — Шики 25.03 19:07 услышал от встречного возницы слух со слов переправщ… · `threads/tenchi_bridge`
-- `roadside_attack` — Пленный указал предполагаемое место встречи заказчика: старая углежог… · `threads/roadside_attack`
+- `roadside_attack` — Участие Шики завершилось передачей пленного и сведений местному патру… · `threads/roadside_attack`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
