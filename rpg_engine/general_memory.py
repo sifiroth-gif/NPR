@@ -42,6 +42,9 @@ def _norm(value):
     return _norm_text(str(value or ""))
 
 
+WORDISH = re.compile(r"\w+")   # имя начинается словом — оно должно стоять в тексте целым словом
+
+
 @functools.lru_cache(maxsize=None)
 def _alias_rx(alias):
     """Скомпилированный шаблон имени: прежде re.search с новой строкой на каждый вызов переполнял
@@ -294,15 +297,22 @@ def build(state_dir, hot, ledger=None):
     # Explicit source mentions let the GM expand from short memory to the
     # earliest and newest *verbatim* played evidence, not a lossy summary.
     # All aliases are lexical candidate hints: no asserted causality or knowledge.
-    pattern = {}
+    pattern, firsts = {}, {}
     for key, card in entities.items():
         if card["kind"] in ("canon", "event", "clock", "thread", "place"):
             continue  # explicit source pointers already exist; avoid costly scans
         forms = list(dict.fromkeys(_norm(a) for a in card["aliases"] if len(_norm(a)) >= 4))
         if forms:
+            chosen = sorted(forms, key=len, reverse=True)[:18]
             pattern[key] = re.compile("|".join(
-                r"(?<!\w)" + re.escape(a) + r"(?!\w)"
-                for a in sorted(forms, key=len, reverse=True)[:18]))
+                r"(?<!\w)" + re.escape(a) + r"(?!\w)" for a in chosen))
+            # Первое слово имени — целым словом в тексте: дешёвый отбор до шаблона. На Python 3.12
+            # 188 тысяч поисков шаблона по всем ходам шли 36 с из 54 (24.11.2026); вывод тот же.
+            heads = set()
+            for form in chosen:
+                head = WORDISH.match(form)
+                heads.add(head.group() if head else None)
+            firsts[key] = heads
 
     processed = set()
     for source, row in sources:
@@ -313,7 +323,11 @@ def build(state_dir, hot, ledger=None):
         if not body:
             continue
         clean = _norm(body)
+        present = set(WORDISH.findall(clean))
         for key, regex in pattern.items():
+            heads = firsts[key]
+            if None not in heads and not (heads & present):
+                continue
             m = regex.search(clean)
             if m is None:
                 continue
