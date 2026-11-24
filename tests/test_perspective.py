@@ -100,5 +100,31 @@ class PresentPastTest(unittest.TestCase):
         self.assertIn("ШАРИНГАН", past["naruto"][0])
 
 
+class PresentPastMeaningTest(PresentPastTest):
+    def test_meaning_brings_an_episode_without_shared_words(self):
+        # Смысловой слой (e5-small в свёртке): близкое по смыслу проходит и без общих редких слов.
+        from rpg_engine import meaning
+        state = Path(tempfile.mkdtemp())
+        (state / "archive").mkdir()
+        rows = [{"id": "s09.text.034", "gm": "Орочимару долго смотрел на подпись договора и улыбался одними губами."},
+                {"id": "s09.text.010", "gm": "Орочимару сказал: тела, глаза и гении — всё в коллекцию."}]
+        (state / "archive/session-009-turns.jsonl").write_text(
+            "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf-8")
+        terms = lambda t: " ".join(sorted({heuristic_history.stem(w) for w in heuristic_history.tokens(t) if len(w) >= 3}))
+        self._index(state, [{"id": r["id"], "kind": "played", "source": "archive/session-009-turns.jsonl",
+                             "start": 0, "end": 0, "terms": terms(r["gm"]), "headline": "", "preview": ""} for r in rows])
+        hot = {"session": 12, "cursor": {"id": "s12.text.043"}, "cast": {"orochimaru": {"name": "Орочимару"}},
+               "scene": {"present": ["shiki", "orochimaru"], "situation": "Шики остановил белую змею взглядом."}}
+        real = meaning.search
+        meaning.search = lambda state_dir, q, limit=12, allow=None: [("s09.text.010", 0.91), ("s09.text.034", 0.80)]
+        try:
+            past = echo.present_past(state, hot)
+        finally:
+            meaning.search = real
+        self.assertEqual([x.split(" — ")[0] for x in past["orochimaru"]], ["s09.text.010", "s09.text.034"])
+        self.assertTrue(hot["fold"]["past"]["meaning"])
+        self.assertEqual(echo.PAST_TURNS, 4)
+
+
 if __name__ == "__main__":
     unittest.main()
