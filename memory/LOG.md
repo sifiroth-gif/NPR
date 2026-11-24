@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.006: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Сэйдзо (`npc/road_warden_seidzo`), линия `roadside_attack`
 - s13.text.005: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, линия `roadside_attack`
 - s13.text.004: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.003: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
@@ -57,4 +58,3 @@
 - s12.text.053: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сай (`npc/sai`), бой
 - s12.text.052: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), бой
 - s12.text.051: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), бой
-- s12.text.050: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), бой
