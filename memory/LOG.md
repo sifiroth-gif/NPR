@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.081: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `root_silence_seals`, бой
 - s12.text.080: Немера (Невыписанная) (`npc/nemera`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), линия `kabuto_name_source`, линия `sai_note`
 - s12.text.079: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `nemera_document`, линия `kabuto_name_source`
 - s12.text.078: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `nemera_document`, вещь `sealing_cloth_scrap`, бой
@@ -55,4 +56,3 @@
 - s12.text.024: Канкуро (`npc/kankuro`)
 - s12.text.023: Канкуро (`npc/kankuro`)
 - s12.text.022: Канкуро (`npc/kankuro`), Немера (Невыписанная) (`npc/nemera`)
-- s12.text.021: Канкуро (`npc/kankuro`), Гаара (`npc/gaara`)
