@@ -253,6 +253,7 @@
 - Тайная лаборатория Шики, известняковые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-kholmy-severo-zapa` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
+- Внутреннее пространство Наруто, перед запертой решёткой · `places/vnutrennee-prostranstvo-naruto-pered-zapertoy-reshetkoy` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, снаружи мост Тэнти · `places/vnutrennee-prostranstvo-naruto-snaruzhi-most-tenti` · 1 ход(ов), s12–s12
 - Внутреннее пространство печати Наруто, внешнее время неподвижно · `places/vnutrennee-prostranstvo-pechati-naruto-vneshnee-vremya-nepod` · 1 ход(ов), s12–s12
 - Восточная седловина у речных ущелий, северо-восточный тракт Страны Ветра · `places/vostochnaya-sedlovina-u-rechnykh-ushcheliy-severo-vostochnyy` · 1 ход(ов), s11–s11
