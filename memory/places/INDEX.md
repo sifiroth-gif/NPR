@@ -118,6 +118,7 @@
 - Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
 - Страна Травы, каменистая ложбина к востоку от моста Тэнти · `places/strana-travy-kamenistaya-lozhbina-k-vostoku-ot-mosta-tenti` · 2 ход(ов), s12–s12
 - Страна Травы, сельские предместья Кусагакуре · `places/strana-travy-selskie-predmestya-kusagakure` · 2 ход(ов), s10–s11
+- Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 2 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Травы, восточный склон известняковой ложбины · `places/strana-travy-vostochnyy-sklon-izvestnyakovoy-lozhbiny` · 2 ход(ов), s12–s12
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
@@ -230,7 +231,6 @@
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
 - Страна Травы, скрытый лесной гребень над западным подходом к мосту Тэнти · `places/strana-travy-skrytyy-lesnoy-greben-nad-zapadnym-podkhodom-k-` · 1 ход(ов), s12–s12
-- Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 1 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
