@@ -57,4 +57,3 @@
 - s12.text.040: Кабуто Якуши (`npc/kabuto`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
 - s12.text.039: Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
 - s12.text.038: Гаара (`npc/gaara`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s12.text.037: Гаара (`npc/gaara`), линия `shiki_training`, план сюжета
