@@ -220,6 +220,7 @@
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
+- Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 1 ход(ов), s12–s12
 - Страна Травы, лесной склон над западным подходом к мосту Тэнти · `places/strana-travy-lesnoy-sklon-nad-zapadnym-podkhodom-k-mostu-ten` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
