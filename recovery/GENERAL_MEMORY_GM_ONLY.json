@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s13.text.019",
+  "cursor": "s13.text.020",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3647,7 +3647,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s13.text.019",
+          "seen": "s13.text.020",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Проверила доступ к первым шести запорам на своей стороне, не меняла границы и не трогала седьмой.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -3663,8 +3663,7 @@
       ],
       "sources": [
         "recovery/cast/nemera.json",
-        "recovery/HOT.json",
-        "s13.text.019"
+        "recovery/HOT.json"
       ]
     },
     "nemera_document": {
@@ -3806,7 +3805,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 110,
+      "mention_count": 111,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -3814,13 +3813,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-03-25T20:59:45",
-          "excerpt": "Лучше. Я кстати был с ними, они преследовали Орочимару. Поэтому будьте аккуратны. Особенно если нога твоя ещё даёт о себе знать <text color=\"secondary\" size=\"xs\">25 марта 1287 года · 20:59</text> ### Северный тракт **Мугами",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.012"
         },
         {
           "at": "0010-03-29T16:21:00",
@@ -3835,6 +3827,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.015"
+        },
+        {
+          "at": "0010-03-29T16:25:20",
+          "excerpt": "илой. Из её пасти вырвался низкий, прерывистый звук, похожий на хриплый смех. **Сиранами:** — Знаешь, Шики, Орочимару тоже восхищается змеями. Но я бы предпочла, чтобы восхищение нами иногда позволяло нам самим решать, что делать. Она вновь опустила голову под",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.020"
         }
       ],
       "projections": [
@@ -12657,13 +12656,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s13.text.019",
+        "s13.text.020",
         "s13.text.013",
         "s13.text.014",
         "s13.text.015",
         "s13.text.016",
         "s13.text.017",
-        "s13.text.018"
+        "s13.text.018",
+        "s13.text.019"
       ]
     },
     "place:da6bfdd9d01e2b29": {
@@ -15499,8 +15499,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json",
-        "s13.text.019"
+        "recovery/cast/shirame.json"
       ]
     },
     "shiranami": {
@@ -15512,7 +15511,7 @@
       "id": "shiranami",
       "kind": "npc",
       "label": "Сиранами",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0010-03-25T12:02:20",
@@ -15520,13 +15519,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.054"
-        },
-        {
-          "at": "0010-03-29T16:24:20",
-          "excerpt": "Нет <text color=\"secondary\" size=\"xs\">29 марта 1287 года · 16:24</text> **Мугами Шики:** — Нет. Сиранами замерла. **Сиранами:** — Даже не попытаешься? Кольца ещё несколько мгновений удерживали Шики. Затем змея разжала их и отодвинула голову далеко за пределы д",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.017"
         },
         {
           "at": "0010-03-29T16:24:40",
@@ -15541,23 +15533,30 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.019"
+        },
+        {
+          "at": "0010-03-29T16:25:20",
+          "excerpt": "#глажу ее# на самом деле вы такие прекрасные и милые создания. Сиранами мы сражались тогда и тогда это был самый эффективный способ. Но это не значит что я считаю тебя врагом. Ты знаешь мое имя? Мастеру: а ты не забыл что Шики всегда в режиме",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.020"
         }
       ],
       "projections": [
         {
           "role": "Призыв Орочимару, ранее временно подчинённый обычным Шаринганом Шики.",
-          "seen": "s13.text.019",
-          "state": "Добровольно опустила голову по просьбе Шики, предупредила против лечения."
+          "seen": "s13.text.020",
+          "state": "Допустила поглаживание через обмотки, назвала Шики по имени, усмехнулась; сохраняет требование самостоятельности."
         },
         {
           "role": "Призыв Орочимару, ранее временно подчинённый обычным Шаринганом Шики.",
-          "state": "Добровольно опустила голову по просьбе Шики, предупредила против лечения."
+          "state": "Допустила поглаживание через обмотки, назвала Шики по имени, усмехнулась; сохраняет требование самостоятельности."
         }
       ],
       "sources": [
         "recovery/cast/shiranami.json",
         "recovery/HOT.json",
-        "s13.text.019"
+        "s13.text.020"
       ]
     },
     "signalshchik": {
@@ -17162,5 +17161,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1050
+  "source_turns_indexed": 1051
 }
