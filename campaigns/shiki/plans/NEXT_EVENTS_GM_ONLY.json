@@ -1,85 +1,85 @@
 {
  "schema": "npr-shiki-next-session-events/1",
  "access": "GM_ONLY. Keeper preparation, not a played turn and not a compulsory plot.",
- "prepared_real_at": "2026-11-23",
- "closed_session": 11,
- "next_session": 12,
- "cursor": "s11.text.079",
- "at": "0010-03-15T08:53:12",
+ "prepared_real_at": "2026-11-24",
+ "closed_session": 12,
+ "next_session": 13,
+ "cursor": "s12.text.104",
+ "at": "0010-03-25T20:01:00",
  "sources": [
-  "archive/session-011-turns.jsonl#s11.text.065..079",
-  "archive/session-011-chronicle.md",
-  "campaigns/shiki/continuity/SESSION_011_TO_012_HANDOFF.json",
+  "archive/session-012-turns.jsonl#s12.text.068..104",
+  "archive/session-012-chronicle.md",
+  "campaigns/shiki/continuity/SESSION_012_TO_013_HANDOFF.json",
   "memory/PLOT.GM_ONLY.md",
   "memory/_curated/canon_arcs.GM_ONLY.json",
   "memory/_curated/will.GM_ONLY.json",
   "recovery/NEXT.json"
  ],
  "binding": [
-  "Session 12 opens on the same ledge over the river, minutes after s11.text.077: Gaara and Chiyo alive and weakened, Kakashi exhausted after Kamui, Naruto, Sakura, Neji nearby; Suna shinobi preparing litters. Do not skip the scene forward without the player.",
-  "Shiki's hair has been silver-white since 1278 (s01.text.093); the dark-haired photo in s09.text.029 and s11.text.077 is a GM error. Any photo or memory of Shiki shows a white-haired youth; NPCs do not confirm the error.",
-  "Kakashi holds a Konoha field Bingo Book page that copies the Kiri entry (as played in s11.text.077); its contents stop at December 1284 and say nothing of the Sharingan, Susanoo or sage mode.",
-  "World autonomy first: Suna, Konoha, Kiri and Akatsuki act on their own clocks; canon events and their links arrive on time even without Shiki.",
-  "Shiki learns only what reaches his senses or a credible channel; Konoha's and Suna's decisions about him happen offscreen and reach him by people, letters or visible change."
+  "Session 13 opens at the raided northern crossing on the evening of 25 March 1287, right after s12.text.104: Seidzo and the woman healed but weak from blood loss, one man dead, the crossbowman alive and stunned, surviving raiders gone back across the bridge. Do not skip forward without the player.",
+  "Canon runs on its own clock: Team Kakashi reaches Orochimaru's hideout on 26 March (hideout_sasuke). Kabuto went back with Sai's letter and three Root prisoners; Shiki keeps the document on the Unwritten.",
+  "Ages come from birthdays on the game calendar (NEXT.ages): Shiki 23, turns 24 on 28 April 1287; Naruto 20.",
+  "Facts: the player's direct correction > the last played turn that changed the fact > canon > card > summaries (NEXT.source_priority).",
+  "Manner: people's unease around Shiki, Lovecraft-style and only through visible behaviour; no description of his looks; no smoothed conflicts; no NPC thoughts in the prose; turns end on pressure from the world, never on a menu of paths."
  ],
  "events": [
   {
-   "id": "s12.suna_position",
-   "kind": "side",
-   "parent": "ch13_kazekage",
-   "status": "candidate",
-   "trigger": "Gaara and the Suna escort set out for Suna, or Shiki asks Gaara anything about his own standing.",
-   "question": "What will Suna — its Kazekage and its council — decide Shiki is for them after the rescue: debtor, ally or threat?",
-   "endings": [
-    "Gaara acknowledges a personal debt and gives Shiki a narrow, real guarantee (safe passage, a word, a contact) without hiding a nukenin.",
-    "The council overrules or binds Gaara: Suna keeps distance and quietly informs its ally Konoha or Kiri's hunters.",
-    "Suna wants something concrete in return — the Kiri dossier, medicine, the ruined seal — and the price becomes the bond.",
-    "Nothing is decided before the parties part; the question stays open with its tension."
-   ],
-   "limit": {
-    "scenes": 3,
-    "until": "0010-03-17T23:59:00"
-   }
-  },
-  {
-   "id": "s12.konoha_report",
+   "id": "s13.hideout_echo",
    "kind": "side",
    "parent": "ch14_tenchi",
    "status": "candidate",
-   "trigger": "Kakashi's and Neji's reports reach Tsunade (due 16–17.03), or Shiki travels with or near the Konoha team.",
-   "question": "What will Konoha do with what Kakashi, Sakura and Neji saw of Shiki — and with Sasori's Tenchi intelligence on 25.03?",
+   "trigger": "Canon beat hideout_sasuke (26.03): Team Kakashi in Orochimaru's hideout, Naruto faces Sasuke; Kabuto reports Shiki to Orochimaru.",
+   "question": "What does the hideout meeting change for Shiki — and through whom does he learn of it?",
    "endings": [
-    "Tsunade wants him used or watched: an offer, a channel or a quiet tail toward the Tenchi operation.",
-    "A harder faction (Root) opens its own file on his eyes and tissues — a hunt, not an offer.",
-    "Konoha keeps the Tenchi operation strictly to its own team; Shiki is left out and learns only by a trace.",
-    "The reports are shelved under war pressure; nothing changes for Shiki yet."
+    "Shiki learns only by a trace (a rumour, a snake of Ryuchido, Sakura's or Yamato's word) after it is over.",
+    "Orochimaru, after Kabuto's report, sends watchers north after Shiki: his eyes and body are material to him.",
+    "Naruto acts differently in front of Sasuke because of what Shiki told him at the bridge, and the difference reaches Shiki later.",
+    "Sai's lost letter breaks Root's plan inside the hideout; the consequences reach Shiki through Root."
    ],
    "limit": {
     "scenes": 4,
-    "until": "0010-03-25T23:59:00"
+    "until": "0010-03-28T23:59:00"
    }
   },
   {
-   "id": "s12.kiri_tissue_hunt",
+   "id": "s13.root_answer",
+   "kind": "side",
+   "parent": "main",
+   "status": "candidate",
+   "trigger": "Root learns of the failed retrieval: three operatives taken by Kabuto, silence seals interrupted by Shiki's senbon, Sai's letter lost.",
+   "question": "What will Root do about the failure and about the man who stopped its operatives?",
+   "endings": [
+    "A cleaner team hunts the witnesses and the letter; Shiki is on its list.",
+    "Danzo wants to use him: an offer, pressure or blackmail through what Root knows.",
+    "Root informs Konoha or Kiri officially, and the price of being known rises.",
+    "Root writes the operation off and waits; the debt remains."
+   ],
+   "limit": {
+    "scenes": 3,
+    "until": "0010-04-05T23:59:00"
+   }
+  },
+  {
+   "id": "s13.crossing_rumour",
    "kind": "scene",
    "parent": "main",
    "status": "candidate",
-   "trigger": "Shiki leaves the escort alone or lingers in the River Country after a fight seen by many; Kiri's standing order is capture alive with viable tissue.",
-   "question": "Do Kiri's hunters, drawn by news of the Kazekage rescue, find a real trace of Shiki — and at what cost?",
+   "trigger": "Seidzo, the woman, the captured crossbowman or the raiders who fled tell what happened at the crossing.",
+   "question": "Who learns that a stranger stopped the raiders and healed the dying at the northern crossing — and what do they do with it?",
    "endings": [
-    "A hunter team finds a real trace and tests him at a distance; Shiki sees their method and their warrant.",
-    "They lose the trail; only a broker or a rumor reaches Shiki.",
-    "They take the wrong target or a bystander pays for the confusion.",
-    "Nothing reaches the River Country in time."
+    "The road people keep their distance and pay in fear and silence: a gift left at night, a door shut in his face.",
+    "The raiders' crew comes back for their man and for revenge.",
+    "The district's officials want to detain and question the healer.",
+    "Kiri's hunters or the market's guards connect the rumour to the S-class bounty."
    ],
    "limit": {
-    "scenes": 2
+    "scenes": 3
    }
   }
  ],
  "carry_next": [
-  "Tenchi Bridge: 25.03.1287 (canon arc; Sakura has Sasori's intelligence).",
-  "Kakashi: rescue_debrief due 16.03 18:00; Gaara: suna_return due 16.03 18:00; Neji: report_guy due 17.03 12:00; Sakura: tenchi_spy due 25.03.",
-  "Old wanted-poster and dark-hair errors are closed: Bingo Books only; white hair always."
+  "hideout_sasuke 26.03.1287; immortals arc from 01.06.1287.",
+  "Orochimaru: shiki_report due 27.03 12:00; Kabuto carries Sai's letter and three Root prisoners.",
+  "Shiki's birthday 28.04: he turns 24."
  ]
 }
