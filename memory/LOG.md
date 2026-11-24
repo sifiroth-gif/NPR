@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.100: поправки игрока: 1
 - s12.text.099: Немера (Невыписанная) (`npc/nemera`), Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), линия `market_shadow`, линия `tenchi_bridge`
 - s12.text.098: Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), линия `market_shadow`
 - s12.text.095: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
@@ -56,4 +57,3 @@
 - s12.text.044: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Кабуто Якуши (`npc/kabuto`), Сай (`npc/sai`), бой
 - s12.text.042: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), Немера (Невыписанная) (`npc/nemera`), Канкуро (`npc/kankuro`), план сюжета
 - s12.text.041: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), план сюжета, поправки игрока: 1
-- s12.text.040: Кабуто Якуши (`npc/kabuto`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
