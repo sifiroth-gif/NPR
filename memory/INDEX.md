@@ -3,12 +3,13 @@
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (269) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (268) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (201)
+## Персонажи (202)
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura` · в сцене
+- Сирамэ — Белая разумная змея со светлыми глазами и почти незаметными… · `npc/shirame` · в сцене
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato` · в сцене
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai`
@@ -208,13 +209,14 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (6)
+## Линии (7)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `nemera_symbiosis` — 17.03.1287 Немера самостоятельно провела незаметный прямой тактильный… · `threads/nemera_symbiosis`
-- `kabuto_letter` — Шики принял приглашение Кабуто встретиться одному у старого северного… · `threads/kabuto_letter`
+- `kabuto_letter` — Кабуто предложил Шики прийти одному к старому северному указателю до … · `threads/kabuto_letter`
+- `kabuto_name_source` — Сирамэ заявила, что Кабуто назвал Немеру «Невыписанной». Проверенный … · `threads/kabuto_name_source`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

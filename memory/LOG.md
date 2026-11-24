@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s12.text.067: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), Кабуто Якуши (`npc/kabuto`), линия `kabuto_letter`
+- s12.text.067: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), линия `kabuto_name_source`
 - s12.text.066: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), вещь `kabuto_message`, линия `kabuto_letter`
 - s12.text.065: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), бой
 - s12.text.064: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), Кабуто Якуши (`npc/kabuto`), бой

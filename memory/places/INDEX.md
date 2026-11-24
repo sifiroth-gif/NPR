@@ -54,6 +54,7 @@
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
+- Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
@@ -61,7 +62,6 @@
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
-- Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 4 ход(ов), s12–s12
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
@@ -228,7 +228,6 @@
 - Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
-- Страна Травы, склон у известнякового обвала · `places/strana-travy-sklon-u-izvestnyakovogo-obvala` · 1 ход(ов), s12–s12
 - Страна Травы, скрытый лесной гребень над западным подходом к мосту Тэнти · `places/strana-travy-skrytyy-lesnoy-greben-nad-zapadnym-podkhodom-k-` · 1 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
