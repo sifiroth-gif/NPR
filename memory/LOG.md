@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.018: Сиранами (`npc/shiranami`), план сюжета
+- s13.text.017: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`), план сюжета, бой
 - s13.text.016: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s13.text.015: Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, план сюжета, бой
 - s13.text.014: Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`), план сюжета
@@ -56,5 +58,3 @@
 - s12.text.065: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), бой
 - s12.text.064: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), Кабуто Якуши (`npc/kabuto`), бой
 - s12.text.063: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Немера (Невыписанная) (`npc/nemera`), бой
-- s12.text.062: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Ямато (`npc/yamato`), Немера (Невыписанная) (`npc/nemera`), Сай (`npc/sai`), бой
-- s12.text.061: Сай (`npc/sai`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), бой

@@ -51,6 +51,7 @@
 - Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 6 ход(ов), s11–s11
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 6 ход(ов), s10–s10
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
+- Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 6 ход(ов), s13–s13
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
@@ -64,7 +65,6 @@
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
-- Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 4 ход(ов), s13–s13
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
