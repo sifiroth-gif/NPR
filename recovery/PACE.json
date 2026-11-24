@@ -1,17 +1,20 @@
 {
  "schema": "npr-pace/1",
- "cursor": "s12.text.038",
+ "cursor": "s12.text.039",
  "scene": {
   "turns": 1,
-  "since": "s12.text.038"
+  "since": "s12.text.039"
  },
- "chapters": [],
- "next_chapters": [
+ "chapters": [
   {
    "id": "ch14_tenchi",
    "title": "Мост Тэнти",
-   "starts": "0010-03-24T00:00:00"
-  },
+   "scenes": 0,
+   "limit": 18,
+   "last_touched": null
+  }
+ ],
+ "next_chapters": [
   {
    "id": "ch15_shed_skin",
    "title": "Сброшенная кожа",
@@ -21,14 +24,19 @@
    "id": "ch16_brothers",
    "title": "Братья",
    "starts": "0010-09-02T00:00:00"
+  },
+  {
+   "id": "ch17_rain_over_leaf",
+   "title": "Дождь над Листом",
+   "starts": "0010-10-17T10:00:00"
   }
  ],
  "news": {
-  "offered": 14,
+  "offered": 15,
   "delivered": 10,
   "missed": 4,
-  "pending": 0,
-  "carrying": false
+  "pending": 8,
+  "carrying": true
  },
  "echo": {
   "offered": 37,
@@ -39,7 +47,7 @@
   "praise": 1,
   "grant": 1,
   "free": 1,
-  "friction": 10
+  "friction": 9
  },
  "rule": "Числа для разбора ведения (OOC): отвечай по ним — что было, что меняется со следующего хода. Без извинений, покаяния и оценок себя: длину сцены выбирает игрок, ведущий отвечает за мир вокруг."
 }

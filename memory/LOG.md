@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.039: Кабуто Якуши (`npc/kabuto`), Наруто Узумаки (`npc/naruto`), план сюжета
 - s12.text.038: Гаара (`npc/gaara`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s12.text.037: Гаара (`npc/gaara`), линия `shiki_training`, план сюжета
 - s12.text.036: Гаара (`npc/gaara`)
@@ -53,4 +54,3 @@
 - s11.text.061: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета, бой
 - s11.text.060: Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), план сюжета, бой
 - s11.text.059: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Фурукава Кёдзи (`npc/caravan_prisoner`), план сюжета, бой
-- s11.text.058: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Хосина Кэн (`npc/hoshina_ken`), план сюжета, бой
