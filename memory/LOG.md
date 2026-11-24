@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.042: Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), Немера (Невыписанная) (`npc/nemera`), Канкуро (`npc/kankuro`), план сюжета
 - s12.text.041: Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Ямато (`npc/yamato`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сай (`npc/sai`), план сюжета, поправки игрока: 1
 - s12.text.040: Кабуто Якуши (`npc/kabuto`), Наруто Узумаки (`npc/naruto`), Орочимару (`npc/orochimaru`), Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
 - s12.text.039: Ямато (`npc/yamato`), Сай (`npc/sai`), план сюжета
@@ -53,4 +54,3 @@
 - s11.text.064: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Немера (Невыписанная) (`npc/nemera`), Аракава Дзюн (`npc/arakawa`), план сюжета, бой
 - s11.text.063: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s11.text.062: Сасори Красных Песков (`npc/sasori`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), план сюжета, бой, поправки игрока: 1
-- s11.text.061: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Мориока Хидэаки (`npc/morioka_hideaki`), план сюжета, бой
