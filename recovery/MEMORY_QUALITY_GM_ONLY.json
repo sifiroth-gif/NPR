@@ -1,26 +1,28 @@
 {
   "current_focus": [
     "kabuto",
+    "masked1",
+    "masked2",
+    "masked3",
     "nemera",
-    "shirame",
     "place:e1e0909c80a6f57f",
     "orochimaru",
     "yamato",
-    "seal_boot_scrap",
-    "sealing_cloth_scrap"
+    "sai_note",
+    "seal_boot_scrap"
   ],
-  "cursor": "s12.text.081",
+  "cursor": "s12.text.083",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3733,
-  "index_entities": 710,
-  "index_source_records": 1012,
-  "indexed_cursor": "s12.text.081",
+  "focus_bytes": 4567,
+  "index_entities": 713,
+  "index_source_records": 1014,
+  "indexed_cursor": "s12.text.083",
   "kinds": {
     "entity": 1,
-    "item": 25,
-    "npc": 147,
+    "item": 26,
+    "npc": 148,
     "place": 527,
-    "thread": 10
+    "thread": 11
   },
   "missing_critical": [],
   "notes": [
@@ -134,6 +136,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "sai_note",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "seal_boot_scrap",
       "kind": "item"
     },
@@ -171,12 +179,6 @@
       "at_1": true,
       "at_5": true,
       "id": "shiki_upper_clothing",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "shiki_wraps",
       "kind": "item"
     },
     {
@@ -482,6 +484,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:kabuto_snake_contract",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:kabuto_tracking_claim",
       "kind": "thread"
     },
@@ -510,7 +518,7 @@
       "kind": "thread"
     },
     {
-      "at_1": true,
+      "at_1": false,
       "at_5": true,
       "id": "thread:sai_note",
       "kind": "thread"
@@ -530,8 +538,8 @@
   ],
   "schema": "npr-memory-quality/1",
   "self_query_at_1": 83,
-  "self_query_at_5": 83,
-  "self_query_count": 83,
+  "self_query_at_5": 84,
+  "self_query_count": 84,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
