@@ -9,7 +9,11 @@ s11.text.030–038: Баки впускает в Суну нукенина кл�
 подыгрывание.
 
 Код считает в репликах NPC похвалу Шики, уступки (с ценой или без) и трение —
-отказ, условие, торг, недоверие. Замечание к ходу — при явной похвале и уступке
+отказ, условие, торг, недоверие. С 24.11.2026 (s12.text.054–062: Орочимару называет
+имя змеи по просьбе, Сиранами «уходит по собственной воле» после лечения, Ямато
+«освобождает тропу», змея-разведчик «так и не добралась» — игрок: «подыгрывает,
+сглаживает конфликты») — и в повествовании: угроза или противник отступает, соглашается,
+не ищет дальше без цены в том же абзаце (``smooth``). Замечание к ходу — при явной похвале и уступке
 без цены; пункт ``must`` — когда окно последних ходов перекошено. Исход код не
 решает: напоминает, что у NPC своя воля.
 """
@@ -25,6 +29,7 @@ MIN_TURNS = 5       # раньше окна не судить
 PRAISE_MAX = 4      # похвал за окно — уже перекос
 FREE_MAX = 1        # уступок без цены за окно — больше одной перекос
 COOLDOWN = 4        # ходов между пунктами must
+SMOOTH_MAX = 3      # сглаживаний без цены за окно — перекос
 
 PRAISE = re.compile(
     r"впечатл|восхищ|поразительн|невероятн|блестящ|великолепн|гениальн|мастерск|превосходн|безупречн"
@@ -47,6 +52,49 @@ FRICTION = re.compile(
     r"|сдайте|сдай\s+оруж|руки\s+на\s+виду|не\s+двигаться", re.I)
 
 
+# Повествование: противник, угроза или упрямый NPC сам сдаёт позицию.
+SMOOTH = re.compile(
+    r"(?<![\wё])(?<!не\s)(?:отступил\w*[^.!?\n]{0,30}(?:освобожда|пропуска|уступа)\w*|"
+    r"освобожда\w*\s+(?:тропу|дорогу|проход|путь)|"
+    r"опустил\w*\s+(?:руку|ладонь)[^.!?\n]{0,40}(?:так\s+и\s+не|не\s+заверш|не\s+слож|не\s+законч)\w*|"
+    r"опустил\w*\s+(?:оружие|кунай|меч|барьер|заграждени\w*)|убрал\w*\s+(?:барьер|оружие|кунай|заграждени\w*)|"
+    r"не\s+стал\w*\s+(?:преследовать|спорить|настаивать|возражать|мешать|задерживать|искать|проверять)|"
+    r"не\s+захотел\w*\s+(?:искать|преследовать|спорить|проверять)|без\s+возражений|"
+    r"ограничил\w*\s+(?:коротким|жестом|кивком)|не\s+пытал\w*\s+(?:воздейств|помешать|остановить|задержать)\w*|"
+    r"так\s+и\s+не\s+(?:добрал|наш|замети|обнаружи|увиде)\w*|оставил\w*\s+(?:попытк|сенбон|иглу)\w*)", re.I)
+SELF = re.compile(r"Немер|отрост|нить|Шики", re.I)   # свои: Немера, сам Шики — не «сглаживание мира»
+# Цена в том же абзаце: кровь, рана, потеря, долг, подозрение, обида, условие, слежка.
+SMOOTH_COST = re.compile(
+    r"кров|ран[аыуе]|бол[ьи]|сломал|потерял|не\s+простит|запомн|счёт|долг|подозр|недовер|обид|условие|взамен|"
+    r"цен[аыу](?![\wё])|следит|следил|метк|запеча|не\s+отпуст|позже|ещё\s+вернётся|вернусь", re.I)
+
+
+def _narration(text):
+    """Абзацы повествования без реплик, шапки и служебного."""
+    out = []
+    for para in re.split(r"\n\s*\n", str(text or "")):
+        lines = [l for l in para.split("\n") if l.strip() and not l.lstrip("*_ ").startswith(("—", "–", "<text", "###"))
+                 and not re.match(r"^\s*\*\*[^*]{2,60}:\*\*", l)]
+        if lines:
+            out.append(" ".join(lines))
+    return out
+
+
+def smoothing(turn):
+    """[отрывок]: в повествовании угроза или противник сдаёт позицию без цены в том же абзаце."""
+    out = []
+    for para in _narration(turn.get("gm")):
+        match = SMOOTH.search(para)
+        if match:
+            left = max(para.rfind(c, 0, match.start()) for c in ".!?") + 1
+            if SELF.search(para[left:match.start()]):
+                continue
+        if match and not SMOOTH_COST.search(para):
+            start = max(0, match.start() - 60)
+            out.append(" ".join(para[start:match.end() + 40].split()))
+    return out
+
+
 def _state(hot):
     return hot.setdefault("fold", {}).setdefault("favor", {"recent": []})
 
@@ -62,6 +110,11 @@ def measure(turn, names, always=()):
             continue
         rows.append((key, label, text))
     out = {"id": turn.get("id"), "praise": 0, "grant": 0, "free": 0, "friction": 0, "quotes": []}
+    smooth = smoothing(turn)
+    out["smooth"] = len(smooth)
+    if smooth:
+        out["sq"] = f"{turn.get('id')}: «{smooth[0][-90:]}»"
+    out["quotes"] += [f"«{q[:100]}» — сглажено" for q in smooth[:1]]
     for i, (key, label, text) in enumerate(rows):
         if PRAISE.search(text):
             out["praise"] += 1
@@ -88,22 +141,29 @@ def track(hot, turn, names, always=()):
     state = _state(hot)
     recent = [r for r in state.get("recent") or [] if r.get("id") != row["id"]]
     state["recent"] = (recent + [{k: v for k, v in row.items() if k != "quotes"}])[-WINDOW:]
-    if row["free"] or row["praise"] >= 3:
+    if row["free"] or row["praise"] >= 3 or row["smooth"] >= 2:
         what = []
         if row["praise"] >= 3:
             what.append(f"похвала Шики в {row['praise']} репликах")
         if row["free"]:
             what.append(f"уступок без цены — {row['free']}")
+        if row["smooth"] >= 2:
+            what.append(f"конфликт гаснет сам — {row['smooth']} раза")
         return [{"turn": row["id"], "kind": "favor", "text":
                  f"Подыгрывание: {', '.join(what)} ({'; '.join(row['quotes'][:2])}). NPC уступает по своей "
                  "причине и за свою цену — условие, надзор, услуга, риск для него самого; восхищение — "
-                 "редкость, не реакция по умолчанию."}]
+                 "редкость, не реакция по умолчанию; противник не бросает цель без причины, угроза не исчезает сама."}]
     return []
 
 
+VERSION = 2          # 24.11.2026: счёт сглаживания в повествовании — окно пересчитать по архиву
+
+
 def seed(hot, rows, names, always=()):
-    """Пустое окно — из последних сыгранных ходов архива, один раз."""
+    """Пустое окно — из последних сыгранных ходов архива, один раз (и заново при смене счёта)."""
     state = _state(hot)
+    if state.get("v") != VERSION:
+        state.update(recent=[], seeded=False, v=VERSION)
     if state.get("recent") or state.get("seeded"):
         return
     played = [r for r in rows if r.get("kind") not in ("ooc", "technical", "void")][-WINDOW:]
@@ -114,7 +174,7 @@ def seed(hot, rows, names, always=()):
 def totals(hot):
     recent = _state(hot).get("recent") or []
     return {"turns": len(recent), **{k: sum(int(r.get(k) or 0) for r in recent)
-                                    for k in ("praise", "grant", "free", "friction")}}
+                                    for k in ("praise", "grant", "free", "friction", "smooth")}}
 
 
 def must(hot):
@@ -124,7 +184,7 @@ def must(hot):
     if len(recent) < MIN_TURNS:
         return None
     total = totals(hot)
-    skew = (total["praise"] >= PRAISE_MAX or total["free"] > FREE_MAX
+    skew = (total["praise"] >= PRAISE_MAX or total["free"] > FREE_MAX or total["smooth"] >= SMOOTH_MAX
             or (total["friction"] == 0 and total["grant"] + total["praise"] >= 2))
     if not skew:
         return None
@@ -138,9 +198,13 @@ def must(hot):
         why.append(f"похвал и благодарностей Шики — {total['praise']}")
     if total["free"] > FREE_MAX:
         why.append(f"уступок без цены — {total['free']}")
+    if total["smooth"] >= SMOOTH_MAX:
+        seen = [r["sq"] for r in recent if r.get("sq")][-2:]
+        why.append(f"конфликт гаснет сам без цены — {total['smooth']} раз" + (f" ({'; '.join(seen)})" if seen else ""))
     if total["friction"] == 0:
         why.append("ни одного отказа, условия или недоверия")
     return (f"Мир подыгрывает Шики: за {total['turns']} ходов {', '.join(why)}. "
             "В этом ходе у присутствующего — своё против желания Шики по его карточке (служба, страх, выгода): "
-            "условие, торг, проверка, отказ или ложь. Заявка игрока — намерение, исход решает мир; спорное — костью. "
+            "условие, торг, проверка, отказ или ложь; противник и угроза держат цель, пока их не снимет цена, поступок "
+            "или кость. Заявка игрока — намерение, исход решает мир; спорное — костью. "
             "Не наказание и не враждебность ради неё — его воля.")

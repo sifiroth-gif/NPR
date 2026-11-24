@@ -710,13 +710,13 @@ def _lint(text, names=()):
             report["by_rule"][hit["rule"]] = report["by_rule"].get(hit["rule"], 0) + 1
             report["advice"][hit["rule"]] = prose_lint.ADVICE[hit["rule"]]
             report["verdict"] = "переписать"
-    hit = prose_lint.interior(text, names) if names else None
-    if hit:
-        report["hits"].insert(0, hit)
-        report["by_rule"]["interior"] = report["by_rule"].get("interior", 0) + 1
-        report["advice"]["interior"] = prose_lint.ADVICE["interior"]
-        if report.get("verdict") == "чисто":
-            report["verdict"] = "шум"
+    for hit in (prose_lint.interior(text, names) if names else None, prose_lint.menu(text)):
+        if hit:   # мысли NPC, меню в конце хода — замечание, не переписывание
+            report["hits"].insert(0, hit)
+            report["by_rule"][hit["rule"]] = report["by_rule"].get(hit["rule"], 0) + 1
+            report["advice"][hit["rule"]] = prose_lint.ADVICE[hit["rule"]]
+            if report.get("verdict") == "чисто":
+                report["verdict"] = "шум"
     return report
 
 

@@ -37,6 +37,31 @@ class InteriorTest(unittest.TestCase):
                          (root / "skills/dark-literary-gm/scripts/prose_lint.py").read_bytes())
 
 
+class SmoothingAndMenuTest(unittest.TestCase):
+    """Игрок, 24.11.2026: «мастер подыгрывает, сглаживает конфликты, проза стерильная» (s12.text.054–062)."""
+
+    def test_conflict_that_dies_by_itself(self):
+        from rpg_engine import favor
+        gm = ("Ямато медленно опустил руку, так и не завершив печать.\n\nОн отступил на полшага, освобождая тропу.\n\n"
+              "**Ямато:** — Хорошо.\n\nНа этот раз Кабуто последовал без возражений.")
+        self.assertEqual(len(favor.smoothing({"gm": gm})), 3)
+        kept = ("Ямато опустил барьер. Кровь из пореза на его ладони капала на мох, и он запомнил, чья это игла.\n\n"
+                "Наруто не отступил.\n\nНить Немеры отступила, освобождая тропу.")
+        self.assertEqual(favor.smoothing({"gm": kept}), [], "с ценой, «не отступил», своя Немера — не сглаживание")
+
+    def test_window_must_on_smoothing(self):
+        from rpg_engine import favor
+        hot = {"fold": {"favor": {"recent": [{"id": f"s12.text.{i:03d}", "praise": 0, "grant": 0, "free": 0,
+                                               "friction": 1, "smooth": 1} for i in range(55, 63)]}}}
+        self.assertIn("конфликт гаснет сам", favor.must(hot))
+
+    def test_menu_ending(self):
+        gm = ("Ямато указал на склон.\n\nВпереди оставались два доступных пути: верхняя тропа и низина.\n\n**Ход Шики.**")
+        self.assertEqual(prose_lint.menu(gm)["rule"], "menu")
+        fine = "Змея повернула голову к склону. Язык коснулся камня там, где минуту назад лежала рука Сакуры.\n\n**Ход Шики.**"
+        self.assertIsNone(prose_lint.menu(fine))
+
+
 class TraitWitnessTest(unittest.TestCase):
     def test_named_is_not_a_witness_present_is(self):
         rows = [{"id": "s09.text.024", "gm": "— Смотрю на Шаринган Шики, — сказал Саске. Орочимару захочет его.",
