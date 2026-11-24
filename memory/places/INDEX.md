@@ -115,6 +115,7 @@
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
 - Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
 - Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
+- Страна Травы, каменистая ложбина к востоку от моста Тэнти · `places/strana-travy-kamenistaya-lozhbina-k-vostoku-ot-mosta-tenti` · 2 ход(ов), s12–s12
 - Страна Травы, сельские предместья Кусагакуре · `places/strana-travy-selskie-predmestya-kusagakure` · 2 ход(ов), s10–s11
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
@@ -221,7 +222,6 @@
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
-- Страна Травы, каменистая ложбина к востоку от моста Тэнти · `places/strana-travy-kamenistaya-lozhbina-k-vostoku-ot-mosta-tenti` · 1 ход(ов), s12–s12
 - Страна Травы, лесной склон над западным подходом к мосту Тэнти · `places/strana-travy-lesnoy-sklon-nad-zapadnym-podkhodom-k-mostu-ten` · 1 ход(ов), s12–s12
 - Страна Травы, ложбина восточнее моста Тэнти · `places/strana-travy-lozhbina-vostochnee-mosta-tenti` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
