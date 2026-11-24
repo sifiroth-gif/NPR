@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.002: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
 - s13.text.001: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
 - s12.text.104: Сэйдзо (`npc/road_warden_seidzo`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
 - s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Неизвестная женщина под повозкой (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
@@ -57,4 +58,3 @@
 - s12.text.049: Девятихвостый (`npc/kurama`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), бой
 - s12.text.048: Девятихвостый (`npc/kurama`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), Тиё (`npc/chiyo`), бой
 - s12.text.047: Девятихвостый (`npc/kurama`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`)
-- s12.text.046: Наруто Узумаки (`npc/naruto`), Девятихвостый (`npc/kurama`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой

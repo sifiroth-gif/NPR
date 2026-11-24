@@ -55,6 +55,7 @@
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
+- Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 5 ход(ов), s12–s13
 - Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
 - Страна Травы, заброшенный сушильный двор на подходе к подпольным торговым складам · `places/strana-travy-zabroshennyy-sushilnyy-dvor-na-podkhode-k-podpo` · 5 ход(ов), s12–s12
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
@@ -63,7 +64,6 @@
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
-- Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 4 ход(ов), s12–s13
 - Страна Травы, Старая мельница · `places/strana-travy-staraya-melnitsa` · 4 ход(ов), s02–s02
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
