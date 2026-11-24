@@ -2,24 +2,25 @@
   "current_focus": [
     "kabuto",
     "nemera",
-    "sakura",
     "shirame",
     "place:e1e0909c80a6f57f",
     "orochimaru",
-    "yamato"
+    "yamato",
+    "seal_boot_scrap",
+    "sealing_cloth_scrap"
   ],
-  "cursor": "s12.text.074",
+  "cursor": "s12.text.080",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3562,
-  "index_entities": 703,
-  "index_source_records": 1005,
-  "indexed_cursor": "s12.text.074",
+  "focus_bytes": 3645,
+  "index_entities": 709,
+  "index_source_records": 1011,
+  "indexed_cursor": "s12.text.080",
   "kinds": {
     "entity": 1,
-    "item": 22,
-    "npc": 145,
+    "item": 25,
+    "npc": 147,
     "place": 527,
-    "thread": 8
+    "thread": 9
   },
   "missing_critical": [],
   "notes": [
@@ -103,6 +104,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "nemera_document",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "possible_sasuke_hair",
       "kind": "item"
     },
@@ -122,6 +129,18 @@
       "at_1": true,
       "at_5": true,
       "id": "rokuto_bounty_payment",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "seal_boot_scrap",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "sealing_cloth_scrap",
       "kind": "item"
     },
     {
@@ -158,12 +177,6 @@
       "at_1": true,
       "at_5": true,
       "id": "shiki_wraps",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "sumi_sword",
       "kind": "item"
     },
     {
@@ -493,6 +506,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "thread:sai_note",
+      "kind": "thread"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "thread:shiki_confidentiality",
       "kind": "thread"
     },
@@ -504,9 +523,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 79,
-  "self_query_at_5": 79,
-  "self_query_count": 79,
+  "self_query_at_1": 82,
+  "self_query_at_5": 82,
+  "self_query_count": 82,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

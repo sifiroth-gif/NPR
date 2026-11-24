@@ -1,15 +1,17 @@
-# Карта мира NPR · на ходе `s12.text.074`
+# Карта мира NPR · на ходе `s12.text.080`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (270) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (202)
+## Персонажи (204)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
-- Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura` · в сцене
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame` · в сцене
+- masked2 —  · `npc/masked2`
+- masked3 —  · `npc/masked3`
+- Сакура Харуно (Сакура, Харуно) — генин, участница (на 1283, экзамен) · `npc/sakura`
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai`
@@ -209,20 +211,21 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (8)
+## Линии (9)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `parents` — 04.10 01:02 Шики ушёл от родителей домой. Нао без его согласия получи… · `threads/parents`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — 1285–1286 Шики стал независимым криминальным подрядчиком с 7 дополнит… · `threads/shiki_underground_career`
 - `nemera_symbiosis` — 17.03.1287 Немера самостоятельно провела незаметный прямой тактильный… · `threads/nemera_symbiosis`
 - `kabuto_letter` — Шики прибыл к северному указателю до назначенного срока и встретился … · `threads/kabuto_letter`
-- `kabuto_name_source` — Шики не является автором имени «Невыписанная». Кабуто держит фрагмент… · `threads/kabuto_name_source`
+- `kabuto_name_source` — Установлен существовавший независимо от Шики старый медицинский источ… · `threads/kabuto_name_source`
 - `kabuto_tracking_claim` — Кабуто признал, что после расставания продолжил нерегулярный сбор све… · `threads/kabuto_tracking_claim`
+- `sai_note` — Кабуто хранит письмо Сая, а на языке нападавших обнаружен знак Корня … · `threads/sai_note`
 
 ## Давние линии (20, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (53)
+## Вещи (56)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -250,6 +253,7 @@
 - `kuroishi_ledger` · `items/kuroishi_ledger`
 - `medical_case_m12` · `items/medical_case_m12`
 - `minagi_receipts` · `items/minagi_receipts`
+- `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
@@ -263,6 +267,8 @@
 - `rokuto_head` · `items/rokuto_head`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `s17_early_shiki_aliquot` · `items/s17_early_shiki_aliquot`
+- `seal_boot_scrap` · `items/seal_boot_scrap`
+- `sealing_cloth_scrap` · `items/sealing_cloth_scrap`
 - `shiki_blood_vial` · `items/shiki_blood_vial`
 - `shiki_finances` · `items/shiki_finances`
 - `shiki_hair_markers` · `items/shiki_hair_markers`
