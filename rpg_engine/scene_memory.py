@@ -6,6 +6,7 @@ retrieval always run, including in a text-ahead GitHub-only session.
 """
 from __future__ import annotations
 
+import functools
 import hashlib
 import json
 import os
@@ -41,6 +42,7 @@ def words(value):
     return [x.casefold() for x in WORDS.findall(str(value)) if len(x) >= 3 and x.casefold() not in STOP]
 
 
+@functools.lru_cache(maxsize=262144)
 def stem(token):
     token = token.casefold().replace("ё", "е")
     for suffix in ("иями", "ными", "ного", "ному", "овать", "ование", "ениями",
