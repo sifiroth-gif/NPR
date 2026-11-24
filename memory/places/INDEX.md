@@ -253,6 +253,7 @@
 - Тайная лаборатория Шики, известняковые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-kholmy-severo-zapa` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, лесистые холмы к северо-западу от Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-k-severo-zapadu-o` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-severo-zapadnee-kusagakure` · 1 ход(ов), s04–s04
+- Внутреннее пространство Наруто перед вратами Девятихвостого, внешнее время неподвижно · `places/vnutrennee-prostranstvo-naruto-pered-vratami-devyatikhvostog` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, перед запертой решёткой · `places/vnutrennee-prostranstvo-naruto-pered-zapertoy-reshetkoy` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, снаружи мост Тэнти · `places/vnutrennee-prostranstvo-naruto-snaruzhi-most-tenti` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто у ворот Девятихвостого · `places/vnutrennee-prostranstvo-naruto-u-vorot-devyatikhvostogo` · 1 ход(ов), s12–s12
