@@ -55,4 +55,3 @@
 - s12.text.014: Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`
 - s12.text.013: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_finances`
 - s12.text.011: Гаара (`npc/gaara`), Баки (`npc/baki`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Наруто Узумаки (`npc/naruto`), Какаши Хатакэ (`npc/kakashi`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
-- s12.text.010: Баки (`npc/baki`), Гаара (`npc/gaara`), Какаши Хатакэ (`npc/kakashi`), Тиё (`npc/chiyo`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Нэдзи Хьюга (`npc/neji`), Немера (Невыписанная) (`npc/nemera`)
