@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s12.text.036: Гаара (`npc/gaara`)
 - s12.text.035: Гаара (`npc/gaara`), Канкуро (`npc/kankuro`)
 - s12.text.034: Немера (Невыписанная) (`npc/nemera`)
 - s12.text.029: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
@@ -53,4 +54,3 @@
 - s11.text.058: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Хосина Кэн (`npc/hoshina_ken`), план сюжета, бой
 - s11.text.057: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Морита Кай (`npc/p4_marked_hunter`), план сюжета, бой
 - s11.text.056: Сасори Красных Песков (`npc/sasori`), Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), план сюжета, бой, поправки игрока: 1
-- s11.text.055: Сакура Харуно (`npc/sakura`), Тиё (`npc/chiyo`), Сасори Красных Песков (`npc/sasori`), Наруто Узумаки (`npc/naruto`), Савара (`npc/suna_advance_tracker`), план сюжета, бой

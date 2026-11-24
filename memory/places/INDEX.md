@@ -116,6 +116,7 @@
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
+- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 2 ход(ов), s12–s12
 - Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 2 ход(ов), s12–s12
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
@@ -237,7 +238,6 @@
 - Сунагакуре, граница торгового и административного кварталов · `places/sunagakure-granitsa-torgovogo-i-administrativnogo-kvartalov` · 1 ход(ов), s12–s12
 - Сунагакуре, мост через канал · `places/sunagakure-most-cherez-kanal` · 1 ход(ов), s12–s12
 - Сунагакуре, развилка перед административным кварталом · `places/sunagakure-razvilka-pered-administrativnym-kvartalom` · 1 ход(ов), s12–s12
-- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 1 ход(ов), s12–s12
 - Сунагакуре, старые водяные сады · `places/sunagakure-starye-vodyanye-sady` · 1 ход(ов), s12–s12
 - Сунагакуре, старый торговый квартал · `places/sunagakure-staryy-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11
