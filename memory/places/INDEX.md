@@ -257,6 +257,7 @@
 - Внутреннее пространство Наруто, перед запертой решёткой · `places/vnutrennee-prostranstvo-naruto-pered-zapertoy-reshetkoy` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто, снаружи мост Тэнти · `places/vnutrennee-prostranstvo-naruto-snaruzhi-most-tenti` · 1 ход(ов), s12–s12
 - Внутреннее пространство Наруто у ворот Девятихвостого · `places/vnutrennee-prostranstvo-naruto-u-vorot-devyatikhvostogo` · 1 ход(ов), s12–s12
+- Внутреннее пространство печати Наруто, у ворот Девятихвостого · `places/vnutrennee-prostranstvo-pechati-naruto-u-vorot-devyatikhvost` · 1 ход(ов), s12–s12
 - Внутреннее пространство печати Наруто, внешнее время неподвижно · `places/vnutrennee-prostranstvo-pechati-naruto-vneshnee-vremya-nepod` · 1 ход(ов), s12–s12
 - Восточная седловина у речных ущелий, северо-восточный тракт Страны Ветра · `places/vostochnaya-sedlovina-u-rechnykh-ushcheliy-severo-vostochnyy` · 1 ход(ов), s11–s11
 - Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
