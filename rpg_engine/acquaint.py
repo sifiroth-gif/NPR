@@ -165,12 +165,49 @@ def describe(met, key, session):
     return f"до s{session:02d} с Шики не встречались — общего прошлого нет"
 
 
-def review(hot, turn, met, names, always=()):
-    """Замечания kind=acquaint: NPC вспоминает прошлое с Шики, которого не было."""
+SURPRISE = re.compile(r"(?<![а-яё])(?:немыслим\w*|не может быть|невозможн\w*|впервые|растерян\w*|ошеломл\w*|"
+                      r"потрясен\w*|потрясён\w*|изумл\w*|не верил\w*|остолбен\w*|оцепене\w*|у него тоже|"
+                      r"что это (?:за|было))", re.I)
+AGAIN_SCENE = 12     # виденное в нынешней сцене — та же встреча, не «раньше»
+
+
+def again(hot, turn, names, entries, always=()):
+    """NPC поражён тем, что уже видел в прошлой сцене (s12.text.043: «Шаринган…» Наруто после s11.text.046)."""
+    from . import aging
+    text = str(turn.get("gm") or "")
+    visible = [e for e in entries or [] if lore.is_trait(e) and shown(e, text)]
+    if not visible:
+        return []
+    now = aging._ordinal(turn.get("id")) or 0
+    seen_book = hot.get("lore") or {}
+    notes, done = [], set()
+    blocks = re.split(r"\n\s*\n", text)
+    for i, block in enumerate(blocks):
+        if not SURPRISE.search(block):
+            continue
+        near = "\n".join(blocks[max(0, i - 1):i + 1])
+        keys = {presence.resolve(label, names) for label, _ in lines(near)}
+        keys |= {k for k in (hot.get("scene") or {}).get("present") or []
+                 if (((hot.get("cast") or {}).get(k) or {}).get("name") or "§")[:5] in near}
+        for key in keys - {None, lore.SHIKI} - set(always) - done:
+            for entry in visible:
+                turn_seen = (seen_book.get(entry["id"]) or {}).get(key)
+                ordinal = aging._ordinal(turn_seen)
+                if turn_seen and ordinal is not None and now - ordinal >= AGAIN_SCENE:
+                    done.add(key)
+                    notes.append({"turn": turn["id"], "kind": "acquaint", "text":
+                                  f"Виденное не удивляет заново: {lore._name(hot, key)} уже видел «{entry.get('title')}» "
+                                  f"({turn_seen}). Реакция — от этой памяти: узнал, сравнил, насторожился, — не открытие."})
+                    break
+    return notes
+
+
+def review(hot, turn, met, names, always=(), entries=None):
+    """Замечания kind=acquaint: NPC вспоминает прошлое с Шики, которого не было, — или поражён виденным."""
     if turn.get("kind") in ("ooc", "technical", "void"):
         return []
     session = _session(turn.get("id"))
-    notes, done = [], set()
+    notes, done = again(hot, turn, names, entries, always), set()
     for label, text in lines(turn.get("gm")):
         if "шики" in label.casefold():
             continue
@@ -276,8 +313,40 @@ def _together(met, key, session, limit=4):
     return out[-limit:] if len(out) <= limit else [out[0], "…"] + out[-(limit - 1):]
 
 
+TRAIT_BACKFILL = 2   # 24.11.2026: черту видел тот, кто был в сцене (говорил или в составе), а не назван в тексте
+
+
+UNSEEN = re.compile(r"(?<![а-яё])(?:не\s+(?:узнал\w*|видел\w*|заметил\w*|знал\w*|увидел\w*)|ни\s+\w+,\s+ни\s)", re.I)
+
+
+def shown(entry, text):
+    """Черта показана в тексте, а не названа в отрицании («ни Кабуто, ни Орочимару не узнали о Шарингане», s09.text.034)."""
+    norm = lore._norm(text)
+    for match in lore._pattern(entry).finditer(norm):
+        start = max(norm.rfind(c, 0, match.start()) for c in ".!?\n") + 1
+        ends = [i for i in (norm.find(c, match.end()) for c in ".!?\n") if i >= 0]
+        if not UNSEEN.search(norm[start:min(ends) if ends else len(norm)]):
+            return True
+    return False
+
+
+def _rebackfill_traits(hot, entries):
+    """Прежний разбор считал свидетелем любого названного (s09.text.024: «Орочимару захочет…» — и Орочимару
+    «видел» Шаринган Шики, хотя s09.text.034: «ни Кабуто, ни Орочимару не узнали»). Пересчёт один раз."""
+    fold = hot.setdefault("fold", {})
+    if fold.get("trait_backfill") == TRAIT_BACKFILL:
+        return
+    traits = {e["id"] for e in entries if lore.is_trait(e) and not e.get("_visual_witness")}
+    for trait in traits:
+        (hot.get("lore") or {}).pop(trait, None)
+    fold["lore_backfill"] = [x for x in fold.get("lore_backfill") or [] if x not in traits]
+    fold["trait_backfill"] = TRAIT_BACKFILL
+
+
 def backfill(state_dir, hot, entries, names, rows=None):
-    """Разово для новых сведений lore.json: кто из говоривших рядом слышал их в прошлых ходах."""
+    """Разово для новых сведений lore.json: кто из говоривших рядом слышал их в прошлых ходах;
+    черту Шики видел тот, кто был в сцене — говорил или стоял в её составе (d.scene.present)."""
+    _rebackfill_traits(hot, entries)
     done = set(hot.setdefault("fold", {}).get("lore_backfill") or [])
     fresh = [e for e in entries if lore.is_fact(e) and e["id"] not in done]
     if not fresh:
@@ -285,11 +354,18 @@ def backfill(state_dir, hot, entries, names, rows=None):
     rows = rows if rows is not None else turns(state_dir)
     added = {}
     cache = {}
-    stems = _stems(names)
+    scene, session = set(), None
     for row in rows:
+        # Состав сцены по записям хода: держится, пока ход его не сменил; новая сессия — с нуля.
+        here = _session(row.get("id"))
+        if here != session:
+            scene, session = set(), here
+        listed = (((row.get("d") or {}).get("scene") or {}).get("present"))
+        if isinstance(listed, list):
+            scene = {str(k) for k in listed if k not in ("shiki", "player")}
         text = lore.heard_text(row, names)
         full = f"{row.get('player') or ''}\n{row.get('gm') or ''}"
-        hits = [e for e in fresh if lore.mentions(e, full if lore.is_trait(e) else text)]
+        hits = [e for e in fresh if (shown(e, full) if lore.is_trait(e) else lore.mentions(e, text))]
         if not hits:
             continue
         people = set()
@@ -300,17 +376,15 @@ def backfill(state_dir, hot, entries, names, rows=None):
                 cache[label] = presence.resolve(label, names)
             if cache[label]:
                 people.add(cache[label])
-        if any(lore.is_trait(e) for e in hits):   # видел тот, кто в сцене: говорил или назван
-            gm = str(row.get("gm") or "").casefold()
-            for word in set(re.findall(r"[а-яёa-z]{4,}", gm)):
-                for stem, key in stems.get(word[:4], ()):
-                    if word.startswith(stem):
-                        people.add(key)
         for entry in hits:
+            if lore.is_trait(entry):     # видел тот, кто был в сцене: говорил или в её составе
+                witnesses = people | scene
+            else:
+                witnesses = people
             wield = set(entry.get("wield") or [])
             known = lore.heard(hot, entry)
             book = hot.setdefault("lore", {}).setdefault(entry["id"], {})
-            candidates = people
+            candidates = witnesses
             if entry.get("_visual_witness"):
                 # Historical high-impact feats must be independently audited.
                 # A named NPC in a transcript can be miles from the technique.

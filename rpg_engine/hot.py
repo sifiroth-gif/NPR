@@ -442,7 +442,7 @@ def apply_turn(hot, turn):
                        "awaiting": turn.get("awaiting", "player")})
         cursor.update(heading(turn["at"], year_offset=hot.get("calendar", {}).get("year_offset", 1277)))
         hot["last"] = _last_entry(turn)
-        report = _lint(turn["gm"])
+        report = _lint(turn["gm"], _npc_names(hot))
         lint = hot.setdefault("lint", {})
         recent = [r for r in lint.get("recent", []) if r["id"] != turn["id"]]
         recent.append({"id": turn["id"], "score": report["score"], "verdict": report["verdict"],
@@ -698,8 +698,11 @@ def _archive_canon(state_dir, hot):
 KEEPER_FILL = "memory/_curated/state_fill.json"
 
 
-def _lint(text):
-    """Линтер прозы и вёрстка реплик кампании: реплика без подписи сразу делает вердикт «переписать»."""
+def _lint(text, names=()):
+    """Линтер прозы и вёрстка реплик кампании: реплика без подписи сразу делает вердикт «переписать».
+
+    Мысли и память NPC в повествовании (``interior``) — замечание к следующему ходу, не переписывание:
+    переписанный трижды ход — тоже жалоба игрока (s11)."""
     report = prose_lint.lint(text)
     for hit in (prose_lint.speakers(text), prose_lint.mechanics(text)):
         if hit:   # реплика без подписи, числа механики в прозе — сразу «переписать»
@@ -707,7 +710,20 @@ def _lint(text):
             report["by_rule"][hit["rule"]] = report["by_rule"].get(hit["rule"], 0) + 1
             report["advice"][hit["rule"]] = prose_lint.ADVICE[hit["rule"]]
             report["verdict"] = "переписать"
+    hit = prose_lint.interior(text, names) if names else None
+    if hit:
+        report["hits"].insert(0, hit)
+        report["by_rule"]["interior"] = report["by_rule"].get("interior", 0) + 1
+        report["advice"]["interior"] = prose_lint.ADVICE["interior"]
+        if report.get("verdict") == "чисто":
+            report["verdict"] = "шум"
     return report
+
+
+def _npc_names(hot):
+    """Имена карточек для сторожа перспективы: все, кроме Шики и Немеры."""
+    return [str(c.get("name")) for k, c in (hot.get("cast") or {}).items()
+            if isinstance(c, dict) and c.get("name") and k not in ("shiki", "nemera")]
 
 
 def _apply_fix(hot, fix):
@@ -1253,7 +1269,7 @@ def fold(state_dir):
                 present_after = list((hot.get("scene") or {}).get("present") or [])
                 checks.extend(lore.review(hot, turn, lore_entries, present_before, present_after))
                 # Кто откуда знает Шики, речь не по уровню, мир не подыгрывает.
-                checks.extend(acquaint.review(hot, turn, met, names, always))
+                checks.extend(acquaint.review(hot, turn, met, names, always, lore_entries))
                 checks.extend(expertise.review(hot, turn, names, skill_seed, always))
                 checks.extend(favor.track(hot, turn, names, always))
                 checks.extend(arcs.track(hot, turn, canon_arcs))   # канон арки: сыграно, пропущено
@@ -1412,6 +1428,11 @@ def fold(state_dir):
     if favor_item:
         extra["favor"] = favor_item
     extra["resync"] = resync_item(hot)
+    try:   # историческая память присутствующих по теме сцены (слова + смысл): NEXT.present.<id>.past
+        extra["past"] = echo.present_past(state_dir, hot, skip=set(_always_present(state_dir)))
+    except Exception as exc:   # производное: сбой не останавливает свёртку
+        hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
+                                              "text": f"past: {type(exc).__name__}: {exc}"})
     extra["arc"] = arcs.view(hot, canon_arcs)
     extra["arc_must"] = arcs.must(hot, canon_arcs)
     near = limits.check(state_dir, hot, hot_bytes=len(texts[0].encode("utf-8")),
