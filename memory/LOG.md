@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.025: Портовый чиновник (`npc/fire_port_official`)
+- s14.text.024: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.023: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_medical_kit`, поправки игрока: 1
 - s14.text.022: Портовый чиновник (`npc/fire_port_official`), Сэйдзи Минасэ (`npc/quay_masked_hunter`)
 - s14.text.021: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Портовый чиновник (`npc/fire_port_official`), Немера (Невыписанная) (`npc/nemera`)
@@ -56,5 +58,3 @@
 - s13.text.068: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), вещь `root_seal_needle`, вещь `shiki_upper_clothing`, план сюжета, бой
 - s13.text.067: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.066: поправки игрока: 1
-- s13.text.065: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), western_nest_young_courier (`npc/western_nest_young_courier`), поправки игрока: 1
-- s13.text.064: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Немера (Невыписанная) (`npc/nemera`), план сюжета

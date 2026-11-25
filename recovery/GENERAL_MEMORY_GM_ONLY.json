@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.023",
+  "cursor": "s14.text.025",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,22 +406,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s14.text.023:0": {
-      "aliases": [
-        "canon:s14.text.023:0",
-        "Восстановлен ранее сыгранный канон (s03.text.009, s03.text.018, s10.text.018): Шики умеет стерилизовать очищенный многоразовый инструментарий медицинской чакрой без отдельного обор"
-      ],
-      "facts": [],
-      "id": "canon:s14.text.023:0",
-      "kind": "canon",
-      "label": "Восстановлен ранее сыгранный канон (s03.text.009, s03.text.018, s10.text.018): Шики умеет стерилизовать очищенный многоразовый инструментарий медицинской чакрой без отдельного обор",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s14.text.023"
       ]
     },
     "captive_guard": {
@@ -845,7 +829,7 @@
       "id": "fire_port_official",
       "kind": "npc",
       "label": "Портовый чиновник",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-11T16:20:00",
@@ -853,13 +837,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.080"
-        },
-        {
-          "at": "0010-04-11T17:24:00",
-          "excerpt": "xt color=\"secondary\" size=\"xs\">11 апреля 1287 года · 17:24</text> ### Страна Огня. Восточная гавань Портовый чиновник успел приоткрыть дверь, когда Шики вернулся за оставленной распиской. Он молча передал бумагу и поспешил убрать руку. Шики сложил лист по сгиб",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.099"
         },
         {
           "at": "0010-04-11T21:15:00",
@@ -874,30 +851,36 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.022"
+        },
+        {
+          "at": "0010-04-11T21:32:00",
+          "excerpt": "та:** — До полудня? Значит, ещё до переговоров с корабельным командованием. Он повернулся к чиновнику. **Портовый чиновник:** — Да, заявление было подписано в семнадцать шестнадцать. Я могу это подтвердить. Сотрудник провёл горизонтальную черту под записью. **",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.025"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.023"
+          "seen": "s14.text.025"
         }
       ],
       "sources": [
         "recovery/cast/fire_port_official.json",
         "recovery/HOT.json",
-        "s14.text.023"
+        "s14.text.025"
       ]
     },
     "fire_port_security_staff": {
       "aliases": [
         "fire port security staff",
-        "Сотрудник безопасности порта",
-        "fire_port_security_staff"
+        "Сотрудник безопасности порта"
       ],
       "facts": [],
       "id": "fire_port_security_staff",
       "kind": "npc",
       "label": "Сотрудник безопасности порта",
-      "mention_count": 11,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0010-04-11T17:16:00",
@@ -907,30 +890,30 @@
           "turn": "s13.text.088"
         },
         {
-          "at": "0010-04-11T20:50:00",
-          "excerpt": "ую кисть. **Сэйдзи Минасэ:** — Я уже забыл, как это ощущается. За дверью стоял поздний вечер. С моря доносились удары волн о сваи. *** Сотрудник безопасности появился на пороге. **Сотрудник безопасности порта:** — Рапорт в провинциальное управление отправлен. ",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.020"
-        },
-        {
-          "at": "0010-04-11T21:15:00",
-          "excerpt": "кончил. Сотрудник безопасности посмотрел на часы. Потом на Минасэ, уже способного шевелить пальцами. **Сотрудник безопасности порта:** — Но врач сказал, что операция закончена. Портовый врач ничего не возразил. Он отодвинул свои инструменты, освободив место дл",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.021"
-        },
-        {
           "at": "0010-04-11T21:30:00",
           "excerpt": "асходники отделил. Минасэ унесли на носилках. У двери он самостоятельно придержал сползавшее одеяло. **Сотрудник безопасности порта:** — Это тот, которого принесли парализованным? **Портовый врач:** — Да. Чиновник, наблюдавший за руками Шики, попросил сотрудни",
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.023"
+        },
+        {
+          "at": "0010-04-11T21:31:00",
+          "excerpt": "и раскрыл журнал. Между страницами лежала промокательная бумага с расплывшимися чернильными пятнами. **Сотрудник безопасности порта:** — Да. Рапорт уже передан дежурному провинциального управления. Ваше предупреждение и предложение о встрече двадцать восьмого ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.024"
+        },
+        {
+          "at": "0010-04-11T21:32:00",
+          "excerpt": "ги Бинго. Они сказали, что получили его до двенадцати часов. Сотрудник безопасности перестал писать. **Сотрудник безопасности порта:** — До полудня? Значит, ещё до переговоров с корабельным командованием. Он повернулся к чиновнику. **Портовый чиновник:** — Да,",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.025"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.023",
+          "seen": "s14.text.025",
           "state": "Сообщил, что рапорт отправлен в провинцию; пришёл за показаниями."
         },
         {
@@ -939,8 +922,7 @@
       ],
       "sources": [
         "recovery/cast/fire_port_security_staff.json",
-        "recovery/HOT.json",
-        "s14.text.023"
+        "recovery/HOT.json"
       ]
     },
     "fire_port_statement_receipt": {
@@ -2420,7 +2402,7 @@
       "id": "kiri_port_guard_senior",
       "kind": "npc",
       "label": "Шиноби Тумана",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0006-09-19T11:09:00",
@@ -2428,13 +2410,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.076"
-        },
-        {
-          "at": "0010-04-11T17:12:00",
-          "excerpt": "кисти, затем перевёл взгляд на младшего проверяющего. **Шиноби корабельной охраны:** — Опускай. **Второй шиноби Тумана:** — Командир, оружие при нём. **Шиноби корабельной охраны:** — Оружие было при нём и тогда, когда он держал руки поднятыми. Это не помешало ",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.085"
         },
         {
           "at": "0010-04-11T17:13:00",
@@ -2449,6 +2424,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.087"
+        },
+        {
+          "at": "0010-04-11T21:32:00",
+          "excerpt": "чиновником мы закончили заявление. Я задержался разговаривая со змеёй, на выходе на меня напали три шиноби тумана по приказу из книги бинго, они сказали что получили его до 12:00 <text color=\"secondary\" size=\"xs\">Воскресенье, 11 апреля 1287 года · 21:32</text>",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.025"
         }
       ],
       "projections": [
@@ -4085,7 +4067,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.023",
+          "seen": "s14.text.025",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -12158,14 +12140,16 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.023",
+        "s14.text.025",
         "s14.text.012",
         "s14.text.015",
         "s14.text.016",
         "s14.text.018",
         "s14.text.020",
         "s14.text.021",
-        "s14.text.022"
+        "s14.text.022",
+        "s14.text.023",
+        "s14.text.024"
       ]
     },
     "place:b5569561296c9e28": {
@@ -15315,8 +15299,7 @@
     "quay_masked_hunter": {
       "aliases": [
         "quay masked hunter",
-        "Сэйдзи Минасэ",
-        "quay_masked_hunter"
+        "Сэйдзи Минасэ"
       ],
       "facts": [],
       "id": "quay_masked_hunter",
@@ -15361,8 +15344,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/quay_masked_hunter.json",
-        "s14.text.023"
+        "recovery/cast/quay_masked_hunter.json"
       ]
     },
     "quay_wire_operator": {
@@ -18339,5 +18321,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1133
+  "source_turns_indexed": 1135
 }
