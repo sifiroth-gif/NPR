@@ -23,7 +23,7 @@ class CorpusRegressionTest(unittest.TestCase):
         self.write("archive/session-004-turns.jsonl", [first, second])
         self.write("archive/deltas/session-004.jsonl", [{"id": first["id"], "at": first["at"], "d": {}}])
         report = h.scan(self.root)
-        self.assertEqual(report, {"prose": 2, "deltas": 1, "validated": 1, "prose_only": 1, "delta_only": 0, "errors": []})
+        self.assertEqual(report, {"prose": 2, "deltas": 1, "validated": 1, "prose_only": 1, "delta_only": 0, "absent_delta": 0, "errors": []})
 
     def test_invalid_delta_and_timestamp_are_reported(self):
         row = {"id": "s04.text.001", "at": "0006-10-01T07:10:00",
@@ -41,3 +41,14 @@ class CorpusRegressionTest(unittest.TestCase):
         self.write(path, [row])
         with self.assertRaises(AssertionError):
             h.check_hashes(self.root, before)
+
+    def test_legacy_absent_delta_is_not_invented_or_rejected(self):
+        row = {"id": "s04.text.044", "at": "0006-10-01T07:10:00",
+               "place": "place", "player": "x", "gm": "y"}
+        self.write("archive/session-004-turns.jsonl", [row])
+        self.write("archive/deltas/session-004.jsonl", [{"id": row["id"], "at": row["at"]}])
+        report = h.scan(self.root)
+        self.assertEqual((report["validated"], report["absent_delta"], report["errors"]), (1, 1, []))
+        self.assertNotIn("d", h.corpus(self.root)[1][row["id"]])
+        self.write("archive/deltas/session-004.jsonl", [{"id": row["id"], "at": row["at"], "d": None}])
+        self.assertTrue(h.scan(self.root)["errors"])

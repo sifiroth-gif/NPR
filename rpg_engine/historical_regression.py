@@ -38,9 +38,11 @@ def corpus(root):
 
 def scan(root):
     prose, delta, errors = corpus(root)
-    joined = 0
+    joined, absent_delta = 0, 0
     for ident, row in delta.items():
-        if not isinstance(row.get("d"), dict):
+        if "d" not in row:
+            absent_delta += 1
+        elif not isinstance(row["d"], dict):
             errors.append(f"{ident}: delta is not object")
             continue
         if ident not in prose:
@@ -49,7 +51,11 @@ def scan(root):
         # These are projections of the same turn. Preserve both raw records.
         if row.get("at") != primary.get("at"):
             errors.append(f"{ident}: timestamp mismatch")
-        turn = dict(primary, schema=hot.TURN_SCHEMA, d=row["d"])
+        turn = dict(primary, schema=hot.TURN_SCHEMA)
+        if "d" in row:
+            turn["d"] = row["d"]
+        else:
+            turn.pop("d", None)
         if row.get("kind"):
             turn["kind"] = row["kind"]
         try:
@@ -59,7 +65,7 @@ def scan(root):
             errors.append(f"{ident}: {exc}")
     return {"prose": len(prose), "deltas": len(delta), "validated": joined,
             "prose_only": len(prose.keys() - delta.keys()),
-            "delta_only": len(delta.keys() - prose.keys()), "errors": errors}
+            "delta_only": len(delta.keys() - prose.keys()), "absent_delta": absent_delta, "errors": errors}
 
 
 def hashes(root):
@@ -143,7 +149,7 @@ def verify(root, state, packet, registry):
     out["partial_heal"] = True
 
     # 5. Actual departure: patient remains clinically relevant, not present.
-    scopes = history_access.scopes(list(primary.values()), {k:v["d"] for k,v in patches.items()})
+    scopes = history_access.scopes(list(primary.values()), {k:v["d"] for k,v in patches.items() if "d" in v})
     assert ident in scopes["s14.text.012"] and ident not in scopes["s14.text.023"]
     assert ident not in state["scene"]["present"] and ident not in packet.get("present", {})
     assert ident in packet["medical"]["patients"]
