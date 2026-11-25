@@ -20,6 +20,8 @@
 from __future__ import annotations
 
 import base64
+import copy
+import math
 import datetime as _dt
 import hashlib
 import json
@@ -159,7 +161,8 @@ def pact_state(pact, at):
 def _pact_event(pact, event, at):
     event_id = event.get("id")
     kind, school = event.get("type"), event.get("school")
-    if not event_id or kind not in PACT_EVENT_POINTS or school not in PACT_EVENT_POINTS[kind]:
+    if (not all(isinstance(v, str) and v for v in (event_id, kind, school))
+            or kind not in PACT_EVENT_POINTS or school not in PACT_EVENT_POINTS[kind]):
         raise TurnError(f"некорректное событие договора: {event!r}")
     events = pact.setdefault("events", [])
     if any(e.get("id") == event_id for e in events):
@@ -221,6 +224,86 @@ def validate_turn(turn):
         if value is not None and (not isinstance(value, dict) or
                                   any(not isinstance(item, dict) for item in value.values())):
             raise TurnError(f"d.fight.{field}: ожидается объект карточек")
+    # The historic direct resource patch remains readable before the combat
+    # cutover. Current writers must use the resource ledger (d.chakra).
+    shiki = delta.get("shiki") or {}
+    if "chakra" in shiki:
+        chakra = shiki["chakra"]
+        if turn_number(turn["id"]) >= turn_number(fight.CUTOVER):
+            raise TurnError("d.shiki.chakra: используй d.chakra.set/spend")
+        if not isinstance(chakra, dict):
+            raise TurnError("d.shiki.chakra: ожидается объект")
+        if "value" in chakra:
+            value = chakra["value"]
+            if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= fight.MAX_CHAKRA:
+                raise TurnError("d.shiki.chakra.value: некорректный запас")
+        for field in ("at", "locked_until"):
+            if field in chakra and chakra[field] is not None:
+                parse_at(chakra[field])
+        if "max" in chakra and chakra["max"] != fight.MAX_CHAKRA:
+            raise TurnError("d.shiki.chakra.max: неверный максимум")
+    for actor, patch in (delta.get("cast") or {}).items():
+        if patch is None:
+            continue
+        if "name" in patch and patch["name"] is not None and not isinstance(patch["name"], str):
+            raise TurnError(f"d.cast.{actor}.name: ожидается строка")
+        if "aliases" in patch and patch["aliases"] is not None and (
+                not isinstance(patch["aliases"], list) or
+                any(not isinstance(x, str) for x in patch["aliases"])):
+            raise TurnError(f"d.cast.{actor}.aliases: ожидается список строк")
+    for key, patch in (delta.get("clocks") or {}).items():
+        if isinstance(patch, dict) and "due" in patch and not ("done" in patch or patch.get("closed")):
+            parse_at(patch["due"])
+    for path, parent in (("d.rolls", delta), ("d.fight.rolls", delta.get("fight") or {})):
+        rolls = parent.get("rolls")
+        if rolls is None:
+            continue
+        if not isinstance(rolls, list) or any(not isinstance(x, dict) for x in rolls):
+            raise TurnError(f"{path}: ожидается список объектов")
+        for roll in rolls:
+            for field in ("by", "skill", "vs_skill"):
+                if roll.get(field) is not None and not isinstance(roll[field], str):
+                    raise TurnError(f"{path}.{field}: ожидается строка")
+            target = roll.get("vs")
+            if target is not None and not (isinstance(target, str) or
+                    type(target) in (int, float) and math.isfinite(target)):
+                raise TurnError(f"{path}.vs: ожидается ID или числовой уровень")
+            for field in ("level", "vs_level", "p"):
+                if roll.get(field) is not None and (type(roll[field]) not in (int, float)
+                        or not math.isfinite(roll[field])):
+                    raise TurnError(f"{path}.{field}: ожидается конечное число")
+            mods = roll.get("mods")
+            if mods is not None:
+                try:
+                    valid = isinstance(mods, dict) and all(
+                        type(v) is not bool and math.isfinite(float(v)) for v in mods.values())
+                except (TypeError, ValueError, OverflowError):
+                    valid = False
+                if not valid:
+                    raise TurnError(f"{path}.mods: ожидаются конечные числовые поправки")
+            if roll.get("axes") is not None and not isinstance(roll["axes"], dict):
+                raise TurnError(f"{path}.axes: ожидается объект")
+            if roll.get("result") is not None and not isinstance(roll["result"], str):
+                raise TurnError(f"{path}.result: ожидается строка")
+    for path, rows in (("d.heal", delta.get("heal") or []),
+                       ("d.fight.heal", (delta.get("fight") or {}).get("heal") or []),
+                       ("d.fight.wounds", (delta.get("fight") or {}).get("wounds") or [])):
+        for row in rows:
+            if not isinstance(row.get("who"), str) or not row["who"].strip():
+                raise TurnError(f"{path}.who: требуется ID персонажа")
+            for field in ("where", "what", "severity", "lost"):
+                if row.get(field) is not None and not isinstance(row[field], str):
+                    raise TurnError(f"{path}.{field}: ожидается строка")
+    for event in delta.get("knowledge_events") or []:
+        if not all(isinstance(event.get(k), str) and event[k].strip()
+                   for k in ("actor", "claim", "source", "channel")):
+            raise TurnError("d.knowledge_events: actor, claim, source, channel обязательны")
+        if event["channel"] not in ("message", "witness", "document", "inference", "told_in_scene"):
+            raise TurnError("d.knowledge_events: неизвестный канал")
+        if event.get("visibility", "player_known") not in ("player_known", "gm_only"):
+            raise TurnError("d.knowledge_events: неизвестная видимость")
+    for event in delta.get("pact_events") or []:
+        _pact_event({}, event, turn["at"])
     return turn
 
 
@@ -398,8 +481,18 @@ def _apply_delta(hot, delta, turn):
 
 
 def apply_turn(hot, turn):
-    """Применяет один ход. Возвращает ``True``, если состояние изменилось."""
+    """Apply a turn atomically; a failed validation cannot advance the cursor."""
     validate_turn(turn)
+    before = copy.deepcopy(hot)
+    try:
+        return _apply_turn_inplace(hot, turn)
+    except Exception:
+        hot.clear()
+        hot.update(before)
+        raise
+
+
+def _apply_turn_inplace(hot, turn):
     session, number = turn_number(turn["id"])
     cursor = hot.setdefault("cursor", {})
     current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))

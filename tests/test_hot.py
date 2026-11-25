@@ -39,6 +39,63 @@ def turn(number, at, **extra):
     return data
 
 
+class DeltaAdmissionRegressionTest(unittest.TestCase):
+    def test_new_direct_chakra_patch_cannot_bypass_ledger(self):
+        for patch in (None, {"value": -1}, {"value": 100}, {"at": "bad"}):
+            state = base()
+            state["shiki"] = {"chakra": {"value": 40}}
+            state["session"] = 14
+            state["cursor"].update({"id": "s14.text.023", "seq": 23})
+            original = json.dumps(state, sort_keys=True)
+            incoming = turn(24, "0006-10-01T07:14:00",
+                            id="s14.text.024", d={"shiki": {"chakra": patch}})
+            with self.assertRaisesRegex(hot.TurnError, "d.shiki.chakra"):
+                hot.apply_turn(state, incoming)
+            self.assertEqual(json.dumps(state, sort_keys=True), original)
+
+    def test_legacy_direct_chakra_and_d100_shape_still_valid(self):
+        incoming = turn(45, "0006-10-01T07:14:00", d={
+            "shiki": {"chakra": {"value": 40, "at": "0006-10-01T07:14:00"}},
+            "rolls": [{"skill": "taijutsu", "vs": 2, "p": 65,
+                       "value": 44, "result": "clean", "mods": {"x": "1"}}]})
+        self.assertIs(hot.validate_turn(incoming), incoming)
+
+    def test_structural_errors_before_fold(self):
+        invalid = [
+            {"rolls": {}}, {"rolls": [{"vs": []}]},
+            {"fight": {"rolls": [{"mods": {"x": "nan"}}]}},
+            {"fight": {"wounds": [{"who": []}]}},
+            {"heal": [{"who": "nori", "where": []}]},
+            {"cast": {"nori": {"name": []}}},
+            {"clocks": {"cleaner": {"due": "bad"}}},
+            {"pact_events": [{"id": "bad", "type": [], "school": "byoton"}]},
+            {"knowledge_events": [{"actor": "nori", "claim": "x", "source": "t", "channel": "magic"}]},
+        ]
+        for delta in invalid:
+            with self.subTest(delta=delta):
+                state = base()
+                original = json.dumps(state, sort_keys=True)
+                with self.assertRaises(hot.TurnError):
+                    hot.apply_turn(state, turn(45, "0006-10-01T07:14:00", d=delta))
+                self.assertEqual(json.dumps(state, sort_keys=True), original)
+
+    def test_semantic_error_rolls_back_entire_turn_and_amend(self):
+        state = base()
+        good = turn(45, "0006-10-01T07:14:00", d={"scene": {}, "cast": {"nori": {"state": "okay"}}})
+        bad_delta = {"scene": {}, "cast": {"nori": {"state": "wrong"}},
+                     "knowledge_events": [{"actor": "absent", "claim": "x",
+                                           "source": "s04.text.044", "channel": "witness"}]}
+        original = json.dumps(state, sort_keys=True)
+        with self.assertRaises(hot.TurnError):
+            hot.apply_turn(state, turn(45, "0006-10-01T07:14:00", d=bad_delta))
+        self.assertEqual(json.dumps(state, sort_keys=True), original)
+        hot.apply_turn(state, good)
+        accepted = json.dumps(state, sort_keys=True)
+        with self.assertRaises(hot.TurnError):
+            hot.apply_turn(state, turn(45, "0006-10-01T07:14:00", d=bad_delta, amend=True))
+        self.assertEqual(json.dumps(state, sort_keys=True), accepted)
+
+
 class HotFoldTest(unittest.TestCase):
     def test_heading_matches_campaign_calendar(self):
         self.assertEqual(hot.heading("0006-10-01T07:10:00"),

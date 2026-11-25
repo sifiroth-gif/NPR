@@ -76,7 +76,7 @@ def parse(value):
         low = high = value
     try:
         low, high = int(float(low)), int(float(high))
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, OverflowError):
         return None
     low, high = max(-2, min(2, low)), max(-2, min(2, high))
     if high < low:
