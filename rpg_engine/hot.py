@@ -187,6 +187,40 @@ def validate_turn(turn):
     if isinstance(turn.get("d"), dict) and "scene" in turn["d"] and not isinstance(
             turn["d"]["scene"], dict):
         raise TurnError("дельта 'd.scene' должна быть объектом")
+    delta = turn.get("d") or {}
+    # Structural failures must be caught before fold mutates the cursor or
+    # rehydrates actors. Preserve established shorthand (threads, canon+).
+    for field in ("cast", "threads", "clocks", "fight", "chakra"):
+        if delta.get(field) is not None and not isinstance(delta[field], dict):
+            raise TurnError(f"d.{field}: ожидается объект")
+    for field in ("shiki", "truth"):
+        if field in delta and not isinstance(delta[field], dict):
+            raise TurnError(f"d.{field}: ожидается объект")
+    for field in ("cast", "clocks"):
+        for key, value in (delta.get(field) or {}).items():
+            if value is not None and not isinstance(value, dict):
+                raise TurnError(f"d.{field}.{key}: ожидается объект или null")
+    scene = delta.get("scene") or {}
+    if scene.get("present") is not None and (
+            not isinstance(scene["present"], list) or
+            any(not isinstance(actor, str) or not actor for actor in scene["present"])):
+        raise TurnError("d.scene.present: ожидается список ID персонажей")
+    for path, parent, field in (
+            ("d.heal", delta, "heal"),
+            ("d.knowledge_events", delta, "knowledge_events"),
+            ("d.pact_events", delta, "pact_events"),
+            ("d.fight.wounds", delta.get("fight") or {}, "wounds"),
+            ("d.fight.heal", delta.get("fight") or {}, "heal"),
+            ("d.chakra.spend", delta.get("chakra") or {}, "spend")):
+        value = parent.get(field)
+        if value is not None and (not isinstance(value, list) or
+                                  any(not isinstance(item, dict) for item in value)):
+            raise TurnError(f"{path}: ожидается список объектов")
+    for field in ("foes", "foe_state"):
+        value = (delta.get("fight") or {}).get(field)
+        if value is not None and (not isinstance(value, dict) or
+                                  any(not isinstance(item, dict) for item in value.values())):
+            raise TurnError(f"d.fight.{field}: ожидается объект карточек")
     return turn
 
 
