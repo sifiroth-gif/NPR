@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.022",
+  "cursor": "s15.text.023",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1700,14 +1700,10 @@
         {
           "seen": "s15.text.022",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
-        },
-        {
-          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "recovery/HOT.json"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -4236,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 138,
+      "mention_count": 139,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4244,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:24:00",
-          "excerpt": "# <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:24</text> ### Подземное убежище Орочимару **Мугами Шики:** — Не на то вы обратили внимание. Вспомните самое начало моей фразы. Видимо вы и правда отчаялись. Шики отделил собственный ноготь вме",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.020"
         },
         {
           "at": "0010-04-21T13:25:00",
@@ -4265,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.022"
+        },
+        {
+          "at": "0010-04-21T13:27:00",
+          "excerpt": "л <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:27</text> ### Подземное убежище Орочимару **Мугами Шики:** — Уважайте змей и их выбор. А ещё мне не нужны образцы, все что нужно я уже взял. Орочимару машинально коснулся волос. **Орочимару:**",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.022",
+          "seen": "s15.text.023",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4279,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.022"
+        "s15.text.023"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13933,7 +13929,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.022",
+        "s15.text.023",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13945,7 +13941,8 @@
         "s15.text.018",
         "s15.text.019",
         "s15.text.020",
-        "s15.text.021"
+        "s15.text.021",
+        "s15.text.022"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17046,7 +17043,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 69,
+      "mention_count": 70,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17054,13 +17051,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:21:00",
-          "excerpt": "**Орочимару:** — Пожалуй, это самое расточительное применение бессмертия, о котором мне приходилось слышать. Сирамэ расправила кольца своего тела. **Сирамэ:** — Почему? Горы были здесь задолго до тебя. И останутся, когда тебя не будет. Мне тоже нравится на них",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.018"
         },
         {
           "at": "0010-04-21T13:23:00",
@@ -17075,25 +17065,27 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.021"
+        },
+        {
+          "at": "0010-04-21T13:27:00",
+          "excerpt": "оначальную наследственность из тканей чужого тела? Саннин некоторое время молчал. Затем перевёл взгляд на Сирамэ. **Орочимару:** — Что касается твоей цены… Хорошо. Я отдам соответствующее распоряжение Кабуто. Ни одна змея, отказавшаяся выполнять исследовательс",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.023"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.022",
-          "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
+          "seen": "s15.text.023",
+          "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
-          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
-        },
-        {
-          "fears": "Удержание людьми или насильственное исследование Немерой",
-          "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json"
+        "s15.text.023"
       ]
     },
     "shiranami": {
@@ -18772,5 +18764,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1196
+  "source_turns_indexed": 1197
 }
