@@ -4,7 +4,7 @@
 
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
 - Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 50 ход(ов), s02–s08
-- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 38 ход(ов), s13–s14
+- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 39 ход(ов), s13–s14
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 26 ход(ов), s09–s09
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09

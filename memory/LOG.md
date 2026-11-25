@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.031: Человек у причальной лестницы (`npc/quay_wire_operator`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.030: Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.029: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Человек у причальной лестницы (`npc/quay_wire_operator`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.028: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.074: Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.073: Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s13.text.072: Мужчина в куртке (`npc/root_field_jacket_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой, поправки игрока: 1
-- s13.text.071: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
