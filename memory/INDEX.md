@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s14.text.053`
+# Карта мира NPR · на ходе `s14.text.055`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,8 +7,8 @@
 
 ## Персонажи (230)
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
-- Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame` · в сцене
-- Старая змея — Крупная серая змея, светлая полоса старого повреждения над … · `npc/ryuchi_west_elder` · в сцене
+- Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
+- Старая змея — Крупная серая змея, светлая полоса старого повреждения над … · `npc/ryuchi_west_elder`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera`
 - Уцуро — Демон медицины, смерти и болезни, кровный призыв Шики · `npc/utsuro`
@@ -237,11 +237,13 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (4)
+## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — «Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и … · `threads/shiki_underground_career`
 - `fire_risk_meeting` — Предложенная Шики будущая точка связи для Огня: 28 апреля 1287 года 1… · `threads/fire_risk_meeting`
 - `shiki_save_asuma` — Цель игрока: спасти Сарутоби Асуму. Заблаговременно предоставить дост… · `threads/shiki_save_asuma`
+- `shiki_promise_nemera` — Шики принял прежнее обещание как собственную цель; Сирамэ согласилась… · `threads/shiki_promise_nemera`
+- `shiki_new_home` — Шики выразил намерение устроить новую нору; место и строительство не … · `threads/shiki_new_home`
 
 ## Давние линии (30, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

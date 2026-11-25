@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.055: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`, линия `shiki_new_home`, поправки игрока: 1
 - s14.text.053: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), поправки игрока: 1
 - s14.text.052: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), план сюжета, поправки игрока: 1
 - s14.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
@@ -56,5 +57,3 @@
 - s13.text.098: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.097: поправки игрока: 5
 - s13.text.096: поправки игрока: 5
-- s13.text.095: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина в куртке (`npc/root_field_jacket_man`)
-- s13.text.094: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
