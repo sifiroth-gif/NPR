@@ -1,9 +1,9 @@
-# Карта мира NPR · на ходе `s15.text.008`
+# Карта мира NPR · на ходе `s15.text.009`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (299) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (300) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (230)
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto` · в сцене
@@ -246,7 +246,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (71)
+## Вещи (72)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -266,6 +266,7 @@
 - `itachi_report_copies` · `items/itachi_report_copies`
 - `kabuto_letter_0416` · `items/kabuto_letter_0416`
 - `kabuto_message` · `items/kabuto_message`
+- `kabuto_orientation_1278` · `items/kabuto_orientation_1278`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`
 - `keiji_field_report` · `items/keiji_field_report`
 - `kijima_route_book` · `items/kijima_route_book`

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.008",
+  "cursor": "s15.text.009",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T11:55:00",
-          "excerpt": "на ступенях святилища, держа на коленях папку с документами. Услышав приближение Шики, поправил очки и поднялся. **Кабуто Якуши:** — Мугами-кун. Рад, что вы приняли наше приглашение. Привычная улыбка сохранилась ровно до того момента, когда он достаточно хорош",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.006"
         },
         {
           "at": "0010-04-21T11:56:00",
@@ -1694,11 +1687,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.008"
+        },
+        {
+          "at": "0010-04-21T12:10:00",
+          "excerpt": "не бумагой, своими словами. Кабуто некоторое время шёл молча. Под ногами хрустели сухие кедровые иглы. **Кабуто Якуши:** — Хорошо. Хотя сомневаюсь, что Немера ожидала услышать именно мой ответ. Он завёл руки за спину. **Кабуто Якуши:** — Когда мы познакомились",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.009"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.008",
+          "seen": "s15.text.009",
           "state": "У святилища, встретил Шики и Сирамэ; показал лист из папки."
         },
         {
@@ -1708,7 +1708,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s15.text.008"
+        "s15.text.009"
       ]
     },
     "kabuto_letter_0416": {
@@ -1730,6 +1730,21 @@
       ],
       "sources": [
         "s14.text.063"
+      ]
+    },
+    "kabuto_orientation_1278": {
+      "aliases": [
+        "kabuto orientation 1278"
+      ],
+      "facts": [],
+      "id": "kabuto_orientation_1278",
+      "kind": "item",
+      "label": "kabuto orientation 1278",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.009"
       ]
     },
     "kadziura_satoru": {
@@ -7150,9 +7165,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.008",
         "s15.text.006",
-        "s15.text.007"
+        "s15.text.007",
+        "s15.text.008"
       ]
     },
     "place:44fbe9adb51ae417": {
@@ -15168,6 +15183,24 @@
         "s06.text.021"
       ]
     },
+    "place:fbb52a0cc35edfa4": {
+      "aliases": [
+        "place:fbb52a0cc35edfa4",
+        "Страна Рек, лесная дорога от северного святилища",
+        "Страна Рек",
+        "лесная дорога от северного святилища"
+      ],
+      "facts": [],
+      "id": "place:fbb52a0cc35edfa4",
+      "kind": "place",
+      "label": "Страна Рек, лесная дорога от северного святилища",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.009"
+      ]
+    },
     "place:fcd327ae808eead8": {
       "aliases": [
         "place:fcd327ae808eead8",
@@ -16952,7 +16985,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 57,
+      "mention_count": 58,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16960,13 +16993,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T11:55:00",
-          "excerpt": "\"xs\">20–21 апреля 1287 года</text> ### Страна Рек. Северный тракт Шики улыбнулся и покинул убежище. Сирамэ путешествовала на его плечах, время от времени приподнимая голову над воротником плаща. Шики не избегал населённых мест. Дорога проходила через небольшие",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.006"
         },
         {
           "at": "0010-04-21T11:56:00",
@@ -16981,12 +17007,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.008"
+        },
+        {
+          "at": "0010-04-21T12:10:00",
+          "excerpt": "мне известно о вашем посещении медицинского крыла. А спустя несколько часов попросили стать вашим наставником. Сирамэ приподняла голову. **Сирамэ:** — Уже зная, кто ты? **Кабуто Якуши:** — Подозревая. Достаточно обоснованно, как выяснилось позднее. Он отвёл ве",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.009"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.008",
+          "seen": "s15.text.009",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -16999,7 +17032,8 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.009"
       ]
     },
     "shiranami": {
@@ -18664,5 +18698,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1182
+  "source_turns_indexed": 1183
 }

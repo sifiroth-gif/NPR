@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.009: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), вещь `kabuto_orientation_1278`
 - s15.text.008: Кабуто Якуши (`npc/kabuto`)
 - s15.text.007: Кабуто Якуши (`npc/kabuto`)
 - s15.text.006: Кабуто Якуши (`npc/kabuto`)
@@ -58,4 +59,3 @@
 - s14.text.020: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s14.text.019: Сэйдзи Минасэ (`npc/quay_masked_hunter`), поправки игрока: 1
 - s14.text.018: Сэйдзи Минасэ (`npc/quay_masked_hunter`)
-- s14.text.017: поправки игрока: 1
