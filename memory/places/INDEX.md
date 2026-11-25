@@ -42,6 +42,7 @@
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
+- Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 8 ход(ов), s15–s15
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
@@ -57,7 +58,6 @@
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 6 ход(ов), s11–s11
 - Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 6 ход(ов), s14–s14
-- Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 6 ход(ов), s15–s15
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08

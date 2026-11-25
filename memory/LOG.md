@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.035: Саске Учиха (`npc/sasuke`)
+- s15.text.034: Саске Учиха (`npc/sasuke`)
 - s15.text.033: Саске Учиха (`npc/sasuke`)
 - s15.text.032: Саске Учиха (`npc/sasuke`), бой
 - s15.text.031: Саске Учиха (`npc/sasuke`), бой, поправки игрока: 1
@@ -57,5 +59,3 @@
 - s14.text.046: поправки игрока: 2
 - s14.text.045: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), линия `nemera_symbiosis`, план сюжета, поправки игрока: 1
 - s14.text.044: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Уцуро (`npc/utsuro`), линия `pact`, линия `shiki_dragon_sage`, линия `nemera_symbiosis`, план сюжета, поправки игрока: 1
-- s14.text.043: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Портовый чиновник (`npc/fire_port_official`), линия `shiki_dragon_sage`, план сюжета
-- s14.text.042: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), линия `shiki_dragon_sage`, план сюжета
