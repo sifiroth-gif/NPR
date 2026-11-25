@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s14.text.003",
+ "cursor": "s14.text.004",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {},
@@ -598,6 +598,11 @@
      "turn": "s12.text.002",
      "at": "0010-03-15T08:54:35",
      "as": "Закончила исследование чужой поверхности по своей воле; отметила, что люди считают её движение зависимым от приказа Шики."
+    },
+    {
+     "turn": "s14.text.004",
+     "at": "0010-04-11T17:24:01",
+     "as": "Самостоятельно отвела цилиндр в сторону ящика при сближении Шики; действие стоит 2 единицы её чакры."
     }
    ]
   },
@@ -6225,7 +6230,25 @@
     "step": "примета"
    }
   },
-  "quay_wire_operator": {}
+  "quay_wire_operator": {
+   "dread": {
+    "stage": 1,
+    "since": "s14.text.004",
+    "log": [
+     {
+      "turn": "s14.text.004",
+      "at": "0010-04-11T17:24:01",
+      "change": "калибровка",
+      "saw": "Мгновенное сближение Шики, незнакомые печати и чёрные лепестки при кашле товарища.",
+      "does": "Выпускает одну проволоку, достаёт кунай, прикрывает лицо воротником."
+     }
+    ],
+    "reads": "Опасное поражение через дыхание; приближаться без защиты рискованно.",
+    "does": "Выпускает одну проволоку, достаёт кунай, прикрывает лицо воротником.",
+    "turn": "s14.text.004",
+    "step": "примета"
+   }
+  }
  },
  "checks": [
   {
@@ -6259,35 +6282,18 @@
    "text": "Бой с именным противником идёт, а d.fight в ходе нет: обмен не записан — его ход, кости и раны пропали."
   },
   {
-   "turn": "s14.text.001",
-   "kind": "read",
-   "text": "«Человек в маске» вернулся в сцену, а его страница `npc/masked_man` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/masked_man.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики."
-  },
-  {
-   "turn": "s14.text.001",
-   "kind": "read",
-   "text": "«Немера (Невыписанная)» вернулся в сцену, а его страница `npc/nemera` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/nemera.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики."
-  },
-  {
    "turn": "s14.text.002",
    "kind": "new_character",
    "text": "В сцене говорит «вне боя» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts."
   },
   {
-   "turn": "s14.text.003",
+   "turn": "s14.text.004",
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"])."
   }
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s13.text.093",
-    "look": [],
-    "soma": [
-     "замер"
-    ]
-   },
    {
     "turn": "s13.text.094",
     "look": [],
@@ -6316,11 +6322,14 @@
     "turn": "s14.text.001",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s14.text.004",
+    "look": [],
+    "soma": []
    }
   ],
-  "worn": [
-   "замер"
-  ],
+  "worn": [],
   "quiet": 0,
   "log": [
    {
@@ -6352,19 +6361,14 @@
    "quay_masked_hunter": {
     "since": "s13.text.099",
     "need": false,
-    "quiet": 0,
-    "last": "s14.text.001"
-   },
-   "quay_cloaked_hunter": {
-    "since": "s13.text.099",
-    "need": false,
-    "quiet": 0,
+    "quiet": 1,
     "last": "s14.text.001"
    },
    "quay_wire_operator": {
     "since": "s13.text.099",
-    "need": true,
-    "quiet": 2
+    "need": false,
+    "quiet": 0,
+    "last": "s14.text.004"
    }
   }
  },
@@ -6937,7 +6941,7 @@
    "hideout_sasuke": {
     "status": "started",
     "turn": "s12.text.040",
-    "late": 76
+    "late": 77
    }
   }
  },
@@ -7120,7 +7124,7 @@
    "place": "Страна Огня, восточная гавань, грузовой причал",
    "opened": "s13.text.099",
    "opened_at": "0010-04-11T17:24:00",
-   "exchanges": 1,
+   "exchanges": 2,
    "foes": {
     "quay_masked_hunter": {
      "status": "active",
@@ -7130,30 +7134,53 @@
     },
     "quay_cloaked_hunter": {
      "status": "active",
-     "morale": "steady",
+     "morale": "breaking",
      "rank": "jonin",
      "intent": "обездвижить"
     },
     "quay_wire_operator": {
      "status": "active",
-     "morale": "steady",
+     "morale": "shaken",
      "rank": "chunin",
      "intent": "связать сетью"
     }
    },
-   "rolls": [],
-   "bursts": {},
-   "last": "s13.text.099",
+   "rolls": [
+    {
+     "turn": "s14.text.004",
+     "what": "Шитон после шуншина против владельца цилиндра",
+     "band": [
+      5,
+      6
+     ],
+     "value": 20,
+     "cat": 6
+    },
+    {
+     "turn": "s14.text.004",
+     "what": "Маскированный перенаправляет удерживающую сеть к Шики",
+     "band": [
+      3,
+      4
+     ],
+     "value": 4,
+     "cat": 3,
+     "by": "quay_masked_hunter"
+    }
+   ],
+   "bursts": {
+    "s14.text.004": 1
+   },
+   "last": "s14.text.004",
    "used": {}
   }
  },
  "will": {
   "seed": "174c098868b645af",
   "streak": {
-   "nemera": 1,
-   "quay_masked_hunter": 1,
-   "quay_cloaked_hunter": 1,
-   "quay_wire_operator": 1
+   "nemera": 2,
+   "quay_masked_hunter": 2,
+   "quay_wire_operator": 2
   },
   "touched": {
    "night_icu_physician": "s11.text.009",
@@ -7167,7 +7194,7 @@
    "seina": "s10.text.043",
    "takagi_ren": "s10.text.023",
    "minase": "s10.text.031",
-   "nemera": "s13.text.089",
+   "nemera": "s14.text.004",
    "utsuro": "s10.text.020",
    "hospital_transporter": "s09.text.044",
    "hospital_night_admin": "s09.text.050",
@@ -7268,11 +7295,11 @@
    "offered": 23,
    "delivered": 16,
    "missed": 7,
-   "at": "0010-04-11T17:24:00",
+   "at": "0010-04-11T17:24:01",
    "last": 1652,
-   "scene_key": "[\"Страна Огня, восточная гавань, грузовой причал\", [\"nemera\", \"quay_cloaked_hunter\", \"quay_masked_hunter\", \"quay_wire_operator\", \"shiki\"]]",
-   "scene_turns": 2,
-   "scene_since": "s13.text.099",
+   "scene_key": "[\"Страна Огня, восточная гавань, грузовой причал\", [\"nemera\", \"quay_masked_hunter\", \"quay_wire_operator\", \"shiki\"]]",
+   "scene_turns": 1,
+   "scene_since": "s14.text.004",
    "last_at": "0010-04-11T17:21:00",
    "start_at": "0010-03-06T04:18:02"
   }

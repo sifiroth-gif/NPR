@@ -1,7 +1,6 @@
 {
   "current_focus": [
     "nemera",
-    "quay_cloaked_hunter",
     "quay_masked_hunter",
     "quay_wire_operator",
     "place:dc29e1137e268dff",
@@ -10,14 +9,15 @@
     "seal_boot_scrap",
     "sealing_cloth_scrap"
   ],
-  "cursor": "s14.text.003",
+  "cursor": "s14.text.004",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2858,
-  "index_entities": 768,
-  "index_source_records": 1119,
-  "indexed_cursor": "s14.text.003",
+  "focus_bytes": 2692,
+  "index_entities": 769,
+  "index_source_records": 1120,
+  "indexed_cursor": "s14.text.004",
   "kinds": {
     "entity": 1,
+    "event": 1,
     "item": 33,
     "npc": 173,
     "place": 556,
@@ -35,6 +35,12 @@
       "at_5": true,
       "id": "recipient6",
       "kind": "entity"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "event:s14.text.004:shiton",
+      "kind": "event"
     },
     {
       "at_1": true,
@@ -500,9 +506,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 78,
-  "self_query_count": 78,
+  "self_query_at_1": 79,
+  "self_query_at_5": 79,
+  "self_query_count": 79,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
