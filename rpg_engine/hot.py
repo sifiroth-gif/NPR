@@ -1503,7 +1503,13 @@ def _canon_and_style(state_dir, hot, applied):
     """Свод канона, канон к сцене, сверка раз в 20 ходов, эталоны и образец манеры; длина чата."""
     engine_root = Path(__file__).resolve().parents[1]
     extra = {}
+    from . import capabilities
     _count_chat(hot, applied)
+    try:
+        extra["capabilities"] = capabilities.packet(engine_root, hot.get("campaign"))
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
+                                              "text": f"capabilities: {type(exc).__name__}: {exc}"})
     for name, step in (("canon_digest", lambda: canon.digest(state_dir)),
                        ("canon", lambda: canon.for_scene(state_dir, hot, applied, engine_root)),
                        ("canon_review", lambda: canon.review(state_dir, hot)),

@@ -755,7 +755,7 @@ def _heal(hot, item, turn_id, notes=None):
         matches = [w for w in wounds if item.get("where") and w.get("where") == item["where"] and not w.get("healed")]
         valid = (isinstance(residual, dict) and not (set(residual) - {"lost", "severity"})
                  and isinstance(residual.get("lost"), str) and bool(residual["lost"].strip())
-                 and ("severity" not in residual or residual["severity"] in SEVERITY)
+                 and ("severity" not in residual or isinstance(residual["severity"], str) and residual["severity"] in SEVERITY)
                  and len(matches) == 1)
         if not valid:
             if notes is not None:
