@@ -1,15 +1,16 @@
-# Карта мира NPR · на ходе `s13.text.055`
+# Карта мира NPR · на ходе `s13.text.056`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (284) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (217)
+## Персонажи (218)
 - western_nest_adult_courier —  · `npc/western_nest_adult_courier` · в сцене
 - western_nest_young_courier —  · `npc/western_nest_young_courier` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
 - Неизвестный связной в маске АНБУ — Связной, пришедший на назначенную передачу отчёта независимого наблюдателя. · `npc/root_wayhouse_liaison`
+- Молодая змея — по подписи в сцене · `npc/molodaya_zmeya`
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
 - Неизвестный наблюдатель за ивами — Скрыто наблюдал заставный мост до тех пор, пока Шики не снял капюшон. · `npc/willow_observer`
 - Дзюн — Мужчина с дорожным снаряжением; другие черты пока не устано… · `npc/haru_brother_jun`
@@ -242,7 +243,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (62)
+## Вещи (63)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -285,6 +286,7 @@
 - `reika_direct_comm_plate` · `items/reika_direct_comm_plate`
 - `rokuto_bounty_payment` · `items/rokuto_bounty_payment`
 - `rokuto_head` · `items/rokuto_head`
+- `root_compulsory_coupling_scroll` · `items/root_compulsory_coupling_scroll`
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `s17_early_shiki_aliquot` · `items/s17_early_shiki_aliquot`
 - `sai_note` · `items/sai_note`

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.056: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), вещь `root_compulsory_coupling_scroll`
 - s13.text.055: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 2
 - s13.text.054: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`)
 - s13.text.053: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
@@ -58,4 +59,3 @@
 - s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Аки (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
 - s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
 - s12.text.101: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
-- s12.text.100: поправки игрока: 1
