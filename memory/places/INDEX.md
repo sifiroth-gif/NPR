@@ -122,6 +122,7 @@
 - Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
 - Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
+- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 2 ход(ов), s15–s15
 - Старая переправа, северная граница Страны Травы · `places/staraya-pereprava-severnaya-granitsa-strany-travy` · 2 ход(ов), s11–s11
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
@@ -228,7 +229,6 @@
 - Седьмой колодец, двор комплекса Кэйсин перед архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-arkhivom-p-4` · 1 ход(ов), s09–s09
 - Седьмой колодец, центральные ворота комплекса Кэйсин · `places/sedmoy-kolodets-tsentralnye-vorota-kompleksa-keysin` · 1 ход(ов), s09–s09
 - Седьмой колодец, внутренний двор у приёмного архива П-4 · `places/sedmoy-kolodets-vnutrenniy-dvor-u-priemnogo-arkhiva-p-4` · 1 ход(ов), s09–s09
-- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 1 ход(ов), s15–s15
 - Северная переправа, граница Страны Травы · `places/severnaya-pereprava-granitsa-strany-travy` · 1 ход(ов), s11–s11
 - Северная переправа, северная граница Страны Травы · `places/severnaya-pereprava-severnaya-granitsa-strany-travy` · 1 ход(ов), s11–s11
 - Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08

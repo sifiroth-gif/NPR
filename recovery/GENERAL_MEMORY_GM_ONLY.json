@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.010",
+  "cursor": "s15.text.011",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 98,
+      "mention_count": 99,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T11:57:00",
-          "excerpt": "# Старое святилище **Мугами Шики:** — Мы. Кабуто застыл. Ветер перевернул уголок листа в его руке. **Кабуто Якуши:** — Мы… Он повторил это слово почти беззвучно. Посмотрел на Сирамэ, но змея не поправила Шики. **Кабуто Якуши:** — Удивительно. За все годы работ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.008"
         },
         {
           "at": "0010-04-21T12:10:00",
@@ -1694,11 +1687,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.010"
+        },
+        {
+          "at": "0010-04-21T13:06:00",
+          "excerpt": "ься плеча Шики, но остановил пальцы в нескольких сантиметрах от ткани плаща. **Орочимару:** — Позволишь? **Кабуто Якуши:** — Орочимару-сама… Саннин бросил на него недовольный взгляд. Кабуто умолк. Орочимару опустил руку и тихо рассмеялся. **Орочимару:** — Кака",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.011"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.010",
+          "seen": "s15.text.011",
           "state": "У святилища, встретил Шики и Сирамэ; показал лист из папки."
         },
         {
@@ -1708,7 +1708,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s15.text.010"
+        "s15.text.011"
       ]
     },
     "kabuto_letter_0416": {
@@ -4237,7 +4237,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 126,
+      "mention_count": 127,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4245,13 +4245,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T11:56:00",
-          "excerpt": "ные желания. Даже собственное представление о вашем будущем. Он сложил документ пополам. **Кабуто Якуши:** — Орочимару-сама использует чужие тела, чтобы сохранить себя. Однако существование прежнего владельца тела становится для него препятствием. Отсюда неизб",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.007"
         },
         {
           "at": "0010-04-21T11:57:00",
@@ -4266,11 +4259,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.010"
+        },
+        {
+          "at": "0010-04-21T13:06:00",
+          "excerpt": "Оставить? Нет господин Орочимару, я там ничего не оставлял <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:06</text> ### Убежище Орочимару **Мугами Шики:** — Оставить? Нет, господин О",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.011"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.010",
+          "seen": "s15.text.011",
           "state": "Лично встречает Шики в подземном убежище."
         },
         {
@@ -4280,7 +4280,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.010"
+        "s15.text.011"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13934,6 +13934,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.011",
         "s15.text.010"
       ]
     },
@@ -17014,7 +17015,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 59,
+      "mention_count": 60,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17022,13 +17023,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T11:57:00",
-          "excerpt": "ул уголок листа в его руке. **Кабуто Якуши:** — Мы… Он повторил это слово почти беззвучно. Посмотрел на Сирамэ, но змея не поправила Шики. **Кабуто Якуши:** — Удивительно. За все годы работы с Орочимару-сама я ни разу не слышал, чтобы после переселения он гово",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.008"
         },
         {
           "at": "0010-04-21T12:10:00",
@@ -17043,12 +17037,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.010"
+        },
+        {
+          "at": "0010-04-21T13:06:00",
+          "excerpt": "мару:** — Можешь ознакомиться со всем, что мы нашли. Я же хотел бы увидеть, чем стало сендзюцу в сочетании с её природой. Сирамэ приподняла голову. **Сирамэ:** — Он пришёл сюда гостем, Орочимару. Саннин медленно повернулся к ней. **Орочимару:** — Даже мои змеи",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.011"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.010",
+          "seen": "s15.text.011",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17062,7 +17063,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s15.text.010"
+        "s15.text.011"
       ]
     },
     "shiranami": {
@@ -18734,5 +18735,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1184
+  "source_turns_indexed": 1185
 }
