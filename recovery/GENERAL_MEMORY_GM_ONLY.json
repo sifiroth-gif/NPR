@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.019",
+  "cursor": "s14.text.020",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -876,13 +876,14 @@
     "fire_port_security_staff": {
       "aliases": [
         "fire port security staff",
-        "Сотрудник безопасности порта"
+        "Сотрудник безопасности порта",
+        "fire_port_security_staff"
       ],
       "facts": [],
       "id": "fire_port_security_staff",
       "kind": "npc",
       "label": "Сотрудник безопасности порта",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-04-11T17:16:00",
@@ -890,13 +891,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.088"
-        },
-        {
-          "at": "0010-04-11T17:22:00",
-          "excerpt": "Старшая сейчас добивается признания отказа. Ей придётся говорить с хранителями. Возможно, тогда узнает больше. Сотрудник безопасности порта опустил глаза к своему журналу. Ещё недавно здесь обсуждали право государств распоряжаться человеческим телом. Теперь по",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.094"
         },
         {
           "at": "0010-04-11T17:23:00",
@@ -911,16 +905,28 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.011"
+        },
+        {
+          "at": "0010-04-11T18:07:00",
+          "excerpt": ". **Сэйдзи Минасэ:** — Передайте жене, что я жив. Только не говорите ей пока, что произошло. Сотрудник безопасности кивнул, затем обратился к Шики. **Сотрудник безопасности порта:** — Врача я пришлю сюда. А от вас теперь нужны показания. И объяснение, что мы д",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.020"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.012",
-          "state": "Распорядился вызвать врача и носилки, предоставил помещение под охраной."
+          "seen": "s14.text.020",
+          "state": "У досмотровой комнаты, просит показания и объяснение по оборудованию."
+        },
+        {
+          "state": "У досмотровой комнаты, просит показания и объяснение по оборудованию."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_security_staff.json"
+        "recovery/cast/fire_port_security_staff.json",
+        "recovery/HOT.json",
+        "s14.text.020"
       ]
     },
     "fire_port_statement_receipt": {
@@ -4030,7 +4036,7 @@
       "id": "nemera",
       "kind": "npc",
       "label": "Немера (Невыписанная)",
-      "mention_count": 125,
+      "mention_count": 126,
       "mentions": [
         {
           "at": "0010-03-13T17:36:00",
@@ -4038,13 +4044,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.028"
-        },
-        {
-          "at": "0010-04-11T17:25:20",
-          "excerpt": "а. Один коснулся его грудной клетки, отслеживая остаточное поражение, второй приподнял выпавший цилиндр. **Немера (Невыписанная):** *— Здесь твоя чакра убивала. Теперь она заставляет ту же плоть жить. Какая странная последовательность.* Постепенно дыхание выро",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.011"
         },
         {
           "at": "0010-04-11T17:28:15",
@@ -4059,13 +4058,20 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.016"
+        },
+        {
+          "at": "0010-04-11T18:07:00",
+          "excerpt": "бшие участки и полностью разрушенные связи не восстановились мгновенно. Немера наблюдала за изменением потоков, не вмешиваясь в ткани. **Немера (Невыписанная):** *— Он всё это время оставался внутри своего тела. Только тело перестало ему отвечать.* К концу вме",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.020"
         }
       ],
       "projections": [
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.019",
+          "seen": "s14.text.020",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -4081,7 +4087,8 @@
       ],
       "sources": [
         "recovery/cast/nemera.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s14.text.020"
       ]
     },
     "nemera_document": {
@@ -12138,7 +12145,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.019",
+        "s14.text.020",
         "s14.text.012",
         "s14.text.015",
         "s14.text.016",
@@ -15241,7 +15248,8 @@
     "quay_cloaked_hunter": {
       "aliases": [
         "quay cloaked hunter",
-        "Человек в дорожном плаще"
+        "Человек в дорожном плаще",
+        "quay_cloaked_hunter"
       ],
       "facts": [],
       "id": "quay_cloaked_hunter",
@@ -15280,25 +15288,27 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.012",
-          "state": "Стабилизирован, ждёт медика на причале.",
+          "seen": "s14.text.020",
+          "state": "Доставлен в портовый лазарет живым, остаточное поражение лёгких.",
           "wants": "Обездвижить Шики для захвата."
         }
       ],
       "sources": [
-        "recovery/cast/quay_cloaked_hunter.json"
+        "recovery/cast/quay_cloaked_hunter.json",
+        "s14.text.020"
       ]
     },
     "quay_masked_hunter": {
       "aliases": [
         "quay masked hunter",
-        "Сэйдзи Минасэ"
+        "Сэйдзи Минасэ",
+        "quay_masked_hunter"
       ],
       "facts": [],
       "id": "quay_masked_hunter",
       "kind": "npc",
       "label": "Сэйдзи Минасэ",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-04-11T17:28:15",
@@ -15320,28 +15330,37 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.018"
+        },
+        {
+          "at": "0010-04-11T18:07:00",
+          "excerpt": "человека, который лишил его возможности двигаться. Теперь эти же пальцы должны были вернуть ему тело. **Сэйдзи Минасэ:** — Только не уходите. Охранник у двери понял, что обращаются к нему. Ответил не сразу. **Охранник:** — Я здесь. ### I. Чакровая диагностика ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.020"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.019",
-          "state": "На столе, в сознании; ожидает вмешательства.",
+          "seen": "s14.text.020",
+          "state": "После операции: сознание и дыхание сохранены, кровотечение остановлено; слабые произвольные движения обеих кистей и ног, не ходит; выраженный тетрапарез, остаточный дефицит чувствительности.",
           "wants": "Взять Шики живым по K-0418."
         },
         {
-          "state": "На столе, в сознании; ожидает вмешательства.",
+          "state": "После операции: сознание и дыхание сохранены, кровотечение остановлено; слабые произвольные движения обеих кистей и ног, не ходит; выраженный тетрапарез, остаточный дефицит чувствительности.",
           "wants": "Взять Шики живым по K-0418."
         }
       ],
       "sources": [
         "recovery/cast/quay_masked_hunter.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s14.text.020"
       ]
     },
     "quay_wire_operator": {
       "aliases": [
         "quay wire operator",
-        "Человек у причальной лестницы"
+        "Человек у причальной лестницы",
+        "quay_wire_operator"
       ],
       "facts": [],
       "id": "quay_wire_operator",
@@ -15373,13 +15392,14 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.015",
-          "state": "Под охраной на причале, ожидает помощи.",
+          "seen": "s14.text.020",
+          "state": "Под медицинским наблюдением в портовом лазарете.",
           "wants": "Перекрыть путь сетью."
         }
       ],
       "sources": [
-        "recovery/cast/quay_wire_operator.json"
+        "recovery/cast/quay_wire_operator.json",
+        "s14.text.020"
       ]
     },
     "razvedchik_zvuka": {
@@ -18312,5 +18332,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1129
+  "source_turns_indexed": 1130
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.020: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.019: Сэйдзи Минасэ (`npc/quay_masked_hunter`), поправки игрока: 1
 - s14.text.018: Сэйдзи Минасэ (`npc/quay_masked_hunter`)
 - s14.text.017: поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.063: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Дзюн (`npc/haru_brother_jun`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.062: Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), вещь `root_compulsory_coupling_scroll`
 - s13.text.061: western_nest_adult_courier (`npc/western_nest_adult_courier`), поправки игрока: 1
-- s13.text.060: поправки игрока: 2
