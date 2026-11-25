@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s13.text.070`
+# Карта мира NPR · на ходе `s13.text.071`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -228,12 +228,11 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (13)
+## Линии (12)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — «Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и … · `threads/shiki_underground_career`
 - `nemera_symbiosis` — 25.03 Немера закончила безопасное сопоставление двух трофейных принуд… · `threads/nemera_symbiosis`
-- `kabuto_letter` — Шики прибыл к северному указателю до назначенного срока и встретился … · `threads/kabuto_letter`
 - `kabuto_name_source` — Старый обрывок госпиталя у Шики; Немера допускает, что доступ к ней м… · `threads/kabuto_name_source`
 - `kabuto_tracking_claim` — Кабуто не предпринимал силового захвата Шики во время этой встречи, м… · `threads/kabuto_tracking_claim`
 - `sai_note` — Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых на… · `threads/sai_note`
@@ -243,8 +242,8 @@
 - `tenchi_bridge` — 26.03 отряд Ямато нашёл Саске в убежище, вернулся без него. Шики не з… · `threads/tenchi_bridge`
 - `roadside_attack` — Участие Шики завершилось передачей пленного и сведений местному патру… · `threads/roadside_attack`
 
-## Давние линии (21, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
+## Давние линии (22, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
 ## Вещи (64)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
