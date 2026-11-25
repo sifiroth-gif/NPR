@@ -59,6 +59,7 @@ jobs:
           def digest(path):
               return hashlib.sha256((state / path).read_bytes()).hexdigest()
           original = load("recovery/HOT.json")
+          original_will = load("recovery/GM_ONLY.json")["will"]
           assert original["cursor"]["id"] == "s14.text.023"
           protected = ["recovery/TURN.json", "archive/session-014-turns.jsonl",
                        "archive/deltas/session-014.jsonl",
@@ -178,8 +179,8 @@ jobs:
           ids = packet.get("must_ids", []) + [row["id"] for row in packet.get("must_pending", {}).get("items", [])]
           assert len(ids) == len(set(ids))
           assert all(ident in world["obligations"] for ident in ids)
-          assert world["news"]["delivered"] == original["_will"]["news"]["delivered"]
-          assert world["news"]["missed"] == original["_will"]["news"]["missed"]
+          assert world["news"]["delivered"] == original_will["news"]["delivered"]
+          assert world["news"]["missed"] == original_will["news"]["missed"]
           print("C3_WORLD_AUTONOMY_OK", "obligations", len(ids), "legacy_offer_retained", True, "NEXT_bytes", packet_bytes)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
