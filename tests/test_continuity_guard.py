@@ -1,6 +1,6 @@
 import unittest
 
-from rpg_engine import continuity_guard as cg
+from rpg_engine import continuity_guard as cg, fight, hot
 
 
 def kinds(hot):
@@ -75,6 +75,63 @@ class SpeechCoverageTest(unittest.TestCase):
                             "gm": "Дверь."})
         self.assertEqual(kinds(hot), [])
 
+
+
+class DeltaResourceTest(unittest.TestCase):
+    def test_invalid_inventory_patch_is_atomic(self):
+        for patch in ({"now": {"count": -1, "state": "стерильный"}},
+                      {"now": {"count": 1.5}}, {"now": {"count": True}},
+                      {"now": {"holder": ["shiki"]}}, {"gone": ""},
+                      {"new": {"count": 5}, "why": "дубликат"},
+                      {"was": {"count": 4}, "now": {"count": 0}}):
+            with self.subTest(patch=patch):
+                original = {"state": "грязный", "count": 2, "turn": "t0"}
+                state = {"things": {"kit": dict(original)}}
+                cg.apply_things(state, {"things": {"kit": patch}}, "t1", "a")
+                self.assertEqual(state["things"]["kit"], original)
+                self.assertTrue(kinds(state))
+
+    def test_invalid_things_container_is_diagnostic(self):
+        state = {}
+        cg.apply_things(state, {"things": ["kit"]}, "t1", "a")
+        self.assertIn("things", kinds(state))
+
+    def test_negative_and_nonfinite_costs_do_not_create_chakra(self):
+        at = "0006-10-01T07:10:00"
+        for value in (-10, float("nan"), float("inf"), True, "10"):
+            with self.subTest(value=value):
+                state = {"shiki": {"chakra": {"value": 40, "at": at}}}
+                notes = []
+                fight._chakra(state, {"spend": [{"what": "test", "cost": value}]},
+                              0, "t1", at, notes)
+                self.assertEqual(state["shiki"]["chakra"]["value"], 40)
+                self.assertTrue(notes)
+
+    def test_invalid_bursts_and_set_do_not_change_chakra(self):
+        at = "0006-10-01T07:10:00"
+        for value in (-2, True, 2.5, "2"):
+            with self.subTest(value=value):
+                state = {"shiki": {"chakra": {"value": 40, "at": at}}}
+                notes = fight.apply(state, {"fight": {"bursts": value},
+                                           "chakra": {"set": -5}},
+                                    {"id": "s04.text.045", "at": at}, [])
+                self.assertEqual(state["shiki"]["chakra"]["value"], 40)
+                self.assertGreaterEqual(len(notes), 2)
+
+    def test_malformed_nested_structures_fail_before_cursor_change(self):
+        for delta in ({"cast": {"npc": "bad"}}, {"clocks": {"clock": []}},
+                      {"scene": {"present": "npc"}}, {"fight": {"wounds": ["bad"]}},
+                      {"heal": {}}, {"chakra": {"spend": [1]}},
+                      {"fight": {"foes": {"npc": "bad"}}}, {"shiki": []}):
+            with self.subTest(delta=delta):
+                state = {"session": 4, "cursor": {"id": "s04.text.044", "seq": 44}}
+                original = {"session": 4, "cursor": dict(state["cursor"])}
+                turn = {"schema": hot.TURN_SCHEMA, "id": "s04.text.045",
+                        "at": "0006-10-01T07:10:00", "place": "test",
+                        "player": "test", "gm": "test", "d": delta}
+                with self.assertRaises(hot.TurnError):
+                    hot.apply_turn(state, turn)
+                self.assertEqual(state, original)
 
 if __name__ == "__main__":
     unittest.main()
