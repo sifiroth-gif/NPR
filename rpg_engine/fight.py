@@ -18,6 +18,8 @@ import json
 import re
 from datetime import datetime
 
+from . import body
+
 DICE = 12
 EXCHANGE_LIMIT = 6        # обменов в одном бою до требования развязки
 BURSTS_PER_EXCHANGE = 4   # жёстких стартов шуншина до спада (лист: 3–4)
@@ -275,10 +277,14 @@ def edge(hot, roll):
         _label, penalty = chakra_state(((hot.get("shiki") or {}).get("chakra") or {}).get("value", 100))
         if penalty:
             parts["чакра"] = penalty
+    if body.penalty(hot, "shiki"):        # кровопотеря бьёт по всему: и по рывку, и по печатям
+        parts["кровопотеря"] = -body.penalty(hot, "shiki")
     if foe:
         hurt = _wound_penalty((hot.get("injuries") or {}).get(vs))
         if hurt:
             parts["раны противника"] = min(hurt, 1)
+        if body.penalty(hot, vs):
+            parts["кровопотеря противника"] = min(body.penalty(hot, vs), 2)
         morale = MORALE.get(foe.get("morale"), 0)
         if morale:
             parts["мораль противника"] = morale
@@ -313,6 +319,10 @@ def foe_edge(hot, roll):
     hurt = _wound_penalty((hot.get("injuries") or {}).get(roll.get("by")))
     if hurt:
         parts["раны противника"] = -min(hurt, 1)
+    if body.penalty(hot, "shiki"):
+        parts["кровопотеря Шики"] = body.penalty(hot, "shiki")
+    if body.penalty(hot, roll.get("by")):
+        parts["кровопотеря противника"] = -min(body.penalty(hot, roll.get("by")), 2)
     morale = MORALE.get(foe.get("morale"), 0)
     if morale:
         parts["мораль противника"] = -morale
@@ -466,12 +476,16 @@ def _wounds(hot, wounds, turn_id, at):
             continue
         record = {k: wound[k] for k in ("where", "what", "severity", "lost") if wound.get(k)}
         record.update({"turn": turn_id, "at": at})
+        if body.bleeds(wound):       # кровь идёт: дальше тело решает кость состояния (body.py)
+            record["bleed"] = True
         hot.setdefault("injuries", {}).setdefault(wound["who"], []).append(record)
 
 
 def _heal(hot, item, turn_id):
     if not isinstance(item, dict) or not item.get("who"):
         return
+    if (item.get("stop") or item.get("blood")) and body.heal(hot, item, turn_id):
+        return      # кровь остановлена или восполнена; рана остаётся до лечения
     wounds = (hot.get("injuries") or {}).get(item["who"]) or []
     where = item.get("where")
     for wound in wounds:
@@ -614,6 +628,8 @@ def brief(hot):
     injuries = {k: [w for w in v if not w.get("healed")] for k, v in (hot.get("injuries") or {}).items()}
     if injuries:
         result["injuries"] = injuries
+    if body.brief(hot):
+        result["body"] = body.brief(hot)
     if active:
         result["active"] = {
             "id": active["id"], "place": active.get("place"), "exchanges": active.get("exchanges", 0),
