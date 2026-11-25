@@ -40,26 +40,15 @@
    "turn": "s14.text.011"
   },
   {
-   "kind": "player",
-   "text": "реплика игрока вошла в сцену на 23%: слова Шики переносятся в прозу полностью и в заданном порядке",
-   "turn": "s14.text.045"
-  },
-  {
-   "kind": "review",
-   "since": "s14.text.037",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s14.text.045"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s14.text.045"
+   "turn": "s14.text.046"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s14.text.045",
+  "cursor": "s14.text.046",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -68,10 +57,9 @@
   },
   "focus": [
    "white_snake_sage",
-   "place:02d2db9d9042a981",
-   "khakudzya_sennin"
+   "place:02d2db9d9042a981"
   ],
-  "focus_bytes": 1298,
+  "focus_bytes": 986,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -88,10 +76,10 @@
    "entries": [
     "chakra.black",
     "eyes.ems",
+    "fusion.tendrils",
     "genome.zero",
     "medical.reconstruct",
     "medical.sterilize",
-    "nemera.agency",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
@@ -109,10 +97,12 @@
     "eyes.magatsuhi",
     "eyes.susanoo",
     "eyes.yomotsu",
+    "fusion.development",
     "genome.fluid",
     "genome.kaguya",
     "medical.diagnosis",
     "medical.field",
+    "nemera.agency",
     "nemera.cloak",
     "nemera.transfer",
     "pact.byoton",
@@ -136,10 +126,10 @@
        "Последняя линька: удержание собственных потоков при разрушении семи запоров"
       ]
      },
-     "max": 100.0,
-     "state": "напряжение",
-     "value": 40.3,
-     "why": "Немера добровольно передала Шики 20 единиц своей чакры со скоростью 10 ед/сек за две секунды"
+     "max": 600.0,
+     "state": "готов",
+     "value": 514.3,
+     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
     },
     "kit": {
      "holder": "shiki",
@@ -289,7 +279,8 @@
     "campaigns/shiki/ref/KNOWLEDGE.md",
     "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/SHIKI.md"
+    "campaigns/shiki/SHIKI.md",
+    "campaigns/shiki/ref/FUSION.md"
    ],
    "required": [
     "injuries/function",
@@ -304,8 +295,7 @@
     "NPC knowledge/fences",
     "prior dialogue/source",
     "intent",
-    "pact/stage",
-    "Nemera autonomy/resource",
+    "fusion profile or historical pact",
     "contact/channel"
    ],
    "routes": [
@@ -315,8 +305,11 @@
     "pact"
    ],
    "unavailable": [
+    "fusion.development",
     "genome.kaguya",
+    "nemera.agency",
     "nemera.cloak",
+    "nemera.transfer",
     "restricted.cancelled",
     "restricted.unlearned"
    ]
@@ -485,11 +478,11 @@
  "cursor": {
   "at": "0010-04-12T11:10:00",
   "date": "Понедельник, 12 апреля 1287 года",
-  "id": "s14.text.045",
+  "id": "s14.text.046",
   "place": "Рьючидо, галерея последней линьки",
   "time": "11:10"
  },
- "digest": "4299cbf7b1a118e3100a543bd59f12cc73cbc0b7fe7b5371a5313d3baf1190d4",
+ "digest": "6add28a6f8eeb5df8cd67ee3b13dfe7bafb6689caa2b946db0b4160307942cdf",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -599,22 +592,24 @@
      "Последняя линька: удержание собственных потоков при разрушении семи запоров"
     ]
    },
-   "state": "напряжение",
-   "value": 40.3
+   "max": 600.0,
+   "regen_per_hour": 10,
+   "state": "готов",
+   "value": 514.3
   },
   "dice": [
    3,
-   19,
-   9,
-   18,
-   9,
+   17,
    1,
-   1,
-   4,
-   2,
+   8,
+   10,
+   12,
+   11,
+   10,
    15,
-   6,
-   15
+   4,
+   16,
+   5
   ],
   "injuries": {
    "quay_masked_hunter": [
@@ -769,23 +764,6 @@
     "kind": "place",
     "label": "Рьючидо, галерея последней линьки",
     "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "khakudzya_sennin",
-    "kind": "npc",
-    "label": "Хакудзя-сэннин",
-    "operational_cues": {
-     "source": "recovery/cast/khakudzya_sennin.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "role": "по подписи в сцене"
-     }
-    },
-    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -794,7 +772,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 3
+  "total_matched": 2
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -1025,7 +1003,7 @@
     "memory_file": "archive/npc-memory/white_snake_sage.json",
     "memory_total": 34,
     "name": "Белая Змея / Хакудзя-сэннин",
-    "seen": "s14.text.045",
+    "seen": "s14.text.046",
     "state": "Лично наблюдала завершение слияния. Безуспешно попросила Немеру отделить чакру. Обратилась к Шики с вопросом, сколько их теперь.",
     "status": "present_profile",
     "tier": "deep"
@@ -1046,11 +1024,11 @@
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Шики на каменном ложе; Белая Змея рядом, отвернулась от ложа.",
-  "pressure": "Слияние окончательно; игрок управляет единым Шики. Ответ, чувства и добровольные действия определяет игрок.",
-  "situation": "После разрушения запоров отдельный голос Немеры кратковременно сохранялся, затем оба потока необратимо объединились. Немера перестала существовать как отдельная воля и собеседник; её память и природа вошли в Шики. Хакудзя-сэннин наблюдала слияние и спрашивает, сколько их теперь. Новые способности и физиология не проверены."
+  "pressure": "Игровая пауза снята после утверждения. Игрок сам определяет ответ, чувства и действия.",
+  "situation": "Линька завершена, Шики и Немера необратимо едины; утверждён новый профиль. Белая Змея ожидает ответа Шики на вопрос, сколько их теперь."
  },
  "shiki": {
-  "body": "Постоянный Режим отшельника Рьючидо; Шаринган выключен с s13.text.077, светло-зелёные с золотом радужки и вертикальные змеиные зрачки сохранены. Раны и функция — по действующему учёту.",
+  "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
   "genome": "{\"discovery\": \"Нулевой Геном определил Шики как первого донора С-17 по старым индивидуальным генетическим маркерам.\", \"s17_tissue\": \"Малая введённая проба уничтожена полностью, жизнеспособных клеток нет; постоянной интеграции не было.\", \"uchiha_eyes\": \"Левый Магацухи (Бётон) — тератогенная скверна живой плоти через взгляд, ВМШ управляет многими мутациями и контактно/через активную связь чакры передаёт поражение. Правый Ёмоцу-Хэгуи (Шитон) — физиологическая команда смерти через додзюцу, ВМШ — поражение в поле зрения без встречного взгляда, групповое воздействие и отложенная метка. Вместе S «Колыбель Ёми» — управляемая жизнь/смерть, формирование некротической биомарионетки с сохранным сознанием при поддержке. НЕ Мумё/Кёкай. Зрение стабильно без слепоты, не бесконечная чакра; глаза собственные, стабилизированы после интеграции генома Учиха. Рисунок ВМШ строго по фото 2900.jpg.\"}",
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -1072,8 +1050,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "12c26f17ad71b2a77508d76fa1f5c6e3d8157e93",
-  "turn": "s14.text.045"
+  "sha": "5d6f723102f61eddedd83a149644d56f64e8f3a9",
+  "turn": "s14.text.046"
  },
  "wiki": {
   "index": "memory/INDEX.md",
