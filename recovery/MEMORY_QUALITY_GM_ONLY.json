@@ -1,5 +1,6 @@
 {
   "current_focus": [
+    "fire_port_official",
     "fire_port_security_staff",
     "nemera",
     "quay_masked_hunter",
@@ -11,11 +12,12 @@
   ],
   "cursor": "s14.text.020",
   "focus_byte_limit": 6600,
-  "focus_bytes": 3463,
-  "index_entities": 770,
+  "focus_bytes": 3607,
+  "index_entities": 771,
   "index_source_records": 1130,
   "indexed_cursor": "s14.text.020",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 33,
     "npc": 174,
@@ -29,6 +31,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s14.text.020:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -499,9 +507,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 78,
-  "self_query_count": 78,
+  "self_query_at_1": 79,
+  "self_query_at_5": 79,
+  "self_query_count": 79,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
