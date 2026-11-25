@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.025: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `shiki_nail_sample_1287`
 - s15.text.024: Орочимару (`npc/orochimaru`)
 - s15.text.023: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`)
 - s15.text.022: Орочимару (`npc/orochimaru`)
@@ -58,4 +59,3 @@
 - s14.text.036: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s14.text.035: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.034: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
-- s14.text.033: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета

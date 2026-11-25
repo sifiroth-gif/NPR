@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.024",
+  "cursor": "s15.text.025",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 101,
+      "mention_count": 102,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T13:06:00",
-          "excerpt": "ься плеча Шики, но остановил пальцы в нескольких сантиметрах от ткани плаща. **Орочимару:** — Позволишь? **Кабуто Якуши:** — Орочимару-сама… Саннин бросил на него недовольный взгляд. Кабуто умолк. Орочимару опустил руку и тихо рассмеялся. **Орочимару:** — Кака",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.011"
         },
         {
           "at": "0010-04-21T13:07:00",
@@ -1694,16 +1687,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.021"
+        },
+        {
+          "at": "0010-04-21T13:30:00",
+          "excerpt": "ей Рьючидо к исследовательским и разведывательным поручениям. Отказ не должен иметь для них последствий. **Кабуто Якуши:** — Даже если от выполнения поручения зависит безопасность убежища? **Орочимару:** — Найдёшь другой способ. Кабуто посмотрел на Шики. **Каб",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.025"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.022",
+          "seen": "s15.text.025",
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
+        },
+        {
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "recovery/HOT.json",
+        "s15.text.025"
       ]
     },
     "kabuto_letter_0416": {
@@ -4232,7 +4237,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 140,
+      "mention_count": 141,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4245,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:26:00",
-          "excerpt": ". <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:26</text> ### Подземное убежище Орочимару **Мугами Шики:** — Столько сколько оно бы прожило. Орочимару прикрыл глаза. **Орочимару:** — Обычная человеческая жизнь. Какое скромное предложение. О",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.022"
         },
         {
           "at": "0010-04-21T13:27:00",
@@ -4261,11 +4259,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.024"
+        },
+        {
+          "at": "0010-04-21T13:30:00",
+          "excerpt": "с <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:30</text> ### Подземное убежище Орочимару **Мугами Шики:** — Знания останутся но все ограничения которые вы так тщательно преодолевали вернуться. Но мне не понятно что такое великий шиноби. По",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.025"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.024",
+          "seen": "s15.text.025",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4280,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.024"
+        "s15.text.025"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,7 +13934,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.024",
+        "s15.text.025",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13943,7 +13948,8 @@
         "s15.text.020",
         "s15.text.021",
         "s15.text.022",
-        "s15.text.023"
+        "s15.text.023",
+        "s15.text.024"
       ]
     },
     "place:e02f343494580ab8": {
@@ -16873,12 +16879,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "orochimaru",
-          "since": "s15.text.020"
+          "holder": "kabuto",
+          "since": "s15.text.020",
+          "turn": "s15.text.025"
         }
       ],
       "sources": [
-        "s15.text.020"
+        "s15.text.025"
       ]
     },
     "shiki_new_refuge": {
@@ -18757,12 +18764,12 @@
     },
     {
       "from": "shiki_nail_sample_1287",
-      "source": "s15.text.020",
+      "source": "s15.text.025",
       "status": "projected",
-      "to": "orochimaru",
+      "to": "kabuto",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1198
+  "source_turns_indexed": 1199
 }
