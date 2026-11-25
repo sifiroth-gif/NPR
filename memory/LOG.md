@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.089: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_spare_communication_plate`
 - s13.text.088: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), вещь `fire_statement_genetic_risk`, план сюжета
 - s13.text.087: Портовый чиновник (`npc/fire_port_official`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шиноби Тумана (`npc/kiri_port_guard_senior`), план сюжета
 - s13.text.086: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_private_line_kiri_plate`, вещь `fire_statement_genetic_risk`, план сюжета

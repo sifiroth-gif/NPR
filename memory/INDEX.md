@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s13.text.088`
+# Карта мира NPR · на ходе `s13.text.089`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -245,7 +245,7 @@
 ## Давние линии (27, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (66)
+## Вещи (67)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -304,6 +304,7 @@
 - `shiki_medical_kit` · `items/shiki_medical_kit`
 - `shiki_private_line_kiri_plate` · `items/shiki_private_line_kiri_plate`
 - `shiki_s17_report_folder` · `items/shiki_s17_report_folder`
+- `shiki_spare_communication_plate` · `items/shiki_spare_communication_plate`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
 - `signaller_contract_tube` · `items/signaller_contract_tube`
