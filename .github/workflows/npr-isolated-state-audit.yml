@@ -7,6 +7,10 @@ on:
       - "rpg_engine/capabilities.py"
       - "rpg_engine/nextpack.py"
       - "rpg_engine/preflight.py"
+      - "rpg_engine/historical_regression.py"
+      - "rpg_engine/hot.py"
+      - "rpg_engine/continuity_guard.py"
+      - "rpg_engine/identity.py"
       - "rpg_engine/dread.py"
       - "rpg_engine/medical.py"
       - "rpg_engine/body.py"
@@ -59,6 +63,11 @@ jobs:
               return json.loads((state / path).read_text(encoding="utf-8"))
           def digest(path):
               return hashlib.sha256((state / path).read_bytes()).hexdigest()
+          from rpg_engine import historical_regression
+          archive_before = historical_regression.hashes(state)
+          corpus = historical_regression.scan(state)
+          print("D1_CORPUS", json.dumps(corpus, ensure_ascii=False))
+          assert not corpus["errors"], corpus["errors"]
           original = load("recovery/HOT.json")
           original_will = load("recovery/GM_ONLY.json")["will"]
           assert original["cursor"]["id"] == "s14.text.023"
@@ -199,6 +208,11 @@ jobs:
           assert not preflight.inspect(packet, dict(probe, review={"predecessor": "s14.text.022"}))["mechanical_ok"]
           assert (packet, probe) == before_probe
           print("C4_PREFLIGHT_OK", "checklist", len(check["checklist"]), "NEXT_bytes", packet_bytes)
+          regressions = historical_regression.verify(state, full, packet, data)
+          print("D1_SCENARIOS", json.dumps(regressions, ensure_ascii=False))
+          assert len(regressions) == 8 and all(regressions.values()), regressions
+          historical_regression.check_hashes(state, archive_before)
+          print("D1_PRIMARY_RECORDS_UNCHANGED", len(archive_before))
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
