@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.031",
+  "cursor": "s15.text.032",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,22 +406,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.031:0": {
-      "aliases": [
-        "canon:s15.text.031:0",
-        "s15.text.031: прямое уточнение игрока заменяет ограничение s15.text.030: после слияния Сусаноо развивается на СЛЕДУЮЩУЮ незавершённую стадию, не просто усиливает скелет. Облик чёрн"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.031:0",
-      "kind": "canon",
-      "label": "s15.text.031: прямое уточнение игрока заменяет ограничение s15.text.030: после слияния Сусаноо развивается на СЛЕДУЮЩУЮ незавершённую стадию, не просто усиливает скелет. Облик чёрн",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.031"
       ]
     },
     "captive_guard": {
@@ -4248,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 144,
+      "mention_count": 145,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4256,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:31:00",
-          "excerpt": "я <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:31</text> ### Подземное убежище Орочимару **Мугами Шики:** — Значит вы хотите вернуться позже к этому варианту? Ну думаю змеи помогут нам связаться. **Орочимару:** — Именно. Предпочитаю иметь ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.026"
         },
         {
           "at": "0010-04-21T13:32:00",
@@ -4277,6 +4254,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.028"
+        },
+        {
+          "at": "0010-04-21T13:39:09",
+          "excerpt": "плитах лежала огромная тень капюшона. Под ним неподвижно светились две зеленоватые точки. **Саске Учиха:** — Орочимару тоже пытался преодолеть ограничения человеческого тела. Но в его случае новое тело постепенно разрушается. У тебя, судя по всему, происходит ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.032"
         }
       ],
       "projections": [
@@ -13091,10 +13075,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.031",
+        "s15.text.032",
         "s15.text.028",
         "s15.text.029",
-        "s15.text.030"
+        "s15.text.030",
+        "s15.text.031"
       ]
     },
     "place:ca8dd7c91b21f899": {
@@ -16544,7 +16529,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.031",
+          "seen": "s15.text.032",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         },
         {
@@ -16554,7 +16539,7 @@
       "sources": [
         "recovery/cast/sasuke.json",
         "recovery/HOT.json",
-        "s15.text.031"
+        "s15.text.032"
       ]
     },
     "sayu": {
@@ -18805,5 +18790,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1205
+  "source_turns_indexed": 1206
 }
