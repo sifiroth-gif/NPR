@@ -2,7 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s14.text.035: western_nest_young_courier (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
+- s14.text.036: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
+- s14.text.035: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.034: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.033: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.032: линия `shiki_dragon_sage`, линия `shiki_save_asuma`, поправки игрока: 1
@@ -48,8 +49,8 @@
 - s13.text.088: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), вещь `fire_statement_genetic_risk`, план сюжета
 - s13.text.087: Портовый чиновник (`npc/fire_port_official`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шиноби Тумана (`npc/kiri_port_guard_senior`), план сюжета
 - s13.text.086: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_private_line_kiri_plate`, вещь `fire_statement_genetic_risk`, план сюжета
-- s13.text.085: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), western_nest_young_courier (`npc/western_nest_young_courier`), план сюжета
-- s13.text.084: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), western_nest_young_courier (`npc/western_nest_young_courier`), план сюжета
+- s13.text.085: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), Молодая посланница (`npc/western_nest_young_courier`), план сюжета
+- s13.text.084: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), Молодая посланница (`npc/western_nest_young_courier`), план сюжета
 - s13.text.083: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), план сюжета
 - s13.text.082: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), план сюжета
 - s13.text.081: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -57,4 +58,3 @@
 - s13.text.079: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.078: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.077: Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, план сюжета
-- s13.text.076: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета

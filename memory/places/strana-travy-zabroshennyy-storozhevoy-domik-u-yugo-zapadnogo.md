@@ -12,6 +12,7 @@
 - Молодая змея · `npc/molodaya_zmeya` — 4 ход(ов)
 - Старший патруля Кусы · `npc/grass_roads_patrol_senior` — 3 ход(ов)
 - Второй шиноби Тумана · `npc/kiri_port_guard_junior` — 1 ход(ов)
+- Белая Змея / Хакудзя-сэннин · `npc/white_snake_sage` — 1 ход(ов)
 
 ## Ходы
 - s13.text.044 0010-04-01T17:03:50

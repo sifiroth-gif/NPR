@@ -83,6 +83,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
+- Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 3 ход(ов), s14–s14
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
@@ -120,7 +121,6 @@
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Старая переправа, северная граница Страны Травы · `places/staraya-pereprava-severnaya-granitsa-strany-travy` · 2 ход(ов), s11–s11
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
-- Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 2 ход(ов), s14–s14
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
 - Страна Рек, каменный уступ у реки · `places/strana-rek-kamennyy-ustup-u-reki` · 2 ход(ов), s11–s11
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
