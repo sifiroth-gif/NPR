@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.049: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`)
 - s13.text.048: поправки игрока: 1
 - s13.text.047: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 1
 - s13.text.046: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 2
@@ -56,4 +57,3 @@
 - s12.text.098: Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), линия `market_shadow`
 - s12.text.095: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
 - s12.text.094: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
-- s12.text.093: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), линия `market_shadow`
