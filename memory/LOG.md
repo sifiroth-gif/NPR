@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.043: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.042: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.041: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.040: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Неизвестный наблюдатель за ивами (`npc/willow_observer`)
@@ -55,4 +56,3 @@
 - s12.text.090: Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), линия `nemera_symbiosis`
 - s12.text.089: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`, поправки игрока: 1
 - s12.text.088: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
-- s12.text.087: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
