@@ -43,7 +43,7 @@ class SourceIdentityRegressionTest(unittest.TestCase):
                                   (14, [{"id": "s14.text.007", "gm": "**Человек в маске:** — Да."},
                                         {"id": "s14.text.015", "gm": "**Человек в маске:** — Минасэ. Сэйдзи Минасэ."}])):
                 path = state / "archive" / f"session-{session:03}-turns.jsonl"
-                path.write_text("\\n".join(json.dumps(row, ensure_ascii=False) for row in rows), encoding="utf-8")
+                path.write_text("\n".join(json.dumps(row, ensure_ascii=False) for row in rows), encoding="utf-8")
             store = {old: entity(old, "Человек в маске", first="s08.text.098", sources=["s14.text.007"]),
                      new: entity(new, "Сэйдзи Минасэ", first="s13.text.099")}
             conversations, _ = talk.collect(state, store)
