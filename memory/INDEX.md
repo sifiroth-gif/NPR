@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.074`
+# Карта мира NPR · на ходе `s15.text.075`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,12 +6,12 @@
 - места · `places/INDEX` (305) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (230)
+- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
 - Мидзухара Аки (Мидзухара) — генин, напарница (на 1283, экзамен) · `npc/aki` · в сцене
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro` · в сцене
 - Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao` · в сцене
 - Хаясэ Рэн — генин, напарник (на 1283, экзамен) · `npc/ren` · в сцене
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
-- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - Старший патруля Кусы — Мужчина в форме шиноби Травы, сегодня без шлема, тени под г… · `npc/grass_roads_patrol_senior`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
@@ -246,7 +246,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (79)
+## Вещи (80)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -285,6 +285,7 @@
 - `medical_case_m12` · `items/medical_case_m12`
 - `minagi_receipts` · `items/minagi_receipts`
 - `mugami_family_album` · `items/mugami_family_album`
+- `mugami_tea_gift_s15` · `items/mugami_tea_gift_s15`
 - `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
 - `orochimaru_poison_samples_s15` · `items/orochimaru_poison_samples_s15`

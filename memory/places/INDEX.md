@@ -22,10 +22,10 @@
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 15 ход(ов), s08–s15
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 15 ход(ов), s08–s15
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 15 ход(ов), s12–s13
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 14 ход(ов), s08–s15
 - Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 14 ход(ов), s15–s15
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12

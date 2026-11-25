@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.074",
+  "cursor": "s15.text.075",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:10:00",
-          "excerpt": "тихо рассмеялась. Рэн поднял чашку и протянул её через стол к Шики. **Хаясэ Рэн:** — За старую команду? **Мидзухара Аки:** — За старую команду. Нао прикрыла рот ладонью. На её глазах выступили слёзы. **Ход Шики.** Шики изменил данное Рэну в 1278 обещание: не у",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.072"
         },
         {
           "at": "0010-04-21T20:23:00",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.074"
+        },
+        {
+          "at": "0010-04-21T20:25:00",
+          "excerpt": "это. Только приезжай иногда, если сможешь. Нао поднялась и ушла на кухню. Оттуда донёсся звон посуды. **Мидзухара Аки:** — Тогда поставлю у калитки отдельный почтовый ящик. С отверстием у земли. До него мои ловушки не достают. Коюки вытянулась над столом. **Ко",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.075"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.074"
+          "seen": "s15.text.075"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.074"
+        "s15.text.075"
       ]
     },
     "aki_home_address_s15": {
@@ -119,7 +119,7 @@
       "id": "akihiro",
       "kind": "npc",
       "label": "Мугами Акихиро",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -127,13 +127,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T19:26:00",
-          "excerpt": ":** — Тогда я только учился. **Кирисава Сэйна:** — И совершенно не умел вовремя прекращать учиться. **Мугами Акихиро:** — Это у него от матери. Нао бросила на мужа укоризненный взгляд. Коюки подползла к следующей фотографии, некоторое время рассматривала её, а",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.061"
         },
         {
           "at": "0010-04-21T19:41:00",
@@ -148,6 +141,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.074"
+        },
+        {
+          "at": "0010-04-21T20:25:00",
+          "excerpt": "сьмо. Ах да, если и буду писать, то передавать письма буду просить змей. Акихиро снял чайник с огня. **Мугами Акихиро:** — Мы переживём это. Только приезжай иногда, если сможешь. Нао поднялась и ушла на кухню. Оттуда донёсся звон посуды. **Мидзухара Аки:** — Т",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.075"
         }
       ],
       "projections": [
@@ -155,7 +155,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.074",
+          "seen": "s15.text.075",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -172,7 +172,7 @@
       "sources": [
         "recovery/cast/akihiro.json",
         "recovery/HOT.json",
-        "s15.text.074"
+        "s15.text.075"
       ]
     },
     "arai_mitiko": {
@@ -3952,6 +3952,27 @@
         "s15.text.061"
       ]
     },
+    "mugami_tea_gift_s15": {
+      "aliases": [
+        "mugami tea gift s15",
+        "Банка любимого чая Шики"
+      ],
+      "facts": [],
+      "id": "mugami_tea_gift_s15",
+      "kind": "item",
+      "label": "Банка любимого чая Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "nao",
+          "since": "s15.text.075"
+        }
+      ],
+      "sources": [
+        "s15.text.075"
+      ]
+    },
     "naemnik_u_shakhty": {
       "aliases": [
         "naemnik u shakhty",
@@ -4047,7 +4068,7 @@
       "id": "nao",
       "kind": "npc",
       "label": "Мугами Нао",
-      "mention_count": 33,
+      "mention_count": 34,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -4055,13 +4076,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T20:06:00",
-          "excerpt": "авалась непроверенной. Отростки втянулись обратно. Нао протянула ладонь к предназначенной родителям пластине. **Мугами Нао:** — Значит, теперь я смогу позвать тебя домой? **Ход Шики.** Шики за восемь минут изготовил отростками две индивидуальные сигнальные пла",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.069"
         },
         {
           "at": "0010-04-21T20:08:00",
@@ -4076,6 +4090,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.073"
+        },
+        {
+          "at": "0010-04-21T20:25:00",
+          "excerpt": "ди утром. Покажу. Из кухни вернулась Нао с небольшой банкой чая. Она поставила её поверх семейного альбома. **Мугами Нао:** — Возьми с собой. У меня ещё есть. Её рука задержалась на крышке банки. **Мугами Нао:** — Я ведь тебя домой приглашаю, Шики. Не в деревн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.075"
         }
       ],
       "projections": [
@@ -4083,7 +4104,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.074",
+          "seen": "s15.text.075",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -4099,7 +4120,8 @@
       ],
       "sources": [
         "recovery/cast/nao.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.075"
       ]
     },
     "naruto": {
@@ -6163,7 +6185,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.074",
+        "s15.text.075",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6174,7 +6196,8 @@
         "s15.text.070",
         "s15.text.071",
         "s15.text.072",
-        "s15.text.073"
+        "s15.text.073",
+        "s15.text.074"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16211,7 +16234,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.074",
+          "seen": "s15.text.075",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16220,8 +16243,7 @@
       ],
       "sources": [
         "recovery/cast/ren.json",
-        "recovery/HOT.json",
-        "s15.text.074"
+        "recovery/HOT.json"
       ]
     },
     "residence_courier_v7": {
@@ -18702,13 +18724,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18716,13 +18739,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-21T20:08:00",
-          "excerpt": "стиной. **Мугами Нао:** — Теперь хотя бы смогу услышать твой голос. **Мугами Шики:** — Ну что, Аки, расскажи Коюки про экзамен. Аки отложила палочки. **Мидзухара Аки:** — Ему было пятнадцать. Выиграл два поединка, а потом добровольно сдался Гааре в полуфинале.",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.070"
         },
         {
           "at": "0010-04-21T20:09:00",
@@ -18737,16 +18753,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.073"
+        },
+        {
+          "at": "0010-04-21T20:25:00",
+          "excerpt": "— Тогда поставлю у калитки отдельный почтовый ящик. С отверстием у земли. До него мои ловушки не достают. Коюки вытянулась над столом. **Коюки:** — А я могу завтра посмотреть, где ты живёшь? Потом покажу дорогу другим змеям, если они захотят носить письма. **М",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.075"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.074",
+          "seen": "s15.text.075",
+          "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
+        },
+        {
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s15.text.075"
       ]
     },
     "white_snake_sage": {
@@ -19186,8 +19214,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "mugami_tea_gift_s15",
+      "source": "s15.text.075",
+      "status": "projected",
+      "to": "nao",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1248
+  "source_turns_indexed": 1249
 }
