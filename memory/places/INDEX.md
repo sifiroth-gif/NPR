@@ -213,6 +213,7 @@
 - Передовой пост Сунагакуре, сухая долина на дороге к Стране Ветра · `places/peredovoy-post-sunagakure-sukhaya-dolina-na-doroge-k-strane-` · 1 ход(ов), s11–s11
 - Рьючидо, Галерея переменчивого камня у колонны · `places/ryuchido-galereya-peremenchivogo-kamnya-u-kolonny` · 1 ход(ов), s10–s10
 - Рьючидо, Галерея переменчивого камня (второе испытание) · `places/ryuchido-galereya-peremenchivogo-kamnya-vtoroe-ispytanie` · 1 ход(ов), s10–s10
+- Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 1 ход(ов), s14–s14
 - Рьючидо, каменная галерея · `places/ryuchido-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
