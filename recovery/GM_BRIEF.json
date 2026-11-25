@@ -300,7 +300,7 @@
   "place": "Страна Огня, восточная гавань, грузовой причал",
   "time": "17:24"
  },
- "digest": "2ee549f37bbf09515fba21b2d7342c7436ce2c2378d99da5d9f5e2e5e79c4d2a",
+ "digest": "f24665becd1c05cadace527e3f1839972d5c8c92b9df286c084b1a0d52c56185",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -544,16 +544,6 @@
    1
   ],
   "injuries": {
-   "crossbow_ambusher": [
-    {
-     "at": "0010-03-25T19:55:00",
-     "lost": "без сознания, не может атаковать",
-     "severity": "средняя",
-     "turn": "s12.text.103",
-     "what": "Нелетальный удар Шики, кратковременная потеря сознания",
-     "where": "нижняя челюсть и голова"
-    }
-   ],
    "root_field_jacket_man": [
     {
      "at": "0010-04-05T11:26:02",
@@ -766,7 +756,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-04-11T17:24:00",
+  "closed": 13,
+  "first_turn": "s14.text.001",
+  "last_turn": "s13.text.099",
+  "next_session": 14,
+  "source": "campaigns/shiki/continuity/SESSION_013_TO_014_HANDOFF.json",
+  "sqlite_revision": 1066
+ },
  "horror": {
   "due": null,
   "npcs": {
@@ -1354,9 +1352,7 @@
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
    "pact",
-   "shiki_confidentiality",
-   "shiki_underground_career",
-   "nemera_symbiosis"
+   "shiki_confidentiality"
   ],
   "secret_topics": [
    "v7_personal_targeting",
@@ -1374,15 +1370,15 @@
     "state": "Предложенная Шики будущая точка связи для Огня: 28 апреля 1287 года 18:00, в Долине Завершения внизу водопада под статуей Учихи Мадары. Записана чиновником порта, делегат НЕ назначен; сведения будут включены в служебное…",
     "turn": "s13.text.092"
    },
-   "roadside_attack": {
-    "source": "memory/threads/roadside_attack.md",
-    "state": "Участие Шики завершилось передачей пленного и сведений местному патрулю; расследование продолжают шиноби Травы.",
-    "turn": "s13.text.007"
+   "nemera_symbiosis": {
+    "source": "memory/threads/nemera_symbiosis.md",
+    "state": "25.03 Немера закончила безопасное сопоставление двух трофейных принудительных печатей с семью запорами. Печати не дают прямого ключа и не доказывают происхождение из госпиталя. Немера собственной волей на несколько секу…",
+    "turn": "s12.text.101"
    },
-   "tenchi_bridge": {
-    "source": "memory/threads/tenchi_bridge.md",
-    "state": "26.03 отряд Ямато нашёл Саске в убежище, вернулся без него. Шики не знает результата; Кэйдзи получил от него сведения 25.03 и позднее установил связь с отрядом.",
-    "turn": "s13.text.013"
+   "shiki_underground_career": {
+    "source": "memory/threads/shiki_underground_career.md",
+    "state": "«Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и переносного имущества. 9 марта 88 млн переданы Минаги по договору МД-091. У Шики нет убежища.",
+    "turn": "s12.text.091"
    }
   }
  }

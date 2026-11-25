@@ -1,7 +1,7 @@
 {
  "schema": "npr-next/1",
  "cursor": "s13.text.100",
- "next_id": "s13.text.101",
+ "next_id": "s14.text.001",
  "header": "Воскресенье, 11 апреля 1287 года 17:24",
  "place": "Страна Огня, восточная гавань, грузовой причал",
  "turn_file": "ae2b8bd13e7f8d4f6e9bb4799cac56ec376f6a4c",
@@ -67,34 +67,18 @@
   "items": [
    {
     "key": "rule:campaigns/shiki/SHIKI.md",
-    "what": "файл правил campaigns/shiki/SHIKI.md (знаков): 11453 из 10000 (115%)",
-    "acts": [
-     "заменить правило или перенести в ref/",
-     "поднять предел (хранитель)"
-    ],
-    "over": true
+    "what": "файл правил campaigns/shiki/SHIKI.md (знаков): 11453 из 10000 (115%)"
    },
    {
     "key": "rule:campaigns/shiki/ref/TECHNIQUES.md",
-    "what": "файл правил campaigns/shiki/ref/TECHNIQUES.md (знаков): 14956 из 12000 (125%)",
-    "acts": [
-     "заменить правило или перенести в ref/",
-     "поднять предел (хранитель)"
-    ],
-    "over": true
+    "what": "файл правил campaigns/shiki/ref/TECHNIQUES.md (знаков): 14956 из 12000 (125%)"
    },
    {
     "key": "rule:campaigns/shiki/ref/COMBAT.md",
-    "what": "файл правил campaigns/shiki/ref/COMBAT.md (знаков): 12516 из 9000 (139%)",
-    "acts": [
-     "заменить правило или перенести в ref/",
-     "поднять предел (хранитель)"
-    ],
-    "over": true
+    "what": "файл правил campaigns/shiki/ref/COMBAT.md (знаков): 12516 из 9000 (139%)"
    }
   ],
-  "tell": true,
-  "rule": "Предел близко. Скажи игроку ОДНОЙ короткой строкой вне игры после сцены (сцену не прерывай): что подходит к пределу и варианты из acts на выбор; выбор игрока исполни: закрыть сессию — recovery/SESSION_CLOSE.json {\"close\": true}; разгрузить — recovery/MEMORY_TRIM.json {\"trim\": true}; поднять предел — просит хранителя игрок."
+  "tell": false
  },
  "checks": [],
  "present": {
@@ -201,16 +185,6 @@
      "lost": "кисть работает",
      "turn": "s13.text.069",
      "at": "0010-04-05T11:26:02"
-    }
-   ],
-   "crossbow_ambusher": [
-    {
-     "where": "нижняя челюсть и голова",
-     "what": "Нелетальный удар Шики, кратковременная потеря сознания",
-     "severity": "средняя",
-     "lost": "без сознания, не может атаковать",
-     "turn": "s12.text.103",
-     "at": "0010-03-25T19:55:00"
     }
    ],
    "root_field_needle_man": [
