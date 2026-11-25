@@ -240,12 +240,12 @@
       "read": [
         "campaigns/shiki/ref/NEMERA.md",
         "campaigns/shiki/SHIKI.md",
-        "campaigns/shiki/ref/TECHNIQUES.md",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/ref/TECHNIQUES.md"
       ],
-      "focus": "До линьки — автономия и границы; после — единая природа, реальные контакты и цена.",
+      "focus": "Автономия, согласованные границы, реальные контакты.",
       "required": [
-        "fusion profile or historical pact",
+        "pact/stage",
+        "Nemera autonomy/resource",
         "contact/channel",
         "NPC knowledge/fences"
       ]
@@ -324,23 +324,21 @@
     },
     {
       "id": "sage.permanent",
-      "title": "Постоянный режим отшельника дракона",
+      "title": "Постоянный Режим отшельника",
       "tags": [
         "combat",
         "travel",
         "medical",
         "pact"
       ],
-      "summary": "После слияния постоянное усиление тела и расширенная природная/нечеловеческая сенсорика; старый змеиный режим исторический.",
+      "summary": "Постоянное усиление тела и природная сенсорика вне поля зрения, без пассивного расхода. При крайнем истощении восприятие угасает; морфология остаётся. Не всеведение.",
       "sources": [
         "s10.text.049",
         "s10.text.053",
         "s10.text.077",
         "campaigns/shiki/ref/TECHNIQUES.md",
         "s11.text.074",
-        "campaigns/shiki/ref/COMBAT.md",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/ref/COMBAT.md"
       ],
       "status": "mastered",
       "activation": "passive",
@@ -352,7 +350,7 @@
         "природная сенсорика"
       ],
       "requires": "Постоянно, без пассивного расхода; при крайнем истощении восприятие может угаснуть.",
-      "limits": "Бонус замещает прежний, не складывается; не чтение мыслей, не всеведение.",
+      "limits": "Не чтение мыслей и не автоматическое обнаружение скрытой чакры; бонус единожды.",
       "core": true
     },
     {
@@ -403,20 +401,18 @@
     },
     {
       "id": "pact.contact",
-      "title": "Контактная природа Шики после слияния",
+      "title": "Договор, стадия 6",
       "tags": [
         "pact",
         "medical",
         "combat",
         "dialogue"
       ],
-      "summary": "Договор уничтожен; холодная цельная кожа и чёрная кровь, опасность только реального контакта. До линьки историческая стадия 6.",
+      "summary": "Холодная цельная кожа, нормальная работоспособность. Риск только прямой голый контакт или свежая кровь в рану/слизистую; нет ауры и заражения от предметов, одежды, воздуха.",
       "sources": [
         "s08.text.022",
         "s10.text.069",
-        "campaigns/shiki/SHIKI.md",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/SHIKI.md"
       ],
       "status": "mastered",
       "activation": "passive",
@@ -457,13 +453,11 @@
         "research",
         "medical"
       ],
-      "summary": "Единственная переключаемая форма глаз, только явная активация; вертикальный зрачок сохраняется. Стандартное зрение Шарингана при активной форме; без деградации до слепоты, ресурс конечен. После линьки чёрные склеры неизменны, холодно-синие радужки становятся красными при ВМШ; узор 2900.jpg.",
+      "summary": "Единственная переключаемая форма глаз, только явная активация; вертикальный зрачок сохраняется. Стандартное зрение Шарингана при активной форме; без деградации до слепоты, ресурс конечен.",
       "sources": [
         "campaigns/shiki/ref/TECHNIQUES.md",
         "s13.text.100",
-        "campaigns/shiki/SHIKI.md",
-        "campaigns/shiki/ref/FUSION.md",
-        "s14.text.046"
+        "campaigns/shiki/SHIKI.md"
       ],
       "status": "mastered",
       "activation": "declared",
@@ -507,25 +501,22 @@
         "dialogue",
         "medical"
       ],
-      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
+      "summary": "Собственная воля и запас 500, отростки 5 м; в бою 1–2 действия по её выбору. Нет движения тела против воли Шики и автоматического заражения.",
       "sources": [
         "s09.text.101",
         "campaigns/shiki/ref/NEMERA.md",
-        "campaigns/shiki/ref/TECHNIQUES.md",
-        "s14.text.045",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/ref/TECHNIQUES.md"
       ],
-      "status": "retired",
-      "activation": "unavailable",
+      "status": "mastered",
+      "activation": "autonomous",
       "aliases": [
         "немера",
         "единение: отростки",
         "отростки немеры"
       ],
-      "requires": "Недоступно после необратимого слияния.",
-      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
-      "core": false
+      "requires": "Её воля, отдельный запас, доступная дистанция 5 м.",
+      "limits": "Нет автоматического заражения и движения тела против воли Шики.",
+      "core": true
     },
     {
       "id": "shunshin.zero",
@@ -1019,20 +1010,17 @@
         "combat",
         "medical"
       ],
-      "status": "retired",
-      "activation": "unavailable",
+      "status": "mastered",
+      "activation": "autonomous",
       "aliases": [
         "чакра немеры",
         "передача чакры немеры"
       ],
-      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
-      "requires": "Недоступно после необратимого слияния.",
-      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
+      "summary": "Отдельный запас 500; передача до 10 ед./с, восстановление 4 ед./ч.",
+      "requires": "Её согласие и действительный запас.",
+      "limits": "Максимум Шики 100 не увеличивается.",
       "sources": [
-        "campaigns/shiki/ref/NEMERA.md",
-        "s14.text.045",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/ref/NEMERA.md"
       ],
       "core": false
     },
@@ -1043,21 +1031,18 @@
         "pact",
         "combat"
       ],
-      "status": "retired",
+      "status": "learning",
       "activation": "unavailable",
       "aliases": [
         "совместный покров"
       ],
-      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
-      "requires": "Недоступно после необратимого слияния.",
-      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
+      "summary": "В освоении; не готовая техника.",
+      "requires": "Новое подтверждённое освоение.",
+      "limits": "Не применять сейчас.",
       "sources": [
         "s09.text.101",
         "campaigns/shiki/ref/NEMERA.md",
-        "campaigns/shiki/ref/TECHNIQUES.md",
-        "s14.text.045",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
+        "campaigns/shiki/ref/TECHNIQUES.md"
       ],
       "core": false
     },
@@ -1108,53 +1093,6 @@
       "sources": [
         "campaigns/shiki/ref/TECHNIQUES.md"
       ],
-      "core": false
-    },
-    {
-      "id": "fusion.tendrils",
-      "title": "Единение: собственные отростки Шики",
-      "tags": [
-        "pact",
-        "combat",
-        "medical"
-      ],
-      "summary": "Управляемые Шики отростки, восприятие и взаимодействие; проведение освоенной чакры по заявке.",
-      "sources": [
-        "s14.text.045",
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
-      ],
-      "status": "mastered",
-      "activation": "declared",
-      "aliases": [
-        "собственные отростки",
-        "отростки шики"
-      ],
-      "requires": "Заявка Шики; общий резерв, исходная проверенная дальность 5 м, 1 ед./мин.",
-      "limits": "Не отдельный NPC, не бесплатный ход или автоматическое поражение.",
-      "core": true
-    },
-    {
-      "id": "fusion.development",
-      "title": "Развитие сендзюцу дракона",
-      "tags": [
-        "combat",
-        "medical",
-        "research"
-      ],
-      "summary": "Пластичность и повышенная регенерация как свойства; новые Сэнпо Шитона/Бётона, пределы и приёмы требуют освоения.",
-      "sources": [
-        "s14.text.046",
-        "campaigns/shiki/ref/FUSION.md"
-      ],
-      "status": "learning",
-      "activation": "unavailable",
-      "aliases": [
-        "новые сэнпо дракона",
-        "морфологическая пластичность"
-      ],
-      "requires": "Проверки и освоение отдельных новых техник.",
-      "limits": "Не выдавать бесплатные техники, бессмертие или автоматическое лечение.",
       "core": false
     }
   ]

@@ -1,5 +1,6 @@
 import unittest
-from rpg_engine import fight, fusion, hot, will, overlay
+from pathlib import Path
+from rpg_engine import fight, fusion, hot, will, overlay, capabilities
 
 class FusionTests(unittest.TestCase):
     def base(self):
@@ -46,3 +47,12 @@ class FusionTests(unittest.TestCase):
         p=overlay.project(packet,[{"turn":t,"sha":"confirmed"}])
         self.assertEqual(p["chakra"]["value"],524.3)
         self.assertEqual(p["chakra"]["max"],600)
+    def test_registry_is_selected_by_current_profile(self):
+        root=Path(__file__).resolve().parents[1]
+        old=capabilities.load(root,"shiki")
+        new=capabilities.load(root,"shiki",self.merged())
+        self.assertEqual(capabilities.resolve(old,"совместный покров")["status"],"learning")
+        self.assertEqual(capabilities.resolve(new,"совместный покров")["status"],"retired")
+        self.assertEqual(capabilities.resolve(new,"собственные отростки")["status"],"mastered")
+        self.assertEqual(capabilities.resolve(new,"чакра немеры")["status"],"retired")
+        self.assertIn("FUSION_CAPABILITIES",capabilities.packet(root,"shiki",self.merged())["registry"])

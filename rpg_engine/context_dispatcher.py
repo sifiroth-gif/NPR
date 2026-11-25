@@ -129,7 +129,7 @@ def route(hot, index, *, action="", limit=DEFAULT_FOCUS, max_bytes=DEFAULT_BYTES
                    packet.get("omitted_priority_entities") or
                    packet.get("over_budget") else "focused"),
     }
-    registry = capabilities.load(Path(__file__).resolve().parents[1], hot.get("campaign"))
+    registry = capabilities.load(Path(__file__).resolve().parents[1], hot.get("campaign"), hot)
     if registry:
         thematic = capabilities.for_request(registry, action, scene=scene,
                                              active_fight=bool((hot.get("_fight") or {}).get("active")))

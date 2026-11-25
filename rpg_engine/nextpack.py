@@ -304,6 +304,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     if fight.get("chakra"):
         pack["chakra"] = fight["chakra"]
     if fusion.active(hot):
+        # A standing NPC instruction was valid only before the irreversible fusion.
+        if isinstance(pack.get("rule"), str):
+            pack["rule"] = pack["rule"].replace("Немера — ref/NEMERA.md, действует сама.", "Немера объединена с Шики; ref/FUSION.md.")
         pack["fusion_profile"] = {"id": fusion.PROFILE, "source": fusion.SOURCE, "ref": "campaigns/shiki/ref/FUSION.md", "nemera_independent": False, "pact": "terminated"}
     nemera = None if fusion.active(hot) else ((hot.get("shiki") or {}).get("nemera_chakra"))
     if isinstance(nemera, dict) and nemera.get("value") is not None:   # её запас отдельно от сотни Шики

@@ -5,7 +5,10 @@ import json
 import re
 from pathlib import Path
 
+from . import fusion
+
 PATH = "campaigns/shiki/ref/CAPABILITIES.json"
+FUSION_PATH = "campaigns/shiki/ref/FUSION_CAPABILITIES.json"
 STATUSES = {"mastered", "experimental", "learning", "retired", "unlearned"}
 ACTIVATIONS = {"passive", "declared", "conditional", "autonomous", "unavailable"}
 TURN_ID = re.compile(r"s\d+\.(?:text|played)\.\d+")
@@ -67,10 +70,10 @@ def validate(data, root):
     return data
 
 
-def load(root, campaign):
+def load(root, campaign, hot=None):
     if campaign not in ("naruto-shiki", "shiki"):
         return None
-    path = Path(root) / PATH
+    path = Path(root) / (FUSION_PATH if fusion.active(hot or {}) else PATH)
     if not path.is_file():
         return None
     return validate(json.loads(path.read_text(encoding="utf-8")), root)
@@ -166,12 +169,12 @@ def _short_source(value):
 
 
 def packet(root, campaign, hot=None):
-    data = load(root, campaign)
+    data = load(root, campaign, hot)
     if not data:
         return None
     return {"rule": "Темы по текущей заявке объединяй; «дальше» — scene_hint. Прочитанное не перечитывай. Проверяй состояние и неизвестные факты по источнику; реестр не даёт знания NPC.",
             "source_base": SOURCE_BASE,
-            "registry": PATH,
+            "registry": FUSION_PATH if fusion.active(hot or {}) else PATH,
             "scene_hint": scene_hint(data, hot or {}),
             "routes": {key: {"read": [_short_source(x) for x in row["read"]],
                              "required": row["required"]} for key, row in data["routes"].items()},
