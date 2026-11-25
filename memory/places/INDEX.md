@@ -237,6 +237,7 @@
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
 - Страна Травы, Пограничный медицинский пост № 6 · `places/strana-travy-pogranichnyy-meditsinskiy-post-n-6` · 1 ход(ов), s02–s02
 - Страна Травы, развилка северного тракта за лесным обходом постоялого двора · `places/strana-travy-razvilka-severnogo-trakta-za-lesnym-obkhodom-po` · 1 ход(ов), s12–s12
+- Страна Травы, северная дорога · `places/strana-travy-severnaya-doroga` · 1 ход(ов), s13–s13
 - Страна Травы, северная дорога из предгорий Водопадов · `places/strana-travy-severnaya-doroga-iz-predgoriy-vodopadov` · 1 ход(ов), s13–s13
 - Страна Травы, северная дорога на старой насыпи у постоялого двора · `places/strana-travy-severnaya-doroga-na-staroy-nasypi-u-postoyalogo` · 1 ход(ов), s12–s12
 - Страна Травы, скрытый лесной гребень над западным подходом к мосту Тэнти · `places/strana-travy-skrytyy-lesnoy-greben-nad-zapadnym-podkhodom-k-` · 1 ход(ов), s12–s12
