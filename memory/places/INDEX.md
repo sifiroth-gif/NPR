@@ -115,6 +115,7 @@
 - Кусагакуре, Старая насосная станция · `places/kusagakure-staraya-nasosnaya-stantsiya` · 2 ход(ов), s03–s03
 - Кусагакуре, старое административное крыло · `places/kusagakure-staroe-administrativnoe-krylo` · 2 ход(ов), s06–s06
 - Кусагакуре, старый западный шлюз · `places/kusagakure-staryy-zapadnyy-shlyuz` · 2 ход(ов), s11–s11
+- Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 2 ход(ов), s15–s15
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 2 ход(ов), s11–s11
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
@@ -186,7 +187,6 @@
 - Кусагакуре, Штаб управления безопасности · `places/kusagakure-shtab-upravleniya-bezopasnosti` · 1 ход(ов), s02–s02
 - Кусагакуре, Старый водоотвод за западным корпусом госпиталя · `places/kusagakure-staryy-vodootvod-za-zapadnym-korpusom-gospitalya` · 1 ход(ов), s02–s02
 - Кусагакуре, тёмный проход у западного водоотводного канала · `places/kusagakure-temnyy-prokhod-u-zapadnogo-vodootvodnogo-kanala` · 1 ход(ов), s04–s04
-- Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 1 ход(ов), s15–s15
 - Кусагакуре, центральный административный корпус · `places/kusagakure-tsentralnyy-administrativnyy-korpus` · 1 ход(ов), s07–s07
 - Кусагакуре, у собственного дома Мугами Шики · `places/kusagakure-u-sobstvennogo-doma-mugami-shiki` · 1 ход(ов), s08–s08
 - Кусагакуре, У входа в дом Мугами Шики · `places/kusagakure-u-vkhoda-v-dom-mugami-shiki` · 1 ход(ов), s02–s02

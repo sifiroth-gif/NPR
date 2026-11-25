@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.065: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.064: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`), Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`)
 - s15.text.063: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`)
 - s15.text.062: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`)
@@ -61,4 +62,3 @@
 - s15.text.008: Кабуто Якуши (`npc/kabuto`)
 - s15.text.007: Кабуто Якуши (`npc/kabuto`)
 - s15.text.006: Кабуто Якуши (`npc/kabuto`)
-- s15.text.005: Сирамэ (`npc/shirame`)
