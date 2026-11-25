@@ -42,6 +42,34 @@ class EchoTest(unittest.TestCase):
         hot["cursor"]["id"] = "s09.text.089"
         self.assertIsNone(echo.pick(self.root, hot), "не чаще раза в GAP ходов")
 
+    def test_echo_counts_only_as_event(self):
+        """Эхо — событие, не слово (s13, 24.11.2026): память и речь Шики — упоминание; весть — событие."""
+        hot = _hot()
+        got = echo.pick(self.root, hot)
+        self.assertIsNotNone(got)
+        hot["cursor"]["id"] = "s09.text.085"
+        recall = [{"id": "s09.text.085", "gm": "Шики вспомнил о закрытых поставках через старый узел.\n"
+                                          "**Шики:** Закрытые поставки. Помню."}]
+        self.assertEqual(echo.pick(self.root, hot, turns=recall), got, "воспоминание и речь Шики — не исполнение")
+        self.assertEqual(hot["fold"]["echo"].get("used_count", 0), 0)
+        self.assertEqual(hot["fold"]["echo"]["mentioned_count"], 1)
+        hot["cursor"]["id"] = "s09.text.086"
+        event = [{"id": "s09.text.086", "gm": "К вечеру гонец принёс записку: закрытые поставки снова идут."}]
+        self.assertIsNone(echo.pick(self.root, hot, turns=event), "весть в сцене — эхо исполнено")
+        self.assertEqual(hot["fold"]["echo"]["used_count"], 1)
+
+    def test_echo_event_kinds(self):
+        from rpg_engine.heuristic_history import stem
+        state = {"fresh": [stem("сэйдзи"), stem("задолжал")]}
+        hot = {"cast": {"seiji": {"name": "Сэйдзи"}}}
+        use = lambda gm, d=None: echo._event_use(state, hot, [{"gm": gm, "d": d or {}}])
+        self.assertEqual(use("**Сэйдзи:** Долг за мной."), (True, True), "говорит — событие")
+        self.assertEqual(use("Тихо.", {"scene": {"present": ["shiki", "seiji"]}}), (True, True), "в составе — событие")
+        self.assertEqual(use("**Шики:** Сэйдзи задолжал."), (False, True), "речь Шики — упоминание")
+        self.assertEqual(use("Шики вспомнил, как Сэйдзи задолжал."), (False, True), "память — упоминание")
+        self.assertEqual(use("У ворот ждал Сэйдзи."), (True, True), "появился — событие")
+        self.assertEqual(use("Дождь."), (False, False))
+
     def test_thread_of_present_npc_is_not_an_echo(self):
         hot = _hot()
         hot["scene"]["present"] = ["shiki", "hirano_seiji"]

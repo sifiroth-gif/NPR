@@ -31,8 +31,23 @@ COMMON = frozenset(stem(w) for w in (
     "которые нужно сейчас своей своих своим своего свою очень более менее всего всех также "
     "человек людей можно нельзя когда тогда снова опять почти около рядом перед кроме деревни "
     "деревня страна страны стране ходом ходов игрок ведущий").split())
-RULE = ("Давнее, созвучное сцене: вплети в ближайшие ходы, когда ляжет, — деталью, документом, человеком, "
-        "слухом; связь не объявляй.")
+RULE = ("Давнее, созвучное сцене, — верни событием, доступным Шики: встреча, поступок, весть, возвращение знакомого, "
+        "вещь или последствие прежнего решения, перемена отношений. Упоминание, имя или воспоминание исполнением не "
+        "считаются (код проверяет). Нет повода — отложи до правдоподобного события; связь не объявляй.")
+# Эхо — событие, не слово (игрок, s13.text.008–009, 24.11.2026): засчитывается, когда давняя нить
+# действует в сцене — её человек говорит или стоит в составе, вещь меняет владельца, в предложении
+# с её приметой что-то происходит (пришёл, прислал, весть, нашли, требует, сгорел…). Примета лишь
+# в воспоминании или в речи Шики — «упомянуто»: эхо остаётся в NEXT до HOLD ходов.
+EVENT = re.compile(
+    r"(?<![\wё])(?:приш[её]л\w*|пришл\w*|появил\w*|вернул\w*|возвра\w*|прибыл\w*|прислал\w*|принес\w*|принёс\w*|"
+    r"доставил\w*|письм\w*|записк\w*|весть|вести|известие|слух\w*|донос\w*|наш[её]л\w*|нашли|ждал\w*|ждёт|ждут|"
+    r"встретил\w*|напал\w*|требу\w*|предложил\w*|сгорел\w*|умер\w*|погиб\w*|продал\w*|отдал\w*|забрал\w*|"
+    r"украл\w*|окликнул\w*|постучал\w*|догнал\w*|выследил\w*|заплатил\w*|узнал\w*|стоял\w*|сидел\w*|"
+    r"протянул\w*|положил\w*|бросил\w*|ударил\w*|остановил\w*|перегородил\w*|позвал\w*|просил\w*)", re.I)
+RECALL_ONLY = re.compile(r"(?<![\wё])(?:вспомн\w*|дума\w*|мысл\w*|вспомина\w*|напомина\w*|подумал\w*|когда-то|некогда|памят\w*|"
+                         r"помнил\w*|рассказывал\w*|говорили когда)", re.I)
+LABEL = re.compile(r"^\s*\*\*([^*:]{2,60}):\*\*")
+SENT = re.compile(r"[^.!?…\n]+[.!?…]*")
 HOLD = 4           # столько ходов эхо держится в NEXT, пока не вплетено
 NEAR = 8           # сколько ближайших по смыслу эпизодов получают надбавку
 NEAR_BONUS = 4.0   # надбавка ближайшему; дальше — по убыванию ранга
@@ -136,6 +151,42 @@ def _used(state, texts):
     return any(m in words for m in fresh)
 
 
+def _event_use(state, hot, turns):
+    """(событие, упоминание): давняя нить вернулась в сцену действием или лишь словом."""
+    fresh = set(state.get("fresh") or []) - {stem("шики")}   # сам Шики в сцене всегда
+    if not fresh:
+        return False, False
+    cast = hot.get("cast") or {}
+    mention = False
+    for turn in turns:
+        delta = turn.get("d") or {}
+        names = []   # кто в составе и в дельте, вещи, сменившие владельца
+        for key in list((delta.get("cast") or {}).keys()) + list(((delta.get("scene") or {}).get("present") or [])):
+            names.append(str((cast.get(key) or {}).get("name") or ((delta.get("cast") or {}).get(key) or {}).get("name") or ""))
+        for key, change in (delta.get("things") or {}).items():
+            names.append(f"{key} {json.dumps(change, ensure_ascii=False)}")
+        if {stem(w) for n in names for w in tokens(n) if len(w) >= 4} & fresh:
+            return True, True
+        for raw in str(turn.get("gm") or "").split("\n"):
+            label = LABEL.match(raw)
+            if label and "шики" not in label.group(1).casefold():
+                if {stem(w) for w in tokens(label.group(1)) if len(w) >= 4} & fresh:
+                    return True, True      # человек давней нити говорит в сцене
+                continue
+            if label or raw.lstrip("*_ ").startswith(("—", "–")):
+                if {stem(w) for w in tokens(raw) if len(w) >= 4} & fresh:
+                    mention = True         # в речи (в том числе Шики) — слово, не событие
+                continue
+            for match in SENT.finditer(raw):
+                sentence = match.group()
+                if not ({stem(w) for w in tokens(sentence) if len(w) >= 4} & fresh):
+                    continue
+                if EVENT.search(sentence) and not RECALL_ONLY.search(sentence):
+                    return True, True
+                mention = True
+    return False, mention
+
+
 def _present(hot):
     """Ключи и основы имён присутствующих: их нити — сама сцена, не давнее."""
     cast = hot.get("cast") or {}
@@ -149,7 +200,7 @@ def _present(hot):
     return keys, names - COMMON
 
 
-def pick(state_dir, hot, texts=()):
+def pick(state_dir, hot, texts=(), turns=None):
     """Одна давняя нить для NEXT.echo или None; состояние — в HOT.fold.echo.
 
     Эхо держится до HOLD ходов, пока ведущий его не вплёл, — один ход в NEXT
@@ -160,10 +211,22 @@ def pick(state_dir, hot, texts=()):
     if now is None:
         return None
     state = hot.setdefault("fold", {}).setdefault("echo", {})
+    if state.get("method") != "event":     # до 25.11.2026 «использовано» считалось по словам — счёт заново
+        state["before_event"] = {"offered": state.get("offered", 0), "used_by_words": state.get("used_count", 0)}
+        state["offered"], state["used_count"], state["mentioned_count"] = (1 if state.get("current") else 0), 0, 0
+        state["method"] = "event"
     if state.get("at") == cursor:          # свёртка без нового хода: то же эхо
         return state.get("current")
     current = state.get("current")
-    if current and texts and _used(state, texts):
+    if current and turns:
+        event, mention = _event_use(state, hot, turns)
+        if event:
+            state["used_count"] = int(state.get("used_count") or 0) + 1
+            current = state["current"] = None
+        elif mention and state.get("mentioned_for") != current.get("from"):
+            state["mentioned_count"] = int(state.get("mentioned_count") or 0) + 1
+            state["mentioned_for"] = current.get("from")
+    elif current and texts and _used(state, texts):   # старый вызов без ходов — по словам
         state["used_count"] = int(state.get("used_count") or 0) + 1
         current = state["current"] = None
     if current and state.get("last") is not None and now - state["last"] < HOLD:
