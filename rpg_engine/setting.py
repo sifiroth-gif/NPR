@@ -42,6 +42,7 @@ def scaffold(destination, *, portable=False):
             (stage / "README.md").write_text(
                 "# Движок длительной текстовой RPG\n\n"
                 "Заполните campaign.json и укажите тот же ID в scene.json.\n\n"
+                "Экспорт для SQLite, без сохранения и канона Шики. HOT требует адаптации; COMBAT_MECHANICS.md — история.\n\n"
                 "    python -m rpg_engine init campaign.json\n"
                 "    python -m rpg_engine gm-packet --pack scene.json\n\n"
                 "Команды, механика и подготовка сцен описаны в [руководстве](docs/LONG_CAMPAIGN.md).\n",

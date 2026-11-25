@@ -19,6 +19,18 @@ class InstructionBudgetTest(unittest.TestCase):
             size = len((ROOT / name).read_text(encoding="utf-8"))
             self.assertLessEqual(size, limit, f"{name}: {size} знаков, предел {limit}. Замени правило, не добавляй.")
 
+    def test_architecture_budgets_and_boot_match_live_contract(self):
+        from rpg_engine import limits
+        arch = (ROOT / "docs/ARCHITECTURE.md").read_text(encoding="utf-8")
+        boot = (ROOT / "campaigns/shiki/BOOT.md").read_text(encoding="utf-8")
+        for size in (limits.HOT_NORM, limits.HOT_LIMIT, limits.BRIEF_TARGET,
+                     limits.BRIEF_HARD, limits.NEXT_TARGET, limits.NEXT_HARD, limits.GM_ONLY_NORM):
+            self.assertIn(str(size), arch)
+        for item in ("NEXT.json", "TURN.json", "NEXT.turn_file", "NEXT.preflight", "FOLD_LAG.md",
+                     "TECHNIQUES.md", "NEMERA.md", "CANON.md"):
+            self.assertIn(item, boot)
+        self.assertIn("не игровой ход", boot)
+
     def test_router_has_no_priority_patches(self):
         for name in ("AGENTS.md", "campaigns/shiki/GM_CORE.md"):
             text = (ROOT / name).read_text(encoding="utf-8")

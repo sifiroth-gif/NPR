@@ -96,7 +96,7 @@ jobs:
             git -C _state checkout -B game-state/shiki FETCH_HEAD
             python -m rpg_engine hot-fold --state-dir _state | tee "$RUNNER_TEMP/fold.json"
             python -m rpg_engine hot-check --state-dir _state | tee "$RUNNER_TEMP/check.json"
-            python -m rpg_engine.recall_audit _state | tee "$RUNNER_TEMP/recall-audit.json"
+            # hot-fold already validates and writes recall audit; do not repeat the search probes.
             # Legacy SQLite/search catalog is rebuilt only at intersession handoff,
             # never on every live-chat turn. HOT v2 holds all current play state.
             # A rejected turn publishes ONLY the refusal (HOT.fold.errors and

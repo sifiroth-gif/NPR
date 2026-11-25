@@ -1,6 +1,9 @@
 from pathlib import Path
 import shutil
 import sqlite3
+import subprocess
+import sys
+import json
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
@@ -198,6 +201,24 @@ class LongCampaign(unittest.TestCase):
         with self.assertRaises(FileExistsError):
             setting.scaffold(destination)
         self.assertEqual(self.game.verify()["revision"], 0)
+
+    def test_portable_fresh_setting_runs_in_isolation(self):
+        destination = self.root / "portable"
+        setting.scaffold(destination, portable=True)
+        for name in ("campaigns", "recovery", "archive", "memory", ".github", ".git", "state.json"):
+            self.assertFalse((destination / name).exists(), name)
+        config = json.loads((destination / "campaign.json").read_text(encoding="utf-8"))
+        self.assertEqual(config["operations"], [])
+        self.assertEqual(config["npcs"], [])
+        def cli(*args):
+            return subprocess.run([sys.executable, "-m", "rpg_engine", *args], cwd=destination,
+                                  check=True, capture_output=True, text=True).stdout
+        cli("init", "campaign.json")
+        cli("gm-packet", "--pack", "scene.json")
+        cli("verify")
+        fresh = Campaign(destination / "campaign.sqlite")
+        self.assertEqual(fresh.context(recent=0)["revision"], 0)
+        self.assertEqual(self.game.context(recent=0)["revision"], 0)
 
     def test_embedding_cache_uses_exact_sources_and_reuses_old_passages(self):
         self.turn("one", text="Старая договорённость.")
