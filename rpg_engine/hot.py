@@ -319,6 +319,13 @@ def validate_turn(turn):
             raise TurnError("d.knowledge_events: неизвестная видимость")
     for event in delta.get("pact_events") or []:
         _pact_event({}, event, turn["at"])
+    from . import news
+    try:
+        news.validate_receipts(turn)
+        from . import obligations
+        obligations.validate(turn)
+    except ValueError as exc:
+        raise TurnError(str(exc)) from exc
     return turn
 
 
@@ -634,6 +641,14 @@ def _apply_turn_inplace(hot, turn):
     will.track(hot, turn, inner)
     dread.after_turn(hot, turn, inner, delta)
     continuity_guard.check_turn(hot, turn)
+    from . import news, obligations
+    news.accept(hot, turn)
+    obligations.accept(hot, turn)
+    if turn_number(turn["id"]) >= (14, 24) and turn.get("kind") not in ("ooc", "technical", "void"):
+        # Resolve the world after each accepted action, not just the last
+        # turn in a delayed batch. Presence at the action's end is known;
+        # a deadline during an unobserved skip is not a played encounter.
+        will.advance(hot, turn.get("_always") or ())
     refresh(hot)
     return True
 
@@ -1671,6 +1686,11 @@ def fold(state_dir):
     nextpack.write(state_dir, hot, brief, _checks_payload(hot), _always_present(state_dir), happened=happened,
                    echoed=echoed, near=near, recall=recall_request.view(state_dir, hot), news=news_item,
                    extra=extra)
+    if news.modern(hot):
+        # NEXT generation updates the private obligation ledger. Persist it
+        # in the same fold; no separate game write or second world advance.
+        texts, queue_changed = _write_state(state_dir, hot, tuple(texts))
+        changed = changed or queue_changed
     news.write_pace(state_dir, hot)
     mark("next")
     return {"status": "updated" if changed else "current", "timings": timings,

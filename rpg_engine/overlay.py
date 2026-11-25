@@ -45,7 +45,7 @@ def project(packet, records):
     """
     result = copy.deepcopy(packet)
     if packet.get("fold_errors") or packet.get("state_errors"):
-        for field in ("dice", "chakra", "must", "must_ids", "turn_file", "scene_context", "state_sources", "medical"):
+        for field in ("dice", "chakra", "must", "must_ids", "turn_file", "scene_context", "state_sources", "medical", "must_pending", "news_id"):
             result.pop(field, None)
         if result.get("capabilities"):
             result["capabilities"].pop("scene_hint", None)
@@ -107,6 +107,14 @@ def project(packet, records):
             break
         pending.append(rec)
         delta = turn.get("d") or {}
+        from . import news
+        try:
+            delivered_news = news.validate_receipts(turn)
+        except ValueError as exc:
+            errors.append(str(exc))
+            break
+        for row in delivered_news:
+            receipts.add(row["id"])
         for ident in delta.get("must_done") or []:
             if isinstance(ident, str):
                 receipts.add(ident)
@@ -139,7 +147,7 @@ def project(packet, records):
             errors.append("TURN ahead of NEXT; exact matching receipt unavailable")
     result.pop("dice", None)
     result.pop("chakra", None)
-    for key in ("fight", "due", "checks", "prose", "echo", "recall", "must", "must_ids", "fences", "source_review"):
+    for key in ("fight", "due", "checks", "prose", "echo", "recall", "must", "must_ids", "must_pending", "news_id", "fences", "source_review"):
         result.pop(key, None)
     # Keep offscreen world facts, not their presumed delivery. Actor summaries
     # are stale until the fold's knowledge and presence calculations complete.

@@ -273,7 +273,14 @@ def advance(hot, always_present=()):
             event["canon"] = True
         history.append(event)
         events.append(event)
-    del history[:-HAPPENED_KEEP]
+    from . import news
+    if news.modern(hot):
+        for event in history:
+            event.setdefault("id", news.event_id(event))
+        # Undelivered important events must survive aging and a long time skip.
+        # Aging archives the spent rows losslessly.
+    else:
+        del history[:-HAPPENED_KEEP]
     return events
 
 

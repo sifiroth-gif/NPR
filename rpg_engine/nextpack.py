@@ -120,19 +120,20 @@ FORM = ("1) <text color=\"secondary\" size=\"xs\">дата · время</text>,
 RECENT_TURNS = 40   # план просят у тех, кто был в игре не дальше стольких ходов назад
 
 
-def must(hot, always_present=(), entries=None):
+def must(hot, always_present=(), entries=None, *, unlimited=False):
     """Обязательное на этот ход: короткий список вместо десятка советов.
 
     Замечания ведущий пропускал по 12 ходов подряд (s08.053–062); здесь не больше
     трёх пунктов, каждый — одно конкретное действие в этой сцене или записи.
     """
     out = inquiry.must(hot)
-    for entry, names, turn in lore.first_sight(hot, entries or [])[:1]:
+    for entry, names, turn in (lore.first_sight(hot, entries or []) if unlimited else lore.first_sight(hot, entries or [])[:1]):
         out.append(f"След увиденного: {', '.join(names[:5])} впервые столкнулись с «{entry.get('title') or entry['id']}» "
                    f"({turn}). Это не проходит за ход: {entry.get('first_sight') or 'вопросы, отрицание, страх, слух'} "
                    "— в этой сцене и за кадром; запиши в их dread.")
     present = (hot.get("scene") or {}).get("present") or []
-    for key, row in dread.pending(hot, present, always_present)[:2]:
+    pending = dread.pending(hot, present, always_present)
+    for key, row in (pending if unlimited else pending[:2]):
         name = will._name(hot, key)
         known = ((hot.get("_psyche") or {}).get(key) or {}).get("dread")
         if row.get("need") and known:
@@ -147,7 +148,8 @@ def must(hot, always_present=(), entries=None):
         else:
             out.append(f"{name} {row.get('quiet')} хода рядом с Шики без новой реакции: увидел новое — сдвиг "
                        f"в поступке и d.cast.{key}.dread; нет — dread.hold с тем, что подтвердилось.")
-    for key, name, plan in will.due_here(hot, always_present)[:1]:
+    due = will.due_here(hot, always_present)
+    for key, name, plan in (due if unlimited else due[:1]):
         out.append(f"{will._name(hot, key)} рядом, а срок плана «{_short(plan.get('next') or plan.get('goal'), 120)}» "
                    f"прошёл — сыграй этот ход в сцене: сделано, сорвалось по слабости или смена тактики; "
                    f"запиши d.cast.{key}.intent.{name}: status и outcome.")
@@ -160,13 +162,13 @@ def must(hot, always_present=(), entries=None):
                    if (l.get("against_shiki") or any(((hot.get("_psyche") or {}).get(k) or {}).get(f)
                                                      for f in ("dread", "psyche")))
                    and now - (_ordinal(touched.get(k)) or 0) <= RECENT_TURNS]
-    for key, last in significant[:1]:
+    for key, last in (significant if unlimited else significant[:1]):
         plan = last.get("goal") or last.get("outcome") or last.get("next") or last.get("key")
         out.append(f"У {will._name(hot, key)} закрыт план «{_short(plan, 80)}» "
                    f"({last.get('status')}), нового нет: впиши d.cast.{key}.intent.<ключ> — goal, next, due, "
                    "flaw, if_unopposed. Исход — видимая перемена мира, что может дойти до Шики (приезд, сделка, "
                    "исчезновение, слух, смерть), не «получит перечень, но не…».")
-    return out[:3]
+    return out if unlimited else out[:3]
 
 
 def build(hot, brief, checks, entries, always_present=(), rules=None, happened=None, echoed=None, near=None,
@@ -194,25 +196,43 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     if (extra or {}).get("ages"):   # возраст на дату хода от дня рождения (canon.ages_now)
         pack["ages"] = dict(extra["ages"], rule="Возраст на дату хода от дня рождения: не менять и не брать "
                                                 "из оригинала Naruto; растёт сам с календарём.")
-    duty = must(hot, always_present, entries)
-    if (extra or {}).get("drama"):   # глава, почин, разговор NPC, ритм — один пункт (drama.must)
-        duty = [extra["drama"]] + duty[:2]
-    if (extra or {}).get("unease"):  # тревога рядом с Шики пропала (favor.unease_must)
-        duty = [extra["unease"]] + duty[:2]
-    if (extra or {}).get("favor"):   # мир не подыгрывает: окно похвал и уступок перекошено (favor.must)
-        duty = [extra["favor"]] + duty[:2]
-    if news and news.get("must"):   # мир доходит до Шики: весть или чужой шаг в затянувшейся сцене
-        duty = [news["must"]] + duty[:2]
-    if (extra or {}).get("body"):    # тело после раны: исход кости состояния (body.py)
-        duty = [extra["body"]] + duty[:2]
-    if (extra or {}).get("arc_must"):   # канон арки просрочен рядом с Шики (arcs.must)
-        duty = [extra["arc_must"]] + duty[:2]
-    if (extra or {}).get("resync"):     # перечитать стартовый пакет в нынешнем чате (hot.resync_item)
-        duty = [extra["resync"]] + duty[:2]
-    if duty:
-        from .overlay import obligation_ids
-        pack["must"] = duty
-        pack["must_ids"] = obligation_ids(pack["cursor"], duty)
+    from . import news as world_news, obligations
+    if world_news.modern(hot):
+        candidates = [(kind, (extra or {}).get(kind), None)
+                      for kind in ("resync", "arc_must", "body", "favor", "unease", "drama")]
+        candidates = [("arc" if kind == "arc_must" else kind, text, ident) for kind, text, ident in candidates]
+        if news and news.get("must"):
+            candidates.append(("news" if news.get("id") else "rhythm", news["must"], news.get("id")))
+        candidates.extend(("due" if "срок плана" in text else "scene", text, None)
+                          for text in must(hot, always_present, entries, unlimited=True))
+        duty, ids, queued = obligations.select(hot, candidates)
+        if duty:
+            pack["must"], pack["must_ids"] = duty, ids
+        if queued:
+            pack["must_pending"] = {"items": queued, "source": "GM_ONLY.json#will.obligations",
+                                    "rule": "Очередь, не выполнено; будет пересмотрена по актуальному состоянию."}
+        if news and news.get("id"):
+            pack["news_id"] = news["id"]
+    else:
+        duty = must(hot, always_present, entries)
+        if (extra or {}).get("drama"):   # глава, почин, разговор NPC, ритм — один пункт (drama.must)
+            duty = [extra["drama"]] + duty[:2]
+        if (extra or {}).get("unease"):  # тревога рядом с Шики пропала (favor.unease_must)
+            duty = [extra["unease"]] + duty[:2]
+        if (extra or {}).get("favor"):   # мир не подыгрывает: окно похвал и уступок перекошено (favor.must)
+            duty = [extra["favor"]] + duty[:2]
+        if news and news.get("must"):   # мир доходит до Шики: весть или чужой шаг в затянувшейся сцене
+            duty = [news["must"]] + duty[:2]
+        if (extra or {}).get("body"):    # тело после раны: исход кости состояния (body.py)
+            duty = [extra["body"]] + duty[:2]
+        if (extra or {}).get("arc_must"):   # канон арки просрочен рядом с Шики (arcs.must)
+            duty = [extra["arc_must"]] + duty[:2]
+        if (extra or {}).get("resync"):     # перечитать стартовый пакет в нынешнем чате (hot.resync_item)
+            duty = [extra["resync"]] + duty[:2]
+        if duty:
+            from .overlay import obligation_ids
+            pack["must"] = duty
+            pack["must_ids"] = obligation_ids(pack["cursor"], duty)
     if happened is None:
         happened = will.offscreen(hot)
     if happened:

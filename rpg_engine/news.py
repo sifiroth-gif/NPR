@@ -17,6 +17,7 @@
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from datetime import datetime
@@ -129,6 +130,102 @@ def _delivered(turns, markers):
     return False
 
 
+C3_START = "s14.text.023"
+EVENT_ID = re.compile(r"evt_[0-9a-f]{20}")
+DELIVERY_CHANNELS = {"message", "document", "witness", "told_in_scene"}
+
+
+def modern(hot):
+    here = aging._ordinal((hot.get("cursor") or {}).get("id"))
+    cut = aging._ordinal(C3_START)
+    return here is not None and here >= cut
+
+
+def event_id(event):
+    identity = [event.get(k) for k in ("npc", "plan", "at", "turn", "status", "outcome")]
+    return "evt_" + hashlib.sha256(json.dumps(identity, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()[:20]
+
+
+def migrate(hot):
+    """Assign IDs to retained events, including a legacy orphaned offer."""
+    from . import will
+    store = will._state(hot)
+    state = store.setdefault("news", {"offered": 0, "delivered": 0, "missed": 0})
+    for event in store.get("happened") or []:
+        event.setdefault("id", event_id(event))
+    current = state.get("current")
+    if current and not current.get("id"):
+        matches = [e for e in store.get("happened") or [] if all(
+                   e.get(k) == current.get(k) for k in ("npc", "plan", "at"))]
+        if len(matches) == 1:
+            current["id"] = matches[0]["id"]
+        else:
+            current["id"] = event_id(dict(current, outcome=current.get("text"), status="legacy_offer"))
+            current["legacy_offer"] = True
+    return state
+
+
+def validate_receipts(turn):
+    rows = (turn.get("d") or {}).get("news_delivered")
+    if rows is None:
+        return []
+    if turn.get("kind") in ("ooc", "technical", "void") or not isinstance(rows, list):
+        raise ValueError("news_delivered requires played turn and list")
+    gm = str(turn.get("gm") or "")
+    from .echo import LABEL
+    visible = []
+    for raw in gm.splitlines():
+        label = LABEL.match(raw)
+        if label and "шики" in label.group(1).casefold():
+            continue
+        if not label and raw.lstrip("*_ ").startswith(("—", "–")):
+            continue
+        visible.append(raw)
+    result = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("news_delivered: expected objects")
+        ident, channel, quote = (row.get(k) for k in ("id", "channel", "quote"))
+        if not isinstance(ident, str) or not EVENT_ID.fullmatch(ident) or channel not in DELIVERY_CHANNELS:
+            raise ValueError("news_delivered: stable event ID and channel required")
+        if not isinstance(quote, str) or len(quote.strip()) < 8 or not any(quote in line for line in visible):
+            raise ValueError("news_delivered: quote must be visible NPC speech or narration, not Shiki's speech")
+        result.append(row)
+    return result
+
+
+def accept(hot, turn):
+    """Called inside the atomic turn, before world resolution; amend rolls back."""
+    rows = validate_receipts(turn)
+    if not rows:
+        return
+    from . import will
+    state = migrate(hot)
+    delivered = state.setdefault("receipts", {})
+    current = state.get("current")
+    events = {e["id"]: e for e in will._state(hot).get("happened") or [] if e.get("id")}
+    for row in rows:
+        ident = row["id"]
+        if ident in delivered:
+            continue
+        event = events.get(ident)
+        offered = current if current and current.get("id") == ident else None
+        if not event and not offered:
+            raise ValueError("news_delivered: unknown event ID")
+        source = event or offered
+        at, now = _parse(source.get("at")), _parse(turn.get("at"))
+        if at and now and at > now:
+            raise ValueError("news_delivered: event has not happened")
+        delivered[ident] = {"turn": turn["id"], "channel": row["channel"], "quote": row["quote"]}
+        if event:
+            event["news"] = "delivered"
+        if offered:
+            state.pop("current", None)
+            current = None
+        state["delivered"] = int(state.get("delivered") or 0) + 1
+        state["last"], state["last_at"] = aging._ordinal(turn["id"]), turn["at"]
+
+
 def pending(hot):
     """Свежие события за кадром, ещё не ставшие вестью: весомые, новые — раньше."""
     from . import will
@@ -136,7 +233,10 @@ def pending(hot):
     events = []
     for event in will._state(hot).get("happened") or []:
         at = _parse(event.get("at"))
-        if event.get("news") or (now and at and (now - at).days > will.NEWS_DAYS):
+        if modern(hot):
+            if event.get("news") in ("delivered", "offered"):
+                continue
+        elif event.get("news") or (now and at and (now - at).days > will.NEWS_DAYS):
             continue
         if weight(hot, event) >= MIN_WEIGHT:
             events.append(event)
@@ -162,8 +262,11 @@ def step(hot, applied):
     if now is None:
         return None
     played = [t for t in applied or [] if t.get("kind") not in ("ooc", "technical", "void")]
+    strict = modern(hot)
+    if strict:
+        state = migrate(hot)
     current = state.get("current")
-    if current and played:
+    if current and played and not strict:
         if _delivered(played, current.get("markers") or []):
             state["delivered"] += 1
             _mark(hot, current, "delivered")
@@ -206,6 +309,9 @@ def step(hot, applied):
                             "npc": event.get("npc"), "plan": event.get("plan"), "at": event.get("at"),
                             "why": "скачок времени" if jump else "долгая сцена" if long else
                                    "новые сутки" if day else "давно без вестей"}
+        if strict:
+            event.setdefault("id", event_id(event))
+            state["current"]["id"] = event["id"]
         event["news"] = "offered"
         state["offered"] += 1
         state["last"], state["last_at"] = now, cursor.get("at")
@@ -214,7 +320,10 @@ def step(hot, applied):
         return _view(state)
     if long:
         state["nudged"] = now
-        return {"must": (f"Сцена идёт {state['scene_turns']} ходов. Понятое игроком сожми до результата и цены "
+        return {"must": (f"Сцена идёт {state['scene_turns']} ходов. Понятое сожми до результата и цены; "
+                         "мир войдёт, только если есть причина и доступный канал. Не решай за Шики; "
+                         "игрок волен продолжить." if strict else
+                         f"Сцена идёт {state['scene_turns']} ходов. Понятое игроком сожми до результата и цены "
                          "одним ходом; пусть мир войдёт в сцену сам — чужой человек, весть, помеха или наступивший "
                          "срок, — не решая за Шики; игрок волен продолжить.")}
     return _view(state)
@@ -248,6 +357,10 @@ def _view(state):
     if not current:
         return None
     long = state.get("scene_turns", 0) >= LONG
+    if current.get("id"):
+        return {"id": current["id"], "must": "Весть " + current["id"] + " — " + current["text"] +
+                " Передай только доступным Шики каналом; нет канала — отложи, не выдумывай. " +
+                "Доставка: d.news_delivered [{id,channel,quote}].", "why": current.get("why")}
     return {"must": (f"Весть мира — {current['text']} Доведи до Шики в ближайшие {HOLD} хода одним видимым фактом "
                      f"(кто пришёл, что пропало, кто ранен, что говорят), {CHANNEL}. Не сочиняй новую интригу и не "
                      "объявляй «новость»: Шики слышит часть, с искажением, и сам решает, что делать."

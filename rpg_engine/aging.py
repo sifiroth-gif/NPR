@@ -230,7 +230,10 @@ def _pass(state_dir, hot, w):
     happened = will.get("happened")
     if isinstance(happened, list):
         from .will import SHOW_FOLDS
-        spent = [e for e in happened if isinstance(e, dict) and e.get("shown", 0) >= SHOW_FOLDS]
+        from . import news
+        spent = [e for e in happened if isinstance(e, dict) and e.get("shown", 0) >= SHOW_FOLDS
+                 and (not news.modern(hot) or e.get("news") == "delivered"
+                      or news.weight(hot, e) < news.MIN_WEIGHT and e.get("news") != "offered")]
         keep = [e for e in happened if e not in spent]
         if spent:
             will["happened"] = keep
