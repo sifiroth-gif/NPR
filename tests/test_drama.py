@@ -87,3 +87,16 @@ class GapTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FlatIntentTest(unittest.TestCase):
+    def test_flat_plan_is_wrapped_and_debris_removed(self):
+        from rpg_engine import npc_memory
+        hot = {"_checks": []}
+        profile = {"intent": {"goal": {"goal": "старое", "status": "committed", "turn": "s13.text.017"}}}
+        npc_memory._intents(hot, profile, {"plan": "trace_watcher", "goal": "узнать цель наблюдателя",
+                                           "next": "проследить за змеёй", "due": "0010-03-29T16:35:00"},
+                            "s13.text.018", "0010-03-29T16:20:00")
+        self.assertEqual(list(profile["intent"]), ["trace_watcher"])
+        self.assertEqual(profile["intent"]["trace_watcher"]["next"], "проследить за змеёй")
+        self.assertTrue(any("без ключа" in c["text"] for c in hot["_checks"]))

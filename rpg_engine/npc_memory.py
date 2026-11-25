@@ -416,9 +416,31 @@ def _successor_key(active, done, key):
     return f"{key}_{n}"
 
 
+PLAN_FIELDS = frozenset(("plan", "goal", "next", "due", "flaw", "against_shiki", "if_unopposed", "status", "outcome"))
+
+
+def _flat(patch):
+    """Плоский план без ключа (s13.text.013–023: intent.goal/next/due у Сирамэ стали девятью «планами»):
+    {"plan": "ключ", "goal": …, "next": …} → {"ключ": {"goal": …, "next": …}}."""
+    if not patch or not set(patch) <= PLAN_FIELDS or not any(isinstance(v, str) for v in patch.values()):
+        return patch
+    if not ({"goal", "next", "status"} & set(patch)):
+        return patch
+    key = "_".join(str(patch["plan"]).split())[:40] if patch.get("plan") else "own_plan"
+    return {key: {k: v for k, v in patch.items() if k != "plan"}}
+
+
 def _intents(hot, profile, patch, turn_id, at):
     active = profile.setdefault("intent", {})
     done = profile.setdefault("intent_done", [])
+    flat = _flat(patch)
+    if flat is not patch:
+        _check(hot, turn_id, "intent", f"план записан без ключа ({', '.join(sorted(patch))}) — принят как "
+               f"intent.{next(iter(flat))}; форма: d.cast.<id>.intent.<ключ>.{{goal, next, due, …}}")
+        patch = flat
+    for key in [k for k, v in active.items() if k in PLAN_FIELDS and isinstance(v, dict)
+                and set(v) <= {"goal", "status", "turn"}]:
+        active.pop(key)   # обломки прежней плоской записи
     for key, value in patch.items():
         if value is None:
             active.pop(key, None)
