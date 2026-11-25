@@ -1,13 +1,13 @@
-# Карта мира NPR · на ходе `s14.text.058`
+# Карта мира NPR · на ходе `s14.text.059`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (296) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (297) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (230)
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
-- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen` · в сцене
+- Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
 - Старая змея — Крупная серая змея, светлая полоса старого повреждения над … · `npc/ryuchi_west_elder`
 - Белая Змея / Хакудзя-сэннин (Белая Змея, Белая) — Огромная белая змея с древней потрескавшейся местами почти … · `npc/white_snake_sage`
@@ -237,18 +237,17 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (6)
+## Линии (5)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
-- `shiki_underground_career` — 13.04 счёт МД-091 лично сверен: 88.1008 млн учётно, 6 млн просрочка, … · `threads/shiki_underground_career`
+- `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
 - `fire_risk_meeting` — Предложенная Шики будущая точка связи для Огня: 28 апреля 1287 года 1… · `threads/fire_risk_meeting`
 - `shiki_save_asuma` — Цель игрока: спасти Сарутоби Асуму. Заблаговременно предоставить дост… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Шики принял прежнее обещание как собственную цель; Сирамэ согласилась… · `threads/shiki_promise_nemera`
-- `shiki_new_home` — 13.04 Минаги предложил альтернативу: бывшее подземное хранилище разор… · `threads/shiki_new_home`
 
 ## Давние линии (30, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (68)
+## Вещи (69)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -306,6 +305,7 @@
 - `shiki_hair_markers` · `items/shiki_hair_markers`
 - `shiki_hospital_gown_gloves` · `items/shiki_hospital_gown_gloves`
 - `shiki_medical_kit` · `items/shiki_medical_kit`
+- `shiki_new_refuge` · `items/shiki_new_refuge`
 - `shiki_private_line_kiri_plate` · `items/shiki_private_line_kiri_plate`
 - `shiki_s17_report_folder` · `items/shiki_s17_report_folder`
 - `shiki_spare_communication_plate` · `items/shiki_spare_communication_plate`
