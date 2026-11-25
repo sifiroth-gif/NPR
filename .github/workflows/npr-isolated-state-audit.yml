@@ -85,6 +85,17 @@ jobs:
           packet_bytes = (state / "recovery/NEXT.json").stat().st_size
           assert packet_bytes <= nextpack.HARD_BYTES, "Expanded NEXT exceeded existing budget"
           print("B1_REGISTRY_OK", len(ids), "archived_sources", len(archived_ids), "NEXT_bytes", packet_bytes)
+          assert packet["scene_context"]["as_of"] == original["scene"]["as_of"]
+          assert "medical" in cap["scene_hint"]["routes"]
+          assert packet["state_sources"]["medical_kit"]["turn"] == "s14.text.023"
+          current = capabilities.for_request(data, "Магацухи", scene=original["scene"])
+          assert "combat" in current["routes"] and "medical" not in current["routes"]
+          assert "eyes.magatsuhi" in current["matched"]
+          mixed = capabilities.for_request(data, "лечу рану, достаю инструменты и спрашиваю врача")
+          assert {"medical", "items", "dialogue"} <= set(mixed["routes"])
+          assert packet_bytes <= nextpack.TARGET_BYTES, "NEXT above target"
+          assert packet_bytes == nextpack._size(packet)
+          print("B2_ROUTING_OK", "NEXT_bytes", packet_bytes, "target", nextpack.TARGET_BYTES)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))

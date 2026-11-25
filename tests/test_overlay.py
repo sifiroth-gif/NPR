@@ -96,3 +96,18 @@ class LagProjectionTest(unittest.TestCase):
         with self.assertRaisesRegex(hot.TurnError, "predecessor"):
             hot.apply_turn(state, t)
         self.assertEqual(state, before)
+
+    def test_stale_thematic_context_removed_on_lag(self):
+        pack = self.packet(base())
+        pack["capabilities"] = {"items": [{"id": "medical.sterilize"}],
+                                "scene_hint": {"routes": ["medical"]}}
+        pack["scene_context"] = {"as_of": pack["cursor"], "situation": "old"}
+        pack["state_sources"] = {"medical_kit": {"state": "old"}}
+        t = turn(45, "0006-10-01T07:14:00", review={"predecessor": pack["cursor"]},
+                 d={"scene": {"situation": "new", "present": []}})
+        result = overlay.project(pack, [{"turn": t, "sha": "one"}])
+        self.assertEqual(result["scene_context"]["situation"], "new")
+        self.assertNotIn("scene_hint", result["capabilities"])
+        self.assertNotIn("state_sources", result)
+        self.assertEqual(result["capabilities"]["items"], pack["capabilities"]["items"])
+        self.assertIn("scene_hint", pack["capabilities"])

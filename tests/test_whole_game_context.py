@@ -131,6 +131,16 @@ class WholeGameIntegration(unittest.TestCase):
                                             action="Жду через 5 дней")
         self.assertTrue(route["time_advance_requires_world_review"])
 
+    def test_shiki_thematic_route_is_additive_and_current(self):
+        self.hot["campaign"] = "naruto-shiki"
+        _, route = context_dispatcher.route(self.hot, self.index, action="лечу рану и спрашиваю врача")
+        self.assertTrue({"medical", "dialogue"} <= set(route["thematic"]["routes"]))
+        self.assertIn("injuries/function", route["thematic"]["required"])
+        self.assertIn("medical.sterilize", route["thematic"]["entries"])
+        self.hot["campaign"] = "other-setting"
+        _, route = context_dispatcher.route(self.hot, self.index, action="лечу рану")
+        self.assertNotIn("thematic", route)
+
     def test_npc_dynamics_are_read_only_and_do_not_direct_shiki(self):
         before = copy.deepcopy(self.hot)
         outlook = npc_dynamics.view(self.hot)

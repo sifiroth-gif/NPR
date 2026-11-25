@@ -45,8 +45,10 @@ def project(packet, records):
     """
     result = copy.deepcopy(packet)
     if packet.get("fold_errors") or packet.get("state_errors"):
-        for field in ("dice", "chakra", "must", "must_ids", "turn_file"):
+        for field in ("dice", "chakra", "must", "must_ids", "turn_file", "scene_context", "state_sources"):
             result.pop(field, None)
+        if result.get("capabilities"):
+            result["capabilities"].pop("scene_hint", None)
         result["lag_status"] = {"status": "blocked", "write_allowed": False, "reason": "fold/state errors"}
         return result
     anchor = packet.get("lag") or {}
@@ -65,6 +67,7 @@ def project(packet, records):
     pending = []
     receipts = set()
     declared_present = None
+    declared_scene = None
     inventory_changes = []
     errors = []
     for rec in records:
@@ -108,6 +111,9 @@ def project(packet, records):
             result["place"] = turn["place"]
             result["header"] = " ".join(hot.heading(at).values())
             scene = delta.get("scene") or {}
+            if scene:
+                declared_scene = {"as_of": turn["id"], "source": "confirmed local TURN",
+                                  **{k: scene[k] for k in ("situation", "positions", "pressure") if k in scene}}
             if "present" in scene:
                 declared_present = {"turn": turn["id"], "ids": list(scene["present"])}
         if delta.get("things"):
@@ -132,6 +138,12 @@ def project(packet, records):
     # Keep offscreen world facts, not their presumed delivery. Actor summaries
     # are stale until the fold's knowledge and presence calculations complete.
     result.pop("present", None)
+    # B2: never carry old mutable context or a scene-derived topic across a
+    # pending receipt. Permanent registry entries are not mutable state.
+    result.pop("scene_context", None)
+    result.pop("state_sources", None)
+    if result.get("capabilities"):
+        result["capabilities"].pop("scene_hint", None)
     result["lag_status"] = {
         "status": "uncertain" if errors else "projected", "write_allowed": not errors,
         "base": base, "cursor": cursor,
@@ -145,6 +157,8 @@ def project(packet, records):
         result.pop("turn_file", None)
         result.pop("next_id", None)
         return result
+    if declared_scene is not None:
+        result["scene_context"] = declared_scene
     if declared_present is not None:
         result["lag_status"]["last_declared_present"] = declared_present
     if inventory_changes:
