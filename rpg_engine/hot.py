@@ -124,7 +124,7 @@ def heading(at, *, year_offset=1277):
 
 
 def turn_number(turn_id):
-    match = TURN_ID.fullmatch(turn_id or "")
+    match = TURN_ID.fullmatch(turn_id if isinstance(turn_id, str) else "")
     if not match:
         raise TurnError(f"некорректный идентификатор хода: {turn_id!r}")
     return int(match[1]), int(match[2])
@@ -727,16 +727,30 @@ def collect_turns(state_dir, hot):
     """Новые ходы из истории TURN.json, рабочей копии и старого FAST_SCENE.json."""
     state_dir = Path(state_dir)
     since = hot.get("fold", {}).get("commit", "")
-    found, errors = {}, []
+    found, errors, invalid = {}, [], {}
+    modern = (14, 24)
 
     def take(raw, origin, legacy=False):
+        key = None
         try:
             turn = _normalize_recorded_turn(turn_from_legacy(raw) if legacy else raw)
+            if isinstance(turn, dict):
+                key = turn_number(turn.get("id"))
             validate_turn(turn)
         except TurnError as exc:
-            errors.append(f"{origin}: {exc}")
+            message = f"{origin}: {exc}"
+            if key is not None:
+                invalid[key] = message
+            else:
+                errors.append(message)
             return
-        found[turn_number(turn["id"])] = turn
+        old = found.get(key)
+        if turn.get("amend"):
+            invalid.pop(key, None)
+        elif key >= modern and old is not None and old != turn:
+            invalid[key] = f"{origin}: {turn['id']} changed without amend"
+            return
+        found[key] = turn
 
     for commit, raw in _history(state_dir, LEGACY_PATH, since):
         if raw.get("format", "").startswith("npr-shiki-fast-scene"):
@@ -752,7 +766,7 @@ def collect_turns(state_dir, hot):
             take(json.loads(current.read_text(encoding="utf-8")), TURN_PATH)
         except json.JSONDecodeError as exc:
             errors.append(f"{TURN_PATH}: не JSON ({exc})")
-    return [found[key] for key in sorted(found)], errors
+    return [found[key] for key in sorted(found)], errors + [invalid[key] for key in sorted(invalid)]
 
 
 def _turn_digest(turn):
@@ -1381,6 +1395,10 @@ def fold(state_dir):
             current = (int(hot.get("session", 0)), int(hot.get("cursor", {}).get("seq", 0)))
             fingerprint = _turn_digest(turn)
             amendment = bool(turn.get("amend")) and incoming == current
+            accepted_digest = hot.get("fold", {}).get("turn_digest")
+            if (incoming == current and incoming >= (14, 24) and accepted_digest
+                    and accepted_digest != fingerprint and not amendment):
+                raise TurnError(f"{turn['id']}: accepted turn changed without amend")
             if incoming <= current and (
                     not amendment or hot.get("fold", {}).get("turn_digest") == fingerprint):
                 continue

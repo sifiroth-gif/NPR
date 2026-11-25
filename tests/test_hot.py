@@ -359,6 +359,30 @@ class HotFilesTest(unittest.TestCase):
         (self.root / hot.TURN_PATH).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
         self.commit(data["id"])
 
+    def test_invalid_version_is_replaced_by_explicit_amend_in_git_history(self):
+        bad = turn(45, "0006-10-01T07:14:00", d={"scene": "invalid"})
+        self.put(bad)
+        self.assertEqual(hot.fold(self.root)["status"], "rejected")
+        self.commit("publish refusal")
+        repaired = turn(45, "0006-10-01T07:14:00", amend=True, d={"scene": {}})
+        self.put(repaired)
+        report = hot.fold(self.root)
+        self.assertEqual(report["applied"], [repaired["id"]])
+        self.assertEqual(report["errors"], [])
+        self.commit("accept repaired")
+        self.assertEqual(hot.fold(self.root)["status"], "current")
+
+    def test_modern_conflicting_pending_versions_require_amend(self):
+        first = turn(24, "0006-10-01T07:14:00", id="s14.text.024")
+        self.put(first)
+        self.put(dict(first, gm="different"))
+        rows, errors = hot.collect_turns(self.root, base())
+        self.assertTrue(any("changed without amend" in x for x in errors))
+        self.put(dict(first, gm="corrected", amend=True))
+        rows, errors = hot.collect_turns(self.root, base())
+        self.assertEqual(errors, [])
+        self.assertEqual(rows[-1]["gm"], "corrected")
+
     def test_fold_recovers_every_turn_from_git_history_of_single_slot(self):
         self.put(turn(45, "0006-10-01T07:14:00"))
         self.put(turn(46, "0006-10-01T07:20:00", line="Нори осмотрела след."))
