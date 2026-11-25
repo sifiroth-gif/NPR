@@ -953,7 +953,7 @@ def _apply_fix(hot, fix):
 
 
 RESYNC_TURNS = 2   # ходов, пока висит просьба перечитать (снимается раньше, если ведущий перечитал)
-RESYNC_READ = ("GM_CORE.md", "SHIKI.md", "ref/TECHNIQUES.md", "ref/NEMERA.md", "ref/COMBAT.md",
+RESYNC_READ = ("GM_CORE.md", "SHIKI.md", "ref/TECHNIQUES.md", "ref/NEMERA.md", "ref/FUSION.md", "ref/COMBAT.md",
                "memory/CANON.md", "recovery/GM_BRIEF.json")
 
 

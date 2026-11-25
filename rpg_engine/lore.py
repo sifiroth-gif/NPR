@@ -323,7 +323,8 @@ def _npc_lines(turn, skip_names=(), hot=None, people=()):
 
 
 def _wielders(hot, entry):
-    return ", ".join(_name(hot, k) for k in entry.get("wield") or [])
+    from . import fusion
+    return ", ".join(_name(hot, k) for k in entry.get("wield") or [] if not fusion.retired(hot, k))
 
 
 def review(hot, turn, entries, present_before, present_after):
