@@ -1441,6 +1441,9 @@ def fold(state_dir):
             # Already published prose cannot be retracted by an asynchronous fold;
             # record any source discrepancy for the very next scene.
             review_notes.extend(memory_guard.review(entity_memory.load(state_dir), turn)["errors"])
+            if turn_number(turn["id"]) >= (14, 24):
+                from . import preflight
+                review_notes.extend(preflight.postcheck(turn))
             if archived is None:
                 archived = _archived_cards(state_dir)
             name_notes = npc_memory.check_names(base, turn.get("d") or {}, turn["id"], archived)

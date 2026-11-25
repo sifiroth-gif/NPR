@@ -344,6 +344,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
             "medical_kit": {key: kit[key] for key in ("holder", "state", "turn") if key in kit}
                            if isinstance(kit, dict) else {"status": "unknown"},
         }
+    if (extra or {}).get("capabilities"):
+        from .preflight import RULE as preflight_rule
+        pack["preflight"] = preflight_rule
     pack["source_priority"] = SOURCE_PRIORITY
     pack["rule"] = RULE
     _fit(pack)
