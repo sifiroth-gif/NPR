@@ -11,11 +11,11 @@
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 20 ход(ов), s07–s11
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 20 ход(ов), s10–s10
+- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 20 ход(ов), s13–s14
 - Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 20 ход(ов), s10–s10
 - Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 20 ход(ов), s13–s13
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
-- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 19 ход(ов), s13–s14
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 16 ход(ов), s09–s10
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
