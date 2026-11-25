@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.009: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.008: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.007: Человек у причальной лестницы (`npc/quay_wire_operator`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), бой
 - s14.text.006: поправки игрока: 1
@@ -58,5 +59,3 @@
 - s13.text.053: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.052: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.051: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), план сюжета, поправки игрока: 1
-- s13.text.050: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s13.text.049: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`)

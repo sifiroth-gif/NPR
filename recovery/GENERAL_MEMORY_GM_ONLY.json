@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.008",
+  "cursor": "s14.text.010",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -514,7 +514,7 @@
       "id": "chelovek_v_maske",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -522,13 +522,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0010-04-11T17:24:02",
-          "excerpt": "аз, потом ещё раз — и Шики уже оказался справа от маскированного, выстроив его и третьего в одну линию. Человек в маске дёрнул головой слишком поздно. У причальной лестницы третий это понял не сразу. Сначала он увидел, что цель больше не там, где должна была б",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.005"
         },
         {
           "at": "0010-04-11T17:24:03",
@@ -543,12 +536,19 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:20",
+          "excerpt": "ода · 17:24:20</text> ### Страна Огня. Восточная гавань **Мугами Шики:** — Когда поступил приказ? **Человек в маске:** — Сегодня утром. До полудня. **Человек у причальной лестницы:** — А отмена? На корабле ведь отказались его брать! **Человек в маске:** — Нам ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.009"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s14.text.008"
+          "seen": "s14.text.010"
         },
         {
           "role": "по подписи в сцене"
@@ -831,8 +831,7 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник",
-        "fire_port_official"
+        "Портовый чиновник"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -876,8 +875,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json",
-        "s14.text.008"
+        "recovery/cast/fire_port_official.json"
       ]
     },
     "fire_port_security_staff": {
@@ -3190,7 +3188,7 @@
       "id": "masked_man",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -3198,13 +3196,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0010-04-11T17:24:02",
-          "excerpt": "аз, потом ещё раз — и Шики уже оказался справа от маскированного, выстроив его и третьего в одну линию. Человек в маске дёрнул головой слишком поздно. У причальной лестницы третий это понял не сразу. Сначала он увидел, что цель больше не там, где должна была б",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.005"
         },
         {
           "at": "0010-04-11T17:24:03",
@@ -3219,6 +3210,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:20",
+          "excerpt": "ода · 17:24:20</text> ### Страна Огня. Восточная гавань **Мугами Шики:** — Когда поступил приказ? **Человек в маске:** — Сегодня утром. До полудня. **Человек у причальной лестницы:** — А отмена? На корабле ведь отказались его брать! **Человек в маске:** — Нам ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.009"
         }
       ],
       "projections": [
@@ -4072,7 +4070,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.008",
+          "seen": "s14.text.010",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -13509,12 +13507,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.008",
+        "s14.text.010",
         "s13.text.099",
         "s14.text.001",
         "s14.text.004",
         "s14.text.005",
-        "s14.text.007"
+        "s14.text.007",
+        "s14.text.008",
+        "s14.text.009"
       ]
     },
     "place:dc6542345d23e554": {
@@ -15222,8 +15222,7 @@
     "quay_cloaked_hunter": {
       "aliases": [
         "quay cloaked hunter",
-        "Человек в дорожном плаще",
-        "quay_cloaked_hunter"
+        "Человек в дорожном плаще"
       ],
       "facts": [],
       "id": "quay_cloaked_hunter",
@@ -15268,21 +15267,19 @@
         }
       ],
       "sources": [
-        "recovery/cast/quay_cloaked_hunter.json",
-        "s14.text.008"
+        "recovery/cast/quay_cloaked_hunter.json"
       ]
     },
     "quay_masked_hunter": {
       "aliases": [
         "quay masked hunter",
-        "Человек в маске",
-        "quay_masked_hunter"
+        "Человек в маске"
       ],
       "facts": [],
       "id": "quay_masked_hunter",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -15290,13 +15287,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0010-04-11T17:24:02",
-          "excerpt": "аз, потом ещё раз — и Шики уже оказался справа от маскированного, выстроив его и третьего в одну линию. Человек в маске дёрнул головой слишком поздно. У причальной лестницы третий это понял не сразу. Сначала он увидел, что цель больше не там, где должна была б",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.005"
         },
         {
           "at": "0010-04-11T17:24:03",
@@ -15311,11 +15301,18 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:20",
+          "excerpt": "ода · 17:24:20</text> ### Страна Огня. Восточная гавань **Мугами Шики:** — Когда поступил приказ? **Человек в маске:** — Сегодня утром. До полудня. **Человек у причальной лестницы:** — А отмена? На корабле ведь отказались его брать! **Человек в маске:** — Нам ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.009"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.008",
+          "seen": "s14.text.010",
           "state": "Парализован, в сознании, холодный пот и слабость.",
           "wants": "Взять Шики живым по K-0418."
         },
@@ -15326,21 +15323,19 @@
       ],
       "sources": [
         "recovery/cast/quay_masked_hunter.json",
-        "recovery/HOT.json",
-        "s14.text.008"
+        "recovery/HOT.json"
       ]
     },
     "quay_wire_operator": {
       "aliases": [
         "quay wire operator",
-        "Человек у причальной лестницы",
-        "quay_wire_operator"
+        "Человек у причальной лестницы"
       ],
       "facts": [],
       "id": "quay_wire_operator",
       "kind": "npc",
       "label": "Человек у причальной лестницы",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-11T17:24:03",
@@ -15355,11 +15350,18 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:20",
+          "excerpt": "гавань **Мугами Шики:** — Когда поступил приказ? **Человек в маске:** — Сегодня утром. До полудня. **Человек у причальной лестницы:** — А отмена? На корабле ведь отказались его брать! **Человек в маске:** — Нам отмены не передавали. По мокрым доскам скользнул ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.009"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.008",
+          "seen": "s14.text.010",
           "wants": "Перекрыть путь сетью."
         },
         {
@@ -15368,8 +15370,7 @@
       ],
       "sources": [
         "recovery/cast/quay_wire_operator.json",
-        "recovery/HOT.json",
-        "s14.text.008"
+        "recovery/HOT.json"
       ]
     },
     "razvedchik_zvuka": {
@@ -18302,5 +18303,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1123
+  "source_turns_indexed": 1124
 }
