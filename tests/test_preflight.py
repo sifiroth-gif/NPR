@@ -80,3 +80,21 @@ class DraftPreflightTest(unittest.TestCase):
         result = preflight.inspect(packet(), second, receipts=[{"turn": first, "sha": "new"}])
         self.assertTrue(result["mechanical_ok"], result)
         self.assertTrue(any("проекция" in x for x in result["review"]))
+
+    def test_private_knowledge_cannot_be_copied_into_public_claims(self):
+        t = draft(d={"scene": {"present": ["shiki"]},
+                     "cast": {"p": {"knows+": ["тайна"]}},
+                     "knowledge_events": [{"actor": "p", "claim": "тайна", "source": "s14.text.001",
+                                           "channel": "document", "visibility": "gm_only"}]})
+        result = preflight.inspect(packet(), t)
+        self.assertFalse(result["mechanical_ok"])
+        self.assertTrue(any("Закрытое" in x for x in result["errors"]))
+
+    def test_wrong_review_type_is_diagnostic_not_exception(self):
+        self.assertFalse(preflight.inspect(packet(), draft(review="invalid"))["mechanical_ok"])
+
+    def test_news_requires_receipt_not_acknowledgment(self):
+        p = packet()
+        p["news_id"] = "evt_" + "a" * 20
+        t = draft(d={"scene": {"present": ["shiki"]}, "must_done": [p["news_id"]]})
+        self.assertFalse(preflight.inspect(p, t)["mechanical_ok"])

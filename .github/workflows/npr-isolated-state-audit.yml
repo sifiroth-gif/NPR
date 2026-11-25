@@ -6,6 +6,7 @@ on:
       - ".github/workflows/npr-isolated-state-audit.yml"
       - "rpg_engine/capabilities.py"
       - "rpg_engine/nextpack.py"
+      - "rpg_engine/preflight.py"
       - "rpg_engine/dread.py"
       - "rpg_engine/medical.py"
       - "rpg_engine/body.py"
@@ -182,6 +183,22 @@ jobs:
           assert world["news"]["delivered"] == original_will["news"]["delivered"]
           assert world["news"]["missed"] == original_will["news"]["missed"]
           print("C3_WORLD_AUTONOMY_OK", "obligations", len(ids), "legacy_offer_retained", True, "NEXT_bytes", packet_bytes)
+          from rpg_engine import preflight
+          assert packet["preflight"] == preflight.RULE
+          probe = {"schema": "npr-turn/2", "id": packet["next_id"],
+                   "at": packet["lag"]["at"], "place": packet["place"],
+                   "player": "Где врач?", "gm": "**Мугами Шики:** — Где врач?",
+                   "review": {"predecessor": packet["cursor"]},
+                   "d": {"scene": {"present": list(full["scene"]["present"])}}}
+          import copy
+          before_probe = copy.deepcopy((packet, probe))
+          check = preflight.inspect(packet, probe)
+          assert check["mechanical_ok"], check
+          assert len(check["checklist"]) == 6
+          assert not preflight.inspect(packet, probe, used=["restricted.unlearned"])["mechanical_ok"]
+          assert not preflight.inspect(packet, dict(probe, review={"predecessor": "s14.text.022"}))["mechanical_ok"]
+          assert (packet, probe) == before_probe
+          print("C4_PREFLIGHT_OK", "checklist", len(check["checklist"]), "NEXT_bytes", packet_bytes)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))

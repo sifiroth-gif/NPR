@@ -138,10 +138,18 @@ def inspect(packet, turn, *, receipts=(), used=()):
         hot.validate_turn(turn)
     except (ValueError, TypeError, OverflowError) as exc:
         return {"mechanical_ok": False, "errors": [str(exc)], "review": [], "checklist": list(CHECKLIST)}
-    packet = overlay.project(packet, receipts)
+    if not isinstance(packet, dict):
+        return {"mechanical_ok": False, "errors": ["NEXT не объект."], "review": [], "checklist": list(CHECKLIST)}
+    try:
+        packet = overlay.project(packet, receipts)
+    except (ValueError, TypeError, KeyError, AttributeError, OverflowError) as exc:
+        return {"mechanical_ok": False, "errors": ["Не удалось проверить курсор: " + str(exc)],
+                "review": [], "checklist": list(CHECKLIST)}
     if packet.get("fold_errors") or packet.get("state_errors") or (packet.get("lag_status") or {}).get("write_allowed") is False:
         errors.append("Состояние заблокировано/не подтверждено; не публикуй новый ход.")
-    if turn.get("id") != packet.get("next_id") or (turn.get("review") or {}).get("predecessor") != packet.get("cursor"):
+    review = turn.get("review")
+    if (turn.get("id") != packet.get("next_id") or not isinstance(review, dict)
+            or review.get("predecessor") != packet.get("cursor")):
         errors.append("ID или predecessor не совпадает с проверенным курсором.")
     start = (packet.get("lag") or {}).get("at")
     if start and hot.parse_at(turn["at"]) < hot.parse_at(start):
@@ -151,6 +159,9 @@ def inspect(packet, turn, *, receipts=(), used=()):
             errors.append("OOC не двигает игровые часы.")
         return {"mechanical_ok": not errors, "errors": errors, "review": cues, "checklist": ["Ответь на вопрос или поправку; не играй сцену."]}
     d = turn.get("d") or {}
+    if turn.get("kind") in ("technical", "void"):
+        cues.append("Технический ход: не выдумывай игровое событие.")
+        return {"mechanical_ok": not errors, "errors": errors, "review": cues, "checklist": list(CHECKLIST)}
     if not isinstance(d.get("scene"), dict) or not isinstance(d["scene"].get("present"), list):
         errors.append("Запиши актуальный состав d.scene.present, не наследуй молча.")
     gm = turn["gm"]
@@ -168,6 +179,22 @@ def inspect(packet, turn, *, receipts=(), used=()):
     for key, row in (packet.get("present") or {}).items():
         if isinstance(row, dict):
             names.append(str(row.get("name") or key))
+    prior_present = set(packet.get("present") or {})
+    after_present = set((d.get("scene") or {}).get("present") or [])
+    local_present = prior_present | after_present | {"shiki", "nemera"}
+    for actor, patch in (d.get("cast") or {}).items():
+        if isinstance(patch, dict) and patch.get("knows+") and actor not in local_present:
+            if not any(ev.get("actor") == actor and ev.get("channel") in ("message", "document", "witness", "inference")
+                       for ev in d.get("knowledge_events") or []):
+                cues.append("NPC %s вне известного состава: знания без подтверждённого канала." % actor)
+    for ev in d.get("knowledge_events") or []:
+        if ev.get("visibility") == "gm_only":
+            patch = (d.get("cast") or {}).get(ev["actor"]) or {}
+            if ev["claim"] in (patch.get("knows+") or []):
+                errors.append("Закрытое знание продублировано в открытом knows+.")
+    if packet.get("news_id") in (d.get("must_done") or []) and not any(
+            ev.get("id") == packet["news_id"] for ev in d.get("news_delivered") or []):
+        errors.append("Весть нельзя закрыть только must_done: требуется news_delivered.")
     interior = prose_lint.interior(gm, names)
     if interior:
         cues.append(interior["quote"])
@@ -181,9 +208,13 @@ def inspect(packet, turn, *, receipts=(), used=()):
             errors.append("Недоступная способность: " + ident)
         else:
             cues.append("Проверь активацию, условия и цену: " + ident)
-    _rolls(packet, turn, errors, cues)
-    cost = _cost(packet, turn, errors, cues)
-    _clinical(packet, turn, errors, cues)
+    try:
+        _rolls(packet, turn, errors, cues)
+        cost = _cost(packet, turn, errors, cues)
+        _clinical(packet, turn, errors, cues)
+    except (ValueError, TypeError, KeyError, AttributeError, OverflowError) as exc:
+        errors.append("Некорректный расчёт/клиническая запись: " + str(exc))
+        cost = None
     if packet.get("source_review"):
         cues.append("Есть конфликт источников: проверь указанные первичные ходы.")
     if packet.get("must") or (packet.get("lag_status") or {}).get("unresolved_must"):
