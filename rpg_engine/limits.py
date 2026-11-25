@@ -19,8 +19,8 @@ BRIEF_TARGET = 60_000        # GM_BRIEF: цель (читается раз в н
 BRIEF_HARD = 96_000          # GM_BRIEF: предел
 # Пакет хода: 23.11.2026 в нём появились канон арки, знание присутствующих, арсенал боя, а поправок
 # игрока стало 19 (7,6 КБ) — прежние 14/17 КБ не держались ни одним ходом. Сверх цели код ужимает сам.
-NEXT_TARGET = 30_000         # пакет хода: цель (24.11.2026: + историческая память присутствующих)
-NEXT_HARD = 40_000           # пакет хода: предел
+NEXT_TARGET = 40_000         # пакет хода: цель (24.11.2026: + историческая память присутствующих)
+NEXT_HARD = 50_000           # пакет хода: предел
 SESSION_TURNS = 120          # длинная сессия: пора закрыть
 WARN = 0.9                   # с какой доли предела предупреждать
 REMIND_TURNS = 15            # одно и то же предупреждение — не чаще раза в 15 ходов
@@ -30,13 +30,13 @@ RULES = {
     "AGENTS.md": 7000,
     "campaigns/shiki/GM_CORE.md": 18000,
     "skills/dark-literary-gm/SKILL.md": 9000,
-    "campaigns/shiki/SHIKI.md": 10000,
-    "campaigns/shiki/ref/TECHNIQUES.md": 12000,
+    "campaigns/shiki/SHIKI.md": 15000,
+    "campaigns/shiki/ref/TECHNIQUES.md": 20000,
     "campaigns/shiki/ref/NEMERA.md": 8000,
     "skills/dark-literary-gm/references/horror-masters.md": 6000,
     "campaigns/shiki/BOOT.md": 2400,
     "campaigns/shiki/ref/MEDICINE.md": 7000,
-    "campaigns/shiki/ref/COMBAT.md": 9000,
+    "campaigns/shiki/ref/COMBAT.md": 16000,
     "campaigns/shiki/ref/KNOWLEDGE.md": 7000,
     "campaigns/shiki/ref/MEMORY.md": 7000,
     "campaigns/shiki/ref/HORROR.md": 7000,
