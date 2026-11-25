@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.044",
+  "cursor": "s15.text.046",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 103,
+      "mention_count": 104,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T13:25:00",
-          "excerpt": "едовательские материалы. Те, что предшествовали первому переселению. Выясни, какие биологические образцы сохранились. **Кабуто Якуши:** — Вашего первоначального организма? **Орочимару:** — Именно. Кабуто бросил на Шики продолжительный взгляд. Он хотел что-то с",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.021"
         },
         {
           "at": "0010-04-21T13:30:00",
@@ -1694,11 +1687,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.044"
+        },
+        {
+          "at": "0010-04-21T14:05:00",
+          "excerpt": "самый сильный и отрави меня как врага. Кабуто посмотрел на Орочимару. Саннин утвердительно кивнул. **Кабуто Якуши:** — Как пожелаете. Он выбрал одну из пробирок. Испытание состоялось. Однако яд, который должен был вызвать тяжёлое нарушение жизненных функций, н",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.046"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.044",
+          "seen": "s15.text.046",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -1708,7 +1708,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s15.text.044"
+        "s15.text.046"
       ]
     },
     "kabuto_letter_0416": {
@@ -4237,7 +4237,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 149,
+      "mention_count": 151,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4247,30 +4247,30 @@
           "turn": "s02.text.046"
         },
         {
-          "at": "0010-04-21T13:46:00",
-          "excerpt": "#возвращаюсь в кабинет к Орочимару# чтож на сегодня все? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:46</text> ### Кабинет Орочимару Орочимару сидел за столом, изучая старые записи.",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.042"
-        },
-        {
-          "at": "0010-04-21T13:50:00",
-          "excerpt": "с есть яды? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:50</text> ### Кабинет Орочимару **Мугами Шики:** — Ох мои сендзюцу все как одна смертельно опасны. Но одну могу показать у вас есть яды? Бледное лицо саннина оживилось. **Орочимару:*",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.043"
-        },
-        {
           "at": "0010-04-21T13:51:00",
           "excerpt": "е выяснить? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:51</text> ### Кабинет Орочимару **Мугами Шики:** — Невосприимчивость, ну и раз уж заговорили я могу создать как минимум два яда как техники, а остальное сендзюцу завязано на моей спе",
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.044"
+        },
+        {
+          "at": "0010-04-21T13:51:20",
+          "excerpt": "информацию <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:51</text> ### Кабинет Орочимару Шики улыбнулся. **Мугами Шики:** — Достаточно что бы это было опасно. Все тяните и тяните из меня информацию. Орочимару рассмеялся. **Орочимару:** — А ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.045"
+        },
+        {
+          "at": "0010-04-21T14:05:00",
+          "excerpt": "я как врага <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:52</text> ### Кабинет Орочимару **Мугами Шики:** — Да ладно Кабуто, возьми самый сильный и отрави меня как врага. Кабуто посмотрел на Орочимару. Саннин утвердительно кивнул. **Кабуто",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.046"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.044",
+          "seen": "s15.text.046",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4280,7 +4280,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.044"
+        "s15.text.046"
       ]
     },
     "orochimaru_poison_samples_s15": {
@@ -4297,11 +4297,12 @@
       "projections": [
         {
           "holder": "orochimaru",
-          "since": "s15.text.043"
+          "since": "s15.text.043",
+          "turn": "s15.text.046"
         }
       ],
       "sources": [
-        "s15.text.043"
+        "s15.text.046"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13986,7 +13987,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.044",
+        "s15.text.046",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -14006,7 +14007,9 @@
         "s15.text.026",
         "s15.text.027",
         "s15.text.042",
-        "s15.text.043"
+        "s15.text.043",
+        "s15.text.044",
+        "s15.text.045"
       ]
     },
     "place:e02f343494580ab8": {
@@ -18828,12 +18831,12 @@
     },
     {
       "from": "orochimaru_poison_samples_s15",
-      "source": "s15.text.043",
+      "source": "s15.text.046",
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1218
+  "source_turns_indexed": 1220
 }
