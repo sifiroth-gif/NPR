@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.023",
+  "cursor": "s15.text.024",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 139,
+      "mention_count": 140,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:25:00",
-          "excerpt": "й <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:25</text> ### Подземное убежище Орочимару **Мугами Шики:** — Я никогда не боялся умереть и все же вы опять услышали не правильно. Шики улыбнулся. **Мугами Шики:** — Я сказал что не могу помочь",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.021"
         },
         {
           "at": "0010-04-21T13:26:00",
@@ -4261,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.023"
+        },
+        {
+          "at": "0010-04-21T13:28:00",
+          "excerpt": "е <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:28</text> ### Подземное убежище Орочимару **Мугами Шики:** — У вас сильно меняется… чувство, когда вы о нем говорите. Орочимару посмотрел на Шики исподлобья. **Орочимару:** — Неужели теперь ты",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.023",
+          "seen": "s15.text.024",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.023"
+        "s15.text.024"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,7 +13929,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.023",
+        "s15.text.024",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13942,7 +13942,8 @@
         "s15.text.019",
         "s15.text.020",
         "s15.text.021",
-        "s15.text.022"
+        "s15.text.022",
+        "s15.text.023"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17084,8 +17085,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json",
-        "s15.text.023"
+        "recovery/cast/shirame.json"
       ]
     },
     "shiranami": {
@@ -18764,5 +18764,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1197
+  "source_turns_indexed": 1198
 }
