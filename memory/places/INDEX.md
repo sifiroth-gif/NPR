@@ -18,7 +18,7 @@
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 19 ход(ов), s09–s14
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11
-- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 16 ход(ов), s15–s15
+- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 17 ход(ов), s15–s15
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08

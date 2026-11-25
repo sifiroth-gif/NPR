@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.025",
+  "cursor": "s15.text.026",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1700,15 +1700,10 @@
         {
           "seen": "s15.text.025",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
-        },
-        {
-          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s15.text.025"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -4237,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 141,
+      "mention_count": 142,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4245,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:27:00",
-          "excerpt": "л <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:27</text> ### Подземное убежище Орочимару **Мугами Шики:** — Уважайте змей и их выбор. А ещё мне не нужны образцы, все что нужно я уже взял. Орочимару машинально коснулся волос. **Орочимару:**",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.023"
         },
         {
           "at": "0010-04-21T13:28:00",
@@ -4266,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.025"
+        },
+        {
+          "at": "0010-04-21T13:31:00",
+          "excerpt": "я <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:31</text> ### Подземное убежище Орочимару **Мугами Шики:** — Значит вы хотите вернуться позже к этому варианту? Ну думаю змеи помогут нам связаться. **Орочимару:** — Именно. Предпочитаю иметь ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.025",
+          "seen": "s15.text.026",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4280,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.025"
+        "s15.text.026"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13934,7 +13929,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.025",
+        "s15.text.026",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13949,7 +13944,8 @@
         "s15.text.021",
         "s15.text.022",
         "s15.text.023",
-        "s15.text.024"
+        "s15.text.024",
+        "s15.text.025"
       ]
     },
     "place:e02f343494580ab8": {
@@ -16515,12 +16511,17 @@
       ],
       "projections": [
         {
-          "seen": "s11.text.054",
+          "seen": "s15.text.026",
+          "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
+        },
+        {
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json"
+        "recovery/cast/sasuke.json",
+        "recovery/HOT.json",
+        "s15.text.026"
       ]
     },
     "sayu": {
@@ -18771,5 +18772,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1199
+  "source_turns_indexed": 1200
 }
