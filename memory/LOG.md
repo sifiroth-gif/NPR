@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.037: Неизвестный наблюдатель за ивами (`npc/willow_observer`)
 - s13.text.036: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.035: Неизвестный наблюдатель за ивами (`npc/willow_observer`), план сюжета
 - s13.text.034: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), вещь `willow_dispatch`, план сюжета, бой
@@ -56,4 +57,3 @@
 - s12.text.084: Немера (Невыписанная) (`npc/nemera`), вещь `nemera_document`, вещь `sealing_cloth_scrap`, линия `kabuto_name_source`
 - s12.text.083: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), masked1 (`npc/masked1`), masked2 (`npc/masked2`), masked3 (`npc/masked3`), Сакура Харуно (`npc/sakura`), вещь `nemera_document`, вещь `sai_note`, линия `kabuto_tracking_claim`, линия `sai_note`
 - s12.text.082: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), вещь `nemera_document`, вещь `sai_note`, линия `sai_note`, линия `kabuto_snake_contract`
-- s12.text.081: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `root_silence_seals`, бой
