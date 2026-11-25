@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s13.text.033`
+# Карта мира NPR · на ходе `s13.text.034`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -239,7 +239,7 @@
 ## Давние линии (21, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (61)
+## Вещи (62)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -301,3 +301,4 @@
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`
 - `traveller_cloak` · `items/traveller_cloak`
+- `willow_dispatch` · `items/willow_dispatch`
