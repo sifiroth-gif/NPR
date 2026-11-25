@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.020",
+  "cursor": "s15.text.021",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,6 +406,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s15.text.021:0": {
+      "aliases": [
+        "canon:s15.text.021:0",
+        "s15.text.021: прямое утверждение игрока о характере Шики: никогда не боялся умереть. Предыдущее предположение Орочимару о страхе смерти было ошибочным суждением NPC."
+      ],
+      "facts": [],
+      "id": "canon:s15.text.021:0",
+      "kind": "canon",
+      "label": "s15.text.021: прямое утверждение игрока о характере Шики: никогда не боялся умереть. Предыдущее предположение Орочимару о страхе смерти было ошибочным суждением NPC.",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.021"
       ]
     },
     "captive_guard": {
@@ -1665,7 +1681,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 100,
+      "mention_count": 101,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1689,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T13:05:00",
-          "excerpt": "ониться. Но заметив его спутника, остановился на середине движения. **Шиноби Звука:** — Кабуто-сама, это тот… **Кабуто Якуши:** — Предупредите Орочимару-сама. Человек поспешил исполнить поручение. Уже за поворотом послышался звук брошенного на засов металличес",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.010"
         },
         {
           "at": "0010-04-21T13:06:00",
@@ -1694,16 +1703,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.012"
+        },
+        {
+          "at": "0010-04-21T13:25:00",
+          "excerpt": "едовательские материалы. Те, что предшествовали первому переселению. Выясни, какие биологические образцы сохранились. **Кабуто Якуши:** — Вашего первоначального организма? **Орочимару:** — Именно. Кабуто бросил на Шики продолжительный взгляд. Он хотел что-то с",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.012",
-          "state": "Покинул комнату по приказу Орочимару; тревожится о болезни учителя."
+          "seen": "s15.text.021",
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
+        },
+        {
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "recovery/HOT.json",
+        "s15.text.021"
       ]
     },
     "kabuto_letter_0416": {
@@ -4232,7 +4253,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 136,
+      "mention_count": 137,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4261,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:21:00",
-          "excerpt": "? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:21</text> ### Подземное убежище Орочимару **Мугами Шики:** — Я не знаю. Может просто буду смотреть на горы и болота. Видите ли, сейчас, да и тогда до… В общем сознании возникло чувство, которо",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.018"
         },
         {
           "at": "0010-04-21T13:23:00",
@@ -4261,11 +4275,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.020"
+        },
+        {
+          "at": "0010-04-21T13:25:00",
+          "excerpt": "й <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:25</text> ### Подземное убежище Орочимару **Мугами Шики:** — Я никогда не боялся умереть и все же вы опять услышали не правильно. Шики улыбнулся. **Мугами Шики:** — Я сказал что не могу помочь",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.020",
+          "seen": "s15.text.021",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4296,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.020"
+        "s15.text.021"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,7 +13950,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.020",
+        "s15.text.021",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13939,7 +13960,8 @@
         "s15.text.016",
         "s15.text.017",
         "s15.text.018",
-        "s15.text.019"
+        "s15.text.019",
+        "s15.text.020"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17040,7 +17062,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 68,
+      "mention_count": 69,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17048,13 +17070,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:20:00",
-          "excerpt": "Сирамэ, мог, у счастью теперь кожей можно полглащать, раньше я себя резал. Господин Орочимару, а зачем это вам? Что такого в вечной жизни? #отсдеживай может я попаду в его отношени",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.017"
         },
         {
           "at": "0010-04-21T13:21:00",
@@ -17069,12 +17084,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.019"
+        },
+        {
+          "at": "0010-04-21T13:25:00",
+          "excerpt": "негромко рассмеялся. **Орочимару:** — И теперь ты предлагаешь мне вернуться к тому, от чего я начинал свой путь. Сирамэ внимательно следила за ним. **Сирамэ:** — Зато оно будет твоим. Орочимару посмотрел на неё с неожиданной неприязнью. Затем подошёл к двери и",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.021"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.020",
+          "seen": "s15.text.021",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17087,7 +17109,8 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.021"
       ]
     },
     "shiranami": {
@@ -18766,5 +18789,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1194
+  "source_turns_indexed": 1195
 }
