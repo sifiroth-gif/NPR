@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.062: Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), вещь `root_compulsory_coupling_scroll`
 - s13.text.061: western_nest_adult_courier (`npc/western_nest_adult_courier`), поправки игрока: 1
 - s13.text.060: поправки игрока: 2
 - s13.text.059: western_nest_adult_courier (`npc/western_nest_adult_courier`), поправки игрока: 2
@@ -58,4 +59,3 @@
 - s13.text.005: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, линия `roadside_attack`
 - s13.text.004: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.003: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
-- s13.text.002: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
