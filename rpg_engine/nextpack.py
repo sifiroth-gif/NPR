@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import directives, dread, inquiry, lore, will
+from . import directives, dread, inquiry, lore, medical, will
 
 PATH = "recovery/NEXT.json"
 from .limits import NEXT_HARD as HARD_BYTES, NEXT_TARGET as TARGET_BYTES  # noqa: E402
@@ -328,8 +328,10 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                                  **{key: scene[key] for key in ("situation", "positions", "pressure")
                                     if scene.get(key)}}
         kit = (hot.get("things") or {}).get("shiki_medical_kit")
+        pack["medical"] = medical.context(hot, compact=True)
         pack["state_sources"] = {
             "injuries": "recovery/HOT.json#injuries",
+            "body": "recovery/HOT.json#body",
             "things": "recovery/HOT.json#things",
             "research": "recovery/HOT.json#shiki",
             "medical_kit": {key: kit[key] for key in ("holder", "state", "turn") if key in kit}
@@ -416,6 +418,8 @@ def _fit(pack):
     """Сначала укорачиваются сроки, затем замечания; ошибки свёртки не трогаются."""
     while _size(pack) > TARGET_BYTES and len(pack.get("due") or []) > 3:
         pack["due"].pop()
+    if _size(pack) > TARGET_BYTES:
+        pack.pop("style", None)  # read the literary skill once; no need to repeat an example
     while _size(pack) > HARD_BYTES and len(pack.get("checks") or []) > 3:
         pack["checks"].pop(0)
     if _size(pack) > HARD_BYTES:            # образец манеры — первым из необязательного

@@ -406,7 +406,7 @@ def apply(hot, delta, turn, pool, legacy=None):
         _review_exchange(active, rolled, data, turn_id, notes)
     _wounds(hot, data.get("wounds"), turn_id, at)
     for item in delta.get("heal") or data.get("heal") or []:
-        _heal(hot, item, turn_id, notes)
+        _heal(hot, item, turn_id, notes, at=at)
     if active:
         for key, patch in (data.get("foe_state") or {}).items():
             if isinstance(patch, dict) and key in active["foes"]:
@@ -748,7 +748,7 @@ def _wounds(hot, wounds, turn_id, at):
         hot.setdefault("injuries", {}).setdefault(wound["who"], []).append(record)
 
 
-def _heal(hot, item, turn_id, notes=None):
+def _heal(hot, item, turn_id, notes=None, *, at=None):
     if not isinstance(item, dict) or not item.get("who"):
         return
     who = item["who"]
@@ -760,6 +760,9 @@ def _heal(hot, item, turn_id, notes=None):
         if notes is not None:
             _note(notes, turn_id, f"Лечение {who}: {message}")
 
+    if body.modern(turn_id) and item.get("all") and (where or source):
+        warn("all=true несовместимо с выбором отдельной раны.")
+        return
     if modern and any(key in item and type(item[key]) is not bool for key in ("stop", "blood", "all")):
         warn("stop/blood/all должны быть логическими значениями; лечение не применено.")
         return
@@ -779,7 +782,7 @@ def _heal(hot, item, turn_id, notes=None):
             warn("частичное лечение требует единственную рану where (при совпадении — injury_turn) и residual.lost; severity — из шкалы ран.")
             return
         if item.get("stop") or item.get("blood"):
-            body.heal(hot, item, turn_id)
+            body.heal(hot, item, turn_id, at)
         matches[0].update(residual)
         matches[0]["recovered_at"] = turn_id
         return
@@ -795,10 +798,13 @@ def _heal(hot, item, turn_id, notes=None):
         if where and (not matches or len(matches) > 1) and not item.get("all"):
             warn("рана не найдена или неоднозначна; укажи injury_turn.")
             return
-    if (item.get("stop") or item.get("blood")) and body.heal(hot, item, turn_id):
+    if (item.get("stop") or item.get("blood")) and body.heal(hot, item, turn_id, at):
         return      # кровь остановлена или восполнена; рана остаётся до лечения
+    was_bleeding = any(w.get("bleed") for w in matches)
     for wound in matches:
         wound["healed"] = turn_id
+    if was_bleeding:
+        body.recovery_anchor(hot, who, turn_id, at)
     remaining = [w for w in wounds if not w.get("healed")]
     if remaining:
         hot["injuries"][who] = remaining

@@ -11,7 +11,7 @@ import re
 
 from pathlib import Path
 
-from . import capabilities, general_memory
+from . import capabilities, general_memory, medical
 
 SCHEMA = "npr-context-routing/1"
 DEFAULT_FOCUS = 10
@@ -136,4 +136,6 @@ def route(hot, index, *, action="", limit=DEFAULT_FOCUS, max_bytes=DEFAULT_BYTES
         result["thematic"] = {k: thematic[k] for k in ("routes", "basis", "matched", "read",
                                                        "required", "unavailable")}
         result["thematic"]["entries"] = [row["id"] for row in thematic["entries"]]
+        if "medical" in thematic["routes"]:
+            result["thematic"]["medical"] = medical.context(hot)
     return packet, result

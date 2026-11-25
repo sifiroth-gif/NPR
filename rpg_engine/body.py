@@ -109,7 +109,24 @@ def _band(hot, who, load, exert, loss):
     return cats
 
 
-def heal(hot, item, turn_id):
+MEDICAL_CUTOVER = "s14.text.024"
+
+
+def modern(turn_id):
+    from .aging import _ordinal
+    here, cut = _ordinal(turn_id), _ordinal(MEDICAL_CUTOVER)
+    return here is not None and cut is not None and here >= cut
+
+
+def recovery_anchor(hot, who, turn_id, at):
+    """Recovery time starts at haemostasis, not the last bleeding roll."""
+    record = _view(hot).get(who)
+    if modern(turn_id) and record and record.get("loss") and at and not any(
+            w.get("bleed") and not w.get("healed") for w in (hot.get("injuries") or {}).get(who, [])):
+        record["at"] = at
+
+
+def heal(hot, item, turn_id, at=None):
     """`stop` — кровь остановлена (рана остаётся); `blood` — кровь восполнена на ступень. True — обработано."""
     who = item.get("who")
     if item.get("blood"):
@@ -118,6 +135,8 @@ def heal(hot, item, turn_id):
             record["loss"] = int(record["loss"]) - 1
             record["stage"] = LOSS[record["loss"]]
             record["restored"] = turn_id
+            if modern(turn_id) and at:
+                record["at"] = at
     if not item.get("stop"):
         return bool(item.get("blood"))
     where, source = item.get("where"), item.get("injury_turn")
@@ -126,6 +145,7 @@ def heal(hot, item, turn_id):
                 and (not source or wound.get("turn") == source)):
             wound["bleed"] = False
             wound["stopped"] = turn_id
+    recovery_anchor(hot, who, turn_id, at)
     return True
 
 
@@ -139,7 +159,13 @@ def check(hot, turn, delta):
         return []
     state = _state(hot)
     fresh = []
-    for who, wounds in (hot.get("injuries") or {}).items():
+    patients = dict(hot.get("injuries") or {})
+    if modern(turn.get("id")):
+        # Full anatomical repair does not erase residual systemic blood loss.
+        for who, record in state.items():
+            if who != "fresh" and isinstance(record, dict) and record.get("loss"):
+                patients.setdefault(who, [])
+    for who, wounds in patients.items():
         open_ = [w for w in wounds if not w.get("healed") and w.get("bleed")]
         record = state.get(who)
         if not open_:
@@ -177,6 +203,14 @@ def check(hot, turn, delta):
                               "exert": exert, "load": load}
             if record["loss"] == len(LOSS) - 1:
                 break
+            if modern(turn.get("id")):
+                # A clot may end bleeding before all quiet checks. Recompute
+                # the load for the next check, never bleed from a closed wound.
+                open_ = [w for w in open_ if w.get("bleed")]
+                if not open_:
+                    break
+                load = sum(LOAD.get(w.get("severity"), 0) for w in open_)
+                critical = any(w.get("severity") == "критическая" for w in open_)
         record["stage"], record["at"] = LOSS[record["loss"]], turn.get("at")
         fresh.append({"who": who, "before": before, "after": record["loss"], **record["last"],
                       "wounds": [w.get("where") for w in open_ if w.get("bleed")]})

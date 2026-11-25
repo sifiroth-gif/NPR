@@ -45,7 +45,7 @@ def project(packet, records):
     """
     result = copy.deepcopy(packet)
     if packet.get("fold_errors") or packet.get("state_errors"):
-        for field in ("dice", "chakra", "must", "must_ids", "turn_file", "scene_context", "state_sources"):
+        for field in ("dice", "chakra", "must", "must_ids", "turn_file", "scene_context", "state_sources", "medical"):
             result.pop(field, None)
         if result.get("capabilities"):
             result["capabilities"].pop("scene_hint", None)
@@ -148,6 +148,7 @@ def project(packet, records):
     # pending receipt. Permanent registry entries are not mutable state.
     result.pop("scene_context", None)
     result.pop("state_sources", None)
+    result.pop("medical", None)  # no claim about unresolved clinical consequences
     if result.get("capabilities"):
         result["capabilities"].pop("scene_hint", None)
     result["lag_status"] = {
