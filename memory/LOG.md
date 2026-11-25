@@ -2,8 +2,9 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s14.text.052: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), план сюжета, поправки игрока: 1
-- s14.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сирамэ (`npc/shirame`), Молодая посланница (`npc/western_nest_young_courier`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
+- s14.text.053: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), поправки игрока: 1
+- s14.text.052: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), план сюжета, поправки игрока: 1
+- s14.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.049: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
@@ -16,10 +17,10 @@
 - s14.text.041: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.040: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета, поправки игрока: 1
 - s14.text.039: Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`
-- s14.text.038: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`
-- s14.text.037: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s14.text.036: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
-- s14.text.035: Молодая посланница (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
+- s14.text.038: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`
+- s14.text.037: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), план сюжета
+- s14.text.036: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
+- s14.text.035: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.034: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.033: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.032: линия `shiki_dragon_sage`, линия `shiki_save_asuma`, поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.096: поправки игрока: 5
 - s13.text.095: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина в куртке (`npc/root_field_jacket_man`)
 - s13.text.094: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
-- s13.text.093: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина с иглой (`npc/root_field_needle_man`)
