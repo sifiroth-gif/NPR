@@ -99,6 +99,10 @@ class WillTest(unittest.TestCase):
         self.assertTrue(any("4 ход(ов) рядом с Шики только отвечает" in n for n in notes))
         will.track(h, {"id": "s04.text.049"}, {"kadziura": {"rel": {"trust": -1}}})
         notes = [n["text"] for n in will.review(h, [{"id": "s04.text.049"}])]
+        self.assertTrue(any("5 ход(ов) рядом с Шики только отвечает" in n for n in notes),
+                        "перемена доверия — отклик, не свой шаг (25.11.2026)")
+        will.track(h, {"id": "s04.text.050"}, {"kadziura": {"intent": {"cover": {"next": "подать рапорт"}}}})
+        notes = [n["text"] for n in will.review(h, [{"id": "s04.text.050"}])]
         self.assertFalse(any("только отвечает" in n for n in notes))
 
     def test_significant_npc_without_will_is_flagged(self):

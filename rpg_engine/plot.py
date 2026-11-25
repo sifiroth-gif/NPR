@@ -175,7 +175,12 @@ def review(hot, turns):
         chapters = [e for e in events.values() if e.get("kind") == "chapter" and e.get("status") == "active"]
         if not chapters:
             queued = [e for e in events.values() if e.get("kind") == "chapter" and e.get("status") == "queued"]
+            queued.sort(key=lambda e: (_parse(e.get("starts")) is None, _parse(e.get("starts")) or datetime.max))
             hint = f" Следующая в очереди: {_label(queued[0])}." if queued else ""
+            starts = _parse(queued[0].get("starts")) if queued else None
+            if starts and now and (starts - now).days > 7:   # 25.11.2026: глава мира через месяцы — не ждать её
+                hint = (f" Ближайшая глава мира {_label(queued[0])} — через {(starts - now).days} дн.: до неё "
+                        "открой свою главу из последствий поступков Шики (kind chapter, parent main).")
             note("У сквозного сюжета нет активной главы: открой следующую главу с концовками и пределом."
                  + hint)
     else:
