@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.019: Сэйдзи Минасэ (`npc/quay_masked_hunter`), поправки игрока: 1
+- s14.text.018: Сэйдзи Минасэ (`npc/quay_masked_hunter`)
 - s14.text.017: поправки игрока: 1
 - s14.text.016: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.015: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`)
@@ -56,5 +58,3 @@
 - s13.text.062: Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), вещь `root_compulsory_coupling_scroll`
 - s13.text.061: western_nest_adult_courier (`npc/western_nest_adult_courier`), поправки игрока: 1
 - s13.text.060: поправки игрока: 2
-- s13.text.059: western_nest_adult_courier (`npc/western_nest_adult_courier`), поправки игрока: 2
-- s13.text.058: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Молодая змея (`npc/molodaya_zmeya`), Немера (Невыписанная) (`npc/nemera`), вещь `root_compulsory_coupling_scroll`
