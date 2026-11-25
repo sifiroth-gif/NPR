@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.039: Саске Учиха (`npc/sasuke`), бой
 - s15.text.038: Саске Учиха (`npc/sasuke`), бой
 - s15.text.037: Саске Учиха (`npc/sasuke`), бой
 - s15.text.036: Саске Учиха (`npc/sasuke`)
@@ -58,4 +59,3 @@
 - s14.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.049: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
-- s14.text.047: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
