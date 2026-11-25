@@ -46,6 +46,7 @@
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
+- Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 7 ход(ов), s14–s14
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
@@ -54,7 +55,6 @@
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 6 ход(ов), s11–s11
 - Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 6 ход(ов), s14–s14
-- Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 6 ход(ов), s14–s14
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
