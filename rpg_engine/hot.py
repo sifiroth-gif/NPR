@@ -30,7 +30,7 @@ import traceback
 import zlib
 from pathlib import Path
 
-from . import acquaint, aging, arcs, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import acquaint, aging, arcs, body, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -477,6 +477,7 @@ def apply_turn(hot, turn):
             if key in hot.get("cast", {}):
                 hot["cast"][key]["seen"] = turn["id"]
     hot.setdefault("_checks", []).extend(fight.apply(hot, delta, turn, pool))
+    body.check(hot, turn, delta)      # кровь идёт — кость состояния решает тело (body.py)
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
@@ -1469,6 +1470,7 @@ def fold(state_dir):
     except Exception as exc:   # производное: сбой не останавливает свёртку
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                               "text": f"past: {type(exc).__name__}: {exc}"})
+    extra["body"] = body.must(hot)
     try:   # давний знакомый после разлуки, один пункт драмы в must (drama.py)
         extra["gap"] = drama.gaps(state_dir, hot, set(_always_present(state_dir)))
         extra["drama"] = drama.must(hot, set(_always_present(state_dir)))
