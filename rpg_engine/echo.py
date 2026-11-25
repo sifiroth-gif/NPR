@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import math
 import re
+from datetime import datetime
 from pathlib import Path
 
 from . import aging
@@ -22,7 +23,8 @@ from .heuristic_history import stem, tokens
 
 GAP = 6            # не чаще раза в шесть ходов
 COOLDOWN = 120     # одну нить — не раньше чем через 120 ходов
-FRESH = 25         # то, чего касались последние 25 ходов, — не прошлое
+FRESH = 25         # дополнительная защита от недавних ходов
+MIN_AGE_DAYS = 60  # Эхо — месяцы и годы по игровому календарю, не по числу ходов
 MIN_SHARED = 2     # минимум общих значимых основ
 MIN_SCORE = 7.0    # сумма редкости общих основ: созвучие, а не совпадение служебных слов
 NAME = re.compile(r"(?<=[\s(«\"])([А-ЯЁ][а-яё]{3,}|[А-ЯЁA-Z]-?\d+)")
@@ -51,6 +53,56 @@ SENT = re.compile(r"[^.!?…\n]+[.!?…]*")
 HOLD = 4           # столько ходов эхо держится в NEXT, пока не вплетено
 NEAR = 8           # сколько ближайших по смыслу эпизодов получают надбавку
 NEAR_BONUS = 4.0   # надбавка ближайшему; дальше — по убыванию ранга
+
+
+def _when(value):
+    """Игровая календарная дата; неизвестный источник не считается давним."""
+    match = re.search(r"(?<!\d)\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2})?)?", str(value or ""))
+    if not match:
+        return None
+    try:
+        return datetime.fromisoformat(match.group(0))
+    except ValueError:
+        return None
+
+
+def _age_days(today, then):
+    return (today.date() - then.date()).days if today and then else None
+
+
+def _history_index(state_dir):
+    path = Path(state_dir) / "archive/heuristic-recall/manifest.json"
+    if not path.is_file():
+        return None
+    try:
+        from . import heuristic_history
+        return heuristic_history.load(path)
+    except (OSError, ValueError, KeyError):
+        return None
+
+
+def _dated_turns(index):
+    """Индекс первоисточников: точное время из архивного хода, не ordinal сессии."""
+    result = {}
+    for row in (index or {}).get("records") or []:
+        if row.get("kind") != "played":
+            continue
+        at = _when(row.get("at"))
+        if at is None:
+            continue
+        rid = str(row.get("id") or "")
+        result[rid] = at
+        base = _turn_of(rid)
+        if base not in result or at < result[base]:
+            result[base] = at
+    return result
+
+
+def _old_source(candidate, today, dated):
+    source = str(candidate[2] or "")
+    when = _when(source) or dated.get(source) or dated.get(_turn_of(source))
+    age = _age_days(today, when)
+    return age if age is not None and age >= MIN_AGE_DAYS else None
 
 
 def _stems(text):
@@ -86,7 +138,7 @@ def _about_present(candidate, present):
     return bool({stem(w.casefold()) for w in NAME.findall(" " + str(text))} & names)
 
 
-def _candidates(state_dir, hot):
+def _candidates(state_dir, hot, index=None):
     now = aging._ordinal((hot.get("cursor") or {}).get("id")) or 0
     for key, row in aging.load(state_dir, "threads.jsonl").items():
         value = row.get("value") or {}
@@ -100,18 +152,14 @@ def _candidates(state_dir, hot):
         value = row.get("value")
         yield ("вещь", f"thing:{key}", (value or {}).get("turn") if isinstance(value, dict) else None,
                f"{key}: {json.dumps(value, ensure_ascii=False)[:300]}", 0.6)
-    yield from _history(state_dir, hot, now)
+    yield from _history(state_dir, hot, now, index=index)
 
 
-def _history(state_dir, hot, now):
-    """Эпизоды прошлых сессий из исторического индекса (без загрузки — без них)."""
-    path = Path(state_dir) / "archive/heuristic-recall/manifest.json"
-    if not path.is_file():
-        return
-    try:
-        from . import heuristic_history
-        index = heuristic_history.load(path)
-    except (OSError, ValueError, KeyError):
+def _history(state_dir, hot, now, index=None):
+    """Эпизоды прошлых сессий из датированного исторического индекса."""
+    if index is None:
+        index = _history_index(state_dir)
+    if not index:
         return
     for row in index["records"]:
         if row.get("kind") != "played":
@@ -211,6 +259,11 @@ def pick(state_dir, hot, texts=(), turns=None):
     if now is None:
         return None
     state = hot.setdefault("fold", {}).setdefault("echo", {})
+    if state.get("age_policy") != "calendar-60d/1":
+        # Старое предложение могло быть "давним" лишь по числу ходов.
+        # При смене правила не блокируем ближайшую настоящую давнюю нить.
+        state["current"], state["last"], state["at"] = None, None, None
+        state["age_policy"] = "calendar-60d/1"
     if state.get("method") != "event":     # до 25.11.2026 «использовано» считалось по словам — счёт заново
         state["before_event"] = {"offered": state.get("offered", 0), "used_by_words": state.get("used_count", 0)}
         state["offered"], state["used_count"], state["mentioned_count"] = (1 if state.get("current") else 0), 0, 0
@@ -239,8 +292,13 @@ def pick(state_dir, hot, texts=(), turns=None):
     present = _present(hot)
     context = _stems(context_text)
     names = {stem(w.casefold()) for w in NAME.findall(" " + context_text)}
+    index = _history_index(state_dir)
+    dated = _dated_turns(index)
+    today = _when((hot.get("cursor") or {}).get("at"))
     used = state.setdefault("used", {})
-    pool = [c for c in _candidates(state_dir, hot) if now - used.get(c[1], -10**6) >= COOLDOWN
+    pool = [c for c in _candidates(state_dir, hot, index=index)
+            if now - used.get(c[1], -10**6) >= COOLDOWN
+            and _old_source(c, today, dated) is not None
             and not _about_present(c, present)]
     found_all = [_stems(c[3]) for c in pool]
     df = {}
@@ -260,7 +318,10 @@ def pick(state_dir, hot, texts=(), turns=None):
         if kind == "эпизод" and not ({stem(w.casefold()) for w in NAME.findall(" " + text)} & set(shared)):
             continue
         rarity = {s: math.log((total + 1) / (df.get(s, 0) + 1)) * (1.5 if s in names else 1.0) for s in shared}
-        score = (sum(rarity.values()) + (0.5 if kind == "линия" else 0)) * weight + bonus
+        # При сопоставимой тематической связи предпочтительнее годы, а не недели.
+        age_days = _old_source((kind, key, source, text, weight), today, dated) or 0
+        age_bonus = min(2.0, (age_days / 365) * 2.0)
+        score = (sum(rarity.values()) + (0.5 if kind == "линия" else 0)) * weight + bonus + age_bonus
         if score < MIN_SCORE or max(rarity.values()) < math.log((total + 1) / 4):
             continue
         if best is None or score > best[0]:
@@ -392,9 +453,11 @@ def present_past(state_dir, hot, skip=()):
     df, total = index.get("df") or {}, max(1, len(index.get("records") or []))
     cast, out, cache = hot.get("cast") or {}, {}, {}
     session = int(hot.get("session") or 0)
+    today = _when((hot.get("cursor") or {}).get("at"))
     rows = [r for r in index.get("records") or [] if r.get("kind") == "played"
             and not str(r.get("source") or "").startswith("recovery/")
-            and _session(r) is not None and _session(r) < session]
+            and _session(r) is not None and _session(r) < session
+            and (_age_days(today, _when(r.get("at"))) or -1) >= MIN_AGE_DAYS]
     idf = lambda base: math.log((total + 1) / (int(df.get(base, 0)) + 1))
     keys, present_names = _present(hot)
     topic = _topic(_stems(context_text), present_names | {stem("шики"), stem("мугами")}, df)
