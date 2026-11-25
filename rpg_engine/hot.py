@@ -1455,7 +1455,7 @@ def fold(state_dir):
     extra["knows"] = _knows(state_dir, hot, met, lore_entries, skill_seed)
     if favor_item:
         extra["favor"] = favor_item
-    unease_item = favor.unease_must(hot)
+    unease_item = favor.unease_must(hot, set(_always_present(state_dir)))
     if unease_item:
         extra["unease"] = unease_item
     try:   # возраст по дню рождения на дату хода — растёт сам (canon.json ages)
