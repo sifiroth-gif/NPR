@@ -17,6 +17,7 @@
 from __future__ import annotations
 
 import hashlib
+import math
 from pathlib import Path
 import json
 import re
@@ -410,7 +411,10 @@ def apply(hot, delta, turn, pool, legacy=None):
         for key, patch in (data.get("foe_state") or {}).items():
             if isinstance(patch, dict) and key in active["foes"]:
                 active["foes"][key].update(patch)
-    bursts = int(data.get("bursts") or 0)
+    bursts = data.get("bursts", 0)
+    if type(bursts) is not int or bursts < 0:
+        _note(notes, turn_id, "d.fight.bursts: требуется неотрицательное целое число; расход не применён.")
+        bursts = 0
     if bursts:
         if active is not None:
             active["bursts"][turn_id] = bursts
@@ -809,9 +813,13 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
         return
     patch = patch if isinstance(patch, dict) else {}
     if "set" in patch:
-        chakra = shiki["chakra"] = {**(chakra if isinstance(chakra, dict) else {}),
-                                   "value": max(0.0, min(MAX_CHAKRA, float(patch["set"]))),
-                                   "max": MAX_CHAKRA, "at": at, "why": patch.get("why", "")}
+        value = patch["set"]
+        if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= MAX_CHAKRA:
+            _note(notes, turn_id, "d.chakra.set: требуется конечное число в пределах запаса; установка не применена.")
+        else:
+            chakra = shiki["chakra"] = {**(chakra if isinstance(chakra, dict) else {}),
+                                       "value": float(value), "max": MAX_CHAKRA,
+                                       "at": at, "why": patch.get("why", "")}
     if not isinstance(chakra, dict):
         return
     chakra["max"] = MAX_CHAKRA
@@ -820,7 +828,13 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
     for item in patch.get("spend") or []:
         if not isinstance(item, dict):
             continue
-        base_cost = item.get("cost") if isinstance(item.get("cost"), (int, float)) else COST.get(str(item.get("rank", "")).upper())
+        if "cost" in item:
+            base_cost = item["cost"]
+            if type(base_cost) not in (int, float) or not math.isfinite(base_cost) or base_cost < 0:
+                _note(notes, turn_id, "d.chakra.spend.cost: требуется конечная неотрицательная цена; расход не применён.")
+                continue
+        else:
+            base_cost = COST.get(str(item.get("rank", "")).upper())
         if base_cost is None:
             _note(notes, turn_id, f"Чакра: у «{item.get('what')}» нет ранга (E–S) или cost.")
             continue
