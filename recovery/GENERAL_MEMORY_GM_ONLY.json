@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.019",
+  "cursor": "s15.text.020",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 135,
+      "mention_count": 136,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:20:00",
-          "excerpt": "Сирамэ, мог, у счастью теперь кожей можно полглащать, раньше я себя резал. Господин Орочимару, а зачем это вам? Что такого в вечной жизни? #отсдеживай может я попаду в его отношения с джирайей и его колотнет# что в итоге то? <text color=\"secondary\" size=\"xs\">С",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.017"
         },
         {
           "at": "0010-04-21T13:21:00",
@@ -4261,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.019"
+        },
+        {
+          "at": "0010-04-21T13:24:00",
+          "excerpt": "# <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:24</text> ### Подземное убежище Орочимару **Мугами Шики:** — Не на то вы обратили внимание. Вспомните самое начало моей фразы. Видимо вы и правда отчаялись. Шики отделил собственный ноготь вме",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.020"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.019",
+          "seen": "s15.text.020",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.019"
+        "s15.text.020"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,7 +13929,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.019",
+        "s15.text.020",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13938,7 +13938,8 @@
         "s15.text.015",
         "s15.text.016",
         "s15.text.017",
-        "s15.text.018"
+        "s15.text.018",
+        "s15.text.019"
       ]
     },
     "place:e02f343494580ab8": {
@@ -16855,6 +16856,27 @@
         "s14.text.023"
       ]
     },
+    "shiki_nail_sample_1287": {
+      "aliases": [
+        "shiki nail sample 1287",
+        "Образец ногтя Шики с живой тканью корня"
+      ],
+      "facts": [],
+      "id": "shiki_nail_sample_1287",
+      "kind": "item",
+      "label": "Образец ногтя Шики с живой тканью корня",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "orochimaru",
+          "since": "s15.text.020"
+        }
+      ],
+      "sources": [
+        "s15.text.020"
+      ]
+    },
     "shiki_new_refuge": {
       "aliases": [
         "shiki new refuge"
@@ -17052,7 +17074,7 @@
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.019",
+          "seen": "s15.text.020",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17065,8 +17087,7 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json",
-        "s15.text.019"
+        "recovery/HOT.json"
       ]
     },
     "shiranami": {
@@ -18735,8 +18756,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "shiki_nail_sample_1287",
+      "source": "s15.text.020",
+      "status": "projected",
+      "to": "orochimaru",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1193
+  "source_turns_indexed": 1194
 }
