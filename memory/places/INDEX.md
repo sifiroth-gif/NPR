@@ -84,6 +84,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
+- Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 3 ход(ов), s14–s14
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
@@ -113,7 +114,6 @@
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 2 ход(ов), s11–s11
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
-- Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 2 ход(ов), s14–s14
 - Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 2 ход(ов), s10–s10
 - Рьючидо, внутреннее святилище Белой Змеи · `places/ryuchido-vnutrennee-svyatilishche-beloy-zmei` · 2 ход(ов), s10–s10

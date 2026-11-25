@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.046",
+  "cursor": "s14.text.047",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,6 +406,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s14.text.047:0": {
+      "aliases": [
+        "canon:s14.text.047:0",
+        "s14.text.047: Шики после слияния обнаружил локальное поражение слизистой собственной кровью в пределах сцены без ручного осмотра; собственный отросток осуществил заявленное направл"
+      ],
+      "facts": [],
+      "id": "canon:s14.text.047:0",
+      "kind": "canon",
+      "label": "s14.text.047: Шики после слияния обнаружил локальное поражение слизистой собственной кровью в пределах сцены без ручного осмотра; собственный отросток осуществил заявленное направл",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s14.text.047"
       ]
     },
     "captive_guard": {
@@ -2204,7 +2220,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -2212,13 +2228,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-04-12T10:44:00",
-          "excerpt": "что переживу это такой, какой являюсь сейчас. Но я уверена в своём решении.* *** **Немера (Невыписанная):** — Хакудзя-сэннин. Мы готовы узнать условия. Белая Змея подняла хвост и трижды ударила им по каменному полу. Из соседнего прохода ответили шипением. Тяжё",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.043"
         },
         {
           "at": "0010-04-12T11:07:00",
@@ -2233,6 +2242,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.045"
+        },
+        {
+          "at": "0010-04-12T11:10:12",
+          "excerpt": "Прежде для обнаружения подобного потребовался бы осмотр. Теперь Шики различал происходящее на расстоянии. Хакудзя-сэннин приоткрыла пасть. Кончик её языка коснулся основания правого клыка. **Мугами Шики:** — Позво… Рука не поднялась. Однако само намерение уже ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.047"
         }
       ],
       "projections": [
@@ -4608,7 +4624,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.046",
+        "s14.text.047",
         "s14.text.044",
         "s14.text.045"
       ]
@@ -18063,7 +18079,8 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин"
+        "Белая Змея / Хакудзя-сэннин",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -18073,7 +18090,8 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s14.text.046",
+          "body": "s14.text.047: кратковременное локальное поражение слизистой у основания клыков кровью Шики после укуса; направленное лечение прекратило поражение, цвет ткани восстановлен, боль исчезла по её словам. Некроза или системного поражения не установлено.",
+          "seen": "s14.text.047",
           "state": "Лично наблюдала завершение слияния. Безуспешно попросила Немеру отделить чакру. Обратилась к Шики с вопросом, сколько их теперь."
         },
         {
@@ -18082,7 +18100,8 @@
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s14.text.047"
       ]
     },
     "willow_dispatch": {
@@ -18440,5 +18459,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1154
+  "source_turns_indexed": 1155
 }
