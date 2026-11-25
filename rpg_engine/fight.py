@@ -64,7 +64,7 @@ ACTIVE = "active"
 ROSTER = "campaigns/shiki/ref/FOES.json"
 NAMED_RANKS = ("elite", "kage")
 NAMED_EDGE_CAP = 2.0       # перевес Шики против именного — не выше: p ≤ 80, всегда бросок
-LONG_BONUS = 1.0           # длинное действие Шики (печати, призыв, сбор природной чакры, лечение) — окно
+LONG_BONUS = 1.0           # только подлинно длинный ритуал, зарядка, лечение, НЕ быстрые печати Шики
 DEFENSE = {"genjutsu": "genjutsu", "taijutsu": "reaction", "weapons": "reaction", "ninjutsu": "reaction",
            "speed": "speed", "shunshin": "speed", "reaction": "reaction", "strength": "strength",
            "sensory": "stealth", "stealth": "sensory"}
@@ -322,7 +322,10 @@ def foe_edge(hot, roll):
     if mine is None:
         mine = shiki_level(hot, "reaction") or 5.0
     parts = {"умение противника": theirs, "защита Шики": -mine}
-    if roll.get("long"):
+    # Максимально быстрые освоенные печати Шики — не длительная подготовка.
+    # Подлинно долгие действия (лечение, ритуал, зарядка) сохраняют окно врагу.
+    handseals = str(roll.get("long_kind") or "").casefold() in ("handseals", "seals", "печати")
+    if roll.get("long") and not handseals:
         parts["длинное действие Шики"] = LONG_BONUS
     for name, value in (roll.get("mods") or {}).items():
         low, high = MODS.get(name, (0, 0))
