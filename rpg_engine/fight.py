@@ -51,6 +51,25 @@ CHAKRA_SKILLS = {"ninjutsu", "genjutsu", "medical", "control", "suiton", "raiton
 PHYSICAL_SKILLS = {"speed", "shunshin", "reaction", "weapons", "taijutsu", "strength", "endurance",
                    "stealth"}
 
+# Постоянный Режим отшельника освоен в Рьючидо 04.03.1287. Старый
+# структурированный лист умений относится к 1283 году, ДО обучения.
+# Добавочный боевой эффект в системе 0–5 — кампания, НЕ числовой канон манги.
+SAGE_TRAINED_AT = "0010-03-04T09:44:00"
+SAGE_BONUS = {
+    "speed": 0.5, "shunshin": 0.5, "reaction": 0.5, "weapons": 0.5,
+    "taijutsu": 0.5, "strength": 0.5, "endurance": 0.5, "sensory": 0.75,
+}
+
+
+def sage_active(hot):
+    """Устойчивая природная энергия после обучения, без второй активации."""
+    cursor = str(((hot.get("cursor") or {}).get("at") or ""))
+    if not cursor or cursor < SAGE_TRAINED_AT:
+        return False
+    chakra = (((hot.get("shiki") or {}).get("chakra") or {}).get("value"))
+    return not isinstance(chakra, (int, float)) or chakra > 0
+
+
 # Поправки, которые ведущий может назвать сам: имя → (минимум, максимум).
 MODS = {"внезапность": (0, 1), "позиция": (-1, 1), "подготовка": (0, 1), "укрытие": (-1, 1),
         "дистанция": (-1, 1), "местность": (-1, 1), "численность": (-1, 1), "знание": (0, 0.5),
@@ -238,7 +257,9 @@ def shiki_level(hot, skill):
     stats = ((hot.get("shiki") or {}).get("stats") or {})
     key = SHIKI_SKILL.get(skill, skill)
     value = stats.get(key)
-    return float(value) if isinstance(value, (int, float)) else None
+    if not isinstance(value, (int, float)):
+        return None
+    return float(value) + (SAGE_BONUS.get(skill, 0.0) if sage_active(hot) else 0.0)
 
 
 def foe_level(foe, skill):
