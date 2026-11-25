@@ -1,7 +1,7 @@
 # Немера (Невыписанная) · `nemera`
 
 псевдонимы: Немера, Невыписанная
-вид: npc · впервые: s04.text.037 · последний раз: s13.text.089 · сейчас в сцене
+вид: npc · впервые: s04.text.037 · последний раз: s13.text.090 · сейчас в сцене
 
 ## Постоянное
 - внешний голос: Слышен окружающим по её воле; негромкий, ясный, низкий бархатистый, с женскими интонациями, без дыхательных пауз, с едва двоящимися гласными и трудно локализуемым источником. [s13.text.046]
@@ -16,7 +16,7 @@
 - голос: Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь». [recovery/HOT.json]
 
 ## Сейчас
-- положение: Без приглашения заявила о желании лично услышать ответ Какаши и его воспоминания о Шики до их знакомства. [s13.text.089]
+- положение: OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно. [s13.text.090]
 
 ## Знает (последние 8 из 8)
 - 06:18 Shiki mentally asks Nemera for her opinion of humans after he experienced revulsion and records dispute. Through his pre-existing one-way granted sensory access she has heard staff openly insult and avoid him, seen Kadziura secure his blood, knows duty physician openly admitted sending medical note and he warned against touching skin; she does NOT know Shiki's undisclosed personal thoughts or Kage's investigation. She has now seen his wrapping and costume via sensory window. [s08.text.027]
