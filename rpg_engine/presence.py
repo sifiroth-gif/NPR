@@ -112,6 +112,10 @@ def resolve(label, names, scope=()):
     if len(scoped) > 1 or len(exact) > 1:
         return None
     if len(exact) == 1:
+        # A generic mask/cloak is not a permanent name; an unrelated person
+        # outside a known scene cannot be reintroduced by that label.
+        if scope and clean in ("человек в маске", "человек в плаще"):
+            return None
         return exact[0]
     # Должность и деревня — не имя: «Разведчик Суны» не «Разведчик Звука» (s11.text.074).
     plain = [w for w in clean.split() if not any(stem in w for stem in ROLE_STEMS) and not w.startswith(GEO_STEMS)]

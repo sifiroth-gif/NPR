@@ -32,7 +32,7 @@ import traceback
 import zlib
 from pathlib import Path
 
-from . import acquaint, aging, arcs, body, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import acquaint, aging, arcs, body, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, identity, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -1296,6 +1296,10 @@ def ensure_npc_memory(state_dir, hot):
     if not (state_dir / npc_memory.MEMORY_DIR).is_dir() and (state_dir / "archive").is_dir():
         report = npc_memory.backfill(state_dir)
     for key, card in (hot.get("cast") or {}).items():
+        projected = identity.project_card(state_dir, key, card)
+        if projected is not card:
+            card.clear()
+            card.update(projected)
         if "memory_total" not in card:
             npc_memory.hydrate_card(card, npc_memory.load_episodes(state_dir, key))
     if "motifs" not in (hot.get("_horror") or {}):
@@ -1312,6 +1316,10 @@ def ensure_npc_memory(state_dir, hot):
             card = json.loads(path.read_text(encoding="utf-8"))
         except ValueError:
             continue
+        projected = identity.project_card(state_dir, path.stem, card)
+        if projected != card:
+            card = projected
+            path.write_text(_dump(card), encoding="utf-8")
         if "memory_total" not in card:
             episodes = npc_memory.load_episodes(state_dir, path.stem)
             if episodes:

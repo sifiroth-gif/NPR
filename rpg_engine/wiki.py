@@ -25,7 +25,7 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import fight, places, plot, talk
+from . import fight, identity, places, plot, talk
 
 SCHEMA = "npr-wiki/1"
 DIR = "memory"
@@ -445,12 +445,14 @@ def build(state_dir, hot, source_root=None):
     roster = _read_json(root / ROSTER, {}) or {}
     _merge_roster(store, roster)
     deltas = _all_deltas(state_dir)
+    identity_rules = identity.active(state_dir, root)
     things, threads = {}, {}
     for row in deltas:
         d = row.get("d") or {}
         turn_id = row.get("id")
-        for key, patch in (d.get("cast") or {}).items():
-            if key in PLAYERS:
+        cast_patch = d.get("cast") or {}
+        for key, patch in cast_patch.items():
+            if key in PLAYERS or identity.duplicate_cast(identity_rules, turn_id, key, patch, cast_patch):
                 continue
             try:
                 _apply_cast(store, key, patch, turn_id, changes if not row.get("curated") else [])
@@ -465,12 +467,13 @@ def build(state_dir, hot, source_root=None):
             threads.setdefault(key, []).append({"turn": turn_id, "patch": patch})
     for key, card in (hot.get("cast") or {}).items():
         if key not in PLAYERS and isinstance(card, dict):
-            _merge_card(store, key, card, "recovery/HOT.json")
+            _merge_card(store, key, identity.project_card(state_dir, key, card, identity_rules), "recovery/HOT.json")
     cast_dir = state_dir / "recovery/cast"
     for path in sorted(cast_dir.glob("*.json")) if cast_dir.is_dir() else ():
         card = _read_json(path, {}) or {}
         if path.stem not in PLAYERS:
-            _merge_card(store, path.stem, card, f"recovery/cast/{path.name}")
+            _merge_card(store, path.stem, identity.project_card(state_dir, path.stem, card, identity_rules),
+                        f"recovery/cast/{path.name}")
     memory_dir = state_dir / "archive/npc-memory"
     for path in sorted(memory_dir.glob("*.json")) if memory_dir.is_dir() else ():
         record = _read_json(path, {}) or {}
@@ -479,7 +482,10 @@ def build(state_dir, hot, source_root=None):
         entity = _entity(store, path.stem)
         entity["name"] = entity["name"] or _text(record.get("name"))
         seen = {(h.get("turn"), h.get("what")) for h in entity["history"]}
+        excluded = identity.excluded_episodes(state_dir, path.stem, identity_rules)
         for episode in record.get("episodes") or []:
+            if episode.get("turn") in excluded:
+                continue
             if (episode.get("turn"), _text(episode.get("what"), 400)) not in seen:
                 entity["history"].append({"turn": episode.get("turn"), "at": episode.get("at"),
                                           "ch": episode.get("ch"),
@@ -499,7 +505,7 @@ def build(state_dir, hot, source_root=None):
     _auto_aliases(store)
     for entity in store.values():   # один эпизод из двух источников — одна строка
         entity["history"] = list({(h.get("turn"), h.get("what")): h for h in entity["history"]}.values())
-    conversations, unplaced = talk.collect(state_dir, store)
+    conversations, unplaced = talk.collect(state_dir, store, root)
     for key, entries in conversations.items():
         store[key]["talk"] = entries
     for entity in store.values():
@@ -551,6 +557,8 @@ ROLE_ENDINGS = re.compile(r"(лог|ник|ница|тель|тельница|и
 def _is_background(label):
     """Безымянная роль, а не имя: «Анестезиолог», «Старший патруля», «Задержанный»."""
     name = _norm(label)
+    if name in ("человек в маске", "человек в плаще"):
+        return True
     if any(stem in name for stem in ROLE_STEMS):
         return True
     words = re.findall(r"[\w-]+", name)

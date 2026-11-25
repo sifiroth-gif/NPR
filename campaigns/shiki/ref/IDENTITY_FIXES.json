@@ -1,0 +1,31 @@
+{
+  "schema": "npr-source-identity/1",
+  "rules": [
+    {
+      "from": "chelovek_v_maske",
+      "to": "quay_masked_hunter",
+      "anchor": "archive/turns/s14/s14.text.015.md",
+      "proof": "**Человек в маске:** — Минасэ. Сэйдзи Минасэ.",
+      "label": "Человек в маске",
+      "speech_turns": [
+        "s14.text.001",
+        "s14.text.007",
+        "s14.text.008",
+        "s14.text.009",
+        "s14.text.011",
+        "s14.text.015"
+      ],
+      "duplicate_turns": [
+        "s14.text.007",
+        "s14.text.008",
+        "s14.text.009",
+        "s14.text.015",
+        "s14.text.016"
+      ],
+      "stale_seen": [
+        "s14.text.018"
+      ],
+      "reason": "Сыгранное раскрытие имени в s14.text.015; в дельтах и архиве памяти эти эпизоды уже относятся к quay_masked_hunter. Иные люди в масках, в том числе s08, не тождественны Минасэ."
+    }
+  ]
+}

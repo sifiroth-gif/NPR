@@ -1,4 +1,7 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
 from rpg_engine import talk
 
@@ -19,6 +22,57 @@ STORE = {
     "nori": entity("nori", "Хаясэ Нори", first="s04.text.050"),
     "messenger": entity("messenger", "Посыльный", first="s05.text.010"),
 }
+
+
+class SourceIdentityRegressionTest(unittest.TestCase):
+    def test_source_scoped_masked_dialogue_and_episode_projection(self):
+        from rpg_engine import identity, npc_memory, presence
+        with tempfile.TemporaryDirectory() as directory:
+            state = Path(directory)
+            anchor = state / "archive/turns/s14/s14.text.015.md"
+            anchor.parent.mkdir(parents=True)
+            anchor.write_text("**Человек в маске:** — Минасэ. Сэйдзи Минасэ.", encoding="utf-8")
+            memory = state / "archive/npc-memory"
+            memory.mkdir()
+            old, new = "chelovek_v_maske", "quay_masked_hunter"
+            historical = {"turn": "s08.text.098", "ch": "present", "what": "other"}
+            duplicate = {"turn": "s14.text.007", "ch": "present", "what": "capture"}
+            (memory / f"{old}.json").write_text(json.dumps({"episodes": [historical, duplicate]}), encoding="utf-8")
+            (memory / f"{new}.json").write_text(json.dumps({"episodes": [duplicate]}), encoding="utf-8")
+            for session, rows in ((8, [{"id": "s08.text.098", "gm": "**Человек в маске:** — Другая сцена."}]),
+                                  (14, [{"id": "s14.text.007", "gm": "**Человек в маске:** — Да."},
+                                        {"id": "s14.text.015", "gm": "**Человек в маске:** — Минасэ. Сэйдзи Минасэ."}])):
+                path = state / "archive" / f"session-{session:03}-turns.jsonl"
+                path.write_text("\\n".join(json.dumps(row, ensure_ascii=False) for row in rows), encoding="utf-8")
+            store = {old: entity(old, "Человек в маске", first="s08.text.098", sources=["s14.text.007"]),
+                     new: entity(new, "Сэйдзи Минасэ", first="s13.text.099")}
+            conversations, _ = talk.collect(state, store)
+            self.assertEqual([row["turn"] for row in conversations[old]], ["s08.text.098"])
+            self.assertEqual([row["turn"] for row in conversations[new]], ["s14.text.007", "s14.text.015"])
+            self.assertEqual(npc_memory.load_episodes(state, old), [historical])
+            self.assertEqual(npc_memory.load_episodes(state, new), [duplicate])
+            self.assertEqual(json.loads((memory / f"{old}.json").read_text())["episodes"], [historical, duplicate])
+            card = {"first": "s08.text.098", "seen": "s14.text.018", "memory": [historical, duplicate], "memory_total": 2}
+            projected = identity.project_card(state, old, card)
+            self.assertEqual(projected["memory"], [historical])
+            self.assertEqual(projected["seen"], "s08.text.098")
+            self.assertEqual(projected["memory_total"], 1)
+            # Reset or different campaign: absence of the exact anchor disables the correction.
+            anchor.unlink()
+            self.assertEqual(npc_memory.load_episodes(state, old), [historical, duplicate])
+            self.assertEqual(identity.active(state), [])
+            names = {old: presence._entry(["Человек в маске"]), new: presence._entry(["Сэйдзи Минасэ"])}
+            self.assertIsNone(presence.resolve("Человек в маске", names, scope={new}))
+            self.assertEqual(presence.resolve("Человек в маске", names, scope={old}), old)
+
+    def test_no_episode_removed_without_canonical_counterpart(self):
+        from rpg_engine import identity
+        with tempfile.TemporaryDirectory() as directory:
+            state = Path(directory)
+            anchor = state / "archive/turns/s14/s14.text.015.md"
+            anchor.parent.mkdir(parents=True)
+            anchor.write_text("**Человек в маске:** — Минасэ. Сэйдзи Минасэ.", encoding="utf-8")
+            self.assertEqual(identity.excluded_episodes(state, "chelovek_v_maske"), set())
 
 
 class TalkTest(unittest.TestCase):

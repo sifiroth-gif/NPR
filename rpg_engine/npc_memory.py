@@ -33,7 +33,7 @@ import json
 import re
 from pathlib import Path
 
-from . import dread as _dread
+from . import dread as _dread, identity
 
 MEMORY_DIR = "archive/npc-memory"
 REL_DIMS = ("trust", "fear", "respect", "debt", "grievance", "attachment", "dependence")
@@ -675,6 +675,10 @@ def sync_cards(state_dir, hot):
     не обнуляет восстановленную память NPC.
     """
     for key, card in (hot.get("cast") or {}).items():
+        projected = identity.project_card(state_dir, key, card)
+        if projected is not card:
+            card.clear()
+            card.update(projected)
         episodes = load_episodes(state_dir, key)
         if episodes:
             hydrate_card(card, episodes)
@@ -685,7 +689,9 @@ def load_episodes(state_dir, key):
     path = Path(state_dir) / MEMORY_DIR / f"{key}.json"
     if not path.is_file():
         return []
-    return json.loads(path.read_text(encoding="utf-8")).get("episodes", [])
+    rows = json.loads(path.read_text(encoding="utf-8")).get("episodes", [])
+    excluded = identity.excluded_episodes(state_dir, key)
+    return [row for row in rows if row.get("turn") not in excluded]
 
 
 def repair_told(state_dir):

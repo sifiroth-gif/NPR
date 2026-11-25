@@ -12,6 +12,8 @@ import json
 import re
 from pathlib import Path
 
+from . import identity
+
 SAID_CHARS = 240
 HEARD_CHARS = 320
 LABEL = re.compile(r"\*\*([^*\n]{2,48}?)(?:\\)?:\*\*")
@@ -152,9 +154,10 @@ class Resolver:
         return _is_background(label)
 
 
-def collect(state_dir, store):
+def collect(state_dir, store, source_root=None):
     """{key: [{turn, at, heard, said: [...]}]} по всем сессиям архива."""
     resolve = Resolver(store)
+    rules = identity.active(state_dir, source_root)
     talk, unknown = {}, {}
     rows = []
     for path in sorted(Path(state_dir, "archive").glob("session-*-turns.jsonl")):
@@ -169,7 +172,7 @@ def collect(state_dir, store):
         heard = speech(row.get("player"))
         lines = {}
         for label, said in utterances(row["gm"]):
-            key = resolve(label, session)
+            key = identity.speech_actor(rules, row["id"], label, store) or resolve(label, session)
             if key is None:
                 if _norm(label) not in NOT_PEOPLE and not _norm(label).startswith("мугами шики"):
                     unknown[label] = unknown.get(label, 0) + 1
