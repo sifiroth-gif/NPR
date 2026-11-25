@@ -80,11 +80,11 @@
 - reflex_and_coordination: 5
 
 ## Chakra
-- value: 99.25
-- at: 0010-04-05T11:26:01
+- value: 93.0
+- at: 0010-04-05T11:26:02
 - state: готов
 - why: Немера добровольно передала Шики 20 единиц своей чакры со скоростью 10 ед/сек за две секунды
-- last: turn: s13.text.068; spent: 0.75; what: рывки ×1
+- last: turn: s13.text.069; spent: 6.25; what: Хётон: Тысяча ледяных игл
 - max: 100.0
 
 ## Knows_plus

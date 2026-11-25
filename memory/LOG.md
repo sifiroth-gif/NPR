@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.069: Немера (Невыписанная) (`npc/nemera`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `shiki_upper_clothing`, план сюжета, бой
 - s13.text.068: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), вещь `root_seal_needle`, вещь `shiki_upper_clothing`, план сюжета, бой
 - s13.text.067: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.066: поправки игрока: 1
@@ -58,4 +59,3 @@
 - s13.text.012: Кэйдзи (`npc/keiji`), Немера (Невыписанная) (`npc/nemera`), вещь `keiji_field_report`
 - s13.text.011: Кэйдзи (`npc/keiji`)
 - s13.text.010: Кэйдзи (`npc/keiji`), линия `tenchi_bridge`, план сюжета
-- s13.text.009: план сюжета

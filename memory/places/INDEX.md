@@ -236,6 +236,7 @@
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, лес у северных болот · `places/strana-travy-les-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Травы, лесной склон над западным подходом к мосту Тэнти · `places/strana-travy-lesnoy-sklon-nad-zapadnym-podkhodom-k-mostu-ten` · 1 ход(ов), s12–s12
+- Страна Травы, лесопильная дорога у сарая · `places/strana-travy-lesopilnaya-doroga-u-saraya` · 1 ход(ов), s13–s13
 - Страна Травы, ложбина восточнее моста Тэнти · `places/strana-travy-lozhbina-vostochnee-mosta-tenti` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти между Наруто и Орочимару · `places/strana-travy-most-tenti-mezhdu-naruto-i-orochimaru` · 1 ход(ов), s12–s12
 - Страна Травы, мост Тэнти — западный пролёт · `places/strana-travy-most-tenti-zapadnyy-prolet` · 1 ход(ов), s12–s12
