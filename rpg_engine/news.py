@@ -254,7 +254,8 @@ def write_pace(state_dir, hot):
             "chapters": chapters, "next_chapters": ahead,
             "news": {k: state.get(k, 0) for k in ("offered", "delivered", "missed")}
                     | {"pending": len(pending(hot)), "carrying": bool(state.get("current"))},
-            "echo": {"offered": echo.get("offered", 0), "used": echo.get("used_count", 0)},
+            "echo": {"offered": echo.get("offered", 0), "used": echo.get("used_count", 0),
+                     "mentioned": echo.get("mentioned_count", 0)},
             "favor": _favor(hot),
             "rule": STATE_RULE}
     path = Path(state_dir) / PATH

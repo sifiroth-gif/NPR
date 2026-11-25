@@ -1405,8 +1405,9 @@ def fold(state_dir):
     arcs.advance(hot, canon_arcs)   # канон без Шики по сроку случается сам
     hot.setdefault("_checks", []).extend(arcs.revalidate(hot, canon_arcs))   # отмена маршрутом — не отмена
     try:   # эхо прошлого: давняя нить, созвучная сцене, — изредка
-        echoed = echo.pick(state_dir, hot, texts=[f"{t.get('gm') or ''} {t.get('line') or ''}" for t in applied
-                                                  if t.get("kind") not in ("ooc", "technical", "void")])
+        played = [t for t in applied if t.get("kind") not in ("ooc", "technical", "void")]
+        echoed = echo.pick(state_dir, hot, texts=[f"{t.get('gm') or ''} {t.get('line') or ''}" for t in played],
+                           turns=played)
     except Exception as exc:   # эхо — украшение, не повод сорвать свёртку
         echoed = None
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "echo",
