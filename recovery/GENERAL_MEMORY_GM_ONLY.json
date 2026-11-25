@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.059",
+  "cursor": "s14.text.060",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,22 +406,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s14.text.059:0": {
-      "aliases": [
-        "canon:s14.text.059:0",
-        "s14.text.059: новое убежище Шики на юге Страны Рек приобретено у Минаги за 8 млн, базовое оснащение 2.4 млн, деньги из резерва. На 15.04 пригодны жилые, медицинские и хозяйственные"
-      ],
-      "facts": [],
-      "id": "canon:s14.text.059:0",
-      "kind": "canon",
-      "label": "s14.text.059: новое убежище Шики на юге Страны Рек приобретено у Минаги за 8 млн, базовое оснащение 2.4 млн, деньги из резерва. На 15.04 пригодны жилые, медицинские и хозяйственные",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s14.text.059"
       ]
     },
     "captive_guard": {
@@ -888,7 +872,8 @@
     "fire_port_security_staff": {
       "aliases": [
         "fire port security staff",
-        "Сотрудник безопасности порта"
+        "Сотрудник безопасности порта",
+        "fire_port_security_staff"
       ],
       "facts": [],
       "id": "fire_port_security_staff",
@@ -927,12 +912,13 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.042",
+          "seen": "s14.text.060",
           "state": "Сообщил, что рапорт отправлен в провинцию; пришёл за показаниями."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_security_staff.json"
+        "recovery/cast/fire_port_security_staff.json",
+        "s14.text.060"
       ]
     },
     "fire_port_statement_receipt": {
@@ -3486,8 +3472,7 @@
     "minagi_zen": {
       "aliases": [
         "minagi zen",
-        "Минаги Дзэн",
-        "minagi_zen"
+        "Минаги Дзэн"
       ],
       "facts": [],
       "id": "minagi_zen",
@@ -3531,17 +3516,10 @@
           "state": "14.04 продал Шики участок и хранилище за 8 млн, оформил передачу и списание; ещё 2.4 млн выданы на обстановку, обе учётные стороны отмечены. Знает место, не знает внутреннего устройства после обстановки.",
           "voice": "Спокойный сухой деловой тон, без ложного дружелюбия.",
           "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
-        },
-        {
-          "fears": "Нарушение нейтралитета, убийство клиента в конторе, разоблачение покупателей.",
-          "state": "14.04 продал Шики участок и хранилище за 8 млн, оформил передачу и списание; ещё 2.4 млн выданы на обстановку, обе учётные стороны отмечены. Знает место, не знает внутреннего устройства после обстановки.",
-          "wants": "Удерживать надежных исполнителей и безопасный доход от комиссий."
         }
       ],
       "sources": [
-        "recovery/cast/minagi_zen.json",
-        "recovery/HOT.json",
-        "s14.text.059"
+        "recovery/cast/minagi_zen.json"
       ]
     },
     "minase": {
@@ -6227,6 +6205,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s14.text.060",
         "s14.text.059"
       ]
     },
@@ -16886,7 +16865,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 45,
+      "mention_count": 46,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16894,13 +16873,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-12T16:22:00",
-          "excerpt": "Сирамэ я сам недоконца понимаю что произошло. Я не могу тебе ответить. #к маленькой# как тебя зовут? <text color=\"secondary\" size=\"xs\">Понедельник, 12 апреля 1287 года · 16:22</tex",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.053"
         },
         {
           "at": "0010-04-12T16:22:15",
@@ -16915,19 +16887,33 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.055"
+        },
+        {
+          "at": "0010-04-15T18:11:00",
+          "excerpt": "збежались письмена призыва. Раздался хлопок, и над полом поднялось облако белого дыма. Из него показалась Сирамэ. Она сразу приподняла голову, осматривая незнакомые стены. На столе зашевелилась Коюки. **Коюки:** — Сирамэ! Смотри, у нас теперь есть пещеры! Сира",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.060"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s14.text.055",
-          "state": "Согласилась передать прежний вопрос Немеры Кабуто от имени Шики; ушла к старшей.",
+          "seen": "s14.text.060",
+          "state": "Добровольно откликнулась на призыв в новом убежище 15.04, убедилась в благополучии Коюки, сообщила о предупреждении хранительниц.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
+          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
+        },
+        {
+          "fears": "Удержание людьми или насильственное исследование Немерой",
+          "state": "Добровольно откликнулась на призыв в новом убежище 15.04, убедилась в благополучии Коюки, сообщила о предупреждении хранительниц.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json"
+        "recovery/cast/shirame.json",
+        "recovery/HOT.json",
+        "s14.text.060"
       ]
     },
     "shiranami": {
@@ -17805,23 +17791,6 @@
         "keeper@s08.text.090"
       ]
     },
-    "thread:shiki_new_home": {
-      "aliases": [
-        "thread:shiki new home",
-        "shiki new home",
-        "shiki_new_home"
-      ],
-      "facts": [],
-      "id": "thread:shiki_new_home",
-      "kind": "thread",
-      "label": "shiki new home",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s14.text.059"
-      ]
-    },
     "thread:shiki_promise_nemera": {
       "aliases": [
         "thread:shiki promise nemera",
@@ -18179,7 +18148,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18187,13 +18156,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-13T08:49:00",
-          "excerpt": "а и поставил её перед Минаги, стараясь не приближаться к Шики со стороны, где из-за воротника выглядывала Коюки. **Минаги Дзэн:** — Оставьте нас. Кассир вышел с такой поспешностью, что забыл забрать со стола собственные счёты. Минаги развернул книгу. **Минаги ",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.057"
         },
         {
           "at": "0010-04-13T08:52:00",
@@ -18208,27 +18170,35 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.059"
+        },
+        {
+          "at": "0010-04-15T18:11:00",
+          "excerpt": "Из него показалась Сирамэ. Она сразу приподняла голову, осматривая незнакомые стены. На столе зашевелилась Коюки. **Коюки:** — Сирамэ! Смотри, у нас теперь есть пещеры! Сирамэ перевела взгляд на неё, затем на Шики. **Сирамэ:** — Так вот где ты была. Она прибли",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.060"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.059",
-          "state": "Осмотрела пещеры и нашла солнечный участок. 15.04 добровольно решила пока остаться в новом убежище Шики, сохраняет возможность уйти."
+          "seen": "s14.text.060",
+          "state": "Встретила Сирамэ, подтвердила, что здорова и пока не хочет возвращаться."
         },
         {
-          "state": "Осмотрела пещеры и нашла солнечный участок. 15.04 добровольно решила пока остаться в новом убежище Шики, сохраняет возможность уйти."
+          "state": "Встретила Сирамэ, подтвердила, что здорова и пока не хочет возвращаться."
         }
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s14.text.059"
+        "s14.text.060"
       ]
     },
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин"
+        "Белая Змея / Хакудзя-сэннин",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -18239,12 +18209,13 @@
       "projections": [
         {
           "body": "s14.text.047: кратковременное локальное поражение слизистой у основания клыков кровью Шики после укуса; направленное лечение прекратило поражение, цвет ткани восстановлен, боль исчезла по её словам. Некроза или системного поражения не установлено.",
-          "seen": "s14.text.051",
+          "seen": "s14.text.060",
           "state": "Разрешила Шики возвращаться без повторных испытаний дочерей при предупреждении о визите. Оставила сброшенные чешуйки у себя."
         }
       ],
       "sources": [
-        "recovery/cast/white_snake_sage.json"
+        "recovery/cast/white_snake_sage.json",
+        "s14.text.060"
       ]
     },
     "willow_dispatch": {
@@ -18609,5 +18580,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1167
+  "source_turns_indexed": 1168
 }
