@@ -7,13 +7,14 @@
     "seal_boot_scrap",
     "sealing_cloth_scrap"
   ],
-  "cursor": "s13.text.064",
+  "cursor": "s13.text.065",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2774,
-  "index_entities": 752,
-  "index_source_records": 1087,
-  "indexed_cursor": "s13.text.064",
+  "focus_bytes": 2771,
+  "index_entities": 753,
+  "index_source_records": 1088,
+  "indexed_cursor": "s13.text.065",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 32,
     "npc": 163,
@@ -27,6 +28,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s13.text.065:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -545,9 +552,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 85,
-  "self_query_at_5": 86,
-  "self_query_count": 86,
+  "self_query_at_1": 86,
+  "self_query_at_5": 87,
+  "self_query_count": 87,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
