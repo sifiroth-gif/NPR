@@ -7,6 +7,9 @@ on:
       - "rpg_engine/capabilities.py"
       - "rpg_engine/nextpack.py"
       - "rpg_engine/dread.py"
+      - "rpg_engine/medical.py"
+      - "rpg_engine/body.py"
+      - "rpg_engine/fight.py"
       - "skills/dark-literary-gm/SKILL.md"
       - "rpg_engine/directives.py"
       - "rpg_engine/history_access.py"
@@ -146,6 +149,21 @@ jobs:
           assert sample["_psyche"]["a"]["dread"]["stage"] == 0
           assert sample["_psyche"]["b"]["dread"]["stage"] == 2
           print("C1_CONTRACT_OK", "independent_reactions", 2, "NEXT_bytes", packet_bytes)
+          from rpg_engine import medical
+          clinical = packet["medical"]
+          minase = clinical["patients"]["quay_masked_hunter"]
+          wounds = [dict(zip(clinical["fields"], row)) for row in minase["w"]]
+          spinal = next(row for row in wounds if row["where"] == "спинной мозг")
+          assert spinal["turn"] == "s14.text.007"
+          assert spinal["recovered_at"] == "s14.text.023"
+          assert spinal["bleed"] is False and "ходьба не проверена" in spinal["lost"]
+          operator = clinical["patients"]["quay_wire_operator"]
+          assert operator["loss"]["loss"] == 1 and any(row[4] is True for row in operator["w"])
+          assert "fight" not in packet
+          assert packet["state_sources"]["medical_kit"]["turn"] == "s14.text.023"
+          assert "точный остаток" in packet["state_sources"]["medical_kit"]["state"]
+          assert medical.context(full)["patients"]["quay_masked_hunter"]["wounds"] == full["injuries"]["quay_masked_hunter"]
+          print("C2_MEDICAL_CONTEXT_OK", "patients", len(clinical["patients"]), "spinal_residual", spinal["recovered_at"], "NEXT_bytes", packet_bytes)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
