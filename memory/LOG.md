@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.092: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), western_nest_adult_courier (`npc/western_nest_adult_courier`), линия `fire_risk_meeting`, план сюжета
 - s13.text.091: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), western_nest_adult_courier (`npc/western_nest_adult_courier`), план сюжета
 - s13.text.090: Немера (Невыписанная) (`npc/nemera`)
 - s13.text.089: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_spare_communication_plate`
@@ -60,4 +61,3 @@
 - s13.text.035: Неизвестный наблюдатель за ивами (`npc/willow_observer`), план сюжета
 - s13.text.034: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), вещь `willow_dispatch`, план сюжета, бой
 - s13.text.033: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
-- s13.text.032: Неизвестный наблюдатель за ивами (`npc/willow_observer`), план сюжета
