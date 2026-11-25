@@ -1,4 +1,8 @@
-"""Бой и чакра: заранее выданные кости, перевес, раны, рывки, мораль, конец боя.
+"""Бой и чакра: заранее выданные кости, полоса исхода, раны, рывки, мораль, конец боя.
+
+С 25.11.2026 — по образцу боя в Йокогаме (Bleach III S32, механика LIVE/2): соотношение сил по
+шести осям даёт полосу категорий исхода 1–7, кость d20 раскладывается по полосе (`bands.py`).
+Ниже, в старом описании, — прежняя модель d100 с порогом: по ней проверяются только старые ходы.
 
 Ведущий в чате не запускает код до ответа. Поэтому свёртка после каждого хода
 выдаёт в GM_BRIEF кости на следующий ход, а после записи проверяет, что ведущий
@@ -18,7 +22,7 @@ import json
 import re
 from datetime import datetime
 
-from . import body
+from . import bands, body
 
 DICE = 12
 EXCHANGE_LIMIT = 6        # обменов в одном бою до требования развязки
@@ -196,12 +200,22 @@ def _note(notes, turn_id, text):
 
 # ---------- кости ----------
 
-def dice(hot):
-    """Кости на следующий ход. Зависят только от уже свёрнутого состояния."""
+def _digest(hot):
     cursor = hot.get("cursor") or {}
     seed = json.dumps([cursor.get("id"), cursor.get("at"), hot.get("last")], ensure_ascii=False,
                       sort_keys=True)
-    digest = hashlib.sha256(seed.encode("utf-8")).digest()
+    return hashlib.sha256(seed.encode("utf-8")).digest()
+
+
+def dice(hot):
+    """Кости d20 на следующий ход. Зависят только от уже свёрнутого состояния."""
+    digest = hashlib.sha256(b"d20|" + _digest(hot)).digest()
+    return [int.from_bytes(digest[2 * i:2 * i + 2], "big") % 20 + 1 for i in range(DICE)]
+
+
+def dice100(hot):
+    """Прежние кости d100 — только для проверки старых ходов (p, value, result)."""
+    digest = _digest(hot)
     return [int.from_bytes(digest[2 * i:2 * i + 2], "big") % 100 for i in range(DICE)]
 
 
@@ -332,7 +346,7 @@ def foe_edge(hot, roll):
 
 # ---------- применение хода ----------
 
-def apply(hot, delta, turn, pool):
+def apply(hot, delta, turn, pool, legacy=None):
     """Бой, броски, раны, чакра одного хода. Возвращает замечания для CHECKS."""
     notes = []
     turn_id, at = turn["id"], turn["at"]
@@ -362,7 +376,7 @@ def apply(hot, delta, turn, pool):
         _note(notes, turn_id, "Бой с именным противником идёт, а d.fight в ходе нет: обмен не записан — "
               "его ход, кости и раны пропали.")
 
-    rolled = _rolls(hot, delta, turn_id, pool, notes)
+    rolled = _rolls(hot, delta, turn_id, pool, notes, legacy)
     if active and data and not data.get("end"):
         _review_exchange(active, rolled, data, turn_id, notes)
     _wounds(hot, data.get("wounds"), turn_id, at)
@@ -428,7 +442,22 @@ def _review_exchange(active, rolled, data, turn_id, notes):
                   "решает бросок, перевес Шики не выше +2.")
 
 
-def _rolls(hot, delta, turn_id, pool, notes):
+CUTOVER = "s13.text.061"   # первый ход после перехода на полосы (25.11.2026)
+
+
+def _new(roll, turn_id):
+    """Новая запись — полоса и категория; старая — порог p и result. Голая кость (только value) до
+    CUTOVER — старая (s11.text.063–065), после — новая."""
+    if any(k in roll for k in ("band", "axes", "cat")):
+        return True
+    if "p" in roll or "result" in roll:
+        return False
+    from .aging import _ordinal
+    here, cut = _ordinal(turn_id), _ordinal(CUTOVER)
+    return here is None or cut is None or here >= cut
+
+
+def _rolls(hot, delta, turn_id, pool, notes, legacy=None):
     rolls = list(delta.get("rolls") or []) + list(((delta.get("fight") or {}) if isinstance(delta.get("fight"), dict) else {}).get("rolls") or [])
     active = (hot.get("_fight") or {}).get("active")
     done = []
@@ -436,38 +465,247 @@ def _rolls(hot, delta, turn_id, pool, notes):
         if not isinstance(roll, dict):
             continue
         label = f"Бросок «{roll.get('what', index + 1)}»"
+        if not _new(roll, turn_id):
+            if _legacy_roll(hot, roll, index, label, turn_id, pool, legacy, notes, active):
+                done.append(roll)
+            continue
         if index >= len(pool):
             _note(notes, turn_id, f"{label}: костей на ход {len(pool)}; лишний бросок не проверен.")
             continue
-        if roll.get("value") != pool[index]:
-            _note(notes, turn_id, f"{label}: взята кость {roll.get('value')}, по порядку была {pool[index]} "
-                  f"(GM_BRIEF.fight.dice[{index}]). Кости берут подряд, не выбирают.")
         value = pool[index]
+        if roll.get("value") != value:
+            _note(notes, turn_id, f"{label}: взята кость {roll.get('value')}, по порядку была {value} "
+                  f"(dice[{index}]). Кости берут подряд, не выбирают.")
         done.append(roll)
-        computed = foe_edge(hot, roll) if roll.get("by") else edge(hot, roll)
-        if computed is None:
-            if roll.get("skill") and not isinstance(roll.get("level"), (int, float)):
-                _note(notes, turn_id, f"{label}: умения «{roll.get('skill')}» нет в листе — укажи level.")
-            p = roll.get("p")
+        got = resolve(hot, roll)
+        if got is None:
+            _note(notes, turn_id, f"{label}: не найден участник ({roll.get('by') or 'shiki'} → {roll.get('vs')}) — "
+                  "vs: id противника из d.fight.foes или число-уровень.")
+            continue
+        computed = got["band"]
+        use = _declared(roll.get("band"))
+        if use:
+            above = use[-1] > computed[-1] and not (roll.get("random") and use[-1] == computed[-1] + 1)
+            below = use[0] < computed[0] and not (roll.get("random") and use[0] == computed[0] - 1)
+            if above or below:
+                _note(notes, turn_id, f"{label}: полоса {bands.text(use)}, по осям {bands.text(computed)} "
+                      f"({got['why']}). Сузить можно свойствами техники и пределами; расширить на соседнюю — "
+                      "только с random (причина). Исход считаю по расчётной.")
+                use = computed
         else:
-            total, p, _parts = computed
-            if isinstance(roll.get("p"), (int, float)) and abs(roll["p"] - p) > 3:
-                _note(notes, turn_id, f"{label}: порог {roll['p']}, по формуле {p} (перевес {total:+}).")
-            if total >= 3 and not roll.get("by"):
-                _note(notes, turn_id, f"{label}: перевес {total:+} — исход решается без броска.")
-        if isinstance(p, (int, float)):
-            expected = outcome(p, value)
-            # Замечание — только смягчённому исходу: записать хуже кости не значит переиграть бросок.
-            if roll.get("result") in GRADE and GRADE.index(roll["result"]) < GRADE.index(expected):
-                _note(notes, turn_id, f"{label}: записан исход «{roll['result']}», по кости {value} "
-                      f"и порогу {p} — «{expected}». Результат не смягчается и не перебрасывается.")
-            record = {"turn": turn_id, "what": roll.get("what"), "p": p, "value": value, "result": expected}
-            if roll.get("by"):
-                record["by"] = roll["by"]
-            if active is not None:
-                active["rolls"] = (active.get("rolls") or []) + [record]
-                del active["rolls"][:-ROLLS_KEEP]
+            use = computed
+        expected = bands.from_die(use, value)
+        cat = roll.get("cat")
+        if isinstance(cat, int) and cat > expected:
+            _note(notes, turn_id, f"{label}: записана категория {cat}, по кости {value} и полосе "
+                  f"{bands.text(use)} — {expected} ({bands.CATEGORIES[expected]}). Исход не смягчается.")
+        if use[0] == 1 and not roll.get("risk"):
+            _note(notes, turn_id, f"{label}: в полосе есть 1 — серьёзный ущерб называют до броска (risk).")
+        record = {"turn": turn_id, "what": roll.get("what"), "band": use, "value": value, "cat": expected}
+        if roll.get("by"):
+            record["by"] = roll["by"]
+        if active is not None:
+            active["rolls"] = (active.get("rolls") or []) + [record]
+            del active["rolls"][:-ROLLS_KEEP]
     return done
+
+
+def from_band(band, value):
+    return bands.from_die(band, value)
+
+
+def _declared(value):
+    if isinstance(value, str):
+        parts = [x for x in value.replace("–", "-").split("-") if x.strip()]
+        value = [int(x) for x in parts if x.strip().isdigit()]
+    if not isinstance(value, (list, tuple)) or not value:
+        return None
+    nums = sorted({int(x) for x in value if isinstance(x, (int, float)) and 1 <= int(x) <= 7})
+    if not nums:
+        return None
+    return list(range(nums[0], nums[-1] + 1))[:5]
+
+
+def _legacy_roll(hot, roll, index, label, turn_id, pool, legacy, notes, active):
+    """Старая запись p/value/result (до 25.11.2026): проверка по костям d100 того хода."""
+    old = legacy if legacy is not None else []
+    if index >= len(old):
+        if roll.get("value") in pool:
+            _note(notes, turn_id, f"{label}: запись по старой форме (p, result) — теперь полоса и категория: "
+                  "band, value, cat (ref/COMBAT.md).")
+        return False
+    value = old[index]
+    if roll.get("value") != value:
+        if roll.get("value") == pool[index] if index < len(pool) else False:
+            _note(notes, turn_id, f"{label}: кость d20 записана по старой форме — нужна полоса: axes C/D/E, "
+                  "band, value, cat (ref/COMBAT.md).")
+            return False
+        _note(notes, turn_id, f"{label}: взята кость {roll.get('value')}, по порядку была {value} "
+              f"(GM_BRIEF.fight.dice[{index}]). Кости берут подряд, не выбирают.")
+    computed = foe_edge(hot, roll) if roll.get("by") else edge(hot, roll)
+    if computed is None:
+        if roll.get("skill") and not isinstance(roll.get("level"), (int, float)):
+            _note(notes, turn_id, f"{label}: умения «{roll.get('skill')}» нет в листе — укажи level.")
+        p = roll.get("p")
+    else:
+        total, p, _parts = computed
+        if isinstance(roll.get("p"), (int, float)) and abs(roll["p"] - p) > 3:
+            _note(notes, turn_id, f"{label}: порог {roll['p']}, по формуле {p} (перевес {total:+}).")
+        if total >= 3 and not roll.get("by"):
+            _note(notes, turn_id, f"{label}: перевес {total:+} — исход решается без броска.")
+    if isinstance(p, (int, float)):
+        expected = outcome(p, value)
+        if roll.get("result") in GRADE and GRADE.index(roll["result"]) < GRADE.index(expected):
+            _note(notes, turn_id, f"{label}: записан исход «{roll['result']}», по кости {value} "
+                  f"и порогу {p} — «{expected}». Результат не смягчается и не перебрасывается.")
+        record = {"turn": turn_id, "what": roll.get("what"), "p": p, "value": value, "result": expected}
+        if roll.get("by"):
+            record["by"] = roll["by"]
+        if active is not None:
+            active["rolls"] = (active.get("rolls") or []) + [record]
+            del active["rolls"][:-ROLLS_KEEP]
+    return True
+
+
+# ---------- соотношение сил: оси и полоса (bands.py) ----------
+
+def _foe(hot, who):
+    return ((((hot.get("_fight") or {}).get("active") or {}).get("foes") or {}).get(who))
+
+
+def _ally(hot, who):
+    found = allies(hot).get(who)
+    return found[1] if found else None
+
+
+def level(hot, who, skill):
+    """Уровень участника в умении (шкала листа 0–5+): Шики, противник, союзник или число."""
+    if isinstance(who, (int, float)):
+        return float(who)
+    if who in (None, "shiki"):
+        found = shiki_level(hot, skill)
+        if found is None and skill in DEFENSE:
+            found = shiki_level(hot, DEFENSE[skill])
+        return found if found is not None else (shiki_level(hot, "reaction") or 4.5)
+    foe = _foe(hot, who)
+    if foe is not None:
+        return foe_level(foe, skill)
+    card = _ally(hot, who)
+    if card:
+        skills = card.get("skills") or {}
+        if isinstance(skills.get(skill), (int, float)):
+            return float(skills[skill])
+        values = [v for v in skills.values() if isinstance(v, (int, float))]
+        return sum(values) / len(values) if values else RANK["jonin"]
+    return None
+
+
+def power(hot, who):
+    """Мощь и запас (ось B): запас чакры и его остаток у Шики, у прочих — запас, ранг или средний уровень."""
+    if isinstance(who, (int, float)):
+        return float(who)
+    if who in (None, "shiki"):
+        base = shiki_level(hot, "reserves")
+        if base is None:
+            base = (((hot.get("shiki") or {}).get("stats") or {}).get("chakra_reserves")) or 4.5
+        _label, penalty = chakra_state(((hot.get("shiki") or {}).get("chakra") or {}).get("value", 100))
+        return float(base) + penalty
+    foe = _foe(hot, who) or _ally(hot, who)
+    if foe is None:
+        return None
+    skills = foe.get("skills") or {}
+    if isinstance(skills.get("reserves"), (int, float)):
+        return float(skills["reserves"])
+    if foe.get("rank") in RANK:
+        return RANK[foe["rank"]]
+    values = [v for v in skills.values() if isinstance(v, (int, float))]
+    return sum(values) / len(values) if values else RANK["chunin"]
+
+
+def burden(hot, who):
+    """Ось F действующего: раны и кровопотеря (0 … −2). Остаток чакры — в B, не здесь: один фактор — один раз,
+    и усталость — от раны, не от запаса (игрок, 25.11.2026)."""
+    if isinstance(who, (int, float)):
+        return (0, 0)
+    who = who or "shiki"
+    wound = _wound_penalty((hot.get("injuries") or {}).get(who))
+    loss = body.stage(hot, who)
+    if wound >= 2 or loss >= 3:
+        return (-2, -2)
+    if wound >= 1 or loss >= 2:
+        return (-1, -1)
+    if wound >= 0.5 or loss >= 1:
+        return (-1, 0)
+    return (0, 0)
+
+
+def exposed(hot, who):
+    """Прибавка к оси E против цели: её раны, кровопотеря, мораль (0 … +2)."""
+    if isinstance(who, (int, float)):
+        return 0
+    low, high = burden(hot, who if who else "shiki")
+    shift = -low if low == high else 0
+    foe = _foe(hot, who)
+    if foe:
+        shift = max(shift, {"shaken": 0, "breaking": 1, "broken": 2}.get(foe.get("morale"), 0))
+    return shift
+
+
+def honest(hot, actor, target):
+    """Против именного, элиты и каге — всегда бросок: полоса не сводится к одной категории."""
+    for who in (actor, target):
+        foe = _foe(hot, who) if isinstance(who, str) else None
+        if foe and named(foe):
+            return True
+    return False
+
+
+def resolve(hot, roll):
+    """Оси A–F и полоса для броска. Действующий — by (или Шики), цель — vs (или Шики)."""
+    actor = roll.get("by") or "shiki"
+    target = roll.get("vs") if roll.get("vs") is not None else ("shiki" if actor != "shiki" else None)
+    if target is None:
+        return None
+    skill = roll.get("skill") or ("speed" if roll.get("interrupt") else "taijutsu")
+    if actor == "shiki":
+        defense = roll.get("vs_skill") or skill
+    else:
+        defense = roll.get("vs_skill") or ("speed" if roll.get("interrupt") else DEFENSE.get(skill, "reaction"))
+    mine, theirs = level(hot, actor, skill), level(hot, target, defense)
+    strong, weak = power(hot, actor), power(hot, target)
+    if None in (mine, theirs, strong, weak):
+        return None
+    given = roll.get("axes") if isinstance(roll.get("axes"), dict) else {}
+    axes = {"A": bands.axis(mine - theirs), "B": bands.axis(strong - weak)}
+    lever = bands.parse(given.get("B", 0)) or (0, 0)
+    axes["B"] = bands.clamp(axes["B"], max(-1, min(1, lever[0])))
+    for name in bands.GM_AXES:
+        axes[name] = bands.parse(given.get(name, 0)) or (0, 0)
+    if roll.get("long") and actor != "shiki":
+        axes["D"] = bands.clamp(axes["D"], 1)          # Шики в длинном действии — окно противнику
+    axes["E"] = bands.clamp(axes["E"], exposed(hot, target))
+    extra = bands.parse(given.get("F", 0)) or (0, 0)
+    axes["F"] = bands.clamp(burden(hot, actor), max(0, min(1, extra[0])))
+    cats, (low, high) = bands.band(axes, honest(hot, actor, target))
+    why = ", ".join(f"{k} {v[0]:+d}" if v[0] == v[1] else f"{k} {v[0]:+d}:{v[1]:+d}" for k, v in axes.items())
+    return {"axes": axes, "band": cats, "M": (low, high), "why": why}
+
+
+def matchup(hot, actor, target, skills=("speed", "taijutsu", "ninjutsu", "genjutsu")):
+    """Подсказка ведущему: оси, которые считает код (A по умениям, B, F, прибавка к E)."""
+    def fmt(pair):
+        return f"{pair[0]:+d}" if pair[0] == pair[1] else f"{pair[0]:+d}:{pair[1]:+d}"
+    out = {}
+    for skill in skills:
+        roll = {"by": actor if actor != "shiki" else None, "vs": target, "skill": skill}
+        got = resolve(hot, roll)
+        if got:
+            out[skill] = fmt(got["axes"]["A"])
+    probe = resolve(hot, {"by": actor if actor != "shiki" else None, "vs": target, "skill": skills[0]})
+    if not probe:
+        return {}
+    return {"A": out, "B": fmt(probe["axes"]["B"]), "F": fmt(probe["axes"]["F"]),
+            "E+": exposed(hot, target), "always_roll": honest(hot, actor, target)}
 
 
 def _wounds(hot, wounds, turn_id, at):
@@ -598,23 +836,33 @@ def _close(state, outcome_text, turn_id, at):
     closed = state.setdefault("closed", [])
     closed.append(summary)
     del closed[:-CLOSED_KEEP]
+    state["aftermath"] = {"turn": turn_id, "id": active["id"], "outcome": str(outcome_text)[:160]}
+
+
+def aftermath(hot):
+    """Пункт must сразу после конца боя: в Йокогаме победа открыла вторую половину сцены — счёт."""
+    state = (hot.get("_fight") or {}).get("aftermath") or {}
+    if not state or state.get("turn") != (hot.get("cursor") or {}).get("id"):
+        return None
+    return (f"Бой «{state['id']}» кончился ({state['outcome']}), сцена — нет: счёт за бой. Что держит Шики и чем "
+            "платит (печати, пленник, отростки), кровь и раны (кость состояния), кто пришёл на шум и что видел, "
+            "что осталось на месте. Союзники решают своё сами; стоп-кадр положения — в конце хода.")
 
 
 # ---------- выдача ведущему ----------
 
 ARSENAL_RULE = ("Именной противник и союзник бьются всем арсеналом по своей цели, не разговором вместо действия: "
                 "arsenal_left — ещё не пущенное в ход; меняй приёмы, ставь ловушки, бей по прикрываемому.")
-RULES = ("Кости бери подряд из dice, по одной на каждую настоящую неопределённость хода, и пиши в d.rolls: "
-         "what, skill, vs (id противника или число), mods, p, value, result. p = 50 + 15×перевес (5–95); "
-         "перевес = умение Шики − умение противника + поправки. От +3 — без броска, от −3 — этим способом "
-         "невозможно; против именного противника (named, ref/FOES.json) бросок всегда, перевес не выше +2. "
-         "Именной противник действует каждый обмен сам: его кость — d.rolls с by (id), skill, interrupt "
-         "(прервать действие Шики между шагами заявки), long (Шики в длинном действии: печати, призыв, сбор "
-         "природной чакры, лечение — +1 противнику); p считает код (tempo в fight.active.foes). Прерванная заявка "
-         "обрывается на этом шаге — дальше окно игрока. Кость < p−25 — чисто; < p — успех; < p+15 — с ценой; "
-         "иначе провал (для by — исход противника). Поправки: "
-         + ", ".join(f"{k} {lo:+g}…{hi:+g}" for k, (lo, hi) in MODS.items())
-         + ". Раны, чакру и мораль противника код добавит сам. Игроку числа не показывай.")
+RULES = ("Как в Йокогаме: соотношение сил даёт полосу исхода, d20 — категорию. Кость — подряд из dice, по одной на "
+         "каждую настоящую неопределённость; против именного — всегда. Оси −2…+2 (неуверенность «a:b»): A мастерство, "
+         "B мощь и запас, F состояние — считает код (fight.active.foes.<id>.vs: «shiki→» — бросок Шики, «→shiki» — "
+         "противника); C знание и подготовка, D дистанция/время/среда, E сопротивление цели — ты. Рычаг (численность, "
+         "призыв) — B ±1. Сумма M: ≤−8 → 1; ≤−4 → 2; ≤−1 → 3; 0 → 4; ≤3 → 5; ≤7 → 6; больше → 7; сумма низов и верхов "
+         "даёт полосу. Сузь её свойствами техники и пределами; соседнюю добавь только с random. d20 по полосе от худшей: "
+         "2 кат. 1–10/11–20; 3 — 1–6/7–14/15–20; 4 — по 5; 5 — по 4. Категории: " +
+         "; ".join(f"{k} {v}" for k, v in bands.CATEGORIES.items()) +
+         ". Есть 1 в полосе — risk (ущерб) до броска. d.rolls: what, skill, vs, by (бросок противника), interrupt, "
+         "long, axes {C,D,E}, band, value, cat, risk. Игроку числа не показывай.")
 
 
 def brief(hot):
@@ -636,6 +884,7 @@ def brief(hot):
             "exchanges_left": max(0, EXCHANGE_LIMIT - int(active.get("exchanges") or 0)),
             "foes": {k: {**v,
                          "levels": {s: foe_level(v, s) for s in ("speed", "taijutsu", "ninjutsu", "genjutsu", "sensory")},
+                         "vs": {"shiki→": matchup(hot, "shiki", k), "→shiki": matchup(hot, k, "shiki")},
                          **({"tempo": tempo(hot, v)} if named(v) else {}),
                          **({"arsenal_left": arsenal_left(hot, k, canon_card(k, v)[1])}
                             if named(v) and canon_card(k, v)[1] else {})}
@@ -650,14 +899,10 @@ def brief(hot):
 
 
 def tempo(hot, foe):
-    """Окна именного противника против Шики: прерывание длинного и быстрого действия, свой ход."""
+    """Окна именного противника против Шики: свой ход каждый обмен, лишний — если быстр."""
     mine = shiki_level(hot, "speed") or 5.0
-    speed = foe_level(foe, "speed")
-    long_p = max(5, min(95, round(50 + 15 * (speed - mine + LONG_BONUS))))
-    quick_p = max(5, min(95, round(50 + 15 * (foe_level(foe, "reaction") - mine))))
-    extra = " и ещё один между шагами заявки" if speed >= mine - 0.5 else ""
-    return (f"свой ход каждый обмен{extra}; прервать длинное действие Шики — p {long_p}, "
-            f"вклиниться в быстрое — p {quick_p}; Шики против него — бросок всегда, перевес ≤ +2")
+    extra = " и ещё один между шагами длинной заявки" if foe_level(foe, "speed") >= mine - 0.5 else ""
+    return f"свой ход каждый обмен{extra}; длинное действие Шики — D +1 противнику; против него бросок всегда"
 
 
 def scene_lines(hot):

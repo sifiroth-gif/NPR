@@ -57,7 +57,7 @@ class NamedFoesTest(unittest.TestCase):
         pool = fight.dice(hot)
         hot2 = hot_with({"i": {"name": "Итачи", "named": True, "status": "active", "skills": {"speed": 5.2}}})
         notes = fight.apply(hot2, {"fight": {"foe_state": {}}, "rolls": [
-            {"what": "прервать печати", "by": "i", "interrupt": True, "long": True, "value": pool[0]}]},
+            {"what": "прервать печати", "by": "i", "interrupt": True, "long": True, "axes": {}, "value": pool[0]}]},
             turn("s11.text.046"), pool)
         self.assertFalse(any("не действовал" in n["text"] for n in notes))
         self.assertEqual(hot2["_fight"]["active"]["rolls"][-1]["by"], "i")
@@ -70,8 +70,11 @@ class NamedFoesTest(unittest.TestCase):
     def test_tempo_in_brief(self):
         hot = hot_with({"i": {"name": "Итачи", "named": True, "status": "active", "skills": {"speed": 5.2, "reaction": 5.6}}})
         line = fight.brief(hot)["active"]["foes"]["i"]["tempo"]
-        self.assertIn("ещё один между шагами заявки", line)
-        self.assertIn("прервать длинное действие Шики — p 60", line)
+        self.assertIn("ещё один между шагами длинной заявки", line)
+        self.assertIn("бросок всегда", line)
+        vs = fight.brief(hot)["active"]["foes"]["i"]["vs"]
+        self.assertTrue(vs["shiki→"]["always_roll"])
+        self.assertIn("genjutsu", vs["→shiki"]["A"])
 
 
 if __name__ == "__main__":

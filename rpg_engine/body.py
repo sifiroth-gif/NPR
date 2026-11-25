@@ -5,10 +5,13 @@
 пока кровь уходила; проверка состояния (d20 = 5 — ухудшение) дала шум в ушах, тёмные края,
 давление 78/46, и вторая половина сцены — удержание пленника — шла уже против тела.
 
-Здесь так же. Рана с кровотечением (`bleed`) после каждого хода с нагрузкой — бросок, порог,
-код учитывает раны и нагрузку, а без нагрузки — раз в QUIET_MINUTES игрового времени. Кость бросает
-свёртка (хеш хода), не ведущий: исход не смягчить. Ступень кровопотери — поправка ко всем
-броскам, пока кровь не восполнена. Остановить кровь — только заявленное действие
+Здесь так же. Рана с кровотечением (`bleed`) после каждого хода с нагрузкой — проверка состояния
+по полосе категорий, как всякий спор (`bands.py`): A — выносливость против нормы, D — нагрузка
+хода, E — кровящие раны, F — уже потерянная кровь; физиология неточна, поэтому полоса шире на
+категорию в обе стороны. Категория 3 и ниже — хуже на ступень (1 при критической — на две), 6 и
+выше — средняя рана свернулась. Без нагрузки — раз в QUIET_MINUTES игрового времени. Кость d20
+бросает свёртка (хеш хода), не ведущий: исход не смягчить. Ступень кровопотери — ось F всех
+бросков, пока кровь не восполнена. Остановить кровь — только заявленное действие
 (`d.heal: [{"who", "where", "stop": true}]`); восполнить — `"blood": true` (снимает ступень).
 """
 
@@ -18,11 +21,12 @@ import hashlib
 import re
 from datetime import datetime
 
+from . import bands
+
 LOSS = ("норма", "слабость", "головокружение", "шок", "без сознания")
-PENALTY = (0, 0.5, 1, 2, 3)              # к перевесу всех бросков; без сознания — выход из боя
+PENALTY = (0, 0.5, 1, 2, 3)              # к перевесу старых бросков d100; в новых — ось F (fight.burden)
 LOAD = {"средняя": 0.5, "тяжёлая": 1.0, "критическая": 2.0}
 BASE = 3.0                               # выносливость, с которой средняя рана в покое — ровно 50 на 50
-EXERT = 0.5                              # нагрузка хода: бросок, техника, рывок
 QUIET_MINUTES = 10                       # без нагрузки — проверка раз в столько игровых минут
 QUIET_MAX = 3
 RECOVER_HOURS = 6                        # кровь не идёт: ступень спадает сама за столько часов
@@ -70,7 +74,7 @@ def _parse(value):
 
 def _die(turn_id, who, n):
     digest = hashlib.sha256(f"body|{turn_id}|{who}|{n}".encode("utf-8")).digest()
-    return int.from_bytes(digest[:2], "big") % 100
+    return int.from_bytes(digest[:2], "big") % 20 + 1
 
 
 def _exerted(who, delta):
@@ -90,6 +94,19 @@ def _level(hot, who):
         return fight.shiki_level(hot, "endurance") or BASE
     foe = ((((hot.get("_fight") or {}).get("active") or {}).get("foes") or {}).get(who))
     return fight.foe_level(foe, "endurance") if foe else BASE
+
+
+def _band(hot, who, load, exert, loss):
+    """Полоса проверки состояния: выносливость, нагрузка, кровящие раны, потерянная кровь; ±1 — физиология."""
+    axes = {"A": bands.axis(_level(hot, who) - BASE), "B": (0, 0), "C": (0, 0),
+            "D": (-1, -1) if exert else (0, 0),
+            "E": (-2, -2) if load >= 2 else (-1, -1) if load >= 1 else (-1, 0) if load else (0, 0),
+            "F": (-min(2, loss), -min(2, loss))}
+    cats, _m = bands.band(axes)
+    cats = list(range(max(1, cats[0] - 1), min(7, cats[-1] + 1) + 1))
+    while len(cats) > 5:
+        cats = cats[1:-1]
+    return cats
 
 
 def heal(hot, item, turn_id):
@@ -113,7 +130,6 @@ def heal(hot, item, turn_id):
 
 def check(hot, turn, delta):
     """После хода: проверки состояния всех, у кого идёт кровь; спад ступени у тех, у кого не идёт."""
-    from . import fight
     if turn.get("kind") in ("ooc", "technical", "void"):
         return []
     now = _parse(turn.get("at"))
@@ -146,20 +162,17 @@ def check(hot, turn, delta):
         before = int(record.get("loss") or 0)
         for n in range(count):
             loss = int(record.get("loss") or 0)
-            edge = round(_level(hot, who) - BASE - load - (EXERT if exert else 0) - PENALTY[loss] / 2, 2)
-            p = max(5, min(95, round(50 + 15 * edge)))
+            cats = _band(hot, who, load, exert, loss)
             value = _die(turn.get("id"), who, n)
-            grade = fight.outcome(p, value)
-            if grade == "провал":
-                loss += 2 if critical else 1
-            elif grade == "с ценой" and exert:
-                loss += 1
-            elif grade == "чисто":
+            cat = bands.from_die(cats, value)
+            if cat <= 3:
+                loss += 2 if cat == 1 and critical else 1
+            elif cat >= 6:
                 for wound in open_:
                     if wound.get("severity") == "средняя":
                         wound["bleed"], wound["stopped"] = False, f"{turn.get('id')}: сгусток"
             record["loss"] = min(loss, len(LOSS) - 1)
-            record["last"] = {"turn": turn.get("id"), "die": value, "p": p, "grade": grade,
+            record["last"] = {"turn": turn.get("id"), "die": value, "band": cats, "cat": cat,
                               "exert": exert, "load": load}
             if record["loss"] == len(LOSS) - 1:
                 break
@@ -184,10 +197,11 @@ def must(hot):
         who = "Шики" if row["who"] == "shiki" else will._name(hot, row["who"])
         where = ", ".join(w for w in row["wounds"] if w) or "рана"
         if row["after"] > row["before"]:
-            verdict = f"хуже — «{LOSS[row['after']]}» (−{PENALTY[row['after']]:g} ко всем броскам)"
+            verdict = f"хуже — «{LOSS[row['after']]}» (ось F всех бросков)"
         else:
-            verdict = f"держится, но «{LOSS[row['after']]}» (−{PENALTY[row['after']]:g})"
-        parts.append(f"{who}: кость состояния {row['die']} при пороге {row['p']} ({where}, кровь идёт"
+            verdict = f"держится, но «{LOSS[row['after']]}»"
+        parts.append(f"{who}: проверка состояния — полоса {bands.text(row['band'])}, d20 {row['die']}, категория "
+                     f"{row['cat']} ({bands.CATEGORIES[row['cat']]}; {where}, кровь идёт"
                      f"{', нагрузка' if row['exert'] else ''}) — {verdict}. Видно телом: {SIGNS.get(row['after'], '')}")
     if not parts:
         return None
