@@ -534,6 +534,12 @@ def _apply_turn_inplace(hot, turn):
         raise TurnError(f"{turn['id']}: sequence gap after {before_cursor.get('id')}")
     if before_cursor.get("at") and parse_at(turn["at"]) < parse_at(before_cursor["at"]):
         raise TurnError(f"{turn['id']}: game time precedes {before_cursor['at']}")
+    # New writers identify the actual predecessor even if NEXT is behind.
+    # Old records without review remain replayable.
+    review = turn.get("review")
+    if (session, number) >= (14, 24) and review is not None:
+        if not isinstance(review, dict) or review.get("predecessor") != before_cursor.get("id"):
+            raise TurnError(f"{turn['id']}: predecessor mismatch; expected {before_cursor.get('id')}")
 
     # Once a scene has a verified anchor, no new in-world turn may silently
     # inherit the positions and present NPCs from an unrelated old scene.

@@ -23,7 +23,7 @@ FIELD = 170
 RULE = ("Это оперативный пакет, не замена сыгранному первоисточнику. Страницу memory/ "
         "открывай только для NPC, впервые входящего в сцену в этом чате, или по вопросу о прошлом; "
         "прочитанное в этом чате не перечитывай. cursor не равен твоему последнему ходу — свёртка "
-        "отстала: открой CHECKS.json. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
+        "отстала: локальная цепочка подтверждённых TURN, не старые расчёты. Игрок просит закрыть сессию — запиши recovery/SESSION_CLOSE.json "
         "{\"close\": true}; отчёт — recovery/SESSION_CLOSE_REPORT.md. echo — давняя нить, созвучная сцене: верни событием, доступным Шики (человек, весть, вещь, последствие), не упоминанием. "
         "Давнее прошлое: если ID хода известен — адресно читай архив; иначе recovery/RECALL.json {\"q\": [\"вопрос\"]}: поиск по всем "
         "сессиям, ответ — NEXT.recall к следующему ходу.")
@@ -195,10 +195,12 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         "turn_file": (brief.get("turn_file") or {}).get("sha"),
         # 24.11.2026: ведущий ждал свёртку («ход сыгран, но пока не записан») — свёртка идёт около минуты,
         # а игрок отвечает быстрее; ходы из истории git код сворачивает по порядку сам.
-        "write": ("Запись не ждёт свёртку. sha — из ответа твоей последней записи TURN.json (turn_file — лишь "
-                  "для первой записи в чате). Если cursor старше твоего последнего хода — свёртка ещё идёт: пиши "
-                  "следующий ход от своего (ID +1, predecessor — твой последний), NEXT прошлого хода в силе. "
-                  "Конфликт sha — одно чтение TURN.json и запись того же хода."),
+        "write": ("Свёртку не жди. SHA — из последней успешной записи, turn_file лишь при свежем старте. "
+                  "cursor отстал или lag.recorded_turn отличается: примени подтверждённые локальные TURN по порядку. "
+                  "Старые dice/chakra/must не повторять; сверяй исполненное, неизвестное не разыгрывай как факт. "
+                  "Конфликт SHA: прочти TURN; точное совпадение — уже сохранён, иной ход/правка — останови перезапись."),
+        "lag": {"at": cursor.get("at"), "recorded_turn": (brief.get("turn_file") or {}).get("turn"),
+                "dice_for": next_id(hot), "chakra_at": ((hot.get("shiki") or {}).get("chakra") or {}).get("at")},
         "fold_errors": checks.get("fold_errors") or [],
     }
     if rules:
@@ -222,7 +224,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     if (extra or {}).get("resync"):     # перечитать стартовый пакет в нынешнем чате (hot.resync_item)
         duty = [extra["resync"]] + duty[:2]
     if duty:
+        from .overlay import obligation_ids
         pack["must"] = duty
+        pack["must_ids"] = obligation_ids(pack["cursor"], duty)
     if happened is None:
         happened = will.offscreen(hot)
     if happened:

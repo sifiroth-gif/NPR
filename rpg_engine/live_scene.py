@@ -132,9 +132,14 @@ def build_for_state(hot, turns, state_dir):
     turn_path = Path(state_dir) / "recovery/TURN.json"
     if turn_path.is_file():
         raw = turn_path.read_bytes()
+        try:
+            recorded = json.loads(raw)
+            recorded_id = recorded.get("id") if isinstance(recorded, dict) else None
+        except (ValueError, UnicodeDecodeError):
+            recorded_id = None
         result["turn_file"] = {"path": "recovery/TURN.json",
                                "sha": hashlib.sha1(b"blob %d\0" % len(raw) + raw).hexdigest(),
-                               "turn": (hot.get("cursor") or {}).get("id"),
+                               "turn": recorded_id,
                                "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json."}
     result.pop("digest", None)
     result["digest"] = _digest(result)
