@@ -111,3 +111,19 @@ class LagProjectionTest(unittest.TestCase):
         self.assertNotIn("state_sources", result)
         self.assertEqual(result["capabilities"]["items"], pack["capabilities"]["items"])
         self.assertIn("scene_hint", pack["capabilities"])
+
+    def test_pending_directive_revoke_projects_once_without_stale_rule(self):
+        from rpg_engine import directives
+        pack = self.packet(base())
+        old = "Впредь пиши коротко."
+        ident = directives.stable_id(old)
+        pack["directives"] = {"standing": [old], "standing_ids": [ident]}
+        quote = "Отмени правило о коротких сценах."
+        t = turn(45, "0006-10-01T07:14:00", kind="ooc", player=quote,
+                 review={"predecessor": pack["cursor"]},
+                 d={"directive_ops": [{"op": "revoke", "id": ident, "quote": quote}]})
+        rec = {"turn": t, "sha": "one"}
+        result = overlay.project(pack, [rec, rec])
+        self.assertTrue(result["lag_status"]["write_allowed"])
+        self.assertEqual(result["directives"]["standing"], [])
+        self.assertEqual(pack["directives"]["standing"], [old])
