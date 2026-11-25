@@ -80,7 +80,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s14.text.067",
+  "cursor": "s14.text.068",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -352,11 +352,11 @@
  "cursor": {
   "at": "0010-04-19T17:20:00",
   "date": "Понедельник, 19 апреля 1287 года",
-  "id": "s14.text.067",
+  "id": "s14.text.068",
   "place": "Страна Рек, удалённое каменистое плато",
   "time": "17:20"
  },
- "digest": "5c572a545783f7e9db6b8d6b7bcd13d6b688ea23fad8ad0f31904aede1a574f1",
+ "digest": "1a2de184aefa9086922ffac5021b09b1ae0d13f5b38f503109f4a57a58354f5c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -460,94 +460,20 @@
    "value": 375.0
   },
   "dice": [
-   10,
-   19,
-   4,
-   12,
+   17,
+   16,
+   11,
    6,
-   1,
-   15,
-   20,
-   6,
+   5,
    3,
+   3,
+   9,
    18,
-   9
+   1,
+   14,
+   19
   ],
   "injuries": {
-   "quay_masked_hunter": [
-    {
-     "at": "0010-04-11T17:24:02",
-     "lost": "ограничена подвижность поражённой стороны, другая рука складывает печать",
-     "severity": "средняя",
-     "turn": "s14.text.005",
-     "what": "скользящий удар водяного дракона и падение",
-     "where": "плечо и бок"
-    },
-    {
-     "at": "0010-04-11T17:24:03",
-     "bleed": false,
-     "lost": "Остаточный парез и сенсорный дефицит; обе руки двигаются против силы тяжести и частично сопротивления, ноги против силы тяжести; ходьба не проверена. Дыхание и сознание сохранены, рана закрыта.",
-     "recovered_at": "s14.text.023",
-     "severity": "тяжёлая",
-     "stopped": "s14.text.020",
-     "turn": "s14.text.007",
-     "what": "Чакровый скальпель: поражение проводящих функций",
-     "where": "спинной мозг"
-    }
-   ],
-   "quay_wire_operator": [
-    {
-     "at": "0010-04-11T17:24:02",
-     "bleed": false,
-     "lost": "Тяжёлая травма спины и туловища, сознание утрачено при кровопотере; гемостаз достигнут портовым врачом, дальнейшее восстановление не подтверждено.",
-     "recovered_at": "s14.text.034",
-     "severity": "тяжёлая",
-     "stopped": "s14.text.034",
-     "turn": "s14.text.005",
-     "what": "удар водяного дракона и столкновение со столбом",
-     "where": "спина и туловище"
-    }
-   ],
-   "root_field_jacket_man": [
-    {
-     "at": "0010-04-05T11:26:02",
-     "lost": "двигает рукой",
-     "severity": "лёгкая",
-     "turn": "s13.text.069",
-     "what": "ледяные иглы",
-     "where": "плечо"
-    },
-    {
-     "at": "0010-04-05T11:26:03",
-     "bleed": false,
-     "lost": "правая кисть утратила хватку, поражение пока местное и прогрессирует",
-     "severity": "тяжёлая",
-     "stopped": "s13.text.075",
-     "turn": "s13.text.070",
-     "what": "Смертный надрез: контактный порез с нарастающим некрозом сосудов и нервов",
-     "where": "правое предплечье"
-    },
-    {
-     "at": "0010-04-05T11:27:00",
-     "lost": "не может подняться, руки не работают, нога слабо шевелится; дыхание и речь целы",
-     "severity": "тяжёлая",
-     "turn": "s13.text.071",
-     "what": "Чакровый скальпель; внутреннее селективное рассечение",
-     "where": "двигательные нервы левой руки и ног"
-    }
-   ],
-   "root_field_needle_man": [
-    {
-     "at": "0010-04-05T11:26:02",
-     "bleed": false,
-     "lost": "печати затруднены",
-     "severity": "средняя",
-     "stopped": "s13.text.075",
-     "turn": "s13.text.069",
-     "what": "ледяные иглы",
-     "where": "предплечье"
-    }
-   ],
    "shiki": [
     {
      "at": "0007-12-24T16:47:00",
@@ -631,7 +557,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-04-19T17:20:00",
+  "closed": 14,
+  "first_turn": "s15.text.001",
+  "last_turn": "s14.text.066",
+  "next_session": 15,
+  "source": "campaigns/shiki/continuity/SESSION_014_TO_015_HANDOFF.json",
+  "sqlite_revision": 1123
+ },
  "horror": {
   "due": null,
   "npcs": {},
@@ -799,8 +733,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e6434e6cd569561672e87e6c3dddf5038e84c2a2",
-  "turn": "s14.text.067"
+  "sha": "f7a2e8665388212483c495f31ec1b0963b2b1a20",
+  "turn": "s14.text.068"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -813,8 +747,7 @@
   "due_now": [],
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
-   "shiki_confidentiality",
-   "fire_risk_meeting"
+   "shiki_confidentiality"
   ],
   "secret_topics": [
    "v7_personal_targeting",
