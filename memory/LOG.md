@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.066: поправки игрока: 1
 - s13.text.065: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), western_nest_young_courier (`npc/western_nest_young_courier`), поправки игрока: 1
 - s13.text.064: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.063: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Дзюн (`npc/haru_brother_jun`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -58,4 +59,3 @@
 - s13.text.009: план сюжета
 - s13.text.008: план сюжета
 - s13.text.007: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), sirame (`npc/sirame`), линия `roadside_attack`
-- s13.text.006: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Сэйдзо (`npc/road_warden_seidzo`), линия `roadside_attack`

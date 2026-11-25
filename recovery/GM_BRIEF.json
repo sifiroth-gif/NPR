@@ -52,7 +52,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s13.text.065",
+  "cursor": "s13.text.066",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -249,11 +249,11 @@
  "cursor": {
   "at": "0010-04-04T08:48:00",
   "date": "Воскресенье, 4 апреля 1287 года",
-  "id": "s13.text.065",
+  "id": "s13.text.066",
   "place": "Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги",
   "time": "08:48"
  },
- "digest": "4c2483841cfe822be3e92aa5a2278982781738ecdd9c3ba0d2fc9ce32386aff5",
+ "digest": "12a26ce69252c64b929143b74be254e3310da5f9661a5925a52f25d60f99573c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -300,17 +300,17 @@
    "value": 100.0
   },
   "dice": [
-   15,
+   13,
+   9,
+   16,
+   10,
+   1,
+   16,
    6,
-   11,
-   10,
-   10,
-   11,
-   8,
-   16,
+   15,
+   15,
    1,
-   16,
-   1,
+   3,
    13
   ],
   "injuries": {
@@ -716,7 +716,7 @@
     {
      "at": "0010-04-04T08:48:00",
      "line": "Шики уточнил: 25 марта на заставе его имени действительно не знали. Старший признал, что первоначальный анонимный рапорт был точе…",
-     "sha256": "732936a8192ef568e72c3ca65b78e501c218256269565bfe5474aef4e2f11653",
+     "sha256": "bdc2e7cafdc4d377d16caf897123d4655eb0cdb93720a5059654a34853febc0d",
      "source": "archive/session-013-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s13.text.065"
@@ -742,7 +742,7 @@
     "memory_file": "archive/npc-memory/grass_roads_patrol_senior.json",
     "memory_total": 3,
     "name": "Старший патруля Кусы",
-    "seen": "s13.text.065",
+    "seen": "s13.text.066",
     "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное дополнение на своём служебном риске.",
     "status": "present_profile",
     "tier": "archetypal",
@@ -901,7 +901,7 @@
     "memory_total": 352,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-    "seen": "s13.text.065",
+    "seen": "s13.text.066",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "Осталась при Шики и слышала признание старшего, что полные показания с именем сознательно не внесли в дело.",
     "status": "present_profile",
@@ -961,8 +961,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "73d8f772722dc4bdb14969b2d4b5c406f5332e77",
-  "turn": "s13.text.065"
+  "sha": "54970c5f60268c6b7a16b3bcdc3fc6b5deb5764e",
+  "turn": "s13.text.066"
  },
  "wiki": {
   "index": "memory/INDEX.md",
