@@ -204,7 +204,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         "fold_errors": checks.get("fold_errors") or [],
     }
     if rules:
-        pack["directives"] = dict(rules, rule="Поправки игрока к ведению: выше GM_CORE и навыка, исполнять до отмены.")
+        pack["directives"] = dict(rules, rule="standing — выше GM_CORE/навыка до отмены; standing_ids по порядку. recent — уточнение, не постоянное правило.")
     if (extra or {}).get("ages"):   # возраст на дату хода от дня рождения (canon.ages_now)
         pack["ages"] = dict(extra["ages"], rule="Возраст на дату хода от дня рождения: не менять и не брать "
                                                 "из оригинала Naruto; растёт сам с календарём.")

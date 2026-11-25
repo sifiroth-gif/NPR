@@ -191,6 +191,10 @@ def validate_turn(turn):
             turn["d"]["scene"], dict):
         raise TurnError("дельта 'd.scene' должна быть объектом")
     delta = turn.get("d") or {}
+    try:
+        directives.validate_ops(turn)
+    except ValueError as exc:
+        raise TurnError(str(exc)) from exc
     # Structural failures must be caught before fold mutates the cursor or
     # rehydrates actors. Preserve established shorthand (threads, canon+).
     for field in ("cast", "threads", "clocks", "fight", "chakra"):
@@ -1485,7 +1489,7 @@ def fold(state_dir):
                 if turn.get("place"):
                     visited.add(str(turn["place"]).casefold())
                 checks.extend(claims.review(turn, visited))
-                directives.capture(hot, turn)
+                directives.capture(hot, turn, state_dir)
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
         except Exception as exc:   # сбой кода — отказ с причиной в NEXT, а не молча упавшая свёртка (s13.text.021)

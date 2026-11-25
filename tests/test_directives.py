@@ -1,3 +1,4 @@
+import copy
 import json
 import tempfile
 import unittest
@@ -217,3 +218,67 @@ class ReplanTest(unittest.TestCase):
         self.assertNotIn("old", intent)
         self.assertEqual(intent["new"]["due"], "0010-03-10T22:00:00")
         self.assertFalse(will._state(h).get("happened"), "снятый план не становится новостью мира")
+
+class DurableDirectiveTest(unittest.TestCase):
+    def test_permanent_survives_expiry_and_session_boundary(self):
+        h = {"cursor": {"id": "s15.text.001"}}
+        directives.capture(h, {"id": "s14.text.024", "kind": "ooc",
+                               "player": "Мастеру: впредь показывай движения подробно."})
+        for i in range(2, 40):
+            directives.capture(h, {"id": f"s15.text.{i:03}", "kind": "ooc",
+                                   "player": f"Почему сцена {i} такая?"})
+        self.assertEqual(len(directives.active(None, h)), 1)
+        self.assertIn("впредь", directives.active(None, h)[0]["text"])
+        self.assertLessEqual(len(h["directives"]), directives.KEEP)
+
+    def test_question_and_once_are_not_binding(self):
+        h = {"cursor": {"id": "s14.text.024"}}
+        for player in ("Мастеру: как ты всегда выбираешь длину?", "Мастеру: перепиши сцену заново.",
+                       "Мастеру: отмени непонятное правило."):
+            directives.capture(h, {"id": "s14.text.024", "kind": "ooc", "player": player})
+        self.assertEqual(directives.active(None, h), [])
+        self.assertEqual([x["kind"] for x in h["directives"]], ["question", "once", "review"])
+
+    def test_explicit_revoke_and_replace_keep_audit_history(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / directives.SEED
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({"standing": [{"text": "Старое правило", "scope": "general"}]}))
+            h = {}
+            ident = directives.standing(root)[0]["id"]
+            quote = "Замени старое правило: впредь пиши короче."
+            t = {"id": "s14.text.024", "kind": "ooc", "player": quote,
+                 "d": {"directive_ops": [{"op": "replace", "id": ident, "quote": quote,
+                                         "text": "впредь пиши короче."}]}}
+            directives.capture(h, t, root)
+            directives.capture(h, t, root)
+            rows = directives.active(root, h)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["scope"], "general")
+            quote = "Отмени правило о коротких сценах."
+            directives.capture(h, {"id": "s14.text.025", "kind": "ooc", "player": quote,
+                                   "d": {"directive_ops": [{"op": "revoke", "id": rows[0]["id"], "quote": quote}]}}, root)
+            self.assertEqual(directives.active(root, h), [])
+            self.assertEqual(len(h["directive_events"]), 2)
+            self.assertEqual(directives.standing(root)[0]["text"], "Старое правило")
+
+    def test_fabricated_quote_and_question_cannot_create_rule(self):
+        for quote, player in (("Впредь пиши кратко.", "Пиши кратко сейчас."),
+                              ("Как всегда писать?", "Как всегда писать?")):
+            with self.assertRaises(ValueError):
+                directives.validate_ops({"id": "s14.text.024", "kind": "ooc", "player": player,
+                                         "d": {"directive_ops": [{"op": "add", "quote": quote, "text": quote}]}})
+
+    def test_migration_keeps_seed_and_needs_played_proof(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / directives.SEED
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({"standing": [{"text": "Старое", "scope": "general"}]}))
+            self.assertEqual(len(directives.active(root, {})), 1)
+            anchor = root / "archive/turns/s14/s14.text.006.md"
+            anchor.parent.mkdir(parents=True)
+            anchor.write_text("## Игрок\nи вообще если можешь делать быстро визуализацию в игре делай ее\n\n## Ведущий\n")
+            self.assertEqual(len(directives.active(root, {})), 2)
+            self.assertEqual(directives.active(root, {})[0]["text"], "Старое")

@@ -110,10 +110,8 @@ def plan(state_dir, engine_dir=ENGINE, now=None):
         path = engine_dir / name
         if path.exists():
             out["general_edit"].append({"path": name + ("/" if path.is_dir() else ""), "lines": _shiki_lines(path)})
-    try:
-        standing = json.loads((state_dir / DIRECTIVES).read_text(encoding="utf-8")).get("standing") or []
-    except (OSError, ValueError):
-        standing = []
+    from . import directives
+    standing = directives.active(state_dir, hot)
     for item in standing:
         if not isinstance(item, dict) or not item.get("text"):
             continue
