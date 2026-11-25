@@ -64,7 +64,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.046",
+  "cursor": "s15.text.047",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -75,10 +75,11 @@
    "kabuto",
    "orochimaru",
    "place:e02efa16a5127f57",
+   "shirame",
    "orochimaru_poison_samples_s15",
    "shiki_nail_sample_1287"
   ],
-  "focus_bytes": 2002,
+  "focus_bytes": 2364,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -94,134 +95,20 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
-    "seals.speed",
     "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
     "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
     "sage.summon"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-04-21T14:05:00",
-    "chakra": {
-     "at": "0010-04-21T14:05:00",
-     "last": {
-      "spent": 3.75,
-      "turn": "s15.text.033",
-      "what": [
-       "Поддержание ВМШ и Сусаноо в течение разговора после испытания"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 574.62,
-     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {
-     "sasuke": {
-      "wounds": [
-       {
-        "at": "0010-04-21T13:41:26",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.039",
-        "what": "ушиб от удара ногой через частичный блок",
-        "where": "бок под рёбрами"
-       }
-      ]
-     },
-     "shiki": {
-      "wounds": [
-       {
-        "at": "0007-12-24T16:47:00",
-        "lost": "поверхностный порез, движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s09.text.066",
-        "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
-        "where": "наружная сторона левого бедра"
-       },
-       {
-        "at": "0010-03-25T12:12:56",
-        "lost": "боль при резких движениях, дыхание сохранено",
-        "severity": "лёгкая",
-        "turn": "s12.text.064",
-        "what": "удар отлетающим известняком во время первого рывка",
-        "where": "боковая область грудной клетки под рёбрами"
-       },
-       {
-        "at": "0010-04-05T11:26:02",
-        "lost": "кисть работает",
-        "severity": "лёгкая",
-        "turn": "s13.text.069",
-        "what": "нож",
-        "where": "левое предплечье"
-       }
-      ]
-     }
-    },
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
     "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/SHIKI.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
@@ -232,19 +119,11 @@
     "time"
    ],
    "routes": [
-    "medical",
-    "combat",
     "dialogue",
     "travel"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -453,13 +332,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-21T14:05:00",
+  "at": "0010-04-21T14:05:30",
   "date": "Среда, 21 апреля 1287 года",
-  "id": "s15.text.046",
+  "id": "s15.text.047",
   "place": "Северная граница Страны Рек, подземное убежище Орочимару",
   "time": "14:05"
  },
- "digest": "b9a9dc62ca90cd9c6f964fa9e09c01086f7112cd3ab499aad8f2f7ad4ec05d55",
+ "digest": "eba70a0cbc7acde0eef7ff4474f857f1186d5712ca97ab6766bdedf07856f993",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -474,14 +353,14 @@
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.046"
+    "to": "s15.text.047"
    },
    {
     "actor": "kabuto",
     "from": "s15.text.004",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.046"
+    "to": "s15.text.047"
    }
   ],
   "nodes": [],
@@ -579,21 +458,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 574.62
+   "value": 574.7
   },
   "dice": [
-   4,
-   5,
-   15,
+   14,
+   3,
    12,
-   2,
-   2,
-   18,
-   19,
-   6,
-   11,
-   4,
-   1
+   12,
+   16,
+   8,
+   12,
+   17,
+   10,
+   15,
+   7,
+   17
   ],
   "injuries": {
    "sasuke": [
@@ -691,6 +570,23 @@
    },
    {
     "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "shirame",
+    "kind": "npc",
+    "label": "Сирамэ",
+    "operational_cues": {
+     "source": "recovery/cast/shirame.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вышла из комнаты, намерена передать известие западным гнёздам."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
      "explicit_edge_candidate"
     ],
     "facts": [],
@@ -730,7 +626,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 5
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -745,18 +641,18 @@
   "due": null,
   "npcs": {
    "kabuto": {
-    "does": "Проверил маркировку образца, сообщил наблюдение, остановился по распоряжению учителя.",
+    "does": "Сообщил об уходе Сирамэ и предположительном направлении.",
     "lever": "остаться чужим инструментом",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Обычный яд не дал ожидаемого эффекта; нельзя переносить вывод на все вещества.",
+    "reads": "Её точный маршрут не установлен.",
     "stage": 4,
     "step": "необратимость"
    },
    "orochimaru": {
-    "does": "Прекратил опыт и прямо признал зависть.",
+    "does": "Признал необходимость дождаться её добровольного возвращения.",
     "lever": "умереть, не узнав всего",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Завидует достигнутым свойствам; собственное тело остаётся ограничением.",
+    "reads": "Соглашение ограничивает принудительные поручения змеям.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -780,20 +676,20 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "ки:** — Да ладно Кабуто, возьми самый сильный и отрави меня как врага.\n\nКабуто посмотрел на Орочимару. Саннин утвердительно кивнул.\n\n**Кабуто Якуши:** — Как пожелаете.\n\nОн выбрал одну из пробирок.\n\nИспытание состоялось. Однако яд, который должен был вызвать тяжёлое нарушение жизненных функций, не оказал на организм Шики заметного действия.\n\nПрошло…",
-  "player": "Да ладно Кабуто, возьми самый сильный и отрави меня как врага",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 14:05</text>\n\n### Кабинет Орочимару\n\n**Мугами Шики:** — Хах. Где Сирамэ?\n\n**Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась вернуться в западные гнёзда.\n\n**Орочимару:** — И теперь, согласно нашему соглашению, мне следует дож…",
+  "player": "Хах. Где #черт вылетело имя змеи с которой пришел, напиши за мпня#",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 53,
+   "appearances": 54,
    "facets": 4,
    "need": 5,
    "npc": "orochimaru",
    "tier": "deep"
   },
   {
-   "appearances": 91,
+   "appearances": 92,
    "facets": 4,
    "need": 5,
    "npc": "kabuto",
@@ -981,32 +877,35 @@
     "s15.text.005",
     "s15.text.006",
     "s15.text.007",
-    "s15.text.043",
     "s15.text.044",
     "s15.text.045",
-    "s15.text.046"
+    "s15.text.046",
+    "s15.text.047"
    ],
    "prior_disclosures": [
     {
      "at": "0010-04-20T16:05:00",
+     "line": "Шики собрался и призвал Сирамэ. Она передала ответ Кабуто о знании имени до экзамена, его обещание личного рассказа и сообщила об…",
      "sha256": "50e134564bdf0bd5c38e679f3eb47a9f6e37a04d8b15951d214d2843949b2eb9",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.004"
     },
     {
-     "at": "0010-04-21T13:51:20",
-     "sha256": "237a29bfa89ed7fb412e1bb0784340559b9df5837494d8f6974993a641a91559",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.045"
-    },
-    {
      "at": "0010-04-21T14:05:00",
-     "sha256": "b59a2b9e64ff1a3c708905987c9a7d93791b50bca3c48c894a6830eb584edf45",
+     "line": "По добровольной заявке Шики Кабуто испытал сильнейший из предоставленных обычных биологических ядов; Пустой клык обеспечил невосп…",
+     "sha256": "d4fb3d75b87825fa7cf4079d76b3ce04afd3e1843099ac4d0d71ab93487a3eef",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.046"
+    },
+    {
+     "at": "0010-04-21T14:05:30",
+     "line": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтв…",
+     "sha256": "227451a02bdc89b96b857365e0692e0e57e0f58b5291df13387d3a2689f304cd",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.047"
     }
    ],
    "profile": {
@@ -1025,12 +924,17 @@
       "ch": "present",
       "turn": "s15.text.046",
       "what": "По добровольной заявке Шики Кабуто испытал сильнейший из предоставленных обычных биологических ядов; Пустой клык обеспечил невосприимчивость. Орочимару прекратил опыт и признал зависть."
+     },
+     {
+      "ch": "present",
+      "turn": "s15.text.047",
+      "what": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтвердил намерение соблюдать её добровольность."
      }
     ],
     "memory_file": "archive/npc-memory/kabuto.json",
-    "memory_total": 91,
+    "memory_total": 92,
     "name": "Кабуто Якуши",
-    "seen": "s15.text.046",
+    "seen": "s15.text.047",
     "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела.",
     "status": "present_profile",
     "tier": "deep"
@@ -1086,32 +990,35 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.043",
     "s15.text.044",
     "s15.text.045",
-    "s15.text.046"
+    "s15.text.046",
+    "s15.text.047"
    ],
    "prior_disclosures": [
     {
      "at": "0010-04-20T16:06:00",
+     "line": "Шики пригласил Сирамэ идти вместе, протянул руку. Она добровольно устроилась на плечах, намерена лично слушать Кабуто и сохранять…",
      "sha256": "40122839ae5c16af4335084c9c47fd5a5527367d364ea5f2cb05f2ba5b7b864d",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T13:51:20",
-     "sha256": "237a29bfa89ed7fb412e1bb0784340559b9df5837494d8f6974993a641a91559",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.045"
-    },
-    {
      "at": "0010-04-21T14:05:00",
-     "sha256": "b59a2b9e64ff1a3c708905987c9a7d93791b50bca3c48c894a6830eb584edf45",
+     "line": "По добровольной заявке Шики Кабуто испытал сильнейший из предоставленных обычных биологических ядов; Пустой клык обеспечил невосп…",
+     "sha256": "d4fb3d75b87825fa7cf4079d76b3ce04afd3e1843099ac4d0d71ab93487a3eef",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.046"
+    },
+    {
+     "at": "0010-04-21T14:05:30",
+     "line": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтв…",
+     "sha256": "227451a02bdc89b96b857365e0692e0e57e0f58b5291df13387d3a2689f304cd",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.047"
     }
    ],
    "profile": {
@@ -1130,12 +1037,17 @@
       "ch": "present",
       "turn": "s15.text.046",
       "what": "По добровольной заявке Шики Кабуто испытал сильнейший из предоставленных обычных биологических ядов; Пустой клык обеспечил невосприимчивость. Орочимару прекратил опыт и признал зависть."
+     },
+     {
+      "ch": "present",
+      "turn": "s15.text.047",
+      "what": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтвердил намерение соблюдать её добровольность."
      }
     ],
     "memory_file": "archive/npc-memory/orochimaru.json",
-    "memory_total": 53,
+    "memory_total": 54,
     "name": "Орочимару",
-    "seen": "s15.text.046",
+    "seen": "s15.text.047",
     "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена.",
     "status": "present_profile",
     "tier": "deep"
@@ -1145,19 +1057,19 @@
  },
  "recent_turns": [
   {
-   "id": "s15.text.045",
-   "line": "Шики не раскрыл пределы сендзюцу. Орочимару перестал расспрашивать, остановил Кабуто. Кабуто открыл футляр, отступил; пробирки герметичны."
-  },
-  {
    "id": "s15.text.046",
    "line": "По добровольной заявке Шики Кабуто испытал сильнейший из предоставленных обычных биологических ядов; Пустой клык обеспечил невосприимчивость. Орочимару прекратил опыт и признал зависть."
+  },
+  {
+   "id": "s15.text.047",
+   "line": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтвердил намерение соблюдать её добровольность."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Шики в кабинете, Орочимару встал из-за стола, Кабуто рядом с образцами.",
   "pressure": "Кабуто предложил встречу с Орочимару, показывает предполагаемую старую ориентировку.",
-  "situation": "Добровольное испытание обычным биологическим ядом из предоставленных образцов завершено после наблюдения. Пассивный Пустой клык действует, новых повреждений Шики нет. Кабуто не наблюдает признаков отравления. Орочимару прекратил опыт и прямо выразил зависть."
+  "situation": "Испытание иммунитета закончено. Шики спросил о Сирамэ. Кабуто сообщил об её уходе из убежища и предположил возвращение в западные гнёзда; точное местонахождение не подтверждено. Орочимару признал ограничение соглашения."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1176,9 +1088,9 @@
    "player": "Пойдем вместе #протягиваю ей руку# забирайся",
    "source": "archive/session-015-turns.jsonl"
   },
-  "s15.text.046": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:52</text>\n\n### Кабинет Орочимару\n\n**Мугами Шики:** — Да ладно Кабуто, возьми самый сильный и отрави меня как врага.\n\nКабуто посмотрел на Орочимару. Саннин утвердительно кивнул.\n\n**Кабуто Якуши:** — Как пожелаете.\n\nОн выбрал одну из пробирок.\n\nИспытание состоялось. Однако яд, который должен был вызвать тяжёлое нарушение жизненных функций, не оказал на организм Шики заметного действия.\n\nПрошло несколько минут.\n\nЗатем десять.\n\nКабуто дважды проверил маркировку образца.\n\n**Кабуто Якуши:** — Н…",
-   "player": "Да ладно Кабуто, возьми самый сильный и отрави меня как врага",
+  "s15.text.047": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 14:05</text>\n\n### Кабинет Орочимару\n\n**Мугами Шики:** — Хах. Где Сирамэ?\n\n**Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась вернуться в западные гнёзда.\n\n**Орочимару:** — И теперь, согласно нашему соглашению, мне следует дождаться, пока она сама пожелает вернуться.\n\nСаннин усмехнулся.\n\n**Орочимару:** — Придётся привыкать.\n\n**Ход Шики.**",
+   "player": "Хах. Где #черт вылетело имя змеи с которой пришел, напиши за мпня#",
    "source": "archive/session-015-turns.jsonl"
   }
  },
@@ -1187,8 +1099,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "c522ed0591bb9a93be595b37989d031e90b40d1b",
-  "turn": "s15.text.046"
+  "sha": "d99b5eacfdf352835ccee61dc6c2b04a051d606a",
+  "turn": "s15.text.047"
  },
  "wiki": {
   "index": "memory/INDEX.md",

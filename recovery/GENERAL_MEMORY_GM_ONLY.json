@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.046",
+  "cursor": "s15.text.047",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 104,
+      "mention_count": 105,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T13:30:00",
-          "excerpt": "ей Рьючидо к исследовательским и разведывательным поручениям. Отказ не должен иметь для них последствий. **Кабуто Якуши:** — Даже если от выполнения поручения зависит безопасность убежища? **Орочимару:** — Найдёшь другой способ. Кабуто посмотрел на Шики. **Каб",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.025"
         },
         {
           "at": "0010-04-21T13:51:00",
@@ -1694,11 +1687,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.046"
+        },
+        {
+          "at": "0010-04-21T14:05:30",
+          "excerpt": "еда, 21 апреля 1287 года · 14:05</text> ### Кабинет Орочимару **Мугами Шики:** — Хах. Где Сирамэ? **Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась вернуться в западные гнёзда. **Орочимару:** — И те",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.047"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.046",
+          "seen": "s15.text.047",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -1708,7 +1708,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s15.text.046"
+        "s15.text.047"
       ]
     },
     "kabuto_letter_0416": {
@@ -4237,7 +4237,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 151,
+      "mention_count": 152,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4245,13 +4245,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:51:00",
-          "excerpt": "е выяснить? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:51</text> ### Кабинет Орочимару **Мугами Шики:** — Невосприимчивость, ну и раз уж заговорили я могу создать как минимум два яда как техники, а остальное сендзюцу завязано на моей спе",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.044"
         },
         {
           "at": "0010-04-21T13:51:20",
@@ -4266,11 +4259,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.046"
+        },
+        {
+          "at": "0010-04-21T14:05:30",
+          "excerpt": "ши за мпня# <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 14:05</text> ### Кабинет Орочимару **Мугами Шики:** — Хах. Где Сирамэ? **Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась ве",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.047"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.046",
+          "seen": "s15.text.047",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4280,7 +4280,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.046"
+        "s15.text.047"
       ]
     },
     "orochimaru_poison_samples_s15": {
@@ -13987,7 +13987,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.046",
+        "s15.text.047",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -14009,7 +14009,8 @@
         "s15.text.042",
         "s15.text.043",
         "s15.text.044",
-        "s15.text.045"
+        "s15.text.045",
+        "s15.text.046"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17111,7 +17112,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 70,
+      "mention_count": 71,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17119,13 +17120,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:23:00",
-          "excerpt": "ается последствий. Он поставил футляр на стол. **Орочимару:** — Полагаю, в твоём случае справедливо второе. Сирамэ спустилась с плеча Шики на край стола. **Сирамэ:** — Прежде чем вы продолжите, я хочу кое-что узнать. Она повернулась к Орочимару. **Сирамэ:** — ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.019"
         },
         {
           "at": "0010-04-21T13:25:00",
@@ -17140,6 +17134,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.023"
+        },
+        {
+          "at": "0010-04-21T14:05:30",
+          "excerpt": "ze=\"xs\">Среда, 21 апреля 1287 года · 14:05</text> ### Кабинет Орочимару **Мугами Шики:** — Хах. Где Сирамэ? **Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась вернуться в западные гнёзда. **Орочимару",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.047"
         }
       ],
       "projections": [
@@ -18838,5 +18839,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1220
+  "source_turns_indexed": 1221
 }
