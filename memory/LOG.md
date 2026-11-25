@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.074: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Акихиро (`npc/akihiro`), вещь `aki_home_address_s15`
 - s15.text.073: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`), вещь `aki_home_address_s15`
 - s15.text.072: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`), поправки игрока: 1
 - s15.text.071: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`)
@@ -61,4 +62,3 @@
 - s15.text.017: Сирамэ (`npc/shirame`), Орочимару (`npc/orochimaru`)
 - s15.text.016: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`)
 - s15.text.015: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), бой
-- s15.text.014: Орочимару (`npc/orochimaru`)
