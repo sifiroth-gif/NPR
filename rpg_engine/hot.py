@@ -233,15 +233,19 @@ def validate_turn(turn):
             raise TurnError("d.shiki.chakra: используй d.chakra.set/spend")
         if not isinstance(chakra, dict):
             raise TurnError("d.shiki.chakra: ожидается объект")
+        # s09.text.013/.020/.022/.024/.025/.026/.034 explicitly recorded
+        # a historical 120 reserve. Validate against that declared maximum,
+        # not today's 100; do not rewrite the archived source.
+        maximum = chakra.get("max", fight.MAX_CHAKRA)
+        if type(maximum) not in (int, float) or not math.isfinite(maximum) or maximum <= 0:
+            raise TurnError("d.shiki.chakra.max: неверный исторический максимум")
         if "value" in chakra:
             value = chakra["value"]
-            if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= fight.MAX_CHAKRA:
+            if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= maximum:
                 raise TurnError("d.shiki.chakra.value: некорректный запас")
         for field in ("at", "locked_until"):
             if field in chakra and chakra[field] is not None:
                 parse_at(chakra[field])
-        if "max" in chakra and chakra["max"] != fight.MAX_CHAKRA:
-            raise TurnError("d.shiki.chakra.max: неверный максимум")
     for actor, patch in (delta.get("cast") or {}).items():
         if patch is None:
             continue

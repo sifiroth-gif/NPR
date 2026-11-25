@@ -60,6 +60,16 @@ class DeltaAdmissionRegressionTest(unittest.TestCase):
                        "value": 44, "result": "clean", "mods": {"x": "1"}}]})
         self.assertIs(hot.validate_turn(incoming), incoming)
 
+    def test_historic_s09_chakra_maximum_is_not_rewritten(self):
+        incoming = turn(13, "0007-10-09T22:35:00", id="s09.text.013",
+                        d={"shiki": {"chakra": {"value": 120, "max": 120,
+                                               "at": "0007-10-09T22:35:00",
+                                               "state": "готов", "why": "год подготовки"}}})
+        self.assertIs(hot.validate_turn(incoming), incoming)
+        incoming["d"]["shiki"]["chakra"]["value"] = 121
+        with self.assertRaisesRegex(hot.TurnError, "d.shiki.chakra.value"):
+            hot.validate_turn(incoming)
+
     def test_structural_errors_before_fold(self):
         invalid = [
             {"rolls": {}}, {"rolls": [{"vs": []}]},
