@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.026: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.025: Портовый чиновник (`npc/fire_port_official`)
 - s14.text.024: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.023: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_medical_kit`, поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.069: Немера (Невыписанная) (`npc/nemera`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `shiki_upper_clothing`, план сюжета, бой
 - s13.text.068: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), вещь `root_seal_needle`, вещь `shiki_upper_clothing`, план сюжета, бой
 - s13.text.067: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`), план сюжета
-- s13.text.066: поправки игрока: 1
