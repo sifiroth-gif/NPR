@@ -58,6 +58,26 @@ class LagProjectionTest(unittest.TestCase):
         self.assertEqual(result["lag_status"]["status"], "uncertain")
         self.assertNotIn("dice", result)
 
+    def test_ahead_turn_file_requires_matching_receipt_sha(self):
+        pack = self.packet(base())
+        pack["lag"]["recorded_turn"] = "s04.text.045"
+        pack["turn_file"] = "remote-amend"
+        t = turn(45, "0006-10-01T07:14:00", review={"predecessor": pack["cursor"]})
+        result = overlay.project(pack, [{"turn": t, "sha": "local-old"}])
+        self.assertFalse(result["lag_status"]["write_allowed"])
+        self.assertNotIn("turn_file", result)
+        self.assertNotIn("next_id", result)
+        result = overlay.project(pack, [{"turn": t, "sha": "remote-amend"}])
+        self.assertTrue(result["lag_status"]["write_allowed"])
+
+    def test_blocked_packet_cannot_supply_stale_resource_or_sha(self):
+        pack = self.packet(base())
+        pack["fold_errors"] = ["gap"]
+        result = overlay.project(pack, [])
+        self.assertFalse(result["lag_status"]["write_allowed"])
+        for key in ("dice", "chakra", "must", "turn_file"):
+            self.assertNotIn(key, result)
+
     def test_cas_never_overwrites_concurrent_edit(self):
         t = turn(45, "0006-10-01T07:14:00")
         raw = json.dumps(t).encode()

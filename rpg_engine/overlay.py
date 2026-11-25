@@ -45,7 +45,9 @@ def project(packet, records):
     """
     result = copy.deepcopy(packet)
     if packet.get("fold_errors") or packet.get("state_errors"):
-        result["lag_status"] = {"status": "blocked", "reason": "fold/state errors"}
+        for field in ("dice", "chakra", "must", "must_ids", "turn_file"):
+            result.pop(field, None)
+        result["lag_status"] = {"status": "blocked", "write_allowed": False, "reason": "fold/state errors"}
         return result
     anchor = packet.get("lag") or {}
     base = packet.get("cursor")
@@ -62,6 +64,8 @@ def project(packet, records):
         ledger = {"shiki": {}}
     pending = []
     receipts = set()
+    declared_present = None
+    inventory_changes = []
     errors = []
     for rec in records:
         if not isinstance(rec, dict) or not isinstance(rec.get("turn"), dict) or not isinstance(rec.get("sha"), str) or not rec["sha"]:
@@ -105,8 +109,9 @@ def project(packet, records):
             result["header"] = " ".join(hot.heading(at).values())
             scene = delta.get("scene") or {}
             if "present" in scene:
-                result["present"] = {key: {"name": ((result.get("present") or {}).get(key) or {}).get("name", key)}
-                                     for key in scene["present"] if key != "shiki"}
+                declared_present = {"turn": turn["id"], "ids": list(scene["present"])}
+        if delta.get("things"):
+            inventory_changes.append({"turn": turn["id"], "things": copy.deepcopy(delta["things"])})
         if at:
             fight._regen(ledger, turn["at"])
             bursts = (delta.get("fight") or {}).get("bursts", 0)
@@ -116,8 +121,10 @@ def project(packet, records):
     # A known stale packet never advertises its old dice/resources as current.
     if not pending and not errors and anchor.get("recorded_turn", base) == base:
         return result
-    if anchor.get("recorded_turn") not in (None, base, cursor) and not pending:
-        errors.append("TURN ahead of NEXT; exact receipt unavailable")
+    if "recorded_turn" in anchor and anchor["recorded_turn"] != base:
+        match = next((rec for rec in pending if rec["turn"]["id"] == anchor["recorded_turn"]), None)
+        if not match or match["sha"] != packet.get("turn_file"):
+            errors.append("TURN ahead of NEXT; exact matching receipt unavailable")
     result.pop("dice", None)
     result.pop("chakra", None)
     for key in ("fight", "due", "checks", "prose", "echo", "recall", "must", "must_ids", "fences", "source_review"):
@@ -126,7 +133,7 @@ def project(packet, records):
     # are stale until the fold's knowledge and presence calculations complete.
     result.pop("present", None)
     result["lag_status"] = {
-        "status": "uncertain" if errors else "projected",
+        "status": "uncertain" if errors else "projected", "write_allowed": not errors,
         "base": base, "cursor": cursor,
         "unresolved_must": [{"id": ident, "text": text} for ident, text in
                             zip(packet.get("must_ids") or obligation_ids(base, packet.get("must") or []),
@@ -135,7 +142,13 @@ def project(packet, records):
         "errors": errors,
     }
     if errors:
+        result.pop("turn_file", None)
+        result.pop("next_id", None)
         return result
+    if declared_present is not None:
+        result["lag_status"]["last_declared_present"] = declared_present
+    if inventory_changes:
+        result["lag_status"]["inventory_transitions"] = inventory_changes
     result["cursor"] = cursor
     s, q = hot.turn_number(cursor)
     result["next_id"] = f"s{s:02d}.text.{q+1:03d}"
