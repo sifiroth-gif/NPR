@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.042: Орочимару (`npc/orochimaru`)
 - s15.text.041: Саске Учиха (`npc/sasuke`), поправки игрока: 1
 - s15.text.040: Саске Учиха (`npc/sasuke`), бой
 - s15.text.039: Саске Учиха (`npc/sasuke`), бой
@@ -58,4 +59,3 @@
 - s14.text.053: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), поправки игрока: 1
 - s14.text.052: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), план сюжета, поправки игрока: 1
 - s14.text.051: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
-- s14.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
