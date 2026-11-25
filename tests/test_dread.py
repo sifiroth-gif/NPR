@@ -111,3 +111,31 @@ class MotifTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class IndividualReactionTest(unittest.TestCase):
+    def test_repeated_observation_does_not_raise_dread(self):
+        h = fresh()
+        at = "0006-10-01T07:00:00"
+        dread.apply(h, "nori", {"saw": "видела рубец", "reads": "знакомая техника", "stage": 0}, "t1", at)
+        for i in range(2, 8):
+            dread.apply(h, "nori", {"saw": "видела рубец", "reads": "знакомая техника"}, f"t{i}", at)
+        self.assertEqual(h["_psyche"]["nori"]["dread"]["stage"], 0)
+        dread.apply(h, "nori", {"saw": "новый документ", "reads": "проверю", "stage": 0}, "t8", at)
+        self.assertEqual(h["_psyche"]["nori"]["dread"]["stage"], 0)
+
+    def test_neutral_first_hold_and_different_actor_trajectory(self):
+        h = fresh()
+        at = "0006-10-01T07:00:00"
+        dread.apply(h, "nori", {"saw": "вошёл", "hold": True, "reads": "обычный врач"}, "t1", at)
+        dread.apply(h, "tetsu", {"saw": "увидел старый шов", "reads": "не понимаю", "stage": 2}, "t1", at)
+        self.assertEqual(h["_psyche"]["nori"]["dread"]["stage"], 0)
+        self.assertEqual(h["_psyche"]["tetsu"]["dread"]["stage"], 2)
+        self.assertIn("hold/down", dread.brief(h, ["nori"])["npcs"]["nori"]["next"])
+
+    def test_absent_reaction_does_not_satisfy_present_obligation(self):
+        h = fresh()
+        for i in range(1, 4):
+            dread.after_turn(h, {"id": f"t{i}", "gm": "Тихо."},
+                             {"elsewhere": {"dread": {"saw": "письмо", "reads": "опасно"}}}, {})
+        self.assertIn("due", h["_horror"])
+        self.assertEqual(h["_horror"]["due"]["npcs"], ["nori", "tetsu"])

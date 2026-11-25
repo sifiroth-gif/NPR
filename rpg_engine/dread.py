@@ -74,7 +74,7 @@ def apply(hot, key, patch, turn_id, at):
     profile = _profile(hot, key)
     state = profile.get("dread")
     if state is None:
-        stage = patch.get("stage", 1)
+        stage = patch.get("stage", 0 if patch.get("hold") else 1)
         try:
             stage = max(0, min(TOP, int(stage)))
         except (TypeError, ValueError):
@@ -86,7 +86,8 @@ def apply(hot, key, patch, turn_id, at):
         old = int(state.get("stage", 0))
         if patch.get("down"):
             stage, change = max(0, old - 1), "ослаб"
-        elif patch.get("hold"):
+        elif (patch.get("hold") or patch.get("stage") == old
+              or (_short(patch["saw"], 200) == (state.get("log") or [{}])[-1].get("saw"))):
             stage, change = old, "подтвердилось"
         else:
             if "stage" in patch and patch["stage"] != old + 1 and patch["stage"] != old:
@@ -134,7 +135,7 @@ def after_turn(hot, turn, inner, delta):
     skip = set(turn.get("_always") or ())
     present = [k for k in ((hot.get("scene") or {}).get("present") or [])
                if k != "shiki" and k in cast and k not in skip]
-    fed = any(valid((inner.get(k) or {}).get("dread")) for k in inner)
+    fed = any(valid((inner.get(k) or {}).get("dread")) for k in present)
     # Реакция каждого присутствующего на Шики: первая — в ту же встречу, дальше —
     # при новом увиденном. Общая заметка d.horror её не заменяет: с s08.058 ведущий
     # закрывал счётчик фразой «реакций обычных людей нет», пока рядом были люди.
@@ -257,12 +258,12 @@ def brief(hot, present):
         npcs[key] = {"stage": stage, "step": LADDER[stage][0],
                      "reads": dread.get("reads", ""), "does": dread.get("does", ""),
                      "lever": _short(lever, 200),
-                     "next": LADDER[min(TOP, stage + 1)][1] if stage < TOP else
-                     "Решение принято; покажи его последствия и ответ мира, не повторяй страх."}
+                     "next": ("Новый факт — возможный сдвиг; иначе hold/down. " + LADDER[min(TOP, stage + 1)][1])
+                     if stage < TOP else "Решение принято; последствия, hold/down, не повторяй страх."}
     return {
         "rule": "Ужас создают чужие решения и необратимые последствия, а не облик Шики. "
                 "Внешность — одна деталь при первой встрече или при перемене; телом — не больше одного штриха. "
-                "Каждый NPC боится своего: смотри lever.",
+                "Реакция из знания и мотива; страх не обязателен. Смотри lever.",
         "npcs": npcs,
         "quiet": state.get("quiet", 0),
         "due": state.get("due"),
