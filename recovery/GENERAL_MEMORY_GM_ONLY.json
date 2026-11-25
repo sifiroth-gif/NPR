@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.012",
+  "cursor": "s15.text.013",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,38 +406,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.012:0": {
-      "aliases": [
-        "canon:s15.text.012:0",
-        "Прямая поправка игрока s15.text.012: к 21.04.1287 тело Орочимару уже изнашивается и он болен; постоянная сенсорика Шики различает ухудшение чакропотоков относительно моста Тэнти. Н"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.012:0",
-      "kind": "canon",
-      "label": "Прямая поправка игрока s15.text.012: к 21.04.1287 тело Орочимару уже изнашивается и он болен; постоянная сенсорика Шики различает ухудшение чакропотоков относительно моста Тэнти. Н",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.012"
-      ]
-    },
-    "canon:s15.text.012:1": {
-      "aliases": [
-        "canon:s15.text.012:1",
-        "s15.text.012: Шики сообщил Кабуто и Орочимару о слиянии с Немерой и пережитом разрушении тюрьмы. Прочитанные папки Палаты VII отделяют происхождение существа от его помещения в гос"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.012:1",
-      "kind": "canon",
-      "label": "s15.text.012: Шики сообщил Кабуто и Орочимару о слиянии с Немерой и пережитом разрушении тюрьмы. Прочитанные папки Палаты VII отделяют происхождение существа от его помещения в гос",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.012"
       ]
     },
     "captive_guard": {
@@ -1735,8 +1703,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s15.text.012"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -4265,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 128,
+      "mention_count": 129,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4273,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:05:00",
-          "excerpt": "ребовалось ничего пересказывать. *** <text color=\"secondary\" size=\"xs\">13:05</text> ### Подземное убежище Орочимару За скалистой грядой обнаружился проход в горную породу. Кабуто отворил скрытую каменную дверь. Внутри пахло лекарственными растворами, воском и ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.010"
         },
         {
           "at": "0010-04-21T13:06:00",
@@ -4294,21 +4254,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.012"
+        },
+        {
+          "at": "0010-04-21T13:08:00",
+          "excerpt": "? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:08</text> ### Подземное убежище Орочимару Не отвлекаясь от чтения, Шики ответил: **Мугами Шики:** — Ага. Вам пора менять тело. Что там Саскэ? Орочимару тихо рассмеялся. Смех перешёл в короткий",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.013"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.012",
-          "state": "Текущее тело прогрессирующе изнашивается, болезнь уже проявляется; сохраняет дееспособность."
+          "seen": "s15.text.013",
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
-          "state": "Текущее тело прогрессирующе изнашивается, болезнь уже проявляется; сохраняет дееспособность."
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.012"
+        "s15.text.013"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13962,9 +13929,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.012",
+        "s15.text.013",
         "s15.text.010",
-        "s15.text.011"
+        "s15.text.011",
+        "s15.text.012"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17044,7 +17012,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 61,
+      "mention_count": 62,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17052,13 +17020,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:05:00",
-          "excerpt": "Человек поспешил исполнить поручение. Уже за поворотом послышался звук брошенного на засов металлического затвора. Сирамэ тихо зашипела. **Сирамэ:** — Я останусь с тобой. Мне не нравится это место. Кабуто открыл последнюю дверь. В просторном помещении горели д",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.010"
         },
         {
           "at": "0010-04-21T13:06:00",
@@ -17073,12 +17034,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.012"
+        },
+        {
+          "at": "0010-04-21T13:08:00",
+          "excerpt": "днажды начнёт умирать. Он подался вперёд. **Орочимару:** — Скажи, Шики-кун, ты сам ещё способен умереть от старости? Сирамэ медленно подняла голову с плеча Шики. **Ход Шики.** Шики указал на необходимость смены тела и спросил о Саске. Орочимару принял лекарств",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.013"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.012",
+          "seen": "s15.text.013",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -18763,5 +18731,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1186
+  "source_turns_indexed": 1187
 }

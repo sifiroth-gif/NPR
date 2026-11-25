@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.013: Орочимару (`npc/orochimaru`)
 - s15.text.012: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), поправки игрока: 2
 - s15.text.011: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`)
 - s15.text.010: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), вещь `kabuto_orientation_1278`
@@ -58,4 +59,3 @@
 - s14.text.024: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.023: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_medical_kit`, поправки игрока: 1
 - s14.text.022: Портовый чиновник (`npc/fire_port_official`), Сэйдзи Минасэ (`npc/quay_masked_hunter`)
-- s14.text.021: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Портовый чиновник (`npc/fire_port_official`), Немера (Невыписанная) (`npc/nemera`)
