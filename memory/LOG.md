@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.054: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
 - s15.text.053: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), вещь `kusa_family_visit_permit_s15`
 - s15.text.052: Глава Кусагакуре (`npc/kusa_head`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `kusa_family_visit_permit_s15`
 - s15.text.051: Глава Кусагакуре (`npc/kusa_head`)
@@ -59,4 +60,3 @@
 - s14.text.065: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`
 - s14.text.064: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`, поправки игрока: 1
 - s14.text.063: Сирамэ (`npc/shirame`), вещь `kabuto_letter_0416`, вещь `ward_vii_fragment_0416`, линия `shiki_promise_nemera`
-- s14.text.062: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), вещь `kabuto_letter_0416`, линия `shiki_promise_nemera`

@@ -1,4 +1,4 @@
-# Кирисава Сэйна · всё, что знает (28)
+# Кирисава Сэйна · всё, что знает (29)
 
 Только то, что персонаж видел, слышал или получил по каналу. Источник — ход.
 
@@ -30,3 +30,4 @@
 - 07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; no chakra was visibly activated and no new technical permissions given. [s08.text.034]
 - Шики уходит домой для восстановления; сам сообщил семье о возможном вечернем визите. [s08.text.047]
 - Лично встретила Шики 21.04.1287 в клинике после многолетней разлуки; увидела его лицо под капюшоном, узнала. Новые свойства тела пока не объяснены. [s15.text.053]
+- Услышала заявление Шики о безопасности касания, видела безопасный контакт Нао. Посыльный главы сообщил о самостоятельном разрушении свитка Семи Запоров 12 апреля около 11:00 без следов вскрытия. [s15.text.054]
