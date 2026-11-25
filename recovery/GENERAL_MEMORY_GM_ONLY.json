@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.004",
+  "cursor": "s14.text.005",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -408,6 +408,38 @@
         "s09.text.067"
       ]
     },
+    "canon:s14.text.005:0": {
+      "aliases": [
+        "canon:s14.text.005:0",
+        "Постоянная поправка игрока: во всех боевых сценах наглядно раскрывать скорость движений, последовательности печатей (для канонических техник проверять источники, для авторских собл"
+      ],
+      "facts": [],
+      "id": "canon:s14.text.005:0",
+      "kind": "canon",
+      "label": "Постоянная поправка игрока: во всех боевых сценах наглядно раскрывать скорость движений, последовательности печатей (для канонических техник проверять источники, для авторских собл",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s14.text.005"
+      ]
+    },
+    "canon:s14.text.005:1": {
+      "aliases": [
+        "canon:s14.text.005:1",
+        "Водный дракон: последовательность 44 канонических печатей показана в s14.text.005; источник Narutopedia, Water Release: Water Dragon Bullet Technique, со ссылкой на Rin no Sho, с. "
+      ],
+      "facts": [],
+      "id": "canon:s14.text.005:1",
+      "kind": "canon",
+      "label": "Водный дракон: последовательность 44 канонических печатей показана в s14.text.005; источник Narutopedia, Water Release: Water Dragon Bullet Technique, со ссылкой на Rin no Sho, с. ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s14.text.005"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -772,27 +804,6 @@
       ],
       "sources": [
         "recovery/cast/endo_hajime.json"
-      ]
-    },
-    "event:s14.text.004:shiton": {
-      "aliases": [
-        "event:s14.text.004:shiton",
-        "cast_B"
-      ],
-      "facts": [],
-      "id": "event:s14.text.004:shiton",
-      "kind": "event",
-      "label": "cast_B",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "at": "0010-04-11T17:24:01",
-          "kind": "cast_B"
-        }
-      ],
-      "sources": [
-        "s14.text.004"
       ]
     },
     "fire_port_official": {
@@ -3155,7 +3166,7 @@
       "id": "masked_man",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -3163,13 +3174,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0006-10-01T21:36:26",
-          "excerpt": "мирания. Мужчина смотрел на Шики широко раскрытыми глазами. Его пальцы пытались найти опору на предплечье, обхватившем шею. **Человек в маске:** — Кх... ты... Он не закончил. На следующем выдохе кашель стал влажным. Старший маскированный увидел происходящее. Е",
-          "source": "archive/session-005-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s05.text.008"
         },
         {
           "at": "0010-04-11T17:24:00",
@@ -3184,6 +3188,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.001"
+        },
+        {
+          "at": "0010-04-11T17:24:02",
+          "excerpt": "аз, потом ещё раз — и Шики уже оказался справа от маскированного, выстроив его и третьего в одну линию. Человек в маске дёрнул головой слишком поздно. У причальной лестницы третий это понял не сразу. Сначала он увидел, что цель больше не там, где должна была б",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.005"
         }
       ],
       "projections": [
@@ -4037,7 +4048,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.004",
+          "seen": "s14.text.005",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -4054,7 +4065,7 @@
       "sources": [
         "recovery/cast/nemera.json",
         "recovery/HOT.json",
-        "s14.text.004"
+        "s14.text.005"
       ]
     },
     "nemera_document": {
@@ -13475,9 +13486,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.004",
+        "s14.text.005",
         "s13.text.099",
-        "s14.text.001"
+        "s14.text.001",
+        "s14.text.004"
       ]
     },
     "place:dc6542345d23e554": {
@@ -15218,19 +15230,19 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.004",
-          "state": "На колене, тяжёлый лёгочный некроз, цилиндр в руках.",
+          "seen": "s14.text.005",
+          "state": "В сознании, тяжёлое поражение лёгких, усилившийся кашель, цилиндр прижат к груди.",
           "wants": "Обездвижить Шики для захвата."
         },
         {
-          "state": "На колене, тяжёлый лёгочный некроз, цилиндр в руках.",
+          "state": "В сознании, тяжёлое поражение лёгких, усилившийся кашель, цилиндр прижат к груди.",
           "wants": "Обездвижить Шики для захвата."
         }
       ],
       "sources": [
         "recovery/cast/quay_cloaked_hunter.json",
         "recovery/HOT.json",
-        "s14.text.004"
+        "s14.text.005"
       ]
     },
     "quay_masked_hunter": {
@@ -15243,7 +15255,7 @@
       "id": "quay_masked_hunter",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -15251,13 +15263,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0006-10-01T21:36:26",
-          "excerpt": "мирания. Мужчина смотрел на Шики широко раскрытыми глазами. Его пальцы пытались найти опору на предплечье, обхватившем шею. **Человек в маске:** — Кх... ты... Он не закончил. На следующем выдохе кашель стал влажным. Старший маскированный увидел происходящее. Е",
-          "source": "archive/session-005-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s05.text.008"
         },
         {
           "at": "0010-04-11T17:24:00",
@@ -15272,11 +15277,18 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.001"
+        },
+        {
+          "at": "0010-04-11T17:24:02",
+          "excerpt": "аз, потом ещё раз — и Шики уже оказался справа от маскированного, выстроив его и третьего в одну линию. Человек в маске дёрнул головой слишком поздно. У причальной лестницы третий это понял не сразу. Сначала он увидел, что цель больше не там, где должна была б",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.005"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.004",
+          "seen": "s14.text.005",
           "wants": "Взять Шики живым по K-0418."
         },
         {
@@ -15286,7 +15298,7 @@
       "sources": [
         "recovery/cast/quay_masked_hunter.json",
         "recovery/HOT.json",
-        "s14.text.004"
+        "s14.text.005"
       ]
     },
     "quay_wire_operator": {
@@ -15303,7 +15315,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s14.text.004",
+          "seen": "s14.text.005",
           "wants": "Перекрыть путь сетью."
         },
         {
@@ -15313,7 +15325,7 @@
       "sources": [
         "recovery/cast/quay_wire_operator.json",
         "recovery/HOT.json",
-        "s14.text.004"
+        "s14.text.005"
       ]
     },
     "razvedchik_zvuka": {
@@ -18246,5 +18258,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1120
+  "source_turns_indexed": 1121
 }
