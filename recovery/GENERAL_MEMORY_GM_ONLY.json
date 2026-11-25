@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.003",
+  "cursor": "s15.text.004",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -7499,8 +7499,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.003",
-        "s15.text.002"
+        "s15.text.004",
+        "s15.text.002",
+        "s15.text.003"
       ]
     },
     "place:4c3c99a9c6c19173": {
@@ -16907,7 +16908,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 52,
+      "mention_count": 53,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16915,13 +16916,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-16T11:44:00",
-          "excerpt": "Да я пойду ... Коюки, а тебя попрошу не идти. Мастеру: какого размера Сирамэ? **Мастеру:** Сирамэ — взрослая белая змея, заметно крупнее Коюки, но гораздо меньше Хагуро и Сиранами. Точные размеры прежде не устанавливались. Фиксирую длину около 2,5 ме",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.064"
         },
         {
           "at": "0010-04-16T11:52:00",
@@ -16936,19 +16930,33 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.002"
+        },
+        {
+          "at": "0010-04-20T16:05:00",
+          "excerpt": "ёрной крови упала на камень. **Кучиёсэ но Дзюцу.** Белый дым заполнил часть коридора. Из него выползла Сирамэ, приподняв над полом голову. Свет лампы отразился в её бледных глазах. **Сирамэ:** — Отшельник. Хорошо, что ты меня позвал. Я собиралась прийти сама. ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.004"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s14.text.065",
-          "state": "Согласилась не сопровождать Шики, но самостоятельно намерена найти Кабуто. Ушла с Коюки через нижние пещеры.",
+          "seen": "s15.text.004",
+          "state": "В убежище после добровольного ответа на призыв; передала результаты разговора.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
+          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
+        },
+        {
+          "fears": "Удержание людьми или насильственное исследование Немерой",
+          "state": "В убежище после добровольного ответа на призыв; передала результаты разговора.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json"
+        "recovery/cast/shirame.json",
+        "recovery/HOT.json",
+        "s15.text.004"
       ]
     },
     "shiranami": {
@@ -17819,11 +17827,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Шики намерен идти на встречу с Кабуто 21.04 самостоятельно; Сирамэ согласилась не сопровождать, но сохраняет собственный поиск встречи с Кабуто. Коюки ушла с Сирамэ."
+          "state": "Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и обещал остальное рассказать лично."
         }
       ],
       "sources": [
-        "s14.text.065"
+        "s15.text.004"
       ]
     },
     "thread:shiki_save_asuma": {
@@ -18181,7 +18189,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18189,13 +18197,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-16T11:44:00",
-          "excerpt": "Да я пойду ... Коюки, а тебя попрошу не идти. Мастеру: какого размера Сирамэ? **Мастеру:** Сирамэ — взрослая белая змея, заметно крупнее Коюки, но гораздо меньше Хагуро и Сиранами. Точные размеры",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.064"
         },
         {
           "at": "0010-04-16T11:52:00",
@@ -18210,6 +18211,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.002"
+        },
+        {
+          "at": "0010-04-20T16:05:00",
+          "excerpt": "Остальное обещал рассказать лично. Она на несколько мгновений замолчала. **Сирамэ:** — Я также спросила его о Коюки. Он признал, что послал её туда, не зная до конца свойств печати. Даже извиняться не стал. Больше она его поручений выполнять не будет. Сирамэ п",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.004"
         }
       ],
       "projections": [
@@ -18613,5 +18621,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1177
+  "source_turns_indexed": 1178
 }
