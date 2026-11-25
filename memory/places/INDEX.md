@@ -34,10 +34,10 @@
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 11 ход(ов), s14–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 10 ход(ов), s08–s15
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 10 ход(ов), s05–s15
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 10 ход(ов), s10–s14
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 9 ход(ов), s08–s15
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
