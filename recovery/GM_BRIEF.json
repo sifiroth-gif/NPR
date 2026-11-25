@@ -96,18 +96,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s14.text.002"
-  },
-  {
-   "kind": "new_character",
-   "text": "В сцене говорит «вне боя» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
-   "turn": "s14.text.002"
+   "turn": "s14.text.003"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s14.text.002",
+  "cursor": "s14.text.003",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -326,11 +321,11 @@
  "cursor": {
   "at": "0010-04-11T17:24:00",
   "date": "Воскресенье, 11 апреля 1287 года",
-  "id": "s14.text.002",
+  "id": "s14.text.003",
   "place": "Страна Огня, восточная гавань, грузовой причал",
   "time": "17:24"
  },
- "digest": "a9e451db7fb8ef58215e718acbdfad76cca447e1a921c3493b858d3c831aa2d2",
+ "digest": "2115564ff8eb33c112cc37072d6fa0b68f3fd1c28d3dbc66f95efc1ca3854115",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -531,18 +526,18 @@
    "value": 100.0
   },
   "dice": [
-   13,
-   8,
-   17,
-   18,
-   3,
+   20,
    4,
-   16,
+   17,
+   20,
+   2,
+   20,
    18,
-   18,
-   15,
-   13,
-   8
+   6,
+   10,
+   5,
+   9,
+   18
   ],
   "injuries": {
    "root_field_jacket_man": [
@@ -1073,7 +1068,7 @@
     "memory_total": 383,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-    "seen": "s14.text.002",
+    "seen": "s14.text.003",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
     "status": "present_profile",
@@ -1108,7 +1103,7 @@
     "memory_file": "archive/npc-memory/quay_cloaked_hunter.json",
     "memory_total": 2,
     "name": "Человек в дорожном плаще",
-    "seen": "s14.text.002",
+    "seen": "s14.text.003",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Обездвижить Шики для захвата."
@@ -1155,7 +1150,7 @@
     "memory_file": "archive/npc-memory/quay_masked_hunter.json",
     "memory_total": 2,
     "name": "Человек в маске",
-    "seen": "s14.text.002",
+    "seen": "s14.text.003",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Взять Шики живым по K-0418."
@@ -1183,7 +1178,7 @@
     "memory_file": "archive/npc-memory/quay_wire_operator.json",
     "memory_total": 2,
     "name": "Человек у причальной лестницы",
-    "seen": "s14.text.002",
+    "seen": "s14.text.003",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Перекрыть путь сетью."
@@ -1212,8 +1207,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "64e35538c777e5a14865165d1e5a0ed6696d9117",
-  "turn": "s14.text.002"
+  "sha": "38e07c2ec5fd74c75e78cf5dd25e12d96586605e",
+  "turn": "s14.text.003"
  },
  "wiki": {
   "index": "memory/INDEX.md",
