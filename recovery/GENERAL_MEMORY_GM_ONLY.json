@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.004",
+  "cursor": "s15.text.005",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4211,7 +4211,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 121,
+      "mention_count": 122,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4219,13 +4219,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-16T11:40:00",
-          "excerpt": "илась в коридоре с небольшим запечатанным свёртком во рту. **Сирамэ:** — Вчера вечером одна из змей, служащих Орочимару, искала тебя. Я забрала послание. Ей незачем знать, где ты живёшь. Она положила свёрток на стол. **Сирамэ:** — Кабуто Якуши. Он всё ещё дума",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.062"
         },
         {
           "at": "0010-04-16T11:43:00",
@@ -4240,6 +4233,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.001"
+        },
+        {
+          "at": "0010-04-20T16:06:00",
+          "excerpt": "тника. **Сирамэ:** — Только не отсылай меня, когда мы встретим Кабуто. Я хочу услышать его рассказ. И если Орочимару вздумает распорядиться мною, как прежде, отвечать ему буду сама. У выхода из убежища их встретил тёплый весенний воздух. Солнечный свет проника",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.005"
         }
       ],
       "projections": [
@@ -6563,6 +6563,25 @@
         "s01.text.137"
       ]
     },
+    "place:3701a1c1ce81bb67": {
+      "aliases": [
+        "place:3701a1c1ce81bb67",
+        "Страна Рек, южные известняковые горы, выход из подземного убежища Шики",
+        "Страна Рек",
+        "южные известняковые горы",
+        "выход из подземного убежища Шики"
+      ],
+      "facts": [],
+      "id": "place:3701a1c1ce81bb67",
+      "kind": "place",
+      "label": "Страна Рек, южные известняковые горы, выход из подземного убежища Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.005"
+      ]
+    },
     "place:375f9f6400814653": {
       "aliases": [
         "place:375f9f6400814653",
@@ -7499,9 +7518,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.004",
         "s15.text.002",
-        "s15.text.003"
+        "s15.text.003",
+        "s15.text.004"
       ]
     },
     "place:4c3c99a9c6c19173": {
@@ -16908,7 +16927,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 53,
+      "mention_count": 54,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16916,13 +16935,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-16T11:52:00",
-          "excerpt": "Хорошо. Сирамэ коюки мне нужно потренироваться и нужно уйти дальше. И я прошу вас не идти со мной, это может быть опасно. Хорошо? <text color=\"secondary\" size=\"xs\">Пятница, 16 апреля 1287",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.065"
         },
         {
           "at": "0010-04-19T22:00:00",
@@ -16937,26 +16949,33 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.004"
+        },
+        {
+          "at": "0010-04-20T16:06:00",
+          "excerpt": "Убежище Шики **Мугами Шики:** — Пойдём вместе. Шики протянул ей руку. **Мугами Шики:** — Забирайся. Сирамэ приблизила морду к его раскрытой ладони. На мгновение задержалась у чёрных разветвлений, покрывавших пальцы, затем коснулась запястья прохладной чешуёй и",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.005"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.004",
-          "state": "В убежище после добровольного ответа на призыв; передала результаты разговора.",
+          "seen": "s15.text.005",
+          "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         },
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "state": "В убежище после добровольного ответа на призыв; передала результаты разговора.",
+          "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s15.text.004"
+        "s15.text.005"
       ]
     },
     "shiranami": {
@@ -18189,7 +18208,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18197,13 +18216,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-16T11:52:00",
-          "excerpt": "Хорошо. Сирамэ коюки мне нужно потренироваться и нужно уйти дальше. И я прошу вас не идти со мной, это может быть опасно. Хорошо? <text color=\"secondary\" size=\"xs\">Пятница, 16 апреля 1287 года ·",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.065"
         },
         {
           "at": "0010-04-19T22:00:00",
@@ -18218,6 +18230,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.004"
+        },
+        {
+          "at": "0010-04-20T16:06:00",
+          "excerpt": "ал сквозь молодую листву, ложился на белую чешую змеи и серебристые волосы отшельника. **Сирамэ:** — Знаешь, Коюки всё ещё говорит о Немере так, словно та просто куда-то ушла. Вчера спросила, можно ли призвать её обратно. Змея немного ослабила кольца на плечах",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.005"
         }
       ],
       "projections": [
@@ -18621,5 +18640,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1178
+  "source_turns_indexed": 1179
 }

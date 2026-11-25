@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.005: Сирамэ (`npc/shirame`)
 - s15.text.004: Сирамэ (`npc/shirame`), линия `shiki_promise_nemera`, план сюжета
 - s15.text.001: Портовый чиновник (`npc/fire_port_official`), Человек у причальной лестницы (`npc/quay_wire_operator`)
 - s14.text.068: поправки игрока: 1
