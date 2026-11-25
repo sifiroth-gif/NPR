@@ -1687,7 +1687,7 @@ def _canon_and_style(state_dir, hot, applied):
     from . import capabilities
     _count_chat(hot, applied)
     try:
-        extra["capabilities"] = capabilities.packet(engine_root, hot.get("campaign"))
+        extra["capabilities"] = capabilities.packet(engine_root, hot.get("campaign"), hot)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                               "text": f"capabilities: {type(exc).__name__}: {exc}"})

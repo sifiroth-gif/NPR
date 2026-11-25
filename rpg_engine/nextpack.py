@@ -322,14 +322,36 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         )
     if (extra or {}).get("capabilities"):
         pack["capabilities"] = extra["capabilities"]
+        # Conditions change independently of the last request. The source
+        # pointer stays available outside combat, including patient function.
+        scene = hot.get("scene") or {}
+        pack["scene_context"] = {"as_of": scene.get("as_of"), "source": "recovery/HOT.json#scene",
+                                 **{key: scene[key] for key in ("situation", "positions", "pressure")
+                                    if scene.get(key)}}
+        kit = (hot.get("things") or {}).get("shiki_medical_kit")
+        pack["state_sources"] = {
+            "injuries": "recovery/HOT.json#injuries",
+            "things": "recovery/HOT.json#things",
+            "research": "recovery/HOT.json#shiki",
+            "medical_kit": {key: kit[key] for key in ("holder", "state", "turn") if key in kit}
+                           if isinstance(kit, dict) else {"status": "unknown"},
+        }
     pack["source_priority"] = SOURCE_PRIORITY
     pack["rule"] = RULE
     _fit(pack)
     return pack
 
 
+def _body(pack):
+    # One line per top-level block: readable in GitHub, no indentation tax
+    # inside large nested lists. Use exactly the same byte budget as on disk.
+    return "{\n" + ",\n".join(json.dumps(k, ensure_ascii=False) + ": " +
+                               json.dumps(v, ensure_ascii=False, separators=(",", ":"))
+                               for k, v in pack.items()) + "\n}\n"
+
+
 def _size(pack):
-    return len(json.dumps(pack, ensure_ascii=False).encode("utf-8"))
+    return len(_body(pack).encode("utf-8"))
 
 
 def _cut(text, limit):
@@ -424,7 +446,7 @@ def _fit(pack):
 
 def _write(state_dir, pack):
     path = Path(state_dir) / PATH
-    body = json.dumps(pack, ensure_ascii=False, indent=1) + "\n"
+    body = _body(pack)
     if path.is_file() and path.read_text(encoding="utf-8") == body:
         return False
     path.parent.mkdir(parents=True, exist_ok=True)

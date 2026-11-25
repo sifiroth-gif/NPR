@@ -35,7 +35,7 @@ def validate(data, root):
         path = (root / value).resolve()
         return value.startswith("campaigns/shiki/") and path.is_relative_to(root) and path.is_file()
     for key, route in routes.items():
-        if not _strings(route.get("terms")) or not _strings(route.get("read")) or not route.get("focus"):
+        if not _strings(route.get("terms")) or not _strings(route.get("read")) or not _strings(route.get("required")) or not route.get("focus"):
             raise ValueError(f"invalid route {key}")
         if not all(source_ok(x) for x in route["read"]):
             raise ValueError(f"missing route source {key}")
@@ -85,23 +85,90 @@ def resolve(data, name):
     return matches[0] if len(matches) == 1 else None
 
 
-def for_request(data, player):
-    """Current request, never last turn; B2 will refine multi-domain selection."""
-    text = normalize(player)
-    routes = [key for key, row in (data.get("routes") or {}).items()
-              if any(normalize(term) in text for term in row.get("terms") or [])]
-    selected = [row for row in data.get("entries") or [] if set(row.get("tags") or []) & set(routes)]
-    return {"routes": routes, "entries": selected}
+CONTINUATION = re.compile(r"^(?:дальше(?: по игре)?|продолж(?:ай|аем|аю|ить)|"
+                          r"что дальше|и дальше|да|нет|угу|хорошо|так|понятно|"
+                          r"слушаю|жду|молчу|поехали|go on|continue)[.!? ]*$")
+WORD = re.compile(r"[\w]+", re.UNICODE)
 
 
-def packet(root, campaign):
+def _words(value):
+    return WORD.findall(normalize(value))
+
+
+def _matches(text_words, term, *, prefix=False):
+    """Token boundaries avoid 'меч' in 'замечаю' or 'рана' in 'охрана'."""
+    needle = _words(term)
+    if not needle:
+        return False
+    for i in range(len(text_words) - len(needle) + 1):
+        candidate = text_words[i:i + len(needle)]
+        if candidate[:-1] == needle[:-1] and (
+                candidate[-1] == needle[-1] or prefix and candidate[-1].startswith(needle[-1])):
+            return True
+    return False
+
+
+def _domains(data, text):
+    words = _words(text)
+    matched = []
+    routes = set()
+    for row in data.get("entries") or []:
+        if any(_matches(words, alias) for alias in [row["id"], row["title"], *row["aliases"]]):
+            matched.append(row["id"])
+            routes.update(row["tags"])
+    for key, row in (data.get("routes") or {}).items():
+        if any(_matches(words, term, prefix=True) for term in row["terms"]):
+            routes.add(key)
+    return [key for key in data["routes"] if key in routes], matched
+
+
+def for_request(data, player, *, scene=None, active_fight=False):
+    """Current explicit domains win; bare continuations use verified scene context.
+
+    A route is a retrieval hint, not a claim that the action is legal or known.
+    """
+    text = normalize(player).strip("# *")
+    routes, matched = _domains(data, text)
+    continuation = not text or bool(CONTINUATION.fullmatch(text))
+    fallback = []
+    if continuation and scene:
+        # Deliberately exclude private 'unread' and old player requests.
+        scene_text = " ".join(str(scene.get(k) or "") for k in ("situation", "positions", "pressure"))
+        fallback, _ = _domains(data, scene_text)
+        routes = list(dict.fromkeys(routes + fallback))
+    if active_fight and "combat" not in routes:
+        routes.append("combat")
+    routes = [key for key in data["routes"] if key in routes]
+    selected = [row for row in data.get("entries") or [] if set(row["tags"]) & set(routes)]
+    selected.sort(key=lambda row: (row["id"] not in matched, not row["core"], row["id"]))
+    read = list(dict.fromkeys(path for key in routes for path in data["routes"][key]["read"]))
+    required = list(dict.fromkeys(field for key in routes for field in data["routes"][key].get("required", [])))
+    return {"routes": routes, "entries": selected, "matched": matched,
+            "basis": "scene_continuation" if continuation else "current_request",
+            "scene_routes": fallback, "read": read, "required": required,
+            "unavailable": [row["id"] for row in selected if row["activation"] == "unavailable"]}
+
+
+def scene_hint(data, hot):
+    """Small present-scene anchor, not a prediction of the next request."""
+    scene = hot.get("scene") or {}
+    plan = for_request(data, "", scene=scene, active_fight=bool((hot.get("_fight") or {}).get("active")))
+    return {"as_of": scene.get("as_of"), "routes": plan["routes"],
+            "source": "recovery/HOT.json#scene",
+            "rule": "Только для «дальше»/продолжения; явная новая заявка важнее. Активный бой учитывай всегда."}
+
+
+def packet(root, campaign, hot=None):
     data = load(root, campaign)
     if not data:
         return None
-    return {"rule": data["rule"] + " Выбери тему по ТЕКУЩЕЙ заявке; полный реестр " + PATH,
-            "routes": {key: {"read": row["read"], "focus": row["focus"]} for key, row in data["routes"].items()},
+    return {"rule": data["rule"] + " Тема по текущей заявке, смешанные темы объединяй; короткое продолжение — scene_hint. Уже прочитанное не открывай; при неизвестном факте — источник. Полный реестр " + PATH,
+            "scene_hint": scene_hint(data, hot or {}),
+            "routes": {key: {"read": row["read"], "focus": row["focus"], "required": row["required"]} for key, row in data["routes"].items()},
             "items": [{"id": row["id"], "tags": row["tags"], "fact": row["summary"], "sources": row["sources"],
                        "status": row["status"], "activation": row["activation"]} for row in data["entries"] if row["core"]],
             "catalog": [{"id": row["id"], "title": row["title"], "tags": row["tags"],
-                         "status": row["status"], "activation": row["activation"]}
-                        for row in data["entries"] if not row["core"]]}
+                         **({"status": row["status"], "activation": row["activation"]}
+                            if row["activation"] == "unavailable" else {})}
+                        for row in data["entries"] if not row["core"]],
+            "catalog_rule": "Без статуса — освоено, но только по заявке/условиям полного реестра; недоступное обозначено явно."}

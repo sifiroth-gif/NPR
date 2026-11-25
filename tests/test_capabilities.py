@@ -66,3 +66,51 @@ class CapabilityIndexTest(unittest.TestCase):
         self.assertEqual(len(pack["items"]), 12)
         self.assertLess(len(json.dumps(pack, ensure_ascii=False).encode()), 17000)
         self.assertFalse(any("requires" in x for x in pack["catalog"]))
+
+    def test_current_request_overrides_scene_and_aliases_activate_domains(self):
+        data = capabilities.load(ROOT, "shiki")
+        scene = {"situation": "Врач лечит пациента в лазарете."}
+        plan = capabilities.for_request(data, "#Магацухи#", scene=scene)
+        self.assertIn("eyes.magatsuhi", plan["matched"])
+        self.assertIn("combat", plan["routes"])
+        self.assertNotIn("medical", plan["routes"])
+        self.assertEqual(plan["basis"], "current_request")
+        self.assertIn("fight/dice", plan["required"])
+        self.assertEqual(len(plan["read"]), len(set(plan["read"])))
+
+    def test_continuation_inherits_verified_scene_not_private_unread(self):
+        data = capabilities.load(ROOT, "shiki")
+        scene = {"situation": "Врач лечит пациента.", "unread": "атакую врага"}
+        plan = capabilities.for_request(data, "Дальше по игре", scene=scene)
+        self.assertIn("medical", plan["routes"])
+        self.assertNotIn("combat", plan["routes"])
+        self.assertEqual(plan["basis"], "scene_continuation")
+        self.assertIn("injuries/function", plan["required"])
+        self.assertIn("combat", capabilities.for_request(data, "говорю", scene=scene,
+                                                        active_fight=True)["routes"])
+
+    def test_boundaries_and_mixed_domains(self):
+        data = capabilities.load(ROOT, "shiki")
+        plan = capabilities.for_request(data, "замечаю охрану")
+        self.assertNotIn("combat", plan["routes"])
+        self.assertNotIn("medical", plan["routes"])
+        plan = capabilities.for_request(data, "#достаю инструменты, лечу рану, спрашиваю врача#")
+        self.assertTrue({"items", "medical", "dialogue"} <= set(plan["routes"]))
+        self.assertIn("medical.sterilize", {r["id"] for r in plan["entries"]})
+
+    def test_unavailable_alias_is_not_a_grant(self):
+        data = capabilities.load(ROOT, "shiki")
+        plan = capabilities.for_request(data, "Совместный покров")
+        self.assertIn("nemera.cloak", plan["matched"])
+        self.assertIn("nemera.cloak", plan["unavailable"])
+
+    def test_next_actual_bytes_and_scene_sources(self):
+        hot = {"campaign": "shiki", "cursor": {"id": "s14.text.023"},
+               "scene": {"as_of": "s14.text.023", "situation": "Врач лечит пациента."},
+               "things": {"shiki_medical_kit": {"holder": "shiki", "state": "упакован", "turn": "s14.text.023"}}}
+        pack = nextpack.build(hot, {"cursor": hot["cursor"]}, {}, [],
+                              extra={"capabilities": capabilities.packet(ROOT, "shiki", hot)})
+        self.assertIn("medical", pack["capabilities"]["scene_hint"]["routes"])
+        self.assertEqual(pack["state_sources"]["medical_kit"]["state"], "упакован")
+        self.assertEqual(json.loads(nextpack._body(pack)), pack)
+        self.assertEqual(nextpack._size(pack), len(nextpack._body(pack).encode()))
