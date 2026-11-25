@@ -141,6 +141,21 @@ class HeuristicHistoryTests(unittest.TestCase):
             self.assertTrue(any(heuristic_history.might_contain(
                 shard["bloom"], token) for shard in route["shards"]))
 
+    def test_bloom_repeated_terms_are_idempotent(self):
+        rows = [{"terms": "стерилизация стерилизация ключ"},
+                {"terms": "стерилизация маяк ключ"}]
+        union = [{"terms": "стерилизация ключ маяк"}]
+        self.assertEqual(heuristic_history._bloom(rows), heuristic_history._bloom(union))
+        self.assertEqual(heuristic_history._bloom(rows * 50), heuristic_history._bloom(union))
+
+    def test_query_is_repeatable_and_does_not_mutate_index(self):
+        index = heuristic_history.build(self.root, self.root)
+        before = json.dumps(index, sort_keys=True)
+        for question in ("Палладиум сундук", "стерилизация", "Варвен", "и в на"):
+            first = heuristic_history.query(index, question)
+            self.assertEqual(first, heuristic_history.query(index, question))
+        self.assertEqual(before, json.dumps(index, sort_keys=True))
+
     def test_stale_shard_is_rejected_not_silently_trusted(self):
         heuristic_history.save(self.root, self.root)
         shard = self.root / "archive/heuristic-recall/shard-000.json"

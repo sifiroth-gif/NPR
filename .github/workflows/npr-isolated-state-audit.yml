@@ -8,6 +8,7 @@ on:
       - "rpg_engine/nextpack.py"
       - "rpg_engine/preflight.py"
       - "rpg_engine/historical_regression.py"
+      - "rpg_engine/heuristic_history.py"
       - "rpg_engine/hot.py"
       - "rpg_engine/continuity_guard.py"
       - "rpg_engine/identity.py"
@@ -46,6 +47,11 @@ jobs:
           path: state
           fetch-depth: 0
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: f9b1c52b464e32a6434ff0c3f3076c91cfb5669d
+          path: d2-baseline
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -78,7 +84,10 @@ jobs:
                        "archive/session-008-turns.jsonl"]
           hashes = {p: digest(p) for p in protected}
           injuries = original.get("injuries")
+          from time import perf_counter
+          started = perf_counter()
           result = hot.fold(state)
+          print("D2_FOLD_SECONDS", round(perf_counter() - started, 3), json.dumps(result.get("timings", {})))
           check = hot.check(state)
           print("FOLD", result["status"], "errors", len(result["errors"]), "applied", len(result["applied"]))
           print("CHECK", check["ok"], "problems", len(check["problems"]))
@@ -213,6 +222,44 @@ jobs:
           assert len(regressions) == 8 and all(regressions.values()), regressions
           historical_regression.check_hashes(state, archive_before)
           print("D1_PRIMARY_RECORDS_UNCHANGED", len(archive_before))
+          # Paired old/new lexical search, same index and runner. Never log text.
+          import importlib.util, statistics, re
+          from rpg_engine import heuristic_history
+          spec = importlib.util.spec_from_file_location("d2_reference", "d2-baseline/rpg_engine/heuristic_history.py")
+          reference = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(reference)
+          index = heuristic_history.load(state / heuristic_history.DESTINATION)
+          groups = {}
+          for row in index["records"]:
+              match = re.search(r"session-(\d{3})", row["source"])
+              if match:
+                  groups.setdefault(int(match.group(1)), []).append(row)
+          probes = []
+          for session, rows in sorted(groups.items()):
+              options = [(index["df"].get(term, 100000), term, row["id"]) for row in rows
+                         for term in set(row["terms"].split()) if len(term) >= 6]
+              if options:
+                  token = min(options)[1]
+                  probes.append((token, ()))
+                  probes.append((token, (session,)))
+          probes += [("стерилизация медицинская чакра", ()), ("Минасэ травма", ()),
+                     ("неизвестныйтокенxyz", ()), ("и в на", ())]
+          old_times, new_times = [], []
+          for n, (question, sessions) in enumerate(probes):
+              funcs = [(reference.query, old_times), (heuristic_history.query, new_times)]
+              if n % 2:
+                  funcs.reverse()
+              answers = []
+              for fn, times in funcs:
+                  start = perf_counter()
+                  answers.append(fn(index, question, limit=10, sessions=sessions))
+                  times.append(1000 * (perf_counter() - start))
+              assert answers[0] == answers[1], "D2 search result changed at probe " + str(n)
+          assert reference._bloom(index["records"]) == heuristic_history._bloom(index["records"])
+          print("D2_PAIRED_SEARCH", json.dumps({"probes": len(probes),
+              "equal": True, "baseline_median_ms": round(statistics.median(old_times), 2),
+              "current_median_ms": round(statistics.median(new_times), 2),
+              "baseline_max_ms": round(max(old_times), 2), "current_max_ms": round(max(new_times), 2)}))
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))

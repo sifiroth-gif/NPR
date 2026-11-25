@@ -403,12 +403,12 @@ def _locations(word):
 
 def _bloom(entries):
     bits = bytearray(ROUTE_BITS // 8)
-    for entry in entries:
-        tokens = set(entry["terms"].split())
-        hints = tokens | {w[:4] for w in tokens if len(w) > 4}
-        for word in hints:
-            for position in _locations(word):
-                bits[position // 8] |= 1 << (position % 8)
+    # OR is idempotent: repeated terms across passages need one insertion.
+    tokens = {word for entry in entries for word in entry["terms"].split()}
+    hints = tokens | {w[:4] for w in tokens if len(w) > 4}
+    for word in hints:
+        for position in _locations(word):
+            bits[position // 8] |= 1 << (position % 8)
     return base64.b64encode(bits).decode("ascii")
 
 
@@ -560,6 +560,14 @@ def query(index, question, *, limit=9, sessions=(), no_guess=True):
     candidates = []
     df = index["df"]
     total = max(1, index["documents"])
+    parsed_set = set(parsed)
+    prefixes = {q[:4] for q in parsed if len(q) >= 5}
+    weights = {q: max(1.0, min(5.2, 1.0 + math.log((total + 1) / (df.get(q, 0)+1))))
+               for q in parsed}
+    normalizer = max(1.0, sum(weights[q] for q in parsed))
+    variants_by_term = {q: (q, q.translate(LATIN)) if re.search("[а-я]", q) else (q,)
+                        for q in parsed}
+    similar = functools.lru_cache(maxsize=32768)(_similar)
     for item in index["records"]:
         if sessions:
             # An explicit --session is a provenance filter: global correction
@@ -569,30 +577,26 @@ def query(index, question, *, limit=9, sessions=(), no_guess=True):
             if not match or int(match.group(1)) not in sessions:
                 continue
         lex = set(item["terms"].split())
-        exact = set(parsed) & lex
-        if not exact:
-            # Work on rare typo/inflection variants, bounded for speed.
-            if not any(any(w.startswith(q[:4]) for w in lex)
-                       for q in parsed if len(q) >= 5):
+        if not parsed_set.intersection(lex):
+            # Equivalent to startswith(q[:4]); check each lexeme only once.
+            if not prefixes or not any(w[:4] in prefixes for w in lex):
                 continue
         score, matched = 0.0, 0
         details = []
         for q in parsed:
-            variants = (q, q.translate(LATIN)) if re.search("[а-я]", q) else (q,)
+            variants = variants_by_term[q]
             similarity = 1.0 if q in lex else max(
-                (_similar(v, w) for v in variants for w in lex if
+                (similar(v, w) for v in variants for w in lex if
                  w[:3] == v[:3] or w.startswith(v[:3])), default=0.0)
             if similarity < 0.73:
                 continue
-            weight = max(1.0, min(5.2, 1.0 + math.log((total + 1) / (df.get(q, 0)+1))))
-            score += similarity * similarity * weight
+            score += similarity * similarity * weights[q]
             matched += 1
             details.append(q)
         if not matched:
             continue
         coverage = matched / len(parsed)
-        score = score / max(1.0, sum(max(1.0, min(5.2, 1.0 +
-            math.log((total+1)/(df.get(q, 0)+1)))) for q in parsed))
+        score = score / normalizer
         # Dated canon cards do not lose to recent generic turn summaries.
         score += min(0.06, 0.015 * item["authority"])
         score += 0.13 * coverage
