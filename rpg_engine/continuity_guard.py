@@ -46,7 +46,13 @@ def _check(hot, turn_id, kind, text):
 
 def apply_things(hot, delta, turn_id, at):
     things = hot.setdefault("things", {})
-    for key, patch in ((delta or {}).get("things") or {}).items():
+    patches = (delta or {}).get("things")
+    if patches is None:
+        return
+    if not isinstance(patches, dict):
+        _check(hot, turn_id, "things", "d.things: ожидается объект")
+        return
+    for key, patch in patches.items():
         if not isinstance(patch, dict):
             _check(hot, turn_id, "things", f"{key}: запись должна быть объектом")
             continue
@@ -64,6 +70,24 @@ def apply_things(hot, delta, turn_id, at):
         if malformed:
             _check(hot, turn_id, "things", f"{key}: неверная структура {', '.join(malformed)}")
             continue
+        invalid = False
+        for mode in ("was", "now", "new"):
+            if mode not in patch:
+                continue
+            for field, value in patch[mode].items():
+                if field == "count":
+                    if type(value) is not int or value < 0:
+                        _check(hot, turn_id, "contradiction" if type(value) is int else "things",
+                               f"{key}.{mode}.count: требуется неотрицательное целое число")
+                        invalid = True
+                elif value is not None and not isinstance(value, str):
+                    _check(hot, turn_id, "things", f"{key}.{mode}.{field}: требуется строка или null")
+                    invalid = True
+        if "gone" in patch and (not isinstance(patch["gone"], str) or not patch["gone"].strip()):
+            _check(hot, turn_id, "things", f"{key}.gone: нужна причина удаления")
+            invalid = True
+        if invalid:
+            continue
         if "gone" in patch:
             item = things.pop(key, None)
             if item is None:
@@ -78,6 +102,7 @@ def apply_things(hot, delta, turn_id, at):
             if key in things:
                 _check(hot, turn_id, "things",
                        f"{key}: введён как новый, но уже есть в учёте ({_brief(things[key])})")
+                continue
             if not patch.get("why"):
                 _check(hot, turn_id, "things", f"{key}: новый предмет без why — откуда он взялся")
             item = {k: v for k, v in (patch.get("new") or {}).items() if k in FIELDS}
@@ -90,11 +115,15 @@ def apply_things(hot, delta, turn_id, at):
                    f"{key}: изменён предмет вне учёта; введён без проверки прежнего состояния")
             item = {"since": turn_id}
             things[key] = item
+        mismatch = False
         for field, expected in (patch.get("was") or {}).items():
             if field in item and _norm(item[field]) != _norm(expected):
                 _check(hot, turn_id, "contradiction",
                        f"{key}.{field}: в сыгранном «{item[field]}», ход исходит из «{expected}» "
                        f"(с {item.get('turn', item.get('since'))})")
+                mismatch = True
+        if mismatch:
+            continue
         for field, value in (patch.get("now") or {}).items():
             if field in FIELDS:
                 item[field] = value
