@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.096: поправки игрока: 5
 - s13.text.095: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина в куртке (`npc/root_field_jacket_man`)
 - s13.text.094: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)
 - s13.text.093: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина с иглой (`npc/root_field_needle_man`)
@@ -60,4 +61,3 @@
 - s13.text.040: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Неизвестный наблюдатель за ивами (`npc/willow_observer`)
 - s13.text.039: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.037: Неизвестный наблюдатель за ивами (`npc/willow_observer`)
-- s13.text.036: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`)

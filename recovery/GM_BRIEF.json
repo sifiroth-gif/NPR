@@ -56,6 +56,11 @@
  "checks": [
   {
    "kind": "fight",
+   "text": "Бросок «Кунай с Райтоном в арбалет на склоне»: умения «weapons» нет в листе — укажи level.",
+   "turn": "s13.text.002"
+  },
+  {
+   "kind": "fight",
    "text": "d.fight без открытого боя: начни его полем start.",
    "turn": "s13.text.015"
   },
@@ -65,30 +70,20 @@
    "turn": "s13.text.034"
   },
   {
-   "kind": "horror",
-   "text": "fire_port_official: ступень 3→2 прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s13.text.095"
-  },
-  {
-   "kind": "horror",
-   "text": "fire_port_security_staff: ступень 4→2 прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s13.text.095"
-  },
-  {
    "kind": "will",
    "text": "«Немера (Невыписанная)» 5 ход(ов) рядом с Шики только отвечает. Его цель: «Узнать Шики до симбиоза из независимого рассказа одного из его давних товарищей». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s13.text.095"
+   "turn": "s13.text.096"
   },
   {
    "kind": "will",
    "text": "«Сотрудник безопасности порта» 6 ход(ов) рядом с Шики только отвечает. Его цель: «Передать отдельное предупреждение о возможной угрозе на ответственное рассмотрение.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s13.text.095"
+   "turn": "s13.text.096"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s13.text.095",
+  "cursor": "s13.text.096",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -301,11 +296,11 @@
  "cursor": {
   "at": "0010-04-11T17:22:30",
   "date": "Воскресенье, 11 апреля 1287 года",
-  "id": "s13.text.095",
+  "id": "s13.text.096",
   "place": "Страна Огня, восточная гавань, портовое управление",
   "time": "17:22"
  },
- "digest": "45233b5b291ddbcdc47397fe1217823a867d5fe3f716d2d916b467b2e4b1aeb9",
+ "digest": "29d5b2eb7abb0dbec9733ae2050bed229a2dbf6d7100af1f82073667cb660af8",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -391,18 +386,18 @@
    "value": 100.0
   },
   "dice": [
-   14,
-   1,
-   9,
-   4,
-   3,
-   13,
-   1,
-   17,
-   13,
-   17,
+   6,
    5,
-   14
+   9,
+   12,
+   8,
+   20,
+   20,
+   20,
+   6,
+   16,
+   12,
+   17
   ],
   "injuries": {
    "crossbow_ambusher": [
@@ -854,7 +849,7 @@
     },
     {
      "at": "0010-04-11T17:22:30",
-     "sha256": "6270063a68303855cd8acbb10bd34d8ccb66151fd872fe707caa374a165e6405",
+     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
      "source": "archive/session-013-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s13.text.095"
@@ -873,7 +868,7 @@
     "memory_file": "archive/npc-memory/fire_port_security_staff.json",
     "memory_total": 7,
     "name": "Сотрудник безопасности порта",
-    "seen": "s13.text.095",
+    "seen": "s13.text.096",
     "state": "Продолжает оформление сведений для ведомства Огня и наблюдает уход змеи.",
     "status": "present_profile",
     "tier": "developed"
@@ -1045,7 +1040,7 @@
     "memory_total": 380,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-    "seen": "s13.text.095",
+    "seen": "s13.text.096",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
     "status": "present_profile",
@@ -1102,12 +1097,11 @@
  },
  "source_passages_ref": "archive/session-*-turns.jsonl",
  "source_passages_truncated": true,
- "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8d546660a78f100db38ff3f0aeaa3c5972cd8235",
-  "turn": "s13.text.095"
+  "sha": "76162e87e812536c69f8eb7466347dfaba6ba5bc",
+  "turn": "s13.text.096"
  },
  "wiki": {
   "index": "memory/INDEX.md",
