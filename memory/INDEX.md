@@ -1,12 +1,14 @@
-# Карта мира NPR · на ходе `s13.text.080`
+# Карта мира NPR · на ходе `s13.text.081`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (292) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (293) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (221)
+## Персонажи (223)
+- Второй шиноби Тумана — Младший из двух проверяющих у трапа; индивидуальные приметы… · `npc/kiri_port_guard_junior` · в сцене
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
+- Шиноби Тумана — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior` · в сцене
 - Мужчина в куртке — Тёмная дорожная куртка, плотные перчатки без знаков деревни. · `npc/root_field_jacket_man`
 - Мужчина с иглой — Сдержанная дорожная одежда без видимых знаков деревни, при … · `npc/root_field_needle_man`
 - Неизвестный наблюдатель за ивами — Скрыто наблюдал заставный мост до тех пор, пока Шики не снял капюшон. · `npc/willow_observer`
@@ -228,7 +230,7 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (12)
+## Линии (11)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — «Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и … · `threads/shiki_underground_career`
@@ -236,14 +238,13 @@
 - `kabuto_name_source` — Старый обрывок госпиталя у Шики; Немера допускает, что доступ к ней м… · `threads/kabuto_name_source`
 - `kabuto_tracking_claim` — Кабуто не предпринимал силового захвата Шики во время этой встречи, м… · `threads/kabuto_tracking_claim`
 - `sai_note` — Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых на… · `threads/sai_note`
-- `root_silence_seals` — Два бессознательных человека пока спасены от автоматического опасного… · `threads/root_silence_seals`
 - `kabuto_snake_contract` — Кабуто сообщил, что личный договор с Рьючидо не подписывал: помощь ок… · `threads/kabuto_snake_contract`
 - `market_shadow` — 25.03 17:13 Шики попрощался с двумя рыночными наблюдателями и ушёл се… · `threads/market_shadow`
 - `tenchi_bridge` — 26.03 отряд Ямато нашёл Саске в убежище, вернулся без него. Шики не з… · `threads/tenchi_bridge`
 - `roadside_attack` — Участие Шики завершилось передачей пленного и сведений местному патру… · `threads/roadside_attack`
 
-## Давние линии (22, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
+## Давние линии (23, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
 ## Вещи (64)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`

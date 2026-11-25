@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.081: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.080: Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.079: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.078: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -58,4 +59,3 @@
 - s13.text.024: Дзюн (`npc/haru_brother_jun`), Сирамэ (`npc/shirame`), план сюжета
 - s13.text.023: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.022: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`)
-- s13.text.021: Сиранами (`npc/shiranami`)
