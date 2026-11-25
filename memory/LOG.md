@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.098: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.097: поправки игрока: 5
 - s13.text.096: поправки игрока: 5
 - s13.text.095: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина в куртке (`npc/root_field_jacket_man`)
