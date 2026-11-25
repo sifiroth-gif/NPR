@@ -72,37 +72,12 @@
    "kind": "fight",
    "text": "Против «quay_masked_hunter» в обмене нет ни одной кости: с именным противником исход решает бросок, перевес Шики не выше +2.",
    "turn": "s13.text.099"
-  },
-  {
-   "kind": "things",
-   "text": "fire_port_statement_receipt: изменён предмет вне учёта; введён без проверки прежнего состояния",
-   "turn": "s13.text.099"
-  },
-  {
-   "kind": "player",
-   "text": "реплика игрока вошла в сцену на 0%: слова Шики переносятся в прозу полностью и в заданном порядке",
-   "turn": "s13.text.099"
-  },
-  {
-   "kind": "name",
-   "text": "quay_masked_hunter: имя «Человек в маске» уже носит masked_man",
-   "turn": "s13.text.099"
-  },
-  {
-   "kind": "new_character",
-   "text": "В сцене говорит «грузчик» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
-   "turn": "s13.text.099"
-  },
-  {
-   "kind": "read",
-   "text": "«Человек в маске» вернулся в сцену, а его страница `npc/masked_man` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/masked_man.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s13.text.099"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s13.text.099",
+  "cursor": "s13.text.100",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -321,11 +296,11 @@
  "cursor": {
   "at": "0010-04-11T17:24:00",
   "date": "Воскресенье, 11 апреля 1287 года",
-  "id": "s13.text.099",
+  "id": "s13.text.100",
   "place": "Страна Огня, восточная гавань, грузовой причал",
   "time": "17:24"
  },
- "digest": "98cb8119f58e78159e1ba1cfce795e8949069c5074e95dfc1b9291ab7083bc77",
+ "digest": "2ee549f37bbf09515fba21b2d7342c7436ce2c2378d99da5d9f5e2e5e79c4d2a",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -398,7 +373,7 @@
         "genjutsu": "+1",
         "ninjutsu": "+1",
         "speed": "+2",
-        "taijutsu": "+1"
+        "taijutsu": "+1:+2"
        },
        "B": "+1",
        "E+": 0,
@@ -408,9 +383,9 @@
       "→shiki": {
        "A": {
         "genjutsu": "-1",
-        "ninjutsu": "-2:-1",
+        "ninjutsu": "-2",
         "speed": "-2",
-        "taijutsu": "-2:-1"
+        "taijutsu": "-2"
        },
        "B": "-1",
        "E+": 0,
@@ -437,8 +412,8 @@
        "A": {
         "genjutsu": "+0:+1",
         "ninjutsu": "+0:+1",
-        "speed": "+1",
-        "taijutsu": "+0"
+        "speed": "+2",
+        "taijutsu": "+1"
        },
        "B": "+0:+1",
        "E+": 0,
@@ -449,7 +424,7 @@
        "A": {
         "genjutsu": "-1:+0",
         "ninjutsu": "-1",
-        "speed": "-1",
+        "speed": "-2",
         "taijutsu": "-1"
        },
        "B": "-1:+0",
@@ -555,18 +530,18 @@
    "value": 100.0
   },
   "dice": [
-   5,
-   5,
-   10,
-   19,
-   4,
+   14,
    13,
-   11,
-   3,
-   15,
-   6,
+   14,
+   19,
    18,
-   15
+   15,
+   16,
+   9,
+   3,
+   1,
+   4,
+   1
   ],
   "injuries": {
    "crossbow_ambusher": [
@@ -957,7 +932,7 @@
    }
   ],
   "queued_ref": "recovery/GM_ONLY.json:plot.events",
-  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — sc…",
+  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
@@ -1126,7 +1101,7 @@
     "memory_total": 382,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/…",
-    "seen": "s13.text.099",
+    "seen": "s13.text.100",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
     "status": "present_profile",
@@ -1185,7 +1160,7 @@
     "memory_file": "archive/npc-memory/quay_cloaked_hunter.json",
     "memory_total": 1,
     "name": "Человек в дорожном плаще",
-    "seen": "s13.text.099",
+    "seen": "s13.text.100",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Обездвижить Шики для захвата."
@@ -1260,7 +1235,7 @@
     "memory_file": "archive/npc-memory/quay_masked_hunter.json",
     "memory_total": 1,
     "name": "Человек в маске",
-    "seen": "s13.text.099",
+    "seen": "s13.text.100",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Взять Шики живым по K-0418."
@@ -1316,7 +1291,7 @@
     "memory_file": "archive/npc-memory/quay_wire_operator.json",
     "memory_total": 1,
     "name": "Человек у причальной лестницы",
-    "seen": "s13.text.099",
+    "seen": "s13.text.100",
     "status": "present_profile",
     "tier": "archetypal",
     "wants": "Перекрыть путь сетью."
@@ -1359,8 +1334,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "9e25a12b45f249d4578968ab13e7d1849151c64d",
-  "turn": "s13.text.099"
+  "sha": "ae2b8bd13e7f8d4f6e9bb4799cac56ec376f6a4c",
+  "turn": "s13.text.100"
  },
  "wiki": {
   "index": "memory/INDEX.md",
