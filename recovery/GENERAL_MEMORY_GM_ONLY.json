@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.075",
+  "cursor": "s15.text.076",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 86,
+      "mention_count": 87,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:23:00",
-          "excerpt": "ные кольца собственного тела. Аки достала из сумки небольшой карандаш и клочок бумаги, записала адрес. **Мидзухара Аки:** — Это мой дом. Я больше не живу с родителями. Она положила записку рядом с тарелкой Шики. **Мидзухара Аки:** — Если снова окажешься в Трав",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.073"
         },
         {
           "at": "0010-04-21T20:24:00",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.075"
+        },
+        {
+          "at": "0010-04-21T20:26:00",
+          "excerpt": "посмотрел на бывших напарников. **Мугами Шики:** — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.076"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.075"
+          "seen": "s15.text.076"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.075"
+        "s15.text.076"
       ]
     },
     "aki_home_address_s15": {
@@ -119,7 +119,7 @@
       "id": "akihiro",
       "kind": "npc",
       "label": "Мугами Акихиро",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -127,13 +127,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T19:41:00",
-          "excerpt": ":** — Хочу! Она забралась на предплечье Шики. Акихиро поднялся из-за стола и достал ключ от калитки. **Мугами Акихиро:** — Торговец снаряжением возле восточного перекрёстка теперь работает допоздна. И возвращайся, пока ужин не остыл. Он протянул сыну ключ. ***",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.064"
         },
         {
           "at": "0010-04-21T20:24:00",
@@ -148,6 +141,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.075"
+        },
+        {
+          "at": "0010-04-21T20:26:00",
+          "excerpt": ", другой — преступником класса S. Прекрасный был экзамен. Акихиро закрыл окно, выходившее на соседний двор. **Мугами Акихиро:** — Давайте договоримся. Всё, что Шики сегодня расскажет за этим столом, останется в этом доме. Мне ещё завтра работать с людьми, кото",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.076"
         }
       ],
       "projections": [
@@ -155,7 +155,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.075",
+          "seen": "s15.text.076",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -172,7 +172,7 @@
       "sources": [
         "recovery/cast/akihiro.json",
         "recovery/HOT.json",
-        "s15.text.075"
+        "s15.text.076"
       ]
     },
     "arai_mitiko": {
@@ -1191,7 +1191,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 71,
+      "mention_count": 72,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1199,13 +1199,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-03-17T11:04:00",
-          "excerpt": "ве и уничтожении улики. Я предполагаю, в чём может меня обвинить Киригакуре. Но предполагаю, не знаю. Гаара не ответил сразу. Он перевёл взгляд на документ, скреплённый печатью совета, и некоторое время рассматривал его. Потом выдвинул ящик стола, достал тонку",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.036"
         },
         {
           "at": "0010-03-17T11:08:00",
@@ -1220,6 +1213,13 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.038"
+        },
+        {
+          "at": "0010-04-21T20:26:00",
+          "excerpt": "х напарников. **Мугами Шики:** — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на экзамене. **Мидзу",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.076"
         }
       ],
       "projections": [
@@ -4104,7 +4104,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.075",
+          "seen": "s15.text.076",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -4120,8 +4120,7 @@
       ],
       "sources": [
         "recovery/cast/nao.json",
-        "recovery/HOT.json",
-        "s15.text.075"
+        "recovery/HOT.json"
       ]
     },
     "naruto": {
@@ -6185,7 +6184,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.075",
+        "s15.text.076",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6197,7 +6196,8 @@
         "s15.text.071",
         "s15.text.072",
         "s15.text.073",
-        "s15.text.074"
+        "s15.text.074",
+        "s15.text.075"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16201,7 +16201,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 87,
+      "mention_count": 88,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16209,13 +16209,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:10:00",
-          "excerpt": "н. Я сменил мнение, я не буду тебя убивать даже если мы станем врагами. Рэн поставил чашку на стол. **Хаясэ Рэн:** — А ведь я даже не спрашивал тебя об этом. Он потёр подбородок и усмехнулся. За девять лет голос его стал грубее, но сохранил ту особенную интона",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.072"
         },
         {
           "at": "0010-04-21T20:23:00",
@@ -16230,11 +16223,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.074"
+        },
+        {
+          "at": "0010-04-21T20:26:00",
+          "excerpt": "* — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на экзамене. **Мидзухара Аки:** — Забавно. Я до с",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.076"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.075",
+          "seen": "s15.text.076",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16243,7 +16243,8 @@
       ],
       "sources": [
         "recovery/cast/ren.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.076"
       ]
     },
     "residence_courier_v7": {
@@ -18724,8 +18725,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -18764,7 +18764,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.075",
+          "seen": "s15.text.076",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -18773,8 +18773,7 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s15.text.075"
+        "recovery/HOT.json"
       ]
     },
     "white_snake_sage": {
@@ -19224,5 +19223,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1249
+  "source_turns_indexed": 1250
 }

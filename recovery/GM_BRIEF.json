@@ -84,18 +84,13 @@
    "kind": "review",
    "since": "s15.text.072",
    "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s15.text.075"
-  },
-  {
-   "kind": "will",
-   "text": "«Мугами Акихиро» 8 ход(ов) рядом с Шики только отвечает. Его цель: «Сохранить спокойствие семьи и работу клиники». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s15.text.075"
+   "turn": "s15.text.076"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.075",
+  "cursor": "s15.text.076",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -126,12 +121,71 @@
   "status": "focused",
   "thematic": {
    "basis": "scene_continuation",
-   "entries": [],
+   "entries": [
+    "chakra.black",
+    "eyes.ems",
+    "fusion.tendrils",
+    "genome.zero",
+    "pact.contact",
+    "sage.permanent",
+    "sage.poison",
+    "seals.speed",
+    "shunshin.zero",
+    "weapon.sumi",
+    "combat.genjutsu",
+    "combat.scalpel",
+    "element.fireball",
+    "element.ice",
+    "element.lightning",
+    "element.phoenix",
+    "element.water",
+    "eyes.cradle",
+    "eyes.magatsuhi",
+    "eyes.susanoo",
+    "eyes.yomotsu",
+    "fusion.development",
+    "genome.fluid",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "pact.byoton",
+    "pact.shiton",
+    "restricted.cancelled",
+    "restricted.unlearned",
+    "sage.senpo",
+    "sage.summon"
+   ],
    "matched": [],
-   "read": [],
-   "required": [],
-   "routes": [],
-   "unavailable": []
+   "read": [
+    "campaigns/shiki/ref/COMBAT.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md"
+   ],
+   "required": [
+    "active forms/passives",
+    "fight/dice",
+    "chakra/injuries",
+    "opponents/positions",
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent"
+   ],
+   "routes": [
+    "combat",
+    "dialogue"
+   ],
+   "unavailable": [
+    "fusion.development",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "restricted.cancelled",
+    "restricted.unlearned"
+   ]
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -355,13 +409,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-21T20:25:00",
+  "at": "0010-04-21T20:26:00",
   "date": "Среда, 21 апреля 1287 года",
-  "id": "s15.text.075",
+  "id": "s15.text.076",
   "place": "Кусагакуре, дом семьи Мугами",
-  "time": "20:25"
+  "time": "20:26"
  },
- "digest": "c9f0d975bbc35d519a02009becc0e1b4b4a0bec7f6bd851235cec787f36e5236",
+ "digest": "34bd073230d07773e179fc3893fc09757386bf92099f82b52fc79e03a846ca3e",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -376,28 +430,28 @@
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.075"
+    "to": "s15.text.076"
    },
    {
     "actor": "akihiro",
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.075"
+    "to": "s15.text.076"
    },
    {
     "actor": "ren",
     "from": "s15.text.065",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.074"
+    "to": "s15.text.076"
    },
    {
     "actor": "aki",
     "from": "s15.text.065",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.075"
+    "to": "s15.text.076"
    },
    {
     "actor": "western_nest_young_courier",
@@ -503,21 +557,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 591.18
+   "value": 591.35
   },
   "dice": [
-   17,
-   7,
-   18,
-   16,
+   19,
+   13,
+   11,
+   5,
    20,
-   18,
-   12,
+   6,
+   1,
    17,
-   7,
-   15,
-   7,
-   2
+   17,
+   16,
+   19,
+   3
   ],
   "injuries": {
    "sasuke": [
@@ -700,18 +754,18 @@
   "due": null,
   "npcs": {
    "aki": {
-    "does": "Предложила отдельный ящик, согласилась показать безопасный подход Коюки.",
+    "does": "Назвала Гаару, коснулась колена и сопоставила его прошлое с нынешним статусом.",
     "lever": "Потерять самостоятельность и оказаться втянутой в чужую опасную историю.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Переписку можно организовать без отмены защиты дома.",
+    "reads": "Вспомнила Гаару и его бой на экзамене; ещё не знает обстоятельств спасения.",
     "stage": 4,
     "step": "необратимость"
    },
    "akihiro": {
-    "does": "Попросил иногда навещать семью.",
+    "does": "Закрыл окно и потребовал конфиденциальности.",
     "lever": "проверку снабжения, которая найдёт его старые поставки",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Не станет требовать смены решения.",
+    "reads": "Разговор может иметь последствия для семьи и клиники, если его услышат соседи или разнесут по деревне.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -724,10 +778,10 @@
     "step": "необратимость"
    },
    "ren": {
-    "does": "Объявил, что зайдёт к Тосэ сегодня.",
+    "does": "Спросил, от кого пришлось спасать Казекаге.",
     "lever": "Потерять товарищей и оказаться беспомощным рядом с ними.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Наставнику следует дать возможность встретиться с бывшим учеником.",
+    "reads": "Не представляет, кто мог одолеть прежнего опасного противника.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -763,21 +817,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 193,
+   "appearances": 194,
    "facets": 4,
    "need": 5,
    "npc": "nao",
    "tier": "deep"
   },
   {
-   "appearances": 204,
+   "appearances": 205,
    "facets": 4,
    "need": 5,
    "npc": "akihiro",
    "tier": "deep"
   },
   {
-   "appearances": 42,
+   "appearances": 43,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
@@ -934,10 +988,10 @@
     "s15.text.066",
     "s15.text.067",
     "s15.text.068",
-    "s15.text.072",
     "s15.text.073",
     "s15.text.074",
-    "s15.text.075"
+    "s15.text.075",
+    "s15.text.076"
    ],
    "prior_disclosures": [
     {
@@ -948,18 +1002,18 @@
      "turn": "s15.text.065"
     },
     {
-     "at": "0010-04-21T20:24:00",
-     "sha256": "a4987332f6a50cd51f6a57cd3656c604350274c507db277139fb4008b190205c",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.074"
-    },
-    {
      "at": "0010-04-21T20:25:00",
-     "sha256": "dadc5ad67fb5c88a3fa8f2fba97b2852b7fb857ba9075d1dbd8d33fa45813dc9",
+     "sha256": "88d81c4078620359bcfbddb35895798da2b47ce7b5d1443a3d52b54f2097b358",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.075"
+    },
+    {
+     "at": "0010-04-21T20:26:00",
+     "sha256": "edfea69bf2cc1ec8092bbbef3d214bf974b81316e5bf63663fed5efb2ea8a5f7",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.076"
     }
    ],
    "profile": {
@@ -975,14 +1029,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.075",
-      "what": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом"
+      "turn": "s15.text.076",
+      "what": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
      }
     ],
     "memory_file": "archive/npc-memory/aki.json",
-    "memory_total": 12,
+    "memory_total": 13,
     "name": "Мидзухара Аки",
-    "seen": "s15.text.075",
+    "seen": "s15.text.076",
     "status": "present_profile",
     "tier": "developed"
    },
@@ -997,6 +1051,18 @@
    },
    "alignment_ref": "campaigns/shiki/plans/NPC_ALIGNMENTS_GM_ONLY.json",
    "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-04-22T07:30:00",
+      "flaw": "Не распоряжается чужими служебными обязанностями и не может контролировать слухи.",
+      "goal": "Оградить семью и клинику от распространения подробностей частного визита сына.",
+      "id": "protect_private_visit",
+      "if_unopposed": "Сохранит семейные подробности вне рабочих разговоров, гости узнают его требование.",
+      "next": "До ухода гостей договориться о неразглашении семейного разговора; утром не обсуждать его в клинике.",
+      "source_turn": "s15.text.076",
+      "status": "committed"
+     }
+    ],
     "pressure_pairs": [
      {
       "anchor": {
@@ -1012,7 +1078,10 @@
      "decides": "молча и практично: сначала защитить дом и дело",
      "deep_fear": "проверку снабжения, которая найдёт его старые поставки",
      "mask": "сдержанная деловитость"
-    }
+    },
+    "unclocked_intents": [
+     "protect_private_visit"
+    ]
    },
    "look": {
     "внешность": "Взрослый человек с руками, пахнущими порошками и растительными маслами (на 1283, экзамен)"
@@ -1022,10 +1091,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.072",
     "s15.text.073",
     "s15.text.074",
-    "s15.text.075"
+    "s15.text.075",
+    "s15.text.076"
    ],
    "prior_disclosures": [
     {
@@ -1036,18 +1105,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T20:24:00",
-     "sha256": "a4987332f6a50cd51f6a57cd3656c604350274c507db277139fb4008b190205c",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.074"
-    },
-    {
      "at": "0010-04-21T20:25:00",
-     "sha256": "dadc5ad67fb5c88a3fa8f2fba97b2852b7fb857ba9075d1dbd8d33fa45813dc9",
+     "sha256": "88d81c4078620359bcfbddb35895798da2b47ce7b5d1443a3d52b54f2097b358",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.075"
+    },
+    {
+     "at": "0010-04-21T20:26:00",
+     "sha256": "edfea69bf2cc1ec8092bbbef3d214bf974b81316e5bf63663fed5efb2ea8a5f7",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.076"
     }
    ],
    "profile": {
@@ -1067,15 +1136,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.075",
-      "what": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом"
+      "turn": "s15.text.076",
+      "what": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
      }
     ],
     "memory_file": "archive/npc-memory/akihiro.json",
-    "memory_total": 204,
+    "memory_total": 205,
     "name": "Мугами Акихиро",
     "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-    "seen": "s15.text.075",
+    "seen": "s15.text.076",
     "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
     "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
     "status": "present_profile",
@@ -1119,10 +1188,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.072",
     "s15.text.073",
     "s15.text.074",
-    "s15.text.075"
+    "s15.text.075",
+    "s15.text.076"
    ],
    "prior_disclosures": [
     {
@@ -1133,18 +1202,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T20:24:00",
-     "sha256": "a4987332f6a50cd51f6a57cd3656c604350274c507db277139fb4008b190205c",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.074"
-    },
-    {
      "at": "0010-04-21T20:25:00",
-     "sha256": "dadc5ad67fb5c88a3fa8f2fba97b2852b7fb857ba9075d1dbd8d33fa45813dc9",
+     "sha256": "88d81c4078620359bcfbddb35895798da2b47ce7b5d1443a3d52b54f2097b358",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.075"
+    },
+    {
+     "at": "0010-04-21T20:26:00",
+     "sha256": "edfea69bf2cc1ec8092bbbef3d214bf974b81316e5bf63663fed5efb2ea8a5f7",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.076"
     }
    ],
    "profile": {
@@ -1164,15 +1233,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.075",
-      "what": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом"
+      "turn": "s15.text.076",
+      "what": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
      }
     ],
     "memory_file": "archive/npc-memory/nao.json",
-    "memory_total": 193,
+    "memory_total": 194,
     "name": "Мугами Нао",
     "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-    "seen": "s15.text.075",
+    "seen": "s15.text.076",
     "stance": "Сдержанная клиническая настороженность [давняя запись: сверяй со state]",
     "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинско…",
     "status": "present_profile",
@@ -1220,10 +1289,10 @@
     "s15.text.066",
     "s15.text.067",
     "s15.text.068",
-    "s15.text.071",
     "s15.text.072",
     "s15.text.073",
-    "s15.text.074"
+    "s15.text.074",
+    "s15.text.076"
    ],
    "prior_disclosures": [
     {
@@ -1234,18 +1303,18 @@
      "turn": "s15.text.065"
     },
     {
-     "at": "0010-04-21T20:23:00",
-     "sha256": "8c6ef330badb81456ebaaa28139dfdbf6010a8fa1937b18989a9f5009c14aa87",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.073"
-    },
-    {
      "at": "0010-04-21T20:24:00",
      "sha256": "a4987332f6a50cd51f6a57cd3656c604350274c507db277139fb4008b190205c",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.074"
+    },
+    {
+     "at": "0010-04-21T20:26:00",
+     "sha256": "edfea69bf2cc1ec8092bbbef3d214bf974b81316e5bf63663fed5efb2ea8a5f7",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.076"
     }
    ],
    "profile": {
@@ -1269,14 +1338,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.075",
-      "what": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом"
+      "turn": "s15.text.076",
+      "what": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
      }
     ],
     "memory_file": "archive/npc-memory/ren.json",
-    "memory_total": 12,
+    "memory_total": 13,
     "name": "Хаясэ Рэн",
-    "seen": "s15.text.075",
+    "seen": "s15.text.076",
     "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь.",
     "status": "present_profile",
     "tier": "developed"
@@ -1336,7 +1405,7 @@
     },
     {
      "at": "0010-04-21T20:25:00",
-     "sha256": "dadc5ad67fb5c88a3fa8f2fba97b2852b7fb857ba9075d1dbd8d33fa45813dc9",
+     "sha256": "88d81c4078620359bcfbddb35895798da2b47ce7b5d1443a3d52b54f2097b358",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.075"
@@ -1364,14 +1433,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.075",
-      "what": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом"
+      "turn": "s15.text.076",
+      "what": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 42,
+    "memory_total": 43,
     "name": "Коюки",
-    "seen": "s15.text.075",
+    "seen": "s15.text.076",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -1381,15 +1450,15 @@
  },
  "recent_turns": [
   {
-   "id": "s15.text.075",
-   "line": "Шики отказался возвращаться в деревню даже при помиловании, обозначил добровольную змеиную почту. Аки предложила безопасный ящик, Коюки договорилась осмотреть подход утром. Нао предложила чай и альбом."
+   "id": "s15.text.076",
+   "line": "Шики рассказал о своём участии в спасении Казекаге и надежде на урегулирование с Кири. Аки назвала Гаару, Рэн спросил о противнике. Акихиро закрыл окно и потребовал не разглашать разговор."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Шики, Нао, Акихиро, Сэйна, Рэн и Аки в доме у стола; Коюки возле своей тарелки. Аки принесла рыбу.",
   "pressure": "Действует разовый допуск главы; бывшие товарищи пока не уверены в личности Шики.",
-  "situation": "Шики объявил, что не вернётся в деревню даже при помиловании, и при переписке намерен просить змей доставлять письма, не подвергая их риску ловушек Аки. Аки предложила установить почтовый ящик вне ловушек, Коюки сама попросила показать место утром; Аки согласилась. Акихиро попросил иногда навещать семью. Нао поставила банку любимого чая поверх альбома, предложила взять; подчеркнула различие дома и деревни. Ночёвка, принятие подарков не решены."
+  "situation": "Шики сообщил о надежде получить свободы после урегулирования с Киригакуре и о своём участии в спасении Казекаге. Аки назвала Гаару, вспомнила бой с ним на экзамене, Рэн спросил, кто его одолел. Акихиро закрыл окно и потребовал сохранить семейный разговор в тайне, Сэйна кивнула. Подробностей спасения собравшиеся ещё не получили."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1403,9 +1472,9 @@
    "player": "Пойдем вместе #протягиваю ей руку# забирайся",
    "source": "archive/session-015-turns.jsonl"
   },
-  "s15.text.075": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 20:25</text>\n\n### Дом семьи Мугами\n\n**Мугами Шики:** — Простите. Но я не вернусь в деревню даже при помиловании. Аки, тебе будет сложно писать, если у тебя ловушки, то я не позволю себе просить змей нести тебе письмо. Ах да, если и буду писать, то передавать письма буду просить змей.\n\nАкихиро снял чайник с огня.\n\n**Мугами Акихиро:** — Мы переживём это. Только приезжай иногда, если сможешь.\n\nНао поднялась и ушла на кухню. Оттуда донёсся звон посуды.\n\n**Мидзухара Аки:** — Тогда поставлю у кали…",
-   "player": "Простите. Но я не вернусь в деревню даже при помиловании. Аки, тебе будет сложно писать, если у тебя ловушки то я не позволю себе просить змей нести тебе письмо. Ах да, если и буду писать то передавать письма буду просить змей ",
+  "s15.text.076": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 20:26</text>\n\n### Дом семьи Мугами\n\n**Мугами Шики:** — Если разберусь с Киригакуре, то может быть и получу некоторые свободы. Кстати, так уж вышло, что я помогал спасти Казекаге.\n\nС хитрым выражением лица он посмотрел на бывших напарников.\n\n**Мугами Шики:** — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге?\n\n**Мидзухара Аки:** — Гаара.\n\nРэн перестал жевать.\n\n**Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару?\n\nАки коснулась колена, повреждённого много лет назад на экзамене.\n\n**Мидзухара…",
+   "player": "Если разберусь с киригакуре, то может быть и получу некоторые свободы. Кстати так уж вышло что я помогал спасти кадзекагэ. А ещё #с хитрым выражением лица# Аки, Рэн, вы знаете кто сейчас кадзекагэ?",
    "source": "archive/session-015-turns.jsonl"
   }
  },
@@ -1415,8 +1484,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "f9d6befc4141abf570ed4100326cce60a8f128bc",
-  "turn": "s15.text.075"
+  "sha": "0bbf94054eaa5e165c8731a985a7a5b591a0f0db",
+  "turn": "s15.text.076"
  },
  "wiki": {
   "index": "memory/INDEX.md",
