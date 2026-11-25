@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.051`
+# Карта мира NPR · на ходе `s15.text.052`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,6 +7,8 @@
 
 ## Персонажи (230)
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head` · в сцене
+- Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
+- Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
 - Старший патруля Кусы — Мужчина в форме шиноби Травы, сегодня без шлема, тени под г… · `npc/grass_roads_patrol_senior`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
@@ -106,7 +108,6 @@
 - Кидзима Суми (Женщина в плаще, Кидзима) — Дорожный плащ, длинный плоский футляр с медицинской печатью. · `npc/kuroishi_visitor`
 - sumi — Небольшая чёрная змея длиной чуть больше человеческого пред… · `npc/sumi`
 - Минасэ Рэи — полукаменная женщина-хирург Нижнего госпиталя · `npc/minase`
-- Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
 - Хаясэ Нори (Хаясэ, Нори) — Капитан внутренней безопасности Кусагакуре, отстранена от дела Тэцу/В-7 · `npc/nori`
 - Реципиент № 6 (реципиента №6, реципиента № 6) — Выживший участник экспериментов с С-17, мальчик примерно 16 лет · `npc/s17_recipient_6`
 - Такаги Рэн (Такаги) — Старший личной охраны главы Кусагакуре, командует шестью прибывшими шиноби из р… · `npc/takagi_ren`
@@ -133,7 +134,6 @@
 - Хранитель лабораторных пропусков госпиталя —  · `npc/hospital_pass_custodian`
 - Кадзиура Сатору (Кадзиура, Сатору) — Старший врач реанимационного отделения Центрального госпиталя, координатор лече… · `npc/kadziura_satoru`
 - Транспортник госпиталя —  · `npc/hospital_transporter`
-- Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - Сиодзаки Масааки (Сиодзаки, Масааки) — Лично не появлялся: известен Шики лишь по подписи в дорожно… · `npc/shiozaki_masaaki`
 - kiri_transfer_carrier —  · `npc/kiri_transfer_carrier`
 - kiri_transfer_watch —  · `npc/kiri_transfer_watch`
@@ -246,7 +246,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (74)
+## Вещи (75)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -278,6 +278,7 @@
 - `kiri_transport_containment` · `items/kiri_transport_containment`
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `kuroishi_ledger` · `items/kuroishi_ledger`
+- `kusa_family_visit_permit_s15` · `items/kusa_family_visit_permit_s15`
 - `market_consumables_25mar` · `items/market_consumables_25mar`
 - `medical_case_m12` · `items/medical_case_m12`
 - `minagi_receipts` · `items/minagi_receipts`
