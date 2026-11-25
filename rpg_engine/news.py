@@ -101,6 +101,34 @@ def _mentions(text, markers):
     return any(m in words or any(w.startswith(m) for w in words if len(m) >= 5) for m in markers)
 
 
+# Весть дошла, когда у неё есть канал (диагностика ведущего 25.11.2026: доставку засчитывали по
+# словам): её говорит NPC, или в повествовании с её именами есть канал или событие — слух, письмо,
+# гонец, «говорят», пришёл, нашли. Имена в речи и мыслях самого Шики или в заявке игрока — не весть.
+CHANNEL = re.compile(r"(?<![\wё])(?:слух\w*|вест\w*|извест\w*|письм\w*|записк\w*|донесени\w*|донёс\w*|"
+                     r"доклад\w*|сообщ\w*|рассказ\w*|говорят|болтают|шепчутся|гонец\w*|гонц\w*|курьер\w*|"
+                     r"торговц\w*|листовк\w*|объявлени\w*|приказ\w*|услышал\w*|узнал\w*|прочитал\w*|"
+                     r"передал\w*|принёс\w*|принес\w*|прислал\w*)", re.I)
+
+
+def _delivered(turns, markers):
+    from .echo import EVENT, LABEL, RECALL_ONLY, SENT
+    for turn in turns:
+        for raw in str(turn.get("gm") or "").split("\n"):
+            label = LABEL.match(raw)
+            if label:
+                if "шики" not in label.group(1).casefold() and _mentions(raw, markers):
+                    return True    # NPC говорит о событии
+                continue
+            if raw.lstrip("*_ ").startswith(("—", "–")):
+                continue           # реплика без метки — чья, неизвестно
+            for match in SENT.finditer(raw):
+                sentence = match.group()
+                if (_mentions(sentence, markers) and (CHANNEL.search(sentence) or EVENT.search(sentence))
+                        and not RECALL_ONLY.search(sentence)):
+                    return True
+    return False
+
+
 def pending(hot):
     """Свежие события за кадром, ещё не ставшие вестью: весомые, новые — раньше."""
     from . import will
@@ -134,10 +162,9 @@ def step(hot, applied):
     if now is None:
         return None
     played = [t for t in applied or [] if t.get("kind") not in ("ooc", "technical", "void")]
-    text = " ".join(f"{t.get('gm') or ''} {t.get('line') or ''}" for t in played)
     current = state.get("current")
     if current and played:
-        if _mentions(text, current.get("markers") or []):
+        if _delivered(played, current.get("markers") or []):
             state["delivered"] += 1
             _mark(hot, current, "delivered")
             state.pop("current")
