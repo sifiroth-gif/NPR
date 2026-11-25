@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.048: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s15.text.047: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`)
 - s15.text.046: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `orochimaru_poison_samples_s15`
 - s15.text.045: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `orochimaru_poison_samples_s15`
@@ -59,4 +60,3 @@
 - s14.text.059: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_finances`, вещь `minagi_receipts`, вещь `shiki_new_refuge`, линия `shiki_new_home`, линия `shiki_underground_career`, поправки игрока: 1
 - s14.text.058: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), линия `shiki_new_home`
 - s14.text.057: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_finances`, линия `shiki_underground_career`, линия `shiki_new_home`, поправки игрока: 1
-- s14.text.056: Коюки (`npc/western_nest_young_courier`), Минаги Дзэн (`npc/minagi_zen`), план сюжета
