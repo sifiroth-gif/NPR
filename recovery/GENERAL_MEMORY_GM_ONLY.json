@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.039",
+  "cursor": "s15.text.041",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 146,
+      "mention_count": 147,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:36:00",
-          "excerpt": "нелись разветвлённые отметины от техник Райтона. Учиха остановился у края площадки. **Саске Учиха:** — Орочимару слабеет. Кабуто старается это скрыть, но получается всё хуже. Он повернулся к Шики. **Саске Учиха:** — Когда мы тренировались в Кагэне, ты предложи",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.028"
         },
         {
           "at": "0010-04-21T13:39:09",
@@ -4261,6 +4254,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.033"
+        },
+        {
+          "at": "0010-04-21T13:42:00",
+          "excerpt": "опустил Учиху и обратился к Шики, старательно глядя куда-то поверх его плеча. **Шиноби Звука:** — Господин Орочимару просил передать, что вы можете покинуть убежище в любое удобное время. Если вам что-нибудь потребуется, обратитесь к Кабуто. Саске скрылся в ко",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.041"
         }
       ],
       "projections": [
@@ -13075,7 +13075,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.039",
+        "s15.text.041",
         "s15.text.028",
         "s15.text.029",
         "s15.text.030",
@@ -13086,7 +13086,9 @@
         "s15.text.035",
         "s15.text.036",
         "s15.text.037",
-        "s15.text.038"
+        "s15.text.038",
+        "s15.text.039",
+        "s15.text.040"
       ]
     },
     "place:ca8dd7c91b21f899": {
@@ -16536,17 +16538,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.039",
-          "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
-        },
-        {
+          "seen": "s15.text.041",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
         "recovery/cast/sasuke.json",
-        "recovery/HOT.json",
-        "s15.text.039"
+        "s15.text.041"
       ]
     },
     "sayu": {
@@ -18797,5 +18795,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1213
+  "source_turns_indexed": 1215
 }
