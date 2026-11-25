@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.050: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.049: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.048: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Старая змея (`npc/ryuchi_west_elder`), поправки игрока: 1
 - s14.text.047: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.093: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Мужчина с иглой (`npc/root_field_needle_man`)
 - s13.text.092: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), western_nest_adult_courier (`npc/western_nest_adult_courier`), линия `fire_risk_meeting`, план сюжета
 - s13.text.091: Портовый чиновник (`npc/fire_port_official`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), western_nest_adult_courier (`npc/western_nest_adult_courier`), план сюжета
-- s13.text.090: Немера (Невыписанная) (`npc/nemera`)
