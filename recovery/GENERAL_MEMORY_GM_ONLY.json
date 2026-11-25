@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s13.text.094",
+  "cursor": "s13.text.095",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -817,17 +817,13 @@
       ],
       "projections": [
         {
-          "seen": "s13.text.094",
-          "state": "Слушал разговор о неподтверждённой личности призывающего; не вмешивался в обмен сведениями."
-        },
-        {
-          "state": "Слушал разговор о неподтверждённой личности призывающего; не вмешивался в обмен сведениями."
+          "seen": "s13.text.095",
+          "state": "После разговора Шики с посланницей держит расписку и возвращается к работе, слышал лишь сказанное в помещении."
         }
       ],
       "sources": [
         "recovery/cast/fire_port_official.json",
-        "recovery/HOT.json",
-        "s13.text.094"
+        "s13.text.095"
       ]
     },
     "fire_port_security_staff": {
@@ -873,17 +869,17 @@
       ],
       "projections": [
         {
-          "seen": "s13.text.094",
-          "state": "Слышал, как посланница признала отсутствие сведений о личности человека и заявила о самостоятельности молодой змеи; отвёл взгляд к журналу."
+          "seen": "s13.text.095",
+          "state": "Продолжает оформление сведений для ведомства Огня и наблюдает уход змеи."
         },
         {
-          "state": "Слышал, как посланница признала отсутствие сведений о личности человека и заявила о самостоятельности молодой змеи; отвёл взгляд к журналу."
+          "state": "Продолжает оформление сведений для ведомства Огня и наблюдает уход змеи."
         }
       ],
       "sources": [
         "recovery/cast/fire_port_security_staff.json",
         "recovery/HOT.json",
-        "s13.text.094"
+        "s13.text.095"
       ]
     },
     "fire_statement_genetic_risk": {
@@ -926,28 +922,6 @@
       ],
       "sources": [
         "s09.text.005"
-      ]
-    },
-    "forest_signal_seal": {
-      "aliases": [
-        "forest signal seal",
-        "Сигнальный фуин-узел у северной дороги"
-      ],
-      "facts": [],
-      "id": "forest_signal_seal",
-      "kind": "item",
-      "label": "Сигнальный фуин-узел у северной дороги",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "берёза у затопленного участка",
-          "since": "s12.text.094",
-          "turn": "s12.text.095"
-        }
-      ],
-      "sources": [
-        "s12.text.095"
       ]
     },
     "front_unknown": {
@@ -4043,7 +4017,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s13.text.094",
+          "seen": "s13.text.095",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -10807,12 +10781,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s13.text.094",
+        "s13.text.095",
         "s13.text.088",
         "s13.text.089",
         "s13.text.091",
         "s13.text.092",
-        "s13.text.093"
+        "s13.text.093",
+        "s13.text.094"
       ]
     },
     "place:98886b320cd46886": {
@@ -15497,7 +15472,8 @@
     "root_field_jacket_man": {
       "aliases": [
         "root field jacket man",
-        "Мужчина в куртке"
+        "Мужчина в куртке",
+        "root_field_jacket_man"
       ],
       "facts": [],
       "id": "root_field_jacket_man",
@@ -15536,12 +15512,13 @@
       ],
       "projections": [
         {
-          "seen": "s13.text.079",
+          "seen": "s13.text.095",
           "state": "После лечения способен ходить и двигать руками, правую кисть сгибает неполно. Оставлен Шики со связанными руками; пока пытался достать нож, не сумел. Договорился с напарником помочь освободиться и уйти."
         }
       ],
       "sources": [
-        "recovery/cast/root_field_jacket_man.json"
+        "recovery/cast/root_field_jacket_man.json",
+        "s13.text.095"
       ]
     },
     "root_field_needle_man": {
@@ -16416,7 +16393,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16424,13 +16401,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-11T17:19:00",
-          "excerpt": "ца Рьючидо избегала открытого пространства и человеческих ног. Подобным образом приближались две змеи, передававшие ему слова Сирамэ несколько дней назад. Из-под скамьи раздался негромкий шипящий голос. **Змея-посланница:** — Мугами. Сотрудник безопасности зас",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.091"
         },
         {
           "at": "0010-04-11T17:21:00",
@@ -16445,6 +16415,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.094"
+        },
+        {
+          "at": "0010-04-11T17:22:30",
+          "excerpt": "извал. И что случилось с молодой. Она повторила оба вопроса без запинки. **Змея-посланница:** — Передам Сирамэ. Пусть спрашивает ту, которая была там. Из моего рта ты получишь лишь то, что дошло до моих ушей. Посланница двинулась к двери, но перед самым порого",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.095"
         }
       ],
       "projections": [
@@ -18082,13 +18059,6 @@
       "type": "held_by"
     },
     {
-      "from": "forest_signal_seal",
-      "source": "s12.text.095",
-      "status": "projected",
-      "to": "берёза у затопленного участка",
-      "type": "held_by"
-    },
-    {
       "from": "shiki_arm_wraps",
       "source": "s13.text.015",
       "status": "projected",
@@ -18146,5 +18116,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1115
+  "source_turns_indexed": 1116
 }
