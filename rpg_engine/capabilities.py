@@ -155,20 +155,34 @@ def scene_hint(data, hot):
     plan = for_request(data, "", scene=scene, active_fight=bool((hot.get("_fight") or {}).get("active")))
     return {"as_of": scene.get("as_of"), "routes": plan["routes"],
             "source": "recovery/HOT.json#scene",
-            "rule": "Только для «дальше»/продолжения; явная новая заявка важнее. Активный бой учитывай всегда."}
+            "rule": "Для продолжения; явная заявка важнее. Активный бой всегда."}
+
+
+SOURCE_BASE = "campaigns/shiki/"
+
+
+def _short_source(value):
+    return value.removeprefix(SOURCE_BASE)
 
 
 def packet(root, campaign, hot=None):
     data = load(root, campaign)
     if not data:
         return None
-    return {"rule": data["rule"] + " Тема по текущей заявке, смешанные темы объединяй; короткое продолжение — scene_hint. Уже прочитанное не открывай; при неизвестном факте — источник. Полный реестр " + PATH,
+    return {"rule": "Темы по текущей заявке объединяй; «дальше» — scene_hint. Прочитанное не перечитывай. Проверяй состояние и неизвестные факты по источнику; реестр не даёт знания NPC.",
+            "source_base": SOURCE_BASE,
+            "registry": PATH,
             "scene_hint": scene_hint(data, hot or {}),
-            "routes": {key: {"read": row["read"], "focus": row["focus"], "required": row["required"]} for key, row in data["routes"].items()},
-            "items": [{"id": row["id"], "tags": row["tags"], "fact": row["summary"], "sources": row["sources"],
-                       "status": row["status"], "activation": row["activation"]} for row in data["entries"] if row["core"]],
+            "routes": {key: {"read": [_short_source(x) for x in row["read"]],
+                             "required": row["required"]} for key, row in data["routes"].items()},
+            "items": [{"id": row["id"], "tags": row["tags"], "fact": row["summary"],
+                       "sources": [_short_source(x) for x in row["sources"]],
+                       "activation": row["activation"],
+                       **({"status": row["status"]} if row["status"] != "mastered" else {})}
+                      for row in data["entries"] if row["core"]],
             "catalog": [{"id": row["id"], "title": row["title"], "tags": row["tags"],
                          **({"status": row["status"], "activation": row["activation"]}
-                            if row["activation"] == "unavailable" else {})}
+                            if row["activation"] == "unavailable" else
+                            {"activation": row["activation"]} if row["activation"] != "declared" else {})}
                         for row in data["entries"] if not row["core"]],
-            "catalog_rule": "Без статуса — освоено, но только по заявке/условиям полного реестра; недоступное обозначено явно."}
+            "catalog_rule": "Без status — освоено, без activation — по заявке. Условия в реестре. К путям ref/ и SHIKI.md добавь source_base; ID ходов неизменны."}

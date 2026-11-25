@@ -114,3 +114,21 @@ class CapabilityIndexTest(unittest.TestCase):
         self.assertEqual(pack["state_sources"]["medical_kit"]["state"], "упакован")
         self.assertEqual(json.loads(nextpack._body(pack)), pack)
         self.assertEqual(nextpack._size(pack), len(nextpack._body(pack).encode()))
+
+    def test_compact_registry_source_pointers_and_autonomous_activation_survive(self):
+        data = capabilities.load(ROOT, "shiki")
+        pack = capabilities.packet(ROOT, "shiki")
+        rows = {row["id"]: row for row in data["entries"]}
+        def expand(src):
+            return src if capabilities.TURN_ID.fullmatch(src) else pack["source_base"] + src
+        for row in pack["items"]:
+            original = rows[row["id"]]
+            self.assertEqual([expand(x) for x in row["sources"]], original["sources"])
+            self.assertEqual(row.get("status", "mastered"), original["status"])
+        for key, route in pack["routes"].items():
+            self.assertEqual([expand(x) for x in route["read"]], data["routes"][key]["read"])
+            self.assertEqual(route["required"], data["routes"][key]["required"])
+        for row in pack["catalog"]:
+            original = rows[row["id"]]
+            self.assertEqual(row.get("status", "mastered"), original["status"])
+            self.assertEqual(row.get("activation", "declared"), original["activation"])
