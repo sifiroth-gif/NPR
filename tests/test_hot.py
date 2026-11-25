@@ -53,6 +53,19 @@ class DeltaAdmissionRegressionTest(unittest.TestCase):
                 hot.apply_turn(state, incoming)
             self.assertEqual(json.dumps(state, sort_keys=True), original)
 
+    def test_append_cannot_convert_chakra_ledger_to_list(self):
+        incoming = turn(45, "0006-10-01T07:14:00",
+                        d={"shiki": {"chakra+": [{"value": 100}]}})
+        with self.assertRaisesRegex(hot.TurnError, "chakra"):
+            hot.validate_turn(incoming)
+
+    def test_new_invalid_axes_are_not_silently_neutralized(self):
+        for axes in ({"C": "inf"}, {"Z": 1}, {"D": "bad"}):
+            incoming = turn(24, "0006-10-01T07:14:00", id="s14.text.024",
+                            d={"rolls": [{"axes": axes}]})
+            with self.assertRaisesRegex(hot.TurnError, "axes"):
+                hot.validate_turn(incoming)
+
     def test_legacy_direct_chakra_and_d100_shape_still_valid(self):
         incoming = turn(45, "0006-10-01T07:14:00", d={
             "shiki": {"chakra": {"value": 40, "at": "0006-10-01T07:14:00"}},

@@ -227,6 +227,8 @@ def validate_turn(turn):
     # The historic direct resource patch remains readable before the combat
     # cutover. Current writers must use the resource ledger (d.chakra).
     shiki = delta.get("shiki") or {}
+    if "chakra+" in shiki:
+        raise TurnError("d.shiki.chakra+: ресурс не является списком")
     if "chakra" in shiki:
         chakra = shiki["chakra"]
         if turn_number(turn["id"]) >= turn_number(fight.CUTOVER):
@@ -285,8 +287,13 @@ def validate_turn(turn):
                     valid = False
                 if not valid:
                     raise TurnError(f"{path}.mods: ожидаются конечные числовые поправки")
-            if roll.get("axes") is not None and not isinstance(roll["axes"], dict):
+            axes = roll.get("axes")
+            if axes is not None and not isinstance(axes, dict):
                 raise TurnError(f"{path}.axes: ожидается объект")
+            if axes is not None and turn_number(turn["id"]) >= turn_number(fight.CUTOVER):
+                for axis, value in axes.items():
+                    if axis not in fight.bands.AXES or fight.bands.parse(value) is None:
+                        raise TurnError(f"{path}.axes.{axis}: неверная ось или значение")
             if roll.get("result") is not None and not isinstance(roll["result"], str):
                 raise TurnError(f"{path}.result: ожидается строка")
     for path, rows in (("d.heal", delta.get("heal") or []),
