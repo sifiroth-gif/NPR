@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.084: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), western_nest_young_courier (`npc/western_nest_young_courier`), план сюжета
 - s13.text.083: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), план сюжета
 - s13.text.082: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), план сюжета
 - s13.text.081: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -58,4 +59,3 @@
 - s13.text.027: Немера (Невыписанная) (`npc/nemera`)
 - s13.text.026: Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`)
 - s13.text.025: Дзюн (`npc/haru_brother_jun`), план сюжета
-- s13.text.024: Дзюн (`npc/haru_brother_jun`), Сирамэ (`npc/shirame`), план сюжета
