@@ -59,6 +59,7 @@
 - Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 6 ход(ов), s11–s11
 - Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 6 ход(ов), s14–s14
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 5 ход(ов), s08–s15
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
@@ -85,7 +86,6 @@
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 3 ход(ов), s08–s15
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03

@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.059`
+# Карта мира NPR · на ходе `s15.text.061`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -246,7 +246,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (75)
+## Вещи (76)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -282,6 +282,7 @@
 - `market_consumables_25mar` · `items/market_consumables_25mar`
 - `medical_case_m12` · `items/medical_case_m12`
 - `minagi_receipts` · `items/minagi_receipts`
+- `mugami_family_album` · `items/mugami_family_album`
 - `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
 - `orochimaru_poison_samples_s15` · `items/orochimaru_poison_samples_s15`

@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.061: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), вещь `mugami_family_album`
+- s15.text.060: Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), вещь `mugami_family_album`
 - s15.text.059: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
 - s15.text.058: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.057: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
@@ -58,5 +60,3 @@
 - s15.text.006: Кабуто Якуши (`npc/kabuto`)
 - s15.text.005: Сирамэ (`npc/shirame`)
 - s15.text.004: Сирамэ (`npc/shirame`), линия `shiki_promise_nemera`, план сюжета
-- s15.text.001: Портовый чиновник (`npc/fire_port_official`), Человек у причальной лестницы (`npc/quay_wire_operator`)
-- s14.text.068: поправки игрока: 1
