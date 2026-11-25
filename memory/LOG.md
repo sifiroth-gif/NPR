@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.016: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`)
 - s15.text.015: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), бой
 - s15.text.014: Орочимару (`npc/orochimaru`)
 - s15.text.013: Орочимару (`npc/orochimaru`)
@@ -58,4 +59,3 @@
 - s14.text.027: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
 - s14.text.026: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.025: Портовый чиновник (`npc/fire_port_official`)
-- s14.text.024: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`)

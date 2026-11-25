@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.015",
+  "cursor": "s15.text.016",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 131,
+      "mention_count": 132,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:08:00",
-          "excerpt": "? <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:08</text> ### Подземное убежище Орочимару Не отвлекаясь от чтения, Шики ответил: **Мугами Шики:** — Ага. Вам пора менять тело. Что там Саскэ? Орочимару тихо рассмеялся. Смех перешёл в короткий",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.013"
         },
         {
           "at": "0010-04-21T13:09:00",
@@ -4261,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.015"
+        },
+        {
+          "at": "0010-04-21T13:19:00",
+          "excerpt": ". <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:19</text> ### Подземное убежище Орочимару **Мугами Шики:** — Предположительно тело разрушается вследствие хронической несовместимости между его собственной духовно-чакровой структурой и физиол",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.015",
+          "seen": "s15.text.016",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.015"
+        "s15.text.016"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,12 +13929,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.015",
+        "s15.text.016",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
         "s15.text.013",
-        "s15.text.014"
+        "s15.text.014",
+        "s15.text.015"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17014,7 +17015,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 64,
+      "mention_count": 65,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17022,13 +17023,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:08:00",
-          "excerpt": "днажды начнёт умирать. Он подался вперёд. **Орочимару:** — Скажи, Шики-кун, ты сам ещё способен умереть от старости? Сирамэ медленно подняла голову с плеча Шики. **Ход Шики.** Шики указал на необходимость смены тела и спросил о Саске. Орочимару принял лекарств",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.013"
         },
         {
           "at": "0010-04-21T13:09:00",
@@ -17043,12 +17037,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.015"
+        },
+        {
+          "at": "0010-04-21T13:19:00",
+          "excerpt": "ливать посредством проклятых печатей. Это давало мне определённое преимущество, но проблема возвращалась. Сирамэ всё ещё смотрела на ладонь, поглотившую волос саннина. **Сирамэ:** — Шики, ты ведь мог так же поступить с моими клетками, когда лечил меня? Она не ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.016"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.015",
+          "seen": "s15.text.016",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17062,7 +17063,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s15.text.015"
+        "s15.text.016"
       ]
     },
     "shiranami": {
@@ -18734,5 +18735,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1189
+  "source_turns_indexed": 1190
 }
