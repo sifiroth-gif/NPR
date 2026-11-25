@@ -33,7 +33,7 @@ jobs:
           python - <<'PY'
           import hashlib, json, subprocess
           from pathlib import Path
-          from rpg_engine import hot, fight
+          from rpg_engine import hot, fight, capabilities, nextpack
           state = Path("state")
           def load(path):
               return json.loads((state / path).read_text(encoding="utf-8"))
@@ -73,6 +73,18 @@ jobs:
           full, _ = hot._read_state(state)
           assert packet["dice"] == fight.dice(full)
           assert packet["lag"]["dice_for"] == packet["next_id"]
+          data = capabilities.load(Path("engine"), full.get("campaign"))
+          cap = packet["capabilities"]
+          ids = {row["id"] for row in cap["items"] + cap["catalog"]}
+          assert ids == {row["id"] for row in data["entries"]}
+          archived_ids = {src for row in data["entries"] for src in row["sources"]
+                          if capabilities.TURN_ID.fullmatch(src)}
+          for ident in sorted(archived_ids):
+              path = state / "archive/turns" / ident.split(".")[0] / (ident + ".md")
+              assert path.is_file(), "Missing played capability source: " + ident
+          packet_bytes = (state / "recovery/NEXT.json").stat().st_size
+          assert packet_bytes <= nextpack.HARD_BYTES, "Expanded NEXT exceeded existing budget"
+          print("B1_REGISTRY_OK", len(ids), "archived_sources", len(archived_ids), "NEXT_bytes", packet_bytes)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
