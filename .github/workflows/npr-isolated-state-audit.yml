@@ -2,7 +2,11 @@ name: NPR isolated state audit
 on:
   push:
     branches: [main]
-    paths: [".github/workflows/npr-isolated-state-audit.yml"]
+    paths:
+      - ".github/workflows/npr-isolated-state-audit.yml"
+      - "rpg_engine/capabilities.py"
+      - "rpg_engine/nextpack.py"
+      - "campaigns/shiki/ref/CAPABILITIES.json"
   workflow_dispatch:
 permissions:
   contents: read
