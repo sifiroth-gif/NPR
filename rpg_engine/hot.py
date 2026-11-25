@@ -1475,7 +1475,7 @@ def fold(state_dir):
                     old_forms = (names.get(actor) or {}).get("forms") or []
                     scoped_names[actor] = presence._entry([patch["name"]] + list(patch.get("aliases") or []) + old_forms)
             scope = set(present_before) | set(((turn.get("d") or {}).get("scene") or {}).get("present") or [])
-            spoke, unnamed = presence.voices(turn, scoped_names, always, scope=scope)
+            spoke, unnamed = presence.voices(turn, scoped_names, tuple(always) + tuple(fusion.RETIRED_ACTORS) if fusion.active(base) else always, scope=scope)
             cards = presence.auto_cards(hot, turn, unnamed, names)
             # Говорящий без имени в карточке или вовсе без карточки (есть только страница вики).
             for key in spoke:

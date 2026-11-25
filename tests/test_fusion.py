@@ -56,3 +56,11 @@ class FusionTests(unittest.TestCase):
         self.assertEqual(capabilities.resolve(new,"собственные отростки")["status"],"mastered")
         self.assertEqual(capabilities.resolve(new,"чакра немеры")["status"],"retired")
         self.assertIn("FUSION_CAPABILITIES",capabilities.packet(root,"shiki",self.merged())["registry"])
+    def test_quoted_memory_is_not_scene_presence(self):
+        from rpg_engine import presence
+        names = {"nemera": presence._entry(["Немера"]), "shirame": presence._entry(["Сирамэ"])}
+        t = {"gm": "**Немера — воспоминание:** *— Старый вопрос.*\n**Сирамэ — воспоминание:** *— Ответ.*"}
+        self.assertEqual(presence.voices(t, names), ([], []))
+        t = {"gm": "**Немера:** — Слова.\n**Сирамэ:** — Слова."}
+        self.assertEqual(presence.voices(t, names, fusion.RETIRED_ACTORS), (["shirame"], []))
+        self.assertEqual(presence.voices(t, names), (["nemera", "shirame"], []))

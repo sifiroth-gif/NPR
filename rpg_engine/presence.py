@@ -151,7 +151,7 @@ def voices(turn, names, always_present=(), scope=()):
         return [], []
     keys, unknown = [], []
     for label in speakers(turn.get("gm")):
-        if "шики" in _norm(label) or _clean(label) in NOT_VOICES:
+        if "шики" in _norm(label) or _clean(label) in NOT_VOICES or re.search(r"[—–-]\s*(?:воспоминание|цитата|из письма)\s*$", label, re.I):
             continue
         key = resolve(label, names, scope=scope)
         if key:
