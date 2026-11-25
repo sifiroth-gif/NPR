@@ -1,6 +1,6 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s14.text.015",
+ "cursor": "s14.text.016",
  "fold_errors": [],
  "checks": [
   {
@@ -35,14 +35,19 @@
    "since": "s13.text.015"
   },
   {
-   "turn": "s14.text.015",
+   "turn": "s14.text.016",
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"])."
   },
   {
-   "turn": "s14.text.015",
+   "turn": "s14.text.016",
    "kind": "will",
-   "text": "«Человек в маске» появляется уже 4 раз, а воли у него нет: задай d.cast.chelovek_v_maske.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "text": "«Человек в маске» появляется уже 5 раз, а воли у него нет: задай d.cast.chelovek_v_maske.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+  },
+  {
+   "turn": "s14.text.016",
+   "kind": "stable_change",
+   "text": "Сэйдзи Минасэ: изменена постоянная черта «внешность». Было «Белая керамическая маска с волнами у висков, тёмный капюшон.» (s13.text.099), стало «На вид около 35 лет, короткие тёмные волосы, неровная щетина, старый шрам вдоль переносиц…». Если это ошибка, исправь ход amend; если перемена произошла в мире, оставь."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
