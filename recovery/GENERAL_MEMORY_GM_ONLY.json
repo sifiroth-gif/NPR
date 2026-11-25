@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.021",
+  "cursor": "s14.text.022",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -833,7 +833,7 @@
       "id": "fire_port_official",
       "kind": "npc",
       "label": "Портовый чиновник",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-04-11T16:20:00",
@@ -841,13 +841,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.080"
-        },
-        {
-          "at": "0010-04-11T17:23:00",
-          "excerpt": "белёсыми разводами; далеко над пристанями кричали птицы, возвращавшиеся к каменным выступам волнореза. Портовый чиновник поднял голову. **Портовый чиновник:** — Нет. Ответ последовал сразу. **Портовый чиновник:** — Вы подали заявление. Его приняли. Распоряжени",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.098"
         },
         {
           "at": "0010-04-11T17:24:00",
@@ -862,17 +855,24 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.021"
+        },
+        {
+          "at": "0010-04-11T21:15:20",
+          "excerpt": "временем попросил приготовить носилки до лазарета. Он уже не хотел, чтобы его переносили без его участия. Портовый чиновник положил рядом с инструментами регистрационную расписку и письменное сообщение о задержке передачи пластины связи Туманом. **Ход Шики.** ",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.022"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.021"
+          "seen": "s14.text.022"
         }
       ],
       "sources": [
         "recovery/cast/fire_port_official.json",
         "recovery/HOT.json",
-        "s14.text.021"
+        "s14.text.022"
       ]
     },
     "fire_port_security_staff": {
@@ -917,7 +917,7 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.021",
+          "seen": "s14.text.022",
           "state": "Сообщил, что рапорт отправлен в провинцию; пришёл за показаниями."
         },
         {
@@ -4071,7 +4071,7 @@
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.021",
+          "seen": "s14.text.022",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -4087,8 +4087,7 @@
       ],
       "sources": [
         "recovery/cast/nemera.json",
-        "recovery/HOT.json",
-        "s14.text.021"
+        "recovery/HOT.json"
       ]
     },
     "nemera_document": {
@@ -12145,12 +12144,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.021",
+        "s14.text.022",
         "s14.text.012",
         "s14.text.015",
         "s14.text.016",
         "s14.text.018",
-        "s14.text.020"
+        "s14.text.020",
+        "s14.text.021"
       ]
     },
     "place:b5569561296c9e28": {
@@ -15340,7 +15340,7 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.021",
+          "seen": "s14.text.022",
           "state": "После дополнительного лечения: движения обеих рук против тяжести и частично сопротивления, ноги против тяжести, ходьба не проверена, остаточные парез и нарушение чувствительности; операционная рана закрыта, кровотечение остановлено.",
           "wants": "Взять Шики живым по K-0418."
         },
@@ -15352,14 +15352,13 @@
       "sources": [
         "recovery/cast/quay_masked_hunter.json",
         "recovery/HOT.json",
-        "s14.text.021"
+        "s14.text.022"
       ]
     },
     "quay_wire_operator": {
       "aliases": [
         "quay wire operator",
-        "Человек у причальной лестницы",
-        "quay_wire_operator"
+        "Человек у причальной лестницы"
       ],
       "facts": [],
       "id": "quay_wire_operator",
@@ -15402,8 +15401,7 @@
       ],
       "sources": [
         "recovery/cast/quay_wire_operator.json",
-        "recovery/HOT.json",
-        "s14.text.021"
+        "recovery/HOT.json"
       ]
     },
     "razvedchik_zvuka": {
@@ -18336,5 +18334,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1131
+  "source_turns_indexed": 1132
 }
