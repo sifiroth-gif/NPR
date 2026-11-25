@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.048: поправки игрока: 1
+- s13.text.047: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 1
 - s13.text.046: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 2
 - s13.text.045: Немера (Невыписанная) (`npc/nemera`), поправки игрока: 2
 - s13.text.044: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -55,4 +57,3 @@
 - s12.text.095: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
 - s12.text.094: Немера (Невыписанная) (`npc/nemera`), вещь `forest_signal_seal`, линия `market_shadow`
 - s12.text.093: Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), линия `market_shadow`
-- s12.text.091: Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, вещь `shiki_finances`, вещь `cash_1184`, вещь `market_consumables_25mar`, линия `shiki_underground_career`, поправки игрока: 1
