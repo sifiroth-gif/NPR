@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s13.text.082",
+  "cursor": "s13.text.083",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2203,7 +2203,7 @@
       "id": "kiri_port_guard_junior",
       "kind": "npc",
       "label": "Второй шиноби Тумана",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-11T16:21:00",
@@ -2218,21 +2218,28 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.082"
+        },
+        {
+          "at": "0010-04-11T16:23:00",
+          "excerpt": "т неофициальной книгой и походит на мотивы Орочимару. Младший проверяющий дёрнулся при последнем имени. **Второй шиноби Тумана:** — Ты сравниваешь Киригакуре с Орочимару? **Шиноби корабельной охраны:** — Не перебивай. **Второй шиноби Тумана:** — Но он... **Шин",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.083"
         }
       ],
       "projections": [
         {
-          "seen": "s13.text.082",
-          "state": "Выполнил вызов подкрепления, недоволен раскрытием служебных полей и требует исполнения приказа."
+          "seen": "s13.text.083",
+          "state": "Возмутился аналогией с Орочимару, указал на Хётон Юки; подчинился."
         },
         {
-          "state": "Выполнил вызов подкрепления, недоволен раскрытием служебных полей и требует исполнения приказа."
+          "state": "Возмутился аналогией с Орочимару, указал на Хётон Юки; подчинился."
         }
       ],
       "sources": [
         "recovery/cast/kiri_port_guard_junior.json",
         "recovery/HOT.json",
-        "s13.text.082"
+        "s13.text.083"
       ]
     },
     "kiri_port_guard_senior": {
@@ -2245,7 +2252,7 @@
       "id": "kiri_port_guard_senior",
       "kind": "npc",
       "label": "Шиноби Тумана",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0006-09-19T11:09:00",
@@ -2253,13 +2260,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.076"
-        },
-        {
-          "at": "0010-04-11T16:20:00",
-          "excerpt": "Пусть сначала попробуют найти что-нибудь запрещённое в мешках с солью. Он сплюнул за борт. У дальнего причала раздался резкий приказ. **Шиноби Тумана:** — Капюшон снимите. Один из пассажиров подчинился. Под капюшоном оказался немолодой мужчина с седыми волосам",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.080"
         },
         {
           "at": "0010-04-11T16:21:00",
@@ -2274,33 +2274,41 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.082"
+        },
+        {
+          "at": "0010-04-11T16:23:00",
+          "excerpt": "циальной книгой и походит на мотивы Орочимару. Младший проверяющий дёрнулся при последнем имени. **Второй шиноби Тумана:** — Ты сравниваешь Киригакуре с Орочимару? **Шиноби корабельной охраны:** — Не перебивай. **Второй шиноби Тумана:** — Но он... **Шиноби кор",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.083"
         }
       ],
       "projections": [
         {
-          "seen": "s13.text.082",
-          "state": "Прочёл карточку K-0418 и честно сообщил отсутствие в ней обвинительного заключения; остановил попытку разворачивать печати до согласия или приказа."
+          "seen": "s13.text.083",
+          "state": "Передал Книгу Бинго офицеру и вернул в футляр, поддержал запрет на немедленный захват."
         },
         {
-          "state": "Прочёл карточку K-0418 и честно сообщил отсутствие в ней обвинительного заключения; остановил попытку разворачивать печати до согласия или приказа."
+          "state": "Передал Книгу Бинго офицеру и вернул в футляр, поддержал запрет на немедленный захват."
         }
       ],
       "sources": [
         "recovery/cast/kiri_port_guard_senior.json",
         "recovery/HOT.json",
-        "s13.text.082"
+        "s13.text.083"
       ]
     },
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
       "kind": "npc",
       "label": "Шиноби корабельной охраны",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-11T16:22:00",
@@ -2308,21 +2316,28 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.082"
+        },
+        {
+          "at": "0010-04-11T16:23:00",
+          "excerpt": "еряющий дёрнулся при последнем имени. **Второй шиноби Тумана:** — Ты сравниваешь Киригакуре с Орочимару? **Шиноби корабельной охраны:** — Не перебивай. **Второй шиноби Тумана:** — Но он... **Шиноби корабельной охраны:** — Я слышал. Корабельный офицер подошёл к",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.083"
         }
       ],
       "projections": [
         {
-          "seen": "s13.text.082",
-          "state": "Пришёл с корабля после сигнала, принял руководство подкреплением, предложил Шики добровольно пройти на борт под охраной, отложил применение подавления до ответа."
+          "seen": "s13.text.083",
+          "state": "Не признал обвинения, не приказывал обезоруживать, отправил запрос в центр, контролирует посадку."
         },
         {
-          "state": "Пришёл с корабля после сигнала, принял руководство подкреплением, предложил Шики добровольно пройти на борт под охраной, отложил применение подавления до ответа."
+          "state": "Не признал обвинения, не приказывал обезоруживать, отправил запрос в центр, контролирует посадку."
         }
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
         "recovery/HOT.json",
-        "s13.text.082"
+        "s13.text.083"
       ]
     },
     "kiri_transfer_carrier": {
@@ -3857,7 +3872,7 @@
       "id": "nemera",
       "kind": "npc",
       "label": "Немера (Невыписанная)",
-      "mention_count": 114,
+      "mention_count": 115,
       "mentions": [
         {
           "at": "0010-03-13T17:36:00",
@@ -3865,13 +3880,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.028"
-        },
-        {
-          "at": "0010-04-11T16:20:00",
-          "excerpt": "ное побережье, а дальше — море, отделявшее материк от островов Страны Воды. Шики повернул на восток. **Немера (Невыписанная):** *— Хорошо, лекарь. Когда-нибудь я напомню тебе об этом обещании.* Она помолчала. *— Ты уже бывал в Тумане. Интересно, найдётся ли та",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.080"
         },
         {
           "at": "0010-04-11T16:21:00",
@@ -3886,13 +3894,20 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.082"
+        },
+        {
+          "at": "0010-04-11T16:23:00",
+          "excerpt": "азведывательного отдела ещё не является предъявленным обвинением. Младший замолчал. Немера пошевелилась внутри одного из запоров. **Немера (Невыписанная):** *— Он осторожен. Первый из них, кто не пытается сделать вид, будто приказ отвечает на вопрос.* *** Кора",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.083"
         }
       ],
       "projections": [
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s13.text.082",
+          "seen": "s13.text.083",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "Остаётся скрытой и не мешает поднятым рукам Шики; наблюдает, как люди Тумана пытаются устроить захват без контакта; её воля и договорные ключи при ней.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -4050,7 +4065,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 114,
+      "mention_count": 115,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4058,13 +4073,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-03T12:01:30",
-          "excerpt": "то и стало причиной попытки дистанционно их убить. Я не позволил. Но не обманывайтесь мы с Кабуто и Орочимару не союзники. С последним, хах, ну посмотрите на меня, вам в корне рассказывают какие техники приводят к таким изменениям на лице. Но знаете что самое ",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.053"
         },
         {
           "at": "0010-04-03T12:02:30",
@@ -4079,6 +4087,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.057"
+        },
+        {
+          "at": "0010-04-11T16:23:00",
+          "excerpt": "розыск человека за его особенности. Это больше попахивает неофициальной книгой и походит на мотивы Орочимару <text color=\"secondary\" size=\"xs\">11 апреля 1287 года · 16:23</text> ### Страна Огня. Восточная гавань, причал Киригакуре **Мугами Шики:** — Потому что",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.083"
         }
       ],
       "projections": [
@@ -6703,8 +6718,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s13.text.082",
-        "s13.text.081"
+        "s13.text.083",
+        "s13.text.081",
+        "s13.text.082"
       ]
     },
     "place:400ba71c88a7ca3f": {
@@ -15603,27 +15619,6 @@
         "recovery/cast/sai.json"
       ]
     },
-    "sai_note": {
-      "aliases": [
-        "sai note"
-      ],
-      "facts": [],
-      "id": "sai_note",
-      "kind": "item",
-      "label": "sai note",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "kabuto",
-          "since": "s12.text.082",
-          "turn": "s12.text.083"
-        }
-      ],
-      "sources": [
-        "s12.text.083"
-      ]
-    },
     "sakura": {
       "aliases": [
         "sakura",
@@ -17095,27 +17090,6 @@
         "s12.text.085"
       ]
     },
-    "thread:kabuto_tracking_claim": {
-      "aliases": [
-        "thread:kabuto tracking claim",
-        "kabuto tracking claim",
-        "kabuto_tracking_claim"
-      ],
-      "facts": [],
-      "id": "thread:kabuto_tracking_claim",
-      "kind": "thread",
-      "label": "kabuto tracking claim",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Кабуто не предпринимал силового захвата Шики во время этой встречи, мотивировал это отсутствием приказа и высокой ценой. Предварительное донесение отправлено Орочимару со змеёй; содержание пока не установлено."
-        }
-      ],
-      "sources": [
-        "s12.text.083"
-      ]
-    },
     "thread:market_shadow": {
       "aliases": [
         "thread:market shadow",
@@ -17197,27 +17171,6 @@
       ],
       "sources": [
         "s13.text.007"
-      ]
-    },
-    "thread:sai_note": {
-      "aliases": [
-        "thread:sai note",
-        "sai note",
-        "sai_note"
-      ],
-      "facts": [],
-      "id": "thread:sai_note",
-      "kind": "thread",
-      "label": "sai note",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Кабуто удерживает перехваченное письмо Сая и трёх пленных, которых намерен перевезти; отправил предварительный отчёт Орочимару, но письмо остаётся при нём."
-        }
-      ],
-      "sources": [
-        "s12.text.083"
       ]
     },
     "thread:shiki_confidentiality": {
@@ -17898,13 +17851,6 @@
       "type": "held_by"
     },
     {
-      "from": "sai_note",
-      "source": "s12.text.083",
-      "status": "projected",
-      "to": "kabuto",
-      "type": "held_by"
-    },
-    {
       "from": "market_consumables_25mar",
       "source": "s12.text.091",
       "status": "projected",
@@ -17955,5 +17901,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1104
+  "source_turns_indexed": 1105
 }

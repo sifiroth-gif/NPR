@@ -4,6 +4,7 @@
 - holder: kabuto
 - state: У Кабуто, не передано Шики.
 - turn: s12.text.083
+- в архиве: с s13.text.083
 
 ## Изменения по ходам
 - s12.text.082: was: holder: kabuto; now: holder: kabuto; state: Кабуто сохраняет письмо и намерен вывезти его с пленными
