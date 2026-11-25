@@ -2,18 +2,19 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.015: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`)
 - s14.text.014: поправки игрока: 1
-- s14.text.012: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`)
-- s14.text.011: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Человек в маске (`npc/chelovek_v_maske`), план сюжета, бой
-- s14.text.009: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
-- s14.text.008: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Портовый чиновник (`npc/fire_port_official`)
-- s14.text.007: Человек у причальной лестницы (`npc/quay_wire_operator`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), бой
+- s14.text.012: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`)
+- s14.text.011: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Человек в маске (`npc/chelovek_v_maske`), план сюжета, бой
+- s14.text.009: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
+- s14.text.008: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Портовый чиновник (`npc/fire_port_official`)
+- s14.text.007: Человек у причальной лестницы (`npc/quay_wire_operator`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), бой
 - s14.text.006: поправки игрока: 1
-- s14.text.005: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 2
-- s14.text.004: Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), quay_masked_hunter (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой
-- s14.text.001: quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`)
+- s14.text.005: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 2
+- s14.text.004: Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой
+- s14.text.001: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`)
 - s13.text.100: поправки игрока: 5
-- s13.text.099: quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `fire_port_statement_receipt`, план сюжета, бой
+- s13.text.099: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `fire_port_statement_receipt`, план сюжета, бой
 - s13.text.098: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.097: поправки игрока: 5
 - s13.text.096: поправки игрока: 5
@@ -57,4 +58,3 @@
 - s13.text.058: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Молодая змея (`npc/molodaya_zmeya`), Немера (Невыписанная) (`npc/nemera`), вещь `root_compulsory_coupling_scroll`
 - s13.text.057: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.056: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), вещь `root_compulsory_coupling_scroll`
-- s13.text.055: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 2
