@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.057: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_finances`, линия `shiki_underground_career`, линия `shiki_new_home`, поправки игрока: 1
 - s14.text.056: Коюки (`npc/western_nest_young_courier`), Минаги Дзэн (`npc/minagi_zen`), план сюжета
 - s14.text.055: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`, линия `shiki_new_home`, поправки игрока: 1
 - s14.text.053: Коюки (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`), поправки игрока: 1
@@ -56,4 +57,3 @@
 - s13.text.100: поправки игрока: 5
 - s13.text.099: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `fire_port_statement_receipt`, план сюжета, бой
 - s13.text.098: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Дзюн (`npc/haru_brother_jun`), план сюжета
-- s13.text.097: поправки игрока: 5
