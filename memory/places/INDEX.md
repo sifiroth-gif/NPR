@@ -47,6 +47,7 @@
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
+- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 7 ход(ов), s14–s14
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
@@ -59,7 +60,6 @@
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
-- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 5 ход(ов), s14–s14
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
@@ -241,6 +241,7 @@
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
+- Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 1 ход(ов), s14–s14
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, лес у северных болот · `places/strana-travy-les-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Травы, лесистый склон над сухим оврагом · `places/strana-travy-lesistyy-sklon-nad-sukhim-ovragom` · 1 ход(ов), s13–s13

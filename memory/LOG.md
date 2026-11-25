@@ -2,6 +2,9 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.066: поправки игрока: 1
+- s14.text.065: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`
+- s14.text.064: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), линия `shiki_promise_nemera`, поправки игрока: 1
 - s14.text.063: Сирамэ (`npc/shirame`), вещь `kabuto_letter_0416`, вещь `ward_vii_fragment_0416`, линия `shiki_promise_nemera`
 - s14.text.062: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), вещь `kabuto_letter_0416`, линия `shiki_promise_nemera`
 - s14.text.061: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Человек у причальной лестницы (`npc/quay_wire_operator`), поправки игрока: 1
@@ -56,6 +59,3 @@
 - s14.text.009: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.008: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.007: Человек у причальной лестницы (`npc/quay_wire_operator`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), бой
-- s14.text.006: поправки игрока: 1
-- s14.text.005: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 2
-- s14.text.004: Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой
