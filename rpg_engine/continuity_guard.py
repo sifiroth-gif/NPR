@@ -22,6 +22,8 @@
 from __future__ import annotations
 
 import re
+import json
+from pathlib import Path
 
 FIELDS = ("name", "holder", "where", "state", "count")
 THINGS_KEEP = 60
@@ -31,6 +33,38 @@ OOC = re.compile(r"(?im)^\s*(?:мастеру|ooc|вне игры)\s*:.*$")
 ACTION = re.compile(r"#[^#]*#|\([^)]*\)|\*[^*]*\*")
 SPEECH_MIN_WORDS = 4
 SPEECH_MIN_COVERAGE = 0.5
+
+
+
+def reconcile_shiki(state_dir, hot, source_root=None):
+    """Repair only an audited cursor and exact stale fields from played proof.
+
+    No archive writes; a reset or later unverified cursor leaves state intact.
+    """
+    root = Path(source_root) if source_root else Path(__file__).resolve().parents[1]
+    try:
+        config = json.loads((root / "campaigns/shiki/ref/STATE_FIXES.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    if config.get("schema") != "npr-source-state-fixes/1":
+        return []
+    changed = []
+    shiki = hot.get("shiki") or {}
+    for fix in config.get("fixes") or []:
+        if (hot.get("cursor") or {}).get("id") != fix["cursor"]:
+            continue
+        if not all(shiki.get(key) == value for key, value in fix["expected"].items()):
+            continue
+        try:
+            verified = all(all(needle in (Path(state_dir) / src["path"]).read_text(encoding="utf-8")
+                               for needle in src["contains"]) for src in fix["sources"])
+        except OSError:
+            verified = False
+        if not verified:
+            continue
+        shiki.update(fix["replacement"])
+        changed.append(fix["id"])
+    return changed
 
 
 def _norm(value):

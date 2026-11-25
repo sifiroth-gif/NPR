@@ -1340,6 +1340,7 @@ def fold(state_dir):
 
     state_dir = Path(state_dir)
     hot, before = _read_state(state_dir)
+    continuity_guard.reconcile_shiki(state_dir, hot)
     ensure_npc_memory(state_dir, hot)
     _load_stats(state_dir, hot)
     alias = merge.aliases(state_dir)
@@ -1522,6 +1523,7 @@ def fold(state_dir):
     will.seed(state_dir, hot)
     will.fill_names(state_dir, hot)
     _keeper_fill(state_dir, hot)
+    continuity_guard.reconcile_shiki(state_dir, hot)  # amend may restore the audited stale snapshot
     # Мир не ждёт ведущего: просроченные планы отсутствующих исполняются сами
     # (GM_ONLY will.happened → NEXT.offscreen).
     will.advance(hot, _always_present(state_dir))

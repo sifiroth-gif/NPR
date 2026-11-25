@@ -1,4 +1,6 @@
+import tempfile
 import unittest
+from pathlib import Path
 
 from rpg_engine import continuity_guard as cg, fight, hot
 
@@ -75,6 +77,30 @@ class SpeechCoverageTest(unittest.TestCase):
                             "gm": "Дверь."})
         self.assertEqual(kinds(hot), [])
 
+
+
+class SourceStateRegressionTest(unittest.TestCase):
+    def test_eye_repair_requires_exact_cursor_fields_and_both_sources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            state = Path(directory)
+            source = state / "archive/turns/s13"
+            source.mkdir(parents=True)
+            original = {"body": "Активирован обычный Шаринган с тремя томоэ, змеиные вертикальные зрачки сохранены.",
+                        "eyes": "Вечный Мангекё отключён 10.03 17:20."}
+            hot_state = {"cursor": {"id": "s14.text.023"}, "shiki": dict(original)}
+            (source / "s13.text.077.md").write_text("#убираю шаринган# Алый цвет исчез из глаз.", encoding="utf-8")
+            self.assertEqual(cg.reconcile_shiki(state, hot_state), [])
+            (source / "s13.text.100.md").write_text(
+                "обычный можешь вообще убрать из файлов. В действующем боевом листе оставлена только активируемая игроком форма глаз",
+                encoding="utf-8")
+            self.assertEqual(cg.reconcile_shiki(state, hot_state), ["shiki-eyes-s14-023"])
+            self.assertIn("выключен", hot_state["shiki"]["eyes"])
+            self.assertEqual(cg.reconcile_shiki(state, hot_state), [])
+            later = {"cursor": {"id": "s14.text.024"}, "shiki": dict(original)}
+            self.assertEqual(cg.reconcile_shiki(state, later), [])
+            self.assertEqual(later["shiki"], original)
+            changed = {"cursor": {"id": "s14.text.023"}, "shiki": {**original, "eyes": "новый факт"}}
+            self.assertEqual(cg.reconcile_shiki(state, changed), [])
 
 
 class DeltaResourceTest(unittest.TestCase):
