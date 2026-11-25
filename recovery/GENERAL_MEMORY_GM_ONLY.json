@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.066",
+  "cursor": "s15.text.067",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 78,
+      "mention_count": 79,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T19:41:00",
-          "excerpt": "рил с торговцем о качестве оружейной стали. **Хаясэ Рэн:** — Если лезвие снова треснет, я принесу его лично. **Мидзухара Аки:** — Ты обещал это ещё в феврале. Шики узнал обоих. Его прежние товарищи по команде, с которыми он когда-то отправился на экзамен в Кон",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.064"
         },
         {
           "at": "0010-04-21T19:42:00",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.066"
+        },
+        {
+          "at": "0010-04-21T19:47:00",
+          "excerpt": "отя остальные деньги хранились вперемешку. Вернулась Аки с рыбой, завёрнутой в широкие влажные листья. **Мидзухара Аки:** — Купила. Рэн, ты идёшь? **Хаясэ Рэн:** — Иду. Только, Шики, давай сегодня без разговоров о Книге Бинго. Хоть один вечер. Коюки подняла го",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.066"
+          "seen": "s15.text.067"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.066"
+        "s15.text.067"
       ]
     },
     "akihiro": {
@@ -460,11 +460,12 @@
       "projections": [
         {
           "holder": "shiki",
-          "since": "s15.text.066"
+          "since": "s15.text.066",
+          "turn": "s15.text.067"
         }
       ],
       "sources": [
-        "s15.text.066"
+        "s15.text.067"
       ]
     },
     "bounty_notices": {
@@ -14602,9 +14603,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.066",
+        "s15.text.067",
         "s15.text.064",
-        "s15.text.065"
+        "s15.text.065",
+        "s15.text.066"
       ]
     },
     "place:e73ff158a510413a": {
@@ -16130,7 +16132,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 80,
+      "mention_count": 81,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16138,13 +16140,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T19:41:00",
-          "excerpt": "упленной сумки, сверяя его со списком. Рядом жилистый мужчина спорил с торговцем о качестве оружейной стали. **Хаясэ Рэн:** — Если лезвие снова треснет, я принесу его лично. **Мидзухара Аки:** — Ты обещал это ещё в феврале. Шики узнал обоих. Его прежние товари",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.064"
         },
         {
           "at": "0010-04-21T19:42:00",
@@ -16159,11 +16154,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.066"
+        },
+        {
+          "at": "0010-04-21T19:47:00",
+          "excerpt": "Вернулась Аки с рыбой, завёрнутой в широкие влажные листья. **Мидзухара Аки:** — Купила. Рэн, ты идёшь? **Хаясэ Рэн:** — Иду. Только, Шики, давай сегодня без разговоров о Книге Бинго. Хоть один вечер. Коюки подняла голову. **Коюки:** — А потом вы расскажете, к",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.066",
+          "seen": "s15.text.067",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16173,7 +16175,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.066"
+        "s15.text.067"
       ]
     },
     "residence_courier_v7": {
@@ -18640,7 +18642,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18648,13 +18650,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-21T19:41:00",
-          "excerpt": "ize=\"xs\">Среда, 21 апреля 1287 года · 19:29</text> ### Дом семьи Мугами **Мугами Шики:** — Хм, неа. Коюки, хочешь пройтись? Пойду куплю, я быстро. **Коюки:** — Хочу! Она забралась на предплечье Шики. Акихиро поднялся из-за стола и достал ключ от калитки. **Муг",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.064"
         },
         {
           "at": "0010-04-21T19:42:00",
@@ -18669,11 +18664,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.066"
+        },
+        {
+          "at": "0010-04-21T19:47:00",
+          "excerpt": "ты идёшь? **Хаясэ Рэн:** — Иду. Только, Шики, давай сегодня без разговоров о Книге Бинго. Хоть один вечер. Коюки подняла голову. **Коюки:** — А потом вы расскажете, каким он был на экзамене? **Хаясэ Рэн:** — О, поверь, там есть что рассказать. Впервые за всю в",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.066",
+          "seen": "s15.text.067",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -18683,7 +18685,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s15.text.066"
+        "s15.text.067"
       ]
     },
     "white_snake_sage": {
@@ -19112,12 +19114,12 @@
     },
     {
       "from": "blank_communication_plates_s15",
-      "source": "s15.text.066",
+      "source": "s15.text.067",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1240
+  "source_turns_indexed": 1241
 }
