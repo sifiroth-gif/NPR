@@ -36,12 +36,12 @@
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 10 ход(ов), s10–s14
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 9 ход(ов), s08–s08
+- Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 9 ход(ов), s05–s15
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 8 ход(ов), s01–s01
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
-- Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
@@ -138,6 +138,7 @@
 - Страна Травы, сельские предместья Кусагакуре · `places/strana-travy-selskie-predmestya-kusagakure` · 2 ход(ов), s10–s11
 - Страна Травы, северные болота · `places/strana-travy-severnye-bolota` · 2 ход(ов), s12–s12
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
+- Страна Травы, ворота Кусагакуре · `places/strana-travy-vorota-kusagakure` · 2 ход(ов), s15–s15
 - Страна Травы, восточный склон известняковой ложбины · `places/strana-travy-vostochnyy-sklon-izvestnyakovoy-lozhbiny` · 2 ход(ов), s12–s12
 - Страна Травы, заброшенный сушильный двор возле подпольных складов · `places/strana-travy-zabroshennyy-sushilnyy-dvor-vozle-podpolnykh-sk` · 2 ход(ов), s12–s12
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
@@ -264,7 +265,6 @@
 - Страна Травы, старая торговая дорога у развилки · `places/strana-travy-staraya-torgovaya-doroga-u-razvilki` · 1 ход(ов), s13–s13
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
 - Страна Травы, теневые торговые ряды возле подпольных складов · `places/strana-travy-tenevye-torgovye-ryady-vozle-podpolnykh-skladov` · 1 ход(ов), s12–s12
-- Страна Травы, ворота Кусагакуре · `places/strana-travy-vorota-kusagakure` · 1 ход(ов), s15–s15
 - Страна Травы, заброшенная дорога у северных болот · `places/strana-travy-zabroshennaya-doroga-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
