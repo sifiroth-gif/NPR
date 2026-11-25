@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.009",
+  "cursor": "s15.text.010",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 97,
+      "mention_count": 98,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T11:56:00",
-          "excerpt": "ротянутый им документ медленно опустился. Он ещё раз посмотрел на Шики. Теперь гораздо внимательнее. **Кабуто Якуши:** — Всегда? Сирамэ повернула голову к медику. **Сирамэ:** — Ты слышал его. Кабуто проигнорировал замечание змеи. Несколько секунд он рассматрив",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.007"
         },
         {
           "at": "0010-04-21T11:57:00",
@@ -1694,11 +1687,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.009"
+        },
+        {
+          "at": "0010-04-21T13:05:00",
+          "excerpt": "ониться. Но заметив его спутника, остановился на середине движения. **Шиноби Звука:** — Кабуто-сама, это тот… **Кабуто Якуши:** — Предупредите Орочимару-сама. Человек поспешил исполнить поручение. Уже за поворотом послышался звук брошенного на засов металличес",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.009",
+          "seen": "s15.text.010",
           "state": "У святилища, встретил Шики и Сирамэ; показал лист из папки."
         },
         {
@@ -1708,7 +1708,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s15.text.009"
+        "s15.text.010"
       ]
     },
     "kabuto_letter_0416": {
@@ -1734,17 +1734,23 @@
     },
     "kabuto_orientation_1278": {
       "aliases": [
-        "kabuto orientation 1278"
+        "kabuto orientation 1278",
+        "Копия ориентировки 1278 г."
       ],
       "facts": [],
       "id": "kabuto_orientation_1278",
       "kind": "item",
-      "label": "kabuto orientation 1278",
+      "label": "Копия ориентировки 1278 г.",
       "mention_count": 0,
       "mentions": [],
-      "projections": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s15.text.010"
+        }
+      ],
       "sources": [
-        "s15.text.009"
+        "s15.text.010"
       ]
     },
     "kadziura_satoru": {
@@ -4231,7 +4237,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 125,
+      "mention_count": 126,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4239,13 +4245,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T11:55:00",
-          "excerpt": "дозревал, что причиной увиденного стали загрязнённые стёкла. Затем вновь надел их. **Кабуто Якуши:** — Так вот почему Орочимару-сама не смог завершить это обучение… Он осёкся. Его внимание переместилось на белую змею. **Кабуто Якуши:** — Сирамэ. Не ожидал увид",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.006"
         },
         {
           "at": "0010-04-21T11:56:00",
@@ -4260,16 +4259,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.008"
+        },
+        {
+          "at": "0010-04-21T13:05:00",
+          "excerpt": "ребовалось ничего пересказывать. *** <text color=\"secondary\" size=\"xs\">13:05</text> ### Подземное убежище Орочимару За скалистой грядой обнаружился проход в горную породу. Кабуто отворил скрытую каменную дверь. Внутри пахло лекарственными растворами, воском и ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s12.text.064",
-          "state": "Услышал/увидел следы преследования и оставил отряду обвал; ушёл с Саем по проходу."
+          "seen": "s15.text.010",
+          "state": "Лично встречает Шики в подземном убежище."
+        },
+        {
+          "state": "Лично встречает Шики в подземном убежище."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "recovery/HOT.json",
+        "s15.text.010"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13908,6 +13919,24 @@
         "s09.text.092"
       ]
     },
+    "place:e02efa16a5127f57": {
+      "aliases": [
+        "place:e02efa16a5127f57",
+        "Северная граница Страны Рек, подземное убежище Орочимару",
+        "Северная граница Страны Рек",
+        "подземное убежище Орочимару"
+      ],
+      "facts": [],
+      "id": "place:e02efa16a5127f57",
+      "kind": "place",
+      "label": "Северная граница Страны Рек, подземное убежище Орочимару",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.010"
+      ]
+    },
     "place:e02f343494580ab8": {
       "aliases": [
         "place:e02f343494580ab8",
@@ -16985,7 +17014,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 58,
+      "mention_count": 59,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16993,13 +17022,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T11:56:00",
-          "excerpt": "енно опустился. Он ещё раз посмотрел на Шики. Теперь гораздо внимательнее. **Кабуто Якуши:** — Всегда? Сирамэ повернула голову к медику. **Сирамэ:** — Ты слышал его. Кабуто проигнорировал замечание змеи. Несколько секунд он рассматривал белые чешуйки на шее Ши",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.007"
         },
         {
           "at": "0010-04-21T11:57:00",
@@ -17014,12 +17036,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.009"
+        },
+        {
+          "at": "0010-04-21T13:05:00",
+          "excerpt": "Человек поспешил исполнить поручение. Уже за поворотом послышался звук брошенного на засов металлического затвора. Сирамэ тихо зашипела. **Сирамэ:** — Я останусь с тобой. Мне не нравится это место. Кабуто открыл последнюю дверь. В просторном помещении горели д",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.010"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.009",
+          "seen": "s15.text.010",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17033,7 +17062,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s15.text.009"
+        "s15.text.010"
       ]
     },
     "shiranami": {
@@ -18695,8 +18724,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "kabuto_orientation_1278",
+      "source": "s15.text.010",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1183
+  "source_turns_indexed": 1184
 }
