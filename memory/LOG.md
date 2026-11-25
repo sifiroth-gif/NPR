@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.006: поправки игрока: 1
 - s14.text.005: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 2
 - s14.text.004: Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), quay_masked_hunter (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой
 - s14.text.001: quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`)
@@ -59,4 +60,3 @@
 - s13.text.049: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`)
 - s13.text.048: поправки игрока: 1
 - s13.text.047: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 1
-- s13.text.046: Немера (Невыписанная) (`npc/nemera`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), поправки игрока: 2

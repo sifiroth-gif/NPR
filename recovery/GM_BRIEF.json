@@ -65,49 +65,34 @@
  "checks": [
   {
    "kind": "fight",
+   "text": "Бросок «Изъять цилиндр до замыкания печати, используя окно, различённое Шаринганом»: порог 80, по формуле 88 (перевес +2.5).",
+   "turn": "s13.text.034"
+  },
+  {
+   "kind": "fight",
+   "text": "Против «quay_masked_hunter» в обмене нет ни одной кости: с именным противником исход решает бросок, перевес Шики не выше +2.",
+   "turn": "s13.text.099"
+  },
+  {
+   "kind": "fight",
    "text": "Бой с именным противником идёт, а d.fight в ходе нет: обмен не записан — его ход, кости и раны пропали.",
    "turn": "s14.text.001"
   },
   {
-   "kind": "style",
-   "text": "Манера ушла от образцов (чистые ходы s10.text.060–092 до сбоя подписей): фразы 14.1 (слов; у образцов 5.6–10.6); реплики 0.04 (доля; у образцов 0.18–0.6); абзацы 22.7 (слов; у образцов 8.3–17.5). Верни голос утверждённых сцен.",
-   "turn": "s14.text.005"
-  },
-  {
-   "kind": "horror",
-   "text": "quay_masked_hunter: ступень 1→настороженность прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s14.text.005"
-  },
-  {
-   "kind": "horror",
-   "text": "quay_wire_operator: ступень 1→страх прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s14.text.005"
-  },
-  {
-   "kind": "horror",
-   "text": "quay_cloaked_hunter: ступень 1→страх прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s14.text.005"
-  },
-  {
-   "kind": "write",
-   "text": "Запись хода: вся запись сверх сцены 4008 знаков (норма до 4000); крупнее всего: cast 988, canon+ 779, scene 569.",
-   "turn": "s14.text.005"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_underground_career, nemera_symbiosis. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s14.text.005"
+   "turn": "s14.text.006"
   },
   {
    "kind": "will",
    "text": "«Человек у причальной лестницы» появляется уже 4 раз, а воли у него нет: задай d.cast.quay_wire_operator.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
-   "turn": "s14.text.005"
+   "turn": "s14.text.006"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s14.text.005",
+  "cursor": "s14.text.006",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -325,11 +310,11 @@
  "cursor": {
   "at": "0010-04-11T17:24:02",
   "date": "Воскресенье, 11 апреля 1287 года",
-  "id": "s14.text.005",
+  "id": "s14.text.006",
   "place": "Страна Огня, восточная гавань, грузовой причал",
   "time": "17:24"
  },
- "digest": "ca75d01df25226a17a3808c465b1603100a6f4a46609c8238ec8aa62b7ab6aac",
+ "digest": "2784048cb584acda8b6bc35954de4d8ec1a7b4a99c047bd1cf5e7bcbdd7eecc1",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -581,18 +566,18 @@
    "value": 88.5
   },
   "dice": [
-   14,
    17,
-   8,
-   10,
-   13,
-   1,
-   18,
    20,
-   17,
-   17,
+   14,
    1,
-   18
+   7,
+   17,
+   3,
+   17,
+   7,
+   16,
+   17,
+   10
   ],
   "injuries": {
    "quay_cloaked_hunter": [
@@ -1157,7 +1142,7 @@
     "memory_total": 385,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-    "seen": "s14.text.005",
+    "seen": "s14.text.006",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
     "status": "present_profile",
@@ -1211,7 +1196,7 @@
     "memory_file": "archive/npc-memory/quay_masked_hunter.json",
     "memory_total": 4,
     "name": "Человек в маске",
-    "seen": "s14.text.005",
+    "seen": "s14.text.006",
     "status": "present_profile",
     "tier": "developed",
     "wants": "Взять Шики живым по K-0418."
@@ -1239,7 +1224,7 @@
     "memory_file": "archive/npc-memory/quay_wire_operator.json",
     "memory_total": 4,
     "name": "Человек у причальной лестницы",
-    "seen": "s14.text.005",
+    "seen": "s14.text.006",
     "status": "present_profile",
     "tier": "developed",
     "wants": "Перекрыть путь сетью."
@@ -1272,8 +1257,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "3a69b9d3d5707f0436f876c743beb45b9c8a53b1",
-  "turn": "s14.text.005"
+  "sha": "f73e4497e08cbe97b9cfd6f93eef081ae7948054",
+  "turn": "s14.text.006"
  },
  "wiki": {
   "index": "memory/INDEX.md",
