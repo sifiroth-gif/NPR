@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.021",
+  "cursor": "s15.text.022",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -406,22 +406,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.021:0": {
-      "aliases": [
-        "canon:s15.text.021:0",
-        "s15.text.021: прямое утверждение игрока о характере Шики: никогда не боялся умереть. Предыдущее предположение Орочимару о страхе смерти было ошибочным суждением NPC."
-      ],
-      "facts": [],
-      "id": "canon:s15.text.021:0",
-      "kind": "canon",
-      "label": "s15.text.021: прямое утверждение игрока о характере Шики: никогда не боялся умереть. Предыдущее предположение Орочимару о страхе смерти было ошибочным суждением NPC.",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.021"
       ]
     },
     "captive_guard": {
@@ -1714,7 +1698,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.021",
+          "seen": "s15.text.022",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -1723,8 +1707,7 @@
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s15.text.021"
+        "recovery/HOT.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -4253,7 +4236,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 137,
+      "mention_count": 138,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4261,13 +4244,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:23:00",
-          "excerpt": "о <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:23</text> ### Подземное убежище Орочимару **Мугами Шики:** — Нет, это тело точно нет. Я не смогу его сохранить, не смогу сохранить и тело Саске и мои гены вам не помогут. Как и мое тело, во вс",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.019"
         },
         {
           "at": "0010-04-21T13:24:00",
@@ -4282,11 +4258,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.021"
+        },
+        {
+          "at": "0010-04-21T13:26:00",
+          "excerpt": ". <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:26</text> ### Подземное убежище Орочимару **Мугами Шики:** — Столько сколько оно бы прожило. Орочимару прикрыл глаза. **Орочимару:** — Обычная человеческая жизнь. Какое скромное предложение. О",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.022"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.021",
+          "seen": "s15.text.022",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4296,7 +4279,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.021"
+        "s15.text.022"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13950,7 +13933,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.021",
+        "s15.text.022",
         "s15.text.010",
         "s15.text.011",
         "s15.text.012",
@@ -13961,7 +13944,8 @@
         "s15.text.017",
         "s15.text.018",
         "s15.text.019",
-        "s15.text.020"
+        "s15.text.020",
+        "s15.text.021"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17096,7 +17080,7 @@
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.021",
+          "seen": "s15.text.022",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -17109,8 +17093,7 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json",
-        "s15.text.021"
+        "recovery/HOT.json"
       ]
     },
     "shiranami": {
@@ -18789,5 +18772,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1195
+  "source_turns_indexed": 1196
 }
