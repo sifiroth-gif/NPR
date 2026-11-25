@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.054: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`)
 - s13.text.053: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.052: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.051: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), план сюжета, поправки игрока: 1
@@ -58,4 +59,3 @@
 - s12.text.101: Немера (Невыписанная) (`npc/nemera`), линия `nemera_symbiosis`
 - s12.text.100: поправки игрока: 1
 - s12.text.099: Немера (Невыписанная) (`npc/nemera`), Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), линия `market_shadow`, линия `tenchi_bridge`
-- s12.text.098: Неизвестный шиноби у болот (`npc/market_guard_lead`), Рыночный наблюдатель (`npc/market_tail_watcher`), Немера (Невыписанная) (`npc/nemera`), Ямато (`npc/yamato`), линия `market_shadow`
