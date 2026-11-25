@@ -207,6 +207,8 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["ages"] = dict(extra["ages"], rule="Возраст на дату хода от дня рождения: не менять и не брать "
                                                 "из оригинала Naruto; растёт сам с календарём.")
     duty = must(hot, always_present, entries)
+    if (extra or {}).get("drama"):   # глава, почин, разговор NPC, ритм — один пункт (drama.must)
+        duty = [extra["drama"]] + duty[:2]
     if (extra or {}).get("unease"):  # тревога рядом с Шики пропала (favor.unease_must)
         duty = [extra["unease"]] + duty[:2]
     if (extra or {}).get("favor"):   # мир не подыгрывает: окно похвал и уступок перекошено (favor.must)
@@ -266,6 +268,9 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         who = ((extra or {}).get("knows") or {}).get(f"{key}#who")
         if who:     # канонический человек 1287 года: кто он сейчас и каков (ref/FOES.json)
             entry["who"] = who
+        gap = ((extra or {}).get("gap") or {}).get(key)
+        if gap:     # давний знакомый вернулся после разлуки (drama.gaps): прожитое время видно
+            entry["gap"] = gap
         past = ((extra or {}).get("past") or {}).get(key)
         if past:    # прошлые сессии с Шики по теме сцены (echo.present_past): его память — отсюда и из knows
             entry["past"] = past

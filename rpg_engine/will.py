@@ -152,6 +152,10 @@ def track(hot, turn, inner):
     for key, own in (inner or {}).items():
         if any(own.get(k) for k in ("intent", "rel", "affect", "psyche", "mem")):
             touched[key] = turn["id"]
+        # Свой шаг — новый или изменённый план; запись памяти и чувства — отклик (25.11.2026:
+        # Немера отвечала 18 ходов, а каждая строка её памяти обнуляла счёт). Почин в тексте
+        # хода сбрасывает счёт отдельно — drama.track.
+        if own.get("intent"):
             streak[key] = 0
 
 

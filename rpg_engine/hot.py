@@ -30,7 +30,7 @@ import traceback
 import zlib
 from pathlib import Path
 
-from . import acquaint, aging, arcs, canon, claims, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
+from . import acquaint, aging, arcs, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
 TURN_SCHEMA = "npr-turn/2"
@@ -1289,6 +1289,7 @@ def fold(state_dir):
                 checks.extend(arcs.track(hot, turn, canon_arcs))   # канон арки: сыграно, пропущено
                 fight.track_arsenal(hot, turn)                      # пущенные в ход приёмы именных
                 checks.extend(fight.nemera_turn(hot, turn))         # Немера не ждёт просьбы
+                drama.track(hot, turn, always)                      # ритм, почин, разговор NPC между собой
                 _resync_seen(hot, turn)                             # перечитал ли ведущий стартовый пакет
                 checks.extend(presence.prune_silent(hot, turn, int(hot.get("cursor", {}).get("seq", 0)), names, always))
                 # Всегда присутствующая Немера живёт в чувствах Шики: «впервые увидеть» его стихию не может.
@@ -1468,6 +1469,12 @@ def fold(state_dir):
     except Exception as exc:   # производное: сбой не останавливает свёртку
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                               "text": f"past: {type(exc).__name__}: {exc}"})
+    try:   # давний знакомый после разлуки, один пункт драмы в must (drama.py)
+        extra["gap"] = drama.gaps(state_dir, hot, set(_always_present(state_dir)))
+        extra["drama"] = drama.must(hot, set(_always_present(state_dir)))
+    except Exception as exc:
+        hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "will",
+                                              "text": f"drama: {type(exc).__name__}: {exc}"})
     mark("extras")
     extra["arc"] = arcs.view(hot, canon_arcs)
     extra["arc_must"] = arcs.must(hot, canon_arcs)
