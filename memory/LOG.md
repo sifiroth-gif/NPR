@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.032: Неизвестный наблюдатель за ивами (`npc/willow_observer`), план сюжета
 - s13.text.031: Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.028: Немера (Невыписанная) (`npc/nemera`)
 - s13.text.027: Немера (Невыписанная) (`npc/nemera`)
@@ -56,4 +57,3 @@
 - s12.text.079: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `nemera_document`, линия `kabuto_name_source`
 - s12.text.078: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `nemera_document`, вещь `sealing_cloth_scrap`, бой
 - s12.text.077: Кабуто Якуши (`npc/kabuto`), masked2 (`npc/masked2`), masked3 (`npc/masked3`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `seal_boot_scrap`, бой
-- s12.text.076: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), линия `sai_note`, бой
