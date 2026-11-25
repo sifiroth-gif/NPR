@@ -2,7 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s14.text.023: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_medical_kit`
+- s14.text.023: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_medical_kit`, поправки игрока: 1
 - s14.text.022: Портовый чиновник (`npc/fire_port_official`), Сэйдзи Минасэ (`npc/quay_masked_hunter`)
 - s14.text.021: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Портовый чиновник (`npc/fire_port_official`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.020: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 1
