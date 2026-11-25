@@ -316,6 +316,14 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
             "Не включай глаза и не выбирай заряд меча за игрока. "
             "Источник: SHIKI.md, ref/TECHNIQUES.md, ref/COMBAT.md."
         )
+    # Established mundane uses are needed even if the NEXT packet was built
+    # before a new medical request. This small reminder must not depend on combat.
+    pack["medical_passives"] = (
+        "Медчакра 5/5 и контроль 5/5: восстановление жизнеспособных тканей и функции; "
+        "Шики умеет очищенные многоразовые инструменты стерилизовать медчакрой "
+        "(s03.text.009/.018, s10.text.018), отдельный стерилизатор не нужен. "
+        "Препараты, расходники и оборудование — только подтверждённые; ref/MEDICINE.md."
+    )
     pack["source_priority"] = SOURCE_PRIORITY
     pack["rule"] = RULE
     _fit(pack)

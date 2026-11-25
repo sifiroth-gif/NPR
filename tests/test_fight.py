@@ -175,3 +175,25 @@ class FightFoldTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PartialHealingRegressionTest(unittest.TestCase):
+    def test_spinal_recovery_keeps_injury_and_updates_function(self):
+        hot = {"injuries": {"patient": [{"where": "спинной мозг", "severity": "тяжёлая",
+                                        "lost": "паралич", "turn": "t0", "bleed": True}]}}
+        notes = []
+        fight._heal(hot, {"who": "patient", "where": "спинной мозг", "stop": True,
+                          "residual": {"lost": "остаточный парез"}}, "t1", notes)
+        wound = hot["injuries"]["patient"][0]
+        self.assertEqual(wound["lost"], "остаточный парез")
+        self.assertEqual(wound["turn"], "t0")
+        self.assertEqual(wound["recovered_at"], "t1")
+        self.assertFalse(wound["bleed"])
+        self.assertEqual(notes, [])
+
+    def test_bad_partial_heal_does_not_remove_wound(self):
+        hot = {"injuries": {"patient": [{"where": "спинной мозг", "lost": "паралич"}]}}
+        notes = []
+        fight._heal(hot, {"who": "patient", "residual": {"lost": "парез"}}, "t1", notes)
+        self.assertEqual(hot["injuries"]["patient"][0]["lost"], "паралич")
+        self.assertTrue(notes)

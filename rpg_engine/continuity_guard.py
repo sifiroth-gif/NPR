@@ -50,6 +50,20 @@ def apply_things(hot, delta, turn_id, at):
         if not isinstance(patch, dict):
             _check(hot, turn_id, "things", f"{key}: запись должна быть объектом")
             continue
+        # Bare holder/state/count formerly disappeared without a warning.
+        unknown = set(patch) - {"was", "now", "new", "why", "gone"}
+        if unknown:
+            _check(hot, turn_id, "things", f"{key}: неизвестные поля {', '.join(sorted(unknown))}; используй was/now или new/gone")
+            continue
+        modes = sum(k in patch for k in ("now", "new", "gone"))
+        if modes != 1 or ("was" in patch and "now" not in patch):
+            _check(hot, turn_id, "things", f"{key}: нужен один переход now/new/gone")
+            continue
+        malformed = [k for k in ("was", "now", "new") if k in patch and
+                     (not isinstance(patch[k], dict) or set(patch[k]) - set(FIELDS))]
+        if malformed:
+            _check(hot, turn_id, "things", f"{key}: неверная структура {', '.join(malformed)}")
+            continue
         if "gone" in patch:
             item = things.pop(key, None)
             if item is None:

@@ -405,7 +405,7 @@ def apply(hot, delta, turn, pool, legacy=None):
         _review_exchange(active, rolled, data, turn_id, notes)
     _wounds(hot, data.get("wounds"), turn_id, at)
     for item in delta.get("heal") or data.get("heal") or []:
-        _heal(hot, item, turn_id)
+        _heal(hot, item, turn_id, notes)
     if active:
         for key, patch in (data.get("foe_state") or {}).items():
             if isinstance(patch, dict) and key in active["foes"]:
@@ -743,8 +743,27 @@ def _wounds(hot, wounds, turn_id, at):
         hot.setdefault("injuries", {}).setdefault(wound["who"], []).append(record)
 
 
-def _heal(hot, item, turn_id):
+def _heal(hot, item, turn_id, notes=None):
     if not isinstance(item, dict) or not item.get("who"):
+        return
+    # Partial recovery keeps the original injury and its provenance. It is not
+    # equivalent to haemostasis or full healing. Require an exact unique site.
+    if "residual" in item:
+        residual = item["residual"]
+        wounds = (hot.get("injuries") or {}).get(item["who"]) or []
+        matches = [w for w in wounds if item.get("where") and w.get("where") == item["where"] and not w.get("healed")]
+        valid = (isinstance(residual, dict) and not (set(residual) - {"lost", "severity"})
+                 and isinstance(residual.get("lost"), str) and bool(residual["lost"].strip())
+                 and ("severity" not in residual or residual["severity"] in SEVERITY)
+                 and len(matches) == 1)
+        if not valid:
+            if notes is not None:
+                _note(notes, turn_id, f"Частичное лечение {item['who']}: требуется единственная рана where и residual.lost; severity — из шкалы ран.")
+            return
+        if item.get("stop") or item.get("blood"):
+            body.heal(hot, item, turn_id)
+        matches[0].update(residual)
+        matches[0]["recovered_at"] = turn_id
         return
     if (item.get("stop") or item.get("blood")) and body.heal(hot, item, turn_id):
         return      # кровь остановлена или восполнена; рана остаётся до лечения

@@ -38,6 +38,21 @@ class ThingsTest(unittest.TestCase):
                                                      "now": {"holder": "nurse"}}}}, "t1", "a")
         self.assertIn("contradiction", kinds(hot))
 
+    def test_bare_state_does_not_silently_advance_item(self):
+        hot = {"things": {"kit": {"state": "грязный", "turn": "t0"}}}
+        cg.apply_things(hot, {"things": {"kit": {"state": "стерильный"}}}, "t1", "a")
+        self.assertEqual(hot["things"]["kit"], {"state": "грязный", "turn": "t0"})
+        self.assertIn("things", kinds(hot))
+        cg.apply_things(hot, {"things": {"kit": {"was": {"state": "грязный"}, "now": {"state": "стерильный"}}}}, "t2", "a")
+        self.assertEqual(hot["things"]["kit"]["state"], "стерильный")
+        self.assertEqual(hot["things"]["kit"]["turn"], "t2")
+
+    def test_malformed_nested_patch_does_not_crash_fold(self):
+        hot = {"things": {"kit": {"state": "грязный", "turn": "t0"}}}
+        cg.apply_things(hot, {"things": {"kit": {"now": "стерильный"}}}, "t1", "a")
+        self.assertIn("things", kinds(hot))
+        self.assertEqual(hot["things"]["kit"]["turn"], "t0")
+
     def test_scene_things_selects_present_and_place(self):
         hot = {"cursor": {"place": "Кусагакуре, госпиталь, кабинет"},
                "things": {"a": {"holder": "shiki"}, "b": {"holder": "far"},
