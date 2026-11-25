@@ -5,8 +5,6 @@
 ## Кто здесь говорил с Шики
 - Кабуто Якуши · `npc/kabuto` — 1 ход(ов)
 - Возница повозки · `npc/kagen_caravan_driver` — 1 ход(ов)
-- Сопровождающий повозки · `npc/kagen_caravan_escort` — 1 ход(ов)
-- Реципиент № 6 · `npc/s17_recipient_6` — 1 ход(ов)
 - Младший шиноби Звука · `npc/sound_kagen_junior` — 1 ход(ов)
 - Старший шиноби Звука · `npc/sound_kagen_senior` — 1 ход(ов)
 
