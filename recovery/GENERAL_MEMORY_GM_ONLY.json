@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.068",
+  "cursor": "s15.text.001",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -822,7 +822,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -861,12 +862,13 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.043",
+          "seen": "s15.text.001",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s15.text.001"
       ]
     },
     "fire_port_security_staff": {
@@ -4211,7 +4213,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 120,
+      "mention_count": 121,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4219,13 +4221,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-12T13:17:12",
-          "excerpt": ", кому нравится подчиняться. Она прикрыла глаза. **Хакудзя-сэннин:** — Ты рассказал, что вместо денег за исследование с Орочимару попросил наш договор. Мне показалось забавным, что человек, столь охотно изучающий чужую плоть, захотел получить возможность звать",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.050"
         },
         {
           "at": "0010-04-16T11:40:00",
@@ -4240,6 +4235,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.063"
+        },
+        {
+          "at": "0010-04-19T17:20:00",
+          "excerpt": "составлял своё письмо, он ещё обращался к двоим. Он обещал предоставить Немере документы о её происхождении. Орочимару желал увидеть результаты обучения в Рьючидо. Встреча была назначена на полдень 21 апреля, у старого святилища на северной границе Страны Рек.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.001"
         }
       ],
       "projections": [
@@ -11828,7 +11830,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.068",
+        "s15.text.001",
         "s14.text.066"
       ]
     },
@@ -15499,7 +15501,8 @@
     "quay_wire_operator": {
       "aliases": [
         "quay wire operator",
-        "Человек у причальной лестницы"
+        "Человек у причальной лестницы",
+        "quay_wire_operator"
       ],
       "facts": [],
       "id": "quay_wire_operator",
@@ -15538,13 +15541,14 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.061",
+          "seen": "s15.text.001",
           "state": "Вне сцены: в портовом лазарете потерял сознание после кровопотери. Врач и помощник добились гемостаза; остаётся тяжёлое системное состояние, восполнение потери крови не подтверждено.",
           "wants": "Перекрыть путь сетью."
         }
       ],
       "sources": [
-        "recovery/cast/quay_wire_operator.json"
+        "recovery/cast/quay_wire_operator.json",
+        "s15.text.001"
       ]
     },
     "razvedchik_zvuka": {
@@ -18593,5 +18597,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1174
+  "source_turns_indexed": 1175
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.001: Портовый чиновник (`npc/fire_port_official`), Человек у причальной лестницы (`npc/quay_wire_operator`)
 - s14.text.068: поправки игрока: 1
 - s14.text.067: поправки игрока: 1
 - s14.text.066: поправки игрока: 1
@@ -58,4 +59,3 @@
 - s14.text.014: поправки игрока: 1
 - s14.text.012: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`)
 - s14.text.011: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Человек в маске (`npc/chelovek_v_maske`), план сюжета, бой
-- s14.text.009: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)

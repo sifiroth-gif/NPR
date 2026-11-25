@@ -127,6 +127,7 @@
 - Страна Рек, каменный уступ у реки · `places/strana-rek-kamennyy-ustup-u-reki` · 2 ход(ов), s11–s11
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
 - Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
+- Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 2 ход(ов), s14–s15
 - Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
 - Страна Травы, каменистая ложбина к востоку от моста Тэнти · `places/strana-travy-kamenistaya-lozhbina-k-vostoku-ot-mosta-tenti` · 2 ход(ов), s12–s12
 - Страна Травы, лесопильная дорога к торговым рядам · `places/strana-travy-lesopilnaya-doroga-k-torgovym-ryadam` · 2 ход(ов), s13–s13
@@ -241,7 +242,6 @@
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
-- Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 1 ход(ов), s14–s14
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, лес у северных болот · `places/strana-travy-les-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Травы, лесистый склон над сухим оврагом · `places/strana-travy-lesistyy-sklon-nad-sukhim-ovragom` · 1 ход(ов), s13–s13
