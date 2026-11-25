@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.079: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.078: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.077: Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, план сюжета
 - s13.text.076: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
@@ -58,4 +59,3 @@
 - s13.text.022: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`)
 - s13.text.021: Сиранами (`npc/shiranami`)
 - s13.text.020: Сиранами (`npc/shiranami`)
-- s13.text.019: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`)
