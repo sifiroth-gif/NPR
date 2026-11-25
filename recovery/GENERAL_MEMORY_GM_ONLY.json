@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.041",
+  "cursor": "s14.text.042",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -872,7 +872,8 @@
     "fire_port_security_staff": {
       "aliases": [
         "fire port security staff",
-        "Сотрудник безопасности порта"
+        "Сотрудник безопасности порта",
+        "fire_port_security_staff"
       ],
       "facts": [],
       "id": "fire_port_security_staff",
@@ -911,12 +912,17 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.030",
+          "seen": "s14.text.042",
+          "state": "Сообщил, что рапорт отправлен в провинцию; пришёл за показаниями."
+        },
+        {
           "state": "Сообщил, что рапорт отправлен в провинцию; пришёл за показаниями."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_security_staff.json"
+        "recovery/cast/fire_port_security_staff.json",
+        "recovery/HOT.json",
+        "s14.text.042"
       ]
     },
     "fire_port_statement_receipt": {
@@ -2204,7 +2210,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -2212,13 +2218,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-04-12T07:39:00",
-          "excerpt": "говоря, думал, что это окончательный уровень, но теперь уже нет. А в чьей власти? **Старая змея:** — Хакудзя-сэннин. Ты ведь уже знаком с ней. Старшая медленно обвила каменный выступ. Теперь её движения стали свободнее: при повороте головы она больше не щадила",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.039"
         },
         {
           "at": "0010-04-12T10:41:00",
@@ -2233,6 +2232,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.041"
+        },
+        {
+          "at": "0010-04-12T10:43:00",
+          "excerpt": "волокна существа, анатомию которого никто никогда не изучал. **Немера (Невыписанная):** — Семь запоров. Хакудзя-сэннин повернулась к ней. **Немера (Невыписанная):** — Когда-то они удерживали меня внутри него. Теперь они связывают нас обоих. Мы изменили их устр",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.042"
         }
       ],
       "projections": [
@@ -4026,7 +4032,7 @@
       "id": "nemera",
       "kind": "npc",
       "label": "Немера (Невыписанная)",
-      "mention_count": 142,
+      "mention_count": 143,
       "mentions": [
         {
           "at": "0010-03-13T17:36:00",
@@ -4034,13 +4040,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.028"
-        },
-        {
-          "at": "0010-04-12T07:39:00",
-          "excerpt": "проявила тонкий отросток, коснувшись стены возле входа. Внутри его полупрозрачной толщи возникли белёсые нити. **Немера (Невыписанная):** *— Лекарь. Если ты изменишь саму природу своего тела, я хочу знать, что произойдёт с нашей связью. До того, как ты начнёшь",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.039"
         },
         {
           "at": "0010-04-12T10:41:00",
@@ -4055,13 +4054,20 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.041"
+        },
+        {
+          "at": "0010-04-12T10:43:00",
+          "excerpt": "ались бледные нити, напоминающие нервные волокна существа, анатомию которого никто никогда не изучал. **Немера (Невыписанная):** — Семь запоров. Хакудзя-сэннин повернулась к ней. **Немера (Невыписанная):** — Когда-то они удерживали меня внутри него. Теперь они",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.042"
         }
       ],
       "projections": [
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s14.text.041",
+          "seen": "s14.text.042",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -4078,7 +4084,7 @@
       "sources": [
         "recovery/cast/nemera.json",
         "recovery/HOT.json",
-        "s14.text.041"
+        "s14.text.042"
       ]
     },
     "nemera_document": {
@@ -13981,13 +13987,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.041",
+        "s14.text.042",
         "s10.text.055",
         "s10.text.061",
         "s10.text.066",
         "s10.text.071",
         "s10.text.072",
-        "s14.text.040"
+        "s14.text.040",
+        "s14.text.041"
       ]
     },
     "place:e5c06329829b6da7": {
@@ -17756,11 +17763,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Хакудзя-сэннин 12.04 назвала драконье сендзюцу последней линькой, преобразующей природу носителя; спросила о связи Шики и Немеры. По условию игрока s14.text.040 для достижения необходимо разрушение всех семи запоров самой Немерой, в том числе седьмого; ещё не произошло."
+          "state": "12.04 10:43 Немера сама раскрыла Белой Змее устройство семи запоров; Хакудзя-сэннин объяснила необходимость их устранения, включая седьмой. Немера заявила о намерении самой разрушить все при испытании. Белая Змея предлагает подготовить место; решение Шики ещё не дано. Запоры целы."
         }
       ],
       "sources": [
-        "s14.text.041"
+        "s14.text.042"
       ]
     },
     "thread:shiki_save_asuma": {
@@ -18123,13 +18130,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s14.text.041"
+          "seen": "s14.text.042"
         }
       ],
       "sources": [
         "recovery/cast/white_snake_sage.json",
         "recovery/HOT.json",
-        "s14.text.041"
+        "s14.text.042"
       ]
     },
     "willow_dispatch": {
@@ -18487,5 +18494,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1150
+  "source_turns_indexed": 1151
 }
