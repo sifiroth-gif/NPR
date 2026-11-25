@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.073: Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s13.text.072: Мужчина в куртке (`npc/root_field_jacket_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой, поправки игрока: 1
 - s13.text.071: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s13.text.070: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), вещь `sumi_sword`, план сюжета, бой
@@ -58,4 +59,3 @@
 - s13.text.016: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), план сюжета, бой
 - s13.text.015: Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_arm_wraps`, план сюжета, бой
 - s13.text.014: Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`), план сюжета
-- s13.text.013: Кэйдзи (`npc/keiji`), Сирамэ (`npc/shirame`), Сиранами (`npc/shiranami`), Немера (Невыписанная) (`npc/nemera`), Наруто Узумаки (`npc/naruto`), Ямато (`npc/yamato`), Сай (`npc/sai`), Девятихвостый (`npc/kurama`), линия `tenchi_bridge`, план сюжета
