@@ -3,6 +3,15 @@
   "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
   "soon": [
    {
+    "due": "0010-04-11T17:30:00",
+    "if_unopposed": "Портовый журнал получит отметку о выдаче документа.",
+    "name": "Портовый чиновник",
+    "next": "Предложить расписку и завершить регистрацию с отметкой выдачи.",
+    "npc": "fire_port_official",
+    "overdue": false,
+    "plan": "hand_receipt"
+   },
+   {
     "due": "0010-04-11T18:00:00",
     "if_unopposed": "При наличии допуска передаст Саю слова Шики; без контакта и допуска останется недоставленным. Не считать доставленным Узумаки без доказанного канала.",
     "name": "Неизвестный связной в маске АНБУ",
@@ -37,6 +46,15 @@
     "npc": "kiri_ship_security_officer",
     "overdue": false,
     "plan": "contact_review"
+   },
+   {
+    "due": "0010-04-11T19:00:00",
+    "if_unopposed": "Уполномоченное ведомство Огня получит сообщение с пометкой об отсутствии независимой проверки.",
+    "name": "Сотрудник безопасности порта",
+    "next": "Составить рапорт с ссылкой на оригинал из службы безопасности и направить по внутреннему каналу.",
+    "npc": "fire_port_security_staff",
+    "overdue": false,
+    "plan": "forward_risk_notice"
    }
   ]
  },
@@ -47,49 +65,44 @@
  "checks": [
   {
    "kind": "fight",
-   "text": "Бросок «Прицельно блокировать ускорившийся контур второго бессознательного шиноби сенбоном»: порог 85, по формуле 65 (перевес +1.0).",
-   "turn": "s12.text.081"
-  },
-  {
-   "kind": "fight",
-   "text": "Бросок «Кунай с Райтоном в арбалет на склоне»: умения «weapons» нет в листе — укажи level.",
-   "turn": "s13.text.002"
-  },
-  {
-   "kind": "fight",
-   "text": "d.fight без открытого боя: начни его полем start.",
-   "turn": "s13.text.015"
-  },
-  {
-   "kind": "fight",
    "text": "Бросок «Изъять цилиндр до замыкания печати, используя окно, различённое Шаринганом»: порог 80, по формуле 88 (перевес +2.5).",
    "turn": "s13.text.034"
   },
   {
-   "kind": "horror",
-   "text": "fire_port_security_staff: ступень 4→3 прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s13.text.098"
+   "kind": "fight",
+   "text": "Против «quay_masked_hunter» в обмене нет ни одной кости: с именным противником исход решает бросок, перевес Шики не выше +2.",
+   "turn": "s13.text.099"
   },
   {
-   "kind": "horror",
-   "text": "fire_port_official: ступень 4→3 прыжком; лестница идёт по одной ступени за ход",
-   "turn": "s13.text.098"
+   "kind": "things",
+   "text": "fire_port_statement_receipt: изменён предмет вне учёта; введён без проверки прежнего состояния",
+   "turn": "s13.text.099"
   },
   {
-   "kind": "lore",
-   "text": "Знание о Шики без источника: в реплике «Вы спросили, будем ли мы вас задерживать. Я отвечу точно: **на этом посту — нет**. У меня нет приказа, а иностранный розыск не даёт мне прав» — «Розыск Кири: класс S, 48 млн рё, захват живым с тканями», но Сотрудник безопасности порта этого от Шики не слышал(а) и по каналу не получал(а). Покажи канал в сцене (донесение, слух, документ — и knows+ в карточке) или пусть не знает: спросит, ошибётся, промолчит.",
-   "turn": "s13.text.098"
+   "kind": "player",
+   "text": "реплика игрока вошла в сцену на 0%: слова Шики переносятся в прозу полностью и в заданном порядке",
+   "turn": "s13.text.099"
   },
   {
-   "kind": "will",
-   "text": "«Немера (Невыписанная)» 6 ход(ов) рядом с Шики только отвечает. Его цель: «Узнать Шики до симбиоза из независимого рассказа одного из его давних товарищей». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s13.text.098"
+   "kind": "name",
+   "text": "quay_masked_hunter: имя «Человек в маске» уже носит masked_man",
+   "turn": "s13.text.099"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «грузчик» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s13.text.099"
+  },
+  {
+   "kind": "read",
+   "text": "«Человек в маске» вернулся в сцену, а его страница `npc/masked_man` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/masked_man.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
+   "turn": "s13.text.099"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s13.text.098",
+  "cursor": "s13.text.099",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -97,16 +110,17 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "fire_port_official",
-   "fire_port_security_staff",
    "nemera",
-   "place:a249651f94422bd4",
+   "quay_cloaked_hunter",
+   "quay_masked_hunter",
+   "quay_wire_operator",
+   "place:dc29e1137e268dff",
    "root_compulsory_coupling_scroll",
    "root_seal_needle",
    "seal_boot_scrap",
    "sealing_cloth_scrap"
   ],
-  "focus_bytes": 3565,
+  "focus_bytes": 2858,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -154,6 +168,12 @@
     "since": "s09.text.096",
     "state": "Экземпляр договора №1184, заверенный акт приёмки и квитанция о получении оплаты.",
     "turn": "s09.text.096"
+   },
+   "fire_port_statement_receipt": {
+    "holder": "shiki",
+    "since": "s13.text.099",
+    "state": "Расписка о приёме заявления Огнём, в дорожной сумке Шики.",
+    "turn": "s13.text.099"
    },
    "forehead_protector": {
     "holder": "shiki",
@@ -299,13 +319,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-11T17:23:00",
+  "at": "0010-04-11T17:24:00",
   "date": "Воскресенье, 11 апреля 1287 года",
-  "id": "s13.text.098",
-  "place": "Страна Огня, восточная гавань, у выхода из портового управления",
-  "time": "17:23"
+  "id": "s13.text.099",
+  "place": "Страна Огня, восточная гавань, грузовой причал",
+  "time": "17:24"
  },
- "digest": "fface56b76f090f4d2e9cfb02ae23b358c09003cf9f53bc17c37797077329f3a",
+ "digest": "98cb8119f58e78159e1ba1cfce795e8949069c5074e95dfc1b9291ab7083bc77",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -323,15 +343,22 @@
     "to": "s13.text.089"
    },
    {
-    "actor": "fire_port_security_staff",
-    "from": "s13.text.084",
+    "actor": "quay_masked_hunter",
+    "from": "s13.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s13.text.095"
    },
    {
-    "actor": "fire_port_official",
-    "from": "s13.text.084",
+    "actor": "quay_cloaked_hunter",
+    "from": "s13.text.005",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s13.text.095"
+   },
+   {
+    "actor": "quay_wire_operator",
+    "from": "s13.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s13.text.095"
@@ -342,11 +369,141 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Сотрудник безопасности порта — не слышал(а); Портовый чиновник — не слышал(а).",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Немера (Невыписанная) — не слышал(а); Сотрудник безопасности порта — не слышал(а); Портовый чиновник — слышал(а) с s13.text.084.",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Немера (Невыписанная), Сотрудник безопасности порта, Портовый чиновник. Присутствие в отряде и запись lore без источника не доказывают видимость."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики, Немера (Невыписанная), Уцуро. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Человек в маске — не слышал(а); Человек в дорожном плаще — не слышал(а); Человек у причальной лестницы — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Немера (Невыписанная) — не слышал(а); Человек в маске — не слышал(а); Человек в дорожном плаще — не слышал(а); Человек у причальной лестницы — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Немера (Невыписанная), Человек в маске, Человек в дорожном плаще, Человек у причальной лестницы. Присутствие в отряде и запись lore без источника не доказывают видимость."
  ],
  "fight": {
+  "active": {
+   "allies": {},
+   "arsenal_rule": "Именной противник и союзник бьются всем арсеналом по своей цели, не разговором вместо действия: arsenal_left — ещё не пущенное в ход; меняй приёмы, ставь ловуш…",
+   "exchanges": 1,
+   "exchanges_left": 5,
+   "foes": {
+    "quay_cloaked_hunter": {
+     "intent": "обездвижить",
+     "levels": {
+      "genjutsu": 3.5,
+      "ninjutsu": 3.5,
+      "sensory": 3.5,
+      "speed": 3.5,
+      "taijutsu": 3.5
+     },
+     "morale": "steady",
+     "rank": "jonin",
+     "status": "active",
+     "vs": {
+      "shiki→": {
+       "A": {
+        "genjutsu": "+1",
+        "ninjutsu": "+1",
+        "speed": "+2",
+        "taijutsu": "+1"
+       },
+       "B": "+1",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": false
+      },
+      "→shiki": {
+       "A": {
+        "genjutsu": "-1",
+        "ninjutsu": "-2:-1",
+        "speed": "-2",
+        "taijutsu": "-2:-1"
+       },
+       "B": "-1",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": false
+      }
+     }
+    },
+    "quay_masked_hunter": {
+     "intent": "захватить живым",
+     "levels": {
+      "genjutsu": 4.2,
+      "ninjutsu": 4.2,
+      "sensory": 4.2,
+      "speed": 4.2,
+      "taijutsu": 4.2
+     },
+     "morale": "steady",
+     "rank": "elite",
+     "status": "active",
+     "tempo": "свой ход каждый обмен; длинное действие Шики — D +1 противнику; против него бросок всегда",
+     "vs": {
+      "shiki→": {
+       "A": {
+        "genjutsu": "+0:+1",
+        "ninjutsu": "+0:+1",
+        "speed": "+1",
+        "taijutsu": "+0"
+       },
+       "B": "+0:+1",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": true
+      },
+      "→shiki": {
+       "A": {
+        "genjutsu": "-1:+0",
+        "ninjutsu": "-1",
+        "speed": "-1",
+        "taijutsu": "-1"
+       },
+       "B": "-1:+0",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": true
+      }
+     }
+    },
+    "quay_wire_operator": {
+     "intent": "связать сетью",
+     "levels": {
+      "genjutsu": 2.5,
+      "ninjutsu": 2.5,
+      "sensory": 2.5,
+      "speed": 2.5,
+      "taijutsu": 2.5
+     },
+     "morale": "steady",
+     "rank": "chunin",
+     "status": "active",
+     "vs": {
+      "shiki→": {
+       "A": {
+        "genjutsu": "+2",
+        "ninjutsu": "+2",
+        "speed": "+2",
+        "taijutsu": "+2"
+       },
+       "B": "+2",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": false
+      },
+      "→shiki": {
+       "A": {
+        "genjutsu": "-2",
+        "ninjutsu": "-2",
+        "speed": "-2",
+        "taijutsu": "-2"
+       },
+       "B": "-2",
+       "E+": 0,
+       "F": "+0",
+       "always_roll": false
+      }
+     }
+    }
+   },
+   "id": "quay_capture",
+   "nemera": "Немера по своему протоколу (ref/NEMERA.md), без просьбы игрока: в каждом обмене одно-два действия отростков по её выбору — перехват, хватка, отвод удара, ощупы…",
+   "place": "Страна Огня, восточная гавань, грузовой причал",
+   "recent_rolls": []
+  },
   "body": {
    "root_field_jacket_man": {
     "last": {
@@ -398,18 +555,18 @@
    "value": 100.0
   },
   "dice": [
+   5,
+   5,
+   10,
    19,
-   20,
-   8,
-   9,
    4,
-   17,
+   13,
+   11,
+   3,
+   15,
    6,
-   20,
-   7,
-   1,
-   17,
-   11
+   18,
+   15
   ],
   "injuries": {
    "crossbow_ambusher": [
@@ -513,30 +670,6 @@
   "activated": [
    {
     "facts": [],
-    "id": "fire_port_official",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/fire_port_official.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Подтвердил отсутствие оснований для задержания на своём посту; оставил расписку о приёме на столе, простился с Шики и закрыл дверь."
-     }
-    }
-   },
-   {
-    "facts": [],
-    "id": "fire_port_security_staff",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/fire_port_security_staff.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Закончил разговор, сообщил Шики, что задержания на посту не будет и координаты встречи войдут в рапорт. Взял рапорт и самостоятельно ушёл по служебному каналу…"
-     }
-    }
-   },
-   {
-    "facts": [],
     "id": "nemera",
     "kind": "npc",
     "operational_cues": {
@@ -549,13 +682,28 @@
     }
    },
    {
+    "facts": [],
+    "id": "quay_cloaked_hunter",
+    "kind": "npc"
+   },
+   {
+    "facts": [],
+    "id": "quay_masked_hunter",
+    "kind": "npc"
+   },
+   {
+    "facts": [],
+    "id": "quay_wire_operator",
+    "kind": "npc"
+   },
+   {
     "channels": [
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:a249651f94422bd4",
+    "id": "place:dc29e1137e268dff",
     "kind": "place",
-    "label": "Страна Огня, восточная гавань, у выхода из портового управления",
+    "label": "Страна Огня, восточная гавань, грузовой причал",
     "status": "no_verified_facts"
    },
    {
@@ -633,7 +781,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 8
+  "total_matched": 9
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -647,22 +795,6 @@
  "horror": {
   "due": null,
   "npcs": {
-   "fire_port_official": {
-    "does": "Не преградил дорогу, перевернул копию заявления и закрыл дверь, сохранив расписку.",
-    "lever": "Приписать заявителю чужое утверждение и поставить управление под ответственность.",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "Чиновнику не принадлежит решение о принудительных мерах; не следует подменять компетенцию службы безопасности.",
-    "stage": 4,
-    "step": "необратимость"
-   },
-   "fire_port_security_staff": {
-    "does": "Отказался от задержания, не назначал сопровождение, но включил предложенные координаты в рапорт и ушёл по служебным делам.",
-    "lever": "",
-    "next": "Решение принято; покажи его последствия и ответ мира, не повторяй страх.",
-    "reads": "На этом посту приказа нет; силовое задержание без полномочий опасно и непродуктивно.",
-    "stage": 4,
-    "step": "необратимость"
-   },
    "nemera": {
     "does": "Передала 20 ед. по согласию, независимо ощупала осколок и раскрыла факт своего присутствия свидетелям.",
     "lever": "неподвижность навсегда",
@@ -670,9 +802,24 @@
     "reads": "Сохранение Шики поддерживает её собственную независимую возможность воспринимать мир; разделение воль не должно исчезать.",
     "stage": 4,
     "step": "необратимость"
+   },
+   "quay_cloaked_hunter": {
+    "lever": "",
+    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
+    "stage": null
+   },
+   "quay_masked_hunter": {
+    "lever": "",
+    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
+    "stage": null
+   },
+   "quay_wire_operator": {
+    "lever": "",
+    "next": "Откалибруй: первая запись dread со stage по сыгранному (0–4) и saw из конкретного прежнего хода.",
+    "stage": null
    }
   },
-  "quiet": 0,
+  "quiet": 1,
   "recent": [
    {
     "turn": "s09.text.092",
@@ -695,23 +842,16 @@
  "last": {
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 8,
-   "facets": 0,
-   "need": 3,
-   "npc": "fire_port_security_staff",
-   "tier": "developed"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
    "nemera",
-   "fire_port_security_staff",
-   "fire_port_official"
+   "quay_masked_hunter",
+   "quay_cloaked_hunter",
+   "quay_wire_operator"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
@@ -740,6 +880,24 @@
     "id": "ch14_tenchi",
     "kind": "side",
     "scenes": 0
+   },
+   {
+    "endings": [
+     "Охотники обезврежены, следы остаются.",
+     "Шики захвачен или тяжело ограничен с последствиями.",
+     "Группа отступит, оставив разрушения и свидетелей.",
+     "Операция сорвана без выяснения её заказчика."
+    ],
+    "id": "quay_capture",
+    "kind": "scene",
+    "limit": {
+     "scenes": 2,
+     "until": "0010-04-11T18:00:00"
+    },
+    "parent": "main",
+    "question": "Чем закончится попытка живого захвата K-0418 на причале Огня?",
+    "scenes": 1,
+    "scenes_left": 1
    }
   ],
   "main": {
@@ -799,170 +957,10 @@
    }
   ],
   "queued_ref": "recovery/GM_ONLY.json:plot.events",
-  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
+  "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — sc…",
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
-  "fire_port_official": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-11T17:30:00",
-      "flaw": "Шики занят устройствами связи.",
-      "goal": "Вручить заявителю подтверждение приёма и закрыть запись.",
-      "id": "hand_receipt",
-      "if_unopposed": "Портовый журнал получит отметку о выдаче документа.",
-      "next": "Предложить расписку и завершить регистрацию с отметкой выдачи.",
-      "source_turn": "s13.text.089",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не подтвердит техническую или военную угрозу без компетентной проверки.",
-     "decides": "Документировать сообщённое без непроверенных выводов.",
-     "deep_fear": "Приписать заявителю чужое утверждение и поставить управление под ответственность."
-    },
-    "unclocked_intents": [
-     "hand_receipt"
-    ]
-   },
-   "look": {
-    "внешность": "Гражданский служащий со списком пассажиров и письменной записью."
-   },
-   "prior_disclosure_ids": [
-    "s13.text.084",
-    "s13.text.085",
-    "s13.text.087",
-    "s13.text.089",
-    "s13.text.091",
-    "s13.text.092",
-    "s13.text.095"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-11T16:28:00",
-     "sha256": "031d085b78157f55bcc18a65307ed3351e702f20801ddd0bc0d393907cafe010",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.084"
-    },
-    {
-     "at": "0010-04-11T17:21:00",
-     "sha256": "5be3cb0991d4e45221a33fbf0e324b3469477993879de2fb0dafc6859aaa1e14",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.092"
-    },
-    {
-     "at": "0010-04-11T17:22:30",
-     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.095"
-    }
-   ],
-   "profile": {
-    "first": "s13.text.084",
-    "inner": {},
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s13.text.098",
-      "what": "Шики объявил, что уходит, спросил о задержании. Чиновник и сотрудник безопасности Огня ответили, что приказа нет, иностранный розыск здесь не основание. Охранник сам понёс рапорт с координатами встреч"
-     }
-    ],
-    "memory_file": "archive/npc-memory/fire_port_official.json",
-    "memory_total": 12,
-    "name": "Портовый чиновник",
-    "seen": "s13.text.098",
-    "state": "Подтвердил отсутствие оснований для задержания на своём посту; оставил расписку о приёме на столе, простился с Шики и закрыл дверь.",
-    "status": "present_profile",
-    "tier": "developed"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
-  "fire_port_security_staff": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-11T19:00:00",
-      "flaw": "Свидетельство Шики непроверенное; ещё нет независимой оценки.",
-      "goal": "Передать отдельное предупреждение о возможной угрозе на ответственное рассмотрение.",
-      "id": "forward_risk_notice",
-      "if_unopposed": "Уполномоченное ведомство Огня получит сообщение с пометкой об отсутствии независимой проверки.",
-      "next": "Составить рапорт с ссылкой на оригинал из службы безопасности и направить по внутреннему каналу.",
-      "source_turn": "s13.text.088",
-      "status": "committed"
-     },
-     {
-      "due": "0010-04-11T19:00:00",
-      "flaw": "Факты риска основаны лишь на заявлении Шики, независимой оценки нет.",
-      "goal": "Передать срочное предупреждение в вышестоящую службу безопасности Страны Огня.",
-      "id": "escalate_risk_report",
-      "if_unopposed": "Рапорт поступит в региональную службу, решение о дальнейшей проверке останется за ней.",
-      "next": "Передать рапорт дежурному со ссылкой на оригинал заявления и предлагаемой точкой связи 28.04.1287.",
-      "source_turn": "s13.text.098",
-      "status": "committed"
-     }
-    ],
-    "unclocked_intents": [
-     "forward_risk_notice",
-     "escalate_risk_report"
-    ]
-   },
-   "look": {
-    "внешность": "Мужчина в местной охранной форме с медной пластиной службы безопасности на воротнике жилета."
-   },
-   "prior_disclosure_ids": [
-    "s13.text.084",
-    "s13.text.089",
-    "s13.text.091",
-    "s13.text.092",
-    "s13.text.095"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-11T16:28:00",
-     "sha256": "031d085b78157f55bcc18a65307ed3351e702f20801ddd0bc0d393907cafe010",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.084"
-    },
-    {
-     "at": "0010-04-11T17:21:00",
-     "sha256": "5be3cb0991d4e45221a33fbf0e324b3469477993879de2fb0dafc6859aaa1e14",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.092"
-    },
-    {
-     "at": "0010-04-11T17:22:30",
-     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.095"
-    }
-   ],
-   "profile": {
-    "first": "s13.text.088",
-    "inner": {},
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s13.text.098",
-      "what": "Шики объявил, что уходит, спросил о задержании. Чиновник и сотрудник безопасности Огня ответили, что приказа нет, иностранный розыск здесь не основание. Охранник сам понёс рапорт с координатами встреч"
-     }
-    ],
-    "memory_file": "archive/npc-memory/fire_port_security_staff.json",
-    "memory_total": 8,
-    "name": "Сотрудник безопасности порта",
-    "seen": "s13.text.098",
-    "state": "Закончил разговор, сообщил Шики, что задержания на посту не будет и координаты встречи войдут в рапорт. Взял рапорт и самостоятельно ушёл по служебному каналу передать его.",
-    "status": "present_profile",
-    "tier": "developed"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
   "nemera": {
    "alignment": {
     "breaking_point": "Реальный шанс свободы может привести к опасной сделке либо неожиданной верности своему слову",
@@ -1120,15 +1118,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s13.text.098",
-      "what": "Шики объявил, что уходит, спросил о задержании. Чиновник и сотрудник безопасности Огня ответили, что приказа нет, иностранный розыск здесь не основание. Охранник сам понёс рапорт с координатами встреч"
+      "turn": "s13.text.099",
+      "what": "Шики положил расписку Огня в сумку. Трое неизвестных бойцов на причале начали живой захват K-0418: печатная сеть падает, цилиндр наведён; маска похожа на АНБУ Кири, которых Шики видел в декабре 1284. "
      }
     ],
     "memory_file": "archive/npc-memory/nemera.json",
-    "memory_total": 381,
+    "memory_total": 382,
     "name": "Немера (Невыписанная)",
     "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/…",
-    "seen": "s13.text.098",
+    "seen": "s13.text.099",
     "stance": "Противник, который говорит правду, когда правда ей выгодна. [давняя запись: сверяй со state]",
     "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
     "status": "present_profile",
@@ -1137,19 +1135,206 @@
     "wants": "По собственному высказыванию Шики: не просто выйти из тюрьмы, а иметь собственную волю и прямое, независимое восприятие мира, не нуждаясь в разрешении хозяина; до того — изучать Шики. Это её заявленная цель, не доказанн…"
    },
    "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "quay_cloaked_hunter": {
+   "look": {
+    "внешность": "Плащ без опознавательных знаков, металлический цилиндр с печатью."
+   },
+   "prior_disclosure_ids": [
+    "s13.text.005",
+    "s13.text.011",
+    "s13.text.012",
+    "s13.text.014",
+    "s13.text.089",
+    "s13.text.091",
+    "s13.text.092",
+    "s13.text.095"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-03-25T20:02:30",
+     "sha256": "a9adf9f7c4e7423212cfcacc9ae70ba5562a123c9673a7761c5f51a499ebbf52",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.005"
+    },
+    {
+     "at": "0010-04-11T17:21:00",
+     "sha256": "5be3cb0991d4e45221a33fbf0e324b3469477993879de2fb0dafc6859aaa1e14",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.092"
+    },
+    {
+     "at": "0010-04-11T17:22:30",
+     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.095"
+    }
+   ],
+   "profile": {
+    "first": "s13.text.099",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s13.text.099",
+      "what": "Шики положил расписку Огня в сумку. Трое неизвестных бойцов на причале начали живой захват K-0418: печатная сеть падает, цилиндр наведён; маска похожа на АНБУ Кири, которых Шики видел в декабре 1284. "
+     }
+    ],
+    "memory_file": "archive/npc-memory/quay_cloaked_hunter.json",
+    "memory_total": 1,
+    "name": "Человек в дорожном плаще",
+    "seen": "s13.text.099",
+    "status": "present_profile",
+    "tier": "archetypal",
+    "wants": "Обездвижить Шики для захвата."
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "quay_masked_hunter": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-04-11T17:26:00",
+      "flaw": "Противник превосходит ожидаемое, операция на территории Огня.",
+      "goal": "Захватить Шики живым.",
+      "id": "capture",
+      "if_unopposed": "Попытается вынести пленника с причала.",
+      "next": "Сомкнуть печатную ловушку и подавить ответ.",
+      "source_turn": "s13.text.099",
+      "status": "committed"
+     }
+    ],
+    "unclocked_intents": [
+     "capture"
+    ]
+   },
+   "look": {
+    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.quay_masked_hunter.look"
+   },
+   "prior_disclosure_ids": [
+    "s13.text.005",
+    "s13.text.011",
+    "s13.text.024",
+    "s13.text.025",
+    "s13.text.089",
+    "s13.text.091",
+    "s13.text.092",
+    "s13.text.095"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-03-25T20:02:30",
+     "sha256": "a9adf9f7c4e7423212cfcacc9ae70ba5562a123c9673a7761c5f51a499ebbf52",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.005"
+    },
+    {
+     "at": "0010-04-11T17:21:00",
+     "sha256": "5be3cb0991d4e45221a33fbf0e324b3469477993879de2fb0dafc6859aaa1e14",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.092"
+    },
+    {
+     "at": "0010-04-11T17:22:30",
+     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.095"
+    }
+   ],
+   "profile": {
+    "first": "s13.text.099",
+    "hides": "Действительная принадлежность и полномочия.",
+    "inner": {},
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s13.text.099",
+      "what": "Шики положил расписку Огня в сумку. Трое неизвестных бойцов на причале начали живой захват K-0418: печатная сеть падает, цилиндр наведён; маска похожа на АНБУ Кири, которых Шики видел в декабре 1284. "
+     }
+    ],
+    "memory_file": "archive/npc-memory/quay_masked_hunter.json",
+    "memory_total": 1,
+    "name": "Человек в маске",
+    "seen": "s13.text.099",
+    "status": "present_profile",
+    "tier": "archetypal",
+    "wants": "Взять Шики живым по K-0418."
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "quay_wire_operator": {
+   "look": {
+    "внешность": "Неприметная одежда, проволока в руках."
+   },
+   "prior_disclosure_ids": [
+    "s13.text.005",
+    "s13.text.011",
+    "s13.text.024",
+    "s13.text.025",
+    "s13.text.089",
+    "s13.text.091",
+    "s13.text.092",
+    "s13.text.095"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-03-25T20:02:30",
+     "sha256": "a9adf9f7c4e7423212cfcacc9ae70ba5562a123c9673a7761c5f51a499ebbf52",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.005"
+    },
+    {
+     "at": "0010-04-11T17:21:00",
+     "sha256": "5be3cb0991d4e45221a33fbf0e324b3469477993879de2fb0dafc6859aaa1e14",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.092"
+    },
+    {
+     "at": "0010-04-11T17:22:30",
+     "sha256": "a3b6cec23b044c7f5f375debc478b7dccfc122dda2139711648b69046e6fff1c",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.095"
+    }
+   ],
+   "profile": {
+    "first": "s13.text.099",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s13.text.099",
+      "what": "Шики положил расписку Огня в сумку. Трое неизвестных бойцов на причале начали живой захват K-0418: печатная сеть падает, цилиндр наведён; маска похожа на АНБУ Кири, которых Шики видел в декабре 1284. "
+     }
+    ],
+    "memory_file": "archive/npc-memory/quay_wire_operator.json",
+    "memory_total": 1,
+    "name": "Человек у причальной лестницы",
+    "seen": "s13.text.099",
+    "status": "present_profile",
+    "tier": "archetypal",
+    "wants": "Перекрыть путь сетью."
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   }
  },
  "recent_turns": [
   {
-   "id": "s13.text.098",
-   "line": "Шики объявил, что уходит, спросил о задержании. Чиновник и сотрудник безопасности Огня ответили, что приказа нет, иностранный розыск здесь не основание. Охранник сам понёс рапорт с координатами встречи; Шики вышел из управления, расписка осталась на столе."
+   "id": "s13.text.099",
+   "line": "Шики положил расписку Огня в сумку. Трое неизвестных бойцов на причале начали живой захват K-0418: печатная сеть падает, цилиндр наведён; маска похожа на АНБУ Кири, которых Шики видел в декабре 1284. Официальная принадлежность группы не доказана."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у выхода в гавань снаружи портового управления, официально не задержан; чиновник за закрывшейся дверью, сотрудник безопасности ушёл к служебному каналу. Расписка о приёме заявления на столе чиновника. Корабль Кири начал отход.",
+  "positions": "Маскированный в 14м у крана, узел в 8м; оператор у лестницы натягивает трос, боец с цилиндром среди ящиков. Шики у конторы; сеть падает, до выстрела миг.",
   "pressure": "Пленный истекает кровью; один противник меняет нож на обратный хват, второй готовит печать. Оба видели Шуншин и отростки Немеры.",
-  "situation": "Шики заявил о намерении уйти и спросил, будет ли задержан. Чиновник и сотрудник безопасности Огня прямо ответили: местного приказа на задержание нет, розыск Кири не имеет здесь автоматической силы. Сотрудник безопасности самостоятельно забрал служебный рапорт для передачи по своей цепи, включая место и время встречи 28.04.1287 у водопада под Мадарой, отказался обещать отсутствия наблюдения в дальнейшем. Чиновник оставил расписку на столе (Шики не взял её) и закрыл портовую дверь. Шики вышел к порогу гавани; корабль Кири отошёл от пирса."
+  "situation": "Шики забрал у чиновника расписку и убрал в сумку. На грузовом причале трое скрытых противников начинают живой захват по номеру K-0418: сеть на чакровых печатях падает, цилиндр готов к выстрелу, маскированный готовит технику. Маска напоминает о Кири и 1284 годе, но их нынешняя принадлежность неизвестна. Шики успевает отреагировать."
  },
  "shiki": {
   "body": "Активирован обычный Шаринган с тремя томоэ, змеиные вертикальные зрачки сохранены.",
@@ -1174,15 +1359,16 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "289891382afe222598ddcaf4888262a38f26a57f",
-  "turn": "s13.text.098"
+  "sha": "9e25a12b45f249d4578968ab13e7d1849151c64d",
+  "turn": "s13.text.099"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
-   "fire_port_official": "memory/npc/fire_port_official.md",
-   "fire_port_security_staff": "memory/npc/fire_port_security_staff.md",
-   "nemera": "memory/npc/nemera.md"
+   "nemera": "memory/npc/nemera.md",
+   "quay_cloaked_hunter": "memory/npc/quay_cloaked_hunter.md",
+   "quay_masked_hunter": "memory/npc/quay_masked_hunter.md",
+   "quay_wire_operator": "memory/npc/quay_wire_operator.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
@@ -1195,8 +1381,7 @@
    "pact",
    "shiki_confidentiality",
    "shiki_underground_career",
-   "nemera_symbiosis",
-   "market_shadow"
+   "nemera_symbiosis"
   ],
   "secret_topics": [
    "v7_personal_targeting",

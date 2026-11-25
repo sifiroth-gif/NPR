@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s13.text.098",
+  "cursor": "s13.text.099",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -777,14 +777,13 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник",
-        "fire_port_official"
+        "Портовый чиновник"
       ],
       "facts": [],
       "id": "fire_port_official",
       "kind": "npc",
       "label": "Портовый чиновник",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-11T16:20:00",
@@ -792,13 +791,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.080"
-        },
-        {
-          "at": "0010-04-11T17:21:00",
-          "excerpt": "ьмого апреля я к восемнадцати часам явлюсь к Долине Завершения. Буду внизу водопада, под Учихой Мадарой. Портовый чиновник перестал листать журнал. За стеной с тяжёлым скрежетом потянули цепь причальной лебёдки. Звук был долгим, мучительным; когда он оборвался",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.092"
         },
         {
           "at": "0010-04-11T17:21:10",
@@ -813,28 +805,29 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.098"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "xt color=\"secondary\" size=\"xs\">11 апреля 1287 года · 17:24</text> ### Страна Огня. Восточная гавань Портовый чиновник успел приоткрыть дверь, когда Шики вернулся за оставленной распиской. Он молча передал бумагу и поспешил убрать руку. Шики сложил лист по сгиб",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.099"
         }
       ],
       "projections": [
         {
           "seen": "s13.text.098",
           "state": "Подтвердил отсутствие оснований для задержания на своём посту; оставил расписку о приёме на столе, простился с Шики и закрыл дверь."
-        },
-        {
-          "state": "Подтвердил отсутствие оснований для задержания на своём посту; оставил расписку о приёме на столе, простился с Шики и закрыл дверь."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json",
-        "recovery/HOT.json",
-        "s13.text.098"
+        "recovery/cast/fire_port_official.json"
       ]
     },
     "fire_port_security_staff": {
       "aliases": [
         "fire port security staff",
-        "Сотрудник безопасности порта",
-        "fire_port_security_staff"
+        "Сотрудник безопасности порта"
       ],
       "facts": [],
       "id": "fire_port_security_staff",
@@ -875,15 +868,31 @@
         {
           "seen": "s13.text.098",
           "state": "Закончил разговор, сообщил Шики, что задержания на посту не будет и координаты встречи войдут в рапорт. Взял рапорт и самостоятельно ушёл по служебному каналу передать его."
-        },
-        {
-          "state": "Закончил разговор, сообщил Шики, что задержания на посту не будет и координаты встречи войдут в рапорт. Взял рапорт и самостоятельно ушёл по служебному каналу передать его."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_security_staff.json",
-        "recovery/HOT.json",
-        "s13.text.098"
+        "recovery/cast/fire_port_security_staff.json"
+      ]
+    },
+    "fire_port_statement_receipt": {
+      "aliases": [
+        "fire port statement receipt"
+      ],
+      "facts": [],
+      "id": "fire_port_statement_receipt",
+      "kind": "item",
+      "label": "fire port statement receipt",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s13.text.099",
+          "turn": "s13.text.099"
+        }
+      ],
+      "sources": [
+        "s13.text.099"
       ]
     },
     "fire_statement_genetic_risk": {
@@ -1162,7 +1171,8 @@
     "grass_roads_patrol_senior": {
       "aliases": [
         "grass roads patrol senior",
-        "Старший патруля Кусы"
+        "Старший патруля Кусы",
+        "grass_roads_patrol_senior"
       ],
       "facts": [],
       "id": "grass_roads_patrol_senior",
@@ -1181,13 +1191,14 @@
       "projections": [
         {
           "fears": "Непредусмотренная официальная связь с разыскиваемым нукенином и гибель патрульных.",
-          "seen": "s13.text.069",
+          "seen": "s13.text.099",
           "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное дополнение на своём служебном риске.",
           "wants": "Подтвердить обстоятельства захвата налётчика для разбирательства, сохранив карьеру."
         }
       ],
       "sources": [
-        "recovery/cast/grass_roads_patrol_senior.json"
+        "recovery/cast/grass_roads_patrol_senior.json",
+        "s13.text.099"
       ]
     },
     "grey_escort_leader": {
@@ -1246,8 +1257,7 @@
     "haru_brother_jun": {
       "aliases": [
         "haru brother jun",
-        "Дзюн",
-        "haru_brother_jun"
+        "Дзюн"
       ],
       "facts": [],
       "id": "haru_brother_jun",
@@ -1290,17 +1300,10 @@
           "seen": "s13.text.098",
           "state": "На слушании 03.04 потребовал свидетелей и оспорил исключение спасителя из протокола.",
           "wants": "Понять, почему убийца или участник нападения оставлен живым; похоронить брата."
-        },
-        {
-          "fears": "Что гибель брата обесценена или виновный избежит наказания.",
-          "state": "На слушании 03.04 потребовал свидетелей и оспорил исключение спасителя из протокола.",
-          "wants": "Понять, почему убийца или участник нападения оставлен живым; похоронить брата."
         }
       ],
       "sources": [
-        "recovery/cast/haru_brother_jun.json",
-        "recovery/HOT.json",
-        "s13.text.098"
+        "recovery/cast/haru_brother_jun.json"
       ]
     },
     "hirano": {
@@ -3154,7 +3157,7 @@
       "id": "masked_man",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -3176,6 +3179,13 @@
           "source": "archive/session-005-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s05.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "еть, но наружу пока ничего не вывела. *— Любопытно, сколько тел потребуется, прежде чем эти люди поймут, что рассчитывали не ту силу.* *** Человек в маске спрыгнул с настила крана. Приземлился легко, держа левую руку возле пояса. Правой он удерживал сложенную ",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.099"
         }
       ],
       "projections": [
@@ -3994,7 +4004,7 @@
       "id": "nemera",
       "kind": "npc",
       "label": "Немера (Невыписанная)",
-      "mention_count": 120,
+      "mention_count": 121,
       "mentions": [
         {
           "at": "0010-03-13T17:36:00",
@@ -4002,13 +4012,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.028"
-        },
-        {
-          "at": "0010-04-11T17:13:00",
-          "excerpt": "алиста. Он ещё раз посмотрел на Шики. **Шиноби корабельной охраны:** — Связь у меня. Теперь будет видно, готов ли кто-нибудь в Тумане разговаривать. Немера коротко шевельнулась внутри запоров. **Немера (Невыписанная):** *— Ты отдал им возможность говорить с то",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.086"
         },
         {
           "at": "0010-04-11T17:16:00",
@@ -4023,13 +4026,20 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.089"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "— уходите. Грузчик бросил канат и побежал. За ним поспешили остальные. *** За внутренней границей Договора шевельнулась Немера. **Немера (Невыписанная):** *— Лекарь.* Её голос был тихим. *— Они ждут не ответа.* Одна из нитей её чакры коснулась внутреннего конт",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.099"
         }
       ],
       "projections": [
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s13.text.098",
+          "seen": "s13.text.099",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -13450,6 +13460,25 @@
         "s11.text.050"
       ]
     },
+    "place:dc29e1137e268dff": {
+      "aliases": [
+        "place:dc29e1137e268dff",
+        "Страна Огня, восточная гавань, грузовой причал",
+        "Страна Огня",
+        "восточная гавань",
+        "грузовой причал"
+      ],
+      "facts": [],
+      "id": "place:dc29e1137e268dff",
+      "kind": "place",
+      "label": "Страна Огня, восточная гавань, грузовой причал",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s13.text.099"
+      ]
+    },
     "place:dc6542345d23e554": {
       "aliases": [
         "place:dc6542345d23e554",
@@ -15150,6 +15179,128 @@
       ],
       "sources": [
         "s09.text.033"
+      ]
+    },
+    "quay_cloaked_hunter": {
+      "aliases": [
+        "quay cloaked hunter",
+        "Человек в дорожном плаще"
+      ],
+      "facts": [],
+      "id": "quay_cloaked_hunter",
+      "kind": "npc",
+      "label": "Человек в дорожном плаще",
+      "mention_count": 2,
+      "mentions": [
+        {
+          "at": "0010-03-12T14:32:00",
+          "excerpt": "лаще. Чуть дальше возница громко ругался из-за застрявшего колеса. Караульный отвернулся, направившись к повозке. Человек в дорожном плаще прошёл за ряд сушилен, пересёк узкий деревянный мост и оказался внутри жилой застройки. Миновал внешнюю линию наблюдения.",
+          "source": "archive/session-011-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s11.text.002"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "установить, выдержит ли она его скорость. Испытать её создатели ещё не успели. Мужчина среди грузчиков отступил от ящика. **Человек в дорожном плаще:** — Уходите с причала. Рабочий с мотком каната на плече обернулся. **Грузчик:** — Здесь нельзя... Он замолчал.",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.099"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s13.text.099",
+          "wants": "Обездвижить Шики для захвата."
+        },
+        {
+          "wants": "Обездвижить Шики для захвата."
+        }
+      ],
+      "sources": [
+        "recovery/cast/quay_cloaked_hunter.json",
+        "recovery/HOT.json",
+        "s13.text.099"
+      ]
+    },
+    "quay_masked_hunter": {
+      "aliases": [
+        "quay masked hunter",
+        "Человек в маске"
+      ],
+      "facts": [],
+      "id": "quay_masked_hunter",
+      "kind": "npc",
+      "label": "Человек в маске",
+      "mention_count": 4,
+      "mentions": [
+        {
+          "at": "0006-09-22T17:57:05",
+          "excerpt": "ному откосу, не достигнув колёс медицинского фургона. Водяной дракон, потеряв часть объёма и скорости, продолжил движение к ивам. Человек в маске попытался разорвать собственную технику и уйти с линии удара. Слишком поздно, чтобы полностью избежать последствий",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.086"
+        },
+        {
+          "at": "0006-10-01T21:36:23",
+          "excerpt": "**Мугами Шики:** — Мне нужно письмо, которое у второго, и ваши приказы. Не утром. Прямо сейчас. Или нападайте. Человек в маске некоторое время молчал. Его глаза переместились с сенбонов на чакровый скальпель, потом на пленника у стены. Лишь теперь он, по-видим",
+          "source": "archive/session-005-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s05.text.007"
+        },
+        {
+          "at": "0006-10-01T21:36:26",
+          "excerpt": "мирания. Мужчина смотрел на Шики широко раскрытыми глазами. Его пальцы пытались найти опору на предплечье, обхватившем шею. **Человек в маске:** — Кх... ты... Он не закончил. На следующем выдохе кашель стал влажным. Старший маскированный увидел происходящее. Е",
+          "source": "archive/session-005-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s05.text.008"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "еть, но наружу пока ничего не вывела. *— Любопытно, сколько тел потребуется, прежде чем эти люди поймут, что рассчитывали не ту силу.* *** Человек в маске спрыгнул с настила крана. Приземлился легко, держа левую руку возле пояса. Правой он удерживал сложенную ",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.099"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s13.text.099",
+          "wants": "Взять Шики живым по K-0418."
+        },
+        {
+          "wants": "Взять Шики живым по K-0418."
+        }
+      ],
+      "sources": [
+        "recovery/cast/quay_masked_hunter.json",
+        "recovery/HOT.json",
+        "s13.text.099"
+      ]
+    },
+    "quay_wire_operator": {
+      "aliases": [
+        "quay wire operator",
+        "Человек у причальной лестницы"
+      ],
+      "facts": [],
+      "id": "quay_wire_operator",
+      "kind": "npc",
+      "label": "Человек у причальной лестницы",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s13.text.099",
+          "wants": "Перекрыть путь сетью."
+        },
+        {
+          "wants": "Перекрыть путь сетью."
+        }
+      ],
+      "sources": [
+        "recovery/cast/quay_wire_operator.json",
+        "recovery/HOT.json",
+        "s13.text.099"
       ]
     },
     "razvedchik_zvuka": {
@@ -17320,27 +17471,6 @@
         "s13.text.092"
       ]
     },
-    "thread:market_shadow": {
-      "aliases": [
-        "thread:market shadow",
-        "market shadow",
-        "market_shadow"
-      ],
-      "facts": [],
-      "id": "thread:market_shadow",
-      "kind": "thread",
-      "label": "market shadow",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "25.03 17:13 Шики попрощался с двумя рыночными наблюдателями и ушёл северной дорогой. Старший охранник приказал возвращаться; вопрос о личности Шики они не разрешили, приказы иных лиц и содержание записки остаются неизвестны."
-        }
-      ],
-      "sources": [
-        "s12.text.099"
-      ]
-    },
     "thread:nemera_symbiosis": {
       "aliases": [
         "thread:nemera symbiosis",
@@ -18142,8 +18272,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "fire_port_statement_receipt",
+      "source": "s13.text.099",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1117
+  "source_turns_indexed": 1118
 }

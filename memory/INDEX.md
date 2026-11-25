@@ -1,15 +1,19 @@
-# Карта мира NPR · на ходе `s13.text.098`
+# Карта мира NPR · на ходе `s13.text.099`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (293) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (226)
+## Персонажи (228)
 - Немера (Невыписанная) (Немера, Невыписанная) — сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — … · `npc/nemera` · в сцене
-- Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official` · в сцене
-- Сотрудник безопасности порта — Мужчина в местной охранной форме с медной пластиной службы … · `npc/fire_port_security_staff` · в сцене
+- Человек в дорожном плаще — Плащ без опознавательных знаков, металлический цилиндр с пе… · `npc/quay_cloaked_hunter` · в сцене
+- Человек у причальной лестницы — Неприметная одежда, проволока в руках. · `npc/quay_wire_operator` · в сцене
+- Старший патруля Кусы — Мужчина в форме шиноби Травы, сегодня без шлема, тени под г… · `npc/grass_roads_patrol_senior`
+- Человек в маске — Белая керамическая маска с волнами у висков, тёмный капюшон. · `npc/masked_man`
 - Дзюн — Мужчина с дорожным снаряжением; другие черты пока не устано… · `npc/haru_brother_jun`
+- Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official`
+- Сотрудник безопасности порта — Мужчина в местной охранной форме с медной пластиной службы … · `npc/fire_port_security_staff`
 - Мужчина в куртке — Тёмная дорожная куртка, плотные перчатки без знаков деревни. · `npc/root_field_jacket_man`
 - Мужчина с иглой — Сдержанная дорожная одежда без видимых знаков деревни, при … · `npc/root_field_needle_man`
 - western_nest_adult_courier —  · `npc/western_nest_adult_courier`
@@ -18,7 +22,6 @@
 - Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
 - western_nest_young_courier —  · `npc/western_nest_young_courier`
 - Неизвестный наблюдатель за ивами — Скрыто наблюдал заставный мост до тех пор, пока Шики не снял капюшон. · `npc/willow_observer`
-- Старший патруля Кусы — Мужчина в форме шиноби Травы, сегодня без шлема, тени под г… · `npc/grass_roads_patrol_senior`
 - Молодая змея — по подписи в сцене · `npc/molodaya_zmeya`
 - Неизвестный связной в маске АНБУ — Связной, пришедший на назначенную передачу отчёта независимого наблюдателя. · `npc/root_wayhouse_liaison`
 - Сирамэ — Белая змея с очень светлыми глазами и почти незаметными зра… · `npc/shirame`
@@ -134,7 +137,6 @@
 - kiri_transfer_watch —  · `npc/kiri_transfer_watch`
 - Возница повозки — Женщина в дорожном плаще. · `npc/kagen_caravan_driver`
 - Сопровождающий повозки — Широкоплечий вооружённый мужчина в дорожной одежде. · `npc/kagen_caravan_escort`
-- Человек в маске —  · `npc/masked_man`
 - tikhiy_porog_seller —  · `npc/tikhiy_porog_seller`
 - Мастер фуиндзюцу охраны Кусагакуре — Пожилой штатный фуин-мастер, вызван Такаги для сохранения В-7 и безопасного обс… · `npc/fuin_master_v7`
 - Медик в очках из группы Мориоки —  · `npc/medical_spectacles`
@@ -233,20 +235,19 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (8)
+## Линии (7)
 - `pact` — Стадия считается кодом, см. pact. Внешность обыгрывать при каждой бли… · `threads/pact`
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — «Чёрный створ» уничтожен Шики 8 марта 1287 после вывоза всех денег и … · `threads/shiki_underground_career`
 - `nemera_symbiosis` — 25.03 Немера закончила безопасное сопоставление двух трофейных принуд… · `threads/nemera_symbiosis`
-- `market_shadow` — 25.03 17:13 Шики попрощался с двумя рыночными наблюдателями и ушёл се… · `threads/market_shadow`
 - `tenchi_bridge` — 26.03 отряд Ямато нашёл Саске в убежище, вернулся без него. Шики не з… · `threads/tenchi_bridge`
 - `roadside_attack` — Участие Шики завершилось передачей пленного и сведений местному патру… · `threads/roadside_attack`
 - `fire_risk_meeting` — Предложенная Шики будущая точка связи для Огня: 28 апреля 1287 года 1… · `threads/fire_risk_meeting`
 
-## Давние линии (27, в архиве)
-`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
+## Давние линии (28, в архиве)
+`threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (67)
+## Вещи (68)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -254,6 +255,7 @@
 - `bounty_notices` · `items/bounty_notices`
 - `cash_1184` · `items/cash_1184`
 - `contract_1184_docs` · `items/contract_1184_docs`
+- `fire_port_statement_receipt` · `items/fire_port_statement_receipt`
 - `fire_statement_genetic_risk` · `items/fire_statement_genetic_risk`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`

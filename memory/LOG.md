@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.099: quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `fire_port_statement_receipt`, план сюжета, бой
 - s13.text.098: Сотрудник безопасности порта (`npc/fire_port_security_staff`), Портовый чиновник (`npc/fire_port_official`), Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.097: поправки игрока: 5
 - s13.text.096: поправки игрока: 5
@@ -61,4 +62,3 @@
 - s13.text.042: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.041: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.040: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Неизвестный наблюдатель за ивами (`npc/willow_observer`)
-- s13.text.039: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
