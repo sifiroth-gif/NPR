@@ -8,6 +8,12 @@ on:
       - "rpg_engine/nextpack.py"
       - "rpg_engine/preflight.py"
       - "rpg_engine/historical_regression.py"
+      - "rpg_engine/overlay.py"
+      - "rpg_engine/setting.py"
+      - "rpg_engine/limits.py"
+      - "campaigns/shiki/BOOT.md"
+      - "docs/ARCHITECTURE.md"
+      - "docs/SETTING_TRANSFER.md"
       - "rpg_engine/heuristic_history.py"
       - "rpg_engine/hot.py"
       - "rpg_engine/continuity_guard.py"
@@ -260,6 +266,52 @@ jobs:
               "equal": True, "baseline_median_ms": round(statistics.median(old_times), 2),
               "current_median_ms": round(statistics.median(new_times), 2),
               "baseline_max_ms": round(max(old_times), 2), "current_max_ms": round(max(new_times), 2)}))
+          # D4 acceptance: bounded projections, archive recall, lag and CAS.
+          from rpg_engine import limits, overlay, protocol_zero
+          sizes = {name: (state / ("recovery/" + name + ".json")).stat().st_size
+                   for name in ("HOT", "GM_ONLY", "GM_BRIEF", "NEXT")}
+          assert sizes["HOT"] <= limits.HOT_LIMIT
+          assert sizes["GM_BRIEF"] <= limits.BRIEF_HARD
+          assert sizes["NEXT"] <= limits.NEXT_TARGET
+          assert not packet.get("fold_errors") and not packet.get("state_errors")
+          assert load("recovery/GM_BRIEF.json")["cursor"]["id"] == packet["cursor"]
+          rule_sizes = {name: len((Path("engine") / name).read_text(encoding="utf-8"))
+                        for name in limits.RULES}
+          assert all(rule_sizes[name] <= cap for name, cap in limits.RULES.items())
+          assert protocol_zero.LIVE is False
+          stats = load("archive/heuristic-recall/audit.json")
+          assert stats["source_coverage_ok"] and len(stats["indexed_sessions"]) == 14
+          assert stats["generic_probe_hit_at_10"] == stats["generic_probe_count"] == 14
+          print("D4_RECALL", json.dumps({k: stats[k] for k in (
+              "documents", "source_coverage_ok", "generic_probe_count",
+              "generic_probe_hit_at_10", "warm_query_median_ms")}))
+          print("D4_BUDGETS", json.dumps(sizes), "rule_files", len(rule_sizes))
+          # Synthetic receipts are in-memory only, never written or played.
+          first = dict(probe)
+          second = copy.deepcopy(probe)
+          session, ordinal = hot.turn_number(first["id"])
+          second["id"] = f"s{session:02d}.text.{ordinal+1:03d}"
+          second["review"] = {"predecessor": first["id"]}
+          receipts = []
+          for item in (first, second):
+              raw = json.dumps(item, ensure_ascii=False).encode("utf-8")
+              receipts.append({"turn": item, "sha": overlay.blob_sha(raw)})
+          packet_before = copy.deepcopy(packet)
+          projected = overlay.project(packet, receipts)
+          assert projected["lag_status"]["write_allowed"], projected["lag_status"]
+          assert projected["cursor"] == second["id"] and projected["turn_file"] == receipts[-1]["sha"]
+          assert projected["dice"] == fight.dice({"cursor": {"id": second["id"], "at": second["at"]},
+                                                   "last": hot._last_entry(second)})
+          assert "medical" not in projected and "must" not in projected
+          assert overlay.project(packet, [receipts[1]])["lag_status"]["write_allowed"] is False
+          assert overlay.project(packet, receipts + [receipts[-1]]) == projected
+          assert packet == packet_before
+          first_raw = json.dumps(first, ensure_ascii=False).encode("utf-8")
+          assert overlay.cas_decision(receipts[0]["sha"], first_raw, first)["status"] == "already_written"
+          assert overlay.cas_decision("wrong", first_raw, second)["status"] == "conflict"
+          assert overlay.cas_decision(receipts[0]["sha"], first_raw, second)["status"] == "retry_same_sha"
+          historical_regression.check_hashes(state, archive_before)
+          print("D4_LAG_CAS_OK", "receipts", len(receipts), "no_live_write", True)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
