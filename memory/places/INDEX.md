@@ -30,11 +30,11 @@
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
+- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 11 ход(ов), s08–s15
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 11 ход(ов), s14–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
-- Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 10 ход(ов), s08–s15
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 10 ход(ов), s05–s15
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 10 ход(ов), s10–s14

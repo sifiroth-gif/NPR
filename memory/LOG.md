@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.071: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`)
 - s15.text.070: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), вещь `blank_communication_plates_s15`, вещь `shiki_communication_receiver`, поправки игрока: 1
 - s15.text.069: Кирисава Сэйна (`npc/seina`), Мугами Акихиро (`npc/akihiro`), Мугами Нао (`npc/nao`), Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), вещь `blank_communication_plates_s15`
 - s15.text.068: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
@@ -61,4 +62,3 @@
 - s15.text.014: Орочимару (`npc/orochimaru`)
 - s15.text.013: Орочимару (`npc/orochimaru`)
 - s15.text.012: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), поправки игрока: 2
-- s15.text.011: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`)
