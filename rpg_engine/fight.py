@@ -751,37 +751,59 @@ def _wounds(hot, wounds, turn_id, at):
 def _heal(hot, item, turn_id, notes=None):
     if not isinstance(item, dict) or not item.get("who"):
         return
-    # Partial recovery keeps the original injury and its provenance. It is not
-    # equivalent to haemostasis or full healing. Require an exact unique site.
+    who = item["who"]
+    wounds = (hot.get("injuries") or {}).get(who) or []
+    where, source = item.get("where"), item.get("injury_turn")
+    modern = _new({}, turn_id)
+
+    def warn(message):
+        if notes is not None:
+            _note(notes, turn_id, f"Лечение {who}: {message}")
+
+    if modern and any(key in item and type(item[key]) is not bool for key in ("stop", "blood", "all")):
+        warn("stop/blood/all должны быть логическими значениями; лечение не применено.")
+        return
+    if source is not None and (not isinstance(source, str) or not source):
+        warn("injury_turn должен быть ID исходного повреждения.")
+        return
+    matches = [w for w in wounds if not w.get("healed") and
+               (not where or w.get("where") == where) and
+               (not source or w.get("turn") == source)]
     if "residual" in item:
         residual = item["residual"]
-        wounds = (hot.get("injuries") or {}).get(item["who"]) or []
-        matches = [w for w in wounds if item.get("where") and w.get("where") == item["where"] and not w.get("healed")]
         valid = (isinstance(residual, dict) and not (set(residual) - {"lost", "severity"})
                  and isinstance(residual.get("lost"), str) and bool(residual["lost"].strip())
                  and ("severity" not in residual or isinstance(residual["severity"], str) and residual["severity"] in SEVERITY)
-                 and len(matches) == 1)
+                 and where and len(matches) == 1 and not item.get("all"))
         if not valid:
-            if notes is not None:
-                _note(notes, turn_id, f"Частичное лечение {item['who']}: требуется единственная рана where и residual.lost; severity — из шкалы ран.")
+            warn("частичное лечение требует единственную рану where (при совпадении — injury_turn) и residual.lost; severity — из шкалы ран.")
             return
         if item.get("stop") or item.get("blood"):
             body.heal(hot, item, turn_id)
         matches[0].update(residual)
         matches[0]["recovered_at"] = turn_id
         return
+    # An explicit false haemostasis/transfusion flag is not a request for
+    # complete recovery. Keep this distinct from old unqualified full heal.
+    if modern and ("stop" in item or "blood" in item) and not (item.get("stop") or item.get("blood")):
+        warn("stop/blood=false не означает полного исцеления.")
+        return
+    if modern and (item.get("stop") or not item.get("blood")):
+        if not where and not item.get("all"):
+            warn("укажи точную рану where либо явное all=true.")
+            return
+        if where and (not matches or len(matches) > 1) and not item.get("all"):
+            warn("рана не найдена или неоднозначна; укажи injury_turn.")
+            return
     if (item.get("stop") or item.get("blood")) and body.heal(hot, item, turn_id):
         return      # кровь остановлена или восполнена; рана остаётся до лечения
-    wounds = (hot.get("injuries") or {}).get(item["who"]) or []
-    where = item.get("where")
-    for wound in wounds:
-        if not where or wound.get("where") == where:
-            wound["healed"] = turn_id
+    for wound in matches:
+        wound["healed"] = turn_id
     remaining = [w for w in wounds if not w.get("healed")]
     if remaining:
-        hot["injuries"][item["who"]] = remaining
+        hot["injuries"][who] = remaining
     else:
-        hot.get("injuries", {}).pop(item["who"], None)
+        hot.get("injuries", {}).pop(who, None)
 
 
 # ---------- чакра ----------

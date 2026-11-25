@@ -120,9 +120,10 @@ def heal(hot, item, turn_id):
             record["restored"] = turn_id
     if not item.get("stop"):
         return bool(item.get("blood"))
-    where = item.get("where")
+    where, source = item.get("where"), item.get("injury_turn")
     for wound in (hot.get("injuries") or {}).get(who) or []:
-        if wound.get("bleed") and (not where or wound.get("where") == where):
+        if (wound.get("bleed") and (not where or wound.get("where") == where)
+                and (not source or wound.get("turn") == source)):
             wound["bleed"] = False
             wound["stopped"] = turn_id
     return True

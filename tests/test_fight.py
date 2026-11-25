@@ -191,6 +191,47 @@ class PartialHealingRegressionTest(unittest.TestCase):
         self.assertFalse(wound["bleed"])
         self.assertEqual(notes, [])
 
+    def test_modern_false_haemostasis_cannot_heal_wound(self):
+        state = {"injuries": {"patient": [{"where": "спинной мозг", "lost": "парез"}]}}
+        notes = []
+        fight._heal(state, {"who": "patient", "where": "спинной мозг", "stop": False},
+                    "s14.text.024", notes)
+        self.assertEqual(state["injuries"]["patient"][0]["lost"], "парез")
+        self.assertTrue(notes)
+
+    def test_modern_partial_treatment_selects_original_injury(self):
+        state = {"injuries": {"patient": [
+            {"where": "спинной мозг", "turn": "s14.text.005", "lost": "паралич", "bleed": True},
+            {"where": "спинной мозг", "turn": "s14.text.007", "lost": "парез", "bleed": True}]}}
+        notes = []
+        fight._heal(state, {"who": "patient", "where": "спинной мозг",
+                            "stop": True, "residual": {"lost": "остаточный парез"}},
+                    "s14.text.024", notes)
+        self.assertTrue(notes)
+        self.assertTrue(all(w["bleed"] for w in state["injuries"]["patient"]))
+        notes.clear()
+        fight._heal(state, {"who": "patient", "where": "спинной мозг",
+                            "injury_turn": "s14.text.005", "stop": True,
+                            "residual": {"lost": "остаточный парез"}},
+                    "s14.text.024", notes)
+        first, second = state["injuries"]["patient"]
+        self.assertEqual(first["lost"], "остаточный парез")
+        self.assertFalse(first["bleed"])
+        self.assertTrue(second["bleed"])
+        self.assertEqual(second["lost"], "парез")
+        self.assertEqual(notes, [])
+
+    def test_modern_full_heal_requires_site_or_explicit_all(self):
+        state = {"injuries": {"patient": [{"where": "плечо"}, {"where": "бок"}]}}
+        notes = []
+        fight._heal(state, {"who": "patient"}, "s14.text.024", notes)
+        self.assertEqual(len(state["injuries"]["patient"]), 2)
+        self.assertTrue(notes)
+        fight._heal(state, {"who": "patient", "where": "плечо"}, "s14.text.024", notes)
+        self.assertEqual([w["where"] for w in state["injuries"]["patient"]], ["бок"])
+        fight._heal(state, {"who": "patient", "all": True}, "s14.text.025", notes)
+        self.assertNotIn("patient", state["injuries"])
+
     def test_bad_partial_heal_does_not_remove_wound(self):
         hot = {"injuries": {"patient": [{"where": "спинной мозг", "lost": "паралич"}]}}
         notes = []
