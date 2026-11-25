@@ -58,4 +58,3 @@
 - s12.text.076: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), линия `sai_note`, бой
 - s12.text.075: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `sai_note`, линия `kabuto_name_source`, бой
 - s12.text.074: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), линия `kabuto_name_source`, бой
-- s12.text.073: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `kabuto_tracking_claim`, линия `kabuto_name_source`, бой
