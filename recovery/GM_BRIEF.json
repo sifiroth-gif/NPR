@@ -90,12 +90,13 @@
    "quay_masked_hunter",
    "quay_wire_operator",
    "place:dc29e1137e268dff",
+   "masked_man",
    "root_compulsory_coupling_scroll",
    "root_seal_needle",
    "seal_boot_scrap",
    "sealing_cloth_scrap"
   ],
-  "focus_bytes": 2858,
+  "focus_bytes": 2999,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -300,7 +301,7 @@
   "place": "Страна Огня, восточная гавань, грузовой причал",
   "time": "17:24"
  },
- "digest": "f24665becd1c05cadace527e3f1839972d5c8c92b9df286c084b1a0d52c56185",
+ "digest": "4465482f3ba1cadea2e15496c49094025a030933eee54b77ab45d2705c475312",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -673,6 +674,16 @@
    },
    {
     "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "masked_man",
+    "kind": "npc",
+    "label": "Человек в маске",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
      "explicit_edge_candidate"
     ],
     "facts": [],
@@ -746,7 +757,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 9
+  "total_matched": 10
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -1306,7 +1317,7 @@
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Маскированный в 14м у крана, узел в 8м; оператор у лестницы натягивает трос, боец с цилиндром среди ящиков. Шики у конторы; сеть падает, до выстрела миг.",
-  "pressure": "Пленный истекает кровью; один противник меняет нож на обратный хват, второй готовит печать. Оба видели Шуншин и отростки Немеры.",
+  "pressure": "Печатная сеть падает над проходом; цилиндр наведён на Шики и готов к выстрелу. Человек в маске начинает печать следующей техники. Трое пытаются взять Шики живым.",
   "situation": "Шики забрал у чиновника расписку и убрал в сумку. На грузовом причале трое скрытых противников начинают живой захват по номеру K-0418: сеть на чакровых печатях падает, цилиндр готов к выстрелу, маскированный готовит технику. Маска напоминает о Кири и 1284 годе, но их нынешняя принадлежность неизвестна. Шики успевает отреагировать."
  },
  "shiki": {
