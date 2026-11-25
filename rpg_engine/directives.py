@@ -90,7 +90,10 @@ def classify(text):
 
 def _items(turn):
     player = turn.get("player") or ""
-    return [_norm(player)] if turn.get("kind") == "ooc" else extract(player)
+    if turn.get("kind") == "ooc":
+        address = re.split(r"по игре\s*:", player, maxsplit=1, flags=re.I)[0]
+        return [_norm(address)] if address.strip() else []
+    return extract(player)
 
 
 def validate_ops(turn):
@@ -155,8 +158,17 @@ def _migration(state_dir):
         except (OSError, IndexError):
             continue
         if row["quote"] in player:
+            sources = [row["turn"]]
+            for extra in row.get("covered", []):
+                extra_path = Path(state_dir) / "archive/turns" / extra["turn"].split(".")[0] / (extra["turn"] + ".md")
+                try:
+                    extra_player = extra_path.read_text(encoding="utf-8").split("## Игрок\n", 1)[1].split("\n## ", 1)[0]
+                except (OSError, IndexError):
+                    continue
+                if extra["quote"] in extra_player:
+                    sources.append(extra["turn"])
             result.append({"id": stable_id(row["text"]), "text": row["text"], "since": row["turn"],
-                           "from": [row["turn"]], "scope": "shiki"})
+                           "from": sources, "scope": "shiki"})
     return result
 
 
@@ -179,8 +191,10 @@ def capture(hot, turn, state_dir=None):
     """Keep permanent events unbounded by recent-turn limits; all source text is in TURN."""
     ops = validate_ops(turn)
     live = {row["id"]: row for row in active(state_dir, hot)}
-    events = hot.setdefault("directive_events", [])
-    book = hot.setdefault("directives", [])
+    # Stage everything before committing: invalid operations cannot leave a
+    # partial directive update in memory.
+    events = list(hot.get("directive_events") or [])
+    book = list(hot.get("directives") or [])
     known = {(d.get("turn"), d.get("text")) for d in book}
     added = []
     # Explicit ops win over heuristic capture of the same passage.
@@ -196,7 +210,8 @@ def capture(hot, turn, state_dir=None):
         kind = event["op"]
         if kind in ("add", "replace"):
             event["new_id"] = stable_id(event["text"])
-        if event in events:
+        if any(all(prior.get(k) == v for k, v in event.items())
+               for prior in events):
             continue
         if kind in ("revoke", "replace"):
             if event["id"] not in live:
@@ -211,6 +226,10 @@ def capture(hot, turn, state_dir=None):
         events.append(event)
         added.append(event.get("text", event["id"] if "id" in event else ""))
     del book[:-KEEP]
+    if events:
+        hot["directive_events"] = events
+    if book:
+        hot["directives"] = book
     return added
 
 
@@ -245,14 +264,19 @@ def view(state_dir, hot):
 
 def project_view(view, turn):
     """Apply confirmed pending OOC operations to NEXT without reading the seed."""
-    if not view or not view.get("standing_ids"):
-        return view
-    # Use the existing stable IDs, not a hash of formatted display strings.
-    texts = dict(zip(view["standing_ids"], view.get("standing", [])))
+    view = view or {}
     ops = validate_ops(turn)
+    # Use existing stable IDs, never hash the formatted display strings.
+    ids = view.get("standing_ids") or []
+    standing_text = view.get("standing") or []
+    texts = dict(zip(ids, standing_text))
     for item in _items(turn):
         if classify(item) == "standing" and not any(_norm(op["quote"]) in item for op in ops):
             ops = [*ops, {"op": "add", "text": item}]
+    if not ops:
+        return view
+    if len(ids) != len(standing_text):
+        raise ValueError("directive_ops: stale directive index; refresh NEXT")
     for op in ops:
         if op["op"] in ("revoke", "replace"):
             if op["id"] not in texts:
@@ -260,4 +284,5 @@ def project_view(view, turn):
             texts.pop(op["id"])
         if op["op"] in ("add", "replace"):
             texts.setdefault(stable_id(op["text"]), f"{op['text']} ({turn['id']})")
-    return dict(view, standing=list(texts.values()), standing_ids=list(texts))
+    return dict(view, standing=list(texts.values()), standing_ids=list(texts),
+                rule="standing — выше GM_CORE/навыка до отмены; standing_ids по порядку. recent — уточнение, не постоянное правило.")

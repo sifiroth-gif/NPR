@@ -282,3 +282,38 @@ class DurableDirectiveTest(unittest.TestCase):
             anchor.write_text("## Игрок\nи вообще если можешь делать быстро визуализацию в игре делай ее\n\n## Ведущий\n")
             self.assertEqual(len(directives.active(root, {})), 2)
             self.assertEqual(directives.active(root, {})[0]["text"], "Старое")
+
+    def test_atomic_invalid_target_and_game_address_exclusion(self):
+        h = {}
+        source = "Отмени правило о темпе."
+        with self.assertRaises(ValueError):
+            directives.capture(h, {"id": "s14.text.024", "kind": "ooc", "player": source,
+                                   "d": {"directive_ops": [{"op": "revoke", "id": "dir_0000000000000000", "quote": source}]}})
+        self.assertEqual(h, {})
+        directives.capture(h, {"id": "s14.text.024", "kind": "ooc",
+                               "player": "Мастеру: покажи заново. По игре: я всегда буду ждать."})
+        self.assertEqual(directives.active(None, h), [])
+
+    def test_empty_view_can_accept_first_confirmed_directive(self):
+        player = "Впредь описывай движения подробно."
+        incoming = {"id": "s14.text.024", "kind": "ooc", "player": player}
+        out = directives.project_view({}, incoming)
+        self.assertEqual(out["standing_ids"], [directives.stable_id(player)])
+
+class DirectiveFoldTest(unittest.TestCase):
+    setUp, tearDown = test_hot.HotFilesTest.setUp, test_hot.HotFilesTest.tearDown
+    git, commit, put = test_hot.HotFilesTest.git, test_hot.HotFilesTest.commit, test_hot.HotFilesTest.put
+
+    def test_amend_rolls_back_directive_event(self):
+        self.put(turn(45, "0006-10-01T07:14:00", kind="ooc",
+                      player="Мастеру: впредь описывай движения подробно."))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        state, _ = hot._read_state(self.root)
+        self.assertEqual(len(directives.active(self.root, state)), 1)
+        self.commit("accepted")
+        self.put(turn(45, "0006-10-01T07:14:00", kind="ooc", amend=True,
+                      player="Мастеру: как устроены броски?"))
+        self.assertEqual(hot.fold(self.root)["errors"], [])
+        state, _ = hot._read_state(self.root)
+        self.assertEqual(directives.active(self.root, state), [])
+        self.assertNotIn("standing", directives.view(self.root, state))

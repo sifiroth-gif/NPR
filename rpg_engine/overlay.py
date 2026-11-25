@@ -10,7 +10,7 @@ import copy
 import hashlib
 import json
 
-from . import fight, hot
+from . import directives, fight, hot
 
 
 def obligation_ids(cursor, items):
@@ -70,6 +70,7 @@ def project(packet, records):
     declared_scene = None
     inventory_changes = []
     errors = []
+    projected_directives = result.get("directives")
     for rec in records:
         if not isinstance(rec, dict) or not isinstance(rec.get("turn"), dict) or not isinstance(rec.get("sha"), str) or not rec["sha"]:
             errors.append("missing confirmed receipt")
@@ -98,6 +99,11 @@ def project(packet, records):
             break
         if at and hot.parse_at(turn["at"]) < hot.parse_at(at):
             errors.append("time precedes predecessor")
+            break
+        try:
+            projected_directives = directives.project_view(projected_directives, turn)
+        except ValueError as exc:
+            errors.append(str(exc))
             break
         pending.append(rec)
         delta = turn.get("d") or {}
@@ -156,7 +162,11 @@ def project(packet, records):
     if errors:
         result.pop("turn_file", None)
         result.pop("next_id", None)
+        result.pop("directives", None)
+        result["lag_status"]["uncertain"].append("directives: exact accepted chain unavailable")
         return result
+    if projected_directives:
+        result["directives"] = projected_directives
     if declared_scene is not None:
         result["scene_context"] = declared_scene
     if declared_present is not None:

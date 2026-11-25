@@ -6,6 +6,8 @@ on:
       - ".github/workflows/npr-isolated-state-audit.yml"
       - "rpg_engine/capabilities.py"
       - "rpg_engine/nextpack.py"
+      - "rpg_engine/directives.py"
+      - "campaigns/shiki/ref/DIRECTIVE_MIGRATION.json"
       - "campaigns/shiki/ref/CAPABILITIES.json"
   workflow_dispatch:
 permissions:
@@ -100,6 +102,18 @@ jobs:
           assert packet_bytes <= nextpack.TARGET_BYTES, "NEXT above target"
           assert packet_bytes == nextpack._size(packet)
           print("B2_ROUTING_OK", "NEXT_bytes", packet_bytes, "target", nextpack.TARGET_BYTES)
+          from rpg_engine import directives
+          seed = directives.standing(state)
+          active = directives.active(state, full)
+          view = packet["directives"]
+          assert len(seed) == 18 and len(active) == 22
+          assert len(view["standing_ids"]) == len(set(view["standing_ids"])) == 22
+          assert all(row["text"] in view["standing"][i] for i, row in enumerate(active))
+          assert set(row["id"] for row in seed) <= set(view["standing_ids"])
+          assert all("s14.text.010" not in row for row in view.get("recent", []))
+          assert all("s14.text.017" not in row for row in view.get("recent", []))
+          assert all("s14.text.014" not in row and "s14.text.019" not in row for row in view.get("recent", []))
+          print("B3_DIRECTIVES_OK", len(seed), "migrated", len(active)-len(seed), "active", len(active))
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
