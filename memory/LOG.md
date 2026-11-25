@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.030: Хаясэ Рэн (`npc/ren`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.028: Немера (Невыписанная) (`npc/nemera`)
 - s13.text.027: Немера (Невыписанная) (`npc/nemera`)
 - s13.text.026: Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`)
@@ -57,4 +58,3 @@
 - s12.text.077: Кабуто Якуши (`npc/kabuto`), masked2 (`npc/masked2`), masked3 (`npc/masked3`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), вещь `seal_boot_scrap`, бой
 - s12.text.076: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Сакура Харуно (`npc/sakura`), линия `sai_note`, бой
 - s12.text.075: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `sai_note`, линия `kabuto_name_source`, бой
-- s12.text.074: Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), линия `kabuto_name_source`, бой
