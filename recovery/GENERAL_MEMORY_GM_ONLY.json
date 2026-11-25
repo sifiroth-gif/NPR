@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.001",
+  "cursor": "s15.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -822,8 +822,7 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник",
-        "fire_port_official"
+        "Портовый чиновник"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -867,8 +866,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json",
-        "s15.text.001"
+        "recovery/cast/fire_port_official.json"
       ]
     },
     "fire_port_security_staff": {
@@ -7485,6 +7483,25 @@
         "s09.text.085"
       ]
     },
+    "place:4bd86523a265b14e": {
+      "aliases": [
+        "place:4bd86523a265b14e",
+        "Страна Рек, южные известняковые горы, подземное убежище Шики",
+        "Страна Рек",
+        "южные известняковые горы",
+        "подземное убежище Шики"
+      ],
+      "facts": [],
+      "id": "place:4bd86523a265b14e",
+      "kind": "place",
+      "label": "Страна Рек, южные известняковые горы, подземное убежище Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.002"
+      ]
+    },
     "place:4c3c99a9c6c19173": {
       "aliases": [
         "place:4c3c99a9c6c19173",
@@ -11830,8 +11847,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.001",
-        "s14.text.066"
+        "s14.text.066",
+        "s15.text.001"
       ]
     },
     "place:ad9133f0089ffacd": {
@@ -15501,8 +15518,7 @@
     "quay_wire_operator": {
       "aliases": [
         "quay wire operator",
-        "Человек у причальной лестницы",
-        "quay_wire_operator"
+        "Человек у причальной лестницы"
       ],
       "facts": [],
       "id": "quay_wire_operator",
@@ -15547,8 +15563,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/quay_wire_operator.json",
-        "s15.text.001"
+        "recovery/cast/quay_wire_operator.json"
       ]
     },
     "razvedchik_zvuka": {
@@ -16891,7 +16906,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 51,
+      "mention_count": 52,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16899,13 +16914,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-16T11:43:00",
-          "excerpt": "ми о ней ещё до того, как её обозначили пациентом седьмой палаты. Была ли эта бумага подлинной, предстояло установить. Сирамэ взглянула на раскрытое письмо. **Сирамэ:** — Он предлагает вам встречу. Вам обоим. Она задержала взгляд на Шики. **Сирамэ:** — Если ре",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.063"
         },
         {
           "at": "0010-04-16T11:44:00",
@@ -16920,6 +16928,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.065"
+        },
+        {
+          "at": "0010-04-19T22:00:00",
+          "excerpt": "стественных расщелинах и движение воды под нижними залами. Жилые помещения оставались пустыми. Коюки и Сирамэ пока не возвращались. В кабинете на полках стояли недавно приобретённые книги. За стеной находились операционная и лаборатория, ещё не знавшие ни одно",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.002"
         }
       ],
       "projections": [
@@ -18165,7 +18180,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18173,13 +18188,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-16T11:40:00",
-          "excerpt": "Сирамэ покинула убежище незадолго до заката. С наступлением темноты пещеры стали заметно прохладнее. Коюки устроилась возле одной из ламп, свернувшись между её каменным основанием и стеной. Ночь прошла спокойно. *** <text color=\"secondary\" size=\"xs\">Пятница, 1",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.062"
         },
         {
           "at": "0010-04-16T11:44:00",
@@ -18194,6 +18202,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.065"
+        },
+        {
+          "at": "0010-04-19T22:00:00",
+          "excerpt": "тных в естественных расщелинах и движение воды под нижними залами. Жилые помещения оставались пустыми. Коюки и Сирамэ пока не возвращались. В кабинете на полках стояли недавно приобретённые книги. За стеной находились операционная и лаборатория, ещё не знавшие",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.002"
         }
       ],
       "projections": [
@@ -18597,5 +18612,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1175
+  "source_turns_indexed": 1176
 }
