@@ -157,6 +157,20 @@ class PresentPastTest(unittest.TestCase):
         self.assertTrue(past["naruto"][0].startswith("s11.text.046 — «"))
         self.assertIn("ШАРИНГАН", past["naruto"][0])
 
+    def test_shared_surname_is_not_a_witness(self):
+        state = Path(tempfile.mkdtemp())
+        (state / "archive").mkdir()
+        rows = [{"id": "s04.text.010", "gm": "**Минасэ Рэи:** — Операция и нервная ткань."}]
+        (state / "archive/session-004-turns.jsonl").write_text(json.dumps(rows[0], ensure_ascii=False) + "\n", encoding="utf-8")
+        terms = " ".join({heuristic_history.stem(w) for w in heuristic_history.tokens(rows[0]["gm"])})
+        self._index(state, [{"id": rows[0]["id"], "kind": "played", "at": "0006-10-01T12:00:00",
+                             "source": "archive/session-004-turns.jsonl", "start": 0, "end": 0,
+                             "terms": terms, "headline": "", "preview": ""}])
+        hot = {"session": 14, "cursor": {"id": "s14.text.023", "at": "0010-04-11T21:30:00"},
+               "cast": {"quay_masked_hunter": {"name": "Сэйдзи Минасэ"}},
+               "scene": {"present": ["shiki", "quay_masked_hunter"], "situation": "Операция и нервная ткань."}}
+        self.assertEqual(echo.present_past(state, hot), {})
+
 
 class PresentPastMeaningTest(PresentPastTest):
     def test_meaning_brings_an_episode_without_shared_words(self):
@@ -171,6 +185,10 @@ class PresentPastMeaningTest(PresentPastTest):
         terms = lambda t: " ".join(sorted({heuristic_history.stem(w) for w in heuristic_history.tokens(t) if len(w) >= 3}))
         self._index(state, [{"id": r["id"], "kind": "played", "at": "0009-10-01T12:00:00", "source": "archive/session-009-turns.jsonl",
                              "start": 0, "end": 0, "terms": terms(r["gm"]), "headline": "", "preview": ""} for r in rows])
+        # These narrator-described episodes have explicit stable-ID witness evidence.
+        mem = state / "archive/npc-memory"
+        mem.mkdir()
+        (mem / "orochimaru.json").write_text(json.dumps({"episodes": [{"turn": r["id"], "ch": "present"} for r in rows]}), encoding="utf-8")
         hot = {"session": 12, "cursor": {"id": "s12.text.043", "at": "0010-04-01T12:00:00"}, "cast": {"orochimaru": {"name": "Орочимару"}},
                "scene": {"present": ["shiki", "orochimaru"], "situation": "Шики остановил белую змею взглядом."}}
         real = meaning.search

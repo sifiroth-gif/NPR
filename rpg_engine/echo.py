@@ -469,6 +469,7 @@ def present_past(state_dir, hot, skip=()):
     except Exception:   # слой необязателен: без него — по словам
         sem = {}
     hot.setdefault("fold", {})["past"] = {"at": (hot.get("cursor") or {}).get("id"), "meaning": bool(sem)}
+    from . import npc_memory, talk, presence
     for key in (hot.get("scene") or {}).get("present") or []:
         if key in ("shiki", "player") or key in skip:
             continue
@@ -476,14 +477,29 @@ def present_past(state_dir, hot, skip=()):
         name_stems = {stem(w.casefold()) for w in NAME.findall(" " + name)} - COMMON
         if not name_stems:
             continue
+        # A shared surname is not identity and mention is not eyewitness knowledge.
+        # Stable-ID presence evidence or this actor's exact labelled speech is required.
+        try:
+            episodes = npc_memory.load_episodes(state_dir, key)
+        except (OSError, ValueError):
+            episodes = []
+        witnessed = {_turn_of(e.get("turn")) for e in episodes
+                     if e.get("ch") in ("present", "witness")}
         own = []
         for row in rows:
-            turn = aging._ordinal(_turn_of(row.get("id")))
+            source_turn = _turn_of(row.get("id"))
+            turn = aging._ordinal(source_turn)
             if turn is not None and now - turn < PAST_SCENE:
                 continue
             terms = set(str(row.get("terms") or "").split())
             if not terms & name_stems:
                 continue
+            if source_turn not in witnessed:
+                if not name_stems <= terms:
+                    continue
+                text = _source_text(state_dir, row, cache)
+                if not any(presence._clean(label) == presence._clean(name) for label, _ in talk.utterances(text)):
+                    continue
             shared = terms & topic
             rarity = sum(math.log((total + 1) / (int(df.get(s, 0)) + 1)) for s in shared)
             own.append((rarity, row))

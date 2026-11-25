@@ -49,6 +49,15 @@ class PresenceKeyTest(unittest.TestCase):
         self.assertEqual(presence.resolve("Мориока Хидэаки", names), "morioka_hideaki")
         self.assertIsNone(presence.resolve("Мориока", names), "две карточки с этим словом — не угадывать")
 
+    def test_generic_masked_label_is_scoped_not_globally_merged(self):
+        names = {"old_mask": presence._entry(["Человек в маске"]),
+                 "quay": presence._entry(["Сэйдзи Минасэ", "Человек в маске"]),
+                 "rei": presence._entry(["Минасэ Рэи"])}
+        self.assertIsNone(presence.resolve("Человек в маске", names))
+        self.assertEqual(presence.resolve("Человек в маске", names, scope={"quay"}), "quay")
+        self.assertEqual(presence.resolve("Минасэ Рэи", names, scope={"quay"}), "rei")
+        self.assertIsNone(presence.resolve("Другой Минасэ", names))
+
     def test_stub_card_keeps_the_case_of_the_label(self):
         h = {}
         names = {}

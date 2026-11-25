@@ -1259,11 +1259,20 @@ def fold(state_dir):
                 # Сторож канона и уход манеры — только при нарушении: чистый ход ничего не добавляет.
                 hot.setdefault("_checks", []).extend(canon.guard(state_dir, turn) + style.drift(state_dir, turn))
             # Состав по подписям реплик, если ведущий не записал present (код не правит его запись).
-            spoke, unnamed = presence.voices(turn, names, always)
+            # Resolve generic dialogue labels within the actual scene, not the global roster.
+            # Explicit renames in this turn take effect for its speech immediately.
+            scoped_names = dict(names)
+            cast_patch = (turn.get("d") or {}).get("cast") or {}
+            for actor, patch in cast_patch.items():
+                if isinstance(patch, dict) and patch.get("name"):
+                    old_forms = (names.get(actor) or {}).get("forms") or []
+                    scoped_names[actor] = presence._entry([patch["name"]] + list(patch.get("aliases") or []) + old_forms)
+            scope = set(present_before) | set(((turn.get("d") or {}).get("scene") or {}).get("present") or [])
+            spoke, unnamed = presence.voices(turn, scoped_names, always, scope=scope)
             cards = presence.auto_cards(hot, turn, unnamed, names)
             # Говорящий без имени в карточке или вовсе без карточки (есть только страница вики).
             for key in spoke:
-                cards.setdefault(key, {"name": presence.display(names, key), "auto": True})
+                cards.setdefault(key, {"name": presence.display(scoped_names, key), "auto": True})
             turn["_spoke"], turn["_cards_auto"], turn["_always"] = spoke + [k for k in cards if k not in spoke], cards, always
             _recall_cast(state_dir, hot, turn)
             if any(v is None for v in ((turn.get("d") or {}).get("cast") or {}).values()):

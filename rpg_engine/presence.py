@@ -100,18 +100,26 @@ def roster(state_dir, hot):
     return {k: _entry(v) for k, v in raw.items()}
 
 
-def resolve(label, names):
+def resolve(label, names, scope=()):
     """Подпись → ключ: полное имя или псевдоним, затем единственное совпадение по собственному имени."""
     clean = _clean(label)
     if not clean:
         return None
     exact = [k for k, e in names.items() if clean in e["forms"]]
+    scoped = [k for k in exact if k in scope]
+    if len(scoped) == 1:
+        return scoped[0]
+    if len(scoped) > 1 or len(exact) > 1:
+        return None
     if len(exact) == 1:
         return exact[0]
     # Должность и деревня — не имя: «Разведчик Суны» не «Разведчик Звука» (s11.text.074).
     plain = [w for w in clean.split() if not any(stem in w for stem in ROLE_STEMS) and not w.startswith(GEO_STEMS)]
     words = {w for w in plain if len(w) >= 3}
-    partial = [k for k, e in names.items() if words & e["parts"]]
+    partial = [k for k, e in names.items() if words and words <= e["parts"]]
+    scoped = [k for k in partial if k in scope]
+    if len(scoped) == 1:
+        return scoped[0]
     if len(partial) == 1:
         return partial[0]
     # Карточка без имени (ведущий завёл только ключ): «Мориока Хидэаки» → morioka_hideaki.
@@ -133,7 +141,7 @@ def speakers(gm):
     return [m.group(1).strip() for m in VOICE.finditer(str(gm or ""))]
 
 
-def voices(turn, names, always_present=()):
+def voices(turn, names, always_present=(), scope=()):
     """Подписи хода → (ключи карточек, метки без карточки)."""
     if turn.get("kind") == "ooc":
         return [], []
@@ -141,7 +149,7 @@ def voices(turn, names, always_present=()):
     for label in speakers(turn.get("gm")):
         if "шики" in _norm(label) or _clean(label) in NOT_VOICES:
             continue
-        key = resolve(label, names)
+        key = resolve(label, names, scope=scope)
         if key:
             if key not in always_present and key not in keys:
                 keys.append(key)
