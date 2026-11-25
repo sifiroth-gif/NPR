@@ -105,11 +105,7 @@ class Resolver:
         here = [k for k in keys if session in self.sessions.get(k, ())]
         if len(here) == 1:
             return here[0]
-        pool = here or keys
-        ranked = sorted(pool, key=self._weight, reverse=True)
-        if len(ranked) > 1 and self._weight(ranked[0]) == self._weight(ranked[1]):
-            return None
-        return ranked[0] if here else None
+        return None  # more mentions/history do not resolve two identities
 
     @staticmethod
     def clean(label):

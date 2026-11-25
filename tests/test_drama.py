@@ -75,8 +75,8 @@ class GapTest(unittest.TestCase):
     def test_old_acquaintance_after_years(self):
         root = Path(tempfile.mkdtemp())
         (root / "recovery/cast").mkdir(parents=True)
-        memory = [{"turn": "s08.text.030", "at": "0006-10-03T06:49:00"},
-                  {"turn": "s13.text.010", "at": "0010-03-25T19:58:00"}]
+        memory = [{"turn": "s08.text.030", "at": "0006-10-03T06:49:00", "ch": "present"},
+                  {"turn": "s13.text.010", "at": "0010-03-25T19:58:00", "ch": "witnessed"}]
         (root / "recovery/cast/keiji.json").write_text(json.dumps({"memory": memory}), encoding="utf-8")
         got = drama.gaps(root, _hot())
         self.assertIn("keiji", got)

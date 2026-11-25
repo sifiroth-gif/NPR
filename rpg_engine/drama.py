@@ -247,8 +247,11 @@ def gaps(state_dir, hot, always=()):
         return {}
     out = {}
     for key in _keys(hot, (hot.get("scene") or {}).get("present") or [], always):
-        dates = sorted(d for d in (_at(m.get("at")) for m in _card(state_dir, key).get("memory") or []
-                                   if isinstance(m, dict)) if d and d <= now)
+        from . import history_access, npc_memory
+        episodes = npc_memory.load_episodes(state_dir, key) or _card(state_dir, key).get("memory") or []
+        dates = sorted(d for d in (_at(m.get("at")) for m in episodes
+                                   if isinstance(m, dict) and m.get("ch") in history_access.WITNESS)
+                       if d and d <= now)
         if len(dates) < 2:
             continue
         start = len(dates) - 1           # нынешняя встреча: записи без разрыва больше MEET_DAYS

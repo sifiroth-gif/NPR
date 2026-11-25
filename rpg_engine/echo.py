@@ -18,7 +18,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from . import aging
+from . import aging, history_access, identity
 from .heuristic_history import stem, tokens
 
 GAP = 6            # не чаще раза в шесть ходов
@@ -469,39 +469,53 @@ def present_past(state_dir, hot, skip=()):
     except Exception:   # слой необязателен: без него — по словам
         sem = {}
     hot.setdefault("fold", {})["past"] = {"at": (hot.get("cursor") or {}).get("id"), "meaning": bool(sem)}
-    from . import npc_memory, talk, presence
+    from . import npc_memory, presence, acquaint
+    names = presence.roster(state_dir, hot)
+    rules = identity.active(state_dir)
+    primary = acquaint.turns(state_dir)
+    scopes = history_access.scopes(primary, history_access.deltas(state_dir))
     for key in (hot.get("scene") or {}).get("present") or []:
         if key in ("shiki", "player") or key in skip:
             continue
         name = (cast.get(key) or {}).get("name") or ((hot.get("_psyche") or {}).get(key) or {}).get("name") or ""
         name_stems = {stem(w.casefold()) for w in NAME.findall(" " + name)} - COMMON
-        if not name_stems:
-            continue
         # A shared surname is not identity and mention is not eyewitness knowledge.
         # Stable-ID presence evidence or this actor's exact labelled speech is required.
         try:
             episodes = npc_memory.load_episodes(state_dir, key)
         except (OSError, ValueError):
             episodes = []
-        witnessed = {_turn_of(e.get("turn")) for e in episodes
-                     if e.get("ch") in ("present", "witness")}
+        witnessed = {_turn_of(ep.get("turn")) for ep in episodes
+                     if ep.get("ch") in history_access.WITNESS}
+        excluded = identity.excluded_episodes(state_dir, key)
         own = []
+        evidence = {}
         for row in rows:
             source_turn = _turn_of(row.get("id"))
             turn = aging._ordinal(source_turn)
             if turn is not None and now - turn < PAST_SCENE:
                 continue
-            terms = set(str(row.get("terms") or "").split())
-            if not terms & name_stems:
+            if source_turn in excluded or not history_access.PLAYED.fullmatch(source_turn):
                 continue
-            if source_turn not in witnessed:
-                if not name_stems <= terms:
-                    continue
-                text = _source_text(state_dir, row, cache)
-                if not any(presence._clean(label) == presence._clean(name) for label, _ in talk.utterances(text)):
-                    continue
+            terms = set(str(row.get("terms") or "").split())
+            scope = scopes.get(source_turn)
+            if scope is not None:
+                scope = history_access.corrected_scope(rules, source_turn, scope)
+            direct = key in scope if scope is not None else source_turn in witnessed
+            # Only exact played rows, no arbitrary old export window masquerading as testimony.
+            if row.get("id") != source_turn or not str(row.get("source", "")).endswith("-turns.jsonl"):
+                continue
+            if not direct and not terms & name_stems:
+                continue
+            text = _source_text(state_dir, row, cache)
+            if not text:
+                continue
+            speech = history_access.own_speech(text, key, source_turn, names, rules, scope)
+            if not direct and not speech:
+                continue
             shared = terms & topic
-            rarity = sum(math.log((total + 1) / (int(df.get(s, 0)) + 1)) for s in shared)
+            rarity = sum(idf(s) for s in shared)
+            evidence[row["id"]] = (direct, speech)
             own.append((rarity, row))
         ranked = sorted((r.get("id") for _, r in own if r.get("id") in sem), key=lambda rid: -sem[rid])
         near = {rid: PAST_MEANING * (1 - rank / PAST_NEAR) for rank, rid in enumerate(ranked[:PAST_NEAR])}
@@ -511,13 +525,21 @@ def present_past(state_dir, hot, skip=()):
             turn = _turn_of(row.get("id"))
             if score < PAST_MIN or turn in seen:
                 continue
-            found = _best_sentence(_source_text(state_dir, row, cache), name_stems, topic, idf,
-                                   loose=row.get("id") in near)
-            if not found:
+            direct, speech = evidence[row["id"]]
+            # Speech is this actor's own utterance, not objective truth. Never
+            # concatenate the next narrator sentence or another actor's words.
+            ranked_speech = [(sum(idf(s) for s in (_stems(line).keys() & topic)), line)
+                             for line in speech if not META.search(line)]
+            best = max(ranked_speech, default=(0, ""))
+            if best[0] >= PAST_SENTENCE:
+                sent = best[1]
+                item = f"{turn} — сказал: «{sent[:PAST_CHARS - 1] + '…' if len(sent) > PAST_CHARS else sent}»"
+            elif direct:
+                item = f"{turn} — присутствовал; конкретное знание сверить по ходу и каналу."
+            else:
                 continue
-            sent = found[1]
             seen.add(turn)
-            picked.append(f"{turn} — «{sent[:PAST_CHARS - 1] + '…' if len(sent) > PAST_CHARS else sent}»")
+            picked.append(item)
             if len(picked) >= PAST_TURNS:
                 break
         if picked:

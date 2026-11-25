@@ -21,7 +21,7 @@ import json
 import re
 from pathlib import Path
 
-from . import lore, presence
+from . import history_access, identity, lore, presence
 
 LABEL = re.compile(r"^\s*\*\*([^*\n]{2,48}?)(?:\\)?:\*\*\s*[*_]*\s*[—–-]\s*(.*)$")
 KNOWN = 3            # общих ходов с репликой NPC — знакомы; меньше — мельком
@@ -79,10 +79,7 @@ def _stems(names, generic=()):
     out = {}
     for stem, keys in owners.items():
         if len(keys) > 1:
-            plain = [k for k in keys if "_" not in k]
-            if len(plain) != 1:
-                continue
-            keys = set(plain)
+            continue
         out.setdefault(stem[:4], []).append((stem, next(iter(keys))))
     return out
 
@@ -111,29 +108,36 @@ def lines(gm):
 
 
 def index(state_dir, names, rows=None, generic=()):
-    """{ключ: {"spoke": [ходы], "seen": [ходы]}} — говорил рядом с Шики / лишь назван."""
+    """Spoke/seen are access evidence; mentioned is search only."""
     stems = _stems(names, generic)
-    cache = {}
+    rows = list(rows if rows is not None else turns(state_dir))
+    scopes = history_access.scopes(rows, history_access.deltas(state_dir))
+    rules = identity.active(state_dir) if state_dir is not None else []
     out = {}
-    for row in rows if rows is not None else turns(state_dir):
+    def record(key, field, turn):
+        out.setdefault(key, {"spoke": [], "seen": [], "mentioned": []})[field].append(turn)
+    for row in rows:
+        if row.get("kind") in ("ooc", "technical", "void"):
+            continue
+        turn = row["id"]
+        scope = scopes.get(turn)
+        if scope is not None:
+            scope = history_access.corrected_scope(rules, turn, scope)
         gm = str(row.get("gm") or "")
-        spoke = set()
-        for label, _ in lines(gm):
-            if "шики" in label.casefold():
-                continue
-            if label not in cache:
-                cache[label] = presence.resolve(label, names)
-            if cache[label]:
-                spoke.add(cache[label])
-        seen = set()
+        spoke = {history_access.speaker(rules, turn, label, names, scope)
+                 for label, _ in lines(gm)} - {None, lore.SHIKI}
+        seen = (set(scope or ()) & set(names)) - spoke - {lore.SHIKI, "player"}
+        mentioned = set()
         for word in set(re.findall(r"[а-яёa-z]{4,}", gm.casefold())):
-            for stem, key in stems.get(word[:4], ()):
-                if word.startswith(stem):
-                    seen.add(key)
+            for base, key in stems.get(word[:4], ()):
+                if word.startswith(base):
+                    mentioned.add(key)
         for key in spoke:
-            out.setdefault(key, {"spoke": [], "seen": []})["spoke"].append(row["id"])
-        for key in seen - spoke:
-            out.setdefault(key, {"spoke": [], "seen": []})["seen"].append(row["id"])
+            record(key, "spoke", turn)
+        for key in seen:
+            record(key, "seen", turn)
+        for key in mentioned - spoke - seen:
+            record(key, "mentioned", turn)
     return out
 
 
@@ -162,7 +166,7 @@ def describe(met, key, session):
     if grade == 1:
         shown = ", ".join(where[:SHOW_TURNS])
         return f"до s{session:02d} лишь мельком ({shown}) — разве что смутно в лицо, без имени и общего прошлого"
-    return f"до s{session:02d} с Шики не встречались — общего прошлого нет"
+    return f"до s{session:02d} встреча с Шики не подтверждена — общее прошлое не приписывать"
 
 
 SURPRISE = re.compile(r"(?<![а-яё])(?:немыслим\w*|не может быть|невозможн\w*|впервые|растерян\w*|ошеломл\w*|"
@@ -246,7 +250,7 @@ def brief(met, key, session):
         return f"{head} знакомы ({_short_turn(where[0], 0)}–{_short_turn(where[-1], 0)})"
     if grade == 1:
         return f"{head} мельком ({', '.join(_short_turn(t, 0) for t in where[:SHOW_TURNS])}), без имени и прошлого"
-    return f"{head} не встречались"
+    return f"{head} встреча не подтверждена"
 
 
 def facts_known(hot, entries, key, traits=False):
@@ -353,16 +357,14 @@ def backfill(state_dir, hot, entries, names, rows=None):
         return {}
     rows = rows if rows is not None else turns(state_dir)
     added = {}
-    cache = {}
-    scene, session = set(), None
+    rows = list(rows)
+    scopes = history_access.scopes(rows, history_access.deltas(state_dir))
+    rules = identity.active(state_dir) if state_dir is not None else []
     for row in rows:
-        # Состав сцены по записям хода: держится, пока ход его не сменил; новая сессия — с нуля.
-        here = _session(row.get("id"))
-        if here != session:
-            scene, session = set(), here
-        listed = (((row.get("d") or {}).get("scene") or {}).get("present"))
-        if isinstance(listed, list):
-            scene = {str(k) for k in listed if k not in ("shiki", "player")}
+        scope = scopes.get(row["id"])
+        if scope is not None:
+            scope = history_access.corrected_scope(rules, row["id"], scope)
+        scene = (scope or set()) - {"shiki", "player"}
         text = lore.heard_text(row, names)
         full = f"{row.get('player') or ''}\n{row.get('gm') or ''}"
         hits = [e for e in fresh if (shown(e, full) if lore.is_trait(e) else lore.mentions(e, text))]
@@ -372,10 +374,9 @@ def backfill(state_dir, hot, entries, names, rows=None):
         for label, _ in lines(row.get("gm")):
             if "шики" in label.casefold() or any(n in label.casefold() for n in lore.INNER):
                 continue
-            if label not in cache:
-                cache[label] = presence.resolve(label, names)
-            if cache[label]:
-                people.add(cache[label])
+            key = history_access.speaker(rules, row["id"], label, names, scope)
+            if key:
+                people.add(key)
         for entry in hits:
             if lore.is_trait(entry):     # видел тот, кто был в сцене: говорил или в её составе
                 witnesses = people | scene

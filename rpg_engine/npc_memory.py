@@ -289,13 +289,26 @@ def apply(hot, turn, inner):
     # отношение, чувство, страх). План и характер (intent, psyche) ведущий пишет за кадром по
     # просьбе NEXT.must — это не эпизод: иначе NPC «помнит» сцены, где его не было (Мориока и
     # допрос Мориты, s10.text.084; 216 из 345 таких «узнал» до починки).
-    touched = set(present) | {k for k, own in inner.items() if k in (hot.get("cast") or {})
-                              and (k in ALWAYS_WITNESS or not set(own) <= BOOKKEEPING)}
+    # Private thoughts, fear and plans do not prove a delivery channel.
+    # For absent actors, only an explicit public knowledge event is recorded.
+    evidence = {}
+    for event in (turn.get("d") or {}).get("knowledge_events") or []:
+        if (event.get("actor") in (hot.get("cast") or {}) and
+                event.get("visibility", "player_known") == "player_known" and
+                event.get("channel") in ("message", "document", "told_in_scene", "witness")):
+            evidence.setdefault(event["actor"], []).append(event)
+    touched = set(present) | set(evidence)
     line = _short(turn.get("line") or "", 260)
     for key in sorted(touched):
         card = hot["cast"][key]
-        channel = "present" if key in present else "told"
-        episode = {"turn": turn_id, "at": at, "ch": channel, "what": line}
+        if key in present:
+            episode = {"turn": turn_id, "at": at, "ch": "present", "what": line}
+        else:
+            claims = evidence[key]
+            episode = {"turn": turn_id, "at": at, "ch": "document" if all(
+                       event["channel"] == "document" for event in claims) else "told",
+                       "what": _short("; ".join(event["claim"] for event in claims), 260),
+                       "sources": [{"source": event["source"], "channel": event["channel"]} for event in claims]}
         _remember(hot, key, card, episode)
     for key, own in inner.items():
         if key not in (hot.get("cast") or {}):
