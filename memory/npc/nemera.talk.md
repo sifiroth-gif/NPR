@@ -1,4 +1,4 @@
-# Немера (Невыписанная) · разговоры с Шики (193 ходов)
+# Немера (Невыписанная) · разговоры с Шики (194 ходов)
 
 Дословно, по ходам: что персонаж говорил и что в том же ходе слышал от Шики. Это память о сказанном, а не о мыслях. Ход целиком — `archive/turns/sNN/<id>.md`.
 
@@ -11,4 +11,4 @@
 - s11: 13 ходов, s11.text.028–s11.text.074 → `memory/npc/nemera.talk.s11.md`
 - s12: 75 ходов, s12.text.001–s12.text.104 → `memory/npc/nemera.talk.s12.md`
 - s13: 53 ходов, s13.text.001–s13.text.099 → `memory/npc/nemera.talk.s13.md`
-- s14: 22 ходов, s14.text.001–s14.text.042 → `memory/npc/nemera.talk.s14.md`
+- s14: 23 ходов, s14.text.001–s14.text.043 → `memory/npc/nemera.talk.s14.md`

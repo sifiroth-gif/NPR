@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.043: Немера (Невыписанная) (`npc/nemera`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Портовый чиновник (`npc/fire_port_official`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.042: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.041: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.040: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета, поправки игрока: 1
@@ -57,4 +58,3 @@
 - s13.text.086: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), вещь `shiki_private_line_kiri_plate`, вещь `fire_statement_genetic_risk`, план сюжета
 - s13.text.085: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), Молодая посланница (`npc/western_nest_young_courier`), план сюжета
 - s13.text.084: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Портовый чиновник (`npc/fire_port_official`), Молодая посланница (`npc/western_nest_young_courier`), план сюжета
-- s13.text.083: Шиноби Тумана (`npc/kiri_port_guard_senior`), Второй шиноби Тумана (`npc/kiri_port_guard_junior`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), план сюжета
