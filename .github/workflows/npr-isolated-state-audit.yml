@@ -1,0 +1,80 @@
+name: NPR isolated state audit
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/npr-isolated-state-audit.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: engine
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: caa812cad7c00dae5337d32ba58756013917b209
+          path: state
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fold pinned s14.text.023 snapshot without publishing
+        env:
+          PYTHONPATH: ${{ github.workspace }}/engine
+          NPR_MEANING_BUDGET: "0"
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          from rpg_engine import hot, fight
+          state = Path("state")
+          def load(path):
+              return json.loads((state / path).read_text(encoding="utf-8"))
+          def digest(path):
+              return hashlib.sha256((state / path).read_bytes()).hexdigest()
+          original = load("recovery/HOT.json")
+          assert original["cursor"]["id"] == "s14.text.023"
+          protected = ["recovery/TURN.json", "archive/session-014-turns.jsonl",
+                       "archive/deltas/session-014.jsonl",
+                       "archive/npc-memory/chelovek_v_maske.json",
+                       "archive/npc-memory/quay_masked_hunter.json",
+                       "archive/session-008-turns.jsonl"]
+          hashes = {p: digest(p) for p in protected}
+          injuries = original.get("injuries")
+          result = hot.fold(state)
+          check = hot.check(state)
+          print("FOLD", result["status"], "errors", len(result["errors"]), "applied", len(result["applied"]))
+          print("CHECK", check["ok"], "problems", len(check["problems"]))
+          assert not result["errors"] and not result["applied"], "Unexpected fold rejection or played turns"
+          assert check["ok"], "State check failed"
+          assert not result.get("wiki", {}).get("error"), "Wiki build failed"
+          after = load("recovery/HOT.json")
+          packet = load("recovery/NEXT.json")
+          assert after["cursor"] == original["cursor"] and packet["cursor"] == original["cursor"]["id"]
+          assert after.get("injuries") == injuries, "Existing injuries changed"
+          assert "выключен" in after["shiki"]["eyes"] and "Шаринган выключен" in after["shiki"]["body"]
+          assert all(digest(p) == v for p, v in hashes.items()), "Primary records changed"
+          canonical = (state / "memory/npc/quay_masked_hunter.talk.md").read_text(encoding="utf-8")
+          generic_path = state / "memory/npc/chelovek_v_maske.talk.md"
+          generic = generic_path.read_text(encoding="utf-8") if generic_path.is_file() else ""
+          for seq in ("001", "007", "008", "009", "011", "015"):
+              ident = "s14.text." + seq
+              assert ident in canonical and ident not in generic, "Dialogue attribution failed: " + ident
+          generic_card = load("recovery/cast/chelovek_v_maske.json")
+          assert not any(row["turn"].startswith("s14.") for row in generic_card.get("memory", []))
+          assert packet["lag"]["recorded_turn"] == packet["cursor"]
+          full, _ = hot._read_state(state)
+          assert packet["dice"] == fight.dice(full)
+          assert packet["lag"]["dice_for"] == packet["next_id"]
+          print("A4_STATE_PROJECTION_OK")
+          print("A5_FRESH_PACKET_OK")
+          print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
+          print("PINNED_STATE_HEAD", subprocess.check_output(["git", "-C", str(state), "rev-parse", "HEAD"], text=True).strip())
+          PY
