@@ -252,8 +252,11 @@ def must(hot):
             "Не наказание и не враждебность ради неё — его воля.")
 
 
-def unease_must(hot):
+def unease_must(hot, always=()):
     """Пункт must: CALM_MAX ходов подряд с людьми рядом и без тревоги — три приёма по кругу."""
+    people = [k for k in (hot.get("scene") or {}).get("present") or [] if k not in ("shiki", "player") and k not in always]
+    if not people:   # рядом никого (25.11.2026: змеи ушли, а пункт о тревоге людей остался)
+        return None
     state = _state(hot)
     calm = int(state.get("calm") or 0)
     if calm < CALM_MAX:

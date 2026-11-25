@@ -85,6 +85,15 @@ class UneaseTest(unittest.TestCase):
             favor.track(hot, {"id": f"s12.text.0{i}", "gm": "Лес молчал."}, {}, ("nemera",))
         self.assertIsNone(favor.unease_must(hot))
 
+    def test_people_left_item_is_dropped(self):
+        from rpg_engine import favor
+        hot = {"scene": {"present": ["shiki", "yamato"]}, "cast": {"yamato": {"name": "Ямато"}}}
+        for i in (63, 64):
+            favor.track(hot, {"id": f"s12.text.0{i}", "gm": "Ямато указал на склон."}, {}, ("nemera",))
+        self.assertIsNotNone(favor.unease_must(hot, ("nemera",)))
+        hot["scene"]["present"] = ["shiki", "nemera"]
+        self.assertIsNone(favor.unease_must(hot, ("nemera",)), "люди ушли — тревожиться некому")
+
 
 class TraitWitnessTest(unittest.TestCase):
     def test_named_is_not_a_witness_present_is(self):
