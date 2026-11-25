@@ -295,7 +295,7 @@
   "place": "Страна Огня, восточная гавань, портовое управление",
   "time": "17:17"
  },
- "digest": "3b74f7f381aa9716d0f4393d9611304006b3f470c8c81201df47e1f57f73bb09",
+ "digest": "3cfb67e34c20b6b0350269523a030d42ac75c07b3b9ff4462fe3837668ba58b1",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -310,14 +310,21 @@
     "from": "s13.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s13.text.085"
+    "to": "s13.text.089"
    },
    {
     "actor": "fire_port_official",
     "from": "s13.text.084",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s13.text.087"
+    "to": "s13.text.089"
+   },
+   {
+    "actor": "fire_port_security_staff",
+    "from": "s13.text.084",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s13.text.089"
    }
   ],
   "nodes": [],
@@ -802,6 +809,12 @@
    "look": {
     "внешность": "Гражданский служащий со списком пассажиров и письменной записью."
    },
+   "prior_disclosure_ids": [
+    "s13.text.084",
+    "s13.text.085",
+    "s13.text.087",
+    "s13.text.089"
+   ],
    "prior_disclosures": [
     {
      "at": "0010-04-11T16:28:00",
@@ -811,18 +824,18 @@
      "turn": "s13.text.084"
     },
     {
-     "at": "0010-04-11T17:12:00",
-     "sha256": "1841f004d8279db06a247d9eaa61dd93488b1bb3114f2c4c337bf7b057d400ba",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.085"
-    },
-    {
      "at": "0010-04-11T17:15:00",
      "sha256": "fbfeb98c005ff2d6131cabb8fcd2e0e6032fce396cee5827a8063460f709508b",
      "source": "archive/session-013-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s13.text.087"
+    },
+    {
+     "at": "0010-04-11T17:17:00",
+     "sha256": "e66f3db5074900e76f281ead8f7249237815ef70df84546d223bd7439286bcbf",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.089"
     }
    ],
    "profile": {
@@ -873,6 +886,13 @@
      "source": "archive/session-013-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s13.text.084"
+    },
+    {
+     "at": "0010-04-11T17:17:00",
+     "sha256": "e66f3db5074900e76f281ead8f7249237815ef70df84546d223bd7439286bcbf",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.089"
     }
    ],
    "profile": {
@@ -986,10 +1006,10 @@
     "s13.text.009",
     "s13.text.012",
     "s13.text.013",
-    "s13.text.079",
     "s13.text.083",
     "s13.text.084",
-    "s13.text.085"
+    "s13.text.085",
+    "s13.text.089"
    ],
    "prior_disclosures": [
     {
@@ -1000,18 +1020,18 @@
      "turn": "s13.text.005"
     },
     {
-     "at": "0010-04-11T16:28:00",
-     "sha256": "031d085b78157f55bcc18a65307ed3351e702f20801ddd0bc0d393907cafe010",
-     "source": "archive/session-013-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s13.text.084"
-    },
-    {
      "at": "0010-04-11T17:12:00",
      "sha256": "1841f004d8279db06a247d9eaa61dd93488b1bb3114f2c4c337bf7b057d400ba",
      "source": "archive/session-013-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s13.text.085"
+    },
+    {
+     "at": "0010-04-11T17:17:00",
+     "sha256": "e66f3db5074900e76f281ead8f7249237815ef70df84546d223bd7439286bcbf",
+     "source": "archive/session-013-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s13.text.089"
     }
    ],
    "profile": {
@@ -1078,7 +1098,7 @@
   },
   {
    "id": "s13.text.089",
-   "line": "ИСПРАВЛЕНО: Шики ищет второй передатчик, но наличие его в инвентаре не подтверждено и находки пока нет. Офицер Огня предлагает расписку; Немера просит при возможности услышать ответ Какаши. Ошибочно созданный предмет исключён."
+   "line": "ПЕРЕПИСАНО: Шики обыскивает сумку, но второй передатчик пока не установлен и не найден. Люди Огня реагируют на поиск после заявления о потенциальном оружии: сотрудник держится у сигнальной печати, чиновник предлагает расписку. Немера хочет услышать рассказ Какаши о преж"
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
@@ -1099,9 +1119,9 @@
    "player": "#убираю последствия прикосновений# вызывай подмогу. Видишь человек готов говорить #достаю обмотки и заматываю руки#",
    "source": "archive/session-013-turns.jsonl"
   },
-  "s13.text.085": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">11 апреля 1287 года · 16:29</text>\n\n### Страна Огня. Восточная гавань, причал Киригакуре\n\n**Мугами Шики:** — Они уже направили обращение. Я бы хотел дождаться его тут.\n\n**Шиноби корабельной охраны:** — Это возможно. Пока ты не пытаешься подняться на наш корабль.\n\n**Мугами Шики:** — И ещё, мне бы опустить руки. Затекают.\n\nКорабельный офицер посмотрел на поднятые кисти, затем перевёл взгляд на младшего проверяющего.\n\n**Шиноби корабельной охраны:** — Опускай.\n\n**Второй шиноби Тумана:** — Командир, оружие при нём.\n\n[... sou…",
-   "player": "Они уже направили обращение, я бы хотел дождаться его тут. И ещё, мне бы опустить руки, затекают. Можете добавить приписку к заявлению. Я даже буду готов ее подписать, пусть за независимым мнением обратиться к Хатаке Какаши. Мы с ним вместе",
+  "s13.text.089": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">11 апреля 1287 года · 17:17</text>\n\n### Страна Огня. Восточная гавань. Портовое управление\n\nВечерний свет проникал сквозь узкие окна портовой канцелярии, ложился на тёмные доски пола, на чернильные пятна и неровные края пожелтевших бумаг. За стенами здания море продолжало своё равнодушное движение. Изредка доносились скрип корабельного дерева, крик чайки, глухой удар железного кольца о причальный столб.\n\nНа столе ещё сохло место, где поставили печать под заявлением Мугами Шики.\n\nДокумент уже унёс служащий.\n\nЧел\n[... sou…",
+   "player": "#роюсь в сумке ищу второй передатчик#",
    "source": "archive/session-013-turns.jsonl"
   }
  },
@@ -1110,7 +1130,7 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "6fbb973a886b449ba184d07996def8521047e9d2",
+  "sha": "7238c7bf9035806dbaa69e40b4a9df9563469548",
   "turn": "s13.text.089"
  },
  "wiki": {
