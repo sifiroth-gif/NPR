@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.034: Сирамэ (`npc/shirame`), Старая змея (`npc/ryuchi_west_elder`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`), план сюжета
 - s14.text.033: Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `shiki_dragon_sage`, план сюжета
 - s14.text.032: линия `shiki_dragon_sage`, линия `shiki_save_asuma`, поправки игрока: 1
 - s14.text.031: Человек у причальной лестницы (`npc/quay_wire_operator`), Немера (Невыписанная) (`npc/nemera`)
@@ -57,4 +58,3 @@
 - s13.text.077: Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Немера (Невыписанная) (`npc/nemera`), вещь `shiki_upper_clothing`, план сюжета
 - s13.text.076: Мужчина в куртке (`npc/root_field_jacket_man`), Мужчина с иглой (`npc/root_field_needle_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
 - s13.text.075: Неизвестный наблюдатель за ивами (`npc/willow_observer`), Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s13.text.074: Мужчина с иглой (`npc/root_field_needle_man`), Мужчина в куртке (`npc/root_field_jacket_man`), Неизвестный наблюдатель за ивами (`npc/willow_observer`), Немера (Невыписанная) (`npc/nemera`), план сюжета
