@@ -2,18 +2,25 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from rpg_engine import aging, echo
 
 
 def _hot(turn="s09.text.083", situation="Караван у старого водосборника; Хирано и контракт №1184."):
-    return {"cursor": {"id": turn, "place": "Страна Ветра, водосборник"},
+    return {"cursor": {"id": turn, "at": "0010-04-01T12:00:00", "place": "Страна Ветра, водосборник"},
             "scene": {"present": ["shiki"], "situation": situation}, "threads": {}, "things": {}}
 
 
 class EchoTest(unittest.TestCase):
     def setUp(self):
         self.root = Path(tempfile.mkdtemp())
+        # Calendar age must come from a dated played source, not the session ID.
+        index = {"records": [{"id": "s08.text.050", "kind": "played", "at": "0009-12-01T12:00:00",
+                               "headline": "", "preview": ""}]}
+        mocked = patch.object(echo, "_history_index", return_value=index)
+        mocked.start()
+        self.addCleanup(mocked.stop)
         rows = [{"key": "hirano_contracts", "aged_at": "s08.text.100",
                  "value": {"state": "Хирано держал закрытые контракты на поставку С-17 через водосборник.",
                            "turn": "s08.text.050"}}]
@@ -36,8 +43,8 @@ class EchoTest(unittest.TestCase):
         self.assertEqual(echo.pick(self.root, hot, texts=["Хирано, водосборник, контракты."]), got,
                          "общие со сценой слова — не доказательство, что эхо вплетено")
         hot["cursor"]["id"] = "s09.text.087"
-        woven = ["Шики вспомнил о закрытых поставках через старый узел."]
-        self.assertIsNone(echo.pick(self.root, hot, texts=woven), "вплетено — снято, новое не раньше GAP")
+        woven = [{"id": "s09.text.087", "gm": "К вечеру гонец принёс записку: закрытые поставки снова идут."}]
+        self.assertIsNone(echo.pick(self.root, hot, turns=woven), "вплетено — снято, новое не раньше GAP")
         self.assertEqual(hot["fold"]["echo"]["used_count"], 1)
         hot["cursor"]["id"] = "s09.text.089"
         self.assertIsNone(echo.pick(self.root, hot), "не чаще раза в GAP ходов")

@@ -139,11 +139,11 @@ class PresentPastTest(unittest.TestCase):
             "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf-8")
         terms = lambda t: " ".join(sorted({heuristic_history.stem(w) for w in heuristic_history.tokens(t) if len(w) >= 3}))
         self._index(state, [
-            {"id": r["id"], "kind": "played", "source": "archive/session-011-turns.jsonl", "start": 0, "end": 0,
+            {"id": r["id"], "kind": "played", "at": "0009-12-01T12:00:00", "source": "archive/session-011-turns.jsonl", "start": 0, "end": 0,
              "terms": terms(r["gm"]), "headline": "", "preview": ""} for r in rows] + [
-            {"id": "s12.text.040", "kind": "played", "source": "archive/session-012-turns.jsonl", "start": 0, "end": 0,
+            {"id": "s12.text.040", "kind": "played", "at": "0010-04-01T11:00:00", "source": "archive/session-012-turns.jsonl", "start": 0, "end": 0,
              "terms": terms("Наруто Шаринган змея"), "headline": "", "preview": ""}])
-        hot = {"session": 12, "cursor": {"id": "s12.text.043"}, "cast": {"naruto": {"name": "Наруто Узумаки"}},
+        hot = {"session": 12, "cursor": {"id": "s12.text.043", "at": "0010-04-01T12:00:00"}, "cast": {"naruto": {"name": "Наруто Узумаки"}},
                "scene": {"present": ["shiki", "naruto", "nemera"],
                          "situation": "Шики Шаринганом остановил призванную змею; Наруто держит Девятихвостого."}}
         floors = echo.PAST_MIN, echo.PAST_SENTENCE    # три записи в указателе: редкость слов мала
@@ -169,9 +169,9 @@ class PresentPastMeaningTest(PresentPastTest):
         (state / "archive/session-009-turns.jsonl").write_text(
             "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf-8")
         terms = lambda t: " ".join(sorted({heuristic_history.stem(w) for w in heuristic_history.tokens(t) if len(w) >= 3}))
-        self._index(state, [{"id": r["id"], "kind": "played", "source": "archive/session-009-turns.jsonl",
+        self._index(state, [{"id": r["id"], "kind": "played", "at": "0009-10-01T12:00:00", "source": "archive/session-009-turns.jsonl",
                              "start": 0, "end": 0, "terms": terms(r["gm"]), "headline": "", "preview": ""} for r in rows])
-        hot = {"session": 12, "cursor": {"id": "s12.text.043"}, "cast": {"orochimaru": {"name": "Орочимару"}},
+        hot = {"session": 12, "cursor": {"id": "s12.text.043", "at": "0010-04-01T12:00:00"}, "cast": {"orochimaru": {"name": "Орочимару"}},
                "scene": {"present": ["shiki", "orochimaru"], "situation": "Шики остановил белую змею взглядом."}}
         real = meaning.search
         meaning.search = lambda state_dir, q, limit=12, allow=None: [("s09.text.010", 0.91), ("s09.text.034", 0.80)]

@@ -45,8 +45,10 @@ class NamedFoesTest(unittest.TestCase):
         total, p, _ = fight.foe_edge(hot, {"by": "i", "skill": "genjutsu"})
         self.assertEqual((total, p), (1.4, 71))
         total, p, parts = fight.foe_edge(hot, {"by": "i", "interrupt": True, "long": True})
-        self.assertEqual(p, 60)
+        self.assertEqual(p, 53, "скорость Шики 6,0 после Рьючидо; 5,2 − 6,0 + 1,0")
         self.assertIn("длинное действие Шики", parts)
+        _, _, fast = fight.foe_edge(hot, {"by": "i", "interrupt": True, "long": True, "long_kind": "handseals"})
+        self.assertNotIn("длинное действие Шики", fast)
 
     def test_named_foe_must_act_and_be_rolled_against(self):
         hot = hot_with({"i": {"name": "Итачи", "named": True, "status": "active", "skills": {"speed": 5.2}}})
@@ -70,7 +72,9 @@ class NamedFoesTest(unittest.TestCase):
     def test_tempo_in_brief(self):
         hot = hot_with({"i": {"name": "Итачи", "named": True, "status": "active", "skills": {"speed": 5.2, "reaction": 5.6}}})
         line = fight.brief(hot)["active"]["foes"]["i"]["tempo"]
-        self.assertIn("ещё один между шагами длинной заявки", line)
+        self.assertNotIn("ещё один между шагами длинной заявки", line, "5,2 медленнее 6,0 на 0,8")
+        hot["_fight"]["active"]["foes"]["i"]["skills"]["speed"] = 5.6
+        self.assertIn("ещё один между шагами длинной заявки", fight.brief(hot)["active"]["foes"]["i"]["tempo"])
         self.assertIn("бросок всегда", line)
         vs = fight.brief(hot)["active"]["foes"]["i"]["vs"]
         self.assertTrue(vs["shiki→"]["always_roll"])

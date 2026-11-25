@@ -705,7 +705,8 @@ def resolve(hot, roll):
     axes["B"] = bands.clamp(axes["B"], max(-1, min(1, lever[0])))
     for name in bands.GM_AXES:
         axes[name] = bands.parse(given.get(name, 0)) or (0, 0)
-    if roll.get("long") and actor != "shiki":
+    handseals = str(roll.get("long_kind") or "").casefold() in ("handseals", "seals", "печати")
+    if roll.get("long") and actor != "shiki" and not handseals:
         axes["D"] = bands.clamp(axes["D"], 1)          # Шики в длинном действии — окно противнику
     axes["E"] = bands.clamp(axes["E"], exposed(hot, target))
     extra = bands.parse(given.get("F", 0)) or (0, 0)

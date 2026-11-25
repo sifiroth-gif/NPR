@@ -53,6 +53,8 @@ class PowerRatioTest(unittest.TestCase):
         slow = fight.resolve(h, {"by": "i", "skill": "speed", "interrupt": True, "long": True})
         quick = fight.resolve(h, {"by": "i", "skill": "speed", "interrupt": True})
         self.assertEqual(slow["axes"]["D"][0], quick["axes"]["D"][0] + 1, "длинное действие Шики — окно")
+        seals = fight.resolve(h, {"by": "i", "skill": "speed", "interrupt": True, "long": True, "long_kind": "handseals"})
+        self.assertEqual(seals["axes"]["D"], quick["axes"]["D"], "освоенные быстрые печати не дают окна")
         mine = fight.resolve(h, {"skill": "genjutsu", "vs": "i"})
         self.assertGreater(len(mine["band"]), 1)
 
@@ -73,6 +75,9 @@ class PowerRatioTest(unittest.TestCase):
 class RollNotesTest(unittest.TestCase):
     def test_risk_and_aftermath(self):
         h = hot({"k": {"name": "Каге", "rank": "kage", "status": "active"}})
+        # The permanent Sage bonus means the original uninjured fixture no
+        # longer reaches category 1. A critical wound supplies the actual risk.
+        h["injuries"] = {"shiki": [{"where": "бок", "severity": "критическая"}]}
         pool = fight.dice(h)
         t = {"id": "s13.text.071", "at": "0010-04-03T13:00:10", "place": "мост"}
         notes = fight.apply(h, {"fight": {"foe_actions": {"k": "удар"}}, "rolls": [
@@ -91,7 +96,7 @@ class RollNotesTest(unittest.TestCase):
         fight._wounds(h, [{"who": "shiki", "where": "бок", "what": "клинок", "severity": "тяжёлая"}],
                       "s13.text.070", "0010-04-03T13:00:00")
         rows = body.check(h, {"id": "s13.text.071", "at": "0010-04-03T13:00:05"}, {"rolls": [{"skill": "ninjutsu"}]})
-        self.assertEqual(rows[0]["band"], [2, 3, 4, 5])
+        self.assertEqual(rows[0]["band"], [3, 4, 5], "постоянный режим отшельника повышает выносливость")
         self.assertIn(rows[0]["cat"], rows[0]["band"])
 
 

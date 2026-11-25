@@ -32,10 +32,11 @@ class LimitsTest(unittest.TestCase):
         # Близость правил к пределу держат тесты; игроку — только перерасход (23.11.2026).
         root = Path(tempfile.mkdtemp())
         (root / "campaigns/shiki").mkdir(parents=True)
-        (root / "campaigns/shiki/SHIKI.md").write_text("ш" * 9500, encoding="utf-8")
+        limit = limits.RULES["campaigns/shiki/SHIKI.md"]
+        (root / "campaigns/shiki/SHIKI.md").write_text("ш" * (limit - 1), encoding="utf-8")
         self.assertIsNone(limits.check(root, {"cursor": {"id": "s09.text.010"}}, hot_bytes=0, secret_bytes=0,
                                        engine=root))
-        (root / "campaigns/shiki/SHIKI.md").write_text("ш" * 10500, encoding="utf-8")
+        (root / "campaigns/shiki/SHIKI.md").write_text("ш" * (limit + 1), encoding="utf-8")
         got = limits.check(root, {"cursor": {"id": "s09.text.010"}}, hot_bytes=0, secret_bytes=0, engine=root)
         self.assertIn("SHIKI.md", got["items"][0]["what"])
 
