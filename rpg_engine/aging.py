@@ -233,12 +233,12 @@ def _pass(state_dir, hot, w):
         from . import news
         spent = [e for e in happened if isinstance(e, dict) and e.get("shown", 0) >= SHOW_FOLDS
                  and (not news.modern(hot) or e.get("news") == "delivered"
-                      or news.weight(hot, e) < news.MIN_WEIGHT and e.get("news") != "offered")]
+                      or news.weight(hot, e) < news.MIN_WEIGHT and e.get("news") not in ("offered", "deferred"))]
         keep = [e for e in happened if e not in spent]
         if spent:
             will["happened"] = keep
             _append(state_dir, "world-events.GM_ONLY.jsonl",
-                    [{"key": f"{e.get('npc')}:{e.get('plan')}", "value": e, "aged_at": turn} for e in spent])
+                    [{"key": e.get("id") or news.event_id(e), "value": e, "aged_at": turn} for e in spent])
             report["world_events"] = len(spent)
 
     plot = hot.get("_plot") or {}

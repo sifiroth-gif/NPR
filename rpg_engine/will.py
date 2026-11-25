@@ -296,7 +296,11 @@ def offscreen(hot):
         if now and at and (now - at).days > NEWS_DAYS:   # давнее — уже не новость: в архив при старении
             event["shown"] = SHOW_FOLDS
             continue
-        event["shown"] = event.get("shown", 0) + 1
+        cursor = (hot.get("cursor") or {}).get("id")
+        if not news.modern(hot) or event.get("shown_at") != cursor:
+            event["shown"] = event.get("shown", 0) + 1
+            if news.modern(hot):
+                event["shown_at"] = cursor
         word = {"fulfilled": "сбылось", "partial": "наполовину", "failed": "сорвалось"}.get(event["status"], event["status"])
         name = event["name"] if event.get("name") and event["name"] != event.get("npc") else _name(hot, event.get("npc"))
         tag = "" if str(event["outcome"]).casefold().startswith(word) else f" ({word})"

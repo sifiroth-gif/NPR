@@ -24,7 +24,7 @@ def accept(hot, turn):
     store = (hot.get("_will") or {}).get("obligations") or {}
     for ident in (turn.get("d") or {}).get("must_done") or []:
         row = store.get(ident)
-        if row and row.get("kind") != "news":
+        if row and row.get("kind") not in ("news", "due", "arc"):
             row["done"] = turn["id"]
 
 
@@ -54,11 +54,12 @@ def select(hot, candidates, limit=3):
         row.pop("inactive", None)
         active.append((ident, row))
     for ident, row in store.items():
-        if ident not in seen and not row.get("done"):
+        if ident not in seen and not row.get("inactive"):
             row["inactive"] = cursor
     # No loss by display cap. Re-evaluate inactive cues next time rather
     # than carrying an obsolete command into a different scene.
     active.sort(key=lambda item: (0 if item[1]["kind"] in ("body", "arc", "resync", "news", "due") else 1,
+                                  0 if item[1].get("offered_at") == cursor else 1,
                                   item[1].get("offered", 0), item[1].get("since") or "", item[0]))
     chosen = active[:limit]
     for ident, row in chosen:

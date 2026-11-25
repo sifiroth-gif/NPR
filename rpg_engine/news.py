@@ -153,6 +153,8 @@ def migrate(hot):
     state = store.setdefault("news", {"offered": 0, "delivered": 0, "missed": 0})
     for event in store.get("happened") or []:
         event.setdefault("id", event_id(event))
+    for k in ("offered", "delivered", "missed"):
+        state.setdefault(k, 0)
     current = state.get("current")
     if current and not current.get("id"):
         matches = [e for e in store.get("happened") or [] if all(
@@ -210,9 +212,10 @@ def accept(hot, turn):
             continue
         event = events.get(ident)
         offered = current if current and current.get("id") == ident else None
-        if not event and not offered:
+        deferred = (state.get("deferred") or {}).get(ident)
+        if not event and not offered and not deferred:
             raise ValueError("news_delivered: unknown event ID")
-        source = event or offered
+        source = event or offered or deferred
         at, now = _parse(source.get("at")), _parse(turn.get("at"))
         if at and now and at > now:
             raise ValueError("news_delivered: event has not happened")
@@ -222,6 +225,7 @@ def accept(hot, turn):
         if offered:
             state.pop("current", None)
             current = None
+        (state.get("deferred") or {}).pop(ident, None)
         state["delivered"] = int(state.get("delivered") or 0) + 1
         state["last"], state["last_at"] = aging._ordinal(turn["id"]), turn["at"]
 
@@ -234,7 +238,7 @@ def pending(hot):
     for event in will._state(hot).get("happened") or []:
         at = _parse(event.get("at"))
         if modern(hot):
-            if event.get("news") in ("delivered", "offered"):
+            if event.get("news") in ("delivered", "offered", "deferred"):
                 continue
         elif event.get("news") or (now and at and (now - at).days > will.NEWS_DAYS):
             continue
@@ -265,7 +269,20 @@ def step(hot, applied):
     strict = modern(hot)
     if strict:
         state = migrate(hot)
+        if not played or state.get("stepped") == played[-1].get("id"):
+            return _view(state)
+        state["stepped"] = played[-1].get("id")
     current = state.get("current")
+    rotated = False
+    if strict and current and _expired(current, now, at):
+        # Rotate an inaccessible offer, without marking delivery or losing it.
+        state.setdefault("deferred", {})[current["id"]] = dict(current, deferred_at=cursor.get("at"), deferred_turn=now)
+        for event in will._state(hot).get("happened") or []:
+            if event.get("id") == current["id"]:
+                event["news"] = "deferred"
+        state.pop("current", None)
+        current = None
+        rotated = True
     if current and played and not strict:
         if _delivered(played, current.get("markers") or []):
             state["delivered"] += 1
@@ -299,7 +316,7 @@ def step(hot, applied):
     quiet = now - int(state.get("last") or now) >= PULSE and (
         not since or not at or (at - since).total_seconds() >= PULSE_HOURS * 3600)
     long = int(state.get("scene_turns") or 0) >= LONG and now - int(state.get("nudged") or -10**6) >= LONG
-    if state.get("current") or not (jump or quiet or long or day):
+    if state.get("current") or not (jump or quiet or long or day or rotated):
         return _view(state)
     candidates = pending(hot)
     if candidates:
@@ -318,6 +335,21 @@ def step(hot, applied):
         if long:
             state["nudged"] = now
         return _view(state)
+    if strict:
+        deferred = state.get("deferred") or {}
+        eligible = [row for row in deferred.values()
+                    if now - int(row.get("deferred_turn") or now) >= PULSE
+                    and (not at or not _parse(row.get("deferred_at")) or
+                         (at - _parse(row["deferred_at"])).total_seconds() >= PULSE_HOURS * 3600)]
+        if eligible:
+            old = min(eligible, key=lambda row: (row["deferred_turn"], row["id"]))
+            deferred.pop(old["id"])
+            state["current"] = dict(old, set=now, set_at=cursor.get("at"))
+            for event in will._state(hot).get("happened") or []:
+                if event.get("id") == old["id"]:
+                    event["news"] = "offered"
+            state["last"], state["last_at"] = now, cursor.get("at")
+            return _view(state)
     if long:
         state["nudged"] = now
         return {"must": (f"Сцена идёт {state['scene_turns']} ходов. Понятое сожми до результата и цены; "
@@ -393,7 +425,7 @@ def write_pace(state_dir, hot):
             "scene": {"turns": state.get("scene_turns", 0), "since": state.get("scene_since")},
             "chapters": chapters, "next_chapters": ahead,
             "news": {k: state.get(k, 0) for k in ("offered", "delivered", "missed")}
-                    | {"pending": len(pending(hot)), "carrying": bool(state.get("current"))},
+                    | {"pending": len(pending(hot)) + len(state.get("deferred") or {}), "carrying": bool(state.get("current"))},
             "echo": {"offered": echo.get("offered", 0), "used": echo.get("used_count", 0),
                      "mentioned": echo.get("mentioned_count", 0)},
             "favor": _favor(hot),

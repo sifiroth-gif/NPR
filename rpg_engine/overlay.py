@@ -116,7 +116,7 @@ def project(packet, records):
         for row in delivered_news:
             receipts.add(row["id"])
         for ident in delta.get("must_done") or []:
-            if isinstance(ident, str):
+            if isinstance(ident, str) and not ident.startswith("evt_"):
                 receipts.add(ident)
         if turn.get("kind") != "ooc":
             at = turn["at"]

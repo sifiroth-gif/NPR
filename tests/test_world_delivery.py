@@ -30,7 +30,7 @@ class WorldDeliveryTest(unittest.TestCase):
         e = event()
         h["_will"]["happened"] = [e]
         state_ = news.migrate(h)
-        state_["current"] = dict(e, text="Письмо доставлено", markers=["минас"], set=1, set_at=e["at"])
+        state_["current"] = dict(e, text="Письмо доставлено", markers=["минас"], set=aging._ordinal("s14.text.024"), set_at="0010-05-01T10:00:00")
         h["cursor"].update(id="s14.text.024", at="0010-05-01T10:00:00")
         news.step(h, [{"id": "s14.text.024", "gm": "**Врач:** — Минасэ."}])
         self.assertIn("current", state_)
@@ -91,3 +91,48 @@ class WorldDeliveryTest(unittest.TestCase):
         self.assertEqual(len(pack["must"]), 3)
         self.assertGreaterEqual(len(pack["must_pending"]["items"]), 3)
         self.assertEqual(sum(row["kind"] == "due" for row in h["_will"]["obligations"].values()), 6)
+
+    def test_rotation_preserves_old_offer_and_allows_next_event(self):
+        h = state()
+        e = event()
+        h["_will"]["happened"] = [e]
+        st = news.migrate(h)
+        st["current"] = {"text": "Старая весть", "npc": "b", "plan": "p", "at": e["at"],
+                         "set": aging._ordinal("s14.text.023"), "set_at": h["cursor"]["at"]}
+        ident = news.migrate(h)["current"]["id"]
+        h["cursor"].update(id="s14.text.036", at="0010-04-12T10:00:00")
+        news.step(h, [{"id": "s14.text.036", "gm": "Прошло время."}])
+        self.assertIn(ident, st["deferred"])
+        self.assertEqual(st["current"]["id"], e["id"])
+        self.assertEqual(st["missed"], 0)
+
+    def test_same_cursor_queue_selection_is_idempotent(self):
+        h = state()
+        items = [("scene", str(i), None) for i in range(7)]
+        first = obligations.select(h, items)
+        self.assertEqual(obligations.select(h, items), first)
+
+    def test_due_plan_cannot_be_closed_by_bare_ack(self):
+        h = state()
+        c = [("due", "plan", None)]
+        _, ids, _ = obligations.select(h, c)
+        obligations.accept(h, {"id": "s14.text.024", "d": {"must_done": ids}})
+        self.assertEqual(obligations.select(h, c)[1], ids)
+
+    def test_delayed_batch_deadline_resolves_before_later_turn(self):
+        from rpg_engine import hot
+        from tests.test_hot import turn
+        h = state()
+        h["session"] = 14
+        h["cursor"]["seq"] = 23
+        h["_psyche"]["a"] = {"intent": {"p": {"due": "0010-04-11T22:00:00",
+                                      "goal": "уйти", "next": "уйти", "if_unopposed": "ушёл", "canon": True}}}
+        first = turn(24, "0010-04-12T00:00:00", d={"scene": {"present": ["shiki"]}})
+        first["id"] = "s14.text.024"
+        hot.apply_turn(h, first)
+        self.assertEqual(len(h["_will"]["happened"]), 1)
+        self.assertNotIn("p", h["_psyche"]["a"]["intent"])
+        later = turn(25, "0010-04-12T00:01:00", d={"scene": {"present": ["shiki", "a"]}})
+        later["id"] = "s14.text.025"
+        hot.apply_turn(h, later)
+        self.assertEqual(len(h["_will"]["happened"]), 1)
