@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.013",
+  "cursor": "s15.text.014",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 129,
+      "mention_count": 130,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T13:06:00",
-          "excerpt": "Оставить? Нет господин Орочимару, я там ничего не оставлял <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:06</text> ### Убежище Орочимару **Мугами Шики:** — Оставить? Нет, господин О",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.011"
         },
         {
           "at": "0010-04-21T13:07:00",
@@ -4261,11 +4254,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.013"
+        },
+        {
+          "at": "0010-04-21T13:09:00",
+          "excerpt": "о <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:09</text> ### Подземное убежище Орочимару **Мугами Шики:** — Я не знаю, состояние новое, но скорее всего да, жизнь продлилась, насколько, вряд ли навечно. **Орочимару:** — Продлилась… Саннин п",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.013",
+          "seen": "s15.text.014",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -4275,7 +4275,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s15.text.013"
+        "s15.text.014"
       ]
     },
     "orochimaru_scout_snake": {
@@ -13929,10 +13929,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.013",
+        "s15.text.014",
         "s15.text.010",
         "s15.text.011",
-        "s15.text.012"
+        "s15.text.012",
+        "s15.text.013"
       ]
     },
     "place:e02f343494580ab8": {
@@ -17012,7 +17013,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 62,
+      "mention_count": 63,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -17020,13 +17021,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T13:06:00",
-          "excerpt": "мару:** — Можешь ознакомиться со всем, что мы нашли. Я же хотел бы увидеть, чем стало сендзюцу в сочетании с её природой. Сирамэ приподняла голову. **Сирамэ:** — Он пришёл сюда гостем, Орочимару. Саннин медленно повернулся к ней. **Орочимару:** — Даже мои змеи",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.011"
         },
         {
           "at": "0010-04-21T13:07:00",
@@ -17041,12 +17035,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.013"
+        },
+        {
+          "at": "0010-04-21T13:09:00",
+          "excerpt": "аты многолетних наблюдений и записи о неудачных переселениях. Я готов предоставить тебе доступ ко всему этому. Сирамэ подняла голову. **Сирамэ:** — Что ты хочешь взамен? Орочимару даже не посмотрел в её сторону. **Орочимару:** — Независимое медицинское заключе",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.014"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.013",
+          "seen": "s15.text.014",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -18731,5 +18732,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1187
+  "source_turns_indexed": 1188
 }
