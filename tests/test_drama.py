@@ -100,3 +100,15 @@ class FlatIntentTest(unittest.TestCase):
         self.assertEqual(list(profile["intent"]), ["trace_watcher"])
         self.assertEqual(profile["intent"]["trace_watcher"]["next"], "проследить за змеёй")
         self.assertTrue(any("без ключа" in c["text"] for c in hot["_checks"]))
+
+
+class NewsChannelTest(unittest.TestCase):
+    def test_news_needs_a_channel(self):
+        from rpg_engine import news
+        from rpg_engine.heuristic_history import stem
+        markers = [stem("кадзекаге")]
+        said = lambda gm: news._delivered([{"gm": gm}], markers)
+        self.assertFalse(said("**Шики:** Кадзекаге жив?"), "вопрос Шики — не весть")
+        self.assertFalse(said("Шики подумал о Кадзекаге."), "мысль Шики — не весть")
+        self.assertTrue(said("**Торговец:** Говорят, Кадзекаге вернулся в Суну."))
+        self.assertTrue(said("На заставе болтают: Кадзекаге вернули живым."))
