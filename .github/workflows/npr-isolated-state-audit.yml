@@ -6,6 +6,8 @@ on:
       - ".github/workflows/npr-isolated-state-audit.yml"
       - "rpg_engine/capabilities.py"
       - "rpg_engine/nextpack.py"
+      - "rpg_engine/dread.py"
+      - "skills/dark-literary-gm/SKILL.md"
       - "rpg_engine/directives.py"
       - "rpg_engine/history_access.py"
       - "rpg_engine/acquaint.py"
@@ -133,6 +135,17 @@ jobs:
           for ident in ("s10.text.018", "s11.text.074", "s13.text.100"):
               assert (state / "archive/turns" / ident.split(".")[0] / (ident + ".md")).is_file()
           print("B4_HISTORICAL_ACCESS_OK", "Minase exact speech", len(rule["speech_turns"]), "excluded duplicates", len(rule["duplicate_turns"]))
+          from rpg_engine import dread
+          assert "все заявленные действия" in packet["form"]
+          assert "не квота эмоций" in packet["form"]
+          assert "завершение" in packet["form"]
+          sample = {"cast": {"a": {"name": "A"}, "b": {"name": "B"}}}
+          dread.apply(sample, "a", {"saw": "known", "reads": "ordinary", "stage": 0}, "t1", "0010-04-11T21:30:00")
+          dread.apply(sample, "b", {"saw": "known", "reads": "danger", "stage": 2}, "t1", "0010-04-11T21:30:00")
+          dread.apply(sample, "a", {"saw": "known", "reads": "ordinary"}, "t2", "0010-04-11T21:30:01")
+          assert sample["_psyche"]["a"]["dread"]["stage"] == 0
+          assert sample["_psyche"]["b"]["dread"]["stage"] == 2
+          print("C1_CONTRACT_OK", "independent_reactions", 2, "NEXT_bytes", packet_bytes)
           print("A4_STATE_PROJECTION_OK")
           print("A5_FRESH_PACKET_OK")
           print("PRIMARY_RECORD_HASHES_UNCHANGED", len(hashes))
