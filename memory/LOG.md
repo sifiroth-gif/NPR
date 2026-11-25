@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.061: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Человек у причальной лестницы (`npc/quay_wire_operator`), поправки игрока: 1
 - s14.text.060: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сотрудник безопасности порта (`npc/fire_port_security_staff`)
 - s14.text.059: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_finances`, вещь `minagi_receipts`, вещь `shiki_new_refuge`, линия `shiki_new_home`, линия `shiki_underground_career`, поправки игрока: 1
 - s14.text.058: Минаги Дзэн (`npc/minagi_zen`), Коюки (`npc/western_nest_young_courier`), линия `shiki_new_home`
@@ -56,4 +57,3 @@
 - s14.text.006: поправки игрока: 1
 - s14.text.005: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой, поправки игрока: 2
 - s14.text.004: Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), бой
-- s14.text.001: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`)
