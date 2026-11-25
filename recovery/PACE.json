@@ -1,17 +1,20 @@
 {
  "schema": "npr-pace/1",
- "cursor": "s13.text.023",
+ "cursor": "s13.text.025",
  "scene": {
-  "turns": 3,
+  "turns": 5,
   "since": "s13.text.021"
  },
- "chapters": [],
- "next_chapters": [
+ "chapters": [
   {
    "id": "ch14s_price_of_trace",
    "title": "Цена следа",
-   "starts": "0010-03-29T17:00:00"
-  },
+   "scenes": 2,
+   "limit": 10,
+   "last_touched": "s13.text.025"
+  }
+ ],
+ "next_chapters": [
   {
    "id": "ch15_shed_skin",
    "title": "Сброшенная кожа",
@@ -21,6 +24,11 @@
    "id": "ch16_brothers",
    "title": "Братья",
    "starts": "0010-09-02T00:00:00"
+  },
+  {
+   "id": "ch17_rain_over_leaf",
+   "title": "Дождь над Листом",
+   "starts": "0010-10-17T10:00:00"
   }
  ],
  "news": {
@@ -31,13 +39,13 @@
   "carrying": false
  },
  "echo": {
-  "offered": 0,
+  "offered": 1,
   "used": 0,
   "mentioned": 0
  },
  "favor": {
   "turns": 8,
-  "praise": 1,
+  "praise": 2,
   "grant": 0,
   "free": 0,
   "friction": 1,

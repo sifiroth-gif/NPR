@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.025: Дзюн (`npc/haru_brother_jun`), план сюжета
+- s13.text.024: Дзюн (`npc/haru_brother_jun`), Сирамэ (`npc/shirame`), план сюжета
 - s13.text.023: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.022: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Коричневая змея-наблюдатель (`npc/orochimaru_scout_snake`)
 - s13.text.021: Сиранами (`npc/shiranami`)
@@ -56,5 +58,3 @@
 - s12.text.073: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `kabuto_tracking_claim`, линия `kabuto_name_source`, бой
 - s12.text.072: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), Сакура Харуно (`npc/sakura`), линия `kabuto_tracking_claim`, линия `kabuto_name_source`
 - s12.text.071: Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`), линия `kabuto_letter`
-- s12.text.069: Ямато (`npc/yamato`), Наруто Узумаки (`npc/naruto`), Сакура Харуно (`npc/sakura`), Немера (Невыписанная) (`npc/nemera`), бой
-- s12.text.068: Сирамэ (`npc/shirame`), Ямато (`npc/yamato`), Сакура Харуно (`npc/sakura`), Наруто Узумаки (`npc/naruto`), Немера (Невыписанная) (`npc/nemera`), бой
