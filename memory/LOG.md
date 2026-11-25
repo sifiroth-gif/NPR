@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.062: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`)
 - s15.text.061: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), вещь `mugami_family_album`
 - s15.text.060: Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), вещь `mugami_family_album`
 - s15.text.059: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
