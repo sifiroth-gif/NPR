@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.011: Человек в дорожном плаще (`npc/quay_cloaked_hunter`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Сотрудник безопасности порта (`npc/fire_port_security_staff`), Человек в маске (`npc/chelovek_v_maske`), план сюжета, бой
 - s14.text.009: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.008: quay_masked_hunter (`npc/quay_masked_hunter`), Человек у причальной лестницы (`npc/quay_wire_operator`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), Портовый чиновник (`npc/fire_port_official`)
 - s14.text.007: Человек у причальной лестницы (`npc/quay_wire_operator`), quay_masked_hunter (`npc/quay_masked_hunter`), Человек в дорожном плаще (`npc/quay_cloaked_hunter`), бой
@@ -58,4 +59,3 @@
 - s13.text.054: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Сирамэ (`npc/shirame`)
 - s13.text.053: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.052: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), план сюжета
-- s13.text.051: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), Сирамэ (`npc/shirame`), план сюжета, поправки игрока: 1
