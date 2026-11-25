@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.065",
+  "cursor": "s15.text.066",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 77,
+      "mention_count": 78,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0001-08-09T15:11:00",
-          "excerpt": "оварищей снова расспрашивали о чужих поступках. Ибики перевёл взгляд на Аки. Она аккуратно закрыла блокнот. **Мидзухара Аки\\:** — Не могу сказать, что наблюдала за ними. Я даже не уверена, что запомнила их лица. **Ибики\\:** — Это тоже ответ. Он собрал документ",
-          "source": "archive/session-002-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s02.text.057"
         },
         {
           "at": "0010-04-21T19:41:00",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.065"
+        },
+        {
+          "at": "0010-04-21T19:46:00",
+          "excerpt": "** — К твоей матери на ужин? Помнится, она всегда готовила больше, чем мы могли съесть. Он усмехнулся. **Мидзухара Аки:** — Рэн, убери руку. Тот посмотрел вниз. Его большой палец всё ещё лежал на застёжке оружейного чехла. Рэн расстегнул ремень и переложил чех",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.066"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.065"
+          "seen": "s15.text.066"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.065"
+        "s15.text.066"
       ]
     },
     "akihiro": {
@@ -436,6 +436,35 @@
       ],
       "sources": [
         "s09.text.075"
+      ]
+    },
+    "blank_communication_plates_s15": {
+      "aliases": [
+        "blank communication plates s15",
+        "Две пустые пластины связи"
+      ],
+      "facts": [],
+      "id": "blank_communication_plates_s15",
+      "kind": "item",
+      "label": "Две пустые пластины связи",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-21T19:46:00",
+          "excerpt": "* — А потом однажды обнаруживаешь его имя в Книге Бинго. **Ход Шики.** Шики пригласил бывших напарников на ужин и купил две пустые пластины связи за 1200 рё. Аки пошла за рыбой, Рэн убрал оружие в сумку и признал, что видел имя Шики в Книге Бинго.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.066"
+        }
+      ],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s15.text.066"
+        }
+      ],
+      "sources": [
+        "s15.text.066"
       ]
     },
     "bounty_notices": {
@@ -14573,8 +14602,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.065",
-        "s15.text.064"
+        "s15.text.066",
+        "s15.text.064",
+        "s15.text.065"
       ]
     },
     "place:e73ff158a510413a": {
@@ -16100,7 +16130,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 79,
+      "mention_count": 80,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16108,13 +16138,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0006-09-19T07:23:00",
-          "excerpt": "ывать людей, которые не способны двигаться с такой же скоростью». Поздравляя Шики с новым званием, Рэн прочитал эту строку и усмехнулся. **Хаясэ Рэн\\:** - Старик нашёл способ отчитать тебя даже в наградном представлении. Сам Рэн к тому времени стал специальным",
-          "source": "archive/session-002-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s02.text.068"
         },
         {
           "at": "0010-04-21T19:41:00",
@@ -16129,11 +16152,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.065"
+        },
+        {
+          "at": "0010-04-21T19:46:00",
+          "excerpt": "ой двух детей, придерживая одного за воротник рубахи. Пахло нагретым за день деревом и свежим хлебом. **Хаясэ Рэн:** — К твоей матери на ужин? Помнится, она всегда готовила больше, чем мы могли съесть. Он усмехнулся. **Мидзухара Аки:** — Рэн, убери руку. Тот п",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.066"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.065",
+          "seen": "s15.text.066",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16143,7 +16173,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.065"
+        "s15.text.066"
       ]
     },
     "residence_courier_v7": {
@@ -18610,7 +18640,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 24,
+      "mention_count": 25,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18618,13 +18648,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-21T19:28:00",
-          "excerpt": "рела на сына. **Мугами Нао:** — Вторая для нас? Акихиро молча отложил палочки и перевёл взгляд на Шики. Коюки, проглотив перепелиное яйцо, приподняла голову над краем своей тарелки. **Ход Шики.** Шики попросил две печати связи. Сэйна предложила принести из кли",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.063"
         },
         {
           "at": "0010-04-21T19:41:00",
@@ -18639,11 +18662,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.065"
+        },
+        {
+          "at": "0010-04-21T19:46:00",
+          "excerpt": "ы легли на прилавок. Торговец завернул пластины в плотную бумагу и придвинул свёрток к Шики деревянной линейкой. **Коюки:** — А вы с Шики были друзьями? Рэн проводил взглядом удаляющуюся Аки. **Хаясэ Рэн:** — Были. Знаешь, маленькая, когда у тебя в команде хор",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.066"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.065",
+          "seen": "s15.text.066",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -18653,7 +18683,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s15.text.065"
+        "s15.text.066"
       ]
     },
     "white_snake_sage": {
@@ -19079,8 +19109,15 @@
       "status": "projected",
       "to": "nao",
       "type": "held_by"
+    },
+    {
+      "from": "blank_communication_plates_s15",
+      "source": "s15.text.066",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1239
+  "source_turns_indexed": 1240
 }
