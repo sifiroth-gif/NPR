@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.058: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Молодая змея (`npc/molodaya_zmeya`), Немера (Невыписанная) (`npc/nemera`), вещь `root_compulsory_coupling_scroll`
 - s13.text.057: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Немера (Невыписанная) (`npc/nemera`)
 - s13.text.056: Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), вещь `root_compulsory_coupling_scroll`
 - s13.text.055: western_nest_adult_courier (`npc/western_nest_adult_courier`), western_nest_young_courier (`npc/western_nest_young_courier`), Неизвестный связной в маске АНБУ (`npc/root_wayhouse_liaison`), Немера (Невыписанная) (`npc/nemera`), поправки игрока: 2
@@ -58,4 +59,3 @@
 - s13.text.001: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
 - s12.text.104: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`
 - s12.text.103: Неизвестный арбалетчик (`npc/crossbow_ambusher`), Аки (`npc/pinned_woman`), Сэйдзо (`npc/road_warden_seidzo`), Немера (Невыписанная) (`npc/nemera`), линия `roadside_attack`, бой
-- s12.text.102: Сэйдзо (`npc/road_warden_seidzo`), Аки (`npc/pinned_woman`), Неизвестный арбалетчик (`npc/crossbow_ambusher`), Немера (Невыписанная) (`npc/nemera`)
