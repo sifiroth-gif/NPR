@@ -43,7 +43,7 @@ class BleedTest(unittest.TestCase):
                 break
         self.assertIsNotNone(worse, "под нагрузкой тяжёлая рана рано или поздно берёт своё")
         item = body.must(hot)
-        self.assertIn("кость состояния", item)
+        self.assertIn("проверка состояния", item)
         self.assertIn("без чисел", item)
         _total, _p, parts = fight.edge(hot, {"skill": "ninjutsu", "vs": "oni"})
         self.assertIn("кровопотеря", parts, "печати тоже страдают — не только тело")

@@ -420,6 +420,7 @@ def apply_turn(hot, turn):
     cursor = hot.setdefault("cursor", {})
     current = (int(hot.get("session", 0)), int(cursor.get("seq", 0)))
     pool = fight.dice(hot)   # кости, выданные ведущему до этого хода
+    legacy = fight.dice100(hot)   # старые d100 — для ходов до 25.11.2026
 
     ooc = turn.get("kind") == "ooc"
     if session != current[0]:
@@ -476,7 +477,7 @@ def apply_turn(hot, turn):
         for key in (hot.get("scene") or {}).get("present") or []:
             if key in hot.get("cast", {}):
                 hot["cast"][key]["seen"] = turn["id"]
-    hot.setdefault("_checks", []).extend(fight.apply(hot, delta, turn, pool))
+    hot.setdefault("_checks", []).extend(fight.apply(hot, delta, turn, pool, legacy))
     body.check(hot, turn, delta)      # кровь идёт — кость состояния решает тело (body.py)
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
@@ -1470,7 +1471,7 @@ def fold(state_dir):
     except Exception as exc:   # производное: сбой не останавливает свёртку
         hot.setdefault("_checks", []).append({"turn": (hot.get("cursor") or {}).get("id"), "kind": "memory",
                                               "text": f"past: {type(exc).__name__}: {exc}"})
-    extra["body"] = body.must(hot)
+    extra["body"] = " ".join(x for x in (body.must(hot), fight.aftermath(hot)) if x) or None
     try:   # давний знакомый после разлуки, один пункт драмы в must (drama.py)
         extra["gap"] = drama.gaps(state_dir, hot, set(_always_present(state_dir)))
         extra["drama"] = drama.must(hot, set(_always_present(state_dir)))

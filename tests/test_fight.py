@@ -29,7 +29,8 @@ class FightTest(unittest.TestCase):
         h = state()
         self.assertEqual(fight.dice(h), fight.dice(json.loads(json.dumps(h))))
         self.assertEqual(len(fight.dice(h)), fight.DICE)
-        self.assertTrue(all(0 <= v < 100 for v in fight.dice(h)))
+        self.assertTrue(all(1 <= v <= 20 for v in fight.dice(h)))
+        self.assertTrue(all(0 <= v < 100 for v in fight.dice100(h)))
         other = state()
         other["cursor"]["id"] = "s04.text.045"
         self.assertNotEqual(fight.dice(h), fight.dice(other))
@@ -59,16 +60,32 @@ class FightTest(unittest.TestCase):
         self.assertEqual(parts["чакра"], -1)
         self.assertNotIn("раны Шики", parts)
 
-    def test_rolls_must_follow_the_dice_order_and_formula(self):
+    def test_legacy_rolls_are_checked_against_old_dice(self):
         h = state()
-        pool = fight.dice(h)
-        good = {"what": "сенбон", "skill": "weapons", "vs": 3.5, "p": 73, "value": pool[0],
-                "result": fight.outcome(73, pool[0])}
-        bad = {"what": "уход", "skill": "speed", "vs": 3.5, "p": 95, "value": (pool[1] + 1) % 100, "result": "успех"}
-        _pool, notes = play(h, 45, {"rolls": [good, bad]})
+        pool, legacy = fight.dice(h), fight.dice100(h)
+        good = {"what": "сенбон", "skill": "weapons", "vs": 3.5, "p": 73, "value": legacy[0],
+                "result": fight.outcome(73, legacy[0])}
+        bad = {"what": "уход", "skill": "speed", "vs": 3.5, "p": 95, "value": (legacy[1] + 1) % 100, "result": "успех"}
+        t = {"id": "s04.text.045", "at": "0006-10-01T07:12:00", "place": "двор"}
+        notes = [n["text"] for n in fight.apply(h, {"rolls": [good, bad]}, t, pool, legacy)]
         self.assertEqual(len([n for n in notes if "«сенбон»" in n]), 0)
         self.assertTrue(any("«уход»: взята кость" in n for n in notes))
         self.assertTrue(any("«уход»: порог 95, по формуле 80" in n for n in notes))
+
+    def test_band_rolls_follow_dice_and_cannot_be_softened(self):
+        h = state()
+        h["_fight"] = {"active": {"id": "f", "foes": {"m1": {"name": "Маска", "rank": "jonin", "status": "active"}},
+                                  "rolls": [], "bursts": {}, "exchanges": 1}}
+        pool = fight.dice(h)
+        got = fight.resolve(h, {"skill": "taijutsu", "vs": "m1"})
+        cat = fight.from_band(got["band"], pool[0])
+        good = {"what": "удар", "skill": "taijutsu", "vs": "m1", "axes": {"C": 0, "D": 0, "E": 0},
+                "band": got["band"], "value": pool[0], "cat": cat}
+        soft = {"what": "уход", "skill": "speed", "vs": "m1", "band": [6, 7], "value": pool[1], "cat": 7}
+        _pool, notes = play(h, 45, {"rolls": [good, soft]})
+        self.assertFalse([n for n in notes if "«удар»" in n], notes)
+        self.assertTrue(any("«уход»: полоса 6–7, по осям" in n for n in notes))
+        self.assertEqual(h["_fight"]["active"]["rolls"][0]["cat"], cat)
 
     def test_fight_lifecycle_wounds_exchanges_and_end(self):
         h = state()
@@ -141,8 +158,8 @@ class FightFoldTest(unittest.TestCase):
         dice = brief["fight"]["dice"]
         self.assertEqual(brief["fight"]["active"]["foes"]["m1"]["name"], "Маска")
         self.put(turn(46, "0006-10-01T07:15:00",
-                      d={"rolls": [{"what": "удар", "skill": "taijutsu", "vs": "m1", "level": 4.5,
-                                    "p": 80, "value": dice[0], "result": fight.outcome(80, dice[0])}],
+                      d={"rolls": [{"what": "удар", "skill": "taijutsu", "vs": "m1", "axes": {"C": 0, "D": 0, "E": 0},
+                                    "value": dice[0]}],
                          "fight": {"wounds": [{"who": "m1", "where": "колено", "severity": "тяжёлая"}]}}))
         self.assertEqual(hot.fold(self.root)["errors"], [])
         checks = json.loads((self.root / hot.CHECKS_PATH).read_text(encoding="utf-8"))["checks"]
