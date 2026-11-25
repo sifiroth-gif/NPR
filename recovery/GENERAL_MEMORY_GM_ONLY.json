@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.005",
+  "cursor": "s15.text.006",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1665,7 +1665,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 93,
+      "mention_count": 94,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1673,13 +1673,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-03T12:01:30",
-          "excerpt": "Да, 25 марта днём трое ваших людей напали на нас с Кабуто Якуши прямо посреди частной беседы #встаю скидываю капюшон делаю пару шагов в сторону АНБУ не прекращая следить ещё за двумя# невежливо совершенно. В ходе боя они не смогли",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.053"
         },
         {
           "at": "0010-04-16T11:40:00",
@@ -1694,16 +1687,28 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.063"
+        },
+        {
+          "at": "0010-04-21T11:55:00",
+          "excerpt": "на ступенях святилища, держа на коленях папку с документами. Услышав приближение Шики, поправил очки и поднялся. **Кабуто Якуши:** — Мугами-кун. Рад, что вы приняли наше приглашение. Привычная улыбка сохранилась ровно до того момента, когда он достаточно хорош",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.006"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.062",
-          "state": "Отправил через змею Орочимару письмо Шики и Немере с фрагментом записи и предложением встречи; не знает о слиянии и месте убежища."
+          "seen": "s15.text.006",
+          "state": "У святилища, встретил Шики и Сирамэ; показал лист из папки."
+        },
+        {
+          "state": "У святилища, встретил Шики и Сирамэ; показал лист из папки."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "recovery/HOT.json",
+        "s15.text.006"
       ]
     },
     "kabuto_letter_0416": {
@@ -4211,7 +4216,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 122,
+      "mention_count": 123,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4219,13 +4224,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-16T11:43:00",
-          "excerpt": "сь о седьмой палате сохранилась в нескольких экземплярах. Причём содержание этих экземпляров различается. Орочимару-сама готов предоставить тебе доступ к имеющимся у него материалам и выслушать ваши вопросы. Он также выразил желание лично увидеть результаты тв",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.063"
         },
         {
           "at": "0010-04-19T17:20:00",
@@ -4240,6 +4238,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.005"
+        },
+        {
+          "at": "0010-04-21T11:55:00",
+          "excerpt": "дозревал, что причиной увиденного стали загрязнённые стёкла. Затем вновь надел их. **Кабуто Якуши:** — Так вот почему Орочимару-сама не смог завершить это обучение… Он осёкся. Его внимание переместилось на белую змею. **Кабуто Якуши:** — Сирамэ. Не ожидал увид",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.006"
         }
       ],
       "projections": [
@@ -7128,6 +7133,24 @@
         "s09.text.031",
         "s09.text.032",
         "s09.text.033"
+      ]
+    },
+    "place:44808f5d62a4d9a8": {
+      "aliases": [
+        "place:44808f5d62a4d9a8",
+        "Страна Рек, старое святилище на северной границе",
+        "Страна Рек",
+        "старое святилище на северной границе"
+      ],
+      "facts": [],
+      "id": "place:44808f5d62a4d9a8",
+      "kind": "place",
+      "label": "Страна Рек, старое святилище на северной границе",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.006"
       ]
     },
     "place:44fbe9adb51ae417": {
@@ -16927,7 +16950,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 54,
+      "mention_count": 55,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16935,13 +16958,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-19T22:00:00",
-          "excerpt": "стественных расщелинах и движение воды под нижними залами. Жилые помещения оставались пустыми. Коюки и Сирамэ пока не возвращались. В кабинете на полках стояли недавно приобретённые книги. За стеной находились операционная и лаборатория, ещё не знавшие ни одно",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.002"
         },
         {
           "at": "0010-04-20T16:05:00",
@@ -16956,12 +16972,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.005"
+        },
+        {
+          "at": "0010-04-21T11:55:00",
+          "excerpt": "\"xs\">20–21 апреля 1287 года</text> ### Страна Рек. Северный тракт Шики улыбнулся и покинул убежище. Сирамэ путешествовала на его плечах, время от времени приподнимая голову над воротником плаща. Шики не избегал населённых мест. Дорога проходила через небольшие",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.006"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.005",
+          "seen": "s15.text.006",
           "state": "Добровольно сопровождает Шики, просит не отсылать при встрече; сама отвечает Орочимару.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -16974,8 +16997,7 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json",
-        "s15.text.005"
+        "recovery/HOT.json"
       ]
     },
     "shiranami": {
@@ -18640,5 +18662,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1179
+  "source_turns_indexed": 1180
 }

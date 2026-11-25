@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.006: Кабуто Якуши (`npc/kabuto`)
 - s15.text.005: Сирамэ (`npc/shirame`)
 - s15.text.004: Сирамэ (`npc/shirame`), линия `shiki_promise_nemera`, план сюжета
 - s15.text.001: Портовый чиновник (`npc/fire_port_official`), Человек у причальной лестницы (`npc/quay_wire_operator`)
@@ -58,4 +59,3 @@
 - s14.text.017: поправки игрока: 1
 - s14.text.016: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Человек в маске (`npc/chelovek_v_maske`), Немера (Невыписанная) (`npc/nemera`)
 - s14.text.015: Сэйдзи Минасэ (`npc/quay_masked_hunter`), Немера (Невыписанная) (`npc/nemera`), Человек у причальной лестницы (`npc/quay_wire_operator`)
-- s14.text.014: поправки игрока: 1
