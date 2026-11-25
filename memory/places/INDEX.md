@@ -16,7 +16,7 @@
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11
-- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 16 ход(ов), s13–s13
+- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 17 ход(ов), s13–s14
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 16 ход(ов), s09–s10
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12

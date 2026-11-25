@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s13.text.100",
+  "cursor": "s14.text.001",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3134,7 +3134,7 @@
       "id": "masked_man",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -3142,13 +3142,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0006-10-01T21:36:23",
-          "excerpt": "**Мугами Шики:** — Мне нужно письмо, которое у второго, и ваши приказы. Не утром. Прямо сейчас. Или нападайте. Человек в маске некоторое время молчал. Его глаза переместились с сенбонов на чакровый скальпель, потом на пленника у стены. Лишь теперь он, по-видим",
-          "source": "archive/session-005-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s05.text.007"
         },
         {
           "at": "0006-10-01T21:36:26",
@@ -3163,6 +3156,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.099"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "цилиндр на Шики, на мгновение задержал взгляд на его лице. **Человек в дорожном плаще:** — Это точно он? **Человек в маске:** — Номер совпадает. Не приближайся. Мужчина перехватил цилиндр обеими руками. Внутри металлической оболочки формировался компактный сгу",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.001"
         }
       ],
       "projections": [
@@ -3981,7 +3981,7 @@
       "id": "nemera",
       "kind": "npc",
       "label": "Немера (Невыписанная)",
-      "mention_count": 121,
+      "mention_count": 122,
       "mentions": [
         {
           "at": "0010-03-13T17:36:00",
@@ -3989,13 +3989,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.028"
-        },
-        {
-          "at": "0010-04-11T17:16:00",
-          "excerpt": "рта:** — И прошу не прикладывать к нему материалы Киригакуре как доказательство. Это разные источники. Чиновник кивнул. *** **Немера (Невыписанная):** *— Любопытно. Теперь у твоих слов есть собственная дорога.* Её внимание на мгновение задержалось на удаляющем",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.088"
         },
         {
           "at": "0010-04-11T17:17:00",
@@ -4010,13 +4003,20 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.099"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "и тут же вернулся к груди Шики. **Человек в дорожном плаще:** — Что у него под одеждой? Ответа не последовало. **Немера (Невыписанная):** *— Они хотят сохранить твоё тело, лекарь. Посмотрим, насколько хорошо они представляют себе его устройство.* Проволока над",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.001"
         }
       ],
       "projections": [
         {
           "fears": "Ничего человеческого. Ей противна неподвижность.",
           "role": "сверхъестественная нечеловеческая сущность в Шики; семь запоров с 25.02.1287 — двусторонние добровольные связи; проявляется только «Единением: отростки» на 5 м, свой запас чакры 500 (канон и поведение — campaigns/shiki/ref/NEMERA.md)",
-          "seen": "s13.text.100",
+          "seen": "s14.text.001",
           "stance": "Противник, который говорит правду, когда правда ей выгодна.",
           "state": "OOC-поправка: объявленное ведущим желание узнать Шики до симбиоза именно от Какаши не подтверждено, основание ошибочно.",
           "voice": "Курсивом, только Шики. Точные холодные фразы; человеческие слова для неё перевод, и она это отмечает. Не жалуется и не просит. Обращение к Шики — «лекарь».",
@@ -13453,7 +13453,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s13.text.100",
+        "s14.text.001",
         "s13.text.099"
       ]
     },
@@ -15162,13 +15162,14 @@
     "quay_cloaked_hunter": {
       "aliases": [
         "quay cloaked hunter",
-        "Человек в дорожном плаще"
+        "Человек в дорожном плаще",
+        "quay_cloaked_hunter"
       ],
       "facts": [],
       "id": "quay_cloaked_hunter",
       "kind": "npc",
       "label": "Человек в дорожном плаще",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-12T14:32:00",
@@ -15183,11 +15184,18 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.099"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "стилом сходились потоки энергии, питавшие удерживающие печати. Ближайший узел находился в восьми метрах. Человек в дорожном плаще, уже направивший цилиндр на Шики, на мгновение задержал взгляд на его лице. **Человек в дорожном плаще:** — Это точно он? **Челове",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.001"
         }
       ],
       "projections": [
         {
-          "seen": "s13.text.100",
+          "seen": "s14.text.001",
           "wants": "Обездвижить Шики для захвата."
         },
         {
@@ -15196,19 +15204,21 @@
       ],
       "sources": [
         "recovery/cast/quay_cloaked_hunter.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s14.text.001"
       ]
     },
     "quay_masked_hunter": {
       "aliases": [
         "quay masked hunter",
-        "Человек в маске"
+        "Человек в маске",
+        "quay_masked_hunter"
       ],
       "facts": [],
       "id": "quay_masked_hunter",
       "kind": "npc",
       "label": "Человек в маске",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0006-09-22T17:57:05",
@@ -15216,13 +15226,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.086"
-        },
-        {
-          "at": "0006-10-01T21:36:23",
-          "excerpt": "**Мугами Шики:** — Мне нужно письмо, которое у второго, и ваши приказы. Не утром. Прямо сейчас. Или нападайте. Человек в маске некоторое время молчал. Его глаза переместились с сенбонов на чакровый скальпель, потом на пленника у стены. Лишь теперь он, по-видим",
-          "source": "archive/session-005-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s05.text.007"
         },
         {
           "at": "0006-10-01T21:36:26",
@@ -15237,11 +15240,18 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.099"
+        },
+        {
+          "at": "0010-04-11T17:24:00",
+          "excerpt": "цилиндр на Шики, на мгновение задержал взгляд на его лице. **Человек в дорожном плаще:** — Это точно он? **Человек в маске:** — Номер совпадает. Не приближайся. Мужчина перехватил цилиндр обеими руками. Внутри металлической оболочки формировался компактный сгу",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.001"
         }
       ],
       "projections": [
         {
-          "seen": "s13.text.100",
+          "seen": "s14.text.001",
           "wants": "Взять Шики живым по K-0418."
         },
         {
@@ -15250,7 +15260,8 @@
       ],
       "sources": [
         "recovery/cast/quay_masked_hunter.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s14.text.001"
       ]
     },
     "quay_wire_operator": {
@@ -15266,7 +15277,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s13.text.100",
+          "seen": "s14.text.001",
           "wants": "Перекрыть путь сетью."
         },
         {
@@ -18208,5 +18219,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1118
+  "source_turns_indexed": 1119
 }
