@@ -23,8 +23,8 @@
 - Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 15 ход(ов), s12–s13
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
+- Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 13 ход(ов), s13–s13
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
-- Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 12 ход(ов), s13–s13
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
