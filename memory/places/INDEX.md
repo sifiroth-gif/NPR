@@ -87,6 +87,7 @@
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
+- Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
@@ -240,7 +241,6 @@
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, нижний каменный уступ у реки · `places/strana-rek-nizhniy-kamennyy-ustup-u-reki` · 1 ход(ов), s11–s11
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
-- Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 1 ход(ов), s15–s15
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
