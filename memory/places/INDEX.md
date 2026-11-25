@@ -56,6 +56,7 @@
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
+- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 5 ход(ов), s13–s13
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
@@ -65,7 +66,6 @@
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
-- Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 4 ход(ов), s13–s13
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
 - Страна Травы, лесистый склон к юго-западу от заставного моста · `places/strana-travy-lesistyy-sklon-k-yugo-zapadu-ot-zastavnogo-most` · 4 ход(ов), s13–s13
