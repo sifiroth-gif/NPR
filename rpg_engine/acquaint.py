@@ -66,8 +66,8 @@ def turns(state_dir):
 def _stems(names, generic=()):
     """Первые 4 буквы → [(основа имени, ключ)]: «Сакуры» находит «сакура», «Какаши» — себя.
 
-    Общая основа у нескольких карточек («Аракава Дзюн», «Аракава Мэй», «Охранник Аракавы»)
-    отходит главной карточке — ключу без суффикса (arakawa); иначе основа ничего не доказывает.
+    Общая основа у нескольких карточек ничего не доказывает.
+    Даже уникальная основа остаётся указателем, не свидетельством встречи.
     """
     owners = {}
     for key, entry in names.items():
@@ -309,7 +309,7 @@ def _together(met, key, session, limit=4):
                     if _session(t) == session and t.rsplit(".", 1)[-1].isdigit()})
     spans = []
     for n in turns:
-        if spans and n - spans[-1][1] <= 2:
+        if spans and n - spans[-1][1] == 1:
             spans[-1][1] = n
         else:
             spans.append([n, n])

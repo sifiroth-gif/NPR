@@ -154,7 +154,7 @@ class PresentPastTest(unittest.TestCase):
             echo.PAST_MIN, echo.PAST_SENTENCE = floors
         self.assertEqual(list(past), ["naruto"])
         self.assertEqual(len(past["naruto"]), 1, "нынешняя сессия — в HOT, рамен — не тема сцены")
-        self.assertTrue(past["naruto"][0].startswith("s11.text.046 — «"))
+        self.assertTrue(past["naruto"][0].startswith("s11.text.046 — сказал: «"))
         self.assertIn("ШАРИНГАН", past["naruto"][0])
 
     def test_shared_surname_is_not_a_witness(self):

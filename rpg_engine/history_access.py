@@ -88,12 +88,16 @@ def speaker(rules, turn, label, names, scope=None):
                 return found
         return None
     # Without scene evidence, a generic role/one-word surname is not identity.
-    if len(exact) == 1 and len(clean.split()) >= 2 and not presence._is_background(clean):
-        return exact[0]
+    if len(exact) == 1 and not presence._is_background(clean):
+        entry = names[exact[0]]
+        # Canonical mononyms (Баки, Канкуро) are names, not surname shortcuts.
+        # Require the one-word label to be the only substantive name form.
+        if len(clean.split()) >= 2 or all(len(form.split()) == 1 for form in entry.get("forms", ())):
+            return exact[0]
     return None
 
 
 def own_speech(text, actor, turn, names, rules, scope=None):
-    from . import talk
-    return [said for label, said in talk.utterances(text)
+    from . import acquaint
+    return [said for label, said in acquaint.lines(text)
             if said and speaker(rules, turn, label, names, scope) == actor]

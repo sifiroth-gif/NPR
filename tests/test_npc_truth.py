@@ -69,7 +69,8 @@ class FactsTest(unittest.TestCase):
 class AcquaintTest(unittest.TestCase):
     ROWS = [turn("s01.text.011", "**Сакура Харуно:** — Наруто! Не ори!"),
             turn("s01.text.060", "**Канкуро:** — Эй."), turn("s01.text.061", "**Канкуро:** — Ну?"),
-            turn("s01.text.062", "**Канкуро:** — Пошли."), turn("s02.text.052", "Какаши перехватил атаку.")]
+            turn("s01.text.062", "**Канкуро:** — Пошли."), dict(turn("s02.text.052", "Какаши перехватил атаку."),
+                 d={"scene": {"present": ["shiki", "kakashi"]}})]
 
     def setUp(self):
         self.met = acquaint.index(None, NAMES, self.ROWS)
@@ -92,7 +93,7 @@ class AcquaintTest(unittest.TestCase):
         hot_state = {"lore": {"fact_orochimaru": {"sakura": "s11.text.036"}}}
         line = acquaint.view(hot_state, "sakura", self.met, [FACT], 11, "медик мира")
         self.assertEqual(line, "до s11 мельком (s01.011), без имени и прошлого; слышал: год у Орочимару 036; медик мира")
-        self.assertEqual(acquaint.view({}, "baki", self.met, [FACT], 11), "до s11 не встречались; тайн Шики не слышал")
+        self.assertEqual(acquaint.view({}, "baki", self.met, [FACT], 11), "до s11 встреча не подтверждена; тайн Шики не слышал")
 
     def test_village_is_not_a_name(self):
         entry = presence._entry(["Связной Песка"])
@@ -102,13 +103,18 @@ class AcquaintTest(unittest.TestCase):
     def test_generic_cards_count_only_speech(self):
         names = names_for(("svyaznoy", "Связной Шумного")) 
         rows = [turn(f"s01.text.{i:03d}", "Связной Шумного принёс письмо.") for i in range(1, 8)]
-        self.assertEqual(acquaint.level(acquaint.index(None, names, rows), "svyaznoy", 11)[0], 2)
+        met = acquaint.index(None, names, rows)
+        self.assertEqual(acquaint.level(met, "svyaznoy", 11)[0], 0)
+        self.assertEqual(len(met["svyaznoy"]["mentioned"]), 7)
         self.assertEqual(acquaint.index(None, names, rows, {"svyaznoy"}), {})
+        rows = [dict(turn("s01.text.001", "**Связной Шумного:** — Письмо."),
+                     d={"scene": {"present": ["shiki", "svyaznoy"]}})]
+        self.assertEqual(acquaint.level(acquaint.index(None, names, rows, {"svyaznoy"}), "svyaznoy", 11)[0], 1)
 
-    def test_shared_surname_goes_to_main_card(self):
+    def test_shared_surname_does_not_go_to_main_card(self):
         names = names_for(("arakawa", "Аракава Дзюн"), ("arakawa_mei", "Аракава Мэй"), ("arakawa_guard", "Охранник Аракавы"))
         stems = acquaint._stems(names)
-        self.assertIn(("аракав", "arakawa"), stems["арак"])
+        self.assertNotIn(("аракав", "arakawa"), stems.get("арак", []))
 
 
 class ExpertiseTest(unittest.TestCase):
@@ -249,10 +255,10 @@ class SeenAndWhoTest(unittest.TestCase):
         t = {"id": "s11.text.034", "player": "", "_spoke": [],
              "gm": "Чёрная чакра Шики легла на ткани. Сакура держала сердце."}
         self.assertEqual(lore.track(state, t, [TRAIT], ["sakura", "baki"], names), [("trait_black_chakra", "sakura")])
-        met = acquaint.index(None, NAMES, [turn("s11.text.033", "**Сакура Харуно:** — Да."),
-                                           turn("s11.text.034", "Сакура держала сердце."),
-                                           turn("s11.text.054", "**Сакура Харуно:** — Яд!"),
-                                           turn("s11.text.055", "Сакура уклонилась.")])
+        met = acquaint.index(None, NAMES, [dict(turn("s11.text.033", "**Сакура Харуно:** — Да."), d={"scene": {"present": ["shiki", "sakura"]}}),
+                                           dict(turn("s11.text.034", "Сакура держала сердце."), d={}),
+                                           dict(turn("s11.text.054", "**Сакура Харуно:** — Яд!"), d={"scene": {"present": ["shiki", "sakura"]}}),
+                                           dict(turn("s11.text.055", "Сакура уклонилась."), d={})])
         line = acquaint.view(state, "sakura", met, [FACT, TRAIT], 11)
         self.assertIn("видел: чёрную чакру 034", line)
         self.assertIn("в сессии вместе: 033–034, 054–055", line)

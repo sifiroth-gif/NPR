@@ -285,10 +285,7 @@ def apply(hot, turn, inner):
         return
     present = [k for k in (hot.get("scene") or {}).get("present") or []
                if k in (hot.get("cast") or {})]
-    # Отсутствующий NPC «узнал» сцену, только если запись хода говорит о его опыте (память,
-    # отношение, чувство, страх). План и характер (intent, psyche) ведущий пишет за кадром по
-    # просьбе NEXT.must — это не эпизод: иначе NPC «помнит» сцены, где его не было (Мориока и
-    # допрос Мориты, s10.text.084; 216 из 345 таких «узнал» до починки).
+    # s10.text.084: отсутствующий NPC не получает общую строку чужой сцены.
     # Private thoughts, fear and plans do not prove a delivery channel.
     # For absent actors, only an explicit public knowledge event is recorded.
     evidence = {}

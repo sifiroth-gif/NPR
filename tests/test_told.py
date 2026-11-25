@@ -23,7 +23,12 @@ class ToldTest(unittest.TestCase):
         npc_memory.apply(hot, TURN, inner)
         self.assertEqual([e["ch"] for e in hot["cast"]["morita"]["memory"]], ["present"])
         self.assertNotIn("memory", hot["cast"]["morioka"], "план за кадром — не опыт NPC")
+        self.assertNotIn("memory", hot["cast"]["nori"], "private memo is not a verified delivery")
+        incoming = dict(TURN, d={"knowledge_events": [{"actor": "nori", "source": "s10.text.083",
+                        "channel": "message", "claim": "Гонец сообщил о допросе."}]})
+        npc_memory.apply(hot, incoming, inner)
         self.assertEqual(hot["cast"]["nori"]["memory"][0]["ch"], "told")
+        self.assertEqual(hot["cast"]["nori"]["memory"][0]["what"], "Гонец сообщил о допросе.")
 
     def test_repair_removes_false_told_everywhere(self):
         state = Path(tempfile.mkdtemp())
