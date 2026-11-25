@@ -1,4 +1,4 @@
-# Кирисава Сэйна · всё, что знает (27)
+# Кирисава Сэйна · всё, что знает (28)
 
 Только то, что персонаж видел, слышал или получил по каналу. Источник — ход.
 
@@ -29,3 +29,4 @@
 - 03 Oct 07:19 Shiki says abnormal near-black blood, low body temperature, corpse-like unblemished exterior and intact function are generally side effects of the Pact (not specific secret mechanics); expressly permits a confidential NEW blood draw at Seina's private clinic. At 07:32 Seina personally sees much denser threadlike network in new black specimen vs sparse in 01 Oct red specimen and preserved erythrocyte shapes in examined areas; no infectivity evidence, no precise cause. [s08.text.033]
 - 07:37 Shiki says his personal working theory is that the integrated kekkei genkai Byoton and Shiton produce the changes in blood and body, rather than his statement being an experimentally demonstrated cause; no chakra was visibly activated and no new technical permissions given. [s08.text.034]
 - Шики уходит домой для восстановления; сам сообщил семье о возможном вечернем визите. [s08.text.047]
+- Лично встретила Шики 21.04.1287 в клинике после многолетней разлуки; увидела его лицо под капюшоном, узнала. Новые свойства тела пока не объяснены. [s15.text.053]
