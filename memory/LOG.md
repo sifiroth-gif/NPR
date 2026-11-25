@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s13.text.026: Немера (Невыписанная) (`npc/nemera`), Дзюн (`npc/haru_brother_jun`)
 - s13.text.025: Дзюн (`npc/haru_brother_jun`), план сюжета
 - s13.text.024: Дзюн (`npc/haru_brother_jun`), Сирамэ (`npc/shirame`), план сюжета
 - s13.text.023: Сиранами (`npc/shiranami`), Сирамэ (`npc/shirame`), Немера (Невыписанная) (`npc/nemera`)
