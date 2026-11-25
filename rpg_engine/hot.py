@@ -132,9 +132,15 @@ def turn_number(turn_id):
 
 # --------------------------------------------------------------------------- договор
 
+from . import fusion
+
+
 def pact_state(pact, at):
     """Пассивный рост 0.75/сутки от связывания плюс очки событий запретных школ."""
     pact = dict(pact or {})
+    if pact.get("status") == "terminated":
+        pact.pop("next_stage_at", None)
+        return pact
     bound = pact.get("bound_at")
     if not bound:
         return pact
@@ -482,8 +488,9 @@ def _apply_delta(hot, delta, turn):
     if "shiki" in delta:
         _merge(hot.setdefault("shiki", {}), delta["shiki"])
     for event in delta.get("pact_events") or []:
-        _pact_event(hot.setdefault("pact", {}), event, at)
-    if "pact_stage_floor" in delta:
+        if not fusion.active(hot):
+            _pact_event(hot.setdefault("pact", {}), event, at)
+    if "pact_stage_floor" in delta and not fusion.active(hot):
         floor = delta["pact_stage_floor"]
         if type(floor) is not int or not 0 <= floor < len(PACT_STAGES):
             raise TurnError("pact_stage_floor must be an integer stage in range")
@@ -658,6 +665,13 @@ def refresh(hot):
     at = hot.get("cursor", {}).get("at")
     if not at:
         return hot
+    if fusion.active(hot):
+        pact = hot.setdefault("pact", {})
+        pact.update(status="terminated", terminated_at="0010-04-12T11:07:00",
+                    label="Договор уничтожен; стадия 6 историческая",
+                    signs="Собственная холодная цельная серая кожа, чёрная кровь; контактная опасность сохраняется.", contact_hazard=True)
+        pact.pop("next_stage_at", None)
+        hot.get("shiki", {}).pop("nemera_chakra", None)
     if hot.get("pact"):
         hot["pact"] = pact_state(hot["pact"], at)
     # Календарь на две недели вперёд: мастер не считает дни недели в уме.
@@ -1917,6 +1931,15 @@ def check(state_dir):
     if '"truth"' in raw[0] or '"hides"' in raw[0]:
         problems.append(f"скрытая правда попала в {HOT_PATH}")
     cursor = hot.get("cursor", {})
+    if fusion.active(hot):
+        shiki = hot.get("shiki") or {}
+        chakra = shiki.get("chakra") or {}
+        if chakra.get("max") != fusion.MAX_CHAKRA or not 0 <= chakra.get("value", -1) <= fusion.MAX_CHAKRA:
+            problems.append("Неверный единый запас после слияния")
+        if shiki.get("nemera_chakra") or (hot.get("pact") or {}).get("status") != "terminated":
+            problems.append("После слияния остался отдельный ресурс или действующий Договор")
+        if "nemera" in (hot.get("scene") or {}).get("present", []):
+            problems.append("После слияния Немера отдельно присутствует в сцене")
     for field in ("id", "seq", "at", "place", "date", "time"):
         if field not in cursor:
             problems.append(f"в курсоре нет {field}")

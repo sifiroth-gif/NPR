@@ -62,6 +62,9 @@ SAGE_BONUS = {
 }
 
 
+from . import fusion
+
+
 def sage_active(hot):
     """Устойчивая природная энергия после обучения, без второй активации."""
     cursor = str(((hot.get("cursor") or {}).get("at") or ""))
@@ -175,6 +178,8 @@ def nemera_turn(hot, turn):
     """Немера не ждёт просьбы: в бою — в каждом обмене, вне боя — замечание после долгого молчания."""
     if turn.get("kind") in ("ooc", "technical", "void"):
         return []
+    if fusion.active(hot):
+        return []
     if "nemera" not in (hot.get("cast") or {}) and not (hot.get("shiki") or {}).get("nemera_chakra"):
         return []   # до пробуждения Немеры
     text = str(turn.get("gm") or "")
@@ -260,7 +265,7 @@ def shiki_level(hot, skill):
     value = stats.get(key)
     if not isinstance(value, (int, float)):
         return None
-    return float(value) + (SAGE_BONUS.get(skill, 0.0) if sage_active(hot) else 0.0)
+    return float(value) + ((fusion.SAGE_BONUS if fusion.active(hot) else SAGE_BONUS).get(skill, 0.0) if sage_active(hot) else 0.0)
 
 
 def foe_level(foe, skill):
@@ -826,8 +831,8 @@ def _regen(hot, at):
     if locked and locked > start:
         start = min(locked, now)
     hours = max(0.0, (now - start).total_seconds() / 3600)
-    chakra["value"] = round(min(MAX_CHAKRA, float(chakra["value"]) + REGEN_PER_HOUR * hours), 2)
-    chakra["max"] = MAX_CHAKRA
+    chakra["value"] = round(min(fusion.max_chakra(hot), float(chakra["value"]) + fusion.regen_rate(hot) * hours), 2)
+    chakra["max"] = fusion.max_chakra(hot)
     chakra["at"] = at
     chakra["state"] = chakra_state(chakra["value"])[0]
     if locked and now >= locked:
@@ -842,16 +847,16 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
     patch = patch if isinstance(patch, dict) else {}
     if "set" in patch:
         value = patch["set"]
-        if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= MAX_CHAKRA:
+        if type(value) not in (int, float) or not math.isfinite(value) or not 0 <= value <= fusion.max_chakra(hot):
             _note(notes, turn_id, "d.chakra.set: требуется конечное число в пределах запаса; установка не применена.")
         else:
             chakra = shiki["chakra"] = {**(chakra if isinstance(chakra, dict) else {}),
-                                       "value": float(value), "max": MAX_CHAKRA,
+                                       "value": float(value), "max": fusion.max_chakra(hot),
                                        "at": at, "why": patch.get("why", "")}
     if not isinstance(chakra, dict):
         return
-    chakra["max"] = MAX_CHAKRA
-    chakra["value"] = max(0.0, min(MAX_CHAKRA, float(chakra["value"])))
+    chakra["max"] = fusion.max_chakra(hot)
+    chakra["value"] = max(0.0, min(fusion.max_chakra(hot), float(chakra["value"])))
     spent, used = 0.0, []
     for item in patch.get("spend") or []:
         if not isinstance(item, dict):
@@ -869,7 +874,7 @@ def _chakra(hot, patch, bursts, turn_id, at, notes):
         cost = float(base_cost) * TECHNIQUE_COST_SCALE
         left = float(chakra["value"]) - spent
         if cost > left + 0.01:
-            _note(notes, turn_id, f"«{item.get('what')}» стоит {cost:g}, а у Шики {max(left, 0):.0f} из 100: "
+            _note(notes, turn_id, f"«{item.get('what')}» стоит {cost:g}, а у Шики {max(left, 0):.0f} из {fusion.max_chakra(hot):g}: "
                   "техника срывается, выходит ослабленной или Шики теряет сознание на ней (d.chakra.collapse). "
                   "Без внешнего источника чакры полной силы не будет.")
         spent += float(cost)
@@ -958,7 +963,9 @@ def brief(hot):
     chakra = (hot.get("shiki") or {}).get("chakra") or {}
     result = {"dice": dice(hot), "rules": RULES, "ref": "campaigns/shiki/ref/COMBAT.md"}
     if chakra:
-        result["chakra"] = {k: chakra[k] for k in ("value", "state", "locked_until", "last") if k in chakra}
+        result["chakra"] = {k: chakra[k] for k in ("value", "max", "state", "locked_until", "last") if k in chakra}
+    if fusion.active(hot):
+        result.setdefault("chakra", {})["regen_per_hour"] = fusion.REGEN_PER_HOUR
     injuries = {k: [w for w in v if not w.get("healed")] for k, v in (hot.get("injuries") or {}).items()}
     if injuries:
         result["injuries"] = injuries
@@ -977,7 +984,7 @@ def brief(hot):
                      for k, v in active["foes"].items()},
             "allies": {k: {"name": c.get("names", [k])[0], "arsenal_left": arsenal_left(hot, k, c)}
                        for k, (_r, c) in allies(hot).items()},
-            "nemera": NEMERA_PROTOCOL, "arsenal_rule": ARSENAL_RULE,
+            "nemera": ("Отдельной Немеры нет. Отростки — действия Шики из единого запаса." if fusion.active(hot) else NEMERA_PROTOCOL), "arsenal_rule": ARSENAL_RULE,
             "recent_rolls": active.get("rolls", [])[-4:]}
     if state.get("closed"):
         result["last_fight"] = state["closed"][-1]

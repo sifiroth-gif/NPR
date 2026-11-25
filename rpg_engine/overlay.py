@@ -10,7 +10,7 @@ import copy
 import hashlib
 import json
 
-from . import directives, fight, hot
+from . import directives, fight, hot, fusion
 
 
 def obligation_ids(cursor, items):
@@ -58,12 +58,14 @@ def project(packet, records):
     last = None
     have_last = False
     chakra = copy.deepcopy(packet.get("chakra") or {})
-    balance = {k: chakra[k] for k in ("value", "state", "locked_until", "last") if k in chakra}
+    balance = {k: chakra[k] for k in ("value", "max", "state", "locked_until", "last") if k in chakra}
     if "value" in balance and anchor.get("chakra_at"):
         balance["at"] = anchor["chakra_at"]
         ledger = {"shiki": {"chakra": balance}}
     else:
         ledger = {"shiki": {}}
+    if (packet.get("fusion_profile") or {}).get("id") == fusion.PROFILE:
+        ledger["shiki"]["fusion_profile"] = {"id": fusion.PROFILE}
     pending = []
     receipts = set()
     declared_present = None
@@ -132,6 +134,10 @@ def project(packet, records):
                 declared_present = {"turn": turn["id"], "ids": list(scene["present"])}
         if delta.get("things"):
             inventory_changes.append({"turn": turn["id"], "things": copy.deepcopy(delta["things"])})
+        profile = (delta.get("shiki") or {}).get("fusion_profile")
+        if isinstance(profile, dict) and profile.get("id") == fusion.PROFILE:
+            ledger["shiki"]["fusion_profile"] = profile
+            result["fusion_profile"] = {"id": fusion.PROFILE, "source": fusion.SOURCE, "ref": "campaigns/shiki/ref/FUSION.md", "nemera_independent": False, "pact": "terminated"}
         if at:
             fight._regen(ledger, turn["at"])
             bursts = (delta.get("fight") or {}).get("bursts", 0)
@@ -193,6 +199,8 @@ def project(packet, records):
         result["lag_status"]["uncertain"].append("dice: exact last prose unavailable")
     if ledger["shiki"].get("chakra") and "value" in ledger["shiki"]["chakra"]:
         result["chakra"] = ledger["shiki"]["chakra"]
+        if fusion.active(ledger):
+            result["chakra"]["regen_per_hour"] = fusion.REGEN_PER_HOUR
         result["lag"]["chakra_at"] = result["chakra"].get("at")
     else:
         result["lag_status"]["uncertain"].append("chakra: no verified starting balance")

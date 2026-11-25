@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import directives, dread, inquiry, lore, medical, will
+from . import directives, dread, inquiry, lore, medical, will, fusion
 
 PATH = "recovery/NEXT.json"
 from .limits import NEXT_HARD as HARD_BYTES, NEXT_TARGET as TARGET_BYTES  # noqa: E402
@@ -303,14 +303,16 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["dice"] = fight["dice"]
     if fight.get("chakra"):
         pack["chakra"] = fight["chakra"]
-    nemera = ((hot.get("shiki") or {}).get("nemera_chakra"))
+    if fusion.active(hot):
+        pack["fusion_profile"] = {"id": fusion.PROFILE, "source": fusion.SOURCE, "ref": "campaigns/shiki/ref/FUSION.md", "nemera_independent": False, "pact": "terminated"}
+    nemera = None if fusion.active(hot) else ((hot.get("shiki") or {}).get("nemera_chakra"))
     if isinstance(nemera, dict) and nemera.get("value") is not None:   # её запас отдельно от сотни Шики
         pack.setdefault("chakra", {})["nemera"] = {k: nemera[k] for k in ("value", "max", "range_meters") if k in nemera}
     if fight.get("active"):
         pack["fight"] = {k: v for k, v in fight.items() if k not in ("dice", "rules", "ref")}
         # Подсказка не потеряется в длинном чате: ключевые постоянные способности
         # должны проявляться в описании боя до выбора действий Шики.
-        pack["battle_passives"] = (
+        pack["battle_passives"] = fusion.PASSIVES if fusion.active(hot) else (
             "Шики ВСЕГДА в змеином Режиме отшельника Рьючидо: природная "
             "сенсорика вокруг (в т.ч. вне зрения), усиленные скорость, сила, "
             "реакция, стойкость; 'Пустой клык' защищает от обычных ядов. "

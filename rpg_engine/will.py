@@ -159,11 +159,14 @@ def track(hot, turn, inner):
             streak[key] = 0
 
 
+from . import fusion
+
+
 def agendas(hot):
     """Все активные планы NPC со сроком: [(npc, ключ, план, срок)] по времени."""
     found = []
     for key, profile in (hot.get("_psyche") or {}).items():
-        if not isinstance(profile, dict):
+        if not isinstance(profile, dict) or fusion.retired(hot, key):
             continue
         for name, agenda in (profile.get("intent") or {}).items():
             if isinstance(agenda, dict) and agenda.get("status", "committed") == "committed":
@@ -323,7 +326,7 @@ def without_plan(hot):
     """Значимые NPC, чей последний план закрыт, а нового нет: кому дать следующий шаг."""
     out = []
     for key, profile in (hot.get("_psyche") or {}).items():
-        if not isinstance(profile, dict) or not profile.get("intent_done"):
+        if fusion.retired(hot, key) or not isinstance(profile, dict) or not profile.get("intent_done"):
             continue
         if any(isinstance(a, dict) and a.get("status", "committed") in ("committed", "paused")
                for a in (profile.get("intent") or {}).values()):
