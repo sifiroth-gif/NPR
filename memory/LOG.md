@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s14.text.063: Сирамэ (`npc/shirame`), вещь `kabuto_letter_0416`, вещь `ward_vii_fragment_0416`, линия `shiki_promise_nemera`
 - s14.text.062: Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), вещь `kabuto_letter_0416`, линия `shiki_promise_nemera`
 - s14.text.061: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Человек у причальной лестницы (`npc/quay_wire_operator`), поправки игрока: 1
 - s14.text.060: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Сотрудник безопасности порта (`npc/fire_port_security_staff`)

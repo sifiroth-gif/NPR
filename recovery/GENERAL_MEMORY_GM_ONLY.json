@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s14.text.062",
+  "cursor": "s14.text.063",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1686,7 +1686,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 92,
+      "mention_count": 93,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -1694,13 +1694,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-03T12:00:00",
-          "excerpt": "ановить их местонахождение, не называя его имени. Он произнёс следующие слова медленно: **Неизвестный АНБУ:** — Кабуто Якуши. Никакого вопросительного оттенка. Потом его внимание вернулось к Шики. **Неизвестный АНБУ:** — Значит, это вы не позволили им умереть.",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.052"
         },
         {
           "at": "0010-04-03T12:01:30",
@@ -1715,6 +1708,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.062"
+        },
+        {
+          "at": "0010-04-16T11:43:00",
+          "excerpt": "ранице Страны Рек. В полдень. Оттуда я смогу сопроводить вас. Необходимости принимать решение заранее нет. *Кабуто Якуши.* Второй лист был гораздо старше. На нём сохранились следы влаги, а край бумаги рассыпался мелкими волокнами. **Фрагмент медицинской записи",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.063"
         }
       ],
       "projections": [
@@ -1724,8 +1724,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s14.text.062"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -1741,11 +1740,12 @@
       "projections": [
         {
           "holder": "shiki",
-          "since": "s14.text.062"
+          "since": "s14.text.062",
+          "turn": "s14.text.063"
         }
       ],
       "sources": [
-        "s14.text.062"
+        "s14.text.063"
       ]
     },
     "kadziura_satoru": {
@@ -4232,7 +4232,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 119,
+      "mention_count": 120,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4240,13 +4240,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-12T10:42:00",
-          "excerpt": "Ну как и обещал #рассказываю ей про то как Орочимару отреагировал на режим отшельника, только пропиши это диалогом Шики в чат# и второе. #серьезнне# То что люди называли драконами. Что это? <text color=\"secondary\" size=\"xs\"",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.041"
         },
         {
           "at": "0010-04-12T13:17:12",
@@ -4261,6 +4254,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.062"
+        },
+        {
+          "at": "0010-04-16T11:43:00",
+          "excerpt": "сь о седьмой палате сохранилась в нескольких экземплярах. Причём содержание этих экземпляров различается. Орочимару-сама готов предоставить тебе доступ к имеющимся у него материалам и выслушать ваши вопросы. Он также выразил желание лично увидеть результаты тв",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.063"
         }
       ],
       "projections": [
@@ -6224,10 +6224,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s14.text.062",
+        "s14.text.063",
         "s14.text.059",
         "s14.text.060",
-        "s14.text.061"
+        "s14.text.061",
+        "s14.text.062"
       ]
     },
     "place:2bd9c75bda3f000a": {
@@ -16886,7 +16887,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 48,
+      "mention_count": 49,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -16894,13 +16895,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-15T18:11:00",
-          "excerpt": "збежались письмена призыва. Раздался хлопок, и над полом поднялось облако белого дыма. Из него показалась Сирамэ. Она сразу приподняла голову, осматривая незнакомые стены. На столе зашевелилась Коюки. **Коюки:** — Сирамэ! Смотри, у нас теперь есть пещеры! Сира",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.060"
         },
         {
           "at": "0010-04-15T18:19:00",
@@ -16915,26 +16909,33 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.062"
+        },
+        {
+          "at": "0010-04-16T11:43:00",
+          "excerpt": "ми о ней ещё до того, как её обозначили пациентом седьмой палаты. Была ли эта бумага подлинной, предстояло установить. Сирамэ взглянула на раскрытое письмо. **Сирамэ:** — Он предлагает вам встречу. Вам обоим. Она задержала взгляд на Шики. **Сирамэ:** — Если ре",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.063"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s14.text.062",
-          "state": "Вернулась с письмом Кабуто, полученным от змеи-посланницы вне убежища; местоположение не сообщила. Личный вопрос о прошлом пока не задала.",
+          "seen": "s14.text.063",
+          "state": "Увидела раскрытое письмо, просит присутствовать на встрече с Кабуто ради собственных вопросов, если Шики решит идти.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         },
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "state": "Вернулась с письмом Кабуто, полученным от змеи-посланницы вне убежища; местоположение не сообщила. Личный вопрос о прошлом пока не задала.",
+          "state": "Увидела раскрытое письмо, просит присутствовать на встрече с Кабуто ради собственных вопросов, если Шики решит идти.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s14.text.062"
+        "s14.text.063"
       ]
     },
     "shiranami": {
@@ -17826,11 +17827,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "16.04 Сирамэ доставила инициативное письмо Кабуто о старых записях Немеры; личный вопрос о прошлом Шики ещё не задан. Письмо не вскрыто."
+          "state": "16.04 прочитано предложение Кабуто на 21.04 12:00; новый фрагмент о палате VII, подлинность неизвестна. Вопрос о прошлом Шики Кабуто ещё не задан лично."
         }
       ],
       "sources": [
-        "s14.text.062"
+        "s14.text.063"
       ]
     },
     "thread:shiki_save_asuma": {
@@ -18093,6 +18094,26 @@
         "recovery/cast/wagon_occupant_unknown.json"
       ]
     },
+    "ward_vii_fragment_0416": {
+      "aliases": [
+        "ward vii fragment 0416"
+      ],
+      "facts": [],
+      "id": "ward_vii_fragment_0416",
+      "kind": "item",
+      "label": "ward vii fragment 0416",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s14.text.063"
+        }
+      ],
+      "sources": [
+        "s14.text.063"
+      ]
+    },
     "waterfall_trackers": {
       "aliases": [
         "waterfall trackers",
@@ -18201,7 +18222,7 @@
       ],
       "projections": [
         {
-          "seen": "s14.text.062",
+          "seen": "s14.text.063",
           "state": "Показала Сирамэ нижние пещеры и выход, зовёт посмотреть своё место отдыха."
         },
         {
@@ -18597,12 +18618,19 @@
     },
     {
       "from": "kabuto_letter_0416",
-      "source": "s14.text.062",
+      "source": "s14.text.063",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
+    },
+    {
+      "from": "ward_vii_fragment_0416",
+      "source": "s14.text.063",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1170
+  "source_turns_indexed": 1171
 }

@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s14.text.062`
+# Карта мира NPR · на ходе `s14.text.063`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -242,12 +242,12 @@
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
 - `fire_risk_meeting` — Предложенная Шики будущая точка связи для Огня: 28 апреля 1287 года 1… · `threads/fire_risk_meeting`
 - `shiki_save_asuma` — Цель игрока: спасти Сарутоби Асуму. Заблаговременно предоставить дост… · `threads/shiki_save_asuma`
-- `shiki_promise_nemera` — 16.04 Сирамэ доставила инициативное письмо Кабуто о старых записях Не… · `threads/shiki_promise_nemera`
+- `shiki_promise_nemera` — 16.04 прочитано предложение Кабуто на 21.04 12:00; новый фрагмент о п… · `threads/shiki_promise_nemera`
 
 ## Давние линии (30, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (70)
+## Вещи (71)
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
 - `black_caravan_contract` · `items/black_caravan_contract`
@@ -317,4 +317,5 @@
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`
 - `traveller_cloak` · `items/traveller_cloak`
+- `ward_vii_fragment_0416` · `items/ward_vii_fragment_0416`
 - `willow_dispatch` · `items/willow_dispatch`
