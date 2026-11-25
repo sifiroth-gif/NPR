@@ -563,3 +563,12 @@ class HotFilesTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MergeScalarListTest(unittest.TestCase):
+    def test_list_append_over_a_string_field(self):
+        # s13.text.021: «knows» у карточки был строкой, «knows+» уронил свёртку трёх ходов.
+        card = {"knows": "Шики лечил её змей.", "facts": {}}
+        hot._merge(card, {"knows+": ["Шики не считает её врагом."], "tags+": "змея"})
+        self.assertEqual(card["knows"], ["Шики лечил её змей.", "Шики не считает её врагом."])
+        self.assertEqual(card["tags"], ["змея"])

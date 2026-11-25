@@ -26,6 +26,7 @@ import json
 import re
 import subprocess
 import time
+import traceback
 import zlib
 from pathlib import Path
 
@@ -244,7 +245,10 @@ def _merge(target, patch):
     """Словари сливаются рекурсивно, ``null`` удаляет ключ, ``ключ+`` дополняет список."""
     for key, value in patch.items():
         if key.endswith("+"):
-            base = target.setdefault(key[:-1], [])
+            base = target.get(key[:-1])
+            if not isinstance(base, list):   # «knows» строкой (s13.text.021): дополнение не роняет свёртку
+                base = [] if base in (None, "", {}) else [base]
+                target[key[:-1]] = base
             for item in (value if isinstance(value, list) else [value]):
                 if item not in base:
                     base.append(item)
@@ -1301,6 +1305,11 @@ def fold(state_dir):
                 directives.capture(hot, turn)
         except TurnError as exc:
             errors.append(f"{turn.get('id')}: {exc}")
+        except Exception as exc:   # сбой кода — отказ с причиной в NEXT, а не молча упавшая свёртка (s13.text.021)
+            where = traceback.extract_tb(exc.__traceback__)[-1]
+            errors.append(f"{turn.get('id')}: сбой свёртки {type(exc).__name__}: {exc} "
+                          f"({Path(where.filename).name}:{where.lineno}); ход в истории, свернётся после исправления кода")
+            break
     # Never publish a partly accepted batch. All turns remain in Git history
     # and will be replayed after the rejected entry is corrected. The refusal
     # itself IS published, so the GM sees it instead of a silently stale HOT.
