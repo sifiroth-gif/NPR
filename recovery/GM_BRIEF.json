@@ -73,19 +73,19 @@
   },
   {
    "kind": "will",
-   "text": "«Мугами Нао» 8 ход(ов) рядом с Шики только отвечает. Его цель: «Понять изменения сына, не упуская его самостоятельности». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s15.text.062"
+   "text": "«Мугами Нао» 9 ход(ов) рядом с Шики только отвечает. Его цель: «Понять изменения сына, не упуская его самостоятельности». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s15.text.063"
   },
   {
    "kind": "will",
-   "text": "«Мугами Акихиро» 10 ход(ов) рядом с Шики только отвечает. Его цель: «Сохранить спокойствие семьи и работу клиники». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s15.text.062"
+   "text": "«Мугами Акихиро» 11 ход(ов) рядом с Шики только отвечает. Его цель: «Сохранить спокойствие семьи и работу клиники». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s15.text.063"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.062",
+  "cursor": "s15.text.063",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -124,23 +124,42 @@
     "pact.contact",
     "sage.permanent",
     "sage.poison",
+    "seals.speed",
     "shunshin.zero",
+    "weapon.sumi",
+    "combat.genjutsu",
     "combat.scalpel",
+    "element.fireball",
+    "element.ice",
+    "element.lightning",
+    "element.phoenix",
+    "element.water",
+    "eyes.cradle",
+    "eyes.magatsuhi",
+    "eyes.susanoo",
+    "eyes.yomotsu",
     "fusion.development",
     "genome.fluid",
+    "genome.kaguya",
     "medical.diagnosis",
     "medical.field",
     "nemera.agency",
+    "nemera.cloak",
     "nemera.transfer",
+    "pact.byoton",
+    "pact.shiton",
     "research.postmortem",
     "research.reproduce",
+    "restricted.cancelled",
+    "restricted.unlearned",
+    "sage.senpo",
     "sage.summon"
    ],
    "matched": [],
    "medical": {
-    "at": "0010-04-21T19:27:00",
+    "at": "0010-04-21T19:28:00",
     "chakra": {
-     "at": "0010-04-21T19:27:00",
+     "at": "0010-04-21T19:28:00",
      "last": {
       "spent": 3.75,
       "turn": "s15.text.033",
@@ -210,33 +229,42 @@
    },
    "read": [
     "campaigns/shiki/ref/MEDICINE.md",
+    "campaigns/shiki/ref/COMBAT.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/SHIKI.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
     "injuries/function",
     "things/medical kit",
     "chakra",
     "scene/time",
+    "active forms/passives",
+    "fight/dice",
+    "chakra/injuries",
+    "opponents/positions",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
     "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time"
+    "things/holder/state/turn",
+    "count/availability",
+    "scene/access"
    ],
    "routes": [
     "medical",
+    "combat",
     "dialogue",
-    "travel"
+    "items"
    ],
    "unavailable": [
     "fusion.development",
+    "genome.kaguya",
     "nemera.agency",
-    "nemera.transfer"
+    "nemera.cloak",
+    "nemera.transfer",
+    "restricted.cancelled",
+    "restricted.unlearned"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -445,13 +473,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-21T19:27:00",
+  "at": "0010-04-21T19:28:00",
   "date": "Среда, 21 апреля 1287 года",
-  "id": "s15.text.062",
+  "id": "s15.text.063",
   "place": "Кусагакуре, дом семьи Мугами",
-  "time": "19:27"
+  "time": "19:28"
  },
- "digest": "1872bd8c98513b736023234fc5e7c8d5951907e95cb3d0186c4d8213aa030cd4",
+ "digest": "ac6708a1332e02aef2463020498c4f37c54974de2efed5c36dcb0b175dd203fb",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -466,28 +494,28 @@
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.062"
+    "to": "s15.text.063"
    },
    {
     "actor": "akihiro",
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.062"
+    "to": "s15.text.063"
    },
    {
     "actor": "seina",
     "from": "s15.text.052",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.062"
+    "to": "s15.text.063"
    },
    {
     "actor": "western_nest_young_courier",
     "from": "s15.text.004",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.061"
+    "to": "s15.text.063"
    }
   ],
   "nodes": [],
@@ -588,18 +616,18 @@
    "value": 600.0
   },
   "dice": [
-   15,
+   18,
+   9,
+   9,
+   7,
+   5,
+   7,
+   7,
+   6,
+   7,
+   1,
    16,
-   10,
-   6,
-   4,
-   6,
-   2,
-   17,
-   4,
-   6,
-   3,
-   20
+   11
   ],
   "injuries": {
    "sasuke": [
@@ -761,18 +789,18 @@
     "step": "необратимость"
    },
    "nao": {
-    "does": "Остановилась с чаем, начала возражать и умолкла.",
+    "does": "Спросила, предназначена ли вторая для родителей.",
     "lever": "что сына заберут как образец",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Опасается, что семейная встреча вновь превратится в служебное дело.",
+    "reads": "Надеется на возможность связи с сыном.",
     "stage": 4,
     "step": "необратимость"
    },
    "seina": {
-    "does": "По собственной инициативе попросила независимый канал связи для помощи пациентам, отказалась от требования возвращения на службу.",
+    "does": "Сообщила, что в клинике есть парные сигнальные печати без голосовой передачи, предложила принести две пары.",
     "lever": "что её ученик станет тем, против чего она всю жизнь работала, и что она это пропустила",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Сохраняет профессиональную связь с учеником, но учитывает его опасный правовой статус.",
+    "reads": "Возможен независимый канал сигнала, но условия ещё предстоит согласовать.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -808,21 +836,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 184,
+   "appearances": 185,
    "facets": 4,
    "need": 5,
    "npc": "nao",
    "tier": "deep"
   },
   {
-   "appearances": 195,
+   "appearances": 196,
    "facets": 4,
    "need": 5,
    "npc": "akihiro",
    "tier": "deep"
   },
   {
-   "appearances": 30,
+   "appearances": 31,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
@@ -963,10 +991,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.058",
     "s15.text.060",
     "s15.text.061",
-    "s15.text.062"
+    "s15.text.062",
+    "s15.text.063"
    ],
    "prior_disclosures": [
     {
@@ -977,18 +1005,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T19:26:00",
-     "sha256": "23f55755f3940a9d66a1fd52780f7e20df3b8d056c476616cd36c403fde440bd",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.061"
-    },
-    {
      "at": "0010-04-21T19:27:00",
-     "sha256": "2404d88745120e87579b985134d8a593c098e7285c90b918865d1cca269c12d6",
+     "sha256": "bb9d0b51ba936a2c6b2b8586e0d22742722247594e02d18a58cf8f15f0d7ba2a",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.062"
+    },
+    {
+     "at": "0010-04-21T19:28:00",
+     "sha256": "fccab427b88266f9099cff88c04816c6cbc20f3edf49ad3a5f488312c44e938e",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.063"
     }
    ],
    "profile": {
@@ -1008,15 +1036,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.062",
-      "what": "Шики подтвердил, что остаётся полевым хирургом. Сэйна попросила независимый канал связи для сложных пациентов, не требуя возвращения на службу. Нао попыталась возразить. Шики ещё не ответил."
+      "turn": "s15.text.063",
+      "what": "Шики попросил две печати связи. Сэйна предложила принести из клиники две пары сигнальных медицинских печатей без голосовой передачи. Нао спросила, предназначена ли вторая для родителей."
      }
     ],
     "memory_file": "archive/npc-memory/akihiro.json",
-    "memory_total": 195,
+    "memory_total": 196,
     "name": "Мугами Акихиро",
     "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-    "seen": "s15.text.062",
+    "seen": "s15.text.063",
     "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
     "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
     "status": "present_profile",
@@ -1060,10 +1088,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.058",
     "s15.text.060",
     "s15.text.061",
-    "s15.text.062"
+    "s15.text.062",
+    "s15.text.063"
    ],
    "prior_disclosures": [
     {
@@ -1074,18 +1102,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T19:26:00",
-     "sha256": "23f55755f3940a9d66a1fd52780f7e20df3b8d056c476616cd36c403fde440bd",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.061"
-    },
-    {
      "at": "0010-04-21T19:27:00",
-     "sha256": "2404d88745120e87579b985134d8a593c098e7285c90b918865d1cca269c12d6",
+     "sha256": "bb9d0b51ba936a2c6b2b8586e0d22742722247594e02d18a58cf8f15f0d7ba2a",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.062"
+    },
+    {
+     "at": "0010-04-21T19:28:00",
+     "sha256": "fccab427b88266f9099cff88c04816c6cbc20f3edf49ad3a5f488312c44e938e",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.063"
     }
    ],
    "profile": {
@@ -1105,15 +1133,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.062",
-      "what": "Шики подтвердил, что остаётся полевым хирургом. Сэйна попросила независимый канал связи для сложных пациентов, не требуя возвращения на службу. Нао попыталась возразить. Шики ещё не ответил."
+      "turn": "s15.text.063",
+      "what": "Шики попросил две печати связи. Сэйна предложила принести из клиники две пары сигнальных медицинских печатей без голосовой передачи. Нао спросила, предназначена ли вторая для родителей."
      }
     ],
     "memory_file": "archive/npc-memory/nao.json",
-    "memory_total": 184,
+    "memory_total": 185,
     "name": "Мугами Нао",
     "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-    "seen": "s15.text.062",
+    "seen": "s15.text.063",
     "stance": "Сдержанная клиническая настороженность [давняя запись: сверяй со state]",
     "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинско…",
     "status": "present_profile",
@@ -1181,10 +1209,10 @@
     "s15.text.054",
     "s15.text.055",
     "s15.text.057",
-    "s15.text.058",
     "s15.text.060",
     "s15.text.061",
-    "s15.text.062"
+    "s15.text.062",
+    "s15.text.063"
    ],
    "prior_disclosures": [
     {
@@ -1195,42 +1223,42 @@
      "turn": "s15.text.052"
     },
     {
-     "at": "0010-04-21T19:26:00",
-     "sha256": "23f55755f3940a9d66a1fd52780f7e20df3b8d056c476616cd36c403fde440bd",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.061"
-    },
-    {
      "at": "0010-04-21T19:27:00",
-     "sha256": "2404d88745120e87579b985134d8a593c098e7285c90b918865d1cca269c12d6",
+     "sha256": "bb9d0b51ba936a2c6b2b8586e0d22742722247594e02d18a58cf8f15f0d7ba2a",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.062"
+    },
+    {
+     "at": "0010-04-21T19:28:00",
+     "sha256": "fccab427b88266f9099cff88c04816c6cbc20f3edf49ad3a5f488312c44e938e",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.063"
     }
    ],
    "profile": {
     "first": "s04.text.065",
     "inner": {},
     "knows": [
-     "Шики не желает обсуждать произошедшее сейчас; есть предположение о свитке, которое намерен сообщить главе утром.",
      "Видела семейное объятие и появление говорящей белой змеи Коюки.",
      "Коюки лично сообщила при семье, что Шики её вылечил; характер лечения и диагноз не раскрыты.",
-     "Шики лично подтвердил, что по-прежнему считает себя полевым хирургом."
+     "Шики лично подтвердил, что по-прежнему считает себя полевым хирургом.",
+     "Шики заявил, что сам объявил себя преступником, попросил две печати связи."
     ],
     "knows_ref": "memory/npc/seina.md",
-    "knows_total": 6,
+    "knows_total": 7,
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.062",
-      "what": "Шики подтвердил, что остаётся полевым хирургом. Сэйна попросила независимый канал связи для сложных пациентов, не требуя возвращения на службу. Нао попыталась возразить. Шики ещё не ответил."
+      "turn": "s15.text.063",
+      "what": "Шики попросил две печати связи. Сэйна предложила принести из клиники две пары сигнальных медицинских печатей без голосовой передачи. Нао спросила, предназначена ли вторая для родителей."
      }
     ],
     "memory_file": "archive/npc-memory/seina.json",
-    "memory_total": 52,
+    "memory_total": 53,
     "name": "Кирисава Сэйна",
-    "seen": "s15.text.062",
+    "seen": "s15.text.063",
     "status": "present_profile",
     "tier": "deep"
    },
@@ -1268,7 +1296,8 @@
     "s15.text.057",
     "s15.text.058",
     "s15.text.060",
-    "s15.text.061"
+    "s15.text.061",
+    "s15.text.063"
    ],
    "prior_disclosures": [
     {
@@ -1279,18 +1308,18 @@
      "turn": "s15.text.004"
     },
     {
-     "at": "0010-04-21T19:25:00",
-     "sha256": "1906b761a0417010b945e832b24d397b84c97a39c214007358201ed09cdf6c67",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.060"
-    },
-    {
      "at": "0010-04-21T19:26:00",
      "sha256": "23f55755f3940a9d66a1fd52780f7e20df3b8d056c476616cd36c403fde440bd",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.061"
+    },
+    {
+     "at": "0010-04-21T19:28:00",
+     "sha256": "fccab427b88266f9099cff88c04816c6cbc20f3edf49ad3a5f488312c44e938e",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.063"
     }
    ],
    "profile": {
@@ -1311,14 +1340,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.062",
-      "what": "Шики подтвердил, что остаётся полевым хирургом. Сэйна попросила независимый канал связи для сложных пациентов, не требуя возвращения на службу. Нао попыталась возразить. Шики ещё не ответил."
+      "turn": "s15.text.063",
+      "what": "Шики попросил две печати связи. Сэйна предложила принести из клиники две пары сигнальных медицинских печатей без голосовой передачи. Нао спросила, предназначена ли вторая для родителей."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 30,
+    "memory_total": 31,
     "name": "Коюки",
-    "seen": "s15.text.062",
+    "seen": "s15.text.063",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -1328,15 +1357,15 @@
  },
  "recent_turns": [
   {
-   "id": "s15.text.062",
-   "line": "Шики подтвердил, что остаётся полевым хирургом. Сэйна попросила независимый канал связи для сложных пациентов, не требуя возвращения на службу. Нао попыталась возразить. Шики ещё не ответил."
+   "id": "s15.text.063",
+   "line": "Шики попросил две печати связи. Сэйна предложила принести из клиники две пары сигнальных медицинских печатей без голосовой передачи. Нао спросила, предназначена ли вторая для родителей."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Семья и Сэйна у стола, Коюки возле раскрытого альбома; альбом придвинут к Шики. Тарелка Шики наполнена, он ещё не ел.",
   "pressure": "Семейный ужин, неопределённость относительно новых потребностей Шики; разрешение главы до утра.",
-  "situation": "Шики назвал себя полевым хирургом. Сэйна сообщила, что за годы его отсутствия отказывала больным, которым не могла помочь, и самостоятельно предложила установить прямой канал для консультаций и помощи сложным пациентам без участия резиденции. Нао начала возражать, Сэйна пояснила, что не просит возвращения на службу. Шики ещё не ответил."
+  "situation": "Шики пояснил, что сам объявил себя нукенином, и попросил две печати связи. Сэйна сообщила о парных сигнальных медицинских печатях в клинике, предложила принести две пары; дальность и порядок активации пока не оговорены, печати не переданы. Нао спросила, вторая ли для родителей. Коюки съела перепелиное яйцо."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1350,9 +1379,9 @@
    "player": "Пойдем вместе #протягиваю ей руку# забирайся",
    "source": "archive/session-015-turns.jsonl"
   },
-  "s15.text.062": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 19:27</text>\n\n### Дом семьи Мугами\n\n**Мугами Шики:** — Да, я же, как бы там ни было, полевой хирург.\n\n**Кирисава Сэйна:** — Полевой хирург…\n\nОна повторила эти слова и опустила глаза на собственные руки.\n\n**Кирисава Сэйна:** — Знаешь, после твоего ухода мне несколько раз приходилось отказывать пациентам, которым я не могла помочь. Раньше я могла обратиться к тебе.\n\nНао перестала разливать чай.\n\n**Кирисава Сэйна:** — Я хочу иметь возможность связаться с тобой, если снова столкнусь с таким боль…",
-   "player": "Да, я же, как бы там ни было, полевой хирург",
+  "s15.text.063": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 19:28</text>\n\n### Дом семьи Мугами\n\n**Мугами Шики:** — Учитель, я сам себя таким объявил. Есть печати связи с собой? Мне нужно две.\n\n**Кирисава Сэйна:** — При себе нет. В клинике имеются парные сигнальные печати для экстренного вызова медиков. Передавать голос через них нельзя, только сигнал. Я могу принести две пары.\n\nНао посмотрела на сына.\n\n**Мугами Нао:** — Вторая для нас?\n\nАкихиро молча отложил палочки и перевёл взгляд на Шики.\n\nКоюки, проглотив перепелиное яйцо, приподняла голову над к…",
+   "player": "Учитель, я сам себя таким объявил. Есть печати связи с собой? Мне нужно две",
    "source": "archive/session-015-turns.jsonl"
   }
  },
@@ -1362,8 +1391,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "f79ff230a0fef36d3da82328227524b4368b71a0",
-  "turn": "s15.text.062"
+  "sha": "480a86133d7f4326692ad760b4f2e74516554551",
+  "turn": "s15.text.063"
  },
  "wiki": {
   "index": "memory/INDEX.md",
