@@ -8,8 +8,35 @@
     "name": "Портовый чиновник",
     "next": "Передать заверенную копию собственных показаний начальнику гавани и просить вывести себя из дальнейшего очного разбирательства.",
     "npc": "fire_port_official",
-    "overdue": false,
+    "overdue": true,
     "plan": "secure_port_record"
+   },
+   {
+    "due": "0010-04-22T18:00:00",
+    "if_unopposed": "Вернётся в западные гнёзда и расскажет Коюки услышанное.",
+    "name": "Сирамэ",
+    "next": "Остаться с Шики, наблюдать за разговором и вернуться к Коюки после встречи.",
+    "npc": "shirame",
+    "overdue": false,
+    "plan": "witness_meeting"
+   },
+   {
+    "due": "0010-04-22T18:00:00",
+    "if_unopposed": "Западные гнёзда получат сведения о достигнутом обещании и смогут самостоятельно решить, принимать ли поручения.",
+    "name": "Сирамэ",
+    "next": "Сообщить Коюки и старшим точное содержание обещания; при новых принудительных поручениях узнать обстоятельства.",
+    "npc": "shirame",
+    "overdue": false,
+    "plan": "voluntary_missions"
+   },
+   {
+    "due": "0010-04-22T18:00:00",
+    "if_unopposed": "При медицинском разрешении охрана передаст раненого сопровождающему Кири для дальнейшего лечения; иначе просьба о переводе останется неудовлетворённой.",
+    "name": "Человек у причальной лестницы",
+    "next": "Через лечащего врача просить охрану о переводе под надзор представителя Кири, если состояние допускает перевозку.",
+    "npc": "quay_wire_operator",
+    "overdue": false,
+    "plan": "request_safe_transfer"
    }
   ]
  },
@@ -64,7 +91,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.048",
+  "cursor": "s15.text.049",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -72,11 +99,10 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:4054691cd5312d90",
-   "orochimaru",
-   "orochimaru_poison_samples_s15"
+   "grass_roads_patrol_senior",
+   "place:c12f173ea0893143"
   ],
-  "focus_bytes": 1247,
+  "focus_bytes": 1060,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -91,25 +117,37 @@
   "thematic": {
    "basis": "scene_continuation",
    "entries": [
+    "chakra.black",
+    "pact.contact",
     "sage.permanent",
     "sage.poison",
     "shunshin.zero",
+    "nemera.agency",
     "sage.summon"
    ],
    "matched": [],
    "read": [
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/SHIKI.md"
    ],
    "required": [
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent",
     "scene/place",
     "body/gear",
     "due/offscreen",
     "time"
    ],
    "routes": [
+    "dialogue",
     "travel"
    ],
-   "unavailable": []
+   "unavailable": [
+    "nemera.agency"
+   ]
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -299,13 +337,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-21T14:12:00",
+  "at": "0010-04-21T18:02:00",
   "date": "Среда, 21 апреля 1287 года",
-  "id": "s15.text.048",
-  "place": "Северная граница Страны Рек, снаружи убежища Орочимару",
-  "time": "14:12"
+  "id": "s15.text.049",
+  "place": "Страна Травы, ворота Кусагакуре",
+  "time": "18:02"
  },
- "digest": "4f2245bbf45473c11939497211d3c06438133c0e0167f67ca1da75530f9369ff",
+ "digest": "03fe916dcf67a987ce867bd5874630c32e11caedc61bd875926c2c23efd1c8a1",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -319,6 +357,11 @@
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Старший патруля Кусы — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Старший патруля Кусы — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Старший патруля Кусы. Присутствие в отряде и запись lore без источника не доказывают видимость."
+ ],
  "fight": {
   "body": {
    "quay_cloaked_hunter": {
@@ -405,21 +448,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 575.78
+   "value": 600.0
   },
   "dice": [
-   4,
-   4,
+   13,
    5,
-   12,
-   3,
-   6,
    11,
-   5,
-   18,
-   18,
+   4,
+   1,
+   15,
    2,
-   1
+   20,
+   16,
+   16,
+   7,
+   8
   ],
   "injuries": {
    "sasuke": [
@@ -482,47 +525,25 @@
  "general_memory": {
   "activated": [
    {
-    "channels": [
-     "scene_anchor"
-    ],
     "facts": [],
-    "id": "place:4054691cd5312d90",
-    "kind": "place",
-    "label": "Северная граница Страны Рек, снаружи убежища Орочимару",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "orochimaru",
+    "id": "grass_roads_patrol_senior",
     "kind": "npc",
-    "label": "Орочимару",
     "operational_cues": {
-     "source": "recovery/cast/orochimaru.json",
+     "source": "recovery/cast/grass_roads_patrol_senior.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+      "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное до"
      }
-    },
-    "status": "no_verified_facts"
+    }
    },
    {
     "channels": [
-     "explicit_edge_candidate"
+     "scene_anchor"
     ],
     "facts": [],
-    "id": "orochimaru_poison_samples_s15",
-    "kind": "item",
-    "label": "Три лабораторных образца биологических ядов",
-    "operational_cues": {
-     "source": "s15.text.046",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
+    "id": "place:c12f173ea0893143",
+    "kind": "place",
+    "label": "Страна Травы, ворота Кусагакуре",
     "status": "no_verified_facts"
    }
   ],
@@ -532,19 +553,29 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 3
+  "total_matched": 2
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {},
+  "npcs": {
+   "grass_roads_patrol_senior": {
+    "does": "Отправил посыльного главе, удерживает вход без обнажения оружия, спросил о цели.",
+    "lever": "Непредусмотренная официальная связь с разыскиваемым нукенином и гибель патрульных.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Не хочет самовольно допускать нукенина и не хочет гибели подчинённых при попытке силового задержания.",
+    "stage": 4,
+    "step": "необратимость"
+   }
+  },
   "quiet": 0,
   "recent": [
    {
@@ -564,16 +595,26 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 14:12</text>\n\n### Северная граница Страны Рек\n\n**Мугами Шики:** — Ладно, мне тоже пора, времени не так много.\n\n**Орочимару:** — Тогда до следующей встречи, Шики-кун. Посмотрим, кем ты станешь к тому времени.\n\nКабуто проводил Шики до выхода.\n\n**Кабуто Якуши:** — Странно. Когда-то я обуч…",
-  "player": "Ладно, мне тоже пора, времени не так много #направляюсь к выходу#",
+  "gm_tail": "ила различить изменение активности чакры охраны ещё на подходе к деревне. Двое шиноби переместились на верхний ярус ворот. Ещё трое вышли навстречу.\n\nОдин из них узнал Шики.\n\nЭто был старший патруля, с которым Шики разговаривал в начале апреля по поводу показаний о нападении на заставу.\n\n**Старший патруля:** — Мугами…\n\nОн повернулся к подчинённому…",
+  "player": "#Иду в кусагакуре без маскировки#",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [],
+ "needs_profile": [
+  {
+   "appearances": 4,
+   "facets": 0,
+   "need": 3,
+   "npc": "grass_roads_patrol_senior",
+   "tier": "developed"
+  }
+ ],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [],
+  "present_inline": [
+   "grass_roads_patrol_senior"
+  ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -663,22 +704,76 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {},
+ "present_npcs": {
+  "grass_roads_patrol_senior": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-04-21T18:25:00",
+      "flaw": "Не может гарантировать силовое удержание Шики; распоряжение главы пока отсутствует.",
+      "goal": "Получить распоряжение главы относительно визита нукенина и сохранить безопасность поста.",
+      "id": "gate_contact",
+      "if_unopposed": "Получит указания резиденции, не вступая в бой.",
+      "next": "Передать донесение через посыльного; удерживать вход и выяснить цель прибытия.",
+      "source_turn": "s15.text.049",
+      "status": "committed"
+     }
+    ],
+    "unclocked_intents": [
+     "gate_contact"
+    ]
+   },
+   "look": {
+    "внешность": "Мужчина в форме шиноби Травы, сегодня без шлема, тени под глазами, грязь на левой поле."
+   },
+   "prior_disclosures": [],
+   "profile": {
+    "fears": "Непредусмотренная официальная связь с разыскиваемым нукенином и гибель патрульных.",
+    "first": "s13.text.063",
+    "inner": {},
+    "knows": [
+     "21.04.1287 лично узнал Шики при открытом подходе к воротам, увидел новые изменения облика; цель визита неизвестна."
+    ],
+    "knows_ref": "memory/npc/grass_roads_patrol_senior.md",
+    "leverage": "Служебный рапорт и возможность представить имя или анонимную запись.",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s13.text.065",
+      "what": "Шики уточнил: 25 марта на заставе его имени действительно не знали. Старший признал, что первоначальный анонимный рапорт был точен, а позднее дополнение от 1 апреля следовало приобщить отдельно, без п"
+     },
+     {
+      "ch": "present",
+      "turn": "s15.text.049",
+      "what": "Шики без маскировки дошёл до ворот Кусы. Старший знакомого патруля узнал его, отправил посыльного главе и отказал в проходе без распоряжения. Шики ещё снаружи."
+     }
+    ],
+    "memory_file": "archive/npc-memory/grass_roads_patrol_senior.json",
+    "memory_total": 4,
+    "name": "Старший патруля Кусы",
+    "seen": "s15.text.049",
+    "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное дополнение на своём служебном риске.",
+    "status": "present_profile",
+    "tier": "developed",
+    "wants": "Подтвердить обстоятельства захвата налётчика для разбирательства, сохранив карьеру."
+   }
+  }
+ },
  "recent_turns": [
-  {
-   "id": "s15.text.047",
-   "line": "Шики спросил о Сирамэ. Кабуто сообщил, что она покинула убежище, предположительно направившись в западные гнёзда. Орочимару подтвердил намерение соблюдать её добровольность."
-  },
   {
    "id": "s15.text.048",
    "line": "Шики попрощался с Орочимару и покинул убежище в сопровождении Кабуто до выхода. Встреча завершена. Шики снаружи, направление дальнейшего пути не заявлено."
+  },
+  {
+   "id": "s15.text.049",
+   "line": "Шики без маскировки дошёл до ворот Кусы. Старший знакомого патруля узнал его, отправил посыльного главе и отказал в проходе без распоряжения. Шики ещё снаружи."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики снаружи убежища среди скал и леса. Орочимару остался в кабинете, Кабуто внутри убежища.",
-  "pressure": "Нет непосредственной угрозы; Шики свободен выбрать следующий путь.",
-  "situation": "Встреча с Орочимару завершена. Шики вышел из убежища после прощания; Кабуто проводил его до выхода. Дальнейший маршрут не определён."
+  "positions": "Шики перед воротами, старший и второй шиноби на дороге, двое на верхнем ярусе, один отправлен в резиденцию.",
+  "pressure": "Вход закрыт до распоряжения главы; статус нукенина сохраняется.",
+  "situation": "Шики прибыл открыто к воротам Кусагакуре. Старший патруля узнал нукенина, не обнажил оружия, перекрыл вход до распоряжения главы, отправил посыльного в резиденцию и спросил цель визита."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -690,12 +785,14 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "66d4272c445af5afab39cc5e13ab12a28a591e84",
-  "turn": "s15.text.048"
+  "sha": "bdb5b36fb7f981af82cc100c83ca1af59b76ac33",
+  "turn": "s15.text.049"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {},
+  "present": {
+   "grass_roads_patrol_senior": "memory/npc/grass_roads_patrol_senior.md"
+  },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },

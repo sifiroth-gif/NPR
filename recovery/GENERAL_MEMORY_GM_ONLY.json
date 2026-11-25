@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.048",
+  "cursor": "s15.text.049",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1195,7 +1195,8 @@
     "grass_roads_patrol_senior": {
       "aliases": [
         "grass roads patrol senior",
-        "Старший патруля Кусы"
+        "Старший патруля Кусы",
+        "grass_roads_patrol_senior"
       ],
       "facts": [],
       "id": "grass_roads_patrol_senior",
@@ -1214,13 +1215,20 @@
       "projections": [
         {
           "fears": "Непредусмотренная официальная связь с разыскиваемым нукенином и гибель патрульных.",
-          "seen": "s13.text.099",
+          "seen": "s15.text.049",
+          "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное дополнение на своём служебном риске.",
+          "wants": "Подтвердить обстоятельства захвата налётчика для разбирательства, сохранив карьеру."
+        },
+        {
+          "fears": "Непредусмотренная официальная связь с разыскиваемым нукенином и гибель патрульных.",
           "state": "Признал различие между первичной неизвестностью имени 25.03 и известным с 01.04 именем; прекращает попытку получить повторную подпись Шики, оставляя ранее отправленное дополнение на своём служебном риске.",
           "wants": "Подтвердить обстоятельства захвата налётчика для разбирательства, сохранив карьеру."
         }
       ],
       "sources": [
-        "recovery/cast/grass_roads_patrol_senior.json"
+        "recovery/cast/grass_roads_patrol_senior.json",
+        "recovery/HOT.json",
+        "s15.text.049"
       ]
     },
     "grey_escort_leader": {
@@ -1703,8 +1711,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s15.text.048"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -4271,8 +4278,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json",
-        "s15.text.048"
+        "recovery/cast/orochimaru.json"
       ]
     },
     "orochimaru_poison_samples_s15": {
@@ -12787,6 +12793,24 @@
         "s04.text.035"
       ]
     },
+    "place:c12f173ea0893143": {
+      "aliases": [
+        "place:c12f173ea0893143",
+        "Страна Травы, ворота Кусагакуре",
+        "Страна Травы",
+        "ворота Кусагакуре"
+      ],
+      "facts": [],
+      "id": "place:c12f173ea0893143",
+      "kind": "place",
+      "label": "Страна Травы, ворота Кусагакуре",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.049"
+      ]
+    },
     "place:c22ad5f06ef17dc0": {
       "aliases": [
         "place:c22ad5f06ef17dc0",
@@ -18849,5 +18873,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1222
+  "source_turns_indexed": 1223
 }
