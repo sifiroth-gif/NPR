@@ -31,12 +31,12 @@
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 9 ход(ов), s08–s08
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
+- Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 9 ход(ов), s13–s13
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 8 ход(ов), s01–s01
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 8 ход(ов), s05–s05
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
-- Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 8 ход(ов), s13–s13
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
