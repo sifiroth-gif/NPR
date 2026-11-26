@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.178",
+  "cursor": "s15.text.179",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,17 +429,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.178",
-          "state": "Удержал древко косы при ударе, отбросил оружие Хидана, приказал держать тело."
-        },
-        {
-          "state": "Удержал древко косы при ударе, отбросил оружие Хидана, приказал держать тело."
+          "seen": "s15.text.179",
+          "state": "Спустился с приёмщиком в подземный пункт для проверки тела Тирику."
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.178"
+        "s15.text.179"
       ]
     },
     "baki": {
@@ -1092,16 +1088,10 @@
           "role": "Сотрудник подпольного пункта выплаты наград",
           "seen": "s15.text.178",
           "state": "Вышел, поднял руки, заявил, что тело монаха внизу, отрицает связи с Акацуки."
-        },
-        {
-          "role": "Сотрудник подпольного пункта выплаты наград",
-          "state": "Вышел, поднял руки, заявил, что тело монаха внизу, отрицает связи с Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "recovery/HOT.json",
-        "s15.text.178"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2135,7 +2125,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2143,13 +2133,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:38:30",
-          "excerpt": "\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:30</text> Чёрная молния пробежала по лезвию Суми. Хидан заметил Шики слишком поздно. Он попытался вскинуть косу, но Асума удержал её древко, а Шикамару усилил захват тенью. Короткий взмах меча. Голова Хидана уп",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.175"
         },
         {
           "at": "0010-04-24T07:38:32",
@@ -2164,12 +2147,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.178"
+        },
+        {
+          "at": "0010-04-24T07:39:05",
+          "excerpt": "исчезла с лезвия Суми. Шики подошёл к Хидану. **Мугами Шики:** — Дзясин. Слышал про такое божество. Хидан перестал ругаться. **Хидан:** — Вот как? И что же ты о нём слышал? Его губы побледнели, голос стал слабее, однако сознание оставалось ясным. Он с интересо",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.179"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.178",
+          "seen": "s15.text.179",
           "state": "Жив, обезглавлен, голос хриплый; части разделены, оружие у деревьев."
         },
         {
@@ -2180,7 +2170,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.178"
+        "s15.text.179"
       ]
     },
     "hirano": {
@@ -2897,7 +2887,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2905,13 +2895,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T07:38:32",
-          "excerpt": "#усиленике зеркал и восстановление зеркал вход в зеркала и атака Какудзу мечем# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:32</text> Шики сложил печати левой рукой. Трещины на ледяных зеркалах затянулись, прозрачные поверхно",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.176"
         },
         {
           "at": "0010-04-24T07:38:36",
@@ -2926,23 +2909,25 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.178"
+        },
+        {
+          "at": "0010-04-24T07:39:05",
+          "excerpt": "бее, однако сознание оставалось ясным. Он с интересом рассматривал Шики снизу вверх. **Хидан:** — Ты убил Какудзу и даже не забрал его деньги. Ради чего? В его лице появилось странное оживление. **Хидан:** — Скажи, ты хоть понимаешь, что такое благословение на",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.179"
         }
       ],
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.178",
-          "state": "Мёртв. Все пять сердец уничтожены, чакровая активность и движения нитей прекратились."
-        },
-        {
-          "role": "Акацуки, нукенин Такигакуре",
+          "seen": "s15.text.179",
           "state": "Мёртв. Все пять сердец уничтожены, чакровая активность и движения нитей прекратились."
         }
       ],
       "sources": [
         "recovery/cast/kakuzu.json",
-        "recovery/HOT.json",
-        "s15.text.178"
+        "s15.text.179"
       ]
     },
     "kankuro": {
@@ -11937,9 +11922,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.178",
+        "s15.text.179",
         "s15.text.176",
-        "s15.text.177"
+        "s15.text.177",
+        "s15.text.178"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -18766,17 +18752,17 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.178",
-          "state": "Отнёс косу Хидана к деревьям, наблюдает за обезглавленным противником."
+          "seen": "s15.text.179",
+          "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
-          "state": "Отнёс косу Хидана к деревьям, наблюдает за обезглавленным противником."
+          "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.178"
+        "s15.text.179"
       ]
     },
     "shiki_arm_wraps": {
@@ -21103,5 +21089,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1351
+  "source_turns_indexed": 1352
 }
