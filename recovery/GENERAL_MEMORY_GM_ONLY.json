@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.152",
+  "cursor": "s15.text.153",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1114,7 +1114,8 @@
     "fire_road_hisato": {
       "aliases": [
         "fire road hisato",
-        "Хисато"
+        "Хисато",
+        "fire_road_hisato"
       ],
       "facts": [],
       "id": "fire_road_hisato",
@@ -1153,11 +1154,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.124"
+          "seen": "s15.text.153"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_hisato.json"
+        "recovery/cast/fire_road_hisato.json",
+        "s15.text.153"
       ]
     },
     "fire_road_jonin": {
@@ -1639,13 +1641,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.152"
+          "seen": "s15.text.153"
         }
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json",
-        "s15.text.152"
+        "recovery/HOT.json"
       ]
     },
     "gaara": {
@@ -2171,7 +2172,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2179,13 +2180,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-23T16:32:00",
-          "excerpt": "dary\" size=\"xs\">Пятница, 23 апреля 1287 года · 16:26</text> ### Конохагакуре. Тренировочный полигон Джирайя выслушал Шики до конца. **Джирайя:** — Полагаю, одного твоего существования достаточно, чтобы поставить под сомнение смысл значительной части его жизни.",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.150"
         },
         {
           "at": "0010-04-23T16:32:01",
@@ -2200,17 +2194,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.152"
+        },
+        {
+          "at": "0010-04-23T16:32:04",
+          "excerpt": "ебра# <text color=\"secondary\" size=\"xs\">23 апреля 1287 года · 16:32:04</text> Шики рванулся вперёд. Джирайя развернул корпус навстречу движению вправо, однако в последний момент Шики сменил направление. Под сандалиями взметнулась сухая земля. Саннин успел заме",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.153"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.152"
+          "seen": "s15.text.153"
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s15.text.152"
+        "s15.text.153"
       ]
     },
     "jiro_caravan_guard": {
@@ -4830,7 +4831,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.152",
+          "seen": "s15.text.153",
           "state": "После предупреждения Шики покинул опасный участок с Сакурой и Ямато; стремится догнать Сая и Саске."
         },
         {
@@ -4839,7 +4840,8 @@
       ],
       "sources": [
         "recovery/cast/naruto.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.153"
       ]
     },
     "naruto_home_sketch_s15": {
@@ -16567,14 +16569,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.152",
+        "s15.text.153",
         "s15.text.145",
         "s15.text.146",
         "s15.text.147",
         "s15.text.148",
         "s15.text.149",
         "s15.text.150",
-        "s15.text.151"
+        "s15.text.151",
+        "s15.text.152"
       ]
     },
     "place:fdb4dc3fd78cd3fd": {
@@ -18423,7 +18426,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s15.text.152"
+          "seen": "s15.text.153"
         }
       ],
       "sources": [
@@ -18648,6 +18651,60 @@
       ],
       "sources": [
         "recovery/cast/signalshchik.json"
+      ]
+    },
+    "sima": {
+      "aliases": [
+        "sima",
+        "Сима"
+      ],
+      "facts": [],
+      "id": "sima",
+      "kind": "npc",
+      "label": "Сима",
+      "mention_count": 4,
+      "mentions": [
+        {
+          "at": "0010-04-23T16:17:00",
+          "excerpt": "*Коюки:** — Наконец-то! Джирайя рассмеялся. **Джирайя:** — С Фукасаку договориться нетрудно. А вот если Сима узнает, что я позвал его в Коноху обедать без неё, мне придётся искать другое место для ночлега. **Наруто:** — Ичираку! Пошли в Ичираку! Он первым брос",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.145"
+        },
+        {
+          "at": "0010-04-23T16:32:00",
+          "excerpt": "извал Симу. Пожилая жаба появилась в облаке дыма, с выражением крайнего недовольства на морщинистой мордочке. **Сима:** — Значит, вот куда ты подевался, старый дурак! Обед остывает! **Фукасаку:** — Мама, тут такое дело… Потребовалось некоторое время, чтобы объ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.150"
+        },
+        {
+          "at": "0010-04-23T16:32:01",
+          "excerpt": "им, разумеется, остаётся. **Фукасаку:** — Мама, не вмешиваемся. Только поддерживаем равновесие чакры. Сима согласно кивнула. Джирайя перестал улыбаться. Его стойка выглядела обманчиво расслабленной: опущенные плечи, открытые ладони, немного согнутые ноги. **Дж",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.151"
+        },
+        {
+          "at": "0010-04-23T16:32:04",
+          "excerpt": "руку, однако пальцы сомкнулись на ткани рукава и сорвались. Он отступил на полшага, коротко выдохнув. **Сима:** — Джирайя-тян, ты позволяешь ему задавать темп! **Джирайя:** — Заметил, мама! Наруто поднялся из-под дерева. Он принялся самостоятельно повторять пе",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.153"
+        }
+      ],
+      "projections": [
+        {
+          "role": "по подписи в сцене",
+          "seen": "s15.text.153"
+        },
+        {
+          "role": "по подписи в сцене"
+        }
+      ],
+      "sources": [
+        "recovery/cast/sima.json",
+        "recovery/HOT.json"
       ]
     },
     "sirame": {
@@ -19835,8 +19892,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -19880,8 +19936,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s15.text.152"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -20394,5 +20449,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1325
+  "source_turns_indexed": 1326
 }
