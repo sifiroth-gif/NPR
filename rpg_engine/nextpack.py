@@ -316,7 +316,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["fight"] = {k: v for k, v in fight.items() if k not in ("dice", "rules", "ref")}
         # Подсказка не потеряется в длинном чате: ключевые постоянные способности
         # должны проявляться в описании боя до выбора действий Шики.
-        pack["battle_passives"] = fusion.PASSIVES if fusion.active(hot) else (
+        pack["battle_passives"] = fusion.passives(hot) if fusion.active(hot) else (
             "Шики ВСЕГДА в змеином Режиме отшельника Рьючидо: природная "
             "сенсорика вокруг (в т.ч. вне зрения), усиленные скорость, сила, "
             "реакция, стойкость; 'Пустой клык' защищает от обычных ядов. "
