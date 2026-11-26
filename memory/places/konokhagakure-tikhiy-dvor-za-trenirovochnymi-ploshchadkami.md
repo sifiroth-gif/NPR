@@ -6,7 +6,7 @@
 - Джирайя · `npc/jiraiya` — 13 ход(ов)
 - Фукасаку · `npc/fukasaku` — 10 ход(ов)
 - Наруто Узумаки · `npc/naruto` — 8 ход(ов)
-- Сима · `npc/sima` — 5 ход(ов)
+- Сима · `npc/shima` — 5 ход(ов)
 - Коюки · `npc/western_nest_young_courier` — 2 ход(ов)
 
 ## Ходы

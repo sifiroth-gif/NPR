@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.005: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`)
 - s16.text.004: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Глава Кусагакуре (`npc/kusa_head`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
 - s16.text.003: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Какаши Хатакэ (`npc/kakashi`), Хаясэ Рэн (`npc/ren`), вещь `gamamaru_nemera_dream_scroll`
 - s16.text.002: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), Мугами Акихиро (`npc/akihiro`)
@@ -55,8 +56,7 @@
 - s15.text.159: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), линия `shiki_save_asuma`, линия `shiki_save_jiraiya`
 - s15.text.158: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Наруто Узумаки (`npc/naruto`), линия `player_preference_overlapping_plans`, линия `shiki_save_asuma`
 - s15.text.157: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Джирайя (`npc/jiraiya`), линия `shiki_save_asuma`, линия `player_preference_overlapping_plans`
-- s15.text.156: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), shima (`npc/shima`), Наруто Узумаки (`npc/naruto`)
-- s15.text.155: Фукасаку (`npc/fukasaku`), shima (`npc/shima`), Джирайя (`npc/jiraiya`), линия `shiki_save_jiraiya`
-- s15.text.154: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/sima`), Наруто Узумаки (`npc/naruto`), бой
+- s15.text.156: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), Наруто Узумаки (`npc/naruto`)
+- s15.text.155: Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), Джирайя (`npc/jiraiya`), линия `shiki_save_jiraiya`
+- s15.text.154: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), sima (`npc/sima`), Наруто Узумаки (`npc/naruto`), бой
 - s15.text.153: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), бой
-- s15.text.152: Коюки (`npc/western_nest_young_courier`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), бой
