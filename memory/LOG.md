@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.127: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s15.text.126: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 2
 - s15.text.125: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Наёмник у шахты (`npc/naemnik_u_shakhty`), поправки игрока: 1
 - s15.text.124: Маю (`npc/fire_road_mayu`), Хисато (`npc/fire_road_hisato`), Дежурный главных ворот Конохи (`npc/fire_leaf_gate_duty`), Наёмник у шахты (`npc/naemnik_u_shakhty`), поправки игрока: 1
@@ -61,4 +62,3 @@
 - s15.text.070: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), вещь `blank_communication_plates_s15`, вещь `shiki_communication_receiver`, поправки игрока: 1
 - s15.text.069: Кирисава Сэйна (`npc/seina`), Мугами Акихиро (`npc/akihiro`), Мугами Нао (`npc/nao`), Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), вещь `blank_communication_plates_s15`
 - s15.text.068: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.067: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), вещь `blank_communication_plates_s15`
