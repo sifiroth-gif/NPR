@@ -38,9 +38,9 @@
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 11 ход(ов), s14–s15
+- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 10 ход(ов), s15–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
-- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 9 ход(ов), s15–s15
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02

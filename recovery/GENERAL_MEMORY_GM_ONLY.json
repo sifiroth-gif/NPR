@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.195",
+  "cursor": "s15.text.196",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -710,7 +710,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -718,13 +718,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T12:20:00",
-          "excerpt": "под усиленной охраной. Деньги и документы из пункта обмена изъяли в качестве вещественных доказательств. Тело Тирику предстояло вернуть в Храм Огня. **Асума Сарутоби:** — Мугами. Дальше мы справимся. Я возвращаюсь через храм, а затем в Коноху. Хокагэ получит п",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.182"
         },
         {
           "at": "0010-04-24T19:15:00",
@@ -739,6 +732,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.194"
+        },
+        {
+          "at": "0010-04-24T19:27:00",
+          "excerpt": "о мне. Она снова придвинула к себе донесение из Храма Огня. На первой странице среди прочих имён стояло имя Тирику. **Цунадэ:** — Шизунэ, распорядись, чтобы меня разбудили, когда вернётся Асума. В какое бы время он ни прибыл. **Шизунэ:** — Хорошо, Цунадэ-сама.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.196"
         }
       ],
       "projections": [
@@ -1307,8 +1307,7 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1351,8 +1350,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "s15.text.195"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -1420,7 +1418,8 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи"
+        "Бансаи",
+        "fire_temple_bansai"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
@@ -1460,12 +1459,13 @@
       "projections": [
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "seen": "s15.text.167",
+          "seen": "s15.text.196",
           "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_bansai.json"
+        "recovery/cast/fire_temple_bansai.json",
+        "s15.text.196"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1840,7 +1840,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1848,13 +1848,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-24T12:37:40",
-          "excerpt": "Фукасаку и Шима <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:37</text> **Мугами Шики:** — Фукасаку и Шима. Белая Змея медленно прикрыла веки. **Хакудзя-сэннин:** —",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.187"
         },
         {
           "at": "0010-04-24T12:38:00",
@@ -1869,6 +1862,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.192"
+        },
+        {
+          "at": "0010-04-24T19:27:00",
+          "excerpt": "Джирайей? На Мьёбоку? Она коротко усмехнулась. **Цунадэ:** — Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Великому Жабьему Мудрецу. Шизунэ поправила лежавшие на столе документы. **Цунадэ:** — Иди отдыхай. Ибики начнёт работу бе",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.196"
         }
       ],
       "projections": [
@@ -3633,12 +3633,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.184",
+          "seen": "s15.text.196",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s15.text.196"
       ]
     },
     "kurama": {
@@ -9626,9 +9627,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.195",
+        "s15.text.196",
         "s15.text.193",
-        "s15.text.194"
+        "s15.text.194",
+        "s15.text.195"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -19277,7 +19279,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19285,13 +19287,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-24T19:23:00",
-          "excerpt": "чаем. Большинство служащих уже разошлись, однако за дверью кабинета Пятой Хокагэ продолжалась работа. Шизунэ встретила Шики в приёмной. Узнав его, она отложила папку с документами и вошла в кабинет. Через минуту Шики пригласили внутрь. Цунадэ сидела за столом,",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.193"
         },
         {
           "at": "0010-04-24T19:25:00",
@@ -19306,11 +19301,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.195"
+        },
+        {
+          "at": "0010-04-24T19:27:00",
+          "excerpt": "— Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Великому Жабьему Мудрецу. Шизунэ поправила лежавшие на столе документы. **Цунадэ:** — Иди отдыхай. Ибики начнёт работу без тебя. Когда вернёшься, зайди ко мне. Она снова придвинула",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.196"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.195",
+          "seen": "s15.text.196",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19320,7 +19322,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s15.text.195"
+        "s15.text.196"
       ]
     },
     "signalshchik": {
@@ -20310,7 +20312,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 28,
+      "mention_count": 29,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20318,13 +20320,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-24T19:23:00",
-          "excerpt": "#к цунадэ# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:23</text> ### Резиденция Хокагэ В коридорах резиденции пахло бумагой, чернилами и остывшим чаем. Большинство сл",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.193"
         },
         {
           "at": "0010-04-24T19:25:00",
@@ -20339,11 +20334,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.195"
+        },
+        {
+          "at": "0010-04-24T19:27:00",
+          "excerpt": "Джирайей-саном посетить гору Мьёбоку. Учитывайте это. После я помогу. А сейчас мне нужно отдохнуть. **Цунадэ:** — С Джирайей? На Мьёбоку? Она коротко усмехнулась. **Цунадэ:** — Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Велик",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.196"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.195",
+          "seen": "s15.text.196",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20353,7 +20355,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s15.text.195"
+        "s15.text.196"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21214,5 +21216,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1368
+  "source_turns_indexed": 1369
 }
