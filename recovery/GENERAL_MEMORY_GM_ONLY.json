@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.012",
+  "cursor": "s16.text.013",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:28:00",
-          "excerpt": "Сад отшельников Трапеза закончилась. Сима убирала посуду, Фукасаку возился с заевшей оконной рамой. Джирайя вышел в сад. Здесь, за домом, находился небольшой пруд. Над водой склонились цветущие ветви, между камнями рос мох. На поверхности покачивались лепестки",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.010"
         },
         {
           "at": "0010-04-25T10:30:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.012"
+        },
+        {
+          "at": "0010-04-25T10:37:00",
+          "excerpt": "о это теперь моя особенность, не копия, не воровство. Тихий голос почти растворился в шелесте листвы. Джирайя опустил голову. Поднял с каменной ограды записную книжку, которую успел вынуть во время разговора, и машинально провёл большим пальцем по её обложке. ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.013"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.012",
+          "seen": "s16.text.013",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.012"
+        "s16.text.013"
       ]
     },
     "jiro_caravan_guard": {
@@ -5390,7 +5390,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 166,
+      "mention_count": 167,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5398,13 +5398,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-23T16:24:00",
-          "excerpt": "*Джирайя:** — А ведь когда-то он был прекрасным учителем. Наруто удивлённо посмотрел на него. **Наруто:** — Орочимару? **Джирайя:** — Представь себе. Фукасаку тяжело вздохнул. Над деревьями пролетела стая птиц, и на несколько мгновений их тени легли на траву м",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.148"
         },
         {
           "at": "0010-04-23T16:26:00",
@@ -5419,6 +5412,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.150"
+        },
+        {
+          "at": "0010-04-25T10:37:00",
+          "excerpt": "хрустели мелкие камни. Несколько раз он собирался заговорить, но всякий раз продолжал идти. **Джирайя:** — Орочимару потратил значительную часть жизни на поиски способа преодолеть ограничения человеческого тела. Ради этого он был готов отказаться практически о",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.013"
         }
       ],
       "projections": [
@@ -8920,9 +8920,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.012",
+        "s16.text.013",
         "s16.text.010",
-        "s16.text.011"
+        "s16.text.011",
+        "s16.text.012"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -19116,7 +19117,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19124,13 +19125,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:53:00",
-          "excerpt": "то прежде существовала единая практика, которую последующие поколения разделили на доступные им составляющие. Сима свернула к небольшому деревянному дому, окружённому садом. Фукасаку остановился перед крыльцом. **Фукасаку:** — Но если ты говоришь именно о людя",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.008"
         },
         {
           "at": "0010-04-25T09:56:00",
@@ -19145,6 +19139,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
+        },
+        {
+          "at": "0010-04-25T10:37:00",
+          "excerpt": "аже не представляю, где проходят твои ограничения. Он посмотрел в сторону дома. Через открытое окно была видна Сима, развешивавшая вымытую посуду. Джирайя понизил голос: **Джирайя:** — Я не стану расспрашивать тебя о происхождении тканей или методах твоих иссл",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.013"
         }
       ],
       "projections": [
@@ -19385,7 +19386,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19393,13 +19394,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:53:00",
-          "excerpt": "то прежде существовала единая практика, которую последующие поколения разделили на доступные им составляющие. Сима свернула к небольшому деревянному дому, окружённому садом. Фукасаку остановился перед крыльцом. **Фукасаку:** — Но если ты говоришь именно о людя",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.008"
         },
         {
           "at": "0010-04-25T09:56:00",
@@ -19414,6 +19408,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
+        },
+        {
+          "at": "0010-04-25T10:37:00",
+          "excerpt": "аже не представляю, где проходят твои ограничения. Он посмотрел в сторону дома. Через открытое окно была видна Сима, развешивавшая вымытую посуду. Джирайя понизил голос: **Джирайя:** — Я не стану расспрашивать тебя о происхождении тканей или методах твоих иссл",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.013"
         }
       ],
       "projections": [
@@ -21176,5 +21177,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1392
+  "source_turns_indexed": 1393
 }
