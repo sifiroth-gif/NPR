@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.180",
+  "cursor": "s15.text.181",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T07:38:32",
-          "excerpt": "ми Асума оттащил тело Хидана подальше от головы. Ослабевший голос бессмертного всё ещё раздавался над поляной. **Асума Сарутоби:** — Мугами, если он сдаётся, возьмём живым. Хокагэ нужен хотя бы один человек, способный рассказать нам об Акацуки. Шики восстанови",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.176"
         },
         {
           "at": "0010-04-24T07:38:36",
@@ -425,16 +418,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.178"
+        },
+        {
+          "at": "0010-04-24T07:42:00",
+          "excerpt": "оэтому после возвращения в Коноху. И лучше голову и туловище держать отдельно. Асума посмотрел на Хидана. **Асума Сарутоби:** — Хорошо. Обсудишь это непосредственно с Хокагэ. Если она согласится, я не вижу причин возражать. **Шикамару Нара:** — Потребуются два",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.181"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.179",
-          "state": "Спустился с приёмщиком в подземный пункт для проверки тела Тирику."
+          "seen": "s15.text.181",
+          "state": "Вернул тело Тирику, взял ключи, решил ждать помощь и запросить специалистов."
+        },
+        {
+          "state": "Вернул тело Тирику, взял ключи, решил ждать помощь и запросить специалистов."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "recovery/HOT.json",
+        "s15.text.181"
       ]
     },
     "baki": {
@@ -710,7 +715,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -718,13 +723,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T04:13:00",
-          "excerpt": "и руками. **Бансаи:** — Надеюсь, они узнают о случившемся раньше, чем доберутся сюда. Рёэн служил вместе с Тирику больше двадцати лет. Старик оглянулся на разрушенное святилище. **Бансаи:** — Тяжело ему будет возвращаться. Асума молча ждал возле ворот. Шики по",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.167"
         },
         {
           "at": "0010-04-24T07:38:00",
@@ -739,6 +737,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.178"
+        },
+        {
+          "at": "0010-04-24T07:42:00",
+          "excerpt": "ода · 07:42</text> Асума появился из подземного помещения вместе с приёмщиком. На руках он нёс тело Тирику, завёрнутое в белую ткань. Он осторожно положил его возле стены здания. Шики повернулся к приёмщику. **Мугами Шики:** — Вами займётся Коноха. Мужчина опу",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.181"
         }
       ],
       "projections": [
@@ -1074,7 +1079,8 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел"
+        "Приёмщик тел",
+        "fire_bounty_station_trader"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1085,12 +1091,18 @@
       "projections": [
         {
           "role": "Сотрудник подпольного пункта выплаты наград",
-          "seen": "s15.text.178",
-          "state": "Вышел, поднял руки, заявил, что тело монаха внизу, отрицает связи с Акацуки."
+          "seen": "s15.text.181",
+          "state": "Показал место хранения тела, ключи изъяты Асумой, под контролем отряда."
+        },
+        {
+          "role": "Сотрудник подпольного пункта выплаты наград",
+          "state": "Показал место хранения тела, ключи изъяты Асумой, под контролем отряда."
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json"
+        "recovery/cast/fire_bounty_station_trader.json",
+        "recovery/HOT.json",
+        "s15.text.181"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2124,7 +2136,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2132,13 +2144,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:38:50",
-          "excerpt": "с Акацуки. Асума приблизился к нему. **Асума Сарутоби:** — Покажешь. Со стороны Хидана донёсся хриплый смех. **Хидан:** — Прикончили старого ублюдка? Ну и хрен с ним. Дзясин всё равно примет его. Шикамару смотрел на говорящую голову с выражением глубокого отвр",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.178"
         },
         {
           "at": "0010-04-24T07:39:05",
@@ -2153,23 +2158,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.180"
+        },
+        {
+          "at": "0010-04-24T07:42:00",
+          "excerpt": "Нара:** — Потребуются два отдельных контейнера с печатями. И желательно, чтобы их перевозили разные группы. **Хидан:** — Вы ещё пожалеете, что связались со мной! Шикамару устало прикрыл глаза. **Шикамару Нара:** — И что-нибудь звукоизолирующее. Асума не улыбну",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.181"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.180",
-          "state": "Жив, обезглавлен, голос хриплый; части разделены, оружие у деревьев."
+          "seen": "s15.text.181",
+          "state": "Жив, обезглавлен; голова и тело раздельно, сопротивление словесное."
         },
         {
           "role": "Акацуки",
-          "state": "Жив, обезглавлен, голос хриплый; части разделены, оружие у деревьев."
+          "state": "Жив, обезглавлен; голова и тело раздельно, сопротивление словесное."
         }
       ],
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.180"
+        "s15.text.181"
       ]
     },
     "hirano": {
@@ -11920,11 +11932,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.180",
+        "s15.text.181",
         "s15.text.176",
         "s15.text.177",
         "s15.text.178",
-        "s15.text.179"
+        "s15.text.179",
+        "s15.text.180"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -18718,7 +18731,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18726,13 +18739,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T07:38:36",
-          "excerpt": "лене и потерял сознание. Шики по-прежнему ощущал работу четырёх сердец. Их ритм стал неравномерным. **Шикамару Нара:** — Сэнсэй, он прав. Мы даже не знаем, что удерживает этих двоих в живых. Обычные средства связывания могут оказаться бесполезными. Асума посмо",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.177"
         },
         {
           "at": "0010-04-24T07:38:50",
@@ -18747,11 +18753,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.180"
+        },
+        {
+          "at": "0010-04-24T07:42:00",
+          "excerpt": "рутоби:** — Хорошо. Обсудишь это непосредственно с Хокагэ. Если она согласится, я не вижу причин возражать. **Шикамару Нара:** — Потребуются два отдельных контейнера с печатями. И желательно, чтобы их перевозили разные группы. **Хидан:** — Вы ещё пожалеете, чт",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.181"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.180",
+          "seen": "s15.text.181",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -18760,7 +18773,8 @@
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.181"
       ]
     },
     "shiki_arm_wraps": {
@@ -20125,11 +20139,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 07:38:50: Какудзу убит Шики, все пять сердец уничтожены. Хидан жив и обездвижен, коса отдельно. Асума и Шикамару не ранены. Приёмщик сообщил о теле Тирику внизу; проверка предстоит."
+          "state": "24.04 07:42: Асума жив, тело Тирику возвращено. Какудзу мёртв, Хидан обездвижен. Шики предложил тайное извлечение сведений в Конохе; согласие Цунадэ ещё не получено. Асума ждёт помощь и планирует раздельную перевозку."
         }
       ],
       "sources": [
-        "s15.text.178"
+        "s15.text.181"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20203,7 +20217,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 22,
+      "mention_count": 23,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20211,13 +20225,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-23T16:32:00",
-          "excerpt": "лощадку. **Джирайя:** — Слабоват в тайдзюцу, говоришь? Посмотрим. Мне уже приходилось слышать подобное от Цунадэ перед тем, как она отправила меня в госпиталь. Наруто уселся под деревом. **Наруто:** — Давай, Шики! Покажи ему! **Джирайя:** — Ты вообще на чьей с",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.150"
         },
         {
           "at": "0010-04-23T16:48:20",
@@ -20232,6 +20239,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.160"
+        },
+        {
+          "at": "0010-04-24T07:42:00",
+          "excerpt": "ния сведений от Хидана в Конохе и раздельную перевозку. Асума согласовал ожидание помощи, решение о допросе оставил Цунадэ.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.181"
         }
       ],
       "projections": [
@@ -21087,5 +21101,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1353
+  "source_turns_indexed": 1354
 }
