@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.164",
+  "cursor": "s15.text.165",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T03:52:00",
-          "excerpt": "молитвенных чёток. Асума остановился. Долгое время он смотрел на ворота. Затем медленно достал боевые клинки. **Асума Сарутоби:** — Изумо, Котэцу. Осмотрите подходы. Шикамару, следы. Никто не ответил вслух. В нескольких десятках метров от стены лежал монах. Ег",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.161"
         },
         {
           "at": "0010-04-24T03:55:00",
@@ -425,16 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.163"
+        },
+        {
+          "at": "0010-04-24T04:01:00",
+          "excerpt": "тся к утру. Это ближайший пункт, дальше с телом они вряд ли пойдут. Несколько секунд Сарутоби молчал. **Асума Сарутоби:** — Ты знаешь, где принимают тела? Шики уже повернулся к Бансаи. Под рукавом монашеского одеяния обнаружился глубокий порез предплечья. Были",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.165"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.164"
+          "seen": "s15.text.165"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.165"
       ]
     },
     "baki": {
@@ -710,7 +711,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -718,13 +719,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T03:52:00",
-          "excerpt": "умо опустился возле первого. **Изумо Камидзуки:** — Жив. Асума сделал несколько шагов к воротам. **Асума Сарутоби:** — Тирику! Ответа не последовало. Шики различал слабый, прерывистый очаг чакры в теле раненого монаха. За стеной, значительно глубже храмового к",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.161"
         },
         {
           "at": "0010-04-24T03:55:00",
@@ -739,6 +733,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.163"
+        },
+        {
+          "at": "0010-04-24T04:01:00",
+          "excerpt": "арутоби:** — Шикамару, мы не можем оставить здесь раненых. Нужно проверить нижние помещения. Но и дать этим людям уйти с телом Тирику я не намерен. Шики назвал вероятный пункт выплаты наград, приметы уборной и оценку срока; вылечил предплечье Бансаи. Разведчик",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.165"
         }
       ],
       "projections": [
@@ -1382,7 +1383,7 @@
       "id": "fire_temple_bansai",
       "kind": "npc",
       "label": "Бансаи",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-24T03:56:00",
@@ -1397,23 +1398,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.164"
+        },
+        {
+          "at": "0010-04-24T04:01:00",
+          "excerpt": "олько секунд Сарутоби молчал. **Асума Сарутоби:** — Ты знаешь, где принимают тела? Шики уже повернулся к Бансаи. Под рукавом монашеского одеяния обнаружился глубокий порез предплечья. Были повреждены мышечные волокна сгибателей кисти, однако магистральные сосу",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.165"
         }
       ],
       "projections": [
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "seen": "s15.text.164",
-          "state": "Жив, тяжело дышит, повреждение руки, тяжесть не обследована."
+          "seen": "s15.text.165",
+          "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         },
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "state": "Жив, тяжело дышит, повреждение руки, тяжесть не обследована."
+          "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_bansai.json",
         "recovery/HOT.json",
-        "s15.text.164"
+        "s15.text.165"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -3457,12 +3465,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.161",
+          "seen": "s15.text.165",
+          "state": "Осматривает подходы к воротам."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
           "state": "Осматривает подходы к воротам."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "recovery/HOT.json",
+        "s15.text.165"
       ]
     },
     "kurama": {
@@ -12330,8 +12344,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.164",
-        "s15.text.163"
+        "s15.text.165",
+        "s15.text.163",
+        "s15.text.164"
       ]
     },
     "place:98886b320cd46886": {
@@ -18514,7 +18529,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18522,13 +18537,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-23T16:48:00",
-          "excerpt": "рику? Связной покачал головой. Шикамару выпрямился. От привычной лености его движений ничего не осталось. **Шикамару Нара:** — Сэнсэй, я соберу команду. **Асума Сарутоби:** — Быстро. Встречаемся у южных ворот. Я получу разрешение Хокагэ. Шикамару исчез с улицы",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.158"
         },
         {
           "at": "0010-04-23T17:13:00",
@@ -18543,15 +18551,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.161"
+        },
+        {
+          "at": "0010-04-24T04:01:00",
+          "excerpt": "ановленный рукав. **Бансаи:** — Благодарю вас. Из-за стены послышались шаги. Во двор вернулись Шикамару и Котэцу. **Шикамару Нара:** — Потеряли след. На востоке начинается каменистая местность. Противника не видели. Асума протянул ему карту. **Асума Сарутоби:*",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.165"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.162"
+          "seen": "s15.text.165"
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "recovery/HOT.json",
+        "s15.text.165"
       ]
     },
     "shiki_arm_wraps": {
@@ -19916,11 +19933,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 03:56: Тирику погиб до прибытия Шики, тело забрали Акацуки. Бансаи свидетель; Асума предполагает получение награды, Шикамару подал сигнал. Спасение первого монаха сохранено. Шики не знает личности удаляющегося очага."
+          "state": "24.04 04:01: Шики назвал вероятный пункт обмена наград и приметы здания. Асума запросил подкрепление, отправка поручена Котэцу; до её доставки и проверки пункта остаётся неопределённость. Тирику погиб ранее, Бансаи вылечен."
         }
       ],
       "sources": [
-        "s15.text.163"
+        "s15.text.165"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20878,5 +20895,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1337
+  "source_turns_indexed": 1338
 }
