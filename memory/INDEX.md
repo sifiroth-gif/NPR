@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.166`
+# Карта мира NPR · на ходе `s15.text.167`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -256,7 +256,7 @@
 ## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
-- `shiki_save_asuma` — 24.04 04:12: Шики показал перечёркнутый протектор, предложил спасение… · `threads/shiki_save_asuma`
+- `shiki_save_asuma` — 24.04 04:13: Бансаи подтвердил, что Рёэн и Дзюн не были в храме во вр… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
