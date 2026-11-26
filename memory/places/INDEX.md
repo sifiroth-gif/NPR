@@ -174,6 +174,7 @@
 - Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
 - Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01
 - Конохагакуре, торговая улица по пути к резиденции Хокагэ · `places/konokhagakure-torgovaya-ulitsa-po-puti-k-rezidentsii-khokage` · 1 ход(ов), s15–s15
+- Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 1 ход(ов), s15–s15
 - Конохагакуре, Тренировочная площадка за восточной оградой госпиталя · `places/konokhagakure-trenirovochnaya-ploshchadka-za-vostochnoy-ogra` · 1 ход(ов), s01–s01
 - Конохагакуре, Трибуна участников · `places/konokhagakure-tribuna-uchastnikov` · 1 ход(ов), s02–s02
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01

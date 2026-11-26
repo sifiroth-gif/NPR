@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.197: Коюки (`npc/western_nest_young_courier`)
 - s15.text.196: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Бансаи (`npc/fire_temple_bansai`), Котэцу Хаганэ (`npc/kotetsu`)
 - s15.text.195: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Кадзунэ (`npc/fire_road_jonin`)
 - s15.text.194: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
@@ -61,4 +62,3 @@
 - s15.text.140: Наруто Узумаки (`npc/naruto`)
 - s15.text.139: Наруто Узумаки (`npc/naruto`)
 - s15.text.138: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.137: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`), вещь `leaf_shiki_agreement_copy`

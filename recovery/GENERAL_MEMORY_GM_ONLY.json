@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.196",
+  "cursor": "s15.text.197",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1418,8 +1418,7 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи",
-        "fire_temple_bansai"
+        "Бансаи"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
@@ -1464,8 +1463,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_bansai.json",
-        "s15.text.196"
+        "recovery/cast/fire_temple_bansai.json"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -3638,8 +3636,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s15.text.196"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -9627,10 +9624,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.196",
         "s15.text.193",
         "s15.text.194",
-        "s15.text.195"
+        "s15.text.195",
+        "s15.text.196"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -12378,6 +12375,25 @@
       "projections": [],
       "sources": [
         "s06.text.023"
+      ]
+    },
+    "place:937887e903bd78e7": {
+      "aliases": [
+        "place:937887e903bd78e7",
+        "Конохагакуре, торговый квартал, гостиница у чайной",
+        "Конохагакуре",
+        "торговый квартал",
+        "гостиница у чайной"
+      ],
+      "facts": [],
+      "id": "place:937887e903bd78e7",
+      "kind": "place",
+      "label": "Конохагакуре, торговый квартал, гостиница у чайной",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.197"
       ]
     },
     "place:93ccf9d9bf271e88": {
@@ -19314,15 +19330,10 @@
         {
           "seen": "s15.text.196",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
-        },
-        {
-          "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "recovery/HOT.json",
-        "s15.text.196"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -20347,15 +20358,10 @@
         {
           "seen": "s15.text.196",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-        },
-        {
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s15.text.196"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -20645,7 +20651,8 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -20684,12 +20691,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.162",
+          "seen": "s15.text.197",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "s15.text.197"
       ]
     },
     "white_snake_sage": {
@@ -21216,5 +21224,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1369
+  "source_turns_indexed": 1370
 }

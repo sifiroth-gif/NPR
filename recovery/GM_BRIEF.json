@@ -12,6 +12,15 @@
     "plan": "return_chiriku_s15"
    },
    {
+    "due": "0010-04-24T21:00:00",
+    "if_unopposed": "Помещение и охраняемый медицинский осмотр будут готовы к приёму.",
+    "name": "Шизунэ",
+    "next": "Подготовить изоляцию и охраняемый медосмотр, обеспечить уведомление Цунадэ при прибытии Асумы.",
+    "npc": "shizune",
+    "overdue": false,
+    "plan": "prepare_hidan_custody_s15"
+   },
+   {
     "due": "0010-04-24T22:00:00",
     "if_unopposed": "Вернётся с отрядом и доложит о спасённых монахах.",
     "name": "Изумо Камидзуки",
@@ -30,6 +39,15 @@
     "plan": "finish_return_s15"
    },
    {
+    "due": "0010-04-25T08:00:00",
+    "if_unopposed": "Определит условия закрытого допроса после оценки состояния пленника.",
+    "name": "Цунадэ",
+    "next": "Принять доклад Асумы и результат медосмотра, поручить Ибики обычный допрос без ожидания Шики; секретный сеанс согласовать по возвращении Шики.",
+    "npc": "tsunade",
+    "overdue": false,
+    "plan": "secure_intelligence_s15"
+   },
+   {
     "due": "0010-04-25T09:00:00",
     "if_unopposed": "Будет ждать на оговорённом месте, организует сопровождение при согласии.",
     "name": "Джирайя",
@@ -37,24 +55,6 @@
     "npc": "jiraiya",
     "overdue": false,
     "plan": "myoboku_meeting_s15"
-   },
-   {
-    "due": "0010-04-25T09:00:00",
-    "if_unopposed": "Согласует добровольную встречу.",
-    "name": "Фукасаку",
-    "next": "Вернуться на Мьёбоку и согласовать с Симой приём возможного гостя 25 апреля.",
-    "npc": "fukasaku",
-    "overdue": false,
-    "plan": "invite_shiki_myoboku"
-   },
-   {
-    "due": "0010-04-25T09:00:00",
-    "if_unopposed": "Подготовит согласованный приём при принятии приглашения.",
-    "name": "shima",
-    "next": "Вернуться домой, подготовить приём при подтверждении визита.",
-    "npc": "shima",
-    "overdue": false,
-    "plan": "host_shiki_visit"
    }
   ]
  },
@@ -72,13 +72,13 @@
    "kind": "review",
    "since": "s15.text.192",
    "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s15.text.196"
+   "turn": "s15.text.197"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.196",
+  "cursor": "s15.text.197",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -86,14 +86,9 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "shizune",
-   "tsunade",
-   "place:53a6a684f23e1422",
-   "leaf_shiki_agreement_copy",
-   "leaf_shiki_agreement_original",
-   "naruto_home_sketch_s15"
+   "place:937887e903bd78e7"
   ],
-  "focus_bytes": 2309,
+  "focus_bytes": 479,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -109,209 +104,25 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
-    "sage.permanent",
-    "sage.poison",
-    "shunshin.zero",
-    "combat.scalpel",
-    "element.ice",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
-    "nemera.agency",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.summon"
+    "nemera.agency"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-04-24T19:27:00",
-    "chakra": {
-     "at": "0010-04-24T19:27:00",
-     "last": {
-      "spent": 3.75,
-      "turn": "s15.text.183",
-      "what": [
-       "Кучиёсэ: Хагуро"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 600.0,
-     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {
-     "hidan": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:30",
-        "bleed": true,
-        "lost": "Нет функциональной связи головы с туловищем; обездвижен, голова говорит.",
-        "severity": "критическая",
-        "turn": "s15.text.175",
-        "what": "Полное отделение головы ударом Суми с Райтоном, сверхъестественное сохранение жизни и сознания.",
-        "where": "шея"
-       }
-      ]
-     },
-     "jiraiya": {
-      "wounds": [
-       {
-        "at": "0010-04-23T16:32:04",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.153",
-        "what": "контролируемый удар через частичный блок",
-        "where": "бок под рёбрами"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, функция сохранена",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар",
-        "where": "плечо"
-       }
-      ]
-     },
-     "kakuzu": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:25",
-        "bleed": false,
-        "lost": "Стянутая нитями рана, локальное повреждение тканей и нитей остаётся; кровопотеря и шок не устранены.",
-        "recovered_at": "s15.text.175",
-        "severity": "средняя",
-        "stopped": "s15.text.175",
-        "turn": "s15.text.171",
-        "what": "Проникающий разрез чакрового скальпеля, повреждены наружные ткани и часть нитей, сквозного пробития нет; поражение сердца не установлено.",
-        "where": "спина, грудная полость"
-       },
-       {
-        "at": "0010-04-24T07:38:32",
-        "bleed": true,
-        "lost": "Рука утратила подвижность.",
-        "severity": "тяжёлая",
-        "turn": "s15.text.176",
-        "what": "Режущая рана Суми через защиту Дотона",
-        "where": "плечо руки, державшей чемодан"
-       }
-      ]
-     },
-     "sasuke": {
-      "wounds": [
-       {
-        "at": "0010-04-21T13:41:26",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.039",
-        "what": "ушиб от удара ногой через частичный блок",
-        "where": "бок под рёбрами"
-       }
-      ]
-     },
-     "shiki": {
-      "wounds": [
-       {
-        "at": "0007-12-24T16:47:00",
-        "lost": "поверхностный порез, движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s09.text.066",
-        "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
-        "where": "наружная сторона левого бедра"
-       },
-       {
-        "at": "0010-03-25T12:12:56",
-        "lost": "боль при резких движениях, дыхание сохранено",
-        "severity": "лёгкая",
-        "turn": "s12.text.064",
-        "what": "удар отлетающим известняком во время первого рывка",
-        "where": "боковая область грудной клетки под рёбрами"
-       },
-       {
-        "at": "0010-04-05T11:26:02",
-        "lost": "кисть работает",
-        "severity": "лёгкая",
-        "turn": "s13.text.069",
-        "what": "нож",
-        "where": "левое предплечье"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар жабьего ката",
-        "where": "грудь"
-       }
-      ]
-     }
-    },
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/SHIKI.md"
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "prior results/source",
-    "material/equipment",
-    "genome/known limits",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time"
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent"
    ],
    "routes": [
-    "medical",
-    "research",
-    "travel"
+    "dialogue"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -412,20 +223,6 @@
     "state": "Подписан обеими сторонами, печать главы; условия s15.text.103–104, заключено s15.text.106, принято Шики s15.text.107.",
     "why": "Шики забрал свой экземпляр."
    },
-   "leaf_shiki_agreement_copy": {
-    "holder": "tsunade",
-    "name": "Соглашение Конохи о взаимном ненападении, экземпляр для Шики",
-    "since": "s15.text.134",
-    "state": "Подписано и опечатано Цунадэ; подпись Шики отсутствует; на столе.",
-    "why": ""
-   },
-   "leaf_shiki_agreement_original": {
-    "holder": "tsunade",
-    "name": "Соглашение Конохи о взаимном ненападении, экземпляр резиденции",
-    "since": "s15.text.134",
-    "state": "Подписано и опечатано Цунадэ; подпись Шики отсутствует; на столе.",
-    "why": ""
-   },
    "market_consumables_25mar": {
     "holder": "shiki",
     "since": "s12.text.091",
@@ -437,13 +234,6 @@
     "since": "s10.text.106",
     "state": "Две контрольные расписки МД-091 у Шики; расход 10.4 млн отмечен на обеих учётных сторонах.",
     "turn": "s14.text.059"
-   },
-   "naruto_home_sketch_s15": {
-    "holder": "tsunade",
-    "name": "Схема пути к дому Наруто",
-    "since": "s15.text.136",
-    "state": "Нарисована и протянута Шики, ещё не принята.",
-    "why": ""
    },
    "nemera_document": {
     "holder": "shiki",
@@ -547,13 +337,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-24T19:27:00",
+  "at": "0010-04-24T19:42:00",
   "date": "Суббота, 24 апреля 1287 года",
-  "id": "s15.text.196",
-  "place": "Конохагакуре, резиденция Хокагэ, кабинет",
-  "time": "19:27"
+  "id": "s15.text.197",
+  "place": "Конохагакуре, торговый квартал, гостиница у чайной",
+  "time": "19:42"
  },
- "digest": "1e1cb2e7fbb3c5ad38eee4b6ef67832ddd821ce9edc4e6569540e3383aab04b8",
+ "digest": "85b349f3a9adef5dec7ab7d8a72203f8835fc19c914be65eda138a477dc40c06",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -562,31 +352,11 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [
-   {
-    "actor": "tsunade",
-    "from": "s15.text.125",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s15.text.196"
-   },
-   {
-    "actor": "shizune",
-    "from": "s15.text.125",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s15.text.196"
-   }
-  ],
+  "edges": [],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
- "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Цунадэ — не слышал(а); Шизунэ — не слышал(а).",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Цунадэ — не слышал(а); Шизунэ — не слышал(а).",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Цунадэ, Шизунэ. Присутствие в отряде и запись lore без источника не доказывают видимость."
- ],
  "fight": {
   "body": {
    "hidan": {
@@ -596,11 +366,11 @@
       2,
       3
      ],
-     "cat": 1,
-     "die": 6,
+     "cat": 2,
+     "die": 14,
      "exert": false,
      "load": 2.0,
-     "turn": "s15.text.193"
+     "turn": "s15.text.197"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -612,11 +382,11 @@
       3,
       4
      ],
-     "cat": 2,
-     "die": 5,
+     "cat": 3,
+     "die": 8,
      "exert": false,
      "load": 1.0,
-     "turn": "s15.text.193"
+     "turn": "s15.text.197"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -708,18 +478,18 @@
    "value": 600.0
   },
   "dice": [
-   16,
-   7,
-   20,
+   12,
+   4,
+   4,
    5,
    10,
-   1,
-   5,
-   7,
-   20,
-   13,
-   11,
-   6
+   2,
+   18,
+   18,
+   14,
+   12,
+   12,
+   16
   ],
   "injuries": {
    "hidan": [
@@ -845,88 +615,13 @@
  "general_memory": {
   "activated": [
    {
-    "facts": [],
-    "id": "shizune",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/shizune.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
-     }
-    }
-   },
-   {
-    "facts": [],
-    "id": "tsunade",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/tsunade.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-     }
-    }
-   },
-   {
     "channels": [
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:53a6a684f23e1422",
+    "id": "place:937887e903bd78e7",
     "kind": "place",
-    "label": "Конохагакуре, резиденция Хокагэ, кабинет",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "leaf_shiki_agreement_copy",
-    "kind": "item",
-    "label": "Соглашение Конохи о взаимном ненападении, экземпляр для Шики",
-    "operational_cues": {
-     "source": "s15.text.134",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "leaf_shiki_agreement_original",
-    "kind": "item",
-    "label": "Соглашение Конохи о взаимном ненападении, экземпляр резиденции",
-    "operational_cues": {
-     "source": "s15.text.134",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "naruto_home_sketch_s15",
-    "kind": "item",
-    "label": "Схема пути к дому Наруто",
-    "operational_cues": {
-     "source": "s15.text.136",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
+    "label": "Конохагакуре, торговый квартал, гостиница у чайной",
     "status": "no_verified_facts"
    }
   ],
@@ -936,37 +631,19 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 6
+  "total_matched": 1
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
-  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {
-   "shizune": {
-    "does": "Попросила присутствовать, спросила о критериях прекращения.",
-    "lever": "Повторение исследований Орочимару и неконтролируемых последствий.",
-    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Нужен независимый контроль физиологического состояния пленника.",
-    "stage": 4,
-    "step": "необратимость"
-   },
-   "tsunade": {
-    "does": "Распорядилась подготовить закрытое помещение и спросила о последствиях метода.",
-    "lever": "Потеря людей вследствие чужих амбиций и собственных решений.",
-    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Возможность получить сведения ценна, но исход вмешательства в память и достоверность данных неизвестны.",
-    "stage": 4,
-    "step": "необратимость"
-   }
-  },
+  "npcs": {},
   "quiet": 1,
   "recent": [
    {
@@ -986,32 +663,16 @@
   "worn": []
  },
  "last": {
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:42</text>\n\n### Конохагакуре. Торговый квартал\n\n**Мугами Шики:** — Я сниму гостиницу, спасибо.\n\nПокинув резиденцию, Шики направился по улице, которую вчера показывал Наруто.\n\nПеред двухэтажной гостиницей покачивались бумажные фонари с изображениями осенних листьев. В соседней чайной, где вч…",
+  "player": "Я сниму гостиницу спасибо #иду к гостинице которую показывал Наруто. Кстати а эхо вообще работает#",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 15,
-   "facets": 3,
-   "need": 5,
-   "npc": "tsunade",
-   "tier": "deep"
-  },
-  {
-   "appearances": 15,
-   "facets": 3,
-   "need": 5,
-   "npc": "shizune",
-   "tier": "deep"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [
-   "tsunade",
-   "shizune"
-  ],
+  "present_inline": [],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -1098,191 +759,22 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {
-  "shizune": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-24T21:00:00",
-      "flaw": "Состояние и свойства пленника неизвестны до прибытия конвоя.",
-      "goal": "Подготовить безопасный и конфиденциальный приём Хидана.",
-      "id": "prepare_hidan_custody_s15",
-      "if_unopposed": "Помещение и охраняемый медицинский осмотр будут готовы к приёму.",
-      "next": "Подготовить изоляцию и охраняемый медосмотр, обеспечить уведомление Цунадэ при прибытии Асумы.",
-      "source_turn": "s15.text.196",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не станет распространять закрытые медицинские сведения самовольно.",
-     "decides": "Медицинские наблюдения, защита пациентов и верность Цунадэ.",
-     "deep_fear": "Повторение исследований Орочимару и неконтролируемых последствий."
-    },
-    "unclocked_intents": [
-     "prepare_hidan_custody_s15"
-    ]
-   },
-   "look": {
-    "внешность": "Темноволосая женщина в тёмном кимоно, медицинские отчёты."
-   },
-   "prior_disclosure_ids": [
-    "s15.text.125",
-    "s15.text.127",
-    "s15.text.128",
-    "s15.text.132",
-    "s15.text.136",
-    "s15.text.193",
-    "s15.text.194",
-    "s15.text.196"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-23T12:23:00",
-     "sha256": "712bd39ce741143e9dfab393784aa27d03cbeb9f9bbab5bba558a1711ee7d8a2",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.125"
-    },
-    {
-     "at": "0010-04-24T19:25:00",
-     "sha256": "3eae447a59ee2947ffae4fd28bb643b2e53916154571993dd19b5a15d060f171",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.194"
-    },
-    {
-     "at": "0010-04-24T19:27:00",
-     "sha256": "440e3b7f074141faeea5717605c16a13094e6d3bd23d07ad46df6bf0543e1b0a",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.196"
-    }
-   ],
-   "profile": {
-    "first": "s15.text.125",
-    "inner": {},
-    "knows": [
-     "Слышала отрицание ученичества, признание знакомства с Орочимару, название режима драконов и предупреждение о риске целого тела.",
-     "Присутствовала при докладе Шики о гибели Тирику, смерти Какудзу, раздельной перевозке живого Хидана и предложении читать память Риннеганом.",
-     "Шики завтра посещает Мьёбоку с Джирайей, намерен помочь по возвращении."
-    ],
-    "knows_ref": "memory/npc/shizune.md",
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s15.text.196",
-      "what": "Шики предупредил о завтрашнем визите на Мьёбоку, поможет после возвращения. Цунадэ поручила начать допрос без него, велела разбудить её по прибытии Асумы. Шизунэ предложила ночлег."
-     }
-    ],
-    "memory_file": "archive/npc-memory/shizune.json",
-    "memory_total": 15,
-    "name": "Шизунэ",
-    "seen": "s15.text.196",
-    "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе.",
-    "status": "present_profile",
-    "tier": "deep"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
-  "tsunade": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-25T08:00:00",
-      "flaw": "Физиология Хидана и возможности Риннегана неизвестны.",
-      "goal": "Получить сведения об Акацуки без утраты пленника до принятия обоснованного решения.",
-      "id": "secure_intelligence_s15",
-      "if_unopposed": "Определит условия закрытого допроса после оценки состояния пленника.",
-      "next": "Принять доклад Асумы и результат медосмотра, поручить Ибики обычный допрос без ожидания Шики; секретный сеанс согласовать по возвращении Шики.",
-      "source_turn": "s15.text.196",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не допустит неконтролируемой угрозы Конохе.",
-     "decides": "Приоритет безопасности жителей и независимой медицинской оценки, прямолинейна, защищает своих.",
-     "deep_fear": "Потеря людей вследствие чужих амбиций и собственных решений."
-    },
-    "unclocked_intents": [
-     "secure_intelligence_s15"
-    ]
-   },
-   "look": {
-    "внешность": "Светлые волосы в двух хвостах, ромбовидная печать на лбу, зелёный хаори."
-   },
-   "prior_disclosure_ids": [
-    "s15.text.125",
-    "s15.text.127",
-    "s15.text.128",
-    "s15.text.132",
-    "s15.text.192",
-    "s15.text.193",
-    "s15.text.194",
-    "s15.text.196"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-23T12:23:00",
-     "sha256": "712bd39ce741143e9dfab393784aa27d03cbeb9f9bbab5bba558a1711ee7d8a2",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.125"
-    },
-    {
-     "at": "0010-04-24T19:25:00",
-     "sha256": "3eae447a59ee2947ffae4fd28bb643b2e53916154571993dd19b5a15d060f171",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.194"
-    },
-    {
-     "at": "0010-04-24T19:27:00",
-     "sha256": "440e3b7f074141faeea5717605c16a13094e6d3bd23d07ad46df6bf0543e1b0a",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.196"
-    }
-   ],
-   "profile": {
-    "first": "s15.text.125",
-    "inner": {},
-    "knows": [
-     "Получила запрос подкрепления и специалистов по фуиндзюцу от операции Асумы; исход боя пока неизвестен.",
-     "Шики сообщил, что нападение на храм совершено ради Тирику, Тирику погиб, много жертв. Какудзу убит Шики как слишком опасный для перевозки; живой обезглавленный Хидан транспортируется раздельно. Шики утверждает,",
-     "Шики не готов ответить на все вопросы о методе, утверждает, что будет осторожен и прекратит вмешательство при осложнении.",
-     "Шики планирует 25 апреля посетить Мьёбоку с Джирайей и помочь с допросом по возвращении."
-    ],
-    "knows_ref": "memory/npc/tsunade.md",
-    "knows_total": 8,
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s15.text.196",
-      "what": "Шики предупредил о завтрашнем визите на Мьёбоку, поможет после возвращения. Цунадэ поручила начать допрос без него, велела разбудить её по прибытии Асумы. Шизунэ предложила ночлег."
-     }
-    ],
-    "memory_file": "archive/npc-memory/tsunade.json",
-    "memory_total": 15,
-    "name": "Цунадэ",
-    "seen": "s15.text.196",
-    "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки.",
-    "status": "present_profile",
-    "tier": "deep"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  }
- },
+ "present_npcs": {},
  "recent_turns": [
   {
    "id": "s15.text.196",
    "line": "Шики предупредил о завтрашнем визите на Мьёбоку, поможет после возвращения. Цунадэ поручила начать допрос без него, велела разбудить её по прибытии Асумы. Шизунэ предложила ночлег."
+  },
+  {
+   "id": "s15.text.197",
+   "line": "Шики отказался от предложенного ночлега и пришёл в гостиницу, показанную Наруто (s15.text.157). Хозяин предложил свободную комнату за 600 рё; ещё не оплачена."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики перед столом Цунадэ в закрытом кабинете, Шизунэ присутствует.",
-  "pressure": "Допрос с Риннеганом отложен до возвращения Шики; обычный допрос и медицинский осмотр идут независимо. Место ночлега ещё не выбрано.",
-  "situation": "Шики предупредил Цунадэ и Шизунэ о завтрашнем визите с Джирайей на Мьёбоку, предложил помочь с допросом после возвращения и сообщил о необходимости отдыха. Цунадэ согласилась, Ибики начинает работу независимо от Шики; по возвращении Шики должен зайти к ней. Приказала разбудить её по прибытии Асумы. Шизунэ открыла дверь и предложила подготовить комнату для ночлега."
+  "positions": "Шики у стойки гостиницы, перед хозяином лежит регистрационная книга и ключ.",
+  "pressure": "Можно снять комнату; завтрашняя встреча с Джирайей в 09:00.",
+  "situation": "Шики ушёл из резиденции в двухэтажную гостиницу с фонарями осенних листьев, показанную Наруто вчера. Хозяин предложил свободную комнату на втором этаже за 600 рё с горячей водой и завтраком; регистрация и оплата ещё не совершены."
  },
  "shiki": {
   "body": "Постоянный режим дракона и устойчивый синтез Инь–Ян–природной энергии s15.text.131; единая сущность, холодная цельная кожа, чёрная кровь и корни, чешуя. Риннешаринган выключен.",
@@ -1290,32 +782,16 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {
-  "s15.text.125": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Пятница, 23 апреля 1287 года · 12:05</text>\n\n### Конохагакуре\n\n**Мугами Шики:** — Тогда, я полагаю, в Долину Завершения мне не нужно. Пойду к ней прямо сейчас.\n\nЗа девять лет деревня успела измениться.\n\nСтарые торговые ряды вытянулись вдоль главной улицы, поглотив несколько переулков. Там, где во время экзамена стояли временные палатки приезжих торговцев, теперь возвышались двухэтажные дома с широкими балконами. Под черепичными крышами сушилось бельё. Над открытыми жаровнями поднимался ароматный дым.\n\nВесна зде\n[... sou…",
-   "player": "Тогда я полагаю в долину завершения мне не нужно. Пойду к ней прямо сейчас #иду и наполняй сцены описаниями как хорошую художественную книгу#",
-   "source": "archive/session-015-turns.jsonl"
-  },
-  "s15.text.196": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:27</text>\n\n### Резиденция Хокагэ\n\n**Мугами Шики:** — Только завтра я планирую с Джирайей-саном посетить гору Мьёбоку. Учитывайте это. После я помогу. А сейчас мне нужно отдохнуть.\n\n**Цунадэ:** — С Джирайей? На Мьёбоку?\n\nОна коротко усмехнулась.\n\n**Цунадэ:** — Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Великому Жабьему Мудрецу.\n\nШизунэ поправила лежавшие на столе документы.\n\n**Цунадэ:** — Иди отдыхай. Ибики начнёт работу без тебя. Когда вернёшься, зайди ко мне.\n…",
-   "player": "Только завтра я планирую с джирайей-саном посетить гору мьябоку. Учитывайте это. После я помогу. А сейчас мне нужно отдохнуть. ",
-   "source": "archive/session-015-turns.jsonl"
-  }
- },
- "source_passages_ref": "archive/session-*-turns.jsonl",
- "source_passages_truncated": true,
+ "source_passages": {},
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "80e0ba4e8cc0e19ce49492a3e91b839c738bf72d",
-  "turn": "s15.text.196"
+  "sha": "7ef1c77c18e7310cc63f622072d5c5eb44dc08be",
+  "turn": "s15.text.197"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {
-   "shizune": "memory/npc/shizune.md",
-   "tsunade": "memory/npc/tsunade.md"
-  },
+  "present": {},
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
