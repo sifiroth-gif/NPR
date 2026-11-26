@@ -77,6 +77,7 @@
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
 - Кусагакуре, Восточный склад водоснабжения · `places/kusagakure-vostochnyy-sklad-vodosnabzheniya` · 5 ход(ов), s03–s03
 - Страна Огня, Храм Огня · `places/strana-ognya-khram-ognya` · 5 ход(ов), s15–s15
+- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 5 ход(ов), s16–s16
 - Страна Травы, мост Тэнти · `places/strana-travy-most-tenti` · 5 ход(ов), s12–s12
 - Страна Травы, Пограничная застава «Ивовый брод» · `places/strana-travy-pogranichnaya-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Страна Травы, восточный склон ложбины · `places/strana-travy-vostochnyy-sklon-lozhbiny` · 5 ход(ов), s12–s12
@@ -88,7 +89,6 @@
 - Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 4 ход(ов), s15–s15
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Мьёбоку, источник жабьего масла · `places/meboku-istochnik-zhabego-masla` · 4 ход(ов), s16–s16
-- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 4 ход(ов), s16–s16
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
 - Страна Травы, лесистый склон к юго-западу от заставного моста · `places/strana-travy-lesistyy-sklon-k-yugo-zapadu-ot-zastavnogo-most` · 4 ход(ов), s13–s13
