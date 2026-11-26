@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.177: Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.176: Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Хидан (`npc/hidan`), линия `shiki_save_asuma`, бой
 - s15.text.175: Хидан (`npc/hidan`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Какудзу (`npc/kakuzu`), бой
 - s15.text.174: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Шикамару Нара (`npc/shikamaru`), бой
@@ -61,4 +62,3 @@
 - s15.text.120: Маю (`npc/fire_road_mayu`), Хисато (`npc/fire_road_hisato`), Кадзунэ (`npc/fire_road_jonin`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.119: Наёмник у шахты (`npc/naemnik_u_shakhty`), Кадзунэ (`npc/fire_road_jonin`), Коюки (`npc/western_nest_young_courier`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
 - s15.text.118: Кадзунэ (`npc/fire_road_jonin`), Коюки (`npc/western_nest_young_courier`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
-- s15.text.117: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Кадзунэ (`npc/fire_road_jonin`), поправки игрока: 1

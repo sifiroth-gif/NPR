@@ -52,6 +52,7 @@
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
+- Страна Огня, пункт выплаты наград · `places/strana-ognya-punkt-vyplaty-nagrad` · 7 ход(ов), s15–s15
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
 - Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 6 ход(ов), s15–s15
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
@@ -62,7 +63,6 @@
 - Кусагакуре, УВБ · `places/kusagakure-uvb` · 6 ход(ов), s06–s06
 - Кусагакуре, западный шлюз · `places/kusagakure-zapadnyy-shlyuz` · 6 ход(ов), s11–s11
 - Рьючидо, галерея последней линьки · `places/ryuchido-galereya-posledney-linki` · 6 ход(ов), s14–s14
-- Страна Огня, пункт выплаты наград · `places/strana-ognya-punkt-vyplaty-nagrad` · 6 ход(ов), s15–s15
 - Страна Огня, старая лесная дорога к центральным провинциям · `places/strana-ognya-staraya-lesnaya-doroga-k-tsentralnym-provintsiy` · 6 ход(ов), s15–s15
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 6 ход(ов), s15–s15
