@@ -46,6 +46,7 @@
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
+- Мьёбоку, храм Великого Жабьего Мудреца · `places/meboku-khram-velikogo-zhabego-mudretsa` · 8 ход(ов), s15–s16
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
@@ -53,7 +54,6 @@
 - Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
-- Мьёбоку, храм Великого Жабьего Мудреца · `places/meboku-khram-velikogo-zhabego-mudretsa` · 7 ход(ов), s15–s16
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03

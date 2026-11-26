@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.001",
+  "cursor": "s16.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -131,7 +131,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.111",
+          "seen": "s16.text.002",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -139,7 +139,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json"
+        "recovery/cast/akihiro.json",
+        "s16.text.002"
       ]
     },
     "arai_mitiko": {
@@ -1206,7 +1207,8 @@
     "fire_road_hisato": {
       "aliases": [
         "fire road hisato",
-        "Хисато"
+        "Хисато",
+        "fire_road_hisato"
       ],
       "facts": [],
       "id": "fire_road_hisato",
@@ -1245,11 +1247,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.153"
+          "seen": "s16.text.002"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_hisato.json"
+        "recovery/cast/fire_road_hisato.json",
+        "s16.text.002"
       ]
     },
     "fire_road_jonin": {
@@ -1765,7 +1768,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1776,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:13:00",
-          "excerpt": "вно изгибались, подобно корням подводного растения, хотя в окружающем воздухе едва ощущалось движение. Фукасаку отступил на одну ступень. Джирайя разомкнул скрещённые руки. **Джирайя:** — Шики… Саннин замолчал, проследив взглядом за одним из отростков. Его осн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.206"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -1794,11 +1790,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.001"
+        },
+        {
+          "at": "0010-04-25T09:19:00",
+          "excerpt": "1287 года · 09:19</text> ### Мьёбоку. Храм Великого Жабьего Мудреца **Мугами Шики:** — Она — это я. Фукасаку медленно повернулся к Шики. Джирайя перестал рассматривать свиток. Его рука, до этого небрежно лежавшая на колене, опустилась на каменный пол. Гамамару",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.002"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.001",
+          "seen": "s16.text.002",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1807,7 +1810,8 @@
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.002"
       ]
     },
     "gaara": {
@@ -1941,7 +1945,7 @@
       "id": "gamamaru",
       "kind": "npc",
       "label": "Гамамару",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-04-24T12:38:00",
@@ -1949,13 +1953,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.188"
-        },
-        {
-          "at": "0010-04-25T09:13:00",
-          "excerpt": "роследив взглядом за одним из отростков. Его основание уходило под одежду, непосредственно в живую плоть. Гамамару медленно выпрямился. Исчезла старческая рассеянность, с которой он ещё недавно обращался к своему ученику. **Гамамару:** — Вот оно. Он приблизил ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.206"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -1970,13 +1967,20 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.001"
+        },
+        {
+          "at": "0010-04-25T09:19:00",
+          "excerpt": "естал рассматривать свиток. Его рука, до этого небрежно лежавшая на колене, опустилась на каменный пол. Гамамару открыл глаза шире. На морщинистой оранжевой коже старейшины дрогнули тяжёлые веки. **Фукасаку:** — Постой… Один источник чакры. Именно это я почувс",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.002"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение природного равновесия.",
           "role": "Старейшина Мьёбоку, пророческие сны.",
-          "seen": "s16.text.001",
+          "seen": "s16.text.002",
           "stance": "Любопытство к гостю.",
           "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
           "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
@@ -1990,7 +1994,8 @@
       ],
       "sources": [
         "recovery/cast/gamamaru.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.002"
       ]
     },
     "gamamaru_nemera_dream_scroll": {
@@ -2510,7 +2515,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2518,13 +2523,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:13:00",
-          "excerpt": "одного растения, хотя в окружающем воздухе едва ощущалось движение. Фукасаку отступил на одну ступень. Джирайя разомкнул скрещённые руки. **Джирайя:** — Шики… Саннин замолчал, проследив взглядом за одним из отростков. Его основание уходило под одежду, непосред",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.206"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -2539,11 +2537,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.001"
+        },
+        {
+          "at": "0010-04-25T09:19:00",
+          "excerpt": ". Храм Великого Жабьего Мудреца **Мугами Шики:** — Она — это я. Фукасаку медленно повернулся к Шики. Джирайя перестал рассматривать свиток. Его рука, до этого небрежно лежавшая на колене, опустилась на каменный пол. Гамамару открыл глаза шире. На морщинистой о",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.002"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.001",
+          "seen": "s16.text.002",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2552,7 +2557,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.002"
       ]
     },
     "jiro_caravan_guard": {
@@ -5792,13 +5798,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.001",
+        "s16.text.002",
         "s15.text.202",
         "s15.text.203",
         "s15.text.204",
         "s15.text.205",
         "s15.text.206",
-        "s15.text.207"
+        "s15.text.207",
+        "s16.text.001"
       ]
     },
     "place:02d2db9d9042a981": {
@@ -21031,5 +21038,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1381
+  "source_turns_indexed": 1382
 }

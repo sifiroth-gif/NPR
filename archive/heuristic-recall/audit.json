@@ -1,8 +1,8 @@
 {
-  "documents": 3253,
-  "generic_probe_count": 15,
-  "generic_probe_hit_at_10": 15,
-  "groups": 17,
+  "documents": 3254,
+  "generic_probe_count": 16,
+  "generic_probe_hit_at_10": 16,
+  "groups": 18,
   "indexed_sessions": [
     1,
     2,
@@ -18,109 +18,116 @@
     12,
     13,
     14,
-    15
+    15,
+    16
   ],
   "limitations": [
     "Historical first session without a curated played/void index remains review_required",
     "Source recall is not semantic entailment or NPC witnessed knowledge",
     "Benchmark is warmed local file/cache timing, not remote GitHub network latency"
   ],
-  "load_ms": 131.18,
+  "load_ms": 168.77,
   "probes": [
     {
-      "query_ms": 98.88,
+      "query_ms": 136.0,
       "query_terms": 1,
       "session": 1,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 98.86,
+      "query_ms": 137.62,
       "query_terms": 1,
       "session": 2,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 99.07,
+      "query_ms": 136.69,
       "query_terms": 1,
       "session": 3,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 106.51,
+      "query_ms": 151.24,
       "query_terms": 1,
       "session": 4,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 146.68,
+      "query_ms": 212.74,
       "query_terms": 1,
       "session": 5,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 101.03,
+      "query_ms": 139.08,
       "query_terms": 1,
       "session": 6,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 99.68,
+      "query_ms": 137.19,
       "query_terms": 1,
       "session": 7,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 104.14,
+      "query_ms": 142.24,
       "query_terms": 1,
       "session": 8,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 100.83,
+      "query_ms": 137.19,
       "query_terms": 1,
       "session": 9,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 99.61,
+      "query_ms": 139.32,
       "query_terms": 1,
       "session": 10,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 100.25,
+      "query_ms": 135.61,
       "query_terms": 1,
       "session": 11,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 115.41,
+      "query_ms": 136.36,
       "query_terms": 1,
       "session": 12,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 101.72,
+      "query_ms": 137.04,
       "query_terms": 1,
       "session": 13,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 100.47,
+      "query_ms": 136.86,
       "query_terms": 1,
       "session": 14,
       "source_hit_at_10": true
     },
     {
-      "query_ms": 99.72,
+      "query_ms": 138.93,
       "query_terms": 1,
       "session": 15,
+      "source_hit_at_10": true
+    },
+    {
+      "query_ms": 161.19,
+      "query_terms": 1,
+      "session": 16,
       "source_hit_at_10": true
     }
   ],
   "schema": "npr-recall-audit/1",
-  "shards": 107,
-  "source_coverage_ok": false,
+  "shards": 108,
+  "source_coverage_ok": true,
   "source_sessions": [
     1,
     2,
@@ -139,9 +146,7 @@
     15,
     16
   ],
-  "unindexed_source_sessions": [
-    16
-  ],
-  "warm_query_median_ms": 100.47,
-  "warm_query_p95_ms": 146.68
+  "unindexed_source_sessions": [],
+  "warm_query_median_ms": 137.4,
+  "warm_query_p95_ms": 212.74
 }

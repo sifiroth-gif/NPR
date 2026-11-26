@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.002: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), Мугами Акихиро (`npc/akihiro`)
 - s15.text.207: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), вещь `gamamaru_nemera_dream_scroll`
 - s15.text.206: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
 - s15.text.205: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
@@ -59,4 +60,3 @@
 - s15.text.152: Коюки (`npc/western_nest_young_courier`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), бой
 - s15.text.151: Джирайя (`npc/jiraiya`)
 - s15.text.150: Джирайя (`npc/jiraiya`), shima (`npc/shima`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.149: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
