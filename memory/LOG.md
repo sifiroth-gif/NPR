@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.075: план сюжета
 - s16.text.074: поправки игрока: 2
 - s16.text.073: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), линия `kiri_bingo_negotiations`
 - s16.text.072: поправки игрока: 4
@@ -61,4 +62,3 @@
 - s16.text.018: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), вещь `myoboku_route_sketch_s16`, поправки игрока: 1
 - s16.text.017: Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), вещь `shima_food_s16`, вещь `myoboku_route_sketch_s16`, поправки игрока: 1
 - s16.text.016: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), поправки игрока: 1
-- s16.text.015: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`)

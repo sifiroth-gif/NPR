@@ -105,7 +105,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.074",
+  "cursor": "s16.text.075",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -410,11 +410,11 @@
  "cursor": {
   "at": "0010-04-26T17:40:00",
   "date": "Понедельник, 26 апреля 1287 года",
-  "id": "s16.text.074",
+  "id": "s16.text.075",
   "place": "Страна Огня, восточный торговый тракт, подход к побережью",
   "time": "17:40"
  },
- "digest": "9f7f4ce1747c275ad03285fa12dd619aadc8540564ae6d03301388f7de883af4",
+ "digest": "d113048557bafa15aaad2441f0d51388e49d8a94b1e140b0447434826e88e008",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -549,18 +549,18 @@
    "value": 600.0
   },
   "dice": [
-   5,
-   1,
-   16,
+   12,
+   8,
+   10,
+   17,
+   9,
+   13,
+   11,
    20,
    19,
-   6,
-   15,
-   7,
    12,
-   2,
-   17,
-   4
+   8,
+   15
   ],
   "injuries": {
    "hidan": [
@@ -776,6 +776,19 @@
     "threads": [
      "shiki_underground_career"
     ]
+   },
+   {
+    "endings_ref": "recovery/GM_ONLY.json:plot.events.yig_world_echo",
+    "id": "yig_world_echo",
+    "kind": "side",
+    "limit": {
+     "scenes": 4
+    },
+    "notes_ref": "recovery/GM_ONLY.json:plot.events.yig_world_echo",
+    "question": "Как изменятся местные практики и отношение людей к змеям после независимого вмешательства древней воли?",
+    "scenes": 1,
+    "scenes_left": 3,
+    "title": "Змеиные кладки"
    }
   ],
   "main": {
@@ -865,8 +878,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "3597b762b45726bf894121d1f4e63fafce7fa747",
-  "turn": "s16.text.074"
+  "sha": "1cb885ed0b0cf3dbbcb773234622053740fc3012",
+  "turn": "s16.text.075"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -875,7 +888,30 @@
   "scene": "memory/SCENE.md"
  },
  "world": {
-  "clocks": [],
+  "clocks": [
+   {
+    "due": "0010-04-29T18:00:00",
+    "id": "yig_brood_disturbance",
+    "if_unopposed": "Змеи покидают часть привычных укрытий и сходятся в районе разорённых кладок; промысел там останавливается, сборщики отступают, жители передают противоречивые свидетельства.",
+    "minutes": 4340.0,
+    "owner": "Йиг и местные змеи",
+    "signs": "Независимые свидетельства жителей и сборщиков лекарственного сырья о необычном перемещении змей и прекращении промысла; только если весть достигает Шики.",
+    "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_brood_disturbance",
+    "status": "scheduled",
+    "what": "Реакция на разорение кладок в южном предгорье Страны Рек"
+   },
+   {
+    "due": "0010-05-04T12:00:00",
+    "id": "yig_local_response",
+    "if_unopposed": "Торговцы меняют район закупок, часть местных жителей восстанавливает старый обряд у каменных убежищ; свидетельства расходятся по торговым дорогам. Проверить результат первого процесса, не считать его неизбежным при вмешательстве.",
+    "minutes": 11180.0,
+    "owner": "Местные жители и торговцы Страны Рек",
+    "signs": "Изменение поставок редких животных, рассказы путников и лекарей; причина неизвестна.",
+    "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_local_response",
+    "status": "scheduled",
+    "what": "Независимая реакция на прекращение промысла и перемещение змей"
+   }
+  ],
   "due_now": [],
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
@@ -886,12 +922,12 @@
    "player_preference_overlapping_plans"
   ],
   "secret_topics": [
-   "v7_personal_targeting",
-   "v7_tapping",
    "vials",
    "visitor_claim",
    "ward_lock_broken",
-   "willow_observer_employer"
+   "willow_observer_employer",
+   "yig_private_profile",
+   "yig_private_world"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
