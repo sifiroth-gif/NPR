@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.017: Джирайя (`npc/jiraiya`), план сюжета
+- s17.text.016: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.015: Джирайя (`npc/jiraiya`)
 - s17.text.014: Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), план сюжета
 - s17.text.013: Джирайя (`npc/jiraiya`)
@@ -58,5 +60,3 @@
 - s16.text.100: Коюки (`npc/western_nest_young_courier`), Портовый чиновник (`npc/fire_port_official`)
 - s16.text.099: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Старая змея святилища (`npc/river_shrine_elder_snake_s16`), поправки игрока: 1
 - s16.text.098: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Старая змея святилища (`npc/river_shrine_elder_snake_s16`), Изумо Камидзуки (`npc/izumo`), Какаши Хатакэ (`npc/kakashi`)
-- s16.text.097: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Старая змея святилища (`npc/river_shrine_elder_snake_s16`), поправки игрока: 1
-- s16.text.096: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Цунадэ (`npc/tsunade`), Шикамару Нара (`npc/shikamaru`)
