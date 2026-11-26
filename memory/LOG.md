@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.066: Такэру (`npc/takeru`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s16.text.065: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s16.text.064: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.063: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
@@ -61,4 +62,3 @@
 - s16.text.009: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`), вещь `myoboku_rikudo_legend_book`, поправки игрока: 1
 - s16.text.008: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
 - s16.text.007: Сима (`npc/shima`), Джирайя (`npc/jiraiya`)
-- s16.text.006: Сима (`npc/shima`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), поправки игрока: 1

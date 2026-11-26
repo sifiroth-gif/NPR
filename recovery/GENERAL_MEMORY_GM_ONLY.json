@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.065",
+  "cursor": "s16.text.066",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -507,20 +507,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s16.text.065:0": {
+    "canon:s16.text.066:0": {
       "aliases": [
-        "canon:s16.text.065:0",
-        "s16.text.065: уточнение по прямой поправке игрока и первичным s15.text.134–135: подписанный 23.04.1287 договор Конохи и Шики уже содержит п.5 «Исследования организма, тканей и насл"
+        "canon:s16.text.066:0",
+        "s16.text.066: Игрок вновь указал на отсутствие исторического эха. Применять постоянное требование s13.text.099: события и последствия давних сессий (месяцы, годы), а не только неда"
       ],
       "facts": [],
-      "id": "canon:s16.text.065:0",
+      "id": "canon:s16.text.066:0",
       "kind": "canon",
-      "label": "s16.text.065: уточнение по прямой поправке игрока и первичным s15.text.134–135: подписанный 23.04.1287 договор Конохи и Шики уже содержит п.5 «Исследования организма, тканей и насл",
+      "label": "s16.text.066: Игрок вновь указал на отсутствие исторического эха. Применять постоянное требование s13.text.099: события и последствия давних сессий (месяцы, годы), а не только неда",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.065"
+        "s16.text.066"
       ]
     },
     "captive_guard": {
@@ -2516,7 +2516,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 83,
+      "mention_count": 84,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2524,13 +2524,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:46:00",
-          "excerpt": "ршенно неподвижно, и только побелевшие пальцы, сжимавшие край стола, выдавали перемену в её состоянии. Джирайя медленно провёл ладонью по лицу. Его тяжёлая фигура осела в кресле. **Джирайя:** — Сколько же раз я слышал подобное… Он произнёс это глухо, почти себ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.063"
         },
         {
           "at": "0010-04-25T20:48:00",
@@ -2545,21 +2538,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.065"
+        },
+        {
+          "at": "0010-04-25T20:59:00",
+          "excerpt": "стей, но не могу обещать явиться Цунадэ кивнула, принимая последнее условие без особого удовольствия. Джирайя поднял ладонь на прощание. *** <text color=\"secondary\" size=\"xs\">20:59</text> ### Главные ворота Конохагакуре Вечерний воздух пах древесным дымом. Тор",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.066"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.065",
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
-        },
-        {
+          "seen": "s16.text.066",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.065"
+        "s16.text.066"
       ]
     },
     "jiro_caravan_guard": {
@@ -3155,7 +3151,7 @@
       "id": "keiji",
       "kind": "npc",
       "label": "Кэйдзи",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0001-07-02T12:57:00",
@@ -3163,13 +3159,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.049"
-        },
-        {
-          "at": "0010-03-25T20:59:45",
-          "excerpt": "Они преследовали Орочимару. Поэтому будьте аккуратны. Особенно если нога твоя ещё даёт о себе знать. Кэйдзи улыбнулся. **Кэйдзи:** — После долгих переходов иногда ноет. Но бегать и драться не мешает. Сэйна говорила, что с возрастом может стать хуже. Старший ши",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.012"
         },
         {
           "at": "0010-03-29T16:20:00",
@@ -3184,6 +3173,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.014"
+        },
+        {
+          "at": "0010-04-25T20:59:00",
+          "excerpt": "на на тюнина, он подозревал Шики в намерении завладеть их свитком. Шики оказал медицинскую помощь его товарищу Кэйдзи и ушёл, ничего не потребовав взамен. Такэру посмотрел на приближающегося путника, затем сверился с журналом. Его губы беззвучно повторили напи",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.066"
         }
       ],
       "projections": [
@@ -9960,6 +9956,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.066",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
@@ -10788,7 +10785,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.065",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -10797,7 +10793,8 @@
         "s16.text.061",
         "s16.text.062",
         "s16.text.063",
-        "s16.text.064"
+        "s16.text.064",
+        "s16.text.065"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20215,6 +20212,57 @@
         "recovery/cast/takagi_ren.json"
       ]
     },
+    "takeru": {
+      "aliases": [
+        "takeru",
+        "Такэру"
+      ],
+      "facts": [],
+      "id": "takeru",
+      "kind": "npc",
+      "label": "Такэру",
+      "mention_count": 10,
+      "mentions": [
+        {
+          "at": "0001-07-02T12:57:00",
+          "excerpt": "дтвердила. **Аки\\:** — Нам нужно пройти. --- Юноша с рассечённой бровью приблизился к часовому. **Второй генин Конохи, негромко\\:** — Такэру, не надо. Но тот слегка отстранил его здоровой рукой. **Такэру\\:** — Я всего лишь разговариваю. Рэн чуть выдвинулся впе",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.049"
+        },
+        {
+          "at": "0006-09-26T03:36:00",
+          "excerpt": "оверили показания твоих задержанных. Оба живы. Медицинский осмотр прошли. Сведения о человеке, называвшем себя Сиба Такэру, пока не подтверждены. Она сделала паузу. На фоне послышался чей-то окрик. — В восемь сорок наши люди проверяли западный служебный корпус",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.145"
+        },
+        {
+          "at": "0006-10-03T06:49:00",
+          "excerpt": "его у Центральной башни сорок четвёртого полигона. Тогда тринадцатилетний генин сидел на камне с повреждённым коленом, а его товарищ Такэру с таким рвением изображал охрану, что едва не помешал лечению. Теперь Кэйдзи уверенно стоял на обеих ногах. Он заметил Ш",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.030"
+        },
+        {
+          "at": "0010-04-25T20:59:00",
+          "excerpt": "рослый мужчина, в чертах которого ещё угадывался крепкий подросток, встреченный Шики почти девять лет назад. Такэру. Тогда, во время второго этапа экзамена на тюнина, он подозревал Шики в намерении завладеть их свитком. Шики оказал медицинскую помощь его товар",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.066"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s16.text.066"
+        }
+      ],
+      "sources": [
+        "recovery/cast/takeru.json",
+        "recovery/HOT.json",
+        "s16.text.066"
+      ]
+    },
     "tamura_reika": {
       "aliases": [
         "tamura reika",
@@ -20571,7 +20619,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 63,
+      "mention_count": 64,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20579,13 +20627,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:46:00",
-          "excerpt": "руист, это не так. Просто бумаги...эх...ну надеюсь вы поняли На словах о живых, числившихся мёртвыми, Цунадэ прикрыла глаза. Мышцы её челюсти напряглись. Она сидела совершенно неподвижно, и только побелевшие пальцы, сжимавшие край стола, выдавали перемену в её",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.063"
         },
         {
           "at": "0010-04-25T20:48:00",
@@ -20600,21 +20641,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.065"
+        },
+        {
+          "at": "0010-04-25T20:59:00",
+          "excerpt": "есть, насчёт реконструкции и дальнейшего дела с Акацуки буду ждать вестей, но не могу обещать явиться Цунадэ кивнула, принимая последнее условие без особого удовольствия. Джирайя поднял ладонь на прощание. *** <text color=\"secondary\" size=\"xs\">20:59</text> ###",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.066"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.065",
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-        },
-        {
+          "seen": "s16.text.066",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s16.text.065"
+        "s16.text.066"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21426,5 +21470,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1443
+  "source_turns_indexed": 1444
 }
