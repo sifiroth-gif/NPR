@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.020",
+  "cursor": "s17.text.021",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 120,
+      "mention_count": 121,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:09:00",
-          "excerpt": "color=\"secondary\" size=\"xs\">Среда, 5 мая 1287 года · 19:09</text> ### Амэгакурэ. Подземные галереи Джирайя выбрался из пасти жабы и бесшумно переместился к водостоку. Шики последовал за ним, минуя участки, куда проникали капли дождя. Оказавшись под каменным св",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.018"
         },
         {
           "at": "0010-05-05T19:10:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.020"
+        },
+        {
+          "at": "0010-05-05T19:14:00",
+          "excerpt": "ни располагались вдоль его носа и под нижней губой. Его лицо Шики уже видел в воспоминаниях Хидана. Пэйн. Джирайя медленно приподнялся над трубой. Его губы беззвучно сложились в знакомое имя. Мужчина наверху остановился возле открытой двери. **Пэйн:** — Когда ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.020",
-          "state": "Проник с Шики в подземную галерею, отменил призыв, остановился у лестницы, просит тишины."
+          "seen": "s17.text.021",
+          "state": "Узнал лицо Яхико, самостоятельно начал осторожный подъём по лестнице после ухода Пэйна."
         },
         {
-          "state": "Проник с Шики в подземную галерею, отменил призыв, остановился у лестницы, просит тишины."
+          "state": "Узнал лицо Яхико, самостоятельно начал осторожный подъём по лестнице после ухода Пэйна."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.020"
+        "s17.text.021"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -14338,9 +14338,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.020",
+        "s17.text.021",
         "s17.text.018",
-        "s17.text.019"
+        "s17.text.019",
+        "s17.text.020"
       ]
     },
     "place:b111bd0da6f7617a": {
@@ -22408,5 +22409,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1529
+  "source_turns_indexed": 1530
 }
