@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.111",
+  "cursor": "s16.text.112",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,6 +527,22 @@
         "s09.text.067"
       ]
     },
+    "canon:s16.text.112:0": {
+      "aliases": [
+        "canon:s16.text.112:0",
+        "s16.text.112: повторная просьба игрока «Мастеру: больше описаний». Сохранять приоритет развернутой литературной прозы над репликами, показывать мимику, жесты, интонации и наблюдаем"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.112:0",
+      "kind": "canon",
+      "label": "s16.text.112: повторная просьба игрока «Мастеру: больше описаний». Сохранять приоритет развернутой литературной прозы над репликами, показывать мимику, жесты, интонации и наблюдаем",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.112"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -932,21 +948,24 @@
     },
     "danzo": {
       "aliases": [
-        "danzo"
+        "danzo",
+        "Шимура Данзо"
       ],
       "facts": [],
       "id": "danzo",
       "kind": "npc",
-      "label": "danzo",
+      "label": "Шимура Данзо",
       "mention_count": 0,
       "mentions": [],
       "projections": [
         {
-          "seen": "s09.text.071"
+          "seen": "s16.text.112"
         }
       ],
       "sources": [
-        "recovery/cast/danzo.json"
+        "recovery/cast/danzo.json",
+        "recovery/HOT.json",
+        "s16.text.112"
       ]
     },
     "deidara": {
@@ -2566,7 +2585,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 87,
+      "mention_count": 88,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2574,13 +2593,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-02T18:05:00",
-          "excerpt": "ть Сирамэ. Вечером пластина связи с Пятой Хокагэ отозвалась знакомым импульсом чакры. **Цунадэ:** — Шики, Джирайя вернулся с границы Дождя. У нас появились сведения о происходящем в Амэгакурэ. Её голос звучал непривычно сухо. На другом конце связи ненадолго во",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.104"
         },
         {
           "at": "0010-05-03T12:04:00",
@@ -2595,11 +2607,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.111"
+        },
+        {
+          "at": "0010-05-03T12:31:00",
+          "excerpt": "а глазами несколько строк. Её брови слегка приподнялись, однако она воздержалась от комментариев и вышла. Джирайя остался возле окна. Солнечный свет падал на его широкие плечи, подчёркивая седину длинных волос и глубокие морщины у глаз. Сейчас он выглядел знач",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.112"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.111",
+          "seen": "s16.text.112",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2608,8 +2627,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.111"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -3627,7 +3645,8 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3666,12 +3685,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.087",
+          "seen": "s16.text.112",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json"
+        "recovery/cast/kiri_ship_security_officer.json",
+        "s16.text.112"
       ]
     },
     "kiri_transfer_carrier": {
@@ -4313,7 +4333,8 @@
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби"
+        "Незнакомый шиноби",
+        "leaf_gate_special_inspector_s16"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
@@ -4352,12 +4373,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.108",
+          "seen": "s16.text.112",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_special_inspector_s16.json"
+        "recovery/cast/leaf_gate_special_inspector_s16.json",
+        "s16.text.112"
       ]
     },
     "lee": {
@@ -9982,7 +10004,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.111",
+        "s16.text.112",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9996,7 +10018,8 @@
         "s16.text.035",
         "s16.text.037",
         "s16.text.038",
-        "s16.text.110"
+        "s16.text.110",
+        "s16.text.111"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20092,7 +20115,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20100,13 +20123,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:58:00",
-          "excerpt": "створками. Шики подробно описывает их внешность, протекторы, характерные признаки и замеченное вооружение. Шизунэ записывает сведения на отдельные листы. Закончив, она пересчитывает их, затем зачем-то пересчитывает снова, хотя ни одного листа со стола не убира",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.031"
         },
         {
           "at": "0010-04-25T12:01:00",
@@ -20121,16 +20137,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.110"
+        },
+        {
+          "at": "0010-05-03T12:31:00",
+          "excerpt": "ние её лица осталось неприветливым. **Цунадэ:** — Что ж. Предоставим ему такую возможность. Она позвала Шизунэ и передала ей лист. Темноволосая помощница Хокагэ пробежала глазами несколько строк. Её брови слегка приподнялись, однако она воздержалась от коммент",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.112"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.110",
+          "seen": "s16.text.112",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s16.text.112"
       ]
     },
     "signalshchik": {
@@ -21211,7 +21235,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 69,
+      "mention_count": 70,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21219,13 +21243,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T11:56:00",
-          "excerpt": "о так и не сделало его внешность привычной. Шиноби потёр переносицу. **Котэцу:** — Я отправил человека к госпоже Цунадэ. Доложу и сам после смены. Он помедлил, затем понизил голос: **Котэцу:** — Мугами-сан, кто-нибудь из них представился? **Ход Шики.** Шики вы",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.109"
         },
         {
           "at": "0010-05-03T12:04:00",
@@ -21240,11 +21257,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.111"
+        },
+        {
+          "at": "0010-05-03T12:31:00",
+          "excerpt": "его людям и сказал пусть задаёт вопросы лично. Шики опустился в кресло, поставив Суми рядом с собой. Цунадэ закончила писать распоряжение и поставила печать. Услышав последние слова Шики, она коротко усмехнулась, но выражение её лица осталось неприветливым. **",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.112"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.111",
+          "seen": "s16.text.112",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -21254,7 +21278,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.111"
+        "s16.text.112"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22080,5 +22104,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1484
+  "source_turns_indexed": 1485
 }
