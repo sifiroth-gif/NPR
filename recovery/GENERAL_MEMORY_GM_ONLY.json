@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.098",
+  "cursor": "s16.text.099",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.099:0": {
+      "aliases": [
+        "canon:s16.text.099:0",
+        "s16.text.099: С 30.04.1287 в естественных пещерах нового убежища Шики добровольно поселились тёмная змея из нижнего ущелья, девять уцелевших яиц, трое вылупившихся детёнышей и неск"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.099:0",
+      "kind": "canon",
+      "label": "s16.text.099: С 30.04.1287 в естественных пещерах нового убежища Шики добровольно поселились тёмная змея из нижнего ущелья, девять уцелевших яиц, трое вылупившихся детёнышей и неск",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.099"
       ]
     },
     "captive_guard": {
@@ -2554,8 +2570,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json",
-        "s16.text.098"
+        "recovery/cast/izumo.json"
       ]
     },
     "jiraiya": {
@@ -2961,8 +2976,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s16.text.098"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -7771,6 +7785,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.099",
         "s14.text.059",
         "s14.text.060",
         "s14.text.061",
@@ -8130,11 +8145,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.098",
         "s16.text.094",
         "s16.text.095",
         "s16.text.096",
-        "s16.text.097"
+        "s16.text.097",
+        "s16.text.098"
       ]
     },
     "place:3641cb3273b1ad66": {
@@ -18424,7 +18439,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.098",
+          "seen": "s16.text.099",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
         {
@@ -18434,7 +18449,7 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s16.text.098"
+        "s16.text.099"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -18451,17 +18466,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.098",
-          "wants": "Сохранить уцелевшие кладки и безопасное место для местных змей."
-        },
-        {
+          "seen": "s16.text.099",
           "wants": "Сохранить уцелевшие кладки и безопасное место для местных змей."
         }
       ],
       "sources": [
         "recovery/cast/river_shrine_elder_snake_s16.json",
-        "recovery/HOT.json",
-        "s16.text.098"
+        "s16.text.099"
       ]
     },
     "road_villager_fumi": {
@@ -18738,7 +18749,7 @@
       "id": "ryuchi_west_elder",
       "kind": "npc",
       "label": "Старая змея",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0010-03-04T07:30:00",
@@ -18746,13 +18757,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
-        },
-        {
-          "at": "0010-04-12T16:21:00",
-          "excerpt": "ько раз коснулся воздуха над пальцами. Сирамэ резко подалась вперёд, но старшая преградила ей дорогу. **Старая змея:** — Матушка уже касалась его. Молодая положила голову на ладонь Шики, немного подождала и затем медленно обвилась вокруг запястья. Никаких пато",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.052"
         },
         {
           "at": "0010-04-29T19:43:00",
@@ -18767,6 +18771,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.098"
+        },
+        {
+          "at": "0010-04-30T02:10:00",
+          "excerpt": "Страна Рек. Нижнее ущелье Шики осторожно уложил уцелевшие яйца в мягкую ткань, сохранив их положение. Старая змея проводила переселенцев до края святилища. На прощание она коснулась головой руки Шики, после чего вернулась к каменному изваянию. Коюки возглавила",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.099"
         }
       ],
       "projections": [
@@ -21376,7 +21387,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 88,
+      "mention_count": 89,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21384,13 +21395,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-29T19:39:00",
-          "excerpt": "й вопрос, я не могу поступить иначе. #аккуратно спасаю уцелевшие яйца и детёнышей, потом спрашиваю# коюки передай что я могу и хочу ее вылечить если она позволит <text color=\"secondary\" size=\"xs\">Четверг, 29 апреля 1287 года · 19:39</text> ### Страна Рек. Древ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.096"
         },
         {
           "at": "0010-04-29T19:43:00",
@@ -21405,11 +21409,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.098"
+        },
+        {
+          "at": "0010-04-30T02:10:00",
+          "excerpt": "края святилища. На прощание она коснулась головой руки Шики, после чего вернулась к каменному изваянию. Коюки возглавила небольшую процессию. *** <text color=\"secondary\" size=\"xs\">Пятница, 30 апреля 1287 года · 02:10</text> ### Южные известняковые горы. Убежищ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.099"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.098",
+          "seen": "s16.text.099",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21419,7 +21430,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.098"
+        "s16.text.099"
       ]
     },
     "white_snake_sage": {
@@ -21911,5 +21922,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1471
+  "source_turns_indexed": 1472
 }

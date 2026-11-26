@@ -71,7 +71,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.098",
+  "cursor": "s16.text.099",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -80,11 +80,11 @@
   },
   "focus": [
    "river_shrine_dark_snake_s16",
-   "river_shrine_elder_snake_s16",
    "western_nest_young_courier",
-   "place:35bb4f6c72178d6b"
+   "place:2b7d9e1b78d00caa",
+   "ryuchi_west_elder"
   ],
-  "focus_bytes": 1239,
+  "focus_bytes": 1546,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -98,12 +98,70 @@
   "status": "focused",
   "thematic": {
    "basis": "scene_continuation",
-   "entries": [],
+   "entries": [
+    "chakra.black",
+    "eyes.ems",
+    "fusion.tendrils",
+    "genome.zero",
+    "pact.contact",
+    "sage.permanent",
+    "sage.poison",
+    "seals.speed",
+    "shunshin.zero",
+    "weapon.sumi",
+    "combat.genjutsu",
+    "combat.scalpel",
+    "element.fireball",
+    "element.ice",
+    "element.lightning",
+    "element.phoenix",
+    "element.water",
+    "eyes.cradle",
+    "eyes.magatsuhi",
+    "eyes.susanoo",
+    "eyes.yomotsu",
+    "fusion.development",
+    "genome.fluid",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "pact.byoton",
+    "pact.shiton",
+    "restricted.cancelled",
+    "restricted.unlearned",
+    "sage.senpo",
+    "sage.summon"
+   ],
    "matched": [],
-   "read": [],
-   "required": [],
-   "routes": [],
-   "unavailable": []
+   "read": [
+    "campaigns/shiki/ref/COMBAT.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/SHIKI.md"
+   ],
+   "required": [
+    "active forms/passives",
+    "fight/dice",
+    "chakra/injuries",
+    "opponents/positions",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time"
+   ],
+   "routes": [
+    "combat",
+    "travel"
+   ],
+   "unavailable": [
+    "fusion.development",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "restricted.cancelled",
+    "restricted.unlearned"
+   ]
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -349,13 +407,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-29T19:45:00",
-  "date": "Четверг, 29 апреля 1287 года",
-  "id": "s16.text.098",
-  "place": "Страна Рек, нижнее ущелье, древнее каменное святилище",
-  "time": "19:45"
+  "at": "0010-04-30T02:10:00",
+  "date": "Пятница, 30 апреля 1287 года",
+  "id": "s16.text.099",
+  "place": "Страна Рек, южные известняковые горы, новое подземное убежище Шики",
+  "time": "02:10"
  },
- "digest": "f91c2e111ac22239a16bfa679a6a7a9237a302f13ecf663367eba9f3eaac8390",
+ "digest": "bf5dd1c87dc33ce9dc5b6f1a38f391a2a767eef59abdaf7bb70906024bc86919",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -378,13 +436,6 @@
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s16.text.098"
-   },
-   {
-    "actor": "river_shrine_elder_snake_s16",
-    "from": "s16.text.004",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s16.text.098"
    }
   ],
   "nodes": [],
@@ -392,9 +443,9 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а); Старая змея святилища — не слышал(а).",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а); Старая змея святилища — не слышал(а).",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Коюки, Тёмная змея у кладок, Старая змея святилища. Присутствие в отряде и запись lore без источника не доказывают видимость."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Коюки, Тёмная змея у кладок. Присутствие в отряде и запись lore без источника не доказывают видимость."
  ],
  "fight": {
   "body": {
@@ -405,11 +456,11 @@
       2,
       3
      ],
-     "cat": 1,
-     "die": 2,
+     "cat": 2,
+     "die": 13,
      "exert": false,
      "load": 2.0,
-     "turn": "s16.text.096"
+     "turn": "s16.text.099"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -422,10 +473,10 @@
       4
      ],
      "cat": 4,
-     "die": 18,
+     "die": 15,
      "exert": false,
      "load": 1.0,
-     "turn": "s16.text.096"
+     "turn": "s16.text.099"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -514,21 +565,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 598.33
+   "value": 600.0
   },
   "dice": [
-   20,
-   18,
-   2,
-   20,
-   13,
-   11,
-   11,
-   8,
    14,
+   6,
    15,
-   5,
-   16
+   2,
+   6,
+   17,
+   8,
+   17,
+   19,
+   8,
+   6,
+   1
   ],
   "injuries": {
    "hidan": [
@@ -650,11 +701,6 @@
    },
    {
     "facts": [],
-    "id": "river_shrine_elder_snake_s16",
-    "kind": "npc"
-   },
-   {
-    "facts": [],
     "id": "western_nest_young_courier",
     "kind": "npc",
     "operational_cues": {
@@ -670,9 +716,26 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:35bb4f6c72178d6b",
+    "id": "place:2b7d9e1b78d00caa",
     "kind": "place",
-    "label": "Страна Рек, нижнее ущелье, древнее каменное святилище",
+    "label": "Страна Рек, южные известняковые горы, новое подземное убежище Шики",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "ryuchi_west_elder",
+    "kind": "npc",
+    "label": "Старая змея",
+    "operational_cues": {
+     "source": "recovery/cast/ryuchi_west_elder.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вернулась с Шики к западным гнёздам, остаётся рядом с молодой, не раскрывает слияние вместо Шики."
+     }
+    },
     "status": "no_verified_facts"
    }
   ],
@@ -697,26 +760,18 @@
   "due": null,
   "npcs": {
    "river_shrine_dark_snake_s16": {
-    "does": "Согласилась переселиться и собирает молодых.",
+    "does": "Выбрала защищённую полость и разместила кладку.",
     "lever": "Повторное разрушение кладок людьми.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Спасённым детёнышам нужна защита.",
+    "reads": "Новое место подходит для сохранения потомства.",
     "stage": 4,
     "step": "необратимость"
    },
-   "river_shrine_elder_snake_s16": {
-    "does": "Отказалась от переселения, остаётся у изваяния.",
-    "lever": "",
-    "next": "Новый факт — возможный сдвиг; иначе hold/down. Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
-    "reads": "Родовое место нельзя оставить совсем без присмотра.",
-    "stage": 2,
-    "step": "пересмотр"
-   },
    "western_nest_young_courier": {
-    "does": "Рассказала о пещере, предложила проводничество и попросила помочь с кладкой.",
+    "does": "Проводила змей, показала пещеры, сообщила Шики об их желании остаться.",
     "lever": "Принудительный вызов и потеря права вернуться.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Можно создать безопасное соседство без принуждения.",
+    "reads": "Убежище становится общим домом.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -740,11 +795,13 @@
   "worn": []
  },
  "last": {
+  "gm_tail": "t>\n\n### Южные известняковые горы. Убежище Шики\n\nВ подземных переходах стояла привычная прохлада. Мерный шум ручья нарушал тишину необитаемых залов.\n\nКоюки с энтузиазмом принялась показывать новым обитателям естественные пещеры. Тёмная змея выбрала защищённую сухую полость неподалёку от воды. Здесь разместили девять спасённых яиц.\n\nМолодые змеи пос…",
+  "player": "Хорошо #аккуратно беру сохраненные яйца и выдвигаемся# ",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 108,
+   "appearances": 109,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
@@ -757,8 +814,7 @@
   "overdue_owner_ids": [],
   "present_inline": [
    "western_nest_young_courier",
-   "river_shrine_dark_snake_s16",
-   "river_shrine_elder_snake_s16"
+   "river_shrine_dark_snake_s16"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
@@ -890,6 +946,16 @@
       "next": "Подготовить группу и принять добровольную помощь Шики и Коюки в переносе кладки.",
       "source_turn": "s16.text.098",
       "status": "committed"
+     },
+     {
+      "due": "0010-05-04T12:00:00",
+      "flaw": "Незнакомые условия пещеры и потребности разных видов змей.",
+      "goal": "Обеспечить сохранность кладки и освоение нового места.",
+      "id": "settle_brood_s16",
+      "if_unopposed": "Переселенцы обустроят места укрытия; состояние яиц станет яснее.",
+      "next": "Следить за яйцами и детёнышами, обследовать безопасные соседние полости.",
+      "source_turn": "s16.text.099",
+      "status": "committed"
      }
     ],
     "psyche_facets": {
@@ -898,7 +964,8 @@
      "deep_fear": "Повторное разрушение кладок людьми."
     },
     "unclocked_intents": [
-     "relocate_brood_s16"
+     "relocate_brood_s16",
+     "settle_brood_s16"
     ]
    },
    "look": {
@@ -931,7 +998,7 @@
     },
     {
      "at": "0010-04-29T19:45:00",
-     "sha256": "c974aad6e02048eb1b78548acf4daa9498c839d784c37fdf3bf833d6425a7c99",
+     "sha256": "4cb5c00fbeeb51ee34dbb658a9929017372c33378505ce861338cddbc248e2ed",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.098"
@@ -943,73 +1010,17 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.098",
-      "what": "Шики предложил змеям пещеру убежища. Тёмная змея согласилась переселиться с детёнышами, старшая отказалась покидать родовое святилище. Коюки предложила показать дорогу и попросила помочь перенести яйц"
+      "turn": "s16.text.099",
+      "what": "Шики перенёс девять яиц, Коюки проводила добровольных переселенцев в убежище. К 02:10 тёмная змея, три детёныша и несколько молодых змей разместились в естественной пещере. Старшая осталась у святилищ"
      }
     ],
     "memory_file": "archive/npc-memory/river_shrine_dark_snake_s16.json",
-    "memory_total": 5,
+    "memory_total": 6,
     "name": "Тёмная змея у кладок",
-    "seen": "s16.text.098",
+    "seen": "s16.text.099",
     "status": "present_profile",
     "tier": "developed",
     "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  },
-  "river_shrine_elder_snake_s16": {
-   "look": {
-    "внешность": "Старая змея с потускневшей чешуёй."
-   },
-   "prior_disclosure_ids": [
-    "s16.text.004",
-    "s16.text.005",
-    "s16.text.009",
-    "s16.text.011",
-    "s16.text.091",
-    "s16.text.094",
-    "s16.text.095",
-    "s16.text.098"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-25T09:37:00",
-     "sha256": "fadc938b7dd2ed122c9944fa6dd510ad51a0d686b4be117cb4414f609d86ef4b",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.004"
-    },
-    {
-     "at": "0010-04-29T19:23:00",
-     "sha256": "f296251d13985887455448eba99f25ec5d35bf36e9e0ee93829b6d6d39355636",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.095"
-    },
-    {
-     "at": "0010-04-29T19:45:00",
-     "sha256": "c974aad6e02048eb1b78548acf4daa9498c839d784c37fdf3bf833d6425a7c99",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.098"
-    }
-   ],
-   "profile": {
-    "first": "s16.text.097",
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s16.text.098",
-      "what": "Шики предложил змеям пещеру убежища. Тёмная змея согласилась переселиться с детёнышами, старшая отказалась покидать родовое святилище. Коюки предложила показать дорогу и попросила помочь перенести яйц"
-     }
-    ],
-    "memory_file": "archive/npc-memory/river_shrine_elder_snake_s16.json",
-    "memory_total": 2,
-    "name": "Старая змея святилища",
-    "seen": "s16.text.098",
-    "status": "present_profile",
-    "tier": "archetypal",
-    "wants": "Сохранить уцелевшие кладки и безопасное место для местных змей."
    },
    "source_ref": "archive/session-*-turns.jsonl"
   },
@@ -1063,7 +1074,7 @@
     },
     {
      "at": "0010-04-29T19:45:00",
-     "sha256": "c974aad6e02048eb1b78548acf4daa9498c839d784c37fdf3bf833d6425a7c99",
+     "sha256": "4cb5c00fbeeb51ee34dbb658a9929017372c33378505ce861338cddbc248e2ed",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.098"
@@ -1091,14 +1102,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.098",
-      "what": "Шики предложил змеям пещеру убежища. Тёмная змея согласилась переселиться с детёнышами, старшая отказалась покидать родовое святилище. Коюки предложила показать дорогу и попросила помочь перенести яйц"
+      "turn": "s16.text.099",
+      "what": "Шики перенёс девять яиц, Коюки проводила добровольных переселенцев в убежище. К 02:10 тёмная змея, три детёныша и несколько молодых змей разместились в естественной пещере. Старшая осталась у святилищ"
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 108,
+    "memory_total": 109,
     "name": "Коюки",
-    "seen": "s16.text.098",
+    "seen": "s16.text.099",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -1108,19 +1119,19 @@
  },
  "recent_turns": [
   {
-   "id": "s16.text.097",
-   "line": "Шики с согласия тёмной змеи вылечил повреждение бока чёрной медицинской чакрой. Старая местная змея через Коюки разрешила обоим возвращаться в святилище."
-  },
-  {
    "id": "s16.text.098",
    "line": "Шики предложил змеям пещеру убежища. Тёмная змея согласилась переселиться с детёнышами, старшая отказалась покидать родовое святилище. Коюки предложила показать дорогу и попросила помочь перенести яйца."
+  },
+  {
+   "id": "s16.text.099",
+   "line": "Шики перенёс девять яиц, Коюки проводила добровольных переселенцев в убежище. К 02:10 тёмная змея, три детёныша и несколько молодых змей разместились в естественной пещере. Старшая осталась у святилища."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики и Коюки у кладок; тёмная змея собирает молодых; старшая у основания изваяния.",
-  "pressure": "Разорённые кладки и необычное собрание змей; опасность пока не проявилась, Коюки обещала отступить.",
-  "situation": "Шики предложил безопасную пещеру убежища. Тёмная змея добровольно согласилась переселиться с детёнышами и собирает несколько молодых особей. Старшая остаётся заботиться о святилище, где, по её словам, жили предки. Коюки рассказала о подземной воде, предложила показать путь и попросила Шики помочь с яйцами. Перенос ещё не начался."
+  "positions": "Шики и Коюки в естественной части убежища; тёмная змея у кладки, молодые в соседних расщелинах.",
+  "pressure": "Прибытие домой; кладка требует обычного ухода. K-0418 временно приостановлен. ",
+  "situation": "После согласия на перенос кладки Шики и Коюки покинули святилище в 19:49. К 02:10 благополучно прибыли в убежище. Тёмная змея выбрала сухую защищённую полость в естественной пещере возле воды; девять яиц и трое детёнышей размещены, несколько молодых змей освоили соседние расщелины. Старая змея осталась у изваяния. Переселенцы добровольны, не подчинённые."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1147,17 +1158,17 @@
  },
  "source_passages_ref": "archive/session-*-turns.jsonl",
  "source_passages_truncated": true,
+ "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "29ad311d3f058ca0888f021fbec46d8b0c4fde5d",
-  "turn": "s16.text.098"
+  "sha": "80fb9bf2c5ef3a9cb1a7e7d60d38adc0692b0664",
+  "turn": "s16.text.099"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
    "river_shrine_dark_snake_s16": "memory/npc/river_shrine_dark_snake_s16.md",
-   "river_shrine_elder_snake_s16": "memory/npc/river_shrine_elder_snake_s16.md",
    "western_nest_young_courier": "memory/npc/western_nest_young_courier.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
@@ -1169,7 +1180,7 @@
     "due": "0010-05-04T12:00:00",
     "id": "yig_local_response",
     "if_unopposed": "Торговцы меняют район закупок, часть местных жителей восстанавливает старый обряд у каменных убежищ; свидетельства расходятся по торговым дорогам. Проверить результат первого процесса, не считать его неизбежным при вмешательстве.",
-    "minutes": 6735.0,
+    "minutes": 6350.0,
     "owner": "Местные жители и торговцы Страны Рек",
     "signs": "Изменение поставок редких животных, рассказы путников и лекарей; причина неизвестна.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_local_response",
@@ -1180,7 +1191,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 39966.0,
+    "minutes": 39581.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
