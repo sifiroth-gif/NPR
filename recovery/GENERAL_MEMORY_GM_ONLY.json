@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.119",
+  "cursor": "s16.text.120",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2567,7 +2567,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 95,
+      "mention_count": 96,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2575,13 +2575,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T12:35:00",
-          "excerpt": "нное внимание человека, обнаружившего, что собеседник располагает сведениями, которых у него быть не должно. Джирайя тяжело вздохнул и свернул карту. Разговор о Дожде явно придётся продолжить без Данзо. **Ход Шики.** Шики предположил связь проверяющих с Корнем",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.117"
         },
         {
           "at": "0010-05-03T12:36:00",
@@ -2596,11 +2589,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.119"
+        },
+        {
+          "at": "0010-05-03T12:48:00",
+          "excerpt": "=\"secondary\" size=\"xs\">Понедельник, 3 мая 1287 года · 12:48</text> ### Конохагакуре. Кабинет Хокагэ Джирайя развернул карту и прижал её углы чернильницей и тяжёлой деревянной подставкой. На бумаге Амэгакурэ представлялась небольшим скоплением улиц, каналов и п",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.120"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.119",
+          "seen": "s16.text.120",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2610,7 +2610,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.119"
+        "s16.text.120"
       ]
     },
     "jiro_caravan_guard": {
@@ -9983,7 +9983,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.119",
+        "s16.text.120",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -10005,7 +10005,8 @@
         "s16.text.115",
         "s16.text.116",
         "s16.text.117",
-        "s16.text.118"
+        "s16.text.118",
+        "s16.text.119"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -21220,7 +21221,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 77,
+      "mention_count": 78,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21228,13 +21229,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T12:35:00",
-          "excerpt": "о увереннее. **Данзо:** — Любопытно. При каких обстоятельствах вы познакомились с этим подразделением? Цунадэ резко постучала костяшками пальцев по столу. **Цунадэ:** — Корень был официально расформирован. Однако, как я вижу, некоторые люди предпочли этого не ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.117"
         },
         {
           "at": "0010-05-03T12:36:00",
@@ -21249,11 +21243,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.119"
+        },
+        {
+          "at": "0010-05-03T12:48:00",
+          "excerpt": "человек, которого местные жители называют Богом. Его распоряжения передаёт женщина, известная как Ангел. Цунадэ нахмурилась. **Цунадэ:** — Пэйн и Конан? **Джирайя:** — Почти наверняка. Он провёл пальцем вдоль восточной границы Страны Дождя. По сведениям его ис",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.120"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.119",
+          "seen": "s16.text.120",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -21263,7 +21264,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.119"
+        "s16.text.120"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22089,5 +22090,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1492
+  "source_turns_indexed": 1493
 }
