@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.102",
+  "cursor": "s15.text.103",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -507,38 +507,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.102:0": {
-      "aliases": [
-        "canon:s15.text.102:0",
-        "s11.text.004 — действующая прямая поправка: награда 49 млн рё из s10.text.129 отменена, Кири S/48 млн. Реплики Тосэ s15.text.096–097 о 49 млн не устанавливают действительной наград"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.102:0",
-      "kind": "canon",
-      "label": "s11.text.004 — действующая прямая поправка: награда 49 млн рё из s10.text.129 отменена, Кири S/48 млн. Реплики Тосэ s15.text.096–097 о 49 млн не устанавливают действительной наград",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.102"
-      ]
-    },
-    "canon:s15.text.102:1": {
-      "aliases": [
-        "canon:s15.text.102:1",
-        "s15.text.102: ранее не определённые конкретные основания внутреннего розыска Кусы установлены по сыгранному s08.text.092–094: самовольный уход дзёнина — установленное основание; ун"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.102:1",
-      "kind": "canon",
-      "label": "s15.text.102: ранее не определённые конкретные основания внутреннего розыска Кусы установлены по сыгранному s08.text.092–094: самовольный уход дзёнина — установленное основание; ун",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.102"
       ]
     },
     "captive_guard": {
@@ -3060,7 +3028,7 @@
       "id": "kusa_head",
       "kind": "npc",
       "label": "Глава Кусагакуре",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0006-10-01T21:57:00",
@@ -3068,13 +3036,6 @@
           "source": "archive/session-005-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s05.text.016"
-        },
-        {
-          "at": "0010-04-22T06:03:00",
-          "excerpt": "ов бумаги. Волокна рассыпались между пальцами, оставив серую пыль в глубоких складках старческой кожи. **Глава Кусагакуре:** — Слились… Он произнёс это слово отдельно. Прежде, во время докладов Мугами, старик обычно изучал документы, лишь изредка поднимая глаз",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.100"
         },
         {
           "at": "0010-04-22T06:05:00",
@@ -3089,6 +3050,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.102"
+        },
+        {
+          "at": "0010-04-22T06:13:00",
+          "excerpt": "м. Внизу несколько молодых шиноби торопились на утреннее построение. Старик проследил за ними взглядом. **Глава Кусагакуре:** — Любопытное положение. Обычно подобные переговоры я веду с представителями других деревень. За ними стоят военные подразделения, терр",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.103"
         }
       ],
       "projections": [
@@ -3096,7 +3064,7 @@
           "body": "Сначала молча рассматривал сдавленную улыбку Шики и тему семейной привязанности, затем стал значительно внимательнее на слове АНБУ. На заседании был холодно-расчётлив, отложил папку дела, держит письменное назначение только готовым к оформлению при согласии; н",
           "fears": "Потерять власть над УВБ и резиденцией, допустить публичный внутриэлитный кризис",
           "role": "Глава деревни, высшая военная и административная власть Кусы",
-          "seen": "s15.text.102",
+          "seen": "s15.text.103",
           "stance": "Принимает дзёнина Мугами в поздний час, требует объяснить ночной визит; личную заинтересованность и знание Тэцу/В-7 пока не демонстрирует",
           "state": "Услышал невидимого Мугами у двери личного кабинета, ответил «Доброй ночи», не поднял тревогу. Досье 19-Т осталось у него, приказ Тацумори в силе.",
           "voice": "Сдержанный, короткие вопросы, без любезностей",
@@ -3113,7 +3081,7 @@
       "sources": [
         "recovery/cast/kusa_head.json",
         "recovery/HOT.json",
-        "s15.text.102"
+        "s15.text.103"
       ]
     },
     "kusa_leader": {
@@ -3163,6 +3131,27 @@
       ],
       "sources": [
         "recovery/cast/kusa_leader.json"
+      ]
+    },
+    "kusa_shiki_nonaggression_draft": {
+      "aliases": [
+        "kusa shiki nonaggression draft",
+        "Проект соглашения Кусагакуре и Мугами Шики"
+      ],
+      "facts": [],
+      "id": "kusa_shiki_nonaggression_draft",
+      "kind": "item",
+      "label": "Проект соглашения Кусагакуре и Мугами Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kusa_head",
+          "since": "s15.text.103"
+        }
+      ],
+      "sources": [
+        "s15.text.103"
       ]
     },
     "lee": {
@@ -6495,7 +6484,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.102",
+        "s15.text.103",
         "s05.text.016",
         "s05.text.017",
         "s05.text.019",
@@ -6508,7 +6497,8 @@
         "s15.text.052",
         "s15.text.099",
         "s15.text.100",
-        "s15.text.101"
+        "s15.text.101",
+        "s15.text.102"
       ]
     },
     "place:2b47f53e4060a559": {
@@ -19325,8 +19315,15 @@
       "status": "projected",
       "to": "kusa_head",
       "type": "held_by"
+    },
+    {
+      "from": "kusa_shiki_nonaggression_draft",
+      "source": "s15.text.103",
+      "status": "projected",
+      "to": "kusa_head",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1276
+  "source_turns_indexed": 1277
 }
