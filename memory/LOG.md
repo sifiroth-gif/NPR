@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.180: Хидан (`npc/hidan`)
 - s15.text.179: Хидан (`npc/hidan`), Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`)
 - s15.text.178: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.177: Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
@@ -61,4 +62,3 @@
 - s15.text.123: Маю (`npc/fire_road_mayu`), Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.122: Нацуки (`npc/fire_road_natsuki`), Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.121: Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Маю (`npc/fire_road_mayu`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.120: Маю (`npc/fire_road_mayu`), Хисато (`npc/fire_road_hisato`), Кадзунэ (`npc/fire_road_jonin`), Коюки (`npc/western_nest_young_courier`)

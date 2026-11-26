@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.179",
+  "cursor": "s15.text.180",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -434,8 +434,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json",
-        "s15.text.179"
+        "recovery/cast/asuma.json"
       ]
     },
     "baki": {
@@ -2125,7 +2124,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2133,13 +2132,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:38:32",
-          "excerpt": "кудзу в шоке потерял чемодан, прекратил сопротивление и предложил деньги и сведения. Асума предложил взять живым; Хидан обездвижен.",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.176"
         },
         {
           "at": "0010-04-24T07:38:50",
@@ -2154,12 +2146,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.179"
+        },
+        {
+          "at": "0010-04-24T07:39:15",
+          "excerpt": "года · 07:39</text> **Мугами Шики:** — Слушай, а если я растворю твоё тело, голова останется жить? Хидан перестал улыбаться. **Хидан:** — Растворишь? Он попытался повернуть голову, чтобы увидеть собственное тело. **Хидан:** — Дзясин даровал мне бессмертие. Мож",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.180"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.179",
+          "seen": "s15.text.180",
           "state": "Жив, обезглавлен, голос хриплый; части разделены, оружие у деревьев."
         },
         {
@@ -2170,7 +2169,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.179"
+        "s15.text.180"
       ]
     },
     "hirano": {
@@ -2926,8 +2925,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakuzu.json",
-        "s15.text.179"
+        "recovery/cast/kakuzu.json"
       ]
     },
     "kankuro": {
@@ -11922,10 +11920,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.179",
+        "s15.text.180",
         "s15.text.176",
         "s15.text.177",
-        "s15.text.178"
+        "s15.text.178",
+        "s15.text.179"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -18719,7 +18718,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18727,13 +18726,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T07:38:15",
-          "excerpt": "тво исчезнет. Шикамару посмотрел на тени деревьев, вытянувшиеся по земле в лучах восходящего солнца. **Шикамару Нара:** — Я смогу удержать того, кто снаружи. Но неизвестно, насколько надолго. **Асума Сарутоби:** — Этого достаточно. Возьмём живым, если получитс",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.169"
         },
         {
           "at": "0010-04-24T07:38:36",
@@ -18748,11 +18740,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.178"
+        },
+        {
+          "at": "0010-04-24T07:39:15",
+          "excerpt": "ал мне бессмертие. Можешь резать меня сколько угодно, ублюдок. Шикамару внимательно посмотрел на него. **Шикамару Нара:** — Значит, ты сам не знаешь. Хидан оскалился. **Хидан:** — Заткнись! На этот раз он не стал смеяться. Шики спросил Хидана о выживании голов",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.180"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.179",
+          "seen": "s15.text.180",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -18761,8 +18760,7 @@
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s15.text.179"
+        "recovery/HOT.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21089,5 +21087,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1352
+  "source_turns_indexed": 1353
 }
