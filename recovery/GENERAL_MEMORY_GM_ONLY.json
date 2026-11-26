@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.078",
+  "cursor": "s15.text.079",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 89,
+      "mention_count": 90,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:26:00",
-          "excerpt": "посмотрел на бывших напарников. **Мугами Шики:** — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.076"
         },
         {
           "at": "0010-04-21T20:26:30",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.078"
+        },
+        {
+          "at": "0010-04-21T20:28:00",
+          "excerpt": "ист и Песок. Помнишь девчонку с розовыми волосами из Конохи? Аки на несколько мгновений задумалась. **Мидзухара Аки:** — Кажется, помню. Из участников экзамена? Имени уже не назову. **Хаясэ Рэн:** — Погоди, она-то каким образом оказалась в бою с Акацуки? Аки б",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.079"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.078"
+          "seen": "s15.text.079"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.078"
+        "s15.text.079"
       ]
     },
     "aki_home_address_s15": {
@@ -155,7 +155,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.078",
+          "seen": "s15.text.079",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -4111,8 +4111,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s15.text.078"
+        "recovery/cast/nao.json"
       ]
     },
     "naruto": {
@@ -6176,7 +6175,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.078",
+        "s15.text.079",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6191,7 +6190,8 @@
         "s15.text.074",
         "s15.text.075",
         "s15.text.076",
-        "s15.text.077"
+        "s15.text.077",
+        "s15.text.078"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16195,7 +16195,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 90,
+      "mention_count": 91,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16203,13 +16203,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:26:00",
-          "excerpt": "* — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на экзамене. **Мидзухара Аки:** — Забавно. Я до с",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.076"
         },
         {
           "at": "0010-04-21T20:26:30",
@@ -16224,11 +16217,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.078"
+        },
+        {
+          "at": "0010-04-21T20:28:00",
+          "excerpt": "овений задумалась. **Мидзухара Аки:** — Кажется, помню. Из участников экзамена? Имени уже не назову. **Хаясэ Рэн:** — Погоди, она-то каким образом оказалась в бою с Акацуки? Аки бросила на него косой взгляд. **Мидзухара Аки:** — Рэн, прошло почти девять лет. И",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.079"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.078",
+          "seen": "s15.text.079",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16238,7 +16238,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.078"
+        "s15.text.079"
       ]
     },
     "residence_courier_v7": {
@@ -19213,5 +19213,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1252
+  "source_turns_indexed": 1253
 }
