@@ -10,7 +10,7 @@
 - Сиранами · `npc/shiranami` — 11 ход(ов)
 - Немера (Невыписанная) · `npc/nemera` — 9 ход(ов)
 - Сирамэ · `npc/shirame` — 7 ход(ов)
-- Дзюн · `npc/haru_brother_jun` — 2 ход(ов)
+- Дзюн · `npc/fire_temple_travel_jun` — 2 ход(ов)
 - Кэйдзи · `npc/keiji` — 1 ход(ов)
 
 ## Ходы

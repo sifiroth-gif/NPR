@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.109",
+  "cursor": "s15.text.110",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -79,12 +79,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.109"
+          "seen": "s15.text.110"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
-        "recovery/HOT.json"
+        "s15.text.110"
       ]
     },
     "aki_home_address_s15": {
@@ -508,22 +508,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.109:0": {
-      "aliases": [
-        "canon:s15.text.109:0",
-        "s15.text.109: 22.04.1287 к 07:04 караул главных ворот Кусы подтвердил получение отмены внутреннего розыска; доведение до остальных служб отдельно. В 08:02 голосовая связь Сэйна→Шик"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.109:0",
-      "kind": "canon",
-      "label": "s15.text.109: 22.04.1287 к 07:04 караул главных ворот Кусы подтвердил получение отмены внутреннего розыска; доведение до остальных служб отдельно. В 08:02 голосовая связь Сэйна→Шик",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.109"
       ]
     },
     "captive_guard": {
@@ -1058,25 +1042,134 @@
         "s13.text.099"
       ]
     },
+    "fire_temple_driver_seiji": {
+      "aliases": [
+        "fire temple driver seiji",
+        "Сэйдзи"
+      ],
+      "facts": [],
+      "id": "fire_temple_driver_seiji",
+      "kind": "npc",
+      "label": "Сэйдзи",
+      "mention_count": 35,
+      "mentions": [
+        {
+          "at": "0006-10-04T06:43:00",
+          "excerpt": "овек, за которым он числился, официально умер в 1280 году. Я подписывал выдачи по его номеру. Кто фактически получал препарат, не видел. Он взял передатчик и открыл служебный перечень последних вызовов. **Мориока Хидэаки:** — А человек, который запретил мне пр",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.090"
+        },
+        {
+          "at": "0010-04-11T21:15:00",
+          "excerpt": "двинул свои инструменты, освободив место для рук Шики. Минасэ перестал рассматривать собственную кисть. **Сэйдзи Минасэ:** — Что ещё можно вернуть? Чёрная чакра вновь сосредоточилась в ладонях Шики. ### Восстановление нервной проводимости После устранения комп",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.021"
+        },
+        {
+          "at": "0010-04-11T21:44:00",
+          "excerpt": "ьной лестницы:** — Убить?.. Нет. Послышался шорох простыни. **Человек у причальной лестницы:** — Когда Сэйдзи упал, я спросил его, слышит ли он меня. Он слышал. Всё слышал. Только пошевелиться не мог. Голос стал тише. **Человек у причальной лестницы:** — Я с т",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.030"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "гами Шики:** — Что произошло? **Старший монах:** — Размыло дорогу. Колесо ушло в канаву, повозка накренилась. Сэйдзи попытался удержать груз, а затем его придавило бортом. Он указал на раненого. **Старший монах:** — Мы вытащили его около получаса назад. Возниц",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s15.text.110"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_temple_driver_seiji.json",
+        "s15.text.110"
+      ]
+    },
+    "fire_temple_travel_jun": {
+      "aliases": [
+        "fire temple travel jun",
+        "Дзюн"
+      ],
+      "facts": [],
+      "id": "fire_temple_travel_jun",
+      "kind": "npc",
+      "label": "Дзюн",
+      "mention_count": 43,
+      "mentions": [
+        {
+          "at": "0006-09-22T09:52:00",
+          "excerpt": "нно, тяжело, увлекая обломки веток. На северной вышке находился старший пограничного наблюдения, тюнин **Нагасэ Дзюн**\\. Невысокий, широкоплечий мужчина лет тридцати, с обветренным лицом и левым ухом, рассечённым старым рубцом. На его рукаве темнела нашивка по",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.081"
+        },
+        {
+          "at": "0010-04-01T14:19:00",
+          "excerpt": "нул верхний лист, из-под него показалось свежее донесение с печатью гарнизона. Шики успел прочесть верхние строки: Дзюн, старший брат погибшего Хару, допущен к разбирательству по делу нападения на северной заставе. Ниже шли дата и подпись дежурного офицера. Ки",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.032"
+        },
+        {
+          "at": "0010-04-04T08:46:00",
+          "excerpt": "пазухи сложенную бумагу. На сгибе была печать гарнизона Кусагакуре. **Старший патруля:** — Старший брат погибшего сторожа, Дзюн, потребовал вызвать всех, кто видел последствия нападения. Включая людей, которых мы первоначально не собирались привлекать. Мужчина",
+          "source": "archive/session-013-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s13.text.063"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "глаза. Он отступил и сложил ладони перед грудью. Губы его едва заметно двигались. **Старший монах:** — Дзюн! Повязку держи! Юноша вздрогнул и поспешно вернулся к раненому. Старший монах поднялся навстречу Шики. На его поясе висели деревянные чётки, потемневшие",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s15.text.110"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_temple_travel_jun.json",
+        "s15.text.110"
+      ]
+    },
     "fire_temple_travel_monk": {
       "aliases": [
         "fire temple travel monk",
-        "fire_temple_travel_monk"
+        "Рёэн"
       ],
       "facts": [],
       "id": "fire_temple_travel_monk",
       "kind": "npc",
-      "label": "fire_temple_travel_monk",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Рёэн",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "мы повезём тебя дальше в таком состоянии, ты можешь лишиться ноги. Он повернулся к Шики. **Старший монах:** — Меня зовут Рёэн. Я служу в Храме Огня под началом Тирику. Это мой ученик Дзюн. В руках старика тихо перебирались чётки. **Рёэн:** — Простите их. Мы пр",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
+        }
+      ],
       "projections": [
         {
-          "seen": "s15.text.109"
+          "seen": "s15.text.110"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json",
-        "s15.text.109"
+        "recovery/HOT.json",
+        "s15.text.110"
       ]
     },
     "forehead_protector": {
@@ -1424,7 +1517,7 @@
       "id": "haru_brother_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1432,13 +1525,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-03-29T16:41:00",
-          "excerpt": "87 года · 16:40</text> ### Предгорья Водопадов **Мугами Шики:** — Потому что живые разговаривают. **Дзюн:** — А мёртвые уже ничего не расскажут. Понимаю. Он оглянулся на деревянный ящик. **Дзюн:** — Завтра похороню брата. Потом отправлюсь к начальнику гарнизон",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.025"
         },
         {
           "at": "0010-04-01T14:19:00",
@@ -1453,6 +1539,13 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.063"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "глаза. Он отступил и сложил ладони перед грудью. Губы его едва заметно двигались. **Старший монах:** — Дзюн! Повязку держи! Юноша вздрогнул и поспешно вернулся к раненому. Старший монах поднялся навстречу Шики. На его поясе висели деревянные чётки, потемневшие",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
         }
       ],
       "projections": [
@@ -13846,6 +13939,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.110",
         "s15.text.109"
       ]
     },
@@ -17200,13 +17294,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.109"
+          "seen": "s15.text.110"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s15.text.109"
+        "s15.text.110"
       ]
     },
     "sekido_tadao": {
@@ -18933,14 +19027,13 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 45,
+      "mention_count": 46,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18948,13 +19041,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T06:43:00",
-          "excerpt": "ый ящик, к которому она прикрепляла металлическую петлю. На столбике ограды белела знакомая змеиная голова. **Коюки:** — Шики! Я запомнила дорогу! Змея спустилась со столбика. **Мидзухара Аки:** — И даже научилась обходить мои ловушки. Способная ученица. **Кою",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.107"
         },
         {
           "at": "0010-04-22T06:45:00",
@@ -18969,11 +19055,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.109"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "привыкли встречать на дорогах самых разных людей, но подобных вам я ещё никогда не видел. Под повозкой мелькнула белая чешуя Коюки. Дзюн заметил её и поспешно подобрал полы одежды. **Рёэн:** — Вы сможете сохранить ему ногу? **Ход Шики.** Шики подошёл и спросил",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.109",
+          "seen": "s15.text.110",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -18982,8 +19075,7 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s15.text.109"
+        "recovery/HOT.json"
       ]
     },
     "white_snake_sage": {
@@ -19468,5 +19560,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1283
+  "source_turns_indexed": 1284
 }
