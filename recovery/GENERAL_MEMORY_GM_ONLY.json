@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.047",
+  "cursor": "s16.text.048",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1366,8 +1366,7 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи",
-        "fire_temple_bansai"
+        "Бансаи"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
@@ -1412,8 +1411,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_bansai.json",
-        "s16.text.047"
+        "recovery/cast/fire_temple_bansai.json"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1805,8 +1803,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fukasaku.json",
-        "s16.text.047"
+        "recovery/cast/fukasaku.json"
       ]
     },
     "gaara": {
@@ -2503,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 66,
+      "mention_count": 67,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2511,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T12:09:00",
-          "excerpt": "нчания разветвляются, одновременно нанося на поверхность несколько взаимосвязанных контуров фуиндзюцу. Джирайя наклоняется ближе. Некоторые элементы формулы ему знакомы, однако способ их соединения совершенно непривычен. Цунадэ убирает руку со стола. Когда оди",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.034"
         },
         {
           "at": "0010-04-25T12:10:00",
@@ -2532,16 +2522,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.037"
+        },
+        {
+          "at": "0010-04-25T16:00:00",
+          "excerpt": "ов: здесь начинались обширные лесные участки, перемежавшиеся оврагами и открытыми каменистыми площадками. Джирайя уже ждал возле небольшого водоёма. На берегу лежали несколько свитков. **Джирайя:** — А вот и ты. С Асумой я поговорил. Теперь можем посвятить ост",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.048"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.038",
+          "seen": "s16.text.048",
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+        },
+        {
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json",
+        "s16.text.048"
       ]
     },
     "jiro_caravan_guard": {
@@ -2892,17 +2894,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.047",
-          "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
-        },
-        {
+          "seen": "s16.text.048",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         }
       ],
       "sources": [
         "recovery/cast/kakashi.json",
-        "recovery/HOT.json",
-        "s16.text.047"
+        "s16.text.048"
       ]
     },
     "kakuzu": {
@@ -14124,6 +14122,24 @@
         "s15.text.108"
       ]
     },
+    "place:b64ce70608e20bb9": {
+      "aliases": [
+        "place:b64ce70608e20bb9",
+        "Конохагакуре, западный тренировочный полигон",
+        "Конохагакуре",
+        "западный тренировочный полигон"
+      ],
+      "facts": [],
+      "id": "place:b64ce70608e20bb9",
+      "kind": "place",
+      "label": "Конохагакуре, западный тренировочный полигон",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.048"
+      ]
+    },
     "place:b6818057c5d64dc5": {
       "aliases": [
         "place:b6818057c5d64dc5",
@@ -14605,7 +14621,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.047",
         "s16.text.039",
         "s16.text.040",
         "s16.text.041",
@@ -14613,7 +14628,8 @@
         "s16.text.043",
         "s16.text.044",
         "s16.text.045",
-        "s16.text.046"
+        "s16.text.046",
+        "s16.text.047"
       ]
     },
     "place:c4348d07a4dd6188": {
@@ -21350,5 +21366,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1426
+  "source_turns_indexed": 1427
 }

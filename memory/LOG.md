@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.048: Джирайя (`npc/jiraiya`), Какаши Хатакэ (`npc/kakashi`)
 - s16.text.047: Какаши Хатакэ (`npc/kakashi`), Фукасаку (`npc/fukasaku`), Бансаи (`npc/fire_temple_bansai`)
 - s16.text.046: Какаши Хатакэ (`npc/kakashi`), Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`)
 - s16.text.045: Какаши Хатакэ (`npc/kakashi`)
@@ -59,4 +60,3 @@
 - s15.text.198: вещь `cash_1184`, вещь `shiki_finances`
 - s15.text.197: Коюки (`npc/western_nest_young_courier`)
 - s15.text.196: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Бансаи (`npc/fire_temple_bansai`), Котэцу Хаганэ (`npc/kotetsu`)
-- s15.text.195: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Кадзунэ (`npc/fire_road_jonin`)
