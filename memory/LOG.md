@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.187: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s15.text.186: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Изумо Камидзуки (`npc/izumo`)
 - s15.text.185: Хагуро (`npc/khaguro`), Асума Сарутоби (`npc/asuma`)
 - s15.text.184: Асума Сарутоби (`npc/asuma`), Хагуро (`npc/khaguro`), Котэцу Хаганэ (`npc/kotetsu`), Приёмщик тел (`npc/fire_bounty_station_trader`)
@@ -61,4 +62,3 @@
 - s15.text.130: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s15.text.129: Какаши Хатакэ (`npc/kakashi`), Коюки (`npc/western_nest_young_courier`), Цунадэ (`npc/tsunade`), поправки игрока: 1
 - s15.text.128: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.127: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
