@@ -35,10 +35,10 @@
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
+- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 11 ход(ов), s15–s16
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 11 ход(ов), s14–s15
-- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 10 ход(ов), s15–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
@@ -176,6 +176,7 @@
 - Конохагакуре, Горящая гостиница · `places/konokhagakure-goryashchaya-gostinitsa` · 1 ход(ов), s01–s01
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01
+- Конохагакуре, подземный изолятор · `places/konokhagakure-podzemnyy-izolyator` · 1 ход(ов), s16–s16
 - Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
 - Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01
 - Конохагакуре, торговая улица по пути к резиденции Хокагэ · `places/konokhagakure-torgovaya-ulitsa-po-puti-k-rezidentsii-khokage` · 1 ход(ов), s15–s15
