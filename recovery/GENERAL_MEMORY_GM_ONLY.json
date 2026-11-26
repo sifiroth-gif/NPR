@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.015",
+  "cursor": "s16.text.016",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.016:0": {
+      "aliases": [
+        "canon:s16.text.016:0",
+        "s16.text.016: Базовые стихийные преобразования Футона и Дотона проверены в Мьёбоку: доступны и с выключенным Риннешаринганом, активный Риннешаринган облегчает точное управление ими"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.016:0",
+      "kind": "canon",
+      "label": "s16.text.016: Базовые стихийные преобразования Футона и Дотона проверены в Мьёбоку: доступны и с выключенным Риннешаринганом, активный Риннешаринган облегчает точное управление ими",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.016"
       ]
     },
     "captive_guard": {
@@ -1765,7 +1781,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1789,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T10:28:00",
-          "excerpt": "еля 1287 года · 10:28</text> ### Мьёбоку. Сад отшельников Трапеза закончилась. Сима убирала посуду, Фукасаку возился с заевшей оконной рамой. Джирайя вышел в сад. Здесь, за домом, находился небольшой пруд. Над водой склонились цветущие ветви, между камнями рос",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.010"
         },
         {
           "at": "0010-04-25T10:39:00",
@@ -1794,11 +1803,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.015"
+        },
+        {
+          "at": "0010-04-25T10:52:00",
+          "excerpt": "преобразования доступны ему и без додзюцу, однако при его активации управление становится существенно легче. Фукасаку поднял рассечённый лист. Провёл когтем по ровному краю, после чего положил обе половины на камень. **Фукасаку:** — Пять основных природ, посто",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.015",
+          "seen": "s16.text.016",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1808,7 +1824,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.015"
+        "s16.text.016"
       ]
     },
     "gaara": {
@@ -2505,7 +2521,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2513,13 +2529,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:37:00",
-          "excerpt": "о это теперь моя особенность, не копия, не воровство. Тихий голос почти растворился в шелесте листвы. Джирайя опустил голову. Поднял с каменной ограды записную книжку, которую успел вынуть во время разговора, и машинально провёл большим пальцем по её обложке. ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.013"
         },
         {
           "at": "0010-04-25T10:39:00",
@@ -2534,11 +2543,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.015"
+        },
+        {
+          "at": "0010-04-25T10:52:00",
+          "excerpt": "ля постепенно уплотняется. Несколько мелких камешков оказываются заключены в затвердевшем комке грунта. Джирайя присаживается рядом и проверяет его прочность. Затем Шики активирует Риннешаринган. Теперь преобразования происходят значительно точнее. Чакра Футон",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.015",
+          "seen": "s16.text.016",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2548,7 +2564,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.015"
+        "s16.text.016"
       ]
     },
     "jiro_caravan_guard": {
@@ -8925,12 +8941,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.015",
+        "s16.text.016",
         "s16.text.010",
         "s16.text.011",
         "s16.text.012",
         "s16.text.013",
-        "s16.text.014"
+        "s16.text.014",
+        "s16.text.015"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -19124,7 +19141,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19132,13 +19149,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:28:00",
-          "excerpt": "\">Воскресенье, 25 апреля 1287 года · 10:28</text> ### Мьёбоку. Сад отшельников Трапеза закончилась. Сима убирала посуду, Фукасаку возился с заевшей оконной рамой. Джирайя вышел в сад. Здесь, за домом, находился небольшой пруд. Над водой склонились цветущие вет",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.010"
         },
         {
           "at": "0010-04-25T10:37:00",
@@ -19153,15 +19163,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.014"
+        },
+        {
+          "at": "0010-04-25T10:52:00",
+          "excerpt": "тоном. За время упражнений Фукасаку успел подготовить возвращение. Возле крыльца лежал раскрытый свиток призыва. Сима вышла попрощаться, держа в лапах небольшой свёрток с едой. Она протянула его Шики, хотя уже знала, что тот совершенно в ней не нуждается. **Си",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.009"
+          "seen": "s16.text.016"
         }
       ],
       "sources": [
-        "recovery/cast/shima.json"
+        "recovery/cast/shima.json",
+        "recovery/HOT.json",
+        "s16.text.016"
       ]
     },
     "shiozaki_masaaki": {
@@ -19393,7 +19412,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19401,13 +19420,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:28:00",
-          "excerpt": "\">Воскресенье, 25 апреля 1287 года · 10:28</text> ### Мьёбоку. Сад отшельников Трапеза закончилась. Сима убирала посуду, Фукасаку возился с заевшей оконной рамой. Джирайя вышел в сад. Здесь, за домом, находился небольшой пруд. Над водой склонились цветущие вет",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.010"
         },
         {
           "at": "0010-04-25T10:37:00",
@@ -19422,6 +19434,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.014"
+        },
+        {
+          "at": "0010-04-25T10:52:00",
+          "excerpt": "тоном. За время упражнений Фукасаку успел подготовить возвращение. Возле крыльца лежал раскрытый свиток призыва. Сима вышла попрощаться, держа в лапах небольшой свёрток с едой. Она протянула его Шики, хотя уже знала, что тот совершенно в ней не нуждается. **Си",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.016"
         }
       ],
       "projections": [
@@ -21184,5 +21203,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1395
+  "source_turns_indexed": 1396
 }
