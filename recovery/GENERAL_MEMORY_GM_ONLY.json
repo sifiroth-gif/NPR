@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.013",
+  "cursor": "s16.text.014",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1765,7 +1765,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1773,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:53:00",
-          "excerpt": "Хорошо. #идем по пути# Фукасаку-сан а что вы знаете о людях до разделения природы чакры? Я про то что сейчас называется инь и ян <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 09:53",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.008"
         },
         {
           "at": "0010-04-25T09:56:00",
@@ -1794,16 +1787,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хидан действительно достав",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.009",
+          "seen": "s16.text.014",
+          "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
+        },
+        {
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         }
       ],
       "sources": [
-        "recovery/cast/fukasaku.json"
+        "recovery/cast/fukasaku.json",
+        "recovery/HOT.json",
+        "s16.text.014"
       ]
     },
     "gaara": {
@@ -2149,7 +2154,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2157,13 +2162,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:42:00",
-          "excerpt": "Нара:** — Потребуются два отдельных контейнера с печатями. И желательно, чтобы их перевозили разные группы. **Хидан:** — Вы ещё пожалеете, что связались со мной! Шикамару устало прикрыл глаза. **Шикамару Нара:** — И что-нибудь звукоизолирующее. Асума не улыбну",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.181"
         },
         {
           "at": "0010-04-24T12:20:00",
@@ -2178,6 +2176,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.194"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хидан действительно доставлен живым, его сведения могут изменить весь мой план проникновения в Страну Дождя. Саннин подошёл к Фукасаку и негромко попро",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
@@ -2500,7 +2505,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2513,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:30:00",
-          "excerpt": "10:30</text> ### Мьёбоку. Сад отшельников **Мугами Шики:** — Значит, вы учили обладателя Риннегана. Джирайя-сан, в таком случае мне нужна ваша помощь. А про организацию расскажу, что знаю, но я мало что знаю. Я не выслеживал их. Есть причина полагать, что они ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.011"
         },
         {
           "at": "0010-04-25T10:34:00",
@@ -2529,11 +2527,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.013"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "у уже скорее всего привезли Хидана, я знаю что путь человека может помочь мне проникнуть в его мысли. Джирайя перестал поправлять рукава. Между деревьями протянулись длинные полосы солнечного света. В одной из них медленно опускалась паутина с крохотным пауком",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.013",
+          "seen": "s16.text.014",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2548,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.013"
+        "s16.text.014"
       ]
     },
     "jiro_caravan_guard": {
@@ -8920,10 +8925,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.013",
+        "s16.text.014",
         "s16.text.010",
         "s16.text.011",
-        "s16.text.012"
+        "s16.text.012",
+        "s16.text.013"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -19117,7 +19123,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19125,13 +19131,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:56:00",
-          "excerpt": "угами Шики:** — После некоторых событий да. А что было с глазами у мудреца и тех, кто был до? Знаете? Сима отодвинула деревянную дверь. Из дома пахнуло варёным рисом, сушёными травами и нагретой древесиной. Внутри оказалось просторно, несмотря на скромные разм",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.009"
         },
         {
           "at": "0010-04-25T10:28:00",
@@ -19146,6 +19145,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.013"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "помянул проникновение в чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хи",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
@@ -19386,7 +19392,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19394,13 +19400,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:56:00",
-          "excerpt": "угами Шики:** — После некоторых событий да. А что было с глазами у мудреца и тех, кто был до? Знаете? Сима отодвинула деревянную дверь. Из дома пахнуло варёным рисом, сушёными травами и нагретой древесиной. Внутри оказалось просторно, несмотря на скромные разм",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.009"
         },
         {
           "at": "0010-04-25T10:28:00",
@@ -19415,6 +19414,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.013"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "помянул проникновение в чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хи",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
@@ -20348,7 +20354,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20356,13 +20362,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-24T19:26:00",
-          "excerpt": "мять. Если что-то пойдёт не так, я прекращу. Шизунэ опустила кисть на край чернильницы. **Шизунэ:** — Цунадэ-сама, позвольте мне присутствовать при допросе. Если его состояние начнёт меняться, нам потребуется независимое медицинское наблюдение. Цунадэ задумчив",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.195"
         },
         {
           "at": "0010-04-24T19:27:00",
@@ -20377,6 +20376,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.007"
+        },
+        {
+          "at": "0010-04-25T10:39:00",
+          "excerpt": "инаний посредством Риннегана я никогда не наблюдал. Здесь ты знаешь больше меня. Нам также понадобится согласие Цунадэ. Фукасаку спустился с крыльца. В саду снова стало слышно журчание воды, стекающей с каменного желоба в пруд. Визит на Мьёбоку подходил к конц",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.014"
         }
       ],
       "projections": [
@@ -21177,5 +21183,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1393
+  "source_turns_indexed": 1394
 }
