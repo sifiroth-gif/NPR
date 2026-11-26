@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.007: Сима (`npc/shima`), Джирайя (`npc/jiraiya`)
 - s16.text.006: Сима (`npc/shima`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s16.text.005: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`)
 - s16.text.004: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Глава Кусагакуре (`npc/kusa_head`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
@@ -59,4 +60,3 @@
 - s15.text.157: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Джирайя (`npc/jiraiya`), линия `shiki_save_asuma`, линия `player_preference_overlapping_plans`
 - s15.text.156: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), Наруто Узумаки (`npc/naruto`)
 - s15.text.155: Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), Джирайя (`npc/jiraiya`), линия `shiki_save_jiraiya`
-- s15.text.154: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), sima (`npc/sima`), Наруто Узумаки (`npc/naruto`), бой

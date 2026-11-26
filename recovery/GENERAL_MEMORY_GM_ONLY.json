@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.006",
+  "cursor": "s16.text.007",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,22 +505,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.006:0": {
-      "aliases": [
-        "canon:s16.text.006:0",
-        "s16.text.006: Игрок уточнил физиологию Шики после слияния: обычная пища по-прежнему доступна, но физиологической потребности в ней и во сне больше нет; Шики спит ради восстановлени"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.006:0",
-      "kind": "canon",
-      "label": "s16.text.006: Игрок уточнил физиологию Шики после слияния: обычная пища по-прежнему доступна, но физиологической потребности в ней и во сне больше нет; Шики спит ради восстановлени",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.006"
       ]
     },
     "captive_guard": {
@@ -1781,7 +1765,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1789,13 +1773,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:37:00",
-          "excerpt": "### Мьёбоку. Источник жабьего масла Шики склоняется перед Великим Мудрецом и покидает храм вместе с Фукасаку и Джирайей. Тропинка пролегает среди исполинских растений. По их стеблям стекают капли утренней росы, в углублениях камней гнездятся маленькие жабы. Зд",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.004"
         },
         {
           "at": "0010-04-25T09:44:00",
@@ -1810,11 +1787,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.006"
+        },
+        {
+          "at": "0010-04-25T09:46:00",
+          "excerpt": "Она произнесла это совершенно буднично, словно речь шла о выздоровлении после продолжительной болезни. Фукасаку забрал у неё корзину, и супруги направились к дому. Джирайя задержался рядом с Шики. **Джирайя:** — Кстати, ты можешь остаться на Мьёбоку и после мо",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.007"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.006",
+          "seen": "s16.text.007",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1823,8 +1807,7 @@
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json",
-        "s16.text.006"
+        "recovery/HOT.json"
       ]
     },
     "gaara": {
@@ -2521,7 +2504,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2529,13 +2512,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:37:00",
-          "excerpt": "а меняется тело, затем утрачивается способность управлять чакрой. После этого вернуть ученика уже невозможно. Джирайя снял сандалии и сел на плоский камень возле бассейна. Фукасаку продемонстрировал обычную последовательность накопления природной энергии и её ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.004"
         },
         {
           "at": "0010-04-25T09:44:00",
@@ -2550,11 +2526,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.006"
+        },
+        {
+          "at": "0010-04-25T09:46:00",
+          "excerpt": "здоровлении после продолжительной болезни. Фукасаку забрал у неё корзину, и супруги направились к дому. Джирайя задержался рядом с Шики. **Джирайя:** — Кстати, ты можешь остаться на Мьёбоку и после моего возвращения. Но если захочешь отправиться в Коноху вмест",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.007"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.006",
+          "seen": "s16.text.007",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2564,7 +2547,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.006"
+        "s16.text.007"
       ]
     },
     "jiro_caravan_guard": {
@@ -15623,9 +15606,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.006",
+        "s16.text.007",
         "s16.text.004",
-        "s16.text.005"
+        "s16.text.005",
+        "s16.text.006"
       ]
     },
     "place:dfe9865838b9839d": {
@@ -19062,7 +19046,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19070,13 +19054,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T08:58:00",
-          "excerpt": "льники. Джирайя негромко рассмеялся. **Джирайя:** — Только не обещай ему, что он съест всё, что приготовила Сима. Фукасаку спрыгнул с плеча ученика и приблизился к Шики. Несколько мгновений старый отшельник всматривался в его лицо. **Фукасаку:** — Великий Мудр",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.200"
         },
         {
           "at": "0010-04-25T09:44:00",
@@ -19091,17 +19068,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.006"
+        },
+        {
+          "at": "0010-04-25T09:46:00",
+          "excerpt": "года · 09:46</text> ### Мьёбоку. Источник жабьего масла **Мугами Шики:** — Удовольствие осталось. **Сима:** — Вот и хорошо. Значит, ещё не всё человеческое в тебе пропало. Она произнесла это совершенно буднично, словно речь шла о выздоровлении после продолжите",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.007"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.006"
+          "seen": "s16.text.007"
         }
       ],
       "sources": [
         "recovery/cast/shima.json",
         "recovery/HOT.json",
-        "s16.text.006"
+        "s16.text.007"
       ]
     },
     "shiozaki_masaaki": {
@@ -19333,7 +19317,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19341,13 +19325,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T08:58:00",
-          "excerpt": "льники. Джирайя негромко рассмеялся. **Джирайя:** — Только не обещай ему, что он съест всё, что приготовила Сима. Фукасаку спрыгнул с плеча ученика и приблизился к Шики. Несколько мгновений старый отшельник всматривался в его лицо. **Фукасаку:** — Великий Мудр",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.200"
         },
         {
           "at": "0010-04-25T09:44:00",
@@ -19362,6 +19339,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.006"
+        },
+        {
+          "at": "0010-04-25T09:46:00",
+          "excerpt": "года · 09:46</text> ### Мьёбоку. Источник жабьего масла **Мугами Шики:** — Удовольствие осталось. **Сима:** — Вот и хорошо. Значит, ещё не всё человеческое в тебе пропало. Она произнесла это совершенно буднично, словно речь шла о выздоровлении после продолжите",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.007"
         }
       ],
       "projections": [
@@ -20274,7 +20258,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20282,13 +20266,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-24T19:25:00",
-          "excerpt": "Но допрос должен пройти тайно <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:25</text> Цунадэ выслушала Шики, не перебивая. При известии о гибели Тирику её пальцы медленно сжались. **Цунадэ:** — Проклятье… Она поднялась из-за стола и подошла к окну",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.194"
         },
         {
           "at": "0010-04-24T19:26:00",
@@ -20303,6 +20280,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.196"
+        },
+        {
+          "at": "0010-04-25T09:46:00",
+          "excerpt": "ался. **Джирайя:** — У меня есть ещё одна просьба. Когда вернёмся, я хотел бы обсудить с тобой Акацуки. Без Цунадэ и остальных. Кажется, наши интересы в этом деле совпадают. **Ход Шики.** Шики подтвердил удовольствие от еды. Сима и Фукасаку направились домой; ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.007"
         }
       ],
       "projections": [
@@ -21096,5 +21080,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1386
+  "source_turns_indexed": 1387
 }
