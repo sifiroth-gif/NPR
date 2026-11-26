@@ -1063,27 +1063,6 @@
         "recovery/cast/endo_hajime.json"
       ]
     },
-    "fire_bounty_records_s15": {
-      "aliases": [
-        "fire bounty records s15",
-        "Учёт выплат пункта наград"
-      ],
-      "facts": [],
-      "id": "fire_bounty_records_s15",
-      "kind": "item",
-      "label": "Учёт выплат пункта наград",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "Коноха, сопровождающее подкрепление",
-          "since": "s15.text.182"
-        }
-      ],
-      "sources": [
-        "s15.text.182"
-      ]
-    },
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
@@ -2998,27 +2977,6 @@
         "recovery/cast/kakuzu.json"
       ]
     },
-    "kakuzu_money_s15": {
-      "aliases": [
-        "kakuzu money s15",
-        "Деньги Какудзу из чемодана"
-      ],
-      "facts": [],
-      "id": "kakuzu_money_s15",
-      "kind": "item",
-      "label": "Деньги Какудзу из чемодана",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "Коноха, сопровождающее подкрепление",
-          "since": "s15.text.182"
-        }
-      ],
-      "sources": [
-        "s15.text.182"
-      ]
-    },
     "kankuro": {
       "aliases": [
         "kankuro",
@@ -3746,28 +3704,6 @@
       ],
       "sources": [
         "recovery/cast/kiri_transfer_watch.json"
-      ]
-    },
-    "konoha_blank_contact_plate_s16": {
-      "aliases": [
-        "konoha blank contact plate s16",
-        "Индивидуальная пластина связи Шики для Конохи"
-      ],
-      "facts": [],
-      "id": "konoha_blank_contact_plate_s16",
-      "kind": "item",
-      "label": "Индивидуальная пластина связи Шики для Конохи",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "tsunade",
-          "since": "s16.text.034",
-          "turn": "s16.text.035"
-        }
-      ],
-      "sources": [
-        "s16.text.035"
       ]
     },
     "kotetsu": {
@@ -5182,27 +5118,6 @@
       ],
       "sources": [
         "recovery/cast/morioka_hideaki.json"
-      ]
-    },
-    "myoboku_rikudo_legend_book": {
-      "aliases": [
-        "myoboku rikudo legend book",
-        "Рукописный сборник преданий о Рикудо"
-      ],
-      "facts": [],
-      "id": "myoboku_rikudo_legend_book",
-      "kind": "item",
-      "label": "Рукописный сборник преданий о Рикудо",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "fukasaku",
-          "since": "s16.text.009"
-        }
-      ],
-      "sources": [
-        "s16.text.009"
       ]
     },
     "myoboku_route_sketch_s16": {
@@ -21265,27 +21180,6 @@
         "s16.text.134"
       ]
     },
-    "thread:jiraiya_rain_investigation": {
-      "aliases": [
-        "thread:jiraiya rain investigation",
-        "jiraiya rain investigation",
-        "jiraiya_rain_investigation"
-      ],
-      "facts": [],
-      "id": "thread:jiraiya_rain_investigation",
-      "kind": "thread",
-      "label": "jiraiya rain investigation",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стержни с управлением телом Пэйна, Цунадэ исключает одиночное проникновение и намерена подготовить разведку с эвакуацией."
-        }
-      ],
-      "sources": [
-        "s16.text.031"
-      ]
-    },
     "thread:kiri_bingo_negotiations": {
       "aliases": [
         "thread:kiri bingo negotiations",
@@ -21305,27 +21199,6 @@
       ],
       "sources": [
         "s16.text.086"
-      ]
-    },
-    "thread:player_preference_overlapping_plans": {
-      "aliases": [
-        "thread:player preference overlapping plans",
-        "player preference overlapping plans",
-        "player_preference_overlapping_plans"
-      ],
-      "facts": [],
-      "id": "thread:player_preference_overlapping_plans",
-      "kind": "thread",
-      "label": "player preference overlapping plans",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Прямая поправка игрока s15.text.158: знание игроком канона требует кризисных, весомых выборов с риском потерь, а не календарных накладок. Независимые события требуют своевременного вмешательства; пример — срочное нападение на Храм Огня конфликтует с Мьёбоку. Не гарантировать спасение, не лишать возможности придумать третий путь."
-        }
-      ],
-      "sources": [
-        "s15.text.158"
       ]
     },
     "thread:shiki_confidentiality": {
@@ -22262,31 +22135,10 @@
       "type": "held_by"
     },
     {
-      "from": "fire_bounty_records_s15",
-      "source": "s15.text.182",
-      "status": "projected",
-      "to": "Коноха, сопровождающее подкрепление",
-      "type": "held_by"
-    },
-    {
-      "from": "kakuzu_money_s15",
-      "source": "s15.text.182",
-      "status": "projected",
-      "to": "Коноха, сопровождающее подкрепление",
-      "type": "held_by"
-    },
-    {
       "from": "gamamaru_nemera_dream_scroll",
       "source": "s16.text.003",
       "status": "projected",
       "to": "shiki",
-      "type": "held_by"
-    },
-    {
-      "from": "myoboku_rikudo_legend_book",
-      "source": "s16.text.009",
-      "status": "projected",
-      "to": "fukasaku",
       "type": "held_by"
     },
     {
@@ -22301,13 +22153,6 @@
       "source": "s16.text.018",
       "status": "projected",
       "to": "shiki",
-      "type": "held_by"
-    },
-    {
-      "from": "konoha_blank_contact_plate_s16",
-      "source": "s16.text.035",
-      "status": "projected",
-      "to": "tsunade",
       "type": "held_by"
     },
     {

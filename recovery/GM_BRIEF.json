@@ -180,24 +180,6 @@
      "turn": "s14.text.023"
     },
     "patients": {
-     "hidan": {
-      "physiology": {
-       "mode": "exceptional",
-       "status_note": "Отделённая голова жива, отвечает; Шизунэ подтвердила основные функции, пленник под наблюдением. Обычная модель кровопотери и утраты сознания не обоснована для его исключительной физиологии. Текущее состояние требует актуального источника.",
-       "status_source": "s16.text.030"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:30",
-        "bleed": true,
-        "lost": "Нет функциональной связи головы с туловищем; обездвижен, голова говорит.",
-        "severity": "критическая",
-        "turn": "s15.text.175",
-        "what": "Полное отделение головы ударом Суми с Райтоном, сверхъестественное сохранение жизни и сознания.",
-        "where": "шея"
-       }
-      ]
-     },
      "jiraiya": {
       "wounds": [
        {
@@ -507,7 +489,7 @@
   "place": "Страна Огня, западные провинции, придорожная чайная",
   "time": "15:25"
  },
- "digest": "4e6aa6b3c7f076971da3c7199564fd7eab00da02a25c1954647f41412cc7b920",
+ "digest": "f19dc4e0f43e4e49567dd6fb18e9ba4ca0512476519db107b663d1f853f747d6",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -654,17 +636,6 @@
    6
   ],
   "injuries": {
-   "hidan": [
-    {
-     "at": "0010-04-24T07:38:30",
-     "bleed": true,
-     "lost": "Нет функциональной связи головы с туловищем; обездвижен, голова говорит.",
-     "severity": "критическая",
-     "turn": "s15.text.175",
-     "what": "Полное отделение головы ударом Суми с Райтоном, сверхъестественное сохранение жизни и сознания.",
-     "where": "шея"
-    }
-   ],
    "jiraiya": [
     {
      "at": "0010-04-23T16:32:04",
@@ -761,7 +732,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-05-04T15:25:00",
+  "closed": 16,
+  "first_turn": "s17.text.001",
+  "last_turn": "s16.text.140",
+  "next_session": 17,
+  "source": "campaigns/shiki/continuity/SESSION_016_TO_017_HANDOFF.json",
+  "sqlite_revision": 1462
+ },
  "horror": {
   "due": null,
   "npcs": {
@@ -798,6 +777,8 @@
   "worn": []
  },
  "last": {
+  "gm_tail": "т рё и надел котэ. Чёрная кожа скрыла предплечья и кисти, оставив пальцы свободными. При сгибании запястья мягкие вставки почти не сопротивлялись движению.\n\n**Мугами Шики:** — спасибо\n\nОружейник молча поклонился.\n\nДжирайя окинул руки Шики коротким взглядом.\n\n**Джирайя:** — Так будет проще путешествовать.\n\nВ чайной их ожидал мужчина с перевязанной …",
+  "player": "#расплачиваюсь, надеваю котэ# спасибо #иду с джирайей в чайную#\nМастер: проверь всю историю и выпиши все освоенные Шики техники и умения",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
@@ -1046,6 +1027,7 @@
    "prior_disclosures": [
     {
      "at": "0010-04-25T10:28:00",
+     "line": "После трапезы Джирайя наедине рассказал Шики о трёх сиротах Дождя, Риннегане Нагато и намерении проникнуть в Амэгакурэ. Просит св…",
      "sha256": "1dd0d7aeecd27bcefbad2e268b8e2460fe2ecbca57d0ad60df9f8730209518fb",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -1053,6 +1035,7 @@
     },
     {
      "at": "0010-05-04T15:23:00",
+     "line": "Оружейник подогнал лёгкие котэ с полностью открытыми пальцами, цена 3600 рё, оплата ещё не совершена. Джирайя расспросил путников…",
      "sha256": "f656763d9dd7863306a2ac43b737a8c6af343ce1c1019b65190fbd607d8f3a7c",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -1060,6 +1043,7 @@
     },
     {
      "at": "0010-05-04T15:25:00",
+     "line": "Шики купил и надел чёрные кожаные котэ за 3600 рё (наличные 198600), с Джирайей вошёл в чайную. Путник показал план водостоков и …",
      "sha256": "102fa142b6e8e9ad9872ff931aa916a86f5cb4226d0dfa3f1c76adc33866c8e0",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -1162,9 +1146,7 @@
    "shiki_confidentiality",
    "shiki_save_asuma",
    "shiki_promise_nemera",
-   "shiki_save_jiraiya",
-   "player_preference_overlapping_plans",
-   "jiraiya_rain_investigation"
+   "shiki_save_jiraiya"
   ],
   "secret_topics": [
    "vials",
