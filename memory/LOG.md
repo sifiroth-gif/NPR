@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.018: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), вещь `myoboku_route_sketch_s16`, поправки игрока: 1
 - s16.text.017: Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), вещь `shima_food_s16`, вещь `myoboku_route_sketch_s16`, поправки игрока: 1
 - s16.text.016: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), поправки игрока: 1
 - s16.text.015: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`)
@@ -59,4 +60,3 @@
 - s15.text.168: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.167: Бансаи (`npc/fire_temple_bansai`), линия `shiki_save_asuma`
 - s15.text.166: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Бансаи (`npc/fire_temple_bansai`), линия `shiki_save_asuma`
-- s15.text.165: Бансаи (`npc/fire_temple_bansai`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), линия `shiki_save_asuma`

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.017",
+  "cursor": "s16.text.018",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -507,20 +507,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s16.text.017:0": {
+    "canon:s16.text.018:0": {
       "aliases": [
-        "canon:s16.text.017:0",
-        "s16.text.017: Свидетельство Фукасаку: пеший путь из Конохи на Мьёбоку занимает около месяца, скрытый проход за водопадом; предложена карта с ориентирами. Гостевой переход через Джи"
+        "canon:s16.text.018:0",
+        "s16.text.018: Шики изучил и запомнил ориентиры пешего маршрута Мьёбоку, карту сжёг; Фукасаку видел уничтожение. Шики и Джирайя вернулись в Коноху в 10:56."
       ],
       "facts": [],
-      "id": "canon:s16.text.017:0",
+      "id": "canon:s16.text.018:0",
       "kind": "canon",
-      "label": "s16.text.017: Свидетельство Фукасаку: пеший путь из Конохи на Мьёбоку занимает около месяца, скрытый проход за водопадом; предложена карта с ориентирами. Гостевой переход через Джи",
+      "label": "s16.text.018: Шики изучил и запомнил ориентиры пешего маршрута Мьёбоку, карту сжёг; Фукасаку видел уничтожение. Шики и Джирайя вернулись в Коноху в 10:56.",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.017"
+        "s16.text.018"
       ]
     },
     "captive_guard": {
@@ -1781,7 +1781,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 38,
+      "mention_count": 39,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1789,13 +1789,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T10:43:00",
-          "excerpt": "ь и способность рассекать материю; во втором — взаимодействовала с землёй, изменяя её механические свойства. Фукасаку наблюдал с крыльца. Когда Джирайя закончил, старый отшельник спустился в сад и переставил горшки с молодыми растениями подальше от тренировочн",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.015"
         },
         {
           "at": "0010-04-25T10:52:00",
@@ -1810,21 +1803,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.017"
+        },
+        {
+          "at": "0010-04-25T10:56:00",
+          "excerpt": "я несколько невесомых хлопьев пепла. **Мугами Шики:** — Спасибо я запомнил и никому не смогу передать. Фукасаку проводил взглядом исчезающие в воздухе остатки карты и одобрительно кивнул. Шики обращается к Джирайе. **Мугами Шики:** — Пойдёмте в коноху. Саннин ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.018"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.017",
-          "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
-        },
-        {
+          "seen": "s16.text.018",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         }
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json",
-        "s16.text.017"
+        "s16.text.018"
       ]
     },
     "gaara": {
@@ -2521,7 +2517,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 48,
+      "mention_count": 49,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2529,13 +2525,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:43:00",
-          "excerpt": "ть все стихии. Я могу использовать три, но дотон и футон для техник не использовал. Надо попробовать. Джирайя остановился возле крыльца. **Джирайя:** — Это, пожалуй, мы можем проверить прямо сейчас. Он вернулся на площадку и подобрал опавший лист. Сложил его п",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.015"
         },
         {
           "at": "0010-04-25T10:52:00",
@@ -2550,11 +2539,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.017"
+        },
+        {
+          "at": "0010-04-25T10:56:00",
+          "excerpt": "зличимы многочисленные источники человеческой чакры, среди которых перемещаются несколько тренировочных групп. Джирайя отряхивает одежду. **Джирайя:** — Сначала я зайду к Цунадэ. Нужно выяснить, что удалось получить от пленника обычными методами. Тогда поймём,",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.018"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.017",
+          "seen": "s16.text.018",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2563,7 +2559,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.018"
       ]
     },
     "jiro_caravan_guard": {
@@ -4987,12 +4984,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "fukasaku",
-          "since": "s16.text.017"
+          "holder": "shiki",
+          "since": "s16.text.017",
+          "turn": "s16.text.018"
         }
       ],
       "sources": [
-        "s16.text.017"
+        "s16.text.018"
       ]
     },
     "naemnik_u_shakhty": {
@@ -8578,6 +8576,24 @@
         "s05.text.013"
       ]
     },
+    "place:455132e0c8853caa": {
+      "aliases": [
+        "place:455132e0c8853caa",
+        "Конохагакуре, тренировочная площадка",
+        "Конохагакуре",
+        "тренировочная площадка"
+      ],
+      "facts": [],
+      "id": "place:455132e0c8853caa",
+      "kind": "place",
+      "label": "Конохагакуре, тренировочная площадка",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.018"
+      ]
+    },
     "place:45979f995b7a036c": {
       "aliases": [
         "place:45979f995b7a036c",
@@ -10780,8 +10796,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.017",
-        "s16.text.009"
+        "s16.text.009",
+        "s16.text.017"
       ]
     },
     "place:6fe55773ec9e8aee": {
@@ -19162,7 +19178,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19170,13 +19186,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:39:00",
-          "excerpt": "помянул проникновение в чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хи",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.014"
         },
         {
           "at": "0010-04-25T10:52:00",
@@ -19191,6 +19200,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.017"
+        },
+        {
+          "at": "0010-04-25T10:56:00",
+          "excerpt": "айе. **Мугами Шики:** — Пойдёмте в коноху. Саннин становится рядом. Фукасаку складывает лапы над свитком. Сима ещё успевает помахать гостям, прежде чем густой белый дым скрывает сад. ### Конохагакуре. Тренировочная площадка Вместо влажного воздуха Мьёбоку — за",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.018"
         }
       ],
       "projections": [
@@ -19199,9 +19215,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shima.json",
-        "recovery/HOT.json",
-        "s16.text.017"
+        "recovery/cast/shima.json"
       ]
     },
     "shima_food_s16": {
@@ -19454,7 +19468,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19462,13 +19476,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:39:00",
-          "excerpt": "помянул проникновение в чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хи",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.014"
         },
         {
           "at": "0010-04-25T10:52:00",
@@ -19483,6 +19490,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.017"
+        },
+        {
+          "at": "0010-04-25T10:56:00",
+          "excerpt": "айе. **Мугами Шики:** — Пойдёмте в коноху. Саннин становится рядом. Фукасаку складывает лапы над свитком. Сима ещё успевает помахать гостям, прежде чем густой белый дым скрывает сад. ### Конохагакуре. Тренировочная площадка Вместо влажного воздуха Мьёбоку — за",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.018"
         }
       ],
       "projections": [
@@ -20416,7 +20430,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20424,13 +20438,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-24T19:27:00",
-          "excerpt": "Джирайей-саном посетить гору Мьёбоку. Учитывайте это. После я помогу. А сейчас мне нужно отдохнуть. **Цунадэ:** — С Джирайей? На Мьёбоку? Она коротко усмехнулась. **Цунадэ:** — Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Велик",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.196"
         },
         {
           "at": "0010-04-25T09:46:00",
@@ -20445,6 +20452,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.014"
+        },
+        {
+          "at": "0010-04-25T10:56:00",
+          "excerpt": "оторых перемещаются несколько тренировочных групп. Джирайя отряхивает одежду. **Джирайя:** — Сначала я зайду к Цунадэ. Нужно выяснить, что удалось получить от пленника обычными методами. Тогда поймём, есть ли необходимость в твоём вмешательстве. Из-за леса вид",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.018"
         }
       ],
       "projections": [
@@ -21252,12 +21266,12 @@
     },
     {
       "from": "myoboku_route_sketch_s16",
-      "source": "s16.text.017",
+      "source": "s16.text.018",
       "status": "projected",
-      "to": "fukasaku",
+      "to": "shiki",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1397
+  "source_turns_indexed": 1398
 }
