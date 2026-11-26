@@ -11,6 +11,7 @@
 - Дзюн · `npc/dzyun` — 3 ход(ов)
 - Сэйдзи · `npc/fire_temple_driver_seiji` — 3 ход(ов)
 - Коюки · `npc/western_nest_young_courier` — 2 ход(ов)
+- Раненый монах · `npc/fire_temple_wounded_monk_s15` — 1 ход(ов)
 - Кирисава Сэйна · `npc/seina` — 1 ход(ов)
 
 ## Ходы

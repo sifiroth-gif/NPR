@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.160",
+  "cursor": "s15.text.161",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-23T16:48:00",
-          "excerpt": "лову. Связной спрыгнул на улицу и передал ему узкую полоску бумаги. Сигарета выпала из пальцев Асумы. **Асума Сарутоби:** — Когда это поступило? **Связной:** — Несколько минут назад. Южные ворота атакованы. Есть раненые. Храм запросил подкрепление. Следующее с",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.158"
         },
         {
           "at": "0010-04-23T16:48:20",
@@ -425,17 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.160"
+        },
+        {
+          "at": "0010-04-24T03:52:00",
+          "excerpt": "молитвенных чёток. Асума остановился. Долгое время он смотрел на ворота. Затем медленно достал боевые клинки. **Асума Сарутоби:** — Изумо, Котэцу. Осмотрите подходы. Шикамару, следы. Никто не ответил вслух. В нескольких десятках метров от стены лежал монах. Ег",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.161"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.160"
+          "seen": "s15.text.161"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s15.text.160"
+        "s15.text.161"
       ]
     },
     "baki": {
@@ -558,22 +558,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.160:0": {
-      "aliases": [
-        "canon:s15.text.160:0",
-        "s15.text.160: отряд Асумы в линии Храма Огня — Асума, Шикамару, Изумо, Котэцу; Шики добровольный пятый. Ино и Тёдзи не присутствовали. Сверено с Naruto Shippuden, эп. 74–75, https:"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.160:0",
-      "kind": "canon",
-      "label": "s15.text.160: отряд Асумы в линии Храма Огня — Асума, Шикамару, Изумо, Котэцу; Шики добровольный пятый. Ино и Тёдзи не присутствовали. Сверено с Naruto Shippuden, эп. 74–75, https:",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.160"
       ]
     },
     "captive_guard": {
@@ -1230,7 +1214,8 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ"
+        "Кадзунэ",
+        "fire_road_jonin"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1269,11 +1254,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.123"
+          "seen": "s15.text.161"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json"
+        "recovery/cast/fire_road_jonin.json",
+        "s15.text.161"
       ]
     },
     "fire_road_mayu": {
@@ -1504,6 +1490,42 @@
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json"
+      ]
+    },
+    "fire_temple_wounded_monk_s15": {
+      "aliases": [
+        "fire temple wounded monk s15",
+        "Раненый монах"
+      ],
+      "facts": [],
+      "id": "fire_temple_wounded_monk_s15",
+      "kind": "npc",
+      "label": "Раненый монах",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-24T03:52:00",
+          "excerpt": "рел на восточную стену. Изумо тем временем попытался остановить кровотечение у лежащего монаха. Тот с трудом приоткрыл глаза. **Раненый монах:** — Настоятель… во дворе… Слова оборвались. Он закашлялся, и Изумо придержал его голову. **Изумо Камидзуки:** — Мугам",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.161"
+        }
+      ],
+      "projections": [
+        {
+          "role": "Монах Храма Огня, личность не установлена",
+          "seen": "s15.text.161",
+          "state": "Жив, сознание нарушено, кровотечение, кашель. Раны не осмотрены."
+        },
+        {
+          "role": "Монах Храма Огня, личность не установлена",
+          "state": "Жив, сознание нарушено, кровотечение, кашель. Раны не осмотрены."
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_temple_wounded_monk_s15.json",
+        "recovery/HOT.json",
+        "s15.text.161"
       ]
     },
     "fire_west_border_senior": {
@@ -2236,7 +2258,7 @@
       "id": "izumo",
       "kind": "npc",
       "label": "Изумо Камидзуки",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-23T17:13:00",
@@ -2244,23 +2266,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.160"
+        },
+        {
+          "at": "0010-04-24T03:52:00",
+          "excerpt": "на рука была вытянута в сторону леса. Неподалёку виднелись ещё два неподвижных тела. Изумо опустился возле первого. **Изумо Камидзуки:** — Жив. Асума сделал несколько шагов к воротам. **Асума Сарутоби:** — Тирику! Ответа не последовало. Шики различал слабый, п",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.161"
         }
       ],
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.160",
-          "state": "С дорожным снаряжением у южных ворот."
+          "seen": "s15.text.161",
+          "state": "Прижимает кровоточащую рану, поддерживает голову монаха."
         },
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "state": "С дорожным снаряжением у южных ворот."
+          "state": "Прижимает кровоточащую рану, поддерживает голову монаха."
         }
       ],
       "sources": [
         "recovery/cast/izumo.json",
         "recovery/HOT.json",
-        "s15.text.160"
+        "s15.text.161"
       ]
     },
     "jiraiya": {
@@ -3334,18 +3363,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.160",
-          "state": "С дорожным снаряжением у южных ворот."
+          "seen": "s15.text.161",
+          "state": "Осматривает подходы к воротам."
         },
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "state": "С дорожным снаряжением у южных ворот."
+          "state": "Осматривает подходы к воротам."
         }
       ],
       "sources": [
         "recovery/cast/kotetsu.json",
         "recovery/HOT.json",
-        "s15.text.160"
+        "s15.text.161"
       ]
     },
     "kurama": {
@@ -16104,6 +16133,24 @@
         "s03.text.094"
       ]
     },
+    "place:ee5520147d5f3836": {
+      "aliases": [
+        "place:ee5520147d5f3836",
+        "Страна Огня, южные ворота Храма Огня",
+        "Страна Огня",
+        "южные ворота Храма Огня"
+      ],
+      "facts": [],
+      "id": "place:ee5520147d5f3836",
+      "kind": "place",
+      "label": "Страна Огня, южные ворота Храма Огня",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.161"
+      ]
+    },
     "place:ee5afb296884ca40": {
       "aliases": [
         "place:ee5afb296884ca40",
@@ -18358,7 +18405,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18366,13 +18413,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0001-08-07T10:05:00",
-          "excerpt": "та 1278 года. 10:05.** *Конохагакуре. Главная арена экзамена на тюнина.* ### Четвертьфинал. Гаара — Шикамару Нара Шикамару спустился на арену с таким выражением лица, словно его заставили присутствовать при собственном вскрытии. Он остановился в двадцати метра",
-          "source": "archive/session-002-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s02.text.031"
         },
         {
           "at": "0010-04-23T16:48:00",
@@ -18387,17 +18427,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.160"
+        },
+        {
+          "at": "0010-04-24T03:52:00",
+          "excerpt": "но удаляясь от храма. Шикамару присел возле разбитого каменного фонаря. На влажной земле сохранились глубокие следы обуви. **Шикамару Нара:** — Сэнсэй. Отсюда кто-то ушёл совсем недавно. Асума посмотрел на восточную стену. Изумо тем временем попытался останови",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.161"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.160"
+          "seen": "s15.text.161"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.160"
+        "s15.text.161"
       ]
     },
     "shiki_arm_wraps": {
@@ -19762,11 +19809,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "23.04 17:13: санкция Цунадэ получена; Асума, Шикамару, Изумо, Котэцу и Шики у южных ворот. Связь с храмом прервана, судьба Тирику неизвестна."
+          "state": "24.04 03:52: Асума и отряд со Шики прибыли к Храму Огня. Тирику ещё не найден. Асума идёт к воротам, один раненый монах нуждается в помощи, неизвестный очаг чакры удаляется на восток."
         }
       ],
       "sources": [
-        "s15.text.160"
+        "s15.text.161"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -19877,8 +19924,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s15.text.160"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -20725,5 +20771,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1333
+  "source_turns_indexed": 1334
 }
