@@ -281,6 +281,7 @@
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
 - Страна Рек, убежище «Чёрный створ» · `places/strana-rek-ubezhishche-chernyy-stvor` · 1 ход(ов), s09–s09
+- Страна Рек, южные предгорья · `places/strana-rek-yuzhnye-predgorya` · 1 ход(ов), s16–s16
 - Страна Рисовых Полей, северная окраина · `places/strana-risovykh-poley-severnaya-okraina` · 1 ход(ов), s08–s08
 - Страна Травы, лес у северных болот · `places/strana-travy-les-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Травы, лесистый склон над сухим оврагом · `places/strana-travy-lesistyy-sklon-nad-sukhim-ovragom` · 1 ход(ов), s13–s13

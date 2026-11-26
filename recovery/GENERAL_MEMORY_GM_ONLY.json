@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.091",
+  "cursor": "s16.text.092",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -810,24 +810,18 @@
     "clock:yig_brood_disturbance": {
       "aliases": [
         "clock:yig brood disturbance",
-        "Реакция на разорение кладок в южном предгорье Страны Рек",
+        "yig brood disturbance",
         "yig_brood_disturbance"
       ],
       "facts": [],
       "id": "clock:yig_brood_disturbance",
       "kind": "clock",
-      "label": "Реакция на разорение кладок в южном предгорье Страны Рек",
+      "label": "yig brood disturbance",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "due": "0010-04-29T18:00:00",
-          "owner": "Йиг и местные змеи",
-          "what": "Реакция на разорение кладок в южном предгорье Страны Рек"
-        }
-      ],
+      "projections": [],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "s16.text.092"
       ]
     },
     "clock:yig_local_response": {
@@ -6910,9 +6904,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.091",
         "s16.text.089",
-        "s16.text.090"
+        "s16.text.090",
+        "s16.text.091"
       ]
     },
     "place:15d1a4d638d1c02a": {
@@ -7025,6 +7019,25 @@
       "projections": [],
       "sources": [
         "s05.text.003"
+      ]
+    },
+    "place:173055fdc8cf034b": {
+      "aliases": [
+        "place:173055fdc8cf034b",
+        "Страна Рек, южные предгорья, дорога у нижнего ущелья",
+        "Страна Рек",
+        "южные предгорья",
+        "дорога у нижнего ущелья"
+      ],
+      "facts": [],
+      "id": "place:173055fdc8cf034b",
+      "kind": "place",
+      "label": "Страна Рек, южные предгорья, дорога у нижнего ущелья",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.092"
       ]
     },
     "place:1866c2cbf3b21334": {
@@ -18310,6 +18323,95 @@
         "recovery/cast/residence_courier_v7.json"
       ]
     },
+    "river_herb_cart_driver_s16": {
+      "aliases": [
+        "river herb cart driver s16",
+        "Возница"
+      ],
+      "facts": [],
+      "id": "river_herb_cart_driver_s16",
+      "kind": "npc",
+      "label": "Возница",
+      "mention_count": 15,
+      "mentions": [
+        {
+          "at": "0006-10-09T15:51:00",
+          "excerpt": "иплины, сколько из-за нежелания продолжать разговор о том, что оба видели. *** Снизу послышался скрип колёс. Повозка показалась между деревьями. Возница — женщина в дорожном плаще — остановила лошадь, увидев перед воротами чужого человека. Рядом с ней сидел ши",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.101"
+        },
+        {
+          "at": "0010-04-22T11:53:00",
+          "excerpt": "эн:** — Нукенин. Он произнёс это вполголоса. Сэйдзи перестал ощупывать исцелённую ногу. Несколько мгновений возница смотрел на Шики, затем опустил голову. **Сэйдзи:** — Ну… преступник или нет, ногу мне сохранили вы. Спасибо. Слова дались ему с заметным усилием",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.112"
+        },
+        {
+          "at": "0010-04-22T11:57:00",
+          "excerpt": "твердил отшельничество. Рёэн предложил записку для привратника Храма Огня. Дзюн разгружает повозку, услышал речь Коюки; возница отдыхает. Дорога свободна.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-29T19:10:00",
+          "excerpt": "ю холмов. Ни одна не проявляла агрессии. Они словно покидали привычные укрытия, направляясь в определённое место. Возница заметил Шики и натянул поводья. При виде его лица мужчина побледнел. Несколько мгновений он смотрел на вертикальные зрачки, затем заметил ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.092"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s16.text.092",
+          "wants": "Уехать с опасного участка и доставить людей в безопасное место."
+        },
+        {
+          "wants": "Уехать с опасного участка и доставить людей в безопасное место."
+        }
+      ],
+      "sources": [
+        "recovery/cast/river_herb_cart_driver_s16.json",
+        "recovery/HOT.json",
+        "s16.text.092"
+      ]
+    },
+    "river_herb_gatherer_s16": {
+      "aliases": [
+        "river herb gatherer s16",
+        "Сборщик"
+      ],
+      "facts": [],
+      "id": "river_herb_gatherer_s16",
+      "kind": "npc",
+      "label": "Сборщик",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-29T19:10:00",
+          "excerpt": "нее ущелье, лучше обойдите. Там сегодня что-то со змеями. Один из его спутников раздражённо дёрнул повозку за борт. **Сборщик:** — Поехали уже! Оставь ты его. Коюки не сводила взгляда с травы. **Коюки:** — Шики, они куда-то собираются. Даже те, которые обычно ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.092"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s16.text.092",
+          "wants": "Немедленно покинуть ущелье и не тратить время."
+        },
+        {
+          "wants": "Немедленно покинуть ущелье и не тратить время."
+        }
+      ],
+      "sources": [
+        "recovery/cast/river_herb_gatherer_s16.json",
+        "recovery/HOT.json",
+        "s16.text.092"
+      ]
+    },
     "road_villager_fumi": {
       "aliases": [
         "road villager fumi",
@@ -21222,7 +21324,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 82,
+      "mention_count": 83,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21230,13 +21332,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-23T16:32:02",
-          "excerpt": "икивать подбадривания. Он подался вперёд, пытаясь уследить за движениями обоих отшельников. На ветке над ним Коюки подняла голову. **Коюки:** — Шики, я ненадолго отлучусь. Нужно передать посыльным дорогу к Аки. Найду тебя позже. Белая змея бесшумно скрылась ср",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.152"
         },
         {
           "at": "0010-04-27T13:53:10",
@@ -21251,11 +21346,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.091"
+        },
+        {
+          "at": "0010-04-29T19:10:00",
+          "excerpt": "— четверг, 29 апреля 1287 года</text> **Мугами Шики:** — Это и хотел тебе предложить. Пойдем домой Коюки довольно устроилась под воротником плаща. Побережье постепенно осталось позади. Шики двигался по торговым дорогам, проходил через небольшие поселения и пер",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.092"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.091",
+          "seen": "s16.text.092",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21265,7 +21367,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.091"
+        "s16.text.092"
       ]
     },
     "white_snake_sage": {
@@ -21757,5 +21859,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1465
+  "source_turns_indexed": 1466
 }
