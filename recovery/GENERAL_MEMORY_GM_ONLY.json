@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.159",
+  "cursor": "s15.text.160",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -418,17 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.159"
+        },
+        {
+          "at": "0010-04-23T17:13:00",
+          "excerpt": "ароматическая палочка, оставленная возле фотографии Третьего Хокагэ. Асума прочёл донесение дважды. **Асума Сарутоби:** — Сколько времени прошло? **Цунадэ:** — Мы не знаем. Последнее сообщение передано ещё во время нападения. Связь оборвалась. Асума положил бу",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.160"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.159"
+          "seen": "s15.text.160"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s15.text.159"
+        "s15.text.160"
       ]
     },
     "baki": {
@@ -551,6 +558,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s15.text.160:0": {
+      "aliases": [
+        "canon:s15.text.160:0",
+        "s15.text.160: отряд Асумы в линии Храма Огня — Асума, Шикамару, Изумо, Котэцу; Шики добровольный пятый. Ино и Тёдзи не присутствовали. Сверено с Naruto Shippuden, эп. 74–75, https:"
+      ],
+      "facts": [],
+      "id": "canon:s15.text.160:0",
+      "kind": "canon",
+      "label": "s15.text.160: отряд Асумы в линии Храма Огня — Асума, Шикамару, Изумо, Котэцу; Шики добровольный пятый. Ино и Тёдзи не присутствовали. Сверено с Naruto Shippuden, эп. 74–75, https:",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.160"
       ]
     },
     "captive_guard": {
@@ -2204,6 +2227,42 @@
         "recovery/cast/itachi_puppet.json"
       ]
     },
+    "izumo": {
+      "aliases": [
+        "izumo",
+        "Изумо Камидзуки"
+      ],
+      "facts": [],
+      "id": "izumo",
+      "kind": "npc",
+      "label": "Изумо Камидзуки",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-23T17:13:00",
+          "excerpt": "дартных жилетах Листа. У одного тёмные волосы закрывали правый глаз, у другого переносицу пересекала широкая повязка. Изумо Камидзуки и Котэцу Хаганэ — сотрудники экзаменационной службы, которых Шики мог видеть много лет назад. Они смотрели на приближавшегося ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.160"
+        }
+      ],
+      "projections": [
+        {
+          "role": "Тюнин Листа, отряд Асумы",
+          "seen": "s15.text.160",
+          "state": "С дорожным снаряжением у южных ворот."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
+          "state": "С дорожным снаряжением у южных ворот."
+        }
+      ],
+      "sources": [
+        "recovery/cast/izumo.json",
+        "recovery/HOT.json",
+        "s15.text.160"
+      ]
+    },
     "jiraiya": {
       "aliases": [
         "jiraiya",
@@ -3251,6 +3310,42 @@
       ],
       "sources": [
         "recovery/cast/kiri_transfer_watch.json"
+      ]
+    },
+    "kotetsu": {
+      "aliases": [
+        "kotetsu",
+        "Котэцу Хаганэ"
+      ],
+      "facts": [],
+      "id": "kotetsu",
+      "kind": "npc",
+      "label": "Котэцу Хаганэ",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-23T17:13:00",
+          "excerpt": "ста. У одного тёмные волосы закрывали правый глаз, у другого переносицу пересекала широкая повязка. Изумо Камидзуки и Котэцу Хаганэ — сотрудники экзаменационной службы, которых Шики мог видеть много лет назад. Они смотрели на приближавшегося человека без малей",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.160"
+        }
+      ],
+      "projections": [
+        {
+          "role": "Тюнин Листа, отряд Асумы",
+          "seen": "s15.text.160",
+          "state": "С дорожным снаряжением у южных ворот."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
+          "state": "С дорожным снаряжением у южных ворот."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kotetsu.json",
+        "recovery/HOT.json",
+        "s15.text.160"
       ]
     },
     "kurama": {
@@ -4875,8 +4970,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json",
-        "s15.text.159"
+        "recovery/cast/naruto.json"
       ]
     },
     "naruto_home_sketch_s15": {
@@ -11626,6 +11720,24 @@
         "s09.text.023"
       ]
     },
+    "place:8e37d87179de8778": {
+      "aliases": [
+        "place:8e37d87179de8778",
+        "Конохагакуре, южные ворота",
+        "Конохагакуре",
+        "южные ворота"
+      ],
+      "facts": [],
+      "id": "place:8e37d87179de8778",
+      "kind": "place",
+      "label": "Конохагакуре, южные ворота",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.160"
+      ]
+    },
     "place:8ea7dab6d4a701e4": {
       "aliases": [
         "place:8ea7dab6d4a701e4",
@@ -18246,7 +18358,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18254,13 +18366,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0001-08-07T09:46:00",
-          "excerpt": "лько тем, кого поражает. Ею можно заставить противника занять невыгодное положение. У противоположного ограждения стоял Шикамару Нара. Он наблюдал за схваткой, опираясь локтями на камень. **Шикамару**, тихо\\: — Вот же неприятная женщина… Темари словно услышала",
-          "source": "archive/session-002-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s02.text.030"
         },
         {
           "at": "0001-08-07T10:05:00",
@@ -18275,15 +18380,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.158"
+        },
+        {
+          "at": "0010-04-23T17:13:00",
+          "excerpt": "а открытых предплечьях Шики, на чёрных структурах, уходивших под рукава. Он ничего не спросил. Шикамару указал на карту. **Шикамару Нара:** — Через лес быстрее. Если выступим сейчас, часть пути пройдём засветло. Остальное — ночью. **Асума Сарутоби:** — Выступа",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.160"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.158"
+          "seen": "s15.text.160"
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "recovery/HOT.json",
+        "s15.text.160"
       ]
     },
     "shiki_arm_wraps": {
@@ -19648,11 +19762,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "23.04.1287 16:48: Шики выбрал участие в помощи храму, догнал Асуму и предложил сопровождение. Асума направляется за разрешением Цунадэ."
+          "state": "23.04 17:13: санкция Цунадэ получена; Асума, Шикамару, Изумо, Котэцу и Шики у южных ворот. Связь с храмом прервана, судьба Тирику неизвестна."
         }
       ],
       "sources": [
-        "s15.text.159"
+        "s15.text.160"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -19726,7 +19840,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -19734,13 +19848,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-23T16:22:00",
-          "excerpt": "Джирайя:** — В молодости мы постоянно спорили. Я завидовал его таланту, он считал меня безнадёжным болваном. Цунадэ колотила нас обоих. А старик Сарутоби верил, что однажды из нас получится нечто путное. Он присел возле оставленного свитка. **Джирайя:** — Знае",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.147"
         },
         {
           "at": "0010-04-23T16:32:00",
@@ -19755,15 +19862,23 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.159"
+        },
+        {
+          "at": "0010-04-23T17:13:00",
+          "excerpt": "text color=\"secondary\" size=\"xs\">23 апреля 1287 года · 16:54</text> ### Резиденция Хокагэ В кабинете Цунадэ стояла тишина. На краю стола догорала тонкая ароматическая палочка, оставленная возле фотографии Третьего Хокагэ. Асума прочёл донесение дважды. **Асума",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.160"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.136"
+          "seen": "s15.text.160"
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s15.text.160"
       ]
     },
     "unknown_masked_prisoner": {
@@ -20610,5 +20725,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1332
+  "source_turns_indexed": 1333
 }

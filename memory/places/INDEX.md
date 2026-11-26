@@ -173,6 +173,7 @@
 - Конохагакуре, Трибуна участников · `places/konokhagakure-tribuna-uchastnikov` · 1 ход(ов), s02–s02
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
 - Конохагакуре, Временная резиденция делегации Кусагакуре · `places/konokhagakure-vremennaya-rezidentsiya-delegatsii-kusagakure` · 1 ход(ов), s02–s02
+- Конохагакуре, южные ворота · `places/konokhagakure-yuzhnye-vorota` · 1 ход(ов), s15–s15
 - Конохагакуре, Западное медицинское крыло главной арены · `places/konokhagakure-zapadnoe-meditsinskoe-krylo-glavnoy-areny` · 1 ход(ов), s02–s02
 - Конохагакуре, жилой квартал · `places/konokhagakure-zhiloy-kvartal` · 1 ход(ов), s15–s15
 - Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
