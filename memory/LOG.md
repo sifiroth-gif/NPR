@@ -2,6 +2,26 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.151: Джирайя (`npc/jiraiya`)
+- s15.text.150: Джирайя (`npc/jiraiya`), shima (`npc/shima`), Коюки (`npc/western_nest_young_courier`)
+- s15.text.149: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
+- s15.text.148: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`), Фукасаку (`npc/fukasaku`)
+- s15.text.147: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`), Фукасаку (`npc/fukasaku`)
+- s15.text.146: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
+- s15.text.145: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Коюки (`npc/western_nest_young_courier`)
+- s15.text.144: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
+- s15.text.143: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
+- s15.text.142: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`)
+- s15.text.141: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`)
+- s15.text.140: Наруто Узумаки (`npc/naruto`)
+- s15.text.139: Наруто Узумаки (`npc/naruto`)
+- s15.text.138: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`)
+- s15.text.137: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`), вещь `leaf_shiki_agreement_copy`
+- s15.text.136: Цунадэ (`npc/tsunade`), Коюки (`npc/western_nest_young_courier`), вещь `naruto_home_sketch_s15`
+- s15.text.135: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), вещь `leaf_shiki_agreement_original`, вещь `leaf_shiki_agreement_copy`, поправки игрока: 2
+- s15.text.134: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), вещь `leaf_shiki_agreement_original`, вещь `leaf_shiki_agreement_copy`
+- s15.text.133: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`)
+- s15.text.132: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Коюки (`npc/western_nest_young_courier`), план сюжета, поправки игрока: 1
 - s15.text.131: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), Коюки (`npc/western_nest_young_courier`), план сюжета, поправки игрока: 1
 - s15.text.130: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s15.text.129: Какаши Хатакэ (`npc/kakashi`), Коюки (`npc/western_nest_young_courier`), Цунадэ (`npc/tsunade`), поправки игрока: 1
@@ -42,23 +62,3 @@
 - s15.text.094: Асумага Тосэ (`npc/kusa_leader`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.093: Асумага Тосэ (`npc/kusa_leader`), Коюки (`npc/western_nest_young_courier`), Хаясэ Рэн (`npc/ren`)
 - s15.text.092: Хаясэ Рэн (`npc/ren`), Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.091: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.090: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`), Кирисава Сэйна (`npc/seina`)
-- s15.text.089: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.088: Мугами Акихиро (`npc/akihiro`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.087: Кирисава Сэйна (`npc/seina`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`)
-- s15.text.086: Коюки (`npc/western_nest_young_courier`), Мидзухара Аки (`npc/aki`), Кирисава Сэйна (`npc/seina`)
-- s15.text.085: Мугами Нао (`npc/nao`), Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`)
-- s15.text.084: Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`), Хаясэ Рэн (`npc/ren`)
-- s15.text.083: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`)
-- s15.text.082: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.081: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Кирисава Сэйна (`npc/seina`)
-- s15.text.080: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Акихиро (`npc/akihiro`)
-- s15.text.079: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`)
-- s15.text.078: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Нао (`npc/nao`)
-- s15.text.077: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`)
-- s15.text.076: Мугами Акихиро (`npc/akihiro`), Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`)
-- s15.text.075: Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), вещь `mugami_tea_gift_s15`
-- s15.text.074: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Акихиро (`npc/akihiro`), вещь `aki_home_address_s15`
-- s15.text.073: Мидзухара Аки (`npc/aki`), Хаясэ Рэн (`npc/ren`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`), вещь `aki_home_address_s15`
-- s15.text.072: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`), поправки игрока: 1

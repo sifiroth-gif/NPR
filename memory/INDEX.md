@@ -1,15 +1,19 @@
-# Карта мира NPR · на ходе `s15.text.131`
+# Карта мира NPR · на ходе `s15.text.151`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (311) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (315) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (240)
-- Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 (на 1283, экзамен) · `npc/kakashi` · в сцене
+## Персонажи (242)
+- shima —  · `npc/shima` · в сцене
+- Джирайя —  · `npc/jiraiya` · в сцене
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
-- Цунадэ — Светлые волосы в двух хвостах, ромбовидная печать на лбу, з… · `npc/tsunade` · в сцене
-- Шизунэ — Темноволосая женщина в тёмном кимоно, медицинские отчёты. · `npc/shizune` · в сцене
+- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
+- Фукасаку —  · `npc/fukasaku` · в сцене
+- Цунадэ — Светлые волосы в двух хвостах, ромбовидная печать на лбу, з… · `npc/tsunade`
+- Шизунэ — Темноволосая женщина в тёмном кимоно, медицинские отчёты. · `npc/shizune`
+- Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 (на 1283, экзамен) · `npc/kakashi`
 - Наёмник у шахты — по подписи в сцене · `npc/naemnik_u_shakhty`
 - Дежурный главных ворот Конохи — Шиноби Листа с регистрационным журналом. · `npc/fire_leaf_gate_duty`
 - Маю — Подросток около тринадцати лет, каштановые волосы, веснушки… · `npc/fire_road_mayu`
@@ -57,7 +61,6 @@
 - Коричневая змея-наблюдатель — Небольшая коричневая змея, чужеродный чакровый контур печат… · `npc/orochimaru_scout_snake`
 - Девятихвостый — Массивная рыжая лисья морда, огромные красные глаза и белые… · `npc/kurama`
 - Кэйдзи — шиноби Конохи (~18 в 1283); в 1278 генин, Шики бесплатно восстановил ему связку… · `npc/keiji`
-- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Сай — Бледный юноша с короткими чёрными волосами; кисть и футляр … · `npc/sai`
 - Ямато — Темноволосый взрослый шиноби, короткие волосы, жилет дзёнин… · `npc/yamato`
 - sirame —  · `npc/sirame`
@@ -138,7 +141,6 @@
 - Мацуда — Неформальный наблюдатель Нори после её отстранения, бывший подчинённый · `npc/matsuda`
 - Икэда —  · `npc/south_crossbowman`
 - akatsuki —  · `npc/akatsuki`
-- jiraiya —  · `npc/jiraiya`
 - pain —  · `npc/pain`
 - Данзо Шимура (Данзо, Шимура) — чиновник скрытых операций (на 1283, экзамен) · `npc/danzo`
 - Хирано — задержанный; шесть лет страдал двигательными нарушениями, принимал препарат · `npc/hirano`
@@ -256,7 +258,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (86)
+## Вещи (89)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -296,11 +298,14 @@
 - `kusa_shiki_nonaggression_draft` · `items/kusa_shiki_nonaggression_draft`
 - `kusa_shiki_nonaggression_original` · `items/kusa_shiki_nonaggression_original`
 - `kusa_shiki_warrant_revocation` · `items/kusa_shiki_warrant_revocation`
+- `leaf_shiki_agreement_copy` · `items/leaf_shiki_agreement_copy`
+- `leaf_shiki_agreement_original` · `items/leaf_shiki_agreement_original`
 - `market_consumables_25mar` · `items/market_consumables_25mar`
 - `medical_case_m12` · `items/medical_case_m12`
 - `minagi_receipts` · `items/minagi_receipts`
 - `mugami_family_album` · `items/mugami_family_album`
 - `mugami_tea_gift_s15` · `items/mugami_tea_gift_s15`
+- `naruto_home_sketch_s15` · `items/naruto_home_sketch_s15`
 - `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
 - `orochimaru_poison_samples_s15` · `items/orochimaru_poison_samples_s15`
