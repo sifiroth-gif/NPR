@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.109: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), fire_temple_travel_monk (`npc/fire_temple_travel_monk`), линия `shiki_save_asuma`, поправки игрока: 1
 - s15.text.108: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.107: Коюки (`npc/western_nest_young_courier`), Мидзухара Аки (`npc/aki`), Кирисава Сэйна (`npc/seina`), вещь `kusa_shiki_nonaggression_original`, вещь `kusa_shiki_nonaggression_copy`
 - s15.text.106: Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
@@ -61,4 +62,3 @@
 - s15.text.052: Глава Кусагакуре (`npc/kusa_head`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `kusa_family_visit_permit_s15`
 - s15.text.051: Глава Кусагакуре (`npc/kusa_head`)
 - s15.text.050: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Глава Кусагакуре (`npc/kusa_head`)
-- s15.text.049: Старший патруля Кусы (`npc/grass_roads_patrol_senior`)

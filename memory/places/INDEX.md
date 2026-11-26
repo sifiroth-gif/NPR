@@ -266,6 +266,7 @@
 - Страна Травы, старая торговая дорога у развилки · `places/strana-travy-staraya-torgovaya-doroga-u-razvilki` · 1 ход(ов), s13–s13
 - Страна Травы, Тайная лаборатория Шики · `places/strana-travy-taynaya-laboratoriya-shiki` · 1 ход(ов), s02–s02
 - Страна Травы, теневые торговые ряды возле подпольных складов · `places/strana-travy-tenevye-torgovye-ryady-vozle-podpolnykh-skladov` · 1 ход(ов), s12–s12
+- Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 1 ход(ов), s15–s15
 - Страна Травы, заброшенная дорога у северных болот · `places/strana-travy-zabroshennaya-doroga-u-severnykh-bolot` · 1 ход(ов), s12–s12
 - Страна Ветра, дорога возле старого водосборника в северо-восточных предгорьях · `places/strana-vetra-doroga-vozle-starogo-vodosbornika-v-severo-vost` · 1 ход(ов), s09–s09
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
