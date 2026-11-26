@@ -5,18 +5,20 @@
     "kiri_ship_security_officer",
     "ao",
     "place:f444fb5353fede17",
+    "kiri_shiki_sample_set_s16",
     "shiki_private_line_kiri_plate"
   ],
-  "cursor": "s16.text.085",
+  "cursor": "s16.text.086",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2159,
-  "index_entities": 878,
-  "index_source_records": 1459,
-  "indexed_cursor": "s16.text.085",
+  "focus_bytes": 2438,
+  "index_entities": 881,
+  "index_source_records": 1460,
+  "indexed_cursor": "s16.text.086",
   "kinds": {
-    "clock": 2,
+    "canon": 1,
+    "clock": 3,
     "entity": 1,
-    "item": 47,
+    "item": 48,
     "npc": 207,
     "place": 613,
     "thread": 8
@@ -28,6 +30,18 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s16.text.086:0",
+      "kind": "canon"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "clock:kiri_sample_agreement_expiry_s16",
+      "kind": "clock"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -139,6 +153,12 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "kiri_shiki_sample_set_s16",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "konoha_blank_contact_plate_s16",
       "kind": "item"
     },
@@ -182,12 +202,6 @@
       "at_1": true,
       "at_5": true,
       "id": "nemera_document",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "possible_sasuke_hair",
       "kind": "item"
     },
     {
@@ -528,9 +542,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 83,
-  "self_query_at_5": 83,
-  "self_query_count": 83,
+  "self_query_at_1": 85,
+  "self_query_at_5": 85,
+  "self_query_count": 85,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

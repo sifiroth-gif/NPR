@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s16.text.085`
+# Карта мира NPR · на ходе `s16.text.086`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -266,12 +266,12 @@
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 - `jiraiya_rain_investigation` — 25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стер… · `threads/jiraiya_rain_investigation`
-- `kiri_bingo_negotiations` — 27.04 13:46 получено официальное согласие Мэй. Шесть пунктов предъявл… · `threads/kiri_bingo_negotiations`
+- `kiri_bingo_negotiations` — Подписано 27.04 13:51, действует до 27.05 13:51. Образцы у Ао, резуль… · `threads/kiri_bingo_negotiations`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (96)
+## Вещи (97)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -305,6 +305,7 @@
 - `kimimaro_functional_cultures` · `items/kimimaro_functional_cultures`
 - `kiri_anbu_mask` · `items/kiri_anbu_mask`
 - `kiri_bingo_book` · `items/kiri_bingo_book`
+- `kiri_shiki_sample_set_s16` · `items/kiri_shiki_sample_set_s16`
 - `kiri_transfer_token` · `items/kiri_transfer_token`
 - `kiri_transport_containment` · `items/kiri_transport_containment`
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
