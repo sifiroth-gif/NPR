@@ -100,6 +100,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
+- Мьёбоку, источник жабьего масла · `places/meboku-istochnik-zhabego-masla` · 3 ход(ов), s16–s16
 - Страна Огня, лес у пункта выплаты наград · `places/strana-ognya-les-u-punkta-vyplaty-nagrad` · 3 ход(ов), s15–s15
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
@@ -132,7 +133,6 @@
 - Кусагакуре, старый западный шлюз · `places/kusagakure-staryy-zapadnyy-shlyuz` · 2 ход(ов), s11–s11
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 2 ход(ов), s11–s11
-- Мьёбоку, источник жабьего масла · `places/meboku-istochnik-zhabego-masla` · 2 ход(ов), s16–s16
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 2 ход(ов), s10–s10

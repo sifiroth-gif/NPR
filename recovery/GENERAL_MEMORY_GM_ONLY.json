@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.005",
+  "cursor": "s16.text.006",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.006:0": {
+      "aliases": [
+        "canon:s16.text.006:0",
+        "s16.text.006: Игрок уточнил физиологию Шики после слияния: обычная пища по-прежнему доступна, но физиологической потребности в ней и во сне больше нет; Шики спит ради восстановлени"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.006:0",
+      "kind": "canon",
+      "label": "s16.text.006: Игрок уточнил физиологию Шики после слияния: обычная пища по-прежнему доступна, но физиологической потребности в ней и во сне больше нет; Шики спит ради восстановлени",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.006"
       ]
     },
     "captive_guard": {
@@ -1765,7 +1781,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1789,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:22:00",
-          "excerpt": "Когда умирают мои сородичи, я ещё некоторое время вижу их во сне. Иногда забываю, что их больше нет, и прошу Фукасаку позвать кого-нибудь из давно умерших. Фукасаку прикрыл глаза. **Гамамару:** — Но мои воспоминания о них всегда принадлежат мне. Даже во сне я ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.003"
         },
         {
           "at": "0010-04-25T09:37:00",
@@ -1794,11 +1803,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.005"
+        },
+        {
+          "at": "0010-04-25T09:45:00",
+          "excerpt": "ила рис и овощи специально для человеческого гостя. Она снова подняла корзину. Теперь уже обеими лапами. **Фукасаку:** — Постоянное поступление природной энергии, отсутствие потребности в пище и сне… Папа Гамамару был прав, когда предостерёг нас от попыток пов",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.006"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.005",
+          "seen": "s16.text.006",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1808,7 +1824,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.005"
+        "s16.text.006"
       ]
     },
     "gaara": {
@@ -1942,7 +1958,7 @@
       "id": "gamamaru",
       "kind": "npc",
       "label": "Гамамару",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0010-04-24T12:38:00",
@@ -1950,13 +1966,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.188"
-        },
-        {
-          "at": "0010-04-25T09:19:00",
-          "excerpt": "естал рассматривать свиток. Его рука, до этого небрежно лежавшая на колене, опустилась на каменный пол. Гамамару открыл глаза шире. На морщинистой оранжевой коже старейшины дрогнули тяжёлые веки. **Фукасаку:** — Постой… Один источник чакры. Именно это я почувс",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.002"
         },
         {
           "at": "0010-04-25T09:22:00",
@@ -1971,6 +1980,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.004"
+        },
+        {
+          "at": "0010-04-25T09:45:00",
+          "excerpt": "лапами. **Фукасаку:** — Постоянное поступление природной энергии, отсутствие потребности в пище и сне… Папа Гамамару был прав, когда предостерёг нас от попыток повторить твой опыт. Джирайя обулся и подобрал свои вещи. **Джирайя:** — После обеда мне нужно верну",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.006"
         }
       ],
       "projections": [
@@ -2505,7 +2521,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2513,13 +2529,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:22:00",
-          "excerpt": "я помню жизнь до Мугами Шики, помню жизнь Мугами Шики, помню обе жизни раздельно, и сейчас тоже помню. Джирайя опустил взгляд на открытые предплечья Шики, покрытые чёрными древовидными структурами. **Джирайя:** — Последний шаг сделала она… Он тихо повторил эти",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.003"
         },
         {
           "at": "0010-04-25T09:37:00",
@@ -2534,11 +2543,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.005"
+        },
+        {
+          "at": "0010-04-25T09:45:00",
+          "excerpt": "угу. Несколько мгновений она внимательно смотрела на Шики. **Сима:** — А удовольствие от еды осталось? Джирайя усмехнулся. **Джирайя:** — Мама Сима, только не надо проверять это на твоих гусеницах. **Сима:** — Помолчи, Джирайя-тян. Я приготовила рис и овощи сп",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.006"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.005",
+          "seen": "s16.text.006",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2548,7 +2564,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.005"
+        "s16.text.006"
       ]
     },
     "jiro_caravan_guard": {
@@ -15607,8 +15623,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.005",
-        "s16.text.004"
+        "s16.text.006",
+        "s16.text.004",
+        "s16.text.005"
       ]
     },
     "place:dfe9865838b9839d": {
@@ -19045,7 +19062,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19053,13 +19070,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-23T16:35:00",
-          "excerpt": "брительно кивнул. **Фукасаку:** — Хорошо. Покажем ему наши водопады и места, где обучаются отшельники. **Сима:** — А пока домой, папа. Обедать! Обе жабы исчезли в облачках белого дыма. Джирайя некоторое время смотрел на опустевшее место. Затем достал из карман",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.156"
         },
         {
           "at": "0010-04-25T08:58:00",
@@ -19074,17 +19084,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.005"
+        },
+        {
+          "at": "0010-04-25T09:45:00",
+          "excerpt": "ялось, кроме того, что я перестал в ней нуждаться, как и во сне. Я сплю, чтобы восстанавливать чакру. Сима опустила корзину, которую собиралась передать супругу. Несколько мгновений она внимательно смотрела на Шики. **Сима:** — А удовольствие от еды осталось? ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.006"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.005"
+          "seen": "s16.text.006"
         }
       ],
       "sources": [
         "recovery/cast/shima.json",
         "recovery/HOT.json",
-        "s16.text.005"
+        "s16.text.006"
       ]
     },
     "shiozaki_masaaki": {
@@ -19316,7 +19333,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19324,13 +19341,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-23T16:35:00",
-          "excerpt": "брительно кивнул. **Фукасаку:** — Хорошо. Покажем ему наши водопады и места, где обучаются отшельники. **Сима:** — А пока домой, папа. Обедать! Обе жабы исчезли в облачках белого дыма. Джирайя некоторое время смотрел на опустевшее место. Затем достал из карман",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.156"
         },
         {
           "at": "0010-04-25T08:58:00",
@@ -19345,6 +19355,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.005"
+        },
+        {
+          "at": "0010-04-25T09:45:00",
+          "excerpt": "ялось, кроме того, что я перестал в ней нуждаться, как и во сне. Я сплю, чтобы восстанавливать чакру. Сима опустила корзину, которую собиралась передать супругу. Несколько мгновений она внимательно смотрела на Шики. **Сима:** — А удовольствие от еды осталось? ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.006"
         }
       ],
       "projections": [
@@ -21079,5 +21096,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1385
+  "source_turns_indexed": 1386
 }
