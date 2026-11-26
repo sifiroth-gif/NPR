@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.130: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.129: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.128: Данзо Шимура (`npc/danzo`), Какаши Хатакэ (`npc/kakashi`)
 - s16.text.127: Данзо Шимура (`npc/danzo`)
@@ -61,4 +62,3 @@
 - s16.text.073: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), линия `kiri_bingo_negotiations`
 - s16.text.072: поправки игрока: 4
 - s16.text.071: поправки игрока: 1
-- s16.text.070: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), линия `kiri_bingo_negotiations`
