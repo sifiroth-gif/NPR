@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.083",
+  "cursor": "s15.text.084",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -79,13 +79,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.083"
+          "seen": "s15.text.084"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
-        "recovery/HOT.json",
-        "s15.text.083"
+        "recovery/HOT.json"
       ]
     },
     "aki_home_address_s15": {
@@ -4059,7 +4058,7 @@
       "id": "nao",
       "kind": "npc",
       "label": "Мугами Нао",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -4067,13 +4066,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T20:23:00",
-          "excerpt": "ших почти весь мир пятнадцатилетнего Мугами Шики. Нао взяла семейный альбом и положила его рядом с запиской Аки. **Мугами Нао:** — Твою комнату я приготовила. Постель свежая. Она помолчала. **Мугами Нао:** — Ты ведь останешься до утра? **Ход Шики.** Шики подде",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.073"
         },
         {
           "at": "0010-04-21T20:25:00",
@@ -4088,6 +4080,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.083"
+        },
+        {
+          "at": "0010-04-21T20:33:00",
+          "excerpt": "ьбома. На фотографии маленький Шики стоял возле отца, держа в руках деревянную коробочку с лекарствами. **Мугами Нао:** — Значит, она тоже жила вдали от дома. Мать придвинула альбом к сыну. **Мугами Нао:** — Тогда пусть и она знает, где вырос ты. Рэн встал из-",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.084"
         }
       ],
       "projections": [
@@ -4095,7 +4094,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.083",
+          "seen": "s15.text.084",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -4112,7 +4111,7 @@
       "sources": [
         "recovery/cast/nao.json",
         "recovery/HOT.json",
-        "s15.text.083"
+        "s15.text.084"
       ]
     },
     "naruto": {
@@ -6176,7 +6175,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.083",
+        "s15.text.084",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6196,7 +6195,8 @@
         "s15.text.079",
         "s15.text.080",
         "s15.text.081",
-        "s15.text.082"
+        "s15.text.082",
+        "s15.text.083"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16200,7 +16200,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 94,
+      "mention_count": 95,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16208,13 +16208,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:29:00",
-          "excerpt": "акура. Также подкрепление: Нэдзи, Рок Ли, тот, с кем я дрался на экзамене, девушка их и их учитель. **Хаясэ Рэн:** — Ли! Этого я помню. Чокнутый в зелёном. Аки улыбнулась, но почти сразу стала серьёзной. **Мидзухара Аки:** — Хатаке Какаши знал, кто ты? В смысл",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.080"
         },
         {
           "at": "0010-04-21T20:30:00",
@@ -16229,11 +16222,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.082"
+        },
+        {
+          "at": "0010-04-21T20:33:00",
+          "excerpt": "к сыну. **Мугами Нао:** — Тогда пусть и она знает, где вырос ты. Рэн встал из-за стола, собрал свои вещи. **Хаясэ Рэн:** — Пойду найду Тосэ. А то просидим здесь до полуночи. Он задержался у двери. **Хаясэ Рэн:** — Рад, что ты жив, Шики. **Ход Шики.** Шики подт",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.084"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.083",
+          "seen": "s15.text.084",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16243,7 +16243,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.083"
+        "s15.text.084"
       ]
     },
     "residence_courier_v7": {
@@ -16981,7 +16981,7 @@
       "id": "seina",
       "kind": "npc",
       "label": "Кирисава Сэйна",
-      "mention_count": 38,
+      "mention_count": 39,
       "mentions": [
         {
           "at": "0001-07-07T09:55:00",
@@ -16989,13 +16989,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.110"
-        },
-        {
-          "at": "0010-04-21T20:06:00",
-          "excerpt": "гда тончайшие ответвления начали двигаться независимо друг от друга, она перевела взгляд на лицо ученика. **Кирисава Сэйна:** — Шики… Ты чувствуешь каждым из них? Рэн сидел совершенно неподвижно. Аки держала между пальцами палочки, так и не донесённые до тарел",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.069"
         },
         {
           "at": "0010-04-21T20:09:00",
@@ -17010,17 +17003,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.082"
+        },
+        {
+          "at": "0010-04-21T20:33:00",
+          "excerpt": "для описания и ощущений не существует. Сэйна посмотрела на ученика с профессиональным любопытством. **Кирисава Сэйна:** — Воспоминания, для которых у человеческой нервной системы никогда не существовало соответствующих органов чувств… Она запнулась и больше ни",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.084"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.083"
+          "seen": "s15.text.084"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s15.text.083"
+        "s15.text.084"
       ]
     },
     "sekido_tadao": {
@@ -18765,7 +18765,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.083",
+          "seen": "s15.text.084",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19224,5 +19224,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1257
+  "source_turns_indexed": 1258
 }
