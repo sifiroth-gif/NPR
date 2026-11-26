@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.002",
+  "cursor": "s16.text.003",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -139,8 +139,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json",
-        "s16.text.002"
+        "recovery/cast/akihiro.json"
       ]
     },
     "arai_mitiko": {
@@ -1207,8 +1206,7 @@
     "fire_road_hisato": {
       "aliases": [
         "fire road hisato",
-        "Хисато",
-        "fire_road_hisato"
+        "Хисато"
       ],
       "facts": [],
       "id": "fire_road_hisato",
@@ -1251,8 +1249,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_hisato.json",
-        "s16.text.002"
+        "recovery/cast/fire_road_hisato.json"
       ]
     },
     "fire_road_jonin": {
@@ -1768,7 +1765,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 26,
+      "mention_count": 27,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1776,13 +1773,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "хотя пол как понятие к ней не применим, назвала себя Немерой. Гамамару застыл. **Гамамару:** — Немера… Фукасаку поднял голову. Великий Мудрец произнёс это имя с отчётливостью, совершенно несвойственной его старческой речи. **Гамамару:** — Фукасаку. Принеси ста",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.207"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -1797,11 +1787,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.002"
+        },
+        {
+          "at": "0010-04-25T09:22:00",
+          "excerpt": "Когда умирают мои сородичи, я ещё некоторое время вижу их во сне. Иногда забываю, что их больше нет, и прошу Фукасаку позвать кого-нибудь из давно умерших. Фукасаку прикрыл глаза. **Гамамару:** — Но мои воспоминания о них всегда принадлежат мне. Даже во сне я ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.003"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.002",
+          "seen": "s16.text.003",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1811,7 +1808,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.002"
+        "s16.text.003"
       ]
     },
     "gaara": {
@@ -1945,7 +1942,7 @@
       "id": "gamamaru",
       "kind": "npc",
       "label": "Гамамару",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0010-04-24T12:38:00",
@@ -1953,13 +1950,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.188"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "основания шеи. **Мугами Шики:** — Она, хотя пол как понятие к ней не применим, назвала себя Немерой. Гамамару застыл. **Гамамару:** — Немера… Фукасаку поднял голову. Великий Мудрец произнёс это имя с отчётливостью, совершенно несвойственной его старческой речи",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.207"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -1974,13 +1964,20 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.002"
+        },
+        {
+          "at": "0010-04-25T09:22:00",
+          "excerpt": "одного подходящего слова. Шики бережно сворачивает пожелтевшие листы и забирает свёрток с рисунками. Гамамару убирает лапу, придерживавшую край ткани. **Мугами Шики:** — Мы одно целое, и когда мы работали над отшельником дракона, мы оба решили отказаться от ра",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.003"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение природного равновесия.",
           "role": "Старейшина Мьёбоку, пророческие сны.",
-          "seen": "s16.text.002",
+          "seen": "s16.text.003",
           "stance": "Любопытство к гостю.",
           "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
           "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
@@ -1995,7 +1992,7 @@
       "sources": [
         "recovery/cast/gamamaru.json",
         "recovery/HOT.json",
-        "s16.text.002"
+        "s16.text.003"
       ]
     },
     "gamamaru_nemera_dream_scroll": {
@@ -2011,12 +2008,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "gamamaru",
-          "since": "s15.text.207"
+          "holder": "shiki",
+          "since": "s15.text.207",
+          "turn": "s16.text.003"
         }
       ],
       "sources": [
-        "s15.text.207"
+        "s16.text.003"
       ]
     },
     "grass_roads_patrol_senior": {
@@ -2515,7 +2513,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 33,
+      "mention_count": 34,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2523,13 +2521,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "ые записи моих сновидений. Те, что хранятся в каменном ларце. Пока Фукасаку отсутствовал, Гамамару молчал. Джирайя несколько раз собирался заговорить, но старик продолжал смотреть на Шики. Наконец Фукасаку вернулся с узким свитком, обёрнутым потемневшей тканью",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.207"
         },
         {
           "at": "0010-04-25T09:18:00",
@@ -2544,11 +2535,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.002"
+        },
+        {
+          "at": "0010-04-25T09:22:00",
+          "excerpt": "я помню жизнь до Мугами Шики, помню жизнь Мугами Шики, помню обе жизни раздельно, и сейчас тоже помню. Джирайя опустил взгляд на открытые предплечья Шики, покрытые чёрными древовидными структурами. **Джирайя:** — Последний шаг сделала она… Он тихо повторил эти",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.003"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.002",
+          "seen": "s16.text.003",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2558,7 +2556,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.002"
+        "s16.text.003"
       ]
     },
     "jiro_caravan_guard": {
@@ -2909,12 +2907,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.134",
+          "seen": "s16.text.003",
           "state": "Остановил вмешательство Наруто в выбор Шики. Заявил Баки, что Коноха останется в Суне до проверки состояния Гаары и согласования возвращения."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s16.text.003"
       ]
     },
     "kakuzu": {
@@ -5798,14 +5797,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.002",
+        "s16.text.003",
         "s15.text.202",
         "s15.text.203",
         "s15.text.204",
         "s15.text.205",
         "s15.text.206",
         "s15.text.207",
-        "s16.text.001"
+        "s16.text.001",
+        "s16.text.002"
       ]
     },
     "place:02d2db9d9042a981": {
@@ -17747,12 +17747,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.093",
+          "seen": "s16.text.003",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         }
       ],
       "sources": [
-        "recovery/cast/ren.json"
+        "recovery/cast/ren.json",
+        "s16.text.003"
       ]
     },
     "residence_courier_v7": {
@@ -21031,12 +21032,12 @@
     },
     {
       "from": "gamamaru_nemera_dream_scroll",
-      "source": "s15.text.207",
+      "source": "s16.text.003",
       "status": "projected",
-      "to": "gamamaru",
+      "to": "shiki",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1382
+  "source_turns_indexed": 1383
 }
