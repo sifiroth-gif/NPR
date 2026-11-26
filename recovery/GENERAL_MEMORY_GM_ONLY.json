@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.112",
+  "cursor": "s15.text.113",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -509,20 +509,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s15.text.112:0": {
+    "canon:s15.text.113:0": {
       "aliases": [
-        "canon:s15.text.112:0",
-        "s15.text.112: Рёэн сообщил Шики, что Асума посещает Храм Огня и служил с Тирику при даймё; это доступная зацепка для shiki_save_asuma, не гарантия встречи. Сэйдзи/seydzi/fire_templ"
+        "canon:s15.text.113:0",
+        "s15.text.113: Шики отказался от предложенных 12000 рё, денежного изменения нет. Связь с Асумой через Тирику предложена Рёэном, встреча не назначена. Весть evt_c682a919ea9b0b03c4f7 "
       ],
       "facts": [],
-      "id": "canon:s15.text.112:0",
+      "id": "canon:s15.text.113:0",
       "kind": "canon",
-      "label": "s15.text.112: Рёэн сообщил Шики, что Асума посещает Храм Огня и служил с Тирику при даймё; это доступная зацепка для shiki_save_asuma, не гарантия встречи. Сэйдзи/seydzi/fire_templ",
+      "label": "s15.text.113: Шики отказался от предложенных 12000 рё, денежного изменения нет. Связь с Асумой через Тирику предложена Рёэном, встреча не назначена. Весть evt_c682a919ea9b0b03c4f7 ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.112"
+        "s15.text.113"
       ]
     },
     "captive_guard": {
@@ -900,6 +900,60 @@
         "recovery/cast/deidara.json"
       ]
     },
+    "dzyun": {
+      "aliases": [
+        "dzyun",
+        "Дзюн"
+      ],
+      "facts": [],
+      "id": "dzyun",
+      "kind": "npc",
+      "label": "Дзюн",
+      "mention_count": 45,
+      "mentions": [
+        {
+          "at": "0006-09-22T09:52:00",
+          "excerpt": "нно, тяжело, увлекая обломки веток. На северной вышке находился старший пограничного наблюдения, тюнин **Нагасэ Дзюн**\\. Невысокий, широкоплечий мужчина лет тридцати, с обветренным лицом и левым ухом, рассечённым старым рубцом. На его рукаве темнела нашивка по",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.081"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "глаза. Он отступил и сложил ладони перед грудью. Губы его едва заметно двигались. **Старший монах:** — Дзюн! Повязку держи! Юноша вздрогнул и поспешно вернулся к раненому. Старший монах поднялся навстречу Шики. На его поясе висели деревянные чётки, потемневшие",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "нам. Он поклонился ещё раз. **Рёэн:** — Наши двери будут для вас открыты, Мугами. Коюки выползла из-под повозки. Дзюн проводил её взглядом. **Дзюн:** — Господин Мугами… А вы случайно не отшельник? Рёэн с неожиданным интересом посмотрел на ученика. **Дзюн:** — ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
+        }
+      ],
+      "projections": [
+        {
+          "role": "по подписи в сцене",
+          "seen": "s15.text.113"
+        },
+        {
+          "role": "по подписи в сцене"
+        }
+      ],
+      "sources": [
+        "recovery/cast/dzyun.json",
+        "recovery/HOT.json"
+      ]
+    },
     "endo_hajime": {
       "aliases": [
         "endo hajime",
@@ -1066,7 +1120,7 @@
       "id": "fire_temple_driver_seiji",
       "kind": "npc",
       "label": "Сэйдзи",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0006-10-04T06:43:00",
@@ -1074,13 +1128,6 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.090"
-        },
-        {
-          "at": "0010-04-22T11:39:00",
-          "excerpt": "гами Шики:** — Что произошло? **Старший монах:** — Размыло дорогу. Колесо ушло в канаву, повозка накренилась. Сэйдзи попытался удержать груз, а затем его придавило бортом. Он указал на раненого. **Старший монах:** — Мы вытащили его около получаса назад. Возниц",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.110"
         },
         {
           "at": "0010-04-22T11:51:00",
@@ -1095,6 +1142,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.112"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "ни поддерживают связь. Молодой монах тем временем расстелил возле дерева сложенное дорожное покрывало, помогая Сэйдзи устроиться удобнее. **Рёэн:** — До храма отсюда несколько дней неспешного пути. На большой развилке после границы нужно свернуть к югу. Если б",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
@@ -1109,13 +1163,14 @@
     "fire_temple_travel_jun": {
       "aliases": [
         "fire temple travel jun",
-        "Дзюн"
+        "Дзюн",
+        "fire_temple_travel_jun"
       ],
       "facts": [],
       "id": "fire_temple_travel_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1123,13 +1178,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-04T08:46:00",
-          "excerpt": "пазухи сложенную бумагу. На сгибе была печать гарнизона Кусагакуре. **Старший патруля:** — Старший брат погибшего сторожа, Дзюн, потребовал вызвать всех, кто видел последствия нападения. Включая людей, которых мы первоначально не собирались привлекать. Мужчина",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.063"
         },
         {
           "at": "0010-04-22T11:39:00",
@@ -1144,15 +1192,23 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.111"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "нам. Он поклонился ещё раз. **Рёэн:** — Наши двери будут для вас открыты, Мугами. Коюки выползла из-под повозки. Дзюн проводил её взглядом. **Дзюн:** — Господин Мугами… А вы случайно не отшельник? Рёэн с неожиданным интересом посмотрел на ученика. **Дзюн:** — ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.111"
+          "seen": "s15.text.113"
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_travel_jun.json"
+        "recovery/cast/fire_temple_travel_jun.json",
+        "s15.text.113"
       ]
     },
     "fire_temple_travel_monk": {
@@ -1165,7 +1221,7 @@
       "id": "fire_temple_travel_monk",
       "kind": "npc",
       "label": "Рёэн",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -1187,17 +1243,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.112"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "и задумался. **Мугами Шики:** — Родственник Третьего… Курит. Последний раз видел его девять лет назад. **Рёэн:** — Сын Третьего Хокагэ. И курить он до сих пор не бросил, насколько мне известно. Монах убрал деньги обратно в кошель. Август 1278 года. Западное ме",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.112"
+          "seen": "s15.text.113"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json",
         "recovery/HOT.json",
-        "s15.text.112"
+        "s15.text.113"
       ]
     },
     "forehead_protector": {
@@ -1545,7 +1608,7 @@
       "id": "haru_brother_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1553,13 +1616,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-04T08:46:00",
-          "excerpt": "пазухи сложенную бумагу. На сгибе была печать гарнизона Кусагакуре. **Старший патруля:** — Старший брат погибшего сторожа, Дзюн, потребовал вызвать всех, кто видел последствия нападения. Включая людей, которых мы первоначально не собирались привлекать. Мужчина",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.063"
         },
         {
           "at": "0010-04-22T11:39:00",
@@ -1574,6 +1630,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.111"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "нам. Он поклонился ещё раз. **Рёэн:** — Наши двери будут для вас открыты, Мугами. Коюки выползла из-под повозки. Дзюн проводил её взглядом. **Дзюн:** — Господин Мугами… А вы случайно не отшельник? Рёэн с неожиданным интересом посмотрел на ученика. **Дзюн:** — ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
@@ -13967,10 +14030,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.112",
+        "s15.text.113",
         "s15.text.109",
         "s15.text.110",
-        "s15.text.111"
+        "s15.text.111",
+        "s15.text.112"
       ]
     },
     "place:d1f28ef0735751fa": {
@@ -17506,7 +17570,7 @@
       "id": "seydzi",
       "kind": "npc",
       "label": "Сэйдзи",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0006-10-04T06:43:00",
@@ -17514,13 +17578,6 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.090"
-        },
-        {
-          "at": "0010-04-22T11:39:00",
-          "excerpt": "гами Шики:** — Что произошло? **Старший монах:** — Размыло дорогу. Колесо ушло в канаву, повозка накренилась. Сэйдзи попытался удержать груз, а затем его придавило бортом. Он указал на раненого. **Старший монах:** — Мы вытащили его около получаса назад. Возниц",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.110"
         },
         {
           "at": "0010-04-22T11:51:00",
@@ -17535,12 +17592,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.112"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "ни поддерживают связь. Молодой монах тем временем расстелил возле дерева сложенное дорожное покрывало, помогая Сэйдзи устроиться удобнее. **Рёэн:** — До храма отсюда несколько дней неспешного пути. На большой развилке после границы нужно свернуть к югу. Если б",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.112"
+          "seen": "s15.text.113"
         },
         {
           "role": "по подписи в сцене"
@@ -17549,7 +17613,7 @@
       "sources": [
         "recovery/cast/seydzi.json",
         "recovery/HOT.json",
-        "s15.text.112"
+        "s15.text.113"
       ]
     },
     "shiki_arm_wraps": {
@@ -19116,7 +19180,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19124,13 +19188,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T06:45:00",
-          "excerpt": "соседнего помещения донёсся звон стеклянных флаконов. Кто-то из сотрудников начинал утреннюю подготовку лекарств. Коюки приподнялась над подоконником. **Коюки:** — Значит, теперь Шики может приходить домой когда захочет? **Кирисава Сэйна:** — Если предупредит ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.108"
         },
         {
           "at": "0010-04-22T11:38:00",
@@ -19145,6 +19202,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:55:00",
+          "excerpt": "Долины Завершения, загляните к нам. Он поклонился ещё раз. **Рёэн:** — Наши двери будут для вас открыты, Мугами. Коюки выползла из-под повозки. Дзюн проводил её взглядом. **Дзюн:** — Господин Мугами… А вы случайно не отшельник? Рёэн с неожиданным интересом пос",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.113"
         }
       ],
       "projections": [
@@ -19639,5 +19703,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1286
+  "source_turns_indexed": 1287
 }
