@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.046",
+  "cursor": "s16.text.047",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1043,8 +1043,7 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел",
-        "fire_bounty_station_trader"
+        "Приёмщик тел"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1060,8 +1059,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "s16.text.046"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -1368,7 +1366,8 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи"
+        "Бансаи",
+        "fire_temple_bansai"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
@@ -1408,12 +1407,13 @@
       "projections": [
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "seen": "s15.text.196",
+          "seen": "s16.text.047",
           "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_bansai.json"
+        "recovery/cast/fire_temple_bansai.json",
+        "s16.text.047"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1800,12 +1800,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.018",
+          "seen": "s16.text.047",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         }
       ],
       "sources": [
-        "recovery/cast/fukasaku.json"
+        "recovery/cast/fukasaku.json",
+        "s16.text.047"
       ]
     },
     "gaara": {
@@ -2190,8 +2191,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json",
-        "s16.text.046"
+        "recovery/cast/hidan.json"
       ]
     },
     "hirano": {
@@ -2892,7 +2892,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.046",
+          "seen": "s16.text.047",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         },
         {
@@ -2902,7 +2902,7 @@
       "sources": [
         "recovery/cast/kakashi.json",
         "recovery/HOT.json",
-        "s16.text.046"
+        "s16.text.047"
       ]
     },
     "kakuzu": {
@@ -14605,14 +14605,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.046",
+        "s16.text.047",
         "s16.text.039",
         "s16.text.040",
         "s16.text.041",
         "s16.text.042",
         "s16.text.043",
         "s16.text.044",
-        "s16.text.045"
+        "s16.text.045",
+        "s16.text.046"
       ]
     },
     "place:c4348d07a4dd6188": {
@@ -20499,7 +20500,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 49,
+      "mention_count": 50,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20507,13 +20508,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T12:10:00",
-          "excerpt": "5 апреля 1287 года · 12:10</text> ### Конохагакуре. Резиденция Хокагэ **Мугами Шики:** — Как обычную Цунадэ берёт пластину и убирает её во внутренний карман одежды. **Цунадэ:** — Хорошо. Свяжусь с тобой, когда появятся результаты разведки. Она достаёт утренние",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.035"
         },
         {
           "at": "0010-04-25T12:12:00",
@@ -20528,6 +20522,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.039"
+        },
+        {
+          "at": "0010-04-25T14:33:00",
+          "excerpt": "оего уровня — уже политический вопрос. Хатакэ поднялся. **Какаши:** — Я готов поддержать твоё предложение перед Цунадэ. И познакомить тебя с людьми, которых обучал Минато. Думаю, им самим было бы интересно разобраться, почему у них так и не получилось освоить ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.047"
         }
       ],
       "projections": [
@@ -21349,5 +21350,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1425
+  "source_turns_indexed": 1426
 }
