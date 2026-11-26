@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.137",
+  "cursor": "s16.text.138",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1129,8 +1129,7 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник",
-        "fire_port_official"
+        "Портовый чиновник"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1174,8 +1173,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json",
-        "s16.text.137"
+        "recovery/cast/fire_port_official.json"
       ]
     },
     "fire_port_security_staff": {
@@ -1301,7 +1299,8 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ"
+        "Кадзунэ",
+        "fire_road_jonin"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1340,11 +1339,12 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.103"
+          "seen": "s16.text.138"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json"
+        "recovery/cast/fire_road_jonin.json",
+        "s16.text.138"
       ]
     },
     "fire_road_mayu": {
@@ -2530,12 +2530,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.110",
+          "seen": "s16.text.138",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s16.text.138"
       ]
     },
     "jiraiya": {
@@ -15462,6 +15463,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.138",
         "s16.text.137"
       ]
     },
@@ -18744,13 +18746,14 @@
     "road_armorer_s16": {
       "aliases": [
         "road armorer s16",
-        "Оружейник"
+        "Оружейник",
+        "road_armorer_s16"
       ],
       "facts": [],
       "id": "road_armorer_s16",
       "kind": "npc",
       "label": "Оружейник",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-03-25T16:29:00",
@@ -18765,11 +18768,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.137"
+        },
+        {
+          "at": "0010-05-04T15:12:00",
+          "excerpt": "цев к предплечьям. Он уже протянул руку, чтобы оценить их толщину, но остановился, не коснувшись кожи. **Оружейник:** — Тогда сталь вам ни к чему. Он достал из деревянного ящика пару длинных чёрных котэ из тонкой мягкой кожи с эластичными тканевыми вставками н",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.138"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.137",
+          "seen": "s16.text.138",
           "state": "Показывает три пары котэ; отложил перчатку при виде предплечий Шики."
         },
         {
@@ -18779,7 +18789,7 @@
       "sources": [
         "recovery/cast/road_armorer_s16.json",
         "recovery/HOT.json",
-        "s16.text.137"
+        "s16.text.138"
       ]
     },
     "road_villager_fumi": {
@@ -20278,8 +20288,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s16.text.137"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -22245,5 +22254,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1508
+  "source_turns_indexed": 1509
 }

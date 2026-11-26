@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.138: Оружейник (`npc/road_armorer_s16`), Изумо Камидзуки (`npc/izumo`), Кадзунэ (`npc/fire_road_jonin`)
 - s16.text.137: Оружейник (`npc/road_armorer_s16`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`), план сюжета
 - s16.text.136: Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`), план сюжета
 - s16.text.135: Джирайя (`npc/jiraiya`), вещь `cash_1184`, вещь `shiki_finances`
@@ -61,4 +62,3 @@
 - s16.text.081: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Кадзунэ (`npc/fire_road_jonin`), поправки игрока: 1
 - s16.text.080: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Коюки (`npc/western_nest_young_courier`)
 - s16.text.079: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Асума Сарутоби (`npc/asuma`), Изумо Камидзуки (`npc/izumo`)
-- s16.text.078: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), поправки игрока: 1
