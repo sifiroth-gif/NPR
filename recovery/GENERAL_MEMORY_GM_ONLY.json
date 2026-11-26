@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.134",
+  "cursor": "s16.text.135",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -617,11 +617,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.096",
-          "turn": "s15.text.198"
+          "turn": "s16.text.135"
         }
       ],
       "sources": [
-        "s15.text.198"
+        "s16.text.135"
       ]
     },
     "chelovek_v_maske": {
@@ -1273,8 +1273,7 @@
     "fire_road_hisato": {
       "aliases": [
         "fire road hisato",
-        "Хисато",
-        "fire_road_hisato"
+        "Хисато"
       ],
       "facts": [],
       "id": "fire_road_hisato",
@@ -1317,8 +1316,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_hisato.json",
-        "s16.text.134"
+        "recovery/cast/fire_road_hisato.json"
       ]
     },
     "fire_road_jonin": {
@@ -1373,8 +1371,7 @@
     "fire_road_mayu": {
       "aliases": [
         "fire road mayu",
-        "Маю",
-        "fire_road_mayu"
+        "Маю"
       ],
       "facts": [],
       "id": "fire_road_mayu",
@@ -1389,8 +1386,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_mayu.json",
-        "s16.text.134"
+        "recovery/cast/fire_road_mayu.json"
       ]
     },
     "fire_road_natsuki": {
@@ -2572,7 +2568,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 97,
+      "mention_count": 98,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2580,13 +2576,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T12:37:00",
-          "excerpt": "енно сменялось чем-то более тяжёлым. **Цунадэ:** — Пересадка… Она произнесла это слово почти беззвучно. Джирайя перестал развязывать тесёмку на свёрнутой карте. Под густыми белыми бровями обозначилась глубокая складка. **Джирайя:** — Значит, старые ранения. В ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.119"
         },
         {
           "at": "0010-05-03T12:48:00",
@@ -2601,16 +2590,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.121"
+        },
+        {
+          "at": "0010-05-04T06:57:00",
+          "excerpt": "ext color=\"secondary\" size=\"xs\">Вторник, 4 мая 1287 года · 06:57</text> ### Главные ворота Конохагакуре Джирайя уже ждал у ворот. На его спине висел большой свиток, дорожная сумка была туго затянута ремнями. В руках саннин держал узкую полоску бумаги с несколь",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.135"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.121",
+          "seen": "s16.text.135",
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+        },
+        {
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json",
+        "s16.text.135"
       ]
     },
     "jiro_caravan_guard": {
@@ -10324,6 +10325,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.135",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
@@ -19777,11 +19779,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.068",
-          "turn": "s15.text.198"
+          "turn": "s16.text.135"
         }
       ],
       "sources": [
-        "s15.text.198"
+        "s16.text.135"
       ]
     },
     "shiki_hair_markers": {
@@ -21909,7 +21911,7 @@
     },
     {
       "from": "shiki_finances",
-      "source": "s15.text.198",
+      "source": "s16.text.135",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -21930,7 +21932,7 @@
     },
     {
       "from": "cash_1184",
-      "source": "s15.text.198",
+      "source": "s16.text.135",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -22189,5 +22191,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1505
+  "source_turns_indexed": 1506
 }
