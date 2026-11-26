@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.034",
+  "cursor": "s16.text.035",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 64,
+      "mention_count": 65,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T12:01:00",
-          "excerpt": "25 апреля 1287 года · 12:01</text> ### Конохагакуре. Резиденция Хокагэ **Мугами Шики:** — Не знаю. Джирайя поставил рядом с именем Нагато вопросительный знак. **Джирайя:** — Значит, пока оставим это предположением. Попытаюсь восстановить сведения о судьбе моих",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.032"
         },
         {
           "at": "0010-04-25T12:06:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.034"
+        },
+        {
+          "at": "0010-04-25T12:10:00",
+          "excerpt": "акудзу. Теперь у нас гораздо больше сведений. Поручу ему сопоставить материалы боя с результатами допроса. Джирайя складывает карту Амэгакурэ. В коридоре раздаются голоса нескольких шиноби. Когда дверь приоткрывается и дежурный замечает Шики, разговор за порог",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.035"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.034",
+          "seen": "s16.text.035",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.034"
+        "s16.text.035"
       ]
     },
     "jiro_caravan_guard": {
@@ -2911,7 +2911,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2919,13 +2919,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-25T11:25:20",
-          "excerpt": "идан:** — Наш лидер. Он отдаёт приказы. Только не думай, что сможешь справиться с ним так же легко, как с Какудзу. Джирайя приблизился к столу. **Джирайя:** — У него Риннеган? Хидан перевёл взгляд на саннина и стиснул зубы. Цунадэ жестом остановила Джирайю. Он",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.024"
         },
         {
           "at": "0010-04-25T11:37:00",
@@ -2940,6 +2933,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.031"
+        },
+        {
+          "at": "0010-04-25T12:10:00",
+          "excerpt": "**Цунадэ:** — Кстати, Шикамару сегодня утром не сумел представить законченный анализ способностей Хидана и Какудзу. Теперь у нас гораздо больше сведений. Поручу ему сопоставить материалы боя с результатами допроса. Джирайя складывает карту Амэгакурэ. В коридор",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.035"
         }
       ],
       "projections": [
@@ -3633,11 +3633,11 @@
         {
           "holder": "tsunade",
           "since": "s16.text.034",
-          "turn": "s16.text.034"
+          "turn": "s16.text.035"
         }
       ],
       "sources": [
-        "s16.text.034"
+        "s16.text.035"
       ]
     },
     "kotetsu": {
@@ -9607,7 +9607,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.034",
+        "s16.text.035",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9616,7 +9616,8 @@
         "s16.text.030",
         "s16.text.031",
         "s16.text.032",
-        "s16.text.033"
+        "s16.text.033",
+        "s16.text.034"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20468,7 +20469,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20476,13 +20477,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T12:01:00",
-          "excerpt": "едположением. Попытаюсь восстановить сведения о судьбе моих учеников после того, как покинул Амэгакурэ. Цунадэ открыла ящик стола и достала папку с разведывательными донесениями. Вскоре между чашками появились старые карты, списки пропавших шиноби и сообщения ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.032"
         },
         {
           "at": "0010-04-25T12:06:00",
@@ -20497,11 +20491,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.034"
+        },
+        {
+          "at": "0010-04-25T12:10:00",
+          "excerpt": "5 апреля 1287 года · 12:10</text> ### Конохагакуре. Резиденция Хокагэ **Мугами Шики:** — Как обычную Цунадэ берёт пластину и убирает её во внутренний карман одежды. **Цунадэ:** — Хорошо. Свяжусь с тобой, когда появятся результаты разведки. Она достаёт утренние",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.035"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.034",
+          "seen": "s16.text.035",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20511,7 +20512,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.034"
+        "s16.text.035"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21316,12 +21317,12 @@
     },
     {
       "from": "konoha_blank_contact_plate_s16",
-      "source": "s16.text.034",
+      "source": "s16.text.035",
       "status": "projected",
       "to": "tsunade",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1414
+  "source_turns_indexed": 1415
 }
