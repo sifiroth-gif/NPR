@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.015: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`)
 - s16.text.014: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`)
 - s16.text.013: Джирайя (`npc/jiraiya`)
 - s16.text.012: Джирайя (`npc/jiraiya`)
@@ -59,4 +60,3 @@
 - s15.text.165: Бансаи (`npc/fire_temple_bansai`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), линия `shiki_save_asuma`
 - s15.text.164: Бансаи (`npc/fire_temple_bansai`)
 - s15.text.163: Тирику (`npc/chiriku`), Бансаи (`npc/fire_temple_bansai`), Асума Сарутоби (`npc/asuma`), Раненый монах (`npc/fire_temple_wounded_monk_s15`), Шизунэ (`npc/shizune`), линия `shiki_save_asuma`, поправки игрока: 1
-- s15.text.162: Раненый монах (`npc/fire_temple_wounded_monk_s15`), Изумо Камидзуки (`npc/izumo`), Шикамару Нара (`npc/shikamaru`), Коюки (`npc/western_nest_young_courier`)

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.014",
+  "cursor": "s16.text.015",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1765,7 +1765,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1773,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:56:00",
-          "excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 09:56</text> ### Мьёбоку. Дом Фукасаку и Симы **Мугами Шики:** — После некоторых событий да. А что было с глазами у мудреца и тех, кто был до? Знаете? Сима отодвинула деревянную дверь. Из дом",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.009"
         },
         {
           "at": "0010-04-25T10:28:00",
@@ -1794,11 +1787,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.014"
+        },
+        {
+          "at": "0010-04-25T10:43:00",
+          "excerpt": "ь и способность рассекать материю; во втором — взаимодействовала с землёй, изменяя её механические свойства. Фукасаку наблюдал с крыльца. Когда Джирайя закончил, старый отшельник спустился в сад и переставил горшки с молодыми растениями подальше от тренировочн",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.015"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.014",
+          "seen": "s16.text.015",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1808,7 +1808,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.014"
+        "s16.text.015"
       ]
     },
     "gaara": {
@@ -2505,7 +2505,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 45,
+      "mention_count": 46,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2513,13 +2513,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:34:00",
-          "excerpt": "ются мышцы его шеи, как расширяются зрачки и прерывается спокойный ритм дыхания. Затем рисунок исчезает. Джирайя резко поднимается с каменной ограды. Несколько сухих листьев падают с его одежды. Он смотрит на лицо Шики, словно пытается найти в нём черты другог",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.012"
         },
         {
           "at": "0010-04-25T10:37:00",
@@ -2534,11 +2527,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.014"
+        },
+        {
+          "at": "0010-04-25T10:43:00",
+          "excerpt": "ть все стихии. Я могу использовать три, но дотон и футон для техник не использовал. Надо попробовать. Джирайя остановился возле крыльца. **Джирайя:** — Это, пожалуй, мы можем проверить прямо сейчас. Он вернулся на площадку и подобрал опавший лист. Сложил его п",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.015"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.014",
+          "seen": "s16.text.015",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2548,7 +2548,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.014"
+        "s16.text.015"
       ]
     },
     "jiro_caravan_guard": {
@@ -8925,11 +8925,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.014",
+        "s16.text.015",
         "s16.text.010",
         "s16.text.011",
         "s16.text.012",
-        "s16.text.013"
+        "s16.text.013",
+        "s16.text.014"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -21183,5 +21184,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1394
+  "source_turns_indexed": 1395
 }
