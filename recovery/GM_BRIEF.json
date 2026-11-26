@@ -47,11 +47,6 @@
  "checks": [
   {
    "kind": "fight",
-   "text": "Бросок «Исследование клеточной патологии Нулевым Геномом и Бётоном»: не найден участник (shiki → None) — vs: id противника из d.fight.foes или число-уровень.",
-   "turn": "s15.text.015"
-  },
-  {
-   "kind": "fight",
    "text": "Бросок «Пробный Тидори Саске против усиленной рёберной защиты Сусаноо»: полоса 2–4, по осям 3–4 (A -1, B +0, C +0, D +1, E -2, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s15.text.030"
   },
@@ -70,12 +65,32 @@
    "kind": "fight",
    "text": "Против «Саске Учиха» в обмене нет ни одной кости: с именным противником исход решает бросок, перевес Шики не выше +2.",
    "turn": "s15.text.037"
+  },
+  {
+   "kind": "review",
+   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
+   "turn": "s15.text.093"
+  },
+  {
+   "kind": "acquaint",
+   "text": "Память без источника: Асумага Тосэ — «Рэн говорил, что ты изменился.». До s15 встреча с шики не подтверждена — общее прошлое не приписывать. Не расширяй это прошлое: узнаёт по Книге Бинго, слуху или документу — и говорит откуда, — либо не помнит.",
+   "turn": "s15.text.093"
+  },
+  {
+   "kind": "will",
+   "text": "«Коюки» 7 ход(ов) рядом с Шики только отвечает. Его цель: «Узнать безопасный подход к дому Аки и передать сведения желающим змеям.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s15.text.093"
+  },
+  {
+   "kind": "will",
+   "text": "«Мугами Акихиро» 5 ход(ов) рядом с Шики только отвечает. Его цель: «Оградить семью и клинику от распространения подробностей частного визита сына.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s15.text.093"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.092",
+  "cursor": "s15.text.093",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -107,24 +122,136 @@
   "thematic": {
    "basis": "scene_continuation",
    "entries": [
+    "chakra.black",
+    "eyes.ems",
+    "fusion.tendrils",
+    "genome.zero",
+    "medical.reconstruct",
     "medical.sterilize",
+    "pact.contact",
+    "sage.permanent",
+    "sage.poison",
+    "shunshin.zero",
     "weapon.sumi",
+    "combat.scalpel",
     "element.lightning",
-    "medical.field"
+    "fusion.development",
+    "genome.fluid",
+    "medical.diagnosis",
+    "medical.field",
+    "nemera.agency",
+    "nemera.transfer",
+    "research.postmortem",
+    "research.reproduce",
+    "sage.summon"
    ],
    "matched": [],
+   "medical": {
+    "at": "0010-04-22T05:08:00",
+    "chakra": {
+     "at": "0010-04-22T05:08:00",
+     "last": {
+      "spent": 12.0,
+      "turn": "s15.text.069",
+      "what": [
+       "Удержание собственных отростков восемь минут",
+       "Формирование двух индивидуальных сигнальных контуров и закладка чакры"
+      ]
+     },
+     "max": 600.0,
+     "state": "готов",
+     "value": 600.0,
+     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
+    },
+    "kit": {
+     "holder": "shiki",
+     "since": "s10.text.102",
+     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
+     "turn": "s14.text.023"
+    },
+    "patients": {
+     "sasuke": {
+      "wounds": [
+       {
+        "at": "0010-04-21T13:41:26",
+        "lost": "болезненность, дыхание и движения сохранены",
+        "severity": "лёгкая",
+        "turn": "s15.text.039",
+        "what": "ушиб от удара ногой через частичный блок",
+        "where": "бок под рёбрами"
+       }
+      ]
+     },
+     "shiki": {
+      "wounds": [
+       {
+        "at": "0007-12-24T16:47:00",
+        "lost": "поверхностный порез, движения сохранены",
+        "severity": "лёгкая",
+        "turn": "s09.text.066",
+        "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
+        "where": "наружная сторона левого бедра"
+       },
+       {
+        "at": "0010-03-25T12:12:56",
+        "lost": "боль при резких движениях, дыхание сохранено",
+        "severity": "лёгкая",
+        "turn": "s12.text.064",
+        "what": "удар отлетающим известняком во время первого рывка",
+        "where": "боковая область грудной клетки под рёбрами"
+       },
+       {
+        "at": "0010-04-05T11:26:02",
+        "lost": "кисть работает",
+        "severity": "лёгкая",
+        "turn": "s13.text.069",
+        "what": "нож",
+        "where": "левое предплечье"
+       }
+      ]
+     }
+    },
+    "sources": [
+     "recovery/HOT.json#injuries",
+     "recovery/HOT.json#body",
+     "recovery/HOT.json#things",
+     "campaigns/shiki/ref/MEDICINE.md"
+    ]
+   },
    "read": [
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/MEDICINE.md",
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md",
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
+    "injuries/function",
+    "things/medical kit",
+    "chakra",
+    "scene/time",
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time",
     "things/holder/state/turn",
     "count/availability",
     "scene/access"
    ],
    "routes": [
+    "medical",
+    "dialogue",
+    "travel",
     "items"
    ],
-   "unavailable": []
+   "unavailable": [
+    "fusion.development",
+    "nemera.agency",
+    "nemera.transfer"
+   ]
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -348,13 +475,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-22T05:04:00",
+  "at": "0010-04-22T05:08:00",
   "date": "Четверг, 22 апреля 1287 года",
-  "id": "s15.text.092",
+  "id": "s15.text.093",
   "place": "Кусагакуре, дом семьи Мугами",
-  "time": "05:04"
+  "time": "05:08"
  },
- "digest": "f2baa42a4b6c597d2a9d4f46e57de642cf9bd8fe5d81ce575b9042ed2b990fb7",
+ "digest": "99ab31f3dbf3cc0203ab7d64a860733029a004a50c8eeff1edf46a8d79d6b657",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -376,28 +503,28 @@
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.091"
+    "to": "s15.text.093"
    },
    {
     "actor": "western_nest_young_courier",
     "from": "s15.text.004",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.091"
+    "to": "s15.text.093"
    },
    {
     "actor": "akihiro",
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.091"
+    "to": "s15.text.093"
    },
    {
     "actor": "kusa_leader",
     "from": "s15.text.070",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.085"
+    "to": "s15.text.093"
    }
   ],
   "nodes": [],
@@ -499,18 +626,18 @@
    "value": 600.0
   },
   "dice": [
-   15,
-   2,
-   6,
-   12,
    9,
+   20,
+   16,
+   3,
    1,
    14,
-   5,
-   12,
-   20,
+   11,
+   19,
+   18,
+   14,
    15,
-   11
+   20
   ],
   "injuries": {
    "sasuke": [
@@ -694,12 +821,12 @@
     "step": "необратимость"
    },
    "kusa_leader": {
-    "does": "Сам пришёл до утреннего визита к главе, сообщил об источнике сведений.",
+    "does": "Остановил приветственный жест, снял оружие, поставил его у косяка и предложил сесть.",
     "lever": "",
-    "next": "Новый факт — возможный сдвиг; иначе hold/down. Знакомое о Шики становится ненадёжным: NPC перечитывает прежний эпизод, документ или слух, и его картина Шики ломается.",
-    "reads": "Времени на встречу мало.",
-    "stage": 1,
-    "step": "примета"
+    "next": "Новый факт — возможный сдвиг; иначе hold/down. Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
+    "reads": "Сопоставляет знакомого ученика с изменившимся телом и сохраняет желание поговорить лично.",
+    "stage": 2,
+    "step": "пересмотр"
    },
    "nao": {
     "does": "Задержалась, наблюдая дыхание, погасила свет.",
@@ -718,10 +845,10 @@
     "step": "необратимость"
    },
    "western_nest_young_courier": {
-    "does": "Ночевала на соседней подушке, утром смотрит в окно.",
+    "does": "Поздоровалась, напомнила о намерении идти к Аки, спустилась по оконной раме.",
     "lever": "Принудительный вызов и потеря права вернуться.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Чувствует себя дома в безопасности.",
+    "reads": "Пора исполнить договорённость с Аки.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -749,21 +876,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 205,
+   "appearances": 206,
    "facets": 4,
    "need": 5,
    "npc": "nao",
    "tier": "deep"
   },
   {
-   "appearances": 54,
+   "appearances": 55,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
    "tier": "deep"
   },
   {
-   "appearances": 212,
+   "appearances": 213,
    "facets": 4,
    "need": 5,
    "npc": "akihiro",
@@ -920,10 +1047,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.086",
     "s15.text.089",
     "s15.text.090",
-    "s15.text.091"
+    "s15.text.091",
+    "s15.text.093"
    ],
    "prior_disclosures": [
     {
@@ -934,18 +1061,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T20:41:00",
-     "sha256": "b79682cc890ca22d2bcfce56260edbd5a0a14e26865f27a1d424c129717c59b9",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.090"
-    },
-    {
      "at": "0010-04-21T20:41:30",
      "sha256": "f8a1e3aeb6fa58a3239d9352143edb90173d992e0bcdc9c14ad8c33c06486422",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.091"
+    },
+    {
+     "at": "0010-04-22T05:08:00",
+     "sha256": "872478ae6dc7ea1104837271a56b99ecfbf516e789cd2b2bb3e514b3d2b9aa6d",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.093"
     }
    ],
    "profile": {
@@ -965,15 +1092,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.092",
-      "what": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+      "turn": "s15.text.093",
+      "what": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
      }
     ],
     "memory_file": "archive/npc-memory/akihiro.json",
-    "memory_total": 212,
+    "memory_total": 213,
     "name": "Мугами Акихиро",
     "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-    "seen": "s15.text.092",
+    "seen": "s15.text.093",
     "stance": "Встревожен, не знает причин [давняя запись: сверяй со state]",
     "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
     "status": "present_profile",
@@ -999,7 +1126,8 @@
     "s15.text.073",
     "s15.text.074",
     "s15.text.084",
-    "s15.text.085"
+    "s15.text.085",
+    "s15.text.093"
    ],
    "prior_disclosures": [
     {
@@ -1010,18 +1138,18 @@
      "turn": "s15.text.070"
     },
     {
-     "at": "0010-04-21T20:33:00",
-     "sha256": "42755989c1d25bf664c4075a240c0749d3dc307ef700624eaf179c3cc28511a8",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.084"
-    },
-    {
      "at": "0010-04-21T20:34:00",
      "sha256": "d78bb64fd16dc913c426afc4f3056f70c38640f329b7b1db5026b7c21df3aa0f",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.085"
+    },
+    {
+     "at": "0010-04-22T05:08:00",
+     "sha256": "872478ae6dc7ea1104837271a56b99ecfbf516e789cd2b2bb3e514b3d2b9aa6d",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.093"
     }
    ],
    "profile": {
@@ -1029,14 +1157,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.092",
-      "what": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+      "turn": "s15.text.093",
+      "what": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
      }
     ],
     "memory_file": "archive/npc-memory/kusa_leader.json",
-    "memory_total": 1,
+    "memory_total": 2,
     "name": "Асумага Тосэ",
-    "seen": "s15.text.092",
+    "seen": "s15.text.093",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -1076,10 +1204,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.086",
     "s15.text.089",
     "s15.text.090",
-    "s15.text.091"
+    "s15.text.091",
+    "s15.text.093"
    ],
    "prior_disclosures": [
     {
@@ -1090,18 +1218,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-21T20:41:00",
-     "sha256": "b79682cc890ca22d2bcfce56260edbd5a0a14e26865f27a1d424c129717c59b9",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.090"
-    },
-    {
      "at": "0010-04-21T20:41:30",
      "sha256": "f8a1e3aeb6fa58a3239d9352143edb90173d992e0bcdc9c14ad8c33c06486422",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.091"
+    },
+    {
+     "at": "0010-04-22T05:08:00",
+     "sha256": "872478ae6dc7ea1104837271a56b99ecfbf516e789cd2b2bb3e514b3d2b9aa6d",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.093"
     }
    ],
    "profile": {
@@ -1121,15 +1249,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.092",
-      "what": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+      "turn": "s15.text.093",
+      "what": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
      }
     ],
     "memory_file": "archive/npc-memory/nao.json",
-    "memory_total": 205,
+    "memory_total": 206,
     "name": "Мугами Нао",
     "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-    "seen": "s15.text.092",
+    "seen": "s15.text.093",
     "stance": "Сдержанная клиническая настороженность [давняя запись: сверяй со state]",
     "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинско…",
     "status": "present_profile",
@@ -1239,14 +1367,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.092",
-      "what": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+      "turn": "s15.text.093",
+      "what": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
      }
     ],
     "memory_file": "archive/npc-memory/seina.json",
-    "memory_total": 70,
+    "memory_total": 71,
     "name": "Кирисава Сэйна",
-    "seen": "s15.text.092",
+    "seen": "s15.text.093",
     "status": "present_profile",
     "tier": "deep"
    },
@@ -1283,10 +1411,10 @@
     "s15.text.005",
     "s15.text.057",
     "s15.text.058",
-    "s15.text.086",
     "s15.text.089",
     "s15.text.090",
-    "s15.text.091"
+    "s15.text.091",
+    "s15.text.093"
    ],
    "prior_disclosures": [
     {
@@ -1297,18 +1425,18 @@
      "turn": "s15.text.004"
     },
     {
-     "at": "0010-04-21T20:41:00",
-     "sha256": "b79682cc890ca22d2bcfce56260edbd5a0a14e26865f27a1d424c129717c59b9",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.090"
-    },
-    {
      "at": "0010-04-21T20:41:30",
      "sha256": "f8a1e3aeb6fa58a3239d9352143edb90173d992e0bcdc9c14ad8c33c06486422",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.091"
+    },
+    {
+     "at": "0010-04-22T05:08:00",
+     "sha256": "872478ae6dc7ea1104837271a56b99ecfbf516e789cd2b2bb3e514b3d2b9aa6d",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.093"
     }
    ],
    "profile": {
@@ -1333,14 +1461,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.092",
-      "what": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+      "turn": "s15.text.093",
+      "what": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 54,
+    "memory_total": 55,
     "name": "Коюки",
-    "seen": "s15.text.092",
+    "seen": "s15.text.093",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -1350,15 +1478,15 @@
  },
  "recent_turns": [
   {
-   "id": "s15.text.092",
-   "line": "Шики переоделся в домашний халат, спал дома с Коюки. На рассвете отец заварил чай; Тосэ, извещённый Рэном вечером, пришёл к 05:04."
+   "id": "s15.text.093",
+   "line": "Шики встал и оделся, увидел Коюки у окна. Она собирается к Аки. Тосэ впервые увидел новый облик ученика, прервал приветственный жест, снял оружие и предложил сесть."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в своей комнате, Коюки у окна; Акихиро у двери, Тосэ в прихожей, Нао дома. Рэн, Аки, Сэйна вне дома.",
+  "positions": "Шики в своей комнате, Коюки у оконной рамы, Тосэ у дверного проёма, Акихиро возле стола, Нао дома.",
   "pressure": "Действует разовый допуск главы; бывшие товарищи пока не уверены в личности Шики.",
-  "situation": "Шики в домашнем халате спал в своей комнате с 20:46 до 05:04; снаряжение и дорожная одежда сложены. Коюки ночевала на подушке, утром проснулась. Нао наблюдала дыхание спящего сына, погасила свет. Акихиро заварил чай и постучал в дверь: Тосэ пришёл на рассвете после вчерашнего сообщения Рэна. Шики ещё не вышел, подарки не приняты."
+  "situation": "Шики поднялся и надел дорожную одежду, медицинское снаряжение. Коюки обнаружена на подоконнике, спустилась по раме и намерена отправиться к Аки. Тосэ подошёл к дверному проёму, впервые увидел нынешний облик ученика, остановил приветственный жест, сообщил, что Рэн предупреждал об изменениях. Снял своё оружие, поставил у косяка, предложил сесть. Акихиро поставил чашки. Шики ещё не ответил; чай и альбом не приняты."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1384,8 +1512,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "3e9cb428733affa58de7c59f40f5e145211c28f5",
-  "turn": "s15.text.092"
+  "sha": "d3d17b040836c84ae1ad573d222defac66b91820",
+  "turn": "s15.text.093"
  },
  "wiki": {
   "index": "memory/INDEX.md",
