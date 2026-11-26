@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.106",
+  "cursor": "s15.text.107",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:34:00",
-          "excerpt": "Рэн постоял ещё немного у двери, попрощался с родителями и Сэйной и вышел. Аки проводила его взглядом. **Мидзухара Аки:** — Шики, я не стану расспрашивать тебя о том, чего ты и сам пока не можешь объяснить. Но хочу попросить об одном. Если когда-нибудь тебе по",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.085"
         },
         {
           "at": "0010-04-21T20:35:00",
@@ -75,15 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.087"
+        },
+        {
+          "at": "0010-04-22T06:43:00",
+          "excerpt": "е ограды белела знакомая змеиная голова. **Коюки:** — Шики! Я запомнила дорогу! Змея спустилась со столбика. **Мидзухара Аки:** — И даже научилась обходить мои ловушки. Способная ученица. **Коюки:** — У тебя их слишком много! **Мидзухара Аки:** — Зато я хорошо",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.090"
+          "seen": "s15.text.107"
         }
       ],
       "sources": [
-        "recovery/cast/aki.json"
+        "recovery/cast/aki.json",
+        "recovery/HOT.json",
+        "s15.text.107"
       ]
     },
     "aki_home_address_s15": {
@@ -507,22 +509,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.106:0": {
-      "aliases": [
-        "canon:s15.text.106:0",
-        "s15.text.106: 22.04.1287 06:21 подписано соглашение Мугами Шики и Кусагакуре на условиях s15.text.103–104: взаимное ненападение, независимость без службы, прекращение внутреннего р"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.106:0",
-      "kind": "canon",
-      "label": "s15.text.106: 22.04.1287 06:21 подписано соглашение Мугами Шики и Кусагакуре на условиях s15.text.103–104: взаимное ненападение, независимость без службы, прекращение внутреннего р",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.106"
       ]
     },
     "captive_guard": {
@@ -3037,8 +3023,7 @@
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре",
-        "kusa_head"
+        "Глава Кусагакуре"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -3080,7 +3065,7 @@
           "body": "Сначала молча рассматривал сдавленную улыбку Шики и тему семейной привязанности, затем стал значительно внимательнее на слове АНБУ. На заседании был холодно-расчётлив, отложил папку дела, держит письменное назначение только готовым к оформлению при согласии; н",
           "fears": "Потерять власть над УВБ и резиденцией, допустить публичный внутриэлитный кризис",
           "role": "Глава деревни, высшая военная и административная власть Кусы",
-          "seen": "s15.text.106",
+          "seen": "s15.text.107",
           "stance": "Принимает дзёнина Мугами в поздний час, требует объяснить ночной визит; личную заинтересованность и знание Тэцу/В-7 пока не демонстрирует",
           "state": "Услышал невидимого Мугами у двери личного кабинета, ответил «Доброй ночи», не поднял тревогу. Досье 19-Т осталось у него, приказ Тацумори в силе.",
           "voice": "Сдержанный, короткие вопросы, без любезностей",
@@ -3096,8 +3081,7 @@
       ],
       "sources": [
         "recovery/cast/kusa_head.json",
-        "recovery/HOT.json",
-        "s15.text.106"
+        "recovery/HOT.json"
       ]
     },
     "kusa_leader": {
@@ -3149,6 +3133,27 @@
         "recovery/cast/kusa_leader.json"
       ]
     },
+    "kusa_shiki_nonaggression_copy": {
+      "aliases": [
+        "kusa shiki nonaggression copy",
+        "Экземпляр соглашения Кусагакуре и Мугами Шики"
+      ],
+      "facts": [],
+      "id": "kusa_shiki_nonaggression_copy",
+      "kind": "item",
+      "label": "Экземпляр соглашения Кусагакуре и Мугами Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s15.text.107"
+        }
+      ],
+      "sources": [
+        "s15.text.107"
+      ]
+    },
     "kusa_shiki_nonaggression_draft": {
       "aliases": [
         "kusa shiki nonaggression draft",
@@ -3188,7 +3193,8 @@
         }
       ],
       "sources": [
-        "s15.text.105"
+        "s15.text.105",
+        "s15.text.107"
       ]
     },
     "kusa_shiki_warrant_revocation": {
@@ -6542,7 +6548,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.106",
         "s05.text.016",
         "s05.text.017",
         "s05.text.019",
@@ -6559,7 +6564,8 @@
         "s15.text.102",
         "s15.text.103",
         "s15.text.104",
-        "s15.text.105"
+        "s15.text.105",
+        "s15.text.106"
       ]
     },
     "place:2b47f53e4060a559": {
@@ -12745,6 +12751,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.107",
         "s15.text.053",
         "s15.text.054",
         "s15.text.055",
@@ -17114,7 +17121,7 @@
       "id": "seina",
       "kind": "npc",
       "label": "Кирисава Сэйна",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0001-07-07T09:55:00",
@@ -17122,13 +17129,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.110"
-        },
-        {
-          "at": "0010-04-21T20:36:00",
-          "excerpt": "ого проще. Сэйна обняла его, положив ладонь между лопаток. От тела ученика почти не исходило тепла. **Кирисава Сэйна:** — С возвращением, Шики. Она произнесла это совсем тихо. Затем отпустила его, взяла медицинский футляр и попрощалась с родителями. Аки собрал",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.087"
         },
         {
           "at": "0010-04-21T20:41:00",
@@ -17143,15 +17143,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.091"
+        },
+        {
+          "at": "0010-04-22T06:43:00",
+          "excerpt": "Заметив вошедшего Шики, пациентка перестала рассказывать о своей болезни и прижала больную руку к груди. Сэйна подняла голову. **Кирисава Сэйна:** — Шики? Подожди немного, я закончу перевязку. Она спокойно продолжила работу. Спустя несколько минут женщина поки",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.094"
+          "seen": "s15.text.107"
         }
       ],
       "sources": [
-        "recovery/cast/seina.json"
+        "recovery/cast/seina.json",
+        "recovery/HOT.json",
+        "s15.text.107"
       ]
     },
     "sekido_tadao": {
@@ -18878,13 +18887,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18892,13 +18902,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T05:04:00",
-          "excerpt": "1 апреля 1287 года · 20:46</text> ### Дом семьи Мугами Шики переоделся и лёг в свою старую кровать. Коюки устроилась на соседней подушке, свернувшись в несколько колец. Нао заглянула в комнату, чтобы пожелать спокойной ночи. Она уже собиралась закрыть дверь, к",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.092"
         },
         {
           "at": "0010-04-22T05:08:00",
@@ -18913,16 +18916,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.094"
+        },
+        {
+          "at": "0010-04-22T06:43:00",
+          "excerpt": "ый ящик, к которому она прикрепляла металлическую петлю. На столбике ограды белела знакомая змеиная голова. **Коюки:** — Шики! Я запомнила дорогу! Змея спустилась со столбика. **Мидзухара Аки:** — И даже научилась обходить мои ловушки. Способная ученица. **Кою",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.097",
+          "seen": "s15.text.107",
+          "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
+        },
+        {
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s15.text.107"
       ]
     },
     "white_snake_sage": {
@@ -19397,8 +19412,15 @@
       "status": "projected",
       "to": "kusa_head_messenger",
       "type": "held_by"
+    },
+    {
+      "from": "kusa_shiki_nonaggression_copy",
+      "source": "s15.text.107",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1280
+  "source_turns_indexed": 1281
 }

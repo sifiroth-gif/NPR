@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.107: Коюки (`npc/western_nest_young_courier`), Мидзухара Аки (`npc/aki`), Кирисава Сэйна (`npc/seina`), вещь `kusa_shiki_nonaggression_original`, вещь `kusa_shiki_nonaggression_copy`
 - s15.text.106: Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
 - s15.text.105: Глава Кусагакуре (`npc/kusa_head`), вещь `kusa_shiki_nonaggression_original`, вещь `kusa_shiki_warrant_revocation`, поправки игрока: 1
 - s15.text.104: Глава Кусагакуре (`npc/kusa_head`)
@@ -61,4 +62,3 @@
 - s15.text.050: Старший патруля Кусы (`npc/grass_roads_patrol_senior`), Глава Кусагакуре (`npc/kusa_head`)
 - s15.text.049: Старший патруля Кусы (`npc/grass_roads_patrol_senior`)
 - s15.text.048: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
-- s15.text.047: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`)

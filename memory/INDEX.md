@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.106`
+# Карта мира NPR · на ходе `s15.text.107`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,13 +7,13 @@
 
 ## Персонажи (230)
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head` · в сцене
+- Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina` · в сцене
+- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
+- Мидзухара Аки (Мидзухара) — генин, напарница (на 1283, экзамен) · `npc/aki` · в сцене
 - Асумага Тосэ (Асумага, Тосэ) — дзёнин-руководитель группы (на 1283, экзамен) · `npc/kusa_leader`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - Мугами Нао — Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы · `npc/nao`
-- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
-- Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
 - Хаясэ Рэн — генин, напарник (на 1283, экзамен) · `npc/ren`
-- Мидзухара Аки (Мидзухара) — генин, напарница (на 1283, экзамен) · `npc/aki`
 - Старший патруля Кусы — Мужчина в форме шиноби Травы, сегодня без шлема, тени под г… · `npc/grass_roads_patrol_senior`
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
@@ -246,7 +246,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (84)
+## Вещи (85)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -281,6 +281,7 @@
 - `kiri_woman_cloak_order` · `items/kiri_woman_cloak_order`
 - `kuroishi_ledger` · `items/kuroishi_ledger`
 - `kusa_family_visit_permit_s15` · `items/kusa_family_visit_permit_s15`
+- `kusa_shiki_nonaggression_copy` · `items/kusa_shiki_nonaggression_copy`
 - `kusa_shiki_nonaggression_draft` · `items/kusa_shiki_nonaggression_draft`
 - `kusa_shiki_nonaggression_original` · `items/kusa_shiki_nonaggression_original`
 - `kusa_shiki_warrant_revocation` · `items/kusa_shiki_warrant_revocation`
