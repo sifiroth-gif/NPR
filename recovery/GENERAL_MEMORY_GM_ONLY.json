@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.167",
+  "cursor": "s15.text.168",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T03:56:00",
-          "excerpt": "ле старого монаха, сидевшего у основания колонны. Старик тяжело дышал, придерживая повреждённую руку. **Асума Сарутоби:** — Бансаи. Где Тирику? Монах долго молчал. **Бансаи:** — Они унесли его тело. Асума опустил голову. **Бансаи:** — Он защищал нас до конца. ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.163"
         },
         {
           "at": "0010-04-24T04:01:00",
@@ -425,16 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.166"
+        },
+        {
+          "at": "0010-04-24T07:38:00",
+          "excerpt": "и ничего не сказал. Лишь однажды, во время короткой остановки у ручья, он заговорил о погибшем товарище. **Асума Сарутоби:** — Мы с Тирику служили при даймё. Тогда нам казалось, что мы понимаем, каким должен быть этот мир. Он посмотрел на текущую воду. **Асума",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.168"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.167"
+          "seen": "s15.text.168"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.168"
       ]
     },
     "baki": {
@@ -710,7 +711,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -718,13 +719,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T03:56:00",
-          "excerpt": "снования колонны. Старик тяжело дышал, придерживая повреждённую руку. **Асума Сарутоби:** — Бансаи. Где Тирику? Монах долго молчал. **Бансаи:** — Они унесли его тело. Асума опустил голову. **Бансаи:** — Он защищал нас до конца. Мы ничем не смогли ему помочь. В",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.163"
         },
         {
           "at": "0010-04-24T04:01:00",
@@ -739,6 +733,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.167"
+        },
+        {
+          "at": "0010-04-24T07:38:00",
+          "excerpt": "однажды, во время короткой остановки у ручья, он заговорил о погибшем товарище. **Асума Сарутоби:** — Мы с Тирику служили при даймё. Тогда нам казалось, что мы понимаем, каким должен быть этот мир. Он посмотрел на текущую воду. **Асума Сарутоби:** — Молодость ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.168"
         }
       ],
       "projections": [
@@ -1375,8 +1376,7 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи",
-        "fire_temple_bansai"
+        "Бансаи"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
@@ -1418,16 +1418,10 @@
           "role": "Пожилой монах Храма Огня, свидетель нападения",
           "seen": "s15.text.167",
           "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
-        },
-        {
-          "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_bansai.json",
-        "recovery/HOT.json",
-        "s15.text.167"
+        "recovery/cast/fire_temple_bansai.json"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -9098,6 +9092,24 @@
         "s10.text.075"
       ]
     },
+    "place:4f81b3a0e10910e1": {
+      "aliases": [
+        "place:4f81b3a0e10910e1",
+        "Страна Огня, лес у пункта выплаты наград",
+        "Страна Огня",
+        "лес у пункта выплаты наград"
+      ],
+      "facts": [],
+      "id": "place:4f81b3a0e10910e1",
+      "kind": "place",
+      "label": "Страна Огня, лес у пункта выплаты наград",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.168"
+      ]
+    },
     "place:4f8f783e8eef7a0d": {
       "aliases": [
         "place:4f8f783e8eef7a0d",
@@ -12344,11 +12356,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.167",
         "s15.text.163",
         "s15.text.164",
         "s15.text.165",
-        "s15.text.166"
+        "s15.text.166",
+        "s15.text.167"
       ]
     },
     "place:98886b320cd46886": {
@@ -18531,7 +18543,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18539,13 +18551,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T03:52:00",
-          "excerpt": "но удаляясь от храма. Шикамару присел возле разбитого каменного фонаря. На влажной земле сохранились глубокие следы обуви. **Шикамару Нара:** — Сэнсэй. Отсюда кто-то ушёл совсем недавно. Асума посмотрел на восточную стену. Изумо тем временем попытался останови",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.161"
         },
         {
           "at": "0010-04-24T04:01:00",
@@ -18560,16 +18565,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.166"
+        },
+        {
+          "at": "0010-04-24T07:38:00",
+          "excerpt": "чения над входом. Вокруг — высокая трава и несколько деревьев, посаженных вдоль дороги. Шикамару остановился. **Шикамару Нара:** — Здесь? Природная сенсорика Шики уловила два человеческих присутствия под зданием. Одно отличалось значительной плотностью чакры. ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.168"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.167"
+          "seen": "s15.text.168"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.168"
       ]
     },
     "shiki_arm_wraps": {
@@ -19934,11 +19947,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 04:13: Бансаи подтвердил, что Рёэн и Дзюн не были в храме во время нападения. Рекомендация возвращена Шики. Отряд готов идти к пункту обмена, подкрепление не подтверждено."
+          "state": "24.04 07:38: Шики, Асума и Шикамару прибыли к пункту обмена до ухода находящихся там людей. Три очага, слышно имя Какудзу. Тело Тирику ещё не видели. Бой не начат, подкрепление не прибыло."
         }
       ],
       "sources": [
-        "s15.text.167"
+        "s15.text.168"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20896,5 +20909,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1340
+  "source_turns_indexed": 1341
 }
