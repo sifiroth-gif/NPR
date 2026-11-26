@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.091: Коюки (`npc/western_nest_young_courier`)
 - s16.text.090: Коюки (`npc/western_nest_young_courier`)
 - s16.text.089: Портовый чиновник (`npc/fire_port_official`)
 - s16.text.088: Портовый чиновник (`npc/fire_port_official`)
@@ -61,4 +62,3 @@
 - s16.text.034: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), вещь `konoha_blank_contact_plate_s16`
 - s16.text.033: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Гамамару (`npc/gamamaru`), вещь `konoha_blank_contact_plate_s16`
 - s16.text.032: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
-- s16.text.031: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), линия `jiraiya_rain_investigation`

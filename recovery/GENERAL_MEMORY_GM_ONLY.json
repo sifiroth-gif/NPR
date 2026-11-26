@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.090",
+  "cursor": "s16.text.091",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -6910,8 +6910,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.090",
-        "s16.text.089"
+        "s16.text.091",
+        "s16.text.089",
+        "s16.text.090"
       ]
     },
     "place:15d1a4d638d1c02a": {
@@ -19663,7 +19664,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 73,
+      "mention_count": 74,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -19671,13 +19672,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-21T14:05:30",
-          "excerpt": "ze=\"xs\">Среда, 21 апреля 1287 года · 14:05</text> ### Кабинет Орочимару **Мугами Шики:** — Хах. Где Сирамэ? **Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась вернуться в западные гнёзда. **Орочимару",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.047"
         },
         {
           "at": "0010-04-21T18:53:00",
@@ -19692,6 +19686,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.090"
+        },
+        {
+          "at": "0010-04-27T13:54:00",
+          "excerpt": "на плече. **Коюки:** — Всё хорошо. Я была в западных гнёздах. Навещала знакомых, помогала с посланиями. Сирамэ говорит, что я становлюсь самостоятельнее. В её голосе послышалась нескрываемая гордость. Змея осторожно прижалась прохладной головой к щеке Шики. **",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.091"
         }
       ],
       "projections": [
@@ -21221,7 +21222,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 81,
+      "mention_count": 82,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21229,13 +21230,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-23T16:32:00",
-          "excerpt": "**Джирайя:** — Но будь осторожен. Он умеет восхищаться тем, чему завидует. Шики отложил сумки и «Суми». Коюки перебралась на ветку ближайшего дерева, откуда открывался хороший вид на площадку. **Джирайя:** — Слабоват в тайдзюцу, говоришь? Посмотрим. Мне уже пр",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.150"
         },
         {
           "at": "0010-04-23T16:32:02",
@@ -21250,11 +21244,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.090"
+        },
+        {
+          "at": "0010-04-27T13:54:00",
+          "excerpt": "гавань. Внутренний двор **Мугами Шики:** — Да, давно тебя не видел немного заволновался. Все хорошо? Коюки высунула голову из-под плаща и удивлённо посмотрела на Шики. **Коюки:** — Ты обо мне волновался? Она немного помолчала, а затем поползла вверх по его оде",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.091"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.090",
+          "seen": "s16.text.091",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21264,7 +21265,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.090"
+        "s16.text.091"
       ]
     },
     "white_snake_sage": {
@@ -21756,5 +21757,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1464
+  "source_turns_indexed": 1465
 }
