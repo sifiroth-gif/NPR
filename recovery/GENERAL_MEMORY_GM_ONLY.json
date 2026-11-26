@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.009",
+  "cursor": "s17.text.010",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 109,
+      "mention_count": 110,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T20:42:00",
-          "excerpt": "ые предгорья **Мугами Шики:** — Хорошо. Вы пересекли мост и продолжили путь. С наступлением сумерек Джирайя свернул с основной дороги. В низинах между горами зажигались огни небольших деревень. Над крышами поднимался дым вечерних очагов. Постоянная природная с",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.005"
         },
         {
           "at": "0010-05-05T11:54:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.007"
+        },
+        {
+          "at": "0010-05-05T11:59:00",
+          "excerpt": "# Страна Рек. Заброшенная мельница **Мугами Шики:** — Я точно могу попробовать, но не гарантировать. Джирайя медленно кивнул. Под ногтем его указательного пальца осталась тёмная полоска графита. Саннин стёр её о собственный рукав. **Джирайя:** — Значит, придёт",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.009",
+          "seen": "s17.text.010",
           "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
         },
         {
@@ -2566,19 +2566,21 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.010"
       ]
     },
     "jiraiya_rain_contact_s17": {
       "aliases": [
         "jiraiya rain contact s17",
-        "Связной Джирайи"
+        "Связной Джирайи",
+        "jiraiya_rain_contact_s17"
       ],
       "facts": [],
       "id": "jiraiya_rain_contact_s17",
       "kind": "npc",
       "label": "Связной Джирайи",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-05-05T11:54:00",
@@ -2586,27 +2588,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.006"
+        },
+        {
+          "at": "0010-05-05T11:59:00",
+          "excerpt": "т, придётся предусмотреть оба случая. Связной с недоумением посмотрел сначала на него, затем на Шики. **Связной Джирайи:** — Простите… Какими телами? Джирайя сложил чертёж водостоков. **Джирайя:** — Есть основания полагать, что некоторые мертвецы в Дожде продо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.010"
         }
       ],
       "projections": [
         {
           "fears": "Задержание и компрометация источников.",
           "role": "Разведывательный источник Джирайи",
-          "seen": "s17.text.009",
-          "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
+          "seen": "s17.text.010",
+          "state": "Получил плату от Джирайи и ушёл с мельницы; отказался возвращаться в Дождь.",
           "voice": "Короткие фразы, осторожно понижает голос при посторонних.",
-          "wants": "Передать сведения, сохранить собственную свободу и не выдать оставшихся людей."
-        },
-        {
-          "fears": "Задержание и компрометация источников.",
-          "role": "Разведывательный источник Джирайи",
-          "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
           "wants": "Передать сведения, сохранить собственную свободу и не выдать оставшихся людей."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya_rain_contact_s17.json",
-        "recovery/HOT.json"
+        "s17.text.010"
       ]
     },
     "jiro_caravan_guard": {
@@ -14666,7 +14669,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.009",
+        "s17.text.010",
         "s17.text.005",
         "s17.text.006",
         "s17.text.007"
@@ -20879,14 +20882,10 @@
         {
           "role": "по подписи в сцене",
           "seen": "s17.text.009"
-        },
-        {
-          "role": "по подписи в сцене"
         }
       ],
       "sources": [
-        "recovery/cast/svyaznoy_peska.json",
-        "recovery/HOT.json"
+        "recovery/cast/svyaznoy_peska.json"
       ]
     },
     "tagitsuhime": {
@@ -22300,5 +22299,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1518
+  "source_turns_indexed": 1519
 }
