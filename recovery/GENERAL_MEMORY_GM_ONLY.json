@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.123",
+  "cursor": "s15.text.124",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -509,6 +509,22 @@
         "s09.text.067"
       ]
     },
+    "canon:s15.text.124:0": {
+      "aliases": [
+        "canon:s15.text.124:0",
+        "s15.text.124: Хокагэ разрешила посещение Конохи и пригласила Шики сегодня; дежурный сообщил это в 12:04. Приглашение не означает отмены розыска Кири или подтверждения явки 28.04. В"
+      ],
+      "facts": [],
+      "id": "canon:s15.text.124:0",
+      "kind": "canon",
+      "label": "s15.text.124: Хокагэ разрешила посещение Конохи и пригласила Шики сегодня; дежурный сообщил это в 12:04. Приглашение не означает отмены розыска Кири или подтверждения явки 28.04. В",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.124"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -970,6 +986,28 @@
         "recovery/cast/endo_hajime.json"
       ]
     },
+    "fire_leaf_gate_duty": {
+      "aliases": [
+        "fire leaf gate duty",
+        "Дежурный главных ворот Конохи"
+      ],
+      "facts": [],
+      "id": "fire_leaf_gate_duty",
+      "kind": "npc",
+      "label": "Дежурный главных ворот Конохи",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s15.text.124"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_leaf_gate_duty.json",
+        "recovery/HOT.json",
+        "s15.text.124"
+      ]
+    },
     "fire_port_official": {
       "aliases": [
         "fire port official",
@@ -1101,7 +1139,7 @@
       "id": "fire_road_hisato",
       "kind": "npc",
       "label": "Хисато",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-04-22T22:56:00",
@@ -1109,13 +1147,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.120"
-        },
-        {
-          "at": "0010-04-22T22:57:00",
-          "excerpt": "спину и ноги. Маю вздрогнула от прикосновения холодных рук. Она поискала взглядом своего наставника. **Хисато:** — Всё хорошо, Маю. Я буду рядом. Девочка перестала сопротивляться, хотя продолжала держать голову повёрнутой в сторону Хисато. **Мугами Шики:** — О",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.121"
         },
         {
           "at": "0010-04-22T23:06:00",
@@ -1130,30 +1161,35 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.123"
+        },
+        {
+          "at": "0010-04-23T12:04:00",
+          "excerpt": "ом лице появилась слабая улыбка. **Маю:** — Тогда, может быть, я тоже когда-нибудь стану такой сильной. Хисато поправил покрывало и взялся за край носилок. **Хисато:** — Пойдём. Твои родители скоро будут в госпитале. Маю ещё раз посмотрела на Шики, прежде чем ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.124"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.123"
+          "seen": "s15.text.124"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_hisato.json",
-        "recovery/HOT.json",
-        "s15.text.123"
+        "s15.text.124"
       ]
     },
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
       "kind": "npc",
       "label": "Кадзунэ",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0010-04-22T22:37:00",
@@ -1161,13 +1197,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.118"
-        },
-        {
-          "at": "0010-04-22T22:57:00",
-          "excerpt": "у дерева попытался подняться. Едва перенеся вес на повреждённую ногу, он поморщился и ухватился за ствол. **Кадзунэ:** — Не геройствуй. Дзёнин подставил ему плечо. **Кадзунэ:** — У него повреждена голень. С поддержкой сможет передвигаться. Остальные на ногах. ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.121"
         },
         {
           "at": "0010-04-22T23:06:00",
@@ -1182,6 +1211,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.123"
+        },
+        {
+          "at": "0010-04-23T12:04:00",
+          "excerpt": "Шики, прежде чем медики понесли её через ворота. **Маю:** — Спасибо, Мугами-сэнсэй. Нацуки поспешил следом. Кадзунэ задержался возле караульного помещения, передавая дежурному сведения о нападении. Шики повернулся к шиноби. **Мугами Шики:** — Хорошо. Дежурный ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.124"
         }
       ],
       "projections": [
@@ -1190,9 +1226,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "recovery/HOT.json",
-        "s15.text.123"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -1209,13 +1243,12 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s15.text.123"
+          "seen": "s15.text.124"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_mayu.json",
-        "recovery/HOT.json",
-        "s15.text.123"
+        "s15.text.124"
       ]
     },
     "fire_road_natsuki": {
@@ -1227,7 +1260,7 @@
       "id": "fire_road_natsuki",
       "kind": "npc",
       "label": "Нацуки",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-22T23:06:00",
@@ -1242,6 +1275,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.123"
+        },
+        {
+          "at": "0010-04-23T12:04:00",
+          "excerpt": "ю ещё раз посмотрела на Шики, прежде чем медики понесли её через ворота. **Маю:** — Спасибо, Мугами-сэнсэй. Нацуки поспешил следом. Кадзунэ задержался возле караульного помещения, передавая дежурному сведения о нападении. Шики повернулся к шиноби. **Мугами Шик",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.124"
         }
       ],
       "projections": [
@@ -1250,8 +1290,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_natsuki.json",
-        "recovery/HOT.json"
+        "recovery/cast/fire_road_natsuki.json"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -4507,7 +4546,8 @@
     "naemnik_u_shakhty": {
       "aliases": [
         "naemnik u shakhty",
-        "Наёмник у шахты"
+        "Наёмник у шахты",
+        "naemnik_u_shakhty"
       ],
       "facts": [],
       "id": "naemnik_u_shakhty",
@@ -4533,11 +4573,12 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.121"
+          "seen": "s15.text.124"
         }
       ],
       "sources": [
-        "recovery/cast/naemnik_u_shakhty.json"
+        "recovery/cast/naemnik_u_shakhty.json",
+        "s15.text.124"
       ]
     },
     "nagae_rokuto": {
@@ -4940,7 +4981,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 154,
+      "mention_count": 155,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -4948,13 +4989,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-21T14:05:30",
-          "excerpt": "ши за мпня# <text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 14:05</text> ### Кабинет Орочимару **Мугами Шики:** — Хах. Где Сирамэ? **Кабуто Якуши:** — Она покинула убежище после вашего разговора с Орочимару-сама. Насколько я понял, собиралась ве",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.047"
         },
         {
           "at": "0010-04-21T14:12:00",
@@ -4969,6 +5003,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.102"
+        },
+        {
+          "at": "0010-04-23T12:04:00",
+          "excerpt": "а залечить раны, нанесённые девять лет назад. Даже каменная кладка некоторых зданий, пострадавших во время вторжения Орочимару, успела потемнеть. Коюки свернулась кольцами на деревянной скамье возле Шики. **Коюки:** — Здесь гораздо шумнее, чем в твоей деревне.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.124"
         }
       ],
       "projections": [
@@ -9296,6 +9337,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.124",
         "s15.text.123"
       ]
     },
@@ -19417,14 +19459,13 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 57,
+      "mention_count": 58,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19432,13 +19473,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T22:57:00",
-          "excerpt": "сначала добраться до медицинского пункта. Там смогут восполнить кровопотерю, а мы отправим сообщение в деревню. Коюки выползла из-под корней. **Коюки:** — Я посмотрю, что впереди. Белая змея исчезла среди папоротников. Кадзунэ проводил её взглядом, но ничего н",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.121"
         },
         {
           "at": "0010-04-22T23:06:00",
@@ -19453,11 +19487,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.123"
+        },
+        {
+          "at": "0010-04-23T12:04:00",
+          "excerpt": "евять лет назад. Даже каменная кладка некоторых зданий, пострадавших во время вторжения Орочимару, успела потемнеть. Коюки свернулась кольцами на деревянной скамье возле Шики. **Коюки:** — Здесь гораздо шумнее, чем в твоей деревне. Из караульного помещения выш",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.124"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.123",
+          "seen": "s15.text.124",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19466,8 +19507,7 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s15.text.123"
+        "recovery/HOT.json"
       ]
     },
     "white_snake_sage": {
@@ -19959,5 +19999,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1297
+  "source_turns_indexed": 1298
 }

@@ -1,6 +1,6 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s15.text.123",
+ "cursor": "s15.text.124",
  "fold_errors": [],
  "checks": [
   {
@@ -40,15 +40,10 @@
    "text": "Запись хода: вся запись сверх сцены 4254 знаков (норма до 4000); крупнее всего: cast 2335, scene 891, chakra 156."
   },
   {
-   "turn": "s15.text.123",
+   "turn": "s15.text.124",
    "kind": "review",
    "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
    "since": "s15.text.116"
-  },
-  {
-   "turn": "s15.text.123",
-   "kind": "will",
-   "text": "«Хисато» появляется уже 4 раз, а воли у него нет: задай d.cast.fire_road_hisato.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
