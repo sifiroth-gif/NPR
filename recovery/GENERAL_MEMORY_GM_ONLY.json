@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.023",
+  "cursor": "s16.text.024",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,22 +505,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.023:0": {
-      "aliases": [
-        "canon:s16.text.023:0",
-        "s16.text.023: Первый опыт Пути человека Шики: извлечение поверхностного фрагмента при минимальной мощности возможно; сопротивление приблизило эффект отделения сознания, вмешательст"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.023:0",
-      "kind": "canon",
-      "label": "s16.text.023: Первый опыт Пути человека Шики: извлечение поверхностного фрагмента при минимальной мощности возможно; сопротивление приблизило эффект отделения сознания, вмешательст",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.023"
       ]
     },
     "captive_guard": {
@@ -2165,7 +2149,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2173,13 +2157,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:24:30",
-          "excerpt": "И всё же она функционирует. **Шизунэ:** — Исходная активность стабильна. Буду следить за её изменениями. Хидан перестал улыбаться. Он некоторое время рассматривал глаза Шики. Его губы приоткрылись, но очередное проклятие так и не прозвучало. Джирайя переместил",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.021"
         },
         {
           "at": "0010-04-25T11:24:45",
@@ -2194,12 +2171,19 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.023"
+        },
+        {
+          "at": "0010-04-25T11:25:20",
+          "excerpt": "ля 1287 года · 11:25</text> ### Конохагакуре. Подземный изолятор **Мугами Шики:** — Кто такой пэйн? Хидан замолчал. Его взгляд изменился. **Хидан:** — Так вот что ты сделал… В чакровых каналах пленника вновь возникло напряжение. Несколько секунд он смотрел на ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.024"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.023",
+          "seen": "s16.text.024",
           "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно."
         },
         {
@@ -2210,7 +2194,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s16.text.023"
+        "s16.text.024"
       ]
     },
     "hirano": {
@@ -2522,7 +2506,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 54,
+      "mention_count": 55,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2530,13 +2514,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:24:30",
-          "excerpt": "некоторое время рассматривал глаза Шики. Его губы приоткрылись, но очередное проклятие так и не прозвучало. Джирайя переместился ближе к изголовью стола. Цунадэ следила за руками Шики. В тишине камеры особенно отчётливо слышалось дыхание троих наблюдателей. Хи",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.021"
         },
         {
           "at": "0010-04-25T11:24:45",
@@ -2551,11 +2528,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.023"
+        },
+        {
+          "at": "0010-04-25T11:25:20",
+          "excerpt": "Наш лидер. Он отдаёт приказы. Только не думай, что сможешь справиться с ним так же легко, как с Какудзу. Джирайя приблизился к столу. **Джирайя:** — У него Риннеган? Хидан перевёл взгляд на саннина и стиснул зубы. Цунадэ жестом остановила Джирайю. Она внимател",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.023",
+          "seen": "s16.text.024",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2564,7 +2548,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.024"
       ]
     },
     "jiro_caravan_guard": {
@@ -2932,7 +2917,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2940,13 +2925,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T07:39:05",
-          "excerpt": "бее, однако сознание оставалось ясным. Он с интересом рассматривал Шики снизу вверх. **Хидан:** — Ты убил Какудзу и даже не забрал его деньги. Ради чего? В его лице появилось странное оживление. **Хидан:** — Скажи, ты хоть понимаешь, что такое благословение на",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.179"
         },
         {
           "at": "0010-04-24T12:20:00",
@@ -2961,6 +2939,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.194"
+        },
+        {
+          "at": "0010-04-25T11:25:20",
+          "excerpt": "идан:** — Наш лидер. Он отдаёт приказы. Только не думай, что сможешь справиться с ним так же легко, как с Какудзу. Джирайя приблизился к столу. **Джирайя:** — У него Риннеган? Хидан перевёл взгляд на саннина и стиснул зубы. Цунадэ жестом остановила Джирайю. Он",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.024"
         }
       ],
       "projections": [
@@ -10477,10 +10462,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.023",
+        "s16.text.024",
         "s16.text.020",
         "s16.text.021",
-        "s16.text.022"
+        "s16.text.022",
+        "s16.text.023"
       ]
     },
     "place:698d95bd1d726b13": {
@@ -19440,7 +19426,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.023",
+          "seen": "s16.text.024",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19450,7 +19436,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.023"
+        "s16.text.024"
       ]
     },
     "signalshchik": {
@@ -20299,11 +20285,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "25.04 11:09: Джирайя получил предварительный доклад о Хидане и запросил допуск к чтению памяти, надеясь уточнить данные об Акацуки."
+          "state": "25.04 11:25: Хидан лично назвал Пэйна лидером Акацуки при Джирайе, не ответил о Риннегане; личность и местонахождение не установлены."
         }
       ],
       "sources": [
-        "s16.text.019"
+        "s16.text.024"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -20461,7 +20447,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20469,13 +20455,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:24:00",
-          "excerpt": "нье, 25 апреля 1287 года · 11:24</text> ### Конохагакуре. Подземный изолятор **Мугами Шики:** — Да. Цунадэ закрыла папку с медицинским заключением и поднялась. **Цунадэ:** — Тогда идёмте. Изолятор находился под одним из служебных зданий Конохи. Несколько лестн",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.020"
         },
         {
           "at": "0010-04-25T11:24:30",
@@ -20490,11 +20469,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.023"
+        },
+        {
+          "at": "0010-04-25T11:25:20",
+          "excerpt": "ирайя приблизился к столу. **Джирайя:** — У него Риннеган? Хидан перевёл взгляд на саннина и стиснул зубы. Цунадэ жестом остановила Джирайю. Она внимательно посмотрела на Шики. **Цунадэ:** — Что именно ты увидел в его воспоминаниях? Хидан больше не смеялся. Он",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.023",
+          "seen": "s16.text.024",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20504,7 +20490,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.023"
+        "s16.text.024"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21309,5 +21295,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1403
+  "source_turns_indexed": 1404
 }
