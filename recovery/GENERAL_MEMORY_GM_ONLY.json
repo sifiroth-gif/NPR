@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.161",
+  "cursor": "s15.text.162",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-23T16:48:20",
-          "excerpt": "ла его в открытую лавку. **Мугами Шики:** — Асума-сан. Я помогал монахам. Я с вами. Асума остановился. **Асума Сарутоби:** — Ты знаком с Тирику? Он внимательно посмотрел на Шики. Девять лет назад этот человек удерживал медицинское крыло стадиона, пока шиноби Л",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.159"
         },
         {
           "at": "0010-04-23T17:13:00",
@@ -425,17 +418,23 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.161"
+        },
+        {
+          "at": "0010-04-24T03:55:00",
+          "excerpt": "*Мугами Шики:** — Кто-то уходит. Шики указал на восточную часть храмовой ограды. Асума остановился. **Асума Сарутоби:** — Шикамару, Котэцу, проверьте. В бой без необходимости не вступать. Оба шиноби немедленно направились вдоль стены. Шики опустился рядом с Из",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.162"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.161"
+          "seen": "s15.text.162"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.161"
+        "recovery/HOT.json"
       ]
     },
     "baki": {
@@ -1214,8 +1213,7 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1258,8 +1256,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "s15.text.161"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -1495,13 +1492,14 @@
     "fire_temple_wounded_monk_s15": {
       "aliases": [
         "fire temple wounded monk s15",
-        "Раненый монах"
+        "Раненый монах",
+        "fire_temple_wounded_monk_s15"
       ],
       "facts": [],
       "id": "fire_temple_wounded_monk_s15",
       "kind": "npc",
       "label": "Раненый монах",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-24T03:52:00",
@@ -1509,23 +1507,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.161"
+        },
+        {
+          "at": "0010-04-24T03:55:00",
+          "excerpt": "кровопотери сохранило ему жизнь, однако циркулирующий объём крови и кислородная ёмкость крови оставались снижены. **Раненый монах:** — Они… пришли вдвоём… Изумо склонился над ним. **Раненый монах:** — Один всё время смеялся. Братья пытались его остановить. Я в",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.162"
         }
       ],
       "projections": [
         {
           "role": "Монах Храма Огня, личность не установлена",
-          "seen": "s15.text.161",
-          "state": "Жив, сознание нарушено, кровотечение, кашель. Раны не осмотрены."
+          "seen": "s15.text.162",
+          "state": "Рана бедра закрыта, гемостаз достигнут, сохраняются слабый пульс, тахипноэ и дефицит крови; сознание сохраняется, двигательная функция не проверена."
         },
         {
           "role": "Монах Храма Огня, личность не установлена",
-          "state": "Жив, сознание нарушено, кровотечение, кашель. Раны не осмотрены."
+          "state": "Рана бедра закрыта, гемостаз достигнут, сохраняются слабый пульс, тахипноэ и дефицит крови; сознание сохраняется, двигательная функция не проверена."
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_wounded_monk_s15.json",
         "recovery/HOT.json",
-        "s15.text.161"
+        "s15.text.162"
       ]
     },
     "fire_west_border_senior": {
@@ -2258,7 +2263,7 @@
       "id": "izumo",
       "kind": "npc",
       "label": "Изумо Камидзуки",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-23T17:13:00",
@@ -2273,23 +2278,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.161"
+        },
+        {
+          "at": "0010-04-24T03:55:00",
+          "excerpt": "аружилась глубокая рана в верхней трети бедра. Кровь продолжала просачиваться сквозь пропитанную повязку. **Изумо Камидзуки:** — Я прижал рану, но он всё равно теряет кровь. Медицинская чакра Шики проникла в повреждённые ткани. Был рассечён участок четырёхглав",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.162"
         }
       ],
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.161",
-          "state": "Прижимает кровоточащую рану, поддерживает голову монаха."
+          "seen": "s15.text.162",
+          "state": "Остаётся возле монаха после гемостаза."
         },
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "state": "Прижимает кровоточащую рану, поддерживает голову монаха."
+          "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
         "recovery/cast/izumo.json",
         "recovery/HOT.json",
-        "s15.text.161"
+        "s15.text.162"
       ]
     },
     "jiraiya": {
@@ -3365,16 +3377,10 @@
           "role": "Тюнин Листа, отряд Асумы",
           "seen": "s15.text.161",
           "state": "Осматривает подходы к воротам."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
-          "state": "Осматривает подходы к воротам."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "recovery/HOT.json",
-        "s15.text.161"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -16148,6 +16154,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.162",
         "s15.text.161"
       ]
     },
@@ -18438,13 +18445,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.161"
+          "seen": "s15.text.162"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s15.text.161"
+        "s15.text.162"
       ]
     },
     "shiki_arm_wraps": {
@@ -20214,7 +20220,8 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -20253,12 +20260,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.152",
+          "seen": "s15.text.162",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "s15.text.162"
       ]
     },
     "white_snake_sage": {
@@ -20771,5 +20779,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1334
+  "source_turns_indexed": 1335
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.162: Раненый монах (`npc/fire_temple_wounded_monk_s15`), Изумо Камидзуки (`npc/izumo`), Шикамару Нара (`npc/shikamaru`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.161: Раненый монах (`npc/fire_temple_wounded_monk_s15`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Изумо Камидзуки (`npc/izumo`), Котэцу Хаганэ (`npc/kotetsu`), Кадзунэ (`npc/fire_road_jonin`), линия `shiki_save_asuma`
 - s15.text.160: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Изумо Камидзуки (`npc/izumo`), Котэцу Хаганэ (`npc/kotetsu`), Цунадэ (`npc/tsunade`), линия `shiki_save_asuma`, поправки игрока: 1
 - s15.text.159: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), линия `shiki_save_asuma`, линия `shiki_save_jiraiya`
@@ -61,4 +62,3 @@
 - s15.text.105: Глава Кусагакуре (`npc/kusa_head`), вещь `kusa_shiki_nonaggression_original`, вещь `kusa_shiki_warrant_revocation`, поправки игрока: 1
 - s15.text.104: Глава Кусагакуре (`npc/kusa_head`)
 - s15.text.103: Глава Кусагакуре (`npc/kusa_head`), вещь `kusa_shiki_nonaggression_draft`
-- s15.text.102: Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 2

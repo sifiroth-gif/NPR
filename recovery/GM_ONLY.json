@@ -1,7 +1,7 @@
 {
  "schema": "npr-gm-only/2",
  "access": "ТОЛЬКО МАСТЕР. Игроку не показывать и не пересказывать, пока это не сыграно в сцене.",
- "cursor": "s15.text.161",
+ "cursor": "s15.text.162",
  "offscreen": {
   "rule": "Это правда мира. Она не меняется от того, что игрок подозревает. Показывать только через то, что Шики видит, слышит, трогает или читает. Уточнять детали можно; менять виновного после показанной улики нельзя.",
   "clocks": {},
@@ -6283,7 +6283,17 @@
     "turn": "s15.text.152",
     "step": "необратимость"
    },
-   "intent": {},
+   "intent": {
+    "return_after_aki_route": {
+     "goal": "Вернуться к Шики после передачи маршрута посыльным.",
+     "next": "Выяснить через добровольных змей, куда направился Шики после Конохи.",
+     "due": "0010-04-24T18:00:00",
+     "flaw": "Шики ушёл без согласования маршрута с Коюки.",
+     "if_unopposed": "Найдёт доступный след или связного, продолжит путь к нему.",
+     "status": "committed",
+     "turn": "s15.text.162"
+    }
+   },
    "intent_done": [
     {
      "key": "explore_new_home",
@@ -8381,7 +8391,17 @@
     "turn": "s15.text.161",
     "step": "пересмотр"
    },
-   "intent": {},
+   "intent": {
+    "check_east_departure": {
+     "goal": "Установить, кто покинул храм, не рискуя отрядом.",
+     "next": "Вместе с Котэцу проверить восточное направление, избегать ненужного боя, передать Асуме результаты.",
+     "due": "0010-04-24T04:10:00",
+     "flaw": "Лес, темнота, неизвестные возможности цели.",
+     "if_unopposed": "Обнаружит след или наблюдаемую цель и вернётся с доступными сведениями.",
+     "status": "committed",
+     "turn": "s15.text.162"
+    }
+   },
    "intent_done": [
     {
      "key": "assemble_team_ten",
@@ -8400,7 +8420,7 @@
   },
   "izumo": {
    "dread": {
-    "stage": 1,
+    "stage": 2,
     "since": "s15.text.160",
     "log": [
      {
@@ -8409,12 +8429,19 @@
       "change": "калибровка",
       "saw": "Заметил необычные открытые предплечья Шики.",
       "does": "Принял представление командира, продолжает наблюдать."
+     },
+     {
+      "turn": "s15.text.162",
+      "at": "0010-04-24T03:55:00",
+      "change": "рост",
+      "saw": "Чёрная медицинская чакра Шики остановила кровотечение и закрыла рану.",
+      "does": "Помог удерживать монаха, не прервал вмешательство."
      }
     ],
-    "reads": "Незнакомый союзник с неизвестными особенностями.",
-    "does": "Принял представление командира, продолжает наблюдать.",
-    "turn": "s15.text.160",
-    "step": "примета"
+    "reads": "Непривычный вид техники, очевидная лечебная функция.",
+    "does": "Помог удерживать монаха, не прервал вмешательство.",
+    "turn": "s15.text.162",
+    "step": "пересмотр"
    }
   },
   "kotetsu": {
@@ -8437,28 +8464,25 @@
    }
   },
   "fire_temple_wounded_monk_s15": {
-   "intent": {
-    "warn": {
+   "intent": {},
+   "intent_done": [
+    {
+     "key": "warn",
+     "at": "0010-04-24T03:55:00",
      "goal": "Сообщить о настоятеле и добиться помощи.",
      "next": "При возможности указать на двор и ответить на вопросы.",
      "due": "0010-04-24T03:55:00",
      "flaw": "Тяжёлое состояние, речь прерывается.",
      "if_unopposed": "Передаст доступные сведения, если сохранит сознание.",
-     "status": "committed",
-     "turn": "s15.text.161"
+     "status": "fulfilled",
+     "turn": "s15.text.162",
+     "outcome": "Указал двор и сообщил о двух нападавших, один падал и вставал, смеялся."
     }
-   },
-   "intent_done": [],
+   ],
    "name": "Раненый монах"
   }
  },
  "checks": [
-  {
-   "turn": "s15.text.159",
-   "kind": "review",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "since": "s15.text.155"
-  },
   {
    "turn": "s15.text.160",
    "kind": "read",
@@ -8472,11 +8496,6 @@
  ],
  "horror": {
   "motifs": [
-   {
-    "turn": "s15.text.156",
-    "look": [],
-    "soma": []
-   },
    {
     "turn": "s15.text.157",
     "look": [
@@ -8509,6 +8528,13 @@
     "turn": "s15.text.161",
     "look": [],
     "soma": []
+   },
+   {
+    "turn": "s15.text.162",
+    "look": [],
+    "soma": [
+     "побледнел"
+    ]
    }
   ],
   "worn": [],
@@ -8543,31 +8569,19 @@
    "asuma": {
     "since": "s15.text.159",
     "need": false,
-    "quiet": 2,
+    "quiet": 3,
     "last": "s15.text.159"
-   },
-   "shikamaru": {
-    "since": "s15.text.160",
-    "need": false,
-    "quiet": 0,
-    "last": "s15.text.161"
    },
    "izumo": {
     "since": "s15.text.160",
     "need": false,
-    "quiet": 1,
-    "last": "s15.text.160"
-   },
-   "kotetsu": {
-    "since": "s15.text.160",
-    "need": false,
-    "quiet": 1,
-    "last": "s15.text.160"
+    "quiet": 0,
+    "last": "s15.text.162"
    },
    "fire_temple_wounded_monk_s15": {
     "since": "s15.text.161",
     "need": true,
-    "quiet": 1
+    "quiet": 2
    }
   }
  },
@@ -9142,7 +9156,7 @@
    "hideout_sasuke": {
     "status": "started",
     "turn": "s12.text.040",
-    "late": 284
+    "late": 285
    }
   }
  },
@@ -9328,12 +9342,11 @@
  "will": {
   "seed": "174c098868b645af",
   "streak": {
-   "asuma": 0,
-   "shikamaru": 1,
-   "izumo": 2,
-   "kotetsu": 2,
+   "asuma": 1,
+   "izumo": 3,
    "fire_temple_wounded_monk_s15": 0,
-   "fire_road_jonin": 0
+   "shikamaru": 0,
+   "western_nest_young_courier": 0
   },
   "touched": {
    "night_icu_physician": "s11.text.009",
@@ -9432,7 +9445,7 @@
    "willow_observer": "s13.text.040",
    "root_wayhouse_liaison": "s13.text.056",
    "western_nest_adult_courier": "s13.text.092",
-   "western_nest_young_courier": "s15.text.152",
+   "western_nest_young_courier": "s15.text.162",
    "grass_roads_patrol_senior": "s15.text.052",
    "root_field_jacket_man": "s13.text.095",
    "root_field_needle_man": "s13.text.093",
@@ -9460,8 +9473,8 @@
    "sima": "s15.text.154",
    "shima": "s15.text.156",
    "asuma": "s15.text.161",
-   "shikamaru": "s15.text.160",
-   "fire_temple_wounded_monk_s15": "s15.text.161"
+   "shikamaru": "s15.text.162",
+   "fire_temple_wounded_monk_s15": "s15.text.162"
   },
   "happened": [
    {
@@ -9898,9 +9911,9 @@
     "status": "fulfilled",
     "outcome": "Командование получит свидетельства и материал задания.",
     "turn": "s15.text.160",
-    "shown": 2,
+    "shown": 3,
     "id": "evt_2236bbbd95934560bd96",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "shizune",
@@ -9910,9 +9923,9 @@
     "status": "failed",
     "outcome": "Сорвалось: Исполнить распоряжение Цунадэ о закрытых материалах. Подвела его слабость: Советники могут потребовать доступ по служебной линии. Цель остаётся.",
     "turn": "s15.text.160",
-    "shown": 2,
+    "shown": 3,
     "id": "evt_d84d20f5eab1843c9000",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "kabuto",
@@ -9922,10 +9935,10 @@
     "status": "failed",
     "outcome": "Сорвалось: Исследовать добровольно переданный ноготь с корнем. Подвела его слабость: Материал может быть опасен и не сохранять свойства вне тела. Цель остаётся.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_dc9082c1ae7a4492d673",
     "news": "offered",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "akihiro",
@@ -9935,9 +9948,9 @@
     "status": "partial",
     "outcome": "Добился лишь части: Клиника сохранит приём, сотрудники будут пресекать расспросы о частной жизни семьи; родные смогут сообщить Шики о последствиях. Помешала его слабость: Не может контролировать внешние слухи или чужие официальные запросы.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_07f31168542bc3ef514e",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "orochimaru",
@@ -9947,9 +9960,9 @@
     "status": "fulfilled",
     "outcome": "Получит первичные результаты от Кабуто.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_6de9d54c5343e48a8159",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "western_nest_young_courier",
@@ -9959,9 +9972,9 @@
     "status": "fulfilled",
     "outcome": "Желающие змеи смогут безопасно оставлять письма у Аки.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_1bdc90da5362943ddbe3",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "shizune",
@@ -9971,9 +9984,9 @@
     "status": "fulfilled",
     "outcome": "Караул получит новый порядок допуска и запрет содействия розыску Кири.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_5b04795c2477d2472c84",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    },
    {
     "npc": "naruto",
@@ -9983,20 +9996,20 @@
     "status": "partial",
     "outcome": "Добился лишь части: Сообщит обоим, что Шики не придёт на встречи и хочет перенести их. Помешала его слабость: Оба могут быть заняты или вне обычных мест.",
     "turn": "s15.text.161",
-    "shown": 1,
+    "shown": 2,
     "id": "evt_41a42102e7785d666f5a",
-    "shown_at": "s15.text.161"
+    "shown_at": "s15.text.162"
    }
   ],
   "news": {
    "offered": 45,
    "delivered": 20,
    "missed": 7,
-   "at": "0010-04-24T03:52:00",
+   "at": "0010-04-24T03:55:00",
    "last": 1961,
-   "scene_key": "[\"Страна Огня, южные ворота Храма Огня\", [\"asuma\", \"fire_temple_wounded_monk_s15\", \"izumo\", \"kotetsu\", \"shikamaru\"]]",
+   "scene_key": "[\"Страна Огня, южные ворота Храма Огня\", [\"asuma\", \"fire_temple_wounded_monk_s15\", \"izumo\"]]",
    "scene_turns": 1,
-   "scene_since": "s15.text.161",
+   "scene_since": "s15.text.162",
    "last_at": "0010-04-24T03:52:00",
    "start_at": "0010-03-06T04:18:02",
    "receipts": {
@@ -10021,7 +10034,7 @@
      "quote": "О твоём возвращении уже говорят в квартале. Отец пытался сохранить всё между нами, но люди видели тебя."
     }
    },
-   "stepped": "s15.text.161",
+   "stepped": "s15.text.162",
    "deferred": {
     "evt_90208f48bbc9b890c5d2": {
      "text": "12.04 06:00 — Человек у причальной лестницы. Если врач стабилизирует состояние, к утру раненый сможет дать показания; при ухудшении опрос снова отложат.",
@@ -11779,7 +11792,9 @@
     "since": "s15.text.160",
     "last": "s15.text.161",
     "offered": 1,
-    "offered_at": "s15.text.161"
+    "offered_at": "s15.text.161",
+    "done": "s15.text.162",
+    "inactive": "s15.text.162"
    },
    "duty_a6db403a34ff0124d968": {
     "kind": "scene",
@@ -11794,15 +11809,17 @@
     "kind": "news",
     "text": "Весть evt_dc9082c1ae7a4492d673 — 23.04 18:00 — Кабуто Якуши. Сорвалось: Исследовать добровольно переданный ноготь с корнем. Подвела его слабость: Материал может быть опасен и не сохранять свойства вне тела. Цель остаётся. Передай только доступным Шики каналом; нет канала — отложи, не выдумывай. Доставка: d.news_delivered [{id,channel,quote}].",
     "since": "s15.text.161",
-    "last": "s15.text.161",
-    "offered": 1,
-    "offered_at": "s15.text.161"
+    "last": "s15.text.162",
+    "offered": 2,
+    "offered_at": "s15.text.162"
    },
    "duty_f80eed5c09fd0944a221": {
     "kind": "scene",
     "text": "Реакция на Шики: Раненый монах рядом с s15.text.161, отношение к Шики не сыграно. Что видит и знает о Шики, как объясняет это по своему опыту и что из этого делает здесь — решение, оговорка, проверка, расчёт; равнодушие тоже выбор. Запиши d.cast.fire_temple_wounded_monk_s15.dread: saw, reads, does, stage (реакции на Шики ещё нет).",
     "since": "s15.text.161",
-    "last": "s15.text.161"
+    "last": "s15.text.162",
+    "offered": 1,
+    "offered_at": "s15.text.162"
    },
    "duty_0f27c510a85f3d443b88": {
     "kind": "scene",
@@ -11810,13 +11827,23 @@
     "since": "s15.text.161",
     "last": "s15.text.161",
     "offered": 1,
-    "offered_at": "s15.text.161"
+    "offered_at": "s15.text.161",
+    "done": "s15.text.162",
+    "inactive": "s15.text.162"
    },
    "duty_dfd784e40c3635d15f33": {
     "kind": "scene",
     "text": "У Шизунэ закрыт план «Зарегистрировать соглашение и довести распоряжение.» (fulfilled), нового нет: впиши d.cast.shizune.intent.<ключ> — goal, next, due, flaw, if_unopposed. Исход — видимая перемена мира, что может дойти до Шики (приезд, сделка, исчезновение, слух, смерть), не «получит перечень, но не…».",
     "since": "s15.text.161",
-    "last": "s15.text.161"
+    "last": "s15.text.162",
+    "offered": 1,
+    "offered_at": "s15.text.162"
+   },
+   "duty_563f88c5839523c0ef87": {
+    "kind": "scene",
+    "text": "Асума Сарутоби 3 хода рядом с Шики без новой реакции: увидел новое — сдвиг в поступке и d.cast.asuma.dread; нет — dread.hold с тем, что подтвердилось.",
+    "since": "s15.text.162",
+    "last": "s15.text.162"
    }
   }
  }
