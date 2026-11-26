@@ -156,6 +156,7 @@
 - Каменный тракт северо-восточнее Сунагакуре, Страна Ветра · `places/kamennyy-trakt-severo-vostochnee-sunagakure-strana-vetra` · 1 ход(ов), s11–s11
 - Коноха, Западный тренировочный полигон · `places/konokha-zapadnyy-trenirovochnyy-poligon` · 1 ход(ов), s02–s02
 - Конохагакуре, Двор пострадавшей гостиницы · `places/konokhagakure-dvor-postradavshey-gostinitsy` · 1 ход(ов), s01–s01
+- Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 1 ход(ов), s15–s15
 - Конохагакуре, Горящая гостиница · `places/konokhagakure-goryashchaya-gostinitsa` · 1 ход(ов), s01–s01
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01

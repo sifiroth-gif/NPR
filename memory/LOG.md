@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.123: Маю (`npc/fire_road_mayu`), Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.122: Нацуки (`npc/fire_road_natsuki`), Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.121: Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Маю (`npc/fire_road_mayu`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.120: Маю (`npc/fire_road_mayu`), Хисато (`npc/fire_road_hisato`), Кадзунэ (`npc/fire_road_jonin`), Коюки (`npc/western_nest_young_courier`)
@@ -61,4 +62,3 @@
 - s15.text.066: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`), вещь `blank_communication_plates_s15`
 - s15.text.065: Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.064: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`), Хаясэ Рэн (`npc/ren`), Мидзухара Аки (`npc/aki`)
-- s15.text.063: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`)
