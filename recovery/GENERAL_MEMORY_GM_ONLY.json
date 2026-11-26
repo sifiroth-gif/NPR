@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.171",
+  "cursor": "s15.text.172",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,7 +429,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.171"
+          "seen": "s15.text.172"
         }
       ],
       "sources": [
@@ -557,6 +557,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s15.text.172:0": {
+      "aliases": [
+        "canon:s15.text.172:0",
+        "Поправка игрока s15.text.172: Какудзу помешан на деньгах; его действия в бою и вне боя учитывают сохранение наживы и выгоду, как каноническую черту характера."
+      ],
+      "facts": [],
+      "id": "canon:s15.text.172:0",
+      "kind": "canon",
+      "label": "Поправка игрока s15.text.172: Какудзу помешан на деньгах; его действия в бою и вне боя учитывают сохранение наживы и выгоду, как каноническую черту характера.",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.172"
       ]
     },
     "captive_guard": {
@@ -2102,7 +2118,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2124,12 +2140,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.171"
+        },
+        {
+          "at": "0010-04-24T07:38:26",
+          "excerpt": "пястья вырвались новые нити, обвившие ручку чемодана. Какудзу рывком подтянул его к себе. **Какудзу:** — Хидан! Если из-за тебя пропадут деньги, я лично закопаю тебя под этим сортиром. **Хидан:** — Да освободи меня сначала, ублюдок! Хидан напрягся, пытаясь пре",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.172"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.171",
+          "seen": "s15.text.172",
           "state": "Удерживается тенью Шикамару, коса в руках."
         },
         {
@@ -2139,8 +2162,7 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json",
-        "s15.text.171"
+        "recovery/HOT.json"
       ]
     },
     "hirano": {
@@ -2857,7 +2879,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2865,13 +2887,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T07:38:15",
-          "excerpt": "обходить противника с противоположной стороны. Внутри здания Шики ощутил перемещение более сильного очага чакры. Какудзу приближался к лестнице, ведущей наверх. До входа в пункт обмена оставалось около тридцати метров. Хидан находился чуть дальше, правее входа",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.169"
         },
         {
           "at": "0010-04-24T07:38:24",
@@ -2886,23 +2901,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.171"
+        },
+        {
+          "at": "0010-04-24T07:38:26",
+          "excerpt": "Мастеру: а ещё Какудзу помешан на деньгах. #вынимаю суми райтон# отсекаю идущие нити <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:26</text> Суми вышел из ножен с сухим металличе",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.172"
         }
       ],
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.171",
-          "state": "Средняя рана спины и повреждение нитей, движения сохранены; контратакует."
+          "seen": "s15.text.172",
+          "state": "Рана спины, слабость; вернул деньги, начинает раскрывать швы спины."
         },
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "state": "Средняя рана спины и повреждение нитей, движения сохранены; контратакует."
+          "state": "Рана спины, слабость; вернул деньги, начинает раскрывать швы спины."
         }
       ],
       "sources": [
         "recovery/cast/kakuzu.json",
         "recovery/HOT.json",
-        "s15.text.171"
+        "s15.text.172"
       ]
     },
     "kankuro": {
@@ -10041,6 +10063,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.172",
         "s15.text.171"
       ]
     },
@@ -18702,7 +18725,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.171",
+          "seen": "s15.text.172",
           "state": "Поддерживает Кагэманэ на Хидане."
         },
         {
@@ -18712,7 +18735,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.171"
+        "s15.text.172"
       ]
     },
     "shiki_arm_wraps": {
@@ -21039,5 +21062,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1344
+  "source_turns_indexed": 1345
 }
