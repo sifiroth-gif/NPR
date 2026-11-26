@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.099: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Глава Кусагакуре (`npc/kusa_head`), вещь `seven_locks_scroll_fragments`
 - s15.text.098: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`)
 - s15.text.097: Асумага Тосэ (`npc/kusa_leader`), Мугами Акихиро (`npc/akihiro`), вещь `forehead_protector`
 - s15.text.096: Асумага Тосэ (`npc/kusa_leader`)
@@ -61,4 +62,3 @@
 - s15.text.042: Орочимару (`npc/orochimaru`)
 - s15.text.041: Саске Учиха (`npc/sasuke`), поправки игрока: 1
 - s15.text.040: Саске Учиха (`npc/sasuke`), бой
-- s15.text.039: Саске Учиха (`npc/sasuke`), бой
