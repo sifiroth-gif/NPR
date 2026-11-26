@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.084: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), линия `kiri_bingo_negotiations`
 - s16.text.083: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), поправки игрока: 1
 - s16.text.082: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Котэцу Хаганэ (`npc/kotetsu`), Хидан (`npc/hidan`), поправки игрока: 1
 - s16.text.081: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Кадзунэ (`npc/fire_road_jonin`), поправки игрока: 1
@@ -61,4 +62,3 @@
 - s16.text.027: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
 - s16.text.026: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
 - s16.text.025: Хидан (`npc/hidan`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), бой, поправки игрока: 1
-- s16.text.024: Хидан (`npc/hidan`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), линия `jiraiya_rain_investigation`

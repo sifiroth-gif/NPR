@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s16.text.083`
+# Карта мира NPR · на ходе `s16.text.084`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -9,7 +9,7 @@
 - Ао — Мужчина средних лет, короткие синие волосы, повязка на прав… · `npc/ao` · в сцене
 - Инспектор закрытого отдела — Худощавый мужчина в строгой тёмной одежде, носит очки. · `npc/kiri_archive_observer_s16` · в сцене
 - Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official` · в сцене
-- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer` · в сцене
+- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
 - Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu`
 - Хидан — Акацуки · `npc/hidan`
 - Кадзунэ (Дзёнин Конохи на лесной дороге) — Взрослый шиноби Листа, поддерживает раненого подростка, кро… · `npc/fire_road_jonin`
@@ -266,7 +266,7 @@
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 - `jiraiya_rain_investigation` — 25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стер… · `threads/jiraiya_rain_investigation`
-- `kiri_bingo_negotiations` — 27.04 в 12:00 переговоры открыты в восточной гавани при местном чинов… · `threads/kiri_bingo_negotiations`
+- `kiri_bingo_negotiations` — Ао принял предложенный принцип добровольного образца под личной ответ… · `threads/kiri_bingo_negotiations`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
