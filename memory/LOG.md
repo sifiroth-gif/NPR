@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.104: Цунадэ (`npc/tsunade`), Наруто Узумаки (`npc/naruto`)
 - s16.text.103: Котэцу Хаганэ (`npc/kotetsu`), Кадзунэ (`npc/fire_road_jonin`)
 - s16.text.102: Коюки (`npc/western_nest_young_courier`)
 - s16.text.101: Коюки (`npc/western_nest_young_courier`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шизунэ (`npc/shizune`)
@@ -61,4 +62,3 @@
 - s16.text.047: Какаши Хатакэ (`npc/kakashi`), Фукасаку (`npc/fukasaku`), Бансаи (`npc/fire_temple_bansai`)
 - s16.text.046: Какаши Хатакэ (`npc/kakashi`), Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`)
 - s16.text.045: Какаши Хатакэ (`npc/kakashi`)
-- s16.text.044: Какаши Хатакэ (`npc/kakashi`), Асума Сарутоби (`npc/asuma`)
