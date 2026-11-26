@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.117: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Дзёнин Конохи на лесной дороге (`npc/fire_road_jonin`), поправки игрока: 1
 - s15.text.116: Старший пограничник Конохи (`npc/fire_west_border_senior`), Рёэн (`npc/fire_temple_travel_monk`), Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
 - s15.text.115: seydzi (`npc/seydzi`), Мугами Нао (`npc/nao`), Старший пограничник Конохи (`npc/fire_west_border_senior`), вещь `fire_temple_guest_note_s15`, поправки игрока: 1
 - s15.text.114: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Коюки (`npc/western_nest_young_courier`), вещь `fire_temple_guest_note_s15`
@@ -61,4 +62,3 @@
 - s15.text.060: Мугами Нао (`npc/nao`), Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), вещь `mugami_family_album`
 - s15.text.059: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
 - s15.text.058: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`)
-- s15.text.057: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)

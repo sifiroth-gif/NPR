@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.116",
+  "cursor": "s15.text.117",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -509,20 +509,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s15.text.116:0": {
+    "canon:s15.text.117:0": {
       "aliases": [
-        "canon:s15.text.116:0",
-        "s15.text.116: западный пост Огня допустил Шики после проверки расписанного заявления; расписка возвращена, о встрече пост не уведомлён, местный приказ задержания на посту отсутству"
+        "canon:s15.text.117:0",
+        "s15.text.117: игрок просит долгий путь с самостоятельными событиями, сохраняя цель своевременного прибытия 28.04 18:00 в Долину Завершения; не гарантирует исход и не отменяет цену "
       ],
       "facts": [],
-      "id": "canon:s15.text.116:0",
+      "id": "canon:s15.text.117:0",
       "kind": "canon",
-      "label": "s15.text.116: западный пост Огня допустил Шики после проверки расписанного заявления; расписка возвращена, о встрече пост не уведомлён, местный приказ задержания на посту отсутству",
+      "label": "s15.text.117: игрок просит долгий путь с самостоятельными событиями, сохраняя цель своевременного прибытия 28.04 18:00 в Долину Завершения; не гарантирует исход и не отменяет цену ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.116"
+        "s15.text.117"
       ]
     },
     "captive_guard": {
@@ -943,15 +943,12 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.116"
-        },
-        {
-          "role": "по подписи в сцене"
+          "seen": "s15.text.117"
         }
       ],
       "sources": [
         "recovery/cast/dzyun.json",
-        "recovery/HOT.json"
+        "s15.text.117"
       ]
     },
     "endo_hajime": {
@@ -1109,6 +1106,27 @@
       ],
       "sources": [
         "s13.text.099"
+      ]
+    },
+    "fire_road_jonin": {
+      "aliases": [
+        "fire road jonin",
+        "Дзёнин Конохи на лесной дороге"
+      ],
+      "facts": [],
+      "id": "fire_road_jonin",
+      "kind": "npc",
+      "label": "Дзёнин Конохи на лесной дороге",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s15.text.117"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_road_jonin.json",
+        "s15.text.117"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1273,20 +1291,18 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.116"
+          "seen": "s15.text.117"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json",
-        "recovery/HOT.json",
-        "s15.text.116"
+        "s15.text.117"
       ]
     },
     "fire_west_border_senior": {
       "aliases": [
         "fire west border senior",
-        "Старший пограничник Конохи",
-        "fire_west_border_senior"
+        "Старший пограничник Конохи"
       ],
       "facts": [],
       "id": "fire_west_border_senior",
@@ -1304,13 +1320,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.116"
+          "seen": "s15.text.117"
         }
       ],
       "sources": [
         "recovery/cast/fire_west_border_senior.json",
-        "recovery/HOT.json",
-        "s15.text.116"
+        "recovery/HOT.json"
       ]
     },
     "forehead_protector": {
@@ -3293,8 +3308,7 @@
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре",
-        "kusa_head"
+        "Глава Кусагакуре"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -3344,8 +3358,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kusa_head.json",
-        "s15.text.116"
+        "recovery/cast/kusa_head.json"
       ]
     },
     "kusa_leader": {
@@ -4500,7 +4513,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.116",
+          "seen": "s15.text.117",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -6313,8 +6326,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.116",
-        "s15.text.115"
+        "s15.text.115",
+        "s15.text.116"
       ]
     },
     "place:1dd3dc1c89f3b08c": {
@@ -15227,6 +15240,24 @@
         "s08.text.088"
       ]
     },
+    "place:e931cda748015408": {
+      "aliases": [
+        "place:e931cda748015408",
+        "Страна Огня, старая лесная дорога к центральным провинциям",
+        "Страна Огня",
+        "старая лесная дорога к центральным провинциям"
+      ],
+      "facts": [],
+      "id": "place:e931cda748015408",
+      "kind": "place",
+      "label": "Страна Огня, старая лесная дорога к центральным провинциям",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.117"
+      ]
+    },
     "place:e98c8605d584c4e9": {
       "aliases": [
         "place:e98c8605d584c4e9",
@@ -17684,7 +17715,7 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.116"
+          "seen": "s15.text.117"
         },
         {
           "role": "по подписи в сцене"
@@ -19259,7 +19290,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 50,
+      "mention_count": 51,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19267,13 +19298,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T11:57:00",
-          "excerpt": "вновь посмотрел на Шики. Теперь в его отношении к незнакомцу появилось нечто помимо страха. Однако, когда Коюки проползла возле его ноги, он всё-таки поспешил отступить. Рёэн извлёк из сумки узкую полоску плотной бумаги, написал несколько строк и поставил небо",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.114"
         },
         {
           "at": "0010-04-22T17:24:00",
@@ -19288,11 +19312,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.116"
+        },
+        {
+          "at": "0010-04-22T22:36:00",
+          "excerpt": "едицинские принадлежности пятнадцатилетнего генина. Теперь над той же землёй опускался апрельский вечер. Коюки перебралась на плечо Шики. **Коюки:** — Здесь хорошие деревья. Большие. Можно прожить всю жизнь и ни разу не спуститься на землю. *** <text color=\"se",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.117"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.116",
+          "seen": "s15.text.117",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19793,5 +19824,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1290
+  "source_turns_indexed": 1291
 }
