@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.133",
+  "cursor": "s16.text.134",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1273,13 +1273,14 @@
     "fire_road_hisato": {
       "aliases": [
         "fire road hisato",
-        "Хисато"
+        "Хисато",
+        "fire_road_hisato"
       ],
       "facts": [],
       "id": "fire_road_hisato",
       "kind": "npc",
       "label": "Хисато",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0010-04-22T22:56:00",
@@ -1287,13 +1288,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.120"
-        },
-        {
-          "at": "0010-04-22T23:06:00",
-          "excerpt": "22:58</text> ### Страна Огня. Лесная дорога Шики осторожно усадил Маю у широкого древесного корня. Хисато подложил ей под спину свёрнутый плащ и укрыл покрывалом. **Мугами Шики:** — Да, участвовал. И я всё же настаиваю идти до Конохи. Девочку я донесу, её жизн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.122"
         },
         {
           "at": "0010-04-23T11:42:00",
@@ -1308,15 +1302,23 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.124"
+        },
+        {
+          "at": "0010-05-03T15:46:00",
+          "excerpt": "ждая дорогу четырём шиноби Конохи, конвоировавшим связанного мужчину. Шики узнал одного из сопровождающих — Хисато, наставника девочки, которую он спас от внутреннего кровотечения одиннадцать дней назад. Но значительно интереснее оказался пленник. Это был тот ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.134"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.002"
+          "seen": "s16.text.134"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_hisato.json"
+        "recovery/cast/fire_road_hisato.json",
+        "s16.text.134"
       ]
     },
     "fire_road_jonin": {
@@ -1371,7 +1373,8 @@
     "fire_road_mayu": {
       "aliases": [
         "fire road mayu",
-        "Маю"
+        "Маю",
+        "fire_road_mayu"
       ],
       "facts": [],
       "id": "fire_road_mayu",
@@ -1381,11 +1384,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s15.text.124"
+          "seen": "s16.text.134",
+          "state": "По сообщению Хисато выписана 01.05.1287; ходит самостоятельно, разрешено постепенно возвращаться к занятиям. Это сообщение наставника, не осмотр Шики."
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_mayu.json"
+        "recovery/cast/fire_road_mayu.json",
+        "s16.text.134"
       ]
     },
     "fire_road_natsuki": {
@@ -2923,7 +2928,7 @@
       "id": "kakashi",
       "kind": "npc",
       "label": "Какаши Хатакэ",
-      "mention_count": 28,
+      "mention_count": 29,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -2931,13 +2936,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-03-15T13:49:00",
-          "excerpt": "тоявший у края навеса, не вмешался. Наруто, напротив, удовлетворённо кивнул. **Наруто Узумаки:** — Вот! Я же говорил! **Какаши Хатакэ:** — Ты говорил несколько другое. **Наруто Узумаки:** — Смысл тот же! *** Старший патруля уже собрался отправить ещё одного св",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.009"
         },
         {
           "at": "0010-03-16T11:32:00",
@@ -2952,21 +2950,23 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.011"
+        },
+        {
+          "at": "0010-05-03T15:46:00",
+          "excerpt": "3</text> ### Конохагакуре **Мугами Шики:** — Какаши-сан, пойду я искать себе ночлег и прогуляюсь. **Какаши Хатакэ:** — Удачной прогулки. *** День выдался тёплым. В торговых рядах пахло древесной смолой, жареной рыбой и свежими татами. Из открытых окон Академии",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.134"
         }
       ],
       "projections": [
         {
           "seen": "s16.text.133",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
-        },
-        {
-          "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "recovery/HOT.json",
-        "s16.text.133"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -14844,6 +14844,25 @@
         "s04.text.005"
       ]
     },
+    "place:bb89e3edf8204443": {
+      "aliases": [
+        "place:bb89e3edf8204443",
+        "Конохагакуре, торговый квартал, у знакомой гостиницы",
+        "Конохагакуре",
+        "торговый квартал",
+        "у знакомой гостиницы"
+      ],
+      "facts": [],
+      "id": "place:bb89e3edf8204443",
+      "kind": "place",
+      "label": "Конохагакуре, торговый квартал, у знакомой гостиницы",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.134"
+      ]
+    },
     "place:bc8609bb71e34960": {
       "aliases": [
         "place:bc8609bb71e34960",
@@ -15294,10 +15313,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.133",
         "s16.text.128",
         "s16.text.129",
-        "s16.text.130"
+        "s16.text.130",
+        "s16.text.133"
       ]
     },
     "place:c806801c7d32961b": {
@@ -21088,6 +21107,27 @@
         "recovery/cast/tetsu.json"
       ]
     },
+    "thread:fire_road_survey_attack": {
+      "aliases": [
+        "thread:fire road survey attack",
+        "fire road survey attack",
+        "fire_road_survey_attack"
+      ],
+      "facts": [],
+      "id": "thread:fire_road_survey_attack",
+      "kind": "thread",
+      "label": "fire road survey attack",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "03.05 15:46 Шики видел задержанного лидера группы s15.text.119; Хисато сообщил о задержании утром на дорожном посту и продолжающемся поиске спутников. По его сообщению заказ на уничтожение результатов съёмки получен до выхода группы; заказчик неизвестен. Коноха ведёт дело, Шики не обязался участвовать."
+        }
+      ],
+      "sources": [
+        "s16.text.134"
+      ]
+    },
     "thread:jiraiya_rain_investigation": {
       "aliases": [
         "thread:jiraiya rain investigation",
@@ -22149,5 +22189,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1504
+  "source_turns_indexed": 1505
 }
