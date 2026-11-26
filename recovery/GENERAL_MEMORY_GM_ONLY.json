@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.069",
+  "cursor": "s16.text.070",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3427,7 +3427,7 @@
       "id": "kiri_port_guard_senior",
       "kind": "npc",
       "label": "Шиноби Тумана",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0006-09-19T11:09:00",
@@ -3435,13 +3435,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.076"
-        },
-        {
-          "at": "0010-04-11T21:32:00",
-          "excerpt": "чиновником мы закончили заявление. Я задержался разговаривая со змеёй, на выходе на меня напали три шиноби тумана по приказу из книги бинго, они сказали что получили его до 12:00 <text color=\"secondary\" size=\"xs\">Воскресенье, 11 апреля 1287 года · 21:32</text>",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.025"
         },
         {
           "at": "0010-04-25T21:18:00",
@@ -3456,11 +3449,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.069"
+        },
+        {
+          "at": "0010-04-25T21:20:00",
+          "excerpt": "ога **Мугами Шики:** — Более чем удовлетворен условиями Из пластины донёсся продолжительный выдох. **Шиноби Тумана:** — Прекрасно. В его голосе впервые за весь разговор прозвучало искреннее облегчение. Послышался скрип пера. Офицер продиктовал кому-то дату и м",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.070"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.069",
+          "seen": "s16.text.070",
           "state": "Снял оцепление с трапа и возобновил пропуск пассажиров."
         },
         {
@@ -3515,13 +3515,17 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.069",
+          "seen": "s16.text.070",
+          "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
+        },
+        {
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
-        "s16.text.069"
+        "recovery/HOT.json",
+        "s16.text.070"
       ]
     },
     "kiri_transfer_carrier": {
@@ -5195,8 +5199,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json",
-        "s16.text.069"
+        "recovery/cast/naruto.json"
       ]
     },
     "neji": {
@@ -14130,8 +14133,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.069",
-        "s16.text.068"
+        "s16.text.070",
+        "s16.text.068",
+        "s16.text.069"
       ]
     },
     "place:b5569561296c9e28": {
@@ -20486,11 +20490,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Предложена встреча 27.04.1287 в полдень в портовом управлении восточной гавани Огня при местном представителе. Предложенные гарантии: оружие при себе, без принудительного обследования/отбора образцов/задержания в ходе встречи; не гарантирует отмену K-0418. Отдел требует участия, Мэй пока не удовлетворила. Согласие Шики и порта е"
+          "state": "Шики принял предложенные 27.04.1287 12:00 восточная гавань Огня и условия встречи. Ожидается подтверждение местной власти и состава делегации; розыск не отменён. Офицер передаст согласие Мидзукагэ."
         }
       ],
       "sources": [
-        "s16.text.069"
+        "s16.text.070"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -21498,5 +21502,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1447
+  "source_turns_indexed": 1448
 }
