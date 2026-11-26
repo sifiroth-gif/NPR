@@ -227,6 +227,29 @@ def _pass(state_dir, hot, w):
     report["npc_plans"], report["npc_dread"] = len(plans), len(fears)
 
     will = hot.get("_will") or {}
+    # Исполненные обязанности прошлых сессий больше не требуют полного текста.
+    # Архивируем первичную запись, оставляя tombstone с тем же ID: select()
+    # не предложит исполненное снова. Неактивное не означает исполненное.
+    duties = will.get("obligations") or {}
+    compacted = []
+    for ident, row in duties.items():
+        if not isinstance(row, dict) or not row.get("done") or "text" not in row:
+            continue
+        if row.get("kind") in ("news", "due", "arc"):
+            continue
+        if _session_of(row["done"]) is None or any(
+                _this_session(hot, row.get(field)) for field in ("since", "last", "done")):
+            continue
+        compacted.append({"key": ident, "value": row, "aged_at": turn})
+    if compacted:
+        name = "obligations-done.GM_ONLY.jsonl"
+        archived = load(state_dir, name)
+        _append(state_dir, name, [r for r in compacted
+                                  if archived.get(r["key"], {}).get("value") != r["value"]])
+        for record in compacted:
+            row = record["value"]
+            duties[record["key"]] = {k: row[k] for k in ("kind", "done", "inactive") if k in row}
+        report["obligations_done"] = len(compacted)
     happened = will.get("happened")
     if isinstance(happened, list):
         from .will import SHOW_FOLDS

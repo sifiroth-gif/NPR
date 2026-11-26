@@ -124,3 +124,46 @@ class ResyncTest(unittest.TestCase):
             self.assertIsNone(hot_module.resync_item(state))
             hot_module._keeper_fill(tmp, state)
             self.assertIsNone(hot_module.resync_item(state))
+
+
+class CompletedObligationAgingTest(unittest.TestCase):
+    def test_archive_completed_previous_session_and_prevent_reissue(self):
+        from rpg_engine import obligations
+        import copy
+        with tempfile.TemporaryDirectory() as tmp:
+            state = Path(tmp)
+            old = obligations.key("scene", "old duty")
+            active = obligations.key("scene", "pending duty")
+            current = obligations.key("scene", "current duty")
+            due = obligations.key("due", "deadline")
+            records = {
+                old: {"kind": "scene", "text": "old duty", "since": "s16.text.001",
+                      "last": "s16.text.002", "done": "s16.text.003", "inactive": "s16.text.004"},
+                active: {"kind": "scene", "text": "pending duty", "since": "s16.text.001",
+                         "inactive": "s16.text.004"},
+                current: {"kind": "scene", "text": "current duty", "done": "s17.text.002"},
+                due: {"kind": "due", "text": "deadline", "since": "s16.text.001"}
+            }
+            before = copy.deepcopy(records)
+            hot = {"cursor": {"id": "s17.text.006"}, "_will": {"obligations": records}}
+            report = aging._pass(state, hot, aging.TIGHT)
+            self.assertEqual(report["obligations_done"], 1)
+            self.assertEqual(records[old], {"kind": "scene", "done": "s16.text.003",
+                                           "inactive": "s16.text.004"})
+            for ident in (active, current, due):
+                self.assertEqual(records[ident], before[ident])
+            path = state / aging.AGED_DIR / "obligations-done.GM_ONLY.jsonl"
+            archived = aging.load(state, path.name)
+            self.assertEqual(archived[old]["value"], before[old])
+            self.assertEqual(len(path.read_text(encoding="utf-8").splitlines()), 1)
+            self.assertNotIn("obligations_done", aging._pass(state, hot, aging.TIGHT))
+            _, ids, _ = obligations.select(hot, [("scene", "old duty", old),
+                                                  ("scene", "pending duty", active),
+                                                  ("due", "deadline", due)])
+            self.assertNotIn(old, ids)
+            self.assertIn(active, ids)
+            self.assertIn(due, ids)
+            # Повторное проигрывание свёртки не дублирует идентичный архив.
+            records[old] = before[old]
+            aging._pass(state, hot, aging.TIGHT)
+            self.assertEqual(len(path.read_text(encoding="utf-8").splitlines()), 1)
