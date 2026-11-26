@@ -56,11 +56,6 @@
  "checks": [
   {
    "kind": "fight",
-   "text": "Бросок «Могурагакурэ»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
-   "turn": "s16.text.049"
-  },
-  {
-   "kind": "fight",
    "text": "Бросок «Дорю Тайга»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s16.text.049"
   },
@@ -92,13 +87,18 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.008"
+   "turn": "s17.text.009"
+  },
+  {
+   "kind": "will",
+   "text": "«Джирайя» 6 ход(ов) рядом с Шики только отвечает. Его цель: «Узнать, кто стоит за Акацуки в Амэгакурэ». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s17.text.009"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.008",
+  "cursor": "s17.text.009",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -516,11 +516,11 @@
  "cursor": {
   "at": "0010-05-05T11:58:00",
   "date": "Среда, 5 мая 1287 года",
-  "id": "s17.text.008",
+  "id": "s17.text.009",
   "place": "Страна Рек, западные предгорья, заброшенная водяная мельница",
   "time": "11:58"
  },
- "digest": "36592620c78c06564682e9d5dcdfa81385b1542ecac067997f3d6ae769b31e47",
+ "digest": "0a5a379f3d0d6370190d02dbe6c4ec9cfb7f008528ad660eee4252e108d8e75c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -653,18 +653,18 @@
    "value": 600.0
   },
   "dice": [
+   4,
    11,
-   16,
-   17,
+   7,
+   19,
+   3,
+   18,
+   7,
+   6,
+   9,
    4,
    17,
-   1,
-   17,
-   11,
-   2,
-   14,
-   9,
-   16
+   14
   ],
   "injuries": {
    "jiraiya": [
@@ -1071,7 +1071,7 @@
     "memory_file": "archive/npc-memory/jiraiya.json",
     "memory_total": 100,
     "name": "Джирайя",
-    "seen": "s17.text.008",
+    "seen": "s17.text.009",
     "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне.",
     "status": "present_profile",
     "tier": "deep"
@@ -1126,7 +1126,7 @@
     "memory_total": 2,
     "name": "Связной Джирайи",
     "role": "Разведывательный источник Джирайи",
-    "seen": "s17.text.008",
+    "seen": "s17.text.009",
     "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
     "status": "present_profile",
     "tier": "archetypal",
@@ -1169,7 +1169,7 @@
     "memory_total": 15,
     "name": "Связной Песка",
     "role": "по подписи в сцене",
-    "seen": "s17.text.008",
+    "seen": "s17.text.009",
     "status": "present_profile",
     "tier": "deep"
    },
@@ -1211,8 +1211,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "ad2c4ad9c73b165ed09e2b1e50dae77810efdfbd",
-  "turn": "s17.text.008"
+  "sha": "8dfe81dce6453a71c196f9e2a8cccc7374551556",
+  "turn": "s17.text.009"
  },
  "wiki": {
   "index": "memory/INDEX.md",

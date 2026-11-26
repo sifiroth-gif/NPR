@@ -60,4 +60,3 @@
 - s16.text.092: Коюки (`npc/western_nest_young_courier`), Возница (`npc/river_herb_cart_driver_s16`), Сборщик (`npc/river_herb_gatherer_s16`)
 - s16.text.091: Коюки (`npc/western_nest_young_courier`)
 - s16.text.090: Коюки (`npc/western_nest_young_courier`)
-- s16.text.089: Портовый чиновник (`npc/fire_port_official`)
