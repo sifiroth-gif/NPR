@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.033: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Гамамару (`npc/gamamaru`), вещь `konoha_blank_contact_plate_s16`
 - s16.text.032: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s16.text.031: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), линия `jiraiya_rain_investigation`
 - s16.text.030: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
@@ -59,4 +60,3 @@
 - s15.text.183: Хагуро (`npc/khaguro`), Котэцу Хаганэ (`npc/kotetsu`), Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`)
 - s15.text.182: Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), вещь `fire_bounty_records_s15`, вещь `kakuzu_money_s15`, линия `shiki_save_asuma`
 - s15.text.181: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Приёмщик тел (`npc/fire_bounty_station_trader`), Хидан (`npc/hidan`), линия `shiki_save_asuma`
-- s15.text.180: Хидан (`npc/hidan`)

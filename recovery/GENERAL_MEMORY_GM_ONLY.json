@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.032",
+  "cursor": "s16.text.033",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1972,14 +1972,15 @@
         {
           "fears": "Нарушение природного равновесия.",
           "role": "Старейшина Мьёбоку, пророческие сны.",
-          "seen": "s16.text.003",
+          "seen": "s16.text.033",
           "stance": "Любопытство к гостю.",
           "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
           "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
         }
       ],
       "sources": [
-        "recovery/cast/gamamaru.json"
+        "recovery/cast/gamamaru.json",
+        "s16.text.033"
       ]
     },
     "gamamaru_nemera_dream_scroll": {
@@ -2500,7 +2501,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 62,
+      "mention_count": 63,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2509,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:51:00",
-          "excerpt": "а машинально придвигает к Шики, затем останавливается и на несколько секунд задерживает взгляд на его руках. Джирайя достаёт из внутреннего кармана блокнот, раскрывает его на странице с заметками об Амэгакурэ. **Джирайя:** — Судя по продолжительности последнег",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.030"
         },
         {
           "at": "0010-04-25T11:58:00",
@@ -2529,11 +2523,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.032"
+        },
+        {
+          "at": "0010-04-25T12:06:00",
+          "excerpt": "разрешением уйти. Хокагэ отпустила его. **Цунадэ:** — Хочешь организовать собственный канал связи с нами? Джирайя отодвинул бумаги, освобождая место для работы. **Ход Шики.** Шики согласился участвовать в операции, отказался от награды. Цунадэ обещала покрыть ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.032",
+          "seen": "s16.text.033",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2544,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.032"
+        "s16.text.033"
       ]
     },
     "jiro_caravan_guard": {
@@ -3616,6 +3617,22 @@
       ],
       "sources": [
         "recovery/cast/kiri_transfer_watch.json"
+      ]
+    },
+    "konoha_blank_contact_plate_s16": {
+      "aliases": [
+        "konoha blank contact plate s16",
+        "Чистая фуин-пластина связи Конохи"
+      ],
+      "facts": [],
+      "id": "konoha_blank_contact_plate_s16",
+      "kind": "item",
+      "label": "Чистая фуин-пластина связи Конохи",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.033"
       ]
     },
     "kotetsu": {
@@ -9585,14 +9602,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.032",
+        "s16.text.033",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
         "s15.text.196",
         "s16.text.019",
         "s16.text.030",
-        "s16.text.031"
+        "s16.text.031",
+        "s16.text.032"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -19433,8 +19451,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s16.text.032"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -20445,7 +20462,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20453,13 +20470,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:51:00",
-          "excerpt": "ных медиков и распоряжается продолжать наблюдение за пленником. ### Резиденция Хокагэ · 11:51 В кабинете Цунадэ открыто окно. Сквозняк шевелит края документов, с улицы доносится далёкий детский смех. После подземелья обыкновенная жизнь деревни кажется почти не",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.030"
         },
         {
           "at": "0010-04-25T11:58:00",
@@ -20474,11 +20484,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.032"
+        },
+        {
+          "at": "0010-04-25T12:06:00",
+          "excerpt": "Цунадэ-сама мне не нужно наград у меня есть небольшое состояние которого хватит мне на долго. Хорошо. У вас есть чистая пластина связи? <text color=\"secondary\" size=\"xs\">Воскресень",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.032",
+          "seen": "s16.text.033",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20488,7 +20505,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.032"
+        "s16.text.033"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21293,5 +21310,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1412
+  "source_turns_indexed": 1413
 }
