@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.080",
+  "cursor": "s16.text.081",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -153,7 +153,7 @@
       "projections": [
         {
           "fears": "Самовольное действие ведомства, срыв переговоров и новый международный инцидент.",
-          "seen": "s16.text.080",
+          "seen": "s16.text.081",
           "voice": "Деловая твёрдость, точность, сдержанная резкость.",
           "wants": "Согласовать приемлемые для Мэй условия урегулирования без уступки безопасности деревни."
         },
@@ -165,7 +165,7 @@
       "sources": [
         "recovery/cast/ao.json",
         "recovery/HOT.json",
-        "s16.text.080"
+        "s16.text.081"
       ]
     },
     "arai_mitiko": {
@@ -531,6 +531,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.081:0": {
+      "aliases": [
+        "canon:s16.text.081:0",
+        "s16.text.081: Ао, инспектор закрытого отдела, корабельный офицер Кири и портовый чиновник лично видели замораживание воды Хётоном и локальную обратимую гидратацию ладони с прохожде"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.081:0",
+      "kind": "canon",
+      "label": "s16.text.081: Ао, инспектор закрытого отдела, корабельный офицер Кири и портовый чиновник лично видели замораживание воды Хётоном и локальную обратимую гидратацию ладони с прохожде",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.081"
       ]
     },
     "captive_guard": {
@@ -1157,13 +1173,14 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
       "kind": "npc",
       "label": "Портовый чиновник",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0010-04-11T16:20:00",
@@ -1171,13 +1188,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.080"
-        },
-        {
-          "at": "0010-04-27T12:01:00",
-          "excerpt": "становления утраченных наследственных программ. Именно поэтому в приказе отдельно оговаривалось сохранение жизнеспособности тканей. Портовый чиновник перестал писать. Он посмотрел на Ао, ожидая продолжения. **Ао:** — Мидзукагэ считает, что подобное основание д",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.077"
         },
         {
           "at": "0010-04-27T12:02:00",
@@ -1192,11 +1202,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.079"
+        },
+        {
+          "at": "0010-04-27T12:06:00",
+          "excerpt": "симые наследственные способности в одном организме! Его голос сорвался на высокую ноту. Он протянул руку к папке, однако портовый чиновник накрыл протокол ладонью. **Портовый чиновник:** — Прошу отметить, что демонстрация была добровольной. Она не означает сог",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.081"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.080",
+          "seen": "s16.text.081",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         },
         {
@@ -1205,7 +1222,8 @@
       ],
       "sources": [
         "recovery/cast/fire_port_official.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.081"
       ]
     },
     "fire_port_security_staff": {
@@ -1331,7 +1349,8 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ"
+        "Кадзунэ",
+        "fire_road_jonin"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1370,11 +1389,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.195"
+          "seen": "s16.text.081"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json"
+        "recovery/cast/fire_road_jonin.json",
+        "s16.text.081"
       ]
     },
     "fire_road_mayu": {
@@ -3366,17 +3386,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.080",
-          "wants": "Сохранить интересы своего отдела при рассмотрении K-0418."
-        },
-        {
+          "seen": "s16.text.081",
           "wants": "Сохранить интересы своего отдела при рассмотрении K-0418."
         }
       ],
       "sources": [
         "recovery/cast/kiri_archive_observer_s16.json",
-        "recovery/HOT.json",
-        "s16.text.080"
+        "s16.text.081"
       ]
     },
     "kiri_bingo_book": {
@@ -3574,7 +3590,8 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3613,12 +3630,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.080",
+          "seen": "s16.text.081",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json"
+        "recovery/cast/kiri_ship_security_officer.json",
+        "s16.text.081"
       ]
     },
     "kiri_transfer_carrier": {
@@ -17186,11 +17204,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.080",
+        "s16.text.081",
         "s16.text.076",
         "s16.text.077",
         "s16.text.078",
-        "s16.text.079"
+        "s16.text.079",
+        "s16.text.080"
       ]
     },
     "place:f4500c0ac878606b": {
@@ -21115,8 +21134,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -21160,8 +21178,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s16.text.080"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -21639,5 +21656,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1454
+  "source_turns_indexed": 1455
 }
