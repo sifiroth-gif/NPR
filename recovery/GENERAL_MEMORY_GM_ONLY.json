@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.004",
+  "cursor": "s17.text.005",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 106,
+      "mention_count": 107,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:34:00",
-          "excerpt": "=\"xs\">Вторник, 4 мая 1287 года · 15:34</text> ### Страна Огня. Придорожная чайная Шики сидел молча. Джирайя засучил рукава и принялся перерисовывать чертёж. Путник следил за движением карандаша, время от времени поправляя линии ногтем здоровой руки. За семь ми",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.002"
         },
         {
           "at": "0010-05-04T17:50:00",
@@ -2553,20 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.004"
+        },
+        {
+          "at": "0010-05-04T20:42:00",
+          "excerpt": "ые предгорья **Мугами Шики:** — Хорошо. Вы пересекли мост и продолжили путь. С наступлением сумерек Джирайя свернул с основной дороги. В низинах между горами зажигались огни небольших деревень. Над крышами поднимался дым вечерних очагов. Постоянная природная с",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.005"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.004",
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+          "seen": "s17.text.005",
+          "state": "Прибыл к запасной точке; намерен дождаться встречи до полудня 05.05."
         },
         {
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+          "state": "Прибыл к запасной точке; намерен дождаться встречи до полудня 05.05."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.005"
       ]
     },
     "jiro_caravan_guard": {
@@ -4227,8 +4228,7 @@
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби",
-        "leaf_gate_special_inspector_s16"
+        "Незнакомый шиноби"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
@@ -4272,8 +4272,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_special_inspector_s16.json",
-        "s17.text.004"
+        "recovery/cast/leaf_gate_special_inspector_s16.json"
       ]
     },
     "lee": {
@@ -10679,8 +10678,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.004",
-        "s17.text.003"
+        "s17.text.003",
+        "s17.text.004"
       ]
     },
     "place:667b37d6bc3480ba": {
@@ -14610,6 +14609,25 @@
         "s04.text.042",
         "s04.text.045",
         "s04.text.046"
+      ]
+    },
+    "place:b8c4612b2c42bc55": {
+      "aliases": [
+        "place:b8c4612b2c42bc55",
+        "Страна Рек, западные предгорья, заброшенная водяная мельница",
+        "Страна Рек",
+        "западные предгорья",
+        "заброшенная водяная мельница"
+      ],
+      "facts": [],
+      "id": "place:b8c4612b2c42bc55",
+      "kind": "place",
+      "label": "Страна Рек, западные предгорья, заброшенная водяная мельница",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.005"
       ]
     },
     "place:b8ccdfc587cc4a22": {
@@ -19800,8 +19818,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s17.text.004"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -22237,5 +22254,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1515
+  "source_turns_indexed": 1516
 }
