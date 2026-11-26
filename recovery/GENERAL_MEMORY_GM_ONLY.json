@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.199",
+  "cursor": "s15.text.200",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1838,7 +1838,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1846,13 +1846,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-24T12:38:00",
-          "excerpt": "ещё не случилось, и забывает тех, кого знает столетиями. Она прищурилась. **Хакудзя-сэннин:** — И передай Фукасаку мои приветствия. Посмотрим, что он на это ответит. Шики не знает, заметили ли жабы последствия слияния. Белая Змея предостерегла от недооценки на",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.188"
         },
         {
           "at": "0010-04-24T19:15:00",
@@ -1867,15 +1860,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.196"
+        },
+        {
+          "at": "0010-04-25T08:58:00",
+          "excerpt": "ожил печати призыва. В белом дыму появилась небольшая зелёная жаба с седыми волосами и густыми бровями. **Фукасаку:** — Доброе утро, Шики-тян. Мама уже приготовила угощение. Правда, я до сих пор не выяснил, чем питаются драконьи отшельники. Джирайя негромко ра",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.200"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.156"
+          "seen": "s15.text.200",
+          "state": "Прибыл по призыву Джирайи, сообщил о готовности принять гостя и пробуждении Великого Мудреца."
+        },
+        {
+          "state": "Прибыл по призыву Джирайи, сообщил о готовности принять гостя и пробуждении Великого Мудреца."
         }
       ],
       "sources": [
-        "recovery/cast/fukasaku.json"
+        "recovery/cast/fukasaku.json",
+        "recovery/HOT.json",
+        "s15.text.200"
       ]
     },
     "gaara": {
@@ -2479,12 +2485,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.192",
+          "seen": "s15.text.200",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s15.text.200"
       ]
     },
     "jiraiya": {
@@ -2496,7 +2503,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 23,
+      "mention_count": 24,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2504,13 +2511,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-23T16:35:00",
-          "excerpt": "4</text> ### Конохагакуре. Тренировочные площадки **Мугами Шики:** — Не знаю, пока у меня нет дел. **Джирайя:** — Тогда предлагаю послезавтра отправиться на Мьёбоку. Завтра я занят, а двадцать пятого с утра буду свободен. Фукасаку одобрительно кивнул. **Фукаса",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.156"
         },
         {
           "at": "0010-04-24T19:14:00",
@@ -2525,16 +2525,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.192"
+        },
+        {
+          "at": "0010-04-25T08:58:00",
+          "excerpt": "выстиранные одежды, торговцы распахивали ставни, а над крышами поднимались тонкие столбы печного дыма. Джирайя уже находился на условленной площадке. Сидя на деревянном столбе, он что-то писал в своей записной книжке, периодически зачёркивая целые строки. **Дж",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.200"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.192",
-          "state": "Подтвердил встречу 25.04 в 09:00 на прежней площадке и переход с помощью Фукасаку."
+          "seen": "s15.text.200",
+          "state": "Пришёл на согласованную площадку до 09:00, встретил Шики и призвал Фукасаку."
+        },
+        {
+          "state": "Пришёл на согласованную площадку до 09:00, встретил Шики и призвал Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json",
+        "s15.text.200"
       ]
     },
     "jiro_caravan_guard": {
@@ -17275,6 +17287,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.200",
         "s15.text.145",
         "s15.text.146",
         "s15.text.147",
@@ -19421,7 +19434,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19429,13 +19442,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-23T16:32:16",
-          "excerpt": "На мгновение он оказался сбоку от Джирайи. Наруто даже не успел повернуть голову. **Наруто:** — Да как он это делает?! Сима ничего не ответила. Её взгляд был прикован к Шики. За десятилетия жизни на Мьёбоку ей доводилось видеть последствия неправильного обраще",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.154"
         },
         {
           "at": "0010-04-23T16:33:00",
@@ -19450,6 +19456,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.156"
+        },
+        {
+          "at": "0010-04-25T08:58:00",
+          "excerpt": "льники. Джирайя негромко рассмеялся. **Джирайя:** — Только не обещай ему, что он съест всё, что приготовила Сима. Фукасаку спрыгнул с плеча ученика и приблизился к Шики. Несколько мгновений старый отшельник всматривался в его лицо. **Фукасаку:** — Великий Мудр",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.200"
         }
       ],
       "projections": [
@@ -21261,5 +21274,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1372
+  "source_turns_indexed": 1373
 }
