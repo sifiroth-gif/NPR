@@ -29,6 +29,8 @@ def context(hot, *, compact=False):
     patients = {}
     omitted = []
     for who in sorted(set(injuries) | set(states)):
+        if body.mode(hot, who) == "dead":
+            continue
         wounds = [w for w in injuries.get(who, []) if not w.get("healed")]
         loss = states.get(who, {})
         if not wounds and not loss.get("loss"):
@@ -42,8 +44,10 @@ def context(hot, *, compact=False):
             row = {"w": [[w.get(k) for k in FIELDS] for w in wounds]}
         else:
             row = {"wounds": [dict(w) for w in wounds]}
-        if loss:
+        if loss.get("loss"):
             row["loss"] = {k: loss[k] for k in ("loss", "stage") if k in loss}
+        if loss.get("mode") == "exceptional":
+            row["physiology"] = {k: loss[k] for k in ("mode", "status_source", "status_note") if k in loss}
         patients[who] = row
     result = {"at": (hot.get("cursor") or {}).get("at"), "patients": patients}
     if compact:
