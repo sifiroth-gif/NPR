@@ -56,6 +56,24 @@ def _parse(value):
         return None
 
 
+def _limit(value):
+    """Normalize legacy ISO deadline shorthand without rewriting played turns."""
+    if isinstance(value, str):
+        return {"until": value} if _parse(value) else {}
+    if not isinstance(value, dict):
+        return {}
+    result = {}
+    scenes = value.get("scenes")
+    if isinstance(scenes, int) and not isinstance(scenes, bool) and scenes > 0:
+        result["scenes"] = scenes
+    elif isinstance(scenes, str) and scenes.isdecimal() and int(scenes) > 0:
+        result["scenes"] = int(scenes)
+    until = value.get("until")
+    if isinstance(until, str) and _parse(until):
+        result["until"] = until
+    return result
+
+
 def _events(hot):
     plot = hot.setdefault("_plot", {})
     return plot, plot.setdefault("events", {})
@@ -79,7 +97,7 @@ def apply(hot, patches, turn_id, at):
             events[key] = event
         for field in FIELDS:
             if field in patch and patch[field] is not None:
-                event[field] = patch[field]
+                event[field] = _limit(patch[field]) if field == "limit" else patch[field]
         if event.get("kind") not in KINDS:
             event["kind"] = "side"
         if event["kind"] == "scene" and not event.get("limit"):
@@ -120,7 +138,7 @@ def _close(plot, events, key, outcome, turn_id, at):
 
 
 def _over(event, now):
-    limit = event.get("limit") or {}
+    limit = _limit(event.get("limit"))
     scenes = int(event.get("scenes") or 0)
     if limit.get("scenes") and scenes >= int(limit["scenes"]):
         return f"{scenes} из {limit['scenes']} сцен"
@@ -157,7 +175,7 @@ def review(hot, turns):
                     missing.append("question")
                 if len(event.get("endings") or []) < 2:
                     missing.append("endings (2–4, с неудачей и «ничего»)")
-                if not event.get("limit"):
+                if not _limit(event.get("limit")):
                     missing.append("limit")
             if missing:
                 note(f"Событие {_label(event)} без конца: добавь в d.plot {', '.join(missing)}.")
@@ -248,12 +266,16 @@ def brief(hot):
     now = _parse((hot.get("cursor") or {}).get("at"))
 
     def view(event):
-        limit = event.get("limit") or {}
+        limit = _limit(event.get("limit"))
         left = None
         if limit.get("scenes"):
             left = max(0, int(limit["scenes"]) - int(event.get("scenes") or 0))
         item = {k: event.get(k) for k in ("id", "kind", "title", "question", "endings", "limit",
                                           "phase", "parent", "threads", "notes", "starts") if event.get(k)}
+        if limit:
+            item["limit"] = limit
+        else:
+            item.pop("limit", None)
         item["scenes"] = event.get("scenes", 0)
         if left is not None:
             item["scenes_left"] = left

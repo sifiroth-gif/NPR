@@ -72,6 +72,23 @@ class PlotTest(unittest.TestCase):
         notes = texts(plot.review(self.hot, [{"id": "s04.text.047"}]))
         self.assertIn("срок 0006-10-01T20:00:00 наступил", notes[0])
 
+    def test_iso_deadline_shorthand_is_normalized(self):
+        deadline = "0006-10-01T20:00:00"
+        self.assertEqual(self.play(45, {"theft": side(limit=deadline)}), [])
+        self.assertEqual(self.hot["_plot"]["events"]["theft"]["limit"], {"until": deadline})
+        self.hot["cursor"]["at"] = "0006-10-01T20:30:00"
+        self.assertTrue(any("срок " + deadline in n for n in texts(plot.review(self.hot, []))))
+        self.assertTrue(plot.brief(self.hot)["active"][1]["at_limit"])
+
+    def test_legacy_and_invalid_limits_do_not_crash(self):
+        self.play(45, {"theft": side()})
+        event = self.hot["_plot"]["events"]["theft"]
+        event["limit"] = "0006-10-01T12:00:00"
+        self.assertEqual(plot.brief(self.hot)["active"][1]["limit"], {"until": event["limit"]})
+        event["limit"] = {"scenes": "bad", "until": "bad"}
+        self.assertTrue(any("добавь в d.plot limit" in n for n in texts(plot.review(self.hot, [{"id": "s04.text.045"}]))))
+        self.assertNotIn("limit", plot.brief(self.hot)["active"][1])
+
     def test_linked_thread_change_counts_as_scene(self):
         self.play(45, {"theft": side(threads=["v7"])})
         self.play(46, {}, threads={"v7": {"state": "запор сорван"}})
@@ -146,6 +163,19 @@ class PlotFoldTest(unittest.TestCase):
         scene = (self.root / "memory/SCENE.md").read_text(encoding="utf-8")
         self.assertIn("События: идут 1", scene)
         self.assertNotIn("вор найден", scene)
+        self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
+
+    def test_fold_replays_iso_deadline_without_rewriting_turn(self):
+        deadline = "0006-10-01T20:00:00"
+        self.put(turn(45, "0006-10-01T07:14:00",
+                      d={"plot": {"theft": side(limit=deadline)}}))
+        self.commit("played shorthand")
+        self.put(turn(46, "0006-10-01T07:20:00"))
+        report = hot.fold(self.root)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["cursor"], "s04.text.046")
+        events = json.loads((self.root / hot.SECRET_PATH).read_text(encoding="utf-8"))["plot"]["events"]
+        self.assertEqual(events["theft"]["limit"], {"until": deadline})
         self.assertTrue(hot.check(self.root)["ok"], hot.check(self.root))
 
     def test_plot_notes_are_replaced_not_piled_up(self):
