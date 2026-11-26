@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.013: Джирайя (`npc/jiraiya`)
 - s17.text.012: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`), Цунадэ (`npc/tsunade`), план сюжета
 - s17.text.011: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.010: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`)
@@ -59,4 +60,3 @@
 - s16.text.096: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Цунадэ (`npc/tsunade`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.095: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`)
 - s16.text.094: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Приёмщик тел (`npc/fire_bounty_station_trader`), Хидан (`npc/hidan`)
-- s16.text.093: поправки игрока: 1

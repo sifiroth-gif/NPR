@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.012",
+  "cursor": "s17.text.013",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 112,
+      "mention_count": 113,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T11:59:00",
-          "excerpt": "# Страна Рек. Заброшенная мельница **Мугами Шики:** — Я точно могу попробовать, но не гарантировать. Джирайя медленно кивнул. Под ногтем его указательного пальца осталась тёмная полоска графита. Саннин стёр её о собственный рукав. **Джирайя:** — Значит, придёт",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.010"
         },
         {
           "at": "0010-05-05T17:42:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.012"
+        },
+        {
+          "at": "0010-05-05T18:25:00",
+          "excerpt": "создателя техники пока не удавалось. Неясным оставалось и то, каким образом он получает информацию от дождя. Джирайя заметил, что Шики задержался. Саннин убрал руку, уже приготовленную для складывания печатей. **Джирайя:** — Нашёл что-нибудь? Он понизил голос ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.013"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.012",
+          "seen": "s17.text.013",
           "state": "Получил результат разведки; предложил перевозку призывной жабой."
         },
         {
@@ -2567,7 +2567,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.012"
+        "s17.text.013"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5371,8 +5371,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json",
-        "s17.text.012"
+        "recovery/cast/naruto.json"
       ]
     },
     "neji": {
@@ -13838,8 +13837,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.012",
-        "s17.text.011"
+        "s17.text.013",
+        "s17.text.011",
+        "s17.text.012"
       ]
     },
     "place:a830525fc489e6a2": {
@@ -21505,8 +21505,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s17.text.012"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22318,5 +22317,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1521
+  "source_turns_indexed": 1522
 }
