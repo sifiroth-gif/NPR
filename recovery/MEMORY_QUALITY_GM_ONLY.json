@@ -3,22 +3,22 @@
     "dzyun",
     "fire_temple_travel_monk",
     "seydzi",
+    "western_nest_young_courier",
     "place:d1c09bbf4152d2ad",
     "fire_temple_driver_seiji",
     "fire_temple_travel_jun",
     "haru_brother_jun",
-    "western_nest_young_courier"
+    "fire_temple_guest_note_s15"
   ],
-  "cursor": "s15.text.113",
+  "cursor": "s15.text.114",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2265,
+  "focus_bytes": 2619,
   "index_entities": 813,
-  "index_source_records": 1287,
-  "indexed_cursor": "s15.text.113",
+  "index_source_records": 1288,
+  "indexed_cursor": "s15.text.114",
   "kinds": {
-    "canon": 1,
     "entity": 1,
-    "item": 49,
+    "item": 50,
     "npc": 182,
     "place": 576,
     "thread": 4
@@ -30,12 +30,6 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "canon:s15.text.113:0",
-      "kind": "canon"
-    },
     {
       "at_1": true,
       "at_5": true,
@@ -88,6 +82,12 @@
       "at_1": true,
       "at_5": true,
       "id": "fire_port_statement_receipt",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "fire_temple_guest_note_s15",
       "kind": "item"
     },
     {
@@ -178,12 +178,6 @@
       "at_1": true,
       "at_5": true,
       "id": "mugami_tea_gift_s15",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "nemera_document",
       "kind": "item"
     },
     {
@@ -500,9 +494,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 78,
-  "self_query_at_5": 78,
-  "self_query_count": 78,
+  "self_query_at_1": 77,
+  "self_query_at_5": 77,
+  "self_query_count": 77,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

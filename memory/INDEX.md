@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.113`
+# Карта мира NPR · на ходе `s15.text.114`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,10 +7,10 @@
 
 ## Персонажи (232)
 - Дзюн — по подписи в сцене · `npc/dzyun` · в сцене
+- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier` · в сцене
 - Рёэн — Пожилой широкоплечий бритоголовый монах, дорожное одеяние, … · `npc/fire_temple_travel_monk` · в сцене
 - Сэйдзи — по подписи в сцене · `npc/fire_temple_driver_seiji`
 - Кирисава Сэйна (Кирисава, Сэйна) — Медицинская тюнин, детская наставница Шики, владелица старого частного врачебно… · `npc/seina`
-- Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
 - Мугами Акихиро (Мугами, Акихиро) — Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны · `npc/akihiro`
 - Мидзухара Аки (Мидзухара) — генин, напарница (на 1283, экзамен) · `npc/aki`
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
@@ -248,7 +248,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (85)
+## Вещи (86)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -260,6 +260,7 @@
 - `contract_1184_docs` · `items/contract_1184_docs`
 - `fire_port_statement_receipt` · `items/fire_port_statement_receipt`
 - `fire_statement_genetic_risk` · `items/fire_statement_genetic_risk`
+- `fire_temple_guest_note_s15` · `items/fire_temple_guest_note_s15`
 - `forehead_protector` · `items/forehead_protector`
 - `foreign_observation_case` · `items/foreign_observation_case`
 - `forest_signal_seal` · `items/forest_signal_seal`

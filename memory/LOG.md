@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.114: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Коюки (`npc/western_nest_young_courier`), вещь `fire_temple_guest_note_s15`
 - s15.text.113: Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.112: Рёэн (`npc/fire_temple_travel_monk`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.111: Сэйдзи (`npc/fire_temple_driver_seiji`), Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), поправки игрока: 1
@@ -61,4 +62,3 @@
 - s15.text.057: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`)
 - s15.text.056: Коюки (`npc/western_nest_young_courier`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
 - s15.text.055: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
-- s15.text.054: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
