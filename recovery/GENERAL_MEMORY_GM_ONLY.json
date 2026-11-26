@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.190",
+  "cursor": "s15.text.191",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2496,7 +2496,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2504,13 +2504,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-23T16:32:16",
-          "excerpt": "87 года · 16:32</text> ### Конохагакуре. Спарринг двух отшельников Шики немного опустил подбородок. Джирайя ждал. Вокруг его раскрытых ладоней ощущалось движение природной энергии. Внешне неподвижный, он словно занимал больше пространства, чем позволяло его фи",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.154"
         },
         {
           "at": "0010-04-23T16:33:00",
@@ -2525,17 +2518,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.156"
+        },
+        {
+          "at": "0010-04-24T19:14:00",
+          "excerpt": "небольшого заведения с красными бумажными фонарями. Саннин уже собирался войти, когда заметил его. **Джирайя:** — О, Шики! Наруто сказал, что ты отправился с Асумой. Я думал, тебя ещё несколько дней не будет. Он отпустил край дверной занавески. Изнутри доносил",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.191"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.190",
-          "state": "Вечером 24.04 идёт по улице западного квартала Конохи возле горячих источников; Шики обнаружил его сенсорикой, контакта ещё нет."
+          "seen": "s15.text.191",
+          "state": "Встретил Шики возле питейного заведения, отложил вход, спросил о храме."
+        },
+        {
+          "state": "Встретил Шики возле питейного заведения, отложил вход, спросил о храме."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "s15.text.190"
+        "recovery/HOT.json",
+        "s15.text.191"
       ]
     },
     "jiro_caravan_guard": {
@@ -9925,10 +9929,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.190",
         "s15.text.123",
         "s15.text.124",
-        "s15.text.189"
+        "s15.text.189",
+        "s15.text.190"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -10588,6 +10592,25 @@
       "sources": [
         "s12.text.005",
         "s12.text.006"
+      ]
+    },
+    "place:6c1951e7d2995cdd": {
+      "aliases": [
+        "place:6c1951e7d2995cdd",
+        "Конохагакуре, западный квартал, улица у горячих источников",
+        "Конохагакуре",
+        "западный квартал",
+        "улица у горячих источников"
+      ],
+      "facts": [],
+      "id": "place:6c1951e7d2995cdd",
+      "kind": "place",
+      "label": "Конохагакуре, западный квартал, улица у горячих источников",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.191"
       ]
     },
     "place:6c2ca84c9cdb8369": {
@@ -21161,5 +21184,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1363
+  "source_turns_indexed": 1364
 }

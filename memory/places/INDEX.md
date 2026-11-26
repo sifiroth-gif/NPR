@@ -179,6 +179,7 @@
 - Конохагакуре, Временная резиденция делегации Кусагакуре · `places/konokhagakure-vremennaya-rezidentsiya-delegatsii-kusagakure` · 1 ход(ов), s02–s02
 - Конохагакуре, южные ворота · `places/konokhagakure-yuzhnye-vorota` · 1 ход(ов), s15–s15
 - Конохагакуре, Западное медицинское крыло главной арены · `places/konokhagakure-zapadnoe-meditsinskoe-krylo-glavnoy-areny` · 1 ход(ов), s02–s02
+- Конохагакуре, западный квартал · `places/konokhagakure-zapadnyy-kvartal` · 1 ход(ов), s15–s15
 - Конохагакуре, жилой квартал · `places/konokhagakure-zhiloy-kvartal` · 1 ход(ов), s15–s15
 - Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
 - Кусагакуре, боковой переулок у дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-u-doma-mugami-shiki` · 1 ход(ов), s08–s08

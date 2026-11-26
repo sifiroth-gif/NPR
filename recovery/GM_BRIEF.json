@@ -13,15 +13,6 @@
    },
    {
     "due": "0010-04-25T09:00:00",
-    "if_unopposed": "Будет ждать на оговорённом месте, организует сопровождение при согласии.",
-    "name": "Джирайя",
-    "next": "Прийти к тренировочной площадке 25 апреля к 09:00, если не возникнут препятствия.",
-    "npc": "jiraiya",
-    "overdue": false,
-    "plan": "myoboku_meeting_s15"
-   },
-   {
-    "due": "0010-04-25T09:00:00",
     "if_unopposed": "Согласует добровольную встречу.",
     "name": "Фукасаку",
     "next": "Вернуться на Мьёбоку и согласовать с Симой приём возможного гостя 25 апреля.",
@@ -55,6 +46,15 @@
     "npc": "kusa_leader",
     "overdue": false,
     "plan": "train_current_team"
+   },
+   {
+    "due": "0010-04-25T12:00:00",
+    "if_unopposed": "Останется пленником, при возможности будет отказываться сотрудничать.",
+    "name": "Хидан",
+    "next": "При восстановлении сознания оценить условия содержания, сопротивляться раскрытию сведений.",
+    "npc": "hidan",
+    "overdue": false,
+    "plan": "survive_custody_s15"
    }
   ]
  },
@@ -67,12 +67,17 @@
    "kind": "fight",
    "text": "Бросок «Какудзу выпускает маску до смыкания зеркал»: полоса 3–5, по осям 4–5 (A +0:+1, B +0, C +0, D +1, E +0, F -1:+0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s15.text.173"
+  },
+  {
+   "kind": "read",
+   "text": "«Джирайя» вернулся в сцену, а его страница `npc/jiraiya` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/jiraiya.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
+   "turn": "s15.text.191"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.190",
+  "cursor": "s15.text.191",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -80,14 +85,14 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:5aadc4b8c633fcbc",
    "jiraiya",
+   "place:6c1951e7d2995cdd",
    "tsunade",
    "leaf_shiki_agreement_copy",
    "leaf_shiki_agreement_original",
    "naruto_home_sketch_s15"
   ],
-  "focus_bytes": 2091,
+  "focus_bytes": 2045,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -103,33 +108,11 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
     "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
-    "seals.speed",
     "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
     "nemera.agency",
     "nemera.cloak",
     "nemera.transfer",
@@ -137,195 +120,38 @@
     "pact.shiton",
     "research.postmortem",
     "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
     "sage.summon"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-04-24T19:11:00",
-    "chakra": {
-     "at": "0010-04-24T19:11:00",
-     "last": {
-      "spent": 3.75,
-      "turn": "s15.text.183",
-      "what": [
-       "Кучиёсэ: Хагуро"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 600.0,
-     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {
-     "hidan": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:30",
-        "bleed": true,
-        "lost": "Нет функциональной связи головы с туловищем; обездвижен, голова говорит.",
-        "severity": "критическая",
-        "turn": "s15.text.175",
-        "what": "Полное отделение головы ударом Суми с Райтоном, сверхъестественное сохранение жизни и сознания.",
-        "where": "шея"
-       }
-      ]
-     },
-     "jiraiya": {
-      "wounds": [
-       {
-        "at": "0010-04-23T16:32:04",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.153",
-        "what": "контролируемый удар через частичный блок",
-        "where": "бок под рёбрами"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, функция сохранена",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар",
-        "where": "плечо"
-       }
-      ]
-     },
-     "kakuzu": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:25",
-        "bleed": false,
-        "lost": "Стянутая нитями рана, локальное повреждение тканей и нитей остаётся; кровопотеря и шок не устранены.",
-        "recovered_at": "s15.text.175",
-        "severity": "средняя",
-        "stopped": "s15.text.175",
-        "turn": "s15.text.171",
-        "what": "Проникающий разрез чакрового скальпеля, повреждены наружные ткани и часть нитей, сквозного пробития нет; поражение сердца не установлено.",
-        "where": "спина, грудная полость"
-       },
-       {
-        "at": "0010-04-24T07:38:32",
-        "bleed": true,
-        "lost": "Рука утратила подвижность.",
-        "severity": "тяжёлая",
-        "turn": "s15.text.176",
-        "what": "Режущая рана Суми через защиту Дотона",
-        "where": "плечо руки, державшей чемодан"
-       }
-      ]
-     },
-     "sasuke": {
-      "wounds": [
-       {
-        "at": "0010-04-21T13:41:26",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.039",
-        "what": "ушиб от удара ногой через частичный блок",
-        "where": "бок под рёбрами"
-       }
-      ]
-     },
-     "shiki": {
-      "wounds": [
-       {
-        "at": "0007-12-24T16:47:00",
-        "lost": "поверхностный порез, движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s09.text.066",
-        "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
-        "where": "наружная сторона левого бедра"
-       },
-       {
-        "at": "0010-03-25T12:12:56",
-        "lost": "боль при резких движениях, дыхание сохранено",
-        "severity": "лёгкая",
-        "turn": "s12.text.064",
-        "what": "удар отлетающим известняком во время первого рывка",
-        "where": "боковая область грудной клетки под рёбрами"
-       },
-       {
-        "at": "0010-04-05T11:26:02",
-        "lost": "кисть работает",
-        "severity": "лёгкая",
-        "turn": "s13.text.069",
-        "what": "нож",
-        "where": "левое предплечье"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар жабьего ката",
-        "where": "грудь"
-       }
-      ]
-     }
-    },
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/SHIKI.md",
     "campaigns/shiki/ref/NEMERA.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/ref/FUSION.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent",
     "scene/place",
     "body/gear",
     "due/offscreen",
     "time",
     "fusion profile or historical pact",
-    "contact/channel",
-    "NPC knowledge/fences"
+    "contact/channel"
    ],
    "routes": [
-    "medical",
-    "combat",
+    "dialogue",
     "travel",
     "pact"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
     "nemera.agency",
     "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.transfer"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -540,13 +366,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-24T19:11:00",
+  "at": "0010-04-24T19:14:00",
   "date": "Суббота, 24 апреля 1287 года",
-  "id": "s15.text.190",
-  "place": "Конохагакуре, главные ворота",
-  "time": "19:11"
+  "id": "s15.text.191",
+  "place": "Конохагакуре, западный квартал, улица у горячих источников",
+  "time": "19:14"
  },
- "digest": "0cec8c7cd73c9ed27f7c39dafa2ee79f91cd08defb59306ee5816433a2f58ba1",
+ "digest": "87c88c597ffbf23eca1fa746f09d1f1facc28e35ffd30186ac29171a0021af78",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -555,11 +381,24 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [],
+  "edges": [
+   {
+    "actor": "jiraiya",
+    "from": "s15.text.017",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s15.text.191"
+   }
+  ],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Джирайя — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Джирайя — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Джирайя. Присутствие в отряде и запись lore без источника не доказывают видимость."
+ ],
  "fight": {
   "body": {
    "hidan": {
@@ -681,18 +520,18 @@
    "value": 600.0
   },
   "dice": [
-   6,
-   13,
-   17,
-   16,
-   3,
-   19,
-   1,
-   8,
    15,
-   18,
+   7,
+   13,
+   14,
+   10,
+   19,
+   9,
    20,
-   16
+   7,
+   3,
+   18,
+   15
   ],
   "injuries": {
    "hidan": [
@@ -818,30 +657,25 @@
  "general_memory": {
   "activated": [
    {
-    "channels": [
-     "scene_anchor"
-    ],
     "facts": [],
-    "id": "place:5aadc4b8c633fcbc",
-    "kind": "place",
-    "label": "Конохагакуре, главные ворота",
-    "status": "no_verified_facts"
+    "id": "jiraiya",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/jiraiya.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Встретил Шики возле питейного заведения, отложил вход, спросил о храме."
+     }
+    }
    },
    {
     "channels": [
      "scene_anchor"
     ],
     "facts": [],
-    "id": "jiraiya",
-    "kind": "npc",
-    "label": "Джирайя",
-    "operational_cues": {
-     "source": "recovery/cast/jiraiya.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Вечером 24.04 идёт по улице западного квартала Конохи возле горячих источников; Шики обнаружил его сенсорикой, контакта ещё нет."
-     }
-    },
+    "id": "place:6c1951e7d2995cdd",
+    "kind": "place",
+    "label": "Конохагакуре, западный квартал, улица у горячих источников",
     "status": "no_verified_facts"
    },
    {
@@ -918,14 +752,24 @@
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {},
-  "quiet": 1,
+  "npcs": {
+   "jiraiya": {
+    "does": "Остановился у входа и спросил о храме.",
+    "lever": "",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Судьба операции требует выяснения.",
+    "stage": 4,
+    "step": "необратимость"
+   }
+  },
+  "quiet": 0,
   "recent": [
    {
     "turn": "s09.text.092",
@@ -944,16 +788,26 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:11</text>\n\nШики сосредоточился на сенсорном восприятии.\n\nЗа стенами Конохи различались сотни источников чакры. Вечерняя деревня ещё жила: шиноби возвращались с заданий, торговцы закрывали лавки, дети бежали по улицам к своим домам.\n\nЗнакомый источник обнаружился в западной части деревни, в…",
-  "player": "#сенсорика ищу джираю#",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:14</text>\n\nШики быстро пересёк несколько кварталов и нагнал Джирайю возле небольшого заведения с красными бумажными фонарями.\n\nСаннин уже собирался войти, когда заметил его.\n\n**Джирайя:** — О, Шики! Наруто сказал, что ты отправился с Асумой. Я думал, тебя ещё несколько дней не будет.\n\nОн о…",
+  "player": "#быстро к нему#",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [],
+ "needs_profile": [
+  {
+   "appearances": 15,
+   "facets": 0,
+   "need": 5,
+   "npc": "jiraiya",
+   "tier": "deep"
+  }
+ ],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [],
+  "present_inline": [
+   "jiraiya"
+  ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -1040,22 +894,124 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {},
+ "present_npcs": {
+  "jiraiya": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-09-02T20:00:00",
+      "flaw": "Узнал лицо врага слишком поздно",
+      "goal": "Узнать, кто стоит за Акацуки в Амэгакурэ",
+      "id": "infiltrate_ame_1287",
+      "if_unopposed": "Джирайя проник в Амэгакурэ, сражался с Пейном и погиб; его последнее донесение дошло до Конохи.",
+      "next": "Узнать, кто стоит за Акацуки в Амэгакурэ",
+      "source_turn": "s09.text.071",
+      "status": "committed"
+     },
+     {
+      "due": "0010-04-25T09:00:00",
+      "flaw": "Служебные дела могут изменить планы; Шики не обязан приходить.",
+      "goal": "Сопроводить Шики на Мьёбоку при принятии приглашения.",
+      "id": "myoboku_meeting_s15",
+      "if_unopposed": "Будет ждать на оговорённом месте, организует сопровождение при согласии.",
+      "next": "Прийти к тренировочной площадке 25 апреля к 09:00, если не возникнут препятствия.",
+      "source_turn": "s15.text.156",
+      "status": "committed"
+     }
+    ],
+    "unclocked_intents": [
+     "infiltrate_ame_1287",
+     "myoboku_meeting_s15"
+    ]
+   },
+   "look": {
+    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.jiraiya.look"
+   },
+   "prior_disclosure_ids": [
+    "s15.text.017",
+    "s15.text.023",
+    "s15.text.132",
+    "s15.text.142",
+    "s15.text.150",
+    "s15.text.155",
+    "s15.text.156",
+    "s15.text.191"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-04-21T13:20:00",
+     "line": "Шики объяснил Сирамэ поглощение клеток и спросил Орочимару о смысле бессмертия. Сирамэ потребовала согласия на пробы. Саннин сам …",
+     "sha256": "547b73731acd673987a82fcad8f1b59709d424c6b8577ab1d05bb16876682969",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.017"
+    },
+    {
+     "at": "0010-04-23T16:35:00",
+     "line": "Джирайя предложил встречу для визита на Мьёбоку 25.04 в 09:00 на площадке. Фукасаку и Сима вернулись домой; Джирайя ушёл по делам…",
+     "sha256": "94d602803a12f685beef8ef948f12e91aa4eac2a588c0444286e15aeffd73a95",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.156"
+    },
+    {
+     "at": "0010-04-24T19:14:00",
+     "line": "Шики быстро достиг Джирайи у питейного заведения. Джирайя сообщил, что Наруто передал сведения об уходе с Асумой, спросил о случи…",
+     "sha256": "0d94e17dc32f6ff1b93a168b0cfd4556296af33c2a15f8642e07425394c18b8d",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.191"
+    }
+   ],
+   "profile": {
+    "first": "s15.text.142",
+    "inner": {},
+    "knows": [
+     "Со слов Шики: Орочимару просил сохранить ему тело, обсуждал причины поступков и сравнил суждения Шики с суждениями Джирайи.",
+     "Шики утверждает, что может восстановить собственное первоначальное тело Орочимару, включая ограничения и смертность; факт восстановления не установлен.",
+     "По словам Шики, достиг многих целей Орочимару без убийств и опытов над другими, что, по его мнению, вызывает у Орочимару неприязнь.",
+     "Наруто сообщил Джирайе об уходе Шики с Асумой в храм Огня; исход миссии ещё неизвестен."
+    ],
+    "knows_ref": "memory/npc/jiraiya.md",
+    "knows_total": 8,
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s15.text.155",
+      "what": "Фукасаку предложил сопровождение на Мьёбоку через Джирайю без нового договора. Сима хочет изучить постоянный режим. Джирайя спросил о сроках пребывания Шики. Добавлена цель игрока спасти Джирайю."
+     },
+     {
+      "ch": "present",
+      "turn": "s15.text.191",
+      "what": "Шики быстро достиг Джирайи у питейного заведения. Джирайя сообщил, что Наруто передал сведения об уходе с Асумой, спросил о случившемся в храме."
+     }
+    ],
+    "memory_file": "archive/npc-memory/jiraiya.json",
+    "memory_total": 15,
+    "name": "Джирайя",
+    "seen": "s15.text.191",
+    "state": "Встретил Шики возле питейного заведения, отложил вход, спросил о храме.",
+    "status": "present_profile",
+    "tier": "deep"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  }
+ },
  "recent_turns": [
-  {
-   "id": "s15.text.189",
-   "line": "Шики попрощался с Белой Змеёй, вышел через западные гнёзда и на максимальной устойчивой скорости достиг Конохи к 19:10. Въезд разрешён после проверки. Асума ещё не вернулся. Предложенная встреча Джирайи 25.04 09:00."
-  },
   {
    "id": "s15.text.190",
    "line": "Шики сосредоточил природную сенсорику, обнаружил знакомую чакру Джирайи в западном квартале возле горячих источников; тот движется по улице, активного сендзюцу не ощущается."
+  },
+  {
+   "id": "s15.text.191",
+   "line": "Шики быстро достиг Джирайи у питейного заведения. Джирайя сообщил, что Наруто передал сведения об уходе с Асумой, спросил о случившемся в храме."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у главных ворот; Джирайя в западном квартале возле горячих источников, различим сенсорикой.",
-  "pressure": "Джирайя найден, прямого контакта нет; доклад Цунадэ о Хидане ещё не сделан.",
-  "situation": "Шики у ворот Конохи сосредоточился на сенсорике, различил знакомую по вчерашней тренировке чакру Джирайи в западном квартале возле горячих источников. Джирайя перемещается по улице в сторону питейных заведений. Активного сендзюцу не ощущается. Шики ещё не пошёл к нему."
+  "positions": "Шики и Джирайя на улице у входа в заведение.",
+  "pressure": "Джирайя ждёт ответа; доклад Цунадэ о Хидане ещё не сделан.",
+  "situation": "Шики по сенсорному следу нагнал Джирайю возле питейного заведения в западном квартале. Джирайя услышал от Наруто об уходе Шики с Асумой; удивлён ранним возвращением, серьёзно спрашивает о произошедшем в храме. Шики ещё не сообщил о бое или Хидане."
  },
  "shiki": {
   "body": "Постоянный режим дракона и устойчивый синтез Инь–Ян–природной энергии s15.text.131; единая сущность, холодная цельная кожа, чёрная кровь и корни, чешуя. Риннешаринган выключен.",
@@ -1063,16 +1019,31 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {},
+ "source_passages": {
+  "s15.text.017": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 21 апреля 1287 года · 13:20</text>\n\n### Подземное убежище Орочимару\n\n**Мугами Шики:** — Сирамэ, мог. К счастью, теперь кожей можно поглощать, раньше я себя резал.\n\nСирамэ приблизила голову к лицу Шики.\n\n**Сирамэ:** — Тогда я хочу, чтобы ты спрашивал меня, если тебе понадобятся мои клетки. Даже если будешь меня лечить.\n\nОна дождалась, пока Шики закончит обращаться к Орочимару.\n\n**Мугами Шики:** — Господин Орочимару, а зачем это вам? Что такого в вечной жизни? Что в итоге-то?\n\nСаннин приподнял бровь.\n\n**Ор\n[... sou…",
+   "player": "Сирамэ, мог, у счастью теперь кожей можно полглащать, раньше я себя резал.\nГосподин Орочимару, а зачем это вам? Что такого в вечной жизни? #отсдеживай может я попаду в его отношения с джирайей и его колотнет# что в итоге то?",
+   "source": "archive/session-015-turns.jsonl"
+  },
+  "s15.text.191": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:14</text>\n\nШики быстро пересёк несколько кварталов и нагнал Джирайю возле небольшого заведения с красными бумажными фонарями.\n\nСаннин уже собирался войти, когда заметил его.\n\n**Джирайя:** — О, Шики! Наруто сказал, что ты отправился с Асумой. Я думал, тебя ещё несколько дней не будет.\n\nОн отпустил край дверной занавески. Изнутри доносились голоса посетителей, запах жареной рыбы и сакэ.\n\nДжирайя внимательнее посмотрел на Шики. Весёлое выражение постепенно исчезло с его лица.\n\n**Джирайя:** — Что пр…",
+   "player": "#быстро к нему#",
+   "source": "archive/session-015-turns.jsonl"
+  }
+ },
+ "source_passages_ref": "archive/session-*-turns.jsonl",
+ "source_passages_truncated": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "f8d4646296f4a601313ed5aa0094c816f1931f63",
-  "turn": "s15.text.190"
+  "sha": "0321c68e9034ddee44e30f3cce55958c06365653",
+  "turn": "s15.text.191"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {},
+  "present": {
+   "jiraiya": "memory/npc/jiraiya.md"
+  },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
