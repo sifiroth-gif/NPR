@@ -243,6 +243,7 @@
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Огня, гавань восточного побережья · `places/strana-ognya-gavan-vostochnogo-poberezhya` · 1 ход(ов), s13–s13
 - Страна Огня, западная дорога из восточной гавани · `places/strana-ognya-zapadnaya-doroga-iz-vostochnoy-gavani` · 1 ход(ов), s14–s14
+- Страна Огня, западный пограничный пост на дороге из Страны Травы · `places/strana-ognya-zapadnyy-pogranichnyy-post-na-doroge-iz-strany-` · 1 ход(ов), s15–s15
 - Страна Рек, дорога к южному перевалу · `places/strana-rek-doroga-k-yuzhnomu-perevalu` · 1 ход(ов), s12–s12
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, лесная дорога от северного святилища · `places/strana-rek-lesnaya-doroga-ot-severnogo-svyatilishcha` · 1 ход(ов), s15–s15

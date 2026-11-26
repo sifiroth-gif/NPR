@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.114",
+  "cursor": "s15.text.115",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -509,6 +509,22 @@
         "s09.text.067"
       ]
     },
+    "canon:s15.text.115:0": {
+      "aliases": [
+        "canon:s15.text.115:0",
+        "s15.text.115: рекомендация Рёэна у Шики. В 13:16 Нао→Шики голосовая связь подтверждена на восточном тракте, ответ не заявлен. Весть о слухах доставлена; клиника работает."
+      ],
+      "facts": [],
+      "id": "canon:s15.text.115:0",
+      "kind": "canon",
+      "label": "s15.text.115: рекомендация Рёэна у Шики. В 13:16 Нао→Шики голосовая связь подтверждена на восточном тракте, ответ не заявлен. Весть о слухах доставлена; клиника работает.",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.115"
+      ]
+    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -893,7 +909,7 @@
       "id": "dzyun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -901,13 +917,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-22T11:51:00",
-          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.111"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -922,12 +931,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Дзюн продолжал разгружать повозку, время от времени поглядывая вслед удаляющемуся отшельнику. *** <text color=\"secondary\" size=\"xs\">13:16</text> Широкая до",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.114"
+          "seen": "s15.text.115"
         },
         {
           "role": "по подписи в сцене"
@@ -935,8 +951,7 @@
       ],
       "sources": [
         "recovery/cast/dzyun.json",
-        "recovery/HOT.json",
-        "s15.text.114"
+        "recovery/HOT.json"
       ]
     },
     "endo_hajime": {
@@ -1105,7 +1120,7 @@
       "id": "fire_temple_driver_seiji",
       "kind": "npc",
       "label": "Сэйдзи",
-      "mention_count": 39,
+      "mention_count": 40,
       "mentions": [
         {
           "at": "0006-10-04T06:43:00",
@@ -1113,13 +1128,6 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.090"
-        },
-        {
-          "at": "0010-04-22T11:53:00",
-          "excerpt": "рука, уже протянувшаяся к одному из ящиков, остановилась. **Рёэн:** — Нукенин. Он произнёс это вполголоса. Сэйдзи перестал ощупывать исцелённую ногу. Несколько мгновений возница смотрел на Шики, затем опустил голову. **Сэйдзи:** — Ну… преступник или нет, ногу ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.112"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -1134,6 +1142,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "нял записку, убрал её в сумку и поклонился монаху. **Мугами Шики:** — Спасибо. Рёэн ответил поклоном. Сэйдзи, лежавший под деревом, приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Дзюн продолжал разгружа",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
@@ -1163,7 +1178,8 @@
         }
       ],
       "sources": [
-        "s15.text.114"
+        "s15.text.114",
+        "s15.text.115"
       ]
     },
     "fire_temple_travel_jun": {
@@ -1175,7 +1191,7 @@
       "id": "fire_temple_travel_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1183,13 +1199,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-22T11:51:00",
-          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.111"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -1204,6 +1213,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Дзюн продолжал разгружать повозку, время от времени поглядывая вслед удаляющемуся отшельнику. *** <text color=\"secondary\" size=\"xs\">13:16</text> Широкая до",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
@@ -1218,14 +1234,13 @@
     "fire_temple_travel_monk": {
       "aliases": [
         "fire temple travel monk",
-        "Рёэн",
-        "fire_temple_travel_monk"
+        "Рёэн"
       ],
       "facts": [],
       "id": "fire_temple_travel_monk",
       "kind": "npc",
       "label": "Рёэн",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -1233,13 +1248,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-22T11:53:00",
-          "excerpt": "немного отвёл край плаща, открывая перечёркнутый протектор Кусагакуре. **Мугами Шики:** — Мугами Шики. Рёэн посмотрел на металлическую пластину. Молодой монах замер возле повозки. Его рука, уже протянувшаяся к одному из ящиков, остановилась. **Рёэн:** — Нукени",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.112"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -1254,17 +1262,44 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "орговый тракт Шики принял записку, убрал её в сумку и поклонился монаху. **Мугами Шики:** — Спасибо. Рёэн ответил поклоном. Сэйдзи, лежавший под деревом, приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Д",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.114"
+          "seen": "s15.text.115"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json",
-        "recovery/HOT.json",
-        "s15.text.114"
+        "recovery/HOT.json"
+      ]
+    },
+    "fire_west_border_senior": {
+      "aliases": [
+        "fire west border senior",
+        "Старший пограничник Конохи"
+      ],
+      "facts": [],
+      "id": "fire_west_border_senior",
+      "kind": "npc",
+      "label": "Старший пограничник Конохи",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s15.text.115"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_west_border_senior.json",
+        "s15.text.115"
       ]
     },
     "forehead_protector": {
@@ -1612,7 +1647,7 @@
       "id": "haru_brother_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1620,13 +1655,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-22T11:51:00",
-          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.111"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -1641,6 +1669,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Дзюн продолжал разгружать повозку, время от времени поглядывая вслед удаляющемуся отшельнику. *** <text color=\"secondary\" size=\"xs\">13:16</text> Широкая до",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
@@ -4416,7 +4451,7 @@
       "id": "nao",
       "kind": "npc",
       "label": "Мугами Нао",
-      "mention_count": 41,
+      "mention_count": 42,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -4424,13 +4459,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T20:39:00",
-          "excerpt": "нце и через несколько секунд зачем-то снова взял его. Нао принесла из комнаты чистый домашний халат. **Мугами Нао:** — Вот. Оставляли для тебя. Она положила халат рядом со сложенной одеждой. От ткани пахло сушёной лавандой — мать по-прежнему хранила её между б",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.088"
         },
         {
           "at": "0010-04-21T20:41:30",
@@ -4445,6 +4473,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.099"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "алась по придорожным ветвям, иногда переползая на соседние деревья. В приёмнике связи раздался голос матери. **Мугами Нао:** — Шики? Сэйна рассказала нам о соглашении. Отец очень обрадовался, хотя, конечно, сделал вид, что ожидал именно такого исхода. Послышал",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
@@ -4452,15 +4487,24 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.102",
+          "seen": "s15.text.115",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
           "wants": "Понять изменения сына, не упуская его самостоятельности"
+        },
+        {
+          "fears": "Непонятная перемена состояния Шики",
+          "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
+          "stance": "Сдержанная клиническая настороженность",
+          "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
+          "wants": "Понять изменения сына, не упуская его самостоятельности"
         }
       ],
       "sources": [
-        "recovery/cast/nao.json"
+        "recovery/cast/nao.json",
+        "recovery/HOT.json",
+        "s15.text.115"
       ]
     },
     "naruto": {
@@ -6240,6 +6284,24 @@
       "projections": [],
       "sources": [
         "s02.text.062"
+      ]
+    },
+    "place:1d5d548f3c403b12": {
+      "aliases": [
+        "place:1d5d548f3c403b12",
+        "Страна Огня, западный пограничный пост на дороге из Страны Травы",
+        "Страна Огня",
+        "западный пограничный пост на дороге из Страны Травы"
+      ],
+      "facts": [],
+      "id": "place:1d5d548f3c403b12",
+      "kind": "place",
+      "label": "Страна Огня, западный пограничный пост на дороге из Страны Травы",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.115"
       ]
     },
     "place:1dd3dc1c89f3b08c": {
@@ -14034,12 +14096,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.114",
         "s15.text.109",
         "s15.text.110",
         "s15.text.111",
         "s15.text.112",
-        "s15.text.113"
+        "s15.text.113",
+        "s15.text.114"
       ]
     },
     "place:d1f28ef0735751fa": {
@@ -17575,7 +17637,7 @@
       "id": "seydzi",
       "kind": "npc",
       "label": "Сэйдзи",
-      "mention_count": 39,
+      "mention_count": 40,
       "mentions": [
         {
           "at": "0006-10-04T06:43:00",
@@ -17583,13 +17645,6 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.090"
-        },
-        {
-          "at": "0010-04-22T11:53:00",
-          "excerpt": "рука, уже протянувшаяся к одному из ящиков, остановилась. **Рёэн:** — Нукенин. Он произнёс это вполголоса. Сэйдзи перестал ощупывать исцелённую ногу. Несколько мгновений возница смотрел на Шики, затем опустил голову. **Сэйдзи:** — Ну… преступник или нет, ногу ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.112"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -17604,12 +17659,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "нял записку, убрал её в сумку и поклонился монаху. **Мугами Шики:** — Спасибо. Рёэн ответил поклоном. Сэйдзи, лежавший под деревом, приподнял руку на прощание. **Сэйдзи:** — Если будете в храме, спросите меня. Я часто вожу туда припасы. Дзюн продолжал разгружа",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.114"
+          "seen": "s15.text.115"
         },
         {
           "role": "по подписи в сцене"
@@ -17617,7 +17679,8 @@
       ],
       "sources": [
         "recovery/cast/seydzi.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.115"
       ]
     },
     "shiki_arm_wraps": {
@@ -19178,14 +19241,13 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 48,
+      "mention_count": 49,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19193,13 +19255,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T11:39:00",
-          "excerpt": "привыкли встречать на дорогах самых разных людей, но подобных вам я ещё никогда не видел. Под повозкой мелькнула белая чешуя Коюки. Дзюн заметил её и поспешно подобрал полы одежды. **Рёэн:** — Вы сможете сохранить ему ногу? **Ход Шики.** Шики подошёл и спросил",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.110"
         },
         {
           "at": "0010-04-22T11:55:00",
@@ -19214,11 +19269,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.114"
+        },
+        {
+          "at": "0010-04-22T17:24:00",
+          "excerpt": "или место молодому лесу, среди которого попадались заброшенные угольные печи и остатки давно вырубленных рощ. Коюки двигалась по придорожным ветвям, иногда переползая на соседние деревья. В приёмнике связи раздался голос матери. **Мугами Нао:** — Шики? Сэйна р",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.115"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.114",
+          "seen": "s15.text.115",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19227,8 +19289,7 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s15.text.114"
+        "recovery/HOT.json"
       ]
     },
     "white_snake_sage": {
@@ -19720,5 +19781,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1288
+  "source_turns_indexed": 1289
 }
