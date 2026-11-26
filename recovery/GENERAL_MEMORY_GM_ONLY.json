@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.140",
+  "cursor": "s17.text.001",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 102,
+      "mention_count": 103,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:11:00",
-          "excerpt": "авку снаряжения под выцветшим полотняным навесом. **Мугами Шики:** — я пока пойду посмотрю себе котэ **Джирайя:** — Хорошо. Я закажу чай на двоих. В лавке пахло выделанной кожей, оружейным маслом и древесным углём. Вдоль стен висели ножны, защитные пластины и ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.137"
         },
         {
           "at": "0010-05-04T15:23:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.140"
+        },
+        {
+          "at": "0010-05-04T15:27:00",
+          "excerpt": "ный свет ложился на потёртую столешницу, освещая пожелтевшую бумагу с чертежами водостоков Амэгакурэ. Джирайя перестал улыбаться. Он наклонился над планом, убрав с него широким движением рукава пустую чашку. Его палец остановился возле обведённой углём башни. ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.001"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.140",
+          "seen": "s17.text.001",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2566,8 +2566,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.140"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -13740,6 +13739,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.001",
         "s16.text.140"
       ]
     },
@@ -18333,27 +18333,36 @@
     "rain_drain_worker_s16": {
       "aliases": [
         "rain drain worker s16",
-        "Путник из Дождя"
+        "Путник из Дождя",
+        "rain_drain_worker_s16"
       ],
       "facts": [],
       "id": "rain_drain_worker_s16",
       "kind": "npc",
       "label": "Путник из Дождя",
-      "mention_count": 0,
-      "mentions": [],
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-05-04T15:27:00",
+          "excerpt": "огда это было? Мужчина с перевязанной рукой несколько раз беззвучно пошевелил губами, припоминая дату. **Путник из Дождя:** — Недели три назад. Нас было четверо. Работали до утра. Он посмотрел на Шики. В течение разговора путник уже несколько раз обращался к н",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.001"
+        }
+      ],
       "projections": [
         {
-          "seen": "s16.text.140",
-          "state": "Показывает собственный план, сообщает свидетельство; держит бумагу при себе."
+          "seen": "s17.text.001",
+          "state": "Готов показать вход на плане; просит не раскрывать источник, отказывается возвращаться."
         },
         {
-          "state": "Показывает собственный план, сообщает свидетельство; держит бумагу при себе."
+          "state": "Готов показать вход на плане; просит не раскрывать источник, отказывается возвращаться."
         }
       ],
       "sources": [
         "recovery/cast/rain_drain_worker_s16.json",
         "recovery/HOT.json",
-        "s16.text.140"
+        "s17.text.001"
       ]
     },
     "razvedchik_zvuka": {
@@ -18667,8 +18676,7 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок",
-        "river_shrine_dark_snake_s16"
+        "Тёмная змея у кладок"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -18683,8 +18691,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_dark_snake_s16.json",
-        "s16.text.140"
+        "recovery/cast/river_shrine_dark_snake_s16.json"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -22178,5 +22185,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1511
+  "source_turns_indexed": 1512
 }
