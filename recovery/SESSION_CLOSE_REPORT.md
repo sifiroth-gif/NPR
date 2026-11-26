@@ -1,7 +1,7 @@
-# Сессия 14 закрыта
+# Сессия 15 закрыта
 
-- Сыграно ходов: 56, внеигровых: 12; последний — s14.text.066.
-- Дословный архив: `archive/session-014.md`; передача: `campaigns/shiki/continuity/SESSION_014_TO_015_HANDOFF.json`.
+- Сыграно ходов: 206, внеигровых: 1; последний — s15.text.207.
+- Дословный архив: `archive/session-015.md`; передача: `campaigns/shiki/continuity/SESSION_015_TO_016_HANDOFF.json`.
 - Выгрузки чата: нет.
-- Разгружено из оперативной памяти: {'threads': 1, 'things': 1, 'injuries': 4, 'npc_plans': 24, 'npc_dread': 29, 'plot_closed': 4}; HOT 89161 байт.
-- Следующий ход: s15.text.001.
+- Разгружено из оперативной памяти: {'things': 13, 'injuries': 1, 'npc_plans': 42, 'npc_dread': 88, 'plot_closed': 3}; HOT 112638 байт.
+- Следующий ход: s16.text.001.
