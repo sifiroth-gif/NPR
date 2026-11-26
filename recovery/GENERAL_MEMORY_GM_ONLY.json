@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.060",
+  "cursor": "s16.text.061",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,22 +505,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.060:0": {
-      "aliases": [
-        "canon:s16.text.060:0",
-        "s16.text.060: Игрок предложил драматическую линию Данзо: его политическое мировоззрение и стремление к контролю несовместимы с независимостью Шики. Развивать через автономные интер"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.060:0",
-      "kind": "canon",
-      "label": "s16.text.060: Игрок предложил драматическую линию Данзо: его политическое мировоззрение и стремление к контролю несовместимы с независимостью Шики. Развивать через автономные интер",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.060"
       ]
     },
     "captive_guard": {
@@ -2516,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 78,
+      "mention_count": 79,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2524,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:36:00",
-          "excerpt": "е завтра. Иди отдыхать. Это приказ. Котэцу с видимым облегчением выпрямился, поклонился и покинул кабинет. Джирайя тем временем подтянул к себе карту. Его широкие пальцы медленно скользили вдоль границы Страны Дождя. Привычная шутливая небрежность исчезла из е",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.058"
         },
         {
           "at": "0010-04-25T20:38:00",
@@ -2545,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.060"
+        },
+        {
+          "at": "0010-04-25T20:41:00",
+          "excerpt": "лампы подчеркнул глубокую борозду, пересекавшую знак деревни. Её пальцы перестали постукивать по столу. Джирайя убрал ноги, наклонился вперёд и опёрся локтями о колени. Исчезла даже та лёгкая улыбка, с которой он обычно встречал чужие признания. **Цунадэ:** — ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.061"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.060",
+          "seen": "s16.text.061",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2559,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.060"
+        "s16.text.061"
       ]
     },
     "jiro_caravan_guard": {
@@ -3687,15 +3671,10 @@
           "role": "Тюнин Листа, отряд Асумы",
           "seen": "s16.text.060",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
-          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "recovery/HOT.json"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -10793,11 +10772,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.060",
+        "s16.text.061",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
-        "s16.text.059"
+        "s16.text.059",
+        "s16.text.060"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20571,7 +20551,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 58,
+      "mention_count": 59,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20579,13 +20559,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:36:00",
-          "excerpt": "ся на руках медика, затем он обошёл край стола с противоположной стороны, хотя прямой путь был свободен. Цунадэ раскрыла папку. По мере чтения её брови сходились всё ближе. Наконец она с раздражением захлопнула её. **Цунадэ:** — Остальное завтра. Иди отдыхать.",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.058"
         },
         {
           "at": "0010-04-25T20:38:00",
@@ -20600,11 +20573,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.060"
+        },
+        {
+          "at": "0010-04-25T20:41:00",
+          "excerpt": "отодвинул край плаща, открывая перечёркнутый протектор Кусагакуре. **Мугами Шики:** — ухода из травы? Цунадэ опустила взгляд на металлическую пластину. Свет настольной лампы подчеркнул глубокую борозду, пересекавшую знак деревни. Её пальцы перестали постукиват",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.061"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.060",
+          "seen": "s16.text.061",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20614,7 +20594,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.060"
+        "s16.text.061"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21426,5 +21406,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1438
+  "source_turns_indexed": 1439
 }
