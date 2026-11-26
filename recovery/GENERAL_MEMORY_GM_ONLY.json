@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.005",
+  "cursor": "s17.text.006",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 107,
+      "mention_count": 108,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T17:50:00",
-          "excerpt": "м лесам, глубоким оврагам и зарослям папоротника. Между корнями деревьев пробивались холодные ручьи. Джирайя шёл непривычно молчаливо. Лишь однажды он остановился, чтобы убрать с дороги небольшую змею, гревшуюся на плоском камне. К вечеру впереди показался дер",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.003"
         },
         {
           "at": "0010-05-04T17:56:00",
@@ -2553,21 +2546,69 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.005"
+        },
+        {
+          "at": "0010-05-05T11:54:00",
+          "excerpt": "провалившуюся кровлю открывался участок ночного неба. В глубине помещения ещё пахло отсыревшей мукой. Джирайя снял со спины свиток, устроился возле стены и развернул полученный от путника чертёж. Тусклый свет маленького дорожного фонаря падал на его широкие ла",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.006"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.005",
-          "state": "Прибыл к запасной точке; намерен дождаться встречи до полудня 05.05."
+          "seen": "s17.text.006",
+          "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
         },
         {
-          "state": "Прибыл к запасной точке; намерен дождаться встречи до полудня 05.05."
+          "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.005"
+        "s17.text.006"
+      ]
+    },
+    "jiraiya_rain_contact_s17": {
+      "aliases": [
+        "jiraiya rain contact s17",
+        "Связной Джирайи"
+      ],
+      "facts": [],
+      "id": "jiraiya_rain_contact_s17",
+      "kind": "npc",
+      "label": "Связной Джирайи",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-05-05T11:54:00",
+          "excerpt": "пасть под центральную башню, минуя жилые кварталы. Он повернул чертежи к Шики. **Ход Шики.** Шики расположился на мельнице. К 11:54 явился связной Джирайи: видел задержание одного пропавшего, указал путь через грузовую пристань и лично наблюдал женщину с бумаж",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.006"
+        }
+      ],
+      "projections": [
+        {
+          "fears": "Задержание и компрометация источников.",
+          "role": "Разведывательный источник Джирайи",
+          "seen": "s17.text.006",
+          "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
+          "voice": "Короткие фразы, осторожно понижает голос при посторонних.",
+          "wants": "Передать сведения, сохранить собственную свободу и не выдать оставшихся людей."
+        },
+        {
+          "fears": "Задержание и компрометация источников.",
+          "role": "Разведывательный источник Джирайи",
+          "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
+          "wants": "Передать сведения, сохранить собственную свободу и не выдать оставшихся людей."
+        }
+      ],
+      "sources": [
+        "recovery/cast/jiraiya_rain_contact_s17.json",
+        "recovery/HOT.json",
+        "s17.text.006"
       ]
     },
     "jiro_caravan_guard": {
@@ -5578,7 +5619,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 176,
+      "mention_count": 177,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5586,13 +5627,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T14:02:00",
-          "excerpt": "д его одеждой едва заметно обозначился неподвижный контур перевязанной руки. **Данзо:** — Вы напоминаете мне Орочимару в одном существенном отношении. Он тоже считал, что право распоряжаться собственными способностями стоит выше интересов деревни. Данзо поверн",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.124"
         },
         {
           "at": "0010-05-03T14:04:00",
@@ -5607,6 +5641,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.127"
+        },
+        {
+          "at": "0010-05-05T11:54:00",
+          "excerpt": "ловека, когда давнее воспоминание внезапно становится частью настоящего. **Джирайя:** — Я тогда подумал об Орочимару. Он сложил карту, но вместо того, чтобы убрать её, оставил лежать между собой и Шики. **Джирайя:** — А теперь думаю о своих учениках. За стеной",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.006"
         }
       ],
       "projections": [
@@ -14627,6 +14668,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.006",
         "s17.text.005"
       ]
     },
@@ -21732,7 +21774,8 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -21771,12 +21814,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.102",
+          "seen": "s17.text.006",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "s17.text.006"
       ]
     },
     "white_snake_sage": {
@@ -22254,5 +22298,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1516
+  "source_turns_indexed": 1517
 }
