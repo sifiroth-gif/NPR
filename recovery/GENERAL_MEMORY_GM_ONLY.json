@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.163",
+  "cursor": "s15.text.164",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,13 +429,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.163"
+          "seen": "s15.text.164"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.163"
+        "recovery/HOT.json"
       ]
     },
     "baki": {
@@ -558,22 +557,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.163:0": {
-      "aliases": [
-        "canon:s15.text.163:0",
-        "Прямая поправка игрока s15.text.163: события канона, на которые Шики причинно не повлиял, сохраняют канонический исход. Тирику убит Хиданом и Какудзу до прибытия отряда, тело забра"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.163:0",
-      "kind": "canon",
-      "label": "Прямая поправка игрока s15.text.163: события канона, на которые Шики причинно не повлиял, сохраняют канонический исход. Тирику убит Хиданом и Какудзу до прибытия отряда, тело забра",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.163"
       ]
     },
     "captive_guard": {
@@ -766,8 +749,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/chiriku.json",
-        "s15.text.163"
+        "recovery/cast/chiriku.json"
       ]
     },
     "chiyo": {
@@ -1393,13 +1375,14 @@
     "fire_temple_bansai": {
       "aliases": [
         "fire temple bansai",
-        "Бансаи"
+        "Бансаи",
+        "fire_temple_bansai"
       ],
       "facts": [],
       "id": "fire_temple_bansai",
       "kind": "npc",
       "label": "Бансаи",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-24T03:56:00",
@@ -1407,12 +1390,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.163"
+        },
+        {
+          "at": "0010-04-24T03:56:15",
+          "excerpt": "чился на восточном направлении. Постепенно шум воды, потрескивание обгоревших балок и тяжёлое дыхание Бансаи отступили на задний план. За храмовой оградой различались два знакомых очага чакры — Шикамару и Котэцу. Они двигались среди деревьев, периодически оста",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.164"
         }
       ],
       "projections": [
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "seen": "s15.text.163",
+          "seen": "s15.text.164",
           "state": "Жив, тяжело дышит, повреждение руки, тяжесть не обследована."
         },
         {
@@ -1423,7 +1413,7 @@
       "sources": [
         "recovery/cast/fire_temple_bansai.json",
         "recovery/HOT.json",
-        "s15.text.163"
+        "s15.text.164"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1597,8 +1587,7 @@
     "fire_temple_wounded_monk_s15": {
       "aliases": [
         "fire temple wounded monk s15",
-        "Раненый монах",
-        "fire_temple_wounded_monk_s15"
+        "Раненый монах"
       ],
       "facts": [],
       "id": "fire_temple_wounded_monk_s15",
@@ -1629,8 +1618,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_wounded_monk_s15.json",
-        "s15.text.163"
+        "recovery/cast/fire_temple_wounded_monk_s15.json"
       ]
     },
     "fire_west_border_senior": {
@@ -12342,6 +12330,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.164",
         "s15.text.163"
       ]
     },
@@ -19015,8 +19004,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s15.text.163"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -20890,5 +20878,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1336
+  "source_turns_indexed": 1337
 }
