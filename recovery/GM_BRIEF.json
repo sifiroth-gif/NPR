@@ -107,7 +107,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.131",
+  "cursor": "s16.text.132",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -134,43 +134,25 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "fusion.tendrils",
     "pact.contact",
-    "sage.permanent",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "sage.summon"
+    "nemera.agency"
    ],
    "matched": [],
    "read": [
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/ref/FUSION.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent",
-    "fusion profile or historical pact",
-    "contact/channel"
+    "intent"
    ],
    "routes": [
-    "dialogue",
-    "pact"
+    "dialogue"
    ],
    "unavailable": [
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -419,11 +401,11 @@
  "cursor": {
   "at": "0010-05-03T14:21:00",
   "date": "Понедельник, 3 мая 1287 года",
-  "id": "s16.text.131",
+  "id": "s16.text.132",
   "place": "Конохагакуре, резиденция Хокагэ, коридор у лестницы",
   "time": "14:21"
  },
- "digest": "f27cac2f93b88a21c8de993bff528a095ca6734623c64b221a2b618b2fcefc91",
+ "digest": "e379684dc1e4215fa53bed50e5fafdb9b9ec140e5bb141def4015fb325869ea2",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -549,18 +531,18 @@
    "value": 600.0
   },
   "dice": [
-   12,
-   18,
-   12,
-   17,
-   19,
-   8,
-   11,
+   5,
+   14,
+   15,
+   13,
+   6,
    16,
-   18,
-   8,
-   17,
-   2
+   4,
+   3,
+   9,
+   14,
+   12,
+   4
   ],
   "injuries": {
    "hidan": [
@@ -590,29 +572,6 @@
      "turn": "s15.text.154",
      "what": "контролируемый удар",
      "where": "плечо"
-    }
-   ],
-   "kakuzu": [
-    {
-     "at": "0010-04-24T07:38:25",
-     "bleed": false,
-     "lost": "Стянутая нитями рана, локальное повреждение тканей и нитей остаётся; кровопотеря и шок не устранены.",
-     "recovered_at": "s15.text.175",
-     "severity": "средняя",
-     "stopped": "s15.text.175",
-     "turn": "s15.text.171",
-     "what": "Проникающий разрез чакрового скальпеля, повреждены наружные ткани и часть нитей, сквозного пробития нет; поражение сердца не установлено.",
-     "where": "спина, грудная полость"
-    },
-    {
-     "at": "0010-04-24T07:38:32",
-     "bleed": false,
-     "closed_by_death": "s15.text.178",
-     "lost": "Рука утратила подвижность.",
-     "severity": "тяжёлая",
-     "turn": "s15.text.176",
-     "what": "Режущая рана Суми через защиту Дотона",
-     "where": "плечо руки, державшей чемодан"
     }
    ]
   },
@@ -964,7 +923,7 @@
     "memory_file": "archive/npc-memory/kakashi.json",
     "memory_total": 53,
     "name": "Какаши Хатакэ",
-    "seen": "s16.text.131",
+    "seen": "s16.text.132",
     "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики.",
     "status": "present_profile",
     "tier": "deep"
@@ -986,7 +945,7 @@
  "scene": {
   "positions": "Шики и Какаши в коридоре у лестницы; Данзо ушёл.",
   "pressure": "Изучение Хирайшина предварительно разрешено; Данзо намерен оспаривать доступ к формуле. Сбор на разведку предложен 04.05 в 07:00.",
-  "situation": "Шики рассказал Какаши, что Данзо, вероятно, пытался договориться, но не располагает необходимым Шики; его желания, по его словам, осуществимы самостоятельно. Двое проходящих шиноби прервали разговор и обошли Шики стороной. Какаши противопоставил добровольное сотрудничество зависимости, сослался на совместное изучение Хирайшина и спросил, что Шики получает от общения с Наруто. Бескорыстность — оценка Какаши, мотив Шики не установлен сверх его слов."
+  "situation": "Шики сказал Какаши о самостоятельности своих желаний и неудобстве для сделок. Какаши сослался на совместное изучение Хирайшина. Последний вопрос о занятиях Шики с Наруто отменён прямой поправкой игрока: таких тренировок нет. Продолжить разговор без этой предпосылки, исходя из интересов Какаши и текущего конфликта о доступе к Хирайшину."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1011,8 +970,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "c68ff678b3fea55e0e9af8c455b047acbab17b92",
-  "turn": "s16.text.131"
+  "sha": "9823942c818bf5d283cd02ce6dbeb1478fc427f5",
+  "turn": "s16.text.132"
  },
  "wiki": {
   "index": "memory/INDEX.md",
