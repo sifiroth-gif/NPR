@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.105",
+  "cursor": "s16.text.106",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2551,16 +2551,10 @@
           "role": "Тюнин Листа, отряд Асумы",
           "seen": "s16.text.105",
           "state": "Остаётся возле монаха после гемостаза."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
-          "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json",
-        "recovery/HOT.json",
-        "s16.text.105"
+        "recovery/cast/izumo.json"
       ]
     },
     "jiraiya": {
@@ -3821,18 +3815,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.105",
-          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
+          "seen": "s16.text.106",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
         "recovery/cast/kotetsu.json",
-        "recovery/HOT.json",
-        "s16.text.105"
+        "s16.text.106"
       ]
     },
     "kurama": {
@@ -4275,16 +4264,69 @@
         "s15.text.107"
       ]
     },
+    "leaf_gate_inspector_aide_1_s16": {
+      "aliases": [
+        "leaf gate inspector aide 1 s16",
+        "Первый шиноби в комнате"
+      ],
+      "facts": [],
+      "id": "leaf_gate_inspector_aide_1_s16",
+      "kind": "npc",
+      "label": "Первый шиноби в комнате",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s16.text.106",
+          "wants": "Обеспечить безопасность проводящего опрос."
+        },
+        {
+          "wants": "Обеспечить безопасность проводящего опрос."
+        }
+      ],
+      "sources": [
+        "recovery/cast/leaf_gate_inspector_aide_1_s16.json",
+        "recovery/HOT.json",
+        "s16.text.106"
+      ]
+    },
+    "leaf_gate_inspector_aide_2_s16": {
+      "aliases": [
+        "leaf gate inspector aide 2 s16",
+        "Второй шиноби в комнате"
+      ],
+      "facts": [],
+      "id": "leaf_gate_inspector_aide_2_s16",
+      "kind": "npc",
+      "label": "Второй шиноби в комнате",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s16.text.106",
+          "wants": "Следить за возможным применением техники."
+        },
+        {
+          "wants": "Следить за возможным применением техники."
+        }
+      ],
+      "sources": [
+        "recovery/cast/leaf_gate_inspector_aide_2_s16.json",
+        "recovery/HOT.json",
+        "s16.text.106"
+      ]
+    },
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби"
+        "Незнакомый шиноби",
+        "leaf_gate_special_inspector_s16"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
       "kind": "npc",
       "label": "Незнакомый шиноби",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0001-07-07T21:51:00",
@@ -4306,11 +4348,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.105"
+        },
+        {
+          "at": "0010-05-03T11:53:00",
+          "excerpt": "незнакомца и подозвал одного из дежурных шиноби. Короткое распоряжение — и посыльный исчез среди домов. Незнакомый шиноби проводил его глазами. На мгновение напряглись мышцы его челюсти. Он повёл Шики в боковое помещение караульного здания. Внутри находились с",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.106"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.105",
+          "seen": "s16.text.106",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         },
         {
@@ -4320,7 +4369,7 @@
       "sources": [
         "recovery/cast/leaf_gate_special_inspector_s16.json",
         "recovery/HOT.json",
-        "s16.text.105"
+        "s16.text.106"
       ]
     },
     "lee": {
@@ -5647,7 +5696,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 170,
+      "mention_count": 171,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5655,13 +5704,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-25T20:00:00",
-          "excerpt": "у. **Джирайя:** — Скажи мне, Мугами, зачем тебе вообще наставники? Он рассмеялся, собирая свитки. **Джирайя:** — Хотя теперь я понимаю, почему Орочимару тобой заинтересовался. --- ## Результаты обучения <box gap={3}> <row align=\"center\"> <icon name=\"check-circ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.049"
         },
         {
           "at": "0010-04-25T20:04:00",
@@ -5676,6 +5718,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.063"
+        },
+        {
+          "at": "0010-05-03T11:53:00",
+          "excerpt": "мый шиноби:** — Мугами Шики. Бывший шиноби Кусагакуре. Нас интересуют обстоятельства вашего сотрудничества с Орочимару и характер проведённых вами изменений собственного организма. Он раскрыл папку. На верхнем листе находилась копия старой ориентировки Кусагак",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.106"
         }
       ],
       "projections": [
@@ -8586,6 +8635,25 @@
         "s01.text.145"
       ]
     },
+    "place:3f1957698ff821c8": {
+      "aliases": [
+        "place:3f1957698ff821c8",
+        "Конохагакуре, главные ворота, боковое помещение караульного здания",
+        "Конохагакуре",
+        "главные ворота",
+        "боковое помещение караульного здания"
+      ],
+      "facts": [],
+      "id": "place:3f1957698ff821c8",
+      "kind": "place",
+      "label": "Конохагакуре, главные ворота, боковое помещение караульного здания",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.106"
+      ]
+    },
     "place:3f1b9d40c196e66d": {
       "aliases": [
         "place:3f1b9d40c196e66d",
@@ -10254,13 +10322,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.105",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
         "s15.text.190",
         "s16.text.066",
-        "s16.text.067"
+        "s16.text.067",
+        "s16.text.105"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -21188,8 +21256,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s16.text.105"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22015,5 +22082,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1478
+  "source_turns_indexed": 1479
 }
