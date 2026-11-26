@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.104",
+  "cursor": "s16.text.105",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2549,12 +2549,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.098",
+          "seen": "s16.text.105",
+          "state": "Остаётся возле монаха после гемостаза."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "recovery/HOT.json",
+        "s16.text.105"
       ]
     },
     "jiraiya": {
@@ -3815,12 +3821,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.103",
+          "seen": "s16.text.105",
+          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "recovery/HOT.json",
+        "s16.text.105"
       ]
     },
     "kurama": {
@@ -4261,6 +4273,54 @@
       ],
       "sources": [
         "s15.text.107"
+      ]
+    },
+    "leaf_gate_special_inspector_s16": {
+      "aliases": [
+        "leaf gate special inspector s16",
+        "Незнакомый шиноби"
+      ],
+      "facts": [],
+      "id": "leaf_gate_special_inspector_s16",
+      "kind": "npc",
+      "label": "Незнакомый шиноби",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0001-07-07T21:51:00",
+          "excerpt": "ых пальцев. **Женщина\\:** — Пожалуйста… Она подняла голову. В её глазах было то выражение, которое нельзя спутать ни с обычным страхом, ни с болью. Перед ней стоял незнакомый шиноби, которому она была готова доверить единственное, что ещё имело для неё значени",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.123"
+        },
+        {
+          "at": "0010-03-15T08:43:21",
+          "excerpt": "о поднял голову. На мгновение взгляды встретились. Дейдара как раз повернулся к уступу, желая убедиться, что незнакомый шиноби больше не представляет угрозы. Этого мгновения было достаточно для попытки. **Гендзюцу: Чужой шаг.** *** Чакра Шики достигла зрительн",
+          "source": "archive/session-011-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s11.text.070"
+        },
+        {
+          "at": "0010-05-03T11:52:00",
+          "excerpt": ". Изумо открыл журнал посетителей. Однако прежде, чем он успел сделать запись, из караульного помещения вышел незнакомый шиноби. **Незнакомый шиноби:** — Одну минуту. Мугами Шики должен пройти дополнительную проверку. Котэцу медленно повернулся к нему. **Котэц",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.105"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s16.text.105",
+          "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
+        },
+        {
+          "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
+        }
+      ],
+      "sources": [
+        "recovery/cast/leaf_gate_special_inspector_s16.json",
+        "recovery/HOT.json",
+        "s16.text.105"
       ]
     },
     "lee": {
@@ -5340,8 +5400,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json",
-        "s16.text.104"
+        "recovery/cast/naruto.json"
       ]
     },
     "neji": {
@@ -10195,6 +10254,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.105",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
@@ -16318,8 +16378,8 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.104",
-        "s16.text.102"
+        "s16.text.102",
+        "s16.text.104"
       ]
     },
     "place:e1844e8397483e36": {
@@ -21090,7 +21150,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 65,
+      "mention_count": 66,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21098,13 +21158,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:49:00",
-          "excerpt": "Резиденция Хокагэ **Мугами Шики:** — Ага, иронично. Но эта строка закреплена в нашем соглашении уже Цунадэ на секунду замерла. Затем прикрыла лицо ладонью и негромко рассмеялась. Смех получился коротким и усталым. **Цунадэ:** — Пятый пункт. Действительно. Она ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.065"
         },
         {
           "at": "0010-04-25T20:59:00",
@@ -21119,21 +21172,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.104"
+        },
+        {
+          "at": "0010-05-03T11:52:00",
+          "excerpt": "ize=\"xs\">Воскресенье, 2 мая 1287 года · 18:06</text> ### Убежище Шики **Мугами Шики:** — да хорошо **Цунадэ:** — Тогда завтра к полудню. Я предупрежу охрану. И ещё, Шики… пока не обсуждай Хирайшин с другими шиноби Конохи. Объясню при встрече. Связь прервалась.",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.105"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.104",
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-        },
-        {
+          "seen": "s16.text.105",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s16.text.104"
+        "s16.text.105"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21959,5 +22015,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1477
+  "source_turns_indexed": 1478
 }
