@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.110: Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Шизунэ (`npc/shizune`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.109: Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Цунадэ (`npc/tsunade`), поправки игрока: 1
 - s16.text.108: Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Хидан (`npc/hidan`), Какаши Хатакэ (`npc/kakashi`)
 - s16.text.107: Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Приёмщик тел (`npc/fire_bounty_station_trader`), Асума Сарутоби (`npc/asuma`)
@@ -61,4 +62,3 @@
 - s16.text.053: Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Хагуро (`npc/khaguro`)
 - s16.text.052: Джирайя (`npc/jiraiya`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.051: Джирайя (`npc/jiraiya`)
-- s16.text.050: Джирайя (`npc/jiraiya`)

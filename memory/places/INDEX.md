@@ -11,13 +11,13 @@
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09
 - Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 24 ход(ов), s15–s15
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 22 ход(ов), s09–s10
+- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 20 ход(ов), s15–s16
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 20 ход(ов), s07–s11
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 20 ход(ов), s10–s10
 - Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 20 ход(ов), s10–s10
 - Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 20 ход(ов), s13–s13
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
-- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 19 ход(ов), s15–s16
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 19 ход(ов), s09–s14
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11

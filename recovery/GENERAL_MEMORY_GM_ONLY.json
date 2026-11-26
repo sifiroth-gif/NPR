@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.109",
+  "cursor": "s16.text.110",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.109:0": {
-      "aliases": [
-        "canon:s16.text.109:0",
-        "s16.text.109: повторная прямая поправка игрока «Мастеру: опять потерял описания и реакции.» Описательная проза должна преобладать над диалогами; мимика, движения, интонации и наблю"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.109:0",
-      "kind": "canon",
-      "label": "s16.text.109: повторная прямая поправка игрока «Мастеру: опять потерял описания и реакции.» Описательная проза должна преобладать над диалогами; мимика, движения, интонации и наблю",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.109"
       ]
     },
     "captive_guard": {
@@ -2565,18 +2549,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.109",
-          "state": "Остаётся возле монаха после гемостаза."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
+          "seen": "s16.text.110",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
         "recovery/cast/izumo.json",
-        "recovery/HOT.json",
-        "s16.text.109"
+        "s16.text.110"
       ]
     },
     "jiraiya": {
@@ -2588,7 +2567,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2596,13 +2575,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:49:00",
-          "excerpt": "ещены. Передачу образцов третьим лицам мы отдельно не оговаривали. Но своё слово на этот счёт я уже дала. Джирайя тихо хмыкнул. Подняв сумку с пола, он перекинул ремень через плечо и поправил его привычным движением. **Джирайя:** — Пожалуй, на сегодня с госуда",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.065"
         },
         {
           "at": "0010-04-25T20:59:00",
@@ -2617,16 +2589,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.104"
+        },
+        {
+          "at": "0010-05-03T12:04:00",
+          "excerpt": "Пятой. Шизунэ невольно прикрыла глаза, словно заранее знала, что услышит за дверью. Внутри находились Цунадэ и Джирайя. Перед ними лежала развёрнутая карта Страны Дождя с многочисленными рукописными отметками. На краю стола стояла нетронутая чашка чая. Цунадэ ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.110"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.066",
+          "seen": "s16.text.110",
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+        },
+        {
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json",
+        "s16.text.110"
       ]
     },
     "jiro_caravan_guard": {
@@ -3837,18 +3821,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.109",
-          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
+          "seen": "s16.text.110",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
         "recovery/cast/kotetsu.json",
-        "recovery/HOT.json",
-        "s16.text.109"
+        "s16.text.110"
       ]
     },
     "kurama": {
@@ -10005,6 +9984,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.110",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -10335,14 +10315,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.109",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
         "s15.text.190",
         "s16.text.066",
         "s16.text.067",
-        "s16.text.105"
+        "s16.text.105",
+        "s16.text.109"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -20113,7 +20093,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 28,
+      "mention_count": 29,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20121,13 +20101,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:51:00",
-          "excerpt": "ворим Хидан открывает глаза. Некоторое время он рассеянно смотрит на потолок, затем начинает ругаться. Шизунэ проверяет его реакцию на голос и свет. Убедившись в сохранности основных функций, она вызывает дежурных медиков и распоряжается продолжать наблюдение ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.030"
         },
         {
           "at": "0010-04-25T11:58:00",
@@ -20142,16 +20115,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.032"
+        },
+        {
+          "at": "0010-05-03T12:04:00",
+          "excerpt": "Шики в регистрационную книгу. *** <text color=\"secondary\" size=\"xs\">12:04</text> ### Резиденция Хокагэ Шизунэ встретила Шики в коридоре второго этажа. В руках она держала несколько папок, одну из которых при его приближении поспешно переложила под остальные. *",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.110"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.101",
+          "seen": "s16.text.110",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s16.text.110"
       ]
     },
     "signalshchik": {
@@ -21232,7 +21213,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 67,
+      "mention_count": 68,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21240,13 +21221,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-02T18:05:00",
-          "excerpt": "готовилась навестить Сирамэ. Вечером пластина связи с Пятой Хокагэ отозвалась знакомым импульсом чакры. **Цунадэ:** — Шики, Джирайя вернулся с границы Дождя. У нас появились сведения о происходящем в Амэгакурэ. Её голос звучал непривычно сухо. На другом конце ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.104"
         },
         {
           "at": "0010-05-03T11:52:00",
@@ -21261,17 +21235,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.109"
+        },
+        {
+          "at": "0010-05-03T12:04:00",
+          "excerpt": "к, одну из которых при его приближении поспешно переложила под остальные. **Шизунэ:** — Мугами-сан. Госпожа Цунадэ уже получила сообщение с ворот. Обычно мягкое лицо Шизунэ сейчас было напряжено. Она поправила выбившуюся прядь волос и с некоторым смущением доб",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.110"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.109",
+          "seen": "s16.text.110",
+          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
+        },
+        {
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "s16.text.109"
+        "recovery/HOT.json",
+        "s16.text.110"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22097,5 +22082,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1482
+  "source_turns_indexed": 1483
 }
