@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.020",
+  "cursor": "s16.text.021",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2149,7 +2149,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2157,13 +2157,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T10:39:00",
-          "excerpt": "на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хидан действительно доставлен живым, его сведения могут изменить весь мой план проникновения в Страну Дождя. Саннин подошёл к Фукасаку и негромко попро",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.014"
         },
         {
           "at": "0010-04-25T11:09:00",
@@ -2178,12 +2171,19 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.020"
+        },
+        {
+          "at": "0010-04-25T11:24:30",
+          "excerpt": "И всё же она функционирует. **Шизунэ:** — Исходная активность стабильна. Буду следить за её изменениями. Хидан перестал улыбаться. Он некоторое время рассматривал глаза Шики. Его губы приоткрылись, но очередное проклятие так и не прозвучало. Джирайя переместил",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.021"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.020",
+          "seen": "s16.text.021",
           "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно."
         },
         {
@@ -2194,7 +2194,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s16.text.020"
+        "s16.text.021"
       ]
     },
     "hirano": {
@@ -2506,7 +2506,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 51,
+      "mention_count": 52,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2514,13 +2514,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:56:00",
-          "excerpt": "зличимы многочисленные источники человеческой чакры, среди которых перемещаются несколько тренировочных групп. Джирайя отряхивает одежду. **Джирайя:** — Сначала я зайду к Цунадэ. Нужно выяснить, что удалось получить от пленника обычными методами. Тогда поймём,",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.018"
         },
         {
           "at": "0010-04-25T11:09:00",
@@ -2535,11 +2528,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.020"
+        },
+        {
+          "at": "0010-04-25T11:24:30",
+          "excerpt": "некоторое время рассматривал глаза Шики. Его губы приоткрылись, но очередное проклятие так и не прозвучало. Джирайя переместился ближе к изголовью стола. Цунадэ следила за руками Шики. В тишине камеры особенно отчётливо слышалось дыхание троих наблюдателей. Хи",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.020",
+          "seen": "s16.text.021",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2549,7 +2549,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.020"
+        "s16.text.021"
       ]
     },
     "jiro_caravan_guard": {
@@ -10462,6 +10462,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.021",
         "s16.text.020"
       ]
     },
@@ -19389,7 +19390,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19397,13 +19398,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-24T19:27:00",
-          "excerpt": "— Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Великому Жабьему Мудрецу. Шизунэ поправила лежавшие на столе документы. **Цунадэ:** — Иди отдыхай. Ибики начнёт работу без тебя. Когда вернёшься, зайди ко мне. Она снова придвинула",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.196"
         },
         {
           "at": "0010-04-25T11:09:00",
@@ -19418,11 +19412,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.020"
+        },
+        {
+          "at": "0010-04-25T11:24:30",
+          "excerpt": "#активирую ринешаринган# шизунэ, следите за его чакрой, увидите аномалию, скажите, хотя думаю я увижу раньше <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 11:24</text> ### Конохагак",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.020",
+          "seen": "s16.text.021",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19432,7 +19433,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.020"
+        "s16.text.021"
       ]
     },
     "signalshchik": {
@@ -20443,7 +20444,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20451,13 +20452,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T10:56:00",
-          "excerpt": "оторых перемещаются несколько тренировочных групп. Джирайя отряхивает одежду. **Джирайя:** — Сначала я зайду к Цунадэ. Нужно выяснить, что удалось получить от пленника обычными методами. Тогда поймём, есть ли необходимость в твоём вмешательстве. Из-за леса вид",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.018"
         },
         {
           "at": "0010-04-25T11:09:00",
@@ -20472,11 +20466,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.020"
+        },
+        {
+          "at": "0010-04-25T11:24:30",
+          "excerpt": "губы приоткрылись, но очередное проклятие так и не прозвучало. Джирайя переместился ближе к изголовью стола. Цунадэ следила за руками Шики. В тишине камеры особенно отчётливо слышалось дыхание троих наблюдателей. Хидан не дышал. **Ход Шики.** Шики активировал ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.020",
+          "seen": "s16.text.021",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20485,8 +20486,7 @@
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s16.text.020"
+        "recovery/HOT.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21291,5 +21291,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1400
+  "source_turns_indexed": 1401
 }
