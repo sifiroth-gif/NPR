@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.187",
+  "cursor": "s15.text.188",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -557,22 +557,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s15.text.187:0": {
-      "aliases": [
-        "canon:s15.text.187:0",
-        "s15.text.187: по свидетельству Хакудзя-сэннин, она знает Фукасаку и Шиму; между Рьючидо и Мьёбоку нет войны, обители обособлены. Белая Змея не запрещает Шики посетить Мьёбоку. Конк"
-      ],
-      "facts": [],
-      "id": "canon:s15.text.187:0",
-      "kind": "canon",
-      "label": "s15.text.187: по свидетельству Хакудзя-сэннин, она знает Фукасаку и Шиму; между Рьючидо и Мьёбоку нет войны, обители обособлены. Белая Змея не запрещает Шики посетить Мьёбоку. Конк",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.187"
       ]
     },
     "captive_guard": {
@@ -1854,7 +1838,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1862,13 +1846,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-23T16:33:00",
-          "excerpt": "condary\" size=\"xs\">23 апреля 1287 года · 16:33</text> **Мугами Шики:** — Я не знаю дороги к горе. **Фукасаку:** — Самостоятельно её найти непросто. Даже среди шиноби мало кому известно, как добраться до Мьёбоку. Старейшина задумчиво оглядел Шики. **Фукасаку:**",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.155"
         },
         {
           "at": "0010-04-23T16:35:00",
@@ -1883,6 +1860,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.187"
+        },
+        {
+          "at": "0010-04-24T12:38:00",
+          "excerpt": "ещё не случилось, и забывает тех, кого знает столетиями. Она прищурилась. **Хакудзя-сэннин:** — И передай Фукасаку мои приветствия. Посмотрим, что он на это ответит. Шики не знает, заметили ли жабы последствия слияния. Белая Змея предостерегла от недооценки на",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.188"
         }
       ],
       "projections": [
@@ -2195,12 +2179,13 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.183",
+          "seen": "s15.text.188",
           "state": "Жив, обезглавлен, части раздельно в запечатанных контейнерах под охраной Конохи; голос слаб, состояние шока по проверке s15.text.182."
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json"
+        "recovery/cast/hidan.json",
+        "s15.text.188"
       ]
     },
     "hirano": {
@@ -3246,7 +3231,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -3254,13 +3239,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-04-12T16:19:00",
-          "excerpt": "ми Шики:** — Спасибо, сэннин-сама. Я пойду, но я буду заглядывать время от времени, если вы не против. Хакудзя-сэннин медленно приподняла голову. **Хакудзя-сэннин:** — Возвращайся. Тебе больше незачем проходить испытания моих дочерей. Но предупреждай их о своё",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.051"
         },
         {
           "at": "0010-04-24T12:37:00",
@@ -3275,6 +3253,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.187"
+        },
+        {
+          "at": "0010-04-24T12:38:00",
+          "excerpt": "и:** — Хороший вопрос. Ответа я не знаю, но они не показали, что заметили что-то кроме отшельника. **Хакудзя-сэннин:** — Не стоит недооценивать их наблюдательность. Старые существа умеют молчать о том, что увидели. Белая Змея медленно уложила голову на камень.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.188"
         }
       ],
       "projections": [
@@ -15960,7 +15945,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.187",
+        "s15.text.188",
         "s10.text.055",
         "s10.text.061",
         "s10.text.066",
@@ -15970,7 +15955,8 @@
         "s14.text.041",
         "s14.text.042",
         "s14.text.043",
-        "s15.text.186"
+        "s15.text.186",
+        "s15.text.187"
       ]
     },
     "place:e5c06329829b6da7": {
@@ -18826,12 +18812,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.184",
+          "seen": "s15.text.188",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s15.text.188"
       ]
     },
     "shiki_arm_wraps": {
@@ -20663,7 +20650,7 @@
       "projections": [
         {
           "body": "s14.text.047: кратковременное локальное поражение слизистой у основания клыков кровью Шики после укуса; направленное лечение прекратило поражение, цвет ткани восстановлен, боль исчезла по её словам. Некроза или системного поражения не установлено.",
-          "seen": "s15.text.187",
+          "seen": "s15.text.188",
           "state": "Приняла Шики, спрашивает о пригласивших жабах."
         },
         {
@@ -20673,7 +20660,7 @@
       "sources": [
         "recovery/cast/white_snake_sage.json",
         "recovery/HOT.json",
-        "s15.text.187"
+        "s15.text.188"
       ]
     },
     "willow_dispatch": {
@@ -21178,5 +21165,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1360
+  "source_turns_indexed": 1361
 }
