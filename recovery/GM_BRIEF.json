@@ -87,7 +87,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.028",
+  "cursor": "s16.text.029",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -99,10 +99,9 @@
    "jiraiya",
    "shizune",
    "tsunade",
-   "place:6946c8d293de1f08",
-   "kurama"
+   "place:6946c8d293de1f08"
   ],
-  "focus_bytes": 2631,
+  "focus_bytes": 2055,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -121,7 +120,6 @@
     "eyes.ems",
     "fusion.tendrils",
     "genome.zero",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
@@ -142,7 +140,6 @@
     "fusion.development",
     "genome.fluid",
     "genome.kaguya",
-    "medical.field",
     "nemera.agency",
     "nemera.cloak",
     "nemera.transfer",
@@ -156,21 +153,16 @@
    "matched": [],
    "read": [
     "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/TECHNIQUES.md"
    ],
    "required": [
     "active forms/passives",
     "fight/dice",
     "chakra/injuries",
-    "opponents/positions",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access"
+    "opponents/positions"
    ],
    "routes": [
-    "combat",
-    "items"
+    "combat"
    ],
    "unavailable": [
     "fusion.development",
@@ -420,13 +412,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-25T11:34:00",
+  "at": "0010-04-25T11:37:00",
   "date": "Воскресенье, 25 апреля 1287 года",
-  "id": "s16.text.028",
+  "id": "s16.text.029",
   "place": "Конохагакуре, подземный изолятор",
-  "time": "11:34"
+  "time": "11:37"
  },
- "digest": "212b6de8644467c76d9f8f1afb2c2bc042b152e126faaad5270600ec194a7c2d",
+ "digest": "acf6451aa27ffdc30e1fd1b31b5696e3972a989349b9b7c504d642a1e284aa5b",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -583,31 +575,30 @@
   },
   "chakra": {
    "last": {
-    "spent": 12.5,
-    "turn": "s16.text.028",
+    "spent": 4.0,
+    "turn": "s16.text.029",
     "what": [
-     "Зрительная иллюзия подобия сна",
-     "Контролируемый Путь человека в сочетании с иллюзией"
+     "Продолжение Пути человека и поддержание иллюзии сна при уточнении примет"
     ]
    },
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 571.5
+   "value": 568.0
   },
   "dice": [
-   5,
-   1,
-   4,
+   14,
    15,
-   17,
-   2,
-   20,
-   17,
-   1,
    18,
+   17,
+   14,
+   3,
+   16,
+   11,
+   14,
+   5,
    10,
-   13
+   1
   ],
   "injuries": {
    "hidan": [
@@ -780,23 +771,6 @@
     "kind": "place",
     "label": "Конохагакуре, подземный изолятор",
     "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "kurama",
-    "kind": "npc",
-    "label": "Девятихвостый",
-    "operational_cues": {
-     "source": "recovery/cast/kurama.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Продолжал соблазнять Наруто собственной силой через страх потери Саске. После самостоятельного отказа Наруто красные потоки перестали достигать его, но Курама…"
-     }
-    },
-    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -805,7 +779,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 6
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -836,10 +810,10 @@
     "step": "необратимость"
    },
    "shizune": {
-    "does": "Наблюдает, сообщила результат.",
+    "does": "Приблизила руку к виску Хидана и сообщила о перемене.",
     "lever": "Повторение исследований Орочимару и неконтролируемых последствий.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Значимых отклонений не обнаружила.",
+    "reads": "Пока допустимо, продолжает наблюдение.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -875,28 +849,28 @@
  },
  "needs_profile": [
   {
-   "appearances": 25,
+   "appearances": 26,
    "facets": 3,
    "need": 5,
    "npc": "tsunade",
    "tier": "deep"
   },
   {
-   "appearances": 25,
+   "appearances": 26,
    "facets": 3,
    "need": 5,
    "npc": "shizune",
    "tier": "deep"
   },
   {
-   "appearances": 52,
+   "appearances": 53,
    "facets": 0,
    "need": 5,
    "npc": "jiraiya",
    "tier": "deep"
   },
   {
-   "appearances": 22,
+   "appearances": 23,
    "facets": 0,
    "need": 5,
    "npc": "hidan",
@@ -1081,15 +1055,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.028",
-      "what": "Шики применил иллюзию сна и Путь человека, получил сведения о трёхдневном ритуале, кольцах, дистанционной связи и порядке запечатывания. Хидан воспринимает рыжеволосого Пэйна как лидера. Чакра стабиль"
+      "turn": "s16.text.029",
+      "what": "Шики уточнил по памяти Хидана протектор Дождя и кольцо Пэйна, имя Конан и приметы Итачи, Кисамэ, Дэйдары, Какудзу, Сасори, Дзэцу. Местонахождение убежищ и функция стержней неизвестны."
      }
     ],
     "memory_file": "archive/npc-memory/hidan.json",
-    "memory_total": 22,
+    "memory_total": 23,
     "name": "Хидан",
     "role": "Акацуки",
-    "seen": "s16.text.028",
+    "seen": "s16.text.029",
     "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно.",
     "status": "present_profile",
     "tier": "deep"
@@ -1186,14 +1160,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.028",
-      "what": "Шики применил иллюзию сна и Путь человека, получил сведения о трёхдневном ритуале, кольцах, дистанционной связи и порядке запечатывания. Хидан воспринимает рыжеволосого Пэйна как лидера. Чакра стабиль"
+      "turn": "s16.text.029",
+      "what": "Шики уточнил по памяти Хидана протектор Дождя и кольцо Пэйна, имя Конан и приметы Итачи, Кисамэ, Дэйдары, Какудзу, Сасори, Дзэцу. Местонахождение убежищ и функция стержней неизвестны."
      }
     ],
     "memory_file": "archive/npc-memory/jiraiya.json",
-    "memory_total": 52,
+    "memory_total": 53,
     "name": "Джирайя",
-    "seen": "s16.text.028",
+    "seen": "s16.text.029",
     "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку.",
     "status": "present_profile",
     "tier": "deep"
@@ -1274,14 +1248,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.028",
-      "what": "Шики применил иллюзию сна и Путь человека, получил сведения о трёхдневном ритуале, кольцах, дистанционной связи и порядке запечатывания. Хидан воспринимает рыжеволосого Пэйна как лидера. Чакра стабиль"
+      "turn": "s16.text.029",
+      "what": "Шики уточнил по памяти Хидана протектор Дождя и кольцо Пэйна, имя Конан и приметы Итачи, Кисамэ, Дэйдары, Какудзу, Сасори, Дзэцу. Местонахождение убежищ и функция стержней неизвестны."
      }
     ],
     "memory_file": "archive/npc-memory/shizune.json",
-    "memory_total": 25,
+    "memory_total": 26,
     "name": "Шизунэ",
-    "seen": "s16.text.028",
+    "seen": "s16.text.029",
     "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе.",
     "status": "present_profile",
     "tier": "deep"
@@ -1370,14 +1344,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.028",
-      "what": "Шики применил иллюзию сна и Путь человека, получил сведения о трёхдневном ритуале, кольцах, дистанционной связи и порядке запечатывания. Хидан воспринимает рыжеволосого Пэйна как лидера. Чакра стабиль"
+      "turn": "s16.text.029",
+      "what": "Шики уточнил по памяти Хидана протектор Дождя и кольцо Пэйна, имя Конан и приметы Итачи, Кисамэ, Дэйдары, Какудзу, Сасори, Дзэцу. Местонахождение убежищ и функция стержней неизвестны."
      }
     ],
     "memory_file": "archive/npc-memory/tsunade.json",
-    "memory_total": 25,
+    "memory_total": 26,
     "name": "Цунадэ",
-    "seen": "s16.text.028",
+    "seen": "s16.text.029",
     "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки.",
     "status": "present_profile",
     "tier": "deep"
@@ -1387,15 +1361,15 @@
  },
  "recent_turns": [
   {
-   "id": "s16.text.028",
-   "line": "Шики применил иллюзию сна и Путь человека, получил сведения о трёхдневном ритуале, кольцах, дистанционной связи и порядке запечатывания. Хидан воспринимает рыжеволосого Пэйна как лидера. Чакра стабильна."
+   "id": "s16.text.029",
+   "line": "Шики уточнил по памяти Хидана протектор Дождя и кольцо Пэйна, имя Конан и приметы Итачи, Кисамэ, Дэйдары, Какудзу, Сасори, Дзэцу. Местонахождение убежищ и функция стержней неизвестны."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
   "positions": "Шики на расстоянии вытянутой руки от головы; остальные сохраняют позиции наблюдения.",
-  "pressure": "Новое содержание памяти ещё не передано присутствующим; Хидан под иллюзией, наблюдение продолжается.",
-  "situation": "Хидан под зрительной иллюзией сна (не доказан физиологический сон); чтение памяти без наблюдаемого нарушения. Получены детали ритуала Гаары: три дня, Гэнрю Кю Фудзин, статуя, кольца, совместное извлечение со смертью носителя, девятихвостый последним. В доступной памяти нет места настоящего тела Пэйна, Хидан воспринимает рыжеволосого как самого лидера. Глаза Шики активны, контакт и гендзюцу сохраняются."
+  "pressure": "Полученные подробности ещё не сообщены присутствующим. Сохранение психики остаётся приоритетом.",
+  "situation": "Продолжено чтение под иллюзией сна. Получены приметы известных Хидану участников; у Пэйна перечёркнутый знак Дождя, кольцо 零, стержни, имя женщины Конан. Шизунэ наблюдает небольшое повышение активности, пока допустимое. Глаза и гендзюцу активны, контакт сохраняется; местонахождение убежищ и назначение стержней неизвестны."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1421,8 +1395,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "16fe3277f53290639adc5946db92554dfbc73031",
-  "turn": "s16.text.028"
+  "sha": "2baf6455f357b27d7013d7f4cac75a3ddfa74225",
+  "turn": "s16.text.029"
  },
  "wiki": {
   "index": "memory/INDEX.md",
