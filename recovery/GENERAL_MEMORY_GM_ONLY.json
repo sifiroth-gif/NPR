@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.061",
+  "cursor": "s16.text.062",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 79,
+      "mention_count": 80,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:38:00",
-          "excerpt": "струкции Хирайшин. Он сам даст информацию об этом. Но раз уж я тут не буду скрывать данного разговора Джирайя медленно выпрямился. Его лицо утратило прежнее добродушие, глубокие складки возле рта стали заметнее. Он сложил руки на груди. **Джирайя:** — В саму А",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.059"
         },
         {
           "at": "0010-04-25T20:40:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.061"
+        },
+        {
+          "at": "0010-04-25T20:43:00",
+          "excerpt": "сь иногда означает, что кто-то не вернётся домой. Но отсутствие этой подписи тоже может стоить людям жизни. Джирайя потёр большим пальцем костяшки другой руки. На его лице проступило выражение тяжёлой задумчивости. **Джирайя:** — Всё зависит от того, ради чего",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.062"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.061",
+          "seen": "s16.text.062",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.061"
+        "s16.text.062"
       ]
     },
     "jiro_caravan_guard": {
@@ -10772,12 +10772,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.061",
+        "s16.text.062",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
         "s16.text.059",
-        "s16.text.060"
+        "s16.text.060",
+        "s16.text.061"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20551,7 +20552,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 59,
+      "mention_count": 60,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20559,13 +20560,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:38:00",
-          "excerpt": "Джирая-сан, прошу не ходить туда без меня. Цунадэ-сама, у нас сегодня с какаши-саном состоялся разговор насчёт реконструкции Хирайшин. Он сам даст информацию об этом. Но раз уж я тут не буду скрывать данного разговора <text",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.059"
         },
         {
           "at": "0010-04-25T20:40:00",
@@ -20580,11 +20574,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.061"
+        },
+        {
+          "at": "0010-04-25T20:43:00",
+          "excerpt": "не готов жить так как велит мне документ. Уточню документ для документа и власти, но не для человека. Цунадэ медленно опустила глаза. Перед ней лежали распоряжения, донесения, дипломатические письма. На каждом документе оставалось место для её подписи. Она взя",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.062"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.061",
+          "seen": "s16.text.062",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20594,7 +20595,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.061"
+        "s16.text.062"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21406,5 +21407,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1439
+  "source_turns_indexed": 1440
 }

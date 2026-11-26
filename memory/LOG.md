@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.062: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.061: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.060: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s16.text.059: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
@@ -61,4 +62,3 @@
 - s16.text.005: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`)
 - s16.text.004: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Глава Кусагакуре (`npc/kusa_head`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
 - s16.text.003: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Какаши Хатакэ (`npc/kakashi`), Хаясэ Рэн (`npc/ren`), вещь `gamamaru_nemera_dream_scroll`
-- s16.text.002: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), Мугами Акихиро (`npc/akihiro`)
