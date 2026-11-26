@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.154: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/sima`), Наруто Узумаки (`npc/naruto`), бой
 - s15.text.153: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), бой
 - s15.text.152: Коюки (`npc/western_nest_young_courier`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), бой
 - s15.text.151: Джирайя (`npc/jiraiya`)
@@ -61,4 +62,3 @@
 - s15.text.097: Асумага Тосэ (`npc/kusa_leader`), Мугами Акихиро (`npc/akihiro`), вещь `forehead_protector`
 - s15.text.096: Асумага Тосэ (`npc/kusa_leader`)
 - s15.text.095: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`)
-- s15.text.094: Асумага Тосэ (`npc/kusa_leader`), Коюки (`npc/western_nest_young_courier`)
