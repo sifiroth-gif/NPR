@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s17.text.001`
+# Карта мира NPR · на ходе `s17.text.002`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,7 +7,7 @@
 
 ## Персонажи (260)
 - Джирайя —  · `npc/jiraiya` · в сцене
-- Путник из Дождя — Мужчина в непромокаемом плаще с перевязанной левой рукой. · `npc/rain_drain_worker_s16` · в сцене
+- Путник из Дождя — Мужчина в непромокаемом плаще с перевязанной левой рукой. · `npc/rain_drain_worker_s16`
 - Тёмная змея у кладок — Крупная тёмная змея среди камней. · `npc/river_shrine_dark_snake_s16`
 - Оружейник — Пожилой мужчина с широкими пальцами, покрытыми мелкими ожог… · `npc/road_armorer_s16`
 - Изумо Камидзуки (Изумо, Камидзуки) — Тюнин Листа, отряд Асумы · `npc/izumo`
@@ -279,7 +279,7 @@
 ## Давние линии (33, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (99)
+## Вещи (100)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -342,6 +342,7 @@
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `private_bounties` · `items/private_bounties`
 - `private_bounty_announcements` · `items/private_bounty_announcements`
+- `rain_drain_plan_copy_s17` · `items/rain_drain_plan_copy_s17`
 - `recipient6_airway_cast_followup` · `items/recipient6_airway_cast_followup`
 - `recipient6_airway_cast_sample` · `items/recipient6_airway_cast_sample`
 - `reika_1285_receipt_copy` · `items/reika_1285_receipt_copy`

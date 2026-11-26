@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.001",
+  "cursor": "s17.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 103,
+      "mention_count": 104,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:23:00",
-          "excerpt": "застёжек. **Оружейник:** — Готово. Три тысячи шестьсот рё, как договорились. В дверном проёме показался Джирайя. Откинув назад длинные белые волосы, он прислонился к косяку. **Джирайя:** — Разговорился я с теми путниками. Они из Амэгакурэ. Мужчина работал на о",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.139"
         },
         {
           "at": "0010-05-04T15:25:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.001"
+        },
+        {
+          "at": "0010-05-04T15:34:00",
+          "excerpt": "=\"xs\">Вторник, 4 мая 1287 года · 15:34</text> ### Страна Огня. Придорожная чайная Шики сидел молча. Джирайя засучил рукава и принялся перерисовывать чертёж. Путник следил за движением карандаша, время от времени поправляя линии ногтем здоровой руки. За семь ми",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.002"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.001",
+          "seen": "s17.text.002",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2566,7 +2566,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.002"
       ]
     },
     "jiro_caravan_guard": {
@@ -13739,8 +13740,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.001",
-        "s16.text.140"
+        "s17.text.002",
+        "s16.text.140",
+        "s17.text.001"
       ]
     },
     "place:a741cc46f35aab33": {
@@ -18330,6 +18332,27 @@
         "recovery/cast/quay_wire_operator.json"
       ]
     },
+    "rain_drain_plan_copy_s17": {
+      "aliases": [
+        "rain drain plan copy s17",
+        "Копия плана водостоков Амэгакурэ"
+      ],
+      "facts": [],
+      "id": "rain_drain_plan_copy_s17",
+      "kind": "item",
+      "label": "Копия плана водостоков Амэгакурэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "jiraiya",
+          "since": "s17.text.002"
+        }
+      ],
+      "sources": [
+        "s17.text.002"
+      ]
+    },
     "rain_drain_worker_s16": {
       "aliases": [
         "rain drain worker s16",
@@ -18340,7 +18363,7 @@
       "id": "rain_drain_worker_s16",
       "kind": "npc",
       "label": "Путник из Дождя",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-05-04T15:27:00",
@@ -18348,21 +18371,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.001"
+        },
+        {
+          "at": "0010-05-04T15:34:00",
+          "excerpt": "м листе возникло несколько подземных галерей, соединённых с основанием центральной башни Амэгакурэ. **Путник из Дождя:** — Здесь раньше отводили воду. Теперь поставили железную дверь. Мне велели заложить кирпичом проход за ней. Приказ принёс человек из охраны ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.002"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.001",
-          "state": "Готов показать вход на плане; просит не раскрывать источник, отказывается возвращаться."
-        },
-        {
-          "state": "Готов показать вход на плане; просит не раскрывать источник, отказывается возвращаться."
+          "seen": "s17.text.002",
+          "state": "Ушёл на восток с оригиналом плана."
         }
       ],
       "sources": [
         "recovery/cast/rain_drain_worker_s16.json",
-        "recovery/HOT.json",
-        "s17.text.001"
+        "s17.text.002"
       ]
     },
     "razvedchik_zvuka": {
@@ -22182,8 +22208,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "rain_drain_plan_copy_s17",
+      "source": "s17.text.002",
+      "status": "projected",
+      "to": "jiraiya",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1512
+  "source_turns_indexed": 1513
 }
