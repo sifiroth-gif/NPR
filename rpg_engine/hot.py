@@ -213,6 +213,15 @@ def validate_turn(turn):
         for key, value in (delta.get(field) or {}).items():
             if value is not None and not isinstance(value, dict):
                 raise TurnError(f"d.{field}.{key}: ожидается объект или null")
+    statuses = delta.get("body_status")
+    if statuses is not None:
+        if not isinstance(statuses, dict) or any(
+                not isinstance(who, str) or not who or who == "fresh" or
+                not isinstance(item, dict) or item.get("mode") not in ("dead", "exceptional", "ordinary") or
+                not isinstance(item.get("reason"), str) or not item["reason"].strip() or
+                ("source" in item and (not isinstance(item["source"], str) or not item["source"]))
+                for who, item in statuses.items()):
+            raise TurnError("d.body_status: ID → mode (dead/exceptional/ordinary), reason, optional source")
     scene = delta.get("scene") or {}
     if scene.get("present") is not None and (
             not isinstance(scene["present"], list) or
@@ -409,7 +418,13 @@ def _merge(target, patch):
 def _apply_delta(hot, delta, turn):
     turn_id, at = turn["id"], turn["at"]
     if "scene" in delta:
-        _merge(hot.setdefault("scene", {}), delta["scene"])
+        scene = hot.setdefault("scene", {})
+        patch = delta["scene"]
+        # An observation scoped to the former participants must not leak into
+        # an unrelated scene. Explicit new unread information is retained.
+        if "present" in patch and set(patch["present"] or []) != set(scene.get("present") or []) and "unread" not in patch:
+            scene.pop("unread", None)
+        _merge(scene, patch)
     present = set(hot.get("scene", {}).get("present", []))
     for key, patch in (delta.get("cast") or {}).items():
         if patch is None:
@@ -643,6 +658,8 @@ def _apply_turn_inplace(hot, turn):
     body.check(hot, turn, delta)      # кровь идёт — кость состояния решает тело (body.py)
     if not ooc and isinstance(delta.get("scene"), dict):
         hot.setdefault("scene", {})["as_of"] = turn["id"]
+    if cursor.get("time"):
+        hot.setdefault("scene", {})["time"] = cursor["time"]
     continuity_guard.apply_things(hot, delta, turn["id"], turn["at"])
     npc_memory.apply(hot, turn, inner)
     will.track(hot, turn, inner)
