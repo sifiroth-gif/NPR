@@ -20,7 +20,7 @@
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 19 ход(ов), s09–s14
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11
-- Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 17 ход(ов), s05–s15
+- Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 18 ход(ов), s05–s15
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 15 ход(ов), s08–s15
