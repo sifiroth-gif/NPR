@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s16.text.068`
+# Карта мира NPR · на ходе `s16.text.069`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,6 +6,8 @@
 - места · `places/INDEX` (336) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (249)
+- Шиноби Тумана (Тумана) — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior` · в сцене
+- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
 - Такэру — генин Конохи на втором этапе экзамена на тюнина, товарищ раненого Кэйдзи · `npc/takeru`
 - Джирайя —  · `npc/jiraiya`
@@ -35,7 +37,6 @@
 - Какудзу — Акацуки, нукенин Такигакуре · `npc/kakuzu`
 - Раненый монах — Монах Храма Огня, личность не установлена · `npc/fire_temple_wounded_monk_s15`
 - Тирику — Настоятель Храма Огня, бывший соратник Асумы · `npc/chiriku`
-- Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Наёмник у шахты — по подписи в сцене · `npc/naemnik_u_shakhty`
 - Дежурный главных ворот Конохи — Шиноби Листа с регистрационным журналом. · `npc/fire_leaf_gate_duty`
 - Маю — Подросток около тринадцати лет, каштановые волосы, веснушки… · `npc/fire_road_mayu`
@@ -66,7 +67,6 @@
 - Мужчина с иглой — Сдержанная дорожная одежда без видимых знаков деревни, при … · `npc/root_field_needle_man`
 - western_nest_adult_courier —  · `npc/western_nest_adult_courier`
 - Второй шиноби Тумана — Младший из двух проверяющих у трапа; индивидуальные приметы… · `npc/kiri_port_guard_junior`
-- Шиноби Тумана — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior`
 - Неизвестный наблюдатель за ивами — Скрыто наблюдал заставный мост до тех пор, пока Шики не снял капюшон. · `npc/willow_observer`
 - Молодая змея — по подписи в сцене · `npc/molodaya_zmeya`
 - Неизвестный связной в маске АНБУ — Связной, пришедший на назначенную передачу отчёта независимого наблюдателя. · `npc/root_wayhouse_liaison`
@@ -264,7 +264,7 @@
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 - `jiraiya_rain_investigation` — 25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стер… · `threads/jiraiya_rain_investigation`
-- `kiri_bingo_negotiations` — Первый прямой контакт после передачи пластины 11.04. Офицер сообщил о… · `threads/kiri_bingo_negotiations`
+- `kiri_bingo_negotiations` — Предложена встреча 27.04.1287 в полдень в портовом управлении восточн… · `threads/kiri_bingo_negotiations`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

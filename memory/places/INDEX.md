@@ -147,6 +147,7 @@
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
 - Старая переправа, северная граница Страны Травы · `places/staraya-pereprava-severnaya-granitsa-strany-travy` · 2 ход(ов), s11–s11
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
+- Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 2 ход(ов), s16–s16
 - Страна Огня, южные ворота Храма Огня · `places/strana-ognya-yuzhnye-vorota-khrama-ognya` · 2 ход(ов), s15–s15
 - Страна Огня, западный пограничный пост на дороге из Страны Травы · `places/strana-ognya-zapadnyy-pogranichnyy-post-na-doroge-iz-strany-` · 2 ход(ов), s15–s15
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
@@ -270,7 +271,6 @@
 - Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
-- Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 1 ход(ов), s16–s16
 - Страна Огня, гавань восточного побережья · `places/strana-ognya-gavan-vostochnogo-poberezhya` · 1 ход(ов), s13–s13
 - Страна Огня, западная дорога из восточной гавани · `places/strana-ognya-zapadnaya-doroga-iz-vostochnoy-gavani` · 1 ход(ов), s14–s14
 - Страна Рек, дорога к южному перевалу · `places/strana-rek-doroga-k-yuzhnomu-perevalu` · 1 ход(ов), s12–s12

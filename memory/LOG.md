@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.069: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Наруто Узумаки (`npc/naruto`), линия `kiri_bingo_negotiations`
 - s16.text.068: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), вещь `shiki_private_line_kiri_plate`, линия `kiri_bingo_negotiations`
 - s16.text.067: Такэру (`npc/takeru`)
 - s16.text.066: Такэру (`npc/takeru`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
@@ -61,4 +62,3 @@
 - s16.text.012: Джирайя (`npc/jiraiya`)
 - s16.text.011: Джирайя (`npc/jiraiya`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.010: Джирайя (`npc/jiraiya`), линия `jiraiya_rain_investigation`
-- s16.text.009: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`), вещь `myoboku_rikudo_legend_book`, поправки игрока: 1
