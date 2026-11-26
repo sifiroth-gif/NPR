@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.037: Джирайя (`npc/jiraiya`)
+- s16.text.036: поправки игрока: 1
 - s16.text.035: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), вещь `konoha_blank_contact_plate_s16`
 - s16.text.034: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), вещь `konoha_blank_contact_plate_s16`
 - s16.text.033: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Гамамару (`npc/gamamaru`), вещь `konoha_blank_contact_plate_s16`
@@ -58,5 +60,3 @@
 - s15.text.187: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
 - s15.text.186: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Изумо Камидзуки (`npc/izumo`)
 - s15.text.185: Хагуро (`npc/khaguro`), Асума Сарутоби (`npc/asuma`)
-- s15.text.184: Асума Сарутоби (`npc/asuma`), Хагуро (`npc/khaguro`), Котэцу Хаганэ (`npc/kotetsu`), Приёмщик тел (`npc/fire_bounty_station_trader`)
-- s15.text.183: Хагуро (`npc/khaguro`), Котэцу Хаганэ (`npc/kotetsu`), Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`)

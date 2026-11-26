@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.035",
+  "cursor": "s16.text.037",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 65,
+      "mention_count": 66,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T12:06:00",
-          "excerpt": "разрешением уйти. Хокагэ отпустила его. **Цунадэ:** — Хочешь организовать собственный канал связи с нами? Джирайя отодвинул бумаги, освобождая место для работы. **Ход Шики.** Шики согласился участвовать в операции, отказался от награды. Цунадэ обещала покрыть ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.033"
         },
         {
           "at": "0010-04-25T12:09:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.035"
+        },
+        {
+          "at": "0010-04-25T12:11:00",
+          "excerpt": "енция Хокагэ **Мугами Шики:** — Джирая-сан вы обещали мне помочь с дотоном и футоном. Когда сможете? Джирайя остановился у двери и задумчиво потёр подбородок. **Джирайя:** — Сегодня в четыре. Мне ещё нужно встретиться с Асумой. После этого я буду на западном т",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.037"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.035",
+          "seen": "s16.text.037",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.035"
+        "s16.text.037"
       ]
     },
     "jiro_caravan_guard": {
@@ -9607,7 +9607,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.035",
+        "s16.text.037",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9617,7 +9617,8 @@
         "s16.text.031",
         "s16.text.032",
         "s16.text.033",
-        "s16.text.034"
+        "s16.text.034",
+        "s16.text.035"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20502,7 +20503,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.035",
+          "seen": "s16.text.037",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20511,8 +20512,7 @@
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s16.text.035"
+        "recovery/HOT.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21324,5 +21324,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1415
+  "source_turns_indexed": 1416
 }

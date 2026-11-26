@@ -1,9 +1,7 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s16.text.035",
- "fold_errors": [
-  "recovery/TURN.json: directive_ops: add requires explicit ongoing instruction, not question/one-shot"
- ],
+ "cursor": "s16.text.037",
+ "fold_errors": [],
  "checks": [
   {
    "turn": "s15.text.173",
@@ -24,16 +22,6 @@
    "turn": "s16.text.025",
    "kind": "fight",
    "text": "Бросок «Повторно извлечь воспоминания с приоритетом сохранения сознания»: полоса 5–7, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной."
-  },
-  {
-   "turn": "s16.text.033",
-   "kind": "things",
-   "text": "konoha_blank_contact_plate_s16: неизвестные поля holder, name, state, where; используй was/now или new/gone"
-  },
-  {
-   "turn": "s16.text.034",
-   "kind": "things",
-   "text": "konoha_blank_contact_plate_s16: изменён предмет вне учёта; введён без проверки прежнего состояния"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
