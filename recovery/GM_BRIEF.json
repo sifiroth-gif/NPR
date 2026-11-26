@@ -67,12 +67,27 @@
    "kind": "fight",
    "text": "Бросок «Какудзу выпускает маску до смыкания зеркал»: полоса 3–5, по осям 4–5 (A +0:+1, B +0, C +0, D +1, E +0, F -1:+0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s15.text.173"
+  },
+  {
+   "kind": "things",
+   "text": "shima_food_s16: новый предмет без why — откуда он взялся",
+   "turn": "s16.text.017"
+  },
+  {
+   "kind": "things",
+   "text": "myoboku_route_sketch_s16: новый предмет без why — откуда он взялся",
+   "turn": "s16.text.017"
+  },
+  {
+   "kind": "review",
+   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
+   "turn": "s16.text.017"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.016",
+  "cursor": "s16.text.017",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -83,11 +98,11 @@
    "fukasaku",
    "jiraiya",
    "shima",
-   "place:4c70b56856663742",
-   "sima",
-   "myoboku_rikudo_legend_book"
+   "place:6f9baf8f5b777910",
+   "myoboku_rikudo_legend_book",
+   "myoboku_route_sketch_s16"
   ],
-  "focus_bytes": 1860,
+  "focus_bytes": 1877,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -103,74 +118,50 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
     "fusion.tendrils",
-    "genome.zero",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
-    "seals.speed",
     "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.field",
     "nemera.agency",
     "nemera.cloak",
     "nemera.transfer",
     "pact.byoton",
     "pact.shiton",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
+    "research.postmortem",
+    "research.reproduce",
     "sage.summon"
    ],
    "matched": [],
    "read": [
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/NEMERA.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/ref/FUSION.md"
    ],
    "required": [
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent",
     "scene/place",
     "body/gear",
     "due/offscreen",
     "time",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access"
+    "fusion profile or historical pact",
+    "contact/channel"
    ],
    "routes": [
-    "combat",
+    "dialogue",
     "travel",
-    "items"
+    "pact"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
     "nemera.agency",
     "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.transfer"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -300,6 +291,14 @@
     "where": "Дом Фукасаку и Симы",
     "why": ""
    },
+   "myoboku_route_sketch_s16": {
+    "holder": "fukasaku",
+    "name": "Карта пути на Мьёбоку",
+    "since": "s16.text.017",
+    "state": "Предложена Шики, ещё не принята; нарисованные ориентиры пешего маршрута из Конохи к скрытому проходу за водопадом, около месяца пути; просьба не передавать посторонним.",
+    "where": "Дом Фукасаку и Симы",
+    "why": ""
+   },
    "nemera_document": {
     "holder": "shiki",
     "since": "s12.text.078",
@@ -380,6 +379,14 @@
     "state": "надеты на предплечья",
     "turn": "s12.text.004"
    },
+   "shima_food_s16": {
+    "holder": "shiki",
+    "name": "Свёрток еды от Симы",
+    "since": "s16.text.017",
+    "state": "Принят, тёплая приготовленная пища в ткани.",
+    "where": "При Шики",
+    "why": ""
+   },
    "sumi_sword": {
     "holder": "shiki",
     "name": "Суми («Сажа»)",
@@ -402,13 +409,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-25T10:52:00",
+  "at": "0010-04-25T10:54:00",
   "date": "Воскресенье, 25 апреля 1287 года",
-  "id": "s16.text.016",
-  "place": "Мьёбоку, сад у дома Фукасаку и Симы",
-  "time": "10:52"
+  "id": "s16.text.017",
+  "place": "Мьёбоку, дом Фукасаку и Симы",
+  "time": "10:54"
  },
- "digest": "183eb584a960c7b47eee566f98c8a5fb35c868ed76c29b480b1e319a2588b522",
+ "digest": "ef30e6da31a539cde39ff3ddb7d739015378a8b39fb2ae381d27a78203bdb372",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -423,21 +430,21 @@
     "from": "s16.text.002",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s16.text.016"
+    "to": "s16.text.017"
    },
    {
     "actor": "fukasaku",
     "from": "s16.text.002",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s16.text.016"
+    "to": "s16.text.017"
    },
    {
     "actor": "shima",
     "from": "s16.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s16.text.016"
+    "to": "s16.text.017"
    }
   ],
   "nodes": [],
@@ -567,21 +574,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 598.0
+   "value": 598.33
   },
   "dice": [
-   2,
+   15,
    13,
    20,
-   11,
-   8,
-   9,
-   6,
-   9,
+   2,
+   17,
    18,
-   13,
-   16,
-   19
+   11,
+   19,
+   11,
+   10,
+   18,
+   10
   ],
   "injuries": {
    "hidan": [
@@ -730,26 +737,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:4c70b56856663742",
+    "id": "place:6f9baf8f5b777910",
     "kind": "place",
-    "label": "Мьёбоку, сад у дома Фукасаку и Симы",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "sima",
-    "kind": "npc",
-    "label": "Сима",
-    "operational_cues": {
-     "source": "recovery/cast/sima.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "role": "по подписи в сцене"
-     }
-    },
+    "label": "Мьёбоку, дом Фукасаку и Симы",
     "status": "no_verified_facts"
    },
    {
@@ -762,6 +752,23 @@
     "label": "Рукописный сборник преданий о Рикудо",
     "operational_cues": {
      "source": "s16.text.009",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "fukasaku"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "myoboku_route_sketch_s16",
+    "kind": "item",
+    "label": "Карта пути на Мьёбоку",
+    "operational_cues": {
+     "source": "s16.text.017",
      "status": "projection_not_authoritative_fact",
      "values": {
       "holder": "fukasaku"
@@ -791,10 +798,10 @@
   "due": null,
   "npcs": {
    "fukasaku": {
-    "does": "Осмотрел лист, подготовил свиток возвращения.",
+    "does": "Нарисовал и предложил карту, попросил не передавать её посторонним.",
     "lever": "Гибель ученика из-за утраты контроля над природной энергией.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Возможности гостя выходят за пределы уже известного, причины неизвестны.",
+    "reads": "Допускает гостевые посещения с сохранением тайны маршрута.",
     "stage": 4,
     "step": "необратимость"
    },
@@ -807,10 +814,10 @@
     "step": "необратимость"
    },
    "shima": {
-    "does": "Предложила свёрток еды и будущий визит.",
+    "does": "Задержала взгляд на лапе, попрощалась.",
     "lever": "Гибель ученика от природной энергии.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Еда может оставаться знаком гостеприимства.",
+    "reads": "Физиология гостя необычна; касание не причинило вреда.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -838,14 +845,14 @@
  },
  "needs_profile": [
   {
-   "appearances": 40,
+   "appearances": 41,
    "facets": 0,
    "need": 5,
    "npc": "jiraiya",
    "tier": "deep"
   },
   {
-   "appearances": 31,
+   "appearances": 32,
    "facets": 3,
    "need": 5,
    "npc": "fukasaku",
@@ -1008,10 +1015,10 @@
     "s16.text.003",
     "s16.text.004",
     "s16.text.005",
-    "s16.text.010",
     "s16.text.014",
     "s16.text.015",
-    "s16.text.016"
+    "s16.text.016",
+    "s16.text.017"
    ],
    "prior_disclosures": [
     {
@@ -1022,18 +1029,18 @@
      "turn": "s16.text.002"
     },
     {
-     "at": "0010-04-25T10:43:00",
-     "sha256": "0f3ccf55be3ca7810bf0787677576626b2e9c7c67f20d7c754c061d62ed9d28a",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.015"
-    },
-    {
      "at": "0010-04-25T10:52:00",
-     "sha256": "3c445868f778ecaaff86362b3cb04c91ce13091bf1f65611a32b46b667fb96b3",
+     "sha256": "f8e49926cc1fb20d08e3ea27318afedaf968154fd01453845de74f8ba94e9deb",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.016"
+    },
+    {
+     "at": "0010-04-25T10:54:00",
+     "sha256": "19d5f345a03dc955f834de805e96b7535bda93c919e1c27f70167bd1dc087a41",
+     "source": "archive/session-016-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s16.text.017"
     }
    ],
    "profile": {
@@ -1050,14 +1057,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.016",
-      "what": "Шики проверил Футон и Дотон с выключенными и включёнными глазами: базовые преобразования доступны в обоих состояниях, точнее с додзюцу. Джирайя предложил обучение. Сима предложила еду."
+      "turn": "s16.text.017",
+      "what": "Шики принял еду. Фукасаку нарисовал путь к скрытому проходу за водопадом и предложил карту; пешком около месяца, через Джирайю быстрее. Обратный переход готов."
      }
     ],
     "memory_file": "archive/npc-memory/fukasaku.json",
-    "memory_total": 31,
+    "memory_total": 32,
     "name": "Фукасаку",
-    "seen": "s16.text.016",
+    "seen": "s16.text.017",
     "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару.",
     "status": "present_profile",
     "tier": "deep"
@@ -1123,10 +1130,10 @@
     "s16.text.003",
     "s16.text.004",
     "s16.text.005",
-    "s16.text.013",
     "s16.text.014",
     "s16.text.015",
-    "s16.text.016"
+    "s16.text.016",
+    "s16.text.017"
    ],
    "prior_disclosures": [
     {
@@ -1137,18 +1144,18 @@
      "turn": "s16.text.002"
     },
     {
-     "at": "0010-04-25T10:43:00",
-     "sha256": "0f3ccf55be3ca7810bf0787677576626b2e9c7c67f20d7c754c061d62ed9d28a",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.015"
-    },
-    {
      "at": "0010-04-25T10:52:00",
-     "sha256": "3c445868f778ecaaff86362b3cb04c91ce13091bf1f65611a32b46b667fb96b3",
+     "sha256": "f8e49926cc1fb20d08e3ea27318afedaf968154fd01453845de74f8ba94e9deb",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.016"
+    },
+    {
+     "at": "0010-04-25T10:54:00",
+     "sha256": "19d5f345a03dc955f834de805e96b7535bda93c919e1c27f70167bd1dc087a41",
+     "source": "archive/session-016-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s16.text.017"
     }
    ],
    "profile": {
@@ -1165,14 +1172,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.016",
-      "what": "Шики проверил Футон и Дотон с выключенными и включёнными глазами: базовые преобразования доступны в обоих состояниях, точнее с додзюцу. Джирайя предложил обучение. Сима предложила еду."
+      "turn": "s16.text.017",
+      "what": "Шики принял еду. Фукасаку нарисовал путь к скрытому проходу за водопадом и предложил карту; пешком около месяца, через Джирайю быстрее. Обратный переход готов."
      }
     ],
     "memory_file": "archive/npc-memory/jiraiya.json",
-    "memory_total": 40,
+    "memory_total": 41,
     "name": "Джирайя",
-    "seen": "s16.text.016",
+    "seen": "s16.text.017",
     "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку.",
     "status": "present_profile",
     "tier": "deep"
@@ -1211,10 +1218,10 @@
     "s16.text.006",
     "s16.text.007",
     "s16.text.009",
-    "s16.text.010",
     "s16.text.013",
     "s16.text.014",
-    "s16.text.016"
+    "s16.text.016",
+    "s16.text.017"
    ],
    "prior_disclosures": [
     {
@@ -1225,18 +1232,18 @@
      "turn": "s16.text.005"
     },
     {
-     "at": "0010-04-25T10:39:00",
-     "sha256": "b4377478085c520b972f7b08d1ef1a9f47d41620915ad46464330d21137cf005",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.014"
-    },
-    {
      "at": "0010-04-25T10:52:00",
-     "sha256": "3c445868f778ecaaff86362b3cb04c91ce13091bf1f65611a32b46b667fb96b3",
+     "sha256": "f8e49926cc1fb20d08e3ea27318afedaf968154fd01453845de74f8ba94e9deb",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.016"
+    },
+    {
+     "at": "0010-04-25T10:54:00",
+     "sha256": "19d5f345a03dc955f834de805e96b7535bda93c919e1c27f70167bd1dc087a41",
+     "source": "archive/session-016-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s16.text.017"
     }
    ],
    "profile": {
@@ -1252,14 +1259,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s16.text.016",
-      "what": "Шики проверил Футон и Дотон с выключенными и включёнными глазами: базовые преобразования доступны в обоих состояниях, точнее с додзюцу. Джирайя предложил обучение. Сима предложила еду."
+      "turn": "s16.text.017",
+      "what": "Шики принял еду. Фукасаку нарисовал путь к скрытому проходу за водопадом и предложил карту; пешком около месяца, через Джирайю быстрее. Обратный переход готов."
      }
     ],
     "memory_file": "archive/npc-memory/shima.json",
-    "memory_total": 12,
+    "memory_total": 13,
     "name": "Сима",
-    "seen": "s16.text.016",
+    "seen": "s16.text.017",
     "status": "present_profile",
     "tier": "developed"
    },
@@ -1268,15 +1275,15 @@
  },
  "recent_turns": [
   {
-   "id": "s16.text.016",
-   "line": "Шики проверил Футон и Дотон с выключенными и включёнными глазами: базовые преобразования доступны в обоих состояниях, точнее с додзюцу. Джирайя предложил обучение. Сима предложила еду."
+   "id": "s16.text.017",
+   "line": "Шики принял еду. Фукасаку нарисовал путь к скрытому проходу за водопадом и предложил карту; пешком около месяца, через Джирайю быстрее. Обратный переход готов."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Джирайя и Фукасаку у тренировочной площадки в саду, на плоском камне два листа; Шики рядом.",
-  "pressure": "Обратный переход готовится; Сима предлагает еду, Джирайя предложил в дальнейшем обучение двум стихиям.",
-  "situation": "Четыре базовых упражнения: Футон без глаз неровно надрезал лист, Дотон уплотнил грунт; с активным Риннешаринганом оба эффекта точнее. Глаза отключены. Фукасаку подготовил свиток возвращения, Сима предложила свёрток еды; принятие и перенос ещё не состоялись."
+  "positions": "Все у крыльца; Шики со свёртком, Фукасаку у свитка призыва, Джирайя готов к возвращению.",
+  "pressure": "Карта предложена, Джирайя спрашивает о готовности вернуться.",
+  "situation": "Шики принял свёрток пищи. Фукасаку нарисовал и предложил карту пешего маршрута к скрытому проходу Мьёбоку за водопадом; сообщил о возможности повторного гостевого перехода через Джирайю без договора. Карта ещё не принята, обратный переход готов."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1290,9 +1297,9 @@
    "player": "Она это я",
    "source": "archive/session-016-turns.jsonl"
   },
-  "s16.text.016": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 10:52</text>\n\n### Мьёбоку. Сад отшельников\n\nШики начинает с Футона.\n\nЧёрная чакра проходит между ладонями, приобретая свойства, отчасти знакомые по использованию Хётона. Край листа надрывается, но разрез получается неровным. Направление потока удаётся сформировать, однако его режущая граница остаётся недостаточно устойчивой.\n\nС Дотоном результат оказывается лучше. Под пальцами Шики рыхлая земля постепенно уплотняется. Несколько мелких камешков оказываются заключены в затвердев\n[... sou…",
-   "player": "#пробую#",
+  "s16.text.017": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 10:54</text>\n\n### Мьёбоку. Дом отшельников\n\nШики принимает свёрток. Через ткань ещё ощущается тепло приготовленной пищи.\n\n**Мугами Шики:** — Спасибо, но я все ещё не знаю дороги.\n\nСима укоризненно посмотрела на супруга.\n\n**Сима:** — Папа, ты ведь даже не объяснил ему, как сюда добраться!\n\nФукасаку вернулся в дом и вскоре вынес небольшой лист бумаги. Усевшись на ступеньку крыльца, он принялся рисовать горные хребты, речные долины и условные обозначения старых троп.\n\nНа последнем участке…",
+   "player": "#беру# спасибо, но я все ещё не знаю дороги",
    "source": "archive/session-016-turns.jsonl"
   }
  },
@@ -1301,8 +1308,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "78f0540f1e4093312c942274dae57dbb6039fea3",
-  "turn": "s16.text.016"
+  "sha": "c3da5f837f4b43c4b6c609f0119d27ccf7270a9b",
+  "turn": "s16.text.017"
  },
  "wiki": {
   "index": "memory/INDEX.md",

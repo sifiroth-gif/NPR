@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s16.text.016`
+# Карта мира NPR · на ходе `s16.text.017`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -268,7 +268,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (93)
+## Вещи (95)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -319,6 +319,7 @@
 - `mugami_family_album` · `items/mugami_family_album`
 - `mugami_tea_gift_s15` · `items/mugami_tea_gift_s15`
 - `myoboku_rikudo_legend_book` · `items/myoboku_rikudo_legend_book`
+- `myoboku_route_sketch_s16` · `items/myoboku_route_sketch_s16`
 - `naruto_home_sketch_s15` · `items/naruto_home_sketch_s15`
 - `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
@@ -355,6 +356,7 @@
 - `shiki_spare_communication_plate` · `items/shiki_spare_communication_plate`
 - `shiki_upper_clothing` · `items/shiki_upper_clothing`
 - `shiki_wraps` · `items/shiki_wraps`
+- `shima_food_s16` · `items/shima_food_s16`
 - `signaller_contract_tube` · `items/signaller_contract_tube`
 - `sluice_saboteur_remains` · `items/sluice_saboteur_remains`
 - `stolen_house_plan` · `items/stolen_house_plan`

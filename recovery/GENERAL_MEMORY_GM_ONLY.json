@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.016",
+  "cursor": "s16.text.017",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -507,20 +507,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s16.text.016:0": {
+    "canon:s16.text.017:0": {
       "aliases": [
-        "canon:s16.text.016:0",
-        "s16.text.016: Базовые стихийные преобразования Футона и Дотона проверены в Мьёбоку: доступны и с выключенным Риннешаринганом, активный Риннешаринган облегчает точное управление ими"
+        "canon:s16.text.017:0",
+        "s16.text.017: Свидетельство Фукасаку: пеший путь из Конохи на Мьёбоку занимает около месяца, скрытый проход за водопадом; предложена карта с ориентирами. Гостевой переход через Джи"
       ],
       "facts": [],
-      "id": "canon:s16.text.016:0",
+      "id": "canon:s16.text.017:0",
       "kind": "canon",
-      "label": "s16.text.016: Базовые стихийные преобразования Футона и Дотона проверены в Мьёбоку: доступны и с выключенным Риннешаринганом, активный Риннешаринган облегчает точное управление ими",
+      "label": "s16.text.017: Свидетельство Фукасаку: пеший путь из Конохи на Мьёбоку занимает около месяца, скрытый проход за водопадом; предложена карта с ориентирами. Гостевой переход через Джи",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.016"
+        "s16.text.017"
       ]
     },
     "captive_guard": {
@@ -1781,7 +1781,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1789,13 +1789,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T10:39:00",
-          "excerpt": "чужой разум, саннин больше не предлагал себя в качестве участника испытания. В доме Сима закончила уборку. Фукасаку появился на крыльце с небольшим свёртком для своего ученика. **Джирайя:** — Полагаю, нам стоит вернуться раньше. Если Хидан действительно достав",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.014"
         },
         {
           "at": "0010-04-25T10:43:00",
@@ -1810,11 +1803,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.016"
+        },
+        {
+          "at": "0010-04-25T10:54:00",
+          "excerpt": "укоризненно посмотрела на супруга. **Сима:** — Папа, ты ведь даже не объяснил ему, как сюда добраться! Фукасаку вернулся в дом и вскоре вынес небольшой лист бумаги. Усевшись на ступеньку крыльца, он принялся рисовать горные хребты, речные долины и условные обо",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.016",
+          "seen": "s16.text.017",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1824,7 +1824,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.016"
+        "s16.text.017"
       ]
     },
     "gaara": {
@@ -2521,7 +2521,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 47,
+      "mention_count": 48,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2529,13 +2529,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T10:39:00",
-          "excerpt": "у уже скорее всего привезли Хидана, я знаю что путь человека может помочь мне проникнуть в его мысли. Джирайя перестал поправлять рукава. Между деревьями протянулись длинные полосы солнечного света. В одной из них медленно опускалась паутина с крохотным пауком",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.014"
         },
         {
           "at": "0010-04-25T10:43:00",
@@ -2550,11 +2543,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.016"
+        },
+        {
+          "at": "0010-04-25T10:54:00",
+          "excerpt": "шумел водопад. Ветер приносил запах влажной земли и цветущих растений. Фукасаку вернулся к раскрытому свитку, а Джирайя приготовился к переходу. **Джирайя:** — Ну что, возвращаемся? **Ход Шики.** Шики принял еду. Фукасаку нарисовал путь к скрытому проходу за в",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.016",
+          "seen": "s16.text.017",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2563,8 +2563,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.016"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -4973,6 +4972,27 @@
       ],
       "sources": [
         "s16.text.009"
+      ]
+    },
+    "myoboku_route_sketch_s16": {
+      "aliases": [
+        "myoboku route sketch s16",
+        "Карта пути на Мьёбоку"
+      ],
+      "facts": [],
+      "id": "myoboku_route_sketch_s16",
+      "kind": "item",
+      "label": "Карта пути на Мьёбоку",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "fukasaku",
+          "since": "s16.text.017"
+        }
+      ],
+      "sources": [
+        "s16.text.017"
       ]
     },
     "naemnik_u_shakhty": {
@@ -8941,13 +8961,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.016",
         "s16.text.010",
         "s16.text.011",
         "s16.text.012",
         "s16.text.013",
         "s16.text.014",
-        "s16.text.015"
+        "s16.text.015",
+        "s16.text.016"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -10760,6 +10780,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.017",
         "s16.text.009"
       ]
     },
@@ -19141,7 +19162,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19149,13 +19170,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:37:00",
-          "excerpt": "аже не представляю, где проходят твои ограничения. Он посмотрел в сторону дома. Через открытое окно была видна Сима, развешивавшая вымытую посуду. Джирайя понизил голос: **Джирайя:** — Я не стану расспрашивать тебя о происхождении тканей или методах твоих иссл",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.013"
         },
         {
           "at": "0010-04-25T10:39:00",
@@ -19170,17 +19184,45 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.016"
+        },
+        {
+          "at": "0010-04-25T10:54:00",
+          "excerpt": "ань ещё ощущается тепло приготовленной пищи. **Мугами Шики:** — Спасибо, но я все ещё не знаю дороги. Сима укоризненно посмотрела на супруга. **Сима:** — Папа, ты ведь даже не объяснил ему, как сюда добраться! Фукасаку вернулся в дом и вскоре вынес небольшой л",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.016"
+          "seen": "s16.text.017"
         }
       ],
       "sources": [
         "recovery/cast/shima.json",
         "recovery/HOT.json",
-        "s16.text.016"
+        "s16.text.017"
+      ]
+    },
+    "shima_food_s16": {
+      "aliases": [
+        "shima food s16",
+        "Свёрток еды от Симы"
+      ],
+      "facts": [],
+      "id": "shima_food_s16",
+      "kind": "item",
+      "label": "Свёрток еды от Симы",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s16.text.017"
+        }
+      ],
+      "sources": [
+        "s16.text.017"
       ]
     },
     "shiozaki_masaaki": {
@@ -19412,7 +19454,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19420,13 +19462,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T10:37:00",
-          "excerpt": "аже не представляю, где проходят твои ограничения. Он посмотрел в сторону дома. Через открытое окно была видна Сима, развешивавшая вымытую посуду. Джирайя понизил голос: **Джирайя:** — Я не стану расспрашивать тебя о происхождении тканей или методах твоих иссл",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.013"
         },
         {
           "at": "0010-04-25T10:39:00",
@@ -19441,6 +19476,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.016"
+        },
+        {
+          "at": "0010-04-25T10:54:00",
+          "excerpt": "ань ещё ощущается тепло приготовленной пищи. **Мугами Шики:** — Спасибо, но я все ещё не знаю дороги. Сима укоризненно посмотрела на супруга. **Сима:** — Папа, ты ведь даже не объяснил ему, как сюда добраться! Фукасаку вернулся в дом и вскоре вынес небольшой л",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.017"
         }
       ],
       "projections": [
@@ -21200,8 +21242,22 @@
       "status": "projected",
       "to": "fukasaku",
       "type": "held_by"
+    },
+    {
+      "from": "shima_food_s16",
+      "source": "s16.text.017",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
+    },
+    {
+      "from": "myoboku_route_sketch_s16",
+      "source": "s16.text.017",
+      "status": "projected",
+      "to": "fukasaku",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1396
+  "source_turns_indexed": 1397
 }
