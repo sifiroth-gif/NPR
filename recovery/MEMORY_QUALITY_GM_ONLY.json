@@ -3,17 +3,19 @@
     "kusa_head",
     "place:2af3465d950b98e1",
     "kusa_shiki_nonaggression_draft",
+    "kusa_shiki_nonaggression_original",
     "seven_locks_scroll_fragments"
   ],
-  "cursor": "s15.text.104",
+  "cursor": "s15.text.105",
   "focus_byte_limit": 6600,
-  "focus_bytes": 1870,
-  "index_entities": 803,
-  "index_source_records": 1278,
-  "indexed_cursor": "s15.text.104",
+  "focus_bytes": 2233,
+  "index_entities": 806,
+  "index_source_records": 1279,
+  "indexed_cursor": "s15.text.105",
   "kinds": {
+    "canon": 1,
     "entity": 1,
-    "item": 46,
+    "item": 48,
     "npc": 177,
     "place": 575,
     "thread": 4
@@ -25,6 +27,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s15.text.105:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -130,6 +138,18 @@
     {
       "at_1": true,
       "at_5": true,
+      "id": "kusa_shiki_nonaggression_original",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "kusa_shiki_warrant_revocation",
+      "kind": "item"
+    },
+    {
+      "at_1": true,
+      "at_5": true,
       "id": "market_consumables_25mar",
       "kind": "item"
     },
@@ -161,18 +181,6 @@
       "at_1": true,
       "at_5": true,
       "id": "orochimaru_poison_samples_s15",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "possible_sasuke_hair",
-      "kind": "item"
-    },
-    {
-      "at_1": true,
-      "at_5": true,
-      "id": "private_bounties",
       "kind": "item"
     },
     {
@@ -489,9 +497,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 77,
-  "self_query_at_5": 77,
-  "self_query_count": 77,
+  "self_query_at_1": 78,
+  "self_query_at_5": 78,
+  "self_query_count": 78,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []
