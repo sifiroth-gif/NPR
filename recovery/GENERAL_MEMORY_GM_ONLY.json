@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.081",
+  "cursor": "s15.text.082",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 92,
+      "mention_count": 93,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:28:00",
-          "excerpt": "ист и Песок. Помнишь девчонку с розовыми волосами из Конохи? Аки на несколько мгновений задумалась. **Мидзухара Аки:** — Кажется, помню. Из участников экзамена? Имени уже не назову. **Хаясэ Рэн:** — Погоди, она-то каким образом оказалась в бою с Акацуки? Аки б",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.079"
         },
         {
           "at": "0010-04-21T20:29:00",
@@ -75,17 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.081"
+        },
+        {
+          "at": "0010-04-21T20:31:00",
+          "excerpt": "на родителей. **Кирисава Сэйна:** — Вот почему разрушился свиток. Нао сжала пальцами край скатерти. **Мидзухара Аки:** — О природной чакре слышала. Её используют отшельники, но подробностей я не знаю. Рэн задумчиво почесал висок. **Хаясэ Рэн:** — То есть тепер",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.081"
+          "seen": "s15.text.082"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
         "recovery/HOT.json",
-        "s15.text.081"
+        "s15.text.082"
       ]
     },
     "aki_home_address_s15": {
@@ -155,7 +155,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.080",
+          "seen": "s15.text.082",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -163,7 +163,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json"
+        "recovery/cast/akihiro.json",
+        "s15.text.082"
       ]
     },
     "arai_mitiko": {
@@ -4095,7 +4096,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.078",
+          "seen": "s15.text.082",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -4103,7 +4104,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json"
+        "recovery/cast/nao.json",
+        "s15.text.082"
       ]
     },
     "naruto": {
@@ -6167,7 +6169,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.081",
+        "s15.text.082",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6185,7 +6187,8 @@
         "s15.text.077",
         "s15.text.078",
         "s15.text.079",
-        "s15.text.080"
+        "s15.text.080",
+        "s15.text.081"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16189,7 +16192,7 @@
       "id": "ren",
       "kind": "npc",
       "label": "Хаясэ Рэн",
-      "mention_count": 93,
+      "mention_count": 94,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -16197,13 +16200,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:28:00",
-          "excerpt": "овений задумалась. **Мидзухара Аки:** — Кажется, помню. Из участников экзамена? Имени уже не назову. **Хаясэ Рэн:** — Погоди, она-то каким образом оказалась в бою с Акацуки? Аки бросила на него косой взгляд. **Мидзухара Аки:** — Рэн, прошло почти девять лет. И",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.079"
         },
         {
           "at": "0010-04-21T20:29:00",
@@ -16218,11 +16214,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.081"
+        },
+        {
+          "at": "0010-04-21T20:31:00",
+          "excerpt": "родной чакре слышала. Её используют отшельники, но подробностей я не знаю. Рэн задумчиво почесал висок. **Хаясэ Рэн:** — То есть теперь ты ещё и отшельник? Коюки приподняла голову. **Коюки:** — Драконий! Аки посмотрела на маленькую белую змею, затем вновь на Ш",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.081",
+          "seen": "s15.text.082",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16232,7 +16235,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.081"
+        "s15.text.082"
       ]
     },
     "residence_courier_v7": {
@@ -16970,7 +16973,7 @@
       "id": "seina",
       "kind": "npc",
       "label": "Кирисава Сэйна",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0001-07-07T09:55:00",
@@ -16978,13 +16981,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.110"
-        },
-        {
-          "at": "0010-04-21T19:28:00",
-          "excerpt": "ми **Мугами Шики:** — Учитель, я сам себя таким объявил. Есть печати связи с собой? Мне нужно две. **Кирисава Сэйна:** — При себе нет. В клинике имеются парные сигнальные печати для экстренного вызова медиков. Передавать голос через них нельзя, только сигнал. ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.063"
         },
         {
           "at": "0010-04-21T20:06:00",
@@ -16999,16 +16995,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.071"
+        },
+        {
+          "at": "0010-04-21T20:31:00",
+          "excerpt": "резкие изменения для вас, не для меня, так что в зеркале себя узнаю. Сэйна посмотрела на родителей. **Кирисава Сэйна:** — Вот почему разрушился свиток. Нао сжала пальцами край скатерти. **Мидзухара Аки:** — О природной чакре слышала. Её используют отшельники, ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.081"
+          "seen": "s15.text.082"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
-        "s15.text.081"
+        "recovery/HOT.json",
+        "s15.text.082"
       ]
     },
     "sekido_tadao": {
@@ -18714,13 +18718,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18728,13 +18733,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-21T20:09:00",
-          "excerpt": "мнишь, что сказал? «Пока ты в моей команде, я буду тебя спасать, не убивать. Станешь врагом — щадить не стану». Коюки приблизилась к краю стола. **Коюки:** — И ты тогда перестал ему доверять? **Хаясэ Рэн:** — Нет. Я дал ему перевязать плечо. Он поднял чашку, н",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.071"
         },
         {
           "at": "0010-04-21T20:23:00",
@@ -18749,16 +18747,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.075"
+        },
+        {
+          "at": "0010-04-21T20:31:00",
+          "excerpt": "подробностей я не знаю. Рэн задумчиво почесал висок. **Хаясэ Рэн:** — То есть теперь ты ещё и отшельник? Коюки приподняла голову. **Коюки:** — Драконий! Аки посмотрела на маленькую белую змею, затем вновь на Шики. **Мидзухара Аки:** — А та сущность… У неё было",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.078",
+          "seen": "s15.text.082",
+          "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
+        },
+        {
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s15.text.082"
       ]
     },
     "white_snake_sage": {
@@ -19208,5 +19218,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1255
+  "source_turns_indexed": 1256
 }
