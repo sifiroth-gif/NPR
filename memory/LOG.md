@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.011: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.010: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`)
 - s17.text.007: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`), план сюжета
 - s17.text.006: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`), Коюки (`npc/western_nest_young_courier`), план сюжета
@@ -59,4 +60,3 @@
 - s16.text.094: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Приёмщик тел (`npc/fire_bounty_station_trader`), Хидан (`npc/hidan`)
 - s16.text.093: поправки игрока: 1
 - s16.text.092: Коюки (`npc/western_nest_young_courier`), Возница (`npc/river_herb_cart_driver_s16`), Сборщик (`npc/river_herb_gatherer_s16`)
-- s16.text.091: Коюки (`npc/western_nest_young_courier`)

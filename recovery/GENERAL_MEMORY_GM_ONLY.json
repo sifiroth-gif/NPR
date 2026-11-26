@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.010",
+  "cursor": "s17.text.011",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 110,
+      "mention_count": 111,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T11:54:00",
-          "excerpt": "провалившуюся кровлю открывался участок ночного неба. В глубине помещения ещё пахло отсыревшей мукой. Джирайя снял со спины свиток, устроился возле стены и развернул полученный от путника чертёж. Тусклый свет маленького дорожного фонаря падал на его широкие ла",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.006"
         },
         {
           "at": "0010-05-05T11:58:00",
@@ -2553,28 +2546,34 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.010"
+        },
+        {
+          "at": "0010-05-05T17:42:00",
+          "excerpt": "деревянные столбы. Дверь дома была открыта. Сквозь неё виднелась обеденная утварь, оставленная на столе. Джирайя остановился возле старого пограничного камня. С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунад",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.011"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.010",
-          "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
+          "seen": "s17.text.011",
+          "state": "Достиг южной границы Дождя; самостоятельно отправил призванную жабу на разведку грузовой разгрузки."
         },
         {
-          "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
+          "state": "Достиг южной границы Дождя; самостоятельно отправил призванную жабу на разведку грузовой разгрузки."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.010"
+        "s17.text.011"
       ]
     },
     "jiraiya_rain_contact_s17": {
       "aliases": [
         "jiraiya rain contact s17",
-        "Связной Джирайи",
-        "jiraiya_rain_contact_s17"
+        "Связной Джирайи"
       ],
       "facts": [],
       "id": "jiraiya_rain_contact_s17",
@@ -2608,8 +2607,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya_rain_contact_s17.json",
-        "s17.text.010"
+        "recovery/cast/jiraiya_rain_contact_s17.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -5620,7 +5618,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 177,
+      "mention_count": 178,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5628,13 +5626,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T14:04:00",
-          "excerpt": "аю сведениями о вашем прошлом в Кусагакуре. Знаю о ваших медицинских познаниях, предполагаемых контактах с Орочимару и приобретении наследственных способностей. Теперь мне известно о вашем интересе к пространственным техникам. Он поднял взгляд. **Данзо:** — Но",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.125"
         },
         {
           "at": "0010-05-03T14:06:00",
@@ -5649,6 +5640,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.006"
+        },
+        {
+          "at": "0010-05-05T17:42:00",
+          "excerpt": ". С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунадэ и Орочимару. Тогда эти места были полны беженцев. Он провёл ладонью по изуродованному камню. **Джирайя:** — Кажется, война давно закончилась. Последние сло",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.011"
         }
       ],
       "projections": [
@@ -13824,6 +13822,24 @@
         "s01.text.049"
       ]
     },
+    "place:a7f3c06c0322b3b5": {
+      "aliases": [
+        "place:a7f3c06c0322b3b5",
+        "Южная граница Страны Дождя, сухое возвышение у реки",
+        "Южная граница Страны Дождя",
+        "сухое возвышение у реки"
+      ],
+      "facts": [],
+      "id": "place:a7f3c06c0322b3b5",
+      "kind": "place",
+      "label": "Южная граница Страны Дождя, сухое возвышение у реки",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.011"
+      ]
+    },
     "place:a830525fc489e6a2": {
       "aliases": [
         "place:a830525fc489e6a2",
@@ -14669,10 +14685,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.010",
         "s17.text.005",
         "s17.text.006",
-        "s17.text.007"
+        "s17.text.007",
+        "s17.text.010"
       ]
     },
     "place:b8ccdfc587cc4a22": {
@@ -21449,7 +21465,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 83,
+      "mention_count": 84,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21457,13 +21473,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T14:04:00",
-          "excerpt": "его измерять человеческие жизни их значением для государства. **Данзо:** — Именно поэтому я считаю соглашение Цунадэ недостаточным. Она доверяет вашим решениям. Я предпочитаю обстоятельства, при которых нарушение обязательств становится невыгодным обеим сторон",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.125"
         },
         {
           "at": "0010-05-03T14:19:00",
@@ -21478,6 +21487,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.129"
+        },
+        {
+          "at": "0010-05-05T17:42:00",
+          "excerpt": "ого камня. С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунадэ и Орочимару. Тогда эти места были полны беженцев. Он провёл ладонью по изуродованному камню. **Джирайя:** — Кажется, война давно закончилась. Посл",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.011"
         }
       ],
       "projections": [
@@ -22299,5 +22315,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1519
+  "source_turns_indexed": 1520
 }

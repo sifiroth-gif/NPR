@@ -343,4 +343,5 @@
 - Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
 - Второй передовой пост Сунагакуре, каменный тракт · `places/vtoroy-peredovoy-post-sunagakure-kamennyy-trakt` · 1 ход(ов), s11–s11
 - Второй передовой пост Сунагакуре, каменный тракт на пути к Стране Ветра · `places/vtoroy-peredovoy-post-sunagakure-kamennyy-trakt-na-puti-k-st` · 1 ход(ов), s11–s11
+- Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 1 ход(ов), s17–s17
 - За пределами Кусагакуре, старая переправа и дорожная развилка · `places/za-predelami-kusagakure-staraya-pereprava-i-dorozhnaya-razvi` · 1 ход(ов), s11–s11
