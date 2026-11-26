@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.025",
+  "cursor": "s16.text.026",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,22 +505,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.025:0": {
-      "aliases": [
-        "canon:s16.text.025:0",
-        "s16.text.025: Шики при втором чтении памяти Хидана увидел собрания проекций Акацуки на пальцах исполинской статуи, рыжеволосого Пэйна с металлическими стержнями в лице и Риннеганом"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.025:0",
-      "kind": "canon",
-      "label": "s16.text.025: Шики при втором чтении памяти Хидана увидел собрания проекций Акацуки на пальцах исполинской статуи, рыжеволосого Пэйна с металлическими стержнями в лице и Риннеганом",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.025"
       ]
     },
     "captive_guard": {
@@ -2165,7 +2149,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 22,
+      "mention_count": 23,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2173,13 +2157,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:25:00",
-          "excerpt": ". В отличие от медицинской техники, воздействие направлено непосредственно на связь сознания с чакрой. Хидан распахивает глаза. **Хидан:** — Какого… Его голос обрывается. Перед внутренним взором Шики проступают фрагменты чужих воспоминаний. Они накладываются д",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.023"
         },
         {
           "at": "0010-04-25T11:25:20",
@@ -2194,12 +2171,19 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.025"
+        },
+        {
+          "at": "0010-04-25T11:29:00",
+          "excerpt": "н. По описанию очень похоже на моих учеников. Но Риннеган принадлежал Нагато. У Яхико его никогда не было. Хидан прислушивался к разговору, однако на имена никак явно не отреагировал. Цунадэ закончила запись и сложила лист. **Цунадэ:** — Шизунэ, после процедур",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.026"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.025",
+          "seen": "s16.text.026",
           "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно."
         },
         {
@@ -2210,7 +2194,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s16.text.025"
+        "s16.text.026"
       ]
     },
     "hirano": {
@@ -2522,7 +2506,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 56,
+      "mention_count": 57,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2530,13 +2514,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:25:00",
-          "excerpt": "пленником, проверяя его реакции. Зрачки реагируют на свет, речь сохраняется. **Хидан:** — Ублюдок… Что ты сделал? Джирайя внимательно следит за ним. Первый контакт позволил извлечь фрагмент памяти без заметного нарушения сознания. Однако безопасный доступ к гл",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.023"
         },
         {
           "at": "0010-04-25T11:25:20",
@@ -2551,11 +2528,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.025"
+        },
+        {
+          "at": "0010-04-25T11:29:00",
+          "excerpt": "ганизации. Местонахождение самого Пэйна установить не удалось. Кисть Цунадэ остановилась над бумагой. Джирайя стоял неподвижно. **Джирайя:** — Рыжие волосы… А женщина с бумажным цветком… Он медленно опустился на стоявший возле стены стул. **Джирайя:** — Яхико ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.025",
+          "seen": "s16.text.026",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2565,7 +2549,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.025"
+        "s16.text.026"
       ]
     },
     "jiro_caravan_guard": {
@@ -10478,12 +10462,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.025",
+        "s16.text.026",
         "s16.text.020",
         "s16.text.021",
         "s16.text.022",
         "s16.text.023",
-        "s16.text.024"
+        "s16.text.024",
+        "s16.text.025"
       ]
     },
     "place:698d95bd1d726b13": {
@@ -19410,7 +19395,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19418,13 +19403,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:24:45",
-          "excerpt": "печати не позволили ему изменить положение. **Хидан:** — Чёрт. Ещё один. Джирайя медленно поднял взгляд. Шизунэ тоже услышала эти слова. Она на мгновение отвлеклась от диагностики, но тут же вернулась к наблюдению. Хидан заметил перемену в поведении присутству",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.022"
         },
         {
           "at": "0010-04-25T11:25:00",
@@ -19439,11 +19417,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.025"
+        },
+        {
+          "at": "0010-04-25T11:29:00",
+          "excerpt": "азговору, однако на имена никак явно не отреагировал. Цунадэ закончила запись и сложила лист. **Цунадэ:** — Шизунэ, после процедуры подготовь распоряжение об усилении наблюдения за Наруто и запроси у Суны всё, что им известно об извлечении биджу из Гаары. Расп",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.025",
+          "seen": "s16.text.026",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19453,7 +19438,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.025"
+        "s16.text.026"
       ]
     },
     "signalshchik": {
@@ -20302,11 +20287,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "25.04 11:25: Хидан лично назвал Пэйна лидером Акацуки при Джирайе, не ответил о Риннегане; личность и местонахождение не установлены."
+          "state": "25.04 11:29: Получено описание Пэйна и женщины из памяти Хидана. Джирайя предполагает сходство с Яхико и Конан, не может объяснить Риннеган. Цунадэ потребовала отложить проникновение и пересмотреть операцию; Джирайя не возразил, просит визуальный образ."
         }
       ],
       "sources": [
-        "s16.text.024"
+        "s16.text.026"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -20464,7 +20449,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 38,
+      "mention_count": 39,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20472,13 +20457,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:25:00",
-          "excerpt": "дорожно моргает. **Шизунэ:** — Был кратковременный скачок активности. Сейчас возвращается к исходному состоянию. Цунадэ наклоняется над пленником, проверяя его реакции. Зрачки реагируют на свет, речь сохраняется. **Хидан:** — Ублюдок… Что ты сделал? Джирайя вн",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.023"
         },
         {
           "at": "0010-04-25T11:25:20",
@@ -20493,11 +20471,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.025"
+        },
+        {
+          "at": "0010-04-25T11:29:00",
+          "excerpt": "делены между парами участников организации. Местонахождение самого Пэйна установить не удалось. Кисть Цунадэ остановилась над бумагой. Джирайя стоял неподвижно. **Джирайя:** — Рыжие волосы… А женщина с бумажным цветком… Он медленно опустился на стоявший возле ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.025",
+          "seen": "s16.text.026",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20507,7 +20492,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.025"
+        "s16.text.026"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21312,5 +21297,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1405
+  "source_turns_indexed": 1406
 }
