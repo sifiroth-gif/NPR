@@ -60,4 +60,3 @@
 - s15.text.151: Джирайя (`npc/jiraiya`)
 - s15.text.150: Джирайя (`npc/jiraiya`), shima (`npc/shima`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.149: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
-- s15.text.148: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`), Фукасаку (`npc/fukasaku`)
