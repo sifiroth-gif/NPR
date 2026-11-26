@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.096",
+  "cursor": "s16.text.097",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.097:0": {
+      "aliases": [
+        "canon:s16.text.097:0",
+        "s16.text.097: В нижнем ущелье Страны Рек Шики спас местных змей и вылечил тёмную змею; старая местная змея через Коюки разрешила обоим возвращаться. Местное признание не распростра"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.097:0",
+      "kind": "canon",
+      "label": "s16.text.097: В нижнем ущелье Страны Рек Шики спас местных змей и вылечил тёмную змею; старая местная змея через Коюки разрешила обоим возвращаться. Местное признание не распростра",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.097"
       ]
     },
     "captive_guard": {
@@ -8128,9 +8144,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.096",
+        "s16.text.097",
         "s16.text.094",
-        "s16.text.095"
+        "s16.text.095",
+        "s16.text.096"
       ]
     },
     "place:3641cb3273b1ad66": {
@@ -18420,7 +18437,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.096",
+          "seen": "s16.text.097",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
         {
@@ -18430,7 +18447,33 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s16.text.096"
+        "s16.text.097"
+      ]
+    },
+    "river_shrine_elder_snake_s16": {
+      "aliases": [
+        "river shrine elder snake s16",
+        "Старая змея святилища"
+      ],
+      "facts": [],
+      "id": "river_shrine_elder_snake_s16",
+      "kind": "npc",
+      "label": "Старая змея святилища",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s16.text.097",
+          "wants": "Сохранить уцелевшие кладки и безопасное место для местных змей."
+        },
+        {
+          "wants": "Сохранить уцелевшие кладки и безопасное место для местных змей."
+        }
+      ],
+      "sources": [
+        "recovery/cast/river_shrine_elder_snake_s16.json",
+        "recovery/HOT.json",
+        "s16.text.097"
       ]
     },
     "road_villager_fumi": {
@@ -18707,7 +18750,7 @@
       "id": "ryuchi_west_elder",
       "kind": "npc",
       "label": "Старая змея",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-03-04T07:30:00",
@@ -18715,13 +18758,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.042"
-        },
-        {
-          "at": "0010-04-12T13:12:12",
-          "excerpt": "Шики:** — Я… Мы. У меня все воспоминания. Многие я не понимаю. Хакудзя-сэннин слегка наклонила голову. Старая змея замерла у входа. **Мугами Шики, мысленно:** *— Немера. Эй, Немера.* Обращение вернулось к нему. Словно человек, позвавший кого-то в совершенно пу",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.049"
         },
         {
           "at": "0010-04-12T13:17:12",
@@ -18736,6 +18772,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.052"
+        },
+        {
+          "at": "0010-04-29T19:43:00",
+          "excerpt": "**Коюки:** — Она благодарит тебя. В глубине святилища послышался шорох. Из-под основания изваяния выползла старая змея с потускневшей чешуёй. Остальные освободили перед ней пространство. Она приблизилась к Коюки. Их разговор оказался коротким. **Коюки:** — Она",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.097"
         }
       ],
       "projections": [
@@ -19424,8 +19467,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s16.text.096"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21049,8 +21091,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s16.text.096"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21347,7 +21388,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 86,
+      "mention_count": 87,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21355,13 +21396,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-29T19:22:00",
-          "excerpt": "трана Рек. Нижнее ущелье **Мугами Шики:** — Пойдем посмотрим, но если станет опасно, уходи хорошо? **Коюки:** — Хорошо. Обещаю. Она крепче обвилась вокруг шеи Шики, оставив голову над воротником. Повозка заскрипела и продолжила путь. Один из сборщиков ещё долг",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.094"
         },
         {
           "at": "0010-04-29T19:23:00",
@@ -21376,11 +21410,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.096"
+        },
+        {
+          "at": "0010-04-29T19:43:00",
+          "excerpt": "ры. Змея резко напряглась. Её тело свернулось плотными кольцами, однако она не попыталась укусить Шики. Коюки приблизилась к её голове и тихо зашипела, успокаивая раненую. Постепенно повреждённые ткани восстановились. Исчезла припухлость, вернулась подвижность",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.097"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.096",
+          "seen": "s16.text.097",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21390,7 +21431,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.096"
+        "s16.text.097"
       ]
     },
     "white_snake_sage": {
@@ -21882,5 +21923,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1469
+  "source_turns_indexed": 1470
 }

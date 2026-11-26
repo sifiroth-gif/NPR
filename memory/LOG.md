@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.097: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Старая змея святилища (`npc/river_shrine_elder_snake_s16`), поправки игрока: 1
 - s16.text.096: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Цунадэ (`npc/tsunade`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.095: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`)
 - s16.text.094: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Приёмщик тел (`npc/fire_bounty_station_trader`), Хидан (`npc/hidan`)
@@ -61,4 +62,3 @@
 - s16.text.040: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.039: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.038: Какаши Хатакэ (`npc/kakashi`)
-- s16.text.037: Джирайя (`npc/jiraiya`)
