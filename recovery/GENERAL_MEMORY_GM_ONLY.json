@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.011",
+  "cursor": "s16.text.012",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:56:00",
-          "excerpt": "ду всех вещей. Одни считали их источником его искусства, другие — следствием достигнутого им понимания чакры. Джирайя, до этого помогавший Симе расставлять посуду, остановился. Поставил чашку на стол и подошёл к раскрытой книге. Исчезла даже привычная небрежно",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.009"
         },
         {
           "at": "0010-04-25T10:28:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.011"
+        },
+        {
+          "at": "0010-04-25T10:34:00",
+          "excerpt": "ются мышцы его шеи, как расширяются зрачки и прерывается спокойный ритм дыхания. Затем рисунок исчезает. Джирайя резко поднимается с каменной ограды. Несколько сухих листьев падают с его одежды. Он смотрит на лицо Шики, словно пытается найти в нём черты другог",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.012"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.011",
+          "seen": "s16.text.012",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.011"
+        "s16.text.012"
       ]
     },
     "jiro_caravan_guard": {
@@ -8920,8 +8920,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.011",
-        "s16.text.010"
+        "s16.text.012",
+        "s16.text.010",
+        "s16.text.011"
       ]
     },
     "place:4c7f3f73c7fee790": {
@@ -18851,8 +18852,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s16.text.011"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21176,5 +21176,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1391
+  "source_turns_indexed": 1392
 }
