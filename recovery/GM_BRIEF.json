@@ -107,7 +107,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.130",
+  "cursor": "s16.text.131",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -419,11 +419,11 @@
  "cursor": {
   "at": "0010-05-03T14:21:00",
   "date": "Понедельник, 3 мая 1287 года",
-  "id": "s16.text.130",
+  "id": "s16.text.131",
   "place": "Конохагакуре, резиденция Хокагэ, коридор у лестницы",
   "time": "14:21"
  },
- "digest": "6ed0f8bfbfef0c6e4111d470731e07d6c5a02fdc859a56dbbbb70c6b5b4836f2",
+ "digest": "f27cac2f93b88a21c8de993bff528a095ca6734623c64b221a2b618b2fcefc91",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -453,36 +453,14 @@
  "fight": {
   "body": {
    "hidan": {
-    "last": {
-     "band": [
-      1,
-      2,
-      3
-     ],
-     "cat": 3,
-     "die": 15,
-     "exert": false,
-     "load": 2.0,
-     "turn": "s16.text.128"
-    },
-    "loss": 4,
-    "stage": "без сознания"
+    "mode": "exceptional",
+    "status_note": "Отделённая голова жива, отвечает; Шизунэ подтвердила основные функции, пленник под наблюдением. Обычная модель кровопотери и утраты сознания не обоснована для его исключительной физиологии. Текущее состояние требует актуального источника.",
+    "status_source": "s16.text.030"
    },
    "kakuzu": {
-    "last": {
-     "band": [
-      2,
-      3,
-      4
-     ],
-     "cat": 3,
-     "die": 14,
-     "exert": false,
-     "load": 1.0,
-     "turn": "s16.text.128"
-    },
-    "loss": 4,
-    "stage": "без сознания"
+    "mode": "dead",
+    "status_note": "Уничтожены все пять сердец; смерть подтверждена сенсорикой. Последующие проверки кровопотери ошибочны.",
+    "status_source": "s15.text.178"
    },
    "quay_cloaked_hunter": {
     "loss": 0,
@@ -571,18 +549,18 @@
    "value": 600.0
   },
   "dice": [
-   5,
-   8,
-   10,
-   8,
-   5,
-   4,
-   6,
-   2,
-   10,
+   12,
+   18,
+   12,
    17,
-   6,
-   15
+   19,
+   8,
+   11,
+   16,
+   18,
+   8,
+   17,
+   2
   ],
   "injuries": {
    "hidan": [
@@ -628,46 +606,13 @@
     },
     {
      "at": "0010-04-24T07:38:32",
-     "bleed": true,
+     "bleed": false,
+     "closed_by_death": "s15.text.178",
      "lost": "Рука утратила подвижность.",
      "severity": "тяжёлая",
      "turn": "s15.text.176",
      "what": "Режущая рана Суми через защиту Дотона",
      "where": "плечо руки, державшей чемодан"
-    }
-   ],
-   "shiki": [
-    {
-     "at": "0007-12-24T16:47:00",
-     "lost": "поверхностный порез, движения сохранены",
-     "severity": "лёгкая",
-     "turn": "s09.text.066",
-     "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
-     "where": "наружная сторона левого бедра"
-    },
-    {
-     "at": "0010-03-25T12:12:56",
-     "lost": "боль при резких движениях, дыхание сохранено",
-     "severity": "лёгкая",
-     "turn": "s12.text.064",
-     "what": "удар отлетающим известняком во время первого рывка",
-     "where": "боковая область грудной клетки под рёбрами"
-    },
-    {
-     "at": "0010-04-05T11:26:02",
-     "lost": "кисть работает",
-     "severity": "лёгкая",
-     "turn": "s13.text.069",
-     "what": "нож",
-     "where": "левое предплечье"
-    },
-    {
-     "at": "0010-04-23T16:32:16",
-     "lost": "болезненность, дыхание и движения сохранены",
-     "severity": "лёгкая",
-     "turn": "s15.text.154",
-     "what": "контролируемый удар жабьего ката",
-     "where": "грудь"
     }
    ]
   },
@@ -987,7 +932,7 @@
     {
      "at": "0010-05-03T14:21:00",
      "line": "Шики сказал Какаши о самостоятельности своих желаний и неудобстве для сделок. Какаши различил независимость и отсутствие потребно…",
-     "sha256": "dada75ae37c2d1ee619e63d0b782d0b6a95206cd21764941318be7197b2e2769",
+     "sha256": "31a27514413afaf1b3507d420dacd8d1e5384b629f02de7bd44a30b01488280d",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.130"
@@ -1019,7 +964,7 @@
     "memory_file": "archive/npc-memory/kakashi.json",
     "memory_total": 53,
     "name": "Какаши Хатакэ",
-    "seen": "s16.text.130",
+    "seen": "s16.text.131",
     "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики.",
     "status": "present_profile",
     "tier": "deep"
@@ -1066,8 +1011,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e73e488e292dcfdd4b31090f1a92b18ddb245183",
-  "turn": "s16.text.130"
+  "sha": "c68ff678b3fea55e0e9af8c455b047acbab17b92",
+  "turn": "s16.text.131"
  },
  "wiki": {
   "index": "memory/INDEX.md",
