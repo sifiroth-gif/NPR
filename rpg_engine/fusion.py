@@ -23,3 +23,21 @@ PASSIVES = ("Постоянный режим отшельника дракона
             "ВМШ лишь по заявке: красная радужка, чёрные склеры, вертикальный зрачок и узор 2900.jpg. "
             "Суми проводит освоенную чакру; не активировать за игрока. Новые техники требуют освоения. "
             "Источник: campaigns/shiki/ref/FUSION.md.")
+
+# Explicit final profile: player correction s15.text.132, after the fusion.
+FINAL_AT = "0010-04-23T14:09:00"
+FINAL_EFFECTIVE = {"speed": 6.25, "shunshin": 6.25, "reaction": 5.95,
+                   "sensory": 6.0, "taijutsu": 5.45, "strength": 4.85,
+                   "endurance": 5.75, "ninjutsu": 5.6, "genjutsu": 4.9,
+                   "medical": 5.2, "control": 5.5}
+
+def final_profile(hot):
+    return active(hot) and str((hot.get("cursor") or {}).get("at") or "") >= FINAL_AT
+
+def passives(hot):
+    if not final_profile(hot):
+        return PASSIVES
+    return (PASSIVES.replace("риск только прямого контакта кожи либо свежей крови с раной/слизистой.",
+                             "обычное касание в покое при удержании чакры безопасно; кровь и потеря контроля остаются риском.")
+            .replace("ВМШ лишь по заявке: красная радужка, чёрные склеры, вертикальный зрачок и узор 2900.jpg.",
+                     "Единый Риннешаринган лишь по заявке, одномоментно: багрово-фиолетовая радужка, кольца, узор 2900.jpg, чёрные склеры и змеиный зрачок; шесть путей и прежние искусства ВМШ. Генетическое развитие завершено."))
