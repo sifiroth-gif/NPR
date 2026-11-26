@@ -1,12 +1,17 @@
-# Карта мира NPR · на ходе `s16.text.075`
+# Карта мира NPR · на ходе `s16.text.076`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (337) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (249)
-- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
+## Персонажи (251)
+- Ао — Мужчина средних лет, короткие синие волосы, повязка на прав… · `npc/ao` · в сцене
+- Инспектор закрытого отдела — Худощавый мужчина в строгой тёмной одежде, с толстой папкой. · `npc/kiri_archive_observer_s16` · в сцене
+- Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official` · в сцене
+- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer` · в сцене
+- Приёмщик тел — Сотрудник подпольного пункта выплаты наград · `npc/fire_bounty_station_trader`
+- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru`
 - Шиноби Тумана (Тумана) — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior`
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Такэру — генин Конохи на втором этапе экзамена на тюнина, товарищ раненого Кэйдзи · `npc/takeru`
@@ -15,11 +20,9 @@
 - Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu`
 - Хагуро (Змея Рьючидо) — по подписи в сцене · `npc/khaguro`
 - Шизунэ — Темноволосая женщина в тёмном кимоно, медицинские отчёты. · `npc/shizune`
-- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru`
 - Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 (на 1283, экзамен) · `npc/kakashi`
 - Бансаи — Пожилой монах Храма Огня, свидетель нападения · `npc/fire_temple_bansai`
 - Фукасаку —  · `npc/fukasaku`
-- Приёмщик тел — Сотрудник подпольного пункта выплаты наград · `npc/fire_bounty_station_trader`
 - Хидан — Акацуки · `npc/hidan`
 - Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma`
 - Гамамару — Старейшина Мьёбоку, пророческие сны. · `npc/gamamaru`
@@ -53,7 +56,6 @@
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
 - Саске Учиха (Саске, Учиха) — генин, участник (на 1283, экзамен) · `npc/sasuke`
 - Сирамэ — Взрослая белая змея с очень светлыми глазами, длина около 2… · `npc/shirame`
-- Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official`
 - Человек у причальной лестницы — Неприметная одежда, проволока в руках. · `npc/quay_wire_operator`
 - Сотрудник безопасности порта — Мужчина в местной охранной форме с медной пластиной службы … · `npc/fire_port_security_staff`
 - Минаги Дзэн (Минаги, Дзэн) — Худой мужчина около 50, короткие седые волосы, глубокий ожо… · `npc/minagi_zen`
@@ -264,7 +266,7 @@
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 - `jiraiya_rain_investigation` — 25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стер… · `threads/jiraiya_rain_investigation`
-- `kiri_bingo_negotiations` — Портовое управление подтвердило переговоры 27.04.1287 12:00 в восточн… · `threads/kiri_bingo_negotiations`
+- `kiri_bingo_negotiations` — 27.04 в 12:00 переговоры открыты в восточной гавани при местном чинов… · `threads/kiri_bingo_negotiations`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
