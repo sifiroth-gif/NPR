@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.013",
+  "cursor": "s17.text.014",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 113,
+      "mention_count": 114,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T17:42:00",
-          "excerpt": "деревянные столбы. Дверь дома была открыта. Сквозь неё виднелась обеденная утварь, оставленная на столе. Джирайя остановился возле старого пограничного камня. С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунад",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.011"
         },
         {
           "at": "0010-05-05T18:24:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.013"
+        },
+        {
+          "at": "0010-05-05T18:28:00",
+          "excerpt": "ничье **Мугами Шики:** — дождь и правда с чакрой, его стоит опасаться и это разительно осложняет дело. Джирайя посмотрел на серую пелену осадков. Прежняя непринуждённость окончательно исчезла с его лица. **Джирайя:** — Значит, мои источники не преувеличивали. ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.013",
+          "seen": "s17.text.014",
           "state": "Получил результат разведки; предложил перевозку призывной жабой."
         },
         {
@@ -2567,7 +2567,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.013"
+        "s17.text.014"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -13837,9 +13837,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.013",
+        "s17.text.014",
         "s17.text.011",
-        "s17.text.012"
+        "s17.text.012",
+        "s17.text.013"
       ]
     },
     "place:a830525fc489e6a2": {
@@ -20402,12 +20403,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.137",
+          "seen": "s17.text.014",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s17.text.014"
       ]
     },
     "signalshchik": {
@@ -22317,5 +22319,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1522
+  "source_turns_indexed": 1523
 }
