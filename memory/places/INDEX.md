@@ -270,6 +270,7 @@
 - Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
+- Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 1 ход(ов), s16–s16
 - Страна Огня, гавань восточного побережья · `places/strana-ognya-gavan-vostochnogo-poberezhya` · 1 ход(ов), s13–s13
 - Страна Огня, западная дорога из восточной гавани · `places/strana-ognya-zapadnaya-doroga-iz-vostochnoy-gavani` · 1 ход(ов), s14–s14
 - Страна Рек, дорога к южному перевалу · `places/strana-rek-doroga-k-yuzhnomu-perevalu` · 1 ход(ов), s12–s12

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.067",
+  "cursor": "s16.text.068",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3427,7 +3427,7 @@
       "id": "kiri_port_guard_senior",
       "kind": "npc",
       "label": "Шиноби Тумана",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0006-09-19T11:09:00",
@@ -3435,13 +3435,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.076"
-        },
-        {
-          "at": "0010-04-11T17:13:00",
-          "excerpt": "Огня. Восточная гавань, причал Киригакуре **Мугами Шики:** — Спокойно. Шики открыл сумку. У младшего шиноби Тумана рука немедленно легла на подсумок. Старший проверяющий повернул голову, но не двинулся. Из сумки появилась небольшая пластина связи. **Мугами Шик",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.086"
         },
         {
           "at": "0010-04-11T17:15:00",
@@ -3456,6 +3449,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.025"
+        },
+        {
+          "at": "0010-04-25T21:18:00",
+          "excerpt": "накомый голос корабельного офицера, которому две недели назад Шики передал устройство в восточной гавани. **Шиноби Тумана:** — Мугами Шики. Если слышишь меня, ответь. Мужчина говорил подчеркнуто официально, выдерживая небольшие промежутки между словами. **Шино",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.068"
         }
       ],
       "projections": [
@@ -3471,7 +3471,8 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3510,12 +3511,13 @@
       ],
       "projections": [
         {
-          "seen": "s13.text.087",
+          "seen": "s16.text.068",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json"
+        "recovery/cast/kiri_ship_security_officer.json",
+        "s16.text.068"
       ]
     },
     "kiri_transfer_carrier": {
@@ -9939,12 +9941,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.067",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
         "s15.text.190",
-        "s16.text.066"
+        "s16.text.066",
+        "s16.text.067"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -14106,6 +14108,24 @@
         "s14.text.028",
         "s14.text.029",
         "s14.text.030"
+      ]
+    },
+    "place:b4a8ed224fe07233": {
+      "aliases": [
+        "place:b4a8ed224fe07233",
+        "Страна Огня, дорога за пределами Конохагакуре",
+        "Страна Огня",
+        "дорога за пределами Конохагакуре"
+      ],
+      "facts": [],
+      "id": "place:b4a8ed224fe07233",
+      "kind": "place",
+      "label": "Страна Огня, дорога за пределами Конохагакуре",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.068"
       ]
     },
     "place:b5569561296c9e28": {
@@ -19200,11 +19220,11 @@
         {
           "holder": "kiri_ship_security_officer",
           "since": "s13.text.086",
-          "turn": "s13.text.086"
+          "turn": "s16.text.068"
         }
       ],
       "sources": [
-        "s13.text.086"
+        "s16.text.068"
       ]
     },
     "shiki_s17_report_folder": {
@@ -20242,9 +20262,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/takeru.json",
-        "recovery/HOT.json",
-        "s16.text.067"
+        "recovery/cast/takeru.json"
       ]
     },
     "tamura_reika": {
@@ -20446,6 +20464,27 @@
       ],
       "sources": [
         "s16.text.031"
+      ]
+    },
+    "thread:kiri_bingo_negotiations": {
+      "aliases": [
+        "thread:kiri bingo negotiations",
+        "kiri bingo negotiations",
+        "kiri_bingo_negotiations"
+      ],
+      "facts": [],
+      "id": "thread:kiri_bingo_negotiations",
+      "kind": "thread",
+      "label": "kiri bingo negotiations",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "Первый прямой контакт после передачи пластины 11.04. Офицер сообщил о разрешении Мидзукагэ начать переговоры и сопротивлении закрытого отдела; K-0418 остаётся в силе, условия встречи открыты."
+        }
+      ],
+      "sources": [
+        "s16.text.068"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -21327,7 +21366,7 @@
     },
     {
       "from": "shiki_private_line_kiri_plate",
-      "source": "s13.text.086",
+      "source": "s16.text.068",
       "status": "projected",
       "to": "kiri_ship_security_officer",
       "type": "held_by"
@@ -21453,5 +21492,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1445
+  "source_turns_indexed": 1446
 }
