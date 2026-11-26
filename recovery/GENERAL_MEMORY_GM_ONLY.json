@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.022",
+  "cursor": "s16.text.023",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.023:0": {
+      "aliases": [
+        "canon:s16.text.023:0",
+        "s16.text.023: Первый опыт Пути человека Шики: извлечение поверхностного фрагмента при минимальной мощности возможно; сопротивление приблизило эффект отделения сознания, вмешательст"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.023:0",
+      "kind": "canon",
+      "label": "s16.text.023: Первый опыт Пути человека Шики: извлечение поверхностного фрагмента при минимальной мощности возможно; сопротивление приблизило эффект отделения сознания, вмешательст",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.023"
       ]
     },
     "captive_guard": {
@@ -2149,7 +2165,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2157,13 +2173,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:24:00",
-          "excerpt": "овили, за счёт чего сохраняется жизнеспособность тканей. Обычные физиологические объяснения здесь неприменимы. Хидан открыл глаза. Его взгляд медленно переместился с Цунадэ на Джирайю, а затем остановился на Шики. **Хидан:** — А-а-а… Вот и ты, ублюдок. На его ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.020"
         },
         {
           "at": "0010-04-25T11:24:30",
@@ -2178,12 +2187,19 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.022"
+        },
+        {
+          "at": "0010-04-25T11:25:00",
+          "excerpt": ". В отличие от медицинской техники, воздействие направлено непосредственно на связь сознания с чакрой. Хидан распахивает глаза. **Хидан:** — Какого… Его голос обрывается. Перед внутренним взором Шики проступают фрагменты чужих воспоминаний. Они накладываются д",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.023"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.022",
+          "seen": "s16.text.023",
           "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно."
         },
         {
@@ -2194,7 +2210,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s16.text.022"
+        "s16.text.023"
       ]
     },
     "hirano": {
@@ -2506,7 +2522,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 53,
+      "mention_count": 54,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2514,13 +2530,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:24:00",
-          "excerpt": "помещение. Дверь закрылась, отрезав последние звуки коридора. Шизунэ приготовилась наблюдать за состоянием пленника. Джирайя встал сбоку от стола, откуда мог видеть и лицо Хидана, и действия Шики. **Цунадэ:** — Нас интересует руководство Акацуки, местонахожден",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.020"
         },
         {
           "at": "0010-04-25T11:24:30",
@@ -2535,11 +2544,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.022"
+        },
+        {
+          "at": "0010-04-25T11:25:00",
+          "excerpt": "пленником, проверяя его реакции. Зрачки реагируют на свет, речь сохраняется. **Хидан:** — Ублюдок… Что ты сделал? Джирайя внимательно следит за ним. Первый контакт позволил извлечь фрагмент памяти без заметного нарушения сознания. Однако безопасный доступ к гл",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.022",
+          "seen": "s16.text.023",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2548,8 +2564,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.022"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -10462,9 +10477,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.022",
+        "s16.text.023",
         "s16.text.020",
-        "s16.text.021"
+        "s16.text.021",
+        "s16.text.022"
       ]
     },
     "place:698d95bd1d726b13": {
@@ -19391,7 +19407,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19399,13 +19415,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:24:00",
-          "excerpt": "ия ощущалась слабее, а многочисленные барьерные печати затрудняли различение удалённых источников чакры. Шизунэ открыла тяжёлую дверь. В центре небольшой камеры стоял металлический стол. На специальной подставке, окружённой удерживающими печатями, находилась г",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.020"
         },
         {
           "at": "0010-04-25T11:24:30",
@@ -19420,11 +19429,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.022"
+        },
+        {
+          "at": "0010-04-25T11:25:00",
+          "excerpt": "споминание. Согласно выбранному ограничению, дальнейшее проникновение прекращается. Хидан судорожно моргает. **Шизунэ:** — Был кратковременный скачок активности. Сейчас возвращается к исходному состоянию. Цунадэ наклоняется над пленником, проверяя его реакции.",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.022",
+          "seen": "s16.text.023",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19434,7 +19450,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.022"
+        "s16.text.023"
       ]
     },
     "signalshchik": {
@@ -20445,7 +20461,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20453,13 +20469,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:09:00",
-          "excerpt": "ть подготовку помещения, поскольку не знали, в каком состоянии его привезут. Она открыла дверь кабинета. Цунадэ сидела за столом, заваленным документами. Рядом с чернильницей лежал предварительный медицинский отчёт. На его полях красными чернилами были сделаны",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.019"
         },
         {
           "at": "0010-04-25T11:24:00",
@@ -20474,11 +20483,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.021"
+        },
+        {
+          "at": "0010-04-25T11:25:00",
+          "excerpt": "дорожно моргает. **Шизунэ:** — Был кратковременный скачок активности. Сейчас возвращается к исходному состоянию. Цунадэ наклоняется над пленником, проверяя его реакции. Зрачки реагируют на свет, речь сохраняется. **Хидан:** — Ублюдок… Что ты сделал? Джирайя вн",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.022",
+          "seen": "s16.text.023",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20488,7 +20504,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.022"
+        "s16.text.023"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21293,5 +21309,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1402
+  "source_turns_indexed": 1403
 }
