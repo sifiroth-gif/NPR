@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.151",
+  "cursor": "s15.text.152",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1606,7 +1606,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1614,13 +1614,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-23T16:26:00",
-          "excerpt": "рел на Шики. **Джирайя:** — Возможность вернуться у него теперь есть. Осталось самое трудное — захотеть этого. Фукасаку медленно покачал головой. **Фукасаку:** — Люди удивительные существа. Имея так мало времени, они способны потратить всю жизнь на страх перед",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.149"
         },
         {
           "at": "0010-04-23T16:32:00",
@@ -1635,16 +1628,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.151"
+        },
+        {
+          "at": "0010-04-23T16:32:02",
+          "excerpt": "ирайя:** — Ого! Улыбка исчезла с его лица. Он осторожно перенёс вес на атакованную ногу. Она выдержала. **Фукасаку:** — Быстрый. Очень быстрый. Наруто перестал выкрикивать подбадривания. Он подался вперёд, пытаясь уследить за движениями обоих отшельников. На в",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.152"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.151"
+          "seen": "s15.text.152"
         }
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.152"
       ]
     },
     "gaara": {
@@ -2170,7 +2171,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2178,13 +2179,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-23T16:26:00",
-          "excerpt": "Но вы проницательны. Я и правда могу только вернуть ему его тело со всеми ограничениями и смертностью. Джирайя задумчиво потёр подбородок. **Джирайя:** — Какое странное предложение для человека, всю жизнь пытавшегося избавиться от собственного тела. Он прошёл ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.149"
         },
         {
           "at": "0010-04-23T16:32:00",
@@ -2199,17 +2193,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.151"
+        },
+        {
+          "at": "0010-04-23T16:32:02",
+          "excerpt": "чал разворачиваться, но скорость Шики позволила опередить перенос веса. Удар пришёлся по опорной ноге. Джирайя потерял равновесие, коснулся ладонью земли и, используя её как дополнительную опору, оттолкнулся в сторону. Приземлился в трёх метрах, несколько ниже",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.152"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.151"
+          "seen": "s15.text.152"
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s15.text.151"
+        "s15.text.152"
       ]
     },
     "jiro_caravan_guard": {
@@ -4829,7 +4830,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.151",
+          "seen": "s15.text.152",
           "state": "После предупреждения Шики покинул опасный участок с Сакурой и Ямато; стремится догнать Сая и Саске."
         },
         {
@@ -16566,13 +16567,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.151",
+        "s15.text.152",
         "s15.text.145",
         "s15.text.146",
         "s15.text.147",
         "s15.text.148",
         "s15.text.149",
-        "s15.text.150"
+        "s15.text.150",
+        "s15.text.151"
       ]
     },
     "place:fdb4dc3fd78cd3fd": {
@@ -18421,7 +18423,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s15.text.151"
+          "seen": "s15.text.152"
         }
       ],
       "sources": [
@@ -19833,13 +19835,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 79,
+      "mention_count": 80,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19847,13 +19850,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-23T16:20:00",
-          "excerpt": "асаку:** — Сначала научись сидеть спокойно хотя бы несколько минут. **Наруто:** — Да запросто! **Джирайя:** — Уже врёт. Коюки тихо фыркнула. Фукасаку подошёл к старому деревянному столбу. Остановился примерно в полуметре от него и нанёс короткий удар лапой, не",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.146"
         },
         {
           "at": "0010-04-23T16:26:00",
@@ -19868,20 +19864,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.150"
+        },
+        {
+          "at": "0010-04-23T16:32:02",
+          "excerpt": "икивать подбадривания. Он подался вперёд, пытаясь уследить за движениями обоих отшельников. На ветке над ним Коюки подняла голову. **Коюки:** — Шики, я ненадолго отлучусь. Нужно передать посыльным дорогу к Аки. Найду тебя позже. Белая змея бесшумно скрылась ср",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.152"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.151",
-          "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
-        },
-        {
+          "seen": "s15.text.152",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json"
+        "s15.text.152"
       ]
     },
     "white_snake_sage": {
@@ -20394,5 +20394,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1324
+  "source_turns_indexed": 1325
 }

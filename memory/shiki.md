@@ -55,30 +55,30 @@
 - С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.
 
 ## Stats
-- ninjutsu: 5.6
-- taijutsu: 4.7
-- genjutsu: 4.9
-- medical_ninjutsu: 5.2
+- ninjutsu: 4.7
+- taijutsu: 4.5
+- genjutsu: 4.6
+- medical_ninjutsu: 5
 - suiton: 4.8
 - raiton: 4.6
 - futon: 3.8
 - hyoton: 4.5
-- sensory: 5
+- sensory: 4.7
 - zero_genome_mastery: 5
 - shunshin_no_jutsu: 5.5
 - stealth: 5
 - espionage: 4.8
 - field_command: 4.6
 - planning: 4.7
-- physical_strength: 4.1
-- physical_endurance: 5
+- physical_strength: 3.8
+- physical_endurance: 4.6
 - chakra_reserves: 4.8
-- chakra_control: 5.5
-- reflex_and_coordination: 5.2
+- chakra_control: 5
+- reflex_and_coordination: 5
 
 ## Chakra
 - value: 400.15
-- at: 0010-04-23T16:32:01
+- at: 0010-04-23T16:32:02
 - state: готов
 - why: Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения.
 - last: turn: s15.text.132; spent: 10.0; what: Чибаку Тэнсэй, миниатюрный демонстрационный вариант
