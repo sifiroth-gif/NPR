@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.030",
+  "cursor": "s16.text.031",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2149,7 +2149,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2157,13 +2157,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:34:00",
-          "excerpt": "ать последним. - Пэйн координирует деятельность пар и передаёт распоряжения посредством дистанционной связи. - Хидан не располагает сведениями о местонахождении настоящего тела Пэйна. Во всех доступных воспоминаниях он воспринимает рыжеволосого мужчину как сам",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.028"
         },
         {
           "at": "0010-04-25T11:37:00",
@@ -2178,6 +2171,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.030"
+        },
+        {
+          "at": "0010-04-25T11:58:00",
+          "excerpt": "Джирайя перестал писать. Несколько секунд он смотрел на имя, выведенное на бумаге. **Мугами Шики:** — Хидан воспринимает Пэйна как настоящего руководителя организации. О существовании другого тела он, судя по доступным воспоминаниям, ничего не знает. Приказы п",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.031"
         }
       ],
       "projections": [
@@ -2188,8 +2188,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json",
-        "s16.text.030"
+        "recovery/cast/hidan.json"
       ]
     },
     "hirano": {
@@ -2501,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 60,
+      "mention_count": 61,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2509,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:31:00",
-          "excerpt": "Риннеган в обоих глазах. Рядом — женщина с синими волосами и бумажным цветком. Образ исчезает почти сразу. Джирайя не двигается. Несколько мгновений в помещении стоит тяжёлая тишина, нарушаемая лишь слабым шорохом одежды и приглушённым треском печатей, удержив",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.027"
         },
         {
           "at": "0010-04-25T11:34:00",
@@ -2530,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.030"
+        },
+        {
+          "at": "0010-04-25T11:58:00",
+          "excerpt": "метрично на лице и ушах. Их назначение мне неизвестно. Женщину рядом с ним действительно зовут Конан. Джирайя перестал писать. Несколько секунд он смотрел на имя, выведенное на бумаге. **Мугами Шики:** — Хидан воспринимает Пэйна как настоящего руководителя орг",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.030",
+          "seen": "s16.text.031",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2544,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.030"
+        "s16.text.031"
       ]
     },
     "jiro_caravan_guard": {
@@ -2912,7 +2911,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2920,13 +2919,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T19:25:00",
-          "excerpt": "много, сам тарику тоже мертв. Двое Акацуки, одного я ликвидировал, слишком опасен для перевозки имя Какудзу. Второй Хидан, жив, вообще не понятно можно ли его убить. Его везут сюда голову и тело отдельно. Я могу его допросить с помощью риннегана, вытащить его ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.194"
         },
         {
           "at": "0010-04-25T11:25:20",
@@ -2941,6 +2933,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.029"
+        },
+        {
+          "at": "0010-04-25T11:58:00",
+          "excerpt": "*Мугами Шики:** — Также я рассмотрел остальных участников. Итачи Учиха, Кисамэ из Тумана, Дэйдара из Камня, Какудзу из Водопада, Сасори из Песка. Есть ещё существо по имени Дзэцу. Его тело разделено на чёрную и белую половины и окружено растительными створками",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.031"
         }
       ],
       "projections": [
@@ -9586,12 +9585,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.030",
+        "s16.text.031",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
         "s15.text.196",
-        "s16.text.019"
+        "s16.text.019",
+        "s16.text.030"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -19394,7 +19394,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 26,
+      "mention_count": 27,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19402,13 +19402,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:34:00",
-          "excerpt": "о. Даже участники Акацуки могут не знать подлинной природы своего руководителя. На протяжении всего воздействия Шизунэ наблюдает за чакровой активностью пленника. На этот раз опасного отделения сознания не происходит. **Шизунэ:** — Стабильно. Значительных откл",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.028"
         },
         {
           "at": "0010-04-25T11:37:00",
@@ -19423,11 +19416,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.030"
+        },
+        {
+          "at": "0010-04-25T11:58:00",
+          "excerpt": "створками. Шики подробно описывает их внешность, протекторы, характерные признаки и замеченное вооружение. Шизунэ записывает сведения на отдельные листы. Закончив, она пересчитывает их, затем зачем-то пересчитывает снова, хотя ни одного листа со стола не убира",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.030",
+          "seen": "s16.text.031",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19437,7 +19437,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.030"
+        "s16.text.031"
       ]
     },
     "signalshchik": {
@@ -20286,11 +20286,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "25.04 11:31: Джирайя узнал черты Яхико в образе Пэйна, но не объяснил изменения; просит узнать местонахождение тела и механизм ритуала."
+          "state": "25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стержни с управлением телом Пэйна, Цунадэ исключает одиночное проникновение и намерена подготовить разведку с эвакуацией."
         }
       ],
       "sources": [
-        "s16.text.027"
+        "s16.text.031"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -20448,7 +20448,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20456,13 +20456,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:31:00",
-          "excerpt": "изменено… стержни, глаза… и это выражение. Будто от человека оставили форму, а всё остальное подменили назначением. Цунадэ внимательно следит за ним, уже не как Хокагэ, а как за старым другом, у которого в один миг сошлись прошлое и настоящее. **Цунадэ:** — Ты",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.027"
         },
         {
           "at": "0010-04-25T11:34:00",
@@ -20477,11 +20470,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.030"
+        },
+        {
+          "at": "0010-04-25T11:58:00",
+          "excerpt": "Приказы передаются дистанционно. Найти местоположение Пэйна или его убежищ через Хидана мне не удалось. Цунадэ придвинула к себе карту Страны Дождя. **Мугами Шики:** — Что касается биджу, техника называется Гэнрю Кю Фудзин — печать девяти призрачных драконов. ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.030",
+          "seen": "s16.text.031",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20491,7 +20491,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.030"
+        "s16.text.031"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21296,5 +21296,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1410
+  "source_turns_indexed": 1411
 }
