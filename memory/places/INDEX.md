@@ -100,6 +100,7 @@
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
+- Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 3 ход(ов), s17–s17
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
 - Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 3 ход(ов), s15–s16
@@ -176,7 +177,6 @@
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
 - Амэгакурэ, под настилом промышленной пристани · `places/amegakure-pod-nastilom-promyshlennoy-pristani` · 1 ход(ов), s17–s17
-- Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 1 ход(ов), s17–s17
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
