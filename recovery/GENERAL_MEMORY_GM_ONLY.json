@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.108",
+  "cursor": "s16.text.109",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.109:0": {
+      "aliases": [
+        "canon:s16.text.109:0",
+        "s16.text.109: повторная прямая поправка игрока «Мастеру: опять потерял описания и реакции.» Описательная проза должна преобладать над диалогами; мимика, движения, интонации и наблю"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.109:0",
+      "kind": "canon",
+      "label": "s16.text.109: повторная прямая поправка игрока «Мастеру: опять потерял описания и реакции.» Описательная проза должна преобладать над диалогами; мимика, движения, интонации и наблю",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.109"
       ]
     },
     "captive_guard": {
@@ -2254,8 +2270,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json",
-        "s16.text.108"
+        "recovery/cast/hidan.json"
       ]
     },
     "hirano": {
@@ -2550,12 +2565,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.105",
+          "seen": "s16.text.109",
+          "state": "Остаётся возле монаха после гемостаза."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "recovery/HOT.json",
+        "s16.text.109"
       ]
     },
     "jiraiya": {
@@ -2961,8 +2982,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s16.text.108"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -3817,12 +3837,18 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.106",
+          "seen": "s16.text.109",
+          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
+        },
+        {
+          "role": "Тюнин Листа, отряд Асумы",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "recovery/HOT.json",
+        "s16.text.109"
       ]
     },
     "kurama": {
@@ -4280,14 +4306,10 @@
         {
           "seen": "s16.text.108",
           "wants": "Обеспечить безопасность проводящего опрос."
-        },
-        {
-          "wants": "Обеспечить безопасность проводящего опрос."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_inspector_aide_1_s16.json",
-        "recovery/HOT.json"
+        "recovery/cast/leaf_gate_inspector_aide_1_s16.json"
       ]
     },
     "leaf_gate_inspector_aide_2_s16": {
@@ -4305,27 +4327,22 @@
         {
           "seen": "s16.text.108",
           "wants": "Следить за возможным применением техники."
-        },
-        {
-          "wants": "Следить за возможным применением техники."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_inspector_aide_2_s16.json",
-        "recovery/HOT.json"
+        "recovery/cast/leaf_gate_inspector_aide_2_s16.json"
       ]
     },
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби",
-        "leaf_gate_special_inspector_s16"
+        "Незнакомый шиноби"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
       "kind": "npc",
       "label": "Незнакомый шиноби",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0001-07-07T21:51:00",
@@ -4333,13 +4350,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.123"
-        },
-        {
-          "at": "0010-05-03T11:53:00",
-          "excerpt": "незнакомца и подозвал одного из дежурных шиноби. Короткое распоряжение — и посыльный исчез среди домов. Незнакомый шиноби проводил его глазами. На мгновение напряглись мышцы его челюсти. Он повёл Шики в боковое помещение караульного здания. Внутри находились с",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.106"
         },
         {
           "at": "0010-05-03T11:54:00",
@@ -4354,21 +4364,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.108"
+        },
+        {
+          "at": "0010-05-03T11:56:00",
+          "excerpt": "гчение, быстро сменившееся раздражением. **Котэцу:** — А он вообще должен был состояться? Вышедший следом незнакомый шиноби даже не взглянул на него. Он пересёк улицу в сопровождении своих людей и вскоре растворился среди прохожих. Котэцу проводил троицу непри",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.109"
         }
       ],
       "projections": [
         {
           "seen": "s16.text.108",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
-        },
-        {
-          "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_special_inspector_s16.json",
-        "recovery/HOT.json",
-        "s16.text.108"
+        "recovery/cast/leaf_gate_special_inspector_s16.json"
       ]
     },
     "lee": {
@@ -8650,9 +8662,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.108",
         "s16.text.106",
-        "s16.text.107"
+        "s16.text.107",
+        "s16.text.108"
       ]
     },
     "place:3f1b9d40c196e66d": {
@@ -10323,6 +10335,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.109",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
@@ -21219,7 +21232,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 66,
+      "mention_count": 67,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21227,13 +21240,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:59:00",
-          "excerpt": "есть, насчёт реконструкции и дальнейшего дела с Акацуки буду ждать вестей, но не могу обещать явиться Цунадэ кивнула, принимая последнее условие без особого удовольствия. Джирайя поднял ладонь на прощание. *** <text color=\"secondary\" size=\"xs\">20:59</text> ###",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.066"
         },
         {
           "at": "0010-05-02T18:05:00",
@@ -21248,16 +21254,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.105"
+        },
+        {
+          "at": "0010-05-03T11:56:00",
+          "excerpt": "о так и не сделало его внешность привычной. Шиноби потёр переносицу. **Котэцу:** — Я отправил человека к госпоже Цунадэ. Доложу и сам после смены. Он помедлил, затем понизил голос: **Котэцу:** — Мугами-сан, кто-нибудь из них представился? **Ход Шики.** Шики вы",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.109"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.105",
+          "seen": "s16.text.109",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s16.text.109"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22083,5 +22097,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1481
+  "source_turns_indexed": 1482
 }
