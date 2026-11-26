@@ -1,13 +1,13 @@
-# Карта мира NPR · на ходе `s16.text.072`
+# Карта мира NPR · на ходе `s16.text.073`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (336) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (337) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (249)
-- Шиноби Тумана (Тумана) — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior` · в сцене
 - Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
+- Шиноби Тумана (Тумана) — Старший из двух проверяющих документы у причала Киригакуре;… · `npc/kiri_port_guard_senior`
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
 - Такэру — генин Конохи на втором этапе экзамена на тюнина, товарищ раненого Кэйдзи · `npc/takeru`
 - Джирайя —  · `npc/jiraiya`
@@ -264,7 +264,7 @@
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 - `jiraiya_rain_investigation` — 25.04 11:58: полный доклад Шики. Джирайя гипотетически связывает стер… · `threads/jiraiya_rain_investigation`
-- `kiri_bingo_negotiations` — Шики принял предложенные 27.04.1287 12:00 восточная гавань Огня и усл… · `threads/kiri_bingo_negotiations`
+- `kiri_bingo_negotiations` — Портовое управление подтвердило переговоры 27.04.1287 12:00 в восточн… · `threads/kiri_bingo_negotiations`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

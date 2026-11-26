@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.072",
+  "cursor": "s16.text.073",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3427,7 +3427,7 @@
       "id": "kiri_port_guard_senior",
       "kind": "npc",
       "label": "Шиноби Тумана",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0006-09-19T11:09:00",
@@ -3435,13 +3435,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.076"
-        },
-        {
-          "at": "0010-04-25T21:18:00",
-          "excerpt": "накомый голос корабельного офицера, которому две недели назад Шики передал устройство в восточной гавани. **Шиноби Тумана:** — Мугами Шики. Если слышишь меня, ответь. Мужчина говорил подчеркнуто официально, выдерживая небольшие промежутки между словами. **Шино",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.068"
         },
         {
           "at": "0010-04-25T21:19:00",
@@ -3456,26 +3449,30 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.070"
+        },
+        {
+          "at": "0010-04-26T17:40:00",
+          "excerpt": "ь дальше. *** Личная пластина связи вновь ожила. На этот раз голос офицера Киригакуре звучал спокойнее. **Шиноби Тумана:** — Мугами. Портовое управление подтвердило проведение переговоров. Делегацию возглавит Ао, доверенное лицо Пятой Мидзукагэ. Последовала па",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.073"
         }
       ],
       "projections": [
         {
           "seen": "s16.text.072",
           "state": "Снял оцепление с трапа и возобновил пропуск пассажиров."
-        },
-        {
-          "state": "Снял оцепление с трапа и возобновил пропуск пассажиров."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_port_guard_senior.json",
-        "recovery/HOT.json"
+        "recovery/cast/kiri_port_guard_senior.json"
       ]
     },
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3514,16 +3511,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.070",
-          "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
-        },
-        {
+          "seen": "s16.text.073",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
-        "recovery/HOT.json"
+        "s16.text.073"
       ]
     },
     "kiri_transfer_carrier": {
@@ -6873,6 +6867,25 @@
       "projections": [],
       "sources": [
         "s06.text.007"
+      ]
+    },
+    "place:18d30a982ede7125": {
+      "aliases": [
+        "place:18d30a982ede7125",
+        "Страна Огня, восточный торговый тракт, подход к побережью",
+        "Страна Огня",
+        "восточный торговый тракт",
+        "подход к побережью"
+      ],
+      "facts": [],
+      "id": "place:18d30a982ede7125",
+      "kind": "place",
+      "label": "Страна Огня, восточный торговый тракт, подход к побережью",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.073"
       ]
     },
     "place:19c3332a9acde396": {
@@ -14131,7 +14144,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.072",
         "s16.text.068",
         "s16.text.069",
         "s16.text.070"
@@ -20489,11 +20501,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Шики принял предложенные 27.04.1287 12:00 восточная гавань Огня и условия встречи. Ожидается подтверждение местной власти и состава делегации; розыск не отменён. Офицер передаст согласие Мидзукагэ."
+          "state": "Портовое управление подтвердило переговоры 27.04.1287 12:00 в восточной гавани. Ао возглавляет делегацию Мидзукагэ, представитель закрытого отдела допущен наблюдателем без самостоятельных полномочий. Шики уведомлён 26.04 в 17:40; все предложенные условия сохранены. Отмена K-0418 остаётся предметом переговоров."
         }
       ],
       "sources": [
-        "s16.text.070"
+        "s16.text.073"
       ]
     },
     "thread:player_preference_overlapping_plans": {
@@ -21501,5 +21513,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1448
+  "source_turns_indexed": 1449
 }
