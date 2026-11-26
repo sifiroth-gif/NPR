@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.136",
+  "cursor": "s16.text.137",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -807,23 +807,6 @@
         "recovery/GM_ONLY.json"
       ]
     },
-    "clock:yig_local_response": {
-      "aliases": [
-        "clock:yig local response",
-        "yig local response",
-        "yig_local_response"
-      ],
-      "facts": [],
-      "id": "clock:yig_local_response",
-      "kind": "clock",
-      "label": "yig local response",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.136"
-      ]
-    },
     "contract_1184_docs": {
       "aliases": [
         "contract 1184 docs"
@@ -1146,7 +1129,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1185,12 +1169,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.100",
+          "seen": "s16.text.137",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s16.text.137"
       ]
     },
     "fire_port_security_staff": {
@@ -2562,7 +2547,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 99,
+      "mention_count": 100,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2570,13 +2555,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T13:58:00",
-          "excerpt": "text> ### Конохагакуре. Кабинет Хокагэ **Мугами Шики:** — Нет, кроме этого разговора дел у меня нет Джирайя затянул ремень своей дорожной сумки. **Джирайя:** — Тогда завтра в семь утра у главных ворот. Если ничего не изменится, будем выходить оттуда. Цунадэ пр",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.121"
         },
         {
           "at": "0010-05-04T06:57:00",
@@ -2591,21 +2569,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.136"
+        },
+        {
+          "at": "0010-05-04T15:11:00",
+          "excerpt": "авку снаряжения под выцветшим полотняным навесом. **Мугами Шики:** — я пока пойду посмотрю себе котэ **Джирайя:** — Хорошо. Я закажу чай на двоих. В лавке пахло выделанной кожей, оружейным маслом и древесным углём. Вдоль стен висели ножны, защитные пластины и ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.137"
         }
       ],
       "projections": [
         {
           "seen": "s16.text.136",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
-        },
-        {
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.136"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -3821,8 +3801,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s16.text.136"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -15467,6 +15446,25 @@
         "s08.text.069"
       ]
     },
+    "place:c9e7d62d5d92c00c": {
+      "aliases": [
+        "place:c9e7d62d5d92c00c",
+        "Страна Огня, западные провинции, лавка снаряжения у чайного дома",
+        "Страна Огня",
+        "западные провинции",
+        "лавка снаряжения у чайного дома"
+      ],
+      "facts": [],
+      "id": "place:c9e7d62d5d92c00c",
+      "kind": "place",
+      "label": "Страна Огня, западные провинции, лавка снаряжения у чайного дома",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.137"
+      ]
+    },
     "place:ca571d2570238ac9": {
       "aliases": [
         "place:ca571d2570238ac9",
@@ -18743,6 +18741,47 @@
         "recovery/cast/river_shrine_elder_snake_s16.json"
       ]
     },
+    "road_armorer_s16": {
+      "aliases": [
+        "road armorer s16",
+        "Оружейник"
+      ],
+      "facts": [],
+      "id": "road_armorer_s16",
+      "kind": "npc",
+      "label": "Оружейник",
+      "mention_count": 2,
+      "mentions": [
+        {
+          "at": "0010-03-25T16:29:00",
+          "excerpt": "ms>204 600 рё</title> <caption>Из первоначальных 498 600 рё. 88 млн рё по договору № МД-091 находятся у брокера Минаги Дзэна. «Чёрный створ» уничтожен 8 марта.</caption> </box> Оружейник пересчитал деньги, закрыл ящик и уложил покупки в плотный дорожный свёрто",
+          "source": "archive/session-012-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s12.text.091"
+        },
+        {
+          "at": "0010-05-04T15:11:00",
+          "excerpt": "Внутренняя сторона руки относительно открыта. Металл пригоден для проведения чакры. За прилавком сидел пожилой оружейник с широкими, покрытыми мелкими ожогами пальцами. Заметив чёрные разветвлённые структуры на руках Шики, он отложил приготовленную для примерк",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.137"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s16.text.137",
+          "state": "Показывает три пары котэ; отложил перчатку при виде предплечий Шики."
+        },
+        {
+          "state": "Показывает три пары котэ; отложил перчатку при виде предплечий Шики."
+        }
+      ],
+      "sources": [
+        "recovery/cast/road_armorer_s16.json",
+        "recovery/HOT.json",
+        "s16.text.137"
+      ]
+    },
     "road_villager_fumi": {
       "aliases": [
         "road villager fumi",
@@ -20234,12 +20273,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.121",
+          "seen": "s16.text.137",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s16.text.137"
       ]
     },
     "signalshchik": {
@@ -22205,5 +22245,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1507
+  "source_turns_indexed": 1508
 }
