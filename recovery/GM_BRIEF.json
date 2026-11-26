@@ -67,23 +67,12 @@
    "kind": "fight",
    "text": "Бросок «Какудзу выпускает маску до смыкания зеркал»: полоса 3–5, по осям 4–5 (A +0:+1, B +0, C +0, D +1, E +0, F -1:+0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s15.text.173"
-  },
-  {
-   "kind": "review",
-   "since": "s15.text.186",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s15.text.189"
-  },
-  {
-   "kind": "read",
-   "text": "«Дежурный главных ворот Конохи» вернулся в сцену, а его страница `npc/fire_leaf_gate_duty` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/fire_leaf_gate_duty.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s15.text.189"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.189",
+  "cursor": "s15.text.190",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -91,9 +80,14 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:5aadc4b8c633fcbc"
+   "place:5aadc4b8c633fcbc",
+   "jiraiya",
+   "tsunade",
+   "leaf_shiki_agreement_copy",
+   "leaf_shiki_agreement_original",
+   "naruto_home_sketch_s15"
   ],
-  "focus_bytes": 439,
+  "focus_bytes": 2091,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -150,9 +144,9 @@
    ],
    "matched": [],
    "medical": {
-    "at": "0010-04-24T19:10:00",
+    "at": "0010-04-24T19:11:00",
     "chakra": {
-     "at": "0010-04-24T19:10:00",
+     "at": "0010-04-24T19:11:00",
      "last": {
       "spent": 3.75,
       "turn": "s15.text.183",
@@ -546,13 +540,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-24T19:10:00",
+  "at": "0010-04-24T19:11:00",
   "date": "Суббота, 24 апреля 1287 года",
-  "id": "s15.text.189",
+  "id": "s15.text.190",
   "place": "Конохагакуре, главные ворота",
-  "time": "19:10"
+  "time": "19:11"
  },
- "digest": "9716d593f591c51089eacb2c1ea3aa4d32a14cae8a6b4709369f0ad81af1ee83",
+ "digest": "0cec8c7cd73c9ed27f7c39dafa2ee79f91cd08defb59306ee5816433a2f58ba1",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -687,18 +681,18 @@
    "value": 600.0
   },
   "dice": [
-   10,
-   11,
-   10,
-   12,
-   12,
-   4,
+   6,
    13,
-   18,
-   15,
+   17,
+   16,
+   3,
+   19,
    1,
-   9,
-   2
+   8,
+   15,
+   18,
+   20,
+   16
   ],
   "injuries": {
    "hidan": [
@@ -832,6 +826,84 @@
     "kind": "place",
     "label": "Конохагакуре, главные ворота",
     "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "jiraiya",
+    "kind": "npc",
+    "label": "Джирайя",
+    "operational_cues": {
+     "source": "recovery/cast/jiraiya.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вечером 24.04 идёт по улице западного квартала Конохи возле горячих источников; Шики обнаружил его сенсорикой, контакта ещё нет."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "tsunade",
+    "kind": "npc",
+    "label": "Цунадэ",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "leaf_shiki_agreement_copy",
+    "kind": "item",
+    "label": "Соглашение Конохи о взаимном ненападении, экземпляр для Шики",
+    "operational_cues": {
+     "source": "s15.text.134",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "leaf_shiki_agreement_original",
+    "kind": "item",
+    "label": "Соглашение Конохи о взаимном ненападении, экземпляр резиденции",
+    "operational_cues": {
+     "source": "s15.text.134",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "naruto_home_sketch_s15",
+    "kind": "item",
+    "label": "Схема пути к дому Наруто",
+    "operational_cues": {
+     "source": "s15.text.136",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
+    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -840,7 +912,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 1
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -872,8 +944,8 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "ки двигался на пределе устойчивой скорости, которую позволяло поддерживать его изменившееся тело.\n\nЛес сливался в непрерывную череду стволов, солнечных просветов и глубоких теней. Природная сенсорика позволяла заранее различать препятствия и живых существ на пути. Останавливаться для накопления природной энергии не требовалось.\n\n***\n\n<text color=\"…",
-  "player": "Хорошо. Пойду я в коноху. #в коноху на максимальной скорости#",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:11</text>\n\nШики сосредоточился на сенсорном восприятии.\n\nЗа стенами Конохи различались сотни источников чакры. Вечерняя деревня ещё жила: шиноби возвращались с заданий, торговцы закрывали лавки, дети бежали по улицам к своим домам.\n\nЗнакомый источник обнаружился в западной части деревни, в…",
+  "player": "#сенсорика ищу джираю#",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [],
@@ -971,19 +1043,19 @@
  "present_npcs": {},
  "recent_turns": [
   {
-   "id": "s15.text.188",
-   "line": "Шики не знает, заметили ли жабы последствия слияния. Белая Змея предостерегла от недооценки наблюдательности, одобрила визит, упомянула Гамамару и попросила передать привет Фукасаку."
-  },
-  {
    "id": "s15.text.189",
    "line": "Шики попрощался с Белой Змеёй, вышел через западные гнёзда и на максимальной устойчивой скорости достиг Конохи к 19:10. Въезд разрешён после проверки. Асума ещё не вернулся. Предложенная встреча Джирайи 25.04 09:00."
+  },
+  {
+   "id": "s15.text.190",
+   "line": "Шики сосредоточил природную сенсорику, обнаружил знакомую чакру Джирайи в западном квартале возле горячих источников; тот движется по улице, активного сендзюцу не ощущается."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у главных ворот Конохи, допущен внутрь. Отряд Асумы на обратном пути.",
-  "pressure": "Шики может опередить доклад о Хидане; встречу с Джирайей надо подтвердить, способ тайного допроса ещё не согласован.",
-  "situation": "Шики завершил визит в Рьючидо, пешим путём через западные гнёзда вышел в Страну Огня и быстрым устойчивым перемещением достиг Конохи в 19:10. Дежурный проверил действующее разрешение и пропустил. Асума ещё не прибыл. Резиденция освещена; ранее предложенная Джирайей встреча 25.04 09:00 на прежней площадке, актуальность после просьбы Наруто перенести ещё не подтверждена."
+  "positions": "Шики у главных ворот; Джирайя в западном квартале возле горячих источников, различим сенсорикой.",
+  "pressure": "Джирайя найден, прямого контакта нет; доклад Цунадэ о Хидане ещё не сделан.",
+  "situation": "Шики у ворот Конохи сосредоточился на сенсорике, различил знакомую по вчерашней тренировке чакру Джирайи в западном квартале возле горячих источников. Джирайя перемещается по улице в сторону питейных заведений. Активного сендзюцу не ощущается. Шики ещё не пошёл к нему."
  },
  "shiki": {
   "body": "Постоянный режим дракона и устойчивый синтез Инь–Ян–природной энергии s15.text.131; единая сущность, холодная цельная кожа, чёрная кровь и корни, чешуя. Риннешаринган выключен.",
@@ -995,8 +1067,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "4f357a4fb5ef13e7eb00dca163d08644c572ec03",
-  "turn": "s15.text.189"
+  "sha": "f8d4646296f4a601313ed5aa0094c816f1931f63",
+  "turn": "s15.text.190"
  },
  "wiki": {
   "index": "memory/INDEX.md",

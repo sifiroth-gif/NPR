@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.189",
+  "cursor": "s15.text.190",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2529,11 +2529,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.157"
+          "seen": "s15.text.190",
+          "state": "Вечером 24.04 идёт по улице западного квартала Конохи возле горячих источников; Шики обнаружил его сенсорикой, контакта ещё нет."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "s15.text.190"
       ]
     },
     "jiro_caravan_guard": {
@@ -9923,9 +9925,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.189",
+        "s15.text.190",
         "s15.text.123",
-        "s15.text.124"
+        "s15.text.124",
+        "s15.text.189"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -20637,8 +20640,7 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин",
-        "white_snake_sage"
+        "Белая Змея / Хакудзя-сэннин"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -20654,8 +20656,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/white_snake_sage.json",
-        "s15.text.189"
+        "recovery/cast/white_snake_sage.json"
       ]
     },
     "willow_dispatch": {
@@ -21160,5 +21161,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1362
+  "source_turns_indexed": 1363
 }
