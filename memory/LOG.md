@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.051: Джирайя (`npc/jiraiya`)
+- s16.text.050: Джирайя (`npc/jiraiya`)
 - s16.text.049: Джирайя (`npc/jiraiya`), бой, поправки игрока: 2
 - s16.text.048: Джирайя (`npc/jiraiya`), Какаши Хатакэ (`npc/kakashi`)
 - s16.text.047: Какаши Хатакэ (`npc/kakashi`), Фукасаку (`npc/fukasaku`), Бансаи (`npc/fire_temple_bansai`)
@@ -58,5 +60,3 @@
 - s15.text.202: Гамамару (`npc/gamamaru`), Асума Сарутоби (`npc/asuma`), Шизунэ (`npc/shizune`)
 - s15.text.201: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`)
 - s15.text.200: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Изумо Камидзуки (`npc/izumo`)
-- s15.text.198: вещь `cash_1184`, вещь `shiki_finances`
-- s15.text.197: Коюки (`npc/western_nest_young_courier`)
