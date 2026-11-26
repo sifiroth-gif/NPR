@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.120",
+  "cursor": "s16.text.122",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -943,11 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.118"
+          "seen": "s16.text.122"
         }
       ],
       "sources": [
-        "recovery/cast/danzo.json"
+        "recovery/cast/danzo.json",
+        "recovery/HOT.json",
+        "s16.text.122"
       ]
     },
     "deidara": {
@@ -2567,7 +2569,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2575,13 +2577,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T12:36:00",
-          "excerpt": "нохагакуре. Кабинет Хокагэ **Мугами Шики:** — Полагаю, некоторые вопросы разумнее обсуждать наедине. Джирайя тихо хмыкнул, узнав собственные недавние слова Данзо, теперь обращённые против него самого. Старик не разделил его веселья. На несколько мгновений межд",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.118"
         },
         {
           "at": "0010-05-03T12:37:00",
@@ -2596,21 +2591,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.120"
+        },
+        {
+          "at": "0010-05-03T13:58:00",
+          "excerpt": "text> ### Конохагакуре. Кабинет Хокагэ **Мугами Шики:** — Нет, кроме этого разговора дел у меня нет Джирайя затянул ремень своей дорожной сумки. **Джирайя:** — Тогда завтра в семь утра у главных ворот. Если ничего не изменится, будем выходить оттуда. Цунадэ пр",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.121"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.120",
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
-        },
-        {
+          "seen": "s16.text.121",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.120"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -9983,7 +9980,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.120",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -10006,7 +10002,8 @@
         "s16.text.116",
         "s16.text.117",
         "s16.text.118",
-        "s16.text.119"
+        "s16.text.119",
+        "s16.text.120"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -11644,6 +11641,24 @@
       "projections": [],
       "sources": [
         "s04.text.063"
+      ]
+    },
+    "place:783ca83ff2be2afa": {
+      "aliases": [
+        "place:783ca83ff2be2afa",
+        "Конохагакуре, резиденция Хокагэ",
+        "Конохагакуре",
+        "резиденция Хокагэ"
+      ],
+      "facts": [],
+      "id": "place:783ca83ff2be2afa",
+      "kind": "place",
+      "label": "Конохагакуре, резиденция Хокагэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.121"
       ]
     },
     "place:789863bd5f678e3c": {
@@ -16475,6 +16490,25 @@
         "s09.text.042"
       ]
     },
+    "place:e1ce188f8dd44d7a": {
+      "aliases": [
+        "place:e1ce188f8dd44d7a",
+        "Конохагакуре, резиденция Хокагэ, малый зал совещаний",
+        "Конохагакуре",
+        "резиденция Хокагэ",
+        "малый зал совещаний"
+      ],
+      "facts": [],
+      "id": "place:e1ce188f8dd44d7a",
+      "kind": "place",
+      "label": "Конохагакуре, резиденция Хокагэ, малый зал совещаний",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.122"
+      ]
+    },
     "place:e1e0909c80a6f57f": {
       "aliases": [
         "place:e1e0909c80a6f57f",
@@ -20102,7 +20136,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20110,13 +20144,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T12:01:00",
-          "excerpt": "оре между чашками появились старые карты, списки пропавших шиноби и сообщения из приграничных поселений. Шизунэ собрала документы о Хидане и направилась к двери. Проходя мимо Шики, она сделала небольшой крюк, хотя пространства между ним и столом вполне хватало",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.032"
         },
         {
           "at": "0010-05-03T12:04:00",
@@ -20131,11 +20158,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.112"
+        },
+        {
+          "at": "0010-05-03T13:58:00",
+          "excerpt": "дора, на стенах неподвижно висели портреты прежних Хокагэ. Из открытых окон доносился отдалённый шум деревни. Шизунэ появилась с небольшой связкой ключей. Её тёмное кимоно негромко шелестело при ходьбе. **Шизунэ:** — Данзо-сама уже в малом зале совещаний. Он п",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.121"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.112",
+          "seen": "s16.text.121",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
@@ -21221,7 +21255,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 78,
+      "mention_count": 79,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21229,13 +21263,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T12:36:00",
-          "excerpt": "ечи я готов продолжить беседу. Он произнёс это с подчёркнутой учтивостью, совершенно лишённой дружелюбия. Цунадэ переводила взгляд с одного собеседника на другого. Её явно раздражало, что в собственном кабинете она оказалась свидетелем разговора, подлинный смы",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.118"
         },
         {
           "at": "0010-05-03T12:37:00",
@@ -21250,21 +21277,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.120"
+        },
+        {
+          "at": "0010-05-03T13:58:00",
+          "excerpt": "Джирайя:** — Тогда завтра в семь утра у главных ворот. Если ничего не изменится, будем выходить оттуда. Цунадэ проводила его взглядом. Когда дверь закрылась, она сняла с плеч зелёное хаори и устало потёрла шею. **Цунадэ:** — Шики, относительно Данзо. Я не стан",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.121"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.120",
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-        },
-        {
+          "seen": "s16.text.121",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s16.text.120"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22090,5 +22119,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1493
+  "source_turns_indexed": 1495
 }
