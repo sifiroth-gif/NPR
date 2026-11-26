@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.172",
+  "cursor": "s15.text.173",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T04:12:00",
-          "excerpt": "ам нужно спасти тут всех, кого можем, и быстро направиться туда. Асума задержал взгляд на протекторе. **Асума Сарутоби:** — Теперь понятно, откуда такие сведения. Шикамару сложил карту. Котэцу посмотрел на Асуму, ожидая пояснений, но тот уже повернулся к монах",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.166"
         },
         {
           "at": "0010-04-24T07:38:00",
@@ -425,11 +418,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
+        },
+        {
+          "at": "0010-04-24T07:38:28",
+          "excerpt": "ам Какудзу остался внутри вместе с чемоданом. Его отражение повторялось в десятках ледяных поверхностей. **Асума Сарутоби:** — Мугами! Слева от тебя! Какудзу резко поднял голову. **Какудзу:** — Мугами?.. Он внимательно всмотрелся в ледяные зеркала. **Какудзу:*",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.173"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.172"
+          "seen": "s15.text.173"
         }
       ],
       "sources": [
@@ -559,20 +559,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s15.text.172:0": {
+    "canon:s15.text.173:0": {
       "aliases": [
-        "canon:s15.text.172:0",
-        "Поправка игрока s15.text.172: Какудзу помешан на деньгах; его действия в бою и вне боя учитывают сохранение наживы и выгоду, как каноническую черту характера."
+        "canon:s15.text.173:0",
+        "Поправка игрока s15.text.173: учитывать активную награду Киригакуре за Шики 48 миллионов рё (s15.text.128); Какудзу знает ориентировку как торговец наградами, сопоставил после услы"
       ],
       "facts": [],
-      "id": "canon:s15.text.172:0",
+      "id": "canon:s15.text.173:0",
       "kind": "canon",
-      "label": "Поправка игрока s15.text.172: Какудзу помешан на деньгах; его действия в бою и вне боя учитывают сохранение наживы и выгоду, как каноническую черту характера.",
+      "label": "Поправка игрока s15.text.173: учитывать активную награду Киригакуре за Шики 48 миллионов рё (s15.text.128); Какудзу знает ориентировку как торговец наградами, сопоставил после услы",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.172"
+        "s15.text.173"
       ]
     },
     "captive_guard": {
@@ -2118,7 +2118,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2126,13 +2126,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:38:24",
-          "excerpt": "данием простирался ровный участок земли — достаточно пространства для одного стремительного шуншина. Хидан оставался справа от входа. Из глубины постройки донеслись тяжёлые шаги. **Какудзу:** — Хидан. Мы закончили. Дверь открылась. На пороге появился высокий ш",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.170"
         },
         {
           "at": "0010-04-24T07:38:25",
@@ -2147,12 +2140,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.172"
+        },
+        {
+          "at": "0010-04-24T07:38:28",
+          "excerpt": "ла чёрное существо развернуло маску в сторону Шики. Внутри его тела начала концентрироваться чакра. **Какудзу:** — Хидан, этого не трогай. За него платят больше, чем за монаха. **Хидан:** — Да пошёл ты со своими деньгами! Шикамару продолжал удерживать его тень",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.173"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.172",
+          "seen": "s15.text.173",
           "state": "Удерживается тенью Шикамару, коса в руках."
         },
         {
@@ -2879,7 +2879,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2887,13 +2887,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T07:38:24",
-          "excerpt": "емительного шуншина. Хидан оставался справа от входа. Из глубины постройки донеслись тяжёлые шаги. **Какудзу:** — Хидан. Мы закончили. Дверь открылась. На пороге появился высокий широкоплечий мужчина в чёрном плаще. Нижнюю часть его лица скрывала маска, на лбу",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.170"
         },
         {
           "at": "0010-04-24T07:38:25",
@@ -2908,23 +2901,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.172"
+        },
+        {
+          "at": "0010-04-24T07:38:28",
+          "excerpt": "Мастеру: я ещё и про то что голова Шики стоит 48 миллионов. По игре: #шуншин между Какудзу и хиданом, печати# Хётон ледяные заркала #заключить Какудзу в ловушку# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:28</text> Шики сорвался с места, ока",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.173"
         }
       ],
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.172",
-          "state": "Рана спины, слабость; вернул деньги, начинает раскрывать швы спины."
+          "seen": "s15.text.173",
+          "state": "Изолирован зеркалами с чемоданом, одна маска снаружи; заинтересован в награде за Шики."
         },
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "state": "Рана спины, слабость; вернул деньги, начинает раскрывать швы спины."
+          "state": "Изолирован зеркалами с чемоданом, одна маска снаружи; заинтересован в награде за Шики."
         }
       ],
       "sources": [
         "recovery/cast/kakuzu.json",
         "recovery/HOT.json",
-        "s15.text.172"
+        "s15.text.173"
       ]
     },
     "kankuro": {
@@ -10063,8 +10063,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.172",
-        "s15.text.171"
+        "s15.text.173",
+        "s15.text.171",
+        "s15.text.172"
       ]
     },
     "place:6031eb4576d13397": {
@@ -18725,7 +18726,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.172",
+          "seen": "s15.text.173",
           "state": "Поддерживает Кагэманэ на Хидане."
         },
         {
@@ -18734,8 +18735,7 @@
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s15.text.172"
+        "recovery/HOT.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21062,5 +21062,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1345
+  "source_turns_indexed": 1346
 }
