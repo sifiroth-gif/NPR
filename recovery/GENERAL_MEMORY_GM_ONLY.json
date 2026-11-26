@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.066",
+  "cursor": "s16.text.067",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,22 +505,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.066:0": {
-      "aliases": [
-        "canon:s16.text.066:0",
-        "s16.text.066: Игрок вновь указал на отсутствие исторического эха. Применять постоянное требование s13.text.099: события и последствия давних сессий (месяцы, годы), а не только неда"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.066:0",
-      "kind": "canon",
-      "label": "s16.text.066: Игрок вновь указал на отсутствие исторического эха. Применять постоянное требование s13.text.099: события и последствия давних сессий (месяцы, годы), а не только неда",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.066"
       ]
     },
     "captive_guard": {
@@ -2554,8 +2538,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "s16.text.066"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -3151,7 +3134,7 @@
       "id": "keiji",
       "kind": "npc",
       "label": "Кэйдзи",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0001-07-02T12:57:00",
@@ -3159,13 +3142,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.049"
-        },
-        {
-          "at": "0010-03-29T16:20:00",
-          "excerpt": "руно Сакуры повреждение руки, помощь оказана. Разошлись сегодня около полудня. Старший шиноби кивнул Кэйдзи. Тот дополнил донесение. **Кэйдзи:** — Береги себя, Шики. Надеюсь, в следующий раз мы встретимся не по службе. Трое шиноби скрылись между деревьями. ---",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.013"
         },
         {
           "at": "0010-03-29T16:21:00",
@@ -3180,6 +3156,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.066"
+        },
+        {
+          "at": "0010-04-25T20:59:45",
+          "excerpt": "Приветствую. Я помню и встречал Кэйдзи пару раз за это время. Много чего произошло, но сейчас это форма отшельника драконов ну и последствия одного неприятного контракта <text color=\"secondary\" size=\"xs\">Воскресе",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.067"
         }
       ],
       "projections": [
@@ -9956,11 +9939,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.066",
+        "s16.text.067",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
-        "s15.text.190"
+        "s15.text.190",
+        "s16.text.066"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -20221,7 +20205,7 @@
       "id": "takeru",
       "kind": "npc",
       "label": "Такэру",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0001-07-02T12:57:00",
@@ -20229,13 +20213,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.049"
-        },
-        {
-          "at": "0006-09-26T03:36:00",
-          "excerpt": "оверили показания твоих задержанных. Оба живы. Медицинский осмотр прошли. Сведения о человеке, называвшем себя Сиба Такэру, пока не подтверждены. Она сделала паузу. На фоне послышался чей-то окрик. — В восемь сорок наши люди проверяли западный служебный корпус",
-          "source": "archive/session-002-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s02.text.145"
         },
         {
           "at": "0006-10-03T06:49:00",
@@ -20250,17 +20227,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.066"
+        },
+        {
+          "at": "0010-04-25T20:59:45",
+          "excerpt": "с это форма отшельника драконов ну и последствия одного неприятного контракта При слове «неприятного» Такэру невольно усмехнулся, но улыбка быстро исчезла. Он перевёл взгляд на дорогу за воротами, словно там было проще найти подходящие слова. **Такэру:** — Ну ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.066"
+          "seen": "s16.text.067"
         }
       ],
       "sources": [
         "recovery/cast/takeru.json",
         "recovery/HOT.json",
-        "s16.text.066"
+        "s16.text.067"
       ]
     },
     "tamura_reika": {
@@ -20657,8 +20641,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s16.text.066"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21470,5 +21453,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1444
+  "source_turns_indexed": 1445
 }
