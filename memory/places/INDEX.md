@@ -133,6 +133,7 @@
 - Кусагакуре, старый западный шлюз · `places/kusagakure-staryy-zapadnyy-shlyuz` · 2 ход(ов), s11–s11
 - Кусагакуре, Восточный жилой квартал · `places/kusagakure-vostochnyy-zhiloy-kvartal` · 2 ход(ов), s03–s03
 - Кусагакуре, западное медицинское отделение · `places/kusagakure-zapadnoe-meditsinskoe-otdelenie` · 2 ход(ов), s11–s11
+- Мьёбоку, сад у дома Фукасаку и Симы · `places/meboku-sad-u-doma-fukasaku-i-simy` · 2 ход(ов), s16–s16
 - Рьючидо, Галерея переменчивого камня · `places/ryuchido-galereya-peremenchivogo-kamnya` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата · `places/ryuchido-vneshnie-vrata` · 2 ход(ов), s10–s10
 - Рьючидо, внешние врата Пещеры Драконьей Земли · `places/ryuchido-vneshnie-vrata-peshchery-drakoney-zemli` · 2 ход(ов), s10–s10
@@ -235,7 +236,6 @@
 - Личная тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/lichnaya-taynaya-laboratoriya-shiki-lesistye-kholmy-severo-z` · 1 ход(ов), s04–s04
 - Мьёбоку, долина у тропы к Великому Жабьему Мудрецу · `places/meboku-dolina-u-tropy-k-velikomu-zhabemu-mudretsu` · 1 ход(ов), s15–s15
 - Мьёбоку, дом Фукасаку и Симы · `places/meboku-dom-fukasaku-i-simy` · 1 ход(ов), s16–s16
-- Мьёбоку, сад у дома Фукасаку и Симы · `places/meboku-sad-u-doma-fukasaku-i-simy` · 1 ход(ов), s16–s16
 - Мьёбоку, у дома Фукасаку и Симы · `places/meboku-u-doma-fukasaku-i-simy` · 1 ход(ов), s16–s16
 - Медицинский читальный зал · `places/meditsinskiy-chitalnyy-zal` · 1 ход(ов), s01–s01
 - Медицинский тренировочный зал · `places/meditsinskiy-trenirovochnyy-zal` · 1 ход(ов), s01–s01

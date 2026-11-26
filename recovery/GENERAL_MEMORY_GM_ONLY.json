@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.010",
+  "cursor": "s16.text.011",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 41,
+      "mention_count": 42,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:53:00",
-          "excerpt": "ля 1287 года · 09:53</text> ### Мьёбоку. Тропа к дому отшельников **Мугами Шики:** — Хорошо. Шики и Джирайя догоняют пожилых супругов. **Мугами Шики:** — Фукасаку-сан, а что вы знаете о людях до разделения природы чакры? Я про то, что сейчас называется Инь и Я",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.008"
         },
         {
           "at": "0010-04-25T09:56:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
+        },
+        {
+          "at": "0010-04-25T10:30:00",
+          "excerpt": "10:30</text> ### Мьёбоку. Сад отшельников **Мугами Шики:** — Значит, вы учили обладателя Риннегана. Джирайя-сан, в таком случае мне нужна ваша помощь. А про организацию расскажу, что знаю, но я мало что знаю. Я не выслеживал их. Есть причина полагать, что они ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.011"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.010",
+          "seen": "s16.text.011",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.010"
+        "s16.text.011"
       ]
     },
     "jiro_caravan_guard": {
@@ -8920,6 +8920,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.011",
         "s16.text.010"
       ]
     },
@@ -18845,12 +18846,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.188",
+          "seen": "s16.text.011",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s16.text.011"
       ]
     },
     "shiki_arm_wraps": {
@@ -21174,5 +21176,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1390
+  "source_turns_indexed": 1391
 }
