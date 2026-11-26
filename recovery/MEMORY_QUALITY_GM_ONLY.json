@@ -4,15 +4,17 @@
     "jiraiya",
     "shizune",
     "tsunade",
-    "place:6946c8d293de1f08"
+    "place:6946c8d293de1f08",
+    "kurama"
   ],
-  "cursor": "s16.text.026",
+  "cursor": "s16.text.028",
   "focus_byte_limit": 6600,
-  "focus_bytes": 2055,
-  "index_entities": 865,
-  "index_source_records": 1406,
-  "indexed_cursor": "s16.text.026",
+  "focus_bytes": 2631,
+  "index_entities": 866,
+  "index_source_records": 1408,
+  "indexed_cursor": "s16.text.028",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 46,
     "npc": 204,
@@ -26,6 +28,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s16.text.028:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -508,9 +516,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 80,
-  "self_query_at_5": 80,
-  "self_query_count": 80,
+  "self_query_at_1": 81,
+  "self_query_at_5": 81,
+  "self_query_count": 81,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

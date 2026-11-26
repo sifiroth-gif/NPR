@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.028: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), бой, поправки игрока: 1
+- s16.text.027: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
 - s16.text.026: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
 - s16.text.025: Хидан (`npc/hidan`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), бой, поправки игрока: 1
 - s16.text.024: Хидан (`npc/hidan`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), линия `jiraiya_rain_investigation`
@@ -58,5 +60,3 @@
 - s15.text.178: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.177: Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.176: Какудзу (`npc/kakuzu`), Асума Сарутоби (`npc/asuma`), Хидан (`npc/hidan`), линия `shiki_save_asuma`, бой
-- s15.text.175: Хидан (`npc/hidan`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Какудзу (`npc/kakuzu`), бой
-- s15.text.174: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Шикамару Нара (`npc/shikamaru`), бой
