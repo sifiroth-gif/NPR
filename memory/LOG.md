@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.174: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Шикамару Нара (`npc/shikamaru`), бой
 - s15.text.173: Какудзу (`npc/kakuzu`), бой, поправки игрока: 1
 - s15.text.172: Какудзу (`npc/kakuzu`), Шикамару Нара (`npc/shikamaru`), бой, поправки игрока: 1
 - s15.text.171: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Шикамару Нара (`npc/shikamaru`), бой
@@ -61,4 +62,3 @@
 - s15.text.117: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Кадзунэ (`npc/fire_road_jonin`), поправки игрока: 1
 - s15.text.116: Старший пограничник Конохи (`npc/fire_west_border_senior`), Рёэн (`npc/fire_temple_travel_monk`), Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
 - s15.text.115: seydzi (`npc/seydzi`), Мугами Нао (`npc/nao`), Старший пограничник Конохи (`npc/fire_west_border_senior`), вещь `fire_temple_guest_note_s15`, поправки игрока: 1
-- s15.text.114: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/dzyun`), Коюки (`npc/western_nest_young_courier`), вещь `fire_temple_guest_note_s15`
