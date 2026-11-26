@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.140: Путник из Дождя (`npc/rain_drain_worker_s16`), Джирайя (`npc/jiraiya`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), вещь `cash_1184`, вещь `shiki_finances`, вещь `shiki_light_kote_s16`, план сюжета
 - s16.text.139: Оружейник (`npc/road_armorer_s16`), Джирайя (`npc/jiraiya`), план сюжета
 - s16.text.138: Оружейник (`npc/road_armorer_s16`), Изумо Камидзуки (`npc/izumo`), Кадзунэ (`npc/fire_road_jonin`)
 - s16.text.137: Оружейник (`npc/road_armorer_s16`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`), план сюжета
@@ -61,4 +62,3 @@
 - s16.text.083: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), поправки игрока: 1
 - s16.text.082: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Котэцу Хаганэ (`npc/kotetsu`), Хидан (`npc/hidan`), поправки игрока: 1
 - s16.text.081: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Кадзунэ (`npc/fire_road_jonin`), поправки игрока: 1
-- s16.text.080: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Коюки (`npc/western_nest_young_courier`)

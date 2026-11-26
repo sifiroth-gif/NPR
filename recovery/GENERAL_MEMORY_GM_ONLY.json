@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.139",
+  "cursor": "s16.text.140",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -617,11 +617,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.096",
-          "turn": "s16.text.135"
+          "turn": "s16.text.140"
         }
       ],
       "sources": [
-        "s16.text.135"
+        "s16.text.140"
       ]
     },
     "chelovek_v_maske": {
@@ -2545,7 +2545,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 101,
+      "mention_count": 102,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2553,13 +2553,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:10:00",
-          "excerpt": "орога **Мугами Шики:** — Пойдемте, а по дороге я буду тренироваться поэтому иногда буду пропадать. **Джирайя:** — Предупредил бы ты меня так лет двадцать назад. Я бы решил, что ученик собирается сбежать с тренировки. Саннин усмехнулся и первым ступил на лесную",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.136"
         },
         {
           "at": "0010-05-04T15:11:00",
@@ -2574,11 +2567,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.139"
+        },
+        {
+          "at": "0010-05-04T15:25:00",
+          "excerpt": "гкие вставки почти не сопротивлялись движению. **Мугами Шики:** — спасибо Оружейник молча поклонился. Джирайя окинул руки Шики коротким взглядом. **Джирайя:** — Так будет проще путешествовать. В чайной их ожидал мужчина с перевязанной рукой. Перед ним стояла н",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.140"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.139",
+          "seen": "s16.text.140",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2588,7 +2588,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.139"
+        "s16.text.140"
       ]
     },
     "jiro_caravan_guard": {
@@ -13809,6 +13809,25 @@
         "s01.text.044"
       ]
     },
+    "place:a72a4d201b91eb95": {
+      "aliases": [
+        "place:a72a4d201b91eb95",
+        "Страна Огня, западные провинции, придорожная чайная",
+        "Страна Огня",
+        "западные провинции",
+        "придорожная чайная"
+      ],
+      "facts": [],
+      "id": "place:a72a4d201b91eb95",
+      "kind": "place",
+      "label": "Страна Огня, западные провинции, придорожная чайная",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.140"
+      ]
+    },
     "place:a741cc46f35aab33": {
       "aliases": [
         "place:a741cc46f35aab33",
@@ -15465,9 +15484,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.139",
         "s16.text.137",
-        "s16.text.138"
+        "s16.text.138",
+        "s16.text.139"
       ]
     },
     "place:ca571d2570238ac9": {
@@ -18396,6 +18415,32 @@
         "recovery/cast/quay_wire_operator.json"
       ]
     },
+    "rain_drain_worker_s16": {
+      "aliases": [
+        "rain drain worker s16",
+        "Путник из Дождя"
+      ],
+      "facts": [],
+      "id": "rain_drain_worker_s16",
+      "kind": "npc",
+      "label": "Путник из Дождя",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s16.text.140",
+          "state": "Показывает собственный план, сообщает свидетельство; держит бумагу при себе."
+        },
+        {
+          "state": "Показывает собственный план, сообщает свидетельство; держит бумагу при себе."
+        }
+      ],
+      "sources": [
+        "recovery/cast/rain_drain_worker_s16.json",
+        "recovery/HOT.json",
+        "s16.text.140"
+      ]
+    },
     "razvedchik_zvuka": {
       "aliases": [
         "razvedchik zvuka",
@@ -18707,7 +18752,8 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок"
+        "Тёмная змея у кладок",
+        "river_shrine_dark_snake_s16"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -18717,12 +18763,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.101",
+          "seen": "s16.text.140",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_dark_snake_s16.json"
+        "recovery/cast/river_shrine_dark_snake_s16.json",
+        "s16.text.140"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -18749,14 +18796,13 @@
     "road_armorer_s16": {
       "aliases": [
         "road armorer s16",
-        "Оружейник",
-        "road_armorer_s16"
+        "Оружейник"
       ],
       "facts": [],
       "id": "road_armorer_s16",
       "kind": "npc",
       "label": "Оружейник",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-03-25T16:29:00",
@@ -18764,13 +18810,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.091"
-        },
-        {
-          "at": "0010-05-04T15:11:00",
-          "excerpt": "Внутренняя сторона руки относительно открыта. Металл пригоден для проведения чакры. За прилавком сидел пожилой оружейник с широкими, покрытыми мелкими ожогами пальцами. Заметив чёрные разветвлённые структуры на руках Шики, он отложил приготовленную для примерк",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.137"
         },
         {
           "at": "0010-05-04T15:12:00",
@@ -18785,21 +18824,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.139"
+        },
+        {
+          "at": "0010-05-04T15:25:00",
+          "excerpt": "ми. При сгибании запястья мягкие вставки почти не сопротивлялись движению. **Мугами Шики:** — спасибо Оружейник молча поклонился. Джирайя окинул руки Шики коротким взглядом. **Джирайя:** — Так будет проще путешествовать. В чайной их ожидал мужчина с перевязанн",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.140"
         }
       ],
       "projections": [
         {
           "seen": "s16.text.139",
           "state": "Подогнал пару мягких котэ с полностью открытыми пальцами, ожидает оплату 3600 рё."
-        },
-        {
-          "state": "Подогнал пару мягких котэ с полностью открытыми пальцами, ожидает оплату 3600 рё."
         }
       ],
       "sources": [
-        "recovery/cast/road_armorer_s16.json",
-        "recovery/HOT.json",
-        "s16.text.139"
+        "recovery/cast/road_armorer_s16.json"
       ]
     },
     "road_villager_fumi": {
@@ -19852,11 +19893,11 @@
         {
           "holder": "shiki",
           "since": "s09.text.068",
-          "turn": "s16.text.135"
+          "turn": "s16.text.140"
         }
       ],
       "sources": [
-        "s16.text.135"
+        "s16.text.140"
       ]
     },
     "shiki_hair_markers": {
@@ -19878,6 +19919,27 @@
       ],
       "sources": [
         "s12.text.055"
+      ]
+    },
+    "shiki_light_kote_s16": {
+      "aliases": [
+        "shiki light kote s16",
+        "Лёгкие чёрные кожаные котэ"
+      ],
+      "facts": [],
+      "id": "shiki_light_kote_s16",
+      "kind": "item",
+      "label": "Лёгкие чёрные кожаные котэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s16.text.140"
+        }
+      ],
+      "sources": [
+        "s16.text.140"
       ]
     },
     "shiki_medical_kit": {
@@ -21984,7 +22046,7 @@
     },
     {
       "from": "shiki_finances",
-      "source": "s16.text.135",
+      "source": "s16.text.140",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -22005,7 +22067,7 @@
     },
     {
       "from": "cash_1184",
-      "source": "s16.text.135",
+      "source": "s16.text.140",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -22261,8 +22323,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "shiki_light_kote_s16",
+      "source": "s16.text.140",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1510
+  "source_turns_indexed": 1511
 }
