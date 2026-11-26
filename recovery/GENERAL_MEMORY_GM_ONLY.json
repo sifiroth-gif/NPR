@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.059",
+  "cursor": "s16.text.060",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.060:0": {
+      "aliases": [
+        "canon:s16.text.060:0",
+        "s16.text.060: Игрок предложил драматическую линию Данзо: его политическое мировоззрение и стремление к контролю несовместимы с независимостью Шики. Развивать через автономные интер"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.060:0",
+      "kind": "canon",
+      "label": "s16.text.060: Игрок предложил драматическую линию Данзо: его политическое мировоззрение и стремление к контролю несовместимы с независимостью Шики. Развивать через автономные интер",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.060"
       ]
     },
     "captive_guard": {
@@ -2500,7 +2516,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 77,
+      "mention_count": 78,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2524,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:29:00",
-          "excerpt": "м великим деревням следует направить официальные уведомления. Она достала из ящика стола чистый лист. **Джирайя:** — Особенно Облаку. У них два дзинтюрики. Правда, Райкагэ вряд ли захочет делиться сведениями об их местонахождении. **Цунадэ:** — Нам и не нужно ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.056"
         },
         {
           "at": "0010-04-25T20:36:00",
@@ -2529,11 +2538,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.059"
+        },
+        {
+          "at": "0010-04-25T20:40:00",
+          "excerpt": ":** — Ценю, что ты не пытаешься обойти этот вопрос. Последние слова прозвучали несколько холоднее первых. Джирайя переставил кресло и тяжело опустился в него, вытянув ноги. При разговоре о Хирайшине он заметно оживился. **Джирайя:** — Знаешь, Цунадэ, Минато то",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.060"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.059",
+          "seen": "s16.text.060",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2559,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.059"
+        "s16.text.060"
       ]
     },
     "jiro_caravan_guard": {
@@ -3669,7 +3685,7 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.059",
+          "seen": "s16.text.060",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         },
         {
@@ -10777,10 +10793,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.059",
+        "s16.text.060",
         "s16.text.055",
         "s16.text.056",
-        "s16.text.058"
+        "s16.text.058",
+        "s16.text.059"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20554,7 +20571,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 57,
+      "mention_count": 58,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20562,13 +20579,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:29:00",
-          "excerpt": "Цунадэ-сама я не сильно слежу за политикой, но думаю стоит отправить предупреждения великим деревням об охоте на биджу <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.056"
         },
         {
           "at": "0010-04-25T20:36:00",
@@ -20583,11 +20593,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.059"
+        },
+        {
+          "at": "0010-04-25T20:40:00",
+          "excerpt": "ми Шики:** — Я не смогу помочь с реконструкцией без освоения. Этот риск вам нужно учитывать Уголок рта Цунадэ едва заметно дрогнул. Она опустила руки на стол и несколько раз постучала ногтем по деревянной столешнице. В открытости Шики было что-то обезоруживающ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.060"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.059",
+          "seen": "s16.text.060",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20597,7 +20614,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.059"
+        "s16.text.060"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21409,5 +21426,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1437
+  "source_turns_indexed": 1438
 }
