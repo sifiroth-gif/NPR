@@ -57,7 +57,41 @@ def _view(hot):
     return hot.get("body") or {}
 
 
+def mode(hot, who):
+    """Ordinary haemodynamics, terminal death, or explicitly exceptional physiology."""
+    return (_view(hot).get(who) or {}).get("mode", "ordinary")
+
+
+def set_status(hot, who, item, turn_id, at):
+    """Source-attributed physiological state; never infer death from a loss roll."""
+    status = item["mode"]
+    if status == "ordinary":
+        record = _state(hot).get(who)
+        if record and record.get("mode") in ("dead", "exceptional"):
+            record.pop("mode", None)
+            record.pop("status_source", None)
+            record.pop("status_note", None)
+            record["at"] = at
+        return
+    record = _state(hot).setdefault(who, {})
+    for key in ("loss", "stage", "last", "restored"):
+        record.pop(key, None)
+    record.update({"mode": status, "at": at, "status_source": item.get("source") or turn_id,
+                   "status_note": item["reason"]})
+    if status == "dead":
+        # Preserve wounds as history; dead tissue is not an active patient.
+        for wound in (hot.get("injuries") or {}).get(who, []):
+            if wound.get("bleed"):
+                wound["bleed"] = False
+                wound["closed_by_death"] = record["status_source"]
+    fresh = _state(hot).get("fresh")
+    if isinstance(fresh, dict):
+        fresh["rows"] = [row for row in fresh.get("rows", []) if row.get("who") != who]
+
+
 def stage(hot, who):
+    if mode(hot, who) != "ordinary":
+        return 0
     return int((_view(hot).get(who) or {}).get("loss") or 0)
 
 
@@ -151,6 +185,16 @@ def heal(hot, item, turn_id, at=None):
 
 def check(hot, turn, delta):
     """После хода: проверки состояния всех, у кого идёт кровь; спад ступени у тех, у кого не идёт."""
+    # Explicit status also applies in a sourced out-of-character correction.
+    for who, item in (delta.get("body_status") or {}).items():
+        set_status(hot, who, item, turn["id"], turn["at"])
+    # A recorded lethal combat outcome must stop ordinary blood-loss rolls.
+    for field in ("foes", "foe_state"):
+        for who, item in ((delta.get("fight") or {}).get(field) or {}).items():
+            if isinstance(item, dict) and item.get("status") in ("dead", "killed", "мёртв", "мертв", "убит"):
+                if mode(hot, who) != "dead":
+                    set_status(hot, who, {"mode": "dead", "reason": "Подтверждённый смертельный исход боя"},
+                               turn["id"], turn["at"])
     if turn.get("kind") in ("ooc", "technical", "void"):
         return []
     now = _parse(turn.get("at"))
@@ -166,6 +210,8 @@ def check(hot, turn, delta):
             if who != "fresh" and isinstance(record, dict) and record.get("loss"):
                 patients.setdefault(who, [])
     for who, wounds in patients.items():
+        if mode(hot, who) != "ordinary":
+            continue
         open_ = [w for w in wounds if not w.get("healed") and w.get("bleed")]
         record = state.get(who)
         if not open_:
@@ -227,6 +273,8 @@ def must(hot):
     rows = sorted(fresh.get("rows") or [], key=lambda r: r["who"] != "shiki")
     parts = []
     for row in rows:
+        if mode(hot, row["who"]) != "ordinary":
+            continue
         if row["after"] == row["before"] and row["after"] < 2:
             continue      # держится на лёгкой ступени — без пункта, видно в GM_BRIEF.fight.body
         who = "Шики" if row["who"] == "shiki" else will._name(hot, row["who"])
@@ -245,5 +293,5 @@ def must(hot):
 
 
 def brief(hot):
-    return {who: {k: v for k, v in record.items() if k in ("loss", "stage", "last")}
+    return {who: {k: v for k, v in record.items() if k in ("loss", "stage", "last", "mode", "status_source", "status_note")}
             for who, record in _view(hot).items() if who != "fresh" and isinstance(record, dict)}
