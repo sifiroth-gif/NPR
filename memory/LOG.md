@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.091: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
+- s15.text.090: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`), Кирисава Сэйна (`npc/seina`)
 - s15.text.089: Мугами Акихиро (`npc/akihiro`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.088: Мугами Акихиро (`npc/akihiro`), Мугами Нао (`npc/nao`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.087: Кирисава Сэйна (`npc/seina`), Мидзухара Аки (`npc/aki`), Мугами Нао (`npc/nao`)
@@ -60,5 +62,3 @@
 - s15.text.034: Саске Учиха (`npc/sasuke`)
 - s15.text.033: Саске Учиха (`npc/sasuke`)
 - s15.text.032: Саске Учиха (`npc/sasuke`), бой
-- s15.text.031: Саске Учиха (`npc/sasuke`), бой, поправки игрока: 1
-- s15.text.030: Саске Учиха (`npc/sasuke`), бой, поправки игрока: 1
