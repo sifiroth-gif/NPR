@@ -175,6 +175,7 @@
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
+- Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 1 ход(ов), s17–s17
 - Каменный тракт северо-восточнее Сунагакуре, Страна Ветра · `places/kamennyy-trakt-severo-vostochnee-sunagakure-strana-vetra` · 1 ход(ов), s11–s11
 - Коноха, Западный тренировочный полигон · `places/konokha-zapadnyy-trenirovochnyy-poligon` · 1 ход(ов), s02–s02
 - Конохагакуре, дом Наруто · `places/konokhagakure-dom-naruto` · 1 ход(ов), s15–s15

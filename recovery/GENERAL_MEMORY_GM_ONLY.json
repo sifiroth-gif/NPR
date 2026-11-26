@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.002",
+  "cursor": "s17.text.003",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 104,
+      "mention_count": 105,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:25:00",
-          "excerpt": "гкие вставки почти не сопротивлялись движению. **Мугами Шики:** — спасибо Оружейник молча поклонился. Джирайя окинул руки Шики коротким взглядом. **Джирайя:** — Так будет проще путешествовать. В чайной их ожидал мужчина с перевязанной рукой. Перед ним стояла н",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.140"
         },
         {
           "at": "0010-05-04T15:27:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.002"
+        },
+        {
+          "at": "0010-05-04T17:50:00",
+          "excerpt": "м лесам, глубоким оврагам и зарослям папоротника. Между корнями деревьев пробивались холодные ручьи. Джирайя шёл непривычно молчаливо. Лишь однажды он остановился, чтобы убрать с дороги небольшую змею, гревшуюся на плоском камне. К вечеру впереди показался дер",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.003"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.002",
+          "seen": "s17.text.003",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2567,7 +2567,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.002"
+        "s17.text.003"
       ]
     },
     "jiro_caravan_guard": {
@@ -10663,6 +10663,24 @@
         "s06.text.025"
       ]
     },
+    "place:666a5520f4721a7e": {
+      "aliases": [
+        "place:666a5520f4721a7e",
+        "Граница Страны Огня и Страны Рек, у деревянного моста",
+        "Граница Страны Огня и Страны Рек",
+        "у деревянного моста"
+      ],
+      "facts": [],
+      "id": "place:666a5520f4721a7e",
+      "kind": "place",
+      "label": "Граница Страны Огня и Страны Рек, у деревянного моста",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.003"
+      ]
+    },
     "place:667b37d6bc3480ba": {
       "aliases": [
         "place:667b37d6bc3480ba",
@@ -13740,9 +13758,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.002",
         "s16.text.140",
-        "s17.text.001"
+        "s17.text.001",
+        "s17.text.002"
       ]
     },
     "place:a741cc46f35aab33": {
@@ -18356,8 +18374,7 @@
     "rain_drain_worker_s16": {
       "aliases": [
         "rain drain worker s16",
-        "Путник из Дождя",
-        "rain_drain_worker_s16"
+        "Путник из Дождя"
       ],
       "facts": [],
       "id": "rain_drain_worker_s16",
@@ -18387,8 +18404,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/rain_drain_worker_s16.json",
-        "s17.text.002"
+        "recovery/cast/rain_drain_worker_s16.json"
       ]
     },
     "razvedchik_zvuka": {
@@ -22218,5 +22234,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1513
+  "source_turns_indexed": 1514
 }
