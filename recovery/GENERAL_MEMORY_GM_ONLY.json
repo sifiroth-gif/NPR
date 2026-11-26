@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.194",
+  "cursor": "s15.text.195",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1307,7 +1307,8 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ"
+        "Кадзунэ",
+        "fire_road_jonin"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1346,11 +1347,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.161"
+          "seen": "s15.text.195"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json"
+        "recovery/cast/fire_road_jonin.json",
+        "s15.text.195"
       ]
     },
     "fire_road_mayu": {
@@ -9624,8 +9626,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.194",
-        "s15.text.193"
+        "s15.text.195",
+        "s15.text.193",
+        "s15.text.194"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -19274,7 +19277,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19282,13 +19285,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-23T14:49:00",
-          "excerpt": "му передать, только я не знаю, где он живёт. **Цунадэ:** — Наруто? Да, он в Конохе. Она посмотрела на Шизунэ. **Цунадэ:** — У него сегодня есть задания? **Шизунэ:** — Насколько я помню, нет. Утром он тренировался. Цунадэ достала лист бумаги и быстро начертила ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.136"
         },
         {
           "at": "0010-04-24T19:23:00",
@@ -19303,11 +19299,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.194"
+        },
+        {
+          "at": "0010-04-24T19:26:00",
+          "excerpt": "росы, но я достаточно осторожен, чтобы не изменить его память. Если что-то пойдёт не так, я прекращу. Шизунэ опустила кисть на край чернильницы. **Шизунэ:** — Цунадэ-сама, позвольте мне присутствовать при допросе. Если его состояние начнёт меняться, нам потреб",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.195"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.194",
+          "seen": "s15.text.195",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19317,7 +19320,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s15.text.194"
+        "s15.text.195"
       ]
     },
     "signalshchik": {
@@ -20307,7 +20310,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20315,13 +20318,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-24T19:15:00",
-          "excerpt": "о менее почтительны. Он проводил взглядом прохожих и уже серьёзнее добавил: **Джирайя:** — Не задерживайся. Цунадэ в последние дни почти не покидает резиденцию. Шики сообщил Джирайе о гибели друга Асумы и разговоре с Белой Змеёй; подтвердил намерение посетить ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.192"
         },
         {
           "at": "0010-04-24T19:23:00",
@@ -20336,11 +20332,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.194"
+        },
+        {
+          "at": "0010-04-24T19:26:00",
+          "excerpt": "мять. Если что-то пойдёт не так, я прекращу. Шизунэ опустила кисть на край чернильницы. **Шизунэ:** — Цунадэ-сама, позвольте мне присутствовать при допросе. Если его состояние начнёт меняться, нам потребуется независимое медицинское наблюдение. Цунадэ задумчив",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.195"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.194",
+          "seen": "s15.text.195",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20350,7 +20353,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s15.text.194"
+        "s15.text.195"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21211,5 +21214,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1367
+  "source_turns_indexed": 1368
 }
