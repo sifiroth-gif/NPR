@@ -14,7 +14,7 @@ ENGINE = Path(__file__).resolve().parents[1]
 # архив её же страхи, планы и линию В-7; пределы подняты, а текущая сессия не стареет (aging.py).
 HOT_NORM = 150_000           # рабочая норма HOT, байт; выше — строгое старение (но не текущей сессии)
 HOT_LIMIT = 180_000          # выше — свёртка блокируется
-GM_ONLY_NORM = 700_000       # скрытая часть: только предупреждение
+GM_ONLY_NORM = 1_000_000       # скрытая часть: только предупреждение
 BRIEF_TARGET = 60_000        # GM_BRIEF: цель (читается раз в начале чата)
 BRIEF_HARD = 96_000          # GM_BRIEF: предел
 # Пакет хода: 23.11.2026 в нём появились канон арки, знание присутствующих, арсенал боя, а поправок
@@ -31,7 +31,7 @@ RULES = {
     "campaigns/shiki/GM_CORE.md": 18000,
     "skills/dark-literary-gm/SKILL.md": 9000,
     "campaigns/shiki/SHIKI.md": 15000,
-    "campaigns/shiki/ref/TECHNIQUES.md": 20000,
+    "campaigns/shiki/ref/TECHNIQUES.md": 25000,
     "campaigns/shiki/ref/NEMERA.md": 8000,
     "skills/dark-literary-gm/references/horror-masters.md": 6000,
     "campaigns/shiki/BOOT.md": 2400,
