@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.079: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Асума Сарутоби (`npc/asuma`), Изумо Камидзуки (`npc/izumo`)
 - s16.text.078: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s16.text.077: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Наруто Узумаки (`npc/naruto`)
 - s16.text.076: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шикамару Нара (`npc/shikamaru`), Приёмщик тел (`npc/fire_bounty_station_trader`), линия `kiri_bingo_negotiations`
@@ -61,4 +62,3 @@
 - s16.text.022: Хидан (`npc/hidan`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Цунадэ (`npc/tsunade`)
 - s16.text.021: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`)
 - s16.text.020: Хидан (`npc/hidan`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`)
-- s16.text.019: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
