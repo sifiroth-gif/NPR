@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.043: Какаши Хатакэ (`npc/kakashi`)
+- s16.text.042: Какаши Хатакэ (`npc/kakashi`), бой, поправки игрока: 1
 - s16.text.041: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.040: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.039: Какаши Хатакэ (`npc/kakashi`)
@@ -58,5 +60,3 @@
 - s15.text.193: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s15.text.192: Джирайя (`npc/jiraiya`), Хагуро (`npc/khaguro`), Изумо Камидзуки (`npc/izumo`)
 - s15.text.191: Джирайя (`npc/jiraiya`)
-- s15.text.190: Джирайя (`npc/jiraiya`)
-- s15.text.189: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)

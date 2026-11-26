@@ -69,6 +69,7 @@
 - Страна Огня, старая лесная дорога к центральным провинциям · `places/strana-ognya-staraya-lesnaya-doroga-k-tsentralnym-provintsiy` · 6 ход(ов), s15–s15
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 6 ход(ов), s15–s15
+- Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 5 ход(ов), s16–s16
 - Конохагакуре, закрытый тренировочный полигон · `places/konokhagakure-zakrytyy-trenirovochnyy-poligon` · 5 ход(ов), s15–s15
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
@@ -98,7 +99,6 @@
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
 - Конохагакуре, Центральный госпитальный блок · `places/konokhagakure-tsentralnyy-gospitalnyy-blok` · 3 ход(ов), s02–s02
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
-- Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 3 ход(ов), s16–s16
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
