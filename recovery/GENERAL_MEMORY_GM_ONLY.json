@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.021",
+  "cursor": "s16.text.022",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2149,7 +2149,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2157,13 +2157,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:09:00",
-          "excerpt": "возле кабинета Хокагэ. Под её глазами залегли тени бессонной ночи. **Шизунэ:** — Уже вернулись? Хорошо. Хидан доставлен сегодня утром. Вчера мы так и не смогли закончить подготовку помещения, поскольку не знали, в каком состоянии его привезут. Она открыла двер",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.019"
         },
         {
           "at": "0010-04-25T11:24:00",
@@ -2178,12 +2171,19 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.021"
+        },
+        {
+          "at": "0010-04-25T11:24:45",
+          "excerpt": "Что Хидан, ты как будто призрака увидел #подхожу к нему# <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 11:24</text> ### Конохагакуре. Подземный изолятор **Муга",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.022"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.021",
+          "seen": "s16.text.022",
           "state": "Живая отделённая голова в удерживающих печатях, сознание и речь сохранены, на внешние стимулы реагирует; тело отдельно."
         },
         {
@@ -2194,7 +2194,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s16.text.021"
+        "s16.text.022"
       ]
     },
     "hirano": {
@@ -2506,7 +2506,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 52,
+      "mention_count": 53,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2514,13 +2514,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:09:00",
-          "excerpt": "dary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 11:09</text> ### Конохагакуре. Резиденция Хокагэ Джирайя шёл быстро. По дороге он несколько раз отвечал на приветствия знакомых шиноби, но нигде не задерживался. В административном квартале было заметно оживле",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.019"
         },
         {
           "at": "0010-04-25T11:24:00",
@@ -2535,11 +2528,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.021"
+        },
+        {
+          "at": "0010-04-25T11:24:45",
+          "excerpt": "овернуть голову, но удерживающие печати не позволили ему изменить положение. **Хидан:** — Чёрт. Ещё один. Джирайя медленно поднял взгляд. Шизунэ тоже услышала эти слова. Она на мгновение отвлеклась от диагностики, но тут же вернулась к наблюдению. Хидан замети",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.022"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.021",
+          "seen": "s16.text.022",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2549,7 +2549,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.021"
+        "s16.text.022"
       ]
     },
     "jiro_caravan_guard": {
@@ -10462,8 +10462,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.021",
-        "s16.text.020"
+        "s16.text.022",
+        "s16.text.020",
+        "s16.text.021"
       ]
     },
     "place:698d95bd1d726b13": {
@@ -19390,7 +19391,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19398,13 +19399,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:09:00",
-          "excerpt": "стояли двое сотрудников службы безопасности, а из бокового крыла вышли шиноби с опечатанными свитками. Шизунэ встретила вас возле кабинета Хокагэ. Под её глазами залегли тени бессонной ночи. **Шизунэ:** — Уже вернулись? Хорошо. Хидан доставлен сегодня утром. В",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.019"
         },
         {
           "at": "0010-04-25T11:24:00",
@@ -19419,11 +19413,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.021"
+        },
+        {
+          "at": "0010-04-25T11:24:45",
+          "excerpt": "печати не позволили ему изменить положение. **Хидан:** — Чёрт. Ещё один. Джирайя медленно поднял взгляд. Шизунэ тоже услышала эти слова. Она на мгновение отвлеклась от диагностики, но тут же вернулась к наблюдению. Хидан заметил перемену в поведении присутству",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.022"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.021",
+          "seen": "s16.text.022",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         },
         {
@@ -19433,7 +19434,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s16.text.021"
+        "s16.text.022"
       ]
     },
     "signalshchik": {
@@ -20477,7 +20478,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.021",
+          "seen": "s16.text.022",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20486,7 +20487,8 @@
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.022"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21291,5 +21293,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1401
+  "source_turns_indexed": 1402
 }

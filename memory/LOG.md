@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.022: Хидан (`npc/hidan`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Цунадэ (`npc/tsunade`)
 - s16.text.021: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`)
 - s16.text.020: Хидан (`npc/hidan`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`)
 - s16.text.019: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`), линия `jiraiya_rain_investigation`
@@ -59,4 +60,3 @@
 - s15.text.172: Какудзу (`npc/kakuzu`), Шикамару Нара (`npc/shikamaru`), бой, поправки игрока: 1
 - s15.text.171: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Шикамару Нара (`npc/shikamaru`), бой
 - s15.text.170: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Котэцу Хаганэ (`npc/kotetsu`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
-- s15.text.169: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Хидан (`npc/hidan`), линия `shiki_save_asuma`
