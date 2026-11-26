@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.096: Асумага Тосэ (`npc/kusa_leader`)
 - s15.text.095: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`)
 - s15.text.094: Асумага Тосэ (`npc/kusa_leader`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.093: Асумага Тосэ (`npc/kusa_leader`), Коюки (`npc/western_nest_young_courier`), Хаясэ Рэн (`npc/ren`)
@@ -61,4 +62,3 @@
 - s15.text.039: Саске Учиха (`npc/sasuke`), бой
 - s15.text.038: Саске Учиха (`npc/sasuke`), бой
 - s15.text.037: Саске Учиха (`npc/sasuke`), бой
-- s15.text.036: Саске Учиха (`npc/sasuke`)

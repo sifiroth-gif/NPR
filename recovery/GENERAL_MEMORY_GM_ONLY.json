@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.095",
+  "cursor": "s15.text.096",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3084,7 +3084,7 @@
       "id": "kusa_leader",
       "kind": "npc",
       "label": "Асумага Тосэ",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0001-08-07T12:38:00",
@@ -3092,13 +3092,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.053"
-        },
-        {
-          "at": "0010-04-22T05:08:00",
-          "excerpt": "стянутый широкой перевязью; у правого бедра висело оружие. От одежды пахло сырой утренней травой и дымом. **Асумага Тосэ:** — Ну, здравствуй, Мугами. Он осмотрел бывшего ученика. Задержался взглядом на глазах, затем перевёл его на открытые предплечья. Рука нас",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.093"
         },
         {
           "at": "0010-04-22T05:10:00",
@@ -3113,17 +3106,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.095"
+        },
+        {
+          "at": "0010-04-22T05:14:00",
+          "excerpt": "киригакуре. Может розыск кусагакуре просто внутренний, но я не знаю о нем ничего. Тосэ нахмурился. **Асумага Тосэ:** — Погоди. Ты даже не знаешь, в чём тебя обвиняет собственная деревня? Он отодвинул чашку. **Асумага Тосэ:** — В наших служебных ориентировках т",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.096"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.095"
+          "seen": "s15.text.096"
         }
       ],
       "sources": [
         "recovery/cast/kusa_leader.json",
         "recovery/HOT.json",
-        "s15.text.095"
+        "s15.text.096"
       ]
     },
     "lee": {
@@ -4153,8 +4153,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "s15.text.095"
+        "recovery/cast/nao.json"
       ]
     },
     "naruto": {
@@ -6218,7 +6217,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.095",
+        "s15.text.096",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -18803,7 +18802,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.095",
+          "seen": "s15.text.096",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19262,5 +19261,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1269
+  "source_turns_indexed": 1270
 }
