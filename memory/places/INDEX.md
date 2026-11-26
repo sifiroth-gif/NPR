@@ -24,11 +24,11 @@
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 18 ход(ов), s05–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 17 ход(ов), s02–s16
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 17 ход(ов), s08–s15
+- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 16 ход(ов), s14–s16
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
-- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 15 ход(ов), s14–s16
 - Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 15 ход(ов), s12–s13
 - Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 14 ход(ов), s15–s15
 - Страна Огня, пункт выплаты наград · `places/strana-ognya-punkt-vyplaty-nagrad` · 14 ход(ов), s15–s15

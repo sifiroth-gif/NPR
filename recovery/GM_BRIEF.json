@@ -89,7 +89,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.102",
+  "cursor": "s16.text.103",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -97,11 +97,10 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:e1834682fafb29d9",
-   "shirame",
+   "place:78c721f461c18af2",
    "western_nest_young_courier"
   ],
-  "focus_bytes": 1259,
+  "focus_bytes": 928,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -115,226 +114,12 @@
   "status": "focused",
   "thematic": {
    "basis": "scene_continuation",
-   "entries": [
-    "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
-    "pact.contact",
-    "sage.permanent",
-    "sage.poison",
-    "seals.speed",
-    "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
-    "sage.summon"
-   ],
+   "entries": [],
    "matched": [],
-   "medical": {
-    "at": "0010-04-30T02:14:00",
-    "chakra": {
-     "at": "0010-04-30T02:14:00",
-     "last": {
-      "spent": 2.0,
-      "turn": "s16.text.097",
-      "what": [
-       "Медицинское ниндзюцу: восстановление локального повреждения тканей змеи"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 600.0,
-     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {
-     "hidan": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:30",
-        "bleed": true,
-        "lost": "Нет функциональной связи головы с туловищем; обездвижен, голова говорит.",
-        "severity": "критическая",
-        "turn": "s15.text.175",
-        "what": "Полное отделение головы ударом Суми с Райтоном, сверхъестественное сохранение жизни и сознания.",
-        "where": "шея"
-       }
-      ]
-     },
-     "jiraiya": {
-      "wounds": [
-       {
-        "at": "0010-04-23T16:32:04",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.153",
-        "what": "контролируемый удар через частичный блок",
-        "where": "бок под рёбрами"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, функция сохранена",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар",
-        "where": "плечо"
-       }
-      ]
-     },
-     "kakuzu": {
-      "loss": {
-       "loss": 4,
-       "stage": "без сознания"
-      },
-      "wounds": [
-       {
-        "at": "0010-04-24T07:38:25",
-        "bleed": false,
-        "lost": "Стянутая нитями рана, локальное повреждение тканей и нитей остаётся; кровопотеря и шок не устранены.",
-        "recovered_at": "s15.text.175",
-        "severity": "средняя",
-        "stopped": "s15.text.175",
-        "turn": "s15.text.171",
-        "what": "Проникающий разрез чакрового скальпеля, повреждены наружные ткани и часть нитей, сквозного пробития нет; поражение сердца не установлено.",
-        "where": "спина, грудная полость"
-       },
-       {
-        "at": "0010-04-24T07:38:32",
-        "bleed": true,
-        "lost": "Рука утратила подвижность.",
-        "severity": "тяжёлая",
-        "turn": "s15.text.176",
-        "what": "Режущая рана Суми через защиту Дотона",
-        "where": "плечо руки, державшей чемодан"
-       }
-      ]
-     },
-     "shiki": {
-      "wounds": [
-       {
-        "at": "0007-12-24T16:47:00",
-        "lost": "поверхностный порез, движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s09.text.066",
-        "what": "взрывной механизм Рокуто: осколок настила/металла прошёл вскользь и прорезал одежду и кожу",
-        "where": "наружная сторона левого бедра"
-       },
-       {
-        "at": "0010-03-25T12:12:56",
-        "lost": "боль при резких движениях, дыхание сохранено",
-        "severity": "лёгкая",
-        "turn": "s12.text.064",
-        "what": "удар отлетающим известняком во время первого рывка",
-        "where": "боковая область грудной клетки под рёбрами"
-       },
-       {
-        "at": "0010-04-05T11:26:02",
-        "lost": "кисть работает",
-        "severity": "лёгкая",
-        "turn": "s13.text.069",
-        "what": "нож",
-        "where": "левое предплечье"
-       },
-       {
-        "at": "0010-04-23T16:32:16",
-        "lost": "болезненность, дыхание и движения сохранены",
-        "severity": "лёгкая",
-        "turn": "s15.text.154",
-        "what": "контролируемый удар жабьего ката",
-        "where": "грудь"
-       }
-      ]
-     }
-    },
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
-   "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/ref/FUSION.md"
-   ],
-   "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
-    "present/identity",
-    "NPC knowledge/fences",
-    "prior dialogue/source",
-    "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time",
-    "fusion profile or historical pact",
-    "contact/channel"
-   ],
-   "routes": [
-    "medical",
-    "combat",
-    "dialogue",
-    "travel",
-    "pact"
-   ],
-   "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
-   ]
+   "read": [],
+   "required": [],
+   "routes": [],
+   "unavailable": []
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -580,13 +365,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-30T02:14:00",
+  "at": "0010-04-30T09:40:00",
   "date": "Пятница, 30 апреля 1287 года",
-  "id": "s16.text.102",
-  "place": "Страна Рек, южные известняковые горы, убежище Шики",
-  "time": "02:14"
+  "id": "s16.text.103",
+  "place": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
+  "time": "09:40"
  },
- "digest": "da24b01a324ce53a5e9c8f25678f2b8077b024c6da259f70359526ae7e680586",
+ "digest": "d09c04a94986600026e9bb7c3f107530e1655e32d5f8e06e3c2a067bfbb05907",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -610,10 +395,10 @@
       3
      ],
      "cat": 2,
-     "die": 13,
+     "die": 7,
      "exert": false,
      "load": 2.0,
-     "turn": "s16.text.099"
+     "turn": "s16.text.103"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -626,10 +411,10 @@
       4
      ],
      "cat": 4,
-     "die": 15,
+     "die": 19,
      "exert": false,
      "load": 1.0,
-     "turn": "s16.text.099"
+     "turn": "s16.text.103"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -721,18 +506,18 @@
    "value": 600.0
   },
   "dice": [
-   6,
-   19,
+   17,
+   15,
    18,
+   7,
    3,
+   8,
    16,
-   15,
-   14,
-   10,
+   6,
    1,
-   15,
-   12,
-   8
+   9,
+   10,
+   14
   ],
   "injuries": {
    "hidan": [
@@ -852,26 +637,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:e1834682fafb29d9",
+    "id": "place:78c721f461c18af2",
     "kind": "place",
-    "label": "Страна Рек, южные известняковые горы, убежище Шики",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "shirame",
-    "kind": "npc",
-    "label": "Сирамэ",
-    "operational_cues": {
-     "source": "recovery/cast/shirame.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Вышла из комнаты, намерена передать известие западным гнёздам."
-     }
-    },
+    "label": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
     "status": "no_verified_facts"
    },
    {
@@ -898,7 +666,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 3
+  "total_matched": 2
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -930,8 +698,8 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">Пятница, 30 апреля 1287 года · 02:14</text>\n\n### Убежище Шики\n\n**Мугами Шики:** — Не знаю, такого я никогда не встречал.\n\n**Коюки:** — Тогда спрошу у Сирамэ. Она ведь тоже когда-то была маленькой.\n\nКоюки спустилась с плеча Шики и направилась к естественным пещерам.\n\n**Коюки:** — Побуду пока с малышами. Когда они о…",
-  "player": "Не знаю, такого я никогда не встречал",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">Пятница, 30 апреля 1287 года · 02:20–09:40</text>\n\n### Убежище Шики. Жилые помещения\n\nНочь прошла спокойно.\n\nЗа толстыми каменными стенами было невозможно различить наступление рассвета. Лишь в естественных пещерах, куда через узкие расщелины проникали солнечные лучи, постепенно теплел камень.\n\nШики отдохнул без п…",
+  "player": "#отправляюсь отдыхать# ",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [],
@@ -1060,19 +828,19 @@
  "present_npcs": {},
  "recent_turns": [
   {
-   "id": "s16.text.101",
-   "line": "Коюки согласилась попросить Сирамэ сопровождать её. Рассказала об обучении человеческой речи в Рьючидо и естественном общении змей; со слов Сирамэ речь связана с чакрой, точный механизм ей неизвестен."
-  },
-  {
    "id": "s16.text.102",
    "line": "Шики не знает случая освоения обычной змеёй человеческой речи. Коюки намерена спросить Сирамэ и пока остаться с детёнышами; ушла в пещеры. Шики свободен в убежище."
+  },
+  {
+   "id": "s16.text.103",
+   "line": "Шики спокойно отдохнул до 09:40 30.04. Коюки осталась у кладки, тёмная змея осваивает близлежащие укрытия. Срочных сообщений не поступило."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в освещённой части убежища; Коюки и переселенцы в естественных пещерах.",
-  "pressure": "Прибытие домой; кладка требует обычного ухода. K-0418 временно приостановлен. ",
-  "situation": "Шики сказал, что не встречал подобных случаев. Коюки намерена спросить Сирамэ о способности к речи, пока помогает переселенцам, затем собирается в Рьючидо. Ушла в естественные пещеры. Жилые помещения без видимых изменений; срочного вызова нет."
+  "positions": "Шики в жилой части, Коюки и переселенцы в естественных пещерах.",
+  "pressure": "Утро дома, непосредственной угрозы не обнаружено.",
+  "situation": "Шики отдохнул в жилых помещениях до 09:40. Ночь прошла без вмешательств. Коюки у кладки, тёмная змея ненадолго обследует ближайшие укрытия. Срочных сообщений Шики не получил."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1084,8 +852,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "0fefa55135cfa5326bbe77e1de499fffa967d00b",
-  "turn": "s16.text.102"
+  "sha": "a1439967f8c1e37b8ee9c265ee77c6c749ae4a01",
+  "turn": "s16.text.103"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1099,7 +867,7 @@
     "due": "0010-05-04T12:00:00",
     "id": "yig_local_response",
     "if_unopposed": "Торговцы меняют район закупок, часть местных жителей восстанавливает старый обряд у каменных убежищ; свидетельства расходятся по торговым дорогам. Проверить результат первого процесса, не считать его неизбежным при вмешательстве.",
-    "minutes": 6346.0,
+    "minutes": 5900.0,
     "owner": "Местные жители и торговцы Страны Рек",
     "signs": "Изменение поставок редких животных, рассказы путников и лекарей; причина неизвестна.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_local_response",
@@ -1110,7 +878,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 39577.0,
+    "minutes": 39131.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",

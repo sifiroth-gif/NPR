@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.102",
+  "cursor": "s16.text.103",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1321,7 +1321,8 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ"
+        "Кадзунэ",
+        "fire_road_jonin"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1360,11 +1361,12 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.081"
+          "seen": "s16.text.103"
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json"
+        "recovery/cast/fire_road_jonin.json",
+        "s16.text.103"
       ]
     },
     "fire_road_mayu": {
@@ -3815,12 +3817,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.082",
+          "seen": "s16.text.103",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s16.text.103"
       ]
     },
     "kurama": {
@@ -11564,6 +11567,26 @@
       "projections": [],
       "sources": [
         "s02.text.060"
+      ]
+    },
+    "place:78c721f461c18af2": {
+      "aliases": [
+        "place:78c721f461c18af2",
+        "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
+        "Страна Рек",
+        "южные известняковые горы",
+        "убежище Шики",
+        "жилые помещения"
+      ],
+      "facts": [],
+      "id": "place:78c721f461c18af2",
+      "kind": "place",
+      "label": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.103"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -21396,14 +21419,13 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 92,
+      "mention_count": 93,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21411,13 +21433,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-30T02:12:00",
-          "excerpt": "1287 года · 02:12</text> ### Убежище Шики. Нижние пещеры **Мугами Шики:** — Хорошо, пусть остаются. Коюки довольно покачала головой и вернулась к переселенцам. Некоторое время из глубины пещеры доносилось оживлённое шипение. Тёмная змея свернулась вокруг кладк",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.100"
         },
         {
           "at": "0010-04-30T02:13:00",
@@ -21432,6 +21447,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.102"
+        },
+        {
+          "at": "0010-04-30T09:40:00",
+          "excerpt": "сне для поддержания жизни, однако сама возможность провести несколько часов в покое сохранилась. К утру Коюки устроилась возле спасённой кладки. Тёмная змея покидала её лишь ненадолго, обследуя ближайшие укрытия. В убежище установилась редкая для последних нед",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.103"
         }
       ],
       "projections": [
@@ -21441,8 +21463,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s16.text.102"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -21934,5 +21955,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1475
+  "source_turns_indexed": 1476
 }
