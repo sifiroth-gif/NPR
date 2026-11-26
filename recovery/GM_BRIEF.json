@@ -67,18 +67,12 @@
    "kind": "fight",
    "text": "Бросок «Какудзу выпускает маску до смыкания зеркал»: полоса 3–5, по осям 4–5 (A +0:+1, B +0, C +0, D +1, E +0, F -1:+0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s15.text.173"
-  },
-  {
-   "kind": "review",
-   "since": "s15.text.192",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s15.text.197"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.197",
+  "cursor": "s15.text.198",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -86,9 +80,13 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:937887e903bd78e7"
+   "place:962be2353e9396b1",
+   "tsunade",
+   "leaf_shiki_agreement_copy",
+   "leaf_shiki_agreement_original",
+   "naruto_home_sketch_s15"
   ],
-  "focus_bytes": 479,
+  "focus_bytes": 1944,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -104,25 +102,67 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
+    "eyes.ems",
+    "fusion.tendrils",
+    "genome.zero",
     "pact.contact",
-    "nemera.agency"
+    "sage.permanent",
+    "sage.poison",
+    "seals.speed",
+    "shunshin.zero",
+    "weapon.sumi",
+    "combat.genjutsu",
+    "combat.scalpel",
+    "element.fireball",
+    "element.ice",
+    "element.lightning",
+    "element.phoenix",
+    "element.water",
+    "eyes.cradle",
+    "eyes.magatsuhi",
+    "eyes.susanoo",
+    "eyes.yomotsu",
+    "fusion.development",
+    "genome.fluid",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "pact.byoton",
+    "pact.shiton",
+    "restricted.cancelled",
+    "restricted.unlearned",
+    "sage.senpo",
+    "sage.summon"
    ],
    "matched": [],
    "read": [
-    "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/COMBAT.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
-    "present/identity",
-    "NPC knowledge/fences",
-    "prior dialogue/source",
-    "intent"
+    "active forms/passives",
+    "fight/dice",
+    "chakra/injuries",
+    "opponents/positions",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time"
    ],
    "routes": [
-    "dialogue"
+    "combat",
+    "travel"
    ],
    "unavailable": [
-    "nemera.agency"
+    "fusion.development",
+    "genome.kaguya",
+    "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
+    "restricted.cancelled",
+    "restricted.unlearned"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -153,8 +193,8 @@
    "cash_1184": {
     "holder": "shiki",
     "since": "s09.text.096",
-    "state": "88,5 млн вынесены Шики 8 марта до разрушения «Чёрного створа»; 9 марта 88 млн переданы Минаги, 500 000 оставлены на дорогу. Остаток дорожных 25 марта после расходов 204 600.",
-    "turn": "s12.text.091"
+    "state": "Дорожная наличность 202800 рё: 204600 по прежней записи, минус 1200 за две пластины связи (s15.text.066–067, один расход), минус 600 гостиница (s15.text.198). Средства у Минаги отдельно.",
+    "turn": "s15.text.198"
    },
    "contract_1184_docs": {
     "holder": "shiki",
@@ -282,8 +322,8 @@
    "shiki_finances": {
     "holder": "shiki",
     "since": "s09.text.068",
-    "state": "15.04 после 8 млн покупки и 2.4 млн обстановки из защищённого резерва: резерв 19.6 млн; последняя сверка остальных частей 13.04: 34 млн свободные ссудные средства, 18 млн непросроченные ссуды, 6 млн просрочка под залог прав на два склада, 100800 полученный доход. Учётная стоимость после известных расходов 77 700 800 рё; новые изменения после 13.04 не сверены. Дорожные 204600 рё по последней записи, не тратились в этой заявке. Расписки у Шики, расход отмечен Минаги.",
-    "turn": "s14.text.059"
+    "state": "У Минаги: резерв 19.6 млн; последняя сверка остальных частей 13.04: 34 млн свободные ссудные средства, 18 млн непросроченные ссуды, 6 млн просрочка под залог прав на два склада, 100800 полученный доход. Учётная стоимость 77 700 800 рё после покупки и обстановки убежища; новые изменения не сверены. Дорожная наличность 202800 рё после 1200 за пластины s15.066–067 и 600 за гостиницу s15.198. Расписки у Шики.",
+    "turn": "s15.text.198"
    },
    "shiki_medical_kit": {
     "holder": "shiki",
@@ -337,13 +377,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-24T19:42:00",
+  "at": "0010-04-24T19:43:00",
   "date": "Суббота, 24 апреля 1287 года",
-  "id": "s15.text.197",
-  "place": "Конохагакуре, торговый квартал, гостиница у чайной",
-  "time": "19:42"
+  "id": "s15.text.198",
+  "place": "Конохагакуре, торговый квартал, гостиница, комната 7",
+  "time": "19:43"
  },
- "digest": "85b349f3a9adef5dec7ab7d8a72203f8835fc19c914be65eda138a477dc40c06",
+ "digest": "20a7850e5218708b052a1421e9214cf2fdaeb12d8dc3f0d140b8afb588f38ca7",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -478,18 +518,18 @@
    "value": 600.0
   },
   "dice": [
-   12,
-   4,
-   4,
    5,
+   18,
    10,
-   2,
+   6,
+   20,
+   13,
+   11,
+   8,
+   6,
    18,
-   18,
-   14,
    12,
-   12,
-   16
+   4
   ],
   "injuries": {
    "hidan": [
@@ -619,9 +659,77 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:937887e903bd78e7",
+    "id": "place:962be2353e9396b1",
     "kind": "place",
-    "label": "Конохагакуре, торговый квартал, гостиница у чайной",
+    "label": "Конохагакуре, торговый квартал, гостиница, комната 7",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "tsunade",
+    "kind": "npc",
+    "label": "Цунадэ",
+    "operational_cues": {
+     "source": "recovery/cast/tsunade.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "leaf_shiki_agreement_copy",
+    "kind": "item",
+    "label": "Соглашение Конохи о взаимном ненападении, экземпляр для Шики",
+    "operational_cues": {
+     "source": "s15.text.134",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "leaf_shiki_agreement_original",
+    "kind": "item",
+    "label": "Соглашение Конохи о взаимном ненападении, экземпляр резиденции",
+    "operational_cues": {
+     "source": "s15.text.134",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "naruto_home_sketch_s15",
+    "kind": "item",
+    "label": "Схема пути к дому Наруто",
+    "operational_cues": {
+     "source": "s15.text.136",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "tsunade"
+     }
+    },
     "status": "no_verified_facts"
    }
   ],
@@ -631,7 +739,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 1
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -663,8 +771,8 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:42</text>\n\n### Конохагакуре. Торговый квартал\n\n**Мугами Шики:** — Я сниму гостиницу, спасибо.\n\nПокинув резиденцию, Шики направился по улице, которую вчера показывал Наруто.\n\nПеред двухэтажной гостиницей покачивались бумажные фонари с изображениями осенних листьев. В соседней чайной, где вч…",
-  "player": "Я сниму гостиницу спасибо #иду к гостинице которую показывал Наруто. Кстати а эхо вообще работает#",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:43</text>\n\n### Гостиница\n\n**Мугами Шики:** — Одна ночь.\n\nШики достал шестьсот рё и положил деньги на стойку. Хозяин пересчитал их, передал ключ и указал на лестницу.\n\n**Хозяин гостиницы:** — Седьмая комната. Купальня в конце коридора. Завтрак с шести утра.\n\nНа втором этаже было тихо. За то…",
+  "player": "Одна ночь #оплачиваю#",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [],
@@ -762,19 +870,19 @@
  "present_npcs": {},
  "recent_turns": [
   {
-   "id": "s15.text.196",
-   "line": "Шики предупредил о завтрашнем визите на Мьёбоку, поможет после возвращения. Цунадэ поручила начать допрос без него, велела разбудить её по прибытии Асумы. Шизунэ предложила ночлег."
-  },
-  {
    "id": "s15.text.197",
    "line": "Шики отказался от предложенного ночлега и пришёл в гостиницу, показанную Наруто (s15.text.157). Хозяин предложил свободную комнату за 600 рё; ещё не оплачена."
+  },
+  {
+   "id": "s15.text.198",
+   "line": "Шики снял комнату №7 на одну ночь, заплатил 600 рё, получил ключ; завтрак с 06:00, купальня на этаже. Остаток дорожных денег 202800 рё с учётом покупки пластин 1200."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у стойки гостиницы, перед хозяином лежит регистрационная книга и ключ.",
-  "pressure": "Можно снять комнату; завтрашняя встреча с Джирайей в 09:00.",
-  "situation": "Шики ушёл из резиденции в двухэтажную гостиницу с фонарями осенних листьев, показанную Наруто вчера. Хозяин предложил свободную комнату на втором этаже за 600 рё с горячей водой и завтраком; регистрация и оплата ещё не совершены."
+  "positions": "Шики в снятой комнате №7.",
+  "pressure": "Встреча с Джирайей 25.04 в 09:00; после возвращения с Мьёбоку закрытый допрос по согласованию с Цунадэ.",
+  "situation": "Шики оплатил 600 рё за одну ночь в гостинице, получил ключ от комнаты №7 на втором этаже. Купальня в конце коридора, завтрак с 06:00. В комнате футон, столик, вода, окно на крыши. Шики может отдохнуть; сон ещё не заявлен."
  },
  "shiki": {
   "body": "Постоянный режим дракона и устойчивый синтез Инь–Ян–природной энергии s15.text.131; единая сущность, холодная цельная кожа, чёрная кровь и корни, чешуя. Риннешаринган выключен.",
@@ -786,8 +894,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "7ef1c77c18e7310cc63f622072d5c5eb44dc08be",
-  "turn": "s15.text.197"
+  "sha": "87a51e84eb6c8479506b3fb1b479112212bcc821",
+  "turn": "s15.text.198"
  },
  "wiki": {
   "index": "memory/INDEX.md",
