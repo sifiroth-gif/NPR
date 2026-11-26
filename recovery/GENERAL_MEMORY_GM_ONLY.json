@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.094",
+  "cursor": "s16.text.095",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1109,8 +1109,7 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел",
-        "fire_bounty_station_trader"
+        "Приёмщик тел"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1126,8 +1125,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "s16.text.094"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2256,8 +2254,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json",
-        "s16.text.094"
+        "recovery/cast/hidan.json"
       ]
     },
     "hirano": {
@@ -8131,6 +8128,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.095",
         "s16.text.094"
       ]
     },
@@ -18410,7 +18408,8 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок"
+        "Тёмная змея у кладок",
+        "river_shrine_dark_snake_s16"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -18420,7 +18419,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.094",
+          "seen": "s16.text.095",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
         {
@@ -18430,7 +18429,7 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s16.text.094"
+        "s16.text.095"
       ]
     },
     "road_villager_fumi": {
@@ -21345,7 +21344,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 84,
+      "mention_count": 85,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21353,13 +21352,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-27T13:54:00",
-          "excerpt": "гавань. Внутренний двор **Мугами Шики:** — Да, давно тебя не видел немного заволновался. Все хорошо? Коюки высунула голову из-под плаща и удивлённо посмотрела на Шики. **Коюки:** — Ты обо мне волновался? Она немного помолчала, а затем поползла вверх по его оде",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.091"
         },
         {
           "at": "0010-04-29T19:10:00",
@@ -21374,11 +21366,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.094"
+        },
+        {
+          "at": "0010-04-29T19:23:00",
+          "excerpt": "## Страна Рек. Древнее святилище **Мугами Шики:** — Спроси у змеи она в порядке, нужна ли ей помощь? Коюки опустилась на камни и приблизилась к тёмной змее. Та приподняла голову. На боку у неё обнаружилась широкая полоса повреждённых чешуек. После короткого об",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.095"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.094",
+          "seen": "s16.text.095",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21388,7 +21387,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.094"
+        "s16.text.095"
       ]
     },
     "white_snake_sage": {
@@ -21880,5 +21879,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1467
+  "source_turns_indexed": 1468
 }

@@ -152,6 +152,7 @@
 - Страна Огня, западный пограничный пост на дороге из Страны Травы · `places/strana-ognya-zapadnyy-pogranichnyy-post-na-doroge-iz-strany-` · 2 ход(ов), s15–s15
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
 - Страна Рек, каменный уступ у реки · `places/strana-rek-kamennyy-ustup-u-reki` · 2 ход(ов), s11–s11
+- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 2 ход(ов), s16–s16
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
 - Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
 - Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 2 ход(ов), s14–s15
@@ -277,7 +278,6 @@
 - Страна Рек, дорога к южному перевалу · `places/strana-rek-doroga-k-yuzhnomu-perevalu` · 1 ход(ов), s12–s12
 - Страна Рек, дорога у внешних ворот Седьмого колодца · `places/strana-rek-doroga-u-vneshnikh-vorot-sedmogo-kolodtsa` · 1 ход(ов), s09–s09
 - Страна Рек, лесная дорога от северного святилища · `places/strana-rek-lesnaya-doroga-ot-severnogo-svyatilishcha` · 1 ход(ов), s15–s15
-- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 1 ход(ов), s16–s16
 - Страна Рек, нижний каменный уступ у реки · `places/strana-rek-nizhniy-kamennyy-ustup-u-reki` · 1 ход(ов), s11–s11
 - Страна Рек, пещера убежища Акацуки · `places/strana-rek-peshchera-ubezhishcha-akatsuki` · 1 ход(ов), s11–s11
 - Страна Рек, убежище Акацуки у озера · `places/strana-rek-ubezhishche-akatsuki-u-ozera` · 1 ход(ов), s11–s11
