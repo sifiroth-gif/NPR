@@ -1,19 +1,21 @@
 {
   "current_focus": [
     "asuma",
-    "chiriku",
-    "place:97dd118ac5fd60ac"
+    "fire_temple_bansai",
+    "place:97dd118ac5fd60ac",
+    "chiriku"
   ],
   "cursor": "s15.text.163",
   "focus_byte_limit": 6600,
-  "focus_bytes": 1171,
-  "index_entities": 849,
+  "focus_bytes": 1565,
+  "index_entities": 851,
   "index_source_records": 1336,
   "indexed_cursor": "s15.text.163",
   "kinds": {
+    "canon": 1,
     "entity": 1,
     "item": 53,
-    "npc": 199,
+    "npc": 200,
     "place": 590,
     "thread": 6
   },
@@ -24,6 +26,12 @@
     "Use played-source regression cases for historical disambiguation and NPC epistemics."
   ],
   "probes": [
+    {
+      "at_1": true,
+      "at_5": true,
+      "id": "canon:s15.text.163:0",
+      "kind": "canon"
+    },
     {
       "at_1": true,
       "at_5": true,
@@ -500,9 +508,9 @@
     }
   ],
   "schema": "npr-memory-quality/1",
-  "self_query_at_1": 79,
-  "self_query_at_5": 79,
-  "self_query_count": 79,
+  "self_query_at_1": 80,
+  "self_query_at_5": 80,
+  "self_query_count": 80,
   "status": "coverage_checks_passed",
   "unattributed_fact_entity_ids": [],
   "unretrieved_probe_ids": []

@@ -5,10 +5,11 @@
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
 - места · `places/INDEX` (320) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
-## Персонажи (245)
+## Персонажи (246)
 - Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma` · в сцене
-- Тирику — Настоятель Храма Огня, бывший соратник Асумы · `npc/chiriku` · в сцене
+- Бансаи — Пожилой монах Храма Огня, свидетель нападения · `npc/fire_temple_bansai` · в сцене
 - Раненый монах — Монах Храма Огня, личность не установлена · `npc/fire_temple_wounded_monk_s15`
+- Тирику — Настоятель Храма Огня, бывший соратник Асумы · `npc/chiriku`
 - Шизунэ — Темноволосая женщина в тёмном кимоно, медицинские отчёты. · `npc/shizune`
 - Изумо Камидзуки (Изумо, Камидзуки) — Тюнин Листа, отряд Асумы · `npc/izumo`
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
@@ -255,7 +256,7 @@
 ## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
-- `shiki_save_asuma` — 24.04 03:52: Асума и отряд со Шики прибыли к Храму Огня. Тирику ещё н… · `threads/shiki_save_asuma`
+- `shiki_save_asuma` — 24.04 03:56: Тирику погиб до прибытия Шики, тело забрали Акацуки. Бан… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
