@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.053: Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Хагуро (`npc/khaguro`)
 - s16.text.052: Джирайя (`npc/jiraiya`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.051: Джирайя (`npc/jiraiya`)
 - s16.text.050: Джирайя (`npc/jiraiya`)
@@ -60,4 +61,3 @@
 - s15.text.203: Гамамару (`npc/gamamaru`), Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`)
 - s15.text.202: Гамамару (`npc/gamamaru`), Асума Сарутоби (`npc/asuma`), Шизунэ (`npc/shizune`)
 - s15.text.201: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`)
-- s15.text.200: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Изумо Камидзуки (`npc/izumo`)

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.052",
+  "cursor": "s16.text.053",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 71,
+      "mention_count": 72,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:01:00",
-          "excerpt": "# Конохагакуре. Западный тренировочный полигон **Мугами Шики:** — Итого 8 природ. Можно и запутаться. Джирайя остановился и медленно повернулся. **Джирайя:** — Восемь? Он пересчитал на пальцах пять основных стихий. **Джирайя:** — О существовании смешанных прир",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.050"
         },
         {
           "at": "0010-04-25T20:02:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.052"
+        },
+        {
+          "at": "0010-04-25T20:06:00",
+          "excerpt": ", и частичную гидратацию я могу. Это изменения меня на генном уровне, просто я их могу контролировать **Джирайя:** — Ещё и наследие Ходзуки? Он коротко рассмеялся, однако веселья в этом смехе почти не было. **Джирайя:** — Пожалуй, тебе действительно стоит вним",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.053"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.052",
+          "seen": "s16.text.053",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.052"
+        "s16.text.053"
       ]
     },
     "jiro_caravan_guard": {
@@ -3223,12 +3223,13 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.192",
+          "seen": "s16.text.053",
           "state": "Сообщил хранительнице о возвращении Шики и передал Белой Змее известие о приглашении жаб; остался у ворот."
         }
       ],
       "sources": [
-        "recovery/cast/khaguro.json"
+        "recovery/cast/khaguro.json",
+        "s16.text.053"
       ]
     },
     "khakudzya_sennin": {
@@ -14136,11 +14137,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.052",
+        "s16.text.053",
         "s16.text.048",
         "s16.text.049",
         "s16.text.050",
-        "s16.text.051"
+        "s16.text.051",
+        "s16.text.052"
       ]
     },
     "place:b6818057c5d64dc5": {
@@ -19003,8 +19005,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s16.text.052"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -19504,12 +19505,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.032",
+          "seen": "s16.text.053",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s16.text.053"
       ]
     },
     "signalshchik": {
@@ -21370,5 +21372,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1431
+  "source_turns_indexed": 1432
 }
