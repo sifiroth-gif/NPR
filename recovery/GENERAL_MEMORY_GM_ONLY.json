@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.200",
+  "cursor": "s15.text.201",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1838,7 +1838,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1846,13 +1846,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-24T19:15:00",
-          "excerpt": "правил налобный протектор. **Джирайя:** — Хорошо. Займись делами. Завтра в девять утра на прежнем месте. Фукасаку организует наш переход на Мьёбоку. На его лице появилась лёгкая усмешка. **Джирайя:** — Признаться, меня удивляет, что ты специально отправился к ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.192"
         },
         {
           "at": "0010-04-24T19:27:00",
@@ -1867,21 +1860,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.200"
+        },
+        {
+          "at": "0010-04-25T08:59:00",
+          "excerpt": "По игре: господин Фукасаку, белая змея мудрец передавала вам свои приветствия <text color=\"secondary\" size=\"xs\">25 апреля 1287 года · 08:59</text> ### Конохагакуре. Тренировочная площадка **Мугам",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.201"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.200",
-          "state": "Прибыл по призыву Джирайи, сообщил о готовности принять гостя и пробуждении Великого Мудреца."
+          "seen": "s15.text.201",
+          "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
-          "state": "Прибыл по призыву Джирайи, сообщил о готовности принять гостя и пробуждении Великого Мудреца."
+          "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         }
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s15.text.200"
+        "s15.text.201"
       ]
     },
     "gaara": {
@@ -2490,8 +2490,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json",
-        "s15.text.200"
+        "recovery/cast/izumo.json"
       ]
     },
     "jiraiya": {
@@ -2503,7 +2502,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 24,
+      "mention_count": 25,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2511,13 +2510,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-24T19:14:00",
-          "excerpt": "небольшого заведения с красными бумажными фонарями. Саннин уже собирался войти, когда заметил его. **Джирайя:** — О, Шики! Наруто сказал, что ты отправился с Асумой. Я думал, тебя ещё несколько дней не будет. Он отпустил край дверной занавески. Изнутри доносил",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.191"
         },
         {
           "at": "0010-04-24T19:15:00",
@@ -2532,21 +2524,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.200"
+        },
+        {
+          "at": "0010-04-25T08:59:00",
+          "excerpt": "пы и тихонько засмеялся. **Фукасаку:** — Столько лет прошло. Приятно знать, что она ещё помнит обо мне. **Джирайя:** — Па, вы настолько хорошо знакомы? **Фукасаку:** — Джирайя-тян, когда мы познакомились, твоего деда ещё на свете не было. Передай ей моё почтен",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.201"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.200",
-          "state": "Пришёл на согласованную площадку до 09:00, встретил Шики и призвал Фукасаку."
+          "seen": "s15.text.201",
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
-          "state": "Пришёл на согласованную площадку до 09:00, встретил Шики и призвал Фукасаку."
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s15.text.200"
+        "s15.text.201"
       ]
     },
     "jiro_caravan_guard": {
@@ -3643,12 +3642,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.196",
+          "seen": "s15.text.201",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s15.text.201"
       ]
     },
     "kurama": {
@@ -5909,6 +5909,23 @@
       "projections": [],
       "sources": [
         "s06.text.046"
+      ]
+    },
+    "place:022bc981c426a393": {
+      "aliases": [
+        "place:022bc981c426a393",
+        "Мьёбоку, долина у тропы к Великому Жабьему Мудрецу",
+        "долина у тропы к Великому Жабьему Мудрецу"
+      ],
+      "facts": [],
+      "id": "place:022bc981c426a393",
+      "kind": "place",
+      "label": "Мьёбоку, долина у тропы к Великому Жабьему Мудрецу",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.201"
       ]
     },
     "place:0235cc1df618b915": {
@@ -17287,7 +17304,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.200",
         "s15.text.145",
         "s15.text.146",
         "s15.text.147",
@@ -17299,7 +17315,8 @@
         "s15.text.153",
         "s15.text.154",
         "s15.text.155",
-        "s15.text.156"
+        "s15.text.156",
+        "s15.text.200"
       ]
     },
     "place:fdb4dc3fd78cd3fd": {
@@ -21274,5 +21291,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1373
+  "source_turns_indexed": 1374
 }
