@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.117",
+  "cursor": "s15.text.118",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -509,22 +509,6 @@
         "s09.text.067"
       ]
     },
-    "canon:s15.text.117:0": {
-      "aliases": [
-        "canon:s15.text.117:0",
-        "s15.text.117: игрок просит долгий путь с самостоятельными событиями, сохраняя цель своевременного прибытия 28.04 18:00 в Долину Завершения; не гарантирует исход и не отменяет цену "
-      ],
-      "facts": [],
-      "id": "canon:s15.text.117:0",
-      "kind": "canon",
-      "label": "s15.text.117: игрок просит долгий путь с самостоятельными событиями, сохраняя цель своевременного прибытия 28.04 18:00 в Долину Завершения; не гарантирует исход и не отменяет цену ",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s15.text.117"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -947,8 +931,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/dzyun.json",
-        "s15.text.117"
+        "recovery/cast/dzyun.json"
       ]
     },
     "endo_hajime": {
@@ -1111,22 +1094,31 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Дзёнин Конохи на лесной дороге"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
       "kind": "npc",
-      "label": "Дзёнин Конохи на лесной дороге",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Кадзунэ",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-22T22:37:00",
+          "excerpt": "очку на землю. Под её дорожным плащом виднелась повязка на животе, тёмная от крови. **Второй шиноби:** — Кадзунэ, она больше не выдержит. Дзёнин стиснул зубы. **Кадзунэ:** — Уходите с дороги. За деревья. Живо. Он направил учеников за Шики, сам остался сбоку, с",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.118"
+        }
+      ],
       "projections": [
         {
-          "seen": "s15.text.117"
+          "seen": "s15.text.118"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_jonin.json",
-        "s15.text.117"
+        "recovery/HOT.json",
+        "s15.text.118"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -1251,8 +1243,7 @@
     "fire_temple_travel_monk": {
       "aliases": [
         "fire temple travel monk",
-        "Рёэн",
-        "fire_temple_travel_monk"
+        "Рёэн"
       ],
       "facts": [],
       "id": "fire_temple_travel_monk",
@@ -1295,14 +1286,14 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_temple_travel_monk.json",
-        "s15.text.117"
+        "recovery/cast/fire_temple_travel_monk.json"
       ]
     },
     "fire_west_border_senior": {
       "aliases": [
         "fire west border senior",
-        "Старший пограничник Конохи"
+        "Старший пограничник Конохи",
+        "fire_west_border_senior"
       ],
       "facts": [],
       "id": "fire_west_border_senior",
@@ -1320,12 +1311,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.117"
+          "seen": "s15.text.118"
         }
       ],
       "sources": [
         "recovery/cast/fire_west_border_senior.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.118"
       ]
     },
     "forehead_protector": {
@@ -4411,11 +4403,15 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s09.text.070"
+          "seen": "s15.text.118"
+        },
+        {
+          "role": "по подписи в сцене"
         }
       ],
       "sources": [
-        "recovery/cast/naemnik_u_shakhty.json"
+        "recovery/cast/naemnik_u_shakhty.json",
+        "recovery/HOT.json"
       ]
     },
     "nagae_rokuto": {
@@ -4513,23 +4509,15 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.117",
+          "seen": "s15.text.118",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
           "wants": "Понять изменения сына, не упуская его самостоятельности"
-        },
-        {
-          "fears": "Непонятная перемена состояния Шики",
-          "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "stance": "Сдержанная клиническая настороженность",
-          "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
-          "wants": "Понять изменения сына, не упуская его самостоятельности"
         }
       ],
       "sources": [
-        "recovery/cast/nao.json",
-        "recovery/HOT.json"
+        "recovery/cast/nao.json"
       ]
     },
     "naruto": {
@@ -15255,6 +15243,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.118",
         "s15.text.117"
       ]
     },
@@ -17715,15 +17704,11 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.117"
-        },
-        {
-          "role": "по подписи в сцене"
+          "seen": "s15.text.118"
         }
       ],
       "sources": [
-        "recovery/cast/seydzi.json",
-        "recovery/HOT.json"
+        "recovery/cast/seydzi.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -19284,13 +19269,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 51,
+      "mention_count": 52,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19298,13 +19284,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T17:24:00",
-          "excerpt": "или место молодому лесу, среди которого попадались заброшенные угольные печи и остатки давно вырубленных рощ. Коюки двигалась по придорожным ветвям, иногда переползая на соседние деревья. В приёмнике связи раздался голос матери. **Мугами Нао:** — Шики? Сэйна р",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.115"
         },
         {
           "at": "0010-04-22T17:48:00",
@@ -19319,11 +19298,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.117"
+        },
+        {
+          "at": "0010-04-22T22:37:00",
+          "excerpt": "ходя мимо отшельника, мальчик с раненой ногой отвернулся. Его здоровая рука судорожно сжала плечо товарища. **Коюки:** — Шики, я буду с маленькими. Белая змея самостоятельно спустилась с его плеча и исчезла возле укрывшихся подростков. **Кадзунэ:** — Мы сопров",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.118"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.117",
+          "seen": "s15.text.118",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19332,7 +19318,8 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.118"
       ]
     },
     "white_snake_sage": {
@@ -19824,5 +19811,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1291
+  "source_turns_indexed": 1292
 }
