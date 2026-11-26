@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.175",
+  "cursor": "s15.text.176",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T07:38:15",
-          "excerpt": "преимущество. Асума некоторое время изучал постройку. Затем проверил положение клинков в ладонях. **Асума Сарутоби:** — Разделим их. Если второй выйдет, пока мы заняты первым, преимущество исчезнет. Шикамару посмотрел на тени деревьев, вытянувшиеся по земле в ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.169"
         },
         {
           "at": "0010-04-24T07:38:28",
@@ -425,11 +418,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.175"
+        },
+        {
+          "at": "0010-04-24T07:38:32",
+          "excerpt": "ми Асума оттащил тело Хидана подальше от головы. Ослабевший голос бессмертного всё ещё раздавался над поляной. **Асума Сарутоби:** — Мугами, если он сдаётся, возьмём живым. Хокагэ нужен хотя бы один человек, способный рассказать нам об Акацуки. Шики восстанови",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.176"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.175",
+          "seen": "s15.text.176",
           "state": "Удержал древко косы при ударе, отбросил оружие Хидана, приказал держать тело."
         },
         {
@@ -439,7 +439,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s15.text.175"
+        "s15.text.176"
       ]
     },
     "baki": {
@@ -2107,7 +2107,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2115,13 +2115,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-24T07:38:28",
-          "excerpt": "ла чёрное существо развернуло маску в сторону Шики. Внутри его тела начала концентрироваться чакра. **Какудзу:** — Хидан, этого не трогай. За него платят больше, чем за монаха. **Хидан:** — Да пошёл ты со своими деньгами! Шикамару продолжал удерживать его тень",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.173"
         },
         {
           "at": "0010-04-24T07:38:29",
@@ -2136,23 +2129,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.175"
+        },
+        {
+          "at": "0010-04-24T07:38:32",
+          "excerpt": "кудзу в шоке потерял чемодан, прекратил сопротивление и предложил деньги и сведения. Асума предложил взять живым; Хидан обездвижен.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.176"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.175",
-          "state": "Обезглавлен, жив, голова отдельно говорит, тело удерживается, коса отброшена."
+          "seen": "s15.text.176",
+          "state": "Голова и тело отделены, тело оттащено от головы, голос ослабел, жив."
         },
         {
           "role": "Акацуки",
-          "state": "Обезглавлен, жив, голова отдельно говорит, тело удерживается, коса отброшена."
+          "state": "Голова и тело отделены, тело оттащено от головы, голос ослабел, жив."
         }
       ],
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.175"
+        "s15.text.176"
       ]
     },
     "hirano": {
@@ -2869,7 +2869,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2877,13 +2877,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-24T07:38:28",
-          "excerpt": "Мастеру: я ещё и про то что голова Шики стоит 48 миллионов. По игре: #шуншин между Какудзу и хиданом, печати# Хётон ледяные заркала #заключить Какудзу в ловушку# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:28</text> Шики сорвался с места, ока",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.173"
         },
         {
           "at": "0010-04-24T07:38:29",
@@ -2898,23 +2891,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.175"
+        },
+        {
+          "at": "0010-04-24T07:38:32",
+          "excerpt": "#усиленике зеркал и восстановление зеркал вход в зеркала и атака Какудзу мечем# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 07:38:32</text> Шики сложил печати левой рукой. Трещины на ледяных зеркалах затянулись, прозрачные поверхно",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.176"
         }
       ],
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.175",
-          "state": "Четыре сердца, в шоке, стянул края раны нитями и остановил кровотечение; дефицит крови сохраняется, чемодан при нём."
+          "seen": "s15.text.176",
+          "state": "Четыре сердца, шок, тяжёлая рана плеча с утратой функции руки; прекратил бой, предложил деньги и информацию, не связан."
         },
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "state": "Четыре сердца, в шоке, стянул края раны нитями и остановил кровотечение; дефицит крови сохраняется, чемодан при нём."
+          "state": "Четыре сердца, шок, тяжёлая рана плеча с утратой функции руки; прекратил бой, предложил деньги и информацию, не связан."
         }
       ],
       "sources": [
         "recovery/cast/kakuzu.json",
         "recovery/HOT.json",
-        "s15.text.175"
+        "s15.text.176"
       ]
     },
     "kankuro": {
@@ -10053,11 +10053,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.175",
         "s15.text.171",
         "s15.text.172",
         "s15.text.173",
-        "s15.text.174"
+        "s15.text.174",
+        "s15.text.175"
       ]
     },
     "place:6031eb4576d13397": {
@@ -11892,6 +11892,24 @@
       "projections": [],
       "sources": [
         "s10.text.109"
+      ]
+    },
+    "place:8c748d41a8ed99eb": {
+      "aliases": [
+        "place:8c748d41a8ed99eb",
+        "Страна Огня, пункт выплаты наград",
+        "Страна Огня",
+        "пункт выплаты наград"
+      ],
+      "facts": [],
+      "id": "place:8c748d41a8ed99eb",
+      "kind": "place",
+      "label": "Страна Огня, пункт выплаты наград",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.176"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -18718,7 +18736,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.175",
+          "seen": "s15.text.176",
           "state": "Удерживает обезглавленное тело Хидана тенью."
         },
         {
@@ -18727,8 +18745,7 @@
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s15.text.175"
+        "recovery/HOT.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -20093,11 +20110,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 07:38:24: Шики занял укрытие в 25 м от входа. Какудзу на пороге, Хидан снаружи; Асума подал сигнал, тень Шикамару в движении. Исход первого обмена не определён."
+          "state": "24.04 07:38:32: Хидан обездвижен, Какудзу прекратил сопротивление и предложил сделку. Асума и Шикамару не ранены. Пленение и поиск тела Тирику предстоят."
         }
       ],
       "sources": [
-        "s15.text.170"
+        "s15.text.176"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -21055,5 +21072,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1348
+  "source_turns_indexed": 1349
 }
