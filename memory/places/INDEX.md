@@ -114,6 +114,7 @@
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
+- Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 2 ход(ов), s17–s17
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский читальный зал восточного госпиталя · `places/konokhagakure-meditsinskiy-chitalnyy-zal-vostochnogo-gospita` · 2 ход(ов), s01–s01
@@ -175,7 +176,6 @@
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
-- Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 1 ход(ов), s17–s17
 - Каменный тракт северо-восточнее Сунагакуре, Страна Ветра · `places/kamennyy-trakt-severo-vostochnee-sunagakure-strana-vetra` · 1 ход(ов), s11–s11
 - Коноха, Западный тренировочный полигон · `places/konokha-zapadnyy-trenirovochnyy-poligon` · 1 ход(ов), s02–s02
 - Конохагакуре, дом Наруто · `places/konokhagakure-dom-naruto` · 1 ход(ов), s15–s15

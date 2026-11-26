@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.004: Шикамару Нара (`npc/shikamaru`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`)
 - s17.text.003: Джирайя (`npc/jiraiya`)
 - s17.text.002: Джирайя (`npc/jiraiya`), Путник из Дождя (`npc/rain_drain_worker_s16`), вещь `rain_drain_plan_copy_s17`
 - s17.text.001: Путник из Дождя (`npc/rain_drain_worker_s16`)
@@ -61,4 +62,3 @@
 - s16.text.087: Ао (`npc/ao`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), вещь `kiri_sample_receipt_s16`
 - s16.text.086: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), вещь `kiri_shiki_sample_set_s16`, линия `kiri_bingo_negotiations`, поправки игрока: 1
 - s16.text.085: Ао (`npc/ao`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), линия `kiri_bingo_negotiations`
-- s16.text.084: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), линия `kiri_bingo_negotiations`

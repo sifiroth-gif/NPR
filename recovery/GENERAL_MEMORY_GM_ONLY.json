@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.003",
+  "cursor": "s17.text.004",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 105,
+      "mention_count": 106,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T15:27:00",
-          "excerpt": "ный свет ложился на потёртую столешницу, освещая пожелтевшую бумагу с чертежами водостоков Амэгакурэ. Джирайя перестал улыбаться. Он наклонился над планом, убрав с него широким движением рукава пустую чашку. Его палец остановился возле обведённой углём башни. ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.001"
         },
         {
           "at": "0010-05-04T15:34:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.003"
+        },
+        {
+          "at": "0010-05-04T17:56:00",
+          "excerpt": "бенно долго он изучал положение о признании независимого статуса Мугами Шики. **Пограничник:** — Господин Джирайя, вы подтверждаете его слова? Саннин утвердительно кивнул. **Джирайя:** — Он путешествует со мной по договорённости с Хокагэ. Пограничник выслушал ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.004"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.003",
+          "seen": "s17.text.004",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2566,8 +2566,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s17.text.003"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -4228,7 +4227,8 @@
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби"
+        "Незнакомый шиноби",
+        "leaf_gate_special_inspector_s16"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
@@ -4267,12 +4267,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.113",
+          "seen": "s17.text.004",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_special_inspector_s16.json"
+        "recovery/cast/leaf_gate_special_inspector_s16.json",
+        "s17.text.004"
       ]
     },
     "lee": {
@@ -10678,6 +10679,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.004",
         "s17.text.003"
       ]
     },
@@ -19793,12 +19795,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.096",
+          "seen": "s17.text.004",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s17.text.004"
       ]
     },
     "shiki_arm_wraps": {
@@ -22234,5 +22237,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1514
+  "source_turns_indexed": 1515
 }
