@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.202: Гамамару (`npc/gamamaru`), Асума Сарутоби (`npc/asuma`), Шизунэ (`npc/shizune`)
 - s15.text.201: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`)
 - s15.text.200: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Изумо Камидзуки (`npc/izumo`)
 - s15.text.198: вещь `cash_1184`, вещь `shiki_finances`
@@ -60,4 +61,3 @@
 - s15.text.145: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.144: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
 - s15.text.143: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`)
-- s15.text.142: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`)

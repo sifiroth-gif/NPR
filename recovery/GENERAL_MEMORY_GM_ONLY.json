@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.201",
+  "cursor": "s15.text.202",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,12 +429,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.185",
+          "seen": "s15.text.202",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "s15.text.202"
       ]
     },
     "baki": {
@@ -1838,7 +1839,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1846,13 +1847,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-24T19:27:00",
-          "excerpt": "Джирайей? На Мьёбоку? Она коротко усмехнулась. **Цунадэ:** — Хотела бы я увидеть выражение лица старика Фукасаку, когда он приведёт тебя к Великому Жабьему Мудрецу. Шизунэ поправила лежавшие на столе документы. **Цунадэ:** — Иди отдыхай. Ибики начнёт работу бе",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.196"
         },
         {
           "at": "0010-04-25T08:58:00",
@@ -1867,11 +1861,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.201"
+        },
+        {
+          "at": "0010-04-25T09:08:00",
+          "excerpt": "s\">25 апреля 1287 года · 09:08</text> ### Мьёбоку. Храм Великого Жабьего Мудреца Шики последовал за Фукасаку и Джирайей. Тропа поднималась вдоль горного ручья. Исполинские растения склонялись над водой, на широких листьях блестели капли росы. Среди камышей пер",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.202"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.201",
+          "seen": "s15.text.202",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1880,8 +1881,7 @@
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json",
-        "s15.text.201"
+        "recovery/HOT.json"
       ]
     },
     "gaara": {
@@ -2004,6 +2004,61 @@
       ],
       "sources": [
         "recovery/cast/gai.json"
+      ]
+    },
+    "gamamaru": {
+      "aliases": [
+        "gamamaru",
+        "Гамамару"
+      ],
+      "facts": [],
+      "id": "gamamaru",
+      "kind": "npc",
+      "label": "Гамамару",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0010-04-24T12:38:00",
+          "excerpt": "теной проползло крупное существо. **Хакудзя-сэннин:** — Посети их. Мне даже интересно, что скажет старый Гамамару, если вы встретитесь. У него весьма своеобразные отношения со временем. Иногда он помнит то, чего ещё не случилось, и забывает тех, кого знает сто",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.188"
+        },
+        {
+          "at": "0010-04-25T08:59:00",
+          "excerpt": "ием и предложением принять её в Мьёбоку. Фукасаку организовал согласованный переход с Джирайей и Шики, предложил идти к Гамамару.",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.201"
+        },
+        {
+          "at": "0010-04-25T09:08:00",
+          "excerpt": "ижения его грудной клетки почти не нарушали её равновесия. **Фукасаку:** — Великий Мудрец, мы привели гостя. Гамамару пошевелился. Его веки приоткрылись. **Гамамару:** — А… Джирайя. Ты опять постарел. **Джирайя:** — Уж кто бы говорил. Старая жаба издала негром",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.202"
+        }
+      ],
+      "projections": [
+        {
+          "fears": "Нарушение природного равновесия.",
+          "role": "Старейшина Мьёбоку, пророческие сны.",
+          "seen": "s15.text.202",
+          "stance": "Любопытство к гостю.",
+          "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
+          "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
+        },
+        {
+          "fears": "Нарушение природного равновесия.",
+          "role": "Старейшина Мьёбоку, пророческие сны.",
+          "stance": "Любопытство к гостю.",
+          "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
+        }
+      ],
+      "sources": [
+        "recovery/cast/gamamaru.json",
+        "recovery/HOT.json",
+        "s15.text.202"
       ]
     },
     "grass_roads_patrol_senior": {
@@ -2502,7 +2557,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2510,13 +2565,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-24T19:15:00",
-          "excerpt": "пройти на гору. С Белой Змеёй я поговорил. А сейчас… Асума ещё не вернулся, мне нужно навестить Кагэ. Джирайя помрачнел. **Джирайя:** — Значит, Тирику погиб. Жаль. Достойный был человек. Он некоторое время смотрел вдоль вечерней улицы, затем поправил налобный ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.192"
         },
         {
           "at": "0010-04-25T08:58:00",
@@ -2531,11 +2579,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.201"
+        },
+        {
+          "at": "0010-04-25T09:08:00",
+          "excerpt": "елые цветы. **Фукасаку:** — Ученики, которые не справились с природной энергией. Мы оставляем их здесь. Джирайя на мгновение задержался возле изваяний, затем продолжил подъём. В глубине храма царил прохладный полумрак. Сквозь высокие окна проникали полосы солн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.202"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.201",
+          "seen": "s15.text.202",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2544,8 +2599,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s15.text.201"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -3647,8 +3701,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s15.text.201"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -5961,6 +6014,23 @@
       "projections": [],
       "sources": [
         "s12.text.063"
+      ]
+    },
+    "place:02b869088aaf1ce1": {
+      "aliases": [
+        "place:02b869088aaf1ce1",
+        "Мьёбоку, храм Великого Жабьего Мудреца",
+        "храм Великого Жабьего Мудреца"
+      ],
+      "facts": [],
+      "id": "place:02b869088aaf1ce1",
+      "kind": "place",
+      "label": "Мьёбоку, храм Великого Жабьего Мудреца",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.202"
       ]
     },
     "place:02d2db9d9042a981": {
@@ -19397,12 +19467,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.196",
+          "seen": "s15.text.202",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s15.text.202"
       ]
     },
     "signalshchik": {
@@ -21291,5 +21362,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1374
+  "source_turns_indexed": 1375
 }
