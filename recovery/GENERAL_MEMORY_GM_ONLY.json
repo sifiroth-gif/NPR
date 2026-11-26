@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.122",
+  "cursor": "s16.text.123",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -943,13 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.122"
+          "seen": "s16.text.123"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s16.text.122"
+        "s16.text.123"
       ]
     },
     "deidara": {
@@ -3348,7 +3348,8 @@
     "kiri_archive_observer_s16": {
       "aliases": [
         "kiri archive observer s16",
-        "Инспектор закрытого отдела"
+        "Инспектор закрытого отдела",
+        "kiri_archive_observer_s16"
       ],
       "facts": [],
       "id": "kiri_archive_observer_s16",
@@ -3380,12 +3381,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.101",
+          "seen": "s16.text.123",
           "wants": "Сохранить интересы своего отдела при рассмотрении K-0418."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_archive_observer_s16.json"
+        "recovery/cast/kiri_archive_observer_s16.json",
+        "s16.text.123"
       ]
     },
     "kiri_bingo_book": {
@@ -16506,6 +16508,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.123",
         "s16.text.122"
       ]
     },
@@ -22119,5 +22122,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1495
+  "source_turns_indexed": 1496
 }
