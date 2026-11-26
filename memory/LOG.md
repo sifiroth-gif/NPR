@@ -61,4 +61,3 @@
 - s15.text.142: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`)
 - s15.text.141: Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`)
 - s15.text.140: Наруто Узумаки (`npc/naruto`)
-- s15.text.139: Наруто Узумаки (`npc/naruto`)

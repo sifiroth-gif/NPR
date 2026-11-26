@@ -3,42 +3,6 @@
   "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
   "soon": [
    {
-    "due": "0010-04-24T20:00:00",
-    "if_unopposed": "Передаст тело монахам и доложит Цунадэ.",
-    "name": "Асума Сарутоби",
-    "next": "Доставить тело Тирику в храм, проверить эвакуацию, затем вернуться в Коноху.",
-    "npc": "asuma",
-    "overdue": false,
-    "plan": "return_chiriku_s15"
-   },
-   {
-    "due": "0010-04-24T21:00:00",
-    "if_unopposed": "Помещение и охраняемый медицинский осмотр будут готовы к приёму.",
-    "name": "Шизунэ",
-    "next": "Подготовить изоляцию и охраняемый медосмотр, обеспечить уведомление Цунадэ при прибытии Асумы.",
-    "npc": "shizune",
-    "overdue": false,
-    "plan": "prepare_hidan_custody_s15"
-   },
-   {
-    "due": "0010-04-24T22:00:00",
-    "if_unopposed": "Вернётся с отрядом и доложит о спасённых монахах.",
-    "name": "Изумо Камидзуки",
-    "next": "Передать Асуме сведения о раненых и сопровождать возвращение отряда.",
-    "npc": "izumo",
-    "overdue": false,
-    "plan": "report_temple_s15"
-   },
-   {
-    "due": "0010-04-24T22:00:00",
-    "if_unopposed": "Вернётся с отрядом, передаст сведения о маршруте и запросе.",
-    "name": "Котэцу Хаганэ",
-    "next": "Сопроводить оставшийся путь в Коноху и доложить о доставке запроса и подкреплении.",
-    "npc": "kotetsu",
-    "overdue": false,
-    "plan": "finish_return_s15"
-   },
-   {
     "due": "0010-04-25T08:00:00",
     "if_unopposed": "Определит условия закрытого допроса после оценки состояния пленника.",
     "name": "Цунадэ",
@@ -55,6 +19,42 @@
     "npc": "jiraiya",
     "overdue": false,
     "plan": "myoboku_meeting_s15"
+   },
+   {
+    "due": "0010-04-25T09:00:00",
+    "if_unopposed": "Согласует добровольную встречу.",
+    "name": "Фукасаку",
+    "next": "Вернуться на Мьёбоку и согласовать с Симой приём возможного гостя 25 апреля.",
+    "npc": "fukasaku",
+    "overdue": false,
+    "plan": "invite_shiki_myoboku"
+   },
+   {
+    "due": "0010-04-25T09:00:00",
+    "if_unopposed": "Подготовит согласованный приём при принятии приглашения.",
+    "name": "shima",
+    "next": "Вернуться домой, подготовить приём при подтверждении визита.",
+    "npc": "shima",
+    "overdue": false,
+    "plan": "host_shiki_visit"
+   },
+   {
+    "due": "0010-04-25T09:00:00",
+    "if_unopposed": "Представит Хокагэ свидетельство о бое и рисках содержания пленника.",
+    "name": "Шикамару Нара",
+    "next": "Сопроводить Асуму через храм и подготовить последовательный отчёт о бое и найденных документах.",
+    "npc": "shikamaru",
+    "overdue": false,
+    "plan": "report_akatsuki_s15"
+   },
+   {
+    "due": "0010-04-25T12:00:00",
+    "if_unopposed": "Группа проведёт самостоятельную учебную проводку и отработает эвакуацию.",
+    "name": "Асумага Тосэ",
+    "next": "Провести практическое занятие с группой на западном маршруте.",
+    "npc": "kusa_leader",
+    "overdue": false,
+    "plan": "train_current_team"
    }
   ]
  },
@@ -72,7 +72,7 @@
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.198",
+  "cursor": "s15.text.199",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -80,13 +80,9 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:962be2353e9396b1",
-   "tsunade",
-   "leaf_shiki_agreement_copy",
-   "leaf_shiki_agreement_original",
-   "naruto_home_sketch_s15"
+   "place:64c4867c7987478d"
   ],
-  "focus_bytes": 1944,
+  "focus_bytes": 448,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -101,69 +97,25 @@
   "thematic": {
    "basis": "scene_continuation",
    "entries": [
-    "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "pact.contact",
     "sage.permanent",
     "sage.poison",
-    "seals.speed",
     "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
     "sage.summon"
    ],
    "matched": [],
    "read": [
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/SHIKI.md"
    ],
    "required": [
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
     "scene/place",
     "body/gear",
     "due/offscreen",
     "time"
    ],
    "routes": [
-    "combat",
     "travel"
    ],
-   "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
-   ]
+   "unavailable": []
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -377,13 +329,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-24T19:43:00",
-  "date": "Суббота, 24 апреля 1287 года",
-  "id": "s15.text.198",
-  "place": "Конохагакуре, торговый квартал, гостиница, комната 7",
-  "time": "19:43"
+  "at": "0010-04-25T07:30:00",
+  "date": "Воскресенье, 25 апреля 1287 года",
+  "id": "s15.text.199",
+  "place": "Конохагакуре, гостиница, комната 7",
+  "time": "07:30"
  },
- "digest": "20a7850e5218708b052a1421e9214cf2fdaeb12d8dc3f0d140b8afb588f38ca7",
+ "digest": "382de3e71dad51e1f3edee7ef6d6e254b1b8ee0b3282cd1800ee5305114240df",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -406,11 +358,11 @@
       2,
       3
      ],
-     "cat": 2,
-     "die": 14,
+     "cat": 3,
+     "die": 16,
      "exert": false,
      "load": 2.0,
-     "turn": "s15.text.197"
+     "turn": "s15.text.199"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -423,10 +375,10 @@
       4
      ],
      "cat": 3,
-     "die": 8,
+     "die": 12,
      "exert": false,
      "load": 1.0,
-     "turn": "s15.text.197"
+     "turn": "s15.text.199"
     },
     "loss": 4,
     "stage": "без сознания"
@@ -518,18 +470,18 @@
    "value": 600.0
   },
   "dice": [
-   5,
-   18,
-   10,
-   6,
-   20,
-   13,
-   11,
-   8,
-   6,
-   18,
+   16,
+   19,
+   14,
+   15,
    12,
-   4
+   16,
+   13,
+   19,
+   7,
+   8,
+   11,
+   12
   ],
   "injuries": {
    "hidan": [
@@ -659,77 +611,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:962be2353e9396b1",
+    "id": "place:64c4867c7987478d",
     "kind": "place",
-    "label": "Конохагакуре, торговый квартал, гостиница, комната 7",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "tsunade",
-    "kind": "npc",
-    "label": "Цунадэ",
-    "operational_cues": {
-     "source": "recovery/cast/tsunade.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "leaf_shiki_agreement_copy",
-    "kind": "item",
-    "label": "Соглашение Конохи о взаимном ненападении, экземпляр для Шики",
-    "operational_cues": {
-     "source": "s15.text.134",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "leaf_shiki_agreement_original",
-    "kind": "item",
-    "label": "Соглашение Конохи о взаимном ненападении, экземпляр резиденции",
-    "operational_cues": {
-     "source": "s15.text.134",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "naruto_home_sketch_s15",
-    "kind": "item",
-    "label": "Схема пути к дому Наруто",
-    "operational_cues": {
-     "source": "s15.text.136",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "tsunade"
-     }
-    },
+    "label": "Конохагакуре, гостиница, комната 7",
     "status": "no_verified_facts"
    }
   ],
@@ -739,7 +623,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 5
+  "total_matched": 1
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -771,8 +655,8 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:43</text>\n\n### Гостиница\n\n**Мугами Шики:** — Одна ночь.\n\nШики достал шестьсот рё и положил деньги на стойку. Хозяин пересчитал их, передал ключ и указал на лестницу.\n\n**Хозяин гостиницы:** — Седьмая комната. Купальня в конце коридора. Завтрак с шести утра.\n\nНа втором этаже было тихо. За то…",
-  "player": "Одна ночь #оплачиваю#",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 19:45</text>\n\n### Гостиница\n\nШики улёгся на футон и погрузился в сон.\n\nЗа окном постепенно погасли фонари торговой улицы. Последние посетители чайной разошлись по домам. Ночной ветер шевелил молодую листву клёнов.\n\n***\n\n<text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 07:3…",
+  "player": "Мастеру: эхо должно быть событием.\nПо игре: сон",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [],
@@ -870,22 +754,22 @@
  "present_npcs": {},
  "recent_turns": [
   {
-   "id": "s15.text.197",
-   "line": "Шики отказался от предложенного ночлега и пришёл в гостиницу, показанную Наруто (s15.text.157). Хозяин предложил свободную комнату за 600 рё; ещё не оплачена."
-  },
-  {
    "id": "s15.text.198",
    "line": "Шики снял комнату №7 на одну ночь, заплатил 600 рё, получил ключ; завтрак с 06:00, купальня на этаже. Остаток дорожных денег 202800 рё с учётом покупки пластин 1200."
+  },
+  {
+   "id": "s15.text.199",
+   "line": "Шики спал в гостинице с 19:45 до 07:30, проснулся отдохнувшим. Встреча с Джирайей в 09:00. Эхо должно быть событием, как уже установлено регламентом."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в снятой комнате №7.",
-  "pressure": "Встреча с Джирайей 25.04 в 09:00; после возвращения с Мьёбоку закрытый допрос по согласованию с Цунадэ.",
-  "situation": "Шики оплатил 600 рё за одну ночь в гостинице, получил ключ от комнаты №7 на втором этаже. Купальня в конце коридора, завтрак с 06:00. В комнате футон, столик, вода, окно на крыши. Шики может отдохнуть; сон ещё не заявлен."
+  "positions": "Шики в комнате №7 гостиницы.",
+  "pressure": "До встречи полтора часа; закрытый допрос после возвращения с Мьёбоку.",
+  "situation": "Шики спал с 19:45 24 апреля до 07:30 25 апреля в комнате №7. Проснулся отдохнувшим. Завтрак доступен в гостинице; встреча с Джирайей в 09:00 на прежней тренировочной площадке. О ночных событиях Конохи ещё не осведомлён."
  },
  "shiki": {
-  "body": "Постоянный режим дракона и устойчивый синтез Инь–Ян–природной энергии s15.text.131; единая сущность, холодная цельная кожа, чёрная кровь и корни, чешуя. Риннешаринган выключен.",
+  "body": "Отдохнул после ночного сна; постоянный режим дракона, Риннешаринган выключен.",
   "genome": "{\"discovery\": \"Нулевой Геном определил Шики как первого донора С-17 по старым индивидуальным генетическим маркерам.\", \"s17_tissue\": \"Малая введённая проба уничтожена полностью, жизнеспособных клеток нет; постоянной интеграции не было.\", \"uchiha_eyes\": \"Левый Магацухи (Бётон) — тератогенная скверна живой плоти через взгляд, ВМШ управляет многими мутациями и контактно/через активную связь чакры передаёт поражение. Правый Ёмоцу-Хэгуи (Шитон) — физиологическая команда смерти через додзюцу, ВМШ — поражение в поле зрения без встречного взгляда, групповое воздействие и отложенная метка. Вместе S «Колыбель Ёми» — управляемая жизнь/смерть, формирование некротической биомарионетки с сохранным сознанием при поддержке. НЕ Мумё/Кёкай. Зрение стабильно без слепоты, не бесконечная чакра; глаза собственные, стабилизированы после интеграции генома Учиха. Рисунок ВМШ строго по фото 2900.jpg.\"}",
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
@@ -894,8 +778,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "87a51e84eb6c8479506b3fb1b479112212bcc821",
-  "turn": "s15.text.198"
+  "sha": "122d7832a51cb6609c0b9a9406c26cdbdcde7a93",
+  "turn": "s15.text.199"
  },
  "wiki": {
   "index": "memory/INDEX.md",

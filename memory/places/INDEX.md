@@ -41,10 +41,10 @@
 - Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 10 ход(ов), s15–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 10 ход(ов), s02–s02
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
+- Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
-- Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 8 ход(ов), s01–s01
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
