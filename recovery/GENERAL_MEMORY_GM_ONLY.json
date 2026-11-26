@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.124",
+  "cursor": "s16.text.125",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -943,13 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.124"
+          "seen": "s16.text.125"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s16.text.124"
+        "s16.text.125"
       ]
     },
     "deidara": {
@@ -5682,7 +5682,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 174,
+      "mention_count": 175,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5690,13 +5690,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T12:05:00",
-          "excerpt": "Узнать о моих делах с Орочимару и откуда у меня шаринган. А имя #смешок# допрашивающий прокололся, Данзо <text color=\"secondary\" size=\"xs\">Понедельник, 3 мая 1287 года · 12:05</text> ### Конохагакуре.",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.111"
         },
         {
           "at": "0010-05-03T12:37:00",
@@ -5711,6 +5704,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.124"
+        },
+        {
+          "at": "0010-05-03T14:04:00",
+          "excerpt": "аю сведениями о вашем прошлом в Кусагакуре. Знаю о ваших медицинских познаниях, предполагаемых контактах с Орочимару и приобретении наследственных способностей. Теперь мне известно о вашем интересе к пространственным техникам. Он поднял взгляд. **Данзо:** — Но",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.125"
         }
       ],
       "projections": [
@@ -16506,9 +16506,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.124",
+        "s16.text.125",
         "s16.text.122",
-        "s16.text.123"
+        "s16.text.123",
+        "s16.text.124"
       ]
     },
     "place:e1e0909c80a6f57f": {
@@ -21257,7 +21258,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 80,
+      "mention_count": 81,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21265,13 +21266,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T12:48:00",
-          "excerpt": "человек, которого местные жители называют Богом. Его распоряжения передаёт женщина, известная как Ангел. Цунадэ нахмурилась. **Цунадэ:** — Пэйн и Конан? **Джирайя:** — Почти наверняка. Он провёл пальцем вдоль восточной границы Страны Дождя. По сведениям его ис",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.120"
         },
         {
           "at": "0010-05-03T13:58:00",
@@ -21286,6 +21280,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.124"
+        },
+        {
+          "at": "0010-05-03T14:04:00",
+          "excerpt": "его измерять человеческие жизни их значением для государства. **Данзо:** — Именно поэтому я считаю соглашение Цунадэ недостаточным. Она доверяет вашим решениям. Я предпочитаю обстоятельства, при которых нарушение обязательств становится невыгодным обеим сторон",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.125"
         }
       ],
       "projections": [
@@ -22121,5 +22122,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1497
+  "source_turns_indexed": 1498
 }
