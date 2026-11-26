@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.112: Рёэн (`npc/fire_temple_travel_monk`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.111: Сэйдзи (`npc/fire_temple_driver_seiji`), Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/fire_temple_travel_jun`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), поправки игрока: 1
 - s15.text.110: Рёэн (`npc/fire_temple_travel_monk`), Дзюн (`npc/fire_temple_travel_jun`), Сэйдзи (`npc/fire_temple_driver_seiji`), Кирисава Сэйна (`npc/seina`), Мидзухара Аки (`npc/aki`)
 - s15.text.109: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), Рёэн (`npc/fire_temple_travel_monk`), линия `shiki_save_asuma`, поправки игрока: 1
@@ -61,4 +62,3 @@
 - s15.text.055: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`)
 - s15.text.054: Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 1
 - s15.text.053: Кирисава Сэйна (`npc/seina`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), вещь `kusa_family_visit_permit_s15`
-- s15.text.052: Глава Кусагакуре (`npc/kusa_head`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Старший патруля Кусы (`npc/grass_roads_patrol_senior`), вещь `kusa_family_visit_permit_s15`
