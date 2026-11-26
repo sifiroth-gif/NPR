@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.102: Глава Кусагакуре (`npc/kusa_head`), поправки игрока: 2
 - s15.text.101: Глава Кусагакуре (`npc/kusa_head`)
 - s15.text.100: Глава Кусагакуре (`npc/kusa_head`), Асумага Тосэ (`npc/kusa_leader`)
 - s15.text.099: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Глава Кусагакуре (`npc/kusa_head`), вещь `seven_locks_scroll_fragments`
@@ -61,4 +62,3 @@
 - s15.text.045: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `orochimaru_poison_samples_s15`
 - s15.text.044: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s15.text.043: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `orochimaru_poison_samples_s15`
-- s15.text.042: Орочимару (`npc/orochimaru`)
