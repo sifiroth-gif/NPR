@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.084",
+  "cursor": "s15.text.085",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -46,7 +46,7 @@
       "id": "aki",
       "kind": "npc",
       "label": "Мидзухара Аки",
-      "mention_count": 93,
+      "mention_count": 94,
       "mentions": [
         {
           "at": "0001-07-01T14:12:00",
@@ -54,13 +54,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.004"
-        },
-        {
-          "at": "0010-04-21T20:29:00",
-          "excerpt": "аясэ Рэн:** — Ли! Этого я помню. Чокнутый в зелёном. Аки улыбнулась, но почти сразу стала серьёзной. **Мидзухара Аки:** — Хатаке Какаши знал, кто ты? В смысле, знал о твоём розыске? Акихиро тем временем начал собирать опустевшие тарелки. Забрав посуду у Рэна и",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.080"
         },
         {
           "at": "0010-04-21T20:30:00",
@@ -75,16 +68,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.082"
+        },
+        {
+          "at": "0010-04-21T20:34:00",
+          "excerpt": "Рэн постоял ещё немного у двери, попрощался с родителями и Сэйной и вышел. Аки проводила его взглядом. **Мидзухара Аки:** — Шики, я не стану расспрашивать тебя о том, чего ты и сам пока не можешь объяснить. Но хочу попросить об одном. Если когда-нибудь тебе по",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.085"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.084"
+          "seen": "s15.text.085"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s15.text.085"
       ]
     },
     "aki_home_address_s15": {
@@ -4058,7 +4059,7 @@
       "id": "nao",
       "kind": "npc",
       "label": "Мугами Нао",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0001-08-10T20:43:00",
@@ -4066,13 +4067,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.058"
-        },
-        {
-          "at": "0010-04-21T20:25:00",
-          "excerpt": "ди утром. Покажу. Из кухни вернулась Нао с небольшой банкой чая. Она поставила её поверх семейного альбома. **Мугами Нао:** — Возьми с собой. У меня ещё есть. Её рука задержалась на крышке банки. **Мугами Нао:** — Я ведь тебя домой приглашаю, Шики. Не в деревн",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.075"
         },
         {
           "at": "0010-04-21T20:32:00",
@@ -4087,6 +4081,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.084"
+        },
+        {
+          "at": "0010-04-21T20:34:00",
+          "excerpt": "ющих это состояние. Поэтому я пока что говорю «мы». Нао протянула руку и накрыла ладонь сына своей. **Мугами Нао:** — Хорошо. Тогда я рада, что вы пришли. Рэн постоял ещё немного у двери, попрощался с родителями и Сэйной и вышел. Аки проводила его взглядом. **",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.085"
         }
       ],
       "projections": [
@@ -4094,7 +4095,7 @@
           "body": "Увидев сына, слишком аккуратно отложила перевязочный пакет, приблизилась, но не обняла автоматически; одновременно злость на собственное неведение и желание вернуть сыну личную самостоятельность.",
           "fears": "Непонятная перемена состояния Шики",
           "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-          "seen": "s15.text.084",
+          "seen": "s15.text.085",
           "stance": "Сдержанная клиническая настороженность",
           "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинской информации нет.",
           "voice": "Тихая прямая речь",
@@ -4111,7 +4112,7 @@
       "sources": [
         "recovery/cast/nao.json",
         "recovery/HOT.json",
-        "s15.text.084"
+        "s15.text.085"
       ]
     },
     "naruto": {
@@ -6175,7 +6176,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.084",
+        "s15.text.085",
         "s15.text.059",
         "s15.text.060",
         "s15.text.061",
@@ -6196,7 +6197,8 @@
         "s15.text.080",
         "s15.text.081",
         "s15.text.082",
-        "s15.text.083"
+        "s15.text.083",
+        "s15.text.084"
       ]
     },
     "place:26e41574e79a07da": {
@@ -16233,7 +16235,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.084",
+          "seen": "s15.text.085",
           "state": "Руководил охраной обоза, передал её заместителю при встрече с Шики и остался; дисциплинированнее прежнего, сохранил резкую речь."
         },
         {
@@ -16243,7 +16245,7 @@
       "sources": [
         "recovery/cast/ren.json",
         "recovery/HOT.json",
-        "s15.text.084"
+        "s15.text.085"
       ]
     },
     "residence_courier_v7": {
@@ -17014,13 +17016,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.084"
+          "seen": "s15.text.085"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
-        "recovery/HOT.json",
-        "s15.text.084"
+        "recovery/HOT.json"
       ]
     },
     "sekido_tadao": {
@@ -18732,7 +18733,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18740,13 +18741,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-21T20:23:00",
-          "excerpt": "реподавателям. Рэн несколько раз заставил Сэйну смеяться, изображая манеру Тосэ отчитывать подчинённых. Коюки слушала, положив голову на сложенные кольца собственного тела. Аки достала из сумки небольшой карандаш и клочок бумаги, записала адрес. **Мидзухара Ак",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.073"
         },
         {
           "at": "0010-04-21T20:25:00",
@@ -18761,20 +18755,23 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.082"
+        },
+        {
+          "at": "0010-04-21T20:34:00",
+          "excerpt": "что у тебя остались друзья. Даже здесь. Она поднялась и обратилась к маленькой змее. **Мидзухара Аки:** — Коюки, пойдём завтра после завтрака. Я покажу тебе дорогу от этого дома до моего. Нао всё ещё держала сына за руку. **Ход Шики.** Шики объяснил употреблен",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.085"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.084",
-          "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
-        },
-        {
+          "seen": "s15.text.085",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -19224,5 +19221,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1258
+  "source_turns_indexed": 1259
 }
