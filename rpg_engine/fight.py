@@ -969,7 +969,8 @@ def brief(hot):
         result["chakra"] = {k: chakra[k] for k in ("value", "max", "state", "locked_until", "last") if k in chakra}
     if fusion.active(hot):
         result.setdefault("chakra", {})["regen_per_hour"] = fusion.REGEN_PER_HOUR
-    injuries = {k: [w for w in v if not w.get("healed")] for k, v in (hot.get("injuries") or {}).items()}
+    injuries = {k: [w for w in v if not w.get("healed")] for k, v in (hot.get("injuries") or {}).items()
+                if body.mode(hot, k) != "dead"}
     if injuries:
         result["injuries"] = injuries
     if body.brief(hot):
@@ -1008,6 +1009,8 @@ def scene_lines(hot):
     if active:
         lines.append(f"- идёт бой `{active['id']}`, обмен {active.get('exchanges', 0)}")
     for who, wounds in (hot.get("injuries") or {}).items():
+        if body.mode(hot, who) == "dead":
+            continue
         for wound in wounds:
             if not wound.get("healed"):
                 lines.append(f"- рана: {who} — {wound.get('where', '')}, {wound.get('severity', '')}"
