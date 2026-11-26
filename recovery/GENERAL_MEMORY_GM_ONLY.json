@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.086",
+  "cursor": "s16.text.087",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -153,19 +153,14 @@
       "projections": [
         {
           "fears": "Самовольное действие ведомства, срыв переговоров и новый международный инцидент.",
-          "seen": "s16.text.086",
+          "seen": "s16.text.087",
           "voice": "Деловая твёрдость, точность, сдержанная резкость.",
-          "wants": "Согласовать приемлемые для Мэй условия урегулирования без уступки безопасности деревни."
-        },
-        {
-          "fears": "Самовольное действие ведомства, срыв переговоров и новый международный инцидент.",
           "wants": "Согласовать приемлемые для Мэй условия урегулирования без уступки безопасности деревни."
         }
       ],
       "sources": [
         "recovery/cast/ao.json",
-        "recovery/HOT.json",
-        "s16.text.086"
+        "s16.text.087"
       ]
     },
     "arai_mitiko": {
@@ -533,22 +528,6 @@
         "s09.text.067"
       ]
     },
-    "canon:s16.text.086:0": {
-      "aliases": [
-        "canon:s16.text.086:0",
-        "s16.text.086: Соглашение s16.text.085 подписано Шики и Ао, заверено Кири и Огнём. K-0418 и 48 млн рё приостановлены 27.04–27.05 1287; не считать окончательно отменёнными. Три проби"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.086:0",
-      "kind": "canon",
-      "label": "s16.text.086: Соглашение s16.text.085 подписано Шики и Ао, заверено Кири и Огнём. K-0418 и 48 млн рё приостановлены 27.04–27.05 1287; не считать окончательно отменёнными. Три проби",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.086"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -810,8 +789,7 @@
       "aliases": [
         "clock:kiri sample agreement expiry s16",
         "Истекает 30-суточное временное соглашение K-0418",
-        "kiri_sample_agreement_expiry_s16",
-        "kiri sample agreement expiry s16"
+        "kiri_sample_agreement_expiry_s16"
       ],
       "facts": [],
       "id": "clock:kiri_sample_agreement_expiry_s16",
@@ -827,8 +805,7 @@
         }
       ],
       "sources": [
-        "recovery/GM_ONLY.json",
-        "s16.text.086"
+        "recovery/GM_ONLY.json"
       ]
     },
     "clock:yig_brood_disturbance": {
@@ -1205,7 +1182,7 @@
       "id": "fire_port_official",
       "kind": "npc",
       "label": "Портовый чиновник",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0010-04-11T16:20:00",
@@ -1213,13 +1190,6 @@
           "source": "archive/session-013-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s13.text.080"
-        },
-        {
-          "at": "0010-04-27T12:10:00",
-          "excerpt": "ми. По завершении вы получите результаты, и мы вновь встретимся. Корабельный офицер чуть заметно расслабил плечи. Портовый чиновник тем временем достал ещё два листа и положил их рядом с первым. **Портовый чиновник:** — Управление Огня сохранит заверенную копи",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.084"
         },
         {
           "at": "0010-04-27T13:46:00",
@@ -1234,11 +1204,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.086"
+        },
+        {
+          "at": "0010-04-27T13:52:00",
+          "excerpt": "ащаемся сегодня. Инспектор открыл было рот, но, встретившись с взглядом Ао, молча принялся собирать бумаги. Портовый чиновник проводил делегацию до двери. Когда представители Тумана вышли, он обернулся к Шики. **Портовый чиновник:** — Знаете, господин Мугами, ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.087"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.086",
+          "seen": "s16.text.087",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         },
         {
@@ -1248,7 +1225,7 @@
       "sources": [
         "recovery/cast/fire_port_official.json",
         "recovery/HOT.json",
-        "s16.text.086"
+        "s16.text.087"
       ]
     },
     "fire_port_security_staff": {
@@ -3398,8 +3375,7 @@
     "kiri_archive_observer_s16": {
       "aliases": [
         "kiri archive observer s16",
-        "Инспектор закрытого отдела",
-        "kiri_archive_observer_s16"
+        "Инспектор закрытого отдела"
       ],
       "facts": [],
       "id": "kiri_archive_observer_s16",
@@ -3433,15 +3409,10 @@
         {
           "seen": "s16.text.086",
           "wants": "Сохранить интересы своего отдела при рассмотрении K-0418."
-        },
-        {
-          "wants": "Сохранить интересы своего отдела при рассмотрении K-0418."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_archive_observer_s16.json",
-        "recovery/HOT.json",
-        "s16.text.086"
+        "recovery/cast/kiri_archive_observer_s16.json"
       ]
     },
     "kiri_bingo_book": {
@@ -3636,6 +3607,27 @@
         "recovery/cast/kiri_port_guard_senior.json"
       ]
     },
+    "kiri_sample_receipt_s16": {
+      "aliases": [
+        "kiri sample receipt s16"
+      ],
+      "facts": [],
+      "id": "kiri_sample_receipt_s16",
+      "kind": "item",
+      "label": "kiri sample receipt s16",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s16.text.087",
+          "turn": "s16.text.087"
+        }
+      ],
+      "sources": [
+        "s16.text.087"
+      ]
+    },
     "kiri_shiki_sample_set_s16": {
       "aliases": [
         "kiri shiki sample set s16"
@@ -3700,17 +3692,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.086",
-          "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
-        },
-        {
+          "seen": "s16.text.087",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
-        "recovery/HOT.json",
-        "s16.text.086"
+        "s16.text.087"
       ]
     },
     "kiri_transfer_carrier": {
@@ -17278,7 +17266,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.086",
+        "s16.text.087",
         "s16.text.076",
         "s16.text.077",
         "s16.text.078",
@@ -17288,7 +17276,8 @@
         "s16.text.082",
         "s16.text.083",
         "s16.text.084",
-        "s16.text.085"
+        "s16.text.085",
+        "s16.text.086"
       ]
     },
     "place:f4500c0ac878606b": {
@@ -21739,8 +21728,15 @@
       "status": "projected",
       "to": "ao",
       "type": "held_by"
+    },
+    {
+      "from": "kiri_sample_receipt_s16",
+      "source": "s16.text.087",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1460
+  "source_turns_indexed": 1461
 }

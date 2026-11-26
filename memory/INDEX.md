@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s16.text.086`
+# Карта мира NPR · на ходе `s16.text.087`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,10 +6,10 @@
 - места · `places/INDEX` (337) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (251)
-- Ао — Мужчина средних лет, короткие синие волосы, повязка на прав… · `npc/ao` · в сцене
-- Инспектор закрытого отдела — Худощавый мужчина в строгой тёмной одежде, носит очки. · `npc/kiri_archive_observer_s16` · в сцене
 - Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official` · в сцене
-- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer` · в сцене
+- Ао — Мужчина средних лет, короткие синие волосы, повязка на прав… · `npc/ao`
+- Шиноби корабельной охраны — Мужчина с коротко остриженными волосами и металлическими на… · `npc/kiri_ship_security_officer`
+- Инспектор закрытого отдела — Худощавый мужчина в строгой тёмной одежде, носит очки. · `npc/kiri_archive_observer_s16`
 - Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu`
 - Хидан — Акацуки · `npc/hidan`
 - Кадзунэ (Дзёнин Конохи на лесной дороге) — Взрослый шиноби Листа, поддерживает раненого подростка, кро… · `npc/fire_road_jonin`
@@ -271,7 +271,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (97)
+## Вещи (98)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -305,6 +305,7 @@
 - `kimimaro_functional_cultures` · `items/kimimaro_functional_cultures`
 - `kiri_anbu_mask` · `items/kiri_anbu_mask`
 - `kiri_bingo_book` · `items/kiri_bingo_book`
+- `kiri_sample_receipt_s16` · `items/kiri_sample_receipt_s16`
 - `kiri_shiki_sample_set_s16` · `items/kiri_shiki_sample_set_s16`
 - `kiri_transfer_token` · `items/kiri_transfer_token`
 - `kiri_transport_containment` · `items/kiri_transport_containment`
