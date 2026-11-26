@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.206",
+  "cursor": "s15.text.207",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1838,7 +1838,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 23,
+      "mention_count": 24,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1846,13 +1846,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:11:00",
-          "excerpt": "рытыми глазами. Его громадное тело почти сливалось с пожелтевшими подушками, на которых он восседал. **Фукасаку:** — За три часа? Джирайя перестал улыбаться. **Джирайя:** — Па, вспомни мои первые занятия с жабьим маслом. Даже когда я научился чувствовать приро",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.204"
         },
         {
           "at": "0010-04-25T09:12:00",
@@ -1867,11 +1860,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.206"
+        },
+        {
+          "at": "0010-04-25T09:18:00",
+          "excerpt": "хотя пол как понятие к ней не применим, назвала себя Немерой. Гамамару застыл. **Гамамару:** — Немера… Фукасаку поднял голову. Великий Мудрец произнёс это имя с отчётливостью, совершенно несвойственной его старческой речи. **Гамамару:** — Фукасаку. Принеси ста",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.207"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.206",
+          "seen": "s15.text.207",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1881,7 +1881,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s15.text.206"
+        "s15.text.207"
       ]
     },
     "gaara": {
@@ -2015,7 +2015,7 @@
       "id": "gamamaru",
       "kind": "npc",
       "label": "Гамамару",
-      "mention_count": 7,
+      "mention_count": 8,
       "mentions": [
         {
           "at": "0010-04-24T12:38:00",
@@ -2023,13 +2023,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.188"
-        },
-        {
-          "at": "0010-04-25T09:11:00",
-          "excerpt": ", как в голове пропало принципиальное различие меня, растения, муравья, в целом всех обитателей мира. Гамамару слушал с полуприкрытыми глазами. Его громадное тело почти сливалось с пожелтевшими подушками, на которых он восседал. **Фукасаку:** — За три часа? Дж",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.204"
         },
         {
           "at": "0010-04-25T09:12:00",
@@ -2044,13 +2037,20 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.206"
+        },
+        {
+          "at": "0010-04-25T09:18:00",
+          "excerpt": "основания шеи. **Мугами Шики:** — Она, хотя пол как понятие к ней не применим, назвала себя Немерой. Гамамару застыл. **Гамамару:** — Немера… Фукасаку поднял голову. Великий Мудрец произнёс это имя с отчётливостью, совершенно несвойственной его старческой речи",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.207"
         }
       ],
       "projections": [
         {
           "fears": "Нарушение природного равновесия.",
           "role": "Старейшина Мьёбоку, пророческие сны.",
-          "seen": "s15.text.206",
+          "seen": "s15.text.207",
           "stance": "Любопытство к гостю.",
           "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
           "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
@@ -2065,7 +2065,28 @@
       "sources": [
         "recovery/cast/gamamaru.json",
         "recovery/HOT.json",
-        "s15.text.206"
+        "s15.text.207"
+      ]
+    },
+    "gamamaru_nemera_dream_scroll": {
+      "aliases": [
+        "gamamaru nemera dream scroll",
+        "Свиток сновидения Гамамару о Немере"
+      ],
+      "facts": [],
+      "id": "gamamaru_nemera_dream_scroll",
+      "kind": "item",
+      "label": "Свиток сновидения Гамамару о Немере",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "gamamaru",
+          "since": "s15.text.207"
+        }
+      ],
+      "sources": [
+        "s15.text.207"
       ]
     },
     "grass_roads_patrol_senior": {
@@ -2564,7 +2585,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2572,13 +2593,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:11:00",
-          "excerpt": "ое тело почти сливалось с пожелтевшими подушками, на которых он восседал. **Фукасаку:** — За три часа? Джирайя перестал улыбаться. **Джирайя:** — Па, вспомни мои первые занятия с жабьим маслом. Даже когда я научился чувствовать природную энергию, мне приходило",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.204"
         },
         {
           "at": "0010-04-25T09:12:00",
@@ -2593,11 +2607,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.206"
+        },
+        {
+          "at": "0010-04-25T09:18:00",
+          "excerpt": "ые записи моих сновидений. Те, что хранятся в каменном ларце. Пока Фукасаку отсутствовал, Гамамару молчал. Джирайя несколько раз собирался заговорить, но старик продолжал смотреть на Шики. Наконец Фукасаку вернулся с узким свитком, обёрнутым потемневшей тканью",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.207"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.206",
+          "seen": "s15.text.207",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2607,7 +2628,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s15.text.206"
+        "s15.text.207"
       ]
     },
     "jiro_caravan_guard": {
@@ -6038,11 +6059,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.206",
+        "s15.text.207",
         "s15.text.202",
         "s15.text.203",
         "s15.text.204",
-        "s15.text.205"
+        "s15.text.205",
+        "s15.text.206"
       ]
     },
     "place:02d2db9d9042a981": {
@@ -21370,8 +21392,15 @@
       "status": "projected",
       "to": "Коноха, сопровождающее подкрепление",
       "type": "held_by"
+    },
+    {
+      "from": "gamamaru_nemera_dream_scroll",
+      "source": "s15.text.207",
+      "status": "projected",
+      "to": "gamamaru",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1379
+  "source_turns_indexed": 1380
 }
