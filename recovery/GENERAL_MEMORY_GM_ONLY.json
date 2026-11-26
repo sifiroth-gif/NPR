@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.007",
+  "cursor": "s16.text.008",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1765,7 +1765,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1773,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:44:00",
-          "excerpt": "44</text> ### Мьёбоку. Источник жабьего масла Шики проходит вдоль каменного бассейна обычным шагом. Фукасаку неподвижно наблюдает за движением природной энергии. Джирайя складывает ладони, сосредоточиваясь на собственных ощущениях. При каждом движении Шики рас",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.005"
         },
         {
           "at": "0010-04-25T09:45:00",
@@ -1794,11 +1787,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.007"
+        },
+        {
+          "at": "0010-04-25T09:53:00",
+          "excerpt": "Хорошо. #идем по пути# Фукасаку-сан а что вы знаете о людях до разделения природы чакры? Я про то что сейчас называется инь и ян <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 09:53",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.008"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.007",
+          "seen": "s16.text.008",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1807,7 +1807,8 @@
       ],
       "sources": [
         "recovery/cast/fukasaku.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s16.text.008"
       ]
     },
     "gaara": {
@@ -2504,7 +2505,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 38,
+      "mention_count": 39,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2512,13 +2513,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:44:00",
-          "excerpt": "вдоль каменного бассейна обычным шагом. Фукасаку неподвижно наблюдает за движением природной энергии. Джирайя складывает ладони, сосредоточиваясь на собственных ощущениях. При каждом движении Шики распределение чакры меняется вслед за работой мышц и нервной си",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.005"
         },
         {
           "at": "0010-04-25T09:45:00",
@@ -2533,11 +2527,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.007"
+        },
+        {
+          "at": "0010-04-25T09:53:00",
+          "excerpt": "ля 1287 года · 09:53</text> ### Мьёбоку. Тропа к дому отшельников **Мугами Шики:** — Хорошо. Шики и Джирайя догоняют пожилых супругов. **Мугами Шики:** — Фукасаку-сан, а что вы знаете о людях до разделения природы чакры? Я про то, что сейчас называется Инь и Я",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.008"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.007",
+          "seen": "s16.text.008",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2547,7 +2548,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.007"
+        "s16.text.008"
       ]
     },
     "jiro_caravan_guard": {
@@ -7766,6 +7767,23 @@
       "projections": [],
       "sources": [
         "s10.text.026"
+      ]
+    },
+    "place:34723f2870eb44e7": {
+      "aliases": [
+        "place:34723f2870eb44e7",
+        "Мьёбоку, у дома Фукасаку и Симы",
+        "у дома Фукасаку и Симы"
+      ],
+      "facts": [],
+      "id": "place:34723f2870eb44e7",
+      "kind": "place",
+      "label": "Мьёбоку, у дома Фукасаку и Симы",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.008"
       ]
     },
     "place:34b524d3498228b2": {
@@ -15606,10 +15624,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.007",
         "s16.text.004",
         "s16.text.005",
-        "s16.text.006"
+        "s16.text.006",
+        "s16.text.007"
       ]
     },
     "place:dfe9865838b9839d": {
@@ -19046,7 +19064,7 @@
       "id": "shima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19054,13 +19072,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:44:00",
-          "excerpt": "устойчивой формой жизни. Он поднял посох и убрал его в нишу между камнями. Продолжать испытания не стал. *** **Сима:** — Папа! Джирайя-тян! Вы опять забыли про еду? На тропинке появилась знакомая пожилая жаба с корзиной. Сима остановилась возле каменного извая",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.005"
         },
         {
           "at": "0010-04-25T09:45:00",
@@ -19075,17 +19086,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.007"
+        },
+        {
+          "at": "0010-04-25T09:53:00",
+          "excerpt": "то прежде существовала единая практика, которую последующие поколения разделили на доступные им составляющие. Сима свернула к небольшому деревянному дому, окружённому садом. Фукасаку остановился перед крыльцом. **Фукасаку:** — Но если ты говоришь именно о людя",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.008"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.007"
+          "seen": "s16.text.008"
         }
       ],
       "sources": [
         "recovery/cast/shima.json",
-        "recovery/HOT.json",
-        "s16.text.007"
+        "recovery/HOT.json"
       ]
     },
     "shiozaki_masaaki": {
@@ -19317,7 +19334,7 @@
       "id": "sima",
       "kind": "npc",
       "label": "Сима",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -19325,13 +19342,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-04-25T09:44:00",
-          "excerpt": "устойчивой формой жизни. Он поднял посох и убрал его в нишу между камнями. Продолжать испытания не стал. *** **Сима:** — Папа! Джирайя-тян! Вы опять забыли про еду? На тропинке появилась знакомая пожилая жаба с корзиной. Сима остановилась возле каменного извая",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.005"
         },
         {
           "at": "0010-04-25T09:45:00",
@@ -19346,6 +19356,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.007"
+        },
+        {
+          "at": "0010-04-25T09:53:00",
+          "excerpt": "то прежде существовала единая практика, которую последующие поколения разделили на доступные им составляющие. Сима свернула к небольшому деревянному дому, окружённому садом. Фукасаку остановился перед крыльцом. **Фукасаку:** — Но если ты говоришь именно о людя",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.008"
         }
       ],
       "projections": [
@@ -21080,5 +21097,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1387
+  "source_turns_indexed": 1388
 }
