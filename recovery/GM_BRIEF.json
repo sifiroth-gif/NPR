@@ -22,6 +22,15 @@
    },
    {
     "due": "0010-04-27T18:00:00",
+    "if_unopposed": "В портовом управлении останется заверенная копия обязательств сторон.",
+    "name": "Портовый чиновник",
+    "next": "Сверить текст и заверить копии соглашения при его подписании.",
+    "npc": "fire_port_official",
+    "overdue": false,
+    "plan": "secure_port_agreement_s16"
+   },
+   {
+    "due": "0010-04-27T18:00:00",
     "if_unopposed": "Получит предварительную карту доступных маршрутов и решит, какой способ разведки допустим.",
     "name": "Цунадэ",
     "next": "Поручить разведке сверить приграничные маршруты и старые контакты Джирайи, определить критерии прекращения операции.",
@@ -46,15 +55,6 @@
     "npc": "ao",
     "overdue": false,
     "plan": "settle_k0418_s16"
-   },
-   {
-    "due": "0010-04-27T18:00:00",
-    "if_unopposed": "Ведомство получит ответ на предложение добровольного доступа либо зафиксирует отказ.",
-    "name": "Инспектор закрытого отдела",
-    "next": "Попытаться включить добровольное исследование или передачу образцов в обсуждение, затем доложить начальству об исходе.",
-    "npc": "kiri_archive_observer_s16",
-    "overdue": false,
-    "plan": "preserve_archive_claim_s16"
    }
   ]
  },
@@ -63,6 +63,21 @@
   "target_bytes": 60000
  },
  "checks": [
+  {
+   "kind": "fight",
+   "text": "Бросок «Дорюхэки»: записана категория 6, по кости 14 и полосе 5 — 5 (ограниченный успех). Исход не смягчается.",
+   "turn": "s16.text.049"
+  },
+  {
+   "kind": "fight",
+   "text": "Бросок «Могурагакурэ»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
+   "turn": "s16.text.049"
+  },
+  {
+   "kind": "fight",
+   "text": "Бросок «Дорю Тайга»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
+   "turn": "s16.text.049"
+  },
   {
    "kind": "fight",
    "text": "Бросок «Дайтоппа»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
@@ -87,17 +102,12 @@
    "kind": "fight",
    "text": "Бросок «Чакровое лезвие Футона»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s16.text.049"
-  },
-  {
-   "kind": "things",
-   "text": "kiri_sample_receipt_s16: изменён предмет вне учёта; введён без проверки прежнего состояния",
-   "turn": "s16.text.087"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.087",
+  "cursor": "s16.text.089",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -105,10 +115,9 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "fire_port_official",
-   "place:f444fb5353fede17"
+   "place:15cd2cb7d182c18f"
   ],
-  "focus_bytes": 940,
+  "focus_bytes": 511,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -122,63 +131,12 @@
   "status": "focused",
   "thematic": {
    "basis": "scene_continuation",
-   "entries": [
-    "chakra.black",
-    "eyes.ems",
-    "genome.zero",
-    "medical.sterilize",
-    "pact.contact",
-    "weapon.sumi",
-    "element.ice",
-    "element.lightning",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
-    "nemera.agency",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned"
-   ],
+   "entries": [],
    "matched": [],
-   "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md"
-   ],
-   "required": [
-    "prior results/source",
-    "material/equipment",
-    "genome/known limits",
-    "scene/time",
-    "present/identity",
-    "NPC knowledge/fences",
-    "prior dialogue/source",
-    "intent",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access"
-   ],
-   "routes": [
-    "research",
-    "dialogue",
-    "items"
-   ],
-   "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "restricted.cancelled",
-    "restricted.unlearned"
-   ]
+   "read": [],
+   "required": [],
+   "routes": [],
+   "unavailable": []
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -424,13 +382,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-27T13:52:00",
+  "at": "0010-04-27T13:53:00",
   "date": "Вторник, 27 апреля 1287 года",
-  "id": "s16.text.087",
-  "place": "Страна Огня, восточная гавань, переговорная портового управления",
-  "time": "13:52"
+  "id": "s16.text.089",
+  "place": "Страна Огня, восточная гавань, внутренний двор портового управления",
+  "time": "13:53"
  },
- "digest": "657c3b329d060aca41b3e00e88f1b4b25679f42fe7e2f6a3bcaf929ae4604f11",
+ "digest": "057d950177225aafe4f814a93784fed93eb7143a54b79a577575ebf932206ec7",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -439,24 +397,11 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [
-   {
-    "actor": "fire_port_official",
-    "from": "s16.text.073",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s16.text.087"
-   }
-  ],
+  "edges": [],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
- "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Портовый чиновник — слышал(а) с s14.text.020.",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Портовый чиновник — слышал(а) с s13.text.084.",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Портовый чиновник. Присутствие в отряде и запись lore без источника не доказывают видимость."
- ],
  "fight": {
   "body": {
    "hidan": {
@@ -575,21 +520,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 593.92
+   "value": 594.08
   },
   "dice": [
-   1,
+   12,
+   11,
    16,
    19,
-   19,
-   8,
-   2,
-   5,
-   1,
-   3,
    12,
    15,
-   3
+   4,
+   9,
+   5,
+   11,
+   15,
+   5
   ],
   "injuries": {
    "hidan": [
@@ -705,25 +650,13 @@
  "general_memory": {
   "activated": [
    {
-    "facts": [],
-    "id": "fire_port_official",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/fire_port_official.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
-     }
-    }
-   },
-   {
     "channels": [
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:f444fb5353fede17",
+    "id": "place:15cd2cb7d182c18f",
     "kind": "place",
-    "label": "Страна Огня, восточная гавань, переговорная портового управления",
+    "label": "Страна Огня, восточная гавань, внутренний двор портового управления",
     "status": "no_verified_facts"
    }
   ],
@@ -733,29 +666,19 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 2
+  "total_matched": 1
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
-  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {
-   "fire_port_official": {
-    "does": "Проводил делегацию, признался, что после первого инцидента думал о переводе.",
-    "lever": "Приписать заявителю чужое утверждение и поставить управление под ответственность.",
-    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Сегодня удалось избежать повторения прежнего нападения.",
-    "stage": 4,
-    "step": "необратимость"
-   }
-  },
+  "npcs": {},
   "quiet": 0,
   "recent": [
    {
@@ -777,26 +700,16 @@
   ]
  },
  "last": {
-  "gm_tail": "пять копятся бумаги. Эх..... Буду на связи\n\nУголок рта Ао дрогнул.\n\n**Ао:** — Поверьте, Мугами, я прекрасно вас понимаю.\n\nОн поднялся, застегнул футляр и повернулся к корабельному офицеру.\n\n**Ао:** — Готовьте судно. Возвращаемся сегодня.\n\nИнспектор открыл было рот, но, встретившись с взглядом Ао, молча принялся собирать бумаги.\n\nПортовый чиновник …",
-  "player": "Я тоже #забираю расписку и кладу в сумку# черт у меня опять копятся бумаги. Эх..... Буду на связи",
+  "gm_tail": "<text color=\"secondary\" size=\"xs\">Вторник, 27 апреля 1287 года · 13:53</text>\n\n### Восточная гавань. Внутренний двор портового управления\n\n**Мугами Шики:** — Маленькое, ладно проводите меня?\n\n**Портовый чиновник:** — Разумеется. Прошу за мной.\n\nОн заметно успокоился и повёл Шики во двор, попутно распорядившись, чтобы служащие не беспокоили посетит…",
+  "player": "Маленькое, ладно проводите меня?",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 31,
-   "facets": 3,
-   "need": 5,
-   "npc": "fire_port_official",
-   "tier": "deep"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [
-   "fire_port_official"
-  ],
+  "present_inline": [],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -914,110 +827,22 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {
-  "fire_port_official": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-27T18:00:00",
-      "flaw": "Нет утверждения Мэй или согласия сторон по деталям.",
-      "goal": "Защитить юрисдикцию Огня и сохранить доказательство согласованных обязательств.",
-      "id": "secure_port_agreement_s16",
-      "if_unopposed": "В портовом управлении останется заверенная копия обязательств сторон.",
-      "next": "Сверить текст и заверить копии соглашения при его подписании.",
-      "source_turn": "s16.text.084",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не подтвердит техническую или военную угрозу без компетентной проверки.",
-     "decides": "Документировать сообщённое без непроверенных выводов.",
-     "deep_fear": "Приписать заявителю чужое утверждение и поставить управление под ответственность."
-    },
-    "unclocked_intents": [
-     "secure_port_agreement_s16"
-    ]
-   },
-   "look": {
-    "внешность": "Гражданский служащий со списком пассажиров и письменной записью."
-   },
-   "prior_disclosure_ids": [
-    "s16.text.073",
-    "s16.text.076",
-    "s16.text.077",
-    "s16.text.078",
-    "s16.text.082",
-    "s16.text.084",
-    "s16.text.085",
-    "s16.text.087"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-04-26T17:40:00",
-     "line": "Шики неспешно шёл к восточной гавани. 26.04 в 17:40 офицер Кири подтвердил согласие порта, назначение Ао главой делегации, допуск…",
-     "sha256": "777de4b996e0ec0b5a69f7f689934b34e17ebfafc4cff87a9d42f7961750e28d",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.073"
-    },
-    {
-     "at": "0010-04-27T13:46:00",
-     "line": "После ожидания офицер доставил согласие Мэй на временное исключение K-0418 и условия исследования. Ао предъявил шесть пунктов сог…",
-     "sha256": "044f95a31ad489284f4b659f0885f7246ee57bd3847bf2db526719ded3fe8b6c",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.085"
-    },
-    {
-     "at": "0010-04-27T13:52:00",
-     "line": "Шики убрал расписку в сумку, подтвердил готовность быть на связи. Ао распорядился готовить судно к возвращению сегодня; делегация…",
-     "sha256": "0cc89d65ccfcd4d9f999a105f3a62744f4523af80d64482b71db0f5aa32c4726",
-     "source": "archive/session-016-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s16.text.087"
-    }
-   ],
-   "profile": {
-    "first": "s13.text.084",
-    "inner": {},
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s16.text.086",
-      "what": "Подписано временное соглашение Кири. Шики передал Ао три запечатанные пробирки единым комплектом, восстановил ткани, предупредил о риске контакта крови. K-0418 и 48 млн приостановлены до 27.05; извеще"
-     },
-     {
-      "ch": "present",
-      "turn": "s16.text.087",
-      "what": "Шики убрал расписку в сумку, подтвердил готовность быть на связи. Ао распорядился готовить судно к возвращению сегодня; делегация покинула комнату. Чиновник остался, выход свободен."
-     }
-    ],
-    "memory_file": "archive/npc-memory/fire_port_official.json",
-    "memory_total": 31,
-    "name": "Портовый чиновник",
-    "seen": "s16.text.087",
-    "state": "Закончил собственные показания, вышел и попросил караульного проводить домой.",
-    "status": "present_profile",
-    "tier": "deep"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  }
- },
+ "present_npcs": {},
  "recent_turns": [
   {
-   "id": "s16.text.086",
-   "line": "Подписано временное соглашение Кири. Шики передал Ао три запечатанные пробирки единым комплектом, восстановил ткани, предупредил о риске контакта крови. K-0418 и 48 млн приостановлены до 27.05; извещение отправляется."
+   "id": "s16.text.088",
+   "line": "Шики спросил разрешение на призыв. Чиновник предложил закрытый внутренний двор, открыл боковую дверь и уточнил размер существа. Призыв ещё не выполнен."
   },
   {
-   "id": "s16.text.087",
-   "line": "Шики убрал расписку в сумку, подтвердил готовность быть на связи. Ао распорядился готовить судно к возвращению сегодня; делегация покинула комнату. Чиновник остался, выход свободен."
+   "id": "s16.text.089",
+   "line": "Чиновник проводил Шики в закрытый двор, разрешил призыв небольшого существа и вернулся в управление. Шики один; техника пока не применена."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики и чиновник в переговорной, делегация за дверью, футляр у Ао.",
-  "pressure": "K-0418 приостановлен до 27.05 13:51; исследование ожидается, оповещение исполнителей в процессе.",
-  "situation": "Переговоры завершены. Шики убрал расписку в сумку. Ао с комплектом образцов и делегацией вышел из комнаты, приказал готовить судно сегодня. Чиновник остался рядом с Шики, свободный выход."
+  "positions": "Шики во дворе между портовым управлением и складами; чиновник внутри управления.",
+  "pressure": "Призыв небольшого существа разрешён. K-0418 приостановлен до 27.05.",
+  "situation": "После разрешения призыва в предыдущем ходе чиновник проводил Шики в огороженный внутренний двор, распорядился не беспокоить посетителя и вернулся в управление. Шики один, призыв не выполнен."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1025,31 +850,16 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {
-  "s16.text.073": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Понедельник, 26 апреля 1287 года · 17:40</text>\n\n### Страна Огня. Восточный торговый тракт\n\nНочь прошла в дороге. За ней наступило прохладное утро, а к полудню леса постепенно уступили место возделанным полям и небольшим торговым поселениям.\n\nШики не требовался сон. Природная энергия непрерывно восполняла его силы. К вечеру даже остаточная усталость после вчерашних тренировок исчезла.\n\nЧем ближе становилось побережье, тем отчётливее ощущался запах моря. Среди деревьев появились придорожные столбы с указателями \n[... sou…",
-   "player": "#Медленно направляюсь к месту переговоров#",
-   "source": "archive/session-016-turns.jsonl"
-  },
-  "s16.text.087": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Вторник, 27 апреля 1287 года · 13:52</text>\n\n### Восточная гавань. Портовое управление\n\n**Мугами Шики:** — Я тоже\n\nШики убрал расписку в сумку, к остальным документам.\n\n**Мугами Шики:** — черт у меня опять копятся бумаги. Эх..... Буду на связи\n\nУголок рта Ао дрогнул.\n\n**Ао:** — Поверьте, Мугами, я прекрасно вас понимаю.\n\nОн поднялся, застегнул футляр и повернулся к корабельному офицеру.\n\n**Ао:** — Готовьте судно. Возвращаемся сегодня.\n\nИнспектор открыл было рот, но, встретившись с взглядом Ао, молча принялся собирать бу…",
-   "player": "Я тоже #забираю расписку и кладу в сумку# черт у меня опять копятся бумаги. Эх..... Буду на связи",
-   "source": "archive/session-016-turns.jsonl"
-  }
- },
- "source_passages_ref": "archive/session-*-turns.jsonl",
- "source_passages_truncated": true,
+ "source_passages": {},
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "e8ae609211d143280580c95d919ca6ce2d75fd71",
-  "turn": "s16.text.087"
+  "sha": "a46dc76b405f9608f6d442b862cef933dd2abae9",
+  "turn": "s16.text.089"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {
-   "fire_port_official": "memory/npc/fire_port_official.md"
-  },
+  "present": {},
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
@@ -1059,7 +869,7 @@
     "due": "0010-04-29T18:00:00",
     "id": "yig_brood_disturbance",
     "if_unopposed": "Змеи покидают часть привычных укрытий и сходятся в районе разорённых кладок; промысел там останавливается, сборщики отступают, жители передают противоречивые свидетельства.",
-    "minutes": 3128.0,
+    "minutes": 3127.0,
     "owner": "Йиг и местные змеи",
     "signs": "Независимые свидетельства жителей и сборщиков лекарственного сырья о необычном перемещении змей и прекращении промысла; только если весть достигает Шики.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_brood_disturbance",
@@ -1070,7 +880,7 @@
     "due": "0010-05-04T12:00:00",
     "id": "yig_local_response",
     "if_unopposed": "Торговцы меняют район закупок, часть местных жителей восстанавливает старый обряд у каменных убежищ; свидетельства расходятся по торговым дорогам. Проверить результат первого процесса, не считать его неизбежным при вмешательстве.",
-    "minutes": 9968.0,
+    "minutes": 9967.0,
     "owner": "Местные жители и торговцы Страны Рек",
     "signs": "Изменение поставок редких животных, рассказы путников и лекарей; причина неизвестна.",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.yig_local_response",
@@ -1081,7 +891,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших м…",
-    "minutes": 43199.0,
+    "minutes": 43198.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",

@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.089: Портовый чиновник (`npc/fire_port_official`)
+- s16.text.088: Портовый чиновник (`npc/fire_port_official`)
 - s16.text.087: Ао (`npc/ao`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), вещь `kiri_sample_receipt_s16`
 - s16.text.086: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), вещь `kiri_shiki_sample_set_s16`, линия `kiri_bingo_negotiations`, поправки игрока: 1
 - s16.text.085: Ао (`npc/ao`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), линия `kiri_bingo_negotiations`
@@ -60,5 +62,3 @@
 - s16.text.032: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s16.text.031: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), линия `jiraiya_rain_investigation`
 - s16.text.030: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
-- s16.text.029: Шизунэ (`npc/shizune`), бой, поправки игрока: 1
-- s16.text.028: Хидан (`npc/hidan`), Шизунэ (`npc/shizune`), бой, поправки игрока: 1
