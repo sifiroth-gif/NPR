@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.048",
+  "cursor": "s16.text.049",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,38 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.049:0": {
+      "aliases": [
+        "canon:s16.text.049:0",
+        "s16.text.049: Дотон освоен практически: Дорюхэки B (формируемая и укрепляемая земляная преграда); Могурагакурэ C (подземное перемещение через подходящий грунт, ориентация природной"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.049:0",
+      "kind": "canon",
+      "label": "s16.text.049: Дотон освоен практически: Дорюхэки B (формируемая и укрепляемая земляная преграда); Могурагакурэ C (подземное перемещение через подходящий грунт, ориентация природной",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.049"
+      ]
+    },
+    "canon:s16.text.049:1": {
+      "aliases": [
+        "canon:s16.text.049:1",
+        "s16.text.049: Футон освоен практически: Дайтоппа C (направленный сильный воздушный поток); Рэппусё C (сосредоточенный порыв, ускорение/отклонение метательного оружия); чакровое лез"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.049:1",
+      "kind": "canon",
+      "label": "s16.text.049: Футон освоен практически: Дайтоппа C (направленный сильный воздушный поток); Рэппусё C (сосредоточенный порыв, ускорение/отклонение метательного оружия); чакровое лез",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.049"
       ]
     },
     "captive_guard": {
@@ -2500,7 +2532,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 67,
+      "mention_count": 68,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2540,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T12:10:00",
-          "excerpt": "акудзу. Теперь у нас гораздо больше сведений. Поручу ему сопоставить материалы боя с результатами допроса. Джирайя складывает карту Амэгакурэ. В коридоре раздаются голоса нескольких шиноби. Когда дверь приоткрывается и дежурный замечает Шики, разговор за порог",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.035"
         },
         {
           "at": "0010-04-25T12:11:00",
@@ -2529,11 +2554,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.048"
+        },
+        {
+          "at": "0010-04-25T20:00:00",
+          "excerpt": "s\">Воскресенье, 25 апреля 1287 года · 16:00</text> ### Конохагакуре. Западный тренировочный полигон Джирайя разложил на земле два свитка. Первый содержал последовательности печатей и схемы распределения чакры в грунте, второй — изображения воздушных потоков. *",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.049"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.048",
+          "seen": "s16.text.049",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2575,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.048"
+        "s16.text.049"
       ]
     },
     "jiro_caravan_guard": {
@@ -2899,8 +2931,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s16.text.048"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -5435,7 +5466,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 167,
+      "mention_count": 168,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5443,13 +5474,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-23T16:26:00",
-          "excerpt": "но ловить не стала. Джирайя поднял с земли свой свиток. **Джирайя:** — Ну что же. Хватит на сегодня разговоров об Орочимару. У меня от них всегда портится настроение. Он перекинул свиток через плечо. **Джирайя:** — Мугами, моё предложение о спарринге остаётся ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.149"
         },
         {
           "at": "0010-04-23T16:32:00",
@@ -5464,6 +5488,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.013"
+        },
+        {
+          "at": "0010-04-25T20:00:00",
+          "excerpt": "у. **Джирайя:** — Скажи мне, Мугами, зачем тебе вообще наставники? Он рассмеялся, собирая свитки. **Джирайя:** — Хотя теперь я понимаю, почему Орочимару тобой заинтересовался. --- ## Результаты обучения <box gap={3}> <row align=\"center\"> <icon name=\"check-circ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.049"
         }
       ],
       "projections": [
@@ -14137,6 +14168,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.049",
         "s16.text.048"
       ]
     },
@@ -20516,7 +20548,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 50,
+      "mention_count": 51,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20524,13 +20556,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T12:12:00",
-          "excerpt": "Значит ещё 4 часа. Цунадэ-сама..#прериваюсь# а впрочем нет #сканирование поиск какаши# <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 12:12</text> ### Конохагакуре. Резиденция",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.038"
         },
         {
           "at": "0010-04-25T12:23:00",
@@ -20545,6 +20570,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.047"
+        },
+        {
+          "at": "0010-04-25T20:00:00",
+          "excerpt": "тапом могут стать комбинации стихий. Ты способен на гораздо большее, чем простое последовательное применение пяти природ. Он посмотрел в сторону огней деревни. **Джирайя:** — А теперь мне нужно к Цунадэ. Обещал передать ей результаты разговора с Асумой. С пове",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.049"
         }
       ],
       "projections": [
@@ -21366,5 +21398,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1427
+  "source_turns_indexed": 1428
 }
