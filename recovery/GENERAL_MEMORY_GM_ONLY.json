@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.112",
+  "cursor": "s16.text.113",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,22 +527,6 @@
         "s09.text.067"
       ]
     },
-    "canon:s16.text.112:0": {
-      "aliases": [
-        "canon:s16.text.112:0",
-        "s16.text.112: повторная просьба игрока «Мастеру: больше описаний». Сохранять приоритет развернутой литературной прозы над репликами, показывать мимику, жесты, интонации и наблюдаем"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.112:0",
-      "kind": "canon",
-      "label": "s16.text.112: повторная просьба игрока «Мастеру: больше описаний». Сохранять приоритет развернутой литературной прозы над репликами, показывать мимику, жесты, интонации и наблюдаем",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.112"
-      ]
-    },
     "captive_guard": {
       "aliases": [
         "captive guard",
@@ -959,13 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.112"
+          "seen": "s16.text.113"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s16.text.112"
+        "s16.text.113"
       ]
     },
     "deidara": {
@@ -2585,7 +2569,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 88,
+      "mention_count": 89,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2593,13 +2577,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T12:04:00",
-          "excerpt": "Пятой. Шизунэ невольно прикрыла глаза, словно заранее знала, что услышит за дверью. Внутри находились Цунадэ и Джирайя. Перед ними лежала развёрнутая карта Страны Дождя с многочисленными рукописными отметками. На краю стола стояла нетронутая чашка чая. Цунадэ ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.110"
         },
         {
           "at": "0010-05-03T12:05:00",
@@ -2614,11 +2591,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.112"
+        },
+        {
+          "at": "0010-05-03T12:32:00",
+          "excerpt": "ечник негромко ударился о пол. **Данзо:** — Хорошо. Вы получили Шаринган путём пересадки или иным способом? Джирайя медленно повернул голову к Цунадэ. Та отложила перо и откинулась на спинку кресла, внимательно наблюдая за стариком. **Данзо:** — И способны ли ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.113"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.112",
+          "seen": "s16.text.113",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -3645,8 +3629,7 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны",
-        "kiri_ship_security_officer"
+        "Шиноби корабельной охраны"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3690,8 +3673,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json",
-        "s16.text.112"
+        "recovery/cast/kiri_ship_security_officer.json"
       ]
     },
     "kiri_transfer_carrier": {
@@ -4373,13 +4355,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.112",
+          "seen": "s16.text.113",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         }
       ],
       "sources": [
         "recovery/cast/leaf_gate_special_inspector_s16.json",
-        "s16.text.112"
+        "s16.text.113"
       ]
     },
     "lee": {
@@ -10004,7 +9986,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.112",
+        "s16.text.113",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -10019,7 +10001,8 @@
         "s16.text.037",
         "s16.text.038",
         "s16.text.110",
-        "s16.text.111"
+        "s16.text.111",
+        "s16.text.112"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20153,8 +20136,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s16.text.112"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -21235,7 +21217,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 70,
+      "mention_count": 71,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21243,13 +21225,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T12:04:00",
-          "excerpt": "к, одну из которых при его приближении поспешно переложила под остальные. **Шизунэ:** — Мугами-сан. Госпожа Цунадэ уже получила сообщение с ворот. Обычно мягкое лицо Шизунэ сейчас было напряжено. Она поправила выбившуюся прядь волос и с некоторым смущением доб",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.110"
         },
         {
           "at": "0010-05-03T12:05:00",
@@ -21264,11 +21239,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.112"
+        },
+        {
+          "at": "0010-05-03T12:32:00",
+          "excerpt": "анзо:** — Хорошо. Вы получили Шаринган путём пересадки или иным способом? Джирайя медленно повернул голову к Цунадэ. Та отложила перо и откинулась на спинку кресла, внимательно наблюдая за стариком. **Данзо:** — И способны ли вы воспроизвести это приобретение ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.113"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.112",
+          "seen": "s16.text.113",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -21278,7 +21260,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.112"
+        "s16.text.113"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22104,5 +22086,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1485
+  "source_turns_indexed": 1486
 }
