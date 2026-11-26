@@ -1,6 +1,6 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s16.text.076",
+ "cursor": "s16.text.077",
  "fold_errors": [],
  "checks": [
   {
@@ -64,9 +64,9 @@
    "text": "Запись хода: вся запись сверх сцены 4432 знаков (норма до 4000); крупнее всего: cast 2655, scene 756, threads 227."
   },
   {
-   "turn": "s16.text.076",
-   "kind": "will",
-   "text": "«Шиноби корабельной охраны» появляется уже 7 раз, а воли у него нет: задай d.cast.kiri_ship_security_officer.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "turn": "s16.text.077",
+   "kind": "review",
+   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."
