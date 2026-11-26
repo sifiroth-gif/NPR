@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.181`
+# Карта мира NPR · на ходе `s15.text.182`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -7,11 +7,11 @@
 
 ## Персонажи (249)
 - Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma` · в сцене
-- Приёмщик тел — Сотрудник подпольного пункта выплаты наград · `npc/fire_bounty_station_trader` · в сцене
-- Хидан — Акацуки · `npc/hidan` · в сцене
+- Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu` · в сцене
 - Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru` · в сцене
+- Приёмщик тел — Сотрудник подпольного пункта выплаты наград · `npc/fire_bounty_station_trader`
+- Хидан — Акацуки · `npc/hidan`
 - Какудзу — Акацуки, нукенин Такигакуре · `npc/kakuzu`
-- Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu`
 - Бансаи — Пожилой монах Храма Огня, свидетель нападения · `npc/fire_temple_bansai`
 - Изумо Камидзуки (Изумо, Камидзуки) — Тюнин Листа, отряд Асумы · `npc/izumo`
 - Раненый монах — Монах Храма Огня, личность не установлена · `npc/fire_temple_wounded_monk_s15`
@@ -259,7 +259,7 @@
 ## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
-- `shiki_save_asuma` — 24.04 07:42: Асума жив, тело Тирику возвращено. Какудзу мёртв, Хидан … · `threads/shiki_save_asuma`
+- `shiki_save_asuma` — 24.04 12:20: Асума жив и не ранен, Какудзу мёртв, Хидан под раздельны… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
@@ -267,7 +267,7 @@
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (89)
+## Вещи (91)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -277,6 +277,7 @@
 - `bounty_notices` · `items/bounty_notices`
 - `cash_1184` · `items/cash_1184`
 - `contract_1184_docs` · `items/contract_1184_docs`
+- `fire_bounty_records_s15` · `items/fire_bounty_records_s15`
 - `fire_port_statement_receipt` · `items/fire_port_statement_receipt`
 - `fire_statement_genetic_risk` · `items/fire_statement_genetic_risk`
 - `fire_temple_guest_note_s15` · `items/fire_temple_guest_note_s15`
@@ -292,6 +293,7 @@
 - `kabuto_message` · `items/kabuto_message`
 - `kabuto_orientation_1278` · `items/kabuto_orientation_1278`
 - `kabuto_private_bounty_ledger` · `items/kabuto_private_bounty_ledger`
+- `kakuzu_money_s15` · `items/kakuzu_money_s15`
 - `keiji_field_report` · `items/keiji_field_report`
 - `kijima_route_book` · `items/kijima_route_book`
 - `kimimaro_bone_sample` · `items/kimimaro_bone_sample`
