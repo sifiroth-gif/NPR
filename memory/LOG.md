@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.127: Данзо Шимура (`npc/danzo`)
 - s16.text.126: Данзо Шимура (`npc/danzo`)
 - s16.text.125: Данзо Шимура (`npc/danzo`)
 - s16.text.124: Данзо Шимура (`npc/danzo`)
@@ -61,4 +62,3 @@
 - s16.text.070: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), линия `kiri_bingo_negotiations`
 - s16.text.069: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Наруто Узумаки (`npc/naruto`), линия `kiri_bingo_negotiations`
 - s16.text.068: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), вещь `shiki_private_line_kiri_plate`, линия `kiri_bingo_negotiations`
-- s16.text.067: Такэру (`npc/takeru`)

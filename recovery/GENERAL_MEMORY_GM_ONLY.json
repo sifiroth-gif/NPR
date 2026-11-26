@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.126",
+  "cursor": "s16.text.127",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -943,13 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.126"
+          "seen": "s16.text.127"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s16.text.126"
+        "s16.text.127"
       ]
     },
     "deidara": {
@@ -5682,7 +5682,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 175,
+      "mention_count": 176,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5690,13 +5690,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T12:37:00",
-          "excerpt": "реждать его об этом. Джирайя посмотрел на дверь, за которой недавно исчез Данзо. **Джирайя:** — Как странно. При Орочимару мы хотя бы знали, кого искать. Цунадэ ничего не ответила. В её лице появилось усталое, почти болезненное выражение. Наконец она снова раз",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.119"
         },
         {
           "at": "0010-05-03T14:02:00",
@@ -5711,6 +5704,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.125"
+        },
+        {
+          "at": "0010-05-03T14:06:00",
+          "excerpt": "деле очень интересно учиться. Но если один из объектов интереса недоступен, то я не стану на манер Орочимару фанатично его добиваться <text color=\"secondary\" size=\"xs\">Понедельник, 3 мая 1287 года · 14:06</text> ### Конохагакуре. Малый зал совещаний **Мугами Ш",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.127"
         }
       ],
       "projections": [
@@ -16506,11 +16506,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.126",
+        "s16.text.127",
         "s16.text.122",
         "s16.text.123",
         "s16.text.124",
-        "s16.text.125"
+        "s16.text.125",
+        "s16.text.126"
       ]
     },
     "place:e1e0909c80a6f57f": {
@@ -22123,5 +22124,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1499
+  "source_turns_indexed": 1500
 }
