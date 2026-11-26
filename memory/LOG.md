@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.057: поправки игрока: 1
 - s16.text.056: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.055: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), поправки игрока: 1
 - s16.text.054: Джирайя (`npc/jiraiya`)
@@ -60,4 +61,3 @@
 - s15.text.207: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), вещь `gamamaru_nemera_dream_scroll`
 - s15.text.206: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
 - s15.text.205: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
-- s15.text.204: Гамамару (`npc/gamamaru`), Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Цунадэ (`npc/tsunade`)

@@ -65,26 +65,6 @@
  "checks": [
   {
    "kind": "fight",
-   "text": "Бросок «Дорюхэки»: записана категория 6, по кости 14 и полосе 5 — 5 (ограниченный успех). Исход не смягчается.",
-   "turn": "s16.text.049"
-  },
-  {
-   "kind": "fight",
-   "text": "Бросок «Могурагакурэ»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
-   "turn": "s16.text.049"
-  },
-  {
-   "kind": "fight",
-   "text": "Бросок «Дорю Тайга»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
-   "turn": "s16.text.049"
-  },
-  {
-   "kind": "fight",
-   "text": "Бросок «Дайтоппа»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
-   "turn": "s16.text.049"
-  },
-  {
-   "kind": "fight",
    "text": "Бросок «Дайтоппа»: записана категория 6, по кости 17 и полосе 5 — 5 (ограниченный успех). Исход не смягчается.",
    "turn": "s16.text.049"
   },
@@ -102,12 +82,32 @@
    "kind": "fight",
    "text": "Бросок «Чакровое лезвие Футона»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной.",
    "turn": "s16.text.049"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «интонации» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s16.text.057"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «мимика» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s16.text.057"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «пластика персонажей» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s16.text.057"
+  },
+  {
+   "kind": "new_character",
+   "text": "В сцене говорит «психологический подтекст» с именем, а страницы нет. Если это не разовый фон, добавь в следующий ход d.cast.<id> с name, look и facts.",
+   "turn": "s16.text.057"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s16.text.056",
+  "cursor": "s16.text.057",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -403,11 +403,11 @@
  "cursor": {
   "at": "0010-04-25T20:29:00",
   "date": "Воскресенье, 25 апреля 1287 года",
-  "id": "s16.text.056",
+  "id": "s16.text.057",
   "place": "Конохагакуре, кабинет Хокагэ",
   "time": "20:29"
  },
- "digest": "c954d69dbb3c23b83989763786eb96c7deaeef8c0cf4f17667fafe65c06ee99c",
+ "digest": "fd84020935e2503c9f0582a0f9f1e77cc14d2808747658c4c6b5fe7d40facc1f",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -562,18 +562,18 @@
    "value": 542.83
   },
   "dice": [
-   4,
+   19,
    4,
    7,
+   10,
+   11,
+   14,
    18,
-   4,
-   5,
-   2,
-   13,
-   8,
-   17,
-   1,
-   10
+   6,
+   11,
+   16,
+   11,
+   17
   ],
   "injuries": {
    "hidan": [
@@ -987,7 +987,7 @@
     },
     {
      "at": "0010-04-25T20:29:00",
-     "sha256": "5d35039cca7516a4e7d20159757ef1f1474e6c5d18948655d871a74293ced1a4",
+     "sha256": "8b961437c22f53f7e039236959eb6731f6bde869a0e9dcfec5a1885d565cf35b",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.056"
@@ -1014,7 +1014,7 @@
     "memory_file": "archive/npc-memory/jiraiya.json",
     "memory_total": 70,
     "name": "Джирайя",
-    "seen": "s16.text.056",
+    "seen": "s16.text.057",
     "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку.",
     "status": "present_profile",
     "tier": "deep"
@@ -1085,7 +1085,7 @@
     },
     {
      "at": "0010-04-25T20:29:00",
-     "sha256": "5d35039cca7516a4e7d20159757ef1f1474e6c5d18948655d871a74293ced1a4",
+     "sha256": "8b961437c22f53f7e039236959eb6731f6bde869a0e9dcfec5a1885d565cf35b",
      "source": "archive/session-016-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s16.text.056"
@@ -1112,7 +1112,7 @@
     "memory_file": "archive/npc-memory/tsunade.json",
     "memory_total": 35,
     "name": "Цунадэ",
-    "seen": "s16.text.056",
+    "seen": "s16.text.057",
     "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки.",
     "status": "present_profile",
     "tier": "deep"
@@ -1164,8 +1164,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8861061e6e482e8ca6b360e7b40ac05f5b362d64",
-  "turn": "s16.text.056"
+  "sha": "a12ad8234eb5d5e7e49d12a94b51bd65f2427a1f",
+  "turn": "s16.text.057"
  },
  "wiki": {
   "index": "memory/INDEX.md",
