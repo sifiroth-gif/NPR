@@ -88,23 +88,12 @@
    "kind": "fight",
    "text": "Против «Саске Учиха» в обмене нет ни одной кости: с именным противником исход решает бросок, перевес Шики не выше +2.",
    "turn": "s15.text.037"
-  },
-  {
-   "kind": "look",
-   "text": "внешность Шики описана 2 раза (взгляд-по-облику, глаза). Ужас — в чужом поступке и последствии, а не в облике",
-   "turn": "s15.text.125"
-  },
-  {
-   "kind": "review",
-   "since": "s15.text.116",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
-   "turn": "s15.text.125"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.125",
+  "cursor": "s15.text.126",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -115,9 +104,11 @@
    "shizune",
    "tsunade",
    "western_nest_young_courier",
-   "place:aa5fb07d973d6c2c"
+   "place:aa5fb07d973d6c2c",
+   "orochimaru",
+   "orochimaru_poison_samples_s15"
   ],
-  "focus_bytes": 1133,
+  "focus_bytes": 1893,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -368,11 +359,11 @@
  "cursor": {
   "at": "0010-04-23T12:23:00",
   "date": "Пятница, 23 апреля 1287 года",
-  "id": "s15.text.125",
+  "id": "s15.text.126",
   "place": "Конохагакуре, резиденция Хокагэ, кабинет Пятой",
   "time": "12:23"
  },
- "digest": "298979f56b67856520399ef7bc550151a592d24964ca7fc573911cc9a5efa737",
+ "digest": "531d5325065eb0f147c6e6ac7aa440e88437bc278995de98684d1751bd290d53",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -489,18 +480,18 @@
    "value": 600.0
   },
   "dice": [
-   8,
-   19,
-   14,
-   9,
-   8,
-   6,
-   4,
-   5,
-   13,
    20,
-   16,
-   20
+   13,
+   9,
+   10,
+   2,
+   12,
+   14,
+   6,
+   14,
+   12,
+   9,
+   17
   ],
   "injuries": {
    "sasuke": [
@@ -593,6 +584,40 @@
     "kind": "place",
     "label": "Конохагакуре, резиденция Хокагэ, кабинет Пятой",
     "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "orochimaru",
+    "kind": "npc",
+    "label": "Орочимару",
+    "operational_cues": {
+     "source": "recovery/cast/orochimaru.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "orochimaru_poison_samples_s15",
+    "kind": "item",
+    "label": "Три лабораторных образца биологических ядов",
+    "operational_cues": {
+     "source": "s15.text.046",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "orochimaru"
+     }
+    },
+    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -601,7 +626,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 4
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -778,7 +803,7 @@
     {
      "at": "0010-04-23T12:23:00",
      "line": "Шики пришёл в кабинет Пятой. Цунадэ подтвердила получение портового заявления и докладов Какаши, Сакуры и утреннего отряда; предл…",
-     "sha256": "4546c1838739a13ff01c92dc3dda95a47fa597ca000788ce5cf7decbd1d25f54",
+     "sha256": "712bd39ce741143e9dfab393784aa27d03cbeb9f9bbab5bba558a1711ee7d8a2",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.125"
@@ -796,7 +821,7 @@
     "memory_file": "archive/npc-memory/shizune.json",
     "memory_total": 1,
     "name": "Шизунэ",
-    "seen": "s15.text.125",
+    "seen": "s15.text.126",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -832,7 +857,7 @@
     {
      "at": "0010-04-23T12:23:00",
      "line": "Шики пришёл в кабинет Пятой. Цунадэ подтвердила получение портового заявления и докладов Какаши, Сакуры и утреннего отряда; предл…",
-     "sha256": "4546c1838739a13ff01c92dc3dda95a47fa597ca000788ce5cf7decbd1d25f54",
+     "sha256": "712bd39ce741143e9dfab393784aa27d03cbeb9f9bbab5bba558a1711ee7d8a2",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.125"
@@ -851,7 +876,7 @@
     "memory_file": "archive/npc-memory/tsunade.json",
     "memory_total": 1,
     "name": "Цунадэ",
-    "seen": "s15.text.125",
+    "seen": "s15.text.126",
     "status": "present_profile",
     "tier": "archetypal"
    },
@@ -913,7 +938,7 @@
     {
      "at": "0010-04-23T12:23:00",
      "line": "Шики пришёл в кабинет Пятой. Цунадэ подтвердила получение портового заявления и докладов Какаши, Сакуры и утреннего отряда; предл…",
-     "sha256": "4546c1838739a13ff01c92dc3dda95a47fa597ca000788ce5cf7decbd1d25f54",
+     "sha256": "712bd39ce741143e9dfab393784aa27d03cbeb9f9bbab5bba558a1711ee7d8a2",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.125"
@@ -953,7 +978,7 @@
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
     "memory_total": 75,
     "name": "Коюки",
-    "seen": "s15.text.125",
+    "seen": "s15.text.126",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -973,9 +998,9 @@
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики перед столом Хокагэ, Коюки на плече; Цунадэ за столом, Шизунэ с документами рядом.",
-  "pressure": "Официальное обсуждение заявления начато. Встреча 28.04 пока не отменена.",
-  "situation": "Шики и Коюки вошли в Коноху и пришли в кабинет Цунадэ в 12:23. Шизунэ присутствует. Цунадэ сообщила о докладах Какаши и Сакуры о событиях Суны, утреннем рапорте отряда, о получении портового заявления и сведений Какаши о переписи собственной наследственности. Предложила обсудить вопрос здесь и при согласовании отменить встречу 28.04. Уточнила риски получения образца тканей. Шики ещё не ответил и не сел."
+  "positions": "Шики и Коюки перед столом, Цунадэ за столом, Шизунэ у закрытой двери.",
+  "pressure": "Цунадэ связывает увиденное с личным знанием Орочимару; ждёт объяснения происхождения сил и риска тканей.",
+  "situation": "Уточнение сцены s15.text.125 без сдвига времени: Цунадэ при первом взгляде заметила сходство с Орочимару, произнесла его имя, велела Шизунэ закрыть дверь. Шизунэ исполнила. Цунадэ спросила, ученик ли Шики Орочимару, затем о последствиях получения образца его тканей. Доклады и приглашение сохраняются; Шики ещё не ответил."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1000,8 +1025,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "f3c42c6d808832c33cf7d77840cef1df7a760bc4",
-  "turn": "s15.text.125"
+  "sha": "1bcdd642fbf411187f1480aa21ea37665b9f13f0",
+  "turn": "s15.text.126"
  },
  "wiki": {
   "index": "memory/INDEX.md",
