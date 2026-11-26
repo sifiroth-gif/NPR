@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.193: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
+- s15.text.192: Джирайя (`npc/jiraiya`), Хагуро (`npc/khaguro`), Изумо Камидзуки (`npc/izumo`)
 - s15.text.191: Джирайя (`npc/jiraiya`)
 - s15.text.190: Джирайя (`npc/jiraiya`)
 - s15.text.189: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
@@ -60,5 +62,3 @@
 - s15.text.136: Цунадэ (`npc/tsunade`), Коюки (`npc/western_nest_young_courier`), вещь `naruto_home_sketch_s15`
 - s15.text.135: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), вещь `leaf_shiki_agreement_original`, вещь `leaf_shiki_agreement_copy`, поправки игрока: 2
 - s15.text.134: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), вещь `leaf_shiki_agreement_original`, вещь `leaf_shiki_agreement_copy`
-- s15.text.133: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`)
-- s15.text.132: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Коюки (`npc/western_nest_young_courier`), план сюжета, поправки игрока: 1
