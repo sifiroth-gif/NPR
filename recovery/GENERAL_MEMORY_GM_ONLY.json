@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.123",
+  "cursor": "s16.text.124",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -943,13 +943,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.123"
+          "seen": "s16.text.124"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s16.text.123"
+        "s16.text.124"
       ]
     },
     "deidara": {
@@ -3348,8 +3348,7 @@
     "kiri_archive_observer_s16": {
       "aliases": [
         "kiri archive observer s16",
-        "Инспектор закрытого отдела",
-        "kiri_archive_observer_s16"
+        "Инспектор закрытого отдела"
       ],
       "facts": [],
       "id": "kiri_archive_observer_s16",
@@ -3386,8 +3385,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_archive_observer_s16.json",
-        "s16.text.123"
+        "recovery/cast/kiri_archive_observer_s16.json"
       ]
     },
     "kiri_bingo_book": {
@@ -5684,7 +5682,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 173,
+      "mention_count": 174,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5692,13 +5690,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T11:53:00",
-          "excerpt": "мый шиноби:** — Мугами Шики. Бывший шиноби Кусагакуре. Нас интересуют обстоятельства вашего сотрудничества с Орочимару и характер проведённых вами изменений собственного организма. Он раскрыл папку. На верхнем листе находилась копия старой ориентировки Кусагак",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.106"
         },
         {
           "at": "0010-05-03T12:05:00",
@@ -5713,6 +5704,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.119"
+        },
+        {
+          "at": "0010-05-03T14:02:00",
+          "excerpt": "д его одеждой едва заметно обозначился неподвижный контур перевязанной руки. **Данзо:** — Вы напоминаете мне Орочимару в одном существенном отношении. Он тоже считал, что право распоряжаться собственными способностями стоит выше интересов деревни. Данзо поверн",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.124"
         }
       ],
       "projections": [
@@ -16508,8 +16506,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.123",
-        "s16.text.122"
+        "s16.text.124",
+        "s16.text.122",
+        "s16.text.123"
       ]
     },
     "place:e1e0909c80a6f57f": {
@@ -21258,7 +21257,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 79,
+      "mention_count": 80,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21266,13 +21265,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T12:37:00",
-          "excerpt": "кагэ **Мугами Шики:** — Очаги чакры, нарушения циркуляции, не болезнь, пересадка, печати сдерживания Цунадэ медленно опустилась в кресло. Её взгляд утратил прежнюю резкость. Она смотрела куда-то мимо Шики, неподвижно держа руки на столе. Профессиональное внима",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.119"
         },
         {
           "at": "0010-05-03T12:48:00",
@@ -21287,6 +21279,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.121"
+        },
+        {
+          "at": "0010-05-03T14:02:00",
+          "excerpt": "о право распоряжаться собственными способностями стоит выше интересов деревни. Данзо повернулся. **Данзо:** — Цунадэ предоставила вам весьма широкие свободы. Но её распоряжения не вечны, как не вечна и её власть. Сухое лицо старика оставалось неподвижным. Ни н",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.124"
         }
       ],
       "projections": [
@@ -22122,5 +22121,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1496
+  "source_turns_indexed": 1497
 }
