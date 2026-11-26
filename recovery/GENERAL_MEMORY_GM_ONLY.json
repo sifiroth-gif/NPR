@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.170",
+  "cursor": "s15.text.171",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,7 +429,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.170"
+          "seen": "s15.text.171"
         }
       ],
       "sources": [
@@ -2102,7 +2102,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2117,23 +2117,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.170"
+        },
+        {
+          "at": "0010-04-24T07:38:25",
+          "excerpt": "акт. Из повреждённого участка его спины вырвался пучок тёмных нитей, устремившихся к руке Шики. Одновременно Хидан заметил движение Асумы. Он сорвал косу с плеча, но тень Шикамару уже достигла его ног. Рывок оружия оборвался на середине движения. **Хидан:** — ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.171"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.170",
-          "state": "Снаружи у стены, раздражён ожиданием Какудзу, пока не заметил отряд."
+          "seen": "s15.text.171",
+          "state": "Удерживается тенью Шикамару, коса в руках."
         },
         {
           "role": "Акацуки",
-          "state": "Снаружи у стены, раздражён ожиданием Какудзу, пока не заметил отряд."
+          "state": "Удерживается тенью Шикамару, коса в руках."
         }
       ],
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.170"
+        "s15.text.171"
       ]
     },
     "hirano": {
@@ -2850,7 +2857,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -2872,23 +2879,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.170"
+        },
+        {
+          "at": "0010-04-24T07:38:25",
+          "excerpt": "Чёрная медицинская чакра охватила его правую кисть, образуя режущую поверхность чакрового скальпеля. Какудзу успел повернуть плечо. Под его плащом стремительно перераспределилась чакра, уплотняя наружные ткани тела. Удар Шики пришёлся в спину. Скальпель преодо",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.171"
         }
       ],
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.170",
-          "state": "В дверном проёме с чемоданом; остановился и посмотрел на край леса."
+          "seen": "s15.text.171",
+          "state": "Средняя рана спины и повреждение нитей, движения сохранены; контратакует."
         },
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "state": "В дверном проёме с чемоданом; остановился и посмотрел на край леса."
+          "state": "Средняя рана спины и повреждение нитей, движения сохранены; контратакует."
         }
       ],
       "sources": [
         "recovery/cast/kakuzu.json",
         "recovery/HOT.json",
-        "s15.text.170"
+        "s15.text.171"
       ]
     },
     "kankuro": {
@@ -3562,8 +3576,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s15.text.170"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -9200,9 +9213,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.170",
         "s15.text.168",
-        "s15.text.169"
+        "s15.text.169",
+        "s15.text.170"
       ]
     },
     "place:4f8f783e8eef7a0d": {
@@ -10011,6 +10024,24 @@
       "projections": [],
       "sources": [
         "s11.text.074"
+      ]
+    },
+    "place:600bc613f63ee900": {
+      "aliases": [
+        "place:600bc613f63ee900",
+        "Страна Огня, пункт выплаты наград, у входа",
+        "Страна Огня",
+        "пункт выплаты наград"
+      ],
+      "facts": [],
+      "id": "place:600bc613f63ee900",
+      "kind": "place",
+      "label": "Страна Огня, пункт выплаты наград, у входа",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.171"
       ]
     },
     "place:6031eb4576d13397": {
@@ -18671,13 +18702,17 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.170"
+          "seen": "s15.text.171",
+          "state": "Поддерживает Кагэманэ на Хидане."
+        },
+        {
+          "state": "Поддерживает Кагэманэ на Хидане."
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.170"
+        "s15.text.171"
       ]
     },
     "shiki_arm_wraps": {
@@ -21004,5 +21039,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1343
+  "source_turns_indexed": 1344
 }
