@@ -111,6 +111,7 @@
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
+- Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 2 ход(ов), s16–s16
 - Конохагакуре, Медицинский читальный зал восточного госпиталя · `places/konokhagakure-meditsinskiy-chitalnyy-zal-vostochnogo-gospita` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный кабинет восточного госпиталя · `places/konokhagakure-meditsinskiy-uchebnyy-kabinet-vostochnogo-gosp` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
