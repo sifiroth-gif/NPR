@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.185",
+  "cursor": "s15.text.186",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -434,8 +434,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json",
-        "s15.text.185"
+        "recovery/cast/asuma.json"
       ]
     },
     "baki": {
@@ -2480,12 +2479,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.166",
+          "seen": "s15.text.186",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s15.text.186"
       ]
     },
     "jiraiya": {
@@ -3180,7 +3180,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -3188,13 +3188,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-24T12:21:00",
-          "excerpt": "Хорошо, я пойду быстрее, смогу успеть на одну встречу если потороплюс #призыв Хагуро# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:21</text> **Мугами Шики:** — Хорошо, я пойду быстрее. Смогу успеть на одну встречу, если потороплюсь. Шики слож",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.183"
         },
         {
           "at": "0010-04-24T12:21:15",
@@ -3209,23 +3202,25 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.185"
+        },
+        {
+          "at": "0010-04-24T12:37:00",
+          "excerpt": "ры мьябоку зайти к ним, я не знаю в каких вы отношениях, но предупредить сеннин-сама стоит. Спасибо Хагуро. <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:23</text> **Мугами Шики:** — Да, меня попросили жабы горы Мьёбоку зайти к ним. Я не знаю, в к",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.186"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.185",
-          "state": "Вернулся в Рьючидо, обратным призывом добровольно перенёс Шики, находится с ним во внешней пещере."
-        },
-        {
-          "role": "по подписи в сцене",
-          "state": "Вернулся в Рьючидо, обратным призывом добровольно перенёс Шики, находится с ним во внешней пещере."
+          "seen": "s15.text.186",
+          "state": "Сообщил хранительнице о возвращении Шики и передал Белой Змее известие о приглашении жаб; остался у ворот."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
-        "recovery/HOT.json",
-        "s15.text.185"
+        "s15.text.186"
       ]
     },
     "khakudzya_sennin": {
@@ -3237,7 +3232,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 40,
+      "mention_count": 41,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -3245,13 +3240,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-04-12T13:12:12",
-          "excerpt": "ей линьки Шики открыл глаза. **Мугами Шики:** — Я… Мы. У меня все воспоминания. Многие я не понимаю. Хакудзя-сэннин слегка наклонила голову. Старая змея замерла у входа. **Мугами Шики, мысленно:** *— Немера. Эй, Немера.* Обращение вернулось к нему. Словно чело",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.049"
         },
         {
           "at": "0010-04-12T13:17:12",
@@ -3266,6 +3254,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.051"
+        },
+        {
+          "at": "0010-04-24T12:37:00",
+          "excerpt": "</text> В глубине святилища горели небольшие светильники. Их отражения мерцали на белой чешуе древней змеи. Хакудзя-сэннин лежала на своём каменном возвышении, погружённая в неподвижность, столь совершенную, что лишь природное восприятие позволяло отличить её ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.186"
         }
       ],
       "projections": [
@@ -15951,6 +15946,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.186",
         "s10.text.055",
         "s10.text.061",
         "s10.text.066",
@@ -18132,7 +18128,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -18140,13 +18136,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-24T12:21:00",
-          "excerpt": "Хорошо, я пойду быстрее, смогу успеть на одну встречу если потороплюс #призыв Хагуро# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:21</text> **Мугами Шики:** — Хорошо, я пойду быстрее. Смогу успеть на одну встречу, если потороплюсь. Шики слож",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.183"
         },
         {
           "at": "0010-04-24T12:21:15",
@@ -18161,6 +18150,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.185"
+        },
+        {
+          "at": "0010-04-24T12:37:00",
+          "excerpt": "ры мьябоку зайти к ним, я не знаю в каких вы отношениях, но предупредить сеннин-сама стоит. Спасибо Хагуро. <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:23</text> **Мугами Шики:** — Да, меня попросили жабы горы Мьёбоку зайти к ним. Я не знаю, в к",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.186"
         }
       ],
       "projections": [
@@ -18176,13 +18172,14 @@
     "ryuchido_gate_woman": {
       "aliases": [
         "ryuchido gate woman",
-        "Итикисимахимэ"
+        "Итикисимахимэ",
+        "ryuchido_gate_woman"
       ],
       "facts": [],
       "id": "ryuchido_gate_woman",
       "kind": "npc",
       "label": "Итикисимахимэ",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-03-04T06:38:00",
@@ -18190,13 +18187,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.025"
-        },
-        {
-          "at": "0010-03-04T09:45:00",
-          "excerpt": "игаешься. И не прекращаешь принимать природную энергию. Небольшая пауза. **Хагуро:** — Пожалуй, я недооценил тебя. Итикисимахимэ прислоняется к косяку ворот. **Итикисимахимэ:** — Как трогательно. Теперь вы оба можете всю дорогу восхищаться друг другом. Хагуро ",
-          "source": "archive/session-010-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s10.text.077"
         },
         {
           "at": "0010-03-06T04:12:00",
@@ -18211,16 +18201,24 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.040"
+        },
+        {
+          "at": "0010-04-24T12:37:00",
+          "excerpt": "времена, о которых даже старейшие из нас знают лишь по рассказам. Хагуро направился к воротам и сообщил Итикисимахимэ о возвращении Шики. Хранительница открыла проход, соблюдая данное ранее разрешение Белой Змеи. *** <text color=\"secondary\" size=\"xs\">12:37 · В",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.186"
         }
       ],
       "projections": [
         {
-          "seen": "s14.text.040",
-          "state": "Осталась у ворот Рьючидо; слышала, что Хагуро передал старшей сторожевой змее сведения о неизвестном самостоятельном отростке спутника Шики."
+          "seen": "s15.text.186",
+          "state": "Пропустила Шики по разрешению Белой Змеи без испытаний."
         }
       ],
       "sources": [
-        "recovery/cast/ryuchido_gate_woman.json"
+        "recovery/cast/ryuchido_gate_woman.json",
+        "s15.text.186"
       ]
     },
     "s17_recipient_6": {
@@ -20640,7 +20638,8 @@
     "white_snake_sage": {
       "aliases": [
         "white snake sage",
-        "Белая Змея / Хакудзя-сэннин"
+        "Белая Змея / Хакудзя-сэннин",
+        "white_snake_sage"
       ],
       "facts": [],
       "id": "white_snake_sage",
@@ -20651,12 +20650,17 @@
       "projections": [
         {
           "body": "s14.text.047: кратковременное локальное поражение слизистой у основания клыков кровью Шики после укуса; направленное лечение прекратило поражение, цвет ткани восстановлен, боль исчезла по её словам. Некроза или системного поражения не установлено.",
-          "seen": "s14.text.060",
-          "state": "Разрешила Шики возвращаться без повторных испытаний дочерей при предупреждении о визите. Оставила сброшенные чешуйки у себя."
+          "seen": "s15.text.186",
+          "state": "Приняла Шики, спрашивает о пригласивших жабах."
+        },
+        {
+          "state": "Приняла Шики, спрашивает о пригласивших жабах."
         }
       ],
       "sources": [
-        "recovery/cast/white_snake_sage.json"
+        "recovery/cast/white_snake_sage.json",
+        "recovery/HOT.json",
+        "s15.text.186"
       ]
     },
     "willow_dispatch": {
@@ -21161,5 +21165,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1358
+  "source_turns_indexed": 1359
 }
