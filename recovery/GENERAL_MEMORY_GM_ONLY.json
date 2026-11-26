@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.006",
+  "cursor": "s17.text.008",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 108,
+      "mention_count": 109,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T17:56:00",
-          "excerpt": "бенно долго он изучал положение о признании независимого статуса Мугами Шики. **Пограничник:** — Господин Джирайя, вы подтверждаете его слова? Саннин утвердительно кивнул. **Джирайя:** — Он путешествует со мной по договорённости с Хокагэ. Пограничник выслушал ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.004"
         },
         {
           "at": "0010-05-04T20:42:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.006"
+        },
+        {
+          "at": "0010-05-05T11:58:00",
+          "excerpt": "ичная кладка. На схеме связного промышленная пристань располагалась неподалёку от выхода второй галереи. Джирайя подложил под отсыревшую бумагу сухую доску, извлечённую из груды обломков. Затем провёл ногтем вдоль подземного канала. **Джирайя:** — Здесь мы ока",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.007"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.006",
+          "seen": "s17.text.008",
           "state": "Встретил связного, сверяет карты и предлагает оценить возможность доступа к башне."
         },
         {
@@ -2566,8 +2566,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s17.text.006"
+        "recovery/HOT.json"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -2593,7 +2592,7 @@
         {
           "fears": "Задержание и компрометация источников.",
           "role": "Разведывательный источник Джирайи",
-          "seen": "s17.text.006",
+          "seen": "s17.text.008",
           "state": "Прибыл на мельницу, предъявил собственную схему дорог.",
           "voice": "Короткие фразы, осторожно понижает голос при посторонних.",
           "wants": "Передать сведения, сохранить собственную свободу и не выдать оставшихся людей."
@@ -2607,8 +2606,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya_rain_contact_s17.json",
-        "recovery/HOT.json",
-        "s17.text.006"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -14668,8 +14666,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.008",
+        "s17.text.005",
         "s17.text.006",
-        "s17.text.005"
+        "s17.text.007"
       ]
     },
     "place:b8ccdfc587cc4a22": {
@@ -20878,11 +20878,15 @@
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s11.text.043"
+          "seen": "s17.text.008"
+        },
+        {
+          "role": "по подписи в сцене"
         }
       ],
       "sources": [
-        "recovery/cast/svyaznoy_peska.json"
+        "recovery/cast/svyaznoy_peska.json",
+        "recovery/HOT.json"
       ]
     },
     "tagitsuhime": {
@@ -21774,8 +21778,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -21819,8 +21822,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s17.text.006"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -22298,5 +22300,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1517
+  "source_turns_indexed": 1518
 }

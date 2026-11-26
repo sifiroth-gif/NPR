@@ -112,6 +112,7 @@
 - Страна Огня, лес у пункта выплаты наград · `places/strana-ognya-les-u-punkta-vyplaty-nagrad` · 3 ход(ов), s15–s15
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
+- Страна Рек, западные предгорья · `places/strana-rek-zapadnye-predgorya` · 3 ход(ов), s17–s17
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
 - Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 2 ход(ов), s17–s17
@@ -159,7 +160,6 @@
 - Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
 - Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 2 ход(ов), s14–s15
 - Страна Рек, закрытое речное ущелье у озера и запечатанной пещеры · `places/strana-rek-zakrytoe-rechnoe-ushchele-u-ozera-i-zapechatannoy` · 2 ход(ов), s11–s11
-- Страна Рек, западные предгорья · `places/strana-rek-zapadnye-predgorya` · 2 ход(ов), s17–s17
 - Страна Травы, каменистая ложбина к востоку от моста Тэнти · `places/strana-travy-kamenistaya-lozhbina-k-vostoku-ot-mosta-tenti` · 2 ход(ов), s12–s12
 - Страна Травы, лесопильная дорога к торговым рядам · `places/strana-travy-lesopilnaya-doroga-k-torgovym-ryadam` · 2 ход(ов), s13–s13
 - Страна Травы, лесопильная дорога у старого сарая · `places/strana-travy-lesopilnaya-doroga-u-starogo-saraya` · 2 ход(ов), s13–s13
