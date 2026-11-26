@@ -30,9 +30,9 @@
 - Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 14 ход(ов), s15–s15
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
+- Конохагакуре, тихий двор за тренировочными площадками · `places/konokhagakure-tikhiy-dvor-za-trenirovochnymi-ploshchadkami` · 12 ход(ов), s15–s15
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
-- Конохагакуре, тихий двор за тренировочными площадками · `places/konokhagakure-tikhiy-dvor-za-trenirovochnymi-ploshchadkami` · 11 ход(ов), s15–s15
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 11 ход(ов), s14–s15
