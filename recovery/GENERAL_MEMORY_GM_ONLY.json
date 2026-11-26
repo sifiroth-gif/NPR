@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.064",
+  "cursor": "s16.text.065",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -505,6 +505,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s16.text.065:0": {
+      "aliases": [
+        "canon:s16.text.065:0",
+        "s16.text.065: уточнение по прямой поправке игрока и первичным s15.text.134–135: подписанный 23.04.1287 договор Конохи и Шики уже содержит п.5 «Исследования организма, тканей и насл"
+      ],
+      "facts": [],
+      "id": "canon:s16.text.065:0",
+      "kind": "canon",
+      "label": "s16.text.065: уточнение по прямой поправке игрока и первичным s15.text.134–135: подписанный 23.04.1287 договор Конохи и Шики уже содержит п.5 «Исследования организма, тканей и насл",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.065"
       ]
     },
     "captive_guard": {
@@ -2500,7 +2516,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 82,
+      "mention_count": 83,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2524,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:43:00",
-          "excerpt": "сь иногда означает, что кто-то не вернётся домой. Но отсутствие этой подписи тоже может стоить людям жизни. Джирайя потёр большим пальцем костяшки другой руки. На его лице проступило выражение тяжёлой задумчивости. **Джирайя:** — Всё зависит от того, ради чего",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.062"
         },
         {
           "at": "0010-04-25T20:46:00",
@@ -2529,11 +2538,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.064"
+        },
+        {
+          "at": "0010-04-25T20:49:00",
+          "excerpt": "ещены. Передачу образцов третьим лицам мы отдельно не оговаривали. Но своё слово на этот счёт я уже дала. Джирайя тихо хмыкнул. Подняв сумку с пола, он перекинул ремень через плечо и поправил его привычным движением. **Джирайя:** — Пожалуй, на сегодня с госуда",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.065"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.064",
+          "seen": "s16.text.065",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2559,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.064"
+        "s16.text.065"
       ]
     },
     "jiro_caravan_guard": {
@@ -10772,7 +10788,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.064",
+        "s16.text.065",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -10780,7 +10796,8 @@
         "s16.text.060",
         "s16.text.061",
         "s16.text.062",
-        "s16.text.063"
+        "s16.text.063",
+        "s16.text.064"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20554,7 +20571,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 62,
+      "mention_count": 63,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20562,13 +20579,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T20:43:00",
-          "excerpt": "не готов жить так как велит мне документ. Уточню документ для документа и власти, но не для человека. Цунадэ медленно опустила глаза. Перед ней лежали распоряжения, донесения, дипломатические письма. На каждом документе оставалось место для её подписи. Она взя",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.062"
         },
         {
           "at": "0010-04-25T20:46:00",
@@ -20583,11 +20593,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.064"
+        },
+        {
+          "at": "0010-04-25T20:49:00",
+          "excerpt": "Резиденция Хокагэ **Мугами Шики:** — Ага, иронично. Но эта строка закреплена в нашем соглашении уже Цунадэ на секунду замерла. Затем прикрыла лицо ладонью и негромко рассмеялась. Смех получился коротким и усталым. **Цунадэ:** — Пятый пункт. Действительно. Она ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.065"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.064",
+          "seen": "s16.text.065",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20597,7 +20614,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.064"
+        "s16.text.065"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21409,5 +21426,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1442
+  "source_turns_indexed": 1443
 }
