@@ -1,14 +1,16 @@
-# Карта мира NPR · на ходе `s15.text.156`
+# Карта мира NPR · на ходе `s15.text.157`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (315) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (316) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (243)
+- Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma` · в сцене
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
-- shima —  · `npc/shima`
+- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru` · в сцене
 - Джирайя —  · `npc/jiraiya`
+- shima —  · `npc/shima`
 - Фукасаку —  · `npc/fukasaku`
 - Сима — по подписи в сцене · `npc/sima`
 - Хисато — Взрослый шиноби Листа, нёс Маю на спине. · `npc/fire_road_hisato`
@@ -216,7 +218,6 @@
 - Ёрои Акадо (Ёрои, Акадо) — генин, участник (на 1283, экзамен) · `npc/yoroi`
 - Акамару — ниндзюкэн, напарник Кибы (на 1283, экзамен) · `npc/akamaru`
 - Анко Митараши (Анко, Митараши) — токубэцу-дзёнин, второй этап (на 1283, экзамен) · `npc/anko`
-- Асума Сарутоби (Асума) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma`
 - Баю — генин, участник (на 1283, экзамен) · `npc/baiu`
 - Гэнма Ширануи (Гэнма, Ширануи) — токубэцу-дзёнин, финалы (на 1283, экзамен) · `npc/genma`
 - Досу Кинута (Досу, Кинута) — генин, участник (на 1283, экзамен) · `npc/dosu`
@@ -246,16 +247,16 @@
 - Хината Хьюга (Хината) — генин, участница (на 1283, экзамен) · `npc/hinata`
 - Хирузен Сарутоби (Хирузен) — Третий Хокаге (на 1283, экзамен) · `npc/hiruzen`
 - Шигурэ — генин, участник (на 1283, экзамен) · `npc/shigure`
-- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru`
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (5)
+## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
-- `shiki_save_asuma` — Цель игрока сохранена: спасти Сарутоби Асуму, дать реальные своевреме… · `threads/shiki_save_asuma`
+- `shiki_save_asuma` — Цель игрока спасти Асуму без метазнания. Личный контакт восстановлен … · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — Цель игрока (внеигровая, s15.text.155): наряду с Асумой спасти Джирай… · `threads/shiki_save_jiraiya`
+- `player_preference_overlapping_plans` — s15.text.157: игрок прямо предпочитает интересные выборы через наслое… · `threads/player_preference_overlapping_plans`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

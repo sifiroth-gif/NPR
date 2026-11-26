@@ -167,6 +167,7 @@
 - Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01
 - Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
 - Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01
+- Конохагакуре, торговый квартал у гостиницы и чайной · `places/konokhagakure-torgovyy-kvartal-u-gostinitsy-i-chaynoy` · 1 ход(ов), s15–s15
 - Конохагакуре, Тренировочная площадка за восточной оградой госпиталя · `places/konokhagakure-trenirovochnaya-ploshchadka-za-vostochnoy-ogra` · 1 ход(ов), s01–s01
 - Конохагакуре, Трибуна участников · `places/konokhagakure-tribuna-uchastnikov` · 1 ход(ов), s02–s02
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.156",
+  "cursor": "s15.text.157",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -385,6 +385,36 @@
       ],
       "sources": [
         "recovery/cast/archive_roof_fugitive.json"
+      ]
+    },
+    "asuma": {
+      "aliases": [
+        "asuma",
+        "Асума Сарутоби"
+      ],
+      "facts": [],
+      "id": "asuma",
+      "kind": "npc",
+      "label": "Асума Сарутоби",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0001-08-07T12:24:31",
+          "excerpt": "ставалась открытой за его спиной. --- ### 12:26. Коноха отвечает В западном секторе стадиона уже шёл другой бой. **Асума Сарутоби** двигался вдоль нижней галереи, удерживая чакровые клинки на уровне бёдер. Его противники попытались закрыть проход взрывными печ",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.052"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s15.text.157"
+        }
+      ],
+      "sources": [
+        "recovery/cast/asuma.json",
+        "recovery/HOT.json",
+        "s15.text.157"
       ]
     },
     "baki": {
@@ -1643,8 +1673,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fukasaku.json",
-        "s15.text.156"
+        "recovery/cast/fukasaku.json"
       ]
     },
     "gaara": {
@@ -2203,12 +2232,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.156"
+          "seen": "s15.text.157"
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "s15.text.156"
+        "s15.text.157"
       ]
     },
     "jiro_caravan_guard": {
@@ -4828,7 +4857,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.156",
+          "seen": "s15.text.157",
           "state": "После предупреждения Шики покинул опасный участок с Сакурой и Ямато; стремится догнать Сая и Саске."
         },
         {
@@ -4838,7 +4867,7 @@
       "sources": [
         "recovery/cast/naruto.json",
         "recovery/HOT.json",
-        "s15.text.156"
+        "s15.text.157"
       ]
     },
     "naruto_home_sketch_s15": {
@@ -6650,6 +6679,24 @@
         "s04.text.029",
         "s04.text.030",
         "s04.text.031"
+      ]
+    },
+    "place:1de92c35b34a7420": {
+      "aliases": [
+        "place:1de92c35b34a7420",
+        "Конохагакуре, торговый квартал у гостиницы и чайной",
+        "Конохагакуре",
+        "торговый квартал у гостиницы и чайной"
+      ],
+      "facts": [],
+      "id": "place:1de92c35b34a7420",
+      "kind": "place",
+      "label": "Конохагакуре, торговый квартал у гостиницы и чайной",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.157"
       ]
     },
     "place:1ea8289e5c7ab92a": {
@@ -16566,7 +16613,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.156",
         "s15.text.145",
         "s15.text.146",
         "s15.text.147",
@@ -16577,7 +16623,8 @@
         "s15.text.152",
         "s15.text.153",
         "s15.text.154",
-        "s15.text.155"
+        "s15.text.155",
+        "s15.text.156"
       ]
     },
     "place:fdb4dc3fd78cd3fd": {
@@ -18162,6 +18209,57 @@
         "recovery/cast/seydzi.json"
       ]
     },
+    "shikamaru": {
+      "aliases": [
+        "shikamaru",
+        "Шикамару Нара"
+      ],
+      "facts": [],
+      "id": "shikamaru",
+      "kind": "npc",
+      "label": "Шикамару Нара",
+      "mention_count": 5,
+      "mentions": [
+        {
+          "at": "0001-07-03T11:27:00",
+          "excerpt": "жущемся учебном манекене. Не идеально. Но уже не случайно. --- ### Пятница, 5 июля. День четвёртый В башню прибыла команда Асумы: Шикамару Нара, Ино Яманака и Тёдзи Акимичи. Шикамару едва держался на ногах от усталости. Ино злилась на него за то, что он дважды",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.092"
+        },
+        {
+          "at": "0001-07-07T08:49:00",
+          "excerpt": "Первый круг | 1 | Темари | Наруто Узумаки | |--------|--------|--------| | 2 | **Мугами Шики** | **Рок Ли** | | 3 | **Мидзухара Аки** | **Гаара** | | 4 | Тэнтэн | Нэдзи Хьюга | --- Проходят непосредственно в четвертьфинал Шино Абурамэ Досу Кинута Саске Учиха Ш",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.106"
+        },
+        {
+          "at": "0001-08-07T09:46:00",
+          "excerpt": "лько тем, кого поражает. Ею можно заставить противника занять невыгодное положение. У противоположного ограждения стоял Шикамару Нара. Он наблюдал за схваткой, опираясь локтями на камень. **Шикамару**, тихо\\: — Вот же неприятная женщина… Темари словно услышала",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.030"
+        },
+        {
+          "at": "0001-08-07T10:05:00",
+          "excerpt": "та 1278 года. 10:05.** *Конохагакуре. Главная арена экзамена на тюнина.* ### Четвертьфинал. Гаара — Шикамару Нара Шикамару спустился на арену с таким выражением лица, словно его заставили присутствовать при собственном вскрытии. Он остановился в двадцати метра",
+          "source": "archive/session-002-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s02.text.031"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s15.text.157"
+        }
+      ],
+      "sources": [
+        "recovery/cast/shikamaru.json",
+        "recovery/HOT.json",
+        "s15.text.157"
+      ]
+    },
     "shiki_arm_wraps": {
       "aliases": [
         "shiki arm wraps"
@@ -18430,8 +18528,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shima.json",
-        "s15.text.156"
+        "recovery/cast/shima.json"
       ]
     },
     "shiozaki_masaaki": {
@@ -19448,6 +19545,27 @@
         "recovery/cast/tetsu.json"
       ]
     },
+    "thread:player_preference_overlapping_plans": {
+      "aliases": [
+        "thread:player preference overlapping plans",
+        "player preference overlapping plans",
+        "player_preference_overlapping_plans"
+      ],
+      "facts": [],
+      "id": "thread:player_preference_overlapping_plans",
+      "kind": "thread",
+      "label": "player preference overlapping plans",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "state": "s15.text.157: игрок прямо предпочитает интересные выборы через наслоение независимых планов NPC и событий (Мьёбоку / Асума); сохранять автономные сроки, последствия выбора, возможность упустить событие; не создавать искусственные дилеммы и не принимать решение за Шики."
+        }
+      ],
+      "sources": [
+        "s15.text.157"
+      ]
+    },
     "thread:shiki_confidentiality": {
       "aliases": [
         "thread:shiki confidentiality",
@@ -19504,11 +19622,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "Цель игрока сохранена: спасти Сарутоби Асуму, дать реальные своевременные возможности связи и вмешательства, не наделять Шики знанием будущего. По пути к Огню встретил монахов Храма Огня (s15.text.109), связь с Асумой ещё не выяснена."
+          "state": "Цель игрока спасти Асуму без метазнания. Личный контакт восстановлен 23.04.1287; Асума планирует поездку в Храм Огня утром 25.04, возможен разговор вечером 24.04. Записка Рёэна у Шики. Совпадение сроков с приглашением на Мьёбоку 25.04 09:00 создаёт реальный выбор без гарантии любого исхода."
         }
       ],
       "sources": [
-        "s15.text.109"
+        "s15.text.157"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20466,5 +20584,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1329
+  "source_turns_indexed": 1330
 }
