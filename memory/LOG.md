@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.052: Джирайя (`npc/jiraiya`), Шикамару Нара (`npc/shikamaru`)
 - s16.text.051: Джирайя (`npc/jiraiya`)
 - s16.text.050: Джирайя (`npc/jiraiya`)
 - s16.text.049: Джирайя (`npc/jiraiya`), бой, поправки игрока: 2

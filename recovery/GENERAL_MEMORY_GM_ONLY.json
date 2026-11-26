@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.051",
+  "cursor": "s16.text.052",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 70,
+      "mention_count": 71,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T20:00:00",
-          "excerpt": "s\">Воскресенье, 25 апреля 1287 года · 16:00</text> ### Конохагакуре. Западный тренировочный полигон Джирайя разложил на земле два свитка. Первый содержал последовательности печатей и схемы распределения чакры в грунте, второй — изображения воздушных потоков. *",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.049"
         },
         {
           "at": "0010-04-25T20:01:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.051"
+        },
+        {
+          "at": "0010-04-25T20:04:00",
+          "excerpt": "аз они опасны. Поэтому я попросил вас обучить меня базовым, базовые техники позволяют сохранить жизнь Джирайя выслушал до конца, не перебивая. Затем медленно опустился на камень у воды. **Джирайя:** — Значит, ледяная стихия и твои глаза… Теперь понятно. Он дол",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.052"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.051",
+          "seen": "s16.text.052",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.051"
+        "s16.text.052"
       ]
     },
     "jiro_caravan_guard": {
@@ -5434,7 +5434,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 168,
+      "mention_count": 169,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5442,13 +5442,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-04-23T16:32:00",
-          "excerpt": "достаточно, чтобы поставить под сомнение смысл значительной части его жизни. Для такого человека, как Орочимару, это почти оскорбление. Он посмотрел на белые волосы Шики. **Джирайя:** — Но будь осторожен. Он умеет восхищаться тем, чему завидует. Шики отложил с",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.150"
         },
         {
           "at": "0010-04-25T10:37:00",
@@ -5463,6 +5456,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.049"
+        },
+        {
+          "at": "0010-04-25T20:04:00",
+          "excerpt": "тно. Он долго смотрел на тёмную поверхность водоёма. Где-то среди камышей плеснула рыба. **Джирайя:** — Орочимару потратил десятилетия на поиски способа преодолеть ограничения человеческого тела. Ради этого он отказывался от одного тела за другим. А ты способе",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.052"
         }
       ],
       "projections": [
@@ -14136,10 +14136,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.051",
+        "s16.text.052",
         "s16.text.048",
         "s16.text.049",
-        "s16.text.050"
+        "s16.text.050",
+        "s16.text.051"
       ]
     },
     "place:b6818057c5d64dc5": {
@@ -18997,12 +18998,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.011",
+          "seen": "s16.text.052",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s16.text.052"
       ]
     },
     "shiki_arm_wraps": {
@@ -21368,5 +21370,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1430
+  "source_turns_indexed": 1431
 }
