@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.095",
+  "cursor": "s16.text.096",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -8128,8 +8128,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.095",
-        "s16.text.094"
+        "s16.text.096",
+        "s16.text.094",
+        "s16.text.095"
       ]
     },
     "place:3641cb3273b1ad66": {
@@ -18419,7 +18420,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.095",
+          "seen": "s16.text.096",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
         {
@@ -18429,7 +18430,7 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s16.text.095"
+        "s16.text.096"
       ]
     },
     "road_villager_fumi": {
@@ -19418,12 +19419,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.076",
+          "seen": "s16.text.096",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s16.text.096"
       ]
     },
     "shiki_arm_wraps": {
@@ -21042,12 +21044,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.066",
+          "seen": "s16.text.096",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s16.text.096"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21344,7 +21347,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21352,13 +21355,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-29T19:10:00",
-          "excerpt": "— четверг, 29 апреля 1287 года</text> **Мугами Шики:** — Это и хотел тебе предложить. Пойдем домой Коюки довольно устроилась под воротником плаща. Побережье постепенно осталось позади. Шики двигался по торговым дорогам, проходил через небольшие поселения и пер",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.092"
         },
         {
           "at": "0010-04-29T19:22:00",
@@ -21373,11 +21369,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.095"
+        },
+        {
+          "at": "0010-04-29T19:39:00",
+          "excerpt": "й вопрос, я не могу поступить иначе. #аккуратно спасаю уцелевшие яйца и детёнышей, потом спрашиваю# коюки передай что я могу и хочу ее вылечить если она позволит <text color=\"secondary\" size=\"xs\">Четверг, 29 апреля 1287 года · 19:39</text> ### Страна Рек. Древ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.096"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.095",
+          "seen": "s16.text.096",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21387,7 +21390,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.095"
+        "s16.text.096"
       ]
     },
     "white_snake_sage": {
@@ -21879,5 +21882,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1468
+  "source_turns_indexed": 1469
 }

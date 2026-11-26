@@ -108,6 +108,7 @@
 - Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 3 ход(ов), s16–s16
 - Страна Огня, лес у пункта выплаты наград · `places/strana-ognya-les-u-punkta-vyplaty-nagrad` · 3 ход(ов), s15–s15
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
+- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 3 ход(ов), s16–s16
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
@@ -152,7 +153,6 @@
 - Страна Огня, западный пограничный пост на дороге из Страны Травы · `places/strana-ognya-zapadnyy-pogranichnyy-post-na-doroge-iz-strany-` · 2 ход(ов), s15–s15
 - Страна Рек, дорога вдоль реки · `places/strana-rek-doroga-vdol-reki` · 2 ход(ов), s12–s12
 - Страна Рек, каменный уступ у реки · `places/strana-rek-kamennyy-ustup-u-reki` · 2 ход(ов), s11–s11
-- Страна Рек, нижнее ущелье · `places/strana-rek-nizhnee-ushchele` · 2 ход(ов), s16–s16
 - Страна Рек, северное ущелье у убежища Акацуки · `places/strana-rek-severnoe-ushchele-u-ubezhishcha-akatsuki` · 2 ход(ов), s11–s11
 - Страна Рек, старая почтовая станция · `places/strana-rek-staraya-pochtovaya-stantsiya` · 2 ход(ов), s12–s12
 - Страна Рек, удалённое каменистое плато · `places/strana-rek-udalennoe-kamenistoe-plato` · 2 ход(ов), s14–s15
