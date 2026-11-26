@@ -92,6 +92,7 @@
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
+- Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
@@ -141,7 +142,6 @@
 - Страна Травы, Тайная лаборатория Мугами Шики · `places/strana-travy-taynaya-laboratoriya-mugami-shiki` · 2 ход(ов), s02–s02
 - Страна Травы, ворота Кусагакуре · `places/strana-travy-vorota-kusagakure` · 2 ход(ов), s15–s15
 - Страна Травы, восточный склон известняковой ложбины · `places/strana-travy-vostochnyy-sklon-izvestnyakovoy-lozhbiny` · 2 ход(ов), s12–s12
-- Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 2 ход(ов), s15–s15
 - Страна Травы, заброшенный сушильный двор возле подпольных складов · `places/strana-travy-zabroshennyy-sushilnyy-dvor-vozle-podpolnykh-sk` · 2 ход(ов), s12–s12
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09

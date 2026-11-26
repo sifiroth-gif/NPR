@@ -1,6 +1,6 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s15.text.110",
+ "cursor": "s15.text.111",
  "fold_errors": [],
  "checks": [
   {
@@ -59,6 +59,21 @@
    "turn": "s15.text.110",
    "kind": "name",
    "text": "fire_temple_driver_seiji: часть имени (Сэйдзи) совпадает с quay_masked_hunter"
+  },
+  {
+   "turn": "s15.text.111",
+   "kind": "review",
+   "text": "fire_temple_driver_seiji: offscreen knows+ requires knowledge_events with source/channel"
+  },
+  {
+   "turn": "s15.text.111",
+   "kind": "write",
+   "text": "Запись хода: вся запись сверх сцены 4693 знаков (норма до 4000); крупнее всего: cast 2620, scene 769, canon+ 228."
+  },
+  {
+   "turn": "s15.text.111",
+   "kind": "read",
+   "text": "«Дзюн» вернулся в сцену, а его страница `npc/fire_temple_travel_jun` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/fire_temple_travel_jun.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

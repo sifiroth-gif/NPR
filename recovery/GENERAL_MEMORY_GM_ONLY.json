@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.110",
+  "cursor": "s15.text.111",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -83,8 +83,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/aki.json",
-        "s15.text.110"
+        "recovery/cast/aki.json"
       ]
     },
     "aki_home_address_s15": {
@@ -154,7 +153,7 @@
           "body": "Посмотрел сначала на сына, потом на жену, заметил её стремление немедленно добиться объяснения и предложил увести разговор в частное пространство.",
           "fears": "Резкие изменения облика сына и возможная беда",
           "role": "Отец Шики, фармацевт и снабженец; работает в кабинете Кирисавы Сэйны",
-          "seen": "s15.text.102",
+          "seen": "s15.text.111",
           "stance": "Встревожен, не знает причин",
           "state": "01:02 остался с женой в родительском доме; утром 04.10 намерен переместить оригиналы аптечных записей под опись, при существенных находках известит сына.",
           "voice": "Сдержанная речь, срыв при волнении",
@@ -162,7 +161,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/akihiro.json"
+        "recovery/cast/akihiro.json",
+        "s15.text.111"
       ]
     },
     "arai_mitiko": {
@@ -508,6 +508,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s15.text.111:0": {
+      "aliases": [
+        "canon:s15.text.111:0",
+        "s15.text.111: Рёэн сообщил Шики, что Тирику служил среди Двенадцати ниндзя-хранителей; не назвал Асуму, связь ещё не установлена. Весть о неудаче Акихиро evt_c682a919ea9b0b03c4f7 о"
+      ],
+      "facts": [],
+      "id": "canon:s15.text.111:0",
+      "kind": "canon",
+      "label": "s15.text.111: Рёэн сообщил Шики, что Тирику служил среди Двенадцати ниндзя-хранителей; не назвал Асуму, связь ещё не установлена. Весть о неудаче Акихиро evt_c682a919ea9b0b03c4f7 о",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.111"
       ]
     },
     "captive_guard": {
@@ -1045,13 +1061,14 @@
     "fire_temple_driver_seiji": {
       "aliases": [
         "fire temple driver seiji",
-        "Сэйдзи"
+        "Сэйдзи",
+        "fire_temple_driver_seiji"
       ],
       "facts": [],
       "id": "fire_temple_driver_seiji",
       "kind": "npc",
       "label": "Сэйдзи",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0006-10-04T06:43:00",
@@ -1059,13 +1076,6 @@
           "source": "archive/session-008-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s08.text.090"
-        },
-        {
-          "at": "0010-04-11T21:15:00",
-          "excerpt": "двинул свои инструменты, освободив место для рук Шики. Минасэ перестал рассматривать собственную кисть. **Сэйдзи Минасэ:** — Что ещё можно вернуть? Чёрная чакра вновь сосредоточилась в ладонях Шики. ### Восстановление нервной проводимости После устранения комп",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.021"
         },
         {
           "at": "0010-04-11T21:44:00",
@@ -1080,28 +1090,36 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "ный. Такая вот особенность. Рёэн медленно опустил чётки. **Рёэн:** — Чёрный? Шики подошёл к раненому. Сэйдзи судорожно вцепился в рукав монаха. В его глазах читался почти детский ужас. Вблизи холодная серая кожа врача, вертикальные зрачки и переплетения чёрных",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.110"
+          "seen": "s15.text.111"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_driver_seiji.json",
-        "s15.text.110"
+        "s15.text.111"
       ]
     },
     "fire_temple_travel_jun": {
       "aliases": [
         "fire temple travel jun",
-        "Дзюн"
+        "Дзюн",
+        "fire_temple_travel_jun"
       ],
       "facts": [],
       "id": "fire_temple_travel_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1109,13 +1127,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-01T14:19:00",
-          "excerpt": "нул верхний лист, из-под него показалось свежее донесение с печатью гарнизона. Шики успел прочесть верхние строки: Дзюн, старший брат погибшего Хару, допущен к разбирательству по делу нападения на северной заставе. Ниже шли дата и подпись дежурного офицера. Ки",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.032"
         },
         {
           "at": "0010-04-04T08:46:00",
@@ -1130,28 +1141,36 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.110"
+          "seen": "s15.text.111"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_jun.json",
-        "s15.text.110"
+        "s15.text.111"
       ]
     },
     "fire_temple_travel_monk": {
       "aliases": [
         "fire temple travel monk",
-        "Рёэн"
+        "Рёэн",
+        "fire_temple_travel_monk"
       ],
       "facts": [],
       "id": "fire_temple_travel_monk",
       "kind": "npc",
       "label": "Рёэн",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -1159,17 +1178,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "вый тракт **Мугами Шики:** — Да. Сразу предупреждаю, цвет чакры будет черный. Такая вот особенность. Рёэн медленно опустил чётки. **Рёэн:** — Чёрный? Шики подошёл к раненому. Сэйдзи судорожно вцепился в рукав монаха. В его глазах читался почти детский ужас. Вб",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.110"
+          "seen": "s15.text.111"
         }
       ],
       "sources": [
         "recovery/cast/fire_temple_travel_monk.json",
         "recovery/HOT.json",
-        "s15.text.110"
+        "s15.text.111"
       ]
     },
     "forehead_protector": {
@@ -1517,7 +1543,7 @@
       "id": "haru_brother_jun",
       "kind": "npc",
       "label": "Дзюн",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0006-09-22T09:52:00",
@@ -1525,13 +1551,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.081"
-        },
-        {
-          "at": "0010-04-01T14:19:00",
-          "excerpt": "нул верхний лист, из-под него показалось свежее донесение с печатью гарнизона. Шики успел прочесть верхние строки: Дзюн, старший брат погибшего Хару, допущен к разбирательству по делу нападения на северной заставе. Ниже шли дата и подпись дежурного офицера. Ки",
-          "source": "archive/session-013-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s13.text.032"
         },
         {
           "at": "0010-04-04T08:46:00",
@@ -1546,6 +1565,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "ением конечностей. Шики раскрыл медицинский комплект. Над повреждёнными тканями возникла чёрная медицинская чакра. Дзюн отшатнулся настолько резко, что ударился спиной о деревянный борт повозки. **Дзюн:** — Учитель… Рёэн поднял руку, требуя тишины. Сам он, одн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
         }
       ],
       "projections": [
@@ -13939,8 +13965,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.110",
-        "s15.text.109"
+        "s15.text.111",
+        "s15.text.109",
+        "s15.text.110"
       ]
     },
     "place:d1f28ef0735751fa": {
@@ -17294,13 +17321,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.110"
+          "seen": "s15.text.111"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s15.text.110"
+        "s15.text.111"
       ]
     },
     "sekido_tadao": {
@@ -17467,6 +17494,60 @@
       ],
       "sources": [
         "recovery/cast/seventh_well_senior_physician.json"
+      ]
+    },
+    "seydzi": {
+      "aliases": [
+        "seydzi",
+        "Сэйдзи"
+      ],
+      "facts": [],
+      "id": "seydzi",
+      "kind": "npc",
+      "label": "Сэйдзи",
+      "mention_count": 36,
+      "mentions": [
+        {
+          "at": "0006-10-04T06:43:00",
+          "excerpt": "овек, за которым он числился, официально умер в 1280 году. Я подписывал выдачи по его номеру. Кто фактически получал препарат, не видел. Он взял передатчик и открыл служебный перечень последних вызовов. **Мориока Хидэаки:** — А человек, который запретил мне пр",
+          "source": "archive/session-008-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s08.text.090"
+        },
+        {
+          "at": "0010-04-11T21:44:00",
+          "excerpt": "ьной лестницы:** — Убить?.. Нет. Послышался шорох простыни. **Человек у причальной лестницы:** — Когда Сэйдзи упал, я спросил его, слышит ли он меня. Он слышал. Всё слышал. Только пошевелиться не мог. Голос стал тише. **Человек у причальной лестницы:** — Я с т",
+          "source": "archive/session-014-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s14.text.030"
+        },
+        {
+          "at": "0010-04-22T11:39:00",
+          "excerpt": "гами Шики:** — Что произошло? **Старший монах:** — Размыло дорогу. Колесо ушло в канаву, повозка накренилась. Сэйдзи попытался удержать груз, а затем его придавило бортом. Он указал на раненого. **Старший монах:** — Мы вытащили его около получаса назад. Возниц",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.110"
+        },
+        {
+          "at": "0010-04-22T11:51:00",
+          "excerpt": "ный. Такая вот особенность. Рёэн медленно опустил чётки. **Рёэн:** — Чёрный? Шики подошёл к раненому. Сэйдзи судорожно вцепился в рукав монаха. В его глазах читался почти детский ужас. Вблизи холодная серая кожа врача, вертикальные зрачки и переплетения чёрных",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.111"
+        }
+      ],
+      "projections": [
+        {
+          "role": "по подписи в сцене",
+          "seen": "s15.text.111"
+        },
+        {
+          "role": "по подписи в сцене"
+        }
+      ],
+      "sources": [
+        "recovery/cast/seydzi.json",
+        "recovery/HOT.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -19066,7 +19147,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.110",
+          "seen": "s15.text.111",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19560,5 +19641,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1284
+  "source_turns_indexed": 1285
 }
