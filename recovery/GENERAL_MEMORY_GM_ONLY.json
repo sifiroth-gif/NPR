@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.033",
+  "cursor": "s16.text.034",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1979,8 +1979,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/gamamaru.json",
-        "s16.text.033"
+        "recovery/cast/gamamaru.json"
       ]
     },
     "gamamaru_nemera_dream_scroll": {
@@ -2501,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 63,
+      "mention_count": 64,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2509,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:58:00",
-          "excerpt": "метрично на лице и ушах. Их назначение мне неизвестно. Женщину рядом с ним действительно зовут Конан. Джирайя перестал писать. Несколько секунд он смотрел на имя, выведенное на бумаге. **Мугами Шики:** — Хидан воспринимает Пэйна как настоящего руководителя орг",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.031"
         },
         {
           "at": "0010-04-25T12:01:00",
@@ -2530,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.033"
+        },
+        {
+          "at": "0010-04-25T12:09:00",
+          "excerpt": "нчания разветвляются, одновременно нанося на поверхность несколько взаимосвязанных контуров фуиндзюцу. Джирайя наклоняется ближе. Некоторые элементы формулы ему знакомы, однако способ их соединения совершенно непривычен. Цунадэ убирает руку со стола. Когда оди",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.034"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.033",
+          "seen": "s16.text.034",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2544,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.033"
+        "s16.text.034"
       ]
     },
     "jiro_caravan_guard": {
@@ -3622,17 +3621,23 @@
     "konoha_blank_contact_plate_s16": {
       "aliases": [
         "konoha blank contact plate s16",
-        "Чистая фуин-пластина связи Конохи"
+        "Индивидуальная пластина связи Шики для Конохи"
       ],
       "facts": [],
       "id": "konoha_blank_contact_plate_s16",
       "kind": "item",
-      "label": "Чистая фуин-пластина связи Конохи",
+      "label": "Индивидуальная пластина связи Шики для Конохи",
       "mention_count": 0,
       "mentions": [],
-      "projections": [],
+      "projections": [
+        {
+          "holder": "tsunade",
+          "since": "s16.text.034",
+          "turn": "s16.text.034"
+        }
+      ],
       "sources": [
-        "s16.text.033"
+        "s16.text.034"
       ]
     },
     "kotetsu": {
@@ -9602,7 +9607,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.033",
+        "s16.text.034",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9610,7 +9615,8 @@
         "s16.text.019",
         "s16.text.030",
         "s16.text.031",
-        "s16.text.032"
+        "s16.text.032",
+        "s16.text.033"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20462,7 +20468,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 45,
+      "mention_count": 46,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20470,13 +20476,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:58:00",
-          "excerpt": "Приказы передаются дистанционно. Найти местоположение Пэйна или его убежищ через Хидана мне не удалось. Цунадэ придвинула к себе карту Страны Дождя. **Мугами Шики:** — Что касается биджу, техника называется Гэнрю Кю Фудзин — печать девяти призрачных драконов. ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.031"
         },
         {
           "at": "0010-04-25T12:01:00",
@@ -20491,11 +20490,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.033"
+        },
+        {
+          "at": "0010-04-25T12:09:00",
+          "excerpt": "яется ближе. Некоторые элементы формулы ему знакомы, однако способ их соединения совершенно непривычен. Цунадэ убирает руку со стола. Когда один из отростков изгибается возле её чашки, она машинально отодвигает её вместе с блюдцем. Последние линии замыкаются. ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.034"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.033",
+          "seen": "s16.text.034",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20505,7 +20511,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.033"
+        "s16.text.034"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21307,8 +21313,15 @@
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
+    },
+    {
+      "from": "konoha_blank_contact_plate_s16",
+      "source": "s16.text.034",
+      "status": "projected",
+      "to": "tsunade",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1413
+  "source_turns_indexed": 1414
 }
