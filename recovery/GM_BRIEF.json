@@ -58,30 +58,25 @@
    "turn": "s15.text.037"
   },
   {
-   "kind": "things",
-   "text": "fire_temple_guest_note_s15: неверная структура was, now",
-   "turn": "s15.text.115"
+   "kind": "review",
+   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
+   "turn": "s15.text.116"
   },
   {
    "kind": "will",
-   "text": "«Рёэн» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Доставить припасы и возницу в Храм Огня.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
-   "turn": "s15.text.115"
+   "text": "«Дзюн» 4 ход(ов) рядом с Шики только отвечает. Его цель: «не записана». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s15.text.116"
   },
   {
-   "kind": "read",
-   "text": "«Мугами Нао» вернулся в сцену, а его страница `npc/nao` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/nao.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s15.text.115"
-  },
-  {
-   "kind": "read",
-   "text": "«Старший пограничник Конохи» вернулся в сцену, а его страница `npc/fire_west_border_senior` не открыта (поле read хода). Открой её до следующей реплики: облик, что знает, что говорил (`npc/fire_west_border_senior.talk`). Игрок давние описания забывает (s09.text.074): коротко напомни, кто это и как выглядит, — через узнавание Шики.",
-   "turn": "s15.text.115"
+   "kind": "will",
+   "text": "«Дзюн» появляется уже 4 раз, а воли у него нет: задай d.cast.dzyun.psyche (decides, deep_fear, boundary) и intent с next, due, flaw.",
+   "turn": "s15.text.116"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s15.text.115",
+  "cursor": "s15.text.116",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -91,16 +86,16 @@
   "focus": [
    "dzyun",
    "fire_temple_travel_monk",
+   "fire_west_border_senior",
    "seydzi",
    "western_nest_young_courier",
    "nao",
    "place:1d5d548f3c403b12",
-   "fire_temple_driver_seiji",
    "fire_temple_guest_note_s15",
    "mugami_family_album",
    "mugami_tea_gift_s15"
   ],
-  "focus_bytes": 3376,
+  "focus_bytes": 3413,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -116,32 +111,18 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "fusion.tendrils",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
     "shunshin.zero",
-    "weapon.sumi",
-    "element.lightning",
-    "medical.field",
     "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
     "sage.summon"
    ],
    "matched": [],
    "read": [
     "campaigns/shiki/ref/KNOWLEDGE.md",
     "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/ref/FUSION.md"
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
     "present/identity",
@@ -151,23 +132,14 @@
     "scene/place",
     "body/gear",
     "due/offscreen",
-    "time",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access",
-    "fusion profile or historical pact",
-    "contact/channel"
+    "time"
    ],
    "routes": [
     "dialogue",
-    "travel",
-    "items",
-    "pact"
+    "travel"
    ],
    "unavailable": [
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -406,13 +378,13 @@
   }
  },
  "cursor": {
-  "at": "0010-04-22T17:24:00",
+  "at": "0010-04-22T17:48:00",
   "date": "Четверг, 22 апреля 1287 года",
-  "id": "s15.text.115",
+  "id": "s15.text.116",
   "place": "Страна Огня, западный пограничный пост на дороге из Страны Травы",
-  "time": "17:24"
+  "time": "17:48"
  },
- "digest": "df780238d8d722740dfdec2977a51f59f67683bb2932d210b9dbb6045205824d",
+ "digest": "3acd9da148fc1272e56684f565cf5120273126f610b84158b321a9b98f81fe51",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -448,14 +420,21 @@
     "from": "s15.text.004",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.115"
+    "to": "s15.text.116"
    },
    {
     "actor": "nao",
     "from": "s15.text.005",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s15.text.115"
+    "to": "s15.text.116"
+   },
+   {
+    "actor": "fire_west_border_senior",
+    "from": "s15.text.017",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s15.text.116"
    }
   ],
   "nodes": [],
@@ -463,9 +442,9 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Рёэн — не слышал(а); Сэйдзи — не слышал(а); Дзюн — не слышал(а); Коюки — не слышал(а); Мугами Нао — слышал(а) с s05.text.030.",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Рёэн — не слышал(а); Сэйдзи — не слышал(а); Дзюн — не слышал(а); Коюки — не слышал(а); Мугами Нао — не слышал(а).",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Рёэн, Сэйдзи, Дзюн, Коюки, Мугами Нао. Присутствие в отряде и запись lore без источника не доказывают видимость."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Рёэн — не слышал(а); Сэйдзи — не слышал(а); Дзюн — не слышал(а); Коюки — не слышал(а); Мугами Нао — слышал(а) с s05.text.030; Старший пограничник Конохи — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Рёэн — не слышал(а); Сэйдзи — не слышал(а); Дзюн — не слышал(а); Коюки — не слышал(а); Мугами Нао — не слышал(а); Старший пограничник Конохи — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Рёэн, Сэйдзи, Дзюн, Коюки, Мугами Нао, Старший пограничник Конохи. Присутствие в отряде и запись lore без источника не доказывают видимость."
  ],
  "fight": {
   "body": {
@@ -557,17 +536,17 @@
    "value": 600.0
   },
   "dice": [
-   6,
-   2,
-   5,
-   1,
-   16,
-   4,
-   6,
+   19,
+   3,
    8,
-   1,
-   16,
+   4,
+   2,
+   18,
+   12,
+   17,
+   7,
    15,
+   9,
    9
   ],
   "injuries": {
@@ -649,6 +628,11 @@
    },
    {
     "facts": [],
+    "id": "fire_west_border_senior",
+    "kind": "npc"
+   },
+   {
+    "facts": [],
     "id": "seydzi",
     "kind": "npc",
     "operational_cues": {
@@ -692,16 +676,6 @@
     "id": "place:1d5d548f3c403b12",
     "kind": "place",
     "label": "Страна Огня, западный пограничный пост на дороге из Страны Травы",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "fire_temple_driver_seiji",
-    "kind": "npc",
-    "label": "Сэйдзи",
     "status": "no_verified_facts"
    },
    {
@@ -792,6 +766,14 @@
     "stage": 4,
     "step": "необратимость"
    },
+   "fire_west_border_senior": {
+    "does": "Проверил ориентировки, вернул расписку, разрешил путь, обещал сообщение.",
+    "lever": "",
+    "next": "Новый факт — возможный сдвиг; иначе hold/down. Страх или расчёт меняет тактику: сделка, ложь, проверка, защита своих, донос, попытка использовать или устранить Шики.",
+    "reads": "Документ действителен, оснований для местного задержания нет; требуется служебный доклад.",
+    "stage": 2,
+    "step": "пересмотр"
+   },
    "nao": {
     "does": "Позвала сына по пластине, сообщила о слухах и работе клиники, поблагодарила за связь.",
     "lever": "что сына заберут как образец",
@@ -840,14 +822,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 65,
+   "appearances": 4,
+   "facets": 0,
+   "need": 3,
+   "npc": "dzyun",
+   "tier": "developed"
+  },
+  {
+   "appearances": 66,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
    "tier": "deep"
   },
   {
-   "appearances": 210,
+   "appearances": 211,
    "facets": 4,
    "need": 5,
    "npc": "nao",
@@ -863,7 +852,8 @@
    "seydzi",
    "dzyun",
    "western_nest_young_courier",
-   "nao"
+   "nao",
+   "fire_west_border_senior"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
@@ -982,7 +972,7 @@
     },
     {
      "at": "0010-04-22T17:24:00",
-     "sha256": "2d7b19b6d05655904612847ccd8cad9a9f307adcd8816a2dd785eea6aa3cfef0",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.115"
@@ -993,42 +983,27 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.115",
-      "what": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
      }
     ],
     "memory_file": "archive/npc-memory/dzyun.json",
-    "memory_total": 3,
+    "memory_total": 4,
     "name": "Дзюн",
     "role": "по подписи в сцене",
-    "seen": "s15.text.115",
+    "seen": "s15.text.116",
     "status": "present_profile",
-    "tier": "archetypal"
+    "tier": "developed"
    },
    "source_ref": "archive/session-*-turns.jsonl"
   },
   "fire_temple_travel_monk": {
    "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-04-22T14:00:00",
-      "flaw": "Возница слаб после кровопотери, повозка застряла.",
-      "goal": "Доставить припасы и возницу в Храм Огня.",
-      "id": "continue_supply_trip",
-      "if_unopposed": "Монахи продолжат путь с задержкой либо найдут замену транспортному средству.",
-      "next": "Дать Сэйдзи отдохнуть и организовать извлечение повозки из канавы, продолжить путь.",
-      "source_turn": "s15.text.111",
-      "status": "committed"
-     }
-    ],
     "psyche_facets": {
      "boundary": "Не позволит бросить возницу.",
      "decides": "Помочь раненому, сохранив ответственность за груз и младшего монаха.",
      "deep_fear": "Потерять человека из-за бездействия."
-    },
-    "unclocked_intents": [
-     "continue_supply_trip"
-    ]
+    }
    },
    "look": {
     "внешность": "Пожилой широкоплечий бритоголовый монах, дорожное одеяние, потемневшие деревянные чётки."
@@ -1057,7 +1032,7 @@
     },
     {
      "at": "0010-04-22T17:24:00",
-     "sha256": "2d7b19b6d05655904612847ccd8cad9a9f307adcd8816a2dd785eea6aa3cfef0",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.115"
@@ -1075,16 +1050,89 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.115",
-      "what": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
      }
     ],
     "memory_file": "archive/npc-memory/fire_temple_travel_monk.json",
-    "memory_total": 6,
+    "memory_total": 7,
     "name": "Рёэн",
-    "seen": "s15.text.115",
+    "seen": "s15.text.116",
     "status": "present_profile",
     "tier": "developed"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "fire_west_border_senior": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-04-22T20:00:00",
+      "flaw": "Не уполномочен решать вопрос встречи или содержания заявления.",
+      "goal": "Уведомить командование Огня о прибытии заявителя и его направлении.",
+      "id": "report_arrival",
+      "if_unopposed": "Командование получит отметку о пересечении границы Шики.",
+      "next": "Передать сведения о предъявленной расписке, имени, месте и дате заявленной встречи по служебной линии.",
+      "source_turn": "s15.text.116",
+      "status": "committed"
+     }
+    ],
+    "unclocked_intents": [
+     "report_arrival"
+    ]
+   },
+   "look": {
+    "внешность": "Шиноби в форме Листа, дежурит у каменного моста."
+   },
+   "prior_disclosure_ids": [
+    "s15.text.017",
+    "s15.text.050",
+    "s15.text.067",
+    "s15.text.070",
+    "s15.text.112",
+    "s15.text.113",
+    "s15.text.115",
+    "s15.text.116"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-04-21T13:20:00",
+     "sha256": "547b73731acd673987a82fcad8f1b59709d424c6b8577ab1d05bb16876682969",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.017"
+    },
+    {
+     "at": "0010-04-22T17:24:00",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.115"
+    },
+    {
+     "at": "0010-04-22T17:48:00",
+     "sha256": "9cc7cf4e13d6dfd292026f64d69ff051015d7eb8a0880f017e224838e80ff057",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.116"
+    }
+   ],
+   "profile": {
+    "first": "s15.text.116",
+    "inner": {},
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
+     }
+    ],
+    "memory_file": "archive/npc-memory/fire_west_border_senior.json",
+    "memory_total": 1,
+    "name": "Старший пограничник Конохи",
+    "seen": "s15.text.116",
+    "status": "present_profile",
+    "tier": "archetypal"
    },
    "source_ref": "archive/session-*-turns.jsonl"
   },
@@ -1122,10 +1170,10 @@
     "s15.text.006",
     "s15.text.007",
     "s15.text.008",
-    "s15.text.112",
     "s15.text.113",
     "s15.text.114",
-    "s15.text.115"
+    "s15.text.115",
+    "s15.text.116"
    ],
    "prior_disclosures": [
     {
@@ -1136,18 +1184,18 @@
      "turn": "s15.text.005"
     },
     {
-     "at": "0010-04-22T11:57:00",
-     "sha256": "60d8196f5977b546273b346941926e07524a74c9cb4392bb68d14b7915f033d7",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.114"
-    },
-    {
      "at": "0010-04-22T17:24:00",
-     "sha256": "2d7b19b6d05655904612847ccd8cad9a9f307adcd8816a2dd785eea6aa3cfef0",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.115"
+    },
+    {
+     "at": "0010-04-22T17:48:00",
+     "sha256": "9cc7cf4e13d6dfd292026f64d69ff051015d7eb8a0880f017e224838e80ff057",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.116"
     }
    ],
    "profile": {
@@ -1167,15 +1215,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.115",
-      "what": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
      }
     ],
     "memory_file": "archive/npc-memory/nao.json",
-    "memory_total": 210,
+    "memory_total": 211,
     "name": "Мугами Нао",
     "role": "Мать Шики, специалист по лечебным растениям и уходу; работает у Кирисавы",
-    "seen": "s15.text.115",
+    "seen": "s15.text.116",
     "stance": "Сдержанная клиническая настороженность [давняя запись: сверяй со state]",
     "state": "01:02 осталась дома после ухода Шики. Озвучила намерение узнать компетенцию стороннего врача, но не передавать образцы и не устраивать осмотр без ведома сына. Самостоятельного согласия Шики на распространение медицинско…",
     "status": "present_profile",
@@ -1235,7 +1283,7 @@
     },
     {
      "at": "0010-04-22T17:24:00",
-     "sha256": "2d7b19b6d05655904612847ccd8cad9a9f307adcd8816a2dd785eea6aa3cfef0",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.115"
@@ -1247,15 +1295,15 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.115",
-      "what": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
      }
     ],
     "memory_file": "archive/npc-memory/seydzi.json",
-    "memory_total": 5,
+    "memory_total": 6,
     "name": "Сэйдзи",
     "role": "по подписи в сцене",
-    "seen": "s15.text.115",
+    "seen": "s15.text.116",
     "status": "present_profile",
     "tier": "developed"
    },
@@ -1292,10 +1340,10 @@
     "s15.text.005",
     "s15.text.057",
     "s15.text.058",
-    "s15.text.110",
     "s15.text.113",
     "s15.text.114",
-    "s15.text.115"
+    "s15.text.115",
+    "s15.text.116"
    ],
    "prior_disclosures": [
     {
@@ -1306,18 +1354,18 @@
      "turn": "s15.text.004"
     },
     {
-     "at": "0010-04-22T11:57:00",
-     "sha256": "60d8196f5977b546273b346941926e07524a74c9cb4392bb68d14b7915f033d7",
-     "source": "archive/session-015-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s15.text.114"
-    },
-    {
      "at": "0010-04-22T17:24:00",
-     "sha256": "2d7b19b6d05655904612847ccd8cad9a9f307adcd8816a2dd785eea6aa3cfef0",
+     "sha256": "6d4062a29267e7b3820eb33222c6aa5cb17a92a2d1c4c40ed5cf8df4c6bc9911",
      "source": "archive/session-015-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s15.text.115"
+    },
+    {
+     "at": "0010-04-22T17:48:00",
+     "sha256": "9cc7cf4e13d6dfd292026f64d69ff051015d7eb8a0880f017e224838e80ff057",
+     "source": "archive/session-015-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s15.text.116"
     }
    ],
    "profile": {
@@ -1342,14 +1390,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s15.text.115",
-      "what": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+      "turn": "s15.text.116",
+      "what": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 65,
+    "memory_total": 66,
     "name": "Коюки",
-    "seen": "s15.text.115",
+    "seen": "s15.text.116",
     "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже.",
     "status": "present_profile",
     "tier": "deep"
@@ -1359,15 +1407,15 @@
  },
  "recent_turns": [
   {
-   "id": "s15.text.115",
-   "line": "Шики принял рекомендацию, попрощался и продолжил путь. Нао по связи сообщила о слухах и радости родителей. К 17:24 Шики дошёл до погранпоста Огня; старший спросил имя и цель визита."
+   "id": "s15.text.116",
+   "line": "Шики предъявил портовую расписку и назвал дату встречи. Пост проверил ориентировку Кири и отсутствие приказа Конохи о задержании, вернул документ, пропустил и намерен доложить о прибытии."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у погранпоста, Коюки сопровождает; двое шиноби у дороги, двое поблизости. Монахи и Сэйдзи остались на тракте.",
-  "pressure": "Обычная проверка въезда, личность пока не названа. Розыск Кири S/48 млн действует; договор с Кусой подписан.",
-  "situation": "Шики принял рекомендацию Рёэна, убрал в сумку, поклонился и продолжил открыто пешком с Коюки. В 13:16 получил голос Нао: Сэйна сообщила родителям соглашение, отец рад, слухи о визите распространились, клиника работает. Ответ не заявлен. В 17:24 достиг западного погранпоста Огня у каменного моста; сенсорикой различил четырёх шиноби, двое видимы. Старший спросил имя и цель, ответа пока нет."
+  "positions": "Шики у открытого шлагбаума, Коюки возле столба, пограничники у поста; монахи остались далеко в Траве.",
+  "pressure": "Въезд разрешён; ответ центральных властей по заявлению и явка на встречу не подтверждены.",
+  "situation": "Шики назвал имя, предъявил подтверждение приёма заявления портом Огня от 11.04, указал встречу в Долине Завершения 28.04. Пост проверил документ и ориентировки: Кири S, местного приказа задержать нет, о встрече пост не уведомлён. Документ возвращён. В 17:48 проезд разрешён, старший обещал доложить. Шики ещё не продолжил путь за пост."
  },
  "shiki": {
   "body": "Постоянный режим отшельника дракона. Единая живая духовно-телесная сущность после слияния. Цельная холодная серая кожа, чёрная кровь и корни, чешуя. Контактная опасность сохраняется; старение замедлено, физические и сенсорные возможности усилены. ВМШ выключен с s13.text.077.",
@@ -1393,14 +1441,15 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "30ebb5d38d3d974c338e386e7d09e61ec5706975",
-  "turn": "s15.text.115"
+  "sha": "a7ebe0e135572c8fefd308f2fff4d27de4702d53",
+  "turn": "s15.text.116"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
    "dzyun": "memory/npc/dzyun.md",
    "fire_temple_travel_monk": "memory/npc/fire_temple_travel_monk.md",
+   "fire_west_border_senior": "memory/npc/fire_west_border_senior.md",
    "nao": "memory/npc/nao.md",
    "seydzi": "memory/npc/seydzi.md",
    "western_nest_young_courier": "memory/npc/western_nest_young_courier.md"
