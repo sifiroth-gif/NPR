@@ -169,7 +169,6 @@ class PlotFoldTest(unittest.TestCase):
         deadline = "0006-10-01T20:00:00"
         self.put(turn(45, "0006-10-01T07:14:00",
                       d={"plot": {"theft": side(limit=deadline)}}))
-        self.commit("played shorthand")
         self.put(turn(46, "0006-10-01T07:20:00"))
         report = hot.fold(self.root)
         self.assertEqual(report["errors"], [])
