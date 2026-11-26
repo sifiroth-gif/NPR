@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.121",
+  "cursor": "s15.text.122",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1101,7 +1101,7 @@
       "id": "fire_road_hisato",
       "kind": "npc",
       "label": "Хисато",
-      "mention_count": 2,
+      "mention_count": 3,
       "mentions": [
         {
           "at": "0010-04-22T22:56:00",
@@ -1116,17 +1116,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.121"
+        },
+        {
+          "at": "0010-04-22T23:06:00",
+          "excerpt": "22:58</text> ### Страна Огня. Лесная дорога Шики осторожно усадил Маю у широкого древесного корня. Хисато подложил ей под спину свёрнутый плащ и укрыл покрывалом. **Мугами Шики:** — Да, участвовал. И я всё же настаиваю идти до Конохи. Девочку я донесу, её жизн",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.122"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.121"
+          "seen": "s15.text.122"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_hisato.json",
         "recovery/HOT.json",
-        "s15.text.121"
+        "s15.text.122"
       ]
     },
     "fire_road_jonin": {
@@ -1139,7 +1146,7 @@
       "id": "fire_road_jonin",
       "kind": "npc",
       "label": "Кадзунэ",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-04-22T22:37:00",
@@ -1147,13 +1154,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.118"
-        },
-        {
-          "at": "0010-04-22T22:38:00",
-          "excerpt": "к спустился с дерева. Третий остановил обход, развернулся и начал удаляться. Через несколько мгновений дорога опустела. Кадзунэ остался стоять возле дерева с кунаем в руке. **Кадзунэ:** — Мугами Шики… Дзёнин посмотрел на удаляющиеся силуэты, затем на человека,",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.119"
         },
         {
           "at": "0010-04-22T22:56:00",
@@ -1168,24 +1168,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.121"
+        },
+        {
+          "at": "0010-04-22T23:06:00",
+          "excerpt": "ё же настаиваю идти до Конохи. Девочку я донесу, её жизни ничего не угрожает. Это не простые наёмники. Кадзунэ посмотрел на дорогу, по которой скрылись преследователи. **Кадзунэ:** — Значит, вы тоже обратили на это внимание. Тем временем Шики приблизился к ран",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.122"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.121"
+          "seen": "s15.text.122"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_jonin.json",
         "recovery/HOT.json",
-        "s15.text.121"
+        "s15.text.122"
       ]
     },
     "fire_road_mayu": {
       "aliases": [
         "fire road mayu",
-        "Маю",
-        "fire_road_mayu"
+        "Маю"
       ],
       "facts": [],
       "id": "fire_road_mayu",
@@ -1195,12 +1201,42 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s15.text.121"
+          "seen": "s15.text.122"
         }
       ],
       "sources": [
         "recovery/cast/fire_road_mayu.json",
-        "s15.text.121"
+        "recovery/HOT.json"
+      ]
+    },
+    "fire_road_natsuki": {
+      "aliases": [
+        "fire road natsuki",
+        "Нацуки"
+      ],
+      "facts": [],
+      "id": "fire_road_natsuki",
+      "kind": "npc",
+      "label": "Нацуки",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-22T23:06:00",
+          "excerpt": "ился перед ним, он вытянул повреждённую ногу и обеими руками вцепился в выступающий корень. **Кадзунэ:** — Нацуки, дай врачу осмотреть тебя. **Нацуки:** — Я сам могу идти… **Кадзунэ:** — Я видел, как ты можешь. Чёрная чакра вновь появилась над пальцами Шики. Н",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.122"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s15.text.122"
+        }
+      ],
+      "sources": [
+        "recovery/cast/fire_road_natsuki.json",
+        "recovery/HOT.json",
+        "s15.text.122"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -4483,14 +4519,10 @@
         {
           "role": "по подписи в сцене",
           "seen": "s15.text.121"
-        },
-        {
-          "role": "по подписи в сцене"
         }
       ],
       "sources": [
-        "recovery/cast/naemnik_u_shakhty.json",
-        "recovery/HOT.json"
+        "recovery/cast/naemnik_u_shakhty.json"
       ]
     },
     "nagae_rokuto": {
@@ -15322,11 +15354,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.121",
+        "s15.text.122",
         "s15.text.117",
         "s15.text.118",
         "s15.text.119",
-        "s15.text.120"
+        "s15.text.120",
+        "s15.text.121"
       ]
     },
     "place:e98c8605d584c4e9": {
@@ -19358,7 +19391,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 55,
+      "mention_count": 56,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -19366,13 +19399,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T22:38:00",
-          "excerpt": "чеников. Рука с кунаем медленно опустилась. **Второй шиноби Конохи:** — Кадзунэ, ей плохо! Со стороны укрытия донёсся голос Коюки. **Коюки:** — Шики, девочка перестала отвечать! **Ход Шики.** Шики предложил проверить Книгу Бинго. Наёмники нашли S/48 млн Кири; ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.119"
         },
         {
           "at": "0010-04-22T22:56:00",
@@ -19387,11 +19413,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.121"
+        },
+        {
+          "at": "0010-04-22T23:06:00",
+          "excerpt": "почти сразу отошёл к своему наставнику. *** <text color=\"secondary\" size=\"xs\">23:06</text> Из папоротников показалась Коюки. **Коюки:** — Дальше дорога пустая. Но я нашла старую тропинку. Она выходит к дороге с другой стороны холма. Если те люди вернутся, нас ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.122"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.121",
+          "seen": "s15.text.122",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -19401,7 +19434,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s15.text.121"
+        "s15.text.122"
       ]
     },
     "white_snake_sage": {
@@ -19893,5 +19926,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1295
+  "source_turns_indexed": 1296
 }
