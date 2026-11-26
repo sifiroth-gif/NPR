@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.107",
+  "cursor": "s16.text.108",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -432,8 +432,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json",
-        "s16.text.107"
+        "recovery/cast/asuma.json"
       ]
     },
     "baki": {
@@ -1110,8 +1109,7 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел",
-        "fire_bounty_station_trader"
+        "Приёмщик тел"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1127,8 +1125,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "s16.text.107"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2252,12 +2249,13 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.094",
+          "seen": "s16.text.108",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json"
+        "recovery/cast/hidan.json",
+        "s16.text.108"
       ]
     },
     "hirano": {
@@ -2958,12 +2956,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.098",
+          "seen": "s16.text.108",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s16.text.108"
       ]
     },
     "kakuzu": {
@@ -4279,7 +4278,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.107",
+          "seen": "s16.text.108",
           "wants": "Обеспечить безопасность проводящего опрос."
         },
         {
@@ -4304,7 +4303,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.107",
+          "seen": "s16.text.108",
           "wants": "Следить за возможным применением техники."
         },
         {
@@ -4326,7 +4325,7 @@
       "id": "leaf_gate_special_inspector_s16",
       "kind": "npc",
       "label": "Незнакомый шиноби",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0001-07-07T21:51:00",
@@ -4334,13 +4333,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.123"
-        },
-        {
-          "at": "0010-05-03T11:52:00",
-          "excerpt": ". Изумо открыл журнал посетителей. Однако прежде, чем он успел сделать запись, из караульного помещения вышел незнакомый шиноби. **Незнакомый шиноби:** — Одну минуту. Мугами Шики должен пройти дополнительную проверку. Котэцу медленно повернулся к нему. **Котэц",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.105"
         },
         {
           "at": "0010-05-03T11:53:00",
@@ -4355,11 +4347,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.107"
+        },
+        {
+          "at": "0010-05-03T11:55:00",
+          "excerpt": "дленно закрыл папку. Его лицо осталось бесстрастным, однако спокойная деловитость исчезла из голоса. **Незнакомый шиноби:** — Как пожелаете. Я передам вашу позицию господину Данзо. Один из его сопровождающих едва заметно повернул голову. По всей видимости, имя",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.108"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.107",
+          "seen": "s16.text.108",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         },
         {
@@ -4369,7 +4368,7 @@
       "sources": [
         "recovery/cast/leaf_gate_special_inspector_s16.json",
         "recovery/HOT.json",
-        "s16.text.107"
+        "s16.text.108"
       ]
     },
     "lee": {
@@ -8651,8 +8650,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.107",
-        "s16.text.106"
+        "s16.text.108",
+        "s16.text.106",
+        "s16.text.107"
       ]
     },
     "place:3f1b9d40c196e66d": {
@@ -22083,5 +22083,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1480
+  "source_turns_indexed": 1481
 }

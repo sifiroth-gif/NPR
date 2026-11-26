@@ -40,10 +40,10 @@
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
+- Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 10 ход(ов), s15–s16
 - Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 10 ход(ов), s16–s16
 - Конохагакуре, подземный изолятор · `places/konokhagakure-podzemnyy-izolyator` · 10 ход(ов), s16–s16
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
-- Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 9 ход(ов), s15–s16
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 9 ход(ов), s16–s16
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
