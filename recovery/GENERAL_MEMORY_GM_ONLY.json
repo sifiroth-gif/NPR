@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.182",
+  "cursor": "s15.text.183",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,7 +429,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.182",
+          "seen": "s15.text.183",
           "state": "Вернул тело Тирику, взял ключи, решил ждать помощь и запросить специалистов."
         },
         {
@@ -438,8 +438,7 @@
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.182"
+        "recovery/HOT.json"
       ]
     },
     "baki": {
@@ -1100,8 +1099,7 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел",
-        "fire_bounty_station_trader"
+        "Приёмщик тел"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1117,8 +1115,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "s15.text.182"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2186,13 +2183,13 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.182",
-          "state": "Жив, обезглавлен, голова и туловище помещены в отдельные контейнеры с удерживающими печатями под охраной Конохи."
+          "seen": "s15.text.183",
+          "state": "Жив, обезглавлен, части раздельно в запечатанных контейнерах под охраной Конохи; голос слаб, состояние шока по проверке s15.text.182."
         }
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "s15.text.182"
+        "s15.text.183"
       ]
     },
     "hirano": {
@@ -2943,12 +2940,13 @@
       "projections": [
         {
           "role": "Акацуки, нукенин Такигакуре",
-          "seen": "s15.text.179",
-          "state": "Мёртв. Все пять сердец уничтожены, чакровая активность и движения нитей прекратились."
+          "seen": "s15.text.183",
+          "state": "Мёртв с s15.text.178, все пять сердец уничтожены; тело под печатью Конохи. Последующие проверки кровопотери не означают жизни."
         }
       ],
       "sources": [
-        "recovery/cast/kakuzu.json"
+        "recovery/cast/kakuzu.json",
+        "s15.text.183"
       ]
     },
     "kakuzu_money_s15": {
@@ -3187,7 +3185,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -3195,13 +3193,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-12T13:17:12",
-          "excerpt": "е кольца и посмотрела на Шики. **Хакудзя-сэннин:** — Каким я тебя видела… *** **Хакудзя-сэннин:** — Четвёртого марта Хагуро привёл тебя ко мне. Итикисима осталась без угощения, Тагори — без послушного ученика. Я уже тогда знала, что ты не из тех, кому нравится",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.050"
         },
         {
           "at": "0010-04-15T18:19:00",
@@ -3216,17 +3207,30 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.064"
+        },
+        {
+          "at": "0010-04-24T12:21:00",
+          "excerpt": "Хорошо, я пойду быстрее, смогу успеть на одну встречу если потороплюс #призыв Хагуро# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:21</text> **Мугами Шики:** — Хорошо, я пойду быстрее. Смогу успеть на одну встречу, если потороплюсь. Шики слож",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.183"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s10.text.109",
-          "state": "06.03 04:12 у входа в «Чёрный створ» после обратной дороги принял благодарность Шики, объяснил, что рассказывал стражу лишь о собственном наблюдении и ради защиты своей ответственности. Добровольно завершил призыв и вернулся в Рьючидо; сейчас отсутствует."
+          "seen": "s15.text.183",
+          "state": "Призван Шики к пункту наград, добровольно откликнулся; спросил о направлении."
+        },
+        {
+          "role": "по подписи в сцене",
+          "state": "Призван Шики к пункту наград, добровольно откликнулся; спросил о направлении."
         }
       ],
       "sources": [
-        "recovery/cast/khaguro.json"
+        "recovery/cast/khaguro.json",
+        "recovery/HOT.json",
+        "s15.text.183"
       ]
     },
     "khakudzya_sennin": {
@@ -3638,7 +3642,7 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.182",
+          "seen": "s15.text.183",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         },
         {
@@ -3649,7 +3653,7 @@
       "sources": [
         "recovery/cast/kotetsu.json",
         "recovery/HOT.json",
-        "s15.text.182"
+        "s15.text.183"
       ]
     },
     "kurama": {
@@ -11970,13 +11974,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.182",
+        "s15.text.183",
         "s15.text.176",
         "s15.text.177",
         "s15.text.178",
         "s15.text.179",
         "s15.text.180",
-        "s15.text.181"
+        "s15.text.181",
+        "s15.text.182"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -18120,7 +18125,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -18128,13 +18133,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-12T13:17:12",
-          "excerpt": "е кольца и посмотрела на Шики. **Хакудзя-сэннин:** — Каким я тебя видела… *** **Хакудзя-сэннин:** — Четвёртого марта Хагуро привёл тебя ко мне. Итикисима осталась без угощения, Тагори — без послушного ученика. Я уже тогда знала, что ты не из тех, кому нравится",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.050"
         },
         {
           "at": "0010-04-15T18:19:00",
@@ -18149,6 +18147,13 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.064"
+        },
+        {
+          "at": "0010-04-24T12:21:00",
+          "excerpt": "Хорошо, я пойду быстрее, смогу успеть на одну встречу если потороплюс #призыв Хагуро# <text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:21</text> **Мугами Шики:** — Хорошо, я пойду быстрее. Смогу успеть на одну встречу, если потороплюсь. Шики слож",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.183"
         }
       ],
       "projections": [
@@ -18803,7 +18808,7 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.182",
+          "seen": "s15.text.183",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -18812,8 +18817,7 @@
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s15.text.182"
+        "recovery/HOT.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21154,5 +21158,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1355
+  "source_turns_indexed": 1356
 }

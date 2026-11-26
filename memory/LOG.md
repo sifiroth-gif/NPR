@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.183: Хагуро (`npc/khaguro`), Котэцу Хаганэ (`npc/kotetsu`), Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`)
 - s15.text.182: Хидан (`npc/hidan`), Приёмщик тел (`npc/fire_bounty_station_trader`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), вещь `fire_bounty_records_s15`, вещь `kakuzu_money_s15`, линия `shiki_save_asuma`
 - s15.text.181: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Приёмщик тел (`npc/fire_bounty_station_trader`), Хидан (`npc/hidan`), линия `shiki_save_asuma`
 - s15.text.180: Хидан (`npc/hidan`)
@@ -61,4 +62,3 @@
 - s15.text.126: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 2
 - s15.text.125: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Наёмник у шахты (`npc/naemnik_u_shakhty`), поправки игрока: 1
 - s15.text.124: Маю (`npc/fire_road_mayu`), Хисато (`npc/fire_road_hisato`), Дежурный главных ворот Конохи (`npc/fire_leaf_gate_duty`), Наёмник у шахты (`npc/naemnik_u_shakhty`), поправки игрока: 1
-- s15.text.123: Маю (`npc/fire_road_mayu`), Кадзунэ (`npc/fire_road_jonin`), Хисато (`npc/fire_road_hisato`), Коюки (`npc/western_nest_young_courier`)
