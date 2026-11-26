@@ -260,6 +260,9 @@ def outcome(p, value):
 # ---------- умения и перевес ----------
 
 def shiki_level(hot, skill):
+    # Final source-gated effective values already include dragon sage bonuses.
+    if fusion.final_profile(hot) and sage_active(hot) and skill in fusion.FINAL_EFFECTIVE:
+        return fusion.FINAL_EFFECTIVE[skill]
     stats = ((hot.get("shiki") or {}).get("stats") or {})
     key = SHIKI_SKILL.get(skill, skill)
     value = stats.get(key)
