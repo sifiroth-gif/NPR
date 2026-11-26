@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.003",
+  "cursor": "s16.text.004",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1601,7 +1601,8 @@
     "fire_west_border_senior": {
       "aliases": [
         "fire west border senior",
-        "Старший пограничник Конохи"
+        "Старший пограничник Конохи",
+        "fire_west_border_senior"
       ],
       "facts": [],
       "id": "fire_west_border_senior",
@@ -1619,11 +1620,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.119"
+          "seen": "s16.text.004"
         }
       ],
       "sources": [
-        "recovery/cast/fire_west_border_senior.json"
+        "recovery/cast/fire_west_border_senior.json",
+        "s16.text.004"
       ]
     },
     "forehead_protector": {
@@ -1765,7 +1767,7 @@
       "id": "fukasaku",
       "kind": "npc",
       "label": "Фукасаку",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0010-04-23T15:18:00",
@@ -1773,13 +1775,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.143"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "нем предании о времени, когда индивидуальное существование ещё не стало единственно возможной формой жизни. Фукасаку протянул руку, намереваясь придержать край ветхого свитка, но остановился. Вместо этого он убрал с каменного помоста чашу, освобождая место пер",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.001"
         },
         {
           "at": "0010-04-25T09:19:00",
@@ -1794,11 +1789,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.003"
+        },
+        {
+          "at": "0010-04-25T09:37:00",
+          "excerpt": "### Мьёбоку. Источник жабьего масла Шики склоняется перед Великим Мудрецом и покидает храм вместе с Фукасаку и Джирайей. Тропинка пролегает среди исполинских растений. По их стеблям стекают капли утренней росы, в углублениях камней гнездятся маленькие жабы. Зд",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.004"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.003",
+          "seen": "s16.text.004",
           "state": "Организовал переход на Мьёбоку; предложил сразу идти к Гамамару."
         },
         {
@@ -1808,7 +1810,7 @@
       "sources": [
         "recovery/cast/fukasaku.json",
         "recovery/HOT.json",
-        "s16.text.003"
+        "s16.text.004"
       ]
     },
     "gaara": {
@@ -1942,7 +1944,7 @@
       "id": "gamamaru",
       "kind": "npc",
       "label": "Гамамару",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-24T12:38:00",
@@ -1950,13 +1952,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.188"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "иями. Природная энергия здесь была насыщенной и удивительно спокойной. Перед Шики лежал древний свиток Гамамару. Семь дверей. Затопленный коридор. Одинокая койка. Чёрные корни, уходящие за пределы рисунка. *Немера.* Имя, записанное задолго до рождения Джирайи.",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.001"
         },
         {
           "at": "0010-04-25T09:19:00",
@@ -1971,6 +1966,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.003"
+        },
+        {
+          "at": "0010-04-25T09:37:00",
+          "excerpt": "ергии в твоём теле при движении. Достаточно нескольких обычных шагов. Не используй техник. **Ход Шики.** Шики поклонился Гамамару и прошёл к источнику. Фукасаку показал окаменевших учеников и обычное накопление сенчакры. Джирайя заинтересовался накоплением в д",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.004"
         }
       ],
       "projections": [
@@ -1981,18 +1983,10 @@
           "stance": "Любопытство к гостю.",
           "voice": "Неторопливый, рассеянный, с внезапной ясностью.",
           "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
-        },
-        {
-          "fears": "Нарушение природного равновесия.",
-          "role": "Старейшина Мьёбоку, пророческие сны.",
-          "stance": "Любопытство к гостю.",
-          "wants": "Понять необычного гостя и сохранить традицию Мьёбоку."
         }
       ],
       "sources": [
-        "recovery/cast/gamamaru.json",
-        "recovery/HOT.json",
-        "s16.text.003"
+        "recovery/cast/gamamaru.json"
       ]
     },
     "gamamaru_nemera_dream_scroll": {
@@ -2513,7 +2507,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2521,13 +2515,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T09:18:00",
-          "excerpt": "ветхого свитка, но остановился. Вместо этого он убрал с каменного помоста чашу, освобождая место перед Шики. Джирайя молчал. Его взгляд задержался на рисунке человеческих фигур, соединённых бесчисленными чёрными линиями. Гамамару ожидал ответа. **Гамамару:** —",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.001"
         },
         {
           "at": "0010-04-25T09:19:00",
@@ -2542,11 +2529,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.003"
+        },
+        {
+          "at": "0010-04-25T09:37:00",
+          "excerpt": "а меняется тело, затем утрачивается способность управлять чакрой. После этого вернуть ученика уже невозможно. Джирайя снял сандалии и сел на плоский камень возле бассейна. Фукасаку продемонстрировал обычную последовательность накопления природной энергии и её ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.004"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.003",
+          "seen": "s16.text.004",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2556,7 +2550,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.003"
+        "s16.text.004"
       ]
     },
     "jiro_caravan_guard": {
@@ -2912,8 +2906,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s16.text.003"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -3979,7 +3972,8 @@
     "kusa_head": {
       "aliases": [
         "kusa head",
-        "Глава Кусагакуре"
+        "Глава Кусагакуре",
+        "kusa_head"
       ],
       "facts": [],
       "id": "kusa_head",
@@ -4021,7 +4015,7 @@
           "body": "Сначала молча рассматривал сдавленную улыбку Шики и тему семейной привязанности, затем стал значительно внимательнее на слове АНБУ. На заседании был холодно-расчётлив, отложил папку дела, держит письменное назначение только готовым к оформлению при согласии; н",
           "fears": "Потерять власть над УВБ и резиденцией, допустить публичный внутриэлитный кризис",
           "role": "Глава деревни, высшая военная и административная власть Кусы",
-          "seen": "s15.text.116",
+          "seen": "s16.text.004",
           "stance": "Принимает дзёнина Мугами в поздний час, требует объяснить ночной визит; личную заинтересованность и знание Тэцу/В-7 пока не демонстрирует",
           "state": "Услышал невидимого Мугами у двери личного кабинета, ответил «Доброй ночи», не поднял тревогу. Досье 19-Т осталось у него, приказ Тацумори в силе.",
           "voice": "Сдержанный, короткие вопросы, без любезностей",
@@ -4029,7 +4023,8 @@
         }
       ],
       "sources": [
-        "recovery/cast/kusa_head.json"
+        "recovery/cast/kusa_head.json",
+        "s16.text.004"
       ]
     },
     "kusa_leader": {
@@ -5797,7 +5792,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.003",
         "s15.text.202",
         "s15.text.203",
         "s15.text.204",
@@ -5805,7 +5799,8 @@
         "s15.text.206",
         "s15.text.207",
         "s16.text.001",
-        "s16.text.002"
+        "s16.text.002",
+        "s16.text.003"
       ]
     },
     "place:02d2db9d9042a981": {
@@ -15602,6 +15597,23 @@
         "s03.text.025"
       ]
     },
+    "place:df76bfeb21c9ce15": {
+      "aliases": [
+        "place:df76bfeb21c9ce15",
+        "Мьёбоку, источник жабьего масла",
+        "источник жабьего масла"
+      ],
+      "facts": [],
+      "id": "place:df76bfeb21c9ce15",
+      "kind": "place",
+      "label": "Мьёбоку, источник жабьего масла",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.004"
+      ]
+    },
     "place:dfe9865838b9839d": {
       "aliases": [
         "place:dfe9865838b9839d",
@@ -17752,8 +17764,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/ren.json",
-        "s16.text.003"
+        "recovery/cast/ren.json"
       ]
     },
     "residence_courier_v7": {
@@ -21039,5 +21050,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1383
+  "source_turns_indexed": 1384
 }

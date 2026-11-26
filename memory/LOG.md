@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.004: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Глава Кусагакуре (`npc/kusa_head`), Старший пограничник Конохи (`npc/fire_west_border_senior`), план сюжета
 - s16.text.003: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Какаши Хатакэ (`npc/kakashi`), Хаясэ Рэн (`npc/ren`), вещь `gamamaru_nemera_dream_scroll`
 - s16.text.002: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), Мугами Акихиро (`npc/akihiro`)
 - s15.text.207: Гамамару (`npc/gamamaru`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), вещь `gamamaru_nemera_dream_scroll`
@@ -59,4 +60,3 @@
 - s15.text.154: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/sima`), Наруто Узумаки (`npc/naruto`), бой
 - s15.text.153: Наруто Узумаки (`npc/naruto`), Джирайя (`npc/jiraiya`), Хисато (`npc/fire_road_hisato`), бой
 - s15.text.152: Коюки (`npc/western_nest_young_courier`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), бой
-- s15.text.151: Джирайя (`npc/jiraiya`)
