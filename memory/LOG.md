@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.133: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.132: поправки игрока: 1
 - s16.text.131: поправки игрока: 2
 - s16.text.130: Какаши Хатакэ (`npc/kakashi`)
@@ -61,4 +62,3 @@
 - s16.text.076: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шикамару Нара (`npc/shikamaru`), Приёмщик тел (`npc/fire_bounty_station_trader`), линия `kiri_bingo_negotiations`
 - s16.text.075: план сюжета
 - s16.text.074: поправки игрока: 2
-- s16.text.073: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), линия `kiri_bingo_negotiations`
