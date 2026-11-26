@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.169: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Хидан (`npc/hidan`), линия `shiki_save_asuma`
 - s15.text.168: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.167: Бансаи (`npc/fire_temple_bansai`), линия `shiki_save_asuma`
 - s15.text.166: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Бансаи (`npc/fire_temple_bansai`), линия `shiki_save_asuma`
@@ -61,4 +62,3 @@
 - s15.text.112: Рёэн (`npc/fire_temple_travel_monk`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.111: Сэйдзи (`npc/fire_temple_driver_seiji`), Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), поправки игрока: 1
 - s15.text.110: Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), Сэйдзи (`npc/fire_temple_driver_seiji`), Кирисава Сэйна (`npc/seina`), Мидзухара Аки (`npc/aki`)
-- s15.text.109: Кирисава Сэйна (`npc/seina`), Коюки (`npc/western_nest_young_courier`), Рёэн (`npc/fire_temple_travel_monk`), линия `shiki_save_asuma`, поправки игрока: 1

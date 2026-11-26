@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.168",
+  "cursor": "s15.text.169",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 10,
+      "mention_count": 11,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T04:01:00",
-          "excerpt": "тся к утру. Это ближайший пункт, дальше с телом они вряд ли пойдут. Несколько секунд Сарутоби молчал. **Асума Сарутоби:** — Ты знаешь, где принимают тела? Шики уже повернулся к Бансаи. Под рукавом монашеского одеяния обнаружился глубокий порез предплечья. Были",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.165"
         },
         {
           "at": "0010-04-24T04:12:00",
@@ -425,17 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
+        },
+        {
+          "at": "0010-04-24T07:38:15",
+          "excerpt": "преимущество. Асума некоторое время изучал постройку. Затем проверил положение клинков в ладонях. **Асума Сарутоби:** — Разделим их. Если второй выйдет, пока мы заняты первым, преимущество исчезнет. Шикамару посмотрел на тени деревьев, вытянувшиеся по земле в ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.169"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.168"
+          "seen": "s15.text.169"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s15.text.168"
+        "s15.text.169"
       ]
     },
     "baki": {
@@ -2092,6 +2092,42 @@
       ],
       "sources": [
         "recovery/cast/haru_brother_jun.json"
+      ]
+    },
+    "hidan": {
+      "aliases": [
+        "hidan",
+        "Хидан"
+      ],
+      "facts": [],
+      "id": "hidan",
+      "kind": "npc",
+      "label": "Хидан",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-04-24T07:38:15",
+          "excerpt": "ьник, заключённый в окружность. За плечом он нёс массивную трёхлезвийную косу, соединённую с длинным тросом. Хидан. Он остановился возле стены и с раздражением пнул лежавший под ногами камень. **Хидан:** — Чёртов старый скряга. Ради денег готов даже в сортире ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.169"
+        }
+      ],
+      "projections": [
+        {
+          "role": "Акацуки",
+          "seen": "s15.text.169",
+          "state": "Снаружи у стены, раздражён ожиданием Какудзу, пока не заметил отряд."
+        },
+        {
+          "role": "Акацуки",
+          "state": "Снаружи у стены, раздражён ожиданием Какудзу, пока не заметил отряд."
+        }
+      ],
+      "sources": [
+        "recovery/cast/hidan.json",
+        "recovery/HOT.json",
+        "s15.text.169"
       ]
     },
     "hirano": {
@@ -9107,6 +9143,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s15.text.169",
         "s15.text.168"
       ]
     },
@@ -18543,7 +18580,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18551,13 +18588,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T04:01:00",
-          "excerpt": "ановленный рукав. **Бансаи:** — Благодарю вас. Из-за стены послышались шаги. Во двор вернулись Шикамару и Котэцу. **Шикамару Нара:** — Потеряли след. На востоке начинается каменистая местность. Противника не видели. Асума протянул ему карту. **Асума Сарутоби:*",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.165"
         },
         {
           "at": "0010-04-24T04:12:00",
@@ -18572,17 +18602,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
+        },
+        {
+          "at": "0010-04-24T07:38:15",
+          "excerpt": "тво исчезнет. Шикамару посмотрел на тени деревьев, вытянувшиеся по земле в лучах восходящего солнца. **Шикамару Нара:** — Я смогу удержать того, кто снаружи. Но неизвестно, насколько надолго. **Асума Сарутоби:** — Этого достаточно. Возьмём живым, если получитс",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.169"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.168"
+          "seen": "s15.text.169"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.168"
+        "s15.text.169"
       ]
     },
     "shiki_arm_wraps": {
@@ -19947,11 +19984,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 07:38: Шики, Асума и Шикамару прибыли к пункту обмена до ухода находящихся там людей. Три очага, слышно имя Какудзу. Тело Тирику ещё не видели. Бой не начат, подкрепление не прибыло."
+          "state": "24.04 07:38:15: Асума выбрал разделение целей. Шикамару готовится удерживать наружного Акацуки, Шики поручён выход. Противник ещё не заметил отряд. Имя Хидана Шики пока неизвестно."
         }
       ],
       "sources": [
-        "s15.text.168"
+        "s15.text.169"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20909,5 +20946,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1341
+  "source_turns_indexed": 1342
 }
