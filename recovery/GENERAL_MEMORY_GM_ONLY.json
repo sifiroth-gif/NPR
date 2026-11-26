@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.184",
+  "cursor": "s15.text.185",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,17 +429,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.184",
-          "state": "Вернул тело Тирику, взял ключи, решил ждать помощь и запросить специалистов."
-        },
-        {
-          "state": "Вернул тело Тирику, взял ключи, решил ждать помощь и запросить специалистов."
+          "seen": "s15.text.185",
+          "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.184"
+        "s15.text.185"
       ]
     },
     "baki": {
@@ -1100,8 +1096,7 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел",
-        "fire_bounty_station_trader"
+        "Приёмщик тел"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1117,8 +1112,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json",
-        "s15.text.184"
+        "recovery/cast/fire_bounty_station_trader.json"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -3186,7 +3180,7 @@
       "id": "khaguro",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -3194,13 +3188,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-16T11:44:00",
-          "excerpt": "размера Сирамэ? **Мастеру:** Сирамэ — взрослая белая змея, заметно крупнее Коюки, но гораздо меньше Хагуро и Сиранами. Точные размеры прежде не устанавливались. Фиксирую длину около 2,5 метра, диаметр туловища в наиболее широкой части — 8–10 сантиметров. Она д",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.064"
         },
         {
           "at": "0010-04-24T12:21:00",
@@ -3215,23 +3202,30 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.184"
+        },
+        {
+          "at": "0010-04-24T12:22:00",
+          "excerpt": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:22</text> **Мугами Шики:** — В Рьючидо. **Хагуро:** — В таком случае всё гораздо проще. Подожди немного. Змея исчезла в облаке белого дыма. Прошло несколько секунд. Пространство вокруг Шики исказилось,",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.185"
         }
       ],
       "projections": [
         {
           "role": "по подписи в сцене",
-          "seen": "s15.text.184",
-          "state": "Призван, подтвердил способность к обратному призыву, ожидает уточнения цели."
+          "seen": "s15.text.185",
+          "state": "Вернулся в Рьючидо, обратным призывом добровольно перенёс Шики, находится с ним во внешней пещере."
         },
         {
           "role": "по подписи в сцене",
-          "state": "Призван, подтвердил способность к обратному призыву, ожидает уточнения цели."
+          "state": "Вернулся в Рьючидо, обратным призывом добровольно перенёс Шики, находится с ним во внешней пещере."
         }
       ],
       "sources": [
         "recovery/cast/khaguro.json",
         "recovery/HOT.json",
-        "s15.text.184"
+        "s15.text.185"
       ]
     },
     "khakudzya_sennin": {
@@ -3645,16 +3639,10 @@
           "role": "Тюнин Листа, отряд Асумы",
           "seen": "s15.text.184",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
-          "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "recovery/HOT.json",
-        "s15.text.184"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -11975,7 +11963,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.184",
         "s15.text.176",
         "s15.text.177",
         "s15.text.178",
@@ -11983,7 +11970,8 @@
         "s15.text.180",
         "s15.text.181",
         "s15.text.182",
-        "s15.text.183"
+        "s15.text.183",
+        "s15.text.184"
       ]
     },
     "place:8cf868146b4748cf": {
@@ -16820,6 +16808,23 @@
         "s02.text.039"
       ]
     },
+    "place:f491261be6b45acb": {
+      "aliases": [
+        "place:f491261be6b45acb",
+        "Рьючидо, внешняя пещера перед воротами обители",
+        "внешняя пещера перед воротами обители"
+      ],
+      "facts": [],
+      "id": "place:f491261be6b45acb",
+      "kind": "place",
+      "label": "Рьючидо, внешняя пещера перед воротами обители",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s15.text.185"
+      ]
+    },
     "place:f498c45e8878de6f": {
       "aliases": [
         "place:f498c45e8878de6f",
@@ -18127,7 +18132,7 @@
       "id": "ryuchido_first_serpent",
       "kind": "npc",
       "label": "Хагуро",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0007-12-19T00:33:00",
@@ -18135,13 +18140,6 @@
           "source": "archive/session-009-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s09.text.050"
-        },
-        {
-          "at": "0010-04-16T11:44:00",
-          "excerpt": "размера Сирамэ? **Мастеру:** Сирамэ — взрослая белая змея, заметно крупнее Коюки, но гораздо меньше Хагуро и Сиранами. Точные размеры прежде не устанавливались. Фиксирую длину около 2,5 метра, диаметр туловища в наиболее широкой части — 8–10 сантиметров. Она д",
-          "source": "archive/session-014-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s14.text.064"
         },
         {
           "at": "0010-04-24T12:21:00",
@@ -18156,6 +18154,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.184"
+        },
+        {
+          "at": "0010-04-24T12:22:00",
+          "excerpt": "<text color=\"secondary\" size=\"xs\">24 апреля 1287 года · 12:22</text> **Мугами Шики:** — В Рьючидо. **Хагуро:** — В таком случае всё гораздо проще. Подожди немного. Змея исчезла в облаке белого дыма. Прошло несколько секунд. Пространство вокруг Шики исказилось,",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.185"
         }
       ],
       "projections": [
@@ -18812,14 +18817,10 @@
         {
           "seen": "s15.text.184",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
-        },
-        {
-          "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "recovery/HOT.json"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21160,5 +21161,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1357
+  "source_turns_indexed": 1358
 }

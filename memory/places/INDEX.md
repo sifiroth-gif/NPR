@@ -242,6 +242,7 @@
 - Рьючидо, подвижная каменная галерея · `places/ryuchido-podvizhnaya-kamennaya-galereya` · 1 ход(ов), s10–s10
 - Рьючидо, внешние врата и порог зала первого испытания · `places/ryuchido-vneshnie-vrata-i-porog-zala-pervogo-ispytaniya` · 1 ход(ов), s10–s10
 - Рьючидо, внешний зал у ворот Пещеры Драконьей Земли · `places/ryuchido-vneshniy-zal-u-vorot-peshchery-drakoney-zemli` · 1 ход(ов), s10–s10
+- Рьючидо, внешняя пещера перед воротами обители · `places/ryuchido-vneshnyaya-peshchera-pered-vorotami-obiteli` · 1 ход(ов), s15–s15
 - Рьючидо, Зал неподвижной воды у моста · `places/ryuchido-zal-nepodvizhnoy-vody-u-mosta` · 1 ход(ов), s10–s10
 - Рьючидо, зал первого испытания перед открытой лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkrytoy-lestnitsey` · 1 ход(ов), s10–s10
 - Рьючидо, зал первого испытания перед открывшейся лестницей · `places/ryuchido-zal-pervogo-ispytaniya-pered-otkryvsheysya-lestnits` · 1 ход(ов), s10–s10
