@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.154`
+# Карта мира NPR · на ходе `s15.text.155`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,11 +6,11 @@
 - места · `places/INDEX` (315) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (243)
-- shima —  · `npc/shima` · в сцене
 - Джирайя —  · `npc/jiraiya` · в сцене
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
 - Сима — по подписи в сцене · `npc/sima` · в сцене
 - Фукасаку —  · `npc/fukasaku` · в сцене
+- shima —  · `npc/shima`
 - Хисато — Взрослый шиноби Листа, нёс Маю на спине. · `npc/fire_road_hisato`
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
 - Цунадэ — Светлые волосы в двух хвостах, ромбовидная печать на лбу, з… · `npc/tsunade`
@@ -250,11 +250,12 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (4)
+## Линии (5)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
 - `shiki_save_asuma` — Цель игрока сохранена: спасти Сарутоби Асуму, дать реальные своевреме… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
+- `shiki_save_jiraiya` — Цель игрока (внеигровая, s15.text.155): наряду с Асумой спасти Джирай… · `threads/shiki_save_jiraiya`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
