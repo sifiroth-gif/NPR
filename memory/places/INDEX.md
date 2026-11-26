@@ -174,6 +174,7 @@
 - Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 2 ход(ов), s12–s12
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
+- Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 2 ход(ов), s17–s17
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
@@ -343,5 +344,4 @@
 - Восточный госпиталь, Тренировочный полигон · `places/vostochnyy-gospital-trenirovochnyy-poligon` · 1 ход(ов), s01–s01
 - Второй передовой пост Сунагакуре, каменный тракт · `places/vtoroy-peredovoy-post-sunagakure-kamennyy-trakt` · 1 ход(ов), s11–s11
 - Второй передовой пост Сунагакуре, каменный тракт на пути к Стране Ветра · `places/vtoroy-peredovoy-post-sunagakure-kamennyy-trakt-na-puti-k-st` · 1 ход(ов), s11–s11
-- Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 1 ход(ов), s17–s17
 - За пределами Кусагакуре, старая переправа и дорожная развилка · `places/za-predelami-kusagakure-staraya-pereprava-i-dorozhnaya-razvi` · 1 ход(ов), s11–s11

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.011",
+  "cursor": "s17.text.012",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 111,
+      "mention_count": 112,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T11:58:00",
-          "excerpt": "ичная кладка. На схеме связного промышленная пристань располагалась неподалёку от выхода второй галереи. Джирайя подложил под отсыревшую бумагу сухую доску, извлечённую из груды обломков. Затем провёл ногтем вдоль подземного канала. **Джирайя:** — Здесь мы ока",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.007"
         },
         {
           "at": "0010-05-05T11:59:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.011"
+        },
+        {
+          "at": "0010-05-05T18:24:00",
+          "excerpt": "есть старый водосток. Она широко раскрыла пасть, переводя дыхание. **Жаба:** — И странный у них дождь, Джирайя. Мелкий, холодный. Даже когда ветер меняется, он всё равно падает почти прямо. Саннин перестал улыбаться. **Джирайя:** — На тебя обратили внимание? *",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.012"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.011",
-          "state": "Достиг южной границы Дождя; самостоятельно отправил призванную жабу на разведку грузовой разгрузки."
+          "seen": "s17.text.012",
+          "state": "Получил результат разведки; предложил перевозку призывной жабой."
         },
         {
-          "state": "Достиг южной границы Дождя; самостоятельно отправил призванную жабу на разведку грузовой разгрузки."
+          "state": "Получил результат разведки; предложил перевозку призывной жабой."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.011"
+        "s17.text.012"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5366,12 +5366,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.104",
+          "seen": "s17.text.012",
           "state": "После предупреждения Шики покинул опасный участок с Сакурой и Ямато; стремится догнать Сая и Саске."
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json"
+        "recovery/cast/naruto.json",
+        "s17.text.012"
       ]
     },
     "neji": {
@@ -13837,6 +13838,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.012",
         "s17.text.011"
       ]
     },
@@ -21498,12 +21500,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.121",
+          "seen": "s17.text.012",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s17.text.012"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22315,5 +22318,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1520
+  "source_turns_indexed": 1521
 }
