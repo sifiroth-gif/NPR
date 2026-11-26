@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.138",
+  "cursor": "s16.text.139",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1299,8 +1299,7 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1343,8 +1342,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "s16.text.138"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -2535,8 +2533,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json",
-        "s16.text.138"
+        "recovery/cast/izumo.json"
       ]
     },
     "jiraiya": {
@@ -2548,7 +2545,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 100,
+      "mention_count": 101,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2556,13 +2553,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-04T06:57:00",
-          "excerpt": "ext color=\"secondary\" size=\"xs\">Вторник, 4 мая 1287 года · 06:57</text> ### Главные ворота Конохагакуре Джирайя уже ждал у ворот. На его спине висел большой свиток, дорожная сумка была туго затянута ремнями. В руках саннин держал узкую полоску бумаги с несколь",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.135"
         },
         {
           "at": "0010-05-04T15:10:00",
@@ -2577,16 +2567,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.137"
+        },
+        {
+          "at": "0010-05-04T15:23:00",
+          "excerpt": "застёжек. **Оружейник:** — Готово. Три тысячи шестьсот рё, как договорились. В дверном проёме показался Джирайя. Откинув назад длинные белые волосы, он прислонился к косяку. **Джирайя:** — Разговорился я с теми путниками. Они из Амэгакурэ. Мужчина работал на о",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.139"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.136",
+          "seen": "s16.text.139",
+          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
+        },
+        {
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json",
+        "s16.text.139"
       ]
     },
     "jiro_caravan_guard": {
@@ -15463,8 +15465,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.138",
-        "s16.text.137"
+        "s16.text.139",
+        "s16.text.137",
+        "s16.text.138"
       ]
     },
     "place:ca571d2570238ac9": {
@@ -18753,7 +18756,7 @@
       "id": "road_armorer_s16",
       "kind": "npc",
       "label": "Оружейник",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-03-25T16:29:00",
@@ -18775,21 +18778,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.138"
+        },
+        {
+          "at": "0010-05-04T15:23:00",
+          "excerpt": "да · 15:23</text> ### Лавка снаряжения **Мугами Шики:** — Да пожалуйста пусть пальцы будут открыты. Оружейник укоротил кожаные напальчники и обработал края тонкой вощёной нитью. Теперь котэ закрывали предплечья почти до локтей, запястья, ладони и тыльную повер",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.139"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.138",
-          "state": "Показывает три пары котэ; отложил перчатку при виде предплечий Шики."
+          "seen": "s16.text.139",
+          "state": "Подогнал пару мягких котэ с полностью открытыми пальцами, ожидает оплату 3600 рё."
         },
         {
-          "state": "Показывает три пары котэ; отложил перчатку при виде предплечий Шики."
+          "state": "Подогнал пару мягких котэ с полностью открытыми пальцами, ожидает оплату 3600 рё."
         }
       ],
       "sources": [
         "recovery/cast/road_armorer_s16.json",
         "recovery/HOT.json",
-        "s16.text.138"
+        "s16.text.139"
       ]
     },
     "road_villager_fumi": {
@@ -22254,5 +22264,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1509
+  "source_turns_indexed": 1510
 }
