@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.045",
+  "cursor": "s16.text.046",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1043,7 +1043,8 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел"
+        "Приёмщик тел",
+        "fire_bounty_station_trader"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1054,12 +1055,13 @@
       "projections": [
         {
           "role": "Сотрудник подпольного пункта выплаты наград",
-          "seen": "s15.text.184",
+          "seen": "s16.text.046",
           "state": "Передан под охрану Конохи."
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json"
+        "recovery/cast/fire_bounty_station_trader.json",
+        "s16.text.046"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -2183,12 +2185,13 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s16.text.030",
+          "seen": "s16.text.046",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json"
+        "recovery/cast/hidan.json",
+        "s16.text.046"
       ]
     },
     "hirano": {
@@ -2889,7 +2892,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.045",
+          "seen": "s16.text.046",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         },
         {
@@ -2899,7 +2902,7 @@
       "sources": [
         "recovery/cast/kakashi.json",
         "recovery/HOT.json",
-        "s16.text.045"
+        "s16.text.046"
       ]
     },
     "kakuzu": {
@@ -14602,13 +14605,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.045",
+        "s16.text.046",
         "s16.text.039",
         "s16.text.040",
         "s16.text.041",
         "s16.text.042",
         "s16.text.043",
-        "s16.text.044"
+        "s16.text.044",
+        "s16.text.045"
       ]
     },
     "place:c4348d07a4dd6188": {
@@ -21345,5 +21349,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1424
+  "source_turns_indexed": 1425
 }
