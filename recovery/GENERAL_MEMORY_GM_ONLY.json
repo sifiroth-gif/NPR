@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.106",
+  "cursor": "s16.text.107",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -427,12 +427,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.079",
+          "seen": "s16.text.107",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "s16.text.107"
       ]
     },
     "baki": {
@@ -1109,7 +1110,8 @@
     "fire_bounty_station_trader": {
       "aliases": [
         "fire bounty station trader",
-        "Приёмщик тел"
+        "Приёмщик тел",
+        "fire_bounty_station_trader"
       ],
       "facts": [],
       "id": "fire_bounty_station_trader",
@@ -1120,12 +1122,13 @@
       "projections": [
         {
           "role": "Сотрудник подпольного пункта выплаты наград",
-          "seen": "s16.text.094",
+          "seen": "s16.text.107",
           "state": "Передан под охрану Конохи."
         }
       ],
       "sources": [
-        "recovery/cast/fire_bounty_station_trader.json"
+        "recovery/cast/fire_bounty_station_trader.json",
+        "s16.text.107"
       ]
     },
     "fire_leaf_gate_duty": {
@@ -3820,8 +3823,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s16.text.106"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -4277,7 +4279,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.106",
+          "seen": "s16.text.107",
           "wants": "Обеспечить безопасность проводящего опрос."
         },
         {
@@ -4286,8 +4288,7 @@
       ],
       "sources": [
         "recovery/cast/leaf_gate_inspector_aide_1_s16.json",
-        "recovery/HOT.json",
-        "s16.text.106"
+        "recovery/HOT.json"
       ]
     },
     "leaf_gate_inspector_aide_2_s16": {
@@ -4303,7 +4304,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.106",
+          "seen": "s16.text.107",
           "wants": "Следить за возможным применением техники."
         },
         {
@@ -4312,8 +4313,7 @@
       ],
       "sources": [
         "recovery/cast/leaf_gate_inspector_aide_2_s16.json",
-        "recovery/HOT.json",
-        "s16.text.106"
+        "recovery/HOT.json"
       ]
     },
     "leaf_gate_special_inspector_s16": {
@@ -4326,7 +4326,7 @@
       "id": "leaf_gate_special_inspector_s16",
       "kind": "npc",
       "label": "Незнакомый шиноби",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0001-07-07T21:51:00",
@@ -4334,13 +4334,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.123"
-        },
-        {
-          "at": "0010-03-15T08:43:21",
-          "excerpt": "о поднял голову. На мгновение взгляды встретились. Дейдара как раз повернулся к уступу, желая убедиться, что незнакомый шиноби больше не представляет угрозы. Этого мгновения было достаточно для попытки. **Гендзюцу: Чужой шаг.** *** Чакра Шики достигла зрительн",
-          "source": "archive/session-011-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s11.text.070"
         },
         {
           "at": "0010-05-03T11:52:00",
@@ -4355,11 +4348,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.106"
+        },
+        {
+          "at": "0010-05-03T11:54:00",
+          "excerpt": "вил: — это официальный допрос? Шиноби не сразу ответил. Его пальцы замерли на краю раскрытой папки. **Незнакомый шиноби:** — Предварительная проверка в интересах безопасности деревни. Он извлёк из папки отдельный лист. В машинописном тексте, среди нескольких п",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.106",
+          "seen": "s16.text.107",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         },
         {
@@ -4369,7 +4369,7 @@
       "sources": [
         "recovery/cast/leaf_gate_special_inspector_s16.json",
         "recovery/HOT.json",
-        "s16.text.106"
+        "s16.text.107"
       ]
     },
     "lee": {
@@ -8651,6 +8651,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s16.text.107",
         "s16.text.106"
       ]
     },
@@ -22082,5 +22083,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1479
+  "source_turns_indexed": 1480
 }
