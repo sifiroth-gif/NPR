@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s15.text.157`
+# Карта мира NPR · на ходе `s15.text.158`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,9 +6,9 @@
 - места · `places/INDEX` (316) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (243)
-- Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma` · в сцене
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto` · в сцене
-- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru` · в сцене
+- Асума Сарутоби (Асума, Сарутоби) — дзёнин, наставник Команды 10 (на 1283, экзамен) · `npc/asuma`
+- Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru`
 - Джирайя —  · `npc/jiraiya`
 - shima —  · `npc/shima`
 - Фукасаку —  · `npc/fukasaku`
@@ -253,10 +253,10 @@
 ## Линии (6)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
-- `shiki_save_asuma` — Цель игрока спасти Асуму без метазнания. Личный контакт восстановлен … · `threads/shiki_save_asuma`
+- `shiki_save_asuma` — 23.04.1287 16:47: Асума получил срочный сигнал об атаке южных ворот Х… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — Цель игрока (внеигровая, s15.text.155): наряду с Асумой спасти Джирай… · `threads/shiki_save_jiraiya`
-- `player_preference_overlapping_plans` — s15.text.157: игрок прямо предпочитает интересные выборы через наслое… · `threads/player_preference_overlapping_plans`
+- `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.158: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Наруто Узумаки (`npc/naruto`), линия `player_preference_overlapping_plans`, линия `shiki_save_asuma`
 - s15.text.157: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Джирайя (`npc/jiraiya`), линия `shiki_save_asuma`, линия `player_preference_overlapping_plans`
 - s15.text.156: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), shima (`npc/shima`), Наруто Узумаки (`npc/naruto`)
 - s15.text.155: Фукасаку (`npc/fukasaku`), shima (`npc/shima`), Джирайя (`npc/jiraiya`), линия `shiki_save_jiraiya`
@@ -61,4 +62,3 @@
 - s15.text.101: Глава Кусагакуре (`npc/kusa_head`)
 - s15.text.100: Глава Кусагакуре (`npc/kusa_head`), Асумага Тосэ (`npc/kusa_leader`)
 - s15.text.099: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`), Мугами Акихиро (`npc/akihiro`), Глава Кусагакуре (`npc/kusa_head`), вещь `seven_locks_scroll_fragments`
-- s15.text.098: Асумага Тосэ (`npc/kusa_leader`), Мугами Нао (`npc/nao`)
