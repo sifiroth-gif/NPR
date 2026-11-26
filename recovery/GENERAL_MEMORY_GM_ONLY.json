@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.135",
+  "cursor": "s16.text.136",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -810,24 +810,18 @@
     "clock:yig_local_response": {
       "aliases": [
         "clock:yig local response",
-        "Независимая реакция на прекращение промысла и перемещение змей",
+        "yig local response",
         "yig_local_response"
       ],
       "facts": [],
       "id": "clock:yig_local_response",
       "kind": "clock",
-      "label": "Независимая реакция на прекращение промысла и перемещение змей",
+      "label": "yig local response",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "due": "0010-05-04T12:00:00",
-          "owner": "Местные жители и торговцы Страны Рек",
-          "what": "Независимая реакция на прекращение промысла и перемещение змей"
-        }
-      ],
+      "projections": [],
       "sources": [
-        "recovery/GM_ONLY.json"
+        "s16.text.136"
       ]
     },
     "contract_1184_docs": {
@@ -2568,7 +2562,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 98,
+      "mention_count": 99,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2576,13 +2570,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-03T12:48:00",
-          "excerpt": "=\"secondary\" size=\"xs\">Понедельник, 3 мая 1287 года · 12:48</text> ### Конохагакуре. Кабинет Хокагэ Джирайя развернул карту и прижал её углы чернильницей и тяжёлой деревянной подставкой. На бумаге Амэгакурэ представлялась небольшим скоплением улиц, каналов и п",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.120"
         },
         {
           "at": "0010-05-03T13:58:00",
@@ -2597,11 +2584,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.135"
+        },
+        {
+          "at": "0010-05-04T15:10:00",
+          "excerpt": "орога **Мугами Шики:** — Пойдемте, а по дороге я буду тренироваться поэтому иногда буду пропадать. **Джирайя:** — Предупредил бы ты меня так лет двадцать назад. Я бы решил, что ученик собирается сбежать с тренировки. Саннин усмехнулся и первым ступил на лесную",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.136"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.135",
+          "seen": "s16.text.136",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2611,7 +2605,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.135"
+        "s16.text.136"
       ]
     },
     "jiro_caravan_guard": {
@@ -3822,12 +3816,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s16.text.110",
+          "seen": "s16.text.136",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s16.text.136"
       ]
     },
     "kurama": {
@@ -7939,6 +7934,25 @@
         "s04.text.052"
       ]
     },
+    "place:2c173d1233129492": {
+      "aliases": [
+        "place:2c173d1233129492",
+        "Страна Огня, западные провинции, придорожный чайный дом",
+        "Страна Огня",
+        "западные провинции",
+        "придорожный чайный дом"
+      ],
+      "facts": [],
+      "id": "place:2c173d1233129492",
+      "kind": "place",
+      "label": "Страна Огня, западные провинции, придорожный чайный дом",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.136"
+      ]
+    },
     "place:2c5758f044d1146d": {
       "aliases": [
         "place:2c5758f044d1146d",
@@ -10325,7 +10339,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.135",
         "s15.text.123",
         "s15.text.124",
         "s15.text.189",
@@ -10333,7 +10346,8 @@
         "s16.text.066",
         "s16.text.067",
         "s16.text.105",
-        "s16.text.109"
+        "s16.text.109",
+        "s16.text.135"
       ]
     },
     "place:5af726c25b70b51c": {
@@ -22191,5 +22205,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1506
+  "source_turns_indexed": 1507
 }

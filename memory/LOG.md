@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.136: Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`), план сюжета
 - s16.text.135: Джирайя (`npc/jiraiya`), вещь `cash_1184`, вещь `shiki_finances`
 - s16.text.134: Хисато (`npc/fire_road_hisato`), Маю (`npc/fire_road_mayu`), линия `fire_road_survey_attack`
 - s16.text.133: Какаши Хатакэ (`npc/kakashi`)
@@ -61,4 +62,3 @@
 - s16.text.079: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Асума Сарутоби (`npc/asuma`), Изумо Камидзуки (`npc/izumo`)
 - s16.text.078: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Какаши Хатакэ (`npc/kakashi`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s16.text.077: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Портовый чиновник (`npc/fire_port_official`), Наруто Узумаки (`npc/naruto`)
-- s16.text.076: Ао (`npc/ao`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`), Портовый чиновник (`npc/fire_port_official`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Шикамару Нара (`npc/shikamaru`), Приёмщик тел (`npc/fire_bounty_station_trader`), линия `kiri_bingo_negotiations`
