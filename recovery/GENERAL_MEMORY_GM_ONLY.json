@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.031",
+  "cursor": "s16.text.032",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2500,7 +2500,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 61,
+      "mention_count": 62,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2508,13 +2508,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-04-25T11:34:00",
-          "excerpt": "ка. На этот раз опасного отделения сознания не происходит. **Шизунэ:** — Стабильно. Значительных отклонений нет. Джирайя осторожно приближается. Цунадэ откладывает медицинские записи. Хидан остаётся погружённым в навеянный сон. Связь между его воспоминаниями и",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.028"
         },
         {
           "at": "0010-04-25T11:51:00",
@@ -2529,11 +2522,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.031"
+        },
+        {
+          "at": "0010-04-25T12:01:00",
+          "excerpt": "25 апреля 1287 года · 12:01</text> ### Конохагакуре. Резиденция Хокагэ **Мугами Шики:** — Не знаю. Джирайя поставил рядом с именем Нагато вопросительный знак. **Джирайя:** — Значит, пока оставим это предположением. Попытаюсь восстановить сведения о судьбе моих",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.031",
+          "seen": "s16.text.032",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2543,7 +2543,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s16.text.031"
+        "s16.text.032"
       ]
     },
     "jiro_caravan_guard": {
@@ -9585,13 +9585,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.031",
+        "s16.text.032",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
         "s15.text.196",
         "s16.text.019",
-        "s16.text.030"
+        "s16.text.030",
+        "s16.text.031"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -19394,7 +19395,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 27,
+      "mention_count": 28,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -19402,13 +19403,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-04-25T11:37:00",
-          "excerpt": "их назначение по чужой памяти невозможно. Тем временем на лице Хидана появляется едва заметное напряжение. Шизунэ приближает руку к его виску. **Шизунэ:** — Активность немного возрастает. Пока допустимо. Иллюзия сохраняется. Полученные сведения уже позволяют с",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.029"
         },
         {
           "at": "0010-04-25T11:51:00",
@@ -19423,21 +19417,24 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.031"
+        },
+        {
+          "at": "0010-04-25T12:01:00",
+          "excerpt": "оре между чашками появились старые карты, списки пропавших шиноби и сообщения из приграничных поселений. Шизунэ собрала документы о Хидане и направилась к двери. Проходя мимо Шики, она сделала небольшой крюк, хотя пространства между ним и столом вполне хватало",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.031",
-          "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
-        },
-        {
+          "seen": "s16.text.032",
           "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
         }
       ],
       "sources": [
         "recovery/cast/shizune.json",
-        "recovery/HOT.json",
-        "s16.text.031"
+        "s16.text.032"
       ]
     },
     "signalshchik": {
@@ -20448,7 +20445,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20456,13 +20453,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T11:34:00",
-          "excerpt": "ия сознания не происходит. **Шизунэ:** — Стабильно. Значительных отклонений нет. Джирайя осторожно приближается. Цунадэ откладывает медицинские записи. Хидан остаётся погружённым в навеянный сон. Связь между его воспоминаниями и сознанием сохранена. Шики удало",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.028"
         },
         {
           "at": "0010-04-25T11:51:00",
@@ -20477,11 +20467,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.031"
+        },
+        {
+          "at": "0010-04-25T12:01:00",
+          "excerpt": "едположением. Попытаюсь восстановить сведения о судьбе моих учеников после того, как покинул Амэгакурэ. Цунадэ открыла ящик стола и достала папку с разведывательными донесениями. Вскоре между чашками появились старые карты, списки пропавших шиноби и сообщения ",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.031",
+          "seen": "s16.text.032",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         },
         {
@@ -20491,7 +20488,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s16.text.031"
+        "s16.text.032"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21296,5 +21293,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1411
+  "source_turns_indexed": 1412
 }
