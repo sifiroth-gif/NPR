@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.099",
+  "cursor": "s16.text.100",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s16.text.099:0": {
-      "aliases": [
-        "canon:s16.text.099:0",
-        "s16.text.099: С 30.04.1287 в естественных пещерах нового убежища Шики добровольно поселились тёмная змея из нижнего ущелья, девять уцелевших яиц, трое вылупившихся детёнышей и неск"
-      ],
-      "facts": [],
-      "id": "canon:s16.text.099:0",
-      "kind": "canon",
-      "label": "s16.text.099: С 30.04.1287 в естественных пещерах нового убежища Шики добровольно поселились тёмная змея из нижнего ущелья, девять уцелевших яиц, трое вылупившихся детёнышей и неск",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s16.text.099"
       ]
     },
     "captive_guard": {
@@ -1167,7 +1151,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1206,12 +1191,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.089",
+          "seen": "s16.text.100",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s16.text.100"
       ]
     },
     "fire_port_security_staff": {
@@ -7330,6 +7316,26 @@
         "s06.text.027"
       ]
     },
+    "place:1f89f4b911373863": {
+      "aliases": [
+        "place:1f89f4b911373863",
+        "Страна Рек, южные известняковые горы, убежище Шики, нижние пещеры",
+        "Страна Рек",
+        "южные известняковые горы",
+        "убежище Шики",
+        "нижние пещеры"
+      ],
+      "facts": [],
+      "id": "place:1f89f4b911373863",
+      "kind": "place",
+      "label": "Страна Рек, южные известняковые горы, убежище Шики, нижние пещеры",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.100"
+      ]
+    },
     "place:2262555f95fe4fea": {
       "aliases": [
         "place:2262555f95fe4fea",
@@ -7785,14 +7791,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.099",
         "s14.text.059",
         "s14.text.060",
         "s14.text.061",
         "s14.text.062",
         "s14.text.063",
         "s14.text.064",
-        "s14.text.065"
+        "s14.text.065",
+        "s16.text.099"
       ]
     },
     "place:2bd9c75bda3f000a": {
@@ -18428,8 +18434,7 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок",
-        "river_shrine_dark_snake_s16"
+        "Тёмная змея у кладок"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -18439,7 +18444,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s16.text.099",
+          "seen": "s16.text.100",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
         {
@@ -18448,15 +18453,13 @@
       ],
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
-        "recovery/HOT.json",
-        "s16.text.099"
+        "recovery/HOT.json"
       ]
     },
     "river_shrine_elder_snake_s16": {
       "aliases": [
         "river shrine elder snake s16",
-        "Старая змея святилища",
-        "river_shrine_elder_snake_s16"
+        "Старая змея святилища"
       ],
       "facts": [],
       "id": "river_shrine_elder_snake_s16",
@@ -18471,8 +18474,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_elder_snake_s16.json",
-        "s16.text.099"
+        "recovery/cast/river_shrine_elder_snake_s16.json"
       ]
     },
     "road_villager_fumi": {
@@ -21387,7 +21389,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 89,
+      "mention_count": 90,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -21395,13 +21397,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-29T19:43:00",
-          "excerpt": "ры. Змея резко напряглась. Её тело свернулось плотными кольцами, однако она не попыталась укусить Шики. Коюки приблизилась к её голове и тихо зашипела, успокаивая раненую. Постепенно повреждённые ткани восстановились. Исчезла припухлость, вернулась подвижность",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.097"
         },
         {
           "at": "0010-04-29T19:45:00",
@@ -21416,11 +21411,18 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.099"
+        },
+        {
+          "at": "0010-04-30T02:12:00",
+          "excerpt": "1287 года · 02:12</text> ### Убежище Шики. Нижние пещеры **Мугами Шики:** — Хорошо, пусть остаются. Коюки довольно покачала головой и вернулась к переселенцам. Некоторое время из глубины пещеры доносилось оживлённое шипение. Тёмная змея свернулась вокруг кладк",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.100"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.099",
+          "seen": "s16.text.100",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -21430,7 +21432,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s16.text.099"
+        "s16.text.100"
       ]
     },
     "white_snake_sage": {
@@ -21922,5 +21924,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1472
+  "source_turns_indexed": 1473
 }
