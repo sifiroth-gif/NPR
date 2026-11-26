@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.040: Какаши Хатакэ (`npc/kakashi`)
+- s16.text.039: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.038: Какаши Хатакэ (`npc/kakashi`)
 - s16.text.037: Джирайя (`npc/jiraiya`)
 - s16.text.036: поправки игрока: 1
@@ -58,5 +60,3 @@
 - s15.text.190: Джирайя (`npc/jiraiya`)
 - s15.text.189: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`)
 - s15.text.188: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Шикамару Нара (`npc/shikamaru`), Хидан (`npc/hidan`)
-- s15.text.187: Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), поправки игрока: 1
-- s15.text.186: Хагуро (`npc/khaguro`), Итикисимахимэ (`npc/ryuchido_gate_woman`), Белая Змея / Хакудзя-сэннин (`npc/white_snake_sage`), Изумо Камидзуки (`npc/izumo`)

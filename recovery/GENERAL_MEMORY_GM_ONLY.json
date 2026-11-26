@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.038",
+  "cursor": "s16.text.040",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2535,14 +2535,10 @@
         {
           "seen": "s16.text.038",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
-        },
-        {
-          "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -2893,13 +2889,17 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.038",
-          "state": "12:12: воспринимаемый Шики источник чакры на востоке в нескольких кварталах от резиденции, почти неподвижен; точное занятие не установлено."
+          "seen": "s16.text.040",
+          "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
+        },
+        {
+          "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         }
       ],
       "sources": [
         "recovery/cast/kakashi.json",
-        "s16.text.038"
+        "recovery/HOT.json",
+        "s16.text.040"
       ]
     },
     "kakuzu": {
@@ -9607,7 +9607,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.038",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9619,7 +9618,8 @@
         "s16.text.033",
         "s16.text.034",
         "s16.text.035",
-        "s16.text.037"
+        "s16.text.037",
+        "s16.text.038"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -14585,6 +14585,25 @@
       "projections": [],
       "sources": [
         "s03.text.020"
+      ]
+    },
+    "place:c26a8e720ce3b58a": {
+      "aliases": [
+        "place:c26a8e720ce3b58a",
+        "Конохагакуре, восточный тренировочный полигон",
+        "Конохагакуре",
+        "восточный тренировочный полигон"
+      ],
+      "facts": [],
+      "id": "place:c26a8e720ce3b58a",
+      "kind": "place",
+      "label": "Конохагакуре, восточный тренировочный полигон",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s16.text.040",
+        "s16.text.039"
       ]
     },
     "place:c4348d07a4dd6188": {
@@ -20471,7 +20490,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 48,
+      "mention_count": 49,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20479,13 +20498,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T12:09:00",
-          "excerpt": "яется ближе. Некоторые элементы формулы ему знакомы, однако способ их соединения совершенно непривычен. Цунадэ убирает руку со стола. Когда один из отростков изгибается возле её чашки, она машинально отодвигает её вместе с блюдцем. Последние линии замыкаются. ",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.034"
         },
         {
           "at": "0010-04-25T12:10:00",
@@ -20500,6 +20512,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.038"
+        },
+        {
+          "at": "0010-04-25T12:23:00",
+          "excerpt": "я 1287 года · 12:12</text> ### Конохагакуре. Резиденция Хокагэ **Мугами Шики:** — Я пойду. Спасибо. Цунадэ кивнула и вернулась к документам. На улице пахло нагретой древесиной и жареным тестом. Воскресный полдень наполнил торговые кварталы людьми. Возле кондит",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.039"
         }
       ],
       "projections": [
@@ -21321,5 +21340,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1417
+  "source_turns_indexed": 1419
 }
