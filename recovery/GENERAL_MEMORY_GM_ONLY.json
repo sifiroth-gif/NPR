@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.017",
+  "cursor": "s17.text.018",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 117,
+      "mention_count": 118,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T18:31:00",
-          "excerpt": "арослей перемещались мелкие животные. Их собственные сигнатуры оставались различимыми на фоне чужой чакры. Джирайя терпеливо ждал. Бурая жаба возле него закрыла глаза, едва заметно раздувая горловой мешок. Теперь Шики располагал достаточно определённым ответом",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.015"
         },
         {
           "at": "0010-05-05T18:33:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.017"
+        },
+        {
+          "at": "0010-05-05T19:09:00",
+          "excerpt": "color=\"secondary\" size=\"xs\">Среда, 5 мая 1287 года · 19:09</text> ### Амэгакурэ. Подземные галереи Джирайя выбрался из пасти жабы и бесшумно переместился к водостоку. Шики последовал за ним, минуя участки, куда проникали капли дождя. Оказавшись под каменным св",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.018"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.017",
-          "state": "Прибыл с Шики под настил промышленной пристани внутри призывной жабы; указывает на водосток."
+          "seen": "s17.text.018",
+          "state": "Проник с Шики в подземную галерею, отменил призыв, остановился у лестницы, просит тишины."
         },
         {
-          "state": "Прибыл с Шики под настил промышленной пристани внутри призывной жабы; указывает на водосток."
+          "state": "Проник с Шики в подземную галерею, отменил призыв, остановился у лестницы, просит тишины."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.017"
+        "s17.text.018"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -14323,6 +14323,24 @@
         "s12.text.004"
       ]
     },
+    "place:b10bca452d21359d": {
+      "aliases": [
+        "place:b10bca452d21359d",
+        "Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения",
+        "Амэгакурэ",
+        "промышленная подземная галерея у фундамента центрального сооружения"
+      ],
+      "facts": [],
+      "id": "place:b10bca452d21359d",
+      "kind": "place",
+      "label": "Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.018"
+      ]
+    },
     "place:b111bd0da6f7617a": {
       "aliases": [
         "place:b111bd0da6f7617a",
@@ -22388,5 +22406,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1526
+  "source_turns_indexed": 1527
 }
