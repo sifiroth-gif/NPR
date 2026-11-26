@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s15.text.170: Какудзу (`npc/kakuzu`), Хидан (`npc/hidan`), Котэцу Хаганэ (`npc/kotetsu`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.169: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Хидан (`npc/hidan`), линия `shiki_save_asuma`
 - s15.text.168: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), линия `shiki_save_asuma`
 - s15.text.167: Бансаи (`npc/fire_temple_bansai`), линия `shiki_save_asuma`
@@ -61,4 +62,3 @@
 - s15.text.113: Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.112: Рёэн (`npc/fire_temple_travel_monk`), seydzi (`npc/seydzi`), поправки игрока: 1
 - s15.text.111: Сэйдзи (`npc/fire_temple_driver_seiji`), Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), Мугами Акихиро (`npc/akihiro`), Кирисава Сэйна (`npc/seina`), поправки игрока: 1
-- s15.text.110: Рёэн (`npc/fire_temple_travel_monk`), fire_temple_travel_jun (`npc/fire_temple_travel_jun`), Сэйдзи (`npc/fire_temple_driver_seiji`), Кирисава Сэйна (`npc/seina`), Мидзухара Аки (`npc/aki`)

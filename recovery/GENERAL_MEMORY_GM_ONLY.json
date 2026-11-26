@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.169",
+  "cursor": "s15.text.170",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -429,13 +429,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.169"
+          "seen": "s15.text.170"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s15.text.169"
+        "recovery/HOT.json"
       ]
     },
     "baki": {
@@ -2103,7 +2102,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2111,12 +2110,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
+        },
+        {
+          "at": "0010-04-24T07:38:24",
+          "excerpt": "данием простирался ровный участок земли — достаточно пространства для одного стремительного шуншина. Хидан оставался справа от входа. Из глубины постройки донеслись тяжёлые шаги. **Какудзу:** — Хидан. Мы закончили. Дверь открылась. На пороге появился высокий ш",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.170"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s15.text.169",
+          "seen": "s15.text.170",
           "state": "Снаружи у стены, раздражён ожиданием Какудзу, пока не заметил отряд."
         },
         {
@@ -2127,7 +2133,7 @@
       "sources": [
         "recovery/cast/hidan.json",
         "recovery/HOT.json",
-        "s15.text.169"
+        "s15.text.170"
       ]
     },
     "hirano": {
@@ -2835,6 +2841,56 @@
         "recovery/cast/kakashi.json"
       ]
     },
+    "kakuzu": {
+      "aliases": [
+        "kakuzu",
+        "Какудзу"
+      ],
+      "facts": [],
+      "id": "kakuzu",
+      "kind": "npc",
+      "label": "Какудзу",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0010-04-24T07:38:00",
+          "excerpt": "прежде всего нужно понять, с кем мы имеем дело. Из-за угла здания донёсся раздражённый мужской голос. **Неизвестный:** — Какудзу! Сколько ещё ты собираешься там торчать?! Асума замер. В утренней тишине особенно отчётливо прозвучал металлический скрежет. Кто-то",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.168"
+        },
+        {
+          "at": "0010-04-24T07:38:15",
+          "excerpt": "обходить противника с противоположной стороны. Внутри здания Шики ощутил перемещение более сильного очага чакры. Какудзу приближался к лестнице, ведущей наверх. До входа в пункт обмена оставалось около тридцати метров. Хидан находился чуть дальше, правее входа",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.169"
+        },
+        {
+          "at": "0010-04-24T07:38:24",
+          "excerpt": "емительного шуншина. Хидан оставался справа от входа. Из глубины постройки донеслись тяжёлые шаги. **Какудзу:** — Хидан. Мы закончили. Дверь открылась. На пороге появился высокий широкоплечий мужчина в чёрном плаще. Нижнюю часть его лица скрывала маска, на лбу",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.170"
+        }
+      ],
+      "projections": [
+        {
+          "role": "Акацуки, нукенин Такигакуре",
+          "seen": "s15.text.170",
+          "state": "В дверном проёме с чемоданом; остановился и посмотрел на край леса."
+        },
+        {
+          "role": "Акацуки, нукенин Такигакуре",
+          "state": "В дверном проёме с чемоданом; остановился и посмотрел на край леса."
+        }
+      ],
+      "sources": [
+        "recovery/cast/kakuzu.json",
+        "recovery/HOT.json",
+        "s15.text.170"
+      ]
+    },
     "kankuro": {
       "aliases": [
         "kankuro",
@@ -3501,12 +3557,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.166",
+          "seen": "s15.text.170",
           "state": "Ушёл к наблюдательному посту с подписанным запросом."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s15.text.170"
       ]
     },
     "kurama": {
@@ -9143,8 +9200,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.169",
-        "s15.text.168"
+        "s15.text.170",
+        "s15.text.168",
+        "s15.text.169"
       ]
     },
     "place:4f8f783e8eef7a0d": {
@@ -18613,13 +18671,13 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.169"
+          "seen": "s15.text.170"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.169"
+        "s15.text.170"
       ]
     },
     "shiki_arm_wraps": {
@@ -19984,11 +20042,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 07:38:15: Асума выбрал разделение целей. Шикамару готовится удерживать наружного Акацуки, Шики поручён выход. Противник ещё не заметил отряд. Имя Хидана Шики пока неизвестно."
+          "state": "24.04 07:38:24: Шики занял укрытие в 25 м от входа. Какудзу на пороге, Хидан снаружи; Асума подал сигнал, тень Шикамару в движении. Исход первого обмена не определён."
         }
       ],
       "sources": [
-        "s15.text.169"
+        "s15.text.170"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20946,5 +21004,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1342
+  "source_turns_indexed": 1343
 }
