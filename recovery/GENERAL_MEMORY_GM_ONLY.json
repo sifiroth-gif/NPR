@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.107",
+  "cursor": "s15.text.108",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -79,13 +79,12 @@
       ],
       "projections": [
         {
-          "seen": "s15.text.107"
+          "seen": "s15.text.108"
         }
       ],
       "sources": [
         "recovery/cast/aki.json",
-        "recovery/HOT.json",
-        "s15.text.107"
+        "recovery/HOT.json"
       ]
     },
     "aki_home_address_s15": {
@@ -3065,7 +3064,7 @@
           "body": "Сначала молча рассматривал сдавленную улыбку Шики и тему семейной привязанности, затем стал значительно внимательнее на слове АНБУ. На заседании был холодно-расчётлив, отложил папку дела, держит письменное назначение только готовым к оформлению при согласии; н",
           "fears": "Потерять власть над УВБ и резиденцией, допустить публичный внутриэлитный кризис",
           "role": "Глава деревни, высшая военная и административная власть Кусы",
-          "seen": "s15.text.107",
+          "seen": "s15.text.108",
           "stance": "Принимает дзёнина Мугами в поздний час, требует объяснить ночной визит; личную заинтересованность и знание Тэцу/В-7 пока не демонстрирует",
           "state": "Услышал невидимого Мугами у двери личного кабинета, ответил «Доброй ночи», не поднял тревогу. Досье 19-Т осталось у него, приказ Тацумори в силе.",
           "voice": "Сдержанный, короткие вопросы, без любезностей",
@@ -3193,8 +3192,7 @@
         }
       ],
       "sources": [
-        "s15.text.105",
-        "s15.text.107"
+        "s15.text.105"
       ]
     },
     "kusa_shiki_warrant_revocation": {
@@ -12751,13 +12749,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.107",
+        "s15.text.108",
         "s15.text.053",
         "s15.text.054",
         "s15.text.055",
         "s15.text.056",
         "s15.text.057",
-        "s15.text.058"
+        "s15.text.058",
+        "s15.text.107"
       ]
     },
     "place:b6818057c5d64dc5": {
@@ -17121,7 +17120,7 @@
       "id": "seina",
       "kind": "npc",
       "label": "Кирисава Сэйна",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0001-07-07T09:55:00",
@@ -17129,13 +17128,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.110"
-        },
-        {
-          "at": "0010-04-21T20:41:00",
-          "excerpt": "момент среди сложенного снаряжения отозвался приёмник связи. Слабый резонанс принадлежал передатчику Сэйны. **Кирисава Сэйна:** — Шики, слышишь меня? Решила сначала проверить связь внутри деревни. Коюки с любопытством повернула голову в сторону приёмника. **Хо",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.090"
         },
         {
           "at": "0010-04-21T20:41:30",
@@ -17150,17 +17142,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.107"
+        },
+        {
+          "at": "0010-04-22T06:45:00",
+          "excerpt": "рекращении внутреннего розыска остановилась. Вернулась к началу документа, проверила подписи и печать. **Кирисава Сэйна:** — Взаимное ненападение… С одним человеком. Она продолжила чтение. Особенно долго задержалась на положении о медицинской практике. Губы её",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.108"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.107"
+          "seen": "s15.text.108"
         }
       ],
       "sources": [
         "recovery/cast/seina.json",
         "recovery/HOT.json",
-        "s15.text.107"
+        "s15.text.108"
       ]
     },
     "sekido_tadao": {
@@ -18894,7 +18893,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -18902,13 +18901,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-04-22T05:08:00",
-          "excerpt": "#встаю и одеваюсь. Оглядываюсь ищу коюки# мастеру: описания опять пропали *Мастеру: замечание справедливое. Перечитал литературный навык и примеры сцен. Возвращаю предметные описания окружения, внешности новых собес",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.093"
         },
         {
           "at": "0010-04-22T05:10:00",
@@ -18923,11 +18915,18 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.107"
+        },
+        {
+          "at": "0010-04-22T06:45:00",
+          "excerpt": "соседнего помещения донёсся звон стеклянных флаконов. Кто-то из сотрудников начинал утреннюю подготовку лекарств. Коюки приподнялась над подоконником. **Коюки:** — Значит, теперь Шики может приходить домой когда захочет? **Кирисава Сэйна:** — Если предупредит ",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.108"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.107",
+          "seen": "s15.text.108",
           "state": "Согласилась не сопровождать Шики; ушла с Сирамэ, намерена вернуться позже."
         },
         {
@@ -18937,7 +18936,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s15.text.107"
+        "s15.text.108"
       ]
     },
     "white_snake_sage": {
@@ -19422,5 +19421,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1281
+  "source_turns_indexed": 1282
 }
