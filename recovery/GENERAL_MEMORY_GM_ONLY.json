@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s16.text.037",
+  "cursor": "s16.text.038",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2533,7 +2533,7 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.037",
+          "seen": "s16.text.038",
           "state": "Прибыл на Мьёбоку вместе с Шики и Фукасаку."
         },
         {
@@ -2542,8 +2542,7 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s16.text.037"
+        "recovery/HOT.json"
       ]
     },
     "jiro_caravan_guard": {
@@ -2894,12 +2893,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.003",
-          "state": "Остановил вмешательство Наруто в выбор Шики. Заявил Баки, что Коноха останется в Суне до проверки состояния Гаары и согласования возвращения."
+          "seen": "s16.text.038",
+          "state": "12:12: воспринимаемый Шики источник чакры на востоке в нескольких кварталах от резиденции, почти неподвижен; точное занятие не установлено."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s16.text.038"
       ]
     },
     "kakuzu": {
@@ -9607,7 +9607,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s16.text.037",
+        "s16.text.038",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -9618,7 +9618,8 @@
         "s16.text.032",
         "s16.text.033",
         "s16.text.034",
-        "s16.text.035"
+        "s16.text.035",
+        "s16.text.037"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -20470,7 +20471,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 47,
+      "mention_count": 48,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -20478,13 +20479,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-04-25T12:06:00",
-          "excerpt": "Цунадэ-сама мне не нужно наград у меня есть небольшое состояние которого хватит мне на долго. Хорошо. У вас есть чистая пластина связи? <text color=\"secondary\" size=\"xs\">Воскресень",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.033"
         },
         {
           "at": "0010-04-25T12:09:00",
@@ -20499,20 +20493,23 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.035"
+        },
+        {
+          "at": "0010-04-25T12:12:00",
+          "excerpt": "Значит ещё 4 часа. Цунадэ-сама..#прериваюсь# а впрочем нет #сканирование поиск какаши# <text color=\"secondary\" size=\"xs\">Воскресенье, 25 апреля 1287 года · 12:12</text> ### Конохагакуре. Резиденция",
+          "source": "archive/session-016-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s16.text.038"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.037",
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
-        },
-        {
+          "seen": "s16.text.038",
           "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "recovery/HOT.json"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -21324,5 +21321,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1416
+  "source_turns_indexed": 1417
 }
