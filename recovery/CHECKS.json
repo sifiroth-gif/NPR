@@ -1,22 +1,13 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s15.text.165",
+ "cursor": "s15.text.166",
  "fold_errors": [],
  "checks": [
   {
-   "turn": "s15.text.163",
-   "kind": "horror",
-   "text": "fire_temple_wounded_monk_s15: dread без saw. Страх растёт только из увиденного или полученного по каналу"
-  },
-  {
-   "turn": "s15.text.165",
+   "turn": "s15.text.166",
    "kind": "review",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст."
-  },
-  {
-   "turn": "s15.text.165",
-   "kind": "will",
-   "text": "«Шикамару Нара» появляется уже 4 раз, а воли у него нет: задай d.cast.shikamaru.psyche (decides, deep_fear, boundary) и intent с next, due, flaw."
+   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.",
+   "since": "s15.text.165"
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

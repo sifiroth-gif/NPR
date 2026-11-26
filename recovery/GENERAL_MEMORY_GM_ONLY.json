@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s15.text.165",
+  "cursor": "s15.text.166",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -396,7 +396,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,13 +404,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T03:55:00",
-          "excerpt": "*Мугами Шики:** — Кто-то уходит. Шики указал на восточную часть храмовой ограды. Асума остановился. **Асума Сарутоби:** — Шикамару, Котэцу, проверьте. В бой без необходимости не вступать. Оба шиноби немедленно направились вдоль стены. Шики опустился рядом с Из",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.162"
         },
         {
           "at": "0010-04-24T03:56:00",
@@ -425,17 +418,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.165"
+        },
+        {
+          "at": "0010-04-24T04:12:00",
+          "excerpt": "ам нужно спасти тут всех, кого можем, и быстро направиться туда. Асума задержал взгляд на протекторе. **Асума Сарутоби:** — Теперь понятно, откуда такие сведения. Шикамару сложил карту. Котэцу посмотрел на Асуму, ожидая пояснений, но тот уже повернулся к монах",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.166"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.165"
+          "seen": "s15.text.166"
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s15.text.165"
+        "s15.text.166"
       ]
     },
     "baki": {
@@ -1383,7 +1383,7 @@
       "id": "fire_temple_bansai",
       "kind": "npc",
       "label": "Бансаи",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-04-24T03:56:00",
@@ -1405,12 +1405,19 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.165"
+        },
+        {
+          "at": "0010-04-24T04:12:00",
+          "excerpt": "карту. Котэцу посмотрел на Асуму, ожидая пояснений, но тот уже повернулся к монаху. **Асума Сарутоби:** — Бансаи, покажи дорогу. Котэцу убрал донесение в нагрудный карман и покинул храм. *** <text color=\"secondary\" size=\"xs\">04:12</text> Под главным молитвенны",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.166"
         }
       ],
       "projections": [
         {
           "role": "Пожилой монах Храма Огня, свидетель нападения",
-          "seen": "s15.text.165",
+          "seen": "s15.text.166",
           "state": "Рана предплечья закрыта, сгибание пальцев восстановлено, иных повреждений не обследовали."
         },
         {
@@ -1421,7 +1428,7 @@
       "sources": [
         "recovery/cast/fire_temple_bansai.json",
         "recovery/HOT.json",
-        "s15.text.165"
+        "s15.text.166"
       ]
     },
     "fire_temple_driver_seiji": {
@@ -2386,12 +2393,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.162",
+          "seen": "s15.text.166",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s15.text.166"
       ]
     },
     "jiraiya": {
@@ -3465,18 +3473,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s15.text.165",
-          "state": "Осматривает подходы к воротам."
-        },
-        {
-          "role": "Тюнин Листа, отряд Асумы",
-          "state": "Осматривает подходы к воротам."
+          "seen": "s15.text.166",
+          "state": "Ушёл к наблюдательному посту с подписанным запросом."
         }
       ],
       "sources": [
         "recovery/cast/kotetsu.json",
-        "recovery/HOT.json",
-        "s15.text.165"
+        "s15.text.166"
       ]
     },
     "kurama": {
@@ -12344,9 +12347,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s15.text.165",
+        "s15.text.166",
         "s15.text.163",
-        "s15.text.164"
+        "s15.text.164",
+        "s15.text.165"
       ]
     },
     "place:98886b320cd46886": {
@@ -18529,7 +18533,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -18537,13 +18541,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-23T17:13:00",
-          "excerpt": "а открытых предплечьях Шики, на чёрных структурах, уходивших под рукава. Он ничего не спросил. Шикамару указал на карту. **Шикамару Нара:** — Через лес быстрее. Если выступим сейчас, часть пути пройдём засветло. Остальное — ночью. **Асума Сарутоби:** — Выступа",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.160"
         },
         {
           "at": "0010-04-24T03:52:00",
@@ -18558,17 +18555,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.165"
+        },
+        {
+          "at": "0010-04-24T04:12:00",
+          "excerpt": "не удалось. На востоке начинало светлеть небо. В предрассветном воздухе запах гари становился особенно отчётливым. **Шикамару Нара:** — Изумо останется с пострадавшими до прибытия помощи. Котэцу передаст донесение и сможет догнать нас у пункта обмена. Если све",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.166"
         }
       ],
       "projections": [
         {
-          "seen": "s15.text.165"
+          "seen": "s15.text.166"
         }
       ],
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s15.text.165"
+        "s15.text.166"
       ]
     },
     "shiki_arm_wraps": {
@@ -19933,11 +19937,11 @@
       "mentions": [],
       "projections": [
         {
-          "state": "24.04 04:01: Шики назвал вероятный пункт обмена наград и приметы здания. Асума запросил подкрепление, отправка поручена Котэцу; до её доставки и проверки пункта остаётся неопределённость. Тирику погиб ранее, Бансаи вылечен."
+          "state": "24.04 04:12: Шики показал перечёркнутый протектор, предложил спасение и перехват. Трое укрывшихся выведены, других живых при осмотре не нашли. Изумо назначен охранять пострадавших, Котэцу несёт запрос, Асума и Шикамару готовы идти со Шики."
         }
       ],
       "sources": [
-        "s15.text.165"
+        "s15.text.166"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -20895,5 +20899,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1338
+  "source_turns_indexed": 1339
 }
