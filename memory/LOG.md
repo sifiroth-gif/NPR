@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s16.text.010: Джирайя (`npc/jiraiya`), линия `jiraiya_rain_investigation`
+- s16.text.009: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), Сима (`npc/shima`), вещь `myoboku_rikudo_legend_book`, поправки игрока: 1
 - s16.text.008: Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`)
 - s16.text.007: Сима (`npc/shima`), Джирайя (`npc/jiraiya`)
 - s16.text.006: Сима (`npc/shima`), Фукасаку (`npc/fukasaku`), Джирайя (`npc/jiraiya`), поправки игрока: 1
@@ -58,5 +60,3 @@
 - s15.text.160: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Изумо Камидзуки (`npc/izumo`), Котэцу Хаганэ (`npc/kotetsu`), Цунадэ (`npc/tsunade`), линия `shiki_save_asuma`, поправки игрока: 1
 - s15.text.159: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), линия `shiki_save_asuma`, линия `shiki_save_jiraiya`
 - s15.text.158: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Наруто Узумаки (`npc/naruto`), линия `player_preference_overlapping_plans`, линия `shiki_save_asuma`
-- s15.text.157: Наруто Узумаки (`npc/naruto`), Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Джирайя (`npc/jiraiya`), линия `shiki_save_asuma`, линия `player_preference_overlapping_plans`
-- s15.text.156: Джирайя (`npc/jiraiya`), Фукасаку (`npc/fukasaku`), Сима (`npc/shima`), Наруто Узумаки (`npc/naruto`)

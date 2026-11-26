@@ -1,14 +1,14 @@
-# Карта мира NPR · на ходе `s16.text.008`
+# Карта мира NPR · на ходе `s16.text.010`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
 - Шики · `shiki` (поправки: `shiki-fixes`) · сцена · `SCENE` · часы мира · `threads/CLOCKS.GM_ONLY` · сюжет и события · `PLOT.GM_ONLY` · поправки к миру · `world-fixes`
-- места · `places/INDEX` (329) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
+- места · `places/INDEX` (331) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (249)
 - Джирайя —  · `npc/jiraiya` · в сцене
-- Сима — по подписи в сцене · `npc/shima` · в сцене
-- Фукасаку —  · `npc/fukasaku` · в сцене
+- Сима — по подписи в сцене · `npc/shima`
+- Фукасаку —  · `npc/fukasaku`
 - Глава Кусагакуре (Кусагакуре) — Глава деревни, высшая военная и административная власть Кусы · `npc/kusa_head`
 - Старший пограничник Конохи — Шиноби в форме Листа, дежурит у каменного моста. · `npc/fire_west_border_senior`
 - Гамамару — Старейшина Мьёбоку, пророческие сны. · `npc/gamamaru`
@@ -256,18 +256,19 @@
 - Шино Абураме (Шино, Абураме) — генин, участник (на 1283, экзамен) · `npc/shino`
 - Шиоре — генин, участница (на 1283, экзамен) · `npc/shiore`
 
-## Линии (6)
+## Линии (7)
 - `shiki_confidentiality` — Кадзиура держит две опечатанные пробы крови Шики: запрос на уничтожен… · `threads/shiki_confidentiality`
 - `shiki_underground_career` — МД-091 сверён 13.04; новое убежище куплено и обставлено 14–15.04, ост… · `threads/shiki_underground_career`
 - `shiki_save_asuma` — 24.04 12:20: Асума жив и не ранен, Какудзу мёртв, Хидан под раздельны… · `threads/shiki_save_asuma`
 - `shiki_promise_nemera` — Сирамэ передала вопрос Кабуто; он подтвердил прежнее знание имени и о… · `threads/shiki_promise_nemera`
 - `shiki_save_jiraiya` — 23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозмож… · `threads/shiki_save_jiraiya`
 - `player_preference_overlapping_plans` — Прямая поправка игрока s15.text.158: знание игроком канона требует кр… · `threads/player_preference_overlapping_plans`
+- `jiraiya_rain_investigation` — 25.04.1287: Джирайя лично рассказал Шики о трёх учениках, Риннегане Н… · `threads/jiraiya_rain_investigation`
 
 ## Давние линии (31, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (92)
+## Вещи (93)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -317,6 +318,7 @@
 - `minagi_receipts` · `items/minagi_receipts`
 - `mugami_family_album` · `items/mugami_family_album`
 - `mugami_tea_gift_s15` · `items/mugami_tea_gift_s15`
+- `myoboku_rikudo_legend_book` · `items/myoboku_rikudo_legend_book`
 - `naruto_home_sketch_s15` · `items/naruto_home_sketch_s15`
 - `nemera_document` · `items/nemera_document`
 - `north_tripwire` · `items/north_tripwire`
