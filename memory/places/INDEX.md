@@ -113,6 +113,7 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
+- Северная граница Страны Рек, вход в подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-vkhod-v-podzemnoe-ubezhishche-` · 3 ход(ов), s17–s17
 - Страна Дождя, безлюдный речной берег за пределами Амэгакурэ · `places/strana-dozhdya-bezlyudnyy-rechnoy-bereg-za-predelami-amegaku` · 3 ход(ов), s17–s17
 - Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 3 ход(ов), s16–s16
 - Страна Огня, лес у пункта выплаты наград · `places/strana-ognya-les-u-punkta-vyplaty-nagrad` · 3 ход(ов), s15–s15
@@ -157,7 +158,6 @@
 - Рьючидо, Зал неподвижной воды · `places/ryuchido-zal-nepodvizhnoy-vody` · 2 ход(ов), s10–s10
 - Рьючидо, зал первого испытания · `places/ryuchido-zal-pervogo-ispytaniya` · 2 ход(ов), s10–s10
 - Седьмой колодец, двор комплекса Кэйсин перед приёмным архивом П-4 · `places/sedmoy-kolodets-dvor-kompleksa-keysin-pered-priemnym-arkhivo` · 2 ход(ов), s09–s09
-- Северная граница Страны Рек, вход в подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-vkhod-v-podzemnoe-ubezhishche-` · 2 ход(ов), s17–s17
 - Старая переправа, северная граница Страны Травы · `places/staraya-pereprava-severnaya-granitsa-strany-travy` · 2 ход(ов), s11–s11
 - Страна Горячих Источников, ущелье Куромори · `places/strana-goryachikh-istochnikov-ushchele-kuromori` · 2 ход(ов), s09–s09
 - Страна Огня, южные ворота Храма Огня · `places/strana-ognya-yuzhnye-vorota-khrama-ognya` · 2 ход(ов), s15–s15
