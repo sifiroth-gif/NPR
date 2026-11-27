@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.100",
+  "cursor": "s17.text.101",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2256,6 +2256,27 @@
       ],
       "sources": [
         "recovery/cast/hidan.json"
+      ]
+    },
+    "hiraishin_mark_orochimaru_lab_s17": {
+      "aliases": [
+        "hiraishin mark orochimaru lab s17",
+        "Индивидуальная метка Хирайшина на косяке лаборатории Орочимару"
+      ],
+      "facts": [],
+      "id": "hiraishin_mark_orochimaru_lab_s17",
+      "kind": "item",
+      "label": "Индивидуальная метка Хирайшина на косяке лаборатории Орочимару",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "orochimaru",
+          "since": "s17.text.101"
+        }
+      ],
+      "sources": [
+        "s17.text.101"
       ]
     },
     "hirano": {
@@ -5763,7 +5784,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 210,
+      "mention_count": 211,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5771,13 +5792,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:39:00",
-          "excerpt": "87 года · 10:39</text> **Мугами Шики:** — Думаете? Я вот совсем не уверен. Передать ему что-нибудь? Орочимару открыл рот, собираясь ответить, но промолчал. Его взгляд скользнул по лаборатории. **Орочимару:** — Кабуто, оставь нас. Медик собрал бумаги и вышел. С",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.098"
         },
         {
           "at": "0010-05-13T10:41:00",
@@ -5792,11 +5806,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.100"
+        },
+        {
+          "at": "0010-05-13T10:43:00",
+          "excerpt": "нкциональные области формулы замкнулись в центральном узле. Метка устойчиво откликнулась на чакру Шики. Орочимару подошёл ближе. Его взгляд задержался на концентрических кольцах и незнакомой последовательности символов. Улыбка сошла с его лица. **Орочимару:** ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.101"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.100",
+          "seen": "s17.text.101",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5806,7 +5827,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.100"
+        "s17.text.101"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12546,14 +12567,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.100",
+        "s17.text.101",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
         "s17.text.096",
         "s17.text.097",
         "s17.text.098",
-        "s17.text.099"
+        "s17.text.099",
+        "s17.text.100"
       ]
     },
     "place:810392b04745def4": {
@@ -23025,8 +23047,15 @@
       "status": "projected",
       "to": "kabuto",
       "type": "held_by"
+    },
+    {
+      "from": "hiraishin_mark_orochimaru_lab_s17",
+      "source": "s17.text.101",
+      "status": "projected",
+      "to": "orochimaru",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1605
+  "source_turns_indexed": 1606
 }
