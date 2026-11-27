@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.116",
+  "cursor": "s17.text.117",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2720,13 +2720,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shiki",
+          "holder": "orochimaru",
           "since": "s17.text.114",
-          "turn": "s17.text.116"
+          "turn": "s17.text.117"
         }
       ],
       "sources": [
-        "s17.text.116"
+        "s17.text.117"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 224,
+      "mention_count": 225,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:24:00",
-          "excerpt": "а крышку лёг небольшой оттиск личной печати саннина. Он передал послание непосредственно Сирамэ. **Джирайя:** — Это для Орочимару. Там моё согласие на встречу и предложение обменяться сведениями о месте и времени через вас. Белая змея осторожно взяла футляр в ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.114"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -5835,11 +5828,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.116"
+        },
+        {
+          "at": "0010-05-13T11:29:00",
+          "excerpt": "ния не будет <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:29</text> ### Убежище Орочимару. Лаборатория **Мугами Шики:** — Да. Шики передал Орочимару лакированный футляр. Саннин принял его обеими руками. Большим пальцем провёл по оттиску лич",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.117"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.116",
+          "seen": "s17.text.117",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5849,7 +5849,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.116"
+        "s17.text.117"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12595,7 +12595,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.116",
+        "s17.text.117",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -12605,7 +12605,8 @@
         "s17.text.099",
         "s17.text.100",
         "s17.text.101",
-        "s17.text.102"
+        "s17.text.102",
+        "s17.text.116"
       ]
     },
     "place:810392b04745def4": {
@@ -20985,7 +20986,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 101,
+      "mention_count": 102,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20993,13 +20994,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:19:00",
-          "excerpt": "оргнула выпуклыми глазами, осмотрела кабинет и открыла рот. **Жаба:** — Опять разведка? Затем она заметила Сирамэ. Её передние лапы упёрлись в пол, а широкое туловище немного приподнялось. Сирамэ, превосходившая жабу размерами во много раз, осталась неподвижно",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.113"
         },
         {
           "at": "0010-05-13T11:24:00",
@@ -21014,6 +21008,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.115"
+        },
+        {
+          "at": "0010-05-13T11:29:00",
+          "excerpt": "Да #передаю ему футляр# и ещё мы нашли посредников передачи. Сирамэ и Гамасэй. Сирамэ просила сказать что помогает только с письмами и не нужно каждое слово передавать отдельным письмом. Джирая согласен встретиться, ждёт место и время, что к",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.117"
         }
       ],
       "projections": [
@@ -21026,8 +21027,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json",
-        "s17.text.116"
+        "recovery/cast/shirame.json"
       ]
     },
     "shiranami": {
@@ -22188,7 +22188,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 115,
+      "mention_count": 116,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22196,13 +22196,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:19:00",
-          "excerpt": ":19</text> **Мугами Шики:** — Тогда как мы организуем знакомство? **Джирайя:** — Зачем откладывать? Цунадэ, разрешишь и мне? Хокагэ выразительно посмотрела на пол, где ещё несколько минут назад находилась призывная формула Шики. **Цунадэ:** — Давайте. Сегодня ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.113"
         },
         {
           "at": "0010-05-13T11:24:00",
@@ -22217,6 +22210,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.115"
+        },
+        {
+          "at": "0010-05-13T11:29:00",
+          "excerpt": "оём восстановлении не только Джирайе? Золотистые глаза саннина поднялись от чистого листа. **Орочимару:** — Что сказала Цунадэ? **Ход Шики.** Шики доставил письмо и назвал посредников. Орочимару прочитал письмо, принял условия Сирамэ, предложил встречу 16 мая ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.117"
         }
       ],
       "projections": [
@@ -22714,7 +22714,7 @@
       "id": "zhaba",
       "kind": "npc",
       "label": "Гамасэй",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0010-05-13T11:26:00",
@@ -22722,6 +22722,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.115"
+        },
+        {
+          "at": "0010-05-13T11:29:00",
+          "excerpt": "Да #передаю ему футляр# и ещё мы нашли посредников передачи. Сирамэ и Гамасэй. Сирамэ просила сказать что помогает только с письмами и не нужно каждое слово передавать отдельным письмом. Джирая согласен встретиться, ждёт место и время, что конкретно",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.117"
         }
       ],
       "projections": [
@@ -23095,9 +23102,9 @@
     },
     {
       "from": "jiraiya_first_letter_s17",
-      "source": "s17.text.116",
+      "source": "s17.text.117",
       "status": "projected",
-      "to": "shiki",
+      "to": "orochimaru",
       "type": "held_by"
     },
     {
@@ -23109,5 +23116,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1620
+  "source_turns_indexed": 1621
 }
