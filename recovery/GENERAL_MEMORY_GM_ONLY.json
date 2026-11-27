@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.122",
+  "cursor": "s17.text.123",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.122:0": {
-      "aliases": [
-        "canon:s17.text.122:0",
-        "s17.text.122: контроль последнего леченного 10.05 яйца показал сохранение кровотока в восстановленных сосудах, более устойчивый сердечный ритм и движение эмбриона. Остаточная гипок"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.122:0",
-      "kind": "canon",
-      "label": "s17.text.122: контроль последнего леченного 10.05 яйца показал сохранение кровотока в восстановленных сосудах, более устойчивый сердечный ритм и движение эмбриона. Остаточная гипок",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.122"
       ]
     },
     "captive_guard": {
@@ -7724,14 +7708,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.122",
+        "s17.text.123",
         "s16.text.100",
         "s16.text.101",
         "s17.text.061",
         "s17.text.062",
         "s17.text.063",
         "s17.text.064",
-        "s17.text.065"
+        "s17.text.065",
+        "s17.text.122"
       ]
     },
     "place:2262555f95fe4fea": {
@@ -19562,7 +19547,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s17.text.122",
+          "seen": "s17.text.123",
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
@@ -19574,7 +19559,7 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s17.text.122"
+        "s17.text.123"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -22567,7 +22552,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 107,
+      "mention_count": 108,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22575,13 +22560,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-13T11:36:00",
-          "excerpt": "озле лестницы, ведущей к естественным пещерам. Он начал приближаться. На верхней ступени показалась белая голова Коюки. Змея замерла, увидев Шики, затем быстро преодолела оставшееся расстояние. На её чешуе блестели мелкие капли воды, а на боку прилипло несколь",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.120"
         },
         {
           "at": "0010-05-13T11:38:00",
@@ -22596,11 +22574,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.122"
+        },
+        {
+          "at": "0010-05-13T11:51:00",
+          "excerpt": "верг, 13 мая 1287 года · 11:51</text> **Мугами Шики:** — Нет, но и сказать что все хорошо я не могу Коюки повернулась к матери. Последовал негромкий обмен звуками, сопровождавшийся короткими прикосновениями мордочек. Тёмная змея несколько раз коснулась языком ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.123"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.122",
+          "seen": "s17.text.123",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22610,7 +22595,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.122"
+        "s17.text.123"
       ]
     },
     "white_snake_sage": {
@@ -23173,5 +23158,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1626
+  "source_turns_indexed": 1627
 }
