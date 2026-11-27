@@ -60,4 +60,3 @@
 - s17.text.109: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s17.text.108: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s17.text.107: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
-- s17.text.106: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
