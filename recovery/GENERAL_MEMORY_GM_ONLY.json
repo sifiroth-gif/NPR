@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.053",
+  "cursor": "s17.text.054",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.054:0": {
+      "aliases": [
+        "canon:s17.text.054:0",
+        "s17.text.054: Риннешаринган сознательно выключен, резервный полигон освобождён, временный допуск сдан. Шизунэ сообщила, что Какаши представил доклад 08.05. Шики не раскрывал ночные"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.054:0",
+      "kind": "canon",
+      "label": "s17.text.054: Риннешаринган сознательно выключен, резервный полигон освобождён, временный допуск сдан. Шизунэ сообщила, что Какаши представил доклад 08.05. Шики не раскрывал ночные",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.054"
       ]
     },
     "captive_guard": {
@@ -2645,7 +2661,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 133,
+      "mention_count": 134,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2653,13 +2669,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-07T08:34:00",
-          "excerpt": "рритории противника, при условии возможного подкрепления ещё 3 лиц с шаринганом. Пойдёмте в коноху. **Джирайя:** — Если у остальных тоже Риннеган, как у тех троих, ситуация ещё хуже. Хорошо, что нам не пришлось проверять это на собственной шкуре. Саннин прибав",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.032"
         },
         {
           "at": "0010-05-07T08:42:00",
@@ -2674,16 +2683,27 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.034"
+        },
+        {
+          "at": "0010-05-09T18:11:00",
+          "excerpt": "Госпожа Цунадэ была весьма удивлена. Она развернулась к дверям резиденции. **Шизунэ:** — Сейчас она у себя. Джирайя-сама тоже там, они обсуждают архивные сведения о Дожде. Проходите, я как раз собиралась вернуться. За дверью кабинета слышался приглушённый голо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.054"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.034",
+          "seen": "s17.text.054",
+          "state": "Запросил исторические архивы Дождя."
+        },
+        {
           "state": "Запросил исторические архивы Дождя."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json"
+        "recovery/cast/jiraiya.json",
+        "recovery/HOT.json"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3904,12 +3924,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.037",
+          "seen": "s17.text.054",
           "state": "Проводила обоих до крытого причала к 19:36, осталась в Амэгакурэ."
         }
       ],
       "sources": [
-        "recovery/cast/konan.json"
+        "recovery/cast/konan.json",
+        "s17.text.054"
       ]
     },
     "kotetsu": {
@@ -7337,7 +7358,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.053",
         "s17.text.050",
         "s17.text.051"
       ]
@@ -11384,6 +11404,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.054",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -20824,7 +20845,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 38,
+      "mention_count": 39,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20832,13 +20853,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-08T06:12:00",
-          "excerpt": "кабинете. Цунадэ сидела за столом, просматривая утренние донесения. Рядом стояла чашка недопитого чая. Шизунэ раскладывала документы по отдельным папкам. При появлении Шики Цунадэ подняла голову. Её взгляд задержался на активном Риннешарингане. **Цунадэ:** — Д",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.048"
         },
         {
           "at": "0010-05-08T06:14:00",
@@ -20853,16 +20867,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.050"
+        },
+        {
+          "at": "0010-05-09T18:11:00",
+          "excerpt": "смешивался с ароматом цветущих деревьев. Где-то во дворе смеялись дети. Возле резиденции Шики встретил Шизунэ. Она спускалась по ступеням с несколькими папками под мышкой. **Шизунэ:** — Мугами-сан? Вы уже закончили? Она остановилась, пропуская выходивших из зд",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.054"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.050",
+          "seen": "s17.text.054",
+          "state": "Вручила подписанный допуск, организован проводник."
+        },
+        {
           "state": "Вручила подписанный допуск, организован проводник."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "recovery/HOT.json",
+        "s17.text.054"
       ]
     },
     "signalshchik": {
@@ -21922,7 +21948,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21930,13 +21956,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-08T06:12:00",
-          "excerpt": "#к цунадэ# <text color=\"secondary\" size=\"xs\">Суббота, 8 мая 1287 года · 06:12</text> ### Конохагакуре. Резиденция Хокагэ Деревня постепенно просыпалась. Владельцы лавок поднимали де",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.048"
         },
         {
           "at": "0010-05-08T06:14:00",
@@ -21951,16 +21970,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.050"
+        },
+        {
+          "at": "0010-05-09T18:11:00",
+          "excerpt": "ики, ограничился коротким поклоном. **Шизунэ:** — Какаши вчера представил результаты исследования. Госпожа Цунадэ была весьма удивлена. Она развернулась к дверям резиденции. **Шизунэ:** — Сейчас она у себя. Джирайя-сама тоже там, они обсуждают архивные сведени",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.054"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.050",
+          "seen": "s17.text.054",
+          "state": "Распорядилась выдать допуск и проводника."
+        },
+        {
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "recovery/HOT.json",
+        "s17.text.054"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22822,5 +22853,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1560
+  "source_turns_indexed": 1561
 }

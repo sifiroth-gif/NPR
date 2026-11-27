@@ -3,24 +3,6 @@
   "rule": "Мир мрачный: NPC выбирает себя, лжёт, торгуется, ошибается по своей слабости и идёт против Шики, когда ему это выгодно или его загнали. Помощь без выгоды редка и имеет причину.",
   "soon": [
    {
-    "due": "0010-05-09T17:00:00",
-    "if_unopposed": "Команда 10 проведёт повторную тренировку с разбором ошибок.",
-    "name": "Шикамару Нара",
-    "next": "С Асумой повторить упражнения на отход, связь и взаимное прикрытие, исправить выявленные ошибки.",
-    "npc": "shikamaru",
-    "overdue": true,
-    "plan": "team10_retreat_drill_s17"
-   },
-   {
-    "due": "0010-05-09T18:00:00",
-    "if_unopposed": "Передаст Цунадэ проверяемые исторические сведения и обозначит пробелы.",
-    "name": "Джирайя",
-    "next": "Изучить доступные архивы Второй войны, Ханзо и сопротивления Дождя; сопоставить с собственными сведениями.",
-    "npc": "jiraiya",
-    "overdue": false,
-    "plan": "rain_history_s17"
-   },
-   {
     "due": "0010-05-10T12:00:00",
     "if_unopposed": "Караул получит письменное разъяснение либо зарегистрированный отказ.",
     "name": "Изумо Камидзуки",
@@ -37,6 +19,24 @@
     "npc": "kotetsu",
     "overdue": false,
     "plan": "gate_record_s17"
+   },
+   {
+    "due": "0010-05-10T18:00:00",
+    "if_unopposed": "Передаст Какаши протокол личных проб метки с выявленными ограничениями.",
+    "name": "Райдо Намиаси",
+    "next": "Самостоятельно выбрать упражнения с метками, проверить стабильность личного отпечатка и отклика; не испытывать самоперенос до устойчивого результата.",
+    "npc": "raido",
+    "overdue": false,
+    "plan": "personal_marker_safety_s17"
+   },
+   {
+    "due": "0010-05-10T18:00:00",
+    "if_unopposed": "Передаст Какаши сравнительные записи о личном узле и результатах отклика, без гарантии освоения.",
+    "name": "Иваши Татами",
+    "next": "Сопоставить полученные записи со своей чакрой, подготовить варианты личного узла и проверить отклик.",
+    "npc": "iwashi",
+    "overdue": false,
+    "plan": "personal_formula_analysis_s17"
    }
   ]
  },
@@ -61,20 +61,15 @@
    "turn": "s16.text.049"
   },
   {
-   "kind": "name",
-   "text": "itachi: часть имени (Учиха) совпадает с sasuke",
-   "turn": "s17.text.053"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.053"
+   "turn": "s17.text.054"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.053",
+  "cursor": "s17.text.054",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -82,9 +77,13 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "place:1bbb671e33badb77"
+   "jiraiya",
+   "shizune",
+   "tsunade",
+   "place:6cab2c7a7613d430",
+   "rain_drain_plan_copy_s17"
   ],
-  "focus_bytes": 475,
+  "focus_bytes": 1738,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -98,12 +97,55 @@
   "status": "focused",
   "thematic": {
    "basis": "scene_continuation",
-   "entries": [],
+   "entries": [
+    "chakra.black",
+    "eyes.ems",
+    "genome.zero",
+    "pact.contact",
+    "element.ice",
+    "eyes.cradle",
+    "eyes.magatsuhi",
+    "fusion.development",
+    "genome.fluid",
+    "genome.kaguya",
+    "medical.diagnosis",
+    "nemera.agency",
+    "pact.byoton",
+    "pact.shiton",
+    "research.postmortem",
+    "research.reproduce",
+    "restricted.cancelled",
+    "restricted.unlearned"
+   ],
    "matched": [],
-   "read": [],
-   "required": [],
-   "routes": [],
-   "unavailable": []
+   "read": [
+    "campaigns/shiki/ref/MEDICINE.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/SHIKI.md",
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md"
+   ],
+   "required": [
+    "prior results/source",
+    "material/equipment",
+    "genome/known limits",
+    "scene/time",
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent"
+   ],
+   "routes": [
+    "research",
+    "dialogue"
+   ],
+   "unavailable": [
+    "fusion.development",
+    "genome.kaguya",
+    "nemera.agency",
+    "restricted.cancelled",
+    "restricted.unlearned"
+   ]
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -263,6 +305,14 @@
     "state": "Три объявления с контактами: Нагаэ Рокуто 27,5 млн рё, Тамура Рэйка 18 млн рё, архив «Белая смола» 9,5 млн рё. Взяты для ознакомления; ни один заказ не принят.",
     "turn": "s09.text.033"
    },
+   "rain_drain_plan_copy_s17": {
+    "holder": "jiraiya",
+    "name": "Копия плана водостоков Амэгакурэ",
+    "since": "s17.text.002",
+    "state": "Ручная копия старого плана с указанными путником подземными галереями и входом; актуальность не проверена.",
+    "where": "Дорожная сумка Джирайи",
+    "why": "Перерисован с разрешения владельца."
+   },
    "rokuto_bounty_payment": {
     "holder": "shiki",
     "since": "s09.text.067",
@@ -357,13 +407,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-09T17:40:00",
+  "at": "0010-05-09T18:11:00",
   "date": "Воскресенье, 9 мая 1287 года",
-  "id": "s17.text.053",
-  "place": "Конохагакуре, северо-западный резервный полигон",
-  "time": "17:40"
+  "id": "s17.text.054",
+  "place": "Конохагакуре, кабинет Хокагэ",
+  "time": "18:11"
  },
- "digest": "8b47d6c058b057db0e3a1e544ecc36176e3324f212d56ba60641f97bc8d72e86",
+ "digest": "2d7e99f46fa4e435f0e52c49b438adfbb193aca36350bbfe078847feda6545c8",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -372,11 +422,38 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [],
+  "edges": [
+   {
+    "actor": "tsunade",
+    "from": "s17.text.029",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s17.text.054"
+   },
+   {
+    "actor": "jiraiya",
+    "from": "s17.text.002",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s17.text.054"
+   },
+   {
+    "actor": "shizune",
+    "from": "s17.text.033",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s17.text.054"
+   }
+  ],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Цунадэ — не слышал(а); Джирайя — слышал(а) с s16.text.049; Шизунэ — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Цунадэ — не слышал(а); Джирайя — слышал(а) с s16.text.016; Шизунэ — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Цунадэ, Джирайя, Шизунэ. Присутствие в отряде и запись lore без источника не доказывают видимость."
+ ],
  "fight": {
   "body": {
    "hidan": {
@@ -473,21 +550,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 215.0
+   "value": 220.17
   },
   "dice": [
+   19,
+   16,
+   2,
+   4,
+   20,
+   1,
+   7,
+   20,
    18,
    3,
-   16,
-   19,
-   11,
-   13,
-   17,
-   7,
-   17,
-   16,
-   18,
-   4
+   2,
+   11
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -516,13 +593,66 @@
  "general_memory": {
   "activated": [
    {
+    "facts": [],
+    "id": "jiraiya",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/jiraiya.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Запросил исторические архивы Дождя."
+     }
+    }
+   },
+   {
+    "facts": [],
+    "id": "shizune",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/shizune.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вручила подписанный допуск, организован проводник."
+     }
+    }
+   },
+   {
+    "facts": [],
+    "id": "tsunade",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/tsunade.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Распорядилась выдать допуск и проводника."
+     }
+    }
+   },
+   {
     "channels": [
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:1bbb671e33badb77",
+    "id": "place:6cab2c7a7613d430",
     "kind": "place",
-    "label": "Конохагакуре, северо-западный резервный полигон",
+    "label": "Конохагакуре, кабинет Хокагэ",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "explicit_edge_candidate"
+    ],
+    "facts": [],
+    "id": "rain_drain_plan_copy_s17",
+    "kind": "item",
+    "label": "Копия плана водостоков Амэгакурэ",
+    "operational_cues": {
+     "source": "s17.text.002",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "holder": "jiraiya"
+     }
+    },
     "status": "no_verified_facts"
    }
   ],
@@ -532,19 +662,45 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 1
+  "total_matched": 5
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {},
+  "npcs": {
+   "jiraiya": {
+    "does": "Согласился с отказом от повторного проникновения.",
+    "lever": "",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Выводы переданы с ограничениями.",
+    "stage": 4,
+    "step": "необратимость"
+   },
+   "shizune": {
+    "does": "Сообщила о докладе и проводила в кабинет.",
+    "lever": "Повторение исследований Орочимару и неконтролируемых последствий.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Возможны новые сведения, нужно дать Хокагэ возможность выслушать его.",
+    "stage": 4,
+    "step": "необратимость"
+   },
+   "tsunade": {
+    "does": "Спросила о завершении исследований.",
+    "lever": "Потеря людей вследствие чужих амбиций и собственных решений.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Можно уточнить итог самостоятельной работы.",
+    "stage": 4,
+    "step": "необратимость"
+   }
+  },
   "quiet": 0,
   "recent": [
    {
@@ -564,16 +720,40 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "о перехода — устойчиво до 35 метров. Одновременные адреса — до трёх проверенных меток. Метательная техника и перенос тела доведены до двигательного автоматизма. Физические носители больше не обязательны.\n\n**Глазной Хирайшин освоен как самостоятельная разновидность пространственно-временного ниндзюцу Шики.** Активация сознательная, но последователь…",
-  "player": "#а теперь метка как и гендзюцу держится на вливании чакры, но не обязательно фиксировать на ней взгляд, так же как и гендзюцу достаточно глазного контакта а дальше оно поддерживается по чакре, при отключении подпитки, остаётся след чакры, в него я и хочу прыгать это решит проблему одномоментности. Теперь доведение до автоматизма метательных техник и перемещения тела исключительно глазными метками#",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [],
+ "needs_profile": [
+  {
+   "appearances": 61,
+   "facets": 3,
+   "need": 5,
+   "npc": "tsunade",
+   "tier": "deep"
+  },
+  {
+   "appearances": 126,
+   "facets": 0,
+   "need": 5,
+   "npc": "jiraiya",
+   "tier": "deep"
+  },
+  {
+   "appearances": 35,
+   "facets": 3,
+   "need": 5,
+   "npc": "shizune",
+   "tier": "deep"
+  }
+ ],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [],
+  "present_inline": [
+   "tsunade",
+   "jiraiya",
+   "shizune"
+  ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -710,22 +890,267 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {},
+ "present_npcs": {
+  "jiraiya": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-09-02T20:00:00",
+      "flaw": "Узнал лицо врага слишком поздно",
+      "goal": "Узнать, кто стоит за Акацуки в Амэгакурэ",
+      "id": "infiltrate_ame_1287",
+      "if_unopposed": "Джирайя проник в Амэгакурэ, сражался с Пейном и погиб; его последнее донесение дошло до Конохи.",
+      "next": "Узнать, кто стоит за Акацуки в Амэгакурэ",
+      "source_turn": "s09.text.071",
+      "status": "committed"
+     },
+     {
+      "due": "0010-05-09T18:00:00",
+      "flaw": "Старые сведения неполны, часть событий происходила вне наблюдения Конохи.",
+      "goal": "Выяснить обстоятельства смерти Яхико и изменения Акацуки.",
+      "id": "rain_history_s17",
+      "if_unopposed": "Передаст Цунадэ проверяемые исторические сведения и обозначит пробелы.",
+      "next": "Изучить доступные архивы Второй войны, Ханзо и сопротивления Дождя; сопоставить с собственными сведениями.",
+      "source_turn": "s17.text.034",
+      "status": "committed"
+     }
+    ],
+    "unclocked_intents": [
+     "infiltrate_ame_1287",
+     "rain_history_s17"
+    ]
+   },
+   "look": {
+    "внешность": "не записан: опиши при первой возможности и внеси в d.cast.jiraiya.look"
+   },
+   "prior_disclosure_ids": [
+    "s17.text.002",
+    "s17.text.003",
+    "s17.text.004",
+    "s17.text.007",
+    "s17.text.029",
+    "s17.text.033",
+    "s17.text.034",
+    "s17.text.054"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-05-04T15:34:00",
+     "sha256": "2752f3bb0f1131423ef6353a56c101b325629af6fc9479c9da8fab51395e0cc3",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.002"
+    },
+    {
+     "at": "0010-05-07T08:43:00",
+     "sha256": "42139266429d3bfbf004a76e493338aac5fe0d35e7d0c3790304d2a5c5d1229d",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.034"
+    },
+    {
+     "at": "0010-05-09T18:11:00",
+     "sha256": "b8395279fc6bc25d41fede337e14f28abd9b8480b88b32c7385f58a449c50632",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.054"
+    }
+   ],
+   "profile": {
+    "first": "s15.text.142",
+    "inner": {},
+    "knows": [
+     "Шики сообщил, что при отходе смутно отследил ещё три источника и один большей силы. Предположение о шести носителях Риннегана и Нагато как более сильном источнике требует проверки; сигнатура сильнейшего пока не",
+     "Шики уточнил сходство сигнатур всех семи источников, сравнив с близнецами; дополнительные четыре были слишком далеко для глубокой сенсорики. Более сильный источник не идентифицирован.",
+     "Шики оценил бой как крайне опасный из-за численного перевеса, чужой территории и возможных подкреплений.",
+     "Шики не знает, может ли воспроизвести управление телами."
+    ],
+    "knows_ref": "memory/npc/jiraiya.md",
+    "knows_total": 8,
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s17.text.054",
+      "what": "Шики отключил Риннешаринган, сдал временный допуск, вернулся в резиденцию. Шизунэ сообщила о вчерашнем докладе Какаши; провела к Цунадэ и Джирайе, обсуждающим архивы Дождя."
+     }
+    ],
+    "memory_file": "archive/npc-memory/jiraiya.json",
+    "memory_total": 126,
+    "name": "Джирайя",
+    "seen": "s17.text.054",
+    "state": "Запросил исторические архивы Дождя.",
+    "status": "present_profile",
+    "tier": "deep"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "shizune": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-05-11T12:00:00",
+      "flaw": "Самостоятельные результаты участников пока неполны.",
+      "goal": "Сохранить закрытый режим переданной методики и организовать учёт проверок.",
+      "id": "hiraishin_records_control_s17",
+      "if_unopposed": "У Цунадэ будет журнал доступа и протокол первых самостоятельных проб.",
+      "next": "Согласовать с Какаши и Гэнмой журнал выдачи методики и протоколов испытаний.",
+      "source_turn": "s17.text.054",
+      "status": "committed"
+     }
+    ],
+    "psyche_facets": {
+     "boundary": "Не станет распространять закрытые медицинские сведения самовольно.",
+     "decides": "Медицинские наблюдения, защита пациентов и верность Цунадэ.",
+     "deep_fear": "Повторение исследований Орочимару и неконтролируемых последствий."
+    },
+    "unclocked_intents": [
+     "hiraishin_records_control_s17"
+    ]
+   },
+   "look": {
+    "внешность": "Темноволосая женщина в тёмном кимоно, медицинские отчёты."
+   },
+   "prior_disclosure_ids": [
+    "s17.text.033",
+    "s17.text.034",
+    "s17.text.048",
+    "s17.text.050",
+    "s17.text.054"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-05-07T08:42:00",
+     "sha256": "8087ec66e3209d98d6d1c8af9d78d47303c98263c8ab8aa8cc9ed3be2868272c",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.033"
+    },
+    {
+     "at": "0010-05-08T06:43:00",
+     "sha256": "0c8284c0e7aca344d940120fef3a33416b066be50ec85315a3f13d74a7ea1ca0",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.050"
+    },
+    {
+     "at": "0010-05-09T18:11:00",
+     "sha256": "b8395279fc6bc25d41fede337e14f28abd9b8480b88b32c7385f58a449c50632",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.054"
+    }
+   ],
+   "profile": {
+    "first": "s15.text.125",
+    "inner": {},
+    "knows": [
+     "Получила распоряжение Цунадэ усилить наблюдение за Наруто и запросить сведения Суны после процедуры.",
+     "Шики передал результаты s16.text.028–029: протектор Дождя и кольцо 零 Пэйна, стержни неизвестного назначения, имя Конан; Гэнрю Кю Фудзин, три дня, кольца, статуя, смерть носителя, Девятихвостый последним; подроб",
+     "Присутствует при докладе Джирайи 07.05 о Конан, Пэйне, нескольких носителях Риннегана, живых заключённых и словах Конан о смерти Яхико.",
+     "От Шики 07.05: чужая чакра дождя имеет узнаваемую сигнатуру; три визуально наблюдавшихся носителя Риннегана обладают сходными сигнатурами; ещё три удалённых источника и один более сильный обладают похожей чакро"
+    ],
+    "knows_ref": "memory/npc/shizune.md",
+    "knows_total": 8,
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s17.text.054",
+      "what": "Шики отключил Риннешаринган, сдал временный допуск, вернулся в резиденцию. Шизунэ сообщила о вчерашнем докладе Какаши; провела к Цунадэ и Джирайе, обсуждающим архивы Дождя."
+     }
+    ],
+    "memory_file": "archive/npc-memory/shizune.json",
+    "memory_total": 35,
+    "name": "Шизунэ",
+    "seen": "s17.text.054",
+    "state": "Вручила подписанный допуск, организован проводник.",
+    "status": "present_profile",
+    "tier": "deep"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
+  "tsunade": {
+   "dynamics": {
+    "psyche_facets": {
+     "boundary": "Не допустит неконтролируемой угрозы Конохе.",
+     "decides": "Приоритет безопасности жителей и независимой медицинской оценки, прямолинейна, защищает своих.",
+     "deep_fear": "Потеря людей вследствие чужих амбиций и собственных решений."
+    }
+   },
+   "look": {
+    "внешность": "Светлые волосы в двух хвостах, ромбовидная печать на лбу, зелёный хаори."
+   },
+   "prior_disclosure_ids": [
+    "s17.text.029",
+    "s17.text.033",
+    "s17.text.034",
+    "s17.text.041",
+    "s17.text.048",
+    "s17.text.050",
+    "s17.text.054"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-05-05T20:06:00",
+     "sha256": "d70c44742dbf2b8e71b98f36e0ab0201246dbbb0f911460b6bf498b7b78de33e",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.029"
+    },
+    {
+     "at": "0010-05-08T06:43:00",
+     "sha256": "0c8284c0e7aca344d940120fef3a33416b066be50ec85315a3f13d74a7ea1ca0",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.050"
+    },
+    {
+     "at": "0010-05-09T18:11:00",
+     "sha256": "b8395279fc6bc25d41fede337e14f28abd9b8480b88b32c7385f58a449c50632",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.054"
+    }
+   ],
+   "profile": {
+    "first": "s15.text.125",
+    "inner": {},
+    "knows": [
+     "От Шики 07.05: чужая чакра дождя имеет узнаваемую сигнатуру; три визуально наблюдавшихся носителя Риннегана обладают сходными сигнатурами; ещё три удалённых источника и один более сильный обладают похожей чакро",
+     "Шики не знает, способен ли воспроизвести управление телами.",
+     "Шики оставил доклад Какаши и запросил закрытую площадку на полтора дня.",
+     "Шики не нуждается в дополнительном оборудовании, попросил проводника и заявил об отсутствии разрушительных техник."
+    ],
+    "knows_ref": "memory/npc/tsunade.md",
+    "knows_total": 8,
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s17.text.054",
+      "what": "Шики отключил Риннешаринган, сдал временный допуск, вернулся в резиденцию. Шизунэ сообщила о вчерашнем докладе Какаши; провела к Цунадэ и Джирайе, обсуждающим архивы Дождя."
+     }
+    ],
+    "memory_file": "archive/npc-memory/tsunade.json",
+    "memory_total": 61,
+    "name": "Цунадэ",
+    "seen": "s17.text.054",
+    "state": "Распорядилась выдать допуск и проводника.",
+    "status": "present_profile",
+    "tier": "deep"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  }
+ },
  "recent_turns": [
   {
-   "id": "s17.text.050",
-   "line": "Шики отказался от оборудования, подтвердил отсутствие разрушительных техник и попросил проводника. Получил подписанный допуск, прибыл на закрытый резервный полигон в 06:43; караул снаружи, внутри один."
-  },
-  {
-   "id": "s17.text.051",
-   "line": "Глазной Хирайшин: метка создаётся взглядом, держится чакрой без взгляда до 20 с, остаток до 3 с; проверены до 3 адресов и 35 м. Бросок и самоперенос автоматизированы в тренировках, включая скрытый ранее адрес."
+   "id": "s17.text.054",
+   "line": "Шики отключил Риннешаринган, сдал временный допуск, вернулся в резиденцию. Шизунэ сообщила о вчерашнем докладе Какаши; провела к Цунадэ и Джирайе, обсуждающим архивы Дождя."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики один на резервном полигоне, караул снаружи.",
-  "pressure": "Время допуска близится к концу. Реальное противодействие не испытано; NPC о глазной разновидности не знают.",
-  "situation": "Поправка к s17.text.051: полуторосуточная тренировка включала дополнительный непроизводительный расход 105 фактических единиц чакры. Шики существенно утомлён, боеспособен, без травм; результаты освоения сохранены. Время не изменилось."
+  "positions": "Шики и Шизунэ у входа в кабинет, Цунадэ за столом, Джирайя рядом.",
+  "pressure": "Открытая беседа; Шики утомлён, без травм. Допуск на полигон сдан.",
+  "situation": "Шики отключил Риннешаринган, освободил резервный полигон и сдал допуск. Шизунэ встретила у резиденции, сообщила о вчерашнем докладе Какаши и проводила в кабинет. Цунадэ и Джирайя обсуждают архивные сведения о Дожде; карта и свитки на столе. Цунадэ спросила о завершении исследований. Глазная разновидность Хирайшина NPC пока неизвестна."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -733,16 +1158,34 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {},
+ "source_passages": {
+  "s17.text.029": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Среда, 5 мая 1287 года · 20:06</text>\n\n### Страна Дождя. Безлюдный речной берег\n\n**Мугами Шики:** — Они мертвы, скорее всего, у них одна чакрасигнатура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск.\n\nДжирайя перестал листать записную книжку.\n\nВетер пригнул тростник к воде. На противоположном берегу среди деревьев едва различались развалины какого-то старого сооружения. Дождь постепенно ослабевал.\n\n**Джирайя:** — Мертвы…\n\nОн произнёс это слово с некоторым усилием.\n[... sou…",
+   "player": "Они мертвы, скорее всего, у них одна чакрасигнатура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск",
+   "source": "archive/session-017-turns.jsonl"
+  },
+  "s17.text.054": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 9 мая 1287 года · 18:11</text>\n\n### Конохагакуре. Резиденция Хокагэ\n\nКонцентрические кольца исчезли из радужек Шики, вернув им холодный тёмно-синий цвет.\n\nКараульный принял временный допуск и отметил время освобождения полигона.\n\nНа улицах уже зажигали фонари. Из открытых окон доносились голоса, запах приготовленного риса смешивался с ароматом цветущих деревьев. Где-то во дворе смеялись дети.\n\nВозле резиденции Шики встретил Шизунэ. Она спускалась по ступеням с несколькими папками под мышкой.\n\n**Шизунэ:** — …",
+   "player": "#сворачиваю ринешаринган, возвращаюсь в резиденцию кагэ#",
+   "source": "archive/session-017-turns.jsonl"
+  }
+ },
+ "source_passages_ref": "archive/session-*-turns.jsonl",
+ "source_passages_truncated": true,
+ "target_exceeded": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "fca6e69d06f572f7be655e6322de552d7d0c2dc1",
-  "turn": "s17.text.053"
+  "sha": "ec914cf4a434141e208d5ada07862d594ec08e71",
+  "turn": "s17.text.054"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {},
+  "present": {
+   "jiraiya": "memory/npc/jiraiya.md",
+   "shizune": "memory/npc/shizune.md",
+   "tsunade": "memory/npc/tsunade.md"
+  },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
@@ -752,7 +1195,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 25691.0,
+    "minutes": 25660.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
@@ -769,12 +1212,12 @@
    "shiki_save_jiraiya"
   ],
   "secret_topics": [
+   "vials",
    "visitor_claim",
    "ward_lock_broken",
    "willow_observer_employer",
    "yig_private_profile",
-   "yig_private_world",
-   "brothers_parallel_may1287"
+   "yig_private_world"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
