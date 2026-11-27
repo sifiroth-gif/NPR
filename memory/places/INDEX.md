@@ -278,6 +278,7 @@
 - Склон над тайной лабораторией Шики, старая известняковая водосборная галерея к северо-западу от Кусагакуре · `places/sklon-nad-taynoy-laboratoriey-shiki-staraya-izvestnyakovaya-` · 1 ход(ов), s08–s08
 - Старая переправа, граница Страны Травы · `places/staraya-pereprava-granitsa-strany-travy` · 1 ход(ов), s11–s11
 - Старый учебный полигон госпиталя · `places/staryy-uchebnyy-poligon-gospitalya` · 1 ход(ов), s01–s01
+- Страна Дождя, южный речной берег за пределами Амэгакурэ · `places/strana-dozhdya-yuzhnyy-rechnoy-bereg-za-predelami-amegakure` · 1 ход(ов), s17–s17
 - Страна Горячих Источников, Куромори · `places/strana-goryachikh-istochnikov-kuromori` · 1 ход(ов), s09–s09
 - Страна Горячих Источников, южная торговая станция «Трёх переправ» · `places/strana-goryachikh-istochnikov-yuzhnaya-torgovaya-stantsiya-t` · 1 ход(ов), s09–s09
 - Страна Огня, гавань восточного побережья · `places/strana-ognya-gavan-vostochnogo-poberezhya` · 1 ход(ов), s13–s13

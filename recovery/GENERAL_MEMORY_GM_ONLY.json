@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.030",
+  "cursor": "s17.text.031",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 129,
+      "mention_count": 130,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T20:04:00",
-          "excerpt": "econdary\" size=\"xs\">Среда, 5 мая 1287 года · 19:36</text> ### Амэгакурэ. Нижние ярусы города Шики и Джирайя последовали за Конан. Спускались долго. Внутренние помещения башни постепенно уступали место техническим галереям, огромным резервуарам и машинным залам",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.028"
         },
         {
           "at": "0010-05-05T20:06:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.030"
+        },
+        {
+          "at": "0010-05-05T20:09:00",
+          "excerpt": "ая как у близнецов, у них у всех она такая. Но остальные были достойно далеко для глубокой сенсорики. Джирайя задумчиво потёр подбородок. **Джирайя:** — Семь источников с похожей чакрой, но один значительно сильнее остальных. Это уже серьёзная зацепка. Он посм",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.030",
-          "state": "Зафиксировал дополнительные сенсорные наблюдения, остановился для уточнения сигнатуры."
+          "seen": "s17.text.031",
+          "state": "Отправил призванную жабу с запиской Цунадэ, начал путь к дороге в Страну Огня."
         },
         {
-          "state": "Зафиксировал дополнительные сенсорные наблюдения, остановился для уточнения сигнатуры."
+          "state": "Отправил призванную жабу с запиской Цунадэ, начал путь к дороге в Страну Огня."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.030"
+        "s17.text.031"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -11293,6 +11293,24 @@
         "s06.text.022"
       ]
     },
+    "place:6f129332a8747c06": {
+      "aliases": [
+        "place:6f129332a8747c06",
+        "Страна Дождя, южный речной берег за пределами Амэгакурэ",
+        "Страна Дождя",
+        "южный речной берег за пределами Амэгакурэ"
+      ],
+      "facts": [],
+      "id": "place:6f129332a8747c06",
+      "kind": "place",
+      "label": "Страна Дождя, южный речной берег за пределами Амэгакурэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.031"
+      ]
+    },
     "place:6f704052c18baa7b": {
       "aliases": [
         "place:6f704052c18baa7b",
@@ -12097,9 +12115,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.030",
         "s17.text.028",
-        "s17.text.029"
+        "s17.text.029",
+        "s17.text.030"
       ]
     },
     "place:7d8179b86d9b7c32": {
@@ -21651,7 +21669,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 86,
+      "mention_count": 87,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21659,13 +21677,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-05T17:42:00",
-          "excerpt": "ого камня. С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунадэ и Орочимару. Тогда эти места были полны беженцев. Он провёл ладонью по изуродованному камню. **Джирайя:** — Кажется, война давно закончилась. Посл",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.011"
         },
         {
           "at": "0010-05-05T20:04:00",
@@ -21680,6 +21691,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.029"
+        },
+        {
+          "at": "0010-05-05T20:09:00",
+          "excerpt": "остальных. Это уже серьёзная зацепка. Он посмотрел на тёмную поверхность реки. **Джирайя:** — Я попрошу Цунадэ держать эти сведения в тайне. Если Нагато действительно управляет остальными телами, наше главное преимущество сейчас в том, что он не знает, насколь",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.031"
         }
       ],
       "projections": [
@@ -22177,7 +22195,7 @@
       "id": "zhaba",
       "kind": "npc",
       "label": "Жаба",
-      "mention_count": 15,
+      "mention_count": 16,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -22185,13 +22203,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-05-05T18:33:00",
-          "excerpt": "Если обнаружим источник, сперва выясним, что он собой представляет. Вступать в бой я пока не намерен. Бурая жаба раскрыла глаза и повернулась к Джирайе. **Жаба:** — Ну что, плывём? Вода становится холодной. **Джирайя:** — Плывём. Он поднялся, отряхнул ладони и",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.016"
         },
         {
           "at": "0010-05-05T18:56:00",
@@ -22206,6 +22217,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.028"
+        },
+        {
+          "at": "0010-05-05T20:09:00",
+          "excerpt": "мы поняли. Саннин прикусил большой палец и сложил печати. На камне перед ним появилась небольшая зелёная жаба. Джирайя достал чистый лист, быстро написал несколько строк, свернул его и передал призванному животному. **Джирайя:** — Доставь лично Пятой. Мы возвр",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.031"
         }
       ],
       "projections": [
@@ -22551,5 +22569,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1539
+  "source_turns_indexed": 1540
 }
