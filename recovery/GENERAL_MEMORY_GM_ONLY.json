@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.102",
+  "cursor": "s17.text.103",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.103:0": {
+      "aliases": [
+        "canon:s17.text.103:0",
+        "s17.text.103: первый подтверждённый дальний физический самоперенос Хирайшином Шики из северного убежища Орочимару в Стране Рек к личной метке на пластине Цунадэ в Конохагакуре; оде"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.103:0",
+      "kind": "canon",
+      "label": "s17.text.103: первый подтверждённый дальний физический самоперенос Хирайшином Шики из северного убежища Орочимару в Стране Рек к личной метке на пластине Цунадэ в Конохагакуре; оде",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.103"
       ]
     },
     "captive_guard": {
@@ -5817,17 +5833,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.102",
-          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
-        },
-        {
+          "seen": "s17.text.103",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "recovery/HOT.json",
-        "s17.text.102"
+        "s17.text.103"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -11531,6 +11543,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.103",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -12567,7 +12580,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.102",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -12576,7 +12588,8 @@
         "s17.text.098",
         "s17.text.099",
         "s17.text.100",
-        "s17.text.101"
+        "s17.text.101",
+        "s17.text.102"
       ]
     },
     "place:810392b04745def4": {
@@ -22130,7 +22143,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 103,
+      "mention_count": 104,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22138,13 +22151,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-09T18:15:00",
-          "excerpt": "е, 9 мая 1287 года · 18:15</text> ### Кабинет Хокагэ **Мугами Шики:** — Я отвечу честно, я не знаю. Цунадэ долго смотрела на него. Потом опустила глаза и тихо вздохнула. **Цунадэ:** — Вот и я не знаю. Она взяла чашку, обнаружила, что чай давно остыл, и постави",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.058"
         },
         {
           "at": "0010-05-09T18:17:00",
@@ -22159,16 +22165,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.066"
+        },
+        {
+          "at": "0010-05-13T10:44:00",
+          "excerpt": "#хирайшин к метке Цунадэ# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 10:44</text> Шики направил чакру в пространственный контур, обращаясь к сигнатуре метки, оставленной у Цунадэ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.103"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.064",
+          "seen": "s17.text.103",
+          "state": "Распорядилась выдать допуск и проводника."
+        },
+        {
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "recovery/HOT.json",
+        "s17.text.103"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23058,5 +23076,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1607
+  "source_turns_indexed": 1608
 }

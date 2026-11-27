@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.103: Цунадэ (`npc/tsunade`), Орочимару (`npc/orochimaru`), поправки игрока: 1
 - s17.text.102: Орочимару (`npc/orochimaru`)
 - s17.text.101: Орочимару (`npc/orochimaru`), вещь `hiraishin_mark_orochimaru_lab_s17`
 - s17.text.100: Орочимару (`npc/orochimaru`)
@@ -59,4 +60,3 @@
 - s17.text.046: поправки игрока: 1
 - s17.text.045: поправки игрока: 1
 - s17.text.044: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`)
-- s17.text.043: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), поправки игрока: 1
