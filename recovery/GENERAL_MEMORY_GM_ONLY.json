@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.035",
+  "cursor": "s18.text.036",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -13106,10 +13106,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.035",
+        "s18.text.036",
         "s17.text.066",
         "s17.text.120",
-        "s17.text.121"
+        "s17.text.121",
+        "s18.text.035"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22596,7 +22597,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 119,
+      "mention_count": 120,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22604,13 +22605,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:14:00",
-          "excerpt": "Коюки, это маленькая, молодая змея Рьючидо. А живу я, хмм наверное странно. Читаю, осваиваю техники, недавно спас кладку змеи после расхищения, обычной не Рьючидо, алтарь был стран",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.028"
         },
         {
           "at": "0010-05-14T15:16:00",
@@ -22625,11 +22619,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.035"
+        },
+        {
+          "at": "0010-05-14T15:24:00",
+          "excerpt": "года · 15:24</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — Я выпил за свой день рождения. Коюки приподнялась, опираясь на свёрнутую кольцами нижнюю часть тела. **Коюки:** — У тебя сегодня день рождения?! Детёныш, до этого неподвижно лежавший на ступен",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.036"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.035",
+          "seen": "s18.text.036",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22639,7 +22640,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.035"
+        "s18.text.036"
       ]
     },
     "white_snake_sage": {
@@ -23202,5 +23203,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1672
+  "source_turns_indexed": 1673
 }
