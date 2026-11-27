@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.130",
+  "cursor": "s17.text.131",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -10356,6 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.131",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -10378,8 +10379,7 @@
         "s16.text.116",
         "s16.text.117",
         "s16.text.118",
-        "s16.text.119",
-        "s16.text.120"
+        "s16.text.119"
       ]
     },
     "place:53cb9e14de8eae9b": {
@@ -12203,7 +12203,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.130",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068",
@@ -12213,7 +12212,8 @@
         "s17.text.126",
         "s17.text.127",
         "s17.text.128",
-        "s17.text.129"
+        "s17.text.129",
+        "s17.text.130"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -22217,7 +22217,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 124,
+      "mention_count": 125,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22225,13 +22225,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:07:00",
-          "excerpt": "т. Я думал, раз он больше не с Орочимару… Он не закончил фразу. С другой стороны канала послышался голос Цунадэ. Она обратилась к Наруто уже без прежней раздражительности, гораздо спокойнее и медленнее. **Цунадэ:** — У тебя нет оснований считать, что он отказа",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.128"
         },
         {
           "at": "0010-05-14T12:09:00",
@@ -22246,17 +22239,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.130"
+        },
+        {
+          "at": "0010-05-14T12:18:00",
+          "excerpt": "/text> ### Конохагакуре. Кабинет Хокагэ Пространственная формула замкнулась на метке, лежащей перед Цунадэ. Известняковые стены убежища исчезли из поля зрения Шики, уступив место залитому дневным светом кабинету. На столе лежали две папки, свёрнутая карта Амэг",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.131"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.130",
+          "seen": "s17.text.131",
+          "state": "Распорядилась выдать допуск и проводника."
+        },
+        {
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "s17.text.130"
+        "recovery/HOT.json",
+        "s17.text.131"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22546,8 +22550,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -22591,8 +22594,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s17.text.130"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -23155,5 +23157,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1634
+  "source_turns_indexed": 1635
 }
