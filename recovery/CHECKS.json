@@ -1,10 +1,7 @@
 {
  "schema": "npr-checks/1",
- "cursor": "s17.text.059",
- "fold_errors": [
-  "recovery/TURN.json@07dd7ec: news_delivered: stable event ID and channel required",
-  "s17.text.061: s17.text.061: sequence gap after s17.text.059"
- ],
+ "cursor": "s17.text.062",
+ "fold_errors": [],
  "checks": [
   {
    "turn": "s16.text.049",
@@ -22,24 +19,14 @@
    "text": "Бросок «Чакровое лезвие Футона»: полоса 5–6, по осям 5 (A +2, B +1, C +0, D +0, E +0, F +0). Сузить можно свойствами техники и пределами; расширить на соседнюю — только с random (причина). Исход считаю по расчётной."
   },
   {
-   "turn": "s17.text.059",
-   "kind": "things",
-   "text": "tsunade_hiraishin_plate_s17: неизвестные поля name; используй was/now или new/gone"
+   "turn": "s17.text.062",
+   "kind": "horror",
+   "text": "3 ход(а) подряд рядом с Шики ни у кого не записана реакция на него (western_nest_young_courier, river_shrine_dark_snake_s16). Что каждый увидел и решил — d.cast.<id>.dread; d.horror её не заменяет. Нового не было — dread.hold с тем, что подтвердилось."
   },
   {
-   "turn": "s17.text.059",
-   "kind": "review",
-   "text": "Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст."
-  },
-  {
-   "turn": "s17.text.059",
+   "turn": "s17.text.062",
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"])."
-  },
-  {
-   "turn": "s17.text.059",
-   "kind": "will",
-   "text": "«Джирайя» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Узнать, кто стоит за Акацуки в Амэгакурэ». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение."
   }
  ],
  "rule": "Сцена уже показана игроку. Расхождение исправляется следующим ходом (d.things, d.cast, amend), а не молчаливым переписыванием сыгранного."

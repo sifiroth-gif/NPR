@@ -16,6 +16,7 @@
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 20 ход(ов), s07–s11
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 20 ход(ов), s10–s10
 - Страна Рек, Седьмой колодец · `places/strana-rek-sedmoy-kolodets` · 20 ход(ов), s10–s10
+- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 20 ход(ов), s14–s17
 - Страна Травы, заброшенный сторожевой домик у юго-западного ответвления старой дороги · `places/strana-travy-zabroshennyy-storozhevoy-domik-u-yugo-zapadnogo` · 20 ход(ов), s13–s13
 - Конохагакуре, Академия шиноби · `places/konokhagakure-akademiya-shinobi` · 19 ход(ов), s01–s01
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
@@ -25,7 +26,6 @@
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 18 ход(ов), s05–s15
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 17 ход(ов), s02–s16
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 17 ход(ов), s08–s15
-- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 17 ход(ов), s14–s16
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
