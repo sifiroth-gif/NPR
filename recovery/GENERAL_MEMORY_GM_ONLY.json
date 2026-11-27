@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.069",
+  "cursor": "s18.text.070",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-15T09:00:34",
-          "excerpt": "Минус три. Акимичи замер на середине поворота. Его руки окончательно приобрели естественные размеры. **Асума Сарутоби:** — Достаточно. Упражнение окончено. На полигоне вновь стало тихо. Пыль, поднятая тремя последовательными рывками Шики, медленно оседала на т",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.062"
         },
         {
           "at": "0010-05-15T09:02:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.069"
+        },
+        {
+          "at": "0010-05-15T09:12:00",
+          "excerpt": "альной снисходительности, с которой он согласился на предложение Шики, практически ничего не осталось. **Асума Сарутоби:** — Теперь понимаю, к чему ты ведёшь. Он поднялся с корня и подошёл к ученикам. Тёдзи освободил ему место возле полотна. Асума присел и ука",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.070"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.069",
+          "seen": "s18.text.070",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.069"
+        "s18.text.070"
       ]
     },
     "baki": {
@@ -776,7 +776,7 @@
       "id": "choji",
       "kind": "npc",
       "label": "Тёдзи Акимичи",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -784,13 +784,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:06:00",
-          "excerpt": "дно, что исходный план больше неосуществим. Тёдзи придвинулся к нему и указал на камень, обозначавший Ино. **Тёдзи Акимичи:** — А если бы мы решили отступать, что стало бы с ней? Шикамару посмотрел на подругу. Та сидела совершенно невредимая, держа флягу обеим",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.067"
         },
         {
           "at": "0010-05-15T09:07:00",
@@ -805,17 +798,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.069"
+        },
+        {
+          "at": "0010-05-15T09:12:00",
+          "excerpt": "раясь ладонями на колени. **Ино Яманака:** — Тогда нам необязательно даже наносить противнику повреждения. **Тёдзи Акимичи:** — А мне необязательно пробивать его защиту. Шикамару подобрал четвёртый камень, отличавшийся от остальных цветом. Поместил его перед т",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.070"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.069"
+          "seen": "s18.text.070"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.069"
+        "s18.text.070"
       ]
     },
     "clinic_assistant": {
@@ -2558,7 +2558,7 @@
       "id": "ino",
       "kind": "npc",
       "label": "Ино Яманака",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -2566,13 +2566,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:05:00",
-          "excerpt": "надеясь получить хотя бы косвенную подсказку, однако наставник демонстративно занялся своей флягой. **Ино Яманака:** — Очень маленький. Но если моя техника сработает, у нас появится шанс. Правда, я пока не представляю, как заставить тебя оставаться на месте до",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.066"
         },
         {
           "at": "0010-05-15T09:07:00",
@@ -2587,17 +2580,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.069"
+        },
+        {
+          "at": "0010-05-15T09:12:00",
+          "excerpt": "ринялась рассматривать расположение камней. Тёдзи тоже наклонился над схемой, опираясь ладонями на колени. **Ино Яманака:** — Тогда нам необязательно даже наносить противнику повреждения. **Тёдзи Акимичи:** — А мне необязательно пробивать его защиту. Шикамару ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.070"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.069"
+          "seen": "s18.text.070"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.069"
+        "s18.text.070"
       ]
     },
     "inquiry_contact_token": {
@@ -10973,7 +10973,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.069",
+        "s18.text.070",
         "s18.text.053",
         "s18.text.054",
         "s18.text.055",
@@ -10989,7 +10989,8 @@
         "s18.text.065",
         "s18.text.066",
         "s18.text.067",
-        "s18.text.068"
+        "s18.text.068",
+        "s18.text.069"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20846,7 +20847,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20854,13 +20855,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:06:00",
-          "excerpt": "предстояло соотнести собственные выводы с решениями, которые он принимал несколькими минутами ранее. **Шикамару Нара:** — Изначально потому, что ты поставил перед нами конкретную учебную задачу. Коснуться тебя. Я пытался решить именно её. Он помолчал. **Шикама",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.067"
         },
         {
           "at": "0010-05-15T09:07:00",
@@ -20875,11 +20869,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.069"
+        },
+        {
+          "at": "0010-05-15T09:12:00",
+          "excerpt": "х цветом. Поместил его перед тремя другими, некоторое время изучал получившуюся картину, затем отодвинул его. **Шикамару Нара:** — Но возникает вопрос о самом захвате. Одно дело — остановить противника на мгновение. Совсем другое — удерживать его после этого. ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.070"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.069",
+          "seen": "s18.text.070",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20889,7 +20890,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.069"
+        "s18.text.070"
       ]
     },
     "shiki_arm_wraps": {
@@ -23377,5 +23378,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1706
+  "source_turns_indexed": 1707
 }
