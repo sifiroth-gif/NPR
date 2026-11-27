@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.106",
+  "cursor": "s17.text.107",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.107:0": {
+      "aliases": [
+        "canon:s17.text.107:0",
+        "s17.text.107 OOC: игрок вновь требует больше описаний; сохранять действующие литературные директивы о плотности сцены, окружении, паузах и видимых реакциях NPC. Игрок разрешил в эт"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.107:0",
+      "kind": "canon",
+      "label": "s17.text.107 OOC: игрок вновь требует больше описаний; сохранять действующие литературные директивы о плотности сцены, окружении, паузах и видимых реакциях NPC. Игрок разрешил в эт",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.107"
       ]
     },
     "captive_guard": {
@@ -2666,7 +2682,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 143,
+      "mention_count": 144,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2690,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T10:41:00",
-          "excerpt": "бумаги. **Орочимару:** — Я найду среди своих знакомых змей ту, которая согласится принимать сообщения. Если Джирайя договорится с одной из жаб, останется познакомить их и определить место передачи. Орочимару некоторое время смотрел на пустой лист. Затем положи",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.099"
         },
         {
           "at": "0010-05-13T10:45:00",
@@ -2695,11 +2704,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.106"
+        },
+        {
+          "at": "0010-05-13T11:10:00",
+          "excerpt": "тно колыхалась занавеска. С улицы доносились голоса прохожих, стук деревянных сандалий, детский смех. Джирайя сидел, широко расставив колени. Цунадэ осталась возле письменного стола. Они оба смотрели на Шики. **Мугами Шики:** — Некоторое время назад мы с Орочи",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.106",
+          "seen": "s17.text.107",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2709,7 +2725,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.106"
+        "s17.text.107"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5789,7 +5805,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 215,
+      "mention_count": 216,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5797,13 +5813,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:45:00",
-          "excerpt": "Из убежища Орочимару, в связи с этим есть разговор, джирая в конохе? <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 10:45</text> **Мугами Шики:** — Из убежища Орочимару, в свя",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.104"
         },
         {
           "at": "0010-05-13T10:46:00",
@@ -5818,6 +5827,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.106"
+        },
+        {
+          "at": "0010-05-13T11:10:00",
+          "excerpt": "Мастеру: больше описаний По игре: #нариши прямой речью что прлизошло и предложение Орочимару но в моем стиле а не сливая вообще всю информацию# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:10</text> ### Конохагакуре. Кабинет Хокагэ Солнечны",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.107"
         }
       ],
       "projections": [
@@ -11531,7 +11547,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.106",
+        "s17.text.107",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11552,7 +11568,8 @@
         "s17.text.059",
         "s17.text.103",
         "s17.text.104",
-        "s17.text.105"
+        "s17.text.105",
+        "s17.text.106"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -22134,7 +22151,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 107,
+      "mention_count": 108,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22142,13 +22159,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T10:45:00",
-          "excerpt": "0:45</text> **Мугами Шики:** — Из убежища Орочимару, в связи с этим есть разговор, джирая в конохе? Цунадэ медленно положила перо на стол. **Цунадэ:** — Орочимару… Её пальцы сомкнулись на крышке футляра. Она некоторое время смотрела на него, затем убрала обрат",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.104"
         },
         {
           "at": "0010-05-13T10:46:00",
@@ -22163,11 +22173,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.106"
+        },
+        {
+          "at": "0010-05-13T11:10:00",
+          "excerpt": "лись голоса прохожих, стук деревянных сандалий, детский смех. Джирайя сидел, широко расставив колени. Цунадэ осталась возле письменного стола. Они оба смотрели на Шики. **Мугами Шики:** — Некоторое время назад мы с Орочимару обсуждали возможность возвращения е",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.107"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.106",
+          "seen": "s17.text.107",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22177,7 +22194,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.106"
+        "s17.text.107"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23067,5 +23084,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1611
+  "source_turns_indexed": 1612
 }
