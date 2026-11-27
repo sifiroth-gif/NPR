@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.099",
+  "cursor": "s17.text.100",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5763,7 +5763,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 209,
+      "mention_count": 210,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5771,13 +5771,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:37:00",
-          "excerpt": "шь одна из форм знания. Вы забываете о собственно философском, религиозном и ценностно-эстетическом. Орочимару задумчиво постучал ногтем по обложке тетради. **Орочимару:** — Я не считаю научное знание абсолютно истинным. Иначе мне пришлось бы признать истинным",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.097"
         },
         {
           "at": "0010-05-13T10:39:00",
@@ -5792,11 +5785,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.099"
+        },
+        {
+          "at": "0010-05-13T10:42:00",
+          "excerpt": "s\">Четверг, 13 мая 1287 года · 10:42</text> **Мугами Шики:** — Хорошо. Вы будете тут ждать ответа? **Орочимару:** — Да. По меньшей мере ближайшую неделю. Мне необходимо оценить состояние организма и восстановить прежние навыки. Он машинально коснулся шеи — тог",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.100"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.099",
+          "seen": "s17.text.100",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5806,7 +5806,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.099"
+        "s17.text.100"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12546,13 +12546,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.099",
+        "s17.text.100",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
         "s17.text.096",
         "s17.text.097",
-        "s17.text.098"
+        "s17.text.098",
+        "s17.text.099"
       ]
     },
     "place:810392b04745def4": {
@@ -23027,5 +23028,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1604
+  "source_turns_indexed": 1605
 }
