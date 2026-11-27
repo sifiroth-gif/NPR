@@ -35,12 +35,12 @@
 - Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 14 ход(ов), s15–s15
 - Страна Огня, пункт выплаты наград · `places/strana-ognya-punkt-vyplaty-nagrad` · 14 ход(ов), s15–s15
 - Конохагакуре, тихий двор за тренировочными площадками · `places/konokhagakure-tikhiy-dvor-za-trenirovochnymi-ploshchadkami` · 13 ход(ов), s15–s15
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 13 ход(ов), s18–s18
 - Нижний госпиталь, Седьмая палата · `places/nizhniy-gospital-sedmaya-palata` · 13 ход(ов), s03–s04
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 13 ход(ов), s10–s15
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
 - Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 12 ход(ов), s15–s16
 - Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 12 ход(ов), s18–s18
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 12 ход(ов), s18–s18
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 11 ход(ов), s17–s17
