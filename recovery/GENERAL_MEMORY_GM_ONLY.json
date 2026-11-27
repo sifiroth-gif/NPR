@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.090",
+  "cursor": "s17.text.091",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.091:0": {
+      "aliases": [
+        "canon:s17.text.091:0",
+        "s17.text.091: Шики прямо называет целью приобретения силы независимость и спокойную жизнь; интерес к учёбе не требует фанатичного овладения недоступным. Реплика об интересе восстан"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.091:0",
+      "kind": "canon",
+      "label": "s17.text.091: Шики прямо называет целью приобретения силы независимость и спокойную жизнь; интерес к учёбе не требует фанатичного овладения недоступным. Реплика об интересе восстан",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.091"
       ]
     },
     "captive_guard": {
@@ -5763,7 +5779,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 200,
+      "mention_count": 201,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5771,13 +5787,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T07:59:00",
-          "excerpt": "secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 07:59</text> **Мугами Шики:** — давайте поговорим. Орочимару положил руки на колени. На его пальцах больше не было следов многочисленных телесных перестроек. Шики мог различить равномерное движение чакры в конеч",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.087"
         },
         {
           "at": "0010-05-13T08:02:00",
@@ -5792,11 +5801,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.090"
+        },
+        {
+          "at": "0010-05-13T08:04:00",
+          "excerpt": "ом деле очень интересно учиться. Но если один из объектов интереса недоступен, то я не стану на манер Орочимару фанатично его добиваться. Саннин приподнял бровь. **Орочимару:** — На манер Орочимару? Он негромко рассмеялся. **Орочимару:** — Полагаю, мне следует",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.091"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.090",
+          "seen": "s17.text.091",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5806,7 +5822,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.090"
+        "s17.text.091"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -8010,7 +8026,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.090",
+        "s17.text.091",
         "s17.text.081",
         "s17.text.082",
         "s17.text.083",
@@ -8018,7 +8034,8 @@
         "s17.text.085",
         "s17.text.086",
         "s17.text.087",
-        "s17.text.089"
+        "s17.text.089",
+        "s17.text.090"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -22942,5 +22959,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1595
+  "source_turns_indexed": 1596
 }

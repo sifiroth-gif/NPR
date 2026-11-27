@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.091: Орочимару (`npc/orochimaru`), поправки игрока: 1
 - s17.text.090: Орочимару (`npc/orochimaru`)
 - s17.text.089: Орочимару (`npc/orochimaru`)
 - s17.text.088: поправки игрока: 1
@@ -59,4 +60,3 @@
 - s17.text.034: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`)
 - s17.text.033: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Какаши Хатакэ (`npc/kakashi`), план сюжета
 - s17.text.032: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), план сюжета
-- s17.text.031: Джирайя (`npc/jiraiya`), план сюжета
