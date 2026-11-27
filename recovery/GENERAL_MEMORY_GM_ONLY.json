@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.096",
+  "cursor": "s17.text.097",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.096:0": {
-      "aliases": [
-        "canon:s17.text.096:0",
-        "s17.text.096: Орочимару лично подтвердил, что даже ранние записанные попытки освоения сендзюцу проходили после первых физиологических модификаций. Чистого исходного наблюдения до м"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.096:0",
-      "kind": "canon",
-      "label": "s17.text.096: Орочимару лично подтвердил, что даже ранние записанные попытки освоения сендзюцу проходили после первых физиологических модификаций. Чистого исходного наблюдения до м",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.096"
       ]
     },
     "captive_guard": {
@@ -2837,7 +2821,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.096",
+          "seen": "s17.text.097",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -2847,7 +2831,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s17.text.096"
+        "s17.text.097"
       ]
     },
     "kabuto_letter_0416": {
@@ -5784,7 +5768,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 206,
+      "mention_count": 207,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5792,13 +5776,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:30:00",
-          "excerpt": "и, я все ещё невосстановился Кабуто освободил рабочий стол и придвинул лампу. ### Ранние исследования Орочимару Первые страницы были написаны ещё молодым Орочимару. Почерк отличался от нынешнего — более крупный, с многочисленными подчёркиваниями. На полях встр",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.094"
         },
         {
           "at": "0010-05-13T10:31:00",
@@ -5813,11 +5790,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.096"
+        },
+        {
+          "at": "0010-05-13T10:37:00",
+          "excerpt": "шь одна из форм знания. Вы забываете о собственно философском, религиозном и ценностно-эстетическом. Орочимару задумчиво постучал ногтем по обложке тетради. **Орочимару:** — Я не считаю научное знание абсолютно истинным. Иначе мне пришлось бы признать истинным",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.097"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.096",
+          "seen": "s17.text.097",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5827,7 +5811,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.096"
+        "s17.text.097"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12567,10 +12551,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.096",
+        "s17.text.097",
         "s17.text.093",
         "s17.text.094",
-        "s17.text.095"
+        "s17.text.095",
+        "s17.text.096"
       ]
     },
     "place:810392b04745def4": {
@@ -23045,5 +23030,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1601
+  "source_turns_indexed": 1602
 }

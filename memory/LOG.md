@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.097: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.096: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), поправки игрока: 1
 - s17.text.095: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.094: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), вещь `orochimaru_senjutsu_early_notes_s17`, вещь `orochimaru_senjutsu_later_records_s17`
@@ -59,4 +60,3 @@
 - s17.text.040: Гэнма Ширануи (`npc/genma`), Какаши Хатакэ (`npc/kakashi`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Портовый чиновник (`npc/fire_port_official`)
 - s17.text.039: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Кадзунэ (`npc/fire_road_jonin`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.038: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), поправки игрока: 1
-- s17.text.037: Какаши Хатакэ (`npc/kakashi`), Конан (`npc/konan`)
