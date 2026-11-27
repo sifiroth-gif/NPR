@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.011: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s18.text.010: Хидан (`npc/hidan`), Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`)
 - s18.text.009: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), план сюжета
 - s18.text.008: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`)
@@ -60,4 +61,3 @@
 - s17.text.087: Орочимару (`npc/orochimaru`), план сюжета
 - s17.text.086: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`)
 - s17.text.085: Сирамэ (`npc/shirame`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
-- s17.text.084: Саске Учиха (`npc/sasuke`), Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Портовый чиновник (`npc/fire_port_official`), план сюжета, поправки игрока: 2
