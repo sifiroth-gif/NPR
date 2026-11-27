@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.082",
+  "cursor": "s17.text.083",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.083:0": {
+      "aliases": [
+        "canon:s17.text.083:0",
+        "s17.text.083, прямая поправка игрока 27.11.2026: восстановленный исходный Орочимару после адаптации остаётся гениальным шиноби уровня Кагэ, Саннином. Сохранены пять стихий, Инь и Я"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.083:0",
+      "kind": "canon",
+      "label": "s17.text.083, прямая поправка игрока 27.11.2026: восстановленный исходный Орочимару после адаптации остаётся гениальным шиноби уровня Кагэ, Саннином. Сохранены пять стихий, Инь и Я",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.083"
       ]
     },
     "captive_guard": {
@@ -1278,8 +1294,7 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1322,8 +1337,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "s17.text.082"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -3076,12 +3090,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.064",
+          "seen": "s17.text.083",
           "state": "Покинул полигон, разрешил Шики остаться до утра; намерен предупредить дежурных и зайти утром."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s17.text.083"
       ]
     },
     "kakuzu": {
@@ -5501,7 +5516,7 @@
       "id": "naruto",
       "kind": "npc",
       "label": "Наруто Узумаки",
-      "mention_count": 74,
+      "mention_count": 75,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -5509,13 +5524,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-03-25T12:39:00",
-          "excerpt": "золотистыми. Ямато посмотрел на серебристую трубку. **Ямато:** — Сакура, Наруто. За мной. Немедленно. **Наруто Узумаки:** — Шики, погоди! Насчёт Кабуто... **Ямато:** — Наруто! На этот раз капитану не пришлось повторять приказ. Сакура уже уходила по верхнему ус",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.071"
         },
         {
           "at": "0010-04-23T16:48:00",
@@ -5530,6 +5538,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.159"
+        },
+        {
+          "at": "0010-05-12T20:55:00",
+          "excerpt": "лекте, мастерстве ниндзюцу и контракте со змеями, а не на регенерации или чужих генах. [1] (https://naruto.fandom.com/wiki/Orochimaru), [2] (https://naruto.fandom.com/ru/wiki/%D0%9E%D1%80%D0%BE%D1%87%D0%B8%D0%BC%D0%B0%D1%80%D1%83) Ниндзюцу и владение стихиями ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.083"
         }
       ],
       "projections": [
@@ -5786,7 +5801,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 193,
+      "mention_count": 194,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5794,13 +5809,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T15:53:00",
-          "excerpt": "до результата# <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 15:31</text> ### Убежище Орочимару. Лаборатория **Мугами Шики:** — Кабуто помогай. Кабуто отбросил очки на инструментальный стол и немедленно приступил к работе. Под ладонями Шики возни",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.080"
         },
         {
           "at": "0010-05-12T20:53:00",
@@ -5815,6 +5823,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.082"
+        },
+        {
+          "at": "0010-05-12T20:55:00",
+          "excerpt": "Нет, не сможет, я вернул ему его. Мастеру: канон для Орочимару: До модификаций тела Орочимару (https://www.google.com/search?kgmid=%2Fm%2F091dhl&q=%D1%87%D1%82%D0%BE+%D1%83%D0%BC%D0%B5%D0%BB+%D0%9E%D1%80%D0%BE%D1%87%D0%B8%D0%BC%D0%B0",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.083"
         }
       ],
       "projections": [
@@ -8028,8 +8043,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.082",
-        "s17.text.081"
+        "s17.text.083",
+        "s17.text.081",
+        "s17.text.082"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -20087,7 +20103,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.082",
+          "seen": "s17.text.083",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         },
         {
@@ -20097,7 +20113,7 @@
       "sources": [
         "recovery/cast/sasuke.json",
         "recovery/HOT.json",
-        "s17.text.082"
+        "s17.text.083"
       ]
     },
     "sayu": {
@@ -20486,8 +20502,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s17.text.082"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -20871,7 +20886,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 92,
+      "mention_count": 93,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20879,13 +20894,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T15:53:00",
-          "excerpt": "пальцев Шики постепенно ослабевало. После восьми часов морфогенеза организм расходовал последние доступные резервы. Сирамэ спустилась на пол. **Сирамэ:** — Кабуто, посмотри на него! Медик бросил быстрый взгляд на Шики. **Кабуто Якуши:** — Ещё немного. Я возьму",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.080"
         },
         {
           "at": "0010-05-12T20:53:00",
@@ -20900,12 +20908,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.082"
+        },
+        {
+          "at": "0010-05-12T20:55:00",
+          "excerpt": "вернулся к Шики. **Саске Учиха:** — Ты говорил, что я смогу обратиться к тебе через змей. Это предложение ещё в силе? Сирамэ подняла голову, внимательно посмотрев на Учиху. *** **Мастер:** принимаю приведённый канон Орочимару. Его возвращение к исходной физиол",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.083"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.082",
+          "seen": "s17.text.083",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20919,7 +20934,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.082"
+        "s17.text.083"
       ]
     },
     "shiranami": {
@@ -22994,5 +23009,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1588
+  "source_turns_indexed": 1589
 }
