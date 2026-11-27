@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.093",
+  "cursor": "s17.text.094",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2821,7 +2821,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.093",
+          "seen": "s17.text.094",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -2831,7 +2831,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s17.text.093"
+        "s17.text.094"
       ]
     },
     "kabuto_letter_0416": {
@@ -3404,7 +3404,7 @@
       "id": "khakudzya_sennin",
       "kind": "npc",
       "label": "Хакудзя-сэннин",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0010-03-04T07:29:25",
@@ -3412,13 +3412,6 @@
           "source": "archive/session-010-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s10.text.041"
-        },
-        {
-          "at": "0010-04-24T12:37:40",
-          "excerpt": "я 1287 года · 12:37</text> **Мугами Шики:** — Фукасаку и Шима. Белая Змея медленно прикрыла веки. **Хакудзя-сэннин:** — Эти двое ещё живы. Впрочем, чему я удивляюсь. Из её горла донёсся низкий, протяжный смешок. **Хакудзя-сэннин:** — Фукасаку всегда отличался ",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.187"
         },
         {
           "at": "0010-04-24T12:38:00",
@@ -3433,6 +3426,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.189"
+        },
+        {
+          "at": "0010-05-13T10:30:00",
+          "excerpt": "достижениями. Теперь впервые можем исследовать их как возможную причину патологии. Орочимару закрыл свою папку. **Орочимару:** — Хакудзя-сэннин сумела дать тебе то, чего не смог получить я. Полагаю, теперь ты лучше меня понимаешь природу этого процесса. Он под",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.094"
         }
       ],
       "projections": [
@@ -5768,7 +5768,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 203,
+      "mention_count": 204,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5776,13 +5776,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T08:04:00",
-          "excerpt": "ом деле очень интересно учиться. Но если один из объектов интереса недоступен, то я не стану на манер Орочимару фанатично его добиваться. Саннин приподнял бровь. **Орочимару:** — На манер Орочимару? Он негромко рассмеялся. **Орочимару:** — Полагаю, мне следует",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.091"
         },
         {
           "at": "0010-05-13T08:06:00",
@@ -5797,11 +5790,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.093"
+        },
+        {
+          "at": "0010-05-13T10:30:00",
+          "excerpt": "и, я все ещё невосстановился Кабуто освободил рабочий стол и придвинул лампу. ### Ранние исследования Орочимару Первые страницы были написаны ещё молодым Орочимару. Почерк отличался от нынешнего — более крупный, с многочисленными подчёркиваниями. На полях встр",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.094"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.093",
+          "seen": "s17.text.094",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5811,7 +5811,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.093"
+        "s17.text.094"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -5892,11 +5892,12 @@
       "projections": [
         {
           "holder": "orochimaru",
-          "since": "s17.text.093"
+          "since": "s17.text.093",
+          "turn": "s17.text.094"
         }
       ],
       "sources": [
-        "s17.text.093"
+        "s17.text.094"
       ]
     },
     "orochimaru_senjutsu_later_records_s17": {
@@ -5913,11 +5914,12 @@
       "projections": [
         {
           "holder": "kabuto",
-          "since": "s17.text.093"
+          "since": "s17.text.093",
+          "turn": "s17.text.094"
         }
       ],
       "sources": [
-        "s17.text.093"
+        "s17.text.094"
       ]
     },
     "osawa_gensei": {
@@ -12549,6 +12551,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.094",
         "s17.text.093"
       ]
     },
@@ -23010,19 +23013,19 @@
     },
     {
       "from": "orochimaru_senjutsu_early_notes_s17",
-      "source": "s17.text.093",
+      "source": "s17.text.094",
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
     },
     {
       "from": "orochimaru_senjutsu_later_records_s17",
-      "source": "s17.text.093",
+      "source": "s17.text.094",
       "status": "projected",
       "to": "kabuto",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1598
+  "source_turns_indexed": 1599
 }
