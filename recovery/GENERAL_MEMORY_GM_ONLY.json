@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.076",
+  "cursor": "s17.text.077",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.077:0": {
+      "aliases": [
+        "canon:s17.text.077:0",
+        "s17.text.077: Нулевой Геном выделил исходную наследственную матрицу Орочимару из сохранившейся клеточной линии аспирата нынешнего тела, с сопоставлением прежнего исследования фолли"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.077:0",
+      "kind": "canon",
+      "label": "s17.text.077: Нулевой Геном выделил исходную наследственную матрицу Орочимару из сохранившейся клеточной линии аспирата нынешнего тела, с сопоставлением прежнего исследования фолли",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.077"
       ]
     },
     "captive_guard": {
@@ -2788,7 +2804,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 112,
+      "mention_count": 113,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2796,13 +2812,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-05-12T05:33:00",
-          "excerpt": "2 мая 1287 года · 05:33</text> **Мугами Шики:** — Не могу сказать, спешка тут будет очень опасна. **Кабуто Якуши:** — Согласен. Но я боюсь, что наш пациент придерживается другого мнения. Из глубины коридора донёсся хриплый, хорошо знакомый голос. **Орочимару:*",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.074"
         },
         {
           "at": "0010-05-12T05:36:00",
@@ -2817,11 +2826,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.076"
+        },
+        {
+          "at": "0010-05-12T07:26:00",
+          "excerpt": "**Сирамэ:** — Кабуто, эту дверь оставь открытой. Я буду находиться возле Шики. Кабуто отложил медицинский журнал. **Кабуто Якуши:** — Ну что, Шики-сан? Удалось найти его? **Ход Шики.** Шики поглотил аспират, Нулевым Геномом разделил клеточные линии и выделил и",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.077"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.076",
+          "seen": "s17.text.077",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -2831,7 +2847,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s17.text.076"
+        "s17.text.077"
       ]
     },
     "kabuto_letter_0416": {
@@ -5789,7 +5805,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 187,
+      "mention_count": 188,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5797,13 +5813,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T05:33:00",
-          "excerpt": "пациент придерживается другого мнения. Из глубины коридора донёсся хриплый, хорошо знакомый голос. **Орочимару:** — Кабуто… Ты заставляешь нашего гостя ждать? Саннин появился в полумраке прохода, опираясь рукой о стену. Его длинные чёрные волосы беспорядочно с",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.074"
         },
         {
           "at": "0010-05-12T05:36:00",
@@ -5818,11 +5827,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.076"
+        },
+        {
+          "at": "0010-05-12T07:26:00",
+          "excerpt": "#беру образец и приглашаю его нулевым геномом выделяю первичную последовательность генов Орочимару# <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 06:04–07:26</text> ### Лабораторное крыло. Нулевой Геном Образец костного мозга соприкоснулся с ладо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.077"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.076",
+          "seen": "s17.text.077",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5832,22 +5848,28 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.076"
+        "s17.text.077"
       ]
     },
-    "orochimaru_marrow_sample_s17": {
+    "orochimaru_original_matrix_s17": {
       "aliases": [
-        "orochimaru marrow sample s17"
+        "orochimaru original matrix s17",
+        "Исходная генетическая матрица Орочимару"
       ],
       "facts": [],
-      "id": "orochimaru_marrow_sample_s17",
+      "id": "orochimaru_original_matrix_s17",
       "kind": "item",
-      "label": "orochimaru marrow sample s17",
+      "label": "Исходная генетическая матрица Орочимару",
       "mention_count": 0,
       "mentions": [],
-      "projections": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s17.text.077"
+        }
+      ],
       "sources": [
-        "s17.text.076"
+        "s17.text.077"
       ]
     },
     "orochimaru_scout_snake": {
@@ -11849,6 +11871,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.077",
         "s17.text.076"
       ]
     },
@@ -20821,7 +20844,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 86,
+      "mention_count": 87,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20829,13 +20852,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T05:33:00",
-          "excerpt": "ает мне вернуть его. Саннин негромко рассмеялся, но смех оборвался приступом кашля. На ладони осталась кровь. Сирамэ отступила от него и повернулась к Шики. **Сирамэ:** — Я останусь здесь. Если тебе предстоит потерять сознание, я хочу видеть, что будет происхо",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.074"
         },
         {
           "at": "0010-05-12T05:36:00",
@@ -20850,12 +20866,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.076"
+        },
+        {
+          "at": "0010-05-12T07:26:00",
+          "excerpt": "акры, совместимую с духовной составляющей саннина. *** Орочимару задремал. Его дыхание оставалось поверхностным. Сирамэ тем временем самостоятельно обследовала соседнее помещение и обнаружила небольшое смотровое окно между комнатами. **Сирамэ:** — Кабуто, эту ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.077"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.076",
+          "seen": "s17.text.077",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20869,7 +20892,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.076"
+        "s17.text.077"
       ]
     },
     "shiranami": {
@@ -22927,8 +22950,15 @@
       "status": "projected",
       "to": "jiraiya",
       "type": "held_by"
+    },
+    {
+      "from": "orochimaru_original_matrix_s17",
+      "source": "s17.text.077",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1582
+  "source_turns_indexed": 1583
 }
