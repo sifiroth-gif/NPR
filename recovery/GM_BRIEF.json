@@ -81,13 +81,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.101"
+   "turn": "s17.text.102"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.101",
+  "cursor": "s17.text.102",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -120,8 +120,12 @@
     "eyes.ems",
     "fusion.tendrils",
     "genome.zero",
+    "medical.reconstruct",
+    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
+    "sage.poison",
+    "combat.scalpel",
     "element.ice",
     "eyes.cradle",
     "eyes.magatsuhi",
@@ -129,49 +133,76 @@
     "genome.fluid",
     "genome.kaguya",
     "medical.diagnosis",
+    "medical.field",
     "nemera.agency",
-    "nemera.cloak",
     "nemera.transfer",
     "pact.byoton",
     "pact.shiton",
     "research.postmortem",
     "research.reproduce",
     "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.summon"
+    "restricted.unlearned"
    ],
    "matched": [],
+   "medical": {
+    "at": "0010-05-13T10:44:00",
+    "chakra": {
+     "at": "0010-05-13T10:44:00",
+     "last": {
+      "spent": 1.0,
+      "turn": "s17.text.101",
+      "what": [
+       "Формирование освоенной индивидуальной физической метки Хирайшина без переноса"
+      ]
+     },
+     "max": 600.0,
+     "state": "готов",
+     "value": 287.53,
+     "why": "Прямая поправка игрока к s17.text.086: 3 часа глубокого погружения ×5, 150 вместо 30, +120 к запасу 141,02 после s17.text.087."
+    },
+    "kit": {
+     "holder": "shiki",
+     "since": "s10.text.102",
+     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
+     "turn": "s14.text.023"
+    },
+    "patients": {},
+    "sources": [
+     "recovery/HOT.json#injuries",
+     "recovery/HOT.json#body",
+     "recovery/HOT.json#things",
+     "campaigns/shiki/ref/MEDICINE.md"
+    ]
+   },
    "read": [
     "campaigns/shiki/ref/MEDICINE.md",
     "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/SHIKI.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/ref/FUSION.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
+    "injuries/function",
+    "things/medical kit",
+    "chakra",
+    "scene/time",
     "prior results/source",
     "material/equipment",
     "genome/known limits",
-    "scene/time",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent",
-    "fusion profile or historical pact",
-    "contact/channel"
+    "intent"
    ],
    "routes": [
+    "medical",
     "research",
-    "dialogue",
-    "pact"
+    "dialogue"
    ],
    "unavailable": [
     "fusion.development",
     "genome.kaguya",
     "nemera.agency",
-    "nemera.cloak",
     "nemera.transfer",
     "restricted.cancelled",
     "restricted.unlearned"
@@ -463,13 +494,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T10:43:00",
+  "at": "0010-05-13T10:44:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.101",
+  "id": "s17.text.102",
   "place": "Северная граница Страны Рек, подземное убежище Орочимару, лаборатория",
-  "time": "10:43"
+  "time": "10:44"
  },
- "digest": "6247e318971e0b53e6952ed307dc72683aeee60e6c5ebdbad6cca39de4312df2",
+ "digest": "014ddbaa0b7913c4d9e5f17335cf03d0c9964ca6815acb64cdb91c1f2901059c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -592,21 +623,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 287.36
+   "value": 287.53
   },
   "dice": [
-   4,
+   10,
    9,
+   9,
+   15,
    20,
-   11,
-   3,
-   4,
+   10,
+   12,
+   15,
    16,
-   17,
-   18,
-   7,
-   3,
-   3
+   12,
+   9,
+   11
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -729,10 +760,10 @@
   "due": null,
   "npcs": {
    "orochimaru": {
-    "does": "Рассмотрел печать без касания, спросил о Хирайшине.",
+    "does": "Разрешил оставить метку, попросил учитывать работу лаборатории, завершил разговор.",
     "lever": "умереть, не узнав всего",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Возможно, Шики освоил пространственное перемещение; точный принцип не раскрыт.",
+    "reads": "Шики не намерен разъяснять технику сейчас; оставленная открыто метка полезна для последующего контакта.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -760,7 +791,7 @@
  },
  "needs_profile": [
   {
-   "appearances": 75,
+   "appearances": 76,
    "facets": 4,
    "need": 5,
    "npc": "orochimaru",
@@ -1024,14 +1055,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.101",
-      "what": "Шики нанёс собственную физическую метку Хирайшина на деревянный косяк двери лаборатории. Локальный отклик устойчив. Орочимару наблюдал нанесение, предположил пространственную печать и спросил о Хирайш"
+      "turn": "s17.text.102",
+      "what": "Шики иронически ответил на вопрос о Хирайшине. Орочимару разрешил оставить печать на косяке и ожидает известий о Джирайе."
      }
     ],
     "memory_file": "archive/npc-memory/orochimaru.json",
-    "memory_total": 75,
+    "memory_total": 76,
     "name": "Орочимару",
-    "seen": "s17.text.101",
+    "seen": "s17.text.102",
     "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена.",
     "status": "present_profile",
     "tier": "deep"
@@ -1041,15 +1072,15 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.101",
-   "line": "Шики нанёс собственную физическую метку Хирайшина на деревянный косяк двери лаборатории. Локальный отклик устойчив. Орочимару наблюдал нанесение, предположил пространственную печать и спросил о Хирайшине."
+   "id": "s17.text.102",
+   "line": "Шики иронически ответил на вопрос о Хирайшине. Орочимару разрешил оставить печать на косяке и ожидает известий о Джирайе."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у дверного косяка лаборатории, Орочимару рядом.",
-  "pressure": "Орочимару заинтересовался оставленной меткой; согласие на её сохранение и объём раскрытия техники ещё не обсуждены.",
-  "situation": "Шики создал индивидуальную физическую метку Хирайшина на деревянном косяке двери лаборатории. Формула устойчиво откликнулась на его сигнатуру; дальность, долговечность и фактический переход к ней не проверены. Орочимару видел нанесение и форму, предположил пространственную технику и спросил, освоен ли Хирайшин. Не касался метки, ответа пока нет."
+  "positions": "Шики у дверного косяка, Орочимару отступил от проёма.",
+  "pressure": "Орочимару ожидает добровольного ответа Джирайи. Следующее действие Шики свободно.",
+  "situation": "Шики иронически отреагировал на предположение Орочимару о Хирайшине. Орочимару принял оставление метки в лаборатории, попросил не появляться во время операции и попрощался. Шики ещё не покинул лабораторию. Принцип и пределы техники не раскрыты."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1074,8 +1105,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "6a0eb87cdb3eaf6ce0dea8d0ff070bc0b89dd71b",
-  "turn": "s17.text.101"
+  "sha": "0e5d37eb5a5ce6cf55033ee6b0d684a08153e8a1",
+  "turn": "s17.text.102"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1091,7 +1122,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 20348.0,
+    "minutes": 20347.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
