@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.044: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.043: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`)
 - s18.text.042: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.041: Ао (`npc/ao`), Коюки (`npc/western_nest_young_courier`)
@@ -59,4 +60,3 @@
 - s17.text.120: Орочимару (`npc/orochimaru`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.119: Орочимару (`npc/orochimaru`)
 - s17.text.118: Орочимару (`npc/orochimaru`), вещь `jiraiya_first_letter_s17`, вещь `orochimaru_reply_letter_s17`
-- s17.text.117: Орочимару (`npc/orochimaru`), вещь `jiraiya_first_letter_s17`
