@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.042",
+  "cursor": "s18.text.043",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3782,13 +3782,17 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.042",
+          "seen": "s18.text.043",
+          "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
+        },
+        {
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
-        "s18.text.042"
+        "recovery/HOT.json",
+        "s18.text.043"
       ]
     },
     "kiri_transfer_carrier": {
@@ -13108,7 +13112,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.042",
+        "s18.text.043",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13118,7 +13122,8 @@
         "s18.text.038",
         "s18.text.039",
         "s18.text.040",
-        "s18.text.041"
+        "s18.text.041",
+        "s18.text.042"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22598,14 +22603,13 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 126,
+      "mention_count": 127,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22613,13 +22617,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:33:00",
-          "excerpt": "рогревается. Но на зиму… Да. После небольшой паузы он добавил: **Мугами Шики:** — Я уже думал об этом. Коюки спустилась с его плеча по рукаву, ненадолго задержалась возле запястья, а затем перебралась на каменную ступеньку. **Коюки:** — Тогда у нас ещё много в",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.040"
         },
         {
           "at": "0010-05-14T17:46:00",
@@ -22634,11 +22631,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.042"
+        },
+        {
+          "at": "0010-05-14T17:50:00",
+          "excerpt": "Конохой. Вместо этого офицер уточнил у находившегося за дверью служащего, когда Ао сможет принять его доклад. Коюки тем временем перебралась на соседний камень. На месте, которое она только что покинула, устроилась одна из молодых змей. Белая змейка уступила е",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.043"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.042",
+          "seen": "s18.text.043",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22647,8 +22651,7 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s18.text.042"
+        "recovery/HOT.json"
       ]
     },
     "white_snake_sage": {
@@ -23211,5 +23214,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1679
+  "source_turns_indexed": 1680
 }
