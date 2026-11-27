@@ -92,6 +92,7 @@
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 4 ход(ов), s17–s17
 - Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 4 ход(ов), s15–s18
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 4 ход(ов), s18–s18
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 4 ход(ов), s15–s15
@@ -108,7 +109,6 @@
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 3 ход(ов), s18–s18
 - Конохагакуре, Центральный госпитальный блок · `places/konokhagakure-tsentralnyy-gospitalnyy-blok` · 3 ход(ов), s02–s02
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
