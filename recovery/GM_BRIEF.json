@@ -81,13 +81,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.121"
+   "turn": "s17.text.122"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.121",
+  "cursor": "s17.text.122",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -95,17 +95,11 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
+   "river_shrine_dark_snake_s16",
    "western_nest_young_courier",
-   "place:8a93286cbfe7d3f2",
-   "orochimaru",
-   "shirame",
-   "hiraishin_mark_orochimaru_lab_s17",
-   "jiraiya_first_letter_s17",
-   "orochimaru_reconstructed_body_s17",
-   "orochimaru_reply_letter_s17",
-   "orochimaru_senjutsu_early_notes_s17"
+   "place:1f89f4b911373863"
   ],
-  "focus_bytes": 3506,
+  "focus_bytes": 1469,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -129,6 +123,7 @@
     "pact.contact",
     "sage.permanent",
     "sage.poison",
+    "shunshin.zero",
     "combat.scalpel",
     "fusion.development",
     "genome.fluid",
@@ -137,23 +132,24 @@
     "nemera.agency",
     "nemera.transfer",
     "research.postmortem",
-    "research.reproduce"
+    "research.reproduce",
+    "sage.summon"
    ],
    "matched": [],
    "medical": {
-    "at": "0010-05-13T11:38:00",
+    "at": "0010-05-13T11:49:00",
     "chakra": {
-     "at": "0010-05-13T11:38:00",
+     "at": "0010-05-13T11:49:00",
      "last": {
-      "spent": 6.25,
-      "turn": "s17.text.120",
+      "spent": 1.0,
+      "turn": "s17.text.122",
       "what": [
-       "Хирайшин, самоперенос к домашней физической метке"
+       "Контактная медицинская чакровая диагностика яйца, без лечения и активации глаз"
       ]
      },
      "max": 600.0,
      "state": "готов",
-     "value": 275.78,
+     "value": 276.61,
      "why": "Прямая поправка игрока к s17.text.086: 3 часа глубокого погружения ×5, 150 вместо 30, +120 к запасу 141,02 после s17.text.087."
     },
     "kit": {
@@ -173,7 +169,8 @@
    "read": [
     "campaigns/shiki/ref/MEDICINE.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/MEMORY.md",
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
     "injuries/function",
@@ -183,11 +180,16 @@
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent"
+    "intent",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time"
    ],
    "routes": [
     "medical",
-    "dialogue"
+    "dialogue",
+    "travel"
    ],
    "unavailable": [
     "fusion.development",
@@ -455,13 +457,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T11:38:00",
+  "at": "0010-05-13T11:49:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.121",
-  "place": "Страна Рек, южные известняковые горы, убежище Шики, жилой коридор",
-  "time": "11:38"
+  "id": "s17.text.122",
+  "place": "Страна Рек, южные известняковые горы, убежище Шики, нижние пещеры",
+  "time": "11:49"
  },
- "digest": "043614835b3320b1a6f339626c4012cfaee02ea0debc30191f5e75685c4c523f",
+ "digest": "143ce42ec71e5953c5b4005ffc9985c0bdb8ece50d6caf91b2b8e46a7d4acf75",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -477,6 +479,13 @@
     "kind": "chronology_same_actor",
     "status": "source_order_only",
     "to": "s17.text.121"
+   },
+   {
+    "actor": "river_shrine_dark_snake_s16",
+    "from": "s17.text.004",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s17.text.121"
    }
   ],
   "nodes": [],
@@ -484,9 +493,9 @@
   "source": "archive/session-*-turns.jsonl"
  },
  "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Коюки — не слышал(а).",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Коюки — не слышал(а).",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Коюки. Присутствие в отряде и запись lore без источника не доказывают видимость."
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Коюки — не слышал(а); Тёмная змея у кладок — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Коюки, Тёмная змея у кладок. Присутствие в отряде и запись lore без источника не доказывают видимость."
  ],
  "fight": {
   "body": {
@@ -575,30 +584,30 @@
   },
   "chakra": {
    "last": {
-    "spent": 6.25,
-    "turn": "s17.text.120",
+    "spent": 1.0,
+    "turn": "s17.text.122",
     "what": [
-     "Хирайшин, самоперенос к домашней физической метке"
+     "Контактная медицинская чакровая диагностика яйца, без лечения и активации глаз"
     ]
    },
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 275.78
+   "value": 276.61
   },
   "dice": [
-   9,
-   14,
-   2,
-   6,
-   9,
-   13,
    15,
-   11,
-   16,
-   2,
    7,
-   6
+   2,
+   14,
+   6,
+   12,
+   16,
+   1,
+   12,
+   2,
+   9,
+   5
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -628,6 +637,18 @@
   "activated": [
    {
     "facts": [],
+    "id": "river_shrine_dark_snake_s16",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/river_shrine_dark_snake_s16.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых."
+     }
+    }
+   },
+   {
+    "facts": [],
     "id": "western_nest_young_courier",
     "kind": "npc",
     "operational_cues": {
@@ -643,128 +664,9 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "place:8a93286cbfe7d3f2",
+    "id": "place:1f89f4b911373863",
     "kind": "place",
-    "label": "Страна Рек, южные известняковые горы, убежище Шики, жилой коридор",
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "orochimaru",
-    "kind": "npc",
-    "label": "Орочимару",
-    "operational_cues": {
-     "source": "recovery/cast/orochimaru.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "scene_anchor"
-    ],
-    "facts": [],
-    "id": "shirame",
-    "kind": "npc",
-    "label": "Сирамэ",
-    "operational_cues": {
-     "source": "recovery/cast/shirame.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Вышла из комнаты, намерена передать известие западным гнёздам."
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "hiraishin_mark_orochimaru_lab_s17",
-    "kind": "item",
-    "label": "Индивидуальная метка Хирайшина на косяке лаборатории Орочимару",
-    "operational_cues": {
-     "source": "s17.text.101",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "jiraiya_first_letter_s17",
-    "kind": "item",
-    "label": "Первое письмо Джирайи Орочимару в лакированном футляре",
-    "operational_cues": {
-     "source": "s17.text.118",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "orochimaru_reconstructed_body_s17",
-    "kind": "item",
-    "label": "Восстановленное исходное тело Орочимару",
-    "operational_cues": {
-     "source": "s17.text.080",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "orochimaru_reply_letter_s17",
-    "kind": "item",
-    "label": "Ответное письмо Орочимару Джирайе в лакированном футляре",
-    "operational_cues": {
-     "source": "s17.text.118",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
-    "status": "no_verified_facts"
-   },
-   {
-    "channels": [
-     "explicit_edge_candidate"
-    ],
-    "facts": [],
-    "id": "orochimaru_senjutsu_early_notes_s17",
-    "kind": "item",
-    "label": "Тетрадь ранних наблюдений Орочимару по сендзюцу",
-    "operational_cues": {
-     "source": "s17.text.094",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "holder": "orochimaru"
-     }
-    },
+    "label": "Страна Рек, южные известняковые горы, убежище Шики, нижние пещеры",
     "status": "no_verified_facts"
    }
   ],
@@ -774,7 +676,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 9
+  "total_matched": 3
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -788,11 +690,19 @@
  "horror": {
   "due": null,
   "npcs": {
+   "river_shrine_dark_snake_s16": {
+    "does": "Разомкнула кольца, наблюдала за руками Шики, через Коюки спросила о повторном лечении.",
+    "lever": "Повторное разрушение кладок людьми.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Помнит прежнее лечение и защищает кладку, следит за прикосновениями.",
+    "stage": 4,
+    "step": "необратимость"
+   },
    "western_nest_young_courier": {
-    "does": "Спросила о дружбе, продемонстрировала контакт с детёнышем, сообщила о перемещении яйца и предложила осмотр после отдыха.",
+    "does": "Проводила Шики и перевела вопрос матери.",
     "lever": "Принудительный вызов и потеря права вернуться.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Сирамэ занята своими делами, Шики вернулся; можно показать изменения у гнезда.",
+    "reads": "Мать хочет понять, потребуется ли новая помощь.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -816,13 +726,11 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "зык несколько раз мелькнул в воздухе, собирая запахи из жилого коридора.\n\nКоюки спустилась на две ступени и издала негромкий протяжный звук. Детёныш приблизился к ней, коснулся мордочкой её чешуи и остановился.\n\n**Коюки:** — Он теперь иногда сам ищет меня. Раньше я всегда приходила к нему.\n\nОна устроилась поперёк нижней ступени. Маленькая змея про…",
-  "player": "Орочимару жив, а Сирамэ, она помогает Орочимару связаться со старым .....другом",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 121,
+   "appearances": 122,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
@@ -834,7 +742,8 @@
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
   "present_inline": [
-   "western_nest_young_courier"
+   "western_nest_young_courier",
+   "river_shrine_dark_snake_s16"
   ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
@@ -973,6 +882,86 @@
   "source": "recovery/GM_ONLY.json:plot"
  },
  "present_npcs": {
+  "river_shrine_dark_snake_s16": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-05-15T12:00:00",
+      "flaw": "Один эмбрион после лечения остаётся уязвимым, тёмная змея не умеет диагностировать его состояние.",
+      "goal": "Сохранить жизнеспособную кладку и защитить детёнышей.",
+      "id": "brood_recovery_s17",
+      "if_unopposed": "Кладка останется под присмотром; при изменениях Коюки сможет сообщить Шики наблюдаемые признаки.",
+      "next": "Обустроить сухие укрытия, возвращать вышедших далеко детёнышей к гнезду и при изменении состояния яиц привлечь внимание Коюки.",
+      "source_turn": "s17.text.073",
+      "status": "committed"
+     }
+    ],
+    "psyche_facets": {
+     "boundary": "Не оставляет зависимых детёнышей и не подчиняется принуждению.",
+     "decides": "Предпочитает безопасность детёнышей и подтверждённые добрые поступки обещаниям.",
+     "deep_fear": "Повторное разрушение кладок людьми."
+    },
+    "unclocked_intents": [
+     "brood_recovery_s17"
+    ]
+   },
+   "look": {
+    "внешность": "Крупная тёмная змея среди камней."
+   },
+   "prior_disclosure_ids": [
+    "s17.text.004",
+    "s17.text.022",
+    "s17.text.055",
+    "s17.text.060",
+    "s17.text.111",
+    "s17.text.112",
+    "s17.text.120",
+    "s17.text.121"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-05-04T17:56:00",
+     "sha256": "0616e91f505630a0df6f554d7b1f17ea6a0a333e94ce43ee4f2eeec97dfd75ac",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.004"
+    },
+    {
+     "at": "0010-05-13T11:36:00",
+     "sha256": "061b8f649fa3449c910aa05c2570ca54eefdd0b1efa0c568511137fccc97fc36",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.120"
+    },
+    {
+     "at": "0010-05-13T11:38:00",
+     "sha256": "190fa1736cc5ff8e897debfae5e07f8b20212e98e8fbd051ee8f7555b61ad0e7",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.121"
+    }
+   ],
+   "profile": {
+    "first": "s16.text.094",
+    "inner": {},
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s17.text.122",
+      "what": "Шики с разрешения тёмной змеи осмотрел последнее леченое яйцо: сохранён кровоток, ритм устойчивее, движение эмбриона есть. Остаточные последствия гипоксии неизвестны; лечения не проводил."
+     }
+    ],
+    "memory_file": "archive/npc-memory/river_shrine_dark_snake_s16.json",
+    "memory_total": 13,
+    "name": "Тёмная змея у кладок",
+    "seen": "s17.text.122",
+    "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
+    "status": "present_profile",
+    "tier": "developed",
+    "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  },
   "western_nest_young_courier": {
    "dynamics": {
     "committed_or_paused_intents": [
@@ -1010,7 +999,6 @@
    "prior_disclosures": [
     {
      "at": "0010-05-10T12:05:00",
-     "line": "Шики вышел через ворота Конохи 09.05 в 18:29, вернулся в убежище 10.05 в 12:05. Коюки сообщила о порче части спасённых яиц и попр…",
      "sha256": "3a702ce5a3b2b14283af5ce2883055982024514f9cc70c6825078e533d452020",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -1018,7 +1006,6 @@
     },
     {
      "at": "0010-05-13T11:36:00",
-     "line": "Шики попрощался и успешно переместился Хирайшином к домашней метке. Коюки встретила его, рассказала об ответном шипении детёныша …",
      "sha256": "061b8f649fa3449c910aa05c2570ca54eefdd0b1efa0c568511137fccc97fc36",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
@@ -1026,8 +1013,7 @@
     },
     {
      "at": "0010-05-13T11:38:00",
-     "line": "Коюки узнала, что Орочимару жив, Сирамэ помогает ему связаться со старым другом. Спросила о дружбе, показала добровольный контакт…",
-     "sha256": "8df42fe044ca8a47d925925f0f7b00809d14828878b33746f52e54d7139cc282",
+     "sha256": "190fa1736cc5ff8e897debfae5e07f8b20212e98e8fbd051ee8f7555b61ad0e7",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.121"
@@ -1055,19 +1041,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.120",
-      "what": "Шики попрощался и успешно переместился Хирайшином к домашней метке. Коюки встретила его, рассказала об ответном шипении детёныша без человеческой речи и спросила об Орочимару и Сирамэ."
-     },
-     {
-      "ch": "present",
-      "turn": "s17.text.121",
-      "what": "Коюки узнала, что Орочимару жив, Сирамэ помогает ему связаться со старым другом. Спросила о дружбе, показала добровольный контакт детёныша, сообщила о перемещении леченого яйца и предложила осмотр пос"
+      "turn": "s17.text.122",
+      "what": "Шики с разрешения тёмной змеи осмотрел последнее леченое яйцо: сохранён кровоток, ритм устойчивее, движение эмбриона есть. Остаточные последствия гипоксии неизвестны; лечения не проводил."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 121,
+    "memory_total": 122,
     "name": "Коюки",
-    "seen": "s17.text.121",
+    "seen": "s17.text.122",
     "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи.",
     "status": "present_profile",
     "tier": "deep"
@@ -1077,19 +1058,19 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.120",
-   "line": "Шики попрощался и успешно переместился Хирайшином к домашней метке. Коюки встретила его, рассказала об ответном шипении детёныша без человеческой речи и спросила об Орочимару и Сирамэ."
-  },
-  {
    "id": "s17.text.121",
    "line": "Коюки узнала, что Орочимару жив, Сирамэ помогает ему связаться со старым другом. Спросила о дружбе, показала добровольный контакт детёныша, сообщила о перемещении леченого яйца и предложила осмотр после отдыха."
+  },
+  {
+   "id": "s17.text.122",
+   "line": "Шики с разрешения тёмной змеи осмотрел последнее леченое яйцо: сохранён кровоток, ритм устойчивее, движение эмбриона есть. Остаточные последствия гипоксии неизвестны; лечения не проводил."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в жилом коридоре, Коюки вернулась к нему от лестницы, детёныш в нижних пещерах.",
-  "pressure": "Коюки интересуется дружбой Орочимару и ждёт возможности проверки кладки; срочная угроза не установлена.",
-  "situation": "Шики сообщил Коюки, что Орочимару жив и Сирамэ помогает ему связаться со старым другом, не называя его. Коюки спросила, подобна ли эта дружба отношениям Шики с Рэном и Аки. Местный детёныш самостоятельно приблизился к Коюки у лестницы, затем вернулся в нижние пещеры. Коюки сообщила, что мать переместила последнее леченое яйцо ближе к остальным; состояние эмбриона не установлено. Предложила Шики осмотреть кладку после отдыха."
+  "positions": "Шики у кладки семи яиц в сухой полости, тёмная змея непосредственно рядом, Коюки посредничает, местные молодые змеи у расщелин.",
+  "pressure": "Динамика последнего яйца благоприятная, прогноз вылупления не гарантирован; мать ожидает объяснения.",
+  "situation": "Шики спустился с Коюки к кладке; тёмная змея разрешила обследование. В последнем леченом яйце при просвечивании и контактной диагностике установлены сохраняющийся кровоток восстановленных сосудов, менее густое ветвление на месте дефекта, более устойчивый сердечный ритм и движение эмбриона. Прогрессирующая гибель тканей или повторное нарушение кровоснабжения доступным способом не обнаружены. Остаточные последствия гипоксии неизвестны. Лечение не проведено. Мать через Коюки спрашивает о необходимости повторного лечения."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1114,12 +1095,13 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "0c20dc38ce6a264fead31c1318a5e42b8a7894ac",
-  "turn": "s17.text.121"
+  "sha": "3c334a3acdd6a109e634a3d0c0ba62128a149097",
+  "turn": "s17.text.122"
  },
  "wiki": {
   "index": "memory/INDEX.md",
   "present": {
+   "river_shrine_dark_snake_s16": "memory/npc/river_shrine_dark_snake_s16.md",
    "western_nest_young_courier": "memory/npc/western_nest_young_courier.md"
   },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
@@ -1131,7 +1113,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 20293.0,
+    "minutes": 20282.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",

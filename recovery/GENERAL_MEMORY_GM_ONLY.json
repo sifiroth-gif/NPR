@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.121",
+  "cursor": "s17.text.122",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.122:0": {
+      "aliases": [
+        "canon:s17.text.122:0",
+        "s17.text.122: контроль последнего леченного 10.05 яйца показал сохранение кровотока в восстановленных сосудах, более устойчивый сердечный ритм и движение эмбриона. Остаточная гипок"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.122:0",
+      "kind": "canon",
+      "label": "s17.text.122: контроль последнего леченного 10.05 яйца показал сохранение кровотока в восстановленных сосудах, более устойчивый сердечный ритм и движение эмбриона. Остаточная гипок",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.122"
       ]
     },
     "captive_guard": {
@@ -7708,6 +7724,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.122",
         "s16.text.100",
         "s16.text.101",
         "s17.text.061",
@@ -13000,9 +13017,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.121",
         "s17.text.066",
-        "s17.text.120"
+        "s17.text.120",
+        "s17.text.121"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -19534,7 +19551,8 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок"
+        "Тёмная змея у кладок",
+        "river_shrine_dark_snake_s16"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -19544,13 +19562,19 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s17.text.073",
+          "seen": "s17.text.122",
+          "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
+          "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
+        },
+        {
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_dark_snake_s16.json"
+        "recovery/cast/river_shrine_dark_snake_s16.json",
+        "recovery/HOT.json",
+        "s17.text.122"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -22543,7 +22567,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 106,
+      "mention_count": 107,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22551,13 +22575,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-12T05:30:00",
-          "excerpt": "07:42</text> **Мугами Шики:** — Пойдем. Сирамэ вытянула длинное белое тело и направилась к выходу. Коюки осталась в жилом помещении. **Коюки:** — Я присмотрю за малышами. Возвращайся. *** Дорога на север заняла почти сутки. Южные известняковые горы постепенно ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.071"
         },
         {
           "at": "0010-05-13T11:36:00",
@@ -22572,11 +22589,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.121"
+        },
+        {
+          "at": "0010-05-13T11:49:00",
+          "excerpt": "r=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:49</text> **Мугами Шики:** — Давай ка сейчас Коюки повела Шики вниз, туда, где вырубленные человеком ступени постепенно уступали место естественным каменным уступам. Воздух становился влажнее. На выступах ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.122"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.121",
+          "seen": "s17.text.122",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22586,7 +22610,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.121"
+        "s17.text.122"
       ]
     },
     "white_snake_sage": {
@@ -23149,5 +23173,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1625
+  "source_turns_indexed": 1626
 }

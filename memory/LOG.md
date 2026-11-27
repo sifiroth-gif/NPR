@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.122: Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s17.text.121: Коюки (`npc/western_nest_young_courier`)
 - s17.text.120: Орочимару (`npc/orochimaru`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.119: Орочимару (`npc/orochimaru`)
@@ -58,4 +59,3 @@
 - s17.text.065: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), поправки игрока: 1
 - s17.text.064: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), поправки игрока: 1
 - s17.text.063: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`)
-- s17.text.062: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), поправки игрока: 1
