@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.019: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`)
 - s18.text.018: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s18.text.017: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
 - s18.text.016: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`)
@@ -60,4 +61,3 @@
 - s17.text.095: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.094: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), вещь `orochimaru_senjutsu_early_notes_s17`, вещь `orochimaru_senjutsu_later_records_s17`
 - s17.text.093: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), вещь `orochimaru_senjutsu_early_notes_s17`, вещь `orochimaru_senjutsu_later_records_s17`
-- s17.text.092: Орочимару (`npc/orochimaru`)

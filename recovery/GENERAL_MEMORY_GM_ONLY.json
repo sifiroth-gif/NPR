@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.018",
+  "cursor": "s18.text.019",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -924,9 +924,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/danzo.json",
-        "recovery/HOT.json",
-        "s18.text.018"
+        "recovery/cast/danzo.json"
       ]
     },
     "deidara": {
@@ -2218,7 +2216,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2226,13 +2224,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-05-05T19:18:24",
-          "excerpt": "на мгновение возникало впечатление, будто перед ним находились части одного существа. **Пэйн:** — Какудзу и Хидан перестали выходить на связь. Теперь ты появляешься здесь вместе с шиноби Конохи. Он слегка наклонил голову. **Пэйн:** — Это совпадение? **Ход Шики",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.026"
         },
         {
           "at": "0010-05-14T13:04:00",
@@ -2247,12 +2238,19 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.010"
+        },
+        {
+          "at": "0010-05-14T13:22:00",
+          "excerpt": "распорядилась продолжать наблюдение без каких-либо вмешательств до завершения медицинского заключения. **Хидан:** — Да отвалите вы уже от меня! Заслонка закрылась. Цунадэ направилась к лестнице, но остановилась возле первой ступени. Солнечный свет проникал чер",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.019"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s18.text.018",
+          "seen": "s18.text.019",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         },
         {
@@ -2262,7 +2260,8 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s18.text.019"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -5813,7 +5812,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 242,
+      "mention_count": 243,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5821,13 +5820,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-14T13:12:00",
-          "excerpt": "ие, сила. #мрачный смешок# я все думал и думал....ваши рассуждения, они в посылке очень подходят на Орочимару, хоть и разительно отличаются в предпосылке. Теперь когда вы говорите о моем отношении к бессмертию эта мысль сомкнулась и стала вербализированной. Мо",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.013"
         },
         {
           "at": "0010-05-14T13:19:00",
@@ -5842,6 +5834,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.018"
+        },
+        {
+          "at": "0010-05-14T13:22:00",
+          "excerpt": "обычными средствами. **Цунадэ:** — Меня сейчас больше удивляет другое. Она обернулась к Шики. **Цунадэ:** — Орочимару согласился ограничить собственную свободу ради твоего условия. И, по твоим словам, продолжает соблюдать его даже после того, как получил желае",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.019"
         }
       ],
       "projections": [
@@ -8151,7 +8150,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.018",
+        "s18.text.019",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
@@ -8161,7 +8160,8 @@
         "s18.text.014",
         "s18.text.015",
         "s18.text.016",
-        "s18.text.017"
+        "s18.text.017",
+        "s18.text.018"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21134,7 +21134,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 58,
+      "mention_count": 59,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21142,13 +21142,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T13:17:00",
-          "excerpt": "необходимости считать человека вершиной природы, чтобы ставить его интересы выше интересов остальных существ. Шизунэ собрала журналы наблюдения. Прижимая их к груди, она остановилась рядом с Цунадэ, оставив между собой и Шики чуть больше пространства, чем треб",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.016"
         },
         {
           "at": "0010-05-14T13:19:00",
@@ -21163,21 +21156,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.018"
+        },
+        {
+          "at": "0010-05-14T13:22:00",
+          "excerpt": "уже опустела. Чакра Данзо удалялась в направлении выхода, и последние слова Шики услышали лишь Цунадэ, Шизунэ и находившиеся поблизости караульные. Хокагэ задумчиво посмотрела вслед старику. **Цунадэ:** — Свобода выбора не освобождает от последствий. Тут я с т",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.019"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.018",
-          "state": "Вручила подписанный допуск, организован проводник."
-        },
-        {
+          "seen": "s18.text.019",
           "state": "Вручила подписанный допуск, организован проводник."
         }
       ],
       "sources": [
         "recovery/cast/shizune.json",
-        "recovery/HOT.json",
-        "s18.text.018"
+        "s18.text.019"
       ]
     },
     "signalshchik": {
@@ -22174,7 +22170,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 145,
+      "mention_count": 146,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22182,13 +22178,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:17:00",
-          "excerpt": "лед. **Данзо Шимура:** — Природа не наделяет человека особым положением. Он добился его самостоятельно. Цунадэ внимательно посмотрела на старика. **Данзо Шимура:** — Существуют существа, превосходящие человека по продолжительности жизни, физической силе и объё",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.016"
         },
         {
           "at": "0010-05-14T13:19:00",
@@ -22203,21 +22192,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.018"
+        },
+        {
+          "at": "0010-05-14T13:22:00",
+          "excerpt": "Да, Цунадэ-сама. Вот Данзо и ещё одно различие. Но вы подняли хорошую тему. Вы абсолютно не обязаны уважать мою независимость и это ваша независимость и выбор и это рождает наш конфлик",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.019"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.018",
-          "state": "Распорядилась выдать допуск и проводника."
-        },
-        {
+          "seen": "s18.text.019",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s18.text.018"
+        "s18.text.019"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23107,5 +23099,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1655
+  "source_turns_indexed": 1656
 }
