@@ -4,8 +4,8 @@
 
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
 - Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 55 ход(ов), s13–s16
+- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 54 ход(ов), s15–s18
 - Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 54 ход(ов), s15–s17
-- Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 53 ход(ов), s15–s18
 - Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 50 ход(ов), s02–s08
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 38 ход(ов), s08–s15
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 38 ход(ов), s14–s17
@@ -40,10 +40,10 @@
 - Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 12 ход(ов), s15–s16
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
+- Конохагакуре, подземный изолятор · `places/konokhagakure-podzemnyy-izolyator` · 11 ход(ов), s16–s18
 - Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 11 ход(ов), s17–s17
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
-- Конохагакуре, подземный изолятор · `places/konokhagakure-podzemnyy-izolyator` · 10 ход(ов), s16–s16
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 9 ход(ов), s16–s16
