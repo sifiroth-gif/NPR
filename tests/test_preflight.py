@@ -136,3 +136,16 @@ class DescriptionGateTest(unittest.TestCase):
     def test_headings_and_long_speech_do_not_count(self):
         _, t = self.current("# " + "описание " * 80 + "\n\n**Врач:** — " + "слово " * 80)
         self.assertTrue(preflight.description_errors(t))
+
+
+    def test_raised_floor_only_from_player_change(self):
+        narration = ("Свет из окна падал на старую дверь, возле которой стоял стол с раскрытыми медицинскими записями.\n\n"
+                     "Шики открыл дверь, и из соседнего помещения донеслись голоса, стук инструментов и журчание воды в умывальнике.\n\n"
+                     "Служащий поднялся из-за стола и указал на дальний коридор, где за приоткрытой дверью виднелись деревянные полки и лампа. "
+                     "На полу перед дверью лежала сложенная ткань.")
+        t = draft(id="s17.text.113", gm=narration)
+        self.assertEqual(preflight.description_errors(t), [])
+        t["id"] = "s17.text.114"
+        self.assertTrue(any("180" in x for x in preflight.description_errors(t)))
+        t["gm"] = "\n\n".join([narration] * 4)
+        self.assertEqual(preflight.description_errors(t), [])
