@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.133: Цунадэ (`npc/tsunade`)
 - s17.text.132: Цунадэ (`npc/tsunade`), поправки игрока: 1
 - s17.text.131: Цунадэ (`npc/tsunade`)
 - s17.text.130: Цунадэ (`npc/tsunade`), Коюки (`npc/western_nest_young_courier`)
@@ -60,4 +61,3 @@
 - s17.text.076: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), вещь `orochimaru_marrow_sample_s17`, план сюжета
 - s17.text.075: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), план сюжета
 - s17.text.074: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), план сюжета
-- s17.text.073: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Шизунэ (`npc/shizune`), план сюжета

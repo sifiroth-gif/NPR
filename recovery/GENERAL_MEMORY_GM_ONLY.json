@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.132",
+  "cursor": "s17.text.133",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.132:0": {
-      "aliases": [
-        "canon:s17.text.132:0",
-        "s17.text.132: в прочитанных Шики доступных медицинских выписках Данзо зафиксированы давние боевые травмы правой руки и глаза, функциональные ограничения; непрерывной истории наблюд"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.132:0",
-      "kind": "canon",
-      "label": "s17.text.132: в прочитанных Шики доступных медицинских выписках Данзо зафиксированы давние боевые травмы правой руки и глаза, функциональные ограничения; непрерывной истории наблюд",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.132"
       ]
     },
     "captive_guard": {
@@ -10372,7 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.132",
+        "s17.text.133",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22233,7 +22217,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 126,
+      "mention_count": 127,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22241,13 +22225,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:17:00",
-          "excerpt": "а, можете придупредить что я прибуду. Если вы хотите меня видеть, я предпочту перенестись хирайшином Цунадэ ответила почти сразу. На заднем плане ещё слышались шаги людей, покидавших её кабинет после разговора с Наруто. **Цунадэ:** — Разумеется. Сейчас предупр",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.130"
         },
         {
           "at": "0010-05-14T12:18:00",
@@ -22262,11 +22239,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.132"
+        },
+        {
+          "at": "0010-05-14T12:28:00",
+          "excerpt": "Шики:** — Я уверен в том что есть очаги чужеродной чакры. Но не уверен, что нужно так истово копать Цунадэ подняла глаза от документов. На несколько мгновений её пальцы задержались на краю раскрытой папки. Затем она закрыла её. **Цунадэ:** — Как врач я с тобой",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.133"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.132",
+          "seen": "s17.text.133",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22276,7 +22260,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.132"
+        "s17.text.133"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23173,5 +23157,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1636
+  "source_turns_indexed": 1637
 }
