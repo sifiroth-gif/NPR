@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.031",
+  "cursor": "s18.text.032",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T15:16:00",
-          "excerpt": "ечто похожее на человека, но с очень выраженными змеиными чертами. Асума задумчиво потёр подбородок. **Асума Сарутоби:** — Хм. Статуя человека-змеи и животные, которые собираются возле неё вопреки своим обычным повадкам… Хозяин забрал деньги и поклонился. При ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.029"
         },
         {
           "at": "0010-05-14T15:17:00",
@@ -423,21 +416,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.031"
+        },
+        {
+          "at": "0010-05-14T15:19:00",
+          "excerpt": "яти. Асума вновь посмотрел на монету. Под его большим пальцем скрывался центральный символ формулы. **Асума Сарутоби:** — Значит, проверим, можно ли использовать её ещё и для подачи сигнала? Он поднёс монету ближе к глазам. На потёртом металле сохранились мелк",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.031",
-          "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
-        },
-        {
+          "seen": "s18.text.032",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s18.text.031"
+        "s18.text.032"
       ]
     },
     "baki": {
@@ -2257,15 +2253,10 @@
           "role": "Акацуки",
           "seen": "s18.text.019",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
-        },
-        {
-          "role": "Акацуки",
-          "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json",
-        "recovery/HOT.json"
+        "recovery/cast/hidan.json"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -8348,7 +8339,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.031",
+        "s18.text.032",
         "s18.text.023",
         "s18.text.024",
         "s18.text.025",
@@ -8356,7 +8347,8 @@
         "s18.text.027",
         "s18.text.028",
         "s18.text.029",
-        "s18.text.030"
+        "s18.text.030",
+        "s18.text.031"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -20950,11 +20942,11 @@
         {
           "holder": "asuma",
           "since": "s18.text.030",
-          "turn": "s18.text.031"
+          "turn": "s18.text.032"
         }
       ],
       "sources": [
-        "s18.text.031"
+        "s18.text.032"
       ]
     },
     "shiki_spare_communication_plate": {
@@ -23195,12 +23187,12 @@
     },
     {
       "from": "shiki_spare_coin_s18",
-      "source": "s18.text.031",
+      "source": "s18.text.032",
       "status": "projected",
       "to": "asuma",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1668
+  "source_turns_indexed": 1669
 }
