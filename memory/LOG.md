@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.052: поправки игрока: 1
 - s17.text.051: поправки игрока: 1
 - s17.text.050: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.049: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 1
@@ -59,4 +60,3 @@
 - s16.text.135: Джирайя (`npc/jiraiya`), вещь `cash_1184`, вещь `shiki_finances`
 - s16.text.134: Хисато (`npc/fire_road_hisato`), Маю (`npc/fire_road_mayu`), линия `fire_road_survey_attack`
 - s16.text.133: Какаши Хатакэ (`npc/kakashi`)
-- s16.text.132: поправки игрока: 1
