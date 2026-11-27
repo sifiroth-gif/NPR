@@ -1,0 +1,1166 @@
+{
+  "schema": "npr-capabilities/1",
+  "campaign": "naruto-shiki",
+  "rule": "Индекс подтверждённого канона. status/activation описывают освоенность и способ применения, не текущее состояние. Наличие предмета, расход, знание NPC и активность проверяй по позднему источнику. unavailable не применять.",
+  "routes": {
+    "medical": {
+      "terms": [
+        "леч",
+        "медицин",
+        "операц",
+        "хирург",
+        "стерил",
+        "рана",
+        "ранен",
+        "нерв",
+        "перевяз",
+        "обезбол",
+        "инструмент",
+        "диагност",
+        "лечу",
+        "лечени",
+        "больн",
+        "пациент",
+        "кровопотер",
+        "кровотеч",
+        "гемостаз",
+        "лазарет",
+        "реанима",
+        "ожог",
+        "шов",
+        "швы",
+        "бинт",
+        "перелом",
+        "пульс",
+        "паралич",
+        "парез",
+        "стерел",
+        "медчакр"
+      ],
+      "read": [
+        "campaigns/shiki/ref/MEDICINE.md"
+      ],
+      "focus": "Освоенные процедуры, раны и функции, доступные вещи, время, цена.",
+      "required": [
+        "injuries/function",
+        "things/medical kit",
+        "chakra",
+        "scene/time"
+      ]
+    },
+    "research": {
+      "terms": [
+        "исслед",
+        "геном",
+        "днк",
+        "биоп",
+        "лаборатор",
+        "эксперимент",
+        "анализ",
+        "генет",
+        "патолог",
+        "секвен",
+        "пробир",
+        "образец",
+        "биоматериал",
+        "хромосом",
+        "мутац",
+        "микроскоп"
+      ],
+      "read": [
+        "campaigns/shiki/ref/MEDICINE.md",
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "focus": "Предыдущие результаты, материал, оборудование, границы знаний.",
+      "required": [
+        "prior results/source",
+        "material/equipment",
+        "genome/known limits",
+        "scene/time"
+      ]
+    },
+    "combat": {
+      "terms": [
+        "бой",
+        "атак",
+        "удар",
+        "шуншин",
+        "печати",
+        "меч",
+        "клинок",
+        "шитон",
+        "бётон",
+        "хётон",
+        "райтон",
+        "суйтон",
+        "шаринган",
+        "мангек",
+        "уклон",
+        "сраж",
+        "защищ",
+        "парир",
+        "контратак",
+        "сенбон",
+        "кунай",
+        "гендзюцу",
+        "тайдзюцу",
+        "катон",
+        "футон",
+        "сэнпо",
+        "сусаноо",
+        "рывок"
+      ],
+      "read": [
+        "campaigns/shiki/ref/COMBAT.md",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "focus": "Освоенные техники, активные формы, противники, кости, ресурсы.",
+      "required": [
+        "active forms/passives",
+        "fight/dice",
+        "chakra/injuries",
+        "opponents/positions"
+      ]
+    },
+    "dialogue": {
+      "terms": [
+        "говор",
+        "спраш",
+        "вопрос",
+        "показан",
+        "расскаж",
+        "разговор",
+        "спрос",
+        "отвеч",
+        "ответ",
+        "слуш",
+        "объясн",
+        "поговор",
+        "показыв",
+        "расспрос",
+        "переговор",
+        "обраща"
+      ],
+      "read": [
+        "campaigns/shiki/ref/KNOWLEDGE.md",
+        "campaigns/shiki/ref/MEMORY.md"
+      ],
+      "focus": "Стабильный ID, доступные источники, собственная цель и история NPC.",
+      "required": [
+        "present/identity",
+        "NPC knowledge/fences",
+        "prior dialogue/source",
+        "intent"
+      ]
+    },
+    "travel": {
+      "terms": [
+        "иду",
+        "уйду",
+        "отправ",
+        "возвращ",
+        "путешеств",
+        "промот",
+        "перемещ",
+        "убываю",
+        "пойду",
+        "пойдём",
+        "идём",
+        "еду",
+        "выхожу",
+        "ухожу",
+        "покида",
+        "прибыл",
+        "дорог",
+        "маршрут",
+        "жду",
+        "таймскип",
+        "перемот",
+        "через"
+      ],
+      "read": [
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "focus": "Маршрут, состояние, сроки и закадровые последствия.",
+      "required": [
+        "scene/place",
+        "body/gear",
+        "due/offscreen",
+        "time"
+      ]
+    },
+    "items": {
+      "terms": [
+        "беру",
+        "достаю",
+        "упаков",
+        "складыв",
+        "предмет",
+        "снаряж",
+        "пластин",
+        "инструмент",
+        "свиток",
+        "вещ",
+        "инвентар",
+        "расходник",
+        "упак",
+        "переда",
+        "отда",
+        "убира",
+        "ножны",
+        "сумк",
+        "комплект",
+        "набор"
+      ],
+      "read": [
+        "campaigns/shiki/ref/MEMORY.md"
+      ],
+      "focus": "Свойства, владелец, доступность, расход и переход was/now.",
+      "required": [
+        "things/holder/state/turn",
+        "count/availability",
+        "scene/access"
+      ]
+    },
+    "pact": {
+      "terms": [
+        "немер",
+        "договор",
+        "запор",
+        "отрост",
+        "прикос",
+        "каса",
+        "сенсор",
+        "заражен",
+        "заражён",
+        "отростк",
+        "немере"
+      ],
+      "read": [
+        "campaigns/shiki/SHIKI.md",
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "focus": "Единая природа после слияния, реальные контакты и цена; исторический договор по запросу.",
+      "required": [
+        "fusion profile or historical pact",
+        "contact/channel",
+        "NPC knowledge/fences"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "medical.sterilize",
+      "title": "Стерилизация медицинской чакрой",
+      "tags": [
+        "medical",
+        "items"
+      ],
+      "summary": "Очищенный многоразовый инструментарий стерилизует направленной медчакрой без аппарата. Одноразовое не возвращается в запас; неизвестное оснащение не считать имеющимся.",
+      "sources": [
+        "s03.text.009",
+        "s03.text.018",
+        "s10.text.018",
+        "campaigns/shiki/ref/MEDICINE.md"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "стерилизация",
+        "стерилизация чакрой",
+        "стерилизую",
+        "стерилизовать"
+      ],
+      "requires": "Очищенный многоразовый инструмент; направленная медчакра.",
+      "limits": "Не распространяется на помещение, руки и одноразовые материалы.",
+      "core": true
+    },
+    {
+      "id": "medical.reconstruct",
+      "title": "Медицинская чакра 5/5, контроль 5/5",
+      "tags": [
+        "medical"
+      ],
+      "summary": "Восстанавливает жизнеспособные ткани и функцию; обычная хирургия для сопоставления/доступа, не ослаблять чакру. Нет бесплатного восстановления крови, отсутствующих органов и некроза.",
+      "sources": [
+        "campaigns/shiki/ref/MEDICINE.md"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "медчакра",
+        "медицинская чакра",
+        "восстановление тканей"
+      ],
+      "requires": "Жизнеспособная ткань, достаточная чакра, сопоставление при крупном дефекте.",
+      "limits": "Не создаёт кровь и отсутствующий орган, не возвращает некротизированное.",
+      "core": true
+    },
+    {
+      "id": "genome.zero",
+      "title": "Нулевой Геном 5/5",
+      "tags": [
+        "research",
+        "medical",
+        "combat"
+      ],
+      "summary": "Анализ живой генетической программы, добровольная интеграция и перепись собственного генома; не автоматическое редактирование чужой ДНК вне своего тела.",
+      "sources": [
+        "campaigns/shiki/ref/MEDICINE.md",
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "нулевой геном",
+        "zero genome"
+      ],
+      "requires": "Живая программа; добровольная абсорбция в свои клетки.",
+      "limits": "Не переписывает чужую ДНК вне тела; лаборатория для точной последовательности.",
+      "core": true
+    },
+    {
+      "id": "sage.permanent",
+      "title": "Постоянный режим отшельника дракона",
+      "tags": [
+        "combat",
+        "travel",
+        "medical",
+        "pact"
+      ],
+      "summary": "После слияния постоянное усиление тела и расширенная природная/нечеловеческая сенсорика; старый змеиный режим исторический.",
+      "sources": [
+        "s10.text.049",
+        "s10.text.053",
+        "s10.text.077",
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "s11.text.074",
+        "campaigns/shiki/ref/COMBAT.md",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "status": "mastered",
+      "activation": "passive",
+      "aliases": [
+        "режим отшельника",
+        "рюьчидо",
+        "рьючидо",
+        "сендзюцу",
+        "природная сенсорика"
+      ],
+      "requires": "Постоянно, без пассивного расхода; при крайнем истощении восприятие может угаснуть.",
+      "limits": "Бонус замещает прежний, не складывается; не чтение мыслей, не всеведение.",
+      "core": true
+    },
+    {
+      "id": "sage.poison",
+      "title": "Пустой клык",
+      "tags": [
+        "combat",
+        "medical",
+        "travel"
+      ],
+      "summary": "Постоянная устойчивость к обычным химическим и биологическим ядам; не иммунитет к болезни, гипоксии, коррозии или чужой чакре.",
+      "sources": [
+        "s10.text.057",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "status": "mastered",
+      "activation": "passive",
+      "aliases": [
+        "пустой клык"
+      ],
+      "requires": "В том числе вне режима отшельника.",
+      "limits": "Не болезни, гипоксия, коррозия, чакровое и неизвестное сверхъестественное поражение.",
+      "core": true
+    },
+    {
+      "id": "chakra.black",
+      "title": "Цвет чакры",
+      "tags": [
+        "medical",
+        "combat",
+        "pact",
+        "dialogue"
+      ],
+      "summary": "Видимая чакра всех типов чёрная; цвет сам по себе не вызывает вреда и не заражает.",
+      "sources": [
+        "s08.text.034",
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "status": "mastered",
+      "activation": "passive",
+      "aliases": [
+        "чёрная чакра",
+        "черная чакра"
+      ],
+      "requires": "Любое видимое применение собственной чакры.",
+      "limits": "Цвет сам по себе не заражает и не расходует дополнительную чакру.",
+      "core": true
+    },
+    {
+      "id": "pact.contact",
+      "title": "Контактная природа Шики после слияния",
+      "tags": [
+        "pact",
+        "medical",
+        "combat",
+        "dialogue"
+      ],
+      "summary": "Обычное касание в покое при удержании чакры безопасно; кровь и утрата контроля остаются риском. Договор уничтожен, отдельной Немеры нет.",
+      "sources": [
+        "s08.text.022",
+        "s10.text.069",
+        "campaigns/shiki/SHIKI.md",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md",
+        "s14.text.050",
+        "s14.text.052",
+        "s15.text.054"
+      ],
+      "status": "mastered",
+      "activation": "passive",
+      "aliases": [
+        "договор семи замков",
+        "стадия 6",
+        "шестая стадия"
+      ],
+      "requires": "Для риска — потеря контроля при контакте либо свежая кровь в рану/слизистую.",
+      "limits": "Не воздух, вещи, одежда; кожа цельная, органы работают.",
+      "core": true
+    },
+    {
+      "id": "seals.speed",
+      "title": "Освоенные печати",
+      "tags": [
+        "combat"
+      ],
+      "summary": "Максимальная скорость, не длинная подготовка; Шитон, Бётон, Хётон — оригинальные одноручные печати слева. Остальные по освоенным формам.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "status": "mastered",
+      "activation": "passive",
+      "aliases": [
+        "ручные печати",
+        "скорость печатей"
+      ],
+      "requires": "Освоенные последовательности; оригинальные одноручные слева лишь три природы.",
+      "limits": "Не отменяет печати, время эффекта, длительный ритуал и физические ограничения.",
+      "core": true
+    },
+    {
+      "id": "eyes.ems",
+      "title": "Единый Риннешаринган",
+      "tags": [
+        "combat",
+        "research",
+        "medical"
+      ],
+      "summary": "С s15.text.132 единственная активируемая форма: Риннеган и ВМШ одномоментно, багрово-фиолетовые радужки с кольцами и узором 2900.jpg; чёрные склеры, вертикальный зрачок. Прежние искусства ВМШ и шесть путей доступны. Генетическое развитие завершено.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "s13.text.100",
+        "campaigns/shiki/SHIKI.md",
+        "campaigns/shiki/ref/FUSION.md",
+        "s14.text.046",
+        "s15.text.132"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "вечный мангекё",
+        "вмш",
+        "шаринган",
+        "риннешаринган",
+        "риннеган"
+      ],
+      "requires": "Явная единая активация игроком; конечная чакра. Отдельно ВМШ или Риннеган не включаются.",
+      "limits": "Зрительные признаки только при активной форме; не телепатия, не рентген, не гарантия реакции.",
+      "core": true
+    },
+    {
+      "id": "weapon.sumi",
+      "title": "Меч Суми",
+      "tags": [
+        "combat",
+        "items"
+      ],
+      "summary": "Проводит все освоенные виды чакры (включая Футон, медчакру и сенчакру); эффект лишь по совместимой заявленной технике. Положение/заряд по последнему ходу.",
+      "sources": [
+        "s13.text.100",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "status": "mastered",
+      "activation": "conditional",
+      "aliases": [
+        "суми",
+        "чакропроводящий меч"
+      ],
+      "requires": "Клинок доступен; заявленная освоенная совместимая техника.",
+      "limits": "Сам не заражает, не лечит, не создаёт новой техники; положение по источнику.",
+      "core": true
+    },
+    {
+      "id": "nemera.agency",
+      "title": "Немера",
+      "tags": [
+        "pact",
+        "combat",
+        "dialogue",
+        "medical"
+      ],
+      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
+      "sources": [
+        "s09.text.101",
+        "campaigns/shiki/ref/NEMERA.md",
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "s14.text.045",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "status": "retired",
+      "activation": "unavailable",
+      "aliases": [
+        "немера",
+        "единение: отростки",
+        "отростки немеры"
+      ],
+      "requires": "Недоступно после необратимого слияния.",
+      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
+      "core": false
+    },
+    {
+      "id": "shunshin.zero",
+      "title": "Шуншин Нулевая ступень",
+      "tags": [
+        "combat",
+        "travel"
+      ],
+      "summary": "Рывок 25–35 м по знакомой линии, с опорой; не телепортация. Серия 3–4 до дополнительной нагрузки.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "шуншин",
+        "нулевая ступень",
+        "сюнсин"
+      ],
+      "requires": "Знакомая линия, опора; расход по боевым правилам.",
+      "limits": "Не телепортация; 3–4 жёстких старта до спада.",
+      "core": true
+    },
+    {
+      "id": "medical.field",
+      "title": "Полевая и гибридная хирургия",
+      "tags": [
+        "medical",
+        "items"
+      ],
+      "status": "mastered",
+      "activation": "conditional",
+      "aliases": [
+        "полевая хирургия",
+        "гибридная хирургия",
+        "гемостаз",
+        "сопоставление тканей"
+      ],
+      "summary": "Хирургия обеспечивает доступ и сопоставление, медчакра восстанавливает ткань; малый дефект — одной чакрой.",
+      "requires": "Реальная анатомия, доступ, сохранённая ткань, запас чакры.",
+      "limits": "Препараты, инструменты, кровь и помощники только фактически доступные.",
+      "sources": [
+        "campaigns/shiki/ref/MEDICINE.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "medical.diagnosis",
+      "title": "Осмотр и чакровая диагностика",
+      "tags": [
+        "medical",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "чакровая диагностика",
+        "пальпация",
+        "осмотр"
+      ],
+      "summary": "Осмотр, пальпация, сенсорика и чакровая диагностика дают наблюдаемые результаты.",
+      "requires": "Доступ к пациенту, измерение или обоснованный функциональный тест.",
+      "limits": "Не ставить диагноз по недоступному знанию; цифры только измеренные.",
+      "sources": [
+        "campaigns/shiki/ref/MEDICINE.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "combat.scalpel",
+      "title": "Чакровый скальпель: Тихий разрез (A)",
+      "tags": [
+        "combat",
+        "medical"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "тихий разрез",
+        "чакровый скальпель"
+      ],
+      "summary": "Точное контактное поражение мышц, сухожилий, нервов и сосудов.",
+      "requires": "Контакт и заявленное воздействие.",
+      "limits": "Не дистанционное поражение.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "combat.genjutsu",
+      "title": "Гендзюцу: Чужой шаг (A)",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "чужой шаг"
+      ],
+      "summary": "Искажает проприоцепцию, равновесие и дистанцию; зрительный канал при активном ВМШ.",
+      "requires": "Выполненный канал воздействия; для зрительного — зрительный контакт.",
+      "limits": "Может быть сорвано болью, Кай или внешним вмешательством.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "element.fireball",
+      "title": "Катон: Великий огненный шар (C)",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "великий огненный шар"
+      ],
+      "summary": "Освоенная техника Катона.",
+      "requires": "Заявка и чакра.",
+      "limits": "Общий уровень Катона не установлен.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "element.phoenix",
+      "title": "Катон: Цветок феникса (C)",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "цветок феникса"
+      ],
+      "summary": "Освоенная техника Катона.",
+      "requires": "Заявка и чакра.",
+      "limits": "Общий уровень Катона не установлен.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "element.water",
+      "title": "Суйтон — освоенный набор",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "безмолвная завеса",
+        "водяной клон",
+        "водяная тюрьма",
+        "водяной дракон",
+        "суйтон"
+      ],
+      "summary": "Завеса B, клон B, тюрьма B, дракон A.",
+      "requires": "Для клона, тюрьмы, дракона нужна вода.",
+      "limits": "Не давать автоматически все техники стихии.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "element.lightning",
+      "title": "Райтон — освоенный набор",
+      "tags": [
+        "combat",
+        "items"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "живая нить",
+        "заряженное оружие",
+        "райтон"
+      ],
+      "summary": "Живая нить A — разряд через проводник; Заряженное оружие A — чакра в оружии.",
+      "requires": "Реальный проводник либо оружие, заявка.",
+      "limits": "Не поражение без пути передачи.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "element.ice",
+      "title": "Хётон — освоенный набор",
+      "tags": [
+        "combat",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "ледяные зеркала",
+        "тысяча ледяных игл",
+        "хётон"
+      ],
+      "summary": "Ледяные зеркала S; Тысяча ледяных игл A. Программа Хаку 4,5.",
+      "requires": "Заявка, чакра, для игл вода или влажный воздух.",
+      "limits": "Не вся ледяная стихия автоматически; оригинальные печати слева.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "genome.fluid",
+      "title": "Нулевой Геном: Текучая ткань (S)",
+      "tags": [
+        "combat",
+        "research",
+        "medical"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "текучая ткань",
+        "гидропластика"
+      ],
+      "summary": "Обратимая частичная текучесть кожи, фасций, мышц по программе Ходзуки.",
+      "requires": "Сознательное применение.",
+      "limits": "Не мозг и не всё тело; опасны разряд и обезвоживание.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "genome.kaguya",
+      "title": "Программа Кагуя",
+      "tags": [
+        "research",
+        "combat"
+      ],
+      "status": "experimental",
+      "activation": "unavailable",
+      "aliases": [
+        "программа кагуя",
+        "кимимаро",
+        "сикоцумьяку",
+        "риннеган"
+      ],
+      "summary": "Первичная ассимиляция; костная инь-ян-комбинация лишь в лабораторной культуре.",
+      "requires": "Исследование в лаборатории.",
+      "limits": "Полная Сикоцумьяку и Риннеган отсутствуют.",
+      "sources": [
+        "s09.text.026",
+        "s09.text.027",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "eyes.magatsuhi",
+      "title": "Магацухи",
+      "tags": [
+        "combat",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "магацухи"
+      ],
+      "summary": "Левая уникальная глазная техника Бётона.",
+      "requires": "Активный ВМШ, заявка, условия воздействия.",
+      "limits": "Не всепоражающая аура.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "eyes.yomotsu",
+      "title": "Ёмоцу-Хэгуи",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "ёмоцу-хэгуи",
+        "емотсу хэгуи",
+        "ёмоцу хэгуи"
+      ],
+      "summary": "Правая уникальная глазная техника Шитона; поле зрения, встречный взгляд не нужен.",
+      "requires": "Активный ВМШ, заявка, доступная цель.",
+      "limits": "Группа и метка только по освоенному механизму.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "eyes.cradle",
+      "title": "Колыбель Ёми (S)",
+      "tags": [
+        "combat",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "колыбель ёми",
+        "колыбель еми"
+      ],
+      "summary": "Совместная глазная техника — некротическая биомарионетка.",
+      "requires": "Активный ВМШ, оба глаза, заявка, чакра.",
+      "limits": "Не бессмертие и не Эдо Тенсей.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "eyes.susanoo",
+      "title": "Неполное Сусаноо",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "сусаноо"
+      ],
+      "summary": "Рёбра, скелет, руки, голова, пластины.",
+      "requires": "Заявка, доступная глазная техника и ресурс.",
+      "limits": "Полная бронированная форма отменена.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "pact.shiton",
+      "title": "Шитон — освоенный набор",
+      "tags": [
+        "combat",
+        "pact",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "смертный надрез",
+        "кашель гниющего лотоса",
+        "живодёр",
+        "изнанка боли",
+        "шитон"
+      ],
+      "summary": "Смертный надрез S, Кашель Гниющего Лотоса B, Живодёр S.",
+      "requires": "Конкретная техника, оригинальные печати левой рукой и её канал.",
+      "limits": "Нет общего бесконтактного поражения или ауры; ранг не ослаблять.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "pact.byoton",
+      "title": "Бётон — освоенный набор",
+      "tags": [
+        "combat",
+        "pact",
+        "research"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "плачущие бубоны",
+        "мятеж белой крови",
+        "самосуд плоти",
+        "бётон"
+      ],
+      "summary": "Плачущие Бубоны B и Мятеж белой крови S; направленные техники.",
+      "requires": "Конкретная техника, оригинальные печати слева и её канал.",
+      "limits": "Не радиусное заражение; цвет чакры не причина эффекта.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "campaigns/shiki/SHIKI.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "research.postmortem",
+      "title": "Посмертная матрица",
+      "tags": [
+        "research",
+        "medical",
+        "pact"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "посмертная матрица"
+      ],
+      "summary": "Шитон сохраняет и исследует уцелевшие генетические фрагменты мёртвой ткани.",
+      "requires": "Материал и заявка.",
+      "limits": "Не восстанавливает исчезнувшие последовательности.",
+      "sources": [
+        "s08.text.076",
+        "s09.text.013",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "research.reproduce",
+      "title": "Заражение: воспроизведение патогена",
+      "tags": [
+        "research",
+        "medical",
+        "pact"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "воспроизведение патогена",
+        "заражение"
+      ],
+      "summary": "Воспроизводит в игровом мире ранее созданный агент; установлен результат для nsp-δ.",
+      "requires": "Ранее созданный в игре агент, техника Бётона.",
+      "limits": "Не произвольный неизвестный агент; восстановление ткани отдельно.",
+      "sources": [
+        "s08.text.017",
+        "s08.text.087",
+        "s08.text.090",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "sage.summon",
+      "title": "Змеиный договор Рьючидо",
+      "tags": [
+        "combat",
+        "travel",
+        "pact"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "призыв змей",
+        "хагуро",
+        "змеиный договор"
+      ],
+      "summary": "Доступ к договору призыва; Хагуро — самостоятельная разумная змея.",
+      "requires": "Заявленный призыв и доступные условия.",
+      "limits": "Призванное существо не обязано подчиняться любой команде.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "sage.senpo",
+      "title": "Освоенные Сэнпо",
+      "tags": [
+        "combat"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "багровая линька",
+        "чёрная пляска",
+        "сэнпо"
+      ],
+      "summary": "Багровая линька S и Чёрная пляска S; адресное воздействие сенчакрой.",
+      "requires": "Действующий режим, конкретное попадание, двуручные печати, чакра.",
+      "limits": "Не аура, не автоматический эффект от присутствия.",
+      "sources": [
+        "s10.text.060",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "nemera.transfer",
+      "title": "Передача чакры Немеры",
+      "tags": [
+        "pact",
+        "combat",
+        "medical"
+      ],
+      "status": "retired",
+      "activation": "unavailable",
+      "aliases": [
+        "чакра немеры",
+        "передача чакры немеры"
+      ],
+      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
+      "requires": "Недоступно после необратимого слияния.",
+      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
+      "sources": [
+        "campaigns/shiki/ref/NEMERA.md",
+        "s14.text.045",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "nemera.cloak",
+      "title": "Совместный покров",
+      "tags": [
+        "pact",
+        "combat"
+      ],
+      "status": "retired",
+      "activation": "unavailable",
+      "aliases": [
+        "совместный покров"
+      ],
+      "summary": "Историческая возможность до слияния; отдельной Немеры и её ресурса больше нет.",
+      "requires": "Недоступно после необратимого слияния.",
+      "limits": "Не возрождать отдельную волю, резерв или совместный покров.",
+      "sources": [
+        "s09.text.101",
+        "campaigns/shiki/ref/NEMERA.md",
+        "campaigns/shiki/ref/TECHNIQUES.md",
+        "s14.text.045",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "restricted.cancelled",
+      "title": "Отменённые техники и формы",
+      "tags": [
+        "combat",
+        "research"
+      ],
+      "status": "retired",
+      "activation": "unavailable",
+      "aliases": [
+        "мумё",
+        "кёкай",
+        "тихий очаг",
+        "мёртвый край",
+        "трёхтомоэ",
+        "полное сусаноо"
+      ],
+      "summary": "Мумё, Кёкай, Тихий очаг, Мёртвый край, отдельный трёхтомоэ и полное Сусаноо отменены.",
+      "requires": "Только историческая справка или новая прямая поправка игрока.",
+      "limits": "Не выдавать в актуальном арсенале.",
+      "sources": [
+        "s09.text.070",
+        "s13.text.100",
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "restricted.unlearned",
+      "title": "Неосвоенное сендзюцу",
+      "tags": [
+        "combat",
+        "research"
+      ],
+      "status": "unlearned",
+      "activation": "unavailable",
+      "aliases": [
+        "муки тенсей",
+        "хакугэки",
+        "собственный яд"
+      ],
+      "summary": "Муки Тенсей, Хакугэки и собственный яд не освоены.",
+      "requires": "Новое освоение по игре.",
+      "limits": "Не применять как готовое.",
+      "sources": [
+        "campaigns/shiki/ref/TECHNIQUES.md"
+      ],
+      "core": false
+    },
+    {
+      "id": "fusion.tendrils",
+      "title": "Единение: собственные отростки Шики",
+      "tags": [
+        "pact",
+        "combat",
+        "medical"
+      ],
+      "summary": "Управляемые Шики отростки, восприятие и взаимодействие; проведение освоенной чакры по заявке.",
+      "sources": [
+        "s14.text.045",
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "status": "mastered",
+      "activation": "declared",
+      "aliases": [
+        "собственные отростки",
+        "отростки шики"
+      ],
+      "requires": "Заявка Шики; общий резерв, исходная проверенная дальность 5 м, 1 ед./мин.",
+      "limits": "Не отдельный NPC, не бесплатный ход или автоматическое поражение.",
+      "core": true
+    },
+    {
+      "id": "fusion.development",
+      "title": "Развитие сендзюцу дракона",
+      "tags": [
+        "combat",
+        "medical",
+        "research"
+      ],
+      "summary": "Пластичность и повышенная регенерация как свойства; новые Сэнпо Шитона/Бётона, пределы и приёмы требуют освоения.",
+      "sources": [
+        "s14.text.046",
+        "campaigns/shiki/ref/FUSION.md"
+      ],
+      "status": "learning",
+      "activation": "unavailable",
+      "aliases": [
+        "новые сэнпо дракона",
+        "морфологическая пластичность"
+      ],
+      "requires": "Проверки и освоение отдельных новых техник.",
+      "limits": "Не выдавать бесплатные техники, бессмертие или автоматическое лечение.",
+      "core": false
+    }
+  ]
+}

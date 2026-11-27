@@ -71,6 +71,15 @@ def _inbox(root, number):
     return moved
 
 
+MEMORY_FILES = ("HOT.json", "GM_ONLY.json", "GM_BRIEF.json", "NEXT.json")
+
+
+def memory_sizes(root):
+    recovery = Path(root) / "recovery"
+    return {name: (recovery / name).stat().st_size for name in MEMORY_FILES
+            if (recovery / name).is_file()}
+
+
 def close(root, number=None):
     root = Path(root)
     game = Campaign(root / "campaign.sqlite")
@@ -149,6 +158,7 @@ def close(root, number=None):
                          for k, v in (hot_state.get("threads") or {}).items()},
         "live_next_must": "Читать recovery/NEXT.json заново: must и offscreen действуют, сессия их не решала."})
 
+    before_sizes = memory_sizes(root)
     # Глубокая разгрузка: строгое старение, затем пакет нового номера.
     state, _ = hot._read_state(root)
     state["_undo"] = None
@@ -181,6 +191,7 @@ def close(root, number=None):
     return {"closed": number, "opened": number + 1, "played": played, "ooc": len(played_rows) - played,
             "last_turn": last["id"], "next_id": first_next, "chat_exports": chats,
             "aged": {k: v for k, v in aged.items() if v}, "hot_bytes": checked.get("bytes"),
+            "memory_before": before_sizes, "memory_after": memory_sizes(root),
             "archive": f"archive/session-{number:03}.md", "handoff": handoff_path}
 
 
@@ -202,6 +213,9 @@ def handle(root):
                 f"- Выгрузки чата: {', '.join(result['chat_exports']) or 'нет'}.\n"
                 f"- Разгружено из оперативной памяти: {result['aged'] or 'нечего'}; HOT {result['hot_bytes']} байт.\n"
                 f"- Следующий ход: {result['next_id']}.\n")
+        text += "\n## Память до → после (байт)\n\n"
+        for name, size in result["memory_after"].items():
+            text += f"- {name}: {result['memory_before'].get(name, 0)} → {size}.\n"
         outcome = "closed"
     except Exception as exc:   # сессия не закрыта — игра продолжается в прежней
         text = f"# Сессия не закрыта\n\nПричина: {type(exc).__name__}: {exc}\n\nИгра продолжается в прежней сессии.\n"

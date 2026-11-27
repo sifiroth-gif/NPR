@@ -10,6 +10,7 @@ HOT держит текущую сцену и то, что ещё живёт; в
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -107,9 +108,27 @@ def _split_keep(hot, items, keep):
     """Старое сверх окна — кроме записей текущей сессии: они остаются при любом окне."""
     if not isinstance(items, list) or len(items) <= keep:
         return [], items
-    old = [x for x in items[:-keep] if not _this_session(hot, _turn_of(x))]
-    kept = [x for x in items if x not in old]
+    # Partition by position, not value equality: an identical newest record
+    # must not disappear merely because an older copy is archived.
+    boundary = max(0, len(items) - keep)
+    old, kept = [], []
+    for i, item in enumerate(items):
+        (old if i < boundary and not _this_session(hot, _turn_of(item)) else kept).append(item)
     return old, kept
+
+
+def _archive_key(prefix, value):
+    body = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return prefix + ":" + hashlib.sha256(body.encode("utf-8")).hexdigest()
+
+
+def _archive_once(state_dir, name, rows):
+    """Append complete immutable records only once, including distinct versions."""
+    if not rows:
+        return
+    known = load(state_dir, name)
+    _append(state_dir, name, [row for row in rows
+                              if known.get(row["key"], {}).get("value") != row["value"]])
 
 
 def _mentioned(key, text):
@@ -195,7 +214,7 @@ def _pass(state_dir, hot, w):
         report["pact_events"] = len(old)
 
     # Скрытое (GM_ONLY): истории планов и страха, исполненное за кадром, закрытый сюжет.
-    plans, fears = [], []
+    plans, fears, plan_details = [], [], []
     now = _ordinal(turn) or 0
     touched = ((hot.get("_will") or {}).get("touched") or {})
     for key, profile in (hot.get("_psyche") or {}).items():
@@ -209,21 +228,28 @@ def _pass(state_dir, hot, w):
         done = profile.get("intent_done")
         if isinstance(done, list) and len(done) > keep_done:
             old, profile["intent_done"] = _split_keep(hot, done, keep_done)
-            plans += [{"key": f"{key}:{d.get('key')}", "npc": key, "value": d, "aged_at": turn} for d in old]
+            plans += [{"key": _archive_key(key, d), "npc": key, "value": d, "aged_at": turn} for d in old]
             # Ключи исполненного остаются: заготовка хранителя не воскресит закрытый план.
             profile["done_keys"] = list(dict.fromkeys((profile.get("done_keys") or []) +
                                                       [d.get("key") for d in old if d.get("key")]))[-80:]
         if isinstance(profile.get("intent_done"), list):
-            profile["intent_done"] = [{k: d[k] for k in DONE_BRIEF if k in d} if i < len(profile["intent_done"]) - 1
-                                      and isinstance(d, dict) else d
-                                      for i, d in enumerate(profile["intent_done"])]
+            for i, d in enumerate(profile["intent_done"][:-1]):
+                if not isinstance(d, dict) or _this_session(hot, _turn_of(d)):
+                    continue
+                short = {k: d[k] for k in DONE_BRIEF if k in d}
+                if short != d:
+                    plan_details.append({"key": _archive_key(key, d), "npc": key,
+                                         "value": d, "aged_at": turn})
+                    profile["intent_done"][i] = short
         dread = profile.get("dread")
         log = dread.get("log") if isinstance(dread, dict) else None
         if isinstance(log, list) and len(log) > keep_log:
             old, dread["log"] = _split_keep(hot, log, keep_log)
-            fears += [{"key": f"{key}:{i}", "npc": key, "value": v, "aged_at": turn} for i, v in enumerate(old)]
-    _append(state_dir, "npc-plans.GM_ONLY.jsonl", plans)
-    _append(state_dir, "npc-dread.GM_ONLY.jsonl", fears)
+            fears += [{"key": _archive_key(key, v), "npc": key, "value": v, "aged_at": turn} for v in old]
+    _archive_once(state_dir, "npc-plans.GM_ONLY.jsonl", plans)
+    _archive_once(state_dir, "npc-dread.GM_ONLY.jsonl", fears)
+    _archive_once(state_dir, "npc-plan-details.GM_ONLY.jsonl", plan_details)
+    report["npc_plan_details"] = len(plan_details)
     report["npc_plans"], report["npc_dread"] = len(plans), len(fears)
 
     will = hot.get("_will") or {}
@@ -250,6 +276,23 @@ def _pass(state_dir, hot, w):
             row = record["value"]
             duties[record["key"]] = {k: row[k] for k in ("kind", "done", "inactive") if k in row}
         report["obligations_done"] = len(compacted)
+    # Inactive situational cues are not completed. select() recalculates
+    # their text when they become active again; preserve ID, fairness counters,
+    # timestamps and all other fields. Never compact an active/current cue.
+    inactive = []
+    for ident, row in duties.items():
+        if not isinstance(row, dict) or row.get("done") or not row.get("inactive") or "text" not in row:
+            continue
+        if _session_of(row["inactive"]) is None or any(
+                _this_session(hot, row.get(field)) for field in ("since", "last", "inactive", "offered_at")):
+            continue
+        inactive.append({"key": _archive_key(ident, row), "id": ident,
+                         "value": row.copy(), "aged_at": turn})
+    _archive_once(state_dir, "obligations-inactive.GM_ONLY.jsonl", inactive)
+    for record in inactive:
+        duties[record["id"]].pop("text", None)
+    if inactive:
+        report["obligations_inactive"] = len(inactive)
     happened = will.get("happened")
     if isinstance(happened, list):
         from .will import SHOW_FOLDS

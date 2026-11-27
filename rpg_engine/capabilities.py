@@ -9,6 +9,7 @@ from . import fusion
 
 PATH = "campaigns/shiki/ref/CAPABILITIES.json"
 FUSION_PATH = "campaigns/shiki/ref/FUSION_CAPABILITIES.json"
+FINAL_PATH = "campaigns/shiki/ref/FINAL_CAPABILITIES.json"
 STATUSES = {"mastered", "experimental", "learning", "retired", "unlearned"}
 ACTIVATIONS = {"passive", "declared", "conditional", "autonomous", "unavailable"}
 TURN_ID = re.compile(r"s\d+\.(?:text|played)\.\d+")
@@ -70,13 +71,20 @@ def validate(data, root):
     return data
 
 
+def registry_path(hot):
+    return FINAL_PATH if fusion.final_profile(hot or {}) else (FUSION_PATH if fusion.active(hot or {}) else PATH)
+
+
 def load(root, campaign, hot=None):
     if campaign not in ("naruto-shiki", "shiki"):
         return None
-    path = Path(root) / (FUSION_PATH if fusion.active(hot or {}) else PATH)
+    path = Path(root) / registry_path(hot)
     if not path.is_file():
         return None
-    return validate(json.loads(path.read_text(encoding="utf-8")), root)
+    data = validate(json.loads(path.read_text(encoding="utf-8")), root)
+    at = str(((hot or {}).get("cursor") or {}).get("at") or "")
+    data["entries"] = [row for row in data["entries"] if not row.get("since_at") or at >= row["since_at"]]
+    return data
 
 
 def resolve(data, name):
@@ -174,7 +182,7 @@ def packet(root, campaign, hot=None):
         return None
     return {"rule": "Темы по текущей заявке объединяй; «дальше» — scene_hint. Прочитанное не перечитывай. Проверяй состояние и неизвестные факты по источнику; реестр не даёт знания NPC.",
             "source_base": SOURCE_BASE,
-            "registry": FUSION_PATH if fusion.active(hot or {}) else PATH,
+            "registry": registry_path(hot),
             "scene_hint": scene_hint(data, hot or {}),
             "routes": {key: {"read": [_short_source(x) for x in row["read"]],
                              "required": row["required"]} for key, row in data["routes"].items()},

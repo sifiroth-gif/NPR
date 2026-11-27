@@ -472,7 +472,7 @@ def attach_history_graph(packet, historical):
 def write(path, packet):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    body = json.dumps(packet, ensure_ascii=False, sort_keys=True, indent=1) + "\n"
+    body = scene_packet.serialize(packet)
     if not path.exists() or path.read_text(encoding="utf-8") != body:
         path.write_text(body, encoding="utf-8")
     return len(body.encode("utf-8"))

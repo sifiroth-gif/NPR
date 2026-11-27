@@ -16,8 +16,16 @@ MAX_PASSAGES = 4
 MAX_THREAD_DETAILS = 3
 
 
+def serialize(packet):
+    """Same compact, readable top-level layout used for the actual byte budget."""
+    return "{\n" + ",\n".join(
+        json.dumps(k, ensure_ascii=False) + ": " +
+        json.dumps(v, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        for k, v in sorted(packet.items())) + "\n}\n"
+
+
 def _bytes(packet):
-    return len(json.dumps(packet, ensure_ascii=False, sort_keys=True).encode("utf-8"))
+    return len(serialize(packet).encode("utf-8"))
 
 
 def _short(value, length):
@@ -183,6 +191,55 @@ def _threads(packet, hot):
             clock["if_unopposed"] = _short(clock.get("if_unopposed"), 135)
 
 
+# Current gear, resources and clinical access are never demoted by age.
+ESSENTIAL_THINGS = frozenset({
+    "sumi_sword", "cash_1184", "shiki_finances", "shiki_medical_kit",
+    "shiki_communication_receiver", "shiki_light_kote_s16",
+    "shiki_upper_clothing", "forehead_protector",
+})
+
+
+def _continuity(packet, hot):
+    """Scene inventory + exact IDs for other owned items, not a second inventory.
+
+    No item is removed from HOT or the wiki; a missing detail requires its
+    latest changing turn. Never infer absence or availability from this view.
+    """
+    continuity = packet.get("continuity")
+    if not isinstance(continuity, dict):
+        return
+    things = continuity.get("things") or {}
+    if not isinstance(things, dict):
+        return
+    scene = hot.get("scene") or {}
+    cursor = (hot.get("cursor") or {}).get("id")
+    text = " ".join(str(scene.get(k) or "") for k in
+                    ("situation", "positions", "pressure")).casefold()
+    # Full records for current changes, named scene items and other present
+    # actors. Remote/old Shiki property remains available via the exact ID.
+    current, index = {}, {}
+    for key, item in things.items():
+        if not isinstance(item, dict):
+            current[key] = item
+            continue
+        name = str(item.get("name") or "").casefold()
+        where = str(item.get("where") or "").casefold()
+        scene_match = key.casefold() in text or bool(name and name in text)
+        if (key in ESSENTIAL_THINGS or item.get("holder") != "shiki" or
+                scene_match or bool(cursor and item.get("turn") == cursor)):
+            current[key] = item
+        else:
+            index[key] = {k: item[k] for k in ("holder", "turn", "since")
+                          if k in item}
+    continuity["things"] = current
+    if index:
+        continuity["things_index"] = index
+        continuity["things_ref"] = "recovery/HOT.json#things"
+        continuity["item_page_template"] = "memory/items/{id}.md"
+        continuity["index_rule"] = ("Индекс не подтверждает доступность/состояние. "
+                                    "При использовании открой карточку и последний меняющий ход.")
+    
+
 def _deduplicate_memory(packet):
     """One copy of identical verified facts, with an in-packet reference."""
     record_by_id = {
@@ -245,6 +302,7 @@ def compact(raw_packet, hot, *, target_bytes=TARGET_BYTES, hard_bytes=HARD_BYTES
     _plot(packet)
     _actors(packet)
     _threads(packet, hot)
+    _continuity(packet, hot)
     _deduplicate_memory(packet)
     _passages(packet)
     packet["checks"] = _current_checks(packet.get("checks") or [], (hot.get("cursor") or {}).get("id"))

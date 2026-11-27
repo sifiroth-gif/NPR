@@ -333,7 +333,20 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
             "Источник: SHIKI.md, ref/TECHNIQUES.md, ref/COMBAT.md."
         )
     if (extra or {}).get("capabilities"):
-        pack["capabilities"] = extra["capabilities"]
+        pack["capabilities"] = dict(extra["capabilities"])
+        # The full technique catalogue is static, not current scene state.
+        # Keep the core, routes and unavailable IDs inline; in a fight retain
+        # the catalogue as a quick reference. The exact registry is addressable.
+        if fusion.active(hot) and not fight.get("active") and pack["capabilities"].get("registry"):
+            catalogue = pack["capabilities"].pop("catalog", [])
+            if catalogue:
+                pack["capabilities"]["catalog_ref"] = pack["capabilities"]["registry"]
+                pack["capabilities"]["catalog_count"] = len(catalogue)
+                pack["capabilities"]["unavailable_ids"] = [
+                    row["id"] for row in catalogue if row.get("activation") == "unavailable"]
+                pack["capabilities"]["catalog_rule"] = (
+                    "Полный арсенал по catalog_ref и ref/TECHNIQUES.md; "
+                    "отсутствие в кратком пакете не означает отсутствие навыка.")
         # Conditions change independently of the last request. The source
         # pointer stays available outside combat, including patient function.
         scene = hot.get("scene") or {}
