@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.025",
+  "cursor": "s18.text.026",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 25,
+      "mention_count": 26,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T14:39:00",
-          "excerpt": "ода · 14:39</text> ### Конохагакуре. Ресторан якинику **Мугами Шики:** — Да, пожалуй. Это вкусно. **Асума Сарутоби:** — Вот и договорились. Асума привёл Шики в небольшое заведение с деревянными перегородками и вытяжками над столами. Судя по приветствию хозяина",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.023"
         },
         {
           "at": "0010-05-14T14:41:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.025"
+        },
+        {
+          "at": "0010-05-14T14:47:00",
+          "excerpt": "— спасибо Асума-сан и прошу простить за сантименты Асума поставил свою чашечку на стол и усмехнулся. **Асума Сарутоби:** — Ещё чего. Мы же не на задании. Он взял сосуд с сакэ и долил немного в опустевшую чашечку Шики. **Асума Сарутоби:** — Знаешь, было бы гора",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.026"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.025",
+          "seen": "s18.text.026",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.025"
+        "s18.text.026"
       ]
     },
     "baki": {
@@ -683,7 +683,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -691,13 +691,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T19:27:00",
-          "excerpt": "о мне. Она снова придвинула к себе донесение из Храма Огня. На первой странице среди прочих имён стояло имя Тирику. **Цунадэ:** — Шизунэ, распорядись, чтобы меня разбудили, когда вернётся Асума. В какое бы время он ни прибыл. **Шизунэ:** — Хорошо, Цунадэ-сама.",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.196"
         },
         {
           "at": "0010-05-14T14:06:00",
@@ -712,6 +705,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.021"
+        },
+        {
+          "at": "0010-05-14T14:47:00",
+          "excerpt": "тельностью, тщательно переворачивая каждый гриб и отодвигая готовые кусочки от жара. **Асума Сарутоби:** — Мы с Тирику однажды отмечали мой день рождения прямо на дежурстве. Вместо праздничного ужина разделили сухой паёк. А ведь хороший был вечер. Улыбка задер",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.026"
         }
       ],
       "projections": [
@@ -8348,9 +8348,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.025",
+        "s18.text.026",
         "s18.text.023",
-        "s18.text.024"
+        "s18.text.024",
+        "s18.text.025"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -23159,5 +23160,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1662
+  "source_turns_indexed": 1663
 }
