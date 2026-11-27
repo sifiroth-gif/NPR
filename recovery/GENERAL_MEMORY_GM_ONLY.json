@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.054",
+  "cursor": "s17.text.055",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.054:0": {
-      "aliases": [
-        "canon:s17.text.054:0",
-        "s17.text.054: Риннешаринган сознательно выключен, резервный полигон освобождён, временный допуск сдан. Шизунэ сообщила, что Какаши представил доклад 08.05. Шики не раскрывал ночные"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.054:0",
-      "kind": "canon",
-      "label": "s17.text.054: Риннешаринган сознательно выключен, резервный полигон освобождён, временный допуск сдан. Шизунэ сообщила, что Какаши представил доклад 08.05. Шики не раскрывал ночные",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.054"
       ]
     },
     "captive_guard": {
@@ -1124,7 +1108,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1163,12 +1148,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.040",
+          "seen": "s17.text.055",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s17.text.055"
       ]
     },
     "fire_port_security_staff": {
@@ -2661,7 +2647,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 134,
+      "mention_count": 135,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2669,13 +2655,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-07T08:42:00",
-          "excerpt": "оверим архивы на сведения о дистанционном управлении чакрой. Пока никаких повторных проникновений в Амэгакурэ. Джирайя молча согласился. Пятая некоторое время рассматривала схему. Затем её взгляд переместился на Шики. **Цунадэ:** — У тебя самого есть способнос",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.033"
         },
         {
           "at": "0010-05-07T08:43:00",
@@ -2690,11 +2669,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.054"
+        },
+        {
+          "at": "0010-05-09T18:12:00",
+          "excerpt": "* — Надеюсь, полтора дня одиночества не привели тебя к мысли о необходимости создания собственного Корня. Джирайя коротко рассмеялся, но Цунадэ продолжала смотреть на Шики совершенно серьёзно. Шизунэ перестала перебирать бумаги. На столе между ними лежали поже",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.054",
+          "seen": "s17.text.055",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2703,7 +2689,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.055"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3929,8 +3916,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/konan.json",
-        "s17.text.054"
+        "recovery/cast/konan.json"
       ]
     },
     "kotetsu": {
@@ -11404,7 +11390,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.054",
+        "s17.text.055",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11416,7 +11402,8 @@
         "s16.text.064",
         "s16.text.065",
         "s17.text.048",
-        "s17.text.049"
+        "s17.text.049",
+        "s17.text.054"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20845,7 +20832,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 39,
+      "mention_count": 40,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20853,13 +20840,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-08T06:14:00",
-          "excerpt": "лтора, есть возможность предоставить мне такую? Цунадэ поправила рукав зелёного хаори и повернулась к Шизунэ. **Цунадэ:** — Что у нас со старым резервным полигоном? Шизунэ открыла журнал распределения тренировочных площадок. **Шизунэ:** — Северо-западный секто",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.049"
         },
         {
           "at": "0010-05-08T06:43:00",
@@ -20874,11 +20854,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.054"
+        },
+        {
+          "at": "0010-05-09T18:12:00",
+          "excerpt": "обственного Корня. Джирайя коротко рассмеялся, но Цунадэ продолжала смотреть на Шики совершенно серьёзно. Шизунэ перестала перебирать бумаги. На столе между ними лежали пожелтевшие военные донесения. Джирайя свернул один из свитков, оставив открытым другой. **",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.054",
+          "seen": "s17.text.055",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -20888,7 +20875,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s17.text.054"
+        "s17.text.055"
       ]
     },
     "signalshchik": {
@@ -21948,7 +21935,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 97,
+      "mention_count": 98,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21956,13 +21943,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-08T06:14:00",
-          "excerpt": "и. Мне нужна закрытая тренировочная площадка дня на полтора, есть возможность предоставить мне такую? Цунадэ поправила рукав зелёного хаори и повернулась к Шизунэ. **Цунадэ:** — Что у нас со старым резервным полигоном? Шизунэ открыла журнал распределения трени",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.049"
         },
         {
           "at": "0010-05-08T06:43:00",
@@ -21977,11 +21957,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.054"
+        },
+        {
+          "at": "0010-05-09T18:12:00",
+          "excerpt": "*Мугами Шики:** — Да. Шики негромко усмехнулся. **Мугами Шики:** — теперь стал больше понимать Данзо. Цунадэ медленно подняла бровь. **Цунадэ:** — Надеюсь, полтора дня одиночества не привели тебя к мысли о необходимости создания собственного Корня. Джирайя кор",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.054",
+          "seen": "s17.text.055",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -21991,7 +21978,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.054"
+        "s17.text.055"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22853,5 +22840,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1561
+  "source_turns_indexed": 1562
 }

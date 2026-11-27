@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.055: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`)
 - s17.text.054: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Конан (`npc/konan`), поправки игрока: 1
 - s17.text.053: Саске Учиха (`npc/sasuke`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Итачи Учиха (`npc/itachi`), план сюжета
 - s17.text.052: поправки игрока: 1
@@ -59,4 +60,3 @@
 - s16.text.138: Оружейник (`npc/road_armorer_s16`), Изумо Камидзуки (`npc/izumo`), Кадзунэ (`npc/fire_road_jonin`)
 - s16.text.137: Оружейник (`npc/road_armorer_s16`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`), план сюжета
 - s16.text.136: Джирайя (`npc/jiraiya`), Котэцу Хаганэ (`npc/kotetsu`), план сюжета
-- s16.text.135: Джирайя (`npc/jiraiya`), вещь `cash_1184`, вещь `shiki_finances`
