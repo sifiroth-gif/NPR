@@ -94,6 +94,7 @@
 - Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 4 ход(ов), s15–s15
 - Кусагакуре, Восточный смотровой колодец · `places/kusagakure-vostochnyy-smotrovoy-kolodets` · 4 ход(ов), s03–s03
 - Мьёбоку, источник жабьего масла · `places/meboku-istochnik-zhabego-masla` · 4 ход(ов), s16–s16
+- Северная граница Страны Рек, вход в подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-vkhod-v-podzemnoe-ubezhishche-` · 4 ход(ов), s17–s17
 - Страна Рек, верховья Сиран · `places/strana-rek-verkhovya-siran` · 4 ход(ов), s09–s09
 - Страна Рек, западные предгорья · `places/strana-rek-zapadnye-predgorya` · 4 ход(ов), s17–s17
 - Страна Травы, лес западнее моста Тэнти · `places/strana-travy-les-zapadnee-mosta-tenti` · 4 ход(ов), s12–s12
@@ -113,7 +114,6 @@
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08
 - Кусагакуре, резиденция Кагэ · `places/kusagakure-rezidentsiya-kage` · 3 ход(ов), s05–s11
 - Кусагакуре, северный коллектор старого водоотвода · `places/kusagakure-severnyy-kollektor-starogo-vodootvoda` · 3 ход(ов), s02–s03
-- Северная граница Страны Рек, вход в подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-vkhod-v-podzemnoe-ubezhishche-` · 3 ход(ов), s17–s17
 - Страна Дождя, безлюдный речной берег за пределами Амэгакурэ · `places/strana-dozhdya-bezlyudnyy-rechnoy-bereg-za-predelami-amegaku` · 3 ход(ов), s17–s17
 - Страна Огня, дорога за пределами Конохагакуре · `places/strana-ognya-doroga-za-predelami-konokhagakure` · 3 ход(ов), s16–s16
 - Страна Огня, лес у пункта выплаты наград · `places/strana-ognya-les-u-punkta-vyplaty-nagrad` · 3 ход(ов), s15–s15

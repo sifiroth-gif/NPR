@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.073",
+  "cursor": "s17.text.074",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2788,7 +2788,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 109,
+      "mention_count": 110,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2796,13 +2796,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-05-12T05:30:00",
-          "excerpt": "остановился. На лице появилась привычная вежливая улыбка, но на этот раз она исчезла прежде, чем он успел заговорить. **Кабуто Якуши:** — Всё-таки пришли. Он взглянул на Сирамэ, затем снова на Шики. Пальцы на рукояти футляра сжались. **Кабуто Якуши:** — Прежде",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.071"
         },
         {
           "at": "0010-05-12T05:31:00",
@@ -2817,11 +2810,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.073"
+        },
+        {
+          "at": "0010-05-12T05:33:00",
+          "excerpt": "2 мая 1287 года · 05:33</text> **Мугами Шики:** — Не могу сказать, спешка тут будет очень опасна. **Кабуто Якуши:** — Согласен. Но я боюсь, что наш пациент придерживается другого мнения. Из глубины коридора донёсся хриплый, хорошо знакомый голос. **Орочимару:*",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.074"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.073",
+          "seen": "s17.text.074",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         },
         {
@@ -2831,7 +2831,7 @@
       "sources": [
         "recovery/cast/kabuto.json",
         "recovery/HOT.json",
-        "s17.text.073"
+        "s17.text.074"
       ]
     },
     "kabuto_letter_0416": {
@@ -5789,7 +5789,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 184,
+      "mention_count": 185,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5797,13 +5797,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T05:30:00",
-          "excerpt": "ие следы колёс, заполненные мутной водой. Недавно здесь проходили тяжёлые повозки. Прежде в окрестностях убежища Орочимару чувствовалось несколько человеческих источников чакры. Теперь ближайшие переходы казались почти опустевшими. Сирамэ остановилась. **Сирам",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.071"
         },
         {
           "at": "0010-05-12T05:31:00",
@@ -5818,16 +5811,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.073"
+        },
+        {
+          "at": "0010-05-12T05:33:00",
+          "excerpt": "пациент придерживается другого мнения. Из глубины коридора донёсся хриплый, хорошо знакомый голос. **Орочимару:** — Кабуто… Ты заставляешь нашего гостя ждать? Саннин появился в полумраке прохода, опираясь рукой о стену. Его длинные чёрные волосы беспорядочно с",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.074"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.053",
+          "seen": "s17.text.074",
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+        },
+        {
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "recovery/HOT.json",
+        "s17.text.074"
       ]
     },
     "orochimaru_scout_snake": {
@@ -10706,9 +10711,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.073",
+        "s17.text.074",
         "s17.text.071",
-        "s17.text.072"
+        "s17.text.072",
+        "s17.text.073"
       ]
     },
     "place:5fe584857bc5378a": {
@@ -19315,8 +19321,7 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок",
-        "river_shrine_dark_snake_s16"
+        "Тёмная змея у кладок"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -19332,8 +19337,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_dark_snake_s16.json",
-        "s17.text.073"
+        "recovery/cast/river_shrine_dark_snake_s16.json"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -20782,7 +20786,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 83,
+      "mention_count": 84,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20790,13 +20794,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T05:30:00",
-          "excerpt": "ext color=\"secondary\" size=\"xs\">Вторник, 11 мая 1287 года · 07:42</text> **Мугами Шики:** — Пойдем. Сирамэ вытянула длинное белое тело и направилась к выходу. Коюки осталась в жилом помещении. **Коюки:** — Я присмотрю за малышами. Возвращайся. *** Дорога на се",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.071"
         },
         {
           "at": "0010-05-12T05:31:00",
@@ -20811,12 +20808,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.073"
+        },
+        {
+          "at": "0010-05-12T05:33:00",
+          "excerpt": "ает мне вернуть его. Саннин негромко рассмеялся, но смех оборвался приступом кашля. На ладони осталась кровь. Сирамэ отступила от него и повернулась к Шики. **Сирамэ:** — Я останусь здесь. Если тебе предстоит потерять сознание, я хочу видеть, что будет происхо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.074"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.073",
+          "seen": "s17.text.074",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20830,7 +20834,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.073"
+        "s17.text.074"
       ]
     },
     "shiranami": {
@@ -20931,8 +20935,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s17.text.073"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -22892,5 +22895,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1579
+  "source_turns_indexed": 1580
 }
