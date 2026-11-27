@@ -14,6 +14,43 @@ from pathlib import Path
 
 from . import continuity_guard, fight, hot, overlay, prose_lint
 
+# Player's binding instruction s17.text.110; do not retroactively judge old turns.
+DESCRIPTION_FROM = (17, 111)
+DESCRIPTION_RULE = (
+    "Описания: каждый игровой ход, даже диалог — предметная среда, доступная Шики "
+    "сенсорика, конкретное действие, видимые реакции NPC. Минимум 3 абзаца "
+    "повествования по ≥8 слов, всего ≥60 слов вне реплик и шапок; нижний порог, не цель. "
+    "Не набивай объём повторами или чужими мыслями. Если не выполнено, допиши весь "
+    "черновик до публикации даже первой строки. OOC/технические записи исключены."
+)
+
+
+def description_errors(turn):
+    """Structural floor only: meaningful detail still requires GM judgement."""
+    if turn.get("kind") in ("ooc", "technical", "void"):
+        return []
+    if hot.turn_number(turn["id"]) < DESCRIPTION_FROM:
+        return []
+    text = turn.get("gm", "")
+    text = re.sub(r"<(?:box|svg|caption|text)\b[^>]*>.*?</(?:box|svg|caption|text)>", "", text, flags=re.S)
+    text = re.sub(r"\x60\x60\x60.*?\x60\x60\x60", "", text, flags=re.S)
+    lengths = []
+    for block in re.split(r"\n\s*\n", text):
+        lines = []
+        for raw in block.splitlines():
+            line = raw.strip()
+            if not line or line.startswith(("#", "**", "—", "–", "-", ">", "[", "<", "***")):
+                continue
+            lines.append(line)
+        words = re.findall(r"[А-Яа-яЁёA-Za-z]+(?:-[А-Яа-яЁёA-Za-z]+)*", " ".join(lines))
+        if len(words) >= 8:
+            lengths.append(len(words))
+    if len(lengths) < 3 or sum(lengths) < 60:
+        return [f"Описания: только {len(lengths)} содержательных абзацев, {sum(lengths)} слов; "
+                "нужно ≥3 абзацев по ≥8 слов и ≥60 слов повествования. Допиши сцену до публикации."]
+    return []
+
+
 CHECKLIST = (
     "Заявка: все действия/слова, попытка ≠ исход; не решай за Шики.",
     "Источник: поздняя поправка, состояние/умение, неизвестное не факт.",
@@ -21,6 +58,7 @@ CHECKLIST = (
     "Цена: время, ресурс, кости, техника, функция и остаточный дефицит.",
     "Мир: срок, доступная весть, самостоятельный мотив и реакция NPC.",
     "Дельта: только случившееся, точные ID, место/состав, цена; затем сцена и запись.",
+    DESCRIPTION_RULE,
 )
 RULE = "До публикации: " + " ".join(CHECKLIST)
 LABEL = re.compile(r"^\*\*Мугами Шики:\*\*\s*[—–]\s*(.*)$", re.I | re.M)
@@ -165,6 +203,7 @@ def inspect(packet, turn, *, receipts=(), used=()):
     if not isinstance(d.get("scene"), dict) or not isinstance(d["scene"].get("present"), list):
         errors.append("Запиши актуальный состав d.scene.present, не наследуй молча.")
     gm = turn["gm"]
+    errors.extend(description_errors(turn))
     speech = _normal(continuity_guard.player_speech(turn["player"]))
     lines = _normal(" ".join(LABEL.findall(gm)))
     if speech and speech not in lines:
@@ -233,9 +272,10 @@ def postcheck(turn):
         return []
     speech = _normal(continuity_guard.player_speech(turn.get("player", "")))
     lines = _normal(" ".join(LABEL.findall(turn.get("gm", ""))))
+    errors = description_errors(turn)
     if speech and len(speech.split()) >= 4 and speech not in lines:
-        return ["Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст."]
-    return []
+        errors.append("Предпроверка: дословная речь Шики не найдена под его подписью; сверить исходный текст.")
+    return errors
 
 
 def main(argv=None):
