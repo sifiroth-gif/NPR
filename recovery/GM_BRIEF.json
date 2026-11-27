@@ -81,13 +81,18 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.111"
+   "turn": "s17.text.112"
+  },
+  {
+   "kind": "will",
+   "text": "«Цунадэ» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Проверить практическую готовность мер защиты от угрозы Акацуки.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s17.text.112"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.111",
+  "cursor": "s17.text.112",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -100,12 +105,13 @@
    "tsunade",
    "place:6cab2c7a7613d430",
    "orochimaru",
+   "zhaba",
    "hiraishin_mark_orochimaru_lab_s17",
    "orochimaru_reconstructed_body_s17",
    "orochimaru_senjutsu_early_notes_s17",
    "rain_drain_plan_copy_s17"
   ],
-  "focus_bytes": 3265,
+  "focus_bytes": 3537,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -121,121 +127,33 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
     "medical.sterilize",
     "pact.contact",
-    "sage.permanent",
-    "sage.poison",
-    "seals.speed",
-    "shunshin.zero",
     "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
     "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
     "medical.field",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
-    "sage.summon"
+    "nemera.agency"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-05-13T11:15:00",
-    "chakra": {
-     "at": "0010-05-13T11:15:00",
-     "last": {
-      "spent": 2.0,
-      "turn": "s17.text.111",
-      "what": [
-       "Кучиёсэ: призыв взрослой негигaнтской змеи Сирамэ"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 284.46,
-     "why": "Прямая поправка игрока к s17.text.086: 3 часа глубокого погружения ×5, 150 вместо 30, +120 к запасу 141,02 после s17.text.087."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {},
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/COMBAT.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/ref/FUSION.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
     "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time",
-    "fusion profile or historical pact",
-    "contact/channel"
+    "things/holder/state/turn",
+    "count/availability",
+    "scene/access"
    ],
    "routes": [
-    "medical",
-    "combat",
     "dialogue",
-    "travel",
-    "pact"
+    "items"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -506,13 +424,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T11:15:00",
+  "at": "0010-05-13T11:17:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.111",
+  "id": "s17.text.112",
   "place": "Конохагакуре, кабинет Хокагэ",
-  "time": "11:15"
+  "time": "11:17"
  },
- "digest": "dab7c0673da15269b765ac4c10deb63bf2389e449b70063fa63d8b4672be8242",
+ "digest": "2286148d85821afdbbbf12c1a2502a568323bba01bf5d11985613179db9e89ad",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -527,21 +445,21 @@
     "from": "s17.text.029",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.111"
+    "to": "s17.text.112"
    },
    {
     "actor": "jiraiya",
     "from": "s17.text.002",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.111"
+    "to": "s17.text.112"
    },
    {
     "actor": "shirame",
     "from": "s17.text.065",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.111"
+    "to": "s17.text.112"
    }
   ],
   "nodes": [],
@@ -649,21 +567,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 284.46
+   "value": 284.79
   },
   "dice": [
-   20,
-   19,
-   10,
-   1,
-   10,
-   9,
-   1,
    4,
-   6,
-   15,
+   12,
    7,
-   14
+   9,
+   7,
+   4,
+   15,
+   17,
+   5,
+   6,
+   10,
+   20
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -756,6 +674,23 @@
    },
    {
     "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "zhaba",
+    "kind": "npc",
+    "label": "Жаба",
+    "operational_cues": {
+     "source": "recovery/cast/zhaba.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "role": "по подписи в сцене"
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
      "explicit_edge_candidate"
     ],
     "facts": [],
@@ -829,7 +764,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 9
+  "total_matched": 10
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -844,26 +779,26 @@
   "due": null,
   "npcs": {
    "jiraiya": {
-    "does": "Освободил место и вступил в короткий обмен репликами.",
+    "does": "Назвал возможность привлечь знакомую небольшую жабу-посланницу.",
     "lever": "",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Предложенный посредник способен вести самостоятельный разговор.",
+    "reads": "Возможен независимый обмен без принуждения животных; нужно познакомить посредников.",
     "stage": 4,
     "step": "необратимость"
    },
    "shirame": {
-    "does": "Осмотрела помещение, подошла к Шики, сообщила о разговоре с Орочимару, спросила цель вызова.",
+    "does": "Согласилась на ограниченное посредничество, потребовала независимую точку обмена и согласие жабы, попросила познакомить.",
     "lever": "Стать беспомощным образцом или наживкой для опытов и переговоров шиноби.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Причина вызова неизвестна, Шики доступен для разговора.",
+    "reads": "Может помочь Шики и знакомому Орочимару при сохранении собственной свободы и взаимном согласии посредников.",
     "stage": 4,
     "step": "необратимость"
    },
    "tsunade": {
-    "does": "Наблюдала, усмехнулась при перепалке с Джирайей.",
+    "does": "Наблюдала за разговором без вмешательства.",
     "lever": "Потеря людей вследствие чужих амбиций и собственных решений.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Посредник доступен для разговора; задача ещё не обсуждена.",
+    "reads": "Переписка может быть согласована без постоянного участия Шики, но пока канал не создан.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -893,21 +828,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 74,
+   "appearances": 75,
    "facets": 3,
    "need": 5,
    "npc": "tsunade",
    "tier": "deep"
   },
   {
-   "appearances": 136,
+   "appearances": 137,
    "facets": 0,
    "need": 5,
    "npc": "jiraiya",
    "tier": "deep"
   },
   {
-   "appearances": 76,
+   "appearances": 77,
    "facets": 3,
    "need": 5,
    "npc": "shirame",
@@ -1097,10 +1032,10 @@
     "s17.text.003",
     "s17.text.004",
     "s17.text.007",
-    "s17.text.107",
     "s17.text.108",
     "s17.text.109",
-    "s17.text.111"
+    "s17.text.111",
+    "s17.text.112"
    ],
    "prior_disclosures": [
     {
@@ -1111,42 +1046,42 @@
      "turn": "s17.text.002"
     },
     {
-     "at": "0010-05-13T11:14:00",
-     "sha256": "de86db568cd3398b02e990115f16986695f4e7b36e9f8824095bfa6f91e997f1",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.109"
-    },
-    {
      "at": "0010-05-13T11:15:00",
-     "sha256": "a694f2597af15cfc15dc7e721acd85838153757a7db3d10854bc54b248c38663",
+     "sha256": "d2ecd9d4a7c6b8202a2bfb5c01e84af454e2806ac8590bce4f27440cb123616d",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.111"
+    },
+    {
+     "at": "0010-05-13T11:17:00",
+     "sha256": "eb5eb9716267f6791726f5499647d82768ca0e516a9659cf4e96eb7e9a39962f",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.112"
     }
    ],
    "profile": {
     "first": "s15.text.142",
     "inner": {},
     "knows": [
-     "Шики передал личное приглашение Орочимару: отказ от тела Саске, встреча вне Конохи без посредничества деревни и попыток возвращения, добровольный выбор Джирайи; предложена связь через согласных жабу и змею.",
      "Шики считает Орочимару разочарованным, но допускающим пересмотр целей; сообщил об официальном уходе Саске от Орочимару, источник и фактический маршрут пока уточняются.",
      "Шики сообщил, что Саске лично рассказал ему об уходе от Орочимару; предложил неназванного кандидата в змеиные посредники.",
-     "Шики призвал взрослую белую разумную змею Рьючидо, которая узнала запах жаб и сообщила о недавнем разговоре с Орочимару."
+     "Шики призвал взрослую белую разумную змею Рьючидо, которая узнала запах жаб и сообщила о недавнем разговоре с Орочимару.",
+     "Сирамэ лично согласилась на ограниченное посредничество, не на постоянные призывы; просит согласия жабы и места вне поселений."
     ],
     "knows_ref": "memory/npc/jiraiya.md",
     "knows_total": 8,
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.111",
-      "what": "Шики успешно призвал Сирамэ в кабинет Хокагэ. Она сообщила о разговоре с Орочимару после его исчезновения, заметила запах жаб от Джирайи и спросила о цели призыва."
+      "turn": "s17.text.112",
+      "what": "Сирамэ добровольно согласилась передавать письма при условии независимого места обмена и согласия жабы. Джирайя предложил познакомить её с небольшой жабой-посланницей."
      }
     ],
     "memory_file": "archive/npc-memory/jiraiya.json",
-    "memory_total": 136,
+    "memory_total": 137,
     "name": "Джирайя",
-    "seen": "s17.text.111",
+    "seen": "s17.text.112",
     "state": "Запросил исторические архивы Дождя.",
     "status": "present_profile",
     "tier": "deep"
@@ -1184,10 +1119,10 @@
     "s17.text.070",
     "s17.text.072",
     "s17.text.073",
-    "s17.text.083",
     "s17.text.084",
     "s17.text.086",
-    "s17.text.111"
+    "s17.text.111",
+    "s17.text.112"
    ],
    "prior_disclosures": [
     {
@@ -1198,18 +1133,18 @@
      "turn": "s17.text.065"
     },
     {
-     "at": "0010-05-13T07:58:00",
-     "sha256": "ad38649d9bd74ef9c2d8a2c5a8e10df36acee7d45e7b4cdecd7b9719f7cc9e65",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.086"
-    },
-    {
      "at": "0010-05-13T11:15:00",
-     "sha256": "a694f2597af15cfc15dc7e721acd85838153757a7db3d10854bc54b248c38663",
+     "sha256": "d2ecd9d4a7c6b8202a2bfb5c01e84af454e2806ac8590bce4f27440cb123616d",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.111"
+    },
+    {
+     "at": "0010-05-13T11:17:00",
+     "sha256": "eb5eb9716267f6791726f5499647d82768ca0e516a9659cf4e96eb7e9a39962f",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.112"
     }
    ],
    "profile": {
@@ -1231,24 +1166,25 @@
      ]
     },
     "knows": [
-     "Шики подтвердил возможность поглощения её живых клеток через кожу; раньше использовал разрез собственной кожи.",
      "Саске лично подтвердил подпись свитка Рьючидо с разрешения Орочимару.",
      "После исчезновения Шики Орочимару сообщил ей об освоении Шики пространственной техники; точный пункт назначения и устройство техники не сообщил.",
-     "Шики призвал её в Коноху 13.05.1287; увидела двух саннинов, ещё не представленных ей."
+     "Шики призвал её в Коноху 13.05.1287; увидела двух саннинов, ещё не представленных ей.",
+     "Шики сообщил, что Джирайя и Орочимару хотят встретиться, но нуждаются в обмене письмами из-за недоверия; Джирайя знает жабу-посланницу."
     ],
     "knows_ref": "memory/npc/shirame.md",
+    "knows_total": 5,
     "leverage": "Только ей переданное слово, ядовитые клыки",
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.111",
-      "what": "Шики успешно призвал Сирамэ в кабинет Хокагэ. Она сообщила о разговоре с Орочимару после его исчезновения, заметила запах жаб от Джирайи и спросила о цели призыва."
+      "turn": "s17.text.112",
+      "what": "Сирамэ добровольно согласилась передавать письма при условии независимого места обмена и согласия жабы. Джирайя предложил познакомить её с небольшой жабой-посланницей."
      }
     ],
     "memory_file": "archive/npc-memory/shirame.json",
-    "memory_total": 76,
+    "memory_total": 77,
     "name": "Сирамэ",
-    "seen": "s17.text.111",
+    "seen": "s17.text.112",
     "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
     "status": "present_profile",
     "tier": "deep",
@@ -1288,10 +1224,10 @@
     "s17.text.033",
     "s17.text.034",
     "s17.text.041",
-    "s17.text.107",
     "s17.text.108",
     "s17.text.109",
-    "s17.text.111"
+    "s17.text.111",
+    "s17.text.112"
    ],
    "prior_disclosures": [
     {
@@ -1302,42 +1238,42 @@
      "turn": "s17.text.029"
     },
     {
-     "at": "0010-05-13T11:14:00",
-     "sha256": "de86db568cd3398b02e990115f16986695f4e7b36e9f8824095bfa6f91e997f1",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.109"
-    },
-    {
      "at": "0010-05-13T11:15:00",
-     "sha256": "a694f2597af15cfc15dc7e721acd85838153757a7db3d10854bc54b248c38663",
+     "sha256": "d2ecd9d4a7c6b8202a2bfb5c01e84af454e2806ac8590bce4f27440cb123616d",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.111"
+    },
+    {
+     "at": "0010-05-13T11:17:00",
+     "sha256": "eb5eb9716267f6791726f5499647d82768ca0e516a9659cf4e96eb7e9a39962f",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.112"
     }
    ],
    "profile": {
     "first": "s15.text.125",
     "inner": {},
     "knows": [
-     "Шики сообщил, что Саске официально покинул Орочимару; личное наблюдение выхода, время и маршрут пока не установлены.",
      "Джирайя согласен на личную встречу с Орочимару на нейтральной территории и намерен обсудить добровольную связь с жабами.",
      "Источник вести о разрыве Саске с Орочимару — личное сообщение Саске Шики, не наблюдение физического выхода.",
-     "Шики способен призывать взрослую белую змею Рьючидо; слышала её сообщение о пребывании в убежище Орочимару."
+     "Шики способен призывать взрослую белую змею Рьючидо; слышала её сообщение о пребывании в убежище Орочимару.",
+     "Сирамэ согласилась на ограниченную передачу писем при добровольности жабы и встречах вне поселений."
     ],
     "knows_ref": "memory/npc/tsunade.md",
     "knows_total": 8,
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.111",
-      "what": "Шики успешно призвал Сирамэ в кабинет Хокагэ. Она сообщила о разговоре с Орочимару после его исчезновения, заметила запах жаб от Джирайи и спросила о цели призыва."
+      "turn": "s17.text.112",
+      "what": "Сирамэ добровольно согласилась передавать письма при условии независимого места обмена и согласия жабы. Джирайя предложил познакомить её с небольшой жабой-посланницей."
      }
     ],
     "memory_file": "archive/npc-memory/tsunade.json",
-    "memory_total": 74,
+    "memory_total": 75,
     "name": "Цунадэ",
-    "seen": "s17.text.111",
+    "seen": "s17.text.112",
     "state": "Распорядилась выдать допуск и проводника.",
     "status": "present_profile",
     "tier": "deep"
@@ -1347,15 +1283,15 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.111",
-   "line": "Шики успешно призвал Сирамэ в кабинет Хокагэ. Она сообщила о разговоре с Орочимару после его исчезновения, заметила запах жаб от Джирайи и спросила о цели призыва."
+   "id": "s17.text.112",
+   "line": "Сирамэ добровольно согласилась передавать письма при условии независимого места обмена и согласия жабы. Джирайя предложил познакомить её с небольшой жабой-посланницей."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у середины кабинета, Сирамэ кольцами у его ног; Джирайя у отодвинутого стула, Цунадэ возле окна.",
-  "pressure": "Оба саннина наблюдают за знакомством; Сирамэ вправе принять или отклонить ещё не озвученное предложение.",
-  "situation": "Шики с разрешения Цунадэ призвал Сирамэ по договору Рьючидо. Она прибыла из убежища Орочимару, сообщила, что обнаружила отсутствие Шики и услышала от Орочимару о его пространственной технике; Кабуто не знал о его уходе. Сирамэ заметила запах жаб от Джирайи, приблизилась к Шики и спросила цель призыва. Посредничество ей ещё не предложено, согласия нет."
+  "positions": "Шики в середине кабинета, Сирамэ между ним и Джирайей; Джирайя поднялся, Цунадэ у стола.",
+  "pressure": "Ожидается добровольное участие жабы и согласование места передачи.",
+  "situation": "Шики объяснил Сирамэ цель встречи саннинов и предложил добровольное посредничество. Она согласилась передавать письма Орочимару, но отвергла постоянные вызовы по чужому желанию, предложила место обмена за пределами поселений и потребовала согласия жабы. Джирайя сообщил о знакомой небольшой жабе-посланнице. Сирамэ попросила познакомить их. Жаба не призвана, точка обмена не выбрана, переписка не началась."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1369,9 +1305,9 @@
    "player": "Они мертвы, скорее всего, у них одна чакрасигнатура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск",
    "source": "archive/session-017-turns.jsonl"
   },
-  "s17.text.111": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:15</text>\n\n### Конохагакуре. Кабинет Хокагэ\n\nШики сложил печати Кабана, Собаки, Птицы, Обезьяны и Овцы. Капля крови выступила на подушечке большого пальца. Когда ладонь коснулась пола, по деревянным доскам разбежались чёрные символы призывной формулы.\n\n**Кучиёсэ но дзюцу.**\n\nГлухой хлопок нарушил тишину кабинета. Белёсое облако дыма поднялось над полом, на мгновение скрыв ножки письменного стола. В его глубине Шики различил знакомую чакру Сирамэ.\n\nПоказалась белая змеиная голова. \n[... sou…",
-   "player": "По игре #призыв сиранэ#",
+  "s17.text.112": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:17</text>\n\n**Мугами Шики:** — Орочимару и джирая хотят организовать встречу, но у них проблемы с доверием поэтому им нужен обмен сообщениями. Джирая умеет призывать жаб, а Орочимару змей. У меня возникла идея передать пару писем через жаб и змей. Поможешь ли ты как посредник?\n\nСирамэ слегка наклонила голову. Её светлые глаза обратились к Джирайе.\n\nЗмея распустила кольца и приблизилась к саннину. Чешуйки на нижней стороне её туловища тихо шуршали по дереву. Джирайя опустился на одн\n[... sou…",
+   "player": "Орочимару и джирая хотят организовать встречу, но у них проблемы с доверием поэтому им нужен обмен сообщениями. Джирая умеет призывать жаб, а Орочимару змей. У меня возникла идея передать пару писем через жаб и змей. Поможешь ли ты как поср",
    "source": "archive/session-017-turns.jsonl"
   }
  },
@@ -1381,8 +1317,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "bc89e8740472156dd31ff41409c03e071af98cb8",
-  "turn": "s17.text.111"
+  "sha": "d908b338275066a67fa4f0d243a0ed1ac0bd9758",
+  "turn": "s17.text.112"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1400,7 +1336,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 20316.0,
+    "minutes": 20314.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
