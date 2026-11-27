@@ -81,13 +81,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.109"
+   "turn": "s17.text.110"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.109",
+  "cursor": "s17.text.110",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -497,11 +497,11 @@
  "cursor": {
   "at": "0010-05-13T11:14:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.109",
+  "id": "s17.text.110",
   "place": "Конохагакуре, кабинет Хокагэ",
   "time": "11:14"
  },
- "digest": "484277f77d1e8273b5a0a9c1189473646cdf7b49c7e077320166fbf3c510d102",
+ "digest": "2849d16eab9c1f7fd703064a197aa24cd336962fb6c8216de4f38bf1c3390b4a",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -634,18 +634,18 @@
    "value": 286.29
   },
   "dice": [
+   11,
+   1,
+   18,
    14,
-   8,
-   15,
+   17,
+   13,
    12,
-   4,
-   12,
-   12,
-   3,
+   6,
+   11,
    20,
-   7,
-   2,
-   15
+   19,
+   20
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -1005,7 +1005,7 @@
     },
     {
      "at": "0010-05-13T11:14:00",
-     "sha256": "ceacc8d265e8268c0407050ec4e711712dccd9af1f3834ac9654662d6a246c6f",
+     "sha256": "de86db568cd3398b02e990115f16986695f4e7b36e9f8824095bfa6f91e997f1",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.109"
@@ -1032,7 +1032,7 @@
     "memory_file": "archive/npc-memory/jiraiya.json",
     "memory_total": 135,
     "name": "Джирайя",
-    "seen": "s17.text.109",
+    "seen": "s17.text.110",
     "state": "Запросил исторические архивы Дождя.",
     "status": "present_profile",
     "tier": "deep"
@@ -1092,7 +1092,7 @@
     },
     {
      "at": "0010-05-13T11:14:00",
-     "sha256": "ceacc8d265e8268c0407050ec4e711712dccd9af1f3834ac9654662d6a246c6f",
+     "sha256": "de86db568cd3398b02e990115f16986695f4e7b36e9f8824095bfa6f91e997f1",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.109"
@@ -1119,7 +1119,7 @@
     "memory_file": "archive/npc-memory/tsunade.json",
     "memory_total": 73,
     "name": "Цунадэ",
-    "seen": "s17.text.109",
+    "seen": "s17.text.110",
     "state": "Распорядилась выдать допуск и проводника.",
     "status": "present_profile",
     "tier": "deep"
@@ -1162,8 +1162,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "b093ecf7e49971809764763e93473c706b824418",
-  "turn": "s17.text.109"
+  "sha": "db0aa54d4902b1592ecefbb1be4ebc65b3b376ad",
+  "turn": "s17.text.110"
  },
  "wiki": {
   "index": "memory/INDEX.md",
