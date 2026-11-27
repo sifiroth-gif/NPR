@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.065: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), поправки игрока: 1
 - s17.text.064: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), поправки игрока: 1
 - s17.text.063: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`)
 - s17.text.062: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), поправки игрока: 1
@@ -59,4 +60,3 @@
 - s17.text.010: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`)
 - s17.text.007: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`), план сюжета
 - s17.text.006: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`), Коюки (`npc/western_nest_young_courier`), план сюжета
-- s17.text.005: Джирайя (`npc/jiraiya`), план сюжета

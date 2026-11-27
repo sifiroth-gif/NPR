@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.064",
+  "cursor": "s17.text.065",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s17.text.064:0": {
+    "canon:s17.text.065:0": {
       "aliases": [
-        "canon:s17.text.064:0",
-        "s17.text.064: два погибших яйца похоронены 10.05.1287 возле наружного выхода нижних пещер убежища; место отмечено белыми камнями Коюки. Тёмная змея посетила могилу и вернулась к се"
+        "canon:s17.text.065:0",
+        "s17.text.065: Шики предложил Коюки обучать местных детёнышей речи только при согласии всех. Тёмная змея согласилась при условии оставаться у гнезда; один детёныш приблизился и заши"
       ],
       "facts": [],
-      "id": "canon:s17.text.064:0",
+      "id": "canon:s17.text.065:0",
       "kind": "canon",
-      "label": "s17.text.064: два погибших яйца похоронены 10.05.1287 возле наружного выхода нижних пещер убежища; место отмечено белыми камнями Коюки. Тёмная змея посетила могилу и вернулась к се",
+      "label": "s17.text.065: Шики предложил Коюки обучать местных детёнышей речи только при согласии всех. Тёмная змея согласилась при условии оставаться у гнезда; один детёныш приблизился и заши",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.064"
+        "s17.text.065"
       ]
     },
     "captive_guard": {
@@ -2644,12 +2644,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.036",
+          "seen": "s17.text.065",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s17.text.065"
       ]
     },
     "jiraiya": {
@@ -3095,8 +3096,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s17.text.064"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -3958,12 +3958,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.036",
+          "seen": "s17.text.065",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s17.text.065"
       ]
     },
     "kurama": {
@@ -7595,12 +7596,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.064",
+        "s17.text.065",
         "s16.text.100",
         "s16.text.101",
         "s17.text.061",
         "s17.text.062",
-        "s17.text.063"
+        "s17.text.063",
+        "s17.text.064"
       ]
     },
     "place:2262555f95fe4fea": {
@@ -19294,14 +19296,19 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s17.text.064",
+          "seen": "s17.text.065",
+          "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
+          "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
+        },
+        {
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         }
       ],
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
-        "s17.text.064"
+        "recovery/HOT.json",
+        "s17.text.065"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -20750,7 +20757,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 77,
+      "mention_count": 78,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20758,13 +20765,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-30T02:13:00",
-          "excerpt": "Коюки #улыбаясь# будь осторожна, а потом мне расскажешь. А душе попроси Сирамэ сходить с тобой. А ещё, хммм а как так вышло что вы можете говорить а они нет, но ты знаешь и их язык? <text color=\"secondary\" size=\"xs\">Пятница, 30 апреля 1287 года · 02:13",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.101"
         },
         {
           "at": "0010-04-30T02:14:00",
@@ -20779,6 +20779,13 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.104"
+        },
+        {
+          "at": "0010-05-10T13:06:00",
+          "excerpt": "енную расщелину. **Коюки:** — Она разрешила. Только просит не уводить их далеко от гнезда. А ещё я расспрошу Сирамэ, с чего начинали наше обучение старшие. Белая змейка свернулась возле детёнышей. **Коюки:** — Представляешь, Шики, если однажды они сами смогут ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.065"
         }
       ],
       "projections": [
@@ -21990,8 +21997,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s17.text.064"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22288,7 +22294,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 99,
+      "mention_count": 100,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22296,13 +22302,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T12:46:00",
-          "excerpt": ". Нижние пещеры **Мугами Шики:** — Да, двое умерли. Я попытаюсь спасти ещё двоих но обещать не могу. Коюки повернулась к тёмной змее. Несколько раз коснулась её морды своей, негромко зашипела. Тёмная змея замерла над погибшими яйцами. Затем медленно отвела гол",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.062"
         },
         {
           "at": "0010-05-10T12:49:00",
@@ -22317,11 +22316,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.064"
+        },
+        {
+          "at": "0010-05-10T13:06:00",
+          "excerpt": "### Убежище Шики. Нижние пещеры **Мугами Шики:** — Любознательный, если все будут согласны поучи их. Коюки оживилась. **Коюки:** — Тогда я попробую учить их так, как меня учили в Рьючидо. Правда, я никогда раньше никого не учила. Она вернулась к кладке и некот",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.065"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.064",
+          "seen": "s17.text.065",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22331,7 +22337,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.064"
+        "s17.text.065"
       ]
     },
     "white_snake_sage": {
@@ -22859,5 +22865,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1571
+  "source_turns_indexed": 1572
 }
