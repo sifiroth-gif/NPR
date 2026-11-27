@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.029",
+  "cursor": "s17.text.030",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 128,
+      "mention_count": 129,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:19:00",
-          "excerpt": "**Конан:** — Я уже предложила учителю уйти. Не заставляй меня нарушать собственное слово. В наступившей тишине Джирайя посмотрел на неё. Его широкие плечи опустились. В этот момент он выглядел значительно старше, чем несколько часов назад, когда они пересекали",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.027"
         },
         {
           "at": "0010-05-05T20:04:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.029"
+        },
+        {
+          "at": "0010-05-05T20:07:00",
+          "excerpt": "щё, я заметил не только троих, когда мы уходили смутно я отследил ещё 3 и один большей силы источник. Джирайя остановился. В темноте его лицо едва различалось. Он медленно повернулся в сторону оставленного города, над которым всё ещё висело тяжёлое дождевое об",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.030"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.029",
-          "state": "Поднялся с камня; предложил возвращение, намерен доложить Цунадэ и просить о разведке сведений о стержнях."
+          "seen": "s17.text.030",
+          "state": "Зафиксировал дополнительные сенсорные наблюдения, остановился для уточнения сигнатуры."
         },
         {
-          "state": "Поднялся с камня; предложил возвращение, намерен доложить Цунадэ и просить о разведке сведений о стержнях."
+          "state": "Зафиксировал дополнительные сенсорные наблюдения, остановился для уточнения сигнатуры."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.029"
+        "s17.text.030"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3793,8 +3793,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/konan.json",
-        "s17.text.029"
+        "recovery/cast/konan.json"
       ]
     },
     "kotetsu": {
@@ -12098,8 +12097,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.029",
-        "s17.text.028"
+        "s17.text.030",
+        "s17.text.028",
+        "s17.text.029"
       ]
     },
     "place:7d8179b86d9b7c32": {
@@ -22551,5 +22551,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1538
+  "source_turns_indexed": 1539
 }
