@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.014",
+  "cursor": "s18.text.015",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -920,13 +920,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.014"
+          "seen": "s18.text.015"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s18.text.014"
+        "s18.text.015"
       ]
     },
     "deidara": {
@@ -2252,12 +2252,17 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s18.text.013",
+          "seen": "s18.text.015",
+          "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
+        },
+        {
+          "role": "Акацуки",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         }
       ],
       "sources": [
-        "recovery/cast/hidan.json"
+        "recovery/cast/hidan.json",
+        "recovery/HOT.json"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -8146,13 +8151,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.014",
+        "s18.text.015",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
         "s18.text.011",
         "s18.text.012",
-        "s18.text.013"
+        "s18.text.013",
+        "s18.text.014"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21125,7 +21131,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 54,
+      "mention_count": 55,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21133,13 +21139,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T13:09:00",
-          "excerpt": "от сознания человеческое тело существовало в темноте, не обнаруживая обычных признаков самостоятельной жизни. Шизунэ подозвала дежурного медика и попросила принести журналы наблюдения за обеими частями организма Хидана. Тот выслушал её, поклонился и поспешил и",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.012"
         },
         {
           "at": "0010-05-14T13:12:00",
@@ -21154,11 +21153,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.014"
+        },
+        {
+          "at": "0010-05-14T13:15:00",
+          "excerpt": "й пол перед собой. Цунадэ перестала хмуриться. При упоминании четырёхчасовой операции она посмотрела на Шизунэ. Та ответила ей едва заметным движением головы. За дверью камеры Хидана наконец воцарилась тишина. Лишь редкие капли воды разбивались о камень где-то",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.015"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.014",
+          "seen": "s18.text.015",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -21168,7 +21174,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s18.text.014"
+        "s18.text.015"
       ]
     },
     "signalshchik": {
@@ -22165,7 +22171,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 141,
+      "mention_count": 142,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22173,13 +22179,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:09:00",
-          "excerpt": "ычного материала. Однако вы сами предложили способ, позволяющий моим специалистам получить к нему доступ. Цунадэ слушала, прислонившись плечом к стене. На её лице сохранялось недовольство, но вмешиваться в разговор она пока не собиралась. Данзо повернулся к дв",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.012"
         },
         {
           "at": "0010-05-14T13:12:00",
@@ -22194,11 +22193,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.014"
+        },
+        {
+          "at": "0010-05-14T13:15:00",
+          "excerpt": "альцы медленно разжались на рукояти трости. Старик отвёл взгляд, рассматривая каменный пол перед собой. Цунадэ перестала хмуриться. При упоминании четырёхчасовой операции она посмотрела на Шизунэ. Та ответила ей едва заметным движением головы. За дверью камеры",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.015"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.014",
+          "seen": "s18.text.015",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22208,7 +22214,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.014"
+        "s18.text.015"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23098,5 +23104,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1651
+  "source_turns_indexed": 1652
 }
