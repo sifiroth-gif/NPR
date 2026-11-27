@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.072",
+  "cursor": "s18.text.073",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 46,
+      "mention_count": 47,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-15T09:12:00",
-          "excerpt": "альной снисходительности, с которой он согласился на предложение Шики, практически ничего не осталось. **Асума Сарутоби:** — Теперь понимаю, к чему ты ведёшь. Он поднялся с корня и подошёл к ученикам. Тёдзи освободил ему место возле полотна. Асума присел и ука",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.070"
         },
         {
           "at": "0010-05-15T09:14:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.072"
+        },
+        {
+          "at": "0010-05-15T09:16:00",
+          "excerpt": "едов выраженного истощения не наблюдалось. Дыхание девушки оставалось ровным, движения пальцев — уверенными. **Асума Сарутоби:** — Хорошее направление. Обсуди это с отцом. Но пока не будем считать одну секунду гарантированным результатом против любого противни",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.073"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.072",
+          "seen": "s18.text.073",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.072"
+        "s18.text.073"
       ]
     },
     "baki": {
@@ -532,20 +532,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s18.text.072:0": {
+    "canon:s18.text.073:0": {
       "aliases": [
-        "canon:s18.text.072:0",
-        "s18.text.072: первая подтверждённая проверка Синтеншин Ино против Шики с согласия и сознательным сопротивлением. Субъективный краткий чужой контакт без полного подчинения, Ино быст"
+        "canon:s18.text.073:0",
+        "s18.text.073: прямая поправка игрока к s18.text.072 — при испытании Синтеншин с сознательным сопротивлением контроль Ино слабее контроля Шики, однако примерно на одну секунду Шики "
       ],
       "facts": [],
-      "id": "canon:s18.text.072:0",
+      "id": "canon:s18.text.073:0",
       "kind": "canon",
-      "label": "s18.text.072: первая подтверждённая проверка Синтеншин Ино против Шики с согласия и сознательным сопротивлением. Субъективный краткий чужой контакт без полного подчинения, Ино быст",
+      "label": "s18.text.073: прямая поправка игрока к s18.text.072 — при испытании Синтеншин с сознательным сопротивлением контроль Ино слабее контроля Шики, однако примерно на одну секунду Шики ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.072"
+        "s18.text.073"
       ]
     },
     "captive_guard": {
@@ -825,13 +825,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.072"
+          "seen": "s18.text.073"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.072"
+        "s18.text.073"
       ]
     },
     "clinic_assistant": {
@@ -2574,7 +2574,7 @@
       "id": "ino",
       "kind": "npc",
       "label": "Ино Яманака",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -2582,13 +2582,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:12:00",
-          "excerpt": "ринялась рассматривать расположение камней. Тёдзи тоже наклонился над схемой, опираясь ладонями на колени. **Ино Яманака:** — Тогда нам необязательно даже наносить противнику повреждения. **Тёдзи Акимичи:** — А мне необязательно пробивать его защиту. Шикамару ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.070"
         },
         {
           "at": "0010-05-15T09:14:00",
@@ -2603,17 +2596,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.072"
+        },
+        {
+          "at": "0010-05-15T09:16:00",
+          "excerpt": "ой контроль слабее моего. Тем не менее на секунду я оказался в твоей власти. Это факт. Ино замерла. **Ино Яманака:** — На целую секунду? Она обернулась к Шикамару. Тот уже поднялся с земли и теперь смотрел на расстояние между Шики и ближайшим тренировочным сто",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.073"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.072"
+          "seen": "s18.text.073"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.072"
+        "s18.text.073"
       ]
     },
     "inquiry_contact_token": {
@@ -10989,7 +10989,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.072",
+        "s18.text.073",
         "s18.text.053",
         "s18.text.054",
         "s18.text.055",
@@ -11008,7 +11008,8 @@
         "s18.text.068",
         "s18.text.069",
         "s18.text.070",
-        "s18.text.071"
+        "s18.text.071",
+        "s18.text.072"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20865,7 +20866,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20873,13 +20874,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:11:00",
-          "excerpt": "й. Шикамару поднялся последним. На земле осталась схема, состоявшая теперь из нескольких соединённых линиями кругов. **Шикамару Нара:** — Мои сильные стороны — анализ, планирование и ограничение действий противника. Слабые — продолжительность удержания, зависи",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.069"
         },
         {
           "at": "0010-05-15T09:12:00",
@@ -20894,11 +20888,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.071"
+        },
+        {
+          "at": "0010-05-15T09:16:00",
+          "excerpt": "Тот уже поднялся с земли и теперь смотрел на расстояние между Шики и ближайшим тренировочным столбом. **Шикамару Нара:** — За это время ты успел бы выполнить несколько рывков. Он вновь посмотрел на Ино. **Шикамару Нара:** — Любопытно. Ты не смогла победить его",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.073"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.072",
+          "seen": "s18.text.073",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20908,7 +20909,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.072"
+        "s18.text.073"
       ]
     },
     "shiki_arm_wraps": {
@@ -23396,5 +23397,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1709
+  "source_turns_indexed": 1710
 }

@@ -15,7 +15,7 @@
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09
 - Конохагакуре, подземный изолятор · `places/konokhagakure-podzemnyy-izolyator` · 22 ход(ов), s16–s18
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 22 ход(ов), s09–s10
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 20 ход(ов), s18–s18
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 21 ход(ов), s18–s18
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 20 ход(ов), s07–s11
 - Рьючидо, внутреннее святилище · `places/ryuchido-vnutrennee-svyatilishche` · 20 ход(ов), s10–s10
