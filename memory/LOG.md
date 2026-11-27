@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.127: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`), план сюжета
 - s17.text.126: Цунадэ (`npc/tsunade`), Котэцу Хаганэ (`npc/kotetsu`), Райдо Намиаси (`npc/raido`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.125: Цунадэ (`npc/tsunade`), Иваши Татами (`npc/iwashi`), Изумо Камидзуки (`npc/izumo`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.124: Саске Учиха (`npc/sasuke`), Изумо Камидзуки (`npc/izumo`), Котэцу Хаганэ (`npc/kotetsu`), Цунадэ (`npc/tsunade`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Коюки (`npc/western_nest_young_courier`), поправки игрока: 1

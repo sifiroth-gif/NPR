@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.126",
+  "cursor": "s17.text.127",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3968,8 +3968,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s17.text.126"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -5555,12 +5554,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.012",
+          "seen": "s17.text.127",
           "state": "После предупреждения Шики покинул опасный участок с Сакурой и Ямато; стремится догнать Сая и Саске."
         }
       ],
       "sources": [
-        "recovery/cast/naruto.json"
+        "recovery/cast/naruto.json",
+        "s17.text.127"
       ]
     },
     "neji": {
@@ -5807,7 +5807,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 231,
+      "mention_count": 232,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5815,13 +5815,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:38:00",
-          "excerpt": "Орочимару жив, а Сирамэ, она помогает Орочимару связаться со старым .....другом <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:38</text> **Мугами Шики:** — Орочи",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.121"
         },
         {
           "at": "0010-05-13T18:21:00",
@@ -5836,6 +5829,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.125"
+        },
+        {
+          "at": "0010-05-14T12:05:00",
+          "excerpt": "пешно ответил ей, и шум возле передающего устройства стих. **Наруто:** — Бабуля сказала, что Саске ушёл от Орочимару. Что ты видел его перед уходом. Он говорил необычно быстро, словно опасался, что связь оборвётся прежде, чем он успеет задать вопрос. Коюки под",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.127"
         }
       ],
       "projections": [
@@ -12204,13 +12204,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.126",
+        "s17.text.127",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068",
         "s17.text.070",
         "s17.text.124",
-        "s17.text.125"
+        "s17.text.125",
+        "s17.text.126"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -19169,8 +19170,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/raido.json",
-        "s17.text.126"
+        "recovery/cast/raido.json"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -21150,12 +21150,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.073",
+          "seen": "s17.text.127",
           "state": "Вручила подписанный допуск, организован проводник."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "s17.text.127"
       ]
     },
     "signalshchik": {
@@ -22215,7 +22216,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 120,
+      "mention_count": 121,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22223,13 +22224,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T18:21:00",
-          "excerpt": "не потревожил Шики. В этот момент откликнулся личный приёмник связи. Чакровая сигнатура принадлежала пластине Цунадэ. Привычный сигнал вызова повторился. Когда связь установилась со стороны отправителя, послышался голос Хокагэ. На заднем плане негромко перегов",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.124"
         },
         {
           "at": "0010-05-13T18:23:00",
@@ -22244,17 +22238,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.126"
+        },
+        {
+          "at": "0010-05-14T12:05:00",
+          "excerpt": "протяжный звук не отреагировала. В жилых помещениях раздался сигнал приёмника. Это снова была пластина Цунадэ. Однако на другом конце канала звучал совсем не её голос. **Наруто:** — Шики! Ты меня слышишь? Вслед за его голосом послышалось недовольное замечание ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.127"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.126",
+          "seen": "s17.text.127",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "s17.text.126"
+        "s17.text.127"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22551,7 +22552,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 111,
+      "mention_count": 112,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22559,13 +22560,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-13T18:21:00",
-          "excerpt": "condary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:51</text> **Мугами Шики:** — Да, я пойду отдыхать Коюки проводила Шики до лестницы и вернулась к гнезду. В жилых помещениях он устроился для медитации, позволив восприятию окружающего постепенно отступить перед",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.124"
         },
         {
           "at": "0010-05-13T18:23:00",
@@ -22580,11 +22574,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.126"
+        },
+        {
+          "at": "0010-05-14T12:05:00",
+          "excerpt": "прошли без происшествий в убежище. В нижних пещерах продолжалась жизнь маленького змеиного поселения. Коюки несколько раз поднималась из-под земли за пределы жилого коридора, а затем возвращалась к гнезду. К полудню солнечный свет проник глубоко в естественную",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.127"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.126",
+          "seen": "s17.text.127",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22594,7 +22595,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.126"
+        "s17.text.127"
       ]
     },
     "white_snake_sage": {
@@ -23157,5 +23158,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1630
+  "source_turns_indexed": 1631
 }
