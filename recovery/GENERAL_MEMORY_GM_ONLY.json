@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.053",
+  "cursor": "s18.text.054",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 33,
+      "mention_count": 34,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T15:18:00",
-          "excerpt": "убрал в карман. Повернул под солнечным светом и внимательно рассмотрел непривычное расположение символов. **Асума Сарутоби:** — Подожди… Это пространственная формула? Прежняя непринуждённость исчезла из его голоса. Он поставил свёрток с мясом на стол и ещё раз",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.031"
         },
         {
           "at": "0010-05-14T15:19:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.053"
+        },
+        {
+          "at": "0010-05-15T08:56:00",
+          "excerpt": "внул и убрал монету в отдельный мешочек. Затянув шнурок, он спрятал его во внутренний карман жилета. **Асума Сарутоби:** — Значит, в случае необходимости я действительно смогу тебя позвать. Полезная вещь. Он достал сигарету, прикурил и повернулся к ученикам. Ш",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.054"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.053",
+          "seen": "s18.text.054",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.053"
+        "s18.text.054"
       ]
     },
     "baki": {
@@ -530,22 +530,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s18.text.053:0": {
-      "aliases": [
-        "canon:s18.text.053:0",
-        "s18.text.052–053: первая проверка отклика физической метки Хирайшина при введении чужой чакры. В 08:55 Асума подал чакру в монету на полигоне №10; Шики в убежище Страны Рек ощутил "
-      ],
-      "facts": [],
-      "id": "canon:s18.text.053:0",
-      "kind": "canon",
-      "label": "s18.text.052–053: первая проверка отклика физической метки Хирайшина при введении чужой чакры. В 08:55 Асума подал чакру в монету на полигоне №10; Шики в убежище Страны Рек ощутил ",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s18.text.053"
       ]
     },
     "captive_guard": {
@@ -795,13 +779,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.053"
+          "seen": "s18.text.054"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.053"
+        "s18.text.054"
       ]
     },
     "clinic_assistant": {
@@ -2537,23 +2521,46 @@
     },
     "ino": {
       "aliases": [
-        "ino"
+        "ino",
+        "Ино Яманака"
       ],
       "facts": [],
       "id": "ino",
       "kind": "npc",
-      "label": "ino",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Ино Яманака",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0001-07-03T11:27:00",
+          "excerpt": "манекене. Не идеально. Но уже не случайно. --- ### Пятница, 5 июля. День четвёртый В башню прибыла команда Асумы: Шикамару Нара, Ино Яманака и Тёдзи Акимичи. Шикамару едва держался на ногах от усталости. Ино злилась на него за то, что он дважды предлагал отказ",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.092"
+        },
+        {
+          "at": "0001-07-07T08:49:00",
+          "excerpt": "ки прошла дальше, не требуя поздравлений. Она победила самостоятельно — и отныне Киба Инузука имел вполне личные причины её ненавидеть. --- ### Десятый бой. Ино Яманака против Темари **09:04.** Темари раскрыла веер. В отличие от Кибы, она не стала бросаться вп",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.106"
+        },
+        {
+          "at": "0010-05-15T08:56:00",
+          "excerpt": "перемещение… Вот уж действительно неприятная способность для противника. Ино перевела взгляд на учителя. **Ино Яманака:** — Асума-сэнсэй, это тот человек, который был с вами у пункта обмена? **Асума Сарутоби:** — Именно. Мугами Шики. Тёдзи закрыл пакет с едой ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.054"
+        }
+      ],
       "projections": [
         {
-          "seen": "s18.text.053"
+          "seen": "s18.text.054"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.053"
+        "s18.text.054"
       ]
     },
     "inquiry_contact_token": {
@@ -3197,7 +3204,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -3205,13 +3212,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-25T12:10:00",
-          "excerpt": "**Цунадэ:** — Кстати, Шикамару сегодня утром не сумел представить законченный анализ способностей Хидана и Какудзу. Теперь у нас гораздо больше сведений. Поручу ему сопоставить материалы боя с результатами допроса. Джирайя складывает карту Амэгакурэ. В коридор",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.035"
         },
         {
           "at": "0010-05-05T19:18:24",
@@ -3226,6 +3226,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.022"
+        },
+        {
+          "at": "0010-05-15T08:56:00",
+          "excerpt": "ту, прикурил и повернулся к ученикам. Шикамару подошёл первым. После совместной операции против Хидана и Какудзу его отношение к Шики заметно отличалось от поведения остальных членов команды. Он остановился рядом с Асумой, без прежней настороженности рассматри",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.054"
         }
       ],
       "projections": [
@@ -10929,6 +10936,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.054",
         "s18.text.053"
       ]
     },
@@ -20786,7 +20794,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20794,13 +20802,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T07:42:00",
-          "excerpt": "рутоби:** — Хорошо. Обсудишь это непосредственно с Хокагэ. Если она согласится, я не вижу причин возражать. **Шикамару Нара:** — Потребуются два отдельных контейнера с печатями. И желательно, чтобы их перевозили разные группы. **Хидан:** — Вы ещё пожалеете, чт",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.181"
         },
         {
           "at": "0010-04-24T12:20:00",
@@ -20815,11 +20816,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.053"
+        },
+        {
+          "at": "0010-05-15T08:56:00",
+          "excerpt": "с Асумой, без прежней настороженности рассматривая человека, с которым уже участвовал в настоящем бою. **Шикамару Нара:** — Пространственное перемещение… Вот уж действительно неприятная способность для противника. Ино перевела взгляд на учителя. **Ино Яманака:",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.054"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.053",
+          "seen": "s18.text.054",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20829,7 +20837,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.053"
+        "s18.text.054"
       ]
     },
     "shiki_arm_wraps": {
@@ -21065,11 +21073,11 @@
         {
           "holder": "asuma",
           "since": "s18.text.030",
-          "turn": "s18.text.053"
+          "turn": "s18.text.054"
         }
       ],
       "sources": [
-        "s18.text.053"
+        "s18.text.054"
       ]
     },
     "shiki_spare_communication_plate": {
@@ -22710,8 +22718,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -22755,8 +22762,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s18.text.053"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -23312,12 +23318,12 @@
     },
     {
       "from": "shiki_spare_coin_s18",
-      "source": "s18.text.053",
+      "source": "s18.text.054",
       "status": "projected",
       "to": "asuma",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1690
+  "source_turns_indexed": 1691
 }

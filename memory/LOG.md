@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.054: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`), вещь `shiki_spare_coin_s18`
 - s18.text.053: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_spare_coin_s18`, поправки игрока: 1
 - s18.text.052: Коюки (`npc/western_nest_young_courier`)
 - s18.text.051: Коюки (`npc/western_nest_young_courier`)
@@ -59,4 +60,3 @@
 - s17.text.130: Цунадэ (`npc/tsunade`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.129: Наруто Узумаки (`npc/naruto`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Коюки (`npc/western_nest_young_courier`)
 - s17.text.128: Наруто Узумаки (`npc/naruto`), Цунадэ (`npc/tsunade`), Коюки (`npc/western_nest_young_courier`), план сюжета
-- s17.text.127: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Наруто Узумаки (`npc/naruto`), Коюки (`npc/western_nest_young_courier`), план сюжета
