@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.078: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), вещь `orochimaru_reconstructed_body_s17`, план сюжета, поправки игрока: 1
 - s17.text.077: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), вещь `orochimaru_original_matrix_s17`, план сюжета, поправки игрока: 1
 - s17.text.076: Кабуто Якуши (`npc/kabuto`), Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), вещь `orochimaru_marrow_sample_s17`, план сюжета
 - s17.text.075: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), план сюжета
@@ -59,4 +60,3 @@
 - s17.text.021: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.020: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.019: Джирайя (`npc/jiraiya`)
-- s17.text.018: Джирайя (`npc/jiraiya`), план сюжета
