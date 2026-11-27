@@ -16,10 +16,11 @@ from . import continuity_guard, fight, hot, overlay, prose_lint
 
 # Player's binding instruction s17.text.110; do not retroactively judge old turns.
 DESCRIPTION_FROM = (17, 111)
+DESCRIPTION_180_FROM = (17, 114)
 DESCRIPTION_RULE = (
     "Описания: каждый игровой ход, даже диалог — предметная среда, доступная Шики "
     "сенсорика, конкретное действие, видимые реакции NPC. Минимум 3 абзаца "
-    "повествования по ≥8 слов, всего ≥60 слов вне реплик и шапок; нижний порог, не цель. "
+    "повествования по ≥8 слов, всего ≥180 слов вне реплик и шапок; нижний порог, не цель. "
     "Не набивай объём повторами или чужими мыслями. Если не выполнено, допиши весь "
     "черновик до публикации даже первой строки. OOC/технические записи исключены."
 )
@@ -45,9 +46,10 @@ def description_errors(turn):
         words = re.findall(r"[А-Яа-яЁёA-Za-z]+(?:-[А-Яа-яЁёA-Za-z]+)*", " ".join(lines))
         if len(words) >= 8:
             lengths.append(len(words))
-    if len(lengths) < 3 or sum(lengths) < 60:
+    minimum = 180 if hot.turn_number(turn["id"]) >= DESCRIPTION_180_FROM else 60
+    if len(lengths) < 3 or sum(lengths) < minimum:
         return [f"Описания: только {len(lengths)} содержательных абзацев, {sum(lengths)} слов; "
-                "нужно ≥3 абзацев по ≥8 слов и ≥60 слов повествования. Допиши сцену до публикации."]
+                f"нужно ≥3 абзацев по ≥8 слов и ≥{minimum} слов повествования. Допиши сцену до публикации."]
     return []
 
 
