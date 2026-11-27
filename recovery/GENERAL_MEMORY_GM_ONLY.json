@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.080",
+  "cursor": "s17.text.081",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.080:0": {
-      "aliases": [
-        "canon:s17.text.080:0",
-        "s17.text.080: 12.05.1287 15:53 Шики при помощи Кабуто завершил первичную стабилизацию Орочимару после добровольного Фуши Тенсей в выращенное исходное тело. Орочимару жив, в сознани"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.080:0",
-      "kind": "canon",
-      "label": "s17.text.080: 12.05.1287 15:53 Шики при помощи Кабуто завершил первичную стабилизацию Орочимару после добровольного Фуши Тенсей в выращенное исходное тело. Орочимару жив, в сознани",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.080"
       ]
     },
     "captive_guard": {
@@ -2804,7 +2788,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 116,
+      "mention_count": 117,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2812,13 +2796,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-05-12T15:26:00",
-          "excerpt": "ая полость, предназначенная для развития нового организма. Кабуто снял очки и приблизился на полшага. **Кабуто Якуши:** — Внутри собственной ткани… Он замолчал. Орочимару открыл глаза. ## I. Репрограммирование клеточной линии <text color=\"secondary\" size=\"xs\">",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.078"
         },
         {
           "at": "0010-05-12T15:31:00",
@@ -2833,21 +2810,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.080"
+        },
+        {
+          "at": "0010-05-12T20:53:00",
+          "excerpt": ", но естественное восстановление уже возобновилось. Дверь открылась. Вошёл Кабуто, держа медицинский журнал. **Кабуто Якуши:** — С возвращением, Шики-сан. Он остановился возле койки. **Кабуто Якуши:** — Орочимару-сама жив. За прошедшие часы никаких признаков п",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.081"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.080",
-          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
-        },
-        {
+          "seen": "s17.text.081",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s17.text.080"
+        "s17.text.081"
       ]
     },
     "kabuto_letter_0416": {
@@ -5805,7 +5785,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 191,
+      "mention_count": 192,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5813,13 +5793,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T15:26:00",
-          "excerpt": "нце отделение# <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 07:26</text> ### Убежище Орочимару. Лаборатория **Мугами Шики:** — Да. Я приступаю. Кабуто отодвинул свободный операционный стол, освободив пространство рядом с Шики. Сирамэ устроилась ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.078"
         },
         {
           "at": "0010-05-12T15:31:00",
@@ -5834,21 +5807,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.080"
+        },
+        {
+          "at": "0010-05-12T20:53:00",
+          "excerpt": "ре <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 20:53</text> ### Страна Рек. Убежище Орочимару. Палата наблюдения Сознание возвращалось постепенно. Сначала — ощущение собственного тела. Затем — звуки: мерное падение капель воды, шорох ткани, тих",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.081"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.080",
-          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
-        },
-        {
+          "seen": "s17.text.081",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "recovery/HOT.json",
-        "s17.text.080"
+        "s17.text.081"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -8034,6 +8010,25 @@
       "projections": [],
       "sources": [
         "s11.text.007"
+      ]
+    },
+    "place:2a7ad2dd968866fc": {
+      "aliases": [
+        "place:2a7ad2dd968866fc",
+        "Северная граница Страны Рек, подземное убежище Орочимару, палата наблюдения",
+        "Северная граница Страны Рек",
+        "подземное убежище Орочимару",
+        "палата наблюдения"
+      ],
+      "facts": [],
+      "id": "place:2a7ad2dd968866fc",
+      "kind": "place",
+      "label": "Северная граница Страны Рек, подземное убежище Орочимару, палата наблюдения",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.081"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -11893,11 +11888,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.080",
         "s17.text.076",
         "s17.text.077",
         "s17.text.078",
-        "s17.text.079"
+        "s17.text.079",
+        "s17.text.080"
       ]
     },
     "place:773158887ba4dadb": {
@@ -20091,12 +20086,17 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.053",
+          "seen": "s17.text.081",
+          "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
+        },
+        {
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json"
+        "recovery/cast/sasuke.json",
+        "recovery/HOT.json",
+        "s17.text.081"
       ]
     },
     "sayu": {
@@ -20869,7 +20869,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 90,
+      "mention_count": 91,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20877,13 +20877,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T15:26:00",
-          "excerpt": "— Да. Я приступаю. Кабуто отодвинул свободный операционный стол, освободив пространство рядом с Шики. Сирамэ устроилась на каменном выступе возле стены. Из-под одежды Шики появился толстый угольно-чёрный отросток. В отличие от прежних боевых проявлений, его ст",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.078"
         },
         {
           "at": "0010-05-12T15:31:00",
@@ -20898,12 +20891,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.080"
+        },
+        {
+          "at": "0010-05-12T20:53:00",
+          "excerpt": "ались при нём. Меч находился на столике возле изголовья. Рядом, свернувшись несколькими кольцами, лежала Сирамэ. Почувствовав изменение дыхания Шики, она подняла голову. **Сирамэ:** — Наконец-то. Змея приблизилась к его лицу. **Сирамэ:** — Ты не приходил в себ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.081"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.080",
+          "seen": "s17.text.081",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20917,7 +20917,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.080"
+        "s17.text.081"
       ]
     },
     "shiranami": {
@@ -22992,5 +22992,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1586
+  "source_turns_indexed": 1587
 }
