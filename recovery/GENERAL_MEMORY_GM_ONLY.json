@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.086",
+  "cursor": "s17.text.087",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5763,7 +5763,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 197,
+      "mention_count": 198,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5771,13 +5771,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T20:56:00",
-          "excerpt": "12 мая 1287 года · 20:56</text> **Мугами Шики:** — Да, ты заключил договор? **Саске Учиха:** — Да. Орочимару позволил мне подписать свиток Рьючидо. Сирамэ слегка приподнялась над постелью. **Сирамэ:** — Значит, теперь и ты призыватель. Саске кивнул. **Саске Уч",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.084"
         },
         {
           "at": "0010-05-13T04:57:00",
@@ -5792,11 +5785,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.086"
+        },
+        {
+          "at": "0010-05-13T07:59:00",
+          "excerpt": "secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 07:59</text> **Мугами Шики:** — давайте поговорим. Орочимару положил руки на колени. На его пальцах больше не было следов многочисленных телесных перестроек. Шики мог различить равномерное движение чакры в конеч",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.087"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.086",
+          "seen": "s17.text.087",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5806,7 +5806,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.086"
+        "s17.text.087"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -8010,12 +8010,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.086",
+        "s17.text.087",
         "s17.text.081",
         "s17.text.082",
         "s17.text.083",
         "s17.text.084",
-        "s17.text.085"
+        "s17.text.085",
+        "s17.text.086"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -20892,8 +20893,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json",
-        "s17.text.086"
+        "recovery/cast/shirame.json"
       ]
     },
     "shiranami": {
@@ -22940,5 +22940,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1592
+  "source_turns_indexed": 1593
 }
