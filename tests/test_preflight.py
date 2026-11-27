@@ -31,7 +31,7 @@ class DraftPreflightTest(unittest.TestCase):
         old = copy.deepcopy((p, t))
         result = preflight.inspect(p, t)
         self.assertTrue(result["mechanical_ok"], result)
-        self.assertEqual(len(result["checklist"]), 6)
+        self.assertEqual(len(result["checklist"]), 7)
         self.assertEqual((p, t), old)
         self.assertFalse(any("дословную" in x for x in result["review"]))
 
@@ -98,3 +98,41 @@ class DraftPreflightTest(unittest.TestCase):
         p["news_id"] = "evt_" + "a" * 20
         t = draft(d={"scene": {"present": ["shiki"]}, "must_done": [p["news_id"]]})
         self.assertFalse(preflight.inspect(p, t)["mechanical_ok"])
+
+
+class DescriptionGateTest(unittest.TestCase):
+    def current(self, gm, **extra):
+        p = packet()
+        p.update(cursor="s17.text.110", next_id="s17.text.111")
+        p["lag"].update(recorded_turn="s17.text.110", dice_for="s17.text.111")
+        t = draft(id="s17.text.111", review={"predecessor": "s17.text.110"},
+                  gm=gm, **extra)
+        return p, t
+
+    def test_dialogue_only_is_rejected(self):
+        p, t = self.current("**Мугами Шики:** — Где врач?\n\n**Врач:** — Здесь.")
+        result = preflight.inspect(p, t)
+        self.assertFalse(result["mechanical_ok"])
+        self.assertTrue(any("Описания" in x for x in result["errors"]))
+        self.assertTrue(any("Описания" in x for x in preflight.postcheck(t)))
+
+    def test_narration_passes_floor(self):
+        gm = ("Свет из высокого окна пересекал пол и падал на старую дверь, "
+              "возле которой стоял стол с раскрытыми медицинскими записями.\n\n"
+              "Шики открыл дверь, и из соседнего помещения донеслись голоса, "
+              "стук металлических инструментов и негромкое мерное журчание воды в умывальнике.\n\n"
+              "**Мугами Шики:** — Где врач?\n\n"
+              "Служащий отложил письмо, поднялся из-за стола и указал на дальний коридор, "
+              "где за приоткрытой дверью виднелись деревянные полки и лампа.")
+        p, t = self.current(gm)
+        self.assertEqual(preflight.description_errors(t), [])
+        self.assertTrue(preflight.inspect(p, t)["mechanical_ok"])
+
+    def test_ooc_and_historical_turns_are_exempt(self):
+        _, t = self.current("Правило принято.", kind="ooc")
+        self.assertEqual(preflight.description_errors(t), [])
+        self.assertEqual(preflight.description_errors(draft()), [])
+
+    def test_headings_and_long_speech_do_not_count(self):
+        _, t = self.current("# " + "описание " * 80 + "\n\n**Врач:** — " + "слово " * 80)
+        self.assertTrue(preflight.description_errors(t))
