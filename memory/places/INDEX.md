@@ -88,6 +88,7 @@
 - Страна Травы, заброшенный сушильный двор на подходе к подпольным торговым складам · `places/strana-travy-zabroshennyy-sushilnyy-dvor-na-podkhode-k-podpo` · 5 ход(ов), s12–s12
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 4 ход(ов), s17–s17
+- Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 4 ход(ов), s17–s17
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 4 ход(ов), s15–s15
@@ -107,7 +108,6 @@
 - Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 3 ход(ов), s15–s16
 - Конохагакуре, Центральный госпитальный блок · `places/konokhagakure-tsentralnyy-gospitalnyy-blok` · 3 ход(ов), s02–s02
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
-- Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 3 ход(ов), s17–s17
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
 - Кусагакуре, дом Магами Шики · `places/kusagakure-dom-magami-shiki` · 3 ход(ов), s04–s04
 - Кусагакуре, переулок у боковой калитки дома Мугами Шики · `places/kusagakure-pereulok-u-bokovoy-kalitki-doma-mugami-shiki` · 3 ход(ов), s08–s08

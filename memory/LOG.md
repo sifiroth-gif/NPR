@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.038: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), поправки игрока: 1
 - s17.text.037: Какаши Хатакэ (`npc/kakashi`), Конан (`npc/konan`)
 - s17.text.036: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`)
 - s17.text.035: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`)
@@ -59,4 +60,3 @@
 - s16.text.121: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Данзо Шимура (`npc/danzo`), Шизунэ (`npc/shizune`)
 - s16.text.120: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s16.text.119: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
-- s16.text.118: Данзо Шимура (`npc/danzo`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
