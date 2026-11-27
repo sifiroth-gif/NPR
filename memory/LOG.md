@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.070: Сирамэ (`npc/shirame`)
 - s17.text.068: Сирамэ (`npc/shirame`), Коюки (`npc/western_nest_young_courier`), Кабуто Якуши (`npc/kabuto`), Иваши Татами (`npc/iwashi`), Райдо Намиаси (`npc/raido`), план сюжета
 - s17.text.066: Коюки (`npc/western_nest_young_courier`), вещь `shiki_shelter_hiraishin_mark_s17`, поправки игрока: 1
 - s17.text.065: Коюки (`npc/western_nest_young_courier`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), поправки игрока: 1
@@ -59,4 +60,3 @@
 - s17.text.013: Джирайя (`npc/jiraiya`)
 - s17.text.012: Джирайя (`npc/jiraiya`), Наруто Узумаки (`npc/naruto`), Цунадэ (`npc/tsunade`), план сюжета
 - s17.text.011: Джирайя (`npc/jiraiya`), план сюжета
-- s17.text.010: Джирайя (`npc/jiraiya`), Связной Джирайи (`npc/jiraiya_rain_contact_s17`)

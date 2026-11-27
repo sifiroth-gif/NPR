@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.069",
+  "cursor": "s17.text.070",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5784,7 +5784,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 180,
+      "mention_count": 181,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5792,13 +5792,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-05T17:42:00",
-          "excerpt": ". С его поверхности кто-то старательно сбил прежний герб. **Джирайя:** — Когда-то я ходил здесь с Цунадэ и Орочимару. Тогда эти места были полны беженцев. Он провёл ладонью по изуродованному камню. **Джирайя:** — Кажется, война давно закончилась. Последние сло",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.011"
         },
         {
           "at": "0010-05-09T18:15:00",
@@ -5813,6 +5806,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.068"
+        },
+        {
+          "at": "0010-05-11T07:41:00",
+          "excerpt": "**Сирамэ:** — Вчера он находился в том же убежище на северной границе Страны Рек, где ты встречался с Орочимару. Думаю, он ещё там. Она слегка приподняла голову. **Сирамэ:** — Он собирался вернуться к Орочимару после отправки вещей. Если хочешь, я могу проводи",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.070"
         }
       ],
       "projections": [
@@ -11991,7 +11991,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.069",
+        "s17.text.070",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068"
@@ -20755,7 +20755,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 79,
+      "mention_count": 80,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20763,13 +20763,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-02T18:05:00",
-          "excerpt": "а дня прошли без происшествий. Новые обитатели пещер постепенно осваивались, а Коюки готовилась навестить Сирамэ. Вечером пластина связи с Пятой Хокагэ отозвалась знакомым импульсом чакры. **Цунадэ:** — Шики, Джирайя вернулся с границы Дождя. У нас появились с",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.104"
         },
         {
           "at": "0010-05-10T13:06:00",
@@ -20784,12 +20777,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.068"
+        },
+        {
+          "at": "0010-05-11T07:41:00",
+          "excerpt": "condary\" size=\"xs\">Вторник, 11 мая 1287 года · 07:41</text> **Мугами Шики:** — где сейчас Кабуто? **Сирамэ:** — Вчера он находился в том же убежище на северной границе Страны Рек, где ты встречался с Орочимару. Думаю, он ещё там. Она слегка приподняла голову. ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.070"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.069",
+          "seen": "s17.text.070",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20802,7 +20802,8 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.070"
       ]
     },
     "shiranami": {
@@ -22330,7 +22331,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.069",
+          "seen": "s17.text.070",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22867,5 +22868,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1575
+  "source_turns_indexed": 1576
 }
