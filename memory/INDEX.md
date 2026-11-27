@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s17.text.113`
+# Карта мира NPR · на ходе `s17.text.114`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -284,7 +284,7 @@
 ## Давние линии (34, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/kiri_bingo_negotiations`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (108)
+## Вещи (110)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -308,6 +308,7 @@
 - `hoshina_journal_1184` · `items/hoshina_journal_1184`
 - `inquiry_contact_token` · `items/inquiry_contact_token`
 - `itachi_report_copies` · `items/itachi_report_copies`
+- `jiraiya_first_letter_s17` · `items/jiraiya_first_letter_s17`
 - `kabuto_letter_0416` · `items/kabuto_letter_0416`
 - `kabuto_message` · `items/kabuto_message`
 - `kabuto_orientation_1278` · `items/kabuto_orientation_1278`
@@ -389,6 +390,7 @@
 - `sluice_saboteur_remains` · `items/sluice_saboteur_remains`
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`
+- `toad_letter_case_s17` · `items/toad_letter_case_s17`
 - `traveller_cloak` · `items/traveller_cloak`
 - `tsunade_hiraishin_plate_s17` · `items/tsunade_hiraishin_plate_s17`
 - `ward_vii_fragment_0416` · `items/ward_vii_fragment_0416`

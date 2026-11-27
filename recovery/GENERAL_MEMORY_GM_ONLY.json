@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.113",
+  "cursor": "s17.text.114",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.114:0": {
+      "aliases": [
+        "canon:s17.text.114:0",
+        "s17.text.114: игрок повысил обязательный структурный минимум описательной прозы с 60 до 180 слов вне диалогов и шапок; применяется с этого хода, предыдущие ходы не пересчитывать."
+      ],
+      "facts": [],
+      "id": "canon:s17.text.114:0",
+      "kind": "canon",
+      "label": "s17.text.114: игрок повысил обязательный структурный минимум описательной прозы с 60 до 180 слов вне диалогов и шапок; применяется с этого хода, предыдущие ходы не пересчитывать.",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.114"
       ]
     },
     "captive_guard": {
@@ -2666,7 +2682,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 149,
+      "mention_count": 150,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2690,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:15:00",
-          "excerpt": "снулся воздуха. **Сирамэ:** — Шики? Ты уже в Конохе? Она оглядела незнакомое помещение. Под взглядом змеи Джирайя переставил ногу, освободив ей пространство между столом и стулом. **Джирайя:** — Какая красавица. Сирамэ повернула к нему голову. **Сирамэ:** — От",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.111"
         },
         {
           "at": "0010-05-13T11:17:00",
@@ -2695,11 +2704,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.113"
+        },
+        {
+          "at": "0010-05-13T11:24:00",
+          "excerpt": "lor=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:24</text> ### Конохагакуре. Кабинет Хокагэ Джирайя расправил загнувшиеся края карты и придавил один из них чернильницей. Бумага была старой, потемневшей на сгибах; поверх первоначальных обозначений дорог",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.114"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.113",
+          "seen": "s17.text.114",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2709,7 +2725,28 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.113"
+        "s17.text.114"
+      ]
+    },
+    "jiraiya_first_letter_s17": {
+      "aliases": [
+        "jiraiya first letter s17",
+        "Первое письмо Джирайи Орочимару в лакированном футляре"
+      ],
+      "facts": [],
+      "id": "jiraiya_first_letter_s17",
+      "kind": "item",
+      "label": "Первое письмо Джирайи Орочимару в лакированном футляре",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shirame",
+          "since": "s17.text.114"
+        }
+      ],
+      "sources": [
+        "s17.text.114"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5789,7 +5826,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 221,
+      "mention_count": 222,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5797,13 +5834,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:15:00",
-          "excerpt": "ьники оконного света. **Сирамэ:** — Я только недавно обнаружила, что тебя нет в убежище. Кабуто ничего не знал, а Орочимару сказал, что ты освоил пространственную технику. Она вновь посмотрела на двух саннинов. Кончик её хвоста медленно скользнул по половице. ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.111"
         },
         {
           "at": "0010-05-13T11:17:00",
@@ -5818,6 +5848,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.113"
+        },
+        {
+          "at": "0010-05-13T11:24:00",
+          "excerpt": "а крышку лёг небольшой оттиск личной печати саннина. Он передал послание непосредственно Сирамэ. **Джирайя:** — Это для Орочимару. Там моё согласие на встречу и предложение обменяться сведениями о месте и времени через вас. Белая змея осторожно взяла футляр в ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.114"
         }
       ],
       "projections": [
@@ -11531,7 +11568,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.113",
+        "s17.text.114",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -20962,7 +20999,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 99,
+      "mention_count": 100,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20970,13 +21007,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:15:00",
-          "excerpt": "ялось над полом, на мгновение скрыв ножки письменного стола. В его глубине Шики различил знакомую чакру Сирамэ. Показалась белая змеиная голова. Следом из рассеивающегося дыма выползло длинное, почти двух с половиной метровое тело. На светлой чешуе сохранился ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.111"
         },
         {
           "at": "0010-05-13T11:17:00",
@@ -20991,12 +21021,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.113"
+        },
+        {
+          "at": "0010-05-13T11:24:00",
+          "excerpt": "рх первоначальных обозначений дорог и населённых пунктов виднелись многочисленные рукописные пометки. Сирамэ приблизилась к столу, поднялась вдоль его ножки и осторожно уложила голову на край столешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.114"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.113",
+          "seen": "s17.text.114",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -21010,7 +21047,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.113"
+        "s17.text.114"
       ]
     },
     "shiranami": {
@@ -22141,6 +22178,27 @@
         "recovery/cast/tikhiy_porog_seller.json"
       ]
     },
+    "toad_letter_case_s17": {
+      "aliases": [
+        "toad letter case s17",
+        "Водостойкий футляр для донесений"
+      ],
+      "facts": [],
+      "id": "toad_letter_case_s17",
+      "kind": "item",
+      "label": "Водостойкий футляр для донесений",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "zhaba",
+          "since": "s17.text.114"
+        }
+      ],
+      "sources": [
+        "s17.text.114"
+      ]
+    },
     "tsunade": {
       "aliases": [
         "tsunade",
@@ -22150,7 +22208,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 113,
+      "mention_count": 114,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22158,13 +22216,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:15:00",
-          "excerpt": "а к нему голову. **Сирамэ:** — От тебя пахнет жабами. **Джирайя:** — А у тебя, я смотрю, прекрасное обоняние. Цунадэ прикрыла рот ладонью, скрывая короткую усмешку. Змея приблизилась к Шики и свернула нижнюю часть туловища кольцами возле его ног. Её голова под",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.111"
         },
         {
           "at": "0010-05-13T11:17:00",
@@ -22179,11 +22230,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.113"
+        },
+        {
+          "at": "0010-05-13T11:24:00",
+          "excerpt": "лешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге остались два небольших тёмных пятна. Цунадэ немедленно убрала лежавшие рядом служебные документы. **Цунадэ:** — Только не на донесения. Джирайя провёл пальцем вдоль западной границы Страны Огня.",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.114"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.113",
+          "seen": "s17.text.114",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22193,7 +22251,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.113"
+        "s17.text.114"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22681,7 +22739,7 @@
       "id": "zhaba",
       "kind": "npc",
       "label": "Жаба",
-      "mention_count": 18,
+      "mention_count": 19,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -22689,13 +22747,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-05-05T20:09:00",
-          "excerpt": "мы поняли. Саннин прикусил большой палец и сложил печати. На камне перед ним появилась небольшая зелёная жаба. Джирайя достал чистый лист, быстро написал несколько строк, свернул его и передал призванному животному. **Джирайя:** — Доставь лично Пятой. Мы возвр",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.031"
         },
         {
           "at": "0010-05-13T10:41:00",
@@ -22710,12 +22761,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.113"
+        },
+        {
+          "at": "0010-05-13T11:24:00",
+          "excerpt": "Сирамэ приблизилась к столу, поднялась вдоль его ножки и осторожно уложила голову на край столешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге остались два небольших тёмных пятна. Цунадэ немедленно убрала лежавшие рядом служебные документы. **Ц",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.114"
         }
       ],
       "projections": [
         {
           "role": "Призывная жаба Джирайи, разведка и возможное добровольное посредничество.",
-          "seen": "s17.text.113"
+          "seen": "s17.text.114"
         },
         {
           "role": "Призывная жаба Джирайи, разведка и возможное добровольное посредничество."
@@ -22724,7 +22782,7 @@
       "sources": [
         "recovery/cast/zhaba.json",
         "recovery/HOT.json",
-        "s17.text.113"
+        "s17.text.114"
       ]
     }
   },
@@ -23085,8 +23143,22 @@
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
+    },
+    {
+      "from": "jiraiya_first_letter_s17",
+      "source": "s17.text.114",
+      "status": "projected",
+      "to": "shirame",
+      "type": "held_by"
+    },
+    {
+      "from": "toad_letter_case_s17",
+      "source": "s17.text.114",
+      "status": "projected",
+      "to": "zhaba",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1617
+  "source_turns_indexed": 1618
 }
