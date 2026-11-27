@@ -2,6 +2,8 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.035: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`)
+- s17.text.034: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`)
 - s17.text.033: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Какаши Хатакэ (`npc/kakashi`), план сюжета
 - s17.text.032: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), план сюжета
 - s17.text.031: Джирайя (`npc/jiraiya`), план сюжета
@@ -58,5 +60,3 @@
 - s16.text.118: Данзо Шимура (`npc/danzo`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s16.text.117: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.116: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
-- s16.text.115: Данзо Шимура (`npc/danzo`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
-- s16.text.114: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
