@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.034",
+  "cursor": "s18.text.035",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -8338,7 +8338,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.034",
         "s18.text.023",
         "s18.text.024",
         "s18.text.025",
@@ -8349,7 +8348,8 @@
         "s18.text.030",
         "s18.text.031",
         "s18.text.032",
-        "s18.text.033"
+        "s18.text.033",
+        "s18.text.034"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -13106,6 +13106,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.035",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121"
@@ -22588,13 +22589,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 118,
+      "mention_count": 119,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22602,13 +22604,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:12:00",
-          "excerpt": "Согласен надо наверно сказать коюки что она была единственной со мной в момент моего дня рождения <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 15:12</text> ### Конохагакуре. Ресторан якинику",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.027"
         },
         {
           "at": "0010-05-14T15:14:00",
@@ -22623,16 +22618,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.029"
+        },
+        {
+          "at": "0010-05-14T15:23:00",
+          "excerpt": "и. Их тела различались благодаря природной сенсорике даже там, куда не проникал свет. Из пещеры донёсся голос Коюки. **Коюки:** — А-а-а. Вот так. Ей ответило короткое шипение. **Коюки:** — Нет, попробуй ещё раз. Через несколько мгновений белая змейка появилась",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.035"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.130",
+          "seen": "s18.text.035",
+          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+        },
+        {
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s18.text.035"
       ]
     },
     "white_snake_sage": {
@@ -23195,5 +23202,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1671
+  "source_turns_indexed": 1672
 }
