@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.023: Асума Сарутоби (`npc/asuma`)
 - s18.text.022: Асума Сарутоби (`npc/asuma`)
 - s18.text.021: Асума Сарутоби (`npc/asuma`)
 - s18.text.020: Асума Сарутоби (`npc/asuma`)
@@ -60,4 +61,3 @@
 - s17.text.099: Орочимару (`npc/orochimaru`)
 - s17.text.098: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.097: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
-- s17.text.096: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), поправки игрока: 1
