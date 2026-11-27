@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.066",
+  "cursor": "s18.text.067",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -427,7 +427,7 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.066",
+          "seen": "s18.text.067",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.066"
+        "s18.text.067"
       ]
     },
     "baki": {
@@ -776,7 +776,7 @@
       "id": "choji",
       "kind": "npc",
       "label": "Тёдзи Акимичи",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -784,13 +784,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:03:00",
-          "excerpt": "оследил взглядом путь от тренировочного столба до дерева, возле которого был условно поражён Шикамару. **Тёдзи Акимичи:** — А я был последним, потому что представлял для тебя наименьшую угрозу? В его голосе прозвучало некоторое разочарование. Ино хотела возраз",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.064"
         },
         {
           "at": "0010-05-15T09:04:00",
@@ -805,17 +798,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.066"
+        },
+        {
+          "at": "0010-05-15T09:06:00",
+          "excerpt": "дно, что исходный план больше неосуществим. Тёдзи придвинулся к нему и указал на камень, обозначавший Ино. **Тёдзи Акимичи:** — А если бы мы решили отступать, что стало бы с ней? Шикамару посмотрел на подругу. Та сидела совершенно невредимая, держа флягу обеим",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.066"
+          "seen": "s18.text.067"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.066"
+        "s18.text.067"
       ]
     },
     "clinic_assistant": {
@@ -2591,13 +2591,12 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.066"
+          "seen": "s18.text.067"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
-        "recovery/HOT.json",
-        "s18.text.066"
+        "recovery/HOT.json"
       ]
     },
     "inquiry_contact_token": {
@@ -10973,7 +10972,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.066",
+        "s18.text.067",
         "s18.text.053",
         "s18.text.054",
         "s18.text.055",
@@ -10986,7 +10985,8 @@
         "s18.text.062",
         "s18.text.063",
         "s18.text.064",
-        "s18.text.065"
+        "s18.text.065",
+        "s18.text.066"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20843,7 +20843,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20851,13 +20851,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T09:03:00",
-          "excerpt": "вернул все три в исходное положение и повторил последовательность ещё раз, теперь значительно медленнее. **Шикамару Нара:** — Нет, Тёдзи. Дело не обязательно в том, кто из нас сильнее. Он указал на первый камень. **Шикамару Нара:** — Ино могла лишить тебя упра",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.064"
         },
         {
           "at": "0010-05-15T09:04:00",
@@ -20872,11 +20865,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.066"
+        },
+        {
+          "at": "0010-05-15T09:06:00",
+          "excerpt": "предстояло соотнести собственные выводы с решениями, которые он принимал несколькими минутами ранее. **Шикамару Нара:** — Изначально потому, что ты поставил перед нами конкретную учебную задачу. Коснуться тебя. Я пытался решить именно её. Он помолчал. **Шикама",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.067"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.066",
+          "seen": "s18.text.067",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20886,7 +20886,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.066"
+        "s18.text.067"
       ]
     },
     "shiki_arm_wraps": {
@@ -23374,5 +23374,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1703
+  "source_turns_indexed": 1704
 }
