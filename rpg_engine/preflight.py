@@ -239,14 +239,17 @@ def inspect(packet, turn, *, receipts=(), used=()):
     interior = prose_lint.interior(gm, names)
     if interior:
         cues.append(interior["quote"])
+    cap = packet.get("capabilities") or {}
     abilities = {row["id"]: row for field in ("items", "catalog")
-                 for row in (packet.get("capabilities") or {}).get(field, [])}
+                 for row in cap.get(field, [])}
+    unavailable = set(cap.get("unavailable_ids") or [])
+    indexed = set(cap.get("catalog_ids") or [])
     for ident in used:
         row = abilities.get(ident)
-        if not row:
-            cues.append("Неизвестная способность %s: проверь реестр." % ident)
-        elif row.get("activation") == "unavailable":
+        if ident in unavailable or (row and row.get("activation") == "unavailable"):
             errors.append("Недоступная способность: " + ident)
+        elif not row and ident not in indexed:
+            cues.append("Неизвестная способность %s: проверь реестр." % ident)
         else:
             cues.append("Проверь активацию, условия и цену: " + ident)
     try:

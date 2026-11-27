@@ -100,6 +100,16 @@ class DraftPreflightTest(unittest.TestCase):
         self.assertFalse(preflight.inspect(p, t)["mechanical_ok"])
 
 
+class CompactCatalogueTest(unittest.TestCase):
+    def test_unavailable_still_blocks_when_catalogue_is_referenced(self):
+        p = packet()
+        p["capabilities"] = {"catalog_ids": ["restricted.unlearned", "space.hiraishin"],
+                             "unavailable_ids": ["restricted.unlearned"],
+                             "catalog_ref": "registry.json", "items": []}
+        self.assertFalse(preflight.inspect(p, draft(), used=["restricted.unlearned"])["mechanical_ok"])
+        self.assertTrue(preflight.inspect(p, draft(), used=["space.hiraishin"])["mechanical_ok"])
+
+
 class DescriptionGateTest(unittest.TestCase):
     def current(self, gm, **extra):
         p = packet()
