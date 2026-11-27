@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.039",
+  "cursor": "s18.text.040",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -13106,14 +13106,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.039",
+        "s18.text.040",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
         "s18.text.035",
         "s18.text.036",
         "s18.text.037",
-        "s18.text.038"
+        "s18.text.038",
+        "s18.text.039"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22600,7 +22601,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 123,
+      "mention_count": 124,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22608,13 +22609,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:25:00",
-          "excerpt": "Коюки мой день рождения был 16 дней назад. Ты была единственной спутницей в этот день. И мне не нужен подарок <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 15:25</t",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.037"
         },
         {
           "at": "0010-05-14T15:26:00",
@@ -22629,11 +22623,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.039"
+        },
+        {
+          "at": "0010-05-14T15:33:00",
+          "excerpt": "рогревается. Но на зиму… Да. После небольшой паузы он добавил: **Мугами Шики:** — Я уже думал об этом. Коюки спустилась с его плеча по рукаву, ненадолго задержалась возле запястья, а затем перебралась на каменную ступеньку. **Коюки:** — Тогда у нас ещё много в",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.040"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.039",
+          "seen": "s18.text.040",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22643,7 +22644,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.039"
+        "s18.text.040"
       ]
     },
     "white_snake_sage": {
@@ -23206,5 +23207,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1676
+  "source_turns_indexed": 1677
 }
