@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.009",
+  "cursor": "s18.text.010",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -920,13 +920,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.009"
+          "seen": "s18.text.010"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s18.text.009"
+        "s18.text.010"
       ]
     },
     "deidara": {
@@ -2218,7 +2218,7 @@
       "id": "hidan",
       "kind": "npc",
       "label": "Хидан",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0010-04-24T07:38:15",
@@ -2226,13 +2226,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.169"
-        },
-        {
-          "at": "0010-04-25T11:58:00",
-          "excerpt": "Джирайя перестал писать. Несколько секунд он смотрел на имя, выведенное на бумаге. **Мугами Шики:** — Хидан воспринимает Пэйна как настоящего руководителя организации. О существовании другого тела он, судя по доступным воспоминаниям, ничего не знает. Приказы п",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.031"
         },
         {
           "at": "0010-05-05T19:18:24",
@@ -2247,12 +2240,19 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.009"
+        },
+        {
+          "at": "0010-05-14T13:05:00",
+          "excerpt": "сь распоряжения и теперь держала карандаш над последней строкой. Из камеры вновь донёсся голос Хидана. **Хидан:** — Погоди-ка… Это ты, глазастый ублюдок?! Он узнал голос Шики. **Хидан:** — Только попробуй опять залезть мне в башку! Сквозь открытое смотровое от",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.010"
         }
       ],
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s18.text.009",
+          "seen": "s18.text.010",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         },
         {
@@ -2262,7 +2262,8 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s18.text.010"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -8151,8 +8152,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.009",
-        "s18.text.008"
+        "s18.text.010",
+        "s18.text.008",
+        "s18.text.009"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21125,7 +21127,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 49,
+      "mention_count": 50,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21133,13 +21135,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T12:39:00",
-          "excerpt": ":39</text> ### Резиденция Хокагэ За дверью раздались быстрые шаги. Шики почувствовал знакомую чакру Шизунэ ещё до того, как она постучала. Обычно её движения по резиденции были размеренными, но сейчас она почти бежала. Дверь открылась. **Шизунэ:** — Цунадэ-сам",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.007"
         },
         {
           "at": "0010-05-14T12:52:00",
@@ -21154,11 +21149,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.009"
+        },
+        {
+          "at": "0010-05-14T13:05:00",
+          "excerpt": "столь категоричном отрицании интереса к бессмертию. **Данзо Шимура:** — Компромисс? Цунадэ обернулась. Шизунэ ещё не успела закончить запись распоряжения и теперь держала карандаш над последней строкой. Из камеры вновь донёсся голос Хидана. **Хидан:** — Погоди",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.009",
+          "seen": "s18.text.010",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -21167,8 +21169,7 @@
       ],
       "sources": [
         "recovery/cast/shizune.json",
-        "recovery/HOT.json",
-        "s18.text.009"
+        "recovery/HOT.json"
       ]
     },
     "signalshchik": {
@@ -22165,7 +22166,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 136,
+      "mention_count": 137,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22173,13 +22174,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:39:00",
-          "excerpt": "ё движения по резиденции были размеренными, но сейчас она почти бежала. Дверь открылась. **Шизунэ:** — Цунадэ-сама. Проблема с заключённым Акацуки. Улыбка исчезла с лица Хокагэ. Шизунэ держала в руке небольшой свиток с надломленной восковой печатью. Заметив Ши",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.007"
         },
         {
           "at": "0010-05-14T12:52:00",
@@ -22194,11 +22188,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.009"
+        },
+        {
+          "at": "0010-05-14T13:05:00",
+          "excerpt": "Нет. Но я могу предложить вам с Цунадэ компромисс, если хотите выслушать <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 13:05</text> ### Конохагакуре. Подземный изолятор **Мугами Шики:** — Нет. Н",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.010"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.009",
+          "seen": "s18.text.010",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22208,7 +22209,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.009"
+        "s18.text.010"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23098,5 +23099,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1646
+  "source_turns_indexed": 1647
 }
