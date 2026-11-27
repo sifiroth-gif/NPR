@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.092",
+  "cursor": "s17.text.093",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2821,12 +2821,17 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.085",
+          "seen": "s17.text.093",
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
+        },
+        {
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "recovery/HOT.json",
+        "s17.text.093"
       ]
     },
     "kabuto_letter_0416": {
@@ -5763,7 +5768,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 202,
+      "mention_count": 203,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5771,13 +5776,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T08:03:00",
-          "excerpt": "ода · 08:03</text> **Мугами Шики:** — Вы все также боитесь смерти и слабости? Улыбка исчезла с лица Орочимару. Он посмотрел на свои руки. Под тонкой кожей проступали голубоватые вены — обыкновенные человеческие сосуды. **Орочимару:** — Разумеется. Он ответил б",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.090"
         },
         {
           "at": "0010-05-13T08:04:00",
@@ -5792,17 +5790,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.092"
+        },
+        {
+          "at": "0010-05-13T08:12:00",
+          "excerpt": "раторию# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 08:12</text> ### Лаборатория Орочимару Шики поднялся с койки, застегнул плащ, забрал Суми и остальные вещи. В коридорах было прохладно. Под каменными сводами тянулись трубы, на которых осед",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.093"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.092",
+          "seen": "s17.text.093",
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+        },
+        {
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "s17.text.092"
+        "recovery/HOT.json",
+        "s17.text.093"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -5867,6 +5876,48 @@
       ],
       "sources": [
         "recovery/cast/orochimaru_scout_snake.json"
+      ]
+    },
+    "orochimaru_senjutsu_early_notes_s17": {
+      "aliases": [
+        "orochimaru senjutsu early notes s17",
+        "Тетрадь ранних наблюдений Орочимару по сендзюцу"
+      ],
+      "facts": [],
+      "id": "orochimaru_senjutsu_early_notes_s17",
+      "kind": "item",
+      "label": "Тетрадь ранних наблюдений Орочимару по сендзюцу",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "orochimaru",
+          "since": "s17.text.093"
+        }
+      ],
+      "sources": [
+        "s17.text.093"
+      ]
+    },
+    "orochimaru_senjutsu_later_records_s17": {
+      "aliases": [
+        "orochimaru senjutsu later records s17",
+        "Папка последующих обследований при попытках сендзюцу"
+      ],
+      "facts": [],
+      "id": "orochimaru_senjutsu_later_records_s17",
+      "kind": "item",
+      "label": "Папка последующих обследований при попытках сендзюцу",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kabuto",
+          "since": "s17.text.093"
+        }
+      ],
+      "sources": [
+        "s17.text.093"
       ]
     },
     "osawa_gensei": {
@@ -8006,7 +8057,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.092",
         "s17.text.081",
         "s17.text.082",
         "s17.text.083",
@@ -8016,7 +8066,8 @@
         "s17.text.087",
         "s17.text.089",
         "s17.text.090",
-        "s17.text.091"
+        "s17.text.091",
+        "s17.text.092"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -12480,6 +12531,25 @@
         "s03.text.031",
         "s03.text.032",
         "s03.text.034"
+      ]
+    },
+    "place:80b8defee89e09eb": {
+      "aliases": [
+        "place:80b8defee89e09eb",
+        "Северная граница Страны Рек, подземное убежище Орочимару, лаборатория",
+        "Северная граница Страны Рек",
+        "подземное убежище Орочимару",
+        "лаборатория"
+      ],
+      "facts": [],
+      "id": "place:80b8defee89e09eb",
+      "kind": "place",
+      "label": "Северная граница Страны Рек, подземное убежище Орочимару, лаборатория",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.093"
       ]
     },
     "place:810392b04745def4": {
@@ -22937,8 +23007,22 @@
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
+    },
+    {
+      "from": "orochimaru_senjutsu_early_notes_s17",
+      "source": "s17.text.093",
+      "status": "projected",
+      "to": "orochimaru",
+      "type": "held_by"
+    },
+    {
+      "from": "orochimaru_senjutsu_later_records_s17",
+      "source": "s17.text.093",
+      "status": "projected",
+      "to": "kabuto",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1597
+  "source_turns_indexed": 1598
 }

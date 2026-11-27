@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s17.text.092`
+# Карта мира NPR · на ходе `s17.text.093`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,9 +6,9 @@
 - места · `places/INDEX` (352) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (266)
-- Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
+- Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto` · в сцене
+- Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru` · в сцене
 - Сирамэ — Взрослая белая змея с очень светлыми глазами, длина около 2… · `npc/shirame`
-- Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Портовый чиновник — Гражданский служащий со списком пассажиров и письменной зап… · `npc/fire_port_official`
 - Саске Учиха (Саске, Учиха) — генин, участник (на 1283, экзамен) · `npc/sasuke`
 - Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 (на 1283, экзамен) · `npc/kakashi`
@@ -284,7 +284,7 @@
 ## Давние линии (34, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/kiri_bingo_negotiations`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (105)
+## Вещи (107)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -346,6 +346,8 @@
 - `orochimaru_original_matrix_s17` · `items/orochimaru_original_matrix_s17`
 - `orochimaru_poison_samples_s15` · `items/orochimaru_poison_samples_s15`
 - `orochimaru_reconstructed_body_s17` · `items/orochimaru_reconstructed_body_s17`
+- `orochimaru_senjutsu_early_notes_s17` · `items/orochimaru_senjutsu_early_notes_s17`
+- `orochimaru_senjutsu_later_records_s17` · `items/orochimaru_senjutsu_later_records_s17`
 - `personal_paper_reports` · `items/personal_paper_reports`
 - `possible_sasuke_hair` · `items/possible_sasuke_hair`
 - `private_bounties` · `items/private_bounties`
