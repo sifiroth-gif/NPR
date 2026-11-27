@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.023",
+  "cursor": "s18.text.024",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 23,
+      "mention_count": 24,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T14:24:00",
-          "excerpt": "ему нет. Асума сан, угостите сигаретой и огнем? Асума усмехнулся и достал из кармана пачку сигарет. **Асума Сарутоби:** — Врач просит закурить? Только Цунадэ не говори, что это я тебя угостил. Он протянул Шики сигарету и щёлкнул зажигалкой, прикрывая небольшое",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.021"
         },
         {
           "at": "0010-05-14T14:26:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.023"
+        },
+        {
+          "at": "0010-05-14T14:41:00",
+          "excerpt": "и. Асума проводил их взглядом. Затем положил щипцы на край тарелки и придвинул к Шики чашку горячего чая. **Асума Сарутоби:** — Какой-то особенный повод? Он указал на мясо, которым Шики только что словно произнёс безмолвный тост. На жаровне потрескивали капли ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.023",
+          "seen": "s18.text.024",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.023"
+        "s18.text.024"
       ]
     },
     "baki": {
@@ -8348,6 +8348,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.024",
         "s18.text.023"
       ]
     },
@@ -23157,5 +23158,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1660
+  "source_turns_indexed": 1661
 }
