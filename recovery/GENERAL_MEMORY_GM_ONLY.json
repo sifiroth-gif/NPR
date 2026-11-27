@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.028",
+  "cursor": "s17.text.029",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 127,
+      "mention_count": 128,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:18:10",
-          "excerpt": "Шики, с его неестественной сероватой кожей и чёрными склерами, на мгновение оказались обращены друг к другу. Джирайя разжал пальцы. **Джирайя:** — Шики… Саннин тяжело выдохнул и убрал руку от оружия. **Джирайя:** — Пожалуй, ты прав. Конан взглянула на Пэйна. *",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.025"
         },
         {
           "at": "0010-05-05T19:19:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.028"
+        },
+        {
+          "at": "0010-05-05T20:06:00",
+          "excerpt": "атура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск. Джирайя перестал листать записную книжку. Ветер пригнул тростник к воде. На противоположном берегу среди деревьев едва различались развалины какого-то старого",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.029"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.028",
-          "state": "Вывез Шики из города на транспортной жабе, отменил призыв, признаёт риск собственной ошибки, предлагает возвращение в Коноху и доклад Цунадэ."
+          "seen": "s17.text.029",
+          "state": "Поднялся с камня; предложил возвращение, намерен доложить Цунадэ и просить о разведке сведений о стержнях."
         },
         {
-          "state": "Вывез Шики из города на транспортной жабе, отменил призыв, признаёт риск собственной ошибки, предлагает возвращение в Коноху и доклад Цунадэ."
+          "state": "Поднялся с камня; предложил возвращение, намерен доложить Цунадэ и просить о разведке сведений о стержнях."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.028"
+        "s17.text.029"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3788,13 +3788,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.028",
+          "seen": "s17.text.029",
           "state": "Проводила обоих до крытого причала к 19:36, осталась в Амэгакурэ."
         }
       ],
       "sources": [
         "recovery/cast/konan.json",
-        "s17.text.028"
+        "s17.text.029"
       ]
     },
     "kotetsu": {
@@ -12098,6 +12098,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.029",
         "s17.text.028"
       ]
     },
@@ -21650,7 +21651,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21658,13 +21659,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T14:20:00",
-          "excerpt": "оригинальной формулы Минато нам действительно понадобятся архивные записи. Какаши посмотрел в сторону кабинета Цунадэ. **Какаши:** — Скажи, он ограничился возражениями или пытался предложить тебе что-нибудь взамен? **Ход Шики.** Шики сравнил сенсорную структур",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.129"
         },
         {
           "at": "0010-05-05T17:42:00",
@@ -21679,6 +21673,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.028"
+        },
+        {
+          "at": "0010-05-05T20:06:00",
+          "excerpt": "Саннин выбросил ветку в воду. Течение медленно унесло её вниз по реке. **Джирайя:** — Когда вернёмся, я попрошу Цунадэ поручить разведке поиск сведений о таких стержнях. А пока будем исходить из твоего предположения. Он поднялся с камня, поправляя тяжёлый свит",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.029"
         }
       ],
       "projections": [
@@ -22550,5 +22551,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1537
+  "source_turns_indexed": 1538
 }

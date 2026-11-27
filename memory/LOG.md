@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.029: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), план сюжета
 - s17.text.028: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), план сюжета
 - s17.text.027: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), Пэйн (`npc/pain`), план сюжета
 - s17.text.026: Конан (`npc/konan`), Пэйн (`npc/pain`), план сюжета
@@ -59,4 +60,3 @@
 - s16.text.112: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Данзо Шимура (`npc/danzo`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), поправки игрока: 1
 - s16.text.111: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.110: Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Шизунэ (`npc/shizune`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
-- s16.text.109: Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Цунадэ (`npc/tsunade`), поправки игрока: 1
