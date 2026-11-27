@@ -77,6 +77,7 @@
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 6 ход(ов), s15–s15
 - Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 6 ход(ов), s17–s17
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 5 ход(ов), s18–s18
 - Конохагакуре, закрытый тренировочный полигон · `places/konokhagakure-zakrytyy-trenirovochnyy-poligon` · 5 ход(ов), s15–s15
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
@@ -92,7 +93,6 @@
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
 - Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 4 ход(ов), s17–s17
 - Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 4 ход(ов), s15–s18
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 4 ход(ов), s18–s18
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
 - Кусагакуре, служебный двор под верхним архивом старого административного крыла · `places/kusagakure-sluzhebnyy-dvor-pod-verkhnim-arkhivom-starogo-adm` · 4 ход(ов), s06–s06
 - Кусагакуре, торговая улица у восточного перекрёстка · `places/kusagakure-torgovaya-ulitsa-u-vostochnogo-perekrestka` · 4 ход(ов), s15–s15

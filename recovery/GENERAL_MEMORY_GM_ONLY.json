@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.056",
+  "cursor": "s18.text.057",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-15T08:56:00",
-          "excerpt": "внул и убрал монету в отдельный мешочек. Затянув шнурок, он спрятал его во внутренний карман жилета. **Асума Сарутоби:** — Значит, в случае необходимости я действительно смогу тебя позвать. Полезная вещь. Он достал сигарету, прикурил и повернулся к ученикам. Ш",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.054"
         },
         {
           "at": "0010-05-15T08:57:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.056"
+        },
+        {
+          "at": "0010-05-15T08:59:40",
+          "excerpt": "между учениками, но теперь отложил приготовленный для упражнения свёрток полотна на ближайший столб. **Асума Сарутоби:** — Смотря какую. В голосе его прозвучала лёгкая усмешка. Однако после совместного с Шики столкновения с Акацуки Асума имел достаточно основа",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.057"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.056",
+          "seen": "s18.text.057",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.056"
+        "s18.text.057"
       ]
     },
     "baki": {
@@ -776,7 +776,7 @@
       "id": "choji",
       "kind": "npc",
       "label": "Тёдзи Акимичи",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -784,13 +784,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0001-07-07T07:52:00",
-          "excerpt": "* - Не заставляй меня повторять\\! Ли победил. На галерее Темари недовольно покачала головой. Гаара не проявил никакого интереса. --- ### 08:34-08:46. Седьмой и восьмой поединки **Шино Абурамэ - Тёдзи Акимичи** Победитель: Шино Абурамэ Шино не пытался остановит",
-          "source": "archive/session-001-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s01.text.105"
         },
         {
           "at": "0010-05-15T08:57:00",
@@ -805,17 +798,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.056"
+        },
+        {
+          "at": "0010-05-15T08:59:40",
+          "excerpt": "н присел возле свёрнутого полотна, проверил прочность пришитых к нему петель и расправил загнувшийся край. **Тёдзи Акимичи:** — Тогда первым раненым буду я. Попробуйте меня унести. **Шикамару Нара:** — Ох, и зачем ты это предложил… Асума негромко рассмеялся. П",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.057"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.056"
+          "seen": "s18.text.057"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.056"
+        "s18.text.057"
       ]
     },
     "clinic_assistant": {
@@ -2558,7 +2558,7 @@
       "id": "ino",
       "kind": "npc",
       "label": "Ино Яманака",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -2566,13 +2566,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T08:56:00",
-          "excerpt": "перемещение… Вот уж действительно неприятная способность для противника. Ино перевела взгляд на учителя. **Ино Яманака:** — Асума-сэнсэй, это тот человек, который был с вами у пункта обмена? **Асума Сарутоби:** — Именно. Мугами Шики. Тёдзи закрыл пакет с едой ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.054"
         },
         {
           "at": "0010-05-15T08:57:00",
@@ -2587,17 +2580,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.056"
+        },
+        {
+          "at": "0010-05-15T08:59:40",
+          "excerpt": "кунаев. Один из них она взвесила в руке, проверяя, насколько его масса отличается от настоящего оружия. **Ино Яманака:** — Шикамару, я не хочу опять изображать раненую. Мне тоже нужно научиться вытаскивать вас из боя. Тёдзи забрал у неё один из кунаев и осмотр",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.057"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.056"
+          "seen": "s18.text.057"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.056"
+        "s18.text.057"
       ]
     },
     "inquiry_contact_token": {
@@ -10973,10 +10973,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.056",
+        "s18.text.057",
         "s18.text.053",
         "s18.text.054",
-        "s18.text.055"
+        "s18.text.055",
+        "s18.text.056"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20833,7 +20834,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20841,13 +20842,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T08:56:00",
-          "excerpt": "с Асумой, без прежней настороженности рассматривая человека, с которым уже участвовал в настоящем бою. **Шикамару Нара:** — Пространственное перемещение… Вот уж действительно неприятная способность для противника. Ино перевела взгляд на учителя. **Ино Яманака:",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.054"
         },
         {
           "at": "0010-05-15T08:57:00",
@@ -20862,11 +20856,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.056"
+        },
+        {
+          "at": "0010-05-15T08:59:40",
+          "excerpt": "ль и расправил загнувшийся край. **Тёдзи Акимичи:** — Тогда первым раненым буду я. Попробуйте меня унести. **Шикамару Нара:** — Ох, и зачем ты это предложил… Асума негромко рассмеялся. По краю полигона тянулась неглубокая канава, отделявшая открытую площадку о",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.057"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.056",
+          "seen": "s18.text.057",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20876,7 +20877,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.056"
+        "s18.text.057"
       ]
     },
     "shiki_arm_wraps": {
@@ -23364,5 +23365,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1693
+  "source_turns_indexed": 1694
 }
