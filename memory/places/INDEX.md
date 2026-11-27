@@ -124,6 +124,7 @@
 - Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 2 ход(ов), s17–s17
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
+- Конохагакуре, кладбище · `places/konokhagakure-kladbishche` · 2 ход(ов), s18–s18
 - Конохагакуре, Медицинский читальный зал восточного госпиталя · `places/konokhagakure-meditsinskiy-chitalnyy-zal-vostochnogo-gospita` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный кабинет восточного госпиталя · `places/konokhagakure-meditsinskiy-uchebnyy-kabinet-vostochnogo-gosp` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
@@ -192,7 +193,6 @@
 - Конохагакуре, Двор пострадавшей гостиницы · `places/konokhagakure-dvor-postradavshey-gostinitsy` · 1 ход(ов), s01–s01
 - Конохагакуре, Горящая гостиница · `places/konokhagakure-goryashchaya-gostinitsa` · 1 ход(ов), s01–s01
 - Конохагакуре, госпиталь · `places/konokhagakure-gospital` · 1 ход(ов), s01–s01
-- Конохагакуре, кладбище · `places/konokhagakure-kladbishche` · 1 ход(ов), s18–s18
 - Конохагакуре, Медицинский учебный полигон · `places/konokhagakure-meditsinskiy-uchebnyy-poligon` · 1 ход(ов), s01–s01
 - Конохагакуре, Служебный двор горящей гостиницы · `places/konokhagakure-sluzhebnyy-dvor-goryashchey-gostinitsy` · 1 ход(ов), s01–s01
 - Конохагакуре, Старый квартал у северной стены · `places/konokhagakure-staryy-kvartal-u-severnoy-steny` · 1 ход(ов), s01–s01

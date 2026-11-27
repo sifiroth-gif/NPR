@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.021",
+  "cursor": "s18.text.022",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 21,
+      "mention_count": 22,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T12:21:15",
-          "excerpt": "Сам я не могу открыть путь в произвольную точку. Асума, услышав этот разговор, задержался возле Шики. **Асума Сарутоби:** — Если доберёшься до Конохи раньше нас, предупреди Хокагэ о пленнике. Особенно о том, что он пережил обезглавливание. Я предпочёл бы, чтоб",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.184"
         },
         {
           "at": "0010-05-14T14:06:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.021"
+        },
+        {
+          "at": "0010-05-14T14:26:00",
+          "excerpt": "### Конохагакуре. Кладбище **Мугами Шики:** — Хм, сейчас в некоторой степени да. Асума улыбнулся. **Асума Сарутоби:** — Уже неплохо. Он не стал расспрашивать, где именно находится этот дом. Вместо этого поправил хризантемы, один из стеблей которых выскользнул ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.022"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.021",
+          "seen": "s18.text.022",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.021"
+        "s18.text.022"
       ]
     },
     "baki": {
@@ -3144,7 +3144,7 @@
       "id": "kakuzu",
       "kind": "npc",
       "label": "Какудзу",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0010-04-24T07:38:00",
@@ -3152,13 +3152,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.168"
-        },
-        {
-          "at": "0010-04-25T11:58:00",
-          "excerpt": "*Мугами Шики:** — Также я рассмотрел остальных участников. Итачи Учиха, Кисамэ из Тумана, Дэйдара из Камня, Какудзу из Водопада, Сасори из Песка. Есть ещё существо по имени Дзэцу. Его тело разделено на чёрную и белую половины и окружено растительными створками",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.031"
         },
         {
           "at": "0010-04-25T12:10:00",
@@ -3173,6 +3166,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.026"
+        },
+        {
+          "at": "0010-05-14T14:26:00",
+          "excerpt": "обие. Он наклонился, поднял упавшую вазу и поставил её на прежнее место. **Асума Сарутоби:** — После встречи с Какудзу и Хиданом я решил изменить подготовку своих учеников. Слишком уж многие привычные правила перестают работать против таких противников. Дзёнин",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.022"
         }
       ],
       "projections": [
@@ -10924,6 +10924,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.022",
         "s18.text.021"
       ]
     },
@@ -23138,5 +23139,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1658
+  "source_turns_indexed": 1659
 }
