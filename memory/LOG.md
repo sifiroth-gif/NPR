@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.058: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.057: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Шикамару Нара (`npc/shikamaru`), поправки игрока: 1
 - s17.text.056: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Кадзунэ (`npc/fire_road_jonin`)
 - s17.text.055: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`)
@@ -59,4 +60,3 @@
 - s17.text.001: Путник из Дождя (`npc/rain_drain_worker_s16`)
 - s16.text.140: Путник из Дождя (`npc/rain_drain_worker_s16`), Джирайя (`npc/jiraiya`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), вещь `cash_1184`, вещь `shiki_finances`, вещь `shiki_light_kote_s16`, план сюжета
 - s16.text.139: Оружейник (`npc/road_armorer_s16`), Джирайя (`npc/jiraiya`), план сюжета
-- s16.text.138: Оружейник (`npc/road_armorer_s16`), Изумо Камидзуки (`npc/izumo`), Кадзунэ (`npc/fire_road_jonin`)

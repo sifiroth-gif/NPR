@@ -63,13 +63,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.057"
+   "turn": "s17.text.058"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.057",
+  "cursor": "s17.text.058",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -81,9 +81,10 @@
    "shizune",
    "tsunade",
    "place:6cab2c7a7613d430",
+   "orochimaru",
    "rain_drain_plan_copy_s17"
   ],
-  "focus_bytes": 1738,
+  "focus_bytes": 2150,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -99,52 +100,50 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "genome.zero",
+    "fusion.tendrils",
     "pact.contact",
-    "element.ice",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
+    "sage.permanent",
+    "sage.poison",
+    "shunshin.zero",
     "nemera.agency",
+    "nemera.cloak",
+    "nemera.transfer",
     "pact.byoton",
     "pact.shiton",
     "research.postmortem",
     "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "sage.summon"
    ],
    "matched": [],
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/SHIKI.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/ref/MEMORY.md",
+    "campaigns/shiki/SHIKI.md",
+    "campaigns/shiki/ref/NEMERA.md",
+    "campaigns/shiki/ref/TECHNIQUES.md",
+    "campaigns/shiki/ref/FUSION.md"
    ],
    "required": [
-    "prior results/source",
-    "material/equipment",
-    "genome/known limits",
-    "scene/time",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent"
+    "intent",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time",
+    "fusion profile or historical pact",
+    "contact/channel"
    ],
    "routes": [
-    "research",
-    "dialogue"
+    "dialogue",
+    "travel",
+    "pact"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
     "nemera.agency",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.cloak",
+    "nemera.transfer"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -407,13 +406,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-09T18:14:00",
+  "at": "0010-05-09T18:15:00",
   "date": "Воскресенье, 9 мая 1287 года",
-  "id": "s17.text.057",
+  "id": "s17.text.058",
   "place": "Конохагакуре, кабинет Хокагэ",
-  "time": "18:14"
+  "time": "18:15"
  },
- "digest": "0043601fea8bb381183a12cea286b7c6430f08347caade723ef377b10176a02c",
+ "digest": "64f64cf2754a3ef12dd035fb8c4aa9267cb0bf2a25399ae8a1e7e025dfb159a7",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -428,21 +427,21 @@
     "from": "s17.text.029",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.057"
+    "to": "s17.text.058"
    },
    {
     "actor": "jiraiya",
     "from": "s17.text.002",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.057"
+    "to": "s17.text.058"
    },
    {
     "actor": "shizune",
     "from": "s17.text.033",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.057"
+    "to": "s17.text.058"
    }
   ],
   "nodes": [],
@@ -550,20 +549,20 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 220.68
+   "value": 220.85
   },
   "dice": [
-   20,
    15,
+   4,
+   17,
+   18,
+   14,
    1,
    19,
-   15,
-   12,
-   20,
-   2,
-   10,
-   11,
-   16,
+   18,
+   3,
+   13,
+   17,
    14
   ],
   "last_fight": {
@@ -640,6 +639,23 @@
    },
    {
     "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "orochimaru",
+    "kind": "npc",
+    "label": "Орочимару",
+    "operational_cues": {
+     "source": "recovery/cast/orochimaru.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
      "explicit_edge_candidate"
     ],
     "facts": [],
@@ -662,7 +678,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 5
+  "total_matched": 6
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -677,26 +693,26 @@
   "due": null,
   "npcs": {
    "jiraiya": {
-    "does": "Посмотрел на улицу и отодвинулся от окна.",
+    "does": "Напомнил о помощи в Дожде, собрал свитки и предложил отдых.",
     "lever": "",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Периметр не даёт прежней гарантии.",
+    "reads": "Совместная разведка имеет значение для оценки Шики.",
     "stage": 4,
     "step": "необратимость"
    },
    "shizune": {
-    "does": "По распоряжению Цунадэ убрала кисть.",
+    "does": "Задержалась у шкафа с папкой.",
     "lever": "Повторение исследований Орочимару и неконтролируемых последствий.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Сведения остаются закрытыми.",
+    "reads": "Остаётся неопределённость относительно будущих возможностей.",
     "stage": 4,
     "step": "необратимость"
    },
    "tsunade": {
-    "does": "Остановила запись, исключила личную форму из исследований, задала вопрос.",
+    "does": "Вспомнила Орочимару, достала копию договора, подтвердила отказ от присяги и пожелала дальнейших визитов.",
     "lever": "Потеря людей вследствие чужих амбиций и собственных решений.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Возможности значительны даже с ограничением; требуется понять отношение Шики к гарантиям.",
+    "reads": "Соглашение сохраняет силу; отношения требуют добровольного контакта.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -724,21 +740,21 @@
  },
  "needs_profile": [
   {
-   "appearances": 64,
+   "appearances": 65,
    "facets": 3,
    "need": 5,
    "npc": "tsunade",
    "tier": "deep"
   },
   {
-   "appearances": 129,
+   "appearances": 130,
    "facets": 0,
    "need": 5,
    "npc": "jiraiya",
    "tier": "deep"
   },
   {
-   "appearances": 38,
+   "appearances": 39,
    "facets": 3,
    "need": 5,
    "npc": "shizune",
@@ -928,10 +944,10 @@
     "s17.text.003",
     "s17.text.004",
     "s17.text.007",
-    "s17.text.054",
     "s17.text.055",
     "s17.text.056",
-    "s17.text.057"
+    "s17.text.057",
+    "s17.text.058"
    ],
    "prior_disclosures": [
     {
@@ -942,18 +958,18 @@
      "turn": "s17.text.002"
     },
     {
-     "at": "0010-05-09T18:13:00",
-     "sha256": "01069696a024cf126508c7a39def62f1ade1b5fa0b8c846dfdc94936ecc2c2d1",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.056"
-    },
-    {
      "at": "0010-05-09T18:14:00",
-     "sha256": "6f2b78294141193ab1177ecf618b7c3519768e65b180ce9014e2f6e30899f0be",
+     "sha256": "88f83e277c8c8d7445893c5bc056a8160a86dfa9571f9eddd2c042b2e0f9c2ce",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.057"
+    },
+    {
+     "at": "0010-05-09T18:15:00",
+     "sha256": "6e06206ed3c3250dfa4b0f1d033b1da94767d009a2ef1c0ebd663e474c188de3",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.058"
     }
    ],
    "profile": {
@@ -970,14 +986,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.057",
-      "what": "Шики сообщил, что Какаши не знает глазного Хирайшина, назвал видимость и Риннешаринган условиями. Цунадэ исключила личную форму из программы и спросила, как сам Шики поступил бы с подобным независимым"
+      "turn": "s17.text.058",
+      "what": "Шики не знает, как поступил бы с подобным себе независимым шиноби. Цунадэ вспомнила Орочимару, подтвердила отказ от присяги и пересмотра договора при освоении новых техник, выразила желание добровольн"
      }
     ],
     "memory_file": "archive/npc-memory/jiraiya.json",
-    "memory_total": 129,
+    "memory_total": 130,
     "name": "Джирайя",
-    "seen": "s17.text.057",
+    "seen": "s17.text.058",
     "state": "Запросил исторические архивы Дождя.",
     "status": "present_profile",
     "tier": "deep"
@@ -1015,10 +1031,10 @@
     "s17.text.034",
     "s17.text.048",
     "s17.text.050",
-    "s17.text.054",
     "s17.text.055",
     "s17.text.056",
-    "s17.text.057"
+    "s17.text.057",
+    "s17.text.058"
    ],
    "prior_disclosures": [
     {
@@ -1029,18 +1045,18 @@
      "turn": "s17.text.033"
     },
     {
-     "at": "0010-05-09T18:13:00",
-     "sha256": "01069696a024cf126508c7a39def62f1ade1b5fa0b8c846dfdc94936ecc2c2d1",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.056"
-    },
-    {
      "at": "0010-05-09T18:14:00",
-     "sha256": "6f2b78294141193ab1177ecf618b7c3519768e65b180ce9014e2f6e30899f0be",
+     "sha256": "88f83e277c8c8d7445893c5bc056a8160a86dfa9571f9eddd2c042b2e0f9c2ce",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.057"
+    },
+    {
+     "at": "0010-05-09T18:15:00",
+     "sha256": "6e06206ed3c3250dfa4b0f1d033b1da94767d009a2ef1c0ebd663e474c188de3",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.058"
     }
    ],
    "profile": {
@@ -1057,14 +1073,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.057",
-      "what": "Шики сообщил, что Какаши не знает глазного Хирайшина, назвал видимость и Риннешаринган условиями. Цунадэ исключила личную форму из программы и спросила, как сам Шики поступил бы с подобным независимым"
+      "turn": "s17.text.058",
+      "what": "Шики не знает, как поступил бы с подобным себе независимым шиноби. Цунадэ вспомнила Орочимару, подтвердила отказ от присяги и пересмотра договора при освоении новых техник, выразила желание добровольн"
      }
     ],
     "memory_file": "archive/npc-memory/shizune.json",
-    "memory_total": 38,
+    "memory_total": 39,
     "name": "Шизунэ",
-    "seen": "s17.text.057",
+    "seen": "s17.text.058",
     "state": "Вручила подписанный допуск, организован проводник.",
     "status": "present_profile",
     "tier": "deep"
@@ -1087,10 +1103,10 @@
     "s17.text.033",
     "s17.text.034",
     "s17.text.041",
-    "s17.text.054",
     "s17.text.055",
     "s17.text.056",
-    "s17.text.057"
+    "s17.text.057",
+    "s17.text.058"
    ],
    "prior_disclosures": [
     {
@@ -1101,42 +1117,42 @@
      "turn": "s17.text.029"
     },
     {
-     "at": "0010-05-09T18:13:00",
-     "sha256": "01069696a024cf126508c7a39def62f1ade1b5fa0b8c846dfdc94936ecc2c2d1",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.056"
-    },
-    {
      "at": "0010-05-09T18:14:00",
-     "sha256": "6f2b78294141193ab1177ecf618b7c3519768e65b180ce9014e2f6e30899f0be",
+     "sha256": "88f83e277c8c8d7445893c5bc056a8160a86dfa9571f9eddd2c042b2e0f9c2ce",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.057"
+    },
+    {
+     "at": "0010-05-09T18:15:00",
+     "sha256": "6e06206ed3c3250dfa4b0f1d033b1da94767d009a2ef1c0ebd663e474c188de3",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.058"
     }
    ],
    "profile": {
     "first": "s15.text.125",
     "inner": {},
     "knows": [
-     "Шики оставил доклад Какаши и запросил закрытую площадку на полтора дня.",
      "Шики не нуждается в дополнительном оборудовании, попросил проводника и заявил об отсутствии разрушительных техник.",
      "Шики добровольно сообщил об освоении Хирайшина без физических меток для метательного оружия и собственного перемещения; механизм, дальность, условия и ограничения не раскрыты. Сказал, что сам не хотел бы незави",
-     "Со слов Шики: Какаши не знает о личной разновидности; для глазного самопереноса нужна непосредственно видимая точка и Риннешаринган. Иных условий и механизма Шики не раскрывал."
+     "Со слов Шики: Какаши не знает о личной разновидности; для глазного самопереноса нужна непосредственно видимая точка и Риннешаринган. Иных условий и механизма Шики не раскрывал.",
+     "Шики прямо ответил, что не знает, как поступил бы с подобным себе независимым шиноби."
     ],
     "knows_ref": "memory/npc/tsunade.md",
     "knows_total": 8,
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.057",
-      "what": "Шики сообщил, что Какаши не знает глазного Хирайшина, назвал видимость и Риннешаринган условиями. Цунадэ исключила личную форму из программы и спросила, как сам Шики поступил бы с подобным независимым"
+      "turn": "s17.text.058",
+      "what": "Шики не знает, как поступил бы с подобным себе независимым шиноби. Цунадэ вспомнила Орочимару, подтвердила отказ от присяги и пересмотра договора при освоении новых техник, выразила желание добровольн"
      }
     ],
     "memory_file": "archive/npc-memory/tsunade.json",
-    "memory_total": 64,
+    "memory_total": 65,
     "name": "Цунадэ",
-    "seen": "s17.text.057",
+    "seen": "s17.text.058",
     "state": "Распорядилась выдать допуск и проводника.",
     "status": "present_profile",
     "tier": "deep"
@@ -1146,15 +1162,15 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.057",
-   "line": "Шики сообщил, что Какаши не знает глазного Хирайшина, назвал видимость и Риннешаринган условиями. Цунадэ исключила личную форму из программы и спросила, как сам Шики поступил бы с подобным независимым шиноби."
+   "id": "s17.text.058",
+   "line": "Шики не знает, как поступил бы с подобным себе независимым шиноби. Цунадэ вспомнила Орочимару, подтвердила отказ от присяги и пересмотра договора при освоении новых техник, выразила желание добровольных визитов. Джирайя предложил отдых."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Цунадэ вновь за столом, Джирайя отошёл от окна, Шизунэ у стола, Шики в кабинете.",
-  "pressure": "Обсуждение политических гарантий и независимости; раскрытие механизма не запрошено.",
-  "situation": "Шики ответил, что Какаши не знает о личной форме, и назвал непосредственную видимость точки и Риннешаринган условиями переноса. Цунадэ не велела записывать сведения и исключила личную форму из программы исследований. Джирайя отодвинулся от окна. Цунадэ спросила, как Шики поступил бы с подобным себе независимым шиноби на её месте."
+  "positions": "Цунадэ за столом, Джирайя стоит у стола со свитками, Шизунэ у шкафа, Шики в кабинете.",
+  "pressure": "Беседа естественно близка к завершению; дальнейшие действия Шики добровольны.",
+  "situation": "Шики ответил, что не знает, как поступил бы на месте Цунадэ. Цунадэ вспомнила Орочимару и Хирузена, Джирайя напомнил о возвращении из Дождя. Цунадэ достала копию соглашения 23.04, заявила, что не потребует присяги и не будет пересматривать договор при каждом освоении новой техники; пожелала добровольных визитов. Джирайя собрал свитки и посоветовал отдых. Шизунэ у шкафа. Шики ещё в кабинете."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1168,9 +1184,9 @@
    "player": "Они мертвы, скорее всего, у них одна чакрасигнатура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск",
    "source": "archive/session-017-turns.jsonl"
   },
-  "s17.text.057": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 9 мая 1287 года · 18:14</text>\n\n### Кабинет Хокагэ\n\n**Мугами Шики:** — Нет. Перенестись могу только к непосредственно видимой точке и только используя ринешаринган.\n\nДжирайя повернул голову к окну. За стеклом виднелись крыши соседних зданий, улица и возвышавшиеся над деревней каменные лица Хокагэ.\n\n**Джирайя:** — Значит, тебе даже не нужно заранее посещать место назначения…\n\nОн замолчал, рассматривая улицу. Несколько мгновений спустя отодвинулся от окна.\n\n**Цунадэ:** — Понятно. По крайней мере, стены ещё им…",
-   "player": "Нет. Перенестись могу только к непосредственно видимой точке и только используя ринешаринган ",
+  "s17.text.058": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 9 мая 1287 года · 18:15</text>\n\n### Кабинет Хокагэ\n\n**Мугами Шики:** — Я отвечу честно, я не знаю.\n\nЦунадэ долго смотрела на него. Потом опустила глаза и тихо вздохнула.\n\n**Цунадэ:** — Вот и я не знаю.\n\nОна взяла чашку, обнаружила, что чай давно остыл, и поставила её обратно.\n\n**Цунадэ:** — Знаешь, когда-то Орочимару тоже был человеком, которого эта деревня считала своим величайшим достоянием. Я помню его ещё ребёнком. Мы вместе учились, вместе воевали, хоронили одних и тех же людей. А потом наступ\n[... sou…",
+   "player": "Я отвечу честно, я не знаю.",
    "source": "archive/session-017-turns.jsonl"
   }
  },
@@ -1179,8 +1195,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "5a6721948186184c6dbf76e205158c7e63a446a7",
-  "turn": "s17.text.057"
+  "sha": "32fdffa7f4d0458e603f3ad4888ad6736a26f28f",
+  "turn": "s17.text.058"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1198,7 +1214,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 25657.0,
+    "minutes": 25656.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",

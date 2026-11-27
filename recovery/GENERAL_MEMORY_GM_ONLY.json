@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.057",
+  "cursor": "s17.text.058",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s17.text.057:0": {
+    "canon:s17.text.058:0": {
       "aliases": [
-        "canon:s17.text.057:0",
-        "s17.text.057: Цунадэ, Джирайя и Шизунэ услышали заявленные Шики условия глазного Хирайшина: непосредственная видимость точки, Риннешаринган. Это сообщение NPC, не изменение механик"
+        "canon:s17.text.058:0",
+        "s17.text.058: Цунадэ устно подтвердила сохранение соглашения 23.04.1287 без требования присяги и пересмотра вследствие каждого освоения Шики новой техники; выразила желание доброво"
       ],
       "facts": [],
-      "id": "canon:s17.text.057:0",
+      "id": "canon:s17.text.058:0",
       "kind": "canon",
-      "label": "s17.text.057: Цунадэ, Джирайя и Шизунэ услышали заявленные Шики условия глазного Хирайшина: непосредственная видимость точки, Риннешаринган. Это сообщение NPC, не изменение механик",
+      "label": "s17.text.058: Цунадэ устно подтвердила сохранение соглашения 23.04.1287 без требования присяги и пересмотра вследствие каждого освоения Шики новой техники; выразила желание доброво",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.057"
+        "s17.text.058"
       ]
     },
     "captive_guard": {
@@ -2661,7 +2661,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 137,
+      "mention_count": 138,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2669,13 +2669,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-09T18:12:00",
-          "excerpt": "* — Надеюсь, полтора дня одиночества не привели тебя к мысли о необходимости создания собственного Корня. Джирайя коротко рассмеялся, но Цунадэ продолжала смотреть на Шики совершенно серьёзно. Шизунэ перестала перебирать бумаги. На столе между ними лежали поже",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.055"
         },
         {
           "at": "0010-05-09T18:13:00",
@@ -2690,11 +2683,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.057"
+        },
+        {
+          "at": "0010-05-09T18:15:00",
+          "excerpt": ", хоронили одних и тех же людей. А потом наступил день, когда наш учитель обнаружил то, чем он занимался. Джирайя отвёл взгляд. Под тяжестью его ладони хрустнул край старого свитка. **Цунадэ:** — И даже тогда старик не смог его убить. В кабинете стало тихо. Из",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.058"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.057",
+          "seen": "s17.text.058",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2704,7 +2704,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.057"
+        "s17.text.058"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5805,7 +5805,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 178,
+      "mention_count": 179,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5813,13 +5813,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-03T14:06:00",
-          "excerpt": "деле очень интересно учиться. Но если один из объектов интереса недоступен, то я не стану на манер Орочимару фанатично его добиваться <text color=\"secondary\" size=\"xs\">Понедельник, 3 мая 1287 года · 14:06</text> ### Конохагакуре. Малый зал совещаний **Мугами Ш",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.127"
         },
         {
           "at": "0010-05-05T11:54:00",
@@ -5834,6 +5827,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.011"
+        },
+        {
+          "at": "0010-05-09T18:15:00",
+          "excerpt": "Она взяла чашку, обнаружила, что чай давно остыл, и поставила её обратно. **Цунадэ:** — Знаешь, когда-то Орочимару тоже был человеком, которого эта деревня считала своим величайшим достоянием. Я помню его ещё ребёнком. Мы вместе учились, вместе воевали, хорони",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.058"
         }
       ],
       "projections": [
@@ -11404,7 +11404,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.057",
+        "s17.text.058",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11419,7 +11419,8 @@
         "s17.text.049",
         "s17.text.054",
         "s17.text.055",
-        "s17.text.056"
+        "s17.text.056",
+        "s17.text.057"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20360,8 +20361,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s17.text.057"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -20849,7 +20849,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 42,
+      "mention_count": 43,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20857,13 +20857,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-09T18:12:00",
-          "excerpt": "обственного Корня. Джирайя коротко рассмеялся, но Цунадэ продолжала смотреть на Шики совершенно серьёзно. Шизунэ перестала перебирать бумаги. На столе между ними лежали пожелтевшие военные донесения. Джирайя свернул один из свитков, оставив открытым другой. **",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.055"
         },
         {
           "at": "0010-05-09T18:13:00",
@@ -20878,11 +20871,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.057"
+        },
+        {
+          "at": "0010-05-09T18:15:00",
+          "excerpt": "аже тогда старик не смог его убить. В кабинете стало тихо. Из коридора доносился размеренный скрип половиц. Шизунэ стояла у шкафа, прижимая к груди папку, которую давно могла положить на полку. **Джирайя:** — Цунадэ, Шики помог мне вернуться из Дождя. Мог оста",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.058"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.057",
+          "seen": "s17.text.058",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -20892,7 +20892,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s17.text.057"
+        "s17.text.058"
       ]
     },
     "signalshchik": {
@@ -21952,7 +21952,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 100,
+      "mention_count": 101,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21960,13 +21960,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-09T18:12:00",
-          "excerpt": "*Мугами Шики:** — Да. Шики негромко усмехнулся. **Мугами Шики:** — теперь стал больше понимать Данзо. Цунадэ медленно подняла бровь. **Цунадэ:** — Надеюсь, полтора дня одиночества не привели тебя к мысли о необходимости создания собственного Корня. Джирайя кор",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.055"
         },
         {
           "at": "0010-05-09T18:13:00",
@@ -21981,11 +21974,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.057"
+        },
+        {
+          "at": "0010-05-09T18:15:00",
+          "excerpt": "е, 9 мая 1287 года · 18:15</text> ### Кабинет Хокагэ **Мугами Шики:** — Я отвечу честно, я не знаю. Цунадэ долго смотрела на него. Потом опустила глаза и тихо вздохнула. **Цунадэ:** — Вот и я не знаю. Она взяла чашку, обнаружила, что чай давно остыл, и постави",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.058"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.057",
+          "seen": "s17.text.058",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -21995,7 +21995,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.057"
+        "s17.text.058"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22857,5 +22857,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1564
+  "source_turns_indexed": 1565
 }
