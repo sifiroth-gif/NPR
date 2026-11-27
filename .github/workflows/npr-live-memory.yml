@@ -135,7 +135,17 @@ jobs:
             if [ "$mode" = ok ]; then
               python -m rpg_engine session-close --state-dir _state --pending | tee "$RUNNER_TEMP/close.json"
               closing=$(python -c "import json,sys;print(json.load(open(sys.argv[1]))['result'])" "$RUNNER_TEMP/close.json")
-              if [ "$closing" != idle ]; then
+              if [ "$closing" = failed ]; then
+                # Preserve the already staged ordinary fold, but never publish
+                # a partially replayed/closed SQLite session after an exception.
+                cp _state/recovery/SESSION_CLOSE_REPORT.md "$RUNNER_TEMP/close-report.md"
+                cp _state/recovery/SESSION_CLOSE.json "$RUNNER_TEMP/close-request.json"
+                git -C _state restore --worktree -- .
+                git -C _state clean -q -fd -- recovery archive memory campaigns/shiki/continuity campaign.sqlite state.json
+                cp "$RUNNER_TEMP/close-report.md" _state/recovery/SESSION_CLOSE_REPORT.md
+                cp "$RUNNER_TEMP/close-request.json" _state/recovery/SESSION_CLOSE.json
+                git -C _state add -- recovery/SESSION_CLOSE_REPORT.md recovery/SESSION_CLOSE.json
+              elif [ "$closing" != idle ]; then
                 git -C _state add -A -- recovery archive memory campaign.sqlite state.json campaigns/shiki/continuity
               fi
             fi
