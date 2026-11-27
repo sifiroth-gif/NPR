@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.002",
+  "cursor": "s18.text.003",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 235,
+      "mention_count": 236,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-14T12:07:00",
-          "excerpt": "ину. Теперь её внимание привлекло наступившее молчание. **Наруто:** — Чёрт. Я думал, раз он больше не с Орочимару… Он не закончил фразу. С другой стороны канала послышался голос Цунадэ. Она обратилась к Наруто уже без прежней раздражительности, гораздо спокойн",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.128"
         },
         {
           "at": "0010-05-14T12:09:00",
@@ -5835,6 +5828,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.002"
+        },
+        {
+          "at": "0010-05-14T12:33:00",
+          "excerpt": "рнулась к Шики. На мгновение её взгляд задержался на его лице. Перед ней стоял человек, которому удалось вернуть Орочимару его собственное тело. Тот самый Орочимару, которого двое оставшихся саннинов долгие годы знали уже преимущественно по донесениям о его пр",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.003"
         }
       ],
       "projections": [
@@ -10356,7 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.002",
+        "s18.text.003",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22062,23 +22062,6 @@
         "s15.text.004"
       ]
     },
-    "thread:shiki_save_asuma": {
-      "aliases": [
-        "thread:shiki save asuma",
-        "shiki save asuma",
-        "shiki_save_asuma"
-      ],
-      "facts": [],
-      "id": "thread:shiki_save_asuma",
-      "kind": "thread",
-      "label": "shiki save asuma",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s18.text.002"
-      ]
-    },
     "thread:shiki_save_jiraiya": {
       "aliases": [
         "thread:shiki save jiraiya",
@@ -22091,13 +22074,9 @@
       "label": "shiki save jiraiya",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "state": "23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозможности встречи ввиду помощи Храму Огня. Доставка ещё не подтверждена. Возможность позднего визита на Мьёбоку не закрыта."
-        }
-      ],
+      "projections": [],
       "sources": [
-        "s15.text.159"
+        "s18.text.003"
       ]
     },
     "thread:shiki_underground_career": {
@@ -22171,7 +22150,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 129,
+      "mention_count": 130,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22179,13 +22158,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:28:00",
-          "excerpt": "Шики:** — Я уверен в том что есть очаги чужеродной чакры. Но не уверен, что нужно так истово копать Цунадэ подняла глаза от документов. На несколько мгновений её пальцы задержались на краю раскрытой папки. Затем она закрыла её. **Цунадэ:** — Как врач я с тобой",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.133"
         },
         {
           "at": "0010-05-14T12:28:00",
@@ -22200,11 +22172,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.002"
+        },
+        {
+          "at": "0010-05-14T12:33:00",
+          "excerpt": ". Да и мне там нечего делать, это их встреча. И какая бы тема там не была, она сама по себе им важна. Цунадэ чуть приподняла брови. Уголки её губ дрогнули, но улыбки не последовало. Она опустила взгляд на свои руки. **Цунадэ:** — Их встреча… Хокагэ повторила э",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.003"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.002",
+          "seen": "s18.text.003",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22214,7 +22193,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.002"
+        "s18.text.003"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23104,5 +23083,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1639
+  "source_turns_indexed": 1640
 }
