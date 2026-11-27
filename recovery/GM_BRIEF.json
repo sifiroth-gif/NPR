@@ -466,7 +466,7 @@
   "place": "Конохагакуре, резиденция Хокагэ, кабинет",
   "time": "12:28"
  },
- "digest": "c786cf79cac80bbce9eb40c6987db3c57ba4dbc8c2434040bf7c8464953af071",
+ "digest": "f343afbf9bc0c26d613cd34fd9aff3b2ee524ab2ecc3c3671826a80a2aa6663c",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -670,7 +670,15 @@
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
- "handoff": null,
+ "handoff": {
+  "at": "0010-05-14T12:28:00",
+  "closed": 17,
+  "first_turn": "s18.text.001",
+  "last_turn": "s17.text.133",
+  "next_session": 18,
+  "source": "campaigns/shiki/continuity/SESSION_017_TO_018_HANDOFF.json",
+  "sqlite_revision": 1589
+ },
  "horror": {
   "due": null,
   "npcs": {
@@ -1034,8 +1042,7 @@
   "no_automatic_conclusion": true,
   "omitted_thread_ids": [
    "shiki_confidentiality",
-   "shiki_promise_nemera",
-   "shiki_save_jiraiya"
+   "shiki_promise_nemera"
   ],
   "secret_topics": [
    "vials",
@@ -1048,15 +1055,15 @@
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
   "threads": {
-   "fire_road_survey_attack": {
-    "source": "memory/threads/fire_road_survey_attack.md",
-    "state": "03.05 15:46 Шики видел задержанного лидера группы s15.text.119; Хисато сообщил о задержании утром на дорожном посту и продолжающемся поиске спутников. По его сообщению заказ на уничтожение результатов съёмки получен до …",
-    "turn": "s16.text.134"
-   },
    "shiki_save_asuma": {
     "source": "memory/threads/shiki_save_asuma.md",
     "state": "24.04 12:20: Асума жив и не ранен, Какудзу мёртв, Хидан под раздельными удерживающими печатями Конохи, тело Тирику возвращается храму. Допрос только по согласованию с Цунадэ.",
     "turn": "s15.text.182"
+   },
+   "shiki_save_jiraiya": {
+    "source": "memory/threads/shiki_save_jiraiya.md",
+    "state": "23.04.1287: Шики поручил Наруто уведомить Джирайю и Какаши о невозможности встречи ввиду помощи Храму Огня. Доставка ещё не подтверждена. Возможность позднего визита на Мьёбоку не закрыта.",
+    "turn": "s15.text.159"
    },
    "shiki_underground_career": {
     "source": "memory/threads/shiki_underground_career.md",
