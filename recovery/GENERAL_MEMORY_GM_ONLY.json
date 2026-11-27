@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.049",
+  "cursor": "s17.text.050",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s17.text.049:0": {
+    "canon:s17.text.050:0": {
       "aliases": [
-        "canon:s17.text.049:0",
-        "s17.text.049: Цунадэ разрешила Шики закрытое использование резервного полигона северо-западного сектора до вечера 09.05.1287 без посторонних, с условием предварительного предупрежд"
+        "canon:s17.text.050:0",
+        "s17.text.050: подписанный допуск Шики на закрытый северо-западный резервный полигон до вечера 09.05.1287 вручён; прибыл 08.05 в 06:43. Караул снаружи, без посторонних внутри. Шики "
       ],
       "facts": [],
-      "id": "canon:s17.text.049:0",
+      "id": "canon:s17.text.050:0",
       "kind": "canon",
-      "label": "s17.text.049: Цунадэ разрешила Шики закрытое использование резервного полигона северо-западного сектора до вечера 09.05.1287 без посторонних, с условием предварительного предупрежд",
+      "label": "s17.text.050: подписанный допуск Шики на закрытый северо-западный резервный полигон до вечера 09.05.1287 вручён; прибыл 08.05 в 06:43. Караул снаружи, без посторонних внутри. Шики ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.049"
+        "s17.text.050"
       ]
     },
     "captive_guard": {
@@ -7289,6 +7289,24 @@
         "s02.text.089"
       ]
     },
+    "place:1bbb671e33badb77": {
+      "aliases": [
+        "place:1bbb671e33badb77",
+        "Конохагакуре, северо-западный резервный полигон",
+        "Конохагакуре",
+        "северо-западный резервный полигон"
+      ],
+      "facts": [],
+      "id": "place:1bbb671e33badb77",
+      "kind": "place",
+      "label": "Конохагакуре, северо-западный резервный полигон",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.050"
+      ]
+    },
     "place:1c0a0035a3b313ed": {
       "aliases": [
         "place:1c0a0035a3b313ed",
@@ -11331,7 +11349,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.049",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11342,7 +11359,8 @@
         "s16.text.063",
         "s16.text.064",
         "s16.text.065",
-        "s17.text.048"
+        "s17.text.048",
+        "s17.text.049"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20771,7 +20789,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 37,
+      "mention_count": 38,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20779,13 +20797,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-07T12:30:00",
-          "excerpt": "гами Шики:** — Да, давайте. **Цунадэ:** — Тогда в половине первого. Закрытая тренировочная площадка. Шизунэ оформит допуск. *** <text color=\"secondary\" size=\"xs\">12:30 · Конохагакуре</text> ### Закрытый полигон пространственных техник Площадка располагалась ср",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.035"
         },
         {
           "at": "0010-05-08T06:12:00",
@@ -20800,21 +20811,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.049"
+        },
+        {
+          "at": "0010-05-08T06:43:00",
+          "excerpt": "ет, но меня бы проводить туда и никаких техник разрушительного характера. **Цунадэ:** — Договорились. Шизунэ, распоряжение охране и проводника ему. Шизунэ передала Шики подписанный допуск. *** <text color=\"secondary\" size=\"xs\">06:43 · Северо-западная окраина К",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.050"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.049",
-          "state": "С Цунадэ в кабинете, освободила место для разговора."
-        },
-        {
-          "state": "С Цунадэ в кабинете, освободила место для разговора."
+          "seen": "s17.text.050",
+          "state": "Вручила подписанный допуск, организован проводник."
         }
       ],
       "sources": [
         "recovery/cast/shizune.json",
-        "recovery/HOT.json",
-        "s17.text.049"
+        "s17.text.050"
       ]
     },
     "signalshchik": {
@@ -21874,7 +21888,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 95,
+      "mention_count": 96,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21882,13 +21896,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-07T19:12:00",
-          "excerpt": "Он убрал тетрадь в сумку. **Какаши:** — Ты выполнил свою часть договорённости, Шики. Теперь наша очередь. Я предложу Цунадэ организовать самостоятельное обучение по твоей методике. Если другие шиноби смогут её воспроизвести, мы действительно вернём Конохе утра",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.042"
         },
         {
           "at": "0010-05-08T06:12:00",
@@ -21903,21 +21910,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.049"
+        },
+        {
+          "at": "0010-05-08T06:43:00",
+          "excerpt": "кагэ **Мугами Шики:** — Нет, но меня бы проводить туда и никаких техник разрушительного характера. **Цунадэ:** — Договорились. Шизунэ, распоряжение охране и проводника ему. Шизунэ передала Шики подписанный допуск. *** <text color=\"secondary\" size=\"xs\">06:43 · ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.050"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.049",
-          "state": "В кабинете, просматривает утренние донесения; готова выслушать Шики."
-        },
-        {
-          "state": "В кабинете, просматривает утренние донесения; готова выслушать Шики."
+          "seen": "s17.text.050",
+          "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s17.text.049"
+        "s17.text.050"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22779,5 +22789,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1558
+  "source_turns_indexed": 1559
 }
