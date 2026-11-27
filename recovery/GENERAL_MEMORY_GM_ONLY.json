@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.110",
+  "cursor": "s17.text.111",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2666,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 146,
+      "mention_count": 147,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:10:00",
-          "excerpt": "тно колыхалась занавеска. С улицы доносились голоса прохожих, стук деревянных сандалий, детский смех. Джирайя сидел, широко расставив колени. Цунадэ осталась возле письменного стола. Они оба смотрели на Шики. **Мугами Шики:** — Некоторое время назад мы с Орочи",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.107"
         },
         {
           "at": "0010-05-13T11:13:00",
@@ -2695,11 +2688,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.109"
+        },
+        {
+          "at": "0010-05-13T11:15:00",
+          "excerpt": "снулся воздуха. **Сирамэ:** — Шики? Ты уже в Конохе? Она оглядела незнакомое помещение. Под взглядом змеи Джирайя переставил ногу, освободив ей пространство между столом и стулом. **Джирайя:** — Какая красавица. Сирамэ повернула к нему голову. **Сирамэ:** — От",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.111"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.110",
+          "seen": "s17.text.111",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2708,7 +2708,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.111"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5788,7 +5789,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 218,
+      "mention_count": 219,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5796,13 +5797,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:10:00",
-          "excerpt": "Мастеру: больше описаний По игре: #нариши прямой речью что прлизошло и предложение Орочимару но в моем стиле а не сливая вообще всю информацию# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:10</text> ### Конохагакуре. Кабинет Хокагэ Солнечны",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.107"
         },
         {
           "at": "0010-05-13T11:13:00",
@@ -5817,6 +5811,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.109"
+        },
+        {
+          "at": "0010-05-13T11:15:00",
+          "excerpt": "ьники оконного света. **Сирамэ:** — Я только недавно обнаружила, что тебя нет в убежище. Кабуто ничего не знал, а Орочимару сказал, что ты освоил пространственную технику. Она вновь посмотрела на двух саннинов. Кончик её хвоста медленно скользнул по половице. ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.111"
         }
       ],
       "projections": [
@@ -11530,7 +11531,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.110",
+        "s17.text.111",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -20961,7 +20962,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 96,
+      "mention_count": 97,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20969,13 +20970,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T20:56:00",
-          "excerpt": "* — Да, ты заключил договор? **Саске Учиха:** — Да. Орочимару позволил мне подписать свиток Рьючидо. Сирамэ слегка приподнялась над постелью. **Сирамэ:** — Значит, теперь и ты призыватель. Саске кивнул. **Саске Учиха:** — Но я не собираюсь зависеть от змей бол",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.084"
         },
         {
           "at": "0010-05-13T04:57:00",
@@ -20990,19 +20984,33 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.086"
+        },
+        {
+          "at": "0010-05-13T11:15:00",
+          "excerpt": "ялось над полом, на мгновение скрыв ножки письменного стола. В его глубине Шики различил знакомую чакру Сирамэ. Показалась белая змеиная голова. Следом из рассеивающегося дыма выползло длинное, почти двух с половиной метровое тело. На светлой чешуе сохранился ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.111"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.086",
+          "seen": "s17.text.111",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
+          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
+        },
+        {
+          "fears": "Удержание людьми или насильственное исследование Немерой",
+          "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json"
+        "recovery/cast/shirame.json",
+        "recovery/HOT.json",
+        "s17.text.111"
       ]
     },
     "shiranami": {
@@ -22142,7 +22150,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 110,
+      "mention_count": 111,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22150,13 +22158,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:10:00",
-          "excerpt": "лись голоса прохожих, стук деревянных сандалий, детский смех. Джирайя сидел, широко расставив колени. Цунадэ осталась возле письменного стола. Они оба смотрели на Шики. **Мугами Шики:** — Некоторое время назад мы с Орочимару обсуждали возможность возвращения е",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.107"
         },
         {
           "at": "0010-05-13T11:13:00",
@@ -22171,11 +22172,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.109"
+        },
+        {
+          "at": "0010-05-13T11:15:00",
+          "excerpt": "а к нему голову. **Сирамэ:** — От тебя пахнет жабами. **Джирайя:** — А у тебя, я смотрю, прекрасное обоняние. Цунадэ прикрыла рот ладонью, скрывая короткую усмешку. Змея приблизилась к Шики и свернула нижнюю часть туловища кольцами возле его ног. Её голова под",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.111"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.110",
+          "seen": "s17.text.111",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22184,7 +22192,8 @@
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.111"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23074,5 +23083,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1614
+  "source_turns_indexed": 1615
 }
