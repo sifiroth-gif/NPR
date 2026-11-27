@@ -81,13 +81,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.087"
+   "turn": "s17.text.088"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.087",
+  "cursor": "s17.text.088",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -446,11 +446,11 @@
  "cursor": {
   "at": "0010-05-13T07:59:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.087",
+  "id": "s17.text.088",
   "place": "Северная граница Страны Рек, подземное убежище Орочимару, палата наблюдения",
   "time": "07:59"
  },
- "digest": "e3aa1c3ca3d2dc4c1971ce4d202b3ecf2e88a632ffc26966bfb52df1f309024d",
+ "digest": "3075b250c3ba2ae4e5d33c46d060631de30f844a138b2ad7368716cccc2f1147",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -573,21 +573,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 141.02
+   "value": 261.02
   },
   "dice": [
-   17,
-   19,
-   3,
-   14,
-   13,
-   7,
+   15,
+   20,
+   6,
+   1,
    17,
    1,
-   16,
+   14,
    9,
-   10,
-   8
+   9,
+   1,
+   15,
+   12
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -934,7 +934,7 @@
     {
      "at": "0010-05-13T07:59:00",
      "line": "Шики согласился поговорить. Орочимару сообщил о доступности стихийного ниндзюцу и утрате привычных телесных возможностей, отказал…",
-     "sha256": "669a9085bae041ee4ef7650e340480b15a3c2b4c5d1c29018c04c5326ac2a400",
+     "sha256": "ffc3b5abf066f3b6c5916f8894731e27feb1a570c4c08563e0f3f6c8bf3557bc",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.087"
@@ -966,7 +966,7 @@
     "memory_file": "archive/npc-memory/orochimaru.json",
     "memory_total": 63,
     "name": "Орочимару",
-    "seen": "s17.text.087",
+    "seen": "s17.text.088",
     "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена.",
     "status": "present_profile",
     "tier": "deep"
@@ -1013,8 +1013,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "8ae2c288e27fbc21f0236cf17ed8c9c3c8f5c762",
-  "turn": "s17.text.087"
+  "sha": "5badb288a7d667db30d31a0f66cc25938f15ee01",
+  "turn": "s17.text.088"
  },
  "wiki": {
   "index": "memory/INDEX.md",
