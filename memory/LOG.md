@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.046: Коюки (`npc/western_nest_young_courier`)
 - s18.text.045: Коюки (`npc/western_nest_young_courier`)
 - s18.text.044: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.043: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`)
@@ -59,4 +60,3 @@
 - s17.text.122: Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s17.text.121: Коюки (`npc/western_nest_young_courier`)
 - s17.text.120: Орочимару (`npc/orochimaru`), Коюки (`npc/western_nest_young_courier`)
-- s17.text.119: Орочимару (`npc/orochimaru`)
