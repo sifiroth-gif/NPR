@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.026",
+  "cursor": "s18.text.027",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 26,
+      "mention_count": 27,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T14:41:00",
-          "excerpt": "и. Асума проводил их взглядом. Затем положил щипцы на край тарелки и придвинул к Шики чашку горячего чая. **Асума Сарутоби:** — Какой-то особенный повод? Он указал на мясо, которым Шики только что словно произнёс безмолвный тост. На жаровне потрескивали капли ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.024"
         },
         {
           "at": "0010-05-14T14:45:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.026"
+        },
+        {
+          "at": "0010-05-14T15:12:00",
+          "excerpt": "— Согласен надо наверно сказать коюки что она была единственной со мной в момент моего дня рождения **Асума Сарутоби:** — Думаю, ей будет приятно это услышать. Он не знал, о ком именно говорил Шики. Незнакомое имя дзёнин повторил вполголоса, словно стараясь за",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.027"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.026",
+          "seen": "s18.text.027",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.026"
+        "s18.text.027"
       ]
     },
     "baki": {
@@ -8348,10 +8348,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.026",
+        "s18.text.027",
         "s18.text.023",
         "s18.text.024",
-        "s18.text.025"
+        "s18.text.025",
+        "s18.text.026"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -22566,7 +22567,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 115,
+      "mention_count": 116,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22574,13 +22575,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T12:07:00",
-          "excerpt": "Из приёмника донёсся скрип дерева: кто-то придвинул стул к столу. Наруто не сразу продолжил разговор. Коюки приподнялась над собственными кольцами. За время разговора она несколько раз переводила взгляд с Шики на металлическую пластину. Теперь её внимание прив",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.128"
         },
         {
           "at": "0010-05-14T12:09:00",
@@ -22595,6 +22589,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.130"
+        },
+        {
+          "at": "0010-05-14T15:12:00",
+          "excerpt": "Согласен надо наверно сказать коюки что она была единственной со мной в момент моего дня рождения <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 15:12</text> ### Конохагакуре. Ресторан якинику",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.027"
         }
       ],
       "projections": [
@@ -23160,5 +23161,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1663
+  "source_turns_indexed": 1664
 }
