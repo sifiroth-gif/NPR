@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.041",
+  "cursor": "s18.text.042",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -156,16 +156,10 @@
           "seen": "s18.text.041",
           "voice": "Деловая твёрдость, точность, сдержанная резкость.",
           "wants": "Согласовать приемлемые для Мэй условия урегулирования без уступки безопасности деревни."
-        },
-        {
-          "fears": "Самовольное действие ведомства, срыв переговоров и новый международный инцидент.",
-          "wants": "Согласовать приемлемые для Мэй условия урегулирования без уступки безопасности деревни."
         }
       ],
       "sources": [
-        "recovery/cast/ao.json",
-        "recovery/HOT.json",
-        "s18.text.041"
+        "recovery/cast/ao.json"
       ]
     },
     "arai_mitiko": {
@@ -3718,14 +3712,10 @@
         {
           "seen": "s18.text.041",
           "state": "Снял оцепление с трапа и возобновил пропуск пассажиров."
-        },
-        {
-          "state": "Снял оцепление с трапа и возобновил пропуск пассажиров."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_port_guard_senior.json",
-        "recovery/HOT.json"
+        "recovery/cast/kiri_port_guard_senior.json"
       ]
     },
     "kiri_sample_receipt_s16": {
@@ -3752,7 +3742,8 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3791,12 +3782,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.112",
+          "seen": "s18.text.042",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json"
+        "recovery/cast/kiri_ship_security_officer.json",
+        "s18.text.042"
       ]
     },
     "kiri_transfer_carrier": {
@@ -13116,7 +13108,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.041",
+        "s18.text.042",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13125,7 +13117,8 @@
         "s18.text.037",
         "s18.text.038",
         "s18.text.039",
-        "s18.text.040"
+        "s18.text.040",
+        "s18.text.041"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22612,7 +22605,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 125,
+      "mention_count": 126,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22620,13 +22613,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:31:00",
-          "excerpt": "нению привычного температурного равновесия, возвращаясь к нему при ослаблении направленного воздействия. Коюки неожиданно пошевелилась. **Коюки:** — Ой… Ты становишься теплее? Она переместилась ближе к основанию шеи, где разница температур ощущалась наиболее о",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.039"
         },
         {
           "at": "0010-05-14T15:33:00",
@@ -22641,11 +22627,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.041"
+        },
+        {
+          "at": "0010-05-14T17:48:00",
+          "excerpt": "ответ Ао. Полагаю, Пятая Мидзукагэ захочет присутствовать лично. Но это пока моё предположение. У лестницы Коюки устроилась на каменном выступе. Последние лучи солнца уже покинули его, однако известняк ещё сохранял тепло. Белая змейка вытянулась вдоль края кам",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.042"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.041",
+          "seen": "s18.text.042",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22655,7 +22648,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.041"
+        "s18.text.042"
       ]
     },
     "white_snake_sage": {
@@ -23218,5 +23211,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1678
+  "source_turns_indexed": 1679
 }
