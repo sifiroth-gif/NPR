@@ -2,8 +2,9 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
-- s17.text.114: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Сирамэ (`npc/shirame`), Жаба (`npc/zhaba`), вещь `jiraiya_first_letter_s17`, вещь `toad_letter_case_s17`, поправки игрока: 1
-- s17.text.113: Жаба (`npc/zhaba`), Сирамэ (`npc/shirame`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
+- s17.text.115: Гамасэй (`npc/zhaba`), Сирамэ (`npc/shirame`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), вещь `jiraiya_first_letter_s17`
+- s17.text.114: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Сирамэ (`npc/shirame`), Гамасэй (`npc/zhaba`), вещь `jiraiya_first_letter_s17`, вещь `toad_letter_case_s17`, поправки игрока: 1
+- s17.text.113: Гамасэй (`npc/zhaba`), Сирамэ (`npc/shirame`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s17.text.112: Сирамэ (`npc/shirame`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s17.text.111: Сирамэ (`npc/shirame`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s17.text.109: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
@@ -58,4 +59,3 @@
 - s17.text.058: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.057: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Шикамару Нара (`npc/shikamaru`), поправки игрока: 1
 - s17.text.056: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Кадзунэ (`npc/fire_road_jonin`)
-- s17.text.055: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Портовый чиновник (`npc/fire_port_official`)

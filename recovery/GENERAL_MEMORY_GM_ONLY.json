@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.114",
+  "cursor": "s17.text.115",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.114:0": {
-      "aliases": [
-        "canon:s17.text.114:0",
-        "s17.text.114: игрок повысил обязательный структурный минимум описательной прозы с 60 до 180 слов вне диалогов и шапок; применяется с этого хода, предыдущие ходы не пересчитывать."
-      ],
-      "facts": [],
-      "id": "canon:s17.text.114:0",
-      "kind": "canon",
-      "label": "s17.text.114: игрок повысил обязательный структурный минимум описательной прозы с 60 до 180 слов вне диалогов и шапок; применяется с этого хода, предыдущие ходы не пересчитывать.",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.114"
       ]
     },
     "captive_guard": {
@@ -2682,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 150,
+      "mention_count": 151,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2690,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:17:00",
-          "excerpt": "пустила кольца и приблизилась к саннину. Чешуйки на нижней стороне её туловища тихо шуршали по дереву. Джирайя опустился на одно колено, чтобы разговаривать с ней на одном уровне. Даже в таком положении он казался несоразмерно большим рядом с её узкой головой.",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.112"
         },
         {
           "at": "0010-05-13T11:19:00",
@@ -2711,11 +2688,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.114"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "но быстрее. Только передай Орочимару, что я согласилась помогать с письмами, а не с его исследованиями. Джирайя негромко рассмеялся. **Джирайя:** — Удивительно, насколько хорошо его знают даже змеи. **Мугами Шики:** — а к вам как могу обращаться? Жаба выпустил",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.115"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.114",
+          "seen": "s17.text.115",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2725,7 +2709,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.114"
+        "s17.text.115"
       ]
     },
     "jiraiya_first_letter_s17": {
@@ -2741,12 +2725,13 @@
       "mentions": [],
       "projections": [
         {
-          "holder": "shirame",
-          "since": "s17.text.114"
+          "holder": "shiki",
+          "since": "s17.text.114",
+          "turn": "s17.text.115"
         }
       ],
       "sources": [
-        "s17.text.114"
+        "s17.text.115"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5826,7 +5811,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 222,
+      "mention_count": 223,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5834,13 +5819,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:17:00",
-          "excerpt": "Орочимару и джирая хотят организовать встречу, но у них проблемы с доверием поэтому им нужен обмен сообщениями. Джирая умеет призывать жаб, а Орочимару змей. У меня возникла идея п",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.112"
         },
         {
           "at": "0010-05-13T11:19:00",
@@ -5855,6 +5833,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.114"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "Давайте это письмо доставлю я, и передам Орочимару имена тех кто согласился помочь, в вы пока осмотрите место. #к жабе# а к вам как могу обращаться? <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:26</tex",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.115"
         }
       ],
       "projections": [
@@ -11568,7 +11553,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.114",
+        "s17.text.115",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -20999,7 +20984,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 100,
+      "mention_count": 101,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -21007,13 +20992,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:17:00",
-          "excerpt": "имару змей. У меня возникла идея передать пару писем через жаб и змей. Поможешь ли ты как посредник? Сирамэ слегка наклонила голову. Её светлые глаза обратились к Джирайе. Змея распустила кольца и приблизилась к саннину. Чешуйки на нижней стороне её туловища т",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.112"
         },
         {
           "at": "0010-05-13T11:19:00",
@@ -21028,26 +21006,27 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.114"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "то письмо доставлю я, и передам Орочимару имена тех кто согласился помочь, в вы пока осмотрите место. Сирамэ подхватила футляр зубами за кожаную петлю и протянула его Шики. На крышке ещё сохранялся свежий оттиск печати Джирайи. Змея держала футляр осторожно, н",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.115"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.114",
+          "seen": "s17.text.115",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
-          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
-        },
-        {
-          "fears": "Удержание людьми или насильственное исследование Немерой",
-          "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json",
-        "s17.text.114"
+        "s17.text.115"
       ]
     },
     "shiranami": {
@@ -22208,7 +22187,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 114,
+      "mention_count": 115,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22216,13 +22195,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:17:00",
-          "excerpt": "ил о тебе. **Джирайя:** — Надеюсь, ничего хорошего. **Сирамэ:** — По-разному. Джирайя перестал улыбаться. Цунадэ наблюдала за ними, опираясь поясницей о край письменного стола. На её лице проступило некоторое удивление: разумная змея разговаривала с легендарны",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.112"
         },
         {
           "at": "0010-05-13T11:19:00",
@@ -22237,11 +22209,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.114"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "игаться среди людей, для которых появление крупной змеи на улице могло стать поводом немедленно позвать шиноби. Цунадэ подошла к двери и распорядилась проводить обоих за пределы деревни, предупредив караульных о характере их поручения. Затем сняла карту со сто",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.115"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.114",
+          "seen": "s17.text.115",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22251,7 +22230,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.114"
+        "s17.text.115"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22733,56 +22712,31 @@
     "zhaba": {
       "aliases": [
         "zhaba",
-        "Жаба"
+        "Гамасэй"
       ],
       "facts": [],
       "id": "zhaba",
       "kind": "npc",
-      "label": "Жаба",
-      "mention_count": 19,
+      "label": "Гамасэй",
+      "mention_count": 1,
       "mentions": [
         {
-          "at": "0010-04-23T16:17:00",
-          "excerpt": "ле. **Джирайя:** — Кучиёсэ но Дзюцу! По земле распространились линии формулы. В небольшом облаке белого дыма возникла старая зелёная жаба с седыми волосами и густыми бровями, одетая в тёмный плащ. **Фукасаку:** — Джирайя-тян! Надеюсь, причина достаточно важная",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-05-13T10:41:00",
-          "excerpt": "орошая разведка тогда первая часть фразы ложна. Я передам, но ему нужно будет средство связи. Думаю жаба змее, а змея вам. Ну если конечно согласятся <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 10:41</text> **Мугами Шики:** — Вы правда меняет",
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "гу обращаться? Жаба выпустила из лап пустой футляр и выпрямилась, насколько позволяли пропорции её тела. **Гамасэй:** — Гамасэй. Из Мьёбокудзана. Мы уже встречались в Дожде, но тогда, признаться, было не до знакомств. Он покосился на Сирамэ, затем снова принял",
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
-          "turn": "s17.text.099"
-        },
-        {
-          "at": "0010-05-13T11:19:00",
-          "excerpt": "икусил большой палец, сложил печати и опустил ладонь на пол. Из облака дыма показалась небольшая зелёная жаба. Шики уже видел её во время разведки в Стране Дождя — тогда она обследовала промышленную пристань и обнаружила водосток. Жаба моргнула выпуклыми глаза",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.113"
-        },
-        {
-          "at": "0010-05-13T11:24:00",
-          "excerpt": "Сирамэ приблизилась к столу, поднялась вдоль его ножки и осторожно уложила голову на край столешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге остались два небольших тёмных пятна. Цунадэ немедленно убрала лежавшие рядом служебные документы. **Ц",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.114"
+          "turn": "s17.text.115"
         }
       ],
       "projections": [
         {
           "role": "Призывная жаба Джирайи, разведка и возможное добровольное посредничество.",
-          "seen": "s17.text.114"
-        },
-        {
-          "role": "Призывная жаба Джирайи, разведка и возможное добровольное посредничество."
+          "seen": "s17.text.115"
         }
       ],
       "sources": [
         "recovery/cast/zhaba.json",
-        "recovery/HOT.json",
-        "s17.text.114"
+        "s17.text.115"
       ]
     }
   },
@@ -23146,9 +23100,9 @@
     },
     {
       "from": "jiraiya_first_letter_s17",
-      "source": "s17.text.114",
+      "source": "s17.text.115",
       "status": "projected",
-      "to": "shirame",
+      "to": "shiki",
       "type": "held_by"
     },
     {
@@ -23160,5 +23114,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1618
+  "source_turns_indexed": 1619
 }
