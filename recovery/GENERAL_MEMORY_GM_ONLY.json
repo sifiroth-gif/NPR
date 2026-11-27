@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.020",
+  "cursor": "s18.text.021",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T12:20:00",
-          "excerpt": "из пункта обмена изъяли в качестве вещественных доказательств. Тело Тирику предстояло вернуть в Храм Огня. **Асума Сарутоби:** — Мугами. Дальше мы справимся. Я возвращаюсь через храм, а затем в Коноху. Хокагэ получит полный доклад. Он посмотрел на завёрнутое т",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.182"
         },
         {
           "at": "0010-04-24T12:21:15",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.020"
+        },
+        {
+          "at": "0010-05-14T14:24:00",
+          "excerpt": "ему нет. Асума сан, угостите сигаретой и огнем? Асума усмехнулся и достал из кармана пачку сигарет. **Асума Сарутоби:** — Врач просит закурить? Только Цунадэ не говори, что это я тебя угостил. Он протянул Шики сигарету и щёлкнул зажигалкой, прикрывая небольшое",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.021"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.020",
+          "seen": "s18.text.021",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.020"
+        "s18.text.021"
       ]
     },
     "baki": {
@@ -683,7 +683,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 20,
+      "mention_count": 21,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -691,13 +691,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T19:25:00",
-          "excerpt": "=\"xs\">24 апреля 1287 года · 19:25</text> Цунадэ выслушала Шики, не перебивая. При известии о гибели Тирику её пальцы медленно сжались. **Цунадэ:** — Проклятье… Она поднялась из-за стола и подошла к окну. Внизу, на улицах Конохи, зажигались вечерние фонари. **Ц",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.194"
         },
         {
           "at": "0010-04-24T19:27:00",
@@ -712,6 +705,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.020"
+        },
+        {
+          "at": "0010-05-14T14:24:00",
+          "excerpt": "твых. Асума некоторое время оставался неподвижным, положив руки на колени. **Асума Сарутоби:** — После гибели Тирику я поймал себя на мысли, что слишком редко сюда прихожу. Он поднялся, отряхнул брюки и посмотрел на соседние надгробия. На нескольких камнях сто",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.021"
         }
       ],
       "projections": [
@@ -10907,6 +10907,24 @@
         "s17.text.073",
         "s17.text.074",
         "s17.text.075"
+      ]
+    },
+    "place:5f30bdbcdb664b14": {
+      "aliases": [
+        "place:5f30bdbcdb664b14",
+        "Конохагакуре, кладбище",
+        "Конохагакуре",
+        "кладбище"
+      ],
+      "facts": [],
+      "id": "place:5f30bdbcdb664b14",
+      "kind": "place",
+      "label": "Конохагакуре, кладбище",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.021"
       ]
     },
     "place:5fe584857bc5378a": {
@@ -22192,7 +22210,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 146,
+      "mention_count": 147,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22200,13 +22218,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:19:00",
-          "excerpt": "Как думаете что я попросил в оплату? При словах о равной ценности человеческой жизни и жизни муравья Цунадэ нахмурилась. Однако последующее упоминание Орочимару заставило её отложить возражение. Данзо внимательно осмотрел лицо Шики. Его взгляд задержался на ве",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.017"
         },
         {
           "at": "0010-05-14T13:21:00",
@@ -22221,6 +22232,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.019"
+        },
+        {
+          "at": "0010-05-14T14:24:00",
+          "excerpt": "Асума усмехнулся и достал из кармана пачку сигарет. **Асума Сарутоби:** — Врач просит закурить? Только Цунадэ не говори, что это я тебя угостил. Он протянул Шики сигарету и щёлкнул зажигалкой, прикрывая небольшое пламя ладонью от ветра. Дорога к кладбищу прохо",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.021"
         }
       ],
       "projections": [
@@ -23120,5 +23138,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1657
+  "source_turns_indexed": 1658
 }
