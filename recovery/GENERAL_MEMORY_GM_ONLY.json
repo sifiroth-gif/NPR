@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.125",
+  "cursor": "s17.text.126",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2610,8 +2610,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/iwashi.json",
-        "s17.text.125"
+        "recovery/cast/iwashi.json"
       ]
     },
     "izumo": {
@@ -2655,8 +2654,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json",
-        "s17.text.125"
+        "recovery/cast/izumo.json"
       ]
     },
     "jiraiya": {
@@ -3965,12 +3963,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.124",
+          "seen": "s17.text.126",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s17.text.126"
       ]
     },
     "kurama": {
@@ -12205,12 +12204,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.125",
+        "s17.text.126",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068",
         "s17.text.070",
-        "s17.text.124"
+        "s17.text.124",
+        "s17.text.125"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -19164,12 +19164,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.124",
+          "seen": "s17.text.126",
           "state": "Забрал снаряжение и ушёл."
         }
       ],
       "sources": [
-        "recovery/cast/raido.json"
+        "recovery/cast/raido.json",
+        "s17.text.126"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -22214,7 +22215,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 119,
+      "mention_count": 120,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22222,13 +22223,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:33:00",
-          "excerpt": "Она путешествует а гамасэйем до места их встречи Орочимару отложил перо поперёк чернильницы. Слова о Цунадэ застали его в тот момент, когда он собирался начать письмо. На чистом листе осталась единственная чёрная точка, медленно расплывавшаяся по волокнам бума",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.118"
         },
         {
           "at": "0010-05-13T18:21:00",
@@ -22243,17 +22237,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.125"
+        },
+        {
+          "at": "0010-05-13T18:25:00",
+          "excerpt": "color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 18:25</text> **Мугами Шики:** — Планирую **Цунадэ:** — Хорошо. Тогда мне не придётся искать тебя через Джирайю. В приёмнике зашелестели страницы. На этот раз Шики различил характерный стук деревянных план",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.126"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.125",
+          "seen": "s17.text.126",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "s17.text.125"
+        "s17.text.126"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22550,7 +22551,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 110,
+      "mention_count": 111,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22558,13 +22559,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-13T11:51:00",
-          "excerpt": "верг, 13 мая 1287 года · 11:51</text> **Мугами Шики:** — Нет, но и сказать что все хорошо я не могу Коюки повернулась к матери. Последовал негромкий обмен звуками, сопровождавшийся короткими прикосновениями мордочек. Тёмная змея несколько раз коснулась языком ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.123"
         },
         {
           "at": "0010-05-13T18:21:00",
@@ -22579,11 +22573,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.125"
+        },
+        {
+          "at": "0010-05-13T18:25:00",
+          "excerpt": "Если они появятся одновременно, наши подразделения могут ошибочно принять их за независимых противников. Коюки оставила приёмник и направилась к выходу. На пороге она столкнулась с маленькой местной змеёй, поднявшейся из пещер. Белая змейка коротко зашипела и ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.126"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.125",
+          "seen": "s17.text.126",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22593,7 +22594,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.125"
+        "s17.text.126"
       ]
     },
     "white_snake_sage": {
@@ -23156,5 +23157,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1629
+  "source_turns_indexed": 1630
 }
