@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.038",
+  "cursor": "s18.text.039",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -13106,13 +13106,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.038",
+        "s18.text.039",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
         "s18.text.035",
         "s18.text.036",
-        "s18.text.037"
+        "s18.text.037",
+        "s18.text.038"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22599,7 +22600,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 122,
+      "mention_count": 123,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22607,13 +22608,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:24:00",
-          "excerpt": "года · 15:24</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — Я выпил за свой день рождения. Коюки приподнялась, опираясь на свёрнутую кольцами нижнюю часть тела. **Коюки:** — У тебя сегодня день рождения?! Детёныш, до этого неподвижно лежавший на ступен",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.036"
         },
         {
           "at": "0010-05-14T15:25:00",
@@ -22628,11 +22622,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.038"
+        },
+        {
+          "at": "0010-05-14T15:31:00",
+          "excerpt": "нению привычного температурного равновесия, возвращаясь к нему при ослаблении направленного воздействия. Коюки неожиданно пошевелилась. **Коюки:** — Ой… Ты становишься теплее? Она переместилась ближе к основанию шеи, где разница температур ощущалась наиболее о",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.039"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.038",
+          "seen": "s18.text.039",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22642,7 +22643,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.038"
+        "s18.text.039"
       ]
     },
     "white_snake_sage": {
@@ -23205,5 +23206,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1675
+  "source_turns_indexed": 1676
 }
