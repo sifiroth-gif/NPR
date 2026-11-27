@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.085: Сирамэ (`npc/shirame`), Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.084: Саске Учиха (`npc/sasuke`), Сирамэ (`npc/shirame`), Кабуто Якуши (`npc/kabuto`), Портовый чиновник (`npc/fire_port_official`), план сюжета, поправки игрока: 2
 - s17.text.083: Саске Учиха (`npc/sasuke`), Сирамэ (`npc/shirame`), Какаши Хатакэ (`npc/kakashi`), план сюжета, поправки игрока: 1
 - s17.text.082: Саске Учиха (`npc/sasuke`), Сирамэ (`npc/shirame`), Кадзунэ (`npc/fire_road_jonin`), Шикамару Нара (`npc/shikamaru`), план сюжета
@@ -59,4 +60,3 @@
 - s17.text.028: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), план сюжета
 - s17.text.027: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), Пэйн (`npc/pain`), план сюжета
 - s17.text.026: Конан (`npc/konan`), Пэйн (`npc/pain`), план сюжета
-- s17.text.025: Джирайя (`npc/jiraiya`), Конан (`npc/konan`), Пэйн (`npc/pain`), план сюжета

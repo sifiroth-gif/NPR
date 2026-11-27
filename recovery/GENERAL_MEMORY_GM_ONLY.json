@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.084",
+  "cursor": "s17.text.085",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,38 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.084:0": {
-      "aliases": [
-        "canon:s17.text.084:0",
-        "s17.text.084: прямая поправка игрока — Саске заключил змеиный договор Рьючидо, лично подтвердил Шики 12.05.1287 20:56. Точная дата подписи не установлена. Известны четыре действующ"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.084:0",
-      "kind": "canon",
-      "label": "s17.text.084: прямая поправка игрока — Саске заключил змеиный договор Рьючидо, лично подтвердил Шики 12.05.1287 20:56. Точная дата подписи не установлена. Известны четыре действующ",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.084"
-      ]
-    },
-    "canon:s17.text.084:1": {
-      "aliases": [
-        "canon:s17.text.084:1",
-        "s17.text.084: игрок требует причинно развить самостоятельную линию Кабуто с учётом выживания Орочимару и обязательного начала Четвёртой мировой войны. GM_CORE s16.036 сохраняет обя"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.084:1",
-      "kind": "canon",
-      "label": "s17.text.084: игрок требует причинно развить самостоятельную линию Кабуто с учётом выживания Орочимару и обязательного начала Четвёртой мировой войны. GM_CORE s16.036 сохраняет обя",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.084"
       ]
     },
     "captive_guard": {
@@ -1140,8 +1108,7 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник",
-        "fire_port_official"
+        "Портовый чиновник"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1185,8 +1152,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json",
-        "s17.text.084"
+        "recovery/cast/fire_port_official.json"
       ]
     },
     "fire_port_security_staff": {
@@ -2855,13 +2821,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.084",
+          "seen": "s17.text.085",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "s17.text.084"
+        "s17.text.085"
       ]
     },
     "kabuto_letter_0416": {
@@ -5819,7 +5785,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 195,
+      "mention_count": 196,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5827,13 +5793,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T20:54:00",
-          "excerpt": "лал? Если я уйду отсюда, сможет ли он меня остановить? **Ход Шики.** Саске назвал исчерпание обучения, презрение к Орочимару и его опытам; признал, что убийство больше не обязательно, но не доверяет обещанию. Спросил, сможет ли восстановленный саннин воспрепят",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.082"
         },
         {
           "at": "0010-05-12T20:55:00",
@@ -5848,16 +5807,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.084"
+        },
+        {
+          "at": "0010-05-13T04:57:00",
+          "excerpt": "мясом. Сирамэ лежала возле изголовья. Услышав движение, она подняла голову. **Сирамэ:** — Кабуто принёс еду. Орочимару приходил ночью, но я сказала ему, чтобы он тебя не будил. Из коридора доносился глухой шум передвигаемых ящиков. **Сирамэ:** — Саске собирает",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.085"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.081",
+          "seen": "s17.text.085",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "s17.text.085"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -8061,10 +8028,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.084",
+        "s17.text.085",
         "s17.text.081",
         "s17.text.082",
-        "s17.text.083"
+        "s17.text.083",
+        "s17.text.084"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -20127,8 +20095,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json",
-        "s17.text.084"
+        "recovery/cast/sasuke.json"
       ]
     },
     "sayu": {
@@ -20901,7 +20868,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 94,
+      "mention_count": 95,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20909,13 +20876,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T20:54:00",
-          "excerpt": "* — Ты видел людей в его лабораториях. Знаешь, что он с ними делал. Мне не нужно оправдывать его убийство. Сирамэ медленно повернула голову в сторону Учихи. **Сирамэ:** — Но теперь тебе необязательно его убивать. Саске взглянул на неё. **Саске Учиха:** — Необя",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.082"
         },
         {
           "at": "0010-05-12T20:55:00",
@@ -20930,12 +20890,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.084"
+        },
+        {
+          "at": "0010-05-13T04:57:00",
+          "excerpt": "ize=\"xs\">Среда, 12 мая 1287 года · 20:57</text> **Мугами Шики:** — Страна, я ещё немного отдохну. **Сирамэ:** — Спи. Я побуду здесь. Тусклый свет лампы растворился за сомкнутыми веками. На этот раз Шики погрузился в естественный глубокий сон, а не в бессознате",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.085"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.084",
+          "seen": "s17.text.085",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20949,7 +20916,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.084"
+        "s17.text.085"
       ]
     },
     "shiranami": {
@@ -23024,5 +22991,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1590
+  "source_turns_indexed": 1591
 }
