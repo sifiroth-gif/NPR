@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.074",
+  "cursor": "s17.text.075",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2788,7 +2788,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 110,
+      "mention_count": 111,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2796,13 +2796,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-05-12T05:31:00",
-          "excerpt": "ществить. Кабуто медленно снял очки. Протёр стёкла краем одежды, хотя на них не было заметно грязи. **Кабуто Якуши:** — В таком случае мне придётся рассказать вам кое-что, о чём Орочимару-сама предпочёл бы умолчать. Он поставил медицинский футляр на каменный п",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.072"
         },
         {
           "at": "0010-05-12T05:32:00",
@@ -2817,21 +2810,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.074"
+        },
+        {
+          "at": "0010-05-12T05:36:00",
+          "excerpt": "Кабуто. **Орочимару:** — Подготовь лабораторию. Возьми необходимый Шики костный мозг. Кабуто заметно удивился. **Кабуто Якуши:** — Орочимару-сама, вы приняли решение? **Орочимару:** — Я разрешаю создать тело. Окончательное решение о переселении приму, когда ув",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.075"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.074",
-          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
-        },
-        {
+          "seen": "s17.text.075",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s17.text.074"
+        "s17.text.075"
       ]
     },
     "kabuto_letter_0416": {
@@ -5789,7 +5785,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 185,
+      "mention_count": 186,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5797,13 +5793,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T05:31:00",
-          "excerpt": "econdary\" size=\"xs\">Среда, 12 мая 1287 года · 05:31</text> ### Северная граница Страны Рек. Убежище Орочимару **Мугами Шики:** — Я хорошо понимаю как это можно осуществить. Кабуто медленно снял очки. Протёр стёкла краем одежды, хотя на них не было заметно гряз",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.072"
         },
         {
           "at": "0010-05-12T05:32:00",
@@ -5818,11 +5807,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.074"
+        },
+        {
+          "at": "0010-05-12T05:36:00",
+          "excerpt": "ой модификации <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 05:36</text> ### Убежище Орочимару **Мугами Шики:** — Знания и ваша, именно ваша чакра. И техники которые не требуют той перестройка которая у вас случилась. Я не знаю ваш репертуар что",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.075"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.074",
+          "seen": "s17.text.075",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5832,7 +5828,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.074"
+        "s17.text.075"
       ]
     },
     "orochimaru_scout_snake": {
@@ -10711,10 +10707,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.074",
+        "s17.text.075",
         "s17.text.071",
         "s17.text.072",
-        "s17.text.073"
+        "s17.text.073",
+        "s17.text.074"
       ]
     },
     "place:5fe584857bc5378a": {
@@ -20786,7 +20783,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 84,
+      "mention_count": 85,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20794,13 +20791,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T05:31:00",
-          "excerpt": "компенсирует разрушение тканей. Вчера ночью произошло лёгочное кровотечение. Мне удалось его остановить. Сирамэ повернула голову к тёмному проходу. **Кабуто Якуши:** — Однако дело не только в состоянии его организма. Вчера Саске отказался явиться по его распор",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.072"
         },
         {
           "at": "0010-05-12T05:32:00",
@@ -20815,12 +20805,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.074"
+        },
+        {
+          "at": "0010-05-12T05:36:00",
+          "excerpt": "ое решение о переселении приму, когда увижу результат. До тех пор ничего не меняй в наших планах относительно Саске. Сирамэ проползла между ними и остановилась возле Шики. **Орочимару:** — Ты ведь понимаешь, Шики-кун, что сейчас предлагаешь мне не просто лечен",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.075"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.074",
+          "seen": "s17.text.075",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20834,7 +20831,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.074"
+        "s17.text.075"
       ]
     },
     "shiranami": {
@@ -22895,5 +22892,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1580
+  "source_turns_indexed": 1581
 }
