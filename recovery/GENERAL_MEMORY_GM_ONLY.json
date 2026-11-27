@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.063",
+  "cursor": "s17.text.064",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.064:0": {
+      "aliases": [
+        "canon:s17.text.064:0",
+        "s17.text.064: два погибших яйца похоронены 10.05.1287 возле наружного выхода нижних пещер убежища; место отмечено белыми камнями Коюки. Тёмная змея посетила могилу и вернулась к се"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.064:0",
+      "kind": "canon",
+      "label": "s17.text.064: два погибших яйца похоронены 10.05.1287 возле наружного выхода нижних пещер убежища; место отмечено белыми камнями Коюки. Тёмная змея посетила могилу и вернулась к се",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.064"
       ]
     },
     "captive_guard": {
@@ -3074,12 +3090,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.044",
+          "seen": "s17.text.064",
           "state": "Покинул полигон, разрешил Шики остаться до утра; намерен предупредить дежурных и зайти утром."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s17.text.064"
       ]
     },
     "kakuzu": {
@@ -7578,11 +7595,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.063",
+        "s17.text.064",
         "s16.text.100",
         "s16.text.101",
         "s17.text.061",
-        "s17.text.062"
+        "s17.text.062",
+        "s17.text.063"
       ]
     },
     "place:2262555f95fe4fea": {
@@ -19276,19 +19294,14 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s17.text.063",
-          "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
-          "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
-        },
-        {
+          "seen": "s17.text.064",
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         }
       ],
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
-        "recovery/HOT.json",
-        "s17.text.063"
+        "s17.text.064"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -21972,12 +21985,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.059",
+          "seen": "s17.text.064",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s17.text.064"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22274,7 +22288,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 98,
+      "mention_count": 99,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22282,13 +22296,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T12:17:00",
-          "excerpt": "=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 12:17</text> ### Убежище Шики. Нижние пещеры Коюки повела Шики вдоль подземного ручья. Здесь каменные стены постепенно утрачивали следы человеческой обработки, переходя в естественные известняковые образов",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.061"
         },
         {
           "at": "0010-05-10T12:46:00",
@@ -22303,11 +22310,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.063"
+        },
+        {
+          "at": "0010-05-10T13:04:00",
+          "excerpt": "ажной и мягкой. Шики выкопал небольшое углубление между выступами известняка и перенёс туда оба яйца. Коюки внимательно наблюдала за каждым его движением. Когда яйца скрылись под землёй, она принесла несколько небольших белых камней и уложила их рядом. Получил",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.064"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.063",
+          "seen": "s17.text.064",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22317,7 +22331,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.063"
+        "s17.text.064"
       ]
     },
     "white_snake_sage": {
@@ -22845,5 +22859,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1570
+  "source_turns_indexed": 1571
 }
