@@ -130,6 +130,7 @@
 - Конохагакуре, Тренировочная площадка за госпиталем · `places/konokhagakure-trenirovochnaya-ploshchadka-za-gospitalem` · 2 ход(ов), s01–s01
 - Конохагакуре, Тренировочный полигон за восточной оградой госпиталя · `places/konokhagakure-trenirovochnyy-poligon-za-vostochnoy-ogradoy-g` · 2 ход(ов), s01–s01
 - Конохагакуре, улица Красных клёнов · `places/konokhagakure-ulitsa-krasnykh-klenov` · 2 ход(ов), s01–s01
+- Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 2 ход(ов), s17–s17
 - Конохагакуре, западный квартал · `places/konokhagakure-zapadnyy-kvartal` · 2 ход(ов), s15–s15
 - Конохагакуре, Западный медицинский переход · `places/konokhagakure-zapadnyy-meditsinskiy-perekhod` · 2 ход(ов), s02–s02
 - Кусагакуре, частный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-kabinet-kirisavy-seyny` · 2 ход(ов), s04–s04
@@ -198,7 +199,6 @@
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
 - Конохагакуре, Временная резиденция делегации Кусагакуре · `places/konokhagakure-vremennaya-rezidentsiya-delegatsii-kusagakure` · 1 ход(ов), s02–s02
 - Конохагакуре, южные ворота · `places/konokhagakure-yuzhnye-vorota` · 1 ход(ов), s15–s15
-- Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 1 ход(ов), s17–s17
 - Конохагакуре, Западное медицинское крыло главной арены · `places/konokhagakure-zapadnoe-meditsinskoe-krylo-glavnoy-areny` · 1 ход(ов), s02–s02
 - Конохагакуре, жилой квартал · `places/konokhagakure-zhiloy-kvartal` · 1 ход(ов), s15–s15
 - Кусагакуре, боковой переулок и хозяйственная пристройка дома Мугами Шики · `places/kusagakure-bokovoy-pereulok-i-khozyaystvennaya-pristroyka-do` · 1 ход(ов), s08–s08
