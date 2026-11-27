@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.027",
+  "cursor": "s17.text.028",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 126,
+      "mention_count": 127,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:18:00",
-          "excerpt": ">Среда, 5 мая 1287 года · 19:18</text> ### Амэгакурэ. Центральная башня Шики оставался в укрытии. **Джирайя:** — Конан, я ведь учил вас защищать людей. Зачем вам Акацуки? Зачем охота на джинчурики? **Конан:** — Потому что ваши уроки оказались недостаточными. И",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.024"
         },
         {
           "at": "0010-05-05T19:18:10",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.027"
+        },
+        {
+          "at": "0010-05-05T20:04:00",
+          "excerpt": "econdary\" size=\"xs\">Среда, 5 мая 1287 года · 19:36</text> ### Амэгакурэ. Нижние ярусы города Шики и Джирайя последовали за Конан. Спускались долго. Внутренние помещения башни постепенно уступали место техническим галереям, огромным резервуарам и машинным залам",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.028"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.027",
-          "state": "Прекратил подготовку к бою, убрал руку от оружия и согласился с Шики."
+          "seen": "s17.text.028",
+          "state": "Вывез Шики из города на транспортной жабе, отменил призыв, признаёт риск собственной ошибки, предлагает возвращение в Коноху и доклад Цунадэ."
         },
         {
-          "state": "Прекратил подготовку к бою, убрал руку от оружия и согласился с Шики."
+          "state": "Вывез Шики из города на транспортной жабе, отменил призыв, признаёт риск собственной ошибки, предлагает возвращение в Коноху и доклад Цунадэ."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.027"
+        "s17.text.028"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3755,7 +3755,7 @@
       "id": "konan",
       "kind": "npc",
       "label": "Конан",
-      "mention_count": 13,
+      "mention_count": 14,
       "mentions": [
         {
           "at": "0010-04-25T10:28:00",
@@ -3763,13 +3763,6 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
-        },
-        {
-          "at": "0010-05-05T19:18:10",
-          "excerpt": "ировки, остановить его атаку# Джирая-сан я думаю что нам стоит воспользоваться предложением госпожи Конан #поворачивась к ним# если ещё оно актуально? <text color=\"secondary\" size=\"xs\">Среда, 5 мая 1287 года · 19:18</text> ### Амэгакурэ. Центральная башня Конч",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.025"
         },
         {
           "at": "0010-05-05T19:18:24",
@@ -3784,21 +3777,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.027"
+        },
+        {
+          "at": "0010-05-05T20:04:00",
+          "excerpt": "да, 5 мая 1287 года · 19:36</text> ### Амэгакурэ. Нижние ярусы города Шики и Джирайя последовали за Конан. Спускались долго. Внутренние помещения башни постепенно уступали место техническим галереям, огромным резервуарам и машинным залам. Здесь пахло нагретым ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.028"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.027",
-          "state": "Ведёт гостей к выходу, начала спуск."
-        },
-        {
-          "state": "Ведёт гостей к выходу, начала спуск."
+          "seen": "s17.text.028",
+          "state": "Проводила обоих до крытого причала к 19:36, осталась в Амэгакурэ."
         }
       ],
       "sources": [
         "recovery/cast/konan.json",
-        "recovery/HOT.json",
-        "s17.text.027"
+        "s17.text.028"
       ]
     },
     "kotetsu": {
@@ -5905,15 +5901,10 @@
         {
           "seen": "s17.text.027",
           "state": "Остался в галерее с двумя другими телами; разрешил Конан проводить гостей."
-        },
-        {
-          "state": "Остался в галерее с двумя другими телами; разрешил Конан проводить гостей."
         }
       ],
       "sources": [
-        "recovery/cast/pain.json",
-        "recovery/HOT.json",
-        "s17.text.027"
+        "recovery/cast/pain.json"
       ]
     },
     "patient_airway": {
@@ -12092,6 +12083,24 @@
         "s06.text.013"
       ]
     },
+    "place:7c9035aff5e10f02": {
+      "aliases": [
+        "place:7c9035aff5e10f02",
+        "Страна Дождя, безлюдный речной берег за пределами Амэгакурэ",
+        "Страна Дождя",
+        "безлюдный речной берег за пределами Амэгакурэ"
+      ],
+      "facts": [],
+      "id": "place:7c9035aff5e10f02",
+      "kind": "place",
+      "label": "Страна Дождя, безлюдный речной берег за пределами Амэгакурэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.028"
+      ]
+    },
     "place:7d8179b86d9b7c32": {
       "aliases": [
         "place:7d8179b86d9b7c32",
@@ -14395,9 +14404,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.027",
         "s17.text.025",
-        "s17.text.026"
+        "s17.text.026",
+        "s17.text.027"
       ]
     },
     "place:b034eabbadbf2c13": {
@@ -21641,7 +21650,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 84,
+      "mention_count": 85,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21649,13 +21658,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-03T14:19:00",
-          "excerpt": "ёнина были растрёпаны сильнее обычного, из кармана жилета выступала потрёпанная книжка. **Какаши:** — О, Шики. Цунадэ-сама передала мне распоряжение относительно Хирайшина. С Генмой я уже разговаривал. Осталось собрать всех троих. Он прикрыл книгу пальцем, зал",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.128"
         },
         {
           "at": "0010-05-03T14:20:00",
@@ -21670,6 +21672,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.011"
+        },
+        {
+          "at": "0010-05-05T20:04:00",
+          "excerpt": "ски трёх учеников. Бумага пожелтела, линии местами почти стёрлись. Он закрыл книжку. **Джирайя:** — Нам нужно возвращаться к Цунадэ. Теперь у нас есть основания считать Амэгакурэ центром Акацуки. Он помолчал, прислушиваясь к шелесту тростника. **Джирайя:** — С",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.028"
         }
       ],
       "projections": [
@@ -22167,7 +22176,7 @@
       "id": "zhaba",
       "kind": "npc",
       "label": "Жаба",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -22175,13 +22184,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-05-05T18:31:00",
-          "excerpt": "вотные. Их собственные сигнатуры оставались различимыми на фоне чужой чакры. Джирайя терпеливо ждал. Бурая жаба возле него закрыла глаза, едва заметно раздувая горловой мешок. Теперь Шики располагал достаточно определённым ответом: **дождь несёт одну устойчиву",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.015"
         },
         {
           "at": "0010-05-05T18:33:00",
@@ -22196,6 +22198,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.017"
+        },
+        {
+          "at": "0010-05-05T20:04:00",
+          "excerpt": "холодности. Джирайя прикусил нижнюю губу, затем сложил печати призыва. У причала появилась знакомая транспортная жаба. Конан осталась стоять под навесом. Ветер шевелил края её плаща. Когда Джирайя направился к жабе, женщина на мгновение подняла руку, словно со",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.028"
         }
       ],
       "projections": [
@@ -22541,5 +22550,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1536
+  "source_turns_indexed": 1537
 }
