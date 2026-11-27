@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.117",
+  "cursor": "s17.text.118",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2666,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 152,
+      "mention_count": 153,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:24:00",
-          "excerpt": "lor=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:24</text> ### Конохагакуре. Кабинет Хокагэ Джирайя расправил загнувшиеся края карты и придавил один из них чернильницей. Бумага была старой, потемневшей на сгибах; поверх первоначальных обозначений дорог",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.114"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -2695,6 +2688,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.116"
+        },
+        {
+          "at": "0010-05-13T11:33:00",
+          "excerpt": "е кресло по другую сторону стола. Затем негромко рассмеялся и вновь взял перо. **Орочимару:** — Полагаю, Джирайя до сих пор даёт ей достаточно поводов для этого. Саннин начал писать. В отличие от лабораторных записей, тесно покрывавших страницы его тетрадей, п",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.118"
         }
       ],
       "projections": [
@@ -2722,11 +2722,11 @@
         {
           "holder": "orochimaru",
           "since": "s17.text.114",
-          "turn": "s17.text.117"
+          "turn": "s17.text.118"
         }
       ],
       "sources": [
-        "s17.text.117"
+        "s17.text.118"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 225,
+      "mention_count": 226,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:26:00",
-          "excerpt": "Давайте это письмо доставлю я, и передам Орочимару имена тех кто согласился помочь, в вы пока осмотрите место. #к жабе# а к вам как могу обращаться? <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:26</tex",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.115"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -5835,11 +5828,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.117"
+        },
+        {
+          "at": "0010-05-13T11:33:00",
+          "excerpt": "а их встречи <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:33</text> ### Убежище Орочимару. Лаборатория **Мугами Шики:** — она не дала оценку но немного волновалась насчёт встречи и ещё Сирамэ прямо сейчас душе не вызывать. Она путешествует ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.118"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.117",
+          "seen": "s17.text.118",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5849,7 +5849,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.117"
+        "s17.text.118"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -5893,6 +5893,27 @@
       ],
       "sources": [
         "s17.text.080"
+      ]
+    },
+    "orochimaru_reply_letter_s17": {
+      "aliases": [
+        "orochimaru reply letter s17",
+        "Ответное письмо Орочимару Джирайе в лакированном футляре"
+      ],
+      "facts": [],
+      "id": "orochimaru_reply_letter_s17",
+      "kind": "item",
+      "label": "Ответное письмо Орочимару Джирайе в лакированном футляре",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "orochimaru",
+          "since": "s17.text.118"
+        }
+      ],
+      "sources": [
+        "s17.text.118"
       ]
     },
     "orochimaru_scout_snake": {
@@ -12595,7 +12616,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.117",
+        "s17.text.118",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -12606,7 +12627,8 @@
         "s17.text.100",
         "s17.text.101",
         "s17.text.102",
-        "s17.text.116"
+        "s17.text.116",
+        "s17.text.117"
       ]
     },
     "place:810392b04745def4": {
@@ -20986,7 +21008,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 102,
+      "mention_count": 103,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20994,13 +21016,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:24:00",
-          "excerpt": "рх первоначальных обозначений дорог и населённых пунктов виднелись многочисленные рукописные пометки. Сирамэ приблизилась к столу, поднялась вдоль его ножки и осторожно уложила голову на край столешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.114"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -21015,6 +21030,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.117"
+        },
+        {
+          "at": "0010-05-13T11:33:00",
+          "excerpt": "По игре: она не дала оценку но немного волновалась насчёт встречи и ещё Сирамэ прямо сейчас душе не вызывать. Она путешествует а гамасэйем до места их встречи <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:33</text> ### Убежище Орочи",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.118"
         }
       ],
       "projections": [
@@ -22188,7 +22210,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 116,
+      "mention_count": 117,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22196,13 +22218,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:24:00",
-          "excerpt": "лешницы. Жаба запрыгнула следом. Под её влажными лапами на бумаге остались два небольших тёмных пятна. Цунадэ немедленно убрала лежавшие рядом служебные документы. **Цунадэ:** — Только не на донесения. Джирайя провёл пальцем вдоль западной границы Страны Огня.",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.114"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -22217,6 +22232,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.117"
+        },
+        {
+          "at": "0010-05-13T11:33:00",
+          "excerpt": "Она путешествует а гамасэйем до места их встречи Орочимару отложил перо поперёк чернильницы. Слова о Цунадэ застали его в тот момент, когда он собирался начать письмо. На чистом листе осталась единственная чёрная точка, медленно расплывавшаяся по волокнам бума",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.118"
         }
       ],
       "projections": [
@@ -23102,7 +23124,7 @@
     },
     {
       "from": "jiraiya_first_letter_s17",
-      "source": "s17.text.117",
+      "source": "s17.text.118",
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
@@ -23113,8 +23135,15 @@
       "status": "projected",
       "to": "zhaba",
       "type": "held_by"
+    },
+    {
+      "from": "orochimaru_reply_letter_s17",
+      "source": "s17.text.118",
+      "status": "projected",
+      "to": "orochimaru",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1621
+  "source_turns_indexed": 1622
 }
