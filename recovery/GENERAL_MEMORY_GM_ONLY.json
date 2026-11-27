@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.048",
+  "cursor": "s18.text.049",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s18.text.049:0": {
+      "aliases": [
+        "canon:s18.text.049:0",
+        "ОOC s18.text.049: тело Шики с исторической базовой температурой около 29,3 °C холодно для обычного человека, но для многих змей эта температура комфортна для активности; относитель"
+      ],
+      "facts": [],
+      "id": "canon:s18.text.049:0",
+      "kind": "canon",
+      "label": "ОOC s18.text.049: тело Шики с исторической базовой температурой около 29,3 °C холодно для обычного человека, но для многих змей эта температура комфортна для активности; относитель",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.049"
       ]
     },
     "captive_guard": {
@@ -13110,7 +13126,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.048",
+        "s18.text.049",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13126,7 +13142,8 @@
         "s18.text.044",
         "s18.text.045",
         "s18.text.046",
-        "s18.text.047"
+        "s18.text.047",
+        "s18.text.048"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22613,7 +22630,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 132,
+      "mention_count": 133,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22621,13 +22638,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T17:57:00",
-          "excerpt": "ойки конфигурации шеи не возникло. **Мугами Шики:** — Не бойся меня, малыш. Шики произнёс это очень тихо. Коюки не вмешивалась. Она расположилась сбоку, в поле восприятия детёныша, сохраняя неподвижность и позволяя ему самостоятельно исследовать незнакомый объ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.046"
         },
         {
           "at": "0010-05-14T17:59:00",
@@ -22642,11 +22652,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.048"
+        },
+        {
+          "at": "0010-05-14T19:20:00",
+          "excerpt": "мя исследовал новое положение его тела, а затем устроился возле шеи. Здесь было теплее, чем на камне. Коюки расположилась рядом. Она несколько раз поправила кольца своего тела, прежде чем окончательно улечься. Шики погрузился в дремоту. Природная энергия продо",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.049"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.048",
+          "seen": "s18.text.049",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22656,7 +22673,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.048"
+        "s18.text.049"
       ]
     },
     "white_snake_sage": {
@@ -23219,5 +23236,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1685
+  "source_turns_indexed": 1686
 }
