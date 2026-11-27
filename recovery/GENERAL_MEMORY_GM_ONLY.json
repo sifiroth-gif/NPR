@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.123",
+  "cursor": "s17.text.124",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.124:0": {
+      "aliases": [
+        "canon:s17.text.124:0",
+        "s17.text.124: сообщение Цунадэ со ссылкой на дозор о встрече с Саске на дороге у северной границы Страны Рек 13.05, без столкновения. Это донесение, не личное наблюдение Шики. Нару"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.124:0",
+      "kind": "canon",
+      "label": "s17.text.124: сообщение Цунадэ со ссылкой на дозор о встрече с Саске на дороге у северной границы Страны Рек 13.05, без столкновения. Это донесение, не личное наблюдение Шики. Нару",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.124"
       ]
     },
     "captive_guard": {
@@ -2605,12 +2621,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.068",
+          "seen": "s17.text.124",
           "state": "Покинул учебный павильон."
         }
       ],
       "sources": [
-        "recovery/cast/iwashi.json"
+        "recovery/cast/iwashi.json",
+        "s17.text.124"
       ]
     },
     "izumo": {
@@ -2649,12 +2666,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.065",
+          "seen": "s17.text.124",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
-        "recovery/cast/izumo.json"
+        "recovery/cast/izumo.json",
+        "s17.text.124"
       ]
     },
     "jiraiya": {
@@ -3963,12 +3981,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.065",
+          "seen": "s17.text.124",
           "state": "Вернулся к 09, передал срочный запрос на пост, подкрепление прибыло."
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json"
+        "recovery/cast/kotetsu.json",
+        "s17.text.124"
       ]
     },
     "kurama": {
@@ -5806,7 +5825,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 229,
+      "mention_count": 230,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5833,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:35:00",
-          "excerpt": "dary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:35</text> **Мугами Шики:** — И как вам это ощущение? Орочимару не сразу ответил. Он смотрел сквозь стекло на неподвижное тело, лежавшее в глубине сосуда. **Орочимару:** — Непривычно. Он поднял правую руку, поверну",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.119"
         },
         {
           "at": "0010-05-13T11:36:00",
@@ -5835,6 +5847,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.121"
+        },
+        {
+          "at": "0010-05-13T18:21:00",
+          "excerpt": "ойчивого внутреннего равновесия. Постепенно восполнялся резерв, истощённый вчерашней работой над телом Орочимару и последующими перемещениями. *** <text color=\"secondary\" size=\"xs\">18:21 · Убежище Шики</text> Когда медитация завершилась, из-за поворота коридор",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.124"
         }
       ],
       "projections": [
@@ -7708,7 +7727,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.123",
         "s16.text.100",
         "s16.text.101",
         "s17.text.061",
@@ -7716,7 +7734,8 @@
         "s17.text.063",
         "s17.text.064",
         "s17.text.065",
-        "s17.text.122"
+        "s17.text.122",
+        "s17.text.123"
       ]
     },
     "place:2262555f95fe4fea": {
@@ -12203,6 +12222,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.124",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068",
@@ -19160,12 +19180,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.068",
+          "seen": "s17.text.124",
           "state": "Забрал снаряжение и ушёл."
         }
       ],
       "sources": [
-        "recovery/cast/raido.json"
+        "recovery/cast/raido.json",
+        "s17.text.124"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -19536,8 +19557,7 @@
     "river_shrine_dark_snake_s16": {
       "aliases": [
         "river shrine dark snake s16",
-        "Тёмная змея у кладок",
-        "river_shrine_dark_snake_s16"
+        "Тёмная змея у кладок"
       ],
       "facts": [],
       "id": "river_shrine_dark_snake_s16",
@@ -19550,16 +19570,10 @@
           "seen": "s17.text.123",
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
-        },
-        {
-          "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
-          "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         }
       ],
       "sources": [
-        "recovery/cast/river_shrine_dark_snake_s16.json",
-        "recovery/HOT.json",
-        "s17.text.123"
+        "recovery/cast/river_shrine_dark_snake_s16.json"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -20237,12 +20251,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.084",
+          "seen": "s17.text.124",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json"
+        "recovery/cast/sasuke.json",
+        "s17.text.124"
       ]
     },
     "sayu": {
@@ -22217,7 +22232,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 117,
+      "mention_count": 118,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22225,13 +22240,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:26:00",
-          "excerpt": "игаться среди людей, для которых появление крупной змеи на улице могло стать поводом немедленно позвать шиноби. Цунадэ подошла к двери и распорядилась проводить обоих за пределы деревни, предупредив караульных о характере их поручения. Затем сняла карту со сто",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.115"
         },
         {
           "at": "0010-05-13T11:29:00",
@@ -22246,16 +22254,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.118"
+        },
+        {
+          "at": "0010-05-13T18:21:00",
+          "excerpt": "не потревожил Шики. В этот момент откликнулся личный приёмник связи. Чакровая сигнатура принадлежала пластине Цунадэ. Привычный сигнал вызова повторился. Когда связь установилась со стороны отправителя, послышался голос Хокагэ. На заднем плане негромко перегов",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.124"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.115",
+          "seen": "s17.text.124",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "s17.text.124"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22552,7 +22568,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 108,
+      "mention_count": 109,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22560,13 +22576,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-13T11:38:00",
-          "excerpt": "**Мугами Шики:** — Орочимару жив, а Сирамэ, она помогает Орочимару связаться со старым .....другом Коюки опустила голову. Молодая белая змея, добровольно поселившаяся у Шики после ухода из западных гнёзд Рьючидо, ещё несколько мгновений разглядывала его лицо. ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.121"
         },
         {
           "at": "0010-05-13T11:49:00",
@@ -22581,11 +22590,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.123"
+        },
+        {
+          "at": "0010-05-13T18:21:00",
+          "excerpt": "condary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:51</text> **Мугами Шики:** — Да, я пойду отдыхать Коюки проводила Шики до лестницы и вернулась к гнезду. В жилых помещениях он устроился для медитации, позволив восприятию окружающего постепенно отступить перед",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.124"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.123",
+          "seen": "s17.text.124",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22595,7 +22611,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.123"
+        "s17.text.124"
       ]
     },
     "white_snake_sage": {
@@ -23158,5 +23174,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1627
+  "source_turns_indexed": 1628
 }

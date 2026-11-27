@@ -9,7 +9,7 @@
 - Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 44 ход(ов), s15–s17
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 38 ход(ов), s08–s15
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
-- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 31 ход(ов), s14–s17
+- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 32 ход(ов), s14–s17
 - Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 30 ход(ов), s16–s17
 - Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 26 ход(ов), s09–s09
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09
