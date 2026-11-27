@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.036",
+  "cursor": "s18.text.037",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -13106,11 +13106,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.036",
+        "s18.text.037",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
-        "s18.text.035"
+        "s18.text.035",
+        "s18.text.036"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22597,7 +22598,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 120,
+      "mention_count": 121,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22605,13 +22606,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T15:16:00",
-          "excerpt": "Асума придержал дверь. **Асума Сарутоби:** — Мне пора к своим. Спасибо за компанию, Шики. И передавай поздравления Коюки. Как-никак она встретила твой день рождения вместе с тобой. **Ход Шики.** Шики оплатил сакэ, рассказал о собирающихся возле человекоподобно",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.029"
         },
         {
           "at": "0010-05-14T15:23:00",
@@ -22626,11 +22620,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.036"
+        },
+        {
+          "at": "0010-05-14T15:25:00",
+          "excerpt": "Коюки мой день рождения был 16 дней назад. Ты была единственной спутницей в этот день. И мне не нужен подарок <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 15:25</t",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.037"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.036",
+          "seen": "s18.text.037",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22640,7 +22641,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.036"
+        "s18.text.037"
       ]
     },
     "white_snake_sage": {
@@ -23203,5 +23204,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1673
+  "source_turns_indexed": 1674
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.037: Коюки (`npc/western_nest_young_courier`)
 - s18.text.036: Коюки (`npc/western_nest_young_courier`)
 - s18.text.035: Коюки (`npc/western_nest_young_courier`)
 - s18.text.032: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
