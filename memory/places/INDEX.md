@@ -64,6 +64,7 @@
 - Страна Огня, западные провинции · `places/strana-ognya-zapadnye-provintsii` · 7 ход(ов), s16–s17
 - Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 6 ход(ов), s17–s17
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
+- Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 6 ход(ов), s18–s18
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
@@ -76,7 +77,6 @@
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 6 ход(ов), s15–s15
 - Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 6 ход(ов), s17–s17
-- Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 5 ход(ов), s18–s18
 - Конохагакуре, закрытый тренировочный полигон · `places/konokhagakure-zakrytyy-trenirovochnyy-poligon` · 5 ход(ов), s15–s15
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05
 - Кусагакуре, подземное хранилище УВБ · `places/kusagakure-podzemnoe-khranilishche-uvb` · 5 ход(ов), s08–s08
