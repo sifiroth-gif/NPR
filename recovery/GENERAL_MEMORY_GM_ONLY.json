@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.062",
+  "cursor": "s17.text.063",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.062:0": {
-      "aliases": [
-        "canon:s17.text.062:0",
-        "s17.text.062: после лечения кладки 10.05.1287 12:46 из девяти яиц пять изначально жизнеспособны, один повреждённый эмбрион стабилизирован после восстановления хориоаллантоисных сос"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.062:0",
-      "kind": "canon",
-      "label": "s17.text.062: после лечения кладки 10.05.1287 12:46 из девяти яиц пять изначально жизнеспособны, один повреждённый эмбрион стабилизирован после восстановления хориоаллантоисных сос",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.062"
       ]
     },
     "captive_guard": {
@@ -7594,10 +7578,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.062",
+        "s17.text.063",
         "s16.text.100",
         "s16.text.101",
-        "s17.text.061"
+        "s17.text.061",
+        "s17.text.062"
       ]
     },
     "place:2262555f95fe4fea": {
@@ -19291,7 +19276,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s17.text.062",
+          "seen": "s17.text.063",
           "state": "Допустила лечение, обвила семь живых яиц, оставив два погибших за кольцом; через Коюки благодарит и спрашивает, можно ли оставить мёртвых.",
           "wants": "Оставаться у разрушенных кладок и защищать оставшихся змей."
         },
@@ -19303,7 +19288,7 @@
       "sources": [
         "recovery/cast/river_shrine_dark_snake_s16.json",
         "recovery/HOT.json",
-        "s17.text.062"
+        "s17.text.063"
       ]
     },
     "river_shrine_elder_snake_s16": {
@@ -22289,7 +22274,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 97,
+      "mention_count": 98,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22297,13 +22282,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T12:05:00",
-          "excerpt": "уступов лежала сброшенная полупрозрачная кожа. Из расщелины возле жилых помещений показалась белая головка. **Коюки:** — Шики! Ты вернулся. Молодая змея быстро спустилась с уступа, но вместо привычного стремления забраться на его плечо остановилась у ног. **Ко",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.060"
         },
         {
           "at": "0010-05-10T12:17:00",
@@ -22318,11 +22296,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.062"
+        },
+        {
+          "at": "0010-05-10T12:49:00",
+          "excerpt": "</text> ### Убежище Шики. Нижние пещеры **Мугами Шики:** — Можно конечно. Но лучше их похоронить. **Коюки:** — Похоронить? Она посмотрела на погибшие яйца, затем на Шики. Несколько мгновений молчала, после чего повернулась к тёмной змее. Между ними состоялся д",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.063"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.062",
+          "seen": "s17.text.063",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22332,7 +22317,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.062"
+        "s17.text.063"
       ]
     },
     "white_snake_sage": {
@@ -22860,5 +22845,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1569
+  "source_turns_indexed": 1570
 }
