@@ -280,7 +280,11 @@ def _pass(state_dir, hot, w):
     # their text when they become active again; preserve ID, fairness counters,
     # timestamps and all other fields. Never compact an active/current cue.
     inactive = []
-    for ident, row in duties.items():
+    handoff = hot.get("handoff") or {}
+    consolidating = (handoff.get("closed") is not None and
+                     handoff.get("closed") == _session_of(turn) and
+                     bool(handoff.get("next_session")))
+    for ident, row in duties.items() if consolidating else ():
         if not isinstance(row, dict) or row.get("done") or not row.get("inactive") or "text" not in row:
             continue
         if _session_of(row["inactive"]) is None or any(

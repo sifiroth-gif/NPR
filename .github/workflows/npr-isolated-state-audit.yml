@@ -221,7 +221,8 @@ jobs:
           before_probe = copy.deepcopy((packet, probe))
           check = preflight.inspect(packet, probe)
           assert check["mechanical_ok"], check
-          assert len(check["checklist"]) == 6
+          assert check["checklist"] == list(preflight.CHECKLIST)
+          assert preflight.DESCRIPTION_RULE in preflight.CHECKLIST
           assert not preflight.inspect(packet, probe, used=["restricted.unlearned"])["mechanical_ok"]
           assert not preflight.inspect(packet, dict(probe, review={"predecessor": "s14.text.022"}))["mechanical_ok"]
           assert (packet, probe) == before_probe

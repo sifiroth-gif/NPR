@@ -33,6 +33,10 @@ class ContextOptimizationTests(unittest.TestCase):
         h = {"cursor": {"id": "s17.text.133"}, "_will": {"obligations": {
             ident: copy.deepcopy(row), "active": current}}}
         with tempfile.TemporaryDirectory() as root:
+            # Ordinary live turns must keep inactive text intact.
+            self.assertNotIn("obligations_inactive", aging._pass(root, h, aging.TIGHT))
+            self.assertEqual(h["_will"]["obligations"][ident], row)
+            h["handoff"] = {"closed": 17, "next_session": 18}
             report = aging._pass(root, h, aging.TIGHT)
             self.assertEqual(report["obligations_inactive"], 1)
             archived = aging.load(root, "obligations-inactive.GM_ONLY.jsonl")
