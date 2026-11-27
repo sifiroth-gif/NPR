@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.024",
+  "cursor": "s18.text.025",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 24,
+      "mention_count": 25,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T14:26:00",
-          "excerpt": "### Конохагакуре. Кладбище **Мугами Шики:** — Хм, сейчас в некоторой степени да. Асума улыбнулся. **Асума Сарутоби:** — Уже неплохо. Он не стал расспрашивать, где именно находится этот дом. Вместо этого поправил хризантемы, один из стеблей которых выскользнул ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.022"
         },
         {
           "at": "0010-05-14T14:39:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.024"
+        },
+        {
+          "at": "0010-05-14T14:45:00",
+          "excerpt": "кэ, будете? У меня есть деньги, я заплачу. Асума удивлённо приподнял брови и поставил чашку на стол. **Асума Сарутоби:** — Так у тебя день рождения был? Конечно, буду. Только еда всё равно за мой счёт. Хозяин записал дополнительный заказ и удалился за стойку. ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.025"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.024",
+          "seen": "s18.text.025",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.024"
+        "s18.text.025"
       ]
     },
     "baki": {
@@ -8348,8 +8348,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.024",
-        "s18.text.023"
+        "s18.text.025",
+        "s18.text.023",
+        "s18.text.024"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -23158,5 +23159,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1661
+  "source_turns_indexed": 1662
 }

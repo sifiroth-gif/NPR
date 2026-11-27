@@ -107,6 +107,7 @@
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
+- Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 3 ход(ов), s18–s18
 - Конохагакуре, Центральный госпитальный блок · `places/konokhagakure-tsentralnyy-gospitalnyy-blok` · 3 ход(ов), s02–s02
 - Конохагакуре, Восточный госпиталь · `places/konokhagakure-vostochnyy-gospital` · 3 ход(ов), s01–s01
 - Кусагакуре, Дом Хасэ · `places/kusagakure-dom-khase` · 3 ход(ов), s03–s03
@@ -128,7 +129,6 @@
 - Конохагакуре, Медицинский читальный зал восточного госпиталя · `places/konokhagakure-meditsinskiy-chitalnyy-zal-vostochnogo-gospita` · 2 ход(ов), s01–s01
 - Конохагакуре, Медицинский учебный кабинет восточного госпиталя · `places/konokhagakure-meditsinskiy-uchebnyy-kabinet-vostochnogo-gosp` · 2 ход(ов), s01–s01
 - Конохагакуре, Полигон №44 · `places/konokhagakure-poligon-n44` · 2 ход(ов), s01–s01
-- Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 2 ход(ов), s18–s18
 - Конохагакуре, северо-западный резервный полигон · `places/konokhagakure-severo-zapadnyy-rezervnyy-poligon` · 2 ход(ов), s17–s17
 - Конохагакуре, торговая улица · `places/konokhagakure-torgovaya-ulitsa` · 2 ход(ов), s01–s01
 - Конохагакуре, торговый квартал у гостиницы и чайной · `places/konokhagakure-torgovyy-kvartal-u-gostinitsy-i-chaynoy` · 2 ход(ов), s15–s15
