@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.004",
+  "cursor": "s18.text.005",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 237,
+      "mention_count": 238,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-14T12:31:00",
-          "excerpt": "его локтем, освобождая место на столе. **Цунадэ:** — Кстати, ты собираешься присутствовать на встрече Джирайи с Орочимару? В её голосе исчезла служебная отстранённость. Имя бывшего товарища она произнесла тише остальных слов. **Ход Шики.** Шики не уверен в обн",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.002"
         },
         {
           "at": "0010-05-14T12:33:00",
@@ -5835,6 +5828,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.004"
+        },
+        {
+          "at": "0010-05-14T12:35:00",
+          "excerpt": "Я имел ввиду присоединиться к встрече джираи и Орочимару. Он спрашивал о вас. О том что вы сказали о встрече его и джираи <text color=\"secondary\" size=\"sm\">Пятница, 14 мая 1287 года · 12:35</text> ### Резиденция Хокагэ **Муга",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.005"
         }
       ],
       "projections": [
@@ -10356,7 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.004",
+        "s18.text.005",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22133,7 +22133,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 131,
+      "mention_count": 132,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22141,13 +22141,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:31:00",
-          "excerpt": "гами Шики:** — Я и сам не знаю. А по поводу Данзо добавлю. Не думаю что он угроза конохе как таковой. Цунадэ откинулась на спинку кресла. Деревянные подлокотники тихо скрипнули под её ладонями. Некоторое время она смотрела на карту Дождя, затем перевернула леж",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.002"
         },
         {
           "at": "0010-05-14T12:33:00",
@@ -22162,11 +22155,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.004"
+        },
+        {
+          "at": "0010-05-14T12:35:00",
+          "excerpt": "ниться к встрече джираи и Орочимару. Он спрашивал о вас. О том что вы сказали о встрече его и джираи. Цунадэ замерла с ручкой в руке. **Цунадэ:** — Обо мне? Она произнесла это неожиданно тихо, без прежней иронии. Ручка легла на стол, оставив на древесине небол",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.005"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.004",
+          "seen": "s18.text.005",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22176,7 +22176,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.004"
+        "s18.text.005"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23066,5 +23066,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1641
+  "source_turns_indexed": 1642
 }
