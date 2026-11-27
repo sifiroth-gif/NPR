@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.042: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Шикамару Нара (`npc/shikamaru`), поправки игрока: 1
 - s17.text.041: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), поправки игрока: 1
 - s17.text.040: Гэнма Ширануи (`npc/genma`), Какаши Хатакэ (`npc/kakashi`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Портовый чиновник (`npc/fire_port_official`)
 - s17.text.039: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Кадзунэ (`npc/fire_road_jonin`), Шизунэ (`npc/shizune`), поправки игрока: 1
@@ -59,4 +60,3 @@
 - s16.text.125: Данзо Шимура (`npc/danzo`)
 - s16.text.124: Данзо Шимура (`npc/danzo`)
 - s16.text.123: Данзо Шимура (`npc/danzo`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`)
-- s16.text.122: Данзо Шимура (`npc/danzo`)
