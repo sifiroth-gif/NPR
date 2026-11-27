@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.013",
+  "cursor": "s18.text.014",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -920,13 +920,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.013"
+          "seen": "s18.text.014"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s18.text.013"
+        "s18.text.014"
       ]
     },
     "deidara": {
@@ -8146,12 +8146,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.013",
+        "s18.text.014",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
         "s18.text.011",
-        "s18.text.012"
+        "s18.text.012",
+        "s18.text.013"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21124,7 +21125,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 53,
+      "mention_count": 54,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21132,13 +21133,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T13:07:00",
-          "excerpt": "Шики:** — Он бессмертен, тут голова, а вот тело...тело отдельно это можно как отдать, так и поделить. Шизунэ медленно повернулась к Шики. Её пальцы стиснули блокнот. Она посмотрела на закрытую заслонку камеры, словно только теперь осознала, что находившееся за",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.011"
         },
         {
           "at": "0010-05-14T13:09:00",
@@ -21153,17 +21147,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.013"
+        },
+        {
+          "at": "0010-05-14T13:13:00",
+          "excerpt": "Правая рука оставалась скрытой под одеждой. **Данзо Шимура:** — Ничего. Ответ последовал без колебаний. Шизунэ подняла голову от медицинских журналов. Цунадэ разомкнула скрещённые на груди руки. **Данзо Шимура:** — На момент нападения они являлись вашими проти",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.013",
+          "seen": "s18.text.014",
+          "state": "Вручила подписанный допуск, организован проводник."
+        },
+        {
           "state": "Вручила подписанный допуск, организован проводник."
         }
       ],
       "sources": [
         "recovery/cast/shizune.json",
-        "s18.text.013"
+        "recovery/HOT.json",
+        "s18.text.014"
       ]
     },
     "signalshchik": {
@@ -22160,7 +22165,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 140,
+      "mention_count": 141,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22168,13 +22173,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:07:00",
-          "excerpt": "подобного соглашения. Данзо, напротив, заметно оживился. **Данзо Шимура:** — Рациональное предложение. Цунадэ бросила на него тяжёлый взгляд. **Цунадэ:** — Не спеши. Мы до сих пор не знаем, насколько независимо существуют отделённые части его организма. Она пр",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.011"
         },
         {
           "at": "0010-05-14T13:09:00",
@@ -22189,11 +22187,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.013"
+        },
+        {
+          "at": "0010-05-14T13:13:00",
+          "excerpt": "Данзо Шимура:** — Ничего. Ответ последовал без колебаний. Шизунэ подняла голову от медицинских журналов. Цунадэ разомкнула скрещённые на груди руки. **Данзо Шимура:** — На момент нападения они являлись вашими противниками. Приказ, которого они не получили, не ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.014"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.013",
+          "seen": "s18.text.014",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22203,7 +22208,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.013"
+        "s18.text.014"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23093,5 +23098,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1650
+  "source_turns_indexed": 1651
 }
