@@ -120,7 +120,10 @@ jobs:
           assert packet["lag"]["dice_for"] == packet["next_id"]
           data = capabilities.load(Path("engine"), full.get("campaign"))
           cap = packet["capabilities"]
-          ids = {row["id"] for row in cap["items"] + cap["catalog"]}
+          ids = {row["id"] for row in cap["items"]} | {row["id"] for row in cap.get("catalog", [])} | set(cap.get("catalog_ids", []))
+          if "catalog_ref" in cap:
+              assert cap["catalog_ref"] == cap["registry"]
+              assert cap["catalog_count"] == len(cap["catalog_ids"])
           assert ids == {row["id"] for row in data["entries"]}
           archived_ids = {src for row in data["entries"] for src in row["sources"]
                           if capabilities.TURN_ID.fullmatch(src)}

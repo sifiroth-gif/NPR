@@ -337,10 +337,11 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         # The full technique catalogue is static, not current scene state.
         # Keep the core, routes and unavailable IDs inline; in a fight retain
         # the catalogue as a quick reference. The exact registry is addressable.
-        if fusion.active(hot) and not fight.get("active") and pack["capabilities"].get("registry"):
+        if not fight.get("active") and pack["capabilities"].get("registry"):
             catalogue = pack["capabilities"].pop("catalog", [])
             if catalogue:
                 pack["capabilities"]["catalog_ref"] = pack["capabilities"]["registry"]
+                pack["capabilities"]["catalog_ids"] = [row["id"] for row in catalogue]
                 pack["capabilities"]["catalog_count"] = len(catalogue)
                 pack["capabilities"]["unavailable_ids"] = [
                     row["id"] for row in catalogue if row.get("activation") == "unavailable"]
