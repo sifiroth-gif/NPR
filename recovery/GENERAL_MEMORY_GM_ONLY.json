@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.022",
+  "cursor": "s17.text.023",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 122,
+      "mention_count": 123,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:12:00",
-          "excerpt": ", не двигаясь и почти не дыша. **Рыжеволосый мужчина:** — Ведите их. Группа скрылась за дверью верхнего этажа. Джирайя остался в укрытии. На его лице проступило глубокое недоумение. **Ход Шики.** Из бокового помещения вывели троих живых заключённых. Шики увиде",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.020"
         },
         {
           "at": "0010-05-05T19:14:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.022"
+        },
+        {
+          "at": "0010-05-05T19:17:00",
+          "excerpt": "7</text> ### Амэгакурэ. Центральная башня **Мугами Шики** *(тихо)*: — хорошо, я буду рядом скрытно. Джирайя вышел из ниши. **Джирайя:** — Ты выросла, Конан. Женщина обернулась. Бумажная бабочка на её плече распалась на отдельные листки, зависшие в воздухе. Нес",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.022",
-          "state": "Узнал Конан; после ухода Пэйна хочет поговорить с ней."
+          "seen": "s17.text.023",
+          "state": "Сам раскрыл присутствие Конан и расспрашивает о судьбе учеников."
         },
         {
-          "state": "Узнал Конан; после ухода Пэйна хочет поговорить с ней."
+          "state": "Сам раскрыл присутствие Конан и расспрашивает о судьбе учеников."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.022"
+        "s17.text.023"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3755,7 +3755,7 @@
       "id": "konan",
       "kind": "npc",
       "label": "Конан",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-04-25T10:28:00",
@@ -3763,13 +3763,6 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
-        },
-        {
-          "at": "0010-05-05T11:54:00",
-          "excerpt": "даёт женщина с бумажным цветком в волосах. Я видел её лично. Джирайя застыл. Лишь угол его рта едва заметно дёрнулся. **Джирайя:** — Конан… Он произнёс имя тихо, почти ласково. Связной посмотрел на него с недоумением. Джирайя уже склонился над обеими схемами, ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.006"
         },
         {
           "at": "0010-05-05T19:14:00",
@@ -3784,21 +3777,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.022"
+        },
+        {
+          "at": "0010-05-05T19:17:00",
+          "excerpt": "ми Шики** *(тихо)*: — хорошо, я буду рядом скрытно. Джирайя вышел из ниши. **Джирайя:** — Ты выросла, Конан. Женщина обернулась. Бумажная бабочка на её плече распалась на отдельные листки, зависшие в воздухе. Несколько секунд она молча смотрела на саннина. **К",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.023"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.022",
-          "state": "Осталась у окна после ухода Пэйна, присутствие Шики и Джирайи не обнаружено."
+          "seen": "s17.text.023",
+          "state": "Разговаривает с Джирайей, требует его ухода; листы бумаги у предплечья."
         },
         {
-          "state": "Осталась у окна после ухода Пэйна, присутствие Шики и Джирайи не обнаружено."
+          "state": "Разговаривает с Джирайей, требует его ухода; листы бумаги у предплечья."
         }
       ],
       "sources": [
         "recovery/cast/konan.json",
         "recovery/HOT.json",
-        "s17.text.022"
+        "s17.text.023"
       ]
     },
     "kotetsu": {
@@ -5903,17 +5903,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.022",
-          "state": "Ушёл по внутренней галерее после разговора с Конан."
-        },
-        {
+          "seen": "s17.text.023",
           "state": "Ушёл по внутренней галерее после разговора с Конан."
         }
       ],
       "sources": [
         "recovery/cast/pain.json",
-        "recovery/HOT.json",
-        "s17.text.022"
+        "s17.text.023"
       ]
     },
     "patient_airway": {
@@ -15749,6 +15745,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.023",
         "s17.text.022"
       ]
     },
@@ -22519,5 +22516,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1531
+  "source_turns_indexed": 1532
 }

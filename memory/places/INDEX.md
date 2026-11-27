@@ -117,6 +117,7 @@
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
+- Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 2 ход(ов), s17–s17
 - Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 2 ход(ов), s17–s17
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
@@ -177,7 +178,6 @@
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
 - Амэгакурэ, под настилом промышленной пристани · `places/amegakure-pod-nastilom-promyshlennoy-pristani` · 1 ход(ов), s17–s17
-- Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 1 ход(ов), s17–s17
 - Читальный зал госпиталя · `places/chitalnyy-zal-gospitalya` · 1 ход(ов), s01–s01
 - Горный уступ над заставой у северо-восточной границы Страны Водопадов со Страной Металла · `places/gornyy-ustup-nad-zastavoy-u-severo-vostochnoy-granitsy-stran` · 1 ход(ов), s08–s08
 - Гостиница «Белая цапля» · `places/gostinitsa-belaya-tsaplya` · 1 ход(ов), s01–s01
