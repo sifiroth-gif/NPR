@@ -31,7 +31,7 @@ RULES = {
     "campaigns/shiki/GM_CORE.md": 18000,
     "skills/dark-literary-gm/SKILL.md": 9000,
     "campaigns/shiki/SHIKI.md": 15000,
-    "campaigns/shiki/ref/TECHNIQUES.md": 25000,
+    "campaigns/shiki/ref/TECHNIQUES.md": 30000,
     "campaigns/shiki/ref/NEMERA.md": 8000,
     "skills/dark-literary-gm/references/horror-masters.md": 6000,
     "campaigns/shiki/BOOT.md": 2400,
