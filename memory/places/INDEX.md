@@ -200,6 +200,7 @@
 - Конохагакуре, торговая улица по пути к резиденции Хокагэ · `places/konokhagakure-torgovaya-ulitsa-po-puti-k-rezidentsii-khokage` · 1 ход(ов), s15–s15
 - Конохагакуре, тренировочная площадка · `places/konokhagakure-trenirovochnaya-ploshchadka` · 1 ход(ов), s16–s16
 - Конохагакуре, Тренировочная площадка за восточной оградой госпиталя · `places/konokhagakure-trenirovochnaya-ploshchadka-za-vostochnoy-ogra` · 1 ход(ов), s01–s01
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 1 ход(ов), s18–s18
 - Конохагакуре, Трибуна участников · `places/konokhagakure-tribuna-uchastnikov` · 1 ход(ов), s02–s02
 - Конохагакуре, Восточный квартал · `places/konokhagakure-vostochnyy-kvartal` · 1 ход(ов), s01–s01
 - Конохагакуре, Временная резиденция делегации Кусагакуре · `places/konokhagakure-vremennaya-rezidentsiya-delegatsii-kusagakure` · 1 ход(ов), s02–s02

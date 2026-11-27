@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.052",
+  "cursor": "s18.text.053",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T15:17:00",
-          "excerpt": "льно хотите, чтобы я пришёл? Если так, вернитесь на минуту. Асума остановился в дверях и обернулся. **Асума Сарутоби:** — Разумеется. Иначе зачем бы я приглашал? Он вернулся к столику, поставив свёрток на его край. Шики открыл дорожную сумку и принялся искать ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.030"
         },
         {
           "at": "0010-05-14T15:18:00",
@@ -423,16 +416,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.032"
+        },
+        {
+          "at": "0010-05-15T08:55:12",
+          "excerpt": "ах. На его раскрытой ладони лежала монета, по поверхности которой ещё рассеивались остатки введённой чакры. **Асума Сарутоби:** — Получилось?! Он посмотрел на наручные часы, затем снова на монету. Улыбнулся, но почти сразу стал серьёзным. **Асума Сарутоби:** —",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.053"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.032",
+          "seen": "s18.text.053",
+          "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
+        },
+        {
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "recovery/HOT.json",
+        "s18.text.053"
       ]
     },
     "baki": {
@@ -525,6 +530,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s18.text.053:0": {
+      "aliases": [
+        "canon:s18.text.053:0",
+        "s18.text.052–053: первая проверка отклика физической метки Хирайшина при введении чужой чакры. В 08:55 Асума подал чакру в монету на полигоне №10; Шики в убежище Страны Рек ощутил "
+      ],
+      "facts": [],
+      "id": "canon:s18.text.053:0",
+      "kind": "canon",
+      "label": "s18.text.052–053: первая проверка отклика физической метки Хирайшина при введении чужой чакры. В 08:55 Асума подал чакру в монету на полигоне №10; Шики в убежище Страны Рек ощутил ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.053"
       ]
     },
     "captive_guard": {
@@ -760,6 +781,27 @@
       ],
       "sources": [
         "recovery/cast/chiyo_caravan.json"
+      ]
+    },
+    "choji": {
+      "aliases": [
+        "choji"
+      ],
+      "facts": [],
+      "id": "choji",
+      "kind": "npc",
+      "label": "choji",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s18.text.053"
+        }
+      ],
+      "sources": [
+        "recovery/cast/choji.json",
+        "recovery/HOT.json",
+        "s18.text.053"
       ]
     },
     "clinic_assistant": {
@@ -2493,6 +2535,27 @@
         "recovery/cast/hospital_transporter.json"
       ]
     },
+    "ino": {
+      "aliases": [
+        "ino"
+      ],
+      "facts": [],
+      "id": "ino",
+      "kind": "npc",
+      "label": "ino",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s18.text.053"
+        }
+      ],
+      "sources": [
+        "recovery/cast/ino.json",
+        "recovery/HOT.json",
+        "s18.text.053"
+      ]
+    },
     "inquiry_contact_token": {
       "aliases": [
         "inquiry contact token"
@@ -3783,14 +3846,10 @@
         {
           "seen": "s18.text.044",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
-        },
-        {
-          "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json",
-        "recovery/HOT.json"
+        "recovery/cast/kiri_ship_security_officer.json"
       ]
     },
     "kiri_transfer_carrier": {
@@ -8742,9 +8801,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.052",
         "s18.text.050",
-        "s18.text.051"
+        "s18.text.051",
+        "s18.text.052"
       ]
     },
     "place:375f9f6400814653": {
@@ -10853,6 +10912,24 @@
         "s11.text.035",
         "s11.text.036",
         "s11.text.037"
+      ]
+    },
+    "place:5c10ecaaa9112a46": {
+      "aliases": [
+        "place:5c10ecaaa9112a46",
+        "Конохагакуре, тренировочный полигон №10",
+        "Конохагакуре",
+        "тренировочный полигон №10"
+      ],
+      "facts": [],
+      "id": "place:5c10ecaaa9112a46",
+      "kind": "place",
+      "label": "Конохагакуре, тренировочный полигон №10",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.053"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20709,7 +20786,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 17,
+      "mention_count": 18,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20717,13 +20794,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T07:39:15",
-          "excerpt": "ал мне бессмертие. Можешь резать меня сколько угодно, ублюдок. Шикамару внимательно посмотрел на него. **Шикамару Нара:** — Значит, ты сам не знаешь. Хидан оскалился. **Хидан:** — Заткнись! На этот раз он не стал смеяться. Шики спросил Хидана о выживании голов",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.180"
         },
         {
           "at": "0010-04-24T07:42:00",
@@ -20738,16 +20808,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.182"
+        },
+        {
+          "at": "0010-05-15T08:55:12",
+          "excerpt": "азать, но задержала взгляд на его лице. Рука девушки медленно опустилась к сумке с оружием. Шикамару заметил это. **Шикамару Нара:** — Ино. Всё нормально. Это Мугами. Девушка не сразу убрала руку. Асума тем временем протянул Шики монету, не выпуская её из паль",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.053"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.082",
+          "seen": "s18.text.053",
+          "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
+        },
+        {
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "recovery/HOT.json",
+        "s18.text.053"
       ]
     },
     "shiki_arm_wraps": {
@@ -20983,11 +21065,11 @@
         {
           "holder": "asuma",
           "since": "s18.text.030",
-          "turn": "s18.text.032"
+          "turn": "s18.text.053"
         }
       ],
       "sources": [
-        "s18.text.032"
+        "s18.text.053"
       ]
     },
     "shiki_spare_communication_plate": {
@@ -22635,7 +22717,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 136,
+      "mention_count": 137,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22643,13 +22725,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T19:25:00",
-          "excerpt": "т. В дальнейшем буду учитывать это различие. Жёстко зафиксировать в отношении змей. По игре: знаешь коюки, я наверно хочу спать, пойдем? <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 19:25</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.050"
         },
         {
           "at": "0010-05-15T08:50:00",
@@ -22664,21 +22739,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.052"
+        },
+        {
+          "at": "0010-05-15T08:55:12",
+          "excerpt": "Да, коюки ты выросла и я рад что ты так много времени проводишь со мной, а сейчас я пойду #хирайшин к метке на монете# <text color=\"secondary\" size=\"xs\">Суббота, 15 мая 1287 года · 08:",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.053"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.052",
-          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
-        },
-        {
+          "seen": "s18.text.053",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json",
-        "s18.text.052"
+        "s18.text.053"
       ]
     },
     "white_snake_sage": {
@@ -23234,12 +23312,12 @@
     },
     {
       "from": "shiki_spare_coin_s18",
-      "source": "s18.text.032",
+      "source": "s18.text.053",
       "status": "projected",
       "to": "asuma",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1689
+  "source_turns_indexed": 1690
 }
