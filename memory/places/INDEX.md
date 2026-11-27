@@ -10,8 +10,8 @@
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 27 ход(ов), s14–s17
 - Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 26 ход(ов), s09–s09
+- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 25 ход(ов), s15–s17
 - Страна Звука, комплекс Кагэн · `places/strana-zvuka-kompleks-kagen` · 25 ход(ов), s08–s09
-- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 24 ход(ов), s15–s15
 - Страна Рек, верховья Сирана · `places/strana-rek-verkhovya-sirana` · 22 ход(ов), s09–s10
 - Кусагакуре, подземный комплекс УВБ · `places/kusagakure-podzemnyy-kompleks-uvb` · 20 ход(ов), s05–s08
 - Кусагакуре, Центральное управление · `places/kusagakure-tsentralnoe-upravlenie` · 20 ход(ов), s07–s11

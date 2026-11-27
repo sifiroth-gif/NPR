@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.075",
+  "cursor": "s17.text.076",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2788,7 +2788,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 111,
+      "mention_count": 112,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2796,13 +2796,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-05-12T05:32:00",
-          "excerpt": "я мысленно представить анатомию организма, способного вырастить внутри себя другое человеческое тело. **Кабуто Якуши:** — На себе… Он произнёс это почти беззвучно. **Кабуто Якуши:** — Значит, собственный организм будет обеспечивать развитие чужого. Кровоснабже",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.073"
         },
         {
           "at": "0010-05-12T05:33:00",
@@ -2817,17 +2810,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.075"
+        },
+        {
+          "at": "0010-05-12T06:04:00",
+          "excerpt": "ицинские светильники, освещая операционный стол, стеклянные шкафы и металлические подносы с инструментами. **Кабуто Якуши:** — Для вашей работы я выделю соседнее помещение. Но Орочимару-сама должен оставаться здесь, под моим наблюдением. Перевозить его в друго",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.076"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.075",
+          "seen": "s17.text.076",
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
+        },
+        {
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "s17.text.075"
+        "recovery/HOT.json",
+        "s17.text.076"
       ]
     },
     "kabuto_letter_0416": {
@@ -5785,7 +5789,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 186,
+      "mention_count": 187,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5793,13 +5797,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T05:32:00",
-          "excerpt": "ешний костный мозг, а тело я выращу на себе. К несчастью это будет очень затратно, после готовности Орочимару переходит и я его стабилизирую, к несчастью после этого я могу отключиться, поэтому.....думаю ты понимаешь <text color=\"secondary\" size=\"xs\">Среда, 12",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.073"
         },
         {
           "at": "0010-05-12T05:33:00",
@@ -5814,11 +5811,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.075"
+        },
+        {
+          "at": "0010-05-12T06:04:00",
+          "excerpt": "ndary\" size=\"xs\">Среда, 12 мая 1287 года · 05:37</text> **Мугами Шики:** — Выбор все равно за вами. Орочимару слегка склонил голову. **Орочимару:** — Именно поэтому я ещё способен принять твоё предложение. *** <text color=\"secondary\" size=\"xs\">05:42</text> ###",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.076"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.075",
+          "seen": "s17.text.076",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5828,7 +5832,22 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.075"
+        "s17.text.076"
+      ]
+    },
+    "orochimaru_marrow_sample_s17": {
+      "aliases": [
+        "orochimaru marrow sample s17"
+      ],
+      "facts": [],
+      "id": "orochimaru_marrow_sample_s17",
+      "kind": "item",
+      "label": "orochimaru marrow sample s17",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.076"
       ]
     },
     "orochimaru_scout_snake": {
@@ -10707,11 +10726,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.075",
         "s17.text.071",
         "s17.text.072",
         "s17.text.073",
-        "s17.text.074"
+        "s17.text.074",
+        "s17.text.075"
       ]
     },
     "place:5fe584857bc5378a": {
@@ -11812,6 +11831,25 @@
       "sources": [
         "s11.text.008",
         "s11.text.009"
+      ]
+    },
+    "place:770432d7e9c938e5": {
+      "aliases": [
+        "place:770432d7e9c938e5",
+        "Северная граница Страны Рек, подземное убежище Орочимару, лабораторное крыло",
+        "Северная граница Страны Рек",
+        "подземное убежище Орочимару",
+        "лабораторное крыло"
+      ],
+      "facts": [],
+      "id": "place:770432d7e9c938e5",
+      "kind": "place",
+      "label": "Северная граница Страны Рек, подземное убежище Орочимару, лабораторное крыло",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.076"
       ]
     },
     "place:773158887ba4dadb": {
@@ -20783,7 +20821,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20791,13 +20829,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T05:32:00",
-          "excerpt": "его отказаться от дальнейших вопросов о механизме. **Кабуто Якуши:** — Да. Я понимаю, что вы имеете в виду. **Сирамэ:** — Надеюсь, действительно понимаешь. Белая змея поднялась над каменным полом почти на треть своей длины. **Сирамэ:** — Если он потеряет созна",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.073"
         },
         {
           "at": "0010-05-12T05:33:00",
@@ -20812,12 +20843,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.075"
+        },
+        {
+          "at": "0010-05-12T06:04:00",
+          "excerpt": "олжен оставаться здесь, под моим наблюдением. Перевозить его в другое убежище в таком состоянии я не позволю. Сирамэ устроилась на пустой полке, откуда были видны обе комнаты. Кабуто помог Орочимару расположиться на операционном столе. Саннин молча позволил пр",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.076"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.075",
+          "seen": "s17.text.076",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20831,7 +20869,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.075"
+        "s17.text.076"
       ]
     },
     "shiranami": {
@@ -22892,5 +22930,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1581
+  "source_turns_indexed": 1582
 }
