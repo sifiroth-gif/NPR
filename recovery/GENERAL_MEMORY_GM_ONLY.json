@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.030",
+  "cursor": "s18.text.031",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 30,
+      "mention_count": 31,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T15:14:00",
-          "excerpt": ", хоть и не удалось спасти всех. Асума перестал курить. Сигарета медленно тлела между его пальцами. **Асума Сарутоби:** — Змея? А я подумал, что речь идёт о девушке. Он рассмеялся собственной ошибке и стряхнул пепел. **Асума Сарутоби:** — Хотя, учитывая твою с",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.028"
         },
         {
           "at": "0010-05-14T15:16:00",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.030"
+        },
+        {
+          "at": "0010-05-14T15:18:00",
+          "excerpt": "убрал в карман. Повернул под солнечным светом и внимательно рассмотрел непривычное расположение символов. **Асума Сарутоби:** — Подожди… Это пространственная формула? Прежняя непринуждённость исчезла из его голоса. Он поставил свёрток с мясом на стол и ещё раз",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.031"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.030",
+          "seen": "s18.text.031",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.030"
+        "s18.text.031"
       ]
     },
     "baki": {
@@ -8348,14 +8348,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.030",
+        "s18.text.031",
         "s18.text.023",
         "s18.text.024",
         "s18.text.025",
         "s18.text.026",
         "s18.text.027",
         "s18.text.028",
-        "s18.text.029"
+        "s18.text.029",
+        "s18.text.030"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -20947,13 +20948,13 @@
       ],
       "projections": [
         {
-          "holder": "shiki",
+          "holder": "asuma",
           "since": "s18.text.030",
-          "turn": "s18.text.030"
+          "turn": "s18.text.031"
         }
       ],
       "sources": [
-        "s18.text.030"
+        "s18.text.031"
       ]
     },
     "shiki_spare_communication_plate": {
@@ -23194,12 +23195,12 @@
     },
     {
       "from": "shiki_spare_coin_s18",
-      "source": "s18.text.030",
+      "source": "s18.text.031",
       "status": "projected",
-      "to": "shiki",
+      "to": "asuma",
       "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1667
+  "source_turns_indexed": 1668
 }

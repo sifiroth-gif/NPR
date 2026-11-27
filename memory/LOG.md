@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.031: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
 - s18.text.030: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
 - s18.text.029: Асума Сарутоби (`npc/asuma`)
 - s18.text.028: Асума Сарутоби (`npc/asuma`)
@@ -60,4 +61,3 @@
 - s17.text.107: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s17.text.106: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s17.text.105: Цунадэ (`npc/tsunade`)
-- s17.text.104: Цунадэ (`npc/tsunade`)
