@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.118",
+  "cursor": "s17.text.119",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 226,
+      "mention_count": 227,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:26:00",
-          "excerpt": "Хорошо до скорого #хирайшин в убежище Орочимару# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:26</text> **Мугами Шики:** — Хорошо до скорого. Джирайя поднял ладонь в прощальном жесте. Шики обрати",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.116"
         },
         {
           "at": "0010-05-13T11:29:00",
@@ -5835,11 +5828,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.118"
+        },
+        {
+          "at": "0010-05-13T11:35:00",
+          "excerpt": "dary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:35</text> **Мугами Шики:** — И как вам это ощущение? Орочимару не сразу ответил. Он смотрел сквозь стекло на неподвижное тело, лежавшее в глубине сосуда. **Орочимару:** — Непривычно. Он поднял правую руку, поверну",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.119"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.118",
+          "seen": "s17.text.119",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5849,7 +5849,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.118"
+        "s17.text.119"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12616,7 +12616,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.118",
+        "s17.text.119",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -12628,7 +12628,8 @@
         "s17.text.101",
         "s17.text.102",
         "s17.text.116",
-        "s17.text.117"
+        "s17.text.117",
+        "s17.text.118"
       ]
     },
     "place:810392b04745def4": {
@@ -23145,5 +23146,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1622
+  "source_turns_indexed": 1623
 }
