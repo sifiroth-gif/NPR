@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.016",
+  "cursor": "s18.text.017",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -920,13 +920,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.016"
+          "seen": "s18.text.017"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s18.text.016"
+        "s18.text.017"
       ]
     },
     "deidara": {
@@ -2252,7 +2252,7 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s18.text.016",
+          "seen": "s18.text.017",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         },
         {
@@ -2262,8 +2262,7 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json",
-        "s18.text.016"
+        "recovery/HOT.json"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -5814,7 +5813,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 240,
+      "mention_count": 241,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5822,13 +5821,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-14T12:35:00",
-          "excerpt": "Я имел ввиду присоединиться к встрече джираи и Орочимару. Он спрашивал о вас. О том что вы сказали о встрече его и джираи <text color=\"secondary\" size=\"sm\">Пятница, 14 мая 1287 года · 12:35</text> ### Резиденция Хокагэ **Муга",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.005"
         },
         {
           "at": "0010-05-14T12:36:00",
@@ -5843,6 +5835,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.013"
+        },
+        {
+          "at": "0010-05-14T13:19:00",
+          "excerpt": "енности я бы защищал животных, не людей. Вы как-то через своих людей спрашивали о моих отношениях с Орочимару. Мой вид прекрасно показывает что у меня есть связь с Рьючидо. Как-то у нас с Орочимару возникла сделка. Как думаете что я попросил в оплату? <text co",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.017"
         }
       ],
       "projections": [
@@ -8152,7 +8151,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.016",
+        "s18.text.017",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
@@ -8160,7 +8159,8 @@
         "s18.text.012",
         "s18.text.013",
         "s18.text.014",
-        "s18.text.015"
+        "s18.text.015",
+        "s18.text.016"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21133,7 +21133,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 56,
+      "mention_count": 57,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21141,13 +21141,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T13:13:00",
-          "excerpt": "Правая рука оставалась скрытой под одеждой. **Данзо Шимура:** — Ничего. Ответ последовал без колебаний. Шизунэ подняла голову от медицинских журналов. Цунадэ разомкнула скрещённые на груди руки. **Данзо Шимура:** — На момент нападения они являлись вашими проти",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.014"
         },
         {
           "at": "0010-05-14T13:15:00",
@@ -21162,11 +21155,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.016"
+        },
+        {
+          "at": "0010-05-14T13:19:00",
+          "excerpt": "распоряжения о передаче Хидана. Старик попросил приложить к ней письменные условия согласованного допроса. Шизунэ занялась документами, однако продолжала прислушиваться к разговору. Дежурный медик, стоявший возле неё, с нескрываемым любопытством посмотрел на Ш",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.016",
+          "seen": "s18.text.017",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -21176,7 +21176,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s18.text.016"
+        "s18.text.017"
       ]
     },
     "signalshchik": {
@@ -22173,7 +22173,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 143,
+      "mention_count": 144,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22181,13 +22181,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:13:00",
-          "excerpt": "Данзо Шимура:** — Ничего. Ответ последовал без колебаний. Шизунэ подняла голову от медицинских журналов. Цунадэ разомкнула скрещённые на груди руки. **Данзо Шимура:** — На момент нападения они являлись вашими противниками. Приказ, которого они не получили, не ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.014"
         },
         {
           "at": "0010-05-14T13:15:00",
@@ -22202,11 +22195,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.016"
+        },
+        {
+          "at": "0010-05-14T13:19:00",
+          "excerpt": "Как думаете что я попросил в оплату? При словах о равной ценности человеческой жизни и жизни муравья Цунадэ нахмурилась. Однако последующее упоминание Орочимару заставило её отложить возражение. Данзо внимательно осмотрел лицо Шики. Его взгляд задержался на ве",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.017"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.016",
+          "seen": "s18.text.017",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22216,7 +22216,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.016"
+        "s18.text.017"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23106,5 +23106,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1653
+  "source_turns_indexed": 1654
 }
