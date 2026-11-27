@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.051",
+  "cursor": "s18.text.052",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -8742,8 +8742,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.051",
-        "s18.text.050"
+        "s18.text.052",
+        "s18.text.050",
+        "s18.text.051"
       ]
     },
     "place:375f9f6400814653": {
@@ -22634,7 +22635,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 135,
+      "mention_count": 136,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22642,13 +22643,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T19:20:00",
-          "excerpt": "мя исследовал новое положение его тела, а затем устроился возле шеи. Здесь было теплее, чем на камне. Коюки расположилась рядом. Она несколько раз поправила кольца своего тела, прежде чем окончательно улечься. Шики погрузился в дремоту. Природная энергия продо",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.049"
         },
         {
           "at": "0010-05-14T19:25:00",
@@ -22663,11 +22657,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.051"
+        },
+        {
+          "at": "0010-05-15T08:55:00",
+          "excerpt": "### Страна Рек. Убежище Шики **Мугами Шики:** — Да. Но теперь я могу перемещаться гораздо быстрее. **Коюки:** — Тогда ты сможешь чаще возвращаться домой. Белая змейка спустилась с кровати, перебралась на деревянную тумбочку и некоторое время наблюдала за движе",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.052"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.051",
+          "seen": "s18.text.052",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22677,7 +22678,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.051"
+        "s18.text.052"
       ]
     },
     "white_snake_sage": {
@@ -23240,5 +23241,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1688
+  "source_turns_indexed": 1689
 }
