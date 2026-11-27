@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.049",
+  "cursor": "s18.text.050",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s18.text.049:0": {
+    "canon:s18.text.050:0": {
       "aliases": [
-        "canon:s18.text.049:0",
-        "ОOC s18.text.049: тело Шики с исторической базовой температурой около 29,3 °C холодно для обычного человека, но для многих змей эта температура комфортна для активности; относитель"
+        "canon:s18.text.050:0",
+        "Постоянное физиологическое правило, прямая поправка игрока s18.text.050: для многих видов змей 29 °C — комфортная температура активного состояния; оптимум зависит от вида. На фоне "
       ],
       "facts": [],
-      "id": "canon:s18.text.049:0",
+      "id": "canon:s18.text.050:0",
       "kind": "canon",
-      "label": "ОOC s18.text.049: тело Шики с исторической базовой температурой около 29,3 °C холодно для обычного человека, но для многих змей эта температура комфортна для активности; относитель",
+      "label": "Постоянное физиологическое правило, прямая поправка игрока s18.text.050: для многих видов змей 29 °C — комфортная температура активного состояния; оптимум зависит от вида. На фоне ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.049"
+        "s18.text.050"
       ]
     },
     "captive_guard": {
@@ -8742,6 +8742,25 @@
         "s15.text.005"
       ]
     },
+    "place:3750f16ec939f439": {
+      "aliases": [
+        "place:3750f16ec939f439",
+        "Страна Рек, южные известняковые горы, убежище Шики, спальня",
+        "Страна Рек",
+        "южные известняковые горы",
+        "убежище Шики"
+      ],
+      "facts": [],
+      "id": "place:3750f16ec939f439",
+      "kind": "place",
+      "label": "Страна Рек, южные известняковые горы, убежище Шики, спальня",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.050"
+      ]
+    },
     "place:375f9f6400814653": {
       "aliases": [
         "place:375f9f6400814653",
@@ -13126,7 +13145,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.049",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13143,7 +13161,8 @@
         "s18.text.045",
         "s18.text.046",
         "s18.text.047",
-        "s18.text.048"
+        "s18.text.048",
+        "s18.text.049"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22630,7 +22649,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 133,
+      "mention_count": 134,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22638,13 +22657,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T17:59:00",
-          "excerpt": "а на мгновение сжались, голова приподнялась. Однако, когда движение прекратилось, он вновь расслабился. Коюки подползла ближе и несколько раз коснулась языком его бока. **Коюки:** — Не буду сегодня больше с ним заниматься. Пусть отдыхает. Она устроилась возле ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.047"
         },
         {
           "at": "0010-05-14T17:59:30",
@@ -22659,11 +22671,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.049"
+        },
+        {
+          "at": "0010-05-14T19:25:00",
+          "excerpt": "т. В дальнейшем буду учитывать это различие. Жёстко зафиксировать в отношении змей. По игре: знаешь коюки, я наверно хочу спать, пойдем? <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 19:25</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.050"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.049",
+          "seen": "s18.text.050",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22673,7 +22692,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.049"
+        "s18.text.050"
       ]
     },
     "white_snake_sage": {
@@ -23236,5 +23255,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1686
+  "source_turns_indexed": 1687
 }
