@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.047",
+  "cursor": "s17.text.048",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,38 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.047:0": {
-      "aliases": [
-        "canon:s17.text.047:0",
-        "s17.text.047: обычный индивидуальный Хирайшин Шики отработан между личными физическими метками в движении, в сочетании с тайдзюцу и Шуншином, без обязательной остановки. Не испытан"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.047:0",
-      "kind": "canon",
-      "label": "s17.text.047: обычный индивидуальный Хирайшин Шики отработан между личными физическими метками в движении, в сочетании с тайдзюцу и Шуншином, без обязательной остановки. Не испытан",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.047"
-      ]
-    },
-    "canon:s17.text.047:1": {
-      "aliases": [
-        "canon:s17.text.047:1",
-        "s17.text.047: глазной Хирайшин собственного тела освоен в начальной форме. Риннешаринган создаёт видимый свободный адрес, монада кратко удерживает его после фиксации до перехода; п"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.047:1",
-      "kind": "canon",
-      "label": "s17.text.047: глазной Хирайшин собственного тела освоен в начальной форме. Риннешаринган создаёт видимый свободный адрес, монада кратко удерживает его после фиксации до перехода; п",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.047"
       ]
     },
     "captive_guard": {
@@ -11347,6 +11315,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.048",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -14826,7 +14795,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.047",
         "s17.text.035",
         "s17.text.036",
         "s17.text.037",
@@ -14835,7 +14803,8 @@
         "s17.text.040",
         "s17.text.041",
         "s17.text.045",
-        "s17.text.046"
+        "s17.text.046",
+        "s17.text.047"
       ]
     },
     "place:b409131ed9e1cd2e": {
@@ -20785,7 +20754,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 35,
+      "mention_count": 36,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20793,13 +20762,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-07T08:42:00",
-          "excerpt": "ения о смерти носителей, дистанционном управлении телами и возможной связи их зрительного восприятия. Шизунэ записывала каждое существенное замечание. Когда Шики закончил, Цунадэ поднялась из-за стола и подошла к окну. Под ним раскинулась утренняя Коноха. На у",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.033"
         },
         {
           "at": "0010-05-07T08:43:00",
@@ -20814,16 +20776,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.035"
+        },
+        {
+          "at": "0010-05-08T06:12:00",
+          "excerpt": "кабинете. Цунадэ сидела за столом, просматривая утренние донесения. Рядом стояла чашка недопитого чая. Шизунэ раскладывала документы по отдельным папкам. При появлении Шики Цунадэ подняла голову. Её взгляд задержался на активном Риннешарингане. **Цунадэ:** — Д",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.048"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.039",
-          "state": "Продолжила протокол без вопроса о возможностях Шики."
+          "seen": "s17.text.048",
+          "state": "С Цунадэ в кабинете, освободила место для разговора."
+        },
+        {
+          "state": "С Цунадэ в кабинете, освободила место для разговора."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "recovery/HOT.json",
+        "s17.text.048"
       ]
     },
     "signalshchik": {
@@ -21883,7 +21857,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 93,
+      "mention_count": 94,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21891,13 +21865,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-07T12:30:00",
-          "excerpt": "lor=\"secondary\" size=\"xs\">Пятница, 7 мая 1287 года · 08:44</text> **Мугами Шики:** — Да, давайте. **Цунадэ:** — Тогда в половине первого. Закрытая тренировочная площадка. Шизунэ оформит допуск. *** <text color=\"secondary\" size=\"xs\">12:30 · Конохагакуре</text> ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.035"
         },
         {
           "at": "0010-05-07T18:26:00",
@@ -21912,16 +21879,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.042"
+        },
+        {
+          "at": "0010-05-08T06:12:00",
+          "excerpt": "#к цунадэ# <text color=\"secondary\" size=\"xs\">Суббота, 8 мая 1287 года · 06:12</text> ### Конохагакуре. Резиденция Хокагэ Деревня постепенно просыпалась. Владельцы лавок поднимали де",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.048"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.038",
-          "state": "Назначила закрытую встречу на 12:30, поручила Шизунэ оформить допуск."
+          "seen": "s17.text.048",
+          "state": "В кабинете, просматривает утренние донесения; готова выслушать Шики."
+        },
+        {
+          "state": "В кабинете, просматривает утренние донесения; готова выслушать Шики."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "recovery/HOT.json",
+        "s17.text.048"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22783,5 +22762,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1556
+  "source_turns_indexed": 1557
 }
