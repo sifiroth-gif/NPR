@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.032",
+  "cursor": "s17.text.033",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 131,
+      "mention_count": 132,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T20:07:00",
-          "excerpt": "щё, я заметил не только троих, когда мы уходили смутно я отследил ещё 3 и один большей силы источник. Джирайя остановился. В темноте его лицо едва различалось. Он медленно повернулся в сторону оставленного города, над которым всё ещё висело тяжёлое дождевое об",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.030"
         },
         {
           "at": "0010-05-05T20:09:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.032"
+        },
+        {
+          "at": "0010-05-07T08:42:00",
+          "excerpt": "оверим архивы на сведения о дистанционном управлении чакрой. Пока никаких повторных проникновений в Амэгакурэ. Джирайя молча согласился. Пятая некоторое время рассматривала схему. Затем её взгляд переместился на Шики. **Цунадэ:** — У тебя самого есть способнос",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.032",
+          "seen": "s17.text.033",
           "state": "Вернулся в Коноху, передаёт Цунадэ разведывательные сведения, предоставил слово Шики."
         },
         {
@@ -2567,7 +2567,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.032"
+        "s17.text.033"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -2958,12 +2958,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.133",
+          "seen": "s17.text.033",
           "state": "На восточном тренировочном полигоне, наблюдает за упражнениями молодых шиноби; встретил Шики."
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json"
+        "recovery/cast/kakashi.json",
+        "s17.text.033"
       ]
     },
     "kakuzu": {
@@ -7843,6 +7844,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.033",
         "s17.text.032"
       ]
     },
@@ -20590,7 +20592,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 32,
+      "mention_count": 33,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20598,13 +20600,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-03T12:31:00",
-          "excerpt": "ние её лица осталось неприветливым. **Цунадэ:** — Что ж. Предоставим ему такую возможность. Она позвала Шизунэ и передала ей лист. Темноволосая помощница Хокагэ пробежала глазами несколько строк. Её брови слегка приподнялись, однако она воздержалась от коммент",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.112"
         },
         {
           "at": "0010-05-03T13:58:00",
@@ -20619,21 +20614,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.032"
+        },
+        {
+          "at": "0010-05-07T08:42:00",
+          "excerpt": "ения о смерти носителей, дистанционном управлении телами и возможной связи их зрительного восприятия. Шизунэ записывала каждое существенное замечание. Когда Шики закончил, Цунадэ поднялась из-за стола и подошла к окну. Под ним раскинулась утренняя Коноха. На у",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.032",
-          "state": "Закрыла дверь кабинета по распоряжению Цунадэ, слушает доклад."
+          "seen": "s17.text.033",
+          "state": "Ведёт закрытый протокол, остановила кисть при вопросе о возможности управления телами."
         },
         {
-          "state": "Закрыла дверь кабинета по распоряжению Цунадэ, слушает доклад."
+          "state": "Ведёт закрытый протокол, остановила кисть при вопросе о возможности управления телами."
         }
       ],
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s17.text.032"
+        "s17.text.033"
       ]
     },
     "signalshchik": {
@@ -21693,7 +21695,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 88,
+      "mention_count": 89,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21701,13 +21703,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-05T20:06:00",
-          "excerpt": "Саннин выбросил ветку в воду. Течение медленно унесло её вниз по реке. **Джирайя:** — Когда вернёмся, я попрошу Цунадэ поручить разведке поиск сведений о таких стержнях. А пока будем исходить из твоего предположения. Он поднялся с камня, поправляя тяжёлый свит",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.029"
         },
         {
           "at": "0010-05-05T20:09:00",
@@ -21722,21 +21717,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.032"
+        },
+        {
+          "at": "0010-05-07T08:42:00",
+          "excerpt": "вязи их зрительного восприятия. Шизунэ записывала каждое существенное замечание. Когда Шики закончил, Цунадэ поднялась из-за стола и подошла к окну. Под ним раскинулась утренняя Коноха. На улице женщина провожала ребёнка в Академию, торговцы расставляли корзин",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.033"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.032",
-          "state": "В закрытом кабинете слушает разведывательный доклад и просит Шики изложить наблюдения."
+          "seen": "s17.text.033",
+          "state": "Засекретила доклад, дала направления подготовки и спрашивает Шики о теоретической возможности воспроизведения принципа."
         },
         {
-          "state": "В закрытом кабинете слушает разведывательный доклад и просит Шики изложить наблюдения."
+          "state": "Засекретила доклад, дала направления подготовки и спрашивает Шики о теоретической возможности воспроизведения принципа."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.032"
+        "s17.text.033"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22598,5 +22600,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1541
+  "source_turns_indexed": 1542
 }
