@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.070",
+  "cursor": "s17.text.071",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2788,7 +2788,7 @@
       "id": "kabuto",
       "kind": "npc",
       "label": "Кабуто Якуши",
-      "mention_count": 106,
+      "mention_count": 107,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -2796,13 +2796,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
-        },
-        {
-          "at": "0010-04-21T14:05:00",
-          "excerpt": "самый сильный и отрави меня как врага. Кабуто посмотрел на Орочимару. Саннин утвердительно кивнул. **Кабуто Якуши:** — Как пожелаете. Он выбрал одну из пробирок. Испытание состоялось. Однако яд, который должен был вызвать тяжёлое нарушение жизненных функций, н",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.046"
         },
         {
           "at": "0010-04-21T14:05:30",
@@ -2817,16 +2810,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.048"
+        },
+        {
+          "at": "0010-05-12T05:30:00",
+          "excerpt": "остановился. На лице появилась привычная вежливая улыбка, но на этот раз она исчезла прежде, чем он успел заговорить. **Кабуто Якуши:** — Всё-таки пришли. Он взглянул на Сирамэ, затем снова на Шики. Пальцы на рукояти футляра сжались. **Кабуто Якуши:** — Прежде",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.071"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.068",
+          "seen": "s17.text.071",
+          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
+        },
+        {
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "recovery/HOT.json",
+        "s17.text.071"
       ]
     },
     "kabuto_letter_0416": {
@@ -5784,7 +5789,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 181,
+      "mention_count": 182,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5792,13 +5797,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-09T18:15:00",
-          "excerpt": "Она взяла чашку, обнаружила, что чай давно остыл, и поставила её обратно. **Цунадэ:** — Знаешь, когда-то Орочимару тоже был человеком, которого эта деревня считала своим величайшим достоянием. Я помню его ещё ребёнком. Мы вместе учились, вместе воевали, хорони",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.058"
         },
         {
           "at": "0010-05-11T07:40:00",
@@ -5813,6 +5811,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.070"
+        },
+        {
+          "at": "0010-05-12T05:30:00",
+          "excerpt": "ие следы колёс, заполненные мутной водой. Недавно здесь проходили тяжёлые повозки. Прежде в окрестностях убежища Орочимару чувствовалось несколько человеческих источников чакры. Теперь ближайшие переходы казались почти опустевшими. Сирамэ остановилась. **Сирам",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.071"
         }
       ],
       "projections": [
@@ -10686,6 +10691,24 @@
         "s08.text.051"
       ]
     },
+    "place:5f21e7394823c4a4": {
+      "aliases": [
+        "place:5f21e7394823c4a4",
+        "Северная граница Страны Рек, вход в подземное убежище Орочимару",
+        "Северная граница Страны Рек",
+        "вход в подземное убежище Орочимару"
+      ],
+      "facts": [],
+      "id": "place:5f21e7394823c4a4",
+      "kind": "place",
+      "label": "Северная граница Страны Рек, вход в подземное убежище Орочимару",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.071"
+      ]
+    },
     "place:5fe584857bc5378a": {
       "aliases": [
         "place:5fe584857bc5378a",
@@ -11991,10 +12014,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.070",
         "s16.text.103",
         "s17.text.067",
-        "s17.text.068"
+        "s17.text.068",
+        "s17.text.070"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -20755,7 +20778,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 80,
+      "mention_count": 81,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20763,13 +20786,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-10T13:06:00",
-          "excerpt": "енную расщелину. **Коюки:** — Она разрешила. Только просит не уводить их далеко от гнезда. А ещё я расспрошу Сирамэ, с чего начинали наше обучение старшие. Белая змейка свернулась возле детёнышей. **Коюки:** — Представляешь, Шики, если однажды они сами смогут ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.065"
         },
         {
           "at": "0010-05-11T07:40:00",
@@ -20784,12 +20800,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.070"
+        },
+        {
+          "at": "0010-05-12T05:30:00",
+          "excerpt": "ext color=\"secondary\" size=\"xs\">Вторник, 11 мая 1287 года · 07:42</text> **Мугами Шики:** — Пойдем. Сирамэ вытянула длинное белое тело и направилась к выходу. Коюки осталась в жилом помещении. **Коюки:** — Я присмотрю за малышами. Возвращайся. *** Дорога на се",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.071"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.070",
+          "seen": "s17.text.071",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20803,7 +20826,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.070"
+        "s17.text.071"
       ]
     },
     "shiranami": {
@@ -22292,13 +22315,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 103,
+      "mention_count": 104,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22306,13 +22330,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T13:15:00",
-          "excerpt": "Да, это было бы здорово. Коюки я пойду отдохнуть, поднимаюсь делаю метку пространственного перемещения в убежище <text color=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 13:15</text> ### Страна Р",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.066"
         },
         {
           "at": "0010-05-10T20:45:00",
@@ -22327,20 +22344,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.068"
+        },
+        {
+          "at": "0010-05-12T05:30:00",
+          "excerpt": "07:42</text> **Мугами Шики:** — Пойдем. Сирамэ вытянула длинное белое тело и направилась к выходу. Коюки осталась в жилом помещении. **Коюки:** — Я присмотрю за малышами. Возвращайся. *** Дорога на север заняла почти сутки. Южные известняковые горы постепенно ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.071"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.070",
-          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
-        },
-        {
+          "seen": "s17.text.071",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json"
+        "s17.text.071"
       ]
     },
     "white_snake_sage": {
@@ -22868,5 +22889,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1576
+  "source_turns_indexed": 1577
 }
