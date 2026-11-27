@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.001",
+  "cursor": "s18.text.002",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 234,
+      "mention_count": 235,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-14T12:05:00",
-          "excerpt": "пешно ответил ей, и шум возле передающего устройства стих. **Наруто:** — Бабуля сказала, что Саске ушёл от Орочимару. Что ты видел его перед уходом. Он говорил необычно быстро, словно опасался, что связь оборвётся прежде, чем он успеет задать вопрос. Коюки под",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.127"
         },
         {
           "at": "0010-05-14T12:07:00",
@@ -5835,6 +5828,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.129"
+        },
+        {
+          "at": "0010-05-14T12:31:00",
+          "excerpt": "его локтем, освобождая место на столе. **Цунадэ:** — Кстати, ты собираешься присутствовать на встрече Джирайи с Орочимару? В её голосе исчезла служебная отстранённость. Имя бывшего товарища она произнесла тише остальных слов. **Ход Шики.** Шики не уверен в обн",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.002"
         }
       ],
       "projections": [
@@ -10356,7 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.001",
+        "s18.text.002",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22074,13 +22074,9 @@
       "label": "shiki save asuma",
       "mention_count": 0,
       "mentions": [],
-      "projections": [
-        {
-          "state": "24.04 12:20: Асума жив и не ранен, Какудзу мёртв, Хидан под раздельными удерживающими печатями Конохи, тело Тирику возвращается храму. Допрос только по согласованию с Цунадэ."
-        }
-      ],
+      "projections": [],
       "sources": [
-        "s15.text.182"
+        "s18.text.002"
       ]
     },
     "thread:shiki_save_jiraiya": {
@@ -22175,7 +22171,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 128,
+      "mention_count": 129,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22183,13 +22179,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:26:00",
-          "excerpt": "#читаю документы# <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 12:26</text> Цунадэ не стала торопить Шики с ответом. Она развернула папку так, чтобы свет из окна падал непосредственно на бумаги, и отодвинула чернильницу. Документы были располо",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.132"
         },
         {
           "at": "0010-05-14T12:28:00",
@@ -22204,11 +22193,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.001"
+        },
+        {
+          "at": "0010-05-14T12:31:00",
+          "excerpt": "гами Шики:** — Я и сам не знаю. А по поводу Данзо добавлю. Не думаю что он угроза конохе как таковой. Цунадэ откинулась на спинку кресла. Деревянные подлокотники тихо скрипнули под её ладонями. Некоторое время она смотрела на карту Дождя, затем перевернула леж",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.002"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.001",
+          "seen": "s18.text.002",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22218,7 +22214,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.001"
+        "s18.text.002"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23108,5 +23104,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1638
+  "source_turns_indexed": 1639
 }
