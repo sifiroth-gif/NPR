@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.131",
+  "cursor": "s17.text.132",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.132:0": {
+      "aliases": [
+        "canon:s17.text.132:0",
+        "s17.text.132: в прочитанных Шики доступных медицинских выписках Данзо зафиксированы давние боевые травмы правой руки и глаза, функциональные ограничения; непрерывной истории наблюд"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.132:0",
+      "kind": "canon",
+      "label": "s17.text.132: в прочитанных Шики доступных медицинских выписках Данзо зафиксированы давние боевые травмы правой руки и глаза, функциональные ограничения; непрерывной истории наблюд",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.132"
       ]
     },
     "captive_guard": {
@@ -10356,7 +10372,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.131",
+        "s17.text.132",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22217,7 +22233,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 125,
+      "mention_count": 126,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22225,13 +22241,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:09:00",
-          "excerpt": "ренности. Затем раздался скрип стула и несколько шагов по деревянному полу. **Наруто:** — Спасибо, Шики. Цунадэ попросила его дождаться Какаши. Наруто коротко ответил ей, и вскоре звук закрывшейся двери отделил его голос от остальных звуков кабинета. **Цунадэ:",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.129"
         },
         {
           "at": "0010-05-14T12:17:00",
@@ -22246,11 +22255,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.131"
+        },
+        {
+          "at": "0010-05-14T12:26:00",
+          "excerpt": "#читаю документы# <text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 12:26</text> Цунадэ не стала торопить Шики с ответом. Она развернула папку так, чтобы свет из окна падал непосредственно на бумаги, и отодвинула чернильницу. Документы были располо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.132"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.131",
+          "seen": "s17.text.132",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22260,7 +22276,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.131"
+        "s17.text.132"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23157,5 +23173,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1635
+  "source_turns_indexed": 1636
 }
