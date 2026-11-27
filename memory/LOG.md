@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.022: Джирайя (`npc/jiraiya`), Пэйн (`npc/pain`), Конан (`npc/konan`), план сюжета
 - s17.text.021: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.020: Джирайя (`npc/jiraiya`), план сюжета
 - s17.text.019: Джирайя (`npc/jiraiya`)
@@ -59,4 +60,3 @@
 - s16.text.105: Цунадэ (`npc/tsunade`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`)
 - s16.text.104: Цунадэ (`npc/tsunade`), Наруто Узумаки (`npc/naruto`)
 - s16.text.103: Котэцу Хаганэ (`npc/kotetsu`), Кадзунэ (`npc/fire_road_jonin`)
-- s16.text.102: Коюки (`npc/western_nest_young_courier`)
