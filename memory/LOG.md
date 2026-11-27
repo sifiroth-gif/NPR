@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.099: Орочимару (`npc/orochimaru`)
 - s17.text.098: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.097: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`)
 - s17.text.096: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), поправки игрока: 1
@@ -59,4 +60,3 @@
 - s17.text.042: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Шикамару Нара (`npc/shikamaru`), поправки игрока: 1
 - s17.text.041: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), поправки игрока: 1
 - s17.text.040: Гэнма Ширануи (`npc/genma`), Какаши Хатакэ (`npc/kakashi`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Портовый чиновник (`npc/fire_port_official`)
-- s17.text.039: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Кадзунэ (`npc/fire_road_jonin`), Шизунэ (`npc/shizune`), поправки игрока: 1

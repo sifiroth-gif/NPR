@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.098",
+  "cursor": "s17.text.099",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2645,7 +2645,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 140,
+      "mention_count": 141,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2653,13 +2653,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-09T18:15:00",
-          "excerpt": ", хоронили одних и тех же людей. А потом наступил день, когда наш учитель обнаружил то, чем он занимался. Джирайя отвёл взгляд. Под тяжестью его ладони хрустнул край старого свитка. **Цунадэ:** — И даже тогда старик не смог его убить. В кабинете стало тихо. Из",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.058"
         },
         {
           "at": "0010-05-09T18:17:00",
@@ -2674,6 +2667,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.096"
+        },
+        {
+          "at": "0010-05-13T10:41:00",
+          "excerpt": "бумаги. **Орочимару:** — Я найду среди своих знакомых змей ту, которая согласится принимать сообщения. Если Джирайя договорится с одной из жаб, останется познакомить их и определить место передачи. Орочимару некоторое время смотрел на пустой лист. Затем положи",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.099"
         }
       ],
       "projections": [
@@ -2826,8 +2826,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s17.text.098"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -5764,7 +5763,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 208,
+      "mention_count": 209,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5772,13 +5771,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:34:00",
-          "excerpt": "фикаций. Это искажение начальной посылки. Второе. Ваш подход строго научный, даже фанатично научный. Орочимару перестал перелистывать тетрадь. **Мугами Шики:** — Мое достижение формы отшельника связанно не с изысканиями науки, а с философско-мировозренчискими ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.096"
         },
         {
           "at": "0010-05-13T10:37:00",
@@ -5793,11 +5785,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.098"
+        },
+        {
+          "at": "0010-05-13T10:41:00",
+          "excerpt": "передам, но ему нужно будет средство связи. Думаю жаба змее, а змея вам. Ну если конечно согласятся. Орочимару негромко рассмеялся. **Орочимару:** — Ты сам сказал, что наблюдал реакции нас обоих на имена друг друга. Для такого заключения мне не понадобилась ра",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.099"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.098",
+          "seen": "s17.text.099",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5807,7 +5806,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.098"
+        "s17.text.099"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12547,12 +12546,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.098",
+        "s17.text.099",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
         "s17.text.096",
-        "s17.text.097"
+        "s17.text.097",
+        "s17.text.098"
       ]
     },
     "place:810392b04745def4": {
@@ -22632,7 +22632,7 @@
       "id": "zhaba",
       "kind": "npc",
       "label": "Жаба",
-      "mention_count": 16,
+      "mention_count": 17,
       "mentions": [
         {
           "at": "0010-04-23T16:17:00",
@@ -22640,13 +22640,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.145"
-        },
-        {
-          "at": "0010-05-05T18:56:00",
-          "excerpt": "сь различимой над поверхностью воды. Джирайя сидел неподвижно, придерживая свиток обеими руками. Наконец жаба остановилась. Её пасть приоткрылась. Внутрь проникли холодный воздух и тусклый желтоватый свет. Над водой возвышались металлические опоры пристани, по",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.017"
         },
         {
           "at": "0010-05-05T20:04:00",
@@ -22661,6 +22654,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.031"
+        },
+        {
+          "at": "0010-05-13T10:41:00",
+          "excerpt": "орошая разведка тогда первая часть фразы ложна. Я передам, но ему нужно будет средство связи. Думаю жаба змее, а змея вам. Ну если конечно согласятся <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 10:41</text> **Мугами Шики:** — Вы правда меняет",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.099"
         }
       ],
       "projections": [
@@ -23027,5 +23027,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1603
+  "source_turns_indexed": 1604
 }
