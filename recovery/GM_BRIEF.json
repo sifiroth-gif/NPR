@@ -61,15 +61,20 @@
    "turn": "s16.text.049"
   },
   {
+   "kind": "write",
+   "text": "Запись хода: повторно открыты recovery/GM_ONLY.json: страница уже в этом чате, перед ходом достаточно recovery/NEXT.json.",
+   "turn": "s17.text.068"
+  },
+  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.067"
+   "turn": "s17.text.068"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.067",
+  "cursor": "s17.text.068",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -77,10 +82,12 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
+   "shirame",
+   "western_nest_young_courier",
    "place:78c721f461c18af2",
-   "western_nest_young_courier"
+   "orochimaru"
   ],
-  "focus_bytes": 909,
+  "focus_bytes": 1683,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -96,71 +103,43 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
     "medical.sterilize",
     "pact.contact",
     "sage.permanent",
     "sage.poison",
-    "combat.scalpel",
-    "fusion.development",
-    "genome.fluid",
-    "medical.diagnosis",
+    "shunshin.zero",
+    "weapon.sumi",
+    "element.lightning",
     "medical.field",
     "nemera.agency",
-    "nemera.transfer",
-    "research.postmortem",
-    "research.reproduce"
+    "sage.summon"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-05-10T20:45:00",
-    "chakra": {
-     "at": "0010-05-10T20:45:00",
-     "last": {
-      "spent": 30.0,
-      "turn": "s17.text.067",
-      "what": [
-       "Поддержание оставленного активным Риннешарингана в течение 7,5 часов отдыха (8 базовых за полчаса по прежнему расходу)"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 437.84,
-     "why": "Однократное объединение подтверждённых остатков 40.3 + 474. Максимум 600; без бесплатного восполнения."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {},
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md"
+    "campaigns/shiki/ref/KNOWLEDGE.md",
+    "campaigns/shiki/ref/MEMORY.md",
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time"
+    "present/identity",
+    "NPC knowledge/fences",
+    "prior dialogue/source",
+    "intent",
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time",
+    "things/holder/state/turn",
+    "count/availability",
+    "scene/access"
    ],
    "routes": [
-    "medical"
+    "dialogue",
+    "travel",
+    "items"
    ],
    "unavailable": [
-    "fusion.development",
-    "nemera.agency",
-    "nemera.transfer"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -415,13 +394,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-10T20:45:00",
-  "date": "Понедельник, 10 мая 1287 года",
-  "id": "s17.text.067",
+  "at": "0010-05-11T07:40:00",
+  "date": "Вторник, 11 мая 1287 года",
+  "id": "s17.text.068",
   "place": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
-  "time": "20:45"
+  "time": "07:40"
  },
- "digest": "a8631bd2b313f7f3d16dbdb6019d6edd287e76f342656246ddabaf611c09dc43",
+ "digest": "932e5f7a88bb193d57f4b5a04f2ec2ecac7c149c8ebf0ae08c753bb5bd33d304",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -430,11 +409,24 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [],
+  "edges": [
+   {
+    "actor": "western_nest_young_courier",
+    "from": "s17.text.060",
+    "kind": "chronology_same_actor",
+    "status": "source_order_only",
+    "to": "s17.text.065"
+   }
+  ],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
+ "fences": [
+  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Сирамэ — слышал(а) с s15.text.015; Коюки — не слышал(а).",
+  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Сирамэ — не слышал(а); Коюки — не слышал(а).",
+  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Сирамэ, Коюки. Присутствие в отряде и запись lore без источника не доказывают видимость."
+ ],
  "fight": {
   "body": {
    "hidan": {
@@ -531,21 +523,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 437.84
+   "value": 547.01
   },
   "dice": [
+   12,
+   6,
+   16,
+   11,
+   6,
    7,
    13,
-   16,
-   20,
-   19,
-   10,
-   13,
-   4,
-   13,
-   9,
-   8,
-   16
+   17,
+   12,
+   15,
+   3,
+   3
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -574,6 +566,30 @@
  "general_memory": {
   "activated": [
    {
+    "facts": [],
+    "id": "shirame",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/shirame.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вышла из комнаты, намерена передать известие западным гнёздам."
+     }
+    }
+   },
+   {
+    "facts": [],
+    "id": "western_nest_young_courier",
+    "kind": "npc",
+    "operational_cues": {
+     "source": "recovery/cast/western_nest_young_courier.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+     }
+    }
+   },
+   {
     "channels": [
      "scene_anchor"
     ],
@@ -588,14 +604,14 @@
      "scene_anchor"
     ],
     "facts": [],
-    "id": "western_nest_young_courier",
+    "id": "orochimaru",
     "kind": "npc",
-    "label": "Коюки",
+    "label": "Орочимару",
     "operational_cues": {
-     "source": "recovery/cast/western_nest_young_courier.json",
+     "source": "recovery/cast/orochimaru.json",
      "status": "projection_not_authoritative_fact",
      "values": {
-      "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+      "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
      }
     },
     "status": "no_verified_facts"
@@ -607,19 +623,37 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 2
+  "total_matched": 4
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
+  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {},
+  "npcs": {
+   "shirame": {
+    "does": "Пришла и передала сведения лично, не требует согласия.",
+    "lever": "Стать беспомощным образцом или наживкой для опытов и переговоров шиноби.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Может передать добровольно принятую просьбу без обязательства служить Орочимару.",
+    "stage": 4,
+    "step": "необратимость"
+   },
+   "western_nest_young_courier": {
+    "does": "Сопроводила Сирамэ и слушает.",
+    "lever": "Принудительный вызов и потеря права вернуться.",
+    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
+    "reads": "Обстоятельства неясны, решение принадлежит Шики.",
+    "stage": 4,
+    "step": "необратимость"
+   }
+  },
   "quiet": 0,
   "recent": [
    {
@@ -639,16 +673,34 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "<text color=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 13:15–20:45</text>\n\n### Убежище Шики. Жилые помещения\n\nДень прошёл в покое.\n\nЗа массивными каменными стенами почти не ощущалось течения времени. Шум подземной воды сливался с редким потрескиванием деревянных конструкций. После нескольких суток разведки, путешествий и напряжённых исс…",
-  "player": "#отдых#",
+  "gm_tail": "а знакомый источник чакры, приближавшийся к жилым помещениям.\n\nВ дверном проёме появилась Сирамэ — взрослая белая змея с почти бесцветными глазами. На её чешуе остались частицы влажной земли.\n\nРядом с ней ползла Коюки, на этот раз непривычно молчаливая.\n\n**Сирамэ:** — Шики. Я пришла по просьбе Кабуто.\n\nОна остановилась возле стола.\n\n**Сирамэ:** — …",
+  "player": "#сворачиваю ринешаринган, мастеру, наверно нужно дальше дёрнуть сюжет, не думаешь?#",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [],
+ "needs_profile": [
+  {
+   "appearances": 59,
+   "facets": 3,
+   "need": 5,
+   "npc": "shirame",
+   "tier": "deep"
+  },
+  {
+   "appearances": 118,
+   "facets": 3,
+   "need": 5,
+   "npc": "western_nest_young_courier",
+   "tier": "deep"
+  }
+ ],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [],
+  "present_inline": [
+   "shirame",
+   "western_nest_young_courier"
+  ],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -671,7 +723,7 @@
     ],
     "parent": "main",
     "question": "Кто заберёт наследие Орочимару в Стране Травы — записи, тела, беглых подопытных — и что достанется Шики и какой ценой?",
-    "scenes": 1,
+    "scenes": 2,
     "title": "Сброшенная кожа"
    },
    {
@@ -785,22 +837,190 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {},
- "recent_turns": [
-  {
-   "id": "s17.text.066",
-   "line": "Шики оставил Коюки с детёнышами, поднялся в жилой коридор и нанёс индивидуальную физическую метку Хирайшина на каменную стену. Отклик устойчивый. Дальний перенос не испытывал. Собирается отдохнуть."
+ "present_npcs": {
+  "shirame": {
+   "dynamics": {
+    "psyche_facets": {
+     "boundary": "Не допускает чужих нитей Немеры и не терпит повторного удержания; лечение разрешает по собственной воле.",
+     "decides": "Сама выбирает, кому доверять и разрешать себя лечить; не считает договор Кабуто правом распоряжаться её телом.",
+     "deep_fear": "Стать беспомощным образцом или наживкой для опытов и переговоров шиноби."
+    }
+   },
+   "look": {
+    "внешность": "Взрослая белая змея с очень светлыми глазами, длина около 2,5 м, максимальный диаметр туловища 8–10 см, тонкий боковой рубец."
+   },
+   "prior_disclosures": [
+    {
+     "at": "0010-05-10T13:06:00",
+     "line": "Шики предложил Коюки добровольно учить детёнышей речи. Тёмная змея согласилась при условии близости гнезда. Один малыш отреагиров…",
+     "sha256": "daf7feadeb7ad9ca615e8cafdca1bc181d60c33ddb7c2523ec5efba8c09fb5fe",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.065"
+    }
+   ],
+   "profile": {
+    "fears": "Удержание людьми или насильственное исследование Немерой",
+    "first": "s12.text.067",
+    "hides": "Не установлено",
+    "inner": {
+     "remembers": [
+      {
+       "as": "Шики призвал её перед дорогой 20.04; она передала ответ Кабуто и свою позицию по поручениям Коюки.",
+       "at": "0010-04-20T16:05:00",
+       "turn": "s15.text.004"
+      },
+      {
+       "as": "Попросила отдельного согласия на взятие собственных клеток; ответ Шики на условие ещё не получен.",
+       "at": "0010-04-21T13:20:00",
+       "turn": "s15.text.017"
+      }
+     ]
+    },
+    "knows": [
+     "Шики подтвердил возможность поглощения её живых клеток через кожу; раньше использовал разрез собственной кожи."
+    ],
+    "knows_ref": "memory/npc/shirame.md",
+    "leverage": "Только ей переданное слово, ядовитые клыки",
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s15.text.022",
+      "what": "Шики обещаний долголетия сверх естественного срока не дал. Орочимару рассматривает восстановление исходного тела как резервный вариант, от Саске не отказался, спрашивает цену."
+     },
+     {
+      "ch": "present",
+      "turn": "s17.text.068",
+      "what": "Шики отключил глаза. 11.05 в 07:40 в убежище добровольно пришла Сирамэ по просьбе Кабуто: ухудшение Орочимару, вывоз имущества, вопрос о восстановлении исходного тела. Решение Шики ещё не принято."
+     }
+    ],
+    "memory_file": "archive/npc-memory/shirame.json",
+    "memory_total": 59,
+    "name": "Сирамэ",
+    "seen": "s17.text.068",
+    "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
+    "status": "present_profile",
+    "tier": "deep",
+    "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
+    "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
   },
+  "western_nest_young_courier": {
+   "dynamics": {
+    "committed_or_paused_intents": [
+     {
+      "due": "0010-05-13T12:00:00",
+      "flaw": "Нет опыта преподавания; физиология обычных змей может не позволять человеческую речь, шипение не доказывает подражание.",
+      "goal": "Проверить возможность добровольного обучения местных детёнышей человеческой речи.",
+      "id": "brood_sound_observation_s17",
+      "if_unopposed": "Коюки проверит реакции малышей на простые звуки и покажет Шики результат, в том числе отсутствие повторяемости.",
+      "next": "Провести короткие добровольные занятия с заинтересованными детёнышами у гнезда; при доступной встрече расспросить Сирамэ о начальном обучении.",
+      "source_turn": "s17.text.065",
+      "status": "committed"
+     }
+    ],
+    "psyche_facets": {
+     "boundary": "Не участвовать в боевых призывах, сохранять собственное решение о посещении и уходе.",
+     "decides": "Любопытство и добровольное доверие; ищет знакомых и спрашивает сама, отказывается от опасных поручений.",
+     "deep_fear": "Принудительный вызов и потеря права вернуться."
+    },
+    "unclocked_intents": [
+     "brood_sound_observation_s17"
+    ]
+   },
+   "look": {
+    "внешность": "Молодая белая змея (s13.text.058)."
+   },
+   "prior_disclosure_ids": [
+    "s17.text.060",
+    "s17.text.063",
+    "s17.text.064",
+    "s17.text.065"
+   ],
+   "prior_disclosures": [
+    {
+     "at": "0010-05-10T12:05:00",
+     "line": "Шики вышел через ворота Конохи 09.05 в 18:29, вернулся в убежище 10.05 в 12:05. Коюки сообщила о порче части спасённых яиц и попр…",
+     "sha256": "3a702ce5a3b2b14283af5ce2883055982024514f9cc70c6825078e533d452020",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.060"
+    },
+    {
+     "at": "0010-05-10T13:04:00",
+     "line": "Шики и Коюки похоронили два погибших яйца возле наружного выхода. Тёмная змея посетила могилу и вернулась к семи живым. Коюки рас…",
+     "sha256": "6a6c9ee71b937f5e7efbd35fca2192bb359dc5bda21b94356ef590bc0de1f386",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.064"
+    },
+    {
+     "at": "0010-05-10T13:06:00",
+     "line": "Шики предложил Коюки добровольно учить детёнышей речи. Тёмная змея согласилась при условии близости гнезда. Один малыш отреагиров…",
+     "sha256": "daf7feadeb7ad9ca615e8cafdca1bc181d60c33ddb7c2523ec5efba8c09fb5fe",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.065"
+    }
+   ],
+   "profile": {
+    "first": "s13.text.054",
+    "inner": {
+     "remembers": [
+      {
+       "as": "Лично слышала голос Немеры в s13.text.058 и s14.text.037; последняя спрашивала с её согласия. Знает совместное существование по словам Сирамэ и личным встречам, не знает конструкции запоров. s14.text.052 услышала от Шики о слиянии.",
+       "at": "0010-04-12T16:21:00",
+       "turn": "s14.text.052"
+      }
+     ]
+    },
+    "knows": [
+     "Услышала от Рэна, что они были друзьями и что имя Шики появилось в Книге Бинго.",
+     "От Аки и Рэна узнала об экзамене 1278 года: две победы, добровольная сдача Гааре, защита госпиталя, повышение Шики и ранение Аки.",
+     "Рэн и Аки рассказали о гибели трёх противников Дождя, убийстве сдавшегося, докладе и лечении Рэна; знает его давнюю фразу о товарищах и врагах из пересказа Рэна.",
+     "Услышала от Сэйны, что Шики теперь может посещать семью при уведомлении караула."
+    ],
+    "knows_ref": "memory/npc/western_nest_young_courier.md",
+    "knows_total": 6,
+    "memory": [
+     {
+      "ch": "present",
+      "turn": "s17.text.065",
+      "what": "Шики предложил Коюки добровольно учить детёнышей речи. Тёмная змея согласилась при условии близости гнезда. Один малыш отреагировал шипением, повторной реакции нет. Коюки хочет спросить Сирамэ."
+     },
+     {
+      "ch": "present",
+      "turn": "s17.text.068",
+      "what": "Шики отключил глаза. 11.05 в 07:40 в убежище добровольно пришла Сирамэ по просьбе Кабуто: ухудшение Орочимару, вывоз имущества, вопрос о восстановлении исходного тела. Решение Шики ещё не принято."
+     }
+    ],
+    "memory_file": "archive/npc-memory/western_nest_young_courier.json",
+    "memory_total": 118,
+    "name": "Коюки",
+    "seen": "s17.text.068",
+    "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи.",
+    "status": "present_profile",
+    "tier": "deep"
+   },
+   "source_ref": "archive/session-*-turns.jsonl"
+  }
+ },
+ "recent_turns": [
   {
    "id": "s17.text.067",
    "line": "Шики спокойно отдохнул с 13:15 до 20:45 10.05, утомление концентрации прошло. Глаза остались активными. Коюки не беспокоила; срочных сообщений нет. Кладка под присмотром тёмной змеи."
+  },
+  {
+   "id": "s17.text.068",
+   "line": "Шики отключил глаза. 11.05 в 07:40 в убежище добровольно пришла Сирамэ по просьбе Кабуто: ухудшение Орочимару, вывоз имущества, вопрос о восстановлении исходного тела. Решение Шики ещё не принято."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в жилых помещениях; Коюки и тёмная змея в убежище, точное текущее положение не установлено.",
-  "pressure": "Спокойное завершение отдыха; дальний Хирайшин не испытан, второй пролеченный эмбрион требует наблюдения.",
-  "situation": "Шики отдохнул в жилой части убежища 7 часов 30 минут. Утомление от длительных тренировок прошло. Коюки поднималась, не мешала отдыху. Кладка остаётся под присмотром тёмной змеи; нового медицинского осмотра не было. Срочных сообщений нет. Риннешаринган остаётся активным."
+  "positions": "Шики в жилом помещении, Сирамэ свернулась возле стола, Коюки рядом.",
+  "pressure": "Срочное обращение Кабуто о прежнем предложении Шики; ответ не дан.",
+  "situation": "Шики отключил Риннешаринган 10.05 в 20:46. После промотки до 11.05 07:40 Сирамэ добровольно прибыла в убежище через нижние пещеры вместе с Коюки. Передала просьбу Кабуто от 10.05: состояние Орочимару заметно ухудшилось, Кабуто вывозил лекарства, свитки и сосуды; хочет узнать, готов ли Шики вновь обсуждать восстановление исходного тела. Сирамэ не знает причины вывоза. Решения Шики нет, перенос не выполнен."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -808,16 +1028,32 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {},
+ "source_passages": {
+  "s17.text.060": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 9 мая 1287 года · 18:29</text>\n\n### Главные ворота Конохи\n\nПосле обычной регистрации выхода Шики покинул деревню.\n\nВечерняя дорога постепенно погружалась в сумерки. За пределами Конохи становилось всё тише. В густых кронах деревьев перекликались ночные птицы, а над низинами поднимался молочно-белый туман.\n\nПуть в Страну Рек прошёл без происшествий.\n\n***\n\n<text color=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 12:05</text>\n\n### Южные известняковые горы. Убежище Шики\n\nЗаросшая торговая доро\n[... sou…",
+   "player": "#возвращаюсь в убежище#",
+   "source": "archive/session-017-turns.jsonl"
+  },
+  "s17.text.065": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 13:06</text>\n\n### Убежище Шики. Нижние пещеры\n\n**Мугами Шики:** — Любознательный, если все будут согласны поучи их.\n\nКоюки оживилась.\n\n**Коюки:** — Тогда я попробую учить их так, как меня учили в Рьючидо. Правда, я никогда раньше никого не учила.\n\nОна вернулась к кладке и некоторое время разговаривала с тёмной змеёй. Та выслушала её, приподняв голову над яйцами.\n\nОдин из детёнышей выполз навстречу Коюки. Два других остались в укрытии.\n\nКоюки произнесла несколько протяжных гласных звуков. …",
+   "player": "Любознательный, если все будут согласны поучи их",
+   "source": "archive/session-017-turns.jsonl"
+  }
+ },
+ "source_passages_ref": "archive/session-*-turns.jsonl",
+ "source_passages_truncated": true,
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "d0880e67035206e2d2917b3166e50ebce6e42b37",
-  "turn": "s17.text.067"
+  "sha": "a82dd1cfb1cc1ddeae1f3b9d91517e6b98ad249c",
+  "turn": "s17.text.068"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {},
+  "present": {
+   "shirame": "memory/npc/shirame.md",
+   "western_nest_young_courier": "memory/npc/western_nest_young_courier.md"
+  },
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
@@ -827,7 +1063,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 24066.0,
+    "minutes": 23411.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
@@ -844,12 +1080,12 @@
    "shiki_save_jiraiya"
   ],
   "secret_topics": [
-   "vials",
    "visitor_claim",
    "ward_lock_broken",
    "willow_observer_employer",
    "yig_private_profile",
-   "yig_private_world"
+   "yig_private_world",
+   "shiki_orochimaru_consultation_request_s17"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",

@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.067",
+  "cursor": "s17.text.068",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2584,12 +2584,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.044",
+          "seen": "s17.text.068",
           "state": "Покинул учебный павильон."
         }
       ],
       "sources": [
-        "recovery/cast/iwashi.json"
+        "recovery/cast/iwashi.json",
+        "s17.text.068"
       ]
     },
     "izumo": {
@@ -2821,12 +2822,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.053",
+          "seen": "s17.text.068",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "s17.text.068"
       ]
     },
     "kabuto_letter_0416": {
@@ -5784,7 +5786,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 179,
+      "mention_count": 180,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5792,13 +5794,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-05T11:54:00",
-          "excerpt": "ловека, когда давнее воспоминание внезапно становится частью настоящего. **Джирайя:** — Я тогда подумал об Орочимару. Он сложил карту, но вместо того, чтобы убрать её, оставил лежать между собой и Шики. **Джирайя:** — А теперь думаю о своих учениках. За стеной",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.006"
         },
         {
           "at": "0010-05-05T17:42:00",
@@ -5813,6 +5808,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.058"
+        },
+        {
+          "at": "0010-05-11T07:40:00",
+          "excerpt": "чно молчаливая. **Сирамэ:** — Шики. Я пришла по просьбе Кабуто. Она остановилась возле стола. **Сирамэ:** — Орочимару снова болен. Гораздо сильнее, чем тогда, когда ты его лечил. Коюки перевела взгляд с неё на Шики. **Сирамэ:** — Вчера Кабуто попросил меня най",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.068"
         }
       ],
       "projections": [
@@ -11991,8 +11993,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.067",
-        "s16.text.103"
+        "s17.text.068",
+        "s16.text.103",
+        "s17.text.067"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -18912,12 +18915,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.044",
+          "seen": "s17.text.068",
           "state": "Забрал снаряжение и ушёл."
         }
       ],
       "sources": [
-        "recovery/cast/raido.json"
+        "recovery/cast/raido.json",
+        "s17.text.068"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -20753,7 +20757,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 78,
+      "mention_count": 79,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20761,13 +20765,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-04-30T02:14:00",
-          "excerpt": "# Убежище Шики **Мугами Шики:** — Не знаю, такого я никогда не встречал. **Коюки:** — Тогда спрошу у Сирамэ. Она ведь тоже когда-то была маленькой. Коюки спустилась с плеча Шики и направилась к естественным пещерам. **Коюки:** — Побуду пока с малышами. Когда о",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.102"
         },
         {
           "at": "0010-05-02T18:05:00",
@@ -20782,19 +20779,33 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.065"
+        },
+        {
+          "at": "0010-05-11T07:40:00",
+          "excerpt": "енсорика различила знакомый источник чакры, приближавшийся к жилым помещениям. В дверном проёме появилась Сирамэ — взрослая белая змея с почти бесцветными глазами. На её чешуе остались частицы влажной земли. Рядом с ней ползла Коюки, на этот раз непривычно мол",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.068"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s15.text.023",
+          "seen": "s17.text.068",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
+          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
+        },
+        {
+          "fears": "Удержание людьми или насильственное исследование Немерой",
+          "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
-        "recovery/cast/shirame.json"
+        "recovery/cast/shirame.json",
+        "recovery/HOT.json",
+        "s17.text.068"
       ]
     },
     "shiranami": {
@@ -22283,13 +22294,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 102,
+      "mention_count": 103,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22297,13 +22309,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T13:06:00",
-          "excerpt": "### Убежище Шики. Нижние пещеры **Мугами Шики:** — Любознательный, если все будут согласны поучи их. Коюки оживилась. **Коюки:** — Тогда я попробую учить их так, как меня учили в Рьючидо. Правда, я никогда раньше никого не учила. Она вернулась к кладке и некот",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.065"
         },
         {
           "at": "0010-05-10T13:15:00",
@@ -22318,16 +22323,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.067"
+        },
+        {
+          "at": "0010-05-11T07:40:00",
+          "excerpt": "лая белая змея с почти бесцветными глазами. На её чешуе остались частицы влажной земли. Рядом с ней ползла Коюки, на этот раз непривычно молчаливая. **Сирамэ:** — Шики. Я пришла по просьбе Кабуто. Она остановилась возле стола. **Сирамэ:** — Орочимару снова бол",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.068"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.066",
+          "seen": "s17.text.068",
+          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+        },
+        {
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s17.text.068"
       ]
     },
     "white_snake_sage": {
@@ -22855,5 +22872,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1574
+  "source_turns_indexed": 1575
 }
