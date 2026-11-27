@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.031",
+  "cursor": "s17.text.032",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 130,
+      "mention_count": 131,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T20:06:00",
-          "excerpt": "атура и что самое неприятное скорее всего их зрение связано. Поэтому в бою стоит учитывать этот риск. Джирайя перестал листать записную книжку. Ветер пригнул тростник к воде. На противоположном берегу среди деревьев едва различались развалины какого-то старого",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.029"
         },
         {
           "at": "0010-05-05T20:07:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.031"
+        },
+        {
+          "at": "0010-05-07T08:34:00",
+          "excerpt": "рритории противника, при условии возможного подкрепления ещё 3 лиц с шаринганом. Пойдёмте в коноху. **Джирайя:** — Если у остальных тоже Риннеган, как у тех троих, ситуация ещё хуже. Хорошо, что нам не пришлось проверять это на собственной шкуре. Саннин прибав",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.031",
-          "state": "Отправил призванную жабу с запиской Цунадэ, начал путь к дороге в Страну Огня."
+          "seen": "s17.text.032",
+          "state": "Вернулся в Коноху, передаёт Цунадэ разведывательные сведения, предоставил слово Шики."
         },
         {
-          "state": "Отправил призванную жабу с запиской Цунадэ, начал путь к дороге в Страну Огня."
+          "state": "Вернулся в Коноху, передаёт Цунадэ разведывательные сведения, предоставил слово Шики."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.031"
+        "s17.text.032"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3755,7 +3755,7 @@
       "id": "konan",
       "kind": "npc",
       "label": "Конан",
-      "mention_count": 14,
+      "mention_count": 15,
       "mentions": [
         {
           "at": "0010-04-25T10:28:00",
@@ -3763,13 +3763,6 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
-        },
-        {
-          "at": "0010-05-05T19:18:24",
-          "excerpt": "9:18</text> ### Амэгакурэ. Центральная башня **Мугами Шики:** — А что с разветкой у Акацуки сложно? Конан внимательнее всмотрелась в лицо Шики. **Конан:** — Шики… Мугами Шики? Медик из Кусагакуре? Она повернулась к Пэйну. **Конан:** — В Книге Бинго Тумана была",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.026"
         },
         {
           "at": "0010-05-05T19:19:00",
@@ -3784,6 +3777,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.028"
+        },
+        {
+          "at": "0010-05-07T08:34:00",
+          "excerpt": "лько минут он последовательно излагал результаты операции: необычный дождь, центральную башню, заключённых, присутствие Конан и Пэйна, смерть Яхико и нескольких носителей Риннегана. Когда речь зашла о Нагато, голос саннина стал тише. Цунадэ слушала неподвижно,",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.032"
         }
       ],
       "projections": [
@@ -7825,6 +7825,25 @@
       "projections": [],
       "sources": [
         "s11.text.007"
+      ]
+    },
+    "place:2ae55a7918a956c7": {
+      "aliases": [
+        "place:2ae55a7918a956c7",
+        "Конохагакуре, резиденция Хокагэ, закрытый кабинет",
+        "Конохагакуре",
+        "резиденция Хокагэ",
+        "закрытый кабинет"
+      ],
+      "facts": [],
+      "id": "place:2ae55a7918a956c7",
+      "kind": "place",
+      "label": "Конохагакуре, резиденция Хокагэ, закрытый кабинет",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.032"
       ]
     },
     "place:2af3465d950b98e1": {
@@ -20571,7 +20590,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 31,
+      "mention_count": 32,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20579,13 +20598,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-03T12:04:00",
-          "excerpt": "Шики в регистрационную книгу. *** <text color=\"secondary\" size=\"xs\">12:04</text> ### Резиденция Хокагэ Шизунэ встретила Шики в коридоре второго этажа. В руках она держала несколько папок, одну из которых при его приближении поспешно переложила под остальные. *",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.110"
         },
         {
           "at": "0010-05-03T12:31:00",
@@ -20600,16 +20612,28 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.121"
+        },
+        {
+          "at": "0010-05-07T08:34:00",
+          "excerpt": "онутая чашка чая. Увидев Джирайю, она заметно расслабилась. **Цунадэ:** — Вернулись. Наконец-то. По её распоряжению Шизунэ закрыла дверь кабинета. Джирайя разложил на столе записную книжку и чертежи водостоков. Несколько минут он последовательно излагал резуль",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.014",
-          "state": "Провела Шики к Цунадэ и закрыла дверь по её жесту, присутствует при докладе."
+          "seen": "s17.text.032",
+          "state": "Закрыла дверь кабинета по распоряжению Цунадэ, слушает доклад."
+        },
+        {
+          "state": "Закрыла дверь кабинета по распоряжению Цунадэ, слушает доклад."
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json"
+        "recovery/cast/shizune.json",
+        "recovery/HOT.json",
+        "s17.text.032"
       ]
     },
     "signalshchik": {
@@ -21669,7 +21693,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 87,
+      "mention_count": 88,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21677,13 +21701,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-05T20:04:00",
-          "excerpt": "ски трёх учеников. Бумага пожелтела, линии местами почти стёрлись. Он закрыл книжку. **Джирайя:** — Нам нужно возвращаться к Цунадэ. Теперь у нас есть основания считать Амэгакурэ центром Акацуки. Он помолчал, прислушиваясь к шелесту тростника. **Джирайя:** — С",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.028"
         },
         {
           "at": "0010-05-05T20:06:00",
@@ -21698,16 +21715,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.031"
+        },
+        {
+          "at": "0010-05-07T08:34:00",
+          "excerpt": "отправил посыльного в резиденцию Хокагэ. *** <text color=\"secondary\" size=\"xs\">08:34 · Резиденция Хокагэ</text> Цунадэ встретила обоих стоя у своего стола. Под глазами Пятой залегли тени, а рядом с кипой документов стояла нетронутая чашка чая. Увидев Джирайю, ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.032"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.012",
-          "state": "Приняла Шики в закрытом кабинете в присутствии Шизунэ, ожидает доклада об Асуме и Акацуки."
+          "seen": "s17.text.032",
+          "state": "В закрытом кабинете слушает разведывательный доклад и просит Шики изложить наблюдения."
+        },
+        {
+          "state": "В закрытом кабинете слушает разведывательный доклад и просит Шики изложить наблюдения."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json"
+        "recovery/cast/tsunade.json",
+        "recovery/HOT.json",
+        "s17.text.032"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22569,5 +22598,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1540
+  "source_turns_indexed": 1541
 }
