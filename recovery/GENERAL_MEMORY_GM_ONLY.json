@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.058",
+  "cursor": "s18.text.059",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -427,7 +427,7 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.058",
+          "seen": "s18.text.059",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.058"
+        "s18.text.059"
       ]
     },
     "baki": {
@@ -809,13 +809,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.058"
+          "seen": "s18.text.059"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.058"
+        "s18.text.059"
       ]
     },
     "clinic_assistant": {
@@ -2558,7 +2558,7 @@
       "id": "ino",
       "kind": "npc",
       "label": "Ино Яманака",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -2566,13 +2566,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-05-15T08:57:00",
-          "excerpt": "то особенности его внешности могут быть не следствием болезни или применения какой-нибудь временной техники. **Ино Яманака:** — Подождите. Отшельник — как Джирайя-сама? Асума стряхнул пепел на землю. **Асума Сарутоби:** — В общих чертах. Но не стоит считать, ч",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.055"
         },
         {
           "at": "0010-05-15T08:59:00",
@@ -2587,17 +2580,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.057"
+        },
+        {
+          "at": "0010-05-15T09:00:31",
+          "excerpt": "ть прошёл перед его грудью, не достигнув ткани плаща. На лице девушки отразилось неподдельное изумление. **Ино Яманака:** — Когда ты успел?! Шикамару немедленно отозвал свою тень и изменил направление техники. Теперь тёмная полоса двигалась вдоль основания сто",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.059"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.058"
+          "seen": "s18.text.059"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.058"
+        "s18.text.059"
       ]
     },
     "inquiry_contact_token": {
@@ -10973,12 +10973,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.058",
+        "s18.text.059",
         "s18.text.053",
         "s18.text.054",
         "s18.text.055",
         "s18.text.056",
-        "s18.text.057"
+        "s18.text.057",
+        "s18.text.058"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20868,7 +20869,7 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.058",
+          "seen": "s18.text.059",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20878,7 +20879,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.058"
+        "s18.text.059"
       ]
     },
     "shiki_arm_wraps": {
@@ -23366,5 +23367,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1695
+  "source_turns_indexed": 1696
 }

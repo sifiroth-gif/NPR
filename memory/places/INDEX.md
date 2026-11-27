@@ -57,6 +57,7 @@
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 7 ход(ов), s18–s18
 - Кусагакуре, частный врачебный кабинет Кирисавы Сэйны · `places/kusagakure-chastnyy-vrachebnyy-kabinet-kirisavy-seyny` · 7 ход(ов), s08–s08
 - Кусагакуре, Северный водоотвод · `places/kusagakure-severnyy-vodootvod` · 7 ход(ов), s03–s03
 - Кусагакуре, управление внутренней безопасности · `places/kusagakure-upravlenie-vnutrenney-bezopasnosti` · 7 ход(ов), s04–s04
@@ -65,7 +66,6 @@
 - Страна Огня, западные провинции · `places/strana-ognya-zapadnye-provintsii` · 7 ход(ов), s16–s17
 - Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 6 ход(ов), s17–s17
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 6 ход(ов), s18–s18
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
 - Кусагакуре, кабинет Кирисавы Сэйны · `places/kusagakure-kabinet-kirisavy-seyny` · 6 ход(ов), s04–s05
 - Кусагакуре, хранилище В-7 · `places/kusagakure-khranilishche-v-7` · 6 ход(ов), s06–s08
