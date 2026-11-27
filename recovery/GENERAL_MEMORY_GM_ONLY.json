@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.019",
+  "cursor": "s18.text.020",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-04-24T07:42:00",
-          "excerpt": "оэтому после возвращения в Коноху. И лучше голову и туловище держать отдельно. Асума посмотрел на Хидана. **Асума Сарутоби:** — Хорошо. Обсудишь это непосредственно с Хокагэ. Если она согласится, я не вижу причин возражать. **Шикамару Нара:** — Потребуются два",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.181"
         },
         {
           "at": "0010-04-24T12:20:00",
@@ -423,16 +416,28 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.184"
+        },
+        {
+          "at": "0010-05-14T14:06:00",
+          "excerpt": "газины, мастерские и жилые дома с узкими садами. Возле цветочной лавки Шики почувствовал знакомую чакру. Асума Сарутоби стоял под полосатым навесом, держа в руках небольшой свёрток с благовониями. От прежней встречи возле подпольного пункта обмена тел его отде",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.020"
         }
       ],
       "projections": [
         {
-          "seen": "s16.text.107",
+          "seen": "s18.text.020",
+          "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
+        },
+        {
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "recovery/HOT.json",
+        "s18.text.020"
       ]
     },
     "baki": {
@@ -678,7 +683,7 @@
       "id": "chiriku",
       "kind": "npc",
       "label": "Тирику",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0010-04-22T11:39:00",
@@ -686,13 +691,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.110"
-        },
-        {
-          "at": "0010-04-24T19:15:00",
-          "excerpt": "А сейчас… Асума ещё не вернулся, мне нужно навестить Кагэ. Джирайя помрачнел. **Джирайя:** — Значит, Тирику погиб. Жаль. Достойный был человек. Он некоторое время смотрел вдоль вечерней улицы, затем поправил налобный протектор. **Джирайя:** — Хорошо. Займись д",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.192"
         },
         {
           "at": "0010-04-24T19:25:00",
@@ -707,6 +705,13 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.196"
+        },
+        {
+          "at": "0010-05-14T14:06:00",
+          "excerpt": "гую руку, чтобы не помять лепестки. **Асума Сарутоби:** — Собираюсь навестить могилу одного старого товарища. Тирику похоронили в Храме Огня, но здесь тоже есть люди, которых я давно не навещал. Дзёнин затушил сигарету о край стоявшей возле лавки урны. Некотор",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.020"
         }
       ],
       "projections": [
@@ -2260,8 +2265,7 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json",
-        "s18.text.019"
+        "recovery/HOT.json"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -8150,7 +8154,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.019",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
@@ -8161,7 +8164,8 @@
         "s18.text.015",
         "s18.text.016",
         "s18.text.017",
-        "s18.text.018"
+        "s18.text.018",
+        "s18.text.019"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -11104,6 +11108,25 @@
       "projections": [],
       "sources": [
         "s15.text.199"
+      ]
+    },
+    "place:652d10c7e0292b96": {
+      "aliases": [
+        "place:652d10c7e0292b96",
+        "Конохагакуре, торговый квартал, у цветочной лавки",
+        "Конохагакуре",
+        "торговый квартал",
+        "у цветочной лавки"
+      ],
+      "facts": [],
+      "id": "place:652d10c7e0292b96",
+      "kind": "place",
+      "label": "Конохагакуре, торговый квартал, у цветочной лавки",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.020"
       ]
     },
     "place:6587d507b59da164": {
@@ -21172,8 +21195,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s18.text.019"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -22208,8 +22230,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "s18.text.019"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23099,5 +23120,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1656
+  "source_turns_indexed": 1657
 }
