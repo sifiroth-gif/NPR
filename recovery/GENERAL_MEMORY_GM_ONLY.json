@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.097",
+  "cursor": "s17.text.098",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2821,17 +2821,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.097",
-          "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
-        },
-        {
+          "seen": "s17.text.098",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
         "recovery/cast/kabuto.json",
-        "recovery/HOT.json",
-        "s17.text.097"
+        "s17.text.098"
       ]
     },
     "kabuto_letter_0416": {
@@ -5768,7 +5764,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 207,
+      "mention_count": 208,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5776,13 +5772,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:31:00",
-          "excerpt": "size=\"xs\">Четверг, 13 мая 1287 года · 10:31</text> **Мугами Шики:** — Что я не согласен с подходом. Орочимару медленно опустил взгляд на раскрытую тетрадь. **Орочимару:** — Вот как? Кабуто перестал писать. Он посмотрел на своего наставника, затем отложил каран",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.095"
         },
         {
           "at": "0010-05-13T10:34:00",
@@ -5797,11 +5786,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.097"
+        },
+        {
+          "at": "0010-05-13T10:39:00",
+          "excerpt": "87 года · 10:39</text> **Мугами Шики:** — Думаете? Я вот совсем не уверен. Передать ему что-нибудь? Орочимару открыл рот, собираясь ответить, но промолчал. Его взгляд скользнул по лаборатории. **Орочимару:** — Кабуто, оставь нас. Медик собрал бумаги и вышел. С",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.098"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.097",
+          "seen": "s17.text.098",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         },
         {
@@ -5811,7 +5807,7 @@
       "sources": [
         "recovery/cast/orochimaru.json",
         "recovery/HOT.json",
-        "s17.text.097"
+        "s17.text.098"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12551,11 +12547,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.097",
+        "s17.text.098",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
-        "s17.text.096"
+        "s17.text.096",
+        "s17.text.097"
       ]
     },
     "place:810392b04745def4": {
@@ -23030,5 +23027,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1602
+  "source_turns_indexed": 1603
 }
