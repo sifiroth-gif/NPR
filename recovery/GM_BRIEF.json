@@ -49,12 +49,12 @@
    },
    {
     "due": "0010-05-15T12:00:00",
-    "if_unopposed": "Старший получит отмеченные ошибки и исправленный порядок проверки допусков.",
-    "name": "Изумо Камидзуки",
-    "next": "Во время следующей смены провести с Котэцу сверку спорных записей и учебную проверку нестандартного распоряжения со старшим.",
-    "npc": "izumo",
+    "if_unopposed": "Коюки покажет Шики новые наблюдаемые реакции детёнышей либо отсутствие прогресса; сообщит о замеченных изменениях кладки.",
+    "name": "Молодая змея",
+    "next": "Связывать короткие звуки с привычными событиями, например кормлением, у заинтересованных детёнышей возле гнезда; сравнивать реакции без принуждения.",
+    "npc": "western_nest_young_courier",
     "overdue": false,
-    "plan": "gate_procedure_drill_s17"
+    "plan": "continue_brood_contact_s17"
    }
   ]
  },
@@ -79,15 +79,20 @@
    "turn": "s16.text.049"
   },
   {
+   "kind": "write",
+   "text": "Запись хода: повторно открыты npc/tsunade: страница уже в этом чате, перед ходом достаточно recovery/NEXT.json.",
+   "turn": "s17.text.130"
+  },
+  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.129"
+   "turn": "s17.text.130"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.129",
+  "cursor": "s17.text.130",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -95,11 +100,12 @@
    "truth": "verified fact requires source and scope"
   },
   "focus": [
-   "western_nest_young_courier",
    "place:78c721f461c18af2",
-   "tsunade"
+   "shizune",
+   "tsunade",
+   "western_nest_young_courier"
   ],
-  "focus_bytes": 1233,
+  "focus_bytes": 1574,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -114,35 +120,25 @@
   "thematic": {
    "basis": "scene_continuation",
    "entries": [
-    "chakra.black",
-    "medical.sterilize",
-    "pact.contact",
-    "weapon.sumi",
-    "element.lightning",
-    "medical.field",
-    "nemera.agency"
+    "sage.permanent",
+    "sage.poison",
+    "shunshin.zero",
+    "sage.summon"
    ],
    "matched": [],
    "read": [
-    "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md"
+    "campaigns/shiki/SHIKI.md"
    ],
    "required": [
-    "present/identity",
-    "NPC knowledge/fences",
-    "prior dialogue/source",
-    "intent",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access"
+    "scene/place",
+    "body/gear",
+    "due/offscreen",
+    "time"
    ],
    "routes": [
-    "dialogue",
-    "items"
+    "travel"
    ],
-   "unavailable": [
-    "nemera.agency"
-   ]
+   "unavailable": []
   },
   "time_advance_requires_world_review": false,
   "unindexed_present_actors": []
@@ -404,13 +400,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-14T12:09:00",
+  "at": "0010-05-14T12:17:00",
   "date": "Пятница, 14 мая 1287 года",
-  "id": "s17.text.129",
+  "id": "s17.text.130",
   "place": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
-  "time": "12:09"
+  "time": "12:17"
  },
- "digest": "fb55309eb5e2d12b52eb2663f7657dc44d4da086073aa4e55466b92aa4236443",
+ "digest": "0f425ec178af69ab87d8de3223051369eba59a51123eb4f9f20afbf6c30e4520",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -419,24 +415,11 @@
   "total_activated": 0
  },
  "evidence_graph": {
-  "edges": [
-   {
-    "actor": "western_nest_young_courier",
-    "from": "s17.text.060",
-    "kind": "chronology_same_actor",
-    "status": "source_order_only",
-    "to": "s17.text.129"
-   }
-  ],
+  "edges": [],
   "nodes": [],
   "scope": "source order only; no semantic entailment",
   "source": "archive/session-*-turns.jsonl"
  },
- "fences": [
-  "Бётон и Шитон (природы Болезни и Смерти): владеют только Шики. Миру неизвестны: нет школ, свитков, наставников и знатоков; само их существование вызывает изумление, неверие или страх. Никто другой не применит их, не испытает на ком-то, не воспроизведёт и не измерит: у остальных лишь пересказ Шики и увиденные последствия, без уверенных суждений о механизме. Рядом: Коюки — не слышал(а).",
-  "Хётон (ледяная стихия): владеют только Шики. Наследие клана Юки из Тумана, почти истреблённого; в Траве ледяную стихию вживую не видели. Лёд из чакры у медика Травы — шок и повод для слухов о Тумане и чужой крови. Рядом: Коюки — не слышал(а).",
-  "Сусаноо Шики: непосредственно видели — нет подтверждённых свидетелей; нет подтверждения наблюдения — Коюки. Присутствие в отряде и запись lore без источника не доказывают видимость."
- ],
  "fight": {
   "body": {
    "hidan": {
@@ -536,18 +519,18 @@
    "value": 600.0
   },
   "dice": [
-   14,
-   19,
+   2,
+   16,
    17,
-   3,
    14,
-   8,
-   15,
-   14,
+   13,
+   16,
+   9,
+   16,
+   5,
    10,
-   4,
-   19,
-   8
+   7,
+   6
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -576,18 +559,6 @@
  "general_memory": {
   "activated": [
    {
-    "facts": [],
-    "id": "western_nest_young_courier",
-    "kind": "npc",
-    "operational_cues": {
-     "source": "recovery/cast/western_nest_young_courier.json",
-     "status": "projection_not_authoritative_fact",
-     "values": {
-      "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
-     }
-    }
-   },
-   {
     "channels": [
      "scene_anchor"
     ],
@@ -595,6 +566,23 @@
     "id": "place:78c721f461c18af2",
     "kind": "place",
     "label": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "shizune",
+    "kind": "npc",
+    "label": "Шизунэ",
+    "operational_cues": {
+     "source": "recovery/cast/shizune.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вручила подписанный допуск, организован проводник."
+     }
+    },
     "status": "no_verified_facts"
    },
    {
@@ -613,6 +601,23 @@
      }
     },
     "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
+    "id": "western_nest_young_courier",
+    "kind": "npc",
+    "label": "Коюки",
+    "operational_cues": {
+     "source": "recovery/cast/western_nest_young_courier.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+     }
+    },
+    "status": "no_verified_facts"
    }
   ],
   "conflicts": [],
@@ -621,29 +626,19 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 3
+  "total_matched": 4
  },
  "guards": {
   "clock_deadlines_are_real": true,
   "no_npc_knowledge_without_channel": true,
   "no_repeated_revelations_without_new_source": true,
-  "npc_epistemic_limit": "Hearing or repeating terminology is not understanding. Infer expertise only from established training and experience; a role alone grants no universal domain knowledge. Allow surprise, concrete clarification, misunderstanding, confident bluffing or denial according to character and risk; do not make every NPC react identically.",
   "player_owns_shiki": true,
   "source_check_if_needed": "rpg_engine.scene_gate.prepare / original played turn"
  },
  "handoff": null,
  "horror": {
   "due": null,
-  "npcs": {
-   "western_nest_young_courier": {
-    "does": "Рассказала своё наблюдение о людях, вернулась к детёнышу и осталась возле укрытия.",
-    "lever": "Принудительный вызов и потеря права вернуться.",
-    "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Малышу нужна возможность самостоятельно приблизиться.",
-    "stage": 4,
-    "step": "необратимость"
-   }
-  },
+  "npcs": {},
   "quiet": 0,
   "recent": [
    {
@@ -663,26 +658,16 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "Цунадэ разомкнула канал. Слабый ток чакры в приёмнике угас.\n\nКоюки вытянулась вдоль края каменного уступа. Её светлая чешуя почти сливалась с известняком, и только движение головы выдавало присутствие змеи.\n\n**Коюки:** — Он ведь тогда тоже спрашивал тебя о Саске, в Конохе.\n\nОна посмотрела на оставшуюся неподвижной пластину.\n\n**Коюки:** — Удивитель…",
-  "player": "Думаю он и так помнит ",
+  "gm_tail": "ии подземного ручья.\n\n***\n\n<text color=\"secondary\" size=\"xs\">12:17</text>\n\nИз приёмника вновь донёсся голос Шизунэ. Она сообщила Цунадэ, что старший караула получил распоряжение и внесёт прибытие Шики в журнал после подтверждения из кабинета.\n\nЗатем Шики различил скрип выдвигаемого ящика. Послышался негромкий металлический стук о деревянную поверх…",
+  "player": "#по коммуникатору# Цунаде сама, можете придупредить что я прибуду. Если вы хотите меня видеть, я предпочту перенестись хирайшином",
   "source": "recovery/TURN.json"
  },
- "needs_profile": [
-  {
-   "appearances": 129,
-   "facets": 3,
-   "need": 5,
-   "npc": "western_nest_young_courier",
-   "tier": "deep"
-  }
- ],
+ "needs_profile": [],
  "npc_dynamics": {
   "actors": [],
   "omitted_actor_ids": [],
   "overdue_owner_ids": [],
-  "present_inline": [
-   "western_nest_young_courier"
-  ],
+  "present_inline": [],
   "source": "recovery/GM_ONLY.json:psyche",
   "unresolved_clock_owners": []
  },
@@ -819,126 +804,22 @@
   "rules": "События ведутся в d.plot. Сквозной сюжет (main) делится на главы (chapter); у каждой главы, побочного события (side) и случайной сцены (scene) конец записан сразу: question — один вопрос; endings — 2–4 исхода, среди них неудача и «ничего не вышло»; limit — scenes и/или until. Случайная сцена — 1–2 обмена, предел по умолчанию 2 сцены, вопрос и концовки не обязательны. Каждый ход, где событие развивается, отмечай {\"touch\": true}; законченное — {\"closed\": \"исход\"}. На пределе следующая сцена разрешает событие одной из концовок по сыгранному; продолжение — только новым событием с новым вопросом. Преграда — лишь заложенная до заявки игрока; после разгадки новой не добавляй. Одновременно не больше 5 побочных событий и сцен; лишние — status \"queued\" с trigger. Главу открывай, когда закрыта прежняя.",
   "source": "recovery/GM_ONLY.json:plot"
  },
- "present_npcs": {
-  "western_nest_young_courier": {
-   "dynamics": {
-    "committed_or_paused_intents": [
-     {
-      "due": "0010-05-15T12:00:00",
-      "flaw": "Неизвестны способности местных змей к человеческой речи, повреждённые яйца требуют наблюдения; Коюки не медик.",
-      "goal": "Продолжать помогать детёнышам и наблюдать их обучение без принуждения.",
-      "id": "continue_brood_contact_s17",
-      "if_unopposed": "Коюки покажет Шики новые наблюдаемые реакции детёнышей либо отсутствие прогресса; сообщит о замеченных изменениях кладки.",
-      "next": "Связывать короткие звуки с привычными событиями, например кормлением, у заинтересованных детёнышей возле гнезда; сравнивать реакции без принуждения.",
-      "source_turn": "s17.text.126",
-      "status": "committed"
-     }
-    ],
-    "psyche_facets": {
-     "boundary": "Не участвовать в боевых призывах, сохранять собственное решение о посещении и уходе.",
-     "decides": "Любопытство и добровольное доверие; ищет знакомых и спрашивает сама, отказывается от опасных поручений.",
-     "deep_fear": "Принудительный вызов и потеря права вернуться."
-    },
-    "unclocked_intents": [
-     "continue_brood_contact_s17"
-    ]
-   },
-   "look": {
-    "внешность": "Молодая белая змея (s13.text.058)."
-   },
-   "prior_disclosure_ids": [
-    "s17.text.060",
-    "s17.text.063",
-    "s17.text.064",
-    "s17.text.065",
-    "s17.text.126",
-    "s17.text.127",
-    "s17.text.128",
-    "s17.text.129"
-   ],
-   "prior_disclosures": [
-    {
-     "at": "0010-05-10T12:05:00",
-     "line": "Шики вышел через ворота Конохи 09.05 в 18:29, вернулся в убежище 10.05 в 12:05. Коюки сообщила о порче части спасённых яиц и попр…",
-     "sha256": "3a702ce5a3b2b14283af5ce2883055982024514f9cc70c6825078e533d452020",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.060"
-    },
-    {
-     "at": "0010-05-14T12:07:00",
-     "line": "Шики не раскрыл частных бесед. Наруто понял, что Саске продолжает искать Итачи, предложил поиск Акацуки; Цунадэ запретила одиночн…",
-     "sha256": "05d1c891c706811b717a95340fcf35baa423d7c1bd56e5366378fa126a51b85f",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.128"
-    },
-    {
-     "at": "0010-05-14T12:09:00",
-     "line": "Шики сказал, что Саске и так помнит. Наруто поблагодарил и ушёл от пластины. Цунадэ напомнила о добровольной консультации и упомя…",
-     "sha256": "bea4df35b677f985f80e63a3d3a02cf68ccb1793fd823597243461c22f189664",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.129"
-    }
-   ],
-   "profile": {
-    "first": "s13.text.054",
-    "inner": {
-     "remembers": [
-      {
-       "as": "Лично слышала голос Немеры в s13.text.058 и s14.text.037; последняя спрашивала с её согласия. Знает совместное существование по словам Сирамэ и личным встречам, не знает конструкции запоров. s14.text.052 услышала от Шики о слиянии.",
-       "at": "0010-04-12T16:21:00",
-       "turn": "s14.text.052"
-      }
-     ]
-    },
-    "knows": [
-     "Рэн и Аки рассказали о гибели трёх противников Дождя, убийстве сдавшегося, докладе и лечении Рэна; знает его давнюю фразу о товарищах и врагах из пересказа Рэна.",
-     "Услышала от Сэйны, что Шики теперь может посещать семью при уведомлении караула.",
-     "Орочимару жив; Сирамэ помогает ему связаться со старым другом, имя которого Шики не назвал.",
-     "Услышала по приёмнику сообщение Цунадэ о Саске и вопрос о способе связи."
-    ],
-    "knows_ref": "memory/npc/western_nest_young_courier.md",
-    "knows_total": 8,
-    "memory": [
-     {
-      "ch": "present",
-      "turn": "s17.text.128",
-      "what": "Шики не раскрыл частных бесед. Наруто понял, что Саске продолжает искать Итачи, предложил поиск Акацуки; Цунадэ запретила одиночный выход и отложила решение до оценки Какаши. Наруто просит передать сл"
-     },
-     {
-      "ch": "present",
-      "turn": "s17.text.129",
-      "what": "Шики сказал, что Саске и так помнит. Наруто поблагодарил и ушёл от пластины. Цунадэ напомнила о добровольной консультации и упомянула архивную проверку без раскрытия результата. Связь завершена."
-     }
-    ],
-    "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 129,
-    "name": "Коюки",
-    "seen": "s17.text.129",
-    "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи.",
-    "status": "present_profile",
-    "tier": "deep"
-   },
-   "source_ref": "archive/session-*-turns.jsonl"
-  }
- },
+ "present_npcs": {},
  "recent_turns": [
-  {
-   "id": "s17.text.128",
-   "line": "Шики не раскрыл частных бесед. Наруто понял, что Саске продолжает искать Итачи, предложил поиск Акацуки; Цунадэ запретила одиночный выход и отложила решение до оценки Какаши. Наруто просит передать слова Саске."
-  },
   {
    "id": "s17.text.129",
    "line": "Шики сказал, что Саске и так помнит. Наруто поблагодарил и ушёл от пластины. Цунадэ напомнила о добровольной консультации и упомянула архивную проверку без раскрытия результата. Связь завершена."
+  },
+  {
+   "id": "s17.text.130",
+   "line": "Цунадэ согласилась на прибытие Хирайшином, уведомила караул через Шизунэ и достала метку. Предложила начать с Данзо. Шики ещё не перенёсся."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в жилом помещении, приёмник неактивен, Коюки у расщелины возле лестницы.",
-  "pressure": "Консультация в Конохе доступна, но не обязательна; архивный результат ещё не получен.",
-  "situation": "Шики предположил, что Саске помнит обещание. Наруто поблагодарил, ушёл от пластины по просьбе Цунадэ дождаться Какаши. Цунадэ напомнила о предложенной консультации после полудня и упомянула результат архивной проверки для личного обсуждения, не раскрывая содержание. Связь завершена. Коюки вспомнила прежние вопросы Наруто о Саске, вернулась к детёнышу у лестницы. Шики свободен выбирать дальнейшее действие."
+  "positions": "Шики в жилом помещении своего убежища, приёмник на связи с Цунадэ; Коюки в нижних пещерах.",
+  "pressure": "Прибытие согласовано, метка доступна; ожидается заявка Шики на Хирайшин.",
+  "situation": "Шики связался с Цунадэ, попросил предупредить караул о прибытии Хирайшином. Цунадэ согласилась; через Шизунэ старший караула получил уведомление, прибытие зарегистрируют после подтверждения из кабинета. Цунадэ достала физическую метку и положила на стол, попросила материалы разведки Дождя и архивной проверки. Предложила сначала обсудить Данзо. Содержание архивной проверки ещё не сообщено. Шики остаётся дома; самоперенос ещё не выполнен. Коюки ушла к гнезду с детёнышем."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -946,31 +827,16 @@
   "mental_link": "С 01:09 до 01:10 Шики добровольно передал ВСЕ доступные чувства Немере исключительно; он ничего чувственно не воспринимал, сохранил сознание и контроль над телом. В 01:10 восприятие восстановлено, текущий полный общий сенсорный канал остаётся по прежнему разрешению; семь запоров не изменены.",
   "sheet": "campaigns/shiki/characters/SHIKI_1283_AFTER_FIVE_YEAR_SKIP_2026-11-13.json"
  },
- "source_passages": {
-  "s17.text.060": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Воскресенье, 9 мая 1287 года · 18:29</text>\n\n### Главные ворота Конохи\n\nПосле обычной регистрации выхода Шики покинул деревню.\n\nВечерняя дорога постепенно погружалась в сумерки. За пределами Конохи становилось всё тише. В густых кронах деревьев перекликались ночные птицы, а над низинами поднимался молочно-белый туман.\n\nПуть в Страну Рек прошёл без происшествий.\n\n***\n\n<text color=\"secondary\" size=\"xs\">Понедельник, 10 мая 1287 года · 12:05</text>\n\n### Южные известняковые горы. Убежище Шики\n\nЗаросшая торговая доро\n[... sou…",
-   "player": "#возвращаюсь в убежище#",
-   "source": "archive/session-017-turns.jsonl"
-  },
-  "s17.text.129": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Пятница, 14 мая 1287 года · 12:09</text>\n\n**Мугами Шики:** — Думаю он и так помнит\n\nНа другом конце связи Наруто замолчал. Впервые за весь разговор он не попытался немедленно возразить. Шики слышал только негромкий шум открытого окна и шелест бумаг на столе Хокагэ.\n\n**Наруто:** — Да. Наверное.\n\nОн произнёс это без прежней уверенности. Затем раздался скрип стула и несколько шагов по деревянному полу.\n\n**Наруто:** — Спасибо, Шики.\n\nЦунадэ попросила его дождаться Какаши. Наруто коротко ответил ей, и вскоре звук за\n[... sou…",
-   "player": "Думаю он и так помнит ",
-   "source": "archive/session-017-turns.jsonl"
-  }
- },
- "source_passages_ref": "archive/session-*-turns.jsonl",
- "source_passages_truncated": true,
+ "source_passages": {},
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "c280e502313981e9bb064b23c7bdd6c44c1fb95d",
-  "turn": "s17.text.129"
+  "sha": "a320c1e4549d9f1a179aa0de53c99e8947f1af59",
+  "turn": "s17.text.130"
  },
  "wiki": {
   "index": "memory/INDEX.md",
-  "present": {
-   "western_nest_young_courier": "memory/npc/western_nest_young_courier.md"
-  },
+  "present": {},
   "rule": "О персонаже, месте, вещи — его страница memory/; нет черты — не выдумывай.",
   "scene": "memory/SCENE.md"
  },
@@ -980,7 +846,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 18822.0,
+    "minutes": 18814.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
