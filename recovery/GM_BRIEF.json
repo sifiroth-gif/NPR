@@ -61,20 +61,15 @@
    "turn": "s16.text.049"
   },
   {
-   "kind": "write",
-   "text": "Запись хода: повторно открыты recovery/GM_ONLY.json: страница уже в этом чате, перед ходом достаточно recovery/NEXT.json.",
-   "turn": "s17.text.068"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.068"
+   "turn": "s17.text.069"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.068",
+  "cursor": "s17.text.069",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -396,11 +391,11 @@
  "cursor": {
   "at": "0010-05-11T07:40:00",
   "date": "Вторник, 11 мая 1287 года",
-  "id": "s17.text.068",
+  "id": "s17.text.069",
   "place": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
   "time": "07:40"
  },
- "digest": "932e5f7a88bb193d57f4b5a04f2ec2ecac7c149c8ebf0ae08c753bb5bd33d304",
+ "digest": "9cfc4397f76c1f5a98e54bf78e55972ddfd9dea000c1c9d32df57a5d295572a4",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -526,17 +521,17 @@
    "value": 547.01
   },
   "dice": [
-   12,
-   6,
-   16,
-   11,
-   6,
-   7,
-   13,
-   17,
-   12,
+   20,
+   8,
    15,
+   13,
    3,
+   2,
+   11,
+   5,
+   7,
+   8,
+   14,
    3
   ],
   "last_fight": {
@@ -897,7 +892,7 @@
     "memory_file": "archive/npc-memory/shirame.json",
     "memory_total": 59,
     "name": "Сирамэ",
-    "seen": "s17.text.068",
+    "seen": "s17.text.069",
     "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
     "status": "present_profile",
     "tier": "deep",
@@ -998,7 +993,7 @@
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
     "memory_total": 118,
     "name": "Коюки",
-    "seen": "s17.text.068",
+    "seen": "s17.text.069",
     "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи.",
     "status": "present_profile",
     "tier": "deep"
@@ -1045,8 +1040,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "a82dd1cfb1cc1ddeae1f3b9d91517e6b98ad249c",
-  "turn": "s17.text.068"
+  "sha": "9467e0cfb871cad12e58e2e6b107c8c06d511767",
+  "turn": "s17.text.069"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1080,12 +1075,12 @@
    "shiki_save_jiraiya"
   ],
   "secret_topics": [
+   "vials",
    "visitor_claim",
    "ward_lock_broken",
    "willow_observer_employer",
    "yig_private_profile",
-   "yig_private_world",
-   "shiki_orochimaru_consultation_request_s17"
+   "yig_private_world"
   ],
   "secrets_in": "recovery/GM_ONLY.json",
   "thread_sources": "memory/INDEX.md",
