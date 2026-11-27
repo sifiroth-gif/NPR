@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.037: Какаши Хатакэ (`npc/kakashi`), Конан (`npc/konan`)
 - s17.text.036: Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`), Котэцу Хаганэ (`npc/kotetsu`), Изумо Камидзуки (`npc/izumo`)
 - s17.text.035: Цунадэ (`npc/tsunade`), Какаши Хатакэ (`npc/kakashi`), Гэнма Ширануи (`npc/genma`), Райдо Намиаси (`npc/raido`), Иваши Татами (`npc/iwashi`)
 - s17.text.034: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), Инспектор закрытого отдела (`npc/kiri_archive_observer_s16`)
@@ -59,4 +60,3 @@
 - s16.text.120: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s16.text.119: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s16.text.118: Данзо Шимура (`npc/danzo`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
-- s16.text.117: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
