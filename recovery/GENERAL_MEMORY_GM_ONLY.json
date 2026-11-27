@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.015",
+  "cursor": "s18.text.016",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -920,13 +920,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.015"
+          "seen": "s18.text.016"
         }
       ],
       "sources": [
         "recovery/cast/danzo.json",
         "recovery/HOT.json",
-        "s18.text.015"
+        "s18.text.016"
       ]
     },
     "deidara": {
@@ -2252,7 +2252,7 @@
       "projections": [
         {
           "role": "Акацуки",
-          "seen": "s18.text.015",
+          "seen": "s18.text.016",
           "state": "Гендзюцу снято, открыл глаза, речь и основные реакции сохранены; голова по-прежнему отдельно от тела под охраной и наблюдением."
         },
         {
@@ -2262,7 +2262,8 @@
       ],
       "sources": [
         "recovery/cast/hidan.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s18.text.016"
       ]
     },
     "hiraishin_mark_orochimaru_lab_s17": {
@@ -8151,14 +8152,15 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.015",
+        "s18.text.016",
         "s18.text.008",
         "s18.text.009",
         "s18.text.010",
         "s18.text.011",
         "s18.text.012",
         "s18.text.013",
-        "s18.text.014"
+        "s18.text.014",
+        "s18.text.015"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -21131,7 +21133,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 55,
+      "mention_count": 56,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21139,13 +21141,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-14T13:12:00",
-          "excerpt": "этот короткий смешок прозвучал отчётливее, чем в обыкновенном помещении. Данзо слегка наклонил голову, а Шизунэ перестала перелистывать принесённый дежурным медиком журнал. **Мугами Шики:** — я все думал и думал....ваши рассуждения, они в посылке очень подходя",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.013"
         },
         {
           "at": "0010-05-14T13:13:00",
@@ -21160,11 +21155,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.015"
+        },
+        {
+          "at": "0010-05-14T13:17:00",
+          "excerpt": "необходимости считать человека вершиной природы, чтобы ставить его интересы выше интересов остальных существ. Шизунэ собрала журналы наблюдения. Прижимая их к груди, она остановилась рядом с Цунадэ, оставив между собой и Шики чуть больше пространства, чем треб",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.015",
+          "seen": "s18.text.016",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -21174,7 +21176,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s18.text.015"
+        "s18.text.016"
       ]
     },
     "signalshchik": {
@@ -22171,7 +22173,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 142,
+      "mention_count": 143,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22179,13 +22181,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:12:00",
-          "excerpt": "с Орочимару, это сравнение стилей мысли исходя из посылок, но разных предпосылок. При упоминании Орочимару Цунадэ медленно скрестила руки на груди. У Данзо же не дрогнул ни один мускул лица. **Данзо Шимура:** — Я достаточно хорошо знаком с образом мышления Оро",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.013"
         },
         {
           "at": "0010-05-14T13:13:00",
@@ -22200,11 +22195,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.015"
+        },
+        {
+          "at": "0010-05-14T13:17:00",
+          "excerpt": "лед. **Данзо Шимура:** — Природа не наделяет человека особым положением. Он добился его самостоятельно. Цунадэ внимательно посмотрела на старика. **Данзо Шимура:** — Существуют существа, превосходящие человека по продолжительности жизни, физической силе и объё",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.016"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.015",
+          "seen": "s18.text.016",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22214,7 +22216,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s18.text.015"
+        "s18.text.016"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23104,5 +23106,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1652
+  "source_turns_indexed": 1653
 }
