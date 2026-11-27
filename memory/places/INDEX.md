@@ -27,10 +27,10 @@
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 17 ход(ов), s14–s16
 - Страна Травы, северные предгорья у границы со Страной Водопадов · `places/strana-travy-severnye-predgorya-u-granitsy-so-stranoy-vodopa` · 16 ход(ов), s13–s13
 - Сунагакуре, гостевой корпус · `places/sunagakure-gostevoy-korpus` · 16 ход(ов), s12–s12
+- Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 15 ход(ов), s16–s17
 - Кусагакуре, Управление печатей · `places/kusagakure-upravlenie-pechatey` · 15 ход(ов), s03–s08
 - Полигон №44, Лес смерти · `places/poligon-n44-les-smerti` · 15 ход(ов), s01–s01
 - Страна Травы, северный тракт · `places/strana-travy-severnyy-trakt` · 15 ход(ов), s12–s13
-- Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 14 ход(ов), s16–s17
 - Северная граница Страны Рек, тренировочная площадка убежища Орочимару · `places/severnaya-granitsa-strany-rek-trenirovochnaya-ploshchadka-ub` · 14 ход(ов), s15–s15
 - Страна Огня, пункт выплаты наград · `places/strana-ognya-punkt-vyplaty-nagrad` · 14 ход(ов), s15–s15
 - Конохагакуре, тихий двор за тренировочными площадками · `places/konokhagakure-tikhiy-dvor-za-trenirovochnymi-ploshchadkami` · 13 ход(ов), s15–s15
