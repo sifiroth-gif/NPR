@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.047",
+  "cursor": "s18.text.048",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -13110,7 +13110,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.047",
+        "s18.text.048",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13125,7 +13125,8 @@
         "s18.text.043",
         "s18.text.044",
         "s18.text.045",
-        "s18.text.046"
+        "s18.text.046",
+        "s18.text.047"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -22612,7 +22613,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 131,
+      "mention_count": 132,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22620,13 +22621,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T17:54:00",
-          "excerpt": "e=\"xs\">Пятница, 14 мая 1287 года · 17:54</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — Да. Коюки довольно качнула головой. **Коюки:** — Тогда я попрошу Сирамэ рассказать мне о морских змеях. Вдруг мы их встретим! Она быстро развернулась и направилась ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.045"
         },
         {
           "at": "0010-05-14T17:57:00",
@@ -22641,11 +22635,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.047"
+        },
+        {
+          "at": "0010-05-14T17:59:30",
+          "excerpt": "14 мая 1287 года · 17:59</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — Только холодная. **Коюки:** — Не холоднее камней, на которых мы спим. Она приблизилась к краю рукава. Малыш высунул голову навстречу знакомой змее. Коюки коснулась его мордочки, но",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.048"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.047",
+          "seen": "s18.text.048",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22655,7 +22656,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.047"
+        "s18.text.048"
       ]
     },
     "white_snake_sage": {
@@ -23218,5 +23219,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1684
+  "source_turns_indexed": 1685
 }
