@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.124",
+  "cursor": "s17.text.125",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.124:0": {
-      "aliases": [
-        "canon:s17.text.124:0",
-        "s17.text.124: сообщение Цунадэ со ссылкой на дозор о встрече с Саске на дороге у северной границы Страны Рек 13.05, без столкновения. Это донесение, не личное наблюдение Шики. Нару"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.124:0",
-      "kind": "canon",
-      "label": "s17.text.124: сообщение Цунадэ со ссылкой на дозор о встрече с Саске на дороге у северной границы Страны Рек 13.05, без столкновения. Это донесение, не личное наблюдение Шики. Нару",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.124"
       ]
     },
     "captive_guard": {
@@ -2621,13 +2605,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.124",
+          "seen": "s17.text.125",
           "state": "Покинул учебный павильон."
         }
       ],
       "sources": [
         "recovery/cast/iwashi.json",
-        "s17.text.124"
+        "s17.text.125"
       ]
     },
     "izumo": {
@@ -2666,13 +2650,13 @@
       "projections": [
         {
           "role": "Тюнин Листа, отряд Асумы",
-          "seen": "s17.text.124",
+          "seen": "s17.text.125",
           "state": "Остаётся возле монаха после гемостаза."
         }
       ],
       "sources": [
         "recovery/cast/izumo.json",
-        "s17.text.124"
+        "s17.text.125"
       ]
     },
     "jiraiya": {
@@ -3986,8 +3970,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kotetsu.json",
-        "s17.text.124"
+        "recovery/cast/kotetsu.json"
       ]
     },
     "kurama": {
@@ -5825,7 +5808,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 230,
+      "mention_count": 231,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5833,13 +5816,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:36:00",
-          "excerpt": "size=\"xs\">Четверг, 13 мая 1287 года · 11:36</text> Шики улыбнулся. **Мугами Шики:** — пойду я удачи Орочимару ответил лёгким наклоном головы. На столе возле его руки остался запечатанный футляр с письмом Джирайе. **Орочимару:** — До встречи, Шики-кун. В следую",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.120"
         },
         {
           "at": "0010-05-13T11:38:00",
@@ -5854,6 +5830,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.124"
+        },
+        {
+          "at": "0010-05-13T18:23:00",
+          "excerpt": "то голос исходит от совершенно безжизненного предмета. **Цунадэ:** — Наруто я скажу правду. Саске ушёл от Орочимару по собственному решению. Но это ещё не означает, что он собирается вернуться домой. Хокагэ тяжело выдохнула. Шорох бумаги прекратился, и некотор",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.125"
         }
       ],
       "projections": [
@@ -12222,11 +12205,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.124",
+        "s17.text.125",
         "s16.text.103",
         "s17.text.067",
         "s17.text.068",
-        "s17.text.070"
+        "s17.text.070",
+        "s17.text.124"
       ]
     },
     "place:78ddeb328c3d254d": {
@@ -19185,8 +19169,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/raido.json",
-        "s17.text.124"
+        "recovery/cast/raido.json"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -20256,8 +20239,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/sasuke.json",
-        "s17.text.124"
+        "recovery/cast/sasuke.json"
       ]
     },
     "sayu": {
@@ -21134,7 +21116,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 44,
+      "mention_count": 45,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -21142,13 +21124,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-09T18:14:00",
-          "excerpt": "ой лампы падал на её лицо снизу, подчёркивая усталость, которую обычно скрывала уверенная манера держаться. Шизунэ потянулась за журналом, но Цунадэ остановила её движением руки. **Цунадэ:** — Это пока записывать не нужно. Шизунэ убрала кисть в футляр. **Цунад",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.057"
         },
         {
           "at": "0010-05-09T18:15:00",
@@ -21163,6 +21138,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.059"
+        },
+        {
+          "at": "0010-05-13T18:23:00",
+          "excerpt": "лышалось движение бумаг. Цунадэ, судя по звуку, отодвинула приёмник и ответила кому-то за дверью. **Цунадэ:** — Шизунэ, попроси Какаши зайти ко мне сегодня вечером. Издалека донёсся утвердительный ответ Шизунэ. Застучали удаляющиеся шаги. Цунадэ не прервала св",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.125"
         }
       ],
       "projections": [
@@ -22232,7 +22214,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 118,
+      "mention_count": 119,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22240,13 +22222,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T11:29:00",
-          "excerpt": "оём восстановлении не только Джирайе? Золотистые глаза саннина поднялись от чистого листа. **Орочимару:** — Что сказала Цунадэ? **Ход Шики.** Шики доставил письмо и назвал посредников. Орочимару прочитал письмо, принял условия Сирамэ, предложил встречу 16 мая ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.117"
         },
         {
           "at": "0010-05-13T11:33:00",
@@ -22261,17 +22236,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.124"
+        },
+        {
+          "at": "0010-05-13T18:23:00",
+          "excerpt": ", но он не оставлял мне способов связи с ним На другом конце связи наступила пауза. Шики слышал, как Цунадэ переложила несколько листов, затем негромко попросила кого-то подождать за дверью. **Цунадэ:** — Понятно. Значит, инициатива остаётся за ним. Раздался з",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.125"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.124",
+          "seen": "s17.text.125",
           "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
         "recovery/cast/tsunade.json",
-        "s17.text.124"
+        "s17.text.125"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22568,7 +22550,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 109,
+      "mention_count": 110,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22576,13 +22558,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-13T11:49:00",
-          "excerpt": "r=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:49</text> **Мугами Шики:** — Давай ка сейчас Коюки повела Шики вниз, туда, где вырубленные человеком ступени постепенно уступали место естественным каменным уступам. Воздух становился влажнее. На выступах ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.122"
         },
         {
           "at": "0010-05-13T11:51:00",
@@ -22597,11 +22572,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.124"
+        },
+        {
+          "at": "0010-05-13T18:23:00",
+          "excerpt": "ся двери. Посторонние голоса стали едва различимы. **Цунадэ:** — Не стану просить тебя разыскивать его. Коюки подползла ближе к приёмнику. Она осторожно приблизила мордочку к его поверхности, выпустила язык и отстранилась, обнаружив, что голос исходит от совер",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.125"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.124",
+          "seen": "s17.text.125",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22611,7 +22593,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s17.text.124"
+        "s17.text.125"
       ]
     },
     "white_snake_sage": {
@@ -23174,5 +23156,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1628
+  "source_turns_indexed": 1629
 }

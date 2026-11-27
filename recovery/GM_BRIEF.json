@@ -4,6 +4,15 @@
   "soon": [
    {
     "due": "0010-05-14T12:00:00",
+    "if_unopposed": "Наруто узнает об уходе Саске; Какаши и Цунадэ определят реакцию Конохи с учётом его поведения.",
+    "name": "Цунадэ",
+    "next": "Обсудить с Какаши вечером порядок разговора с Наруто и его дальнейшие занятия; затем лично сообщить Наруто известные факты.",
+    "npc": "tsunade",
+    "overdue": false,
+    "plan": "inform_naruto_sasuke_departure_s17"
+   },
+   {
+    "due": "0010-05-14T12:00:00",
     "if_unopposed": "Цунадэ получит обновлённый закрытый отчёт и перечень проверенных ограничений.",
     "name": "Шизунэ",
     "next": "Сверить новые протоколы с журналом и представить Цунадэ отклонения, отдельно обсудить ограничения самостоятельных испытаний с Какаши.",
@@ -52,20 +61,20 @@
    "turn": "s16.text.049"
   },
   {
-   "kind": "review",
-   "text": "tsunade: offscreen knows+ requires knowledge_events with source/channel",
-   "turn": "s17.text.124"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.124"
+   "turn": "s17.text.125"
+  },
+  {
+   "kind": "will",
+   "text": "«Коюки» 4 ход(ов) рядом с Шики только отвечает. Его цель: «Продолжать помогать детёнышам и наблюдать их обучение без принуждения.». Есть ли у него повод сделать свой ход — надавить, солгать, сторговаться, ошибиться, пойти против Шики? Повода нет — ждать тоже его решение.",
+   "turn": "s17.text.125"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.124",
+  "cursor": "s17.text.125",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -75,9 +84,10 @@
   "focus": [
    "western_nest_young_courier",
    "place:78c721f461c18af2",
+   "shizune",
    "tsunade"
   ],
-  "focus_bytes": 1233,
+  "focus_bytes": 1574,
   "mode": "scene",
   "needs_primary_source_review": false,
   "omitted_critical": [],
@@ -93,92 +103,25 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
-    "sage.permanent",
-    "sage.poison",
-    "shunshin.zero",
-    "weapon.sumi",
-    "combat.scalpel",
-    "element.lightning",
-    "fusion.development",
-    "genome.fluid",
-    "medical.diagnosis",
-    "medical.field",
-    "nemera.agency",
-    "nemera.transfer",
-    "research.postmortem",
-    "research.reproduce",
-    "sage.summon"
+    "nemera.agency"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-05-13T18:21:00",
-    "chakra": {
-     "at": "0010-05-13T18:21:00",
-     "last": {
-      "spent": 1.0,
-      "turn": "s17.text.122",
-      "what": [
-       "Контактная медицинская чакровая диагностика яйца, без лечения и активации глаз"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 600.0,
-     "why": "s17.text.088: полное погружение ×5, с 11:53 до 18:21 = 6 ч 28 мин ×50/ч = 323.33; с 276.94 и базовым восстановлением на подъёме итог достигает потолка 600."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {},
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/SHIKI.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access"
+    "intent"
    ],
    "routes": [
-    "medical",
-    "dialogue",
-    "travel",
-    "items"
+    "dialogue"
    ],
    "unavailable": [
-    "fusion.development",
-    "nemera.agency",
-    "nemera.transfer"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -441,13 +384,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T18:21:00",
+  "at": "0010-05-13T18:23:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.124",
+  "id": "s17.text.125",
   "place": "Страна Рек, южные известняковые горы, убежище Шики, жилые помещения",
-  "time": "18:21"
+  "time": "18:23"
  },
- "digest": "0f91259a29ced44aa6a266a98dcc49138515d2c10c7b656288a2efce2b4153ea",
+ "digest": "43acebbcad766d6fc29379a86c208fd45c731c22d302318c61eda99d220d0e9f",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -573,18 +516,18 @@
    "value": 600.0
   },
   "dice": [
-   20,
-   6,
-   19,
-   16,
-   11,
-   4,
    9,
    1,
-   19,
-   17,
+   2,
+   7,
    8,
-   12
+   15,
+   15,
+   20,
+   8,
+   6,
+   6,
+   14
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -639,6 +582,23 @@
      "scene_anchor"
     ],
     "facts": [],
+    "id": "shizune",
+    "kind": "npc",
+    "label": "Шизунэ",
+    "operational_cues": {
+     "source": "recovery/cast/shizune.json",
+     "status": "projection_not_authoritative_fact",
+     "values": {
+      "state": "Вручила подписанный допуск, организован проводник."
+     }
+    },
+    "status": "no_verified_facts"
+   },
+   {
+    "channels": [
+     "scene_anchor"
+    ],
+    "facts": [],
     "id": "tsunade",
     "kind": "npc",
     "label": "Цунадэ",
@@ -658,7 +618,7 @@
   "omitted_priority_entities": [],
   "rule": "L0 identity/facts; L1 projections/sources; L2 played excerpts. Neither co-occurrence nor projections establish canon.",
   "schema": "npr-general-memory/1",
-  "total_matched": 3
+  "total_matched": 4
  },
  "guards": {
   "clock_deadlines_are_real": true,
@@ -673,10 +633,10 @@
   "due": null,
   "npcs": {
    "western_nest_young_courier": {
-    "does": "Дождалась ухода молодой змеи, затем приблизилась и выслушала вызов.",
+    "does": "Осмотрела пластину, осталась слушать разговор.",
     "lever": "Принудительный вызов и потеря права вернуться.",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Местные змеи ещё осторожны с непривычной неподвижностью Шики.",
+    "reads": "Любопытна связь без присутствия собеседника.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -700,13 +660,13 @@
   "worn": []
  },
  "last": {
-  "gm_tail": " установилась со стороны отправителя, послышался голос Хокагэ. На заднем плане негромко переговаривались шиноби.\n\n**Цунадэ:** — Шики, у меня новости о Саске. Дозор сообщил о встрече с ним на дороге у северной границы Страны Рек. Он действительно покинул убежище. По донесению, столкновения не произошло.\n\nНа некоторое время голос Цунадэ исчез за шел…",
-  "player": "Да, я пойду отдыхать #мкдитация для восстановления чакры полностью и дерни сюжет#",
+  "gm_tail": "мени Конохи. Сообщать мне содержание ваших разговоров я тебя не обязываю.\n\nСнова послышалось движение бумаг. Цунадэ, судя по звуку, отодвинула приёмник и ответила кому-то за дверью.\n\n**Цунадэ:** — Шизунэ, попроси Какаши зайти ко мне сегодня вечером.\n\nИздалека донёсся утвердительный ответ Шизунэ. Застучали удаляющиеся шаги. Цунадэ не прервала связь…",
+  "player": "#по комсуникатору# да говорил, оставил ему способ связаться со мной, но он не оставлял мне способов связи с ним",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 124,
+   "appearances": 125,
    "facets": 3,
    "need": 5,
    "npc": "western_nest_young_courier",
@@ -913,7 +873,7 @@
     {
      "at": "0010-05-13T18:21:00",
      "line": "Шики полностью восстановил чакру глубокой медитацией. Цунадэ связалась по пластине: дозор сообщил о Саске на дороге, без столкнов…",
-     "sha256": "f161fbc133f596308d7d1bcb6ed5f6d4cb0afba48ccb4a3ca9748f62979bec94",
+     "sha256": "cd523de2e232f7427de29673dc85b00047bff62d8da0e89deba73a7c8bd6c781",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.124"
@@ -941,19 +901,19 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.123",
-      "what": "Коюки перевела осторожный прогноз. Мать оставила яйцо в кладке, отвела детёныша и поправила гнездо. Коюки сообщила о запасной сухой полости и предложила наблюдение."
+      "turn": "s17.text.124",
+      "what": "Шики полностью восстановил чакру глубокой медитацией. Цунадэ связалась по пластине: дозор сообщил о Саске на дороге, без столкновения; спрашивает о канале связи и решении относительно Наруто."
      },
      {
       "ch": "present",
-      "turn": "s17.text.124",
-      "what": "Шики полностью восстановил чакру глубокой медитацией. Цунадэ связалась по пластине: дозор сообщил о Саске на дороге, без столкновения; спрашивает о канале связи и решении относительно Наруто."
+      "turn": "s17.text.125",
+      "what": "Шики пояснил односторонность связи с Саске. Цунадэ не просит его искать, намерена сообщить Наруто об уходе Саске, вызвала Какаши на вечер и спросила о доступности Шики для связи."
      }
     ],
     "memory_file": "archive/npc-memory/western_nest_young_courier.json",
-    "memory_total": 124,
+    "memory_total": 125,
     "name": "Коюки",
-    "seen": "s17.text.124",
+    "seen": "s17.text.125",
     "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи.",
     "status": "present_profile",
     "tier": "deep"
@@ -963,19 +923,19 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.123",
-   "line": "Коюки перевела осторожный прогноз. Мать оставила яйцо в кладке, отвела детёныша и поправила гнездо. Коюки сообщила о запасной сухой полости и предложила наблюдение."
-  },
-  {
    "id": "s17.text.124",
    "line": "Шики полностью восстановил чакру глубокой медитацией. Цунадэ связалась по пластине: дозор сообщил о Саске на дороге, без столкновения; спрашивает о канале связи и решении относительно Наруто."
+  },
+  {
+   "id": "s17.text.125",
+   "line": "Шики пояснил односторонность связи с Саске. Цунадэ не просит его искать, намерена сообщить Наруто об уходе Саске, вызвала Какаши на вечер и спросила о доступности Шики для связи."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики в жилом помещении, Коюки возле двери; Цунадэ на связи удалённо.",
-  "pressure": "Саске действует самостоятельно, Цунадэ выбирает дальнейшую политику; Шики может ответить или отказаться.",
-  "situation": "Шики завершил 6 ч 28 мин глубокой медитации, запас 600. Коюки рядом. Цунадэ инициировала связь через личную пластину: дозор сообщил о встрече с Саске на дороге у северной границы Страны Рек, без столкновения; новую операцию по возвращению не назначала, Наруто ещё не знает. Спрашивает о способе связи и что сообщить Наруто."
+  "positions": "Шики и Коюки в жилом помещении; Цунадэ удалённо на связи.",
+  "pressure": "Цунадэ ожидает ответа о доступности Шики; никаких обязательств он пока не принял.",
+  "situation": "По приёмнику Шики сообщил Цунадэ, что Саске имеет способ связаться с ним, но обратного способа не оставил. Цунадэ не просит искать Саске, намерена сообщить Наруто о его самостоятельном уходе; сообщила о частичном прогрессе Наруто в контроле ветра и нетерпении, попросила Шизунэ пригласить Какаши вечером. Спросила, будет ли Шики доступен для связи. Коюки рядом слышит разговор."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1000,8 +960,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "625cdb0427509d6a29fe2ebdc3b55c2e5c9fb6a3",
-  "turn": "s17.text.124"
+  "sha": "b3b645eafabefbf9db6db37d9a192fdbf7cefcec",
+  "turn": "s17.text.125"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1017,7 +977,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 19890.0,
+    "minutes": 19888.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
