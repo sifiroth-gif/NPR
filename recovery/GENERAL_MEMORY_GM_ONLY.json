@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.119",
+  "cursor": "s17.text.120",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5806,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 227,
+      "mention_count": 228,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5814,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:29:00",
-          "excerpt": "ния не будет <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:29</text> ### Убежище Орочимару. Лаборатория **Мугами Шики:** — Да. Шики передал Орочимару лакированный футляр. Саннин принял его обеими руками. Большим пальцем провёл по оттиску лич",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.117"
         },
         {
           "at": "0010-05-13T11:33:00",
@@ -5835,21 +5828,24 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.119"
+        },
+        {
+          "at": "0010-05-13T11:36:00",
+          "excerpt": "size=\"xs\">Четверг, 13 мая 1287 года · 11:36</text> Шики улыбнулся. **Мугами Шики:** — пойду я удачи Орочимару ответил лёгким наклоном головы. На столе возле его руки остался запечатанный футляр с письмом Джирайе. **Орочимару:** — До встречи, Шики-кун. В следую",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.120"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.119",
-          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
-        },
-        {
+          "seen": "s17.text.120",
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "recovery/HOT.json",
-        "s17.text.119"
+        "s17.text.120"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -12616,7 +12612,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.119",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -12629,7 +12624,8 @@
         "s17.text.102",
         "s17.text.116",
         "s17.text.117",
-        "s17.text.118"
+        "s17.text.118",
+        "s17.text.119"
       ]
     },
     "place:810392b04745def4": {
@@ -13005,6 +13001,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.120",
         "s17.text.066"
       ]
     },
@@ -21009,7 +21006,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 103,
+      "mention_count": 104,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -21017,13 +21014,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:26:00",
-          "excerpt": "то письмо доставлю я, и передам Орочимару имена тех кто согласился помочь, в вы пока осмотрите место. Сирамэ подхватила футляр зубами за кожаную петлю и протянула его Шики. На крышке ещё сохранялся свежий оттиск печати Джирайи. Змея держала футляр осторожно, н",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.115"
         },
         {
           "at": "0010-05-13T11:29:00",
@@ -21038,6 +21028,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.118"
+        },
+        {
+          "at": "0010-05-13T11:36:00",
+          "excerpt": "Шики. Влажный след, оставленный её телом на камне, быстро высыхал в более тёплом воздухе жилых помещений. **Коюки:** — А Сирамэ с тобой не вернулась? **Ход Шики.** Шики попрощался и успешно переместился Хирайшином к домашней метке. Коюки встретила его, рассказ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.120"
         }
       ],
       "projections": [
@@ -22539,13 +22536,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 104,
+      "mention_count": 105,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22553,13 +22551,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-10T20:45:00",
-          "excerpt": "ые формулы. К вечеру утомление от освоения Хирайшина прошло. В нижних пещерах продолжалась своя жизнь. Коюки несколько раз поднималась к жилым помещениям, однако не стала беспокоить Шики. Семь живых яиц оставались под присмотром тёмной змеи. Никаких срочных со",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.067"
         },
         {
           "at": "0010-05-11T07:40:00",
@@ -22574,16 +22565,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.071"
+        },
+        {
+          "at": "0010-05-13T11:36:00",
+          "excerpt": "озле лестницы, ведущей к естественным пещерам. Он начал приближаться. На верхней ступени показалась белая голова Коюки. Змея замерла, увидев Шики, затем быстро преодолела оставшееся расстояние. На её чешуе блестели мелкие капли воды, а на боку прилипло несколь",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.120"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.071",
+          "seen": "s17.text.120",
+          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+        },
+        {
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s17.text.120"
       ]
     },
     "white_snake_sage": {
@@ -23146,5 +23149,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1623
+  "source_turns_indexed": 1624
 }
