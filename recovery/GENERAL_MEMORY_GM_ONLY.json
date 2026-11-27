@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.085",
+  "cursor": "s17.text.086",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2826,8 +2826,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json",
-        "s17.text.085"
+        "recovery/cast/kabuto.json"
       ]
     },
     "kabuto_letter_0416": {
@@ -3695,27 +3694,6 @@
       ],
       "sources": [
         "s16.text.087"
-      ]
-    },
-    "kiri_shiki_sample_set_s16": {
-      "aliases": [
-        "kiri shiki sample set s16"
-      ],
-      "facts": [],
-      "id": "kiri_shiki_sample_set_s16",
-      "kind": "item",
-      "label": "kiri shiki sample set s16",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "ao",
-          "since": "s16.text.086",
-          "turn": "s16.text.086"
-        }
-      ],
-      "sources": [
-        "s16.text.086"
       ]
     },
     "kiri_ship_security_officer": {
@@ -5785,7 +5763,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 196,
+      "mention_count": 197,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5793,13 +5771,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T20:55:00",
-          "excerpt": "Нет, не сможет, я вернул ему его. Мастеру: канон для Орочимару: До модификаций тела Орочимару (https://www.google.com/search?kgmid=%2Fm%2F091dhl&q=%D1%87%D1%82%D0%BE+%D1%83%D0%BC%D0%B5%D0%BB+%D0%9E%D1%80%D0%BE%D1%87%D0%B8%D0%BC%D0%B0",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.083"
         },
         {
           "at": "0010-05-12T20:56:00",
@@ -5814,17 +5785,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.085"
+        },
+        {
+          "at": "0010-05-13T07:58:00",
+          "excerpt": "ления# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 04:58–07:58</text> ### Убежище Орочимару. Палата наблюдения **Мугами Шики:** — Лучше, надо восстановить чакру. Шики сел, погрузившись в медитацию. Постепенно дыхание стало размеренным. Восста",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.086"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.085",
+          "seen": "s17.text.086",
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+        },
+        {
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
         "recovery/cast/orochimaru.json",
-        "s17.text.085"
+        "recovery/HOT.json",
+        "s17.text.086"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -8028,11 +8010,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.085",
+        "s17.text.086",
         "s17.text.081",
         "s17.text.082",
         "s17.text.083",
-        "s17.text.084"
+        "s17.text.084",
+        "s17.text.085"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -20868,7 +20851,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 95,
+      "mention_count": 96,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20876,13 +20859,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T20:55:00",
-          "excerpt": "вернулся к Шики. **Саске Учиха:** — Ты говорил, что я смогу обратиться к тебе через змей. Это предложение ещё в силе? Сирамэ подняла голову, внимательно посмотрев на Учиху. *** **Мастер:** принимаю приведённый канон Орочимару. Его возвращение к исходной физиол",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.083"
         },
         {
           "at": "0010-05-12T20:56:00",
@@ -20897,26 +20873,27 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.085"
+        },
+        {
+          "at": "0010-05-13T07:58:00",
+          "excerpt": "й энергией. Природная энергия свободно циркулировала в преобразованном организме драконьего отшельника. Сирамэ спустилась с койки и бесшумно покинула палату. Спустя три часа за дверью послышались шаги. На пороге появился Орочимару. Теперь он выглядел существен",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.086"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.085",
+          "seen": "s17.text.086",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
-          "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
-        },
-        {
-          "fears": "Удержание людьми или насильственное исследование Немерой",
-          "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
         }
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "recovery/HOT.json",
-        "s17.text.085"
+        "s17.text.086"
       ]
     },
     "shiranami": {
@@ -21920,27 +21897,6 @@
       ],
       "sources": [
         "s16.text.134"
-      ]
-    },
-    "thread:kiri_bingo_negotiations": {
-      "aliases": [
-        "thread:kiri bingo negotiations",
-        "kiri bingo negotiations",
-        "kiri_bingo_negotiations"
-      ],
-      "facts": [],
-      "id": "thread:kiri_bingo_negotiations",
-      "kind": "thread",
-      "label": "kiri bingo negotiations",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "state": "Подписано 27.04 13:51, действует до 27.05 13:51. Образцы у Ао, результат и повторные переговоры ожидаются; розыск и выплаты приостановлены, старые копии Бинго ещё могут циркулировать."
-        }
-      ],
-      "sources": [
-        "s16.text.086"
       ]
     },
     "thread:shiki_confidentiality": {
@@ -22948,13 +22904,6 @@
       "type": "held_by"
     },
     {
-      "from": "kiri_shiki_sample_set_s16",
-      "source": "s16.text.086",
-      "status": "projected",
-      "to": "ao",
-      "type": "held_by"
-    },
-    {
       "from": "kiri_sample_receipt_s16",
       "source": "s16.text.087",
       "status": "projected",
@@ -22991,5 +22940,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1591
+  "source_turns_indexed": 1592
 }
