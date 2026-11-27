@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.107",
+  "cursor": "s17.text.108",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.107:0": {
-      "aliases": [
-        "canon:s17.text.107:0",
-        "s17.text.107 OOC: игрок вновь требует больше описаний; сохранять действующие литературные директивы о плотности сцены, окружении, паузах и видимых реакциях NPC. Игрок разрешил в эт"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.107:0",
-      "kind": "canon",
-      "label": "s17.text.107 OOC: игрок вновь требует больше описаний; сохранять действующие литературные директивы о плотности сцены, окружении, паузах и видимых реакциях NPC. Игрок разрешил в эт",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.107"
       ]
     },
     "captive_guard": {
@@ -2682,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 144,
+      "mention_count": 145,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2690,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T10:45:00",
-          "excerpt": "крышке футляра. Она некоторое время смотрела на него, затем убрала обратно в ящик. **Цунадэ:** — Вчера Джирайя закончил проверку нескольких старых разведывательных контактов. О новом отъезде он мне не сообщал. Могу послать за ним. Хокагэ откинулась на спинку к",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.104"
         },
         {
           "at": "0010-05-13T11:07:00",
@@ -2711,11 +2688,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.107"
+        },
+        {
+          "at": "0010-05-13T11:13:00",
+          "excerpt": "его целей отказывается от этого, а он сам при невозможности, продолжает биться головой о эту стену. Джирайя задумчиво потёр подбородок. За окном ветер перебирал молодую листву деревьев, и по стене кабинета скользили размытые тени ветвей. **Джирайя:** — Когда м",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.108"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.107",
+          "seen": "s17.text.108",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2725,7 +2709,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.107"
+        "s17.text.108"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5805,7 +5789,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 216,
+      "mention_count": 217,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5813,13 +5797,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T10:46:00",
-          "excerpt": "аний. Цунадэ повернулась к Шики. **Цунадэ:** — Хорошо. Дождёмся Джирайю. **Ход Шики.** Шики сообщил, что спас Орочимару, отложил подробности до прихода Джирайи, извинился за обход караула. Цунадэ направила посыльного за Джирайей и велела уведомить старшего кар",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.105"
         },
         {
           "at": "0010-05-13T11:07:00",
@@ -5834,6 +5811,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.107"
+        },
+        {
+          "at": "0010-05-13T11:13:00",
+          "excerpt": "можности, продолжает биться головой о эту стену. Кстати Цунадэ-сама, Учиха Саске официально покинул Орочимару <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:13</text> **Мугами Шики:** — Разочарованным, но шаг к принятию того что цели его мало",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.108"
         }
       ],
       "projections": [
@@ -11547,7 +11531,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.107",
+        "s17.text.108",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11569,7 +11553,8 @@
         "s17.text.103",
         "s17.text.104",
         "s17.text.105",
-        "s17.text.106"
+        "s17.text.106",
+        "s17.text.107"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20180,7 +20165,7 @@
       "id": "sasuke",
       "kind": "npc",
       "label": "Учиха Саске",
-      "mention_count": 1,
+      "mention_count": 2,
       "mentions": [
         {
           "at": "0001-07-01T14:18:00",
@@ -20188,6 +20173,13 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.011"
+        },
+        {
+          "at": "0010-05-13T11:13:00",
+          "excerpt": "ся от этого, а он сам при невозможности, продолжает биться головой о эту стену. Кстати Цунадэ-сама, Учиха Саске официально покинул Орочимару <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:13</text> **Мугами Шики:** — Разочарованным, но шаг к ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.108"
         }
       ],
       "projections": [
@@ -22151,7 +22143,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 108,
+      "mention_count": 109,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22159,13 +22151,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-13T10:46:00",
-          "excerpt": "обно расскажу вам о вашем друге когда будет джирая. И да прошу прощения караульных я не предупредил. Цунадэ не сразу ответила. При словах «вашему другу» она опустила глаза. Её взгляд остановился на чернильной полосе, перечеркнувшей служебный документ. **Цунадэ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.105"
         },
         {
           "at": "0010-05-13T11:07:00",
@@ -22180,11 +22165,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.107"
+        },
+        {
+          "at": "0010-05-13T11:13:00",
+          "excerpt": "ей отказывается от этого, а он сам при невозможности, продолжает биться головой о эту стену. Кстати Цунадэ-сама, Учиха Саске официально покинул Орочимару <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:13</text> **Мугами Шики:** — Разочарованн",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.108"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.107",
+          "seen": "s17.text.108",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22194,7 +22186,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.107"
+        "s17.text.108"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23084,5 +23076,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1612
+  "source_turns_indexed": 1613
 }

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.108: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`)
 - s17.text.107: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), поправки игрока: 1
 - s17.text.106: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`)
 - s17.text.105: Цунадэ (`npc/tsunade`)
@@ -59,4 +60,3 @@
 - s17.text.051: поправки игрока: 1
 - s17.text.050: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.049: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), поправки игрока: 1
-- s17.text.048: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
