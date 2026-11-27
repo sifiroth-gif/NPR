@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.133",
+  "cursor": "s18.text.001",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2666,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 153,
+      "mention_count": 154,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:26:00",
-          "excerpt": "но быстрее. Только передай Орочимару, что я согласилась помогать с письмами, а не с его исследованиями. Джирайя негромко рассмеялся. **Джирайя:** — Удивительно, насколько хорошо его знают даже змеи. **Мугами Шики:** — а к вам как могу обращаться? Жаба выпустил",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.115"
         },
         {
           "at": "0010-05-13T11:26:00",
@@ -2695,6 +2688,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.118"
+        },
+        {
+          "at": "0010-05-14T12:28:00",
+          "excerpt": "тельного знака, обозначавшего предполагаемый общий источник чакры носителей Риннегана. **Цунадэ:** — Если Джирайя прав и мы имеем дело с управляемыми телами, уничтожение этих тел может ничего не решить. Она взяла карандаш, но не стала наносить новую отметку. Н",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.001"
         }
       ],
       "projections": [
@@ -10356,7 +10356,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.133",
+        "s18.text.001",
         "s15.text.193",
         "s15.text.194",
         "s15.text.195",
@@ -22175,7 +22175,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 127,
+      "mention_count": 128,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22183,13 +22183,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T12:18:00",
-          "excerpt": "/text> ### Конохагакуре. Кабинет Хокагэ Пространственная формула замкнулась на метке, лежащей перед Цунадэ. Известняковые стены убежища исчезли из поля зрения Шики, уступив место залитому дневным светом кабинету. На столе лежали две папки, свёрнутая карта Амэг",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.131"
         },
         {
           "at": "0010-05-14T12:26:00",
@@ -22204,11 +22197,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.133"
+        },
+        {
+          "at": "0010-05-14T12:28:00",
+          "excerpt": "нными делами. Живая деревня, каждый обитатель которой обладал собственным, неповторимым рисунком чакры. Цунадэ придвинула к карте лист с результатами разведки. Её ноготь остановился возле карандашного вопросительного знака, обозначавшего предполагаемый общий и",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.001"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.133",
+          "seen": "s18.text.001",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -22218,7 +22218,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.133"
+        "s18.text.001"
       ]
     },
     "unknown_masked_prisoner": {
@@ -23108,5 +23108,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1637
+  "source_turns_indexed": 1638
 }
