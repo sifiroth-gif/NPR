@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.044",
+  "cursor": "s18.text.045",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3742,8 +3742,7 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны",
-        "kiri_ship_security_officer"
+        "Шиноби корабельной охраны"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3791,8 +3790,7 @@
       ],
       "sources": [
         "recovery/cast/kiri_ship_security_officer.json",
-        "recovery/HOT.json",
-        "s18.text.044"
+        "recovery/HOT.json"
       ]
     },
     "kiri_transfer_carrier": {
@@ -13112,7 +13110,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.044",
+        "s18.text.045",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13124,7 +13122,8 @@
         "s18.text.040",
         "s18.text.041",
         "s18.text.042",
-        "s18.text.043"
+        "s18.text.043",
+        "s18.text.044"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -21137,7 +21136,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 105,
+      "mention_count": 106,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -21145,13 +21144,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-13T11:33:00",
-          "excerpt": "По игре: она не дала оценку но немного волновалась насчёт встречи и ещё Сирамэ прямо сейчас душе не вызывать. Она путешествует а гамасэйем до места их встречи <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:33</text> ### Убежище Орочи",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.118"
         },
         {
           "at": "0010-05-13T11:36:00",
@@ -21166,6 +21158,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.121"
+        },
+        {
+          "at": "0010-05-14T17:54:00",
+          "excerpt": "ек. Убежище Шики **Мугами Шики:** — Да. Коюки довольно качнула головой. **Коюки:** — Тогда я попрошу Сирамэ рассказать мне о морских змеях. Вдруг мы их встретим! Она быстро развернулась и направилась обратно к пещерам. Однако возле лестницы остановилась и посм",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.045"
         }
       ],
       "projections": [
@@ -22611,7 +22610,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 128,
+      "mention_count": 129,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22619,13 +22618,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T17:48:00",
-          "excerpt": "ответ Ао. Полагаю, Пятая Мидзукагэ захочет присутствовать лично. Но это пока моё предположение. У лестницы Коюки устроилась на каменном выступе. Последние лучи солнца уже покинули его, однако известняк ещё сохранял тепло. Белая змейка вытянулась вдоль края кам",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.042"
         },
         {
           "at": "0010-05-14T17:50:00",
@@ -22640,11 +22632,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.044"
+        },
+        {
+          "at": "0010-05-14T17:54:00",
+          "excerpt": "e=\"xs\">Пятница, 14 мая 1287 года · 17:54</text> ### Страна Рек. Убежище Шики **Мугами Шики:** — Да. Коюки довольно качнула головой. **Коюки:** — Тогда я попрошу Сирамэ рассказать мне о морских змеях. Вдруг мы их встретим! Она быстро развернулась и направилась ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.045"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.044",
+          "seen": "s18.text.045",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22654,7 +22653,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.044"
+        "s18.text.045"
       ]
     },
     "white_snake_sage": {
@@ -23217,5 +23216,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1681
+  "source_turns_indexed": 1682
 }
