@@ -42,10 +42,10 @@
 - Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 12 ход(ов), s18–s18
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
+- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 11 ход(ов), s18–s18
 - Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 11 ход(ов), s17–s17
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
-- Конохагакуре, тренировочный полигон №10 · `places/konokhagakure-trenirovochnyy-poligon-n10` · 10 ход(ов), s18–s18
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 9 ход(ов), s16–s16
