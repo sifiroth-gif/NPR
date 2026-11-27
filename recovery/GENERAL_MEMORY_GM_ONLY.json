@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.023",
+  "cursor": "s17.text.024",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 123,
+      "mention_count": 124,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:14:00",
-          "excerpt": "ни располагались вдоль его носа и под нижней губой. Его лицо Шики уже видел в воспоминаниях Хидана. Пэйн. Джирайя медленно приподнялся над трубой. Его губы беззвучно сложились в знакомое имя. Мужчина наверху остановился возле открытой двери. **Пэйн:** — Когда ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.021"
         },
         {
           "at": "0010-05-05T19:16:00",
@@ -2553,21 +2546,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.023"
+        },
+        {
+          "at": "0010-05-05T19:18:00",
+          "excerpt": ">Среда, 5 мая 1287 года · 19:18</text> ### Амэгакурэ. Центральная башня Шики оставался в укрытии. **Джирайя:** — Конан, я ведь учил вас защищать людей. Зачем вам Акацуки? Зачем охота на джинчурики? **Конан:** — Потому что ваши уроки оказались недостаточными. И",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.023",
-          "state": "Сам раскрыл присутствие Конан и расспрашивает о судьбе учеников."
+          "seen": "s17.text.024",
+          "state": "Расспросил Пэйна о лице Яхико; при подготовке бумаги Конан опустил руку к подсумку."
         },
         {
-          "state": "Сам раскрыл присутствие Конан и расспрашивает о судьбе учеников."
+          "state": "Расспросил Пэйна о лице Яхико; при подготовке бумаги Конан опустил руку к подсумку."
         }
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.023"
+        "s17.text.024"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3755,7 +3755,7 @@
       "id": "konan",
       "kind": "npc",
       "label": "Конан",
-      "mention_count": 9,
+      "mention_count": 10,
       "mentions": [
         {
           "at": "0010-04-25T10:28:00",
@@ -3763,13 +3763,6 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
-        },
-        {
-          "at": "0010-05-05T19:14:00",
-          "excerpt": "лись в знакомое имя. Мужчина наверху остановился возле открытой двери. **Пэйн:** — Когда закончите, доложите Конан. Из коридора ему ответили: **Шиноби Дождя:** — Да, Бог-сама. Пэйн ушёл. Джирайя ещё некоторое время смотрел на опустевшую площадку. Затем приблиз",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.021"
         },
         {
           "at": "0010-05-05T19:16:00",
@@ -3784,21 +3777,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.023"
+        },
+        {
+          "at": "0010-05-05T19:18:00",
+          "excerpt": "1287 года · 19:18</text> ### Амэгакурэ. Центральная башня Шики оставался в укрытии. **Джирайя:** — Конан, я ведь учил вас защищать людей. Зачем вам Акацуки? Зачем охота на джинчурики? **Конан:** — Потому что ваши уроки оказались недостаточными. Из глубины гале",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.023",
-          "state": "Разговаривает с Джирайей, требует его ухода; листы бумаги у предплечья."
+          "seen": "s17.text.024",
+          "state": "Сформировала вокруг тела заострённые бумажные лезвия; пока не атаковала."
         },
         {
-          "state": "Разговаривает с Джирайей, требует его ухода; листы бумаги у предплечья."
+          "state": "Сформировала вокруг тела заострённые бумажные лезвия; пока не атаковала."
         }
       ],
       "sources": [
         "recovery/cast/konan.json",
         "recovery/HOT.json",
-        "s17.text.023"
+        "s17.text.024"
       ]
     },
     "kotetsu": {
@@ -5870,7 +5870,7 @@
       "id": "pain",
       "kind": "npc",
       "label": "Пэйн",
-      "mention_count": 8,
+      "mention_count": 9,
       "mentions": [
         {
           "at": "0010-04-23T14:09:00",
@@ -5878,13 +5878,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.132"
-        },
-        {
-          "at": "0010-05-03T12:48:00",
-          "excerpt": "называют Богом. Его распоряжения передаёт женщина, известная как Ангел. Цунадэ нахмурилась. **Цунадэ:** — Пэйн и Конан? **Джирайя:** — Почти наверняка. Он провёл пальцем вдоль восточной границы Страны Дождя. По сведениям его источников, население Амэгакурэ дей",
-          "source": "archive/session-016-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s16.text.120"
         },
         {
           "at": "0010-05-05T19:14:00",
@@ -5899,17 +5892,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.022"
+        },
+        {
+          "at": "0010-05-05T19:18:00",
+          "excerpt": "*Конан:** — Потому что ваши уроки оказались недостаточными. Из глубины галереи донеслись шаги. Появился Пэйн. При виде Джирайи он остановился. Ни один мускул на его лице не дрогнул. Даже дыхания, характерного для живого человека, Шики на таком расстоянии не мо",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.024"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.023",
-          "state": "Ушёл по внутренней галерее после разговора с Конан."
+          "seen": "s17.text.024",
+          "state": "Вернулся в галерею, говорил с Джирайей; пока не атаковал."
+        },
+        {
+          "state": "Вернулся в галерею, говорил с Джирайей; пока не атаковал."
         }
       ],
       "sources": [
         "recovery/cast/pain.json",
-        "s17.text.023"
+        "recovery/HOT.json",
+        "s17.text.024"
       ]
     },
     "patient_airway": {
@@ -15745,8 +15749,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.023",
-        "s17.text.022"
+        "s17.text.024",
+        "s17.text.022",
+        "s17.text.023"
       ]
     },
     "place:cd696a4d6e4749cc": {
@@ -22516,5 +22521,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1532
+  "source_turns_indexed": 1533
 }
