@@ -81,13 +81,13 @@
   {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.089"
+   "turn": "s17.text.090"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.089",
+  "cursor": "s17.text.090",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -115,129 +115,25 @@
    "basis": "scene_continuation",
    "entries": [
     "chakra.black",
-    "eyes.ems",
-    "fusion.tendrils",
-    "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
-    "sage.permanent",
-    "sage.poison",
-    "seals.speed",
-    "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
-    "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
-    "eyes.cradle",
-    "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
-    "fusion.development",
-    "genome.fluid",
-    "genome.kaguya",
-    "medical.diagnosis",
-    "medical.field",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "pact.byoton",
-    "pact.shiton",
-    "research.postmortem",
-    "research.reproduce",
-    "restricted.cancelled",
-    "restricted.unlearned",
-    "sage.senpo",
-    "sage.summon"
+    "nemera.agency"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-05-13T08:02:00",
-    "chakra": {
-     "at": "0010-05-13T08:02:00",
-     "last": {
-      "spent": 64.5,
-      "turn": "s17.text.080",
-      "what": [
-       "Согласование чакровой и автономной регуляции Орочимару после переселения при помощи Кабуто"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 261.52,
-     "why": "Прямая поправка игрока к s17.text.086: 3 часа глубокого погружения ×5, 150 вместо 30, +120 к запасу 141,02 после s17.text.087."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {},
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
-    "campaigns/shiki/ref/MEDICINE.md",
-    "campaigns/shiki/ref/TECHNIQUES.md",
-    "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/COMBAT.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
-    "campaigns/shiki/ref/MEMORY.md",
-    "campaigns/shiki/ref/NEMERA.md",
-    "campaigns/shiki/ref/FUSION.md"
+    "campaigns/shiki/ref/MEMORY.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
-    "prior results/source",
-    "material/equipment",
-    "genome/known limits",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
-    "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time",
-    "things/holder/state/turn",
-    "count/availability",
-    "scene/access",
-    "fusion profile or historical pact",
-    "contact/channel"
+    "intent"
    ],
    "routes": [
-    "medical",
-    "research",
-    "combat",
-    "dialogue",
-    "travel",
-    "items",
-    "pact"
+    "dialogue"
    ],
    "unavailable": [
-    "fusion.development",
-    "genome.kaguya",
-    "nemera.agency",
-    "nemera.cloak",
-    "nemera.transfer",
-    "restricted.cancelled",
-    "restricted.unlearned"
+    "nemera.agency"
    ]
   },
   "time_advance_requires_world_review": false,
@@ -509,13 +405,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T08:02:00",
+  "at": "0010-05-13T08:03:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.089",
+  "id": "s17.text.090",
   "place": "Северная граница Страны Рек, подземное убежище Орочимару, палата наблюдения",
-  "time": "08:02"
+  "time": "08:03"
  },
- "digest": "28aad29ca9fbe65f8fe682a1f484cd9857f004a3fd3aa5f4719f2b7baa83cdd3",
+ "digest": "484eba234bee3ff88aad0d793e215808309658bf12e5d1f2c0c662f98e68f784",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -530,7 +426,7 @@
     "from": "s17.text.058",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.089"
+    "to": "s17.text.090"
    }
   ],
   "nodes": [],
@@ -638,21 +534,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 261.52
+   "value": 261.69
   },
   "dice": [
-   8,
+   3,
    10,
-   2,
+   8,
+   19,
+   15,
    20,
-   11,
-   8,
-   6,
-   8,
-   8,
-   7,
-   7,
-   17
+   12,
+   16,
+   10,
+   1,
+   3,
+   9
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -741,10 +637,10 @@
   "due": null,
   "npcs": {
    "orochimaru": {
-    "does": "Конкретизировал три исследовательских направления, предложил доступ к собственным архивам, заявил о праве на независимые методы.",
+    "does": "Признал страх, изложил собственное отношение к смерти, спросил о мотивах Шики.",
     "lever": "умереть, не узнав всего",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Совместная работа возможна только при согласовании интересов; уникальная физиология Шики остаётся недоступна без согласия.",
+    "reads": "Восстановление тела не решило вопрос конечности существования и зависимости.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -768,13 +664,13 @@
   "worn": []
  },
  "last": {
-  "gm_tail": "ь это ограничение. Теперь мне хотелось бы понять, почему человеческий организм вообще оказывается неспособен вынести определённую концентрацию природной энергии.\n\nЕго взгляд задержался на руках Шики.\n\n**Орочимару:** — В этом направлении меня интересует именно твоя физиология. Но я помню наше соглашение. Ты вправе отказать мне в предоставлении любо…",
-  "player": "Какого рода и на каком материале вы хотите вести исследования?",
+  "gm_tail": "бёнком, погибшим на поле боя, в конечном счёте нет никакой разницы.\n\nСаннин медленно провёл большим пальцем по ладони.\n\n**Орочимару:** — Хирузен-сэнсэй полагал, что человек продолжает жить в своих учениках. Меня никогда не удовлетворял этот ответ. Если мои знания переживут меня, это не означает, что переживу себя я.\n\nЗа стеной тихо журчала вода.\n\n…",
+  "player": "Вы все также боитесь смерти и слабости?",
   "source": "recovery/TURN.json"
  },
  "needs_profile": [
   {
-   "appearances": 64,
+   "appearances": 65,
    "facets": 4,
    "need": 5,
    "npc": "orochimaru",
@@ -974,10 +870,10 @@
     "s17.text.070",
     "s17.text.072",
     "s17.text.073",
-    "s17.text.084",
     "s17.text.086",
     "s17.text.087",
-    "s17.text.089"
+    "s17.text.089",
+    "s17.text.090"
    ],
    "prior_disclosures": [
     {
@@ -989,20 +885,20 @@
      "turn": "s17.text.058"
     },
     {
-     "at": "0010-05-13T07:59:00",
-     "line": "Шики согласился поговорить. Орочимару сообщил о доступности стихийного ниндзюцу и утрате привычных телесных возможностей, отказал…",
-     "sha256": "ffc3b5abf066f3b6c5916f8894731e27feb1a570c4c08563e0f3f6c8bf3557bc",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.087"
-    },
-    {
      "at": "0010-05-13T08:02:00",
      "line": "Орочимару предложил изучать старение, воспроизведение кеккей генкай и переносимость природной энергии. Назвал собственные клетки,…",
-     "sha256": "ac50e46bc937466eebd5374767bf1a106aa7e4e4f14d0a3137ad4ddcda4b8716",
+     "sha256": "46a4b61fe863def4eaad21d63a077dd0d25c27218ebd1ab87fbc8e7c2ce950b3",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.089"
+    },
+    {
+     "at": "0010-05-13T08:03:00",
+     "line": "Орочимару признал страх смерти и зависимости, объяснил неприятие символического бессмертия через учеников; спросил о мотивах прео…",
+     "sha256": "026dc31ede1aa3d7ea03ae03dbeea7a90f2e47ba02af851deff182e3bfe76f56",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.090"
     }
    ],
    "profile": {
@@ -1021,12 +917,17 @@
       "ch": "present",
       "turn": "s17.text.089",
       "what": "Орочимару предложил изучать старение, воспроизведение кеккей генкай и переносимость природной энергии. Назвал собственные клетки, архивные культуры, донорский материал и добровольное участие Шики. Нас"
+     },
+     {
+      "ch": "present",
+      "turn": "s17.text.090",
+      "what": "Орочимару признал страх смерти и зависимости, объяснил неприятие символического бессмертия через учеников; спросил о мотивах преобразований Шики."
      }
     ],
     "memory_file": "archive/npc-memory/orochimaru.json",
-    "memory_total": 64,
+    "memory_total": 65,
     "name": "Орочимару",
-    "seen": "s17.text.089",
+    "seen": "s17.text.090",
     "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена.",
     "status": "present_profile",
     "tier": "deep"
@@ -1036,19 +937,19 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.087",
-   "line": "Шики согласился поговорить. Орочимару сообщил о доступности стихийного ниндзюцу и утрате привычных телесных возможностей, отказался препятствовать уходу Саске и предложил возобновить исследования на равных."
-  },
-  {
    "id": "s17.text.089",
    "line": "Орочимару предложил изучать старение, воспроизведение кеккей генкай и переносимость природной энергии. Назвал собственные клетки, архивные культуры, донорский материал и добровольное участие Шики. Настаивает на независимости методов."
+  },
+  {
+   "id": "s17.text.090",
+   "line": "Орочимару признал страх смерти и зависимости, объяснил неприятие символического бессмертия через учеников; спросил о мотивах преобразований Шики."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики сидит на койке, Орочимару на стуле напротив.",
-  "pressure": "Условия сотрудничества и этические ограничения остаются предметом переговоров.",
-  "situation": "Орочимару предложил три направления сотрудничества: старение и регенеративный потенциал без опухолевого перерождения; лабораторное воспроизведение наследственных свойств; физиологические ограничения освоения сендзюцу. По его словам, располагает клеточными культурами, образцами прежних тел и материалом некоторых носителей кеккей генкай; состав и происхождение пока не проверены. Предлагает архивы и оборудование, интересуется физиологией Шики только с согласия, настаивает на самостоятельности собственных методов. Шики пока не согласился."
+  "positions": "Шики на койке, Орочимару напротив на стуле.",
+  "pressure": "Орочимару ищет различие между своими мотивами и преобразованиями Шики; ответ ожидается.",
+  "situation": "Шики спросил, сохраняется ли страх смерти и слабости. Орочимару признал его, рассказал о смерти родителей, неприятии идеи продолжения жизни в учениках и неудобстве собственной зависимости от Шики после восстановления. Вспомнил прежнее заявление Шики об отсутствии страха смерти, спросил о мотивах его телесных преобразований. Переговоры о сотрудничестве не завершены."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1062,9 +963,9 @@
    "player": "Я отвечу честно, я не знаю.",
    "source": "archive/session-017-turns.jsonl"
   },
-  "s17.text.089": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 08:02</text>\n\n**Мугами Шики:** — Какого рода и на каком материале вы хотите вести исследования?\n\nОрочимару откинулся на спинку стула.\n\n**Орочимару:** — Меня интересуют три направления.\n\nОн разогнул указательный палец.\n\n**Орочимару:** — Первое — старение. Не бесконечная смена тел, которой я занимался прежде, а сохранение одного организма. Меня интересует возможность поддерживать регенеративный потенциал тканей, не вызывая их опухолевого перерождения.\n\nОн коснулся собственного предплеч\n[... sou…",
-   "player": "Какого рода и на каком материале вы хотите вести исследования?",
+  "s17.text.090": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 08:03</text>\n\n**Мугами Шики:** — Вы все также боитесь смерти и слабости?\n\nУлыбка исчезла с лица Орочимару.\n\nОн посмотрел на свои руки. Под тонкой кожей проступали голубоватые вены — обыкновенные человеческие сосуды.\n\n**Орочимару:** — Разумеется.\n\nОн ответил без прежней иронии.\n\n**Орочимару:** — Когда умерли мои родители, я ещё не понимал, почему люди должны исчезать. Позднее я увидел достаточно смертей, чтобы понять: между величайшим шиноби и ребёнком, погибшим на поле боя, в конечном счёте н…",
+   "player": "Вы все также боитесь смерти и слабости?",
    "source": "archive/session-017-turns.jsonl"
   }
  },
@@ -1073,8 +974,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "6ca3acad1a3e6353907658b1ae63adc09aab5e7b",
-  "turn": "s17.text.089"
+  "sha": "73084b8bb8035e049fd4a4f516bd1cd84388174b",
+  "turn": "s17.text.090"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1090,7 +991,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 20509.0,
+    "minutes": 20508.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",

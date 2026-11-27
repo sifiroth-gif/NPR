@@ -7,7 +7,7 @@
 - Кусагакуре, Центральный госпиталь · `places/kusagakure-tsentralnyy-gospital` · 50 ход(ов), s02–s08
 - Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 44 ход(ов), s15–s17
 - Кусагакуре, дом семьи Мугами · `places/kusagakure-dom-semi-mugami` · 38 ход(ов), s08–s15
-- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 37 ход(ов), s15–s17
+- Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 38 ход(ов), s15–s17
 - Кусагакуре, Дом Мугами Шики · `places/kusagakure-dom-mugami-shiki` · 35 ход(ов), s02–s08
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 27 ход(ов), s14–s17
 - Страна Звука, Кагэн · `places/strana-zvuka-kagen` · 26 ход(ов), s09–s09
