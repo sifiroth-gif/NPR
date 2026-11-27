@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.026",
+  "cursor": "s17.text.027",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2524,7 +2524,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 125,
+      "mention_count": 126,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2532,13 +2532,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-05T19:17:00",
-          "excerpt": "7</text> ### Амэгакурэ. Центральная башня **Мугами Шики** *(тихо)*: — хорошо, я буду рядом скрытно. Джирайя вышел из ниши. **Джирайя:** — Ты выросла, Конан. Женщина обернулась. Бумажная бабочка на её плече распалась на отдельные листки, зависшие в воздухе. Нес",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.023"
         },
         {
           "at": "0010-05-05T19:18:00",
@@ -2553,11 +2546,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.025"
+        },
+        {
+          "at": "0010-05-05T19:19:00",
+          "excerpt": "**Конан:** — Я уже предложила учителю уйти. Не заставляй меня нарушать собственное слово. В наступившей тишине Джирайя посмотрел на неё. Его широкие плечи опустились. В этот момент он выглядел значительно старше, чем несколько часов назад, когда они пересекали",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.027"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.026",
+          "seen": "s17.text.027",
           "state": "Прекратил подготовку к бою, убрал руку от оружия и согласился с Шики."
         },
         {
@@ -2566,7 +2566,8 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s17.text.027"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -3754,7 +3755,7 @@
       "id": "konan",
       "kind": "npc",
       "label": "Конан",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0010-04-25T10:28:00",
@@ -3762,13 +3763,6 @@
           "source": "archive/session-016-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s16.text.010"
-        },
-        {
-          "at": "0010-05-05T19:18:00",
-          "excerpt": "1287 года · 19:18</text> ### Амэгакурэ. Центральная башня Шики оставался в укрытии. **Джирайя:** — Конан, я ведь учил вас защищать людей. Зачем вам Акацуки? Зачем охота на джинчурики? **Конан:** — Потому что ваши уроки оказались недостаточными. Из глубины гале",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.024"
         },
         {
           "at": "0010-05-05T19:18:10",
@@ -3783,21 +3777,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.026"
+        },
+        {
+          "at": "0010-05-05T19:19:00",
+          "excerpt": "ство энергетических рисунков. Три совершенно разных тела несли в себе практически одинаковую чужую силу. Конан оказалась единственной среди них, чьё присутствие сохраняло привычную неоднородность живого человека. **Пэйн:** — Ты предпочитаешь оставить мои вопро",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.027"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.026",
-          "state": "Сформировала вокруг тела заострённые бумажные лезвия; пока не атаковала."
+          "seen": "s17.text.027",
+          "state": "Ведёт гостей к выходу, начала спуск."
         },
         {
-          "state": "Сформировала вокруг тела заострённые бумажные лезвия; пока не атаковала."
+          "state": "Ведёт гостей к выходу, начала спуск."
         }
       ],
       "sources": [
         "recovery/cast/konan.json",
         "recovery/HOT.json",
-        "s17.text.026"
+        "s17.text.027"
       ]
     },
     "kotetsu": {
@@ -5869,7 +5870,7 @@
       "id": "pain",
       "kind": "npc",
       "label": "Пэйн",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0010-04-23T14:09:00",
@@ -5877,13 +5878,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.132"
-        },
-        {
-          "at": "0010-05-05T19:18:00",
-          "excerpt": "*Конан:** — Потому что ваши уроки оказались недостаточными. Из глубины галереи донеслись шаги. Появился Пэйн. При виде Джирайи он остановился. Ни один мускул на его лице не дрогнул. Даже дыхания, характерного для живого человека, Шики на таком расстоянии не мо",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.024"
         },
         {
           "at": "0010-05-05T19:18:10",
@@ -5898,21 +5892,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.026"
+        },
+        {
+          "at": "0010-05-05T19:19:00",
+          "excerpt": "ные золотистые полосы. Откуда-то снизу, из глубины башни, доносилось мерное биение работающих насосов. Пэйн не ответил сразу. Шики ощущал чакру трёх находившихся перед ним мужчин. В обычных человеческих организмах её движение сопровождалось непрерывными, едва ",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.027"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.026",
-          "state": "Вернулся в галерею, говорил с Джирайей; пока не атаковал."
+          "seen": "s17.text.027",
+          "state": "Остался в галерее с двумя другими телами; разрешил Конан проводить гостей."
         },
         {
-          "state": "Вернулся в галерею, говорил с Джирайей; пока не атаковал."
+          "state": "Остался в галерее с двумя другими телами; разрешил Конан проводить гостей."
         }
       ],
       "sources": [
         "recovery/cast/pain.json",
         "recovery/HOT.json",
-        "s17.text.026"
+        "s17.text.027"
       ]
     },
     "patient_airway": {
@@ -14394,8 +14395,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.026",
-        "s17.text.025"
+        "s17.text.027",
+        "s17.text.025",
+        "s17.text.026"
       ]
     },
     "place:b034eabbadbf2c13": {
@@ -22539,5 +22541,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1535
+  "source_turns_indexed": 1536
 }
