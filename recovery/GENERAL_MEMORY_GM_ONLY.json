@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.039",
+  "cursor": "s17.text.040",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s17.text.039:0": {
-      "aliases": [
-        "canon:s17.text.039:0",
-        "s17.text.039: экспериментальный самостоятельный Хирайшин малых неживых объектов: три последовательных успешных переноса к личной метке в пределах полигона; согласованы адресация, г"
-      ],
-      "facts": [],
-      "id": "canon:s17.text.039:0",
-      "kind": "canon",
-      "label": "s17.text.039: экспериментальный самостоятельный Хирайшин малых неживых объектов: три последовательных успешных переноса к личной метке в пределах полигона; согласованы адресация, г",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s17.text.039"
       ]
     },
     "captive_guard": {
@@ -1124,7 +1108,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1163,12 +1148,13 @@
       ],
       "projections": [
         {
-          "seen": "s16.text.137",
+          "seen": "s17.text.040",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s17.text.040"
       ]
     },
     "fire_port_security_staff": {
@@ -1294,8 +1280,7 @@
     "fire_road_jonin": {
       "aliases": [
         "fire road jonin",
-        "Кадзунэ",
-        "fire_road_jonin"
+        "Кадзунэ"
       ],
       "facts": [],
       "id": "fire_road_jonin",
@@ -1338,8 +1323,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/fire_road_jonin.json",
-        "s17.text.039"
+        "recovery/cast/fire_road_jonin.json"
       ]
     },
     "fire_road_mayu": {
@@ -2081,7 +2065,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.039",
+          "seen": "s17.text.040",
           "state": "Предоставил материалы, наблюдал коррекцию формулы, предложил показать перенос куная."
         },
         {
@@ -2091,7 +2075,7 @@
       "sources": [
         "recovery/cast/genma.json",
         "recovery/HOT.json",
-        "s17.text.039"
+        "s17.text.040"
       ]
     },
     "grass_roads_patrol_senior": {
@@ -2558,7 +2542,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.039",
+          "seen": "s17.text.040",
           "state": "Заметил изменение формулы Шики."
         },
         {
@@ -2568,7 +2552,7 @@
       "sources": [
         "recovery/cast/iwashi.json",
         "recovery/HOT.json",
-        "s17.text.039"
+        "s17.text.040"
       ]
     },
     "izumo": {
@@ -3053,7 +3037,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.039",
+          "seen": "s17.text.040",
           "state": "Зафиксировал результат, обозначил пределы освоения."
         },
         {
@@ -3063,7 +3047,7 @@
       "sources": [
         "recovery/cast/kakashi.json",
         "recovery/HOT.json",
-        "s17.text.039"
+        "s17.text.040"
       ]
     },
     "kakuzu": {
@@ -14808,11 +14792,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.039",
+        "s17.text.040",
         "s17.text.035",
         "s17.text.036",
         "s17.text.037",
-        "s17.text.038"
+        "s17.text.038",
+        "s17.text.039"
       ]
     },
     "place:b409131ed9e1cd2e": {
@@ -18799,7 +18784,7 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.039",
+          "seen": "s17.text.040",
           "state": "Предложил начать пространственные опыты с малых предметов, сославшись на обучение у Минато."
         },
         {
@@ -18809,7 +18794,7 @@
       "sources": [
         "recovery/cast/raido.json",
         "recovery/HOT.json",
-        "s17.text.039"
+        "s17.text.040"
       ]
     },
     "rain_drain_plan_copy_s17": {
@@ -20786,8 +20771,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shizune.json",
-        "s17.text.039"
+        "recovery/cast/shizune.json"
       ]
     },
     "signalshchik": {
@@ -22747,5 +22731,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1548
+  "source_turns_indexed": 1549
 }
