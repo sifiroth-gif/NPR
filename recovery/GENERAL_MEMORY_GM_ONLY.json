@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.058",
+  "cursor": "s17.text.059",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,20 @@
         "s09.text.067"
       ]
     },
-    "canon:s17.text.058:0": {
+    "canon:s17.text.059:0": {
       "aliases": [
-        "canon:s17.text.058:0",
-        "s17.text.058: Цунадэ устно подтвердила сохранение соглашения 23.04.1287 без требования присяги и пересмотра вследствие каждого освоения Шики новой техники; выразила желание доброво"
+        "canon:s17.text.059:0",
+        "s17.text.059: Шики передал Цунадэ индивидуальную физическую метку Хирайшина на пластине для срочного прибытия. Дальность не проверена, гарантий нет. Хранение у Цунадэ в запертом ящ"
       ],
       "facts": [],
-      "id": "canon:s17.text.058:0",
+      "id": "canon:s17.text.059:0",
       "kind": "canon",
-      "label": "s17.text.058: Цунадэ устно подтвердила сохранение соглашения 23.04.1287 без требования присяги и пересмотра вследствие каждого освоения Шики новой техники; выразила желание доброво",
+      "label": "s17.text.059: Шики передал Цунадэ индивидуальную физическую метку Хирайшина на пластине для срочного прибытия. Дальность не проверена, гарантий нет. Хранение у Цунадэ в запертом ящ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.058"
+        "s17.text.059"
       ]
     },
     "captive_guard": {
@@ -2079,12 +2079,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.044",
+          "seen": "s17.text.059",
           "state": "Покинул полигон с папкой методики."
         }
       ],
       "sources": [
-        "recovery/cast/genma.json"
+        "recovery/cast/genma.json",
+        "s17.text.059"
       ]
     },
     "grass_roads_patrol_senior": {
@@ -2661,7 +2662,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 138,
+      "mention_count": 139,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2669,13 +2670,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-09T18:13:00",
-          "excerpt": "ождя в тусклый медный цвет. Ветер шевелил занавески, и лежавшая на столе бумага едва слышно шелестела. Джирайя перестал улыбаться. Цунадэ не сразу ответила. Её пальцы, до этого рассеянно постукивавшие по деревянной столешнице, замерли. **Цунадэ:** — Без физиче",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.056"
         },
         {
           "at": "0010-05-09T18:14:00",
@@ -2690,11 +2684,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.058"
+        },
+        {
+          "at": "0010-05-09T18:17:00",
+          "excerpt": "няла пластину на раскрытую ладонь. Некоторое время рассматривала её, медленно поворачивая под светом лампы. Джирайя подошёл ближе. **Джирайя:** — У Минато была совершенно другая формула. Он наклонился, изучая незнакомый рисунок. Протянул руку, словно собираясь",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.059"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.058",
+          "seen": "s17.text.059",
           "state": "Запросил исторические архивы Дождя."
         },
         {
@@ -2704,7 +2705,7 @@
       "sources": [
         "recovery/cast/jiraiya.json",
         "recovery/HOT.json",
-        "s17.text.058"
+        "s17.text.059"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -4455,7 +4456,8 @@
     "leaf_gate_special_inspector_s16": {
       "aliases": [
         "leaf gate special inspector s16",
-        "Незнакомый шиноби"
+        "Незнакомый шиноби",
+        "leaf_gate_special_inspector_s16"
       ],
       "facts": [],
       "id": "leaf_gate_special_inspector_s16",
@@ -4494,12 +4496,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.034",
+          "seen": "s17.text.059",
           "wants": "Проверить и ограничить неконтролируемый доступ независимого шиноби к Конохе."
         }
       ],
       "sources": [
-        "recovery/cast/leaf_gate_special_inspector_s16.json"
+        "recovery/cast/leaf_gate_special_inspector_s16.json",
+        "s17.text.059"
       ]
     },
     "lee": {
@@ -11404,7 +11407,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.058",
+        "s17.text.059",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11420,7 +11423,8 @@
         "s17.text.054",
         "s17.text.055",
         "s17.text.056",
-        "s17.text.057"
+        "s17.text.057",
+        "s17.text.058"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20849,7 +20853,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 43,
+      "mention_count": 44,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20857,13 +20861,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-09T18:13:00",
-          "excerpt": "до этого рассеянно постукивавшие по деревянной столешнице, замерли. **Цунадэ:** — Без физических меток? Шизунэ посмотрела на дверь кабинета. Подошла к ней и проверила, плотно ли она закрыта. **Джирайя:** — Даже Минато нуждался в пространственном ориентире. Его",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.056"
         },
         {
           "at": "0010-05-09T18:14:00",
@@ -20878,11 +20875,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.058"
+        },
+        {
+          "at": "0010-05-09T18:17:00",
+          "excerpt": "накомый рисунок. Протянул руку, словно собираясь коснуться центрального символа, но остановился. **Цунадэ:** — Шизунэ, принеси небольшой футляр. Та открыла один из шкафов и извлекла деревянную коробочку с мягкой внутренней обивкой. Цунадэ самостоятельно уложил",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.059"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.058",
+          "seen": "s17.text.059",
           "state": "Вручила подписанный допуск, организован проводник."
         },
         {
@@ -20892,7 +20896,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s17.text.058"
+        "s17.text.059"
       ]
     },
     "signalshchik": {
@@ -21952,7 +21956,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 101,
+      "mention_count": 102,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21960,13 +21964,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-09T18:13:00",
-          "excerpt": "Ветер шевелил занавески, и лежавшая на столе бумага едва слышно шелестела. Джирайя перестал улыбаться. Цунадэ не сразу ответила. Её пальцы, до этого рассеянно постукивавшие по деревянной столешнице, замерли. **Цунадэ:** — Без физических меток? Шизунэ посмотрел",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.056"
         },
         {
           "at": "0010-05-09T18:14:00",
@@ -21981,11 +21978,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.058"
+        },
+        {
+          "at": "0010-05-09T18:17:00",
+          "excerpt": "уться к себе. Если что на связи и ещё #достаю пустую пластину и делаю пространственную метку, отдаю Цунадэ# это на случай срочности, но я ещё не проверял дальность. Поэтому без гарантий. Мастеру: хирайшин во всех освоенных формах в карточку техник <text color=",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.059"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.058",
+          "seen": "s17.text.059",
           "state": "Распорядилась выдать допуск и проводника."
         },
         {
@@ -21995,7 +21999,23 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.058"
+        "s17.text.059"
+      ]
+    },
+    "tsunade_hiraishin_plate_s17": {
+      "aliases": [
+        "tsunade hiraishin plate s17",
+        "Личная метка Хирайшина на пластине Цунадэ"
+      ],
+      "facts": [],
+      "id": "tsunade_hiraishin_plate_s17",
+      "kind": "item",
+      "label": "Личная метка Хирайшина на пластине Цунадэ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.059"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22857,5 +22877,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1565
+  "source_turns_indexed": 1566
 }

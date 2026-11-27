@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s17.text.059: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Гэнма Ширануи (`npc/genma`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), вещь `tsunade_hiraishin_plate_s17`, поправки игрока: 1
 - s17.text.058: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), поправки игрока: 1
 - s17.text.057: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Шикамару Нара (`npc/shikamaru`), поправки игрока: 1
 - s17.text.056: Цунадэ (`npc/tsunade`), Джирайя (`npc/jiraiya`), Шизунэ (`npc/shizune`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), Кадзунэ (`npc/fire_road_jonin`)
@@ -59,4 +60,3 @@
 - s17.text.002: Джирайя (`npc/jiraiya`), Путник из Дождя (`npc/rain_drain_worker_s16`), вещь `rain_drain_plan_copy_s17`
 - s17.text.001: Путник из Дождя (`npc/rain_drain_worker_s16`)
 - s16.text.140: Путник из Дождя (`npc/rain_drain_worker_s16`), Джирайя (`npc/jiraiya`), Тёмная змея у кладок (`npc/river_shrine_dark_snake_s16`), вещь `cash_1184`, вещь `shiki_finances`, вещь `shiki_light_kote_s16`, план сюжета
-- s16.text.139: Оружейник (`npc/road_armorer_s16`), Джирайя (`npc/jiraiya`), план сюжета

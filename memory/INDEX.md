@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s17.text.058`
+# Карта мира NPR · на ходе `s17.text.059`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -9,6 +9,8 @@
 - Джирайя —  · `npc/jiraiya` · в сцене
 - Цунадэ — Светлые волосы в двух хвостах, ромбовидная печать на лбу, з… · `npc/tsunade` · в сцене
 - Шизунэ — Темноволосая женщина в тёмном кимоно, медицинские отчёты. · `npc/shizune` · в сцене
+- Гэнма Ширануи (Гэнма, Ширануи) — токубэцу-дзёнин, финалы (на 1283, экзамен) · `npc/genma`
+- Незнакомый шиноби — Шиноби со сдержанной манерой, вышедший из караульного помещ… · `npc/leaf_gate_special_inspector_s16`
 - Шикамару Нара (Шикамару, Нара) — генин, участник (на 1283, экзамен) · `npc/shikamaru`
 - Кадзунэ (Дзёнин Конохи на лесной дороге) — Взрослый шиноби Листа, поддерживает раненого подростка, кро… · `npc/fire_road_jonin`
 - Тёмная змея у кладок — Крупная тёмная змея среди камней. · `npc/river_shrine_dark_snake_s16`
@@ -18,14 +20,12 @@
 - Кабуто Якуши (Кабуто, Якуши) — генин, участник (на 1283, экзамен) · `npc/kabuto`
 - Орочимару — саннин, скрытый организатор (на 1283, экзамен) · `npc/orochimaru`
 - Саске Учиха (Саске, Учиха) — генин, участник (на 1283, экзамен) · `npc/sasuke`
-- Гэнма Ширануи (Гэнма, Ширануи) — токубэцу-дзёнин, финалы (на 1283, экзамен) · `npc/genma`
 - Иваши Татами (Иваши, Татами) —  · `npc/iwashi`
 - Какаши Хатакэ (Какаши, Хатакэ) — дзёнин, наставник Команды 7 (на 1283, экзамен) · `npc/kakashi`
 - Райдо Намиаси (Райдо, Намиаси) — Крепкий мужчина со шрамами на лице. · `npc/raido`
 - Изумо Камидзуки (Изумо, Камидзуки) — Тюнин Листа, отряд Асумы · `npc/izumo`
 - Котэцу Хаганэ (Котэцу, Хаганэ) — Тюнин Листа, отряд Асумы · `npc/kotetsu`
 - Инспектор закрытого отдела — Худощавый мужчина в строгой тёмной одежде, носит очки. · `npc/kiri_archive_observer_s16`
-- Незнакомый шиноби — Шиноби со сдержанной манерой, вышедший из караульного помещ… · `npc/leaf_gate_special_inspector_s16`
 - Пэйн — Рыжеволосый мужчина с лицом Яхико, Риннеганом, металлически… · `npc/pain`
 - Жаба — по подписи в сцене · `npc/zhaba`
 - Наруто Узумаки (Наруто, Узумаки) — генин, участник (на 1283, экзамен) · `npc/naruto`
@@ -285,7 +285,7 @@
 ## Давние линии (33, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (100)
+## Вещи (101)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -384,5 +384,6 @@
 - `stolen_house_plan` · `items/stolen_house_plan`
 - `sumi_sword` · `items/sumi_sword`
 - `traveller_cloak` · `items/traveller_cloak`
+- `tsunade_hiraishin_plate_s17` · `items/tsunade_hiraishin_plate_s17`
 - `ward_vii_fragment_0416` · `items/ward_vii_fragment_0416`
 - `willow_dispatch` · `items/willow_dispatch`

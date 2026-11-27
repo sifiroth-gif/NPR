@@ -21,8 +21,8 @@
 - Страна Огня, Долина Завершения · `places/strana-ognya-dolina-zaversheniya` · 19 ход(ов), s09–s10
 - Страна Рек, Нижний Сиран · `places/strana-rek-nizhniy-siran` · 19 ход(ов), s09–s14
 - Страна Рек, убежище Акацуки · `places/strana-rek-ubezhishche-akatsuki` · 19 ход(ов), s11–s11
+- Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 18 ход(ов), s16–s17
 - Кусагакуре, резиденция главы · `places/kusagakure-rezidentsiya-glavy` · 18 ход(ов), s05–s15
-- Конохагакуре, кабинет Хокагэ · `places/konokhagakure-kabinet-khokage` · 17 ход(ов), s16–s17
 - Конохагакуре, Западный тренировочный полигон · `places/konokhagakure-zapadnyy-trenirovochnyy-poligon` · 17 ход(ов), s02–s16
 - Кусагакуре, частная клиника Кирисавы Сэйны · `places/kusagakure-chastnaya-klinika-kirisavy-seyny` · 17 ход(ов), s08–s15
 - Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 17 ход(ов), s14–s16
