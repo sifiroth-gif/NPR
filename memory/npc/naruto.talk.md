@@ -1,4 +1,4 @@
-# Наруто Узумаки · разговоры с Шики (90 ходов)
+# Наруто Узумаки · разговоры с Шики (91 ходов)
 
 Дословно, по ходам: что персонаж говорил и что в том же ходе слышал от Шики. Это память о сказанном, а не о мыслях. Ход целиком — `archive/turns/sNN/<id>.md`.
 
@@ -8,4 +8,4 @@
 - s11: 22 ходов, s11.text.036–s11.text.077 → `memory/npc/naruto.talk.s11.md`
 - s12: 40 ходов, s12.text.001–s12.text.071 → `memory/npc/naruto.talk.s12.md`
 - s15: 19 ходов, s15.text.137–s15.text.159 → `memory/npc/naruto.talk.s15.md`
-- s17: 2 ходов, s17.text.127–s17.text.128 → `memory/npc/naruto.talk.s17.md`
+- s17: 3 ходов, s17.text.127–s17.text.129 → `memory/npc/naruto.talk.s17.md`
