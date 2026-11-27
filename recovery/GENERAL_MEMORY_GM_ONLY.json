@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.115",
+  "cursor": "s17.text.116",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2666,7 +2666,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 151,
+      "mention_count": 152,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2674,13 +2674,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-13T11:19:00",
-          "excerpt": "\">Четверг, 13 мая 1287 года · 11:19</text> **Мугами Шики:** — Тогда как мы организуем знакомство? **Джирайя:** — Зачем откладывать? Цунадэ, разрешишь и мне? Хокагэ выразительно посмотрела на пол, где ещё несколько минут назад находилась призывная формула Шики.",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.113"
         },
         {
           "at": "0010-05-13T11:24:00",
@@ -2695,21 +2688,23 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.115"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:26</text> **Мугами Шики:** — Хорошо до скорого. Джирайя поднял ладонь в прощальном жесте. Шики обратился к пространственной метке на дверном косяке лаборатории Орочимару. Знакомая структура откликнулась на ег",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.116"
         }
       ],
       "projections": [
         {
           "seen": "s17.text.115",
           "state": "Запросил исторические архивы Дождя."
-        },
-        {
-          "state": "Запросил исторические архивы Дождя."
         }
       ],
       "sources": [
-        "recovery/cast/jiraiya.json",
-        "recovery/HOT.json",
-        "s17.text.115"
+        "recovery/cast/jiraiya.json"
       ]
     },
     "jiraiya_first_letter_s17": {
@@ -2727,11 +2722,11 @@
         {
           "holder": "shiki",
           "since": "s17.text.114",
-          "turn": "s17.text.115"
+          "turn": "s17.text.116"
         }
       ],
       "sources": [
-        "s17.text.115"
+        "s17.text.116"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5811,7 +5806,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 223,
+      "mention_count": 224,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5819,13 +5814,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-13T11:19:00",
-          "excerpt": "её челюстями. **Жаба:** — Джирайя. Зачем здесь змея? **Джирайя:** — Познакомься. Это Сирамэ из Рьючидо. Нам с Орочимару необходимо обменяться несколькими письмами. Она согласилась помочь с его стороны. Жаба перевела взгляд на саннина. **Жаба:** — С Орочимару? ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.113"
         },
         {
           "at": "0010-05-13T11:24:00",
@@ -5840,16 +5828,28 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.115"
+        },
+        {
+          "at": "0010-05-13T11:26:00",
+          "excerpt": "Хорошо до скорого #хирайшин в убежище Орочимару# <text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 11:26</text> **Мугами Шики:** — Хорошо до скорого. Джирайя поднял ладонь в прощальном жесте. Шики обрати",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.116"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.103",
+          "seen": "s17.text.116",
+          "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
+        },
+        {
           "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена."
         }
       ],
       "sources": [
-        "recovery/cast/orochimaru.json"
+        "recovery/cast/orochimaru.json",
+        "recovery/HOT.json",
+        "s17.text.116"
       ]
     },
     "orochimaru_original_matrix_s17": {
@@ -11553,7 +11553,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.115",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11576,7 +11575,8 @@
         "s17.text.104",
         "s17.text.105",
         "s17.text.106",
-        "s17.text.107"
+        "s17.text.107",
+        "s17.text.108"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -12595,6 +12595,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s17.text.116",
         "s17.text.093",
         "s17.text.094",
         "s17.text.095",
@@ -21018,7 +21019,7 @@
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.115",
+          "seen": "s17.text.116",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -21026,7 +21027,7 @@
       ],
       "sources": [
         "recovery/cast/shirame.json",
-        "s17.text.115"
+        "s17.text.116"
       ]
     },
     "shiranami": {
@@ -22222,15 +22223,10 @@
         {
           "seen": "s17.text.115",
           "state": "Распорядилась выдать допуск и проводника."
-        },
-        {
-          "state": "Распорядилась выдать допуск и проводника."
         }
       ],
       "sources": [
-        "recovery/cast/tsunade.json",
-        "recovery/HOT.json",
-        "s17.text.115"
+        "recovery/cast/tsunade.json"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22735,8 +22731,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/zhaba.json",
-        "s17.text.115"
+        "recovery/cast/zhaba.json"
       ]
     }
   },
@@ -23100,7 +23095,7 @@
     },
     {
       "from": "jiraiya_first_letter_s17",
-      "source": "s17.text.115",
+      "source": "s17.text.116",
       "status": "projected",
       "to": "shiki",
       "type": "held_by"
@@ -23114,5 +23109,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1619
+  "source_turns_indexed": 1620
 }
