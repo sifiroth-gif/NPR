@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.028",
+  "cursor": "s18.text.030",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 28,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -404,30 +404,30 @@
           "turn": "s02.text.052"
         },
         {
-          "at": "0010-05-14T14:47:00",
-          "excerpt": "— спасибо Асума-сан и прошу простить за сантименты Асума поставил свою чашечку на стол и усмехнулся. **Асума Сарутоби:** — Ещё чего. Мы же не на задании. Он взял сосуд с сакэ и долил немного в опустевшую чашечку Шики. **Асума Сарутоби:** — Знаешь, было бы гора",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.026"
-        },
-        {
-          "at": "0010-05-14T15:12:00",
-          "excerpt": "— Согласен надо наверно сказать коюки что она была единственной со мной в момент моего дня рождения **Асума Сарутоби:** — Думаю, ей будет приятно это услышать. Он не знал, о ком именно говорил Шики. Незнакомое имя дзёнин повторил вполголоса, словно стараясь за",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.027"
-        },
-        {
           "at": "0010-05-14T15:14:00",
           "excerpt": ", хоть и не удалось спасти всех. Асума перестал курить. Сигарета медленно тлела между его пальцами. **Асума Сарутоби:** — Змея? А я подумал, что речь идёт о девушке. Он рассмеялся собственной ошибке и стряхнул пепел. **Асума Сарутоби:** — Хотя, учитывая твою с",
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.028"
+        },
+        {
+          "at": "0010-05-14T15:16:00",
+          "excerpt": "ечто похожее на человека, но с очень выраженными змеиными чертами. Асума задумчиво потёр подбородок. **Асума Сарутоби:** — Хм. Статуя человека-змеи и животные, которые собираются возле неё вопреки своим обычным повадкам… Хозяин забрал деньги и поклонился. При ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.029"
+        },
+        {
+          "at": "0010-05-14T15:17:00",
+          "excerpt": "льно хотите, чтобы я пришёл? Если так, вернитесь на минуту. Асума остановился в дверях и обернулся. **Асума Сарутоби:** — Разумеется. Иначе зачем бы я приглашал? Он вернулся к столику, поставив свёрток на его край. Шики открыл дорожную сумку и принялся искать ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.030"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.028",
+          "seen": "s18.text.030",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.028"
+        "s18.text.030"
       ]
     },
     "baki": {
@@ -8348,12 +8348,14 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.028",
+        "s18.text.030",
         "s18.text.023",
         "s18.text.024",
         "s18.text.025",
         "s18.text.026",
-        "s18.text.027"
+        "s18.text.027",
+        "s18.text.028",
+        "s18.text.029"
       ]
     },
     "place:2c5758f044d1146d": {
@@ -20924,6 +20926,36 @@
         "s11.text.020"
       ]
     },
+    "shiki_spare_coin_s18": {
+      "aliases": [
+        "shiki spare coin s18",
+        "Небольшая металлическая монета"
+      ],
+      "facts": [],
+      "id": "shiki_spare_coin_s18",
+      "kind": "item",
+      "label": "Небольшая металлическая монета",
+      "mention_count": 1,
+      "mentions": [
+        {
+          "at": "0010-05-14T15:17:00",
+          "excerpt": "принялся искать подходящий предмет для нанесения пространственной формулы. Среди принадлежностей нашлась небольшая металлическая монета с достаточно ровной поверхностью. Такой носитель не занимал бы много места и легко помещался в кармане. Асума наблюдал за по",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.030"
+        }
+      ],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s18.text.030",
+          "turn": "s18.text.030"
+        }
+      ],
+      "sources": [
+        "s18.text.030"
+      ]
+    },
     "shiki_spare_communication_plate": {
       "aliases": [
         "shiki spare communication plate"
@@ -22568,7 +22600,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 117,
+      "mention_count": 118,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22576,13 +22608,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-14T12:17:00",
-          "excerpt": "надэ:** — Именно уведомление, а не разрешение на вход. Он уже имеет такое разрешение. В коридоре убежища Коюки продолжала заниматься детёнышем. Маленькая змея высунула голову из расщелины, когда белая змейка издала негромкий звук. На этот раз Коюки не повторил",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.130"
         },
         {
           "at": "0010-05-14T15:12:00",
@@ -22597,6 +22622,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.028"
+        },
+        {
+          "at": "0010-05-14T15:16:00",
+          "excerpt": "Асума придержал дверь. **Асума Сарутоби:** — Мне пора к своим. Спасибо за компанию, Шики. И передавай поздравления Коюки. Как-никак она встретила твой день рождения вместе с тобой. **Ход Шики.** Шики оплатил сакэ, рассказал о собирающихся возле человекоподобно",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.029"
         }
       ],
       "projections": [
@@ -23159,8 +23191,15 @@
       "status": "projected",
       "to": "orochimaru",
       "type": "held_by"
+    },
+    {
+      "from": "shiki_spare_coin_s18",
+      "source": "s18.text.030",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1665
+  "source_turns_indexed": 1667
 }
