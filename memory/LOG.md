@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.041: Ао (`npc/ao`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.040: Коюки (`npc/western_nest_young_courier`)
 - s18.text.039: Коюки (`npc/western_nest_young_courier`), бой
 - s18.text.038: Коюки (`npc/western_nest_young_courier`)
@@ -59,4 +60,3 @@
 - s17.text.117: Орочимару (`npc/orochimaru`), вещь `jiraiya_first_letter_s17`
 - s17.text.116: Орочимару (`npc/orochimaru`), Сирамэ (`npc/shirame`), вещь `jiraiya_first_letter_s17`
 - s17.text.115: Гамасэй (`npc/zhaba`), Сирамэ (`npc/shirame`), Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), вещь `jiraiya_first_letter_s17`
-- s17.text.114: Джирайя (`npc/jiraiya`), Цунадэ (`npc/tsunade`), Сирамэ (`npc/shirame`), Гамасэй (`npc/zhaba`), вещь `jiraiya_first_letter_s17`, вещь `toad_letter_case_s17`, поправки игрока: 1
