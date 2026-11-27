@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.083",
+  "cursor": "s17.text.084",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -527,20 +527,36 @@
         "s09.text.067"
       ]
     },
-    "canon:s17.text.083:0": {
+    "canon:s17.text.084:0": {
       "aliases": [
-        "canon:s17.text.083:0",
-        "s17.text.083, прямая поправка игрока 27.11.2026: восстановленный исходный Орочимару после адаптации остаётся гениальным шиноби уровня Кагэ, Саннином. Сохранены пять стихий, Инь и Я"
+        "canon:s17.text.084:0",
+        "s17.text.084: прямая поправка игрока — Саске заключил змеиный договор Рьючидо, лично подтвердил Шики 12.05.1287 20:56. Точная дата подписи не установлена. Известны четыре действующ"
       ],
       "facts": [],
-      "id": "canon:s17.text.083:0",
+      "id": "canon:s17.text.084:0",
       "kind": "canon",
-      "label": "s17.text.083, прямая поправка игрока 27.11.2026: восстановленный исходный Орочимару после адаптации остаётся гениальным шиноби уровня Кагэ, Саннином. Сохранены пять стихий, Инь и Я",
+      "label": "s17.text.084: прямая поправка игрока — Саске заключил змеиный договор Рьючидо, лично подтвердил Шики 12.05.1287 20:56. Точная дата подписи не установлена. Известны четыре действующ",
       "mention_count": 0,
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.083"
+        "s17.text.084"
+      ]
+    },
+    "canon:s17.text.084:1": {
+      "aliases": [
+        "canon:s17.text.084:1",
+        "s17.text.084: игрок требует причинно развить самостоятельную линию Кабуто с учётом выживания Орочимару и обязательного начала Четвёртой мировой войны. GM_CORE s16.036 сохраняет обя"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.084:1",
+      "kind": "canon",
+      "label": "s17.text.084: игрок требует причинно развить самостоятельную линию Кабуто с учётом выживания Орочимару и обязательного начала Четвёртой мировой войны. GM_CORE s16.036 сохраняет обя",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.084"
       ]
     },
     "captive_guard": {
@@ -1124,7 +1140,8 @@
     "fire_port_official": {
       "aliases": [
         "fire port official",
-        "Портовый чиновник"
+        "Портовый чиновник",
+        "fire_port_official"
       ],
       "facts": [],
       "id": "fire_port_official",
@@ -1163,12 +1180,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.055",
+          "seen": "s17.text.084",
           "state": "Закончил собственные показания, вышел и попросил караульного проводить домой."
         }
       ],
       "sources": [
-        "recovery/cast/fire_port_official.json"
+        "recovery/cast/fire_port_official.json",
+        "s17.text.084"
       ]
     },
     "fire_port_security_staff": {
@@ -2837,12 +2855,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.081",
+          "seen": "s17.text.084",
           "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела."
         }
       ],
       "sources": [
-        "recovery/cast/kabuto.json"
+        "recovery/cast/kabuto.json",
+        "s17.text.084"
       ]
     },
     "kabuto_letter_0416": {
@@ -3095,8 +3114,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kakashi.json",
-        "s17.text.083"
+        "recovery/cast/kakashi.json"
       ]
     },
     "kakuzu": {
@@ -5801,7 +5819,7 @@
       "id": "orochimaru",
       "kind": "npc",
       "label": "Орочимару",
-      "mention_count": 194,
+      "mention_count": 195,
       "mentions": [
         {
           "at": "0001-08-07T12:12:00",
@@ -5809,13 +5827,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.046"
-        },
-        {
-          "at": "0010-05-12T20:53:00",
-          "excerpt": "ре <text color=\"secondary\" size=\"xs\">Среда, 12 мая 1287 года · 20:53</text> ### Страна Рек. Убежище Орочимару. Палата наблюдения Сознание возвращалось постепенно. Сначала — ощущение собственного тела. Затем — звуки: мерное падение капель воды, шорох ткани, тих",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.081"
         },
         {
           "at": "0010-05-12T20:54:00",
@@ -5830,6 +5841,13 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.083"
+        },
+        {
+          "at": "0010-05-12T20:56:00",
+          "excerpt": "12 мая 1287 года · 20:56</text> **Мугами Шики:** — Да, ты заключил договор? **Саске Учиха:** — Да. Орочимару позволил мне подписать свиток Рьючидо. Сирамэ слегка приподнялась над постелью. **Сирамэ:** — Значит, теперь и ты призыватель. Саске кивнул. **Саске Уч",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.084"
         }
       ],
       "projections": [
@@ -8043,9 +8061,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.083",
+        "s17.text.084",
         "s17.text.081",
-        "s17.text.082"
+        "s17.text.082",
+        "s17.text.083"
       ]
     },
     "place:2ae55a7918a956c7": {
@@ -20103,17 +20122,13 @@
       ],
       "projections": [
         {
-          "seen": "s17.text.083",
-          "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
-        },
-        {
+          "seen": "s17.text.084",
           "state": "После объяснения цены и опасной методики Саске решил не принимать предложение сейчас, вернуться к собственным планам и ушёл. Намерен самостоятельно найти Шики, если решит после Орочимару."
         }
       ],
       "sources": [
         "recovery/cast/sasuke.json",
-        "recovery/HOT.json",
-        "s17.text.083"
+        "s17.text.084"
       ]
     },
     "sayu": {
@@ -20886,7 +20901,7 @@
       "id": "shirame",
       "kind": "npc",
       "label": "Сирамэ",
-      "mention_count": 93,
+      "mention_count": 94,
       "mentions": [
         {
           "at": "0010-03-25T12:17:52",
@@ -20894,13 +20909,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.067"
-        },
-        {
-          "at": "0010-05-12T20:53:00",
-          "excerpt": "ались при нём. Меч находился на столике возле изголовья. Рядом, свернувшись несколькими кольцами, лежала Сирамэ. Почувствовав изменение дыхания Шики, она подняла голову. **Сирамэ:** — Наконец-то. Змея приблизилась к его лицу. **Сирамэ:** — Ты не приходил в себ",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.081"
         },
         {
           "at": "0010-05-12T20:54:00",
@@ -20915,12 +20923,19 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.083"
+        },
+        {
+          "at": "0010-05-12T20:56:00",
+          "excerpt": "* — Да, ты заключил договор? **Саске Учиха:** — Да. Орочимару позволил мне подписать свиток Рьючидо. Сирамэ слегка приподнялась над постелью. **Сирамэ:** — Значит, теперь и ты призыватель. Саске кивнул. **Саске Учиха:** — Но я не собираюсь зависеть от змей бол",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.084"
         }
       ],
       "projections": [
         {
           "fears": "Удержание людьми или насильственное исследование Немерой",
-          "seen": "s17.text.083",
+          "seen": "s17.text.084",
           "state": "Вышла из комнаты, намерена передать известие западным гнёздам.",
           "voice": "Шипящие краткие реплики, нетерпимость к приказам чужих шиноби",
           "wants": "Доставить ответ Шики Кабуто и уйти невредимой"
@@ -20934,7 +20949,7 @@
       "sources": [
         "recovery/cast/shirame.json",
         "recovery/HOT.json",
-        "s17.text.083"
+        "s17.text.084"
       ]
     },
     "shiranami": {
@@ -23009,5 +23024,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1589
+  "source_turns_indexed": 1590
 }
