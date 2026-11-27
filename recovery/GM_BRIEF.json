@@ -79,20 +79,15 @@
    "turn": "s16.text.049"
   },
   {
-   "kind": "acquaint",
-   "text": "Виденное не удивляет заново: Кабуто Якуши уже видел «Режим змеиного отшельника на лице и теле» (s12.text.041). Реакция — от этой памяти: узнал, сравнил, насторожился, — не открытие.",
-   "turn": "s17.text.094"
-  },
-  {
    "kind": "plot",
    "text": "Линии без движения две сессии и больше: shiki_save_asuma, shiki_promise_nemera, shiki_save_jiraiya. Закрой каждую с исходом (d.threads.<id>.closed) или переведи в событие d.plot с концом (threads: [\"<id>\"]).",
-   "turn": "s17.text.094"
+   "turn": "s17.text.095"
   }
  ],
  "checks_ref": "recovery/CHECKS.json",
  "context_route": {
   "budget_bytes": 6600,
-  "cursor": "s17.text.094",
+  "cursor": "s17.text.095",
   "epistemic_rules": {
    "npc_knowledge": "separate from world truth and from player disclosure",
    "shiki": "player alone owns Shiki's voluntary decisions",
@@ -127,30 +122,15 @@
     "eyes.ems",
     "fusion.tendrils",
     "genome.zero",
-    "medical.reconstruct",
-    "medical.sterilize",
     "pact.contact",
     "sage.permanent",
-    "sage.poison",
-    "seals.speed",
-    "shunshin.zero",
-    "weapon.sumi",
-    "combat.genjutsu",
-    "combat.scalpel",
-    "element.fireball",
     "element.ice",
-    "element.lightning",
-    "element.phoenix",
-    "element.water",
     "eyes.cradle",
     "eyes.magatsuhi",
-    "eyes.susanoo",
-    "eyes.yomotsu",
     "fusion.development",
     "genome.fluid",
     "genome.kaguya",
     "medical.diagnosis",
-    "medical.field",
     "nemera.agency",
     "nemera.cloak",
     "nemera.transfer",
@@ -160,79 +140,33 @@
     "research.reproduce",
     "restricted.cancelled",
     "restricted.unlearned",
-    "sage.senpo",
     "sage.summon"
    ],
    "matched": [],
-   "medical": {
-    "at": "0010-05-13T10:30:00",
-    "chakra": {
-     "at": "0010-05-13T10:30:00",
-     "last": {
-      "spent": 64.5,
-      "turn": "s17.text.080",
-      "what": [
-       "Согласование чакровой и автономной регуляции Орочимару после переселения при помощи Кабуто"
-      ]
-     },
-     "max": 600.0,
-     "state": "готов",
-     "value": 286.19,
-     "why": "Прямая поправка игрока к s17.text.086: 3 часа глубокого погружения ×5, 150 вместо 30, +120 к запасу 141,02 после s17.text.087."
-    },
-    "kit": {
-     "holder": "shiki",
-     "since": "s10.text.102",
-     "state": "Пригодные многоразовые инструменты очищены, стерилизованы медицинской чакрой и упакованы; использованные одноразовые материалы отделены; точный остаток расходников не установлен.",
-     "turn": "s14.text.023"
-    },
-    "patients": {},
-    "sources": [
-     "recovery/HOT.json#injuries",
-     "recovery/HOT.json#body",
-     "recovery/HOT.json#things",
-     "campaigns/shiki/ref/MEDICINE.md"
-    ]
-   },
    "read": [
     "campaigns/shiki/ref/MEDICINE.md",
     "campaigns/shiki/ref/TECHNIQUES.md",
     "campaigns/shiki/SHIKI.md",
-    "campaigns/shiki/ref/COMBAT.md",
     "campaigns/shiki/ref/KNOWLEDGE.md",
     "campaigns/shiki/ref/MEMORY.md",
     "campaigns/shiki/ref/NEMERA.md",
     "campaigns/shiki/ref/FUSION.md"
    ],
    "required": [
-    "injuries/function",
-    "things/medical kit",
-    "chakra",
-    "scene/time",
     "prior results/source",
     "material/equipment",
     "genome/known limits",
-    "active forms/passives",
-    "fight/dice",
-    "chakra/injuries",
-    "opponents/positions",
+    "scene/time",
     "present/identity",
     "NPC knowledge/fences",
     "prior dialogue/source",
     "intent",
-    "scene/place",
-    "body/gear",
-    "due/offscreen",
-    "time",
     "fusion profile or historical pact",
     "contact/channel"
    ],
    "routes": [
-    "medical",
     "research",
-    "combat",
     "dialogue",
-    "travel",
     "pact"
    ],
    "unavailable": [
@@ -540,13 +474,13 @@
   }
  },
  "cursor": {
-  "at": "0010-05-13T10:30:00",
+  "at": "0010-05-13T10:31:00",
   "date": "Четверг, 13 мая 1287 года",
-  "id": "s17.text.094",
+  "id": "s17.text.095",
   "place": "Северная граница Страны Рек, подземное убежище Орочимару, лаборатория",
-  "time": "10:30"
+  "time": "10:31"
  },
- "digest": "888587523f683911a57ade826ef9371ba084d97c5e0e8e1ea5eeb069aa088873",
+ "digest": "34d454806f032d5f52fdb0c942ee6aebfb9ef8b5797da63c6b256b28a831dba5",
  "entity_memory": {
   "activated": [],
   "conflicts": [],
@@ -561,14 +495,14 @@
     "from": "s17.text.058",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.092"
+    "to": "s17.text.095"
    },
    {
     "actor": "kabuto",
     "from": "s17.text.070",
     "kind": "chronology_same_actor",
     "status": "source_order_only",
-    "to": "s17.text.092"
+    "to": "s17.text.095"
    }
   ],
   "nodes": [],
@@ -676,21 +610,21 @@
    "max": 600.0,
    "regen_per_hour": 10,
    "state": "готов",
-   "value": 286.19
+   "value": 286.36
   },
   "dice": [
+   8,
+   1,
+   5,
+   17,
+   2,
    14,
-   12,
-   18,
-   9,
-   20,
-   12,
-   12,
-   3,
-   20,
-   15,
+   16,
    10,
-   13
+   11,
+   19,
+   1,
+   15
   ],
   "last_fight": {
    "at": "0010-04-24T07:38:32",
@@ -842,18 +776,18 @@
   "due": null,
   "npcs": {
    "kabuto": {
-    "does": "Остановил руку у страницы, указал карандашом, выразил сомнение в прежней гипотезе тканевой выносливости.",
+    "does": "Перестал писать и оставил между собой и Шики стол.",
     "lever": "остаться чужим инструментом",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Восстановленное тело создаёт возможность пересмотреть значение модификаций.",
+    "reads": "Разговор может изменить объяснение неудач Орочимару.",
     "stage": 4,
     "step": "необратимость"
    },
    "orochimaru": {
-    "does": "Попросил Шики изложить выводы.",
+    "does": "Попросил конкретизировать уровень критики.",
     "lever": "умереть, не узнав всего",
     "next": "Решение принято; последствия, hold/down, не повторяй страх.",
-    "reads": "Опыт освоившего сендзюцу может помочь пересмотреть причины неудачи.",
+    "reads": "Неудача обосновывает пересмотр, но наблюдения нельзя отвергать без объяснения.",
     "stage": 4,
     "step": "необратимость"
    }
@@ -881,14 +815,14 @@
  },
  "needs_profile": [
   {
-   "appearances": 68,
+   "appearances": 69,
    "facets": 4,
    "need": 5,
    "npc": "orochimaru",
    "tier": "deep"
   },
   {
-   "appearances": 103,
+   "appearances": 104,
    "facets": 4,
    "need": 5,
    "npc": "kabuto",
@@ -1123,10 +1057,10 @@
     "s17.text.072",
     "s17.text.073",
     "s17.text.076",
-    "s17.text.083",
     "s17.text.084",
     "s17.text.089",
-    "s17.text.092"
+    "s17.text.092",
+    "s17.text.095"
    ],
    "prior_disclosures": [
     {
@@ -1137,18 +1071,18 @@
      "turn": "s17.text.070"
     },
     {
-     "at": "0010-05-13T08:02:00",
-     "sha256": "46a4b61fe863def4eaad21d63a077dd0d25c27218ebd1ab87fbc8e7c2ce950b3",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.089"
-    },
-    {
      "at": "0010-05-13T08:06:00",
      "sha256": "8bda7af81f59f95cdc3d8a54bdda566b2e1727fb506059b5303b7ac3651555fa",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.092"
+    },
+    {
+     "at": "0010-05-13T10:31:00",
+     "sha256": "c620e7e80dc8d618a2422e93f8545f647f767e10f1f9b5a607f6c95003c96eea",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.095"
     }
    ],
    "profile": {
@@ -1165,14 +1099,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.094",
-      "what": "Шики прочёл ранние и поздние записи сендзюцу. Восприятие и поглощение доступны Орочимару, устойчивый баланс нет; ранние неврологические симптомы и поздние смешанные эффекты. Причина не доказана."
+      "turn": "s17.text.095",
+      "what": "Шики выразил несогласие с подходом. Орочимару признал основания для критики, но попросил различить ошибку постановки проблемы и способа решения."
      }
     ],
     "memory_file": "archive/npc-memory/kabuto.json",
-    "memory_total": 103,
+    "memory_total": 104,
     "name": "Кабуто Якуши",
-    "seen": "s17.text.094",
+    "seen": "s17.text.095",
     "state": "По приказу Орочимару ищет ранние исследовательские материалы и образцы его исходного тела.",
     "status": "present_profile",
     "tier": "deep"
@@ -1228,10 +1162,10 @@
     "s17.text.070",
     "s17.text.072",
     "s17.text.073",
-    "s17.text.089",
     "s17.text.090",
     "s17.text.091",
-    "s17.text.092"
+    "s17.text.092",
+    "s17.text.095"
    ],
    "prior_disclosures": [
     {
@@ -1242,18 +1176,18 @@
      "turn": "s17.text.058"
     },
     {
-     "at": "0010-05-13T08:04:00",
-     "sha256": "4f09f6b7d51ab18c75118f15e8d402695c3f804b8b38bfc6de37e9fce7313a3f",
-     "source": "archive/session-017-turns.jsonl",
-     "status": "played_candidate_not_automatic_actor_fact",
-     "turn": "s17.text.091"
-    },
-    {
      "at": "0010-05-13T08:06:00",
      "sha256": "8bda7af81f59f95cdc3d8a54bdda566b2e1727fb506059b5303b7ac3651555fa",
      "source": "archive/session-017-turns.jsonl",
      "status": "played_candidate_not_automatic_actor_fact",
      "turn": "s17.text.092"
+    },
+    {
+     "at": "0010-05-13T10:31:00",
+     "sha256": "c620e7e80dc8d618a2422e93f8545f647f767e10f1f9b5a607f6c95003c96eea",
+     "source": "archive/session-017-turns.jsonl",
+     "status": "played_candidate_not_automatic_actor_fact",
+     "turn": "s17.text.095"
     }
    ],
    "profile": {
@@ -1270,14 +1204,14 @@
     "memory": [
      {
       "ch": "present",
-      "turn": "s17.text.094",
-      "what": "Шики прочёл ранние и поздние записи сендзюцу. Восприятие и поглощение доступны Орочимару, устойчивый баланс нет; ранние неврологические симптомы и поздние смешанные эффекты. Причина не доказана."
+      "turn": "s17.text.095",
+      "what": "Шики выразил несогласие с подходом. Орочимару признал основания для критики, но попросил различить ошибку постановки проблемы и способа решения."
      }
     ],
     "memory_file": "archive/npc-memory/orochimaru.json",
-    "memory_total": 68,
+    "memory_total": 69,
     "name": "Орочимару",
-    "seen": "s17.text.094",
+    "seen": "s17.text.095",
     "state": "Принял лекарство; частичная временная компенсация ухудшения, причина не устранена.",
     "status": "present_profile",
     "tier": "deep"
@@ -1287,15 +1221,15 @@
  },
  "recent_turns": [
   {
-   "id": "s17.text.094",
-   "line": "Шики прочёл ранние и поздние записи сендзюцу. Восприятие и поглощение доступны Орочимару, устойчивый баланс нет; ранние неврологические симптомы и поздние смешанные эффекты. Причина не доказана."
+   "id": "s17.text.095",
+   "line": "Шики выразил несогласие с подходом. Орочимару признал основания для критики, но попросил различить ошибку постановки проблемы и способа решения."
   }
  ],
  "recent_turns_ref": "recovery/TURN.json",
  "scene": {
-  "positions": "Шики у рабочего стола, рядом Кабуто и Орочимару; прежнее тело в ёмкости.",
-  "pressure": "Нужно отличить первичный механизм неспособности к сендзюцу от поздних патологических осложнений.",
-  "situation": "За 2ч18м Шики прочёл обе предложенные записи. Ранние наблюдения: восприятие и поглощение природной энергии доступны, иногда образование малого количества сенчакры, но неустойчивость распределения, спазмы, нарушения координации и чувствительности. Поздние наблюдения смешивают отторжение носителя, модификации и нарушение регуляции. Первопричина не установлена. Кабуто допустил патологическую роль модификаций. Орочимару спросил о выводах. Обследование и вмешательство не начаты."
+  "positions": "Шики и Орочимару у раскрытой тетради; Кабуто по другую сторону стола.",
+  "pressure": "Орочимару ожидает конкретного возражения Шики.",
+  "situation": "Шики выразил несогласие с исследовательским подходом, не конкретизируя его. Орочимару сослался на наблюдавшуюся непереносимость природной энергии и спросил, касается ли возражение постановки проблемы или способа решения. Кабуто отложил карандаш, переместился на противоположную сторону стола. Обследование не начато."
  },
  "shiki": {
   "body": "Постоянный режим дракона, Риннешаринган выключен; отростки свёрнуты, отдельной Немеры нет.",
@@ -1309,9 +1243,9 @@
    "player": "Я отвечу честно, я не знаю.",
    "source": "archive/session-017-turns.jsonl"
   },
-  "s17.text.092": {
-   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 08:06</text>\n\n**Мугами Шики:** — Да. И повторюсь мне бессмертие не нужно. От вашего предложения я отказываюсь. Помните, вы можете начать новые модификации, но больше я не стану создавать вам тело. А сендзюцу, тут я пожалуй посмотрю что можно сделать.\n\nОрочимару выпрямился. Его пальцы замерли на подлокотниках стула.\n\n**Орочимару:** — Значит, второго шанса не будет.\n\nОн произнёс это негромко, словно окончательно устанавливая для себя границы нового положения.\n\nНесколько мгновений санни\n[... sou…",
-   "player": "Да. И повторюсь мне бессмертие не нужно. От вашего предложения я отказываюсь. Помните, вы можете начать новые модификации, но больше я не стану создавать вам тело. А сендзюцу, тут я пожалуй посмотрю что можно сделать",
+  "s17.text.095": {
+   "gm_excerpt": "<text color=\"secondary\" size=\"xs\">Четверг, 13 мая 1287 года · 10:31</text>\n\n**Мугами Шики:** — Что я не согласен с подходом.\n\nОрочимару медленно опустил взгляд на раскрытую тетрадь.\n\n**Орочимару:** — Вот как?\n\nКабуто перестал писать. Он посмотрел на своего наставника, затем отложил карандаш. Когда Орочимару придвинулся к столу, Кабуто незаметно переместился на противоположную сторону, оставив между собой и Шики широкую столешницу.\n\n**Орочимару:** — Учитывая результат моих исследований, у тебя есть основания для критики. Однако неспособность организма пе…",
+   "player": "Что я не согласен с подходом",
    "source": "archive/session-017-turns.jsonl"
   }
  },
@@ -1321,8 +1255,8 @@
  "turn_file": {
   "path": "recovery/TURN.json",
   "rule": "Пиши следующий ход с этим sha. Конфликт — один раз перечитай TURN.json.",
-  "sha": "bef5d283e2cdda8f25253f36424131894c19fe9b",
-  "turn": "s17.text.094"
+  "sha": "9529b0e971f96c7008008653ddc2c0d019838bc6",
+  "turn": "s17.text.095"
  },
  "wiki": {
   "index": "memory/INDEX.md",
@@ -1339,7 +1273,7 @@
     "due": "0010-05-27T13:51:00",
     "id": "kiri_sample_agreement_expiry_s16",
     "if_unopposed": "К сроку стороны определяют дальнейший статус. При отсутствии нового соглашения временная гарантия истекает; решение Мэй о дальнейших мерах не предрешено.",
-    "minutes": 20361.0,
+    "minutes": 20360.0,
     "owner": "Ао и Тэруми Мэй",
     "signs": "Результаты исследования, сообщение Ао, повторные переговоры",
     "source": "recovery/GM_ONLY.json:offscreen.clocks.kiri_sample_agreement_expiry_s16",
