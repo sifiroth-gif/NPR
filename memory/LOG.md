@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.006: Цунадэ (`npc/tsunade`)
 - s18.text.005: Цунадэ (`npc/tsunade`)
 - s18.text.004: Цунадэ (`npc/tsunade`)
 - s18.text.003: Цунадэ (`npc/tsunade`), линия `shiki_save_jiraiya`
@@ -60,4 +61,3 @@
 - s17.text.082: Саске Учиха (`npc/sasuke`), Сирамэ (`npc/shirame`), Кадзунэ (`npc/fire_road_jonin`), Шикамару Нара (`npc/shikamaru`), план сюжета
 - s17.text.081: Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), Саске Учиха (`npc/sasuke`), Орочимару (`npc/orochimaru`), план сюжета
 - s17.text.080: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Сирамэ (`npc/shirame`), вещь `orochimaru_reconstructed_body_s17`, план сюжета, поправки игрока: 1
-- s17.text.079: Орочимару (`npc/orochimaru`), Кабуто Якуши (`npc/kabuto`), Незнакомый шиноби (`npc/leaf_gate_special_inspector_s16`), вещь `orochimaru_reconstructed_body_s17`, план сюжета, поправки игрока: 1
