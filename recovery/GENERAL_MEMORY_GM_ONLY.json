@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s17.text.048",
+  "cursor": "s17.text.049",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s17.text.049:0": {
+      "aliases": [
+        "canon:s17.text.049:0",
+        "s17.text.049: Цунадэ разрешила Шики закрытое использование резервного полигона северо-западного сектора до вечера 09.05.1287 без посторонних, с условием предварительного предупрежд"
+      ],
+      "facts": [],
+      "id": "canon:s17.text.049:0",
+      "kind": "canon",
+      "label": "s17.text.049: Цунадэ разрешила Шики закрытое использование резервного полигона северо-западного сектора до вечера 09.05.1287 без посторонних, с условием предварительного предупрежд",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s17.text.049"
       ]
     },
     "captive_guard": {
@@ -11315,7 +11331,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s17.text.048",
+        "s17.text.049",
         "s16.text.055",
         "s16.text.056",
         "s16.text.058",
@@ -11325,7 +11341,8 @@
         "s16.text.062",
         "s16.text.063",
         "s16.text.064",
-        "s16.text.065"
+        "s16.text.065",
+        "s17.text.048"
       ]
     },
     "place:6cfdffecccff3eba": {
@@ -20754,7 +20771,7 @@
       "id": "shizune",
       "kind": "npc",
       "label": "Шизунэ",
-      "mention_count": 36,
+      "mention_count": 37,
       "mentions": [
         {
           "at": "0010-04-23T12:23:00",
@@ -20762,13 +20779,6 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.125"
-        },
-        {
-          "at": "0010-05-07T08:43:00",
-          "excerpt": ". Цунадэ медленно откинулась на спинку кресла. **Цунадэ:** — Понятно. Тогда пока оставим этот вопрос. Шизунэ промокнула чернильное пятно краем ненужного листа и продолжила вести протокол. Однако вопрос о способностях Шики она записывать не стала. Джирайя подош",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.034"
         },
         {
           "at": "0010-05-07T12:30:00",
@@ -20783,11 +20793,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.048"
+        },
+        {
+          "at": "0010-05-08T06:14:00",
+          "excerpt": "лтора, есть возможность предоставить мне такую? Цунадэ поправила рукав зелёного хаори и повернулась к Шизунэ. **Цунадэ:** — Что у нас со старым резервным полигоном? Шизунэ открыла журнал распределения тренировочных площадок. **Шизунэ:** — Северо-западный секто",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.049"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.048",
+          "seen": "s17.text.049",
           "state": "С Цунадэ в кабинете, освободила место для разговора."
         },
         {
@@ -20797,7 +20814,7 @@
       "sources": [
         "recovery/cast/shizune.json",
         "recovery/HOT.json",
-        "s17.text.048"
+        "s17.text.049"
       ]
     },
     "signalshchik": {
@@ -21857,7 +21874,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 94,
+      "mention_count": 95,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -21865,13 +21882,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-07T18:26:00",
-          "excerpt": "ие пластины и несколько образцов новой формулы. Какаши опустил протектор. **Какаши:** — Завтра мне предстоит весьма интересный разговор с Цунадэ. Гэнма поднял одну из пластин и внимательно посмотрел на её центральный символ. **Гэнма:** — У Минато была своя фор",
-          "source": "archive/session-017-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s17.text.041"
         },
         {
           "at": "0010-05-07T19:12:00",
@@ -21886,11 +21896,18 @@
           "source": "archive/session-017-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s17.text.048"
+        },
+        {
+          "at": "0010-05-08T06:14:00",
+          "excerpt": "и. Мне нужна закрытая тренировочная площадка дня на полтора, есть возможность предоставить мне такую? Цунадэ поправила рукав зелёного хаори и повернулась к Шизунэ. **Цунадэ:** — Что у нас со старым резервным полигоном? Шизунэ открыла журнал распределения трени",
+          "source": "archive/session-017-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s17.text.049"
         }
       ],
       "projections": [
         {
-          "seen": "s17.text.048",
+          "seen": "s17.text.049",
           "state": "В кабинете, просматривает утренние донесения; готова выслушать Шики."
         },
         {
@@ -21900,7 +21917,7 @@
       "sources": [
         "recovery/cast/tsunade.json",
         "recovery/HOT.json",
-        "s17.text.048"
+        "s17.text.049"
       ]
     },
     "unknown_masked_prisoner": {
@@ -22762,5 +22779,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1557
+  "source_turns_indexed": 1558
 }
