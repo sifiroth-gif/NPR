@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.054",
+  "cursor": "s18.text.055",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 34,
+      "mention_count": 35,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-14T15:19:00",
-          "excerpt": "яти. Асума вновь посмотрел на монету. Под его большим пальцем скрывался центральный символ формулы. **Асума Сарутоби:** — Значит, проверим, можно ли использовать её ещё и для подачи сигнала? Он поднёс монету ближе к глазам. На потёртом металле сохранились мелк",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.032"
         },
         {
           "at": "0010-05-15T08:55:12",
@@ -423,11 +416,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.054"
+        },
+        {
+          "at": "0010-05-15T08:57:00",
+          "excerpt": "ременной техники. **Ино Яманака:** — Подождите. Отшельник — как Джирайя-сама? Асума стряхнул пепел на землю. **Асума Сарутоби:** — В общих чертах. Но не стоит считать, что способности у них одинаковые. На соседнем участке полигона ветер раскачивал подвешенную ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.054",
+          "seen": "s18.text.055",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         },
         {
@@ -437,7 +437,7 @@
       "sources": [
         "recovery/cast/asuma.json",
         "recovery/HOT.json",
-        "s18.text.054"
+        "s18.text.055"
       ]
     },
     "baki": {
@@ -769,23 +769,46 @@
     },
     "choji": {
       "aliases": [
-        "choji"
+        "choji",
+        "Тёдзи Акимичи"
       ],
       "facts": [],
       "id": "choji",
       "kind": "npc",
-      "label": "choji",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Тёдзи Акимичи",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0001-07-03T11:27:00",
+          "excerpt": "идеально. Но уже не случайно. --- ### Пятница, 5 июля. День четвёртый В башню прибыла команда Асумы: Шикамару Нара, Ино Яманака и Тёдзи Акимичи. Шикамару едва держался на ногах от усталости. Ино злилась на него за то, что он дважды предлагал отказаться от прес",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.092"
+        },
+        {
+          "at": "0001-07-07T07:52:00",
+          "excerpt": "* - Не заставляй меня повторять\\! Ли победил. На галерее Темари недовольно покачала головой. Гаара не проявил никакого интереса. --- ### 08:34-08:46. Седьмой и восьмой поединки **Шино Абурамэ - Тёдзи Акимичи** Победитель: Шино Абурамэ Шино не пытался остановит",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.105"
+        },
+        {
+          "at": "0010-05-15T08:57:00",
+          "excerpt": "икамару Нара:** — Отшельник… Это связано с Рьючидо, верно? Но что именно тебе даёт этот статус, я не знаю. **Тёдзи Акимичи:** — А разве драконы существуют? Ино повернулась к нему, намереваясь возразить, однако остановилась. Она ещё раз посмотрела на Шики, слов",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.055"
+        }
+      ],
       "projections": [
         {
-          "seen": "s18.text.054"
+          "seen": "s18.text.055"
         }
       ],
       "sources": [
         "recovery/cast/choji.json",
         "recovery/HOT.json",
-        "s18.text.054"
+        "s18.text.055"
       ]
     },
     "clinic_assistant": {
@@ -2528,7 +2551,7 @@
       "id": "ino",
       "kind": "npc",
       "label": "Ино Яманака",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -2550,17 +2573,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.054"
+        },
+        {
+          "at": "0010-05-15T08:57:00",
+          "excerpt": "то особенности его внешности могут быть не следствием болезни или применения какой-нибудь временной техники. **Ино Яманака:** — Подождите. Отшельник — как Джирайя-сама? Асума стряхнул пепел на землю. **Асума Сарутоби:** — В общих чертах. Но не стоит считать, ч",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.054"
+          "seen": "s18.text.055"
         }
       ],
       "sources": [
         "recovery/cast/ino.json",
         "recovery/HOT.json",
-        "s18.text.054"
+        "s18.text.055"
       ]
     },
     "inquiry_contact_token": {
@@ -2736,7 +2766,7 @@
       "id": "jiraiya",
       "kind": "npc",
       "label": "Джирайя",
-      "mention_count": 156,
+      "mention_count": 157,
       "mentions": [
         {
           "at": "0010-03-16T12:24:00",
@@ -2744,13 +2774,6 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.015"
-        },
-        {
-          "at": "0010-05-14T12:28:00",
-          "excerpt": "тельного знака, обозначавшего предполагаемый общий источник чакры носителей Риннегана. **Цунадэ:** — Если Джирайя прав и мы имеем дело с управляемыми телами, уничтожение этих тел может ничего не решить. Она взяла карандаш, но не стала наносить новую отметку. Н",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.001"
         },
         {
           "at": "0010-05-14T12:34:00",
@@ -2765,6 +2788,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.006"
+        },
+        {
+          "at": "0010-05-15T08:57:00",
+          "excerpt": "ледствием болезни или применения какой-нибудь временной техники. **Ино Яманака:** — Подождите. Отшельник — как Джирайя-сама? Асума стряхнул пепел на землю. **Асума Сарутоби:** — В общих чертах. Но не стоит считать, что способности у них одинаковые. На соседнем",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.055"
         }
       ],
       "projections": [
@@ -10936,8 +10966,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.054",
-        "s18.text.053"
+        "s18.text.055",
+        "s18.text.053",
+        "s18.text.054"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -20794,7 +20825,7 @@
       "id": "shikamaru",
       "kind": "npc",
       "label": "Шикамару Нара",
-      "mention_count": 19,
+      "mention_count": 20,
       "mentions": [
         {
           "at": "0001-07-03T11:27:00",
@@ -20802,13 +20833,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.092"
-        },
-        {
-          "at": "0010-04-24T12:20:00",
-          "excerpt": "а ближайший пост срочный запрос о помощи. Шикамару тем временем закончил осмотр подземного помещения. **Шикамару Нара:** — Здесь учёт выплат за разыскиваемых шиноби. Имена получателей почти нигде не указаны. Но есть даты, суммы и номера ордеров. Заберём всё. П",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.182"
         },
         {
           "at": "0010-05-15T08:55:12",
@@ -20823,11 +20847,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.054"
+        },
+        {
+          "at": "0010-05-15T08:57:00",
+          "excerpt": "наблюдать способности лекаря, которые трудно было объяснить исключительно владением медицинским ниндзюцу. **Шикамару Нара:** — Отшельник… Это связано с Рьючидо, верно? Но что именно тебе даёт этот статус, я не знаю. **Тёдзи Акимичи:** — А разве драконы существ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.055"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.054",
+          "seen": "s18.text.055",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         },
         {
@@ -20837,7 +20868,7 @@
       "sources": [
         "recovery/cast/shikamaru.json",
         "recovery/HOT.json",
-        "s18.text.054"
+        "s18.text.055"
       ]
     },
     "shiki_arm_wraps": {
@@ -23325,5 +23356,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1691
+  "source_turns_indexed": 1692
 }
