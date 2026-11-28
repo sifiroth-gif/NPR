@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.083",
+  "cursor": "s18.text.084",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -432,8 +432,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json",
-        "s18.text.083"
+        "recovery/cast/asuma.json"
       ]
     },
     "baki": {
@@ -805,11 +804,12 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.077"
+          "seen": "s18.text.084"
         }
       ],
       "sources": [
-        "recovery/cast/choji.json"
+        "recovery/cast/choji.json",
+        "s18.text.084"
       ]
     },
     "clinic_assistant": {
@@ -1889,7 +1889,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 75,
+      "mention_count": 76,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1897,13 +1897,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-04-23T13:31:00",
-          "excerpt": "е Ветра, разговор происходил среди людей, изнурённых недавним сражением. Было слишком много других забот: Гаара, раненые, возвращение отряда. Теперь перед ним сидел человек, намеревавшийся осуществить подобное преобразование непосредственно у него на глазах. Ш",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.130"
         },
         {
           "at": "0010-05-16T07:15:00",
@@ -1918,11 +1911,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.083"
+        },
+        {
+          "at": "0010-05-16T07:37:00",
+          "excerpt": "Здравствуй гаара. Я подумал о том #сажусь# что документ лишним не будет и даже может в каком-то смысле успокаивать людей #достаю из сумки договоры с листом и травой# <text color=\"secondary\" s",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.084"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.083",
+          "seen": "s18.text.084",
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         },
         {
@@ -1932,7 +1932,7 @@
       "sources": [
         "recovery/cast/gaara.json",
         "recovery/HOT.json",
-        "s18.text.083"
+        "s18.text.084"
       ]
     },
     "gaara_private_letter": {
@@ -10342,10 +10342,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.083",
+        "s18.text.084",
         "s12.text.035",
         "s12.text.036",
-        "s12.text.037"
+        "s12.text.037",
+        "s18.text.083"
       ]
     },
     "place:523b6a4a1e145a5f": {
@@ -20872,8 +20873,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "s18.text.083"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -21872,7 +21872,8 @@
     "suna_night_gate_guard": {
       "aliases": [
         "suna night gate guard",
-        "Шиноби Песка"
+        "Шиноби Песка",
+        "suna_night_gate_guard"
       ],
       "facts": [],
       "id": "suna_night_gate_guard",
@@ -21911,11 +21912,12 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.082"
+          "seen": "s18.text.084"
         }
       ],
       "sources": [
-        "recovery/cast/suna_night_gate_guard.json"
+        "recovery/cast/suna_night_gate_guard.json",
+        "s18.text.084"
       ]
     },
     "suna_wounded_scout": {
@@ -22475,7 +22477,7 @@
       "id": "tsunade",
       "kind": "npc",
       "label": "Цунадэ",
-      "mention_count": 147,
+      "mention_count": 148,
       "mentions": [
         {
           "at": "0010-03-15T08:29:00",
@@ -22483,13 +22485,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.043"
-        },
-        {
-          "at": "0010-05-14T13:21:00",
-          "excerpt": "». И согласился, что за отказ не последует наказания. Данзо несколько секунд молчал. Затем посмотрел на Цунадэ, словно ожидая от неё какой-нибудь реплики относительно осуществимости подобного соглашения. Но Хокагэ разглядывала Шики. **Цунадэ:** — Знаешь, за пр",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.018"
         },
         {
           "at": "0010-05-14T13:22:00",
@@ -22504,6 +22499,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.021"
+        },
+        {
+          "at": "0010-05-16T07:37:00",
+          "excerpt": "тором пункте соглашения с Конохой. Прочитав его, вернулся к началу документа и ещё раз посмотрел на подпись Цунадэ. **Гаара:** — Значит, Трава прекратила собственный розыск, а Лист официально отказался содействовать Туману. Он положил оба соглашения рядом, соп",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.084"
         }
       ],
       "projections": [
@@ -22810,7 +22812,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 143,
+      "mention_count": 144,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22818,13 +22820,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T23:27:00",
-          "excerpt": "еды ремонта на каменных стенах прохода. Некоторые участки кладки заметно отличались по цвету от остальных. Коюки высунула голову из-за воротника Шики. Мотылёк, привлечённый светом, несколько раз пролетел возле её морды. Она проследила за ним, совершенно не обр",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.081"
         },
         {
           "at": "0010-05-16T07:15:00",
@@ -22839,11 +22834,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.083"
+        },
+        {
+          "at": "0010-05-16T07:37:00",
+          "excerpt": "ельно читать. Документ Кусагакуре был датирован двадцать вторым апреля, документ Конохи — следующим днём. Коюки спустилась с плеча Шики на подлокотник кресла. Оттуда она наблюдала за Кадзекагэ, время от времени поглядывая на песок, скопившийся в углах широкого",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.084"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.083",
+          "seen": "s18.text.084",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22853,7 +22855,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.083"
+        "s18.text.084"
       ]
     },
     "white_snake_sage": {
@@ -23409,5 +23411,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1720
+  "source_turns_indexed": 1721
 }
