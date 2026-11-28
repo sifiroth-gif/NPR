@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import directives, dread, inquiry, lore, medical, will, fusion
+from . import cognition, directives, dread, inquiry, lore, medical, will, fusion
 
 PATH = "recovery/NEXT.json"
 from .limits import NEXT_HARD as HARD_BYTES, NEXT_TARGET as TARGET_BYTES  # noqa: E402
@@ -270,10 +270,16 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["prose"] = {"verdict": last[0].get("verdict"),
                          "hits": [f"{h.get('rule')}: «{_short(h.get('quote'), 90)}»" for h in last[0].get("hits", [])[:3]]}
     people = {}
+    cognitive = cognition.enabled(pack["next_id"])
+    if cognitive and present:
+        pack["cognition"] = {"for": pack["next_id"], "new_roll": cognition.draw(pack["next_id"]),
+                             "rule": cognition.RULE}
     for key in present:
         if key in always_present:
             continue
         entry = {"name": lore._name(hot, key), "reaction": dread.summary(hot, key)}
+        if cognitive:
+            entry["cognition"] = cognition.view(hot, key, pack["next_id"])
         knows = ((extra or {}).get("knows") or {}).get(key)
         if knows:   # знакомство до сессии и сведения о Шики (acquaint.view): чего NPC не знает — не говорит
             entry["knows"] = knows
