@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.115",
+  "cursor": "s18.text.116",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -444,7 +444,7 @@
       "id": "baki",
       "kind": "npc",
       "label": "Баки",
-      "mention_count": 29,
+      "mention_count": 30,
       "mentions": [
         {
           "at": "0010-03-12T21:47:00",
@@ -452,13 +452,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.025"
-        },
-        {
-          "at": "0010-03-17T11:00:00",
-          "excerpt": "пришёл. Он указал на свободное кресло. **Гаара:** — Можешь сесть. На столе лежали два документа. Один был подписан Баки. На другом стояла печать совета Суны. Гаара не стал начинать с благодарностей. **Гаара:** — Утром совет принял два решения. Я хотел сообщить",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.035"
         },
         {
           "at": "0010-03-17T11:08:00",
@@ -473,6 +466,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.100"
+        },
+        {
+          "at": "0010-05-16T09:19:00",
+          "excerpt": "ся старый рисунок двух журавлей, почти стёршийся от многолетнего употребления. **Чиё:** — Помню, как в марте Баки пришлось оправдываться перед советом за то, что он впустил тебя в деревню. Пока Канкуро лежал при смерти, кое-кто ещё рассуждал о соблюдении между",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.116"
         }
       ],
       "projections": [
@@ -733,7 +733,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.115",
+          "seen": "s18.text.116",
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         },
         {
@@ -743,7 +743,7 @@
       "sources": [
         "recovery/cast/chiyo.json",
         "recovery/HOT.json",
-        "s18.text.115"
+        "s18.text.116"
       ]
     },
     "chiyo_caravan": {
@@ -1079,6 +1079,27 @@
       ],
       "sources": [
         "recovery/cast/dzyun.json"
+      ]
+    },
+    "ebizo": {
+      "aliases": [
+        "ebizo"
+      ],
+      "facts": [],
+      "id": "ebizo",
+      "kind": "npc",
+      "label": "ebizo",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "seen": "s18.text.116"
+        }
+      ],
+      "sources": [
+        "recovery/cast/ebizo.json",
+        "recovery/HOT.json",
+        "s18.text.116"
       ]
     },
     "endo_hajime": {
@@ -3289,7 +3310,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 73,
+      "mention_count": 74,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3297,13 +3318,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T08:50:00",
-          "excerpt": "года · 08:50</text> ### Сунагакуре. Мастерская кукловодов **Мугами Шики:** — Нет. Всё уравновешено. Канкуро кивнул и с заметным облегчением расправил плечи. **Канкуро:** — Ну и хорошо. А остальное, пожалуй, оставлю тебе. Он поднялся с табуретки и подошёл к Сас",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.112"
         },
         {
           "at": "0010-05-16T08:52:00",
@@ -3318,6 +3332,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.114"
+        },
+        {
+          "at": "0010-05-16T09:19:00",
+          "excerpt": ":** — Помню, как в марте Баки пришлось оправдываться перед советом за то, что он впустил тебя в деревню. Пока Канкуро лежал при смерти, кое-кто ещё рассуждал о соблюдении международных обязательств. Она недовольно цокнула языком. **Чиё:** — Международные обяза",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.116"
         }
       ],
       "projections": [
@@ -18876,8 +18897,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.115",
-        "s18.text.114"
+        "s18.text.116",
+        "s18.text.114",
+        "s18.text.115"
       ]
     },
     "place:fa780cef00ddd296": {
@@ -23536,5 +23558,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1750
+  "source_turns_indexed": 1751
 }
