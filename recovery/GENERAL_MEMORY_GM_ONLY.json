@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.119",
+  "cursor": "s18.text.120",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -733,13 +733,17 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.119",
+          "seen": "s18.text.120",
+          "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
+        },
+        {
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         }
       ],
       "sources": [
         "recovery/cast/chiyo.json",
-        "s18.text.119"
+        "recovery/HOT.json",
+        "s18.text.120"
       ]
     },
     "chiyo_caravan": {
@@ -1086,7 +1090,7 @@
       "id": "ebizo",
       "kind": "npc",
       "label": "Эбидзо",
-      "mention_count": 6,
+      "mention_count": 7,
       "mentions": [
         {
           "at": "0010-05-16T08:52:00",
@@ -1094,13 +1098,6 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.113"
-        },
-        {
-          "at": "0010-05-16T09:21:00",
-          "excerpt": "color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 09:21</text> ### Сунагакуре. Дом Чиё и Эбидзо **Мугами Шики:** — Генетические линии Юки и Ходзуки. Они хотели их вернуть. Чиё перестала улыбаться. **Чиё:** — Вернуть?! Эбидзо опустил газету. Бумага с ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.117"
         },
         {
           "at": "0010-05-16T09:24:00",
@@ -1115,16 +1112,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.119"
+        },
+        {
+          "at": "0010-05-16T10:15:00",
+          "excerpt": "Шики расположился у берега. **Чиё:** — Каждую? Даже на дне? Старуха с удивлением посмотрела на воду. **Эбидзо:** — Не вздумай спрашивать, где они. Хоть раз попробуй поймать рыбу самостоятельно. **Чиё:** — Ты вообще молчи. У тебя даже крючок сухой. Следующие со",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.120"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.119"
+          "seen": "s18.text.120"
         }
       ],
       "sources": [
         "recovery/cast/ebizo.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s18.text.120"
       ]
     },
     "endo_hajime": {
@@ -18996,6 +19001,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.120",
         "s18.text.119"
       ]
     },
@@ -23547,5 +23553,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1754
+  "source_turns_indexed": 1755
 }
