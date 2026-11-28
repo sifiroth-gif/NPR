@@ -59,4 +59,3 @@
 - s18.text.031: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
 - s18.text.030: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
 - s18.text.029: Асума Сарутоби (`npc/asuma`)
-- s18.text.028: Асума Сарутоби (`npc/asuma`)
