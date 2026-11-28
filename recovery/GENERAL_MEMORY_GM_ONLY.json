@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.100",
+  "cursor": "s18.text.101",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2307,27 +2307,6 @@
         "recovery/cast/hidan.json"
       ]
     },
-    "hiraishin_mark_orochimaru_lab_s17": {
-      "aliases": [
-        "hiraishin mark orochimaru lab s17",
-        "Индивидуальная метка Хирайшина на косяке лаборатории Орочимару"
-      ],
-      "facts": [],
-      "id": "hiraishin_mark_orochimaru_lab_s17",
-      "kind": "item",
-      "label": "Индивидуальная метка Хирайшина на косяке лаборатории Орочимару",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s17.text.101"
-        }
-      ],
-      "sources": [
-        "s17.text.101"
-      ]
-    },
     "hiraishin_mark_suna_courtyard": {
       "aliases": [
         "hiraishin mark suna courtyard",
@@ -3338,7 +3317,7 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.100",
+          "seen": "s18.text.101",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         },
         {
@@ -3347,8 +3326,7 @@
       ],
       "sources": [
         "recovery/cast/kankuro.json",
-        "recovery/HOT.json",
-        "s18.text.100"
+        "recovery/HOT.json"
       ]
     },
     "kase": {
@@ -14863,10 +14841,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.100",
+        "s18.text.101",
         "s18.text.097",
         "s18.text.098",
-        "s18.text.099"
+        "s18.text.099",
+        "s18.text.100"
       ]
     },
     "place:ab7d74f5f67d2537": {
@@ -23494,13 +23473,6 @@
       "source": "s17.text.077",
       "status": "projected",
       "to": "shiki",
-      "type": "held_by"
-    },
-    {
-      "from": "hiraishin_mark_orochimaru_lab_s17",
-      "source": "s17.text.101",
-      "status": "projected",
-      "to": "orochimaru",
       "type": "held_by"
     },
     {
