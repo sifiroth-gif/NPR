@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.087: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.086: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`), вещь `suna_shiki_nonaggression_copy`, поправки игрока: 1
 - s18.text.085: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.084: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`), Шиноби Песка (`npc/suna_night_gate_guard`), Тёдзи Акимичи (`npc/choji`)
@@ -59,4 +60,3 @@
 - s18.text.030: Асума Сарутоби (`npc/asuma`), вещь `shiki_spare_coin_s18`
 - s18.text.029: Асума Сарутоби (`npc/asuma`)
 - s18.text.028: Асума Сарутоби (`npc/asuma`)
-- s18.text.027: Асума Сарутоби (`npc/asuma`)

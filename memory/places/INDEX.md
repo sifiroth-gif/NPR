@@ -55,6 +55,7 @@
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
+- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 8 ход(ов), s12–s18
 - Сунагакуре, центральный госпиталь · `places/sunagakure-tsentralnyy-gospital` · 8 ход(ов), s11–s11
 - Конохагакуре, гостиница делегации Кусагакуре · `places/konokhagakure-gostinitsa-delegatsii-kusagakure` · 7 ход(ов), s01–s01
 - Конохагакуре, Медицинское крыло главной арены · `places/konokhagakure-meditsinskoe-krylo-glavnoy-areny` · 7 ход(ов), s02–s02
@@ -64,7 +65,6 @@
 - Мьёбоку, сад у дома Фукасаку и Симы · `places/meboku-sad-u-doma-fukasaku-i-simy` · 7 ход(ов), s16–s16
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Страна Огня, западные провинции · `places/strana-ognya-zapadnye-provintsii` · 7 ход(ов), s16–s17
-- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 7 ход(ов), s12–s18
 - Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 6 ход(ов), s17–s17
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
