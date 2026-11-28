@@ -152,6 +152,7 @@ def project(packet, records):
         if not match or match["sha"] != packet.get("turn_file"):
             errors.append("TURN ahead of NEXT; exact matching receipt unavailable")
     result.pop("dice", None)
+    result.pop("cognition", None)  # actor-specific draw and topic state are stale
     result.pop("chakra", None)
     for key in ("fight", "due", "checks", "prose", "echo", "recall", "must", "must_ids", "must_pending", "news_id", "fences", "source_review"):
         result.pop(key, None)
