@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.077: Асума Сарутоби (`npc/asuma`), Ино Яманака (`npc/ino`), Шикамару Нара (`npc/shikamaru`), Тёдзи Акимичи (`npc/choji`)
 - s18.text.076: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`)
 - s18.text.075: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`)
 - s18.text.074: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`)
@@ -59,4 +60,3 @@
 - s18.text.020: Асума Сарутоби (`npc/asuma`)
 - s18.text.019: Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`), Хидан (`npc/hidan`)
 - s18.text.018: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
-- s18.text.017: Данзо Шимура (`npc/danzo`), Цунадэ (`npc/tsunade`), Шизунэ (`npc/shizune`)
