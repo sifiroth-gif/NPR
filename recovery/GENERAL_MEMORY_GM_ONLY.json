@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.097",
+  "cursor": "s18.text.098",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,22 +525,6 @@
       ],
       "sources": [
         "s09.text.067"
-      ]
-    },
-    "canon:s18.text.097:0": {
-      "aliases": [
-        "canon:s18.text.097:0",
-        "s18.text.097: По прямому уточнению игрока Канкуро в итоге использует куклу Сасори, как в каноне. В данной кампании Тиё забрала тело в s11.text.068 и разрешила Канкуро восстановить "
-      ],
-      "facts": [],
-      "id": "canon:s18.text.097:0",
-      "kind": "canon",
-      "label": "s18.text.097: По прямому уточнению игрока Канкуро в итоге использует куклу Сасори, как в каноне. В данной кампании Тиё забрала тело в s11.text.068 и разрешила Канкуро восстановить ",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [],
-      "sources": [
-        "s18.text.097"
       ]
     },
     "captive_guard": {
@@ -3321,7 +3305,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 57,
+      "mention_count": 58,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3329,13 +3313,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:59:00",
-          "excerpt": "рошо. Тогда все хорошо По игре: да Гаара, теперь у тебя есть прямая связь со мной. А ещё скажи, как Канкуро? Хотел бы его проведать <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:59</text> ### Сунагакуре. Кабинет Пятого Кадзекагэ **Мугами",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.092"
         },
         {
           "at": "0010-05-16T08:00:00",
@@ -3350,11 +3327,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.097"
+        },
+        {
+          "at": "0010-05-16T08:24:00",
+          "excerpt": "Привет Канкуро, вижу ты чувствуешь себя лучше. Работа хороша, но не всем будет приятно ее видеть <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 08:24</text> ### Сунага",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.098"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.097",
+          "seen": "s18.text.098",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         },
         {
@@ -3364,7 +3348,7 @@
       "sources": [
         "recovery/cast/kankuro.json",
         "recovery/HOT.json",
-        "s18.text.097"
+        "s18.text.098"
       ]
     },
     "kase": {
@@ -14879,6 +14863,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.098",
         "s18.text.097"
       ]
     },
@@ -23574,5 +23559,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1733
+  "source_turns_indexed": 1734
 }
