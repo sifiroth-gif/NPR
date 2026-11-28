@@ -117,7 +117,8 @@ def _book(hot, actor):
 def view(hot, actor, turn_id):
     past = sorted(_book(hot, actor).items(), key=lambda item: item[1].get("turn", ""), reverse=True)
     return {**profile(actor), "roll": draw(turn_id, actor),
-            "topics": {k: v for k, v in past[:3]}}
+            "topics": {k: v for k, v in past[:3]},
+            "last_read": (((hot.get("_psyche") or {}).get(actor) or {}).get("dread") or {}).get("reads", "")}
 
 
 def _local(hot, turn):
@@ -155,11 +156,13 @@ def assess(row, actor, roll, previous, gm):
     limit = ceiling(roll, actor, row["domain"], row["novelty"], row["evidence"])
     if previous and norm(previous.get("stimulus")) == norm(row["stimulus"]):
         # Same evidence is not a new die; no improvement without new source.
-        limit = min(limit, LEVELS.index(previous["outcome"]))
+        limit = LEVELS.index(previous["outcome"])
     if LEVELS.index(row["outcome"]) > limit:
         problems.append(f"предел понимания {LEVELS[limit]}, заявлено {row['outcome']}")
     if norm(row["stimulus"]) not in gm:
         problems.append("stimulus не найден в сыгранной сцене")
+    if norm(row["stimulus"]) == norm(row.get("visible")):
+        problems.append("реакция NPC не может быть собственным источником")
     if row["affect"] != "none" and (not norm(row.get("visible")) or norm(row["visible"]) not in gm):
         problems.append("эмоция/реакция не подтверждена видимой репликой или поступком")
     if row["novelty"] == "disruptive":
