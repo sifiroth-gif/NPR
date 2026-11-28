@@ -93,6 +93,7 @@
 - Страна Травы, заброшенная лесопилка у старой дороги · `places/strana-travy-zabroshennaya-lesopilka-u-staroy-dorogi` · 5 ход(ов), s13–s13
 - Страна Травы, заброшенный сушильный двор на подходе к подпольным торговым складам · `places/strana-travy-zabroshennyy-sushilnyy-dvor-na-podkhode-k-podpo` · 5 ход(ов), s12–s12
 - Страна Травы, Застава «Ивовый брод» · `places/strana-travy-zastava-ivovyy-brod` · 5 ход(ов), s02–s02
+- Сунагакуре, северный жилой квартал · `places/sunagakure-severnyy-zhiloy-kvartal` · 5 ход(ов), s18–s18
 - Амэгакурэ, промышленная подземная галерея у фундамента центрального сооружения · `places/amegakure-promyshlennaya-podzemnaya-galereya-u-fundamenta-ts` · 4 ход(ов), s17–s17
 - Конохагакуре, торговый квартал · `places/konokhagakure-torgovyy-kvartal` · 4 ход(ов), s15–s18
 - Кусагакуре, северный проезд УВБ у повозки · `places/kusagakure-severnyy-proezd-uvb-u-povozki` · 4 ход(ов), s05–s05
@@ -109,7 +110,6 @@
 - Страна Ветра, ворота Сунагакуре · `places/strana-vetra-vorota-sunagakure` · 4 ход(ов), s12–s18
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
-- Сунагакуре, северный жилой квартал · `places/sunagakure-severnyy-zhiloy-kvartal` · 4 ход(ов), s18–s18
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02

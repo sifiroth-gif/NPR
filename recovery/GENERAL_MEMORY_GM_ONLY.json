@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.117",
+  "cursor": "s18.text.118",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -733,7 +733,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.117",
+          "seen": "s18.text.118",
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         },
         {
@@ -743,7 +743,7 @@
       "sources": [
         "recovery/cast/chiyo.json",
         "recovery/HOT.json",
-        "s18.text.117"
+        "s18.text.118"
       ]
     },
     "chiyo_caravan": {
@@ -1083,23 +1083,53 @@
     },
     "ebizo": {
       "aliases": [
-        "ebizo"
+        "ebizo",
+        "Эбидзо"
       ],
       "facts": [],
       "id": "ebizo",
       "kind": "npc",
-      "label": "ebizo",
-      "mention_count": 0,
-      "mentions": [],
+      "label": "Эбидзо",
+      "mention_count": 5,
+      "mentions": [
+        {
+          "at": "0010-05-16T08:52:00",
+          "excerpt": ". **Мугами Шики:** — Пожалуй, можно. А куда идти-то? **Канкуро:** — К Чиё? Она живёт вместе с братом, Эбидзо. Сейчас покажу. Канкуро закрепил куклу на стойке и освободил пальцы от чакровых нитей. В поисках чистой бумаги он перебрал несколько листов, прежде чем",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.113"
+        },
+        {
+          "at": "0010-05-16T09:19:00",
+          "excerpt": "color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 09:19</text> ### Сунагакуре. Дом Чиё и Эбидзо **Мугами Шики:** — Ну, выбор у них был очень неприятный. Думаю, в том числе из-за событий с Гаарой. А сейчас у меня три договора о ненападении с деревнями",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.116"
+        },
+        {
+          "at": "0010-05-16T09:21:00",
+          "excerpt": "color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 09:21</text> ### Сунагакуре. Дом Чиё и Эбидзо **Мугами Шики:** — Генетические линии Юки и Ходзуки. Они хотели их вернуть. Чиё перестала улыбаться. **Чиё:** — Вернуть?! Эбидзо опустил газету. Бумага с ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.117"
+        },
+        {
+          "at": "0010-05-16T09:24:00",
+          "excerpt": "t color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 09:24</text> ### Сунагакуре. Дом Чиё и Эбидзо **Мугами Шики:** — Они подозревали меня в хищении, но достаточных оснований у них не было. А вот доказательства моего владения техниками льда и особых в",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.118"
+        }
+      ],
       "projections": [
         {
-          "seen": "s18.text.117"
+          "seen": "s18.text.118"
         }
       ],
       "sources": [
         "recovery/cast/ebizo.json",
         "recovery/HOT.json",
-        "s18.text.117"
+        "s18.text.118"
       ]
     },
     "endo_hajime": {
@@ -2830,28 +2860,6 @@
       ],
       "sources": [
         "recovery/cast/jiraiya.json"
-      ]
-    },
-    "jiraiya_first_letter_s17": {
-      "aliases": [
-        "jiraiya first letter s17",
-        "Первое письмо Джирайи Орочимару в лакированном футляре"
-      ],
-      "facts": [],
-      "id": "jiraiya_first_letter_s17",
-      "kind": "item",
-      "label": "Первое письмо Джирайи Орочимару в лакированном футляре",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s17.text.114",
-          "turn": "s17.text.118"
-        }
-      ],
-      "sources": [
-        "s17.text.118"
       ]
     },
     "jiraiya_rain_contact_s17": {
@@ -5991,27 +5999,6 @@
       ],
       "sources": [
         "s17.text.077"
-      ]
-    },
-    "orochimaru_reply_letter_s17": {
-      "aliases": [
-        "orochimaru reply letter s17",
-        "Ответное письмо Орочимару Джирайе в лакированном футляре"
-      ],
-      "facts": [],
-      "id": "orochimaru_reply_letter_s17",
-      "kind": "item",
-      "label": "Ответное письмо Орочимару Джирайе в лакированном футляре",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s17.text.118"
-        }
-      ],
-      "sources": [
-        "s17.text.118"
       ]
     },
     "orochimaru_scout_snake": {
@@ -18897,10 +18884,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.117",
+        "s18.text.118",
         "s18.text.114",
         "s18.text.115",
-        "s18.text.116"
+        "s18.text.116",
+        "s18.text.117"
       ]
     },
     "place:fa780cef00ddd296": {
@@ -23509,20 +23497,6 @@
       "type": "held_by"
     },
     {
-      "from": "jiraiya_first_letter_s17",
-      "source": "s17.text.118",
-      "status": "projected",
-      "to": "orochimaru",
-      "type": "held_by"
-    },
-    {
-      "from": "orochimaru_reply_letter_s17",
-      "source": "s17.text.118",
-      "status": "projected",
-      "to": "orochimaru",
-      "type": "held_by"
-    },
-    {
       "from": "shiki_spare_coin_s18",
       "source": "s18.text.054",
       "status": "projected",
@@ -23559,5 +23533,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1752
+  "source_turns_indexed": 1753
 }
