@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.095",
+  "cursor": "s18.text.096",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -16436,8 +16436,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.095",
-        "s18.text.094"
+        "s18.text.096",
+        "s18.text.094",
+        "s18.text.095"
       ]
     },
     "place:c9e7d62d5d92c00c": {
@@ -21901,7 +21902,7 @@
       "id": "suna_mark_courtyard_guard_chief",
       "kind": "npc",
       "label": "Начальник караула",
-      "mention_count": 4,
+      "mention_count": 5,
       "mentions": [
         {
           "at": "0010-05-14T12:39:00",
@@ -21909,13 +21910,6 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.007"
-        },
-        {
-          "at": "0010-05-16T08:00:00",
-          "excerpt": "ик, которому ранее поручили подготовить место для пространственной печати. Он доложил, что двор свободен и начальник караула уведомлён о предстоящем посещении. Заметив спускающуюся с кресла белую змею, шиноби остановился. **Коюки:** — Простите, в какую сторону",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.093"
         },
         {
           "at": "0010-05-16T08:12:00",
@@ -21930,17 +21924,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.095"
+        },
+        {
+          "at": "0010-05-16T08:16:00",
+          "excerpt": "а. Если захотите меня позвать, просто пропустите через неё немного чакры. И передайте это Кадзекагэ. **Начальник караула:** — Понял. Мужчина достал из нагрудного кармана небольшую записную книжку и записал указания. Закончив, он ещё раз посмотрел на пространст",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.096"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.095"
+          "seen": "s18.text.096"
         }
       ],
       "sources": [
         "recovery/cast/suna_mark_courtyard_guard_chief.json",
         "recovery/HOT.json",
-        "s18.text.095"
+        "s18.text.096"
       ]
     },
     "suna_night_gate_guard": {
@@ -23506,5 +23507,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1731
+  "source_turns_indexed": 1732
 }
