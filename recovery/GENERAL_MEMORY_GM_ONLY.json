@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.096",
+  "cursor": "s18.text.097",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s18.text.097:0": {
+      "aliases": [
+        "canon:s18.text.097:0",
+        "s18.text.097: По прямому уточнению игрока Канкуро в итоге использует куклу Сасори, как в каноне. В данной кампании Тиё забрала тело в s11.text.068 и разрешила Канкуро восстановить "
+      ],
+      "facts": [],
+      "id": "canon:s18.text.097:0",
+      "kind": "canon",
+      "label": "s18.text.097: По прямому уточнению игрока Канкуро в итоге использует куклу Сасори, как в каноне. В данной кампании Тиё забрала тело в s11.text.068 и разрешила Канкуро восстановить ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.097"
       ]
     },
     "captive_guard": {
@@ -3305,7 +3321,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 56,
+      "mention_count": 57,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3313,13 +3329,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:48:00",
-          "excerpt": "остановился возле окна. За его спиной, на невысокой деревянной полке, стояла фотография команды Песка. Канкуро, Темари и сам Гаара были запечатлены ещё подростками. Рядом с фотографией лежала небольшая стопка писем, перевязанных выцветшим шнуром. **Гаара:** — ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.087"
         },
         {
           "at": "0010-05-16T07:59:00",
@@ -3334,16 +3343,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.093"
+        },
+        {
+          "at": "0010-05-16T08:23:00",
+          "excerpt": "Мастеру: в каноне Канкуро по итогу начал использовать куклу сасори. По игре: #иду к канкуро# <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 08:23</text> ### Сунагакуре. Мастерска",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.097"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.094",
+          "seen": "s18.text.097",
+          "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
+        },
+        {
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         }
       ],
       "sources": [
-        "recovery/cast/kankuro.json"
+        "recovery/cast/kankuro.json",
+        "recovery/HOT.json",
+        "s18.text.097"
       ]
     },
     "kase": {
@@ -14842,6 +14863,25 @@
         "s05.text.053"
       ]
     },
+    "place:ab458bb15ea48980": {
+      "aliases": [
+        "place:ab458bb15ea48980",
+        "Сунагакуре, западный квартал, мастерская кукловодов",
+        "Сунагакуре",
+        "западный квартал",
+        "мастерская кукловодов"
+      ],
+      "facts": [],
+      "id": "place:ab458bb15ea48980",
+      "kind": "place",
+      "label": "Сунагакуре, западный квартал, мастерская кукловодов",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.097"
+      ]
+    },
     "place:ab7d74f5f67d2537": {
       "aliases": [
         "place:ab7d74f5f67d2537",
@@ -16436,9 +16476,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.096",
         "s18.text.094",
-        "s18.text.095"
+        "s18.text.095",
+        "s18.text.096"
       ]
     },
     "place:c9e7d62d5d92c00c": {
@@ -20452,6 +20492,28 @@
         "recovery/cast/sasori.json"
       ]
     },
+    "sasori_puppet_body": {
+      "aliases": [
+        "sasori puppet body",
+        "Кукольное тело Сасори"
+      ],
+      "facts": [],
+      "id": "sasori_puppet_body",
+      "kind": "item",
+      "label": "Кукольное тело Сасори",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "kankuro",
+          "since": "s18.text.097",
+          "turn": "s18.text.097"
+        }
+      ],
+      "sources": [
+        "s18.text.097"
+      ]
+    },
     "sasuke": {
       "aliases": [
         "sasuke",
@@ -21895,8 +21957,7 @@
     "suna_mark_courtyard_guard_chief": {
       "aliases": [
         "suna mark courtyard guard chief",
-        "Начальник караула",
-        "suna_mark_courtyard_guard_chief"
+        "Начальник караула"
       ],
       "facts": [],
       "id": "suna_mark_courtyard_guard_chief",
@@ -21940,8 +22001,7 @@
       ],
       "sources": [
         "recovery/cast/suna_mark_courtyard_guard_chief.json",
-        "recovery/HOT.json",
-        "s18.text.096"
+        "recovery/HOT.json"
       ]
     },
     "suna_night_gate_guard": {
@@ -23504,8 +23564,15 @@
       "status": "projected",
       "to": "suna_mark_courtyard_guard_chief",
       "type": "held_by"
+    },
+    {
+      "from": "sasori_puppet_body",
+      "source": "s18.text.097",
+      "status": "projected",
+      "to": "kankuro",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1732
+  "source_turns_indexed": 1733
 }

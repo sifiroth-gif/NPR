@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s18.text.096`
+# Карта мира NPR · на ходе `s18.text.097`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -6,8 +6,8 @@
 - места · `places/INDEX` (356) · фракции · `factions/INDEX.GM_ONLY` · что менялось в памяти · `LOG`
 
 ## Персонажи (268)
-- Начальник караула —  · `npc/suna_mark_courtyard_guard_chief` · в сцене
-- Канкуро — генин, участник (на 1283, экзамен) · `npc/kankuro`
+- Канкуро — генин, участник (на 1283, экзамен) · `npc/kankuro` · в сцене
+- Начальник караула —  · `npc/suna_mark_courtyard_guard_chief`
 - Гаара — генин, участник (на 1283, экзамен) · `npc/gaara`
 - Коюки (Молодая змея, Молодая посланница) — Молодая белая змея (s13.text.058). · `npc/western_nest_young_courier`
 - Тёдзи Акимичи (Тёдзи, Акимичи) — генин, участник (на 1283, экзамен) · `npc/choji`
@@ -283,7 +283,7 @@
 ## Давние линии (35, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/fire_road_survey_attack`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/kiri_bingo_negotiations`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (115)
+## Вещи (116)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -367,6 +367,7 @@
 - `ryuchido_summoning_scroll` · `items/ryuchido_summoning_scroll`
 - `s17_early_shiki_aliquot` · `items/s17_early_shiki_aliquot`
 - `sai_note` · `items/sai_note`
+- `sasori_puppet_body` · `items/sasori_puppet_body`
 - `seal_boot_scrap` · `items/seal_boot_scrap`
 - `sealing_cloth_scrap` · `items/sealing_cloth_scrap`
 - `seven_locks_scroll_fragments` · `items/seven_locks_scroll_fragments`

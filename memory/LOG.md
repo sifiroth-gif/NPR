@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.097: Канкуро (`npc/kankuro`), вещь `sasori_puppet_body`, поправки игрока: 1
 - s18.text.096: Начальник караула (`npc/suna_mark_courtyard_guard_chief`)
 - s18.text.095: Начальник караула (`npc/suna_mark_courtyard_guard_chief`), вещь `hiraishin_mark_suna_courtyard`
 - s18.text.094: Начальник караула (`npc/suna_mark_courtyard_guard_chief`), Канкуро (`npc/kankuro`)
@@ -60,4 +61,3 @@
 - s18.text.040: Коюки (`npc/western_nest_young_courier`)
 - s18.text.039: Коюки (`npc/western_nest_young_courier`), бой
 - s18.text.038: Коюки (`npc/western_nest_young_courier`)
-- s18.text.037: Коюки (`npc/western_nest_young_courier`)
