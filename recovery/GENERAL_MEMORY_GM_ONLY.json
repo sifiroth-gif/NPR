@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.102",
+  "cursor": "s18.text.103",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3284,7 +3284,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 61,
+      "mention_count": 62,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3292,13 +3292,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T08:26:00",
-          "excerpt": "· 08:26</text> ### Сунагакуре. Мастерская кукловодов **Мугами Шики:** — Не вызывает особых эмоций. Канкуро несколько секунд смотрел на него, затем пожал плечами. **Канкуро:** — Вот уж кому действительно повезло. Он вернулся к рабочему столу и взял небольшую ме",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.099"
         },
         {
           "at": "0010-05-16T08:32:00",
@@ -3313,11 +3306,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.102"
+        },
+        {
+          "at": "0010-05-16T08:36:00",
+          "excerpt": "кловодов **Мугами Шики:** — Ага. Мы пришли к определённым соглашениям. Надеюсь, придём и к другим. **Канкуро:** — Вот уж чего я не ожидал услышать. Он покачал головой и наконец взялся за принесённое мастером предплечье. Проверив подвижность кисти, Канкуро отки",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.103"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.102",
+          "seen": "s18.text.103",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         },
         {
@@ -3327,7 +3327,7 @@
       "sources": [
         "recovery/cast/kankuro.json",
         "recovery/HOT.json",
-        "s18.text.102"
+        "s18.text.103"
       ]
     },
     "kase": {
@@ -14842,11 +14842,12 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.102",
+        "s18.text.103",
         "s18.text.097",
         "s18.text.098",
         "s18.text.099",
-        "s18.text.100"
+        "s18.text.100",
+        "s18.text.102"
       ]
     },
     "place:ab7d74f5f67d2537": {
@@ -23534,5 +23535,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1737
+  "source_turns_indexed": 1738
 }
