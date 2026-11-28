@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.079",
+  "cursor": "s18.text.080",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -5964,28 +5964,6 @@
       ],
       "sources": [
         "s17.text.077"
-      ]
-    },
-    "orochimaru_reconstructed_body_s17": {
-      "aliases": [
-        "orochimaru reconstructed body s17",
-        "Восстановленное исходное тело Орочимару"
-      ],
-      "facts": [],
-      "id": "orochimaru_reconstructed_body_s17",
-      "kind": "item",
-      "label": "Восстановленное исходное тело Орочимару",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s17.text.078",
-          "turn": "s17.text.080"
-        }
-      ],
-      "sources": [
-        "s17.text.080"
       ]
     },
     "orochimaru_reply_letter_s17": {
@@ -12726,6 +12704,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.080",
         "s12.text.010"
       ]
     },
@@ -13266,7 +13245,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.079",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -13285,7 +13263,8 @@
         "s18.text.047",
         "s18.text.048",
         "s18.text.049",
-        "s18.text.078"
+        "s18.text.078",
+        "s18.text.079"
       ]
     },
     "place:8bf2702ed9c6fbda": {
@@ -21880,6 +21859,57 @@
         "recovery/cast/suna_advance_tracker.json"
       ]
     },
+    "suna_night_gate_guard": {
+      "aliases": [
+        "suna night gate guard",
+        "Шиноби Песка"
+      ],
+      "facts": [],
+      "id": "suna_night_gate_guard",
+      "kind": "npc",
+      "label": "Шиноби Песка",
+      "mention_count": 11,
+      "mentions": [
+        {
+          "at": "0001-07-02T13:52:00",
+          "excerpt": "* — Я тебе говорю, он опять куда-то ушёл\\! **Женский голос\\:** — Канкуро, перестань кричать. Из-за угла появились двое шиноби Песка. Первым шёл юноша с раскрашенным лицом и большим свёртком за спиной. Он раздражённо поправлял ремень, то и дело оглядываясь наза",
+          "source": "archive/session-001-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s01.text.060"
+        },
+        {
+          "at": "0010-03-15T08:40:23",
+          "excerpt": "неизвестное искусство. Шики направился к открытому входу. На каменном уступе позади него лежал мёртвый шиноби Песка. Ветер шевелил край его одежды. Кровь медленно проникала между камнями, встречая тонкие струйки воды. Шики снял капюшон. На плечи упали длинные ",
+          "source": "archive/session-011-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s11.text.052"
+        },
+        {
+          "at": "0010-04-21T20:27:00",
+          "excerpt": "ко секунд оставался над ней, хотя вода уже достигла края. **Мидзухара Аки:** — А кто были остальные двое? Шиноби Песка? Нао посмотрела на семейный альбом, лежавший возле Шики. Из-под обложки выступал уголок фотографии мальчика в одежде начинающего ирьёнина. Он",
+          "source": "archive/session-015-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s15.text.078"
+        },
+        {
+          "at": "0010-05-15T23:25:00",
+          "excerpt": "еские жилища, вырубленные непосредственно в камне. **Коюки:** — Какая необычная деревня… У входа находились трое шиноби Песка. Один из них вышел навстречу путникам, другой остался возле караульного помещения. При свете фонаря первый охранник разглядел лицо Шик",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.080"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s18.text.080"
+        }
+      ],
+      "sources": [
+        "recovery/cast/suna_night_gate_guard.json",
+        "recovery/HOT.json",
+        "s18.text.080"
+      ]
+    },
     "suna_wounded_scout": {
       "aliases": [
         "suna wounded scout",
@@ -22772,7 +22802,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 139,
+      "mention_count": 140,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22780,13 +22810,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T08:55:12",
-          "excerpt": "Да, коюки ты выросла и я рад что ты так много времени проводишь со мной, а сейчас я пойду #хирайшин к метке на монете# <text color=\"secondary\" size=\"xs\">Суббота, 15 мая 1287 года · 08:",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.053"
         },
         {
           "at": "0010-05-15T09:22:05",
@@ -22801,11 +22824,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.079"
+        },
+        {
+          "at": "0010-05-15T23:25:00",
+          "excerpt": "1287 года · 09:26</text> ### Страна Рек **Мугами Шики:** — Ну вот и увидишь. Шики покинул убежище. Коюки устроилась на его плече, подставив голову утреннему солнцу. По мере продвижения на запад густая растительность редела. Известняковые горы уступали место су",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.080"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.079",
+          "seen": "s18.text.080",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22815,7 +22845,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.079"
+        "s18.text.080"
       ]
     },
     "white_snake_sage": {
@@ -23321,13 +23351,6 @@
       "type": "held_by"
     },
     {
-      "from": "orochimaru_reconstructed_body_s17",
-      "source": "s17.text.080",
-      "status": "projected",
-      "to": "orochimaru",
-      "type": "held_by"
-    },
-    {
       "from": "orochimaru_senjutsu_early_notes_s17",
       "source": "s17.text.094",
       "status": "projected",
@@ -23378,5 +23401,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1716
+  "source_turns_indexed": 1717
 }

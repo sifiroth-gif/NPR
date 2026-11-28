@@ -181,6 +181,7 @@
 - Страна Травы, восточный склон известняковой ложбины · `places/strana-travy-vostochnyy-sklon-izvestnyakovoy-lozhbiny` · 2 ход(ов), s12–s12
 - Страна Травы, заброшенный сушильный двор возле подпольных складов · `places/strana-travy-zabroshennyy-sushilnyy-dvor-vozle-podpolnykh-sk` · 2 ход(ов), s12–s12
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
+- Страна Ветра, ворота Сунагакуре · `places/strana-vetra-vorota-sunagakure` · 2 ход(ов), s12–s18
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
 - Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 2 ход(ов), s12–s12
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
@@ -321,7 +322,6 @@
 - Страна Ветра, лагерь среди каменных глыб в восточных предгорьях · `places/strana-vetra-lager-sredi-kamennykh-glyb-v-vostochnykh-predgo` · 1 ход(ов), s09–s09
 - Страна Ветра, пустынная дорога у старого водосборника в северо-восточных предгорьях · `places/strana-vetra-pustynnaya-doroga-u-starogo-vodosbornika-v-seve` · 1 ход(ов), s09–s09
 - Страна Ветра, сухая дорога у водосборника и северный каменный уступ · `places/strana-vetra-sukhaya-doroga-u-vodosbornika-i-severnyy-kamenn` · 1 ход(ов), s09–s09
-- Страна Ветра, ворота Сунагакуре · `places/strana-vetra-vorota-sunagakure` · 1 ход(ов), s12–s12
 - Страна Ветра, юго-западный проход скал у старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-skal-u-starogo-vodosborni` · 1 ход(ов), s09–s09
 - Страна Ветра, юго-западный проход возле старого водосборника · `places/strana-vetra-yugo-zapadnyy-prokhod-vozle-starogo-vodosbornik` · 1 ход(ов), s09–s09
 - Страна Водопадов, посёлок Тихий Порог · `places/strana-vodopadov-poselok-tikhiy-porog` · 1 ход(ов), s08–s08
