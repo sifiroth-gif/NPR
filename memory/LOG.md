@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.112: Канкуро (`npc/kankuro`)
 - s18.text.111: Канкуро (`npc/kankuro`)
 - s18.text.110: Канкуро (`npc/kankuro`)
 - s18.text.109: Канкуро (`npc/kankuro`)
@@ -60,4 +61,3 @@
 - s18.text.055: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`)
 - s18.text.054: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`), вещь `shiki_spare_coin_s18`
 - s18.text.053: Асума Сарутоби (`npc/asuma`), Шикамару Нара (`npc/shikamaru`), Ино Яманака (`npc/ino`), Тёдзи Акимичи (`npc/choji`), Коюки (`npc/western_nest_young_courier`), вещь `shiki_spare_coin_s18`, поправки игрока: 1
-- s18.text.052: Коюки (`npc/western_nest_young_courier`)
