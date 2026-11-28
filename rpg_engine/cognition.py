@@ -16,6 +16,11 @@ DOMAINS = ("general", "medicine", "puppetry", "strategy", "politics",
            "seals", "ninjutsu", "social", "research", "snakes", "sensory")
 AFFECT = ("surprise", "confusion", "curiosity", "doubt", "fear", "anger",
           "joy", "denial", "interest", "calm", "none")
+SALIENCE = {"ordinary": 0, "personal": 4, "existential": 8}
+NOVELTY_AFFECT = {"routine": 0, "new": 4, "disruptive": 8}
+REACTIVITY = {"kankuro": 1, "gaara": -1, "shikamaru": -1, "tsunade": 1,
+              "orochimaru": -1, "kabuto": -1, "sakura": 1, "kakashi": -1,
+              "jiraiya": 1, "chiyo": 0, "western_nest_young_courier": 1}
 
 # Conservative campaign defaults; unknown expertise is not granted by rank.
 # Bonus is local to the domain, not a global genius trait.
@@ -35,15 +40,17 @@ PROFILES = {
 
 RULE = (
     "Новый значимый факт/новая трактовка NPC: d.cognition[actor] "
-    "{topic,domain,novelty,evidence,stimulus,outcome,interpretation,affect,visible,basis}. "
+    "{topic,domain,novelty,evidence,stimulus,outcome,interpretation,affect,visible,basis,salience}. "
     "topic — стабильный ключ; stimulus/visible — точные фрагменты сцены. "
     "Прямой факт received не требует успеха. Для понимания: roll + aptitude +4 за domain из domains; "
     "порог routine 7/new 13/disruptive 19. Ниже порога на 5+: received; на 1–4: partial; "
     "достиг: hypothesis; explicit и на 4 выше: understood. signs максимум hypothesis, opaque максимум partial. "
     "Это потолок, не обязательный вывод и не доказательство тайны. "
-    "Эмоция независимо от успеха: surprise/confusion/curiosity/doubt/fear/anger/joy/denial/interest/calm/none; "
-    "при disruptive calm требует basis, none не подходит. Не повторяй ту же улику для нового броска. "
-    "NPC вне прежнего состава — new_roll; при устаревшем пакете не повышай понимание без нового источника."
+    "Аффект отдельно: affect_roll + reactivity + новизна (routine/new/disruptive: 0/4/8) "
+    "+ salience (ordinary/personal/existential: 0/4/8); <17=0, 17–23=1, ≥24=2; routine+ordinary=0, disruptive ≥1. "
+    "Вид: surprise/confusion/curiosity/doubt/fear/anger/joy/denial/interest/calm/none. "
+    "При силе ≥1 none нельзя; при 2 или disruptive calm требует basis. Повтор улики не навязывает новое потрясение. "
+    "NPC вне состава — new_profiles или new_roll/new_affect_roll; при отставании не используй старые кости."
 )
 
 
@@ -58,13 +65,40 @@ def norm(value):
 
 def profile(actor):
     aptitude, domains = PROFILES.get(actor, (0, ()))
-    return {"aptitude": aptitude, "domains": list(domains)}
+    return {"aptitude": aptitude, "domains": list(domains), "reactivity": REACTIVITY.get(actor, 0)}
 
 
 def draw(turn_id, actor=""):
     # Separate deterministic lane: never consume combat or world-plan dice.
     raw = hashlib.sha256(f"npc-cognition/1|{turn_id}|{actor}".encode()).digest()
     return int.from_bytes(raw[:8], "big") % 20 + 1
+
+
+def affect_draw(turn_id, actor=""):
+    raw = hashlib.sha256(f"npc-affect/1|{turn_id}|{actor}".encode()).digest()
+    return int.from_bytes(raw[:8], "big") % 20 + 1
+
+
+def actor_key(actor, prior):
+    # Known newcomers retain their own draw; anonymous newcomers use the
+    # published fallback rather than silently inventing an unseen die.
+    return actor if actor in prior or actor in PROFILES else ""
+
+
+def newcomer_packet(turn_id):
+    return {"for": turn_id, "new_roll": draw(turn_id), "new_affect_roll": affect_draw(turn_id),
+            "new_profiles": {k: {**profile(k), "roll": draw(turn_id, k),
+                                 "affect_roll": affect_draw(turn_id, k)} for k in PROFILES},
+            "rule": RULE}
+
+
+def affect_strength(roll, actor, novelty, salience="ordinary", *, repeated=False):
+    if repeated:
+        return 0  # an identical stimulus cannot compel another emotional jolt
+    if novelty == "routine" and salience == "ordinary":
+        return 0
+    score = roll + REACTIVITY.get(actor, 0) + NOVELTY_AFFECT[novelty] + SALIENCE[salience]
+    return max(1 if novelty == "disruptive" else 0, 0 if score < 17 else 1 if score < 24 else 2)
 
 
 def ceiling(roll, actor, domain, novelty, evidence):
@@ -103,6 +137,8 @@ def validate(turn):
                                ("outcome", LEVELS), ("affect", AFFECT)):
             if not isinstance(row.get(field), str) or row[field] not in choices:
                 raise ValueError(f"d.cognition.{actor}.{field}: invalid value")
+        if not isinstance(row.get("salience", "ordinary"), str) or row.get("salience", "ordinary") not in SALIENCE:
+            raise ValueError(f"d.cognition.{actor}.salience: invalid value")
         for field in ("interpretation", "visible", "basis"):
             if field in row and (not isinstance(row[field], str) or len(row[field]) > 240):
                 raise ValueError(f"d.cognition.{actor}.{field}: text <=240")
@@ -116,7 +152,7 @@ def _book(hot, actor):
 
 def view(hot, actor, turn_id):
     past = sorted(_book(hot, actor).items(), key=lambda item: item[1].get("turn", ""), reverse=True)
-    return {**profile(actor), "roll": draw(turn_id, actor),
+    return {**profile(actor), "roll": draw(turn_id, actor), "affect_roll": affect_draw(turn_id, actor),
             "topics": {k: v for k, v in past[:3]},
             "last_read": (((hot.get("_psyche") or {}).get(actor) or {}).get("dread") or {}).get("reads", "")}
 
@@ -178,12 +214,13 @@ def triggers(hot, turn, local):
     return needed | spoken_inferences(hot, turn, local)
 
 
-def assess(row, actor, roll, previous, gm):
+def assess(row, actor, roll, affect_roll, previous, gm):
     """Return effective ceiling and errors without mutating state."""
     problems = []
     limit = ceiling(roll, actor, row["domain"], row["novelty"], row["evidence"])
-    if previous and (evidence_id(row["stimulus"]) in (previous.get("evidence_ids") or [])
-                     or norm(previous.get("stimulus")) == norm(row["stimulus"])):
+    repeated = bool(previous and (evidence_id(row["stimulus"]) in (previous.get("evidence_ids") or [])
+                                  or norm(previous.get("stimulus")) == norm(row["stimulus"])))
+    if repeated:
         # Same evidence is not a new die; no improvement without new source.
         limit = LEVELS.index(previous["outcome"])
     if LEVELS.index(row["outcome"]) > limit:
@@ -194,12 +231,12 @@ def assess(row, actor, roll, previous, gm):
         problems.append("реакция NPC не может быть собственным источником")
     if row["affect"] != "none" and (not norm(row.get("visible")) or norm(row["visible"]) not in gm):
         problems.append("эмоция/реакция не подтверждена видимой репликой или поступком")
-    if row["novelty"] == "disruptive":
-        if row["affect"] == "none":
-            problems.append("новое нарушение картины мира осталось без реакции")
-        if row["affect"] == "calm" and not norm(row.get("basis")):
-            problems.append("спокойствие при нарушении картины мира без индивидуального основания")
-    return limit, problems
+    strength = affect_strength(affect_roll, actor, row["novelty"], row.get("salience", "ordinary"), repeated=repeated)
+    if strength and row["affect"] == "none":
+        problems.append(f"значимый стимул (сила аффекта {strength}) остался без реакции")
+    if not repeated and (strength == 2 or row["novelty"] == "disruptive") and row["affect"] == "calm" and not norm(row.get("basis")):
+        problems.append("спокойствие при сильном воздействии без индивидуального основания")
+    return limit, strength, problems
 
 
 def review(hot, turn, *, packet=None):
@@ -219,19 +256,23 @@ def review(hot, turn, *, packet=None):
             errors.append(f"{actor}: d.cognition без присутствия или доступного наблюдения")
             continue
         if packet is None:
-            roll = draw(turn["id"], actor if actor in prior else "")
+            key = actor_key(actor, prior)
+            roll, affect_roll = draw(turn["id"], key), affect_draw(turn["id"], key)
             prev = _book(hot, actor).get(row["topic"])
         else:
+            cp = packet.get("cognition") or {}
             p = ((packet.get("present") or {}).get(actor) or {}).get("cognition") or {}
-            roll = p.get("roll", (packet.get("cognition") or {}).get("new_roll"))
+            p = p or (cp.get("new_profiles") or {}).get(actor) or {}
+            roll = p.get("roll", cp.get("new_roll"))
+            affect_roll = p.get("affect_roll", cp.get("new_affect_roll"))
             prev = (p.get("topics") or {}).get(row["topic"])
-            if ((packet.get("cognition") or {}).get("for") != turn["id"]
-                    or type(roll) is not int or not 1 <= roll <= 20):
+            if (cp.get("for") != turn["id"] or type(roll) is not int or not 1 <= roll <= 20
+                    or type(affect_roll) is not int or not 1 <= affect_roll <= 20):
                 # Unknown/stale packet: only factual reception is safe to project.
                 if row["outcome"] != "received":
                     errors.append(f"{actor}: нет свежего когнитивного броска")
-                roll = 1
-        limit, problems = assess(row, actor, roll, prev, gm)
+                roll, affect_roll = 1, 1
+        limit, strength, problems = assess(row, actor, roll, affect_roll, prev, gm)
         if row["outcome"] == "hypothesis":
             claim = norm(row.get("interpretation"))
             facts = ((d.get("cast") or {}).get(actor) or {}).get("knows+") or []
@@ -244,7 +285,7 @@ def review(hot, turn, *, packet=None):
             data[actor] = {"topic": row["topic"], "turn": turn["id"],
                            "stimulus": row["stimulus"], "outcome": row["outcome"],
                            "interpretation": row.get("interpretation", ""),
-                           "affect": row["affect"], "limit": LEVELS[limit],
+                           "affect": row["affect"], "affect_strength": strength, "limit": LEVELS[limit],
                            "evidence_ids": list(dict.fromkeys(
                                list((prev or {}).get("evidence_ids") or []) + [evidence_id(row["stimulus"])]))}
     return errors, data
