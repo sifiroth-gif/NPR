@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.077",
+  "cursor": "s18.text.078",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -394,7 +394,7 @@
       "id": "asuma",
       "kind": "npc",
       "label": "Асума Сарутоби",
-      "mention_count": 51,
+      "mention_count": 52,
       "mentions": [
         {
           "at": "0001-08-07T12:24:31",
@@ -402,13 +402,6 @@
           "source": "archive/session-002-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s02.text.052"
-        },
-        {
-          "at": "0010-05-15T09:19:00",
-          "excerpt": "и на ногу. Ино внимательно посмотрела на Шики, затем на своего наставника. Никто из учеников не улыбался. **Асума Сарутоби:** — Твоя жизнь тоже входит в их число, Шики. Он произнёс это негромко, без наставительного тона. Его большой палец скользнул по краю мет",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.075"
         },
         {
           "at": "0010-05-15T09:21:00",
@@ -423,21 +416,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.077"
+        },
+        {
+          "at": "0010-05-15T09:22:05",
+          "excerpt": "сума на мгновение задержал взгляд на их сомкнутых пальцах, ощутив необычный холод кожи собеседника. **Асума Сарутоби:** — До встречи, Шики. Он отпустил руку. В следующее мгновение пространственная формула Хирайшина замкнулась. Зелень леса, солнечный свет и гол",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.078"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.077",
-          "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
-        },
-        {
+          "seen": "s18.text.078",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
         "recovery/cast/asuma.json",
-        "recovery/HOT.json",
-        "s18.text.077"
+        "s18.text.078"
       ]
     },
     "baki": {
@@ -813,8 +809,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/choji.json",
-        "s18.text.077"
+        "recovery/cast/choji.json"
       ]
     },
     "clinic_assistant": {
@@ -2594,8 +2589,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/ino.json",
-        "s18.text.077"
+        "recovery/cast/ino.json"
       ]
     },
     "inquiry_contact_token": {
@@ -10971,7 +10965,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.077",
         "s18.text.053",
         "s18.text.054",
         "s18.text.055",
@@ -10994,7 +10987,8 @@
         "s18.text.072",
         "s18.text.073",
         "s18.text.074",
-        "s18.text.075"
+        "s18.text.075",
+        "s18.text.076"
       ]
     },
     "place:5c90b4c54344ba12": {
@@ -13273,6 +13267,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.078",
         "s17.text.066",
         "s17.text.120",
         "s17.text.121",
@@ -20886,15 +20881,10 @@
         {
           "seen": "s18.text.077",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
-        },
-        {
-          "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json",
-        "recovery/HOT.json",
-        "s18.text.077"
+        "recovery/cast/shikamaru.json"
       ]
     },
     "shiki_arm_wraps": {
@@ -22775,13 +22765,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 137,
+      "mention_count": 138,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22789,13 +22780,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T08:50:00",
-          "excerpt": "08:50</text> ### Страна Рек. Убежище Шики Ночь прошла без происшествий. К моменту пробуждения Шики Коюки уже покинула спальню. На подушке сохранилось небольшое углубление, оставленное кольцами её тела. Из нижних пещер доносилось знакомое шипение. Утреннее солн",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.051"
         },
         {
           "at": "0010-05-15T08:55:00",
@@ -22810,16 +22794,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.053"
+        },
+        {
+          "at": "0010-05-15T09:22:05",
+          "excerpt": "цы. Один из них медленно перемещался вдоль стены, останавливаясь возле выступающих камней. Вскоре показалась Коюки. Белая змейка подняла голову, несколько раз высунула раздвоенный язык и поползла навстречу Шики. **Коюки:** — Уже вернулся? Позади неё из углубле",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.078"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.053",
+          "seen": "s18.text.078",
+          "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
+        },
+        {
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json"
+        "recovery/cast/western_nest_young_courier.json",
+        "recovery/HOT.json",
+        "s18.text.078"
       ]
     },
     "white_snake_sage": {
@@ -23382,5 +23378,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1714
+  "source_turns_indexed": 1715
 }
