@@ -40,10 +40,10 @@
 - Рьючидо, внутреннее святилище Хакудзя-сэннин · `places/ryuchido-vnutrennee-svyatilishche-khakudzya-sennin` · 13 ход(ов), s10–s15
 - Страна Травы, старый северный указатель · `places/strana-travy-staryy-severnyy-ukazatel` · 13 ход(ов), s12–s12
 - Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 13 ход(ов), s12–s18
+- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 13 ход(ов), s18–s18
 - Конохагакуре, главные ворота · `places/konokhagakure-glavnye-vorota` · 12 ход(ов), s15–s16
 - Конохагакуре, ресторан якинику · `places/konokhagakure-restoran-yakiniku` · 12 ход(ов), s18–s18
 - Кусагакуре, Центральный лазарет · `places/kusagakure-tsentralnyy-lazaret` · 12 ход(ов), s02–s02
-- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 12 ход(ов), s18–s18
 - Конохагакуре, Главная арена экзамена на тюнина · `places/konokhagakure-glavnaya-arena-ekzamena-na-tyunina` · 11 ход(ов), s02–s02
 - Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 11 ход(ов), s17–s17
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02

@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.107: Канкуро (`npc/kankuro`)
 - s18.text.106: Канкуро (`npc/kankuro`)
 - s18.text.105: Канкуро (`npc/kankuro`)
 - s18.text.104: Канкуро (`npc/kankuro`)
@@ -60,4 +61,3 @@
 - s18.text.050: Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s18.text.049: Коюки (`npc/western_nest_young_courier`), поправки игрока: 1
 - s18.text.048: Коюки (`npc/western_nest_young_courier`)
-- s18.text.047: Коюки (`npc/western_nest_young_courier`)
