@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.094",
+  "cursor": "s18.text.095",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -2328,6 +2328,28 @@
         "s17.text.101"
       ]
     },
+    "hiraishin_mark_suna_courtyard": {
+      "aliases": [
+        "hiraishin mark suna courtyard",
+        "Физическая метка Хирайшина в Сунагакуре"
+      ],
+      "facts": [],
+      "id": "hiraishin_mark_suna_courtyard",
+      "kind": "item",
+      "label": "Физическая метка Хирайшина в Сунагакуре",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "suna_mark_courtyard_guard_chief",
+          "since": "s18.text.095",
+          "turn": "s18.text.095"
+        }
+      ],
+      "sources": [
+        "s18.text.095"
+      ]
+    },
     "hirano": {
       "aliases": [
         "hirano",
@@ -3321,8 +3343,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kankuro.json",
-        "s18.text.094"
+        "recovery/cast/kankuro.json"
       ]
     },
     "kase": {
@@ -16415,6 +16436,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.095",
         "s18.text.094"
       ]
     },
@@ -21872,13 +21894,14 @@
     "suna_mark_courtyard_guard_chief": {
       "aliases": [
         "suna mark courtyard guard chief",
-        "Начальник караула"
+        "Начальник караула",
+        "suna_mark_courtyard_guard_chief"
       ],
       "facts": [],
       "id": "suna_mark_courtyard_guard_chief",
       "kind": "npc",
       "label": "Начальник караула",
-      "mention_count": 3,
+      "mention_count": 4,
       "mentions": [
         {
           "at": "0010-05-14T12:39:00",
@@ -21900,17 +21923,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.094"
+        },
+        {
+          "at": "0010-05-16T08:14:00",
+          "excerpt": "ь. Шики ощущал новый адрес так же отчётливо, как остальные принадлежащие ему физические метки Хирайшина. Начальник караула приблизился к стене. Он внимательно рассмотрел рисунок, не прикасаясь к нему. Один из дежурных выглянул из помещения и остановился на пор",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.095"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.094"
+          "seen": "s18.text.095"
         }
       ],
       "sources": [
         "recovery/cast/suna_mark_courtyard_guard_chief.json",
         "recovery/HOT.json",
-        "s18.text.094"
+        "s18.text.095"
       ]
     },
     "suna_night_gate_guard": {
@@ -23466,8 +23496,15 @@
       "status": "projected",
       "to": "gaara",
       "type": "held_by"
+    },
+    {
+      "from": "hiraishin_mark_suna_courtyard",
+      "source": "s18.text.095",
+      "status": "projected",
+      "to": "suna_mark_courtyard_guard_chief",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1730
+  "source_turns_indexed": 1731
 }
