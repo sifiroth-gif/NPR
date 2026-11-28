@@ -336,6 +336,7 @@
 - Сунагакуре, мост через канал · `places/sunagakure-most-cherez-kanal` · 1 ход(ов), s12–s12
 - Сунагакуре, развилка перед административным кварталом · `places/sunagakure-razvilka-pered-administrativnym-kvartalom` · 1 ход(ов), s12–s12
 - Сунагакуре, резиденция Кадзекагэ · `places/sunagakure-rezidentsiya-kadzekage` · 1 ход(ов), s12–s12
+- Сунагакуре, северный жилой квартал · `places/sunagakure-severnyy-zhiloy-kvartal` · 1 ход(ов), s18–s18
 - Сунагакуре, старые водяные сады · `places/sunagakure-starye-vodyanye-sady` · 1 ход(ов), s12–s12
 - Сунагакуре, старый торговый квартал · `places/sunagakure-staryy-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11

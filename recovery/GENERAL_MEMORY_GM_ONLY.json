@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.113",
+  "cursor": "s18.text.114",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -733,12 +733,17 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s12.text.048",
+          "seen": "s18.text.114",
+          "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
+        },
+        {
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         }
       ],
       "sources": [
-        "recovery/cast/chiyo.json"
+        "recovery/cast/chiyo.json",
+        "recovery/HOT.json",
+        "s18.text.114"
       ]
     },
     "chiyo_caravan": {
@@ -3284,7 +3289,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 72,
+      "mention_count": 73,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3292,13 +3297,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T08:48:00",
-          "excerpt": "гда. Тут подобная ситуация. Я стал немного сильнее это ощущать и понимать, хотя объяснить это сложно. Канкуро долго молчал. **Канкуро:** — Как это — всегда? Даже до рождения? Он посмотрел на Шики, ожидая какого-нибудь уточнения, которое устранило бы противореч",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.111"
         },
         {
           "at": "0010-05-16T08:50:00",
@@ -3313,21 +3311,23 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.113"
+        },
+        {
+          "at": "0010-05-16T09:12:00",
+          "excerpt": "ло. **Чиё:** — Садись. Расскажешь старухе, что с тобой стряслось за эти два месяца. **Ход Шики.** Шики попрощался с Канкуро до полудня и за 20 минут дошёл до дома Чиё. Старуха занималась рыболовной леской, не сразу узнала изменившегося Шики, удивилась и предло",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.114"
         }
       ],
       "projections": [
         {
           "seen": "s18.text.113",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
-        },
-        {
-          "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         }
       ],
       "sources": [
-        "recovery/cast/kankuro.json",
-        "recovery/HOT.json",
-        "s18.text.113"
+        "recovery/cast/kankuro.json"
       ]
     },
     "kase": {
@@ -14842,7 +14842,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.113",
         "s18.text.097",
         "s18.text.098",
         "s18.text.099",
@@ -14857,7 +14856,8 @@
         "s18.text.109",
         "s18.text.110",
         "s18.text.111",
-        "s18.text.112"
+        "s18.text.112",
+        "s18.text.113"
       ]
     },
     "place:ab7d74f5f67d2537": {
@@ -18860,6 +18860,25 @@
         "s11.text.072"
       ]
     },
+    "place:fa01db8a6e77b0e0": {
+      "aliases": [
+        "place:fa01db8a6e77b0e0",
+        "Сунагакуре, северный жилой квартал, веранда дома Чиё и Эбидзо",
+        "Сунагакуре",
+        "северный жилой квартал",
+        "веранда дома Чиё и Эбидзо"
+      ],
+      "facts": [],
+      "id": "place:fa01db8a6e77b0e0",
+      "kind": "place",
+      "label": "Сунагакуре, северный жилой квартал, веранда дома Чиё и Эбидзо",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.114"
+      ]
+    },
     "place:fa780cef00ddd296": {
       "aliases": [
         "place:fa780cef00ddd296",
@@ -21978,8 +21997,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/suna_mark_courtyard_guard_chief.json",
-        "recovery/HOT.json"
+        "recovery/cast/suna_mark_courtyard_guard_chief.json"
       ]
     },
     "suna_night_gate_guard": {
@@ -22578,27 +22596,6 @@
       ],
       "sources": [
         "recovery/cast/tikhiy_porog_seller.json"
-      ]
-    },
-    "toad_letter_case_s17": {
-      "aliases": [
-        "toad letter case s17",
-        "Водостойкий футляр для донесений"
-      ],
-      "facts": [],
-      "id": "toad_letter_case_s17",
-      "kind": "item",
-      "label": "Водостойкий футляр для донесений",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "zhaba",
-          "since": "s17.text.114"
-        }
-      ],
-      "sources": [
-        "s17.text.114"
       ]
     },
     "tsunade": {
@@ -23495,13 +23492,6 @@
       "type": "held_by"
     },
     {
-      "from": "toad_letter_case_s17",
-      "source": "s17.text.114",
-      "status": "projected",
-      "to": "zhaba",
-      "type": "held_by"
-    },
-    {
       "from": "orochimaru_reply_letter_s17",
       "source": "s17.text.118",
       "status": "projected",
@@ -23545,5 +23535,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1748
+  "source_turns_indexed": 1749
 }
