@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.082",
+  "cursor": "s18.text.083",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -427,12 +427,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.078",
+          "seen": "s18.text.083",
           "state": "Остался у пункта наград с отрядом, готовится вернуть тело Тирику в храм."
         }
       ],
       "sources": [
-        "recovery/cast/asuma.json"
+        "recovery/cast/asuma.json",
+        "s18.text.083"
       ]
     },
     "baki": {
@@ -1888,7 +1889,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 74,
+      "mention_count": 75,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1896,13 +1897,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-04-21T20:26:00",
-          "excerpt": "х напарников. **Мугами Шики:** — А ещё… Аки, Рэн, вы знаете, кто сейчас Казекаге? **Мидзухара Аки:** — Гаара. Рэн перестал жевать. **Хаясэ Рэн:** — Подожди. Ты спасал *того самого* Гаару? Аки коснулась колена, повреждённого много лет назад на экзамене. **Мидзу",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.076"
         },
         {
           "at": "0010-04-23T13:31:00",
@@ -1917,17 +1911,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.082"
+        },
+        {
+          "at": "0010-05-16T07:32:00",
+          "excerpt": "ередал документ дежурному возле кабинета. Тот постучал в дверь и, получив разрешение, пропустил посетителя внутрь. Гаара находился за письменным столом. Перед ним лежали раскрытые документы, несколько свитков и небольшая карта Страны Ветра. Увидев Шики, он отл",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.083"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.082",
+          "seen": "s18.text.083",
+          "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
+        },
+        {
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         }
       ],
       "sources": [
         "recovery/cast/gaara.json",
-        "s18.text.082"
+        "recovery/HOT.json",
+        "s18.text.083"
       ]
     },
     "gaara_private_letter": {
@@ -3841,8 +3846,7 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны",
-        "kiri_ship_security_officer"
+        "Шиноби корабельной охраны"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3886,8 +3890,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json",
-        "s18.text.082"
+        "recovery/cast/kiri_ship_security_officer.json"
       ]
     },
     "kiri_transfer_carrier": {
@@ -10339,6 +10342,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.083",
         "s12.text.035",
         "s12.text.036",
         "s12.text.037"
@@ -12707,10 +12711,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.082",
         "s12.text.010",
         "s18.text.080",
-        "s18.text.081"
+        "s18.text.081",
+        "s18.text.082"
       ]
     },
     "place:7c86de7f4ad7899c": {
@@ -20863,12 +20867,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.077",
+          "seen": "s18.text.083",
           "state": "Остался на поверхности наблюдать за отделённым телом Хидана."
         }
       ],
       "sources": [
-        "recovery/cast/shikamaru.json"
+        "recovery/cast/shikamaru.json",
+        "s18.text.083"
       ]
     },
     "shiki_arm_wraps": {
@@ -21867,8 +21872,7 @@
     "suna_night_gate_guard": {
       "aliases": [
         "suna night gate guard",
-        "Шиноби Песка",
-        "suna_night_gate_guard"
+        "Шиноби Песка"
       ],
       "facts": [],
       "id": "suna_night_gate_guard",
@@ -21911,9 +21915,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/suna_night_gate_guard.json",
-        "recovery/HOT.json",
-        "s18.text.082"
+        "recovery/cast/suna_night_gate_guard.json"
       ]
     },
     "suna_wounded_scout": {
@@ -22808,7 +22810,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 142,
+      "mention_count": 143,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22816,13 +22818,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T23:25:00",
-          "excerpt": "1287 года · 09:26</text> ### Страна Рек **Мугами Шики:** — Ну вот и увидишь. Шики покинул убежище. Коюки устроилась на его плече, подставив голову утреннему солнцу. По мере продвижения на запад густая растительность редела. Известняковые горы уступали место су",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.080"
         },
         {
           "at": "0010-05-15T23:27:00",
@@ -22837,11 +22832,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.082"
+        },
+        {
+          "at": "0010-05-16T07:32:00",
+          "excerpt": "Если нам разрешат Коюки. #шиноби# хорошо #поход до резиденции кадзекагэ# <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:15</text> ### Страна Ветра. Ворота Сунагакуре **Мугами",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.083"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.082",
+          "seen": "s18.text.083",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22851,7 +22853,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.082"
+        "s18.text.083"
       ]
     },
     "white_snake_sage": {
@@ -23407,5 +23409,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1719
+  "source_turns_indexed": 1720
 }

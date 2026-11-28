@@ -107,6 +107,7 @@
 - Страна Ветра, ворота Сунагакуре · `places/strana-vetra-vorota-sunagakure` · 4 ход(ов), s12–s18
 - Страна Звука, северный склад «Куроиси» · `places/strana-zvuka-severnyy-sklad-kuroisi` · 4 ход(ов), s09–s09
 - Страна Звука, северный тракт · `places/strana-zvuka-severnyy-trakt` · 4 ход(ов), s09–s09
+- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 4 ход(ов), s12–s18
 - Тайная лаборатория Шики, лесистые холмы северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-lesistye-kholmy-severo-zapadnee-k` · 4 ход(ов), s04–s04
 - Конохагакуре, Медицинское крыло · `places/konokhagakure-meditsinskoe-krylo` · 3 ход(ов), s02–s02
 - Конохагакуре, Открытый тренировочный полигон у западного склона · `places/konokhagakure-otkrytyy-trenirovochnyy-poligon-u-zapadnogo-sk` · 3 ход(ов), s01–s02
@@ -123,7 +124,6 @@
 - Страна Рек, «Чёрный створ» · `places/strana-rek-chernyy-stvor` · 3 ход(ов), s09–s09
 - Страна Рек, старое святилище на северной границе · `places/strana-rek-staroe-svyatilishche-na-severnoy-granitse` · 3 ход(ов), s15–s15
 - Страна Ветра, грузовая станция Хакусэки · `places/strana-vetra-gruzovaya-stantsiya-khakuseki` · 3 ход(ов), s09–s09
-- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 3 ход(ов), s12–s12
 - Граница Страны Огня и Страны Рек, у деревянного моста · `places/granitsa-strany-ognya-i-strany-rek-u-derevyannogo-mosta` · 2 ход(ов), s17–s17
 - Конохагакуре, Чайная «Тихая сосна» · `places/konokhagakure-chaynaya-tikhaya-sosna` · 2 ход(ов), s01–s01
 - Конохагакуре, Гостиница «Белая цапля» · `places/konokhagakure-gostinitsa-belaya-tsaplya` · 2 ход(ов), s01–s01
