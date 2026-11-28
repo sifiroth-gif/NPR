@@ -1,0 +1,237 @@
+"""Actor-local comprehension and affect, independent of factual access and dread.
+
+The draw limits interpretation, never establishes truth. Fictional calibration
+is not a psychometric model. Historical turns remain replayable.
+"""
+from __future__ import annotations
+
+import hashlib
+import re
+
+CUTOVER = (18, 102)
+LEVELS = ("received", "partial", "hypothesis", "understood")
+EVIDENCE = ("explicit", "signs", "opaque")
+NOVELTY = {"routine": 7, "new": 13, "disruptive": 19}
+DOMAINS = ("general", "medicine", "puppetry", "strategy", "politics",
+           "seals", "ninjutsu", "social", "research", "snakes", "sensory")
+AFFECT = ("surprise", "confusion", "curiosity", "doubt", "fear", "anger",
+          "joy", "denial", "interest", "calm", "none")
+
+# Conservative campaign defaults; unknown expertise is not granted by rank.
+# Bonus is local to the domain, not a global genius trait.
+PROFILES = {
+    "kankuro": (0, ("puppetry",)),
+    "gaara": (1, ("politics",)),
+    "shikamaru": (2, ("strategy",)),
+    "tsunade": (1, ("medicine", "politics")),
+    "orochimaru": (2, ("research", "ninjutsu", "snakes")),
+    "kabuto": (1, ("medicine", "research")),
+    "sakura": (0, ("medicine",)),
+    "kakashi": (1, ("strategy", "ninjutsu")),
+    "jiraiya": (1, ("seals", "ninjutsu")),
+    "chiyo": (1, ("puppetry", "medicine")),
+    "western_nest_young_courier": (0, ("snakes",)),
+}
+
+RULE = (
+    "Новый значимый факт/новая трактовка NPC: d.cognition[actor] "
+    "{topic,domain,novelty,evidence,stimulus,outcome,interpretation,affect,visible,basis}. "
+    "topic — стабильный ключ; stimulus/visible — точные фрагменты сцены. "
+    "Прямой факт received не требует успеха. Для понимания: roll + aptitude +4 за domain из domains; "
+    "порог routine 7/new 13/disruptive 19. Ниже порога на 5+: received; на 1–4: partial; "
+    "достиг: hypothesis; explicit и на 4 выше: understood. signs максимум hypothesis, opaque максимум partial. "
+    "Это потолок, не обязательный вывод и не доказательство тайны. "
+    "Эмоция независимо от успеха: surprise/confusion/curiosity/doubt/fear/anger/joy/denial/interest/calm/none; "
+    "при disruptive calm требует basis, none не подходит. Не повторяй ту же улику для нового броска. "
+    "NPC вне прежнего состава — new_roll; при устаревшем пакете не повышай понимание без нового источника."
+)
+
+
+def enabled(turn_id):
+    m = re.fullmatch(r"s(\d+)\.text\.(\d+)", str(turn_id or ""))
+    return bool(m and tuple(map(int, m.groups())) >= CUTOVER)
+
+
+def norm(value):
+    return " ".join(str(value or "").split())
+
+
+def profile(actor):
+    aptitude, domains = PROFILES.get(actor, (0, ()))
+    return {"aptitude": aptitude, "domains": list(domains)}
+
+
+def draw(turn_id, actor=""):
+    # Separate deterministic lane: never consume combat or world-plan dice.
+    raw = hashlib.sha256(f"npc-cognition/1|{turn_id}|{actor}".encode()).digest()
+    return int.from_bytes(raw[:8], "big") % 20 + 1
+
+
+def ceiling(roll, actor, domain, novelty, evidence):
+    p = profile(actor)
+    score = roll + p["aptitude"] + (4 if domain in p["domains"] else 0)
+    margin = score - NOVELTY[novelty]
+    limit = 0 if margin <= -5 else 1 if margin < 0 else 2
+    if evidence == "explicit" and margin >= 4:
+        limit = 3
+    if evidence == "opaque":
+        limit = min(limit, 1)
+    return limit
+
+
+def rows(turn):
+    return (turn.get("d") or {}).get("cognition") or {}
+
+
+def validate(turn):
+    value = (turn.get("d") or {}).get("cognition")
+    if value is None:
+        return
+    if not isinstance(value, dict) or len(value) > 16:
+        raise ValueError("d.cognition: actor -> object (max 16)")
+    if turn.get("kind") in ("ooc", "technical", "void") and value:
+        raise ValueError("d.cognition: only played scenes")
+    for actor, row in value.items():
+        if not isinstance(actor, str) or not actor or actor == "shiki" or not isinstance(row, dict):
+            raise ValueError("d.cognition: invalid NPC")
+        for field in ("topic", "stimulus"):
+            if not isinstance(row.get(field), str) or not norm(row[field]) or len(row[field]) > 240:
+                raise ValueError(f"d.cognition.{actor}.{field}: required text <=240")
+        if not re.fullmatch(r"[a-z0-9_]{1,64}", row["topic"]):
+            raise ValueError("d.cognition.topic: stable ASCII identifier")
+        for field, choices in (("domain", DOMAINS), ("novelty", NOVELTY), ("evidence", EVIDENCE),
+                               ("outcome", LEVELS), ("affect", AFFECT)):
+            if row.get(field) not in choices:
+                raise ValueError(f"d.cognition.{actor}.{field}: invalid value")
+        for field in ("interpretation", "visible", "basis"):
+            if field in row and (not isinstance(row[field], str) or len(row[field]) > 240):
+                raise ValueError(f"d.cognition.{actor}.{field}: text <=240")
+        if row["outcome"] in ("partial", "hypothesis", "understood") and not norm(row.get("interpretation")):
+            raise ValueError("d.cognition: interpretation required above received")
+
+
+def _book(hot, actor):
+    return ((hot.get("_psyche") or {}).get(actor) or {}).get("cognition") or {}
+
+
+def view(hot, actor, turn_id):
+    past = sorted(_book(hot, actor).items(), key=lambda item: item[1].get("turn", ""), reverse=True)
+    return {**profile(actor), "roll": draw(turn_id, actor),
+            "topics": {k: v for k, v in past[:3]}}
+
+
+def _local(hot, turn):
+    d = turn.get("d") or {}
+    before = set((hot.get("scene") or {}).get("present") or [])
+    after = set((d.get("scene") or {}).get("present") or [])
+    return before | after | set(turn.get("_spoke") or ()) | set(turn.get("_always") or ())
+
+
+def triggers(hot, turn, local):
+    """Structured evidence of new acquisition or a fresh interpretation.
+    Routine dialogue with neither needs no record. Never infer hidden truths
+    from free text or a character's profession.
+    """
+    d = turn.get("d") or {}
+    needed = set()
+    for actor, patch in (d.get("cast") or {}).items():
+        if actor == "shiki" or actor not in local or not isinstance(patch, dict):
+            continue
+        if patch.get("knows+"):
+            needed.add(actor)
+        dread = patch.get("dread") or {}
+        old = ((hot.get("_psyche") or {}).get(actor) or {}).get("dread") or {}
+        if isinstance(dread, dict) and dread.get("reads") and norm(dread["reads"]) != norm(old.get("reads")):
+            needed.add(actor)
+    for event in d.get("knowledge_events") or []:
+        if event.get("actor") in local and event.get("actor") != "shiki":
+            needed.add(event["actor"])
+    return needed
+
+
+def assess(row, actor, roll, previous, gm):
+    """Return effective ceiling and errors without mutating state."""
+    problems = []
+    limit = ceiling(roll, actor, row["domain"], row["novelty"], row["evidence"])
+    if previous and norm(previous.get("stimulus")) == norm(row["stimulus"]):
+        # Same evidence is not a new die; no improvement without new source.
+        limit = min(limit, LEVELS.index(previous["outcome"]))
+    if LEVELS.index(row["outcome"]) > limit:
+        problems.append(f"предел понимания {LEVELS[limit]}, заявлено {row['outcome']}")
+    if norm(row["stimulus"]) not in gm:
+        problems.append("stimulus не найден в сыгранной сцене")
+    if row["affect"] != "none" and (not norm(row.get("visible")) or norm(row["visible"]) not in gm):
+        problems.append("эмоция/реакция не подтверждена видимой репликой или поступком")
+    if row["novelty"] == "disruptive":
+        if row["affect"] == "none":
+            problems.append("новое нарушение картины мира осталось без реакции")
+        if row["affect"] == "calm" and not norm(row.get("basis")):
+            problems.append("спокойствие при нарушении картины мира без индивидуального основания")
+    return limit, problems
+
+
+def review(hot, turn, *, packet=None):
+    """Read-only pre/postcheck; a published scene cannot be unplayed by a lint."""
+    if turn.get("kind") in ("ooc", "technical", "void") or not (enabled(turn.get("id")) or rows(turn)):
+        return [], {}
+    validate(turn)
+    d = turn.get("d") or {}
+    gm = norm(turn.get("gm"))
+    local = _local(hot, turn)
+    prior = set((hot.get("scene") or {}).get("present") or [])
+    data, errors = {}, []
+    for actor in sorted(triggers(hot, turn, local) - set(rows(turn))):
+        errors.append(f"{actor}: новая осведомлённость/трактовка без d.cognition; знание не равно пониманию")
+    for actor, row in rows(turn).items():
+        if actor not in local:
+            errors.append(f"{actor}: d.cognition без присутствия или доступного наблюдения")
+            continue
+        if packet is None:
+            roll = draw(turn["id"], actor if actor in prior else "")
+            prev = _book(hot, actor).get(row["topic"])
+        else:
+            p = ((packet.get("present") or {}).get(actor) or {}).get("cognition") or {}
+            roll = p.get("roll", (packet.get("cognition") or {}).get("new_roll"))
+            prev = (p.get("topics") or {}).get(row["topic"])
+            if type(roll) is not int or not 1 <= roll <= 20:
+                # Unknown/stale packet: don't pretend it can certify a conclusion.
+                if row["outcome"] != "received":
+                    errors.append(f"{actor}: нет свежего когнитивного броска")
+                continue
+        limit, problems = assess(row, actor, roll, prev, gm)
+        if row["outcome"] == "hypothesis":
+            claim = norm(row.get("interpretation"))
+            facts = ((d.get("cast") or {}).get(actor) or {}).get("knows+") or []
+            if isinstance(facts, str):
+                facts = [facts]
+            if any(norm(fact) == claim for fact in facts):
+                problems.append("гипотеза записана как достоверный knows+")
+        errors.extend(f"{actor}: {p}" for p in problems)
+        if not problems:
+            data[actor] = {"topic": row["topic"], "turn": turn["id"],
+                           "stimulus": row["stimulus"], "outcome": row["outcome"],
+                           "interpretation": row.get("interpretation", ""),
+                           "affect": row["affect"], "limit": LEVELS[limit]}
+    return errors, data
+
+
+def apply(hot, turn, prior_hot):
+    errors, accepted = review(prior_hot, turn)
+    for error in errors:
+        hot.setdefault("_checks", []).append({"turn": turn["id"], "kind": "cognition", "text": error})
+    for actor, value in accepted.items():
+        book = hot.setdefault("_psyche", {}).setdefault(actor, {}).setdefault("cognition", {})
+        topic = value.pop("topic")
+        book[topic] = value
+
+
+def inspect(packet, turn):
+    """Use only the already supplied NEXT (no connector round-trip)."""
+    if not packet.get("cognition"):
+        return []
+    present = packet.get("present") or {}
+    pseudo = {"scene": {"present": list(present)},
+              "_psyche": {k: {"cognition": (v.get("cognition") or {}).get("topics", {}),
+                              "dread": {"reads": (v.get("cognition") or {}).get("last_read", "")}}
+                          for k, v in present.items()}}
+    return review(pseudo, turn, packet=packet)[0]
