@@ -2,8 +2,8 @@
 
 Где Шики бывал в сыгранных сессиях. Описание места — на его странице.
 
+- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 58 ход(ов), s14–s18
 - Конохагакуре, Центральная башня · `places/konokhagakure-tsentralnaya-bashnya` · 57 ход(ов), s01–s01
-- Страна Рек, южные известняковые горы · `places/strana-rek-yuzhnye-izvestnyakovye-gory` · 57 ход(ов), s14–s18
 - Страна Огня, восточная гавань · `places/strana-ognya-vostochnaya-gavan` · 55 ход(ов), s13–s16
 - Конохагакуре, резиденция Хокагэ · `places/konokhagakure-rezidentsiya-khokage` · 54 ход(ов), s15–s18
 - Северная граница Страны Рек, подземное убежище Орочимару · `places/severnaya-granitsa-strany-rek-podzemnoe-ubezhishche-orochima` · 54 ход(ов), s15–s17
