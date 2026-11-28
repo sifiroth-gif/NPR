@@ -41,6 +41,7 @@ NEXT (1 чтение) → адресный источник при необхо�
 | Медицина | [MEDICAL_CONTEXT](MEDICAL_CONTEXT.md), medical.py, body.py, fight.py |
 | Автономия | [WORLD_AUTONOMY](WORLD_AUTONOMY.md), will.py, news.py, obligations.py, arcs.py; с s14.text.024 проверка планов после каждого принятого игрового хода; ID вестей, отложенная очередь |
 | Художественный контур | dread.py: индивидуальная реакция, hold/down, без квоты страха; GM_CORE, HORROR.md; prose_lint — эвристика |
+| Когнитивный контур NPC | [NPC_COGNITION](NPC_COGNITION.md), cognition.py: отдельный бросок и потолок понимания, источник, независимый аффект, закрытая память тем; NEXT / TURN / preflight / fold |
 | Preflight | [PREFLIGHT](PREFLIGHT.md): шесть пунктов вручную; CLI дополнительная проверка |
 | Историческая приёмка | [HISTORICAL_REGRESSIONS](HISTORICAL_REGRESSIONS.md), изолированный снимок и хеши |
 
