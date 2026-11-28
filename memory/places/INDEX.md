@@ -47,8 +47,8 @@
 - Конохагакуре, закрытый полигон пространственных техник · `places/konokhagakure-zakrytyy-poligon-prostranstvennykh-tekhnik` · 11 ход(ов), s17–s17
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
+- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 11 ход(ов), s18–s18
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
-- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 10 ход(ов), s18–s18
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 9 ход(ов), s16–s16
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
