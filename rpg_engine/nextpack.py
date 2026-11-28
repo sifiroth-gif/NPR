@@ -271,7 +271,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
                          "hits": [f"{h.get('rule')}: «{_short(h.get('quote'), 90)}»" for h in last[0].get("hits", [])[:3]]}
     people = {}
     cognitive = cognition.enabled(pack["next_id"])
-    if cognitive and present:
+    if cognitive:
         pack["cognition"] = {"for": pack["next_id"], "new_roll": cognition.draw(pack["next_id"]),
                              "rule": cognition.RULE}
     for key in present:
@@ -447,7 +447,14 @@ def _squeeze_checks(pack):
         pack["checks"] = [_cut(c, 220) for c in pack["checks"][-3:]]
 
 
-_SQUEEZE = (_squeeze_fight, _squeeze_minor, _squeeze_arc, _squeeze_checks, _squeeze_present)
+def _squeeze_cognition(pack):
+    for person in (pack.get("present") or {}).values():
+        state = person.get("cognition") or {}
+        if state.get("topics"):
+            state["topics"] = dict(list(state["topics"].items())[:1])
+
+
+_SQUEEZE = (_squeeze_cognition, _squeeze_fight, _squeeze_minor, _squeeze_arc, _squeeze_checks, _squeeze_present)
 
 
 def _fit(pack):
