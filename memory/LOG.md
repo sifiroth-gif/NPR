@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.093: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.092: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`), Канкуро (`npc/kankuro`)
 - s18.text.091: Гаара (`npc/gaara`), вещь `shiki_private_line_gaara_plate`
 - s18.text.090: Гаара (`npc/gaara`), Коюки (`npc/western_nest_young_courier`)
