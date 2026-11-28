@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.108",
+  "cursor": "s18.text.109",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -3284,7 +3284,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 67,
+      "mention_count": 68,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3292,13 +3292,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T08:42:00",
-          "excerpt": "яснять хозяевам, что мой внешний вид не отравит воду. Хотя сейчас я уже решил проблему прикосновений. Канкуро хмыкнул, собираясь что-то ответить, но вдруг замер с карандашом в руке. **Канкуро:** — Погоди. Какую проблему прикосновений? Он отложил карандаш попер",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.106"
         },
         {
           "at": "0010-05-16T08:43:00",
@@ -3313,11 +3306,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.108"
+        },
+        {
+          "at": "0010-05-16T08:46:00",
+          "excerpt": "оторого там быть не должно. Когда я его открыл, он меня поцарапал. Капля крови — и вот тебе контракт. Канкуро медленно опустил карандаш. **Канкуро:** — В смысле — поцарапал? Сам свиток?! Он коротко рассмеялся, но смех оборвался почти сразу. Кукловод посмотрел ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.109"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.108",
+          "seen": "s18.text.109",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         },
         {
@@ -3327,7 +3327,7 @@
       "sources": [
         "recovery/cast/kankuro.json",
         "recovery/HOT.json",
-        "s18.text.108"
+        "s18.text.109"
       ]
     },
     "kase": {
@@ -14842,7 +14842,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.108",
+        "s18.text.109",
         "s18.text.097",
         "s18.text.098",
         "s18.text.099",
@@ -14852,7 +14852,8 @@
         "s18.text.104",
         "s18.text.105",
         "s18.text.106",
-        "s18.text.107"
+        "s18.text.107",
+        "s18.text.108"
       ]
     },
     "place:ab7d74f5f67d2537": {
@@ -23540,5 +23541,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1743
+  "source_turns_indexed": 1744
 }
