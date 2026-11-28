@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.104: Канкуро (`npc/kankuro`)
 - s18.text.103: Канкуро (`npc/kankuro`)
 - s18.text.102: Канкуро (`npc/kankuro`)
 - s18.text.101: поправки игрока: 1
@@ -60,4 +61,3 @@
 - s18.text.047: Коюки (`npc/western_nest_young_courier`)
 - s18.text.046: Коюки (`npc/western_nest_young_courier`)
 - s18.text.045: Коюки (`npc/western_nest_young_courier`)
-- s18.text.044: Шиноби корабельной охраны (`npc/kiri_ship_security_officer`), Коюки (`npc/western_nest_young_courier`)

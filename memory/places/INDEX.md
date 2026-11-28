@@ -48,12 +48,12 @@
 - Кусагакуре, Исследовательский корпус № 3 · `places/kusagakure-issledovatelskiy-korpus-n-3` · 11 ход(ов), s02–s02
 - Страна Огня, лесистые предгорья · `places/strana-ognya-lesistye-predgorya` · 11 ход(ов), s14–s14
 - Кусагакуре, родительский дом Мугами · `places/kusagakure-roditelskiy-dom-mugami` · 10 ход(ов), s05–s08
+- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 10 ход(ов), s18–s18
 - Конохагакуре, Гостиница · `places/konokhagakure-gostinitsa` · 9 ход(ов), s01–s15
 - Конохагакуре, восточный тренировочный полигон · `places/konokhagakure-vostochnyy-trenirovochnyy-poligon` · 9 ход(ов), s16–s16
 - Кусагакуре, Восточный канал · `places/kusagakure-vostochnyy-kanal` · 9 ход(ов), s03–s03
 - Кусагакуре, задний двор кабинета Кирисавы Сэйны · `places/kusagakure-zadniy-dvor-kabineta-kirisavy-seyny` · 9 ход(ов), s05–s05
 - Мьёбоку, храм Великого Жабьего Мудреца · `places/meboku-khram-velikogo-zhabego-mudretsa` · 9 ход(ов), s15–s16
-- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 9 ход(ов), s18–s18
 - Конохагакуре, Главная арена · `places/konokhagakure-glavnaya-arena` · 8 ход(ов), s02–s02
 - Кусагакуре, Нижний читальный зал архива · `places/kusagakure-nizhniy-chitalnyy-zal-arkhiva` · 8 ход(ов), s03–s03
 - Нижний госпиталь, Нулевая операционная · `places/nizhniy-gospital-nulevaya-operatsionnaya` · 8 ход(ов), s04–s04
