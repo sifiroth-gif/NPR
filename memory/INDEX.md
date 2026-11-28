@@ -1,4 +1,4 @@
-# Карта мира NPR · на ходе `s18.text.090`
+# Карта мира NPR · на ходе `s18.text.091`
 
 Прежде чем писать о персонаже, вещи или линии, открой её страницу (`memory/<путь>.md`). Нет черты на странице — не выдумывай: открой ход по ссылке или оставь неопределённой. Тайное — в `*.GM_ONLY.md`.
 
@@ -282,7 +282,7 @@
 ## Давние линии (35, в архиве)
 `threads/anbu_transfer`, `threads/arakawa_treatment`, `threads/black_market_new_contracts`, `threads/case19T`, `threads/central_visitors`, `threads/ch09_order_chain`, `threads/fire_risk_meeting`, `threads/fire_road_survey_attack`, `threads/forbidden_arts`, `threads/jiraiya_rain_investigation`, `threads/kabuto_letter`, `threads/kabuto_name_source`, `threads/kabuto_snake_contract`, `threads/kabuto_tracking_claim`, `threads/kiri_bingo_negotiations`, `threads/lower_hospital`, `threads/market_shadow`, `threads/minagi_commission`, `threads/nemera`, `threads/order`, `threads/parents`, `threads/player_preference_overlapping_plans`, `threads/reika_meeting`, `threads/roadside_attack`, `threads/root_silence_seals`, `threads/s17_survivors`, `threads/sai_note`, `threads/secret_lab`, `threads/sharingan`, `threads/tamura_inquiry`, `threads/tamura_return`, `threads/tenchi_bridge`, `threads/tetsu`, `threads/unknown_buyer_mask`, `threads/v7`
 
-## Вещи (113)
+## Вещи (114)
 - `aki_home_address_s15` · `items/aki_home_address_s15`
 - `arakawa_patient_ampoule` · `items/arakawa_patient_ampoule`
 - `arakawa_transport_copy` · `items/arakawa_transport_copy`
@@ -378,6 +378,7 @@
 - `shiki_medical_kit` · `items/shiki_medical_kit`
 - `shiki_nail_sample_1287` · `items/shiki_nail_sample_1287`
 - `shiki_new_refuge` · `items/shiki_new_refuge`
+- `shiki_private_line_gaara_plate` · `items/shiki_private_line_gaara_plate`
 - `shiki_private_line_kiri_plate` · `items/shiki_private_line_kiri_plate`
 - `shiki_s17_report_folder` · `items/shiki_s17_report_folder`
 - `shiki_shelter_hiraishin_mark_s17` · `items/shiki_shelter_hiraishin_mark_s17`
