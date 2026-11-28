@@ -32,6 +32,29 @@ def turn(row=None, *, ident="s18.text.102"):
 
 
 class CognitionTests(unittest.TestCase):
+    def test_affect_is_separate_and_stakes_matter(self):
+        self.assertEqual(cognition.affect_strength(20, "kankuro", "routine"), 0)
+        self.assertEqual(cognition.affect_strength(8, "kankuro", "disruptive"), 1)
+        self.assertEqual(cognition.affect_strength(16, "kankuro", "disruptive"), 2)
+        self.assertEqual(cognition.affect_strength(16, "gaara", "disruptive"), 1)
+        self.assertEqual(cognition.affect_strength(10, "kankuro", "new", "existential"), 1)
+        self.assertEqual(cognition.affect_strength(20, "kankuro", "disruptive", repeated=True), 0)
+        with patch.object(cognition, "draw", return_value=1), patch.object(cognition, "affect_draw", return_value=20):
+            errors, accepted = cognition.review(state(), turn(record(novelty="disruptive")))
+            self.assertFalse(errors)
+            self.assertEqual(accepted["kankuro"]["outcome"], "received")
+            self.assertEqual(accepted["kankuro"]["affect_strength"], 2)
+            errors, _ = cognition.review(state(), turn(record(novelty="disruptive", affect="none", visible="")))
+            self.assertTrue(any("сила аффекта" in e for e in errors))
+
+    def test_known_new_actor_gets_own_draw(self):
+        t = turn(record())
+        h = state()
+        h["scene"]["present"] = ["shiki"]
+        packet = {"present": {}, "cognition": cognition.newcomer_packet(t["id"])}
+        self.assertEqual(cognition.inspect(packet, t), cognition.review(h, t)[0])
+        self.assertEqual(packet["cognition"]["new_profiles"]["kankuro"]["roll"], cognition.draw(t["id"], "kankuro"))
+
     def test_domain_specific_and_individual(self):
         self.assertEqual(cognition.ceiling(20, "kankuro", "puppetry", "disruptive", "explicit"), 3)
         self.assertEqual(cognition.ceiling(20, "kankuro", "politics", "disruptive", "explicit"), 2)
