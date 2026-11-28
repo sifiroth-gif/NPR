@@ -14,7 +14,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import directives, dread, inquiry, lore, medical, will, fusion
+from . import cognition, directives, dread, inquiry, lore, medical, will, fusion
 
 PATH = "recovery/NEXT.json"
 from .limits import NEXT_HARD as HARD_BYTES, NEXT_TARGET as TARGET_BYTES  # noqa: E402
@@ -270,10 +270,15 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
         pack["prose"] = {"verdict": last[0].get("verdict"),
                          "hits": [f"{h.get('rule')}: «{_short(h.get('quote'), 90)}»" for h in last[0].get("hits", [])[:3]]}
     people = {}
+    cognitive = cognition.enabled(pack["next_id"])
+    if cognitive:
+        pack["cognition"] = cognition.newcomer_packet(pack["next_id"])
     for key in present:
         if key in always_present:
             continue
         entry = {"name": lore._name(hot, key), "reaction": dread.summary(hot, key)}
+        if cognitive:
+            entry["cognition"] = cognition.view(hot, key, pack["next_id"])
         knows = ((extra or {}).get("knows") or {}).get(key)
         if knows:   # знакомство до сессии и сведения о Шики (acquaint.view): чего NPC не знает — не говорит
             entry["knows"] = knows
@@ -441,7 +446,14 @@ def _squeeze_checks(pack):
         pack["checks"] = [_cut(c, 220) for c in pack["checks"][-3:]]
 
 
-_SQUEEZE = (_squeeze_fight, _squeeze_minor, _squeeze_arc, _squeeze_checks, _squeeze_present)
+def _squeeze_cognition(pack):
+    for person in (pack.get("present") or {}).values():
+        state = person.get("cognition") or {}
+        if state.get("topics"):
+            state["topics"] = dict(list(state["topics"].items())[:1])
+
+
+_SQUEEZE = (_squeeze_cognition, _squeeze_fight, _squeeze_minor, _squeeze_arc, _squeeze_checks, _squeeze_present)
 
 
 def _fit(pack):

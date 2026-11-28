@@ -32,6 +32,7 @@ import traceback
 import zlib
 from pathlib import Path
 
+from . import cognition
 from . import acquaint, aging, arcs, body, canon, claims, drama, echo, expertise, favor, limits, style, continuity_guard, directives, dread, fight, identity, inquiry, keeper, lore, merge, nextpack, npc_memory, plot, presence, prose_lint, will
 
 SCHEMA = "npr-hot/2"
@@ -199,6 +200,7 @@ def validate_turn(turn):
     delta = turn.get("d") or {}
     try:
         directives.validate_ops(turn)
+        cognition.validate(turn)
     except ValueError as exc:
         raise TurnError(str(exc)) from exc
     # Structural failures must be caught before fold mutates the cursor or
@@ -640,6 +642,8 @@ def _apply_turn_inplace(hot, turn):
         cursor["id"] = turn["id"]
 
     delta = turn.get("d") or {}
+    # Cognition uses the pre-action actor set and private topic ledger.
+    cognition.apply(hot, turn, hot)
     # Психика, отношения, чувство и намерения NPC не попадают в открытую карточку.
     public_delta, inner = npc_memory.split_patch(hot, delta, turn["id"])
     _apply_delta(hot, public_delta, turn)

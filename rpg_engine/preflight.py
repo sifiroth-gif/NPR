@@ -12,7 +12,7 @@ import math
 import re
 from pathlib import Path
 
-from . import continuity_guard, fight, hot, overlay, prose_lint
+from . import cognition, continuity_guard, fight, hot, overlay, prose_lint
 
 # Player's binding instruction s17.text.110; do not retroactively judge old turns.
 DESCRIPTION_FROM = (17, 111)
@@ -206,6 +206,7 @@ def inspect(packet, turn, *, receipts=(), used=()):
         errors.append("Запиши актуальный состав d.scene.present, не наследуй молча.")
     gm = turn["gm"]
     errors.extend(description_errors(turn))
+    errors.extend(cognition.inspect(packet, turn))
     speech = _normal(continuity_guard.player_speech(turn["player"]))
     lines = _normal(" ".join(LABEL.findall(gm)))
     if speech and speech not in lines:

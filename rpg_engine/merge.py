@@ -77,6 +77,11 @@ def redirect(turn, alias):
                     _fill(cast[new], patch)
                 else:
                     cast.setdefault(new, patch)
+    cognition = (turn.get("d") or {}).get("cognition")
+    if isinstance(cognition, dict):
+        for old, new in alias.items():
+            if old in cognition:
+                cognition.setdefault(new, cognition.pop(old))
     scene = (turn.get("d") or {}).get("scene")
     if isinstance(scene, dict) and isinstance(scene.get("present"), list):
         scene["present"] = list(dict.fromkeys(alias.get(k, k) for k in scene["present"]))
