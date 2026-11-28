@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.118",
+  "cursor": "s18.text.119",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -733,17 +733,13 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.118",
-          "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
-        },
-        {
+          "seen": "s18.text.119",
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         }
       ],
       "sources": [
         "recovery/cast/chiyo.json",
-        "recovery/HOT.json",
-        "s18.text.118"
+        "s18.text.119"
       ]
     },
     "chiyo_caravan": {
@@ -1090,7 +1086,7 @@
       "id": "ebizo",
       "kind": "npc",
       "label": "Эбидзо",
-      "mention_count": 5,
+      "mention_count": 6,
       "mentions": [
         {
           "at": "0010-05-16T08:52:00",
@@ -1098,13 +1094,6 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.113"
-        },
-        {
-          "at": "0010-05-16T09:19:00",
-          "excerpt": "color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 09:19</text> ### Сунагакуре. Дом Чиё и Эбидзо **Мугами Шики:** — Ну, выбор у них был очень неприятный. Думаю, в том числе из-за событий с Гаарой. А сейчас у меня три договора о ненападении с деревнями",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.116"
         },
         {
           "at": "0010-05-16T09:21:00",
@@ -1119,17 +1108,23 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.118"
+        },
+        {
+          "at": "0010-05-16T09:37:00",
+          "excerpt": "и Шики:** — Только в теории. Шики поднялся с кресла. **Мугами Шики:** — Пойдёмте. **Чиё:** — В теории! Эбидзо, слышал? Оказывается, рыбалку ещё и изучают! **Эбидзо:** — А ты сорок лет занимаешься ею практически, но рыбы больше ловить не стала. Старуха выразите",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.119"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.118"
+          "seen": "s18.text.119"
         }
       ],
       "sources": [
         "recovery/cast/ebizo.json",
-        "recovery/HOT.json",
-        "s18.text.118"
+        "recovery/HOT.json"
       ]
     },
     "endo_hajime": {
@@ -18884,11 +18879,11 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.118",
         "s18.text.114",
         "s18.text.115",
         "s18.text.116",
-        "s18.text.117"
+        "s18.text.117",
+        "s18.text.118"
       ]
     },
     "place:fa780cef00ddd296": {
@@ -18983,6 +18978,25 @@
       "projections": [],
       "sources": [
         "s15.text.009"
+      ]
+    },
+    "place:fca1ee54509ebcf0": {
+      "aliases": [
+        "place:fca1ee54509ebcf0",
+        "Сунагакуре, северный водоём, берег под скальным выступом",
+        "Сунагакуре",
+        "северный водоём",
+        "берег под скальным выступом"
+      ],
+      "facts": [],
+      "id": "place:fca1ee54509ebcf0",
+      "kind": "place",
+      "label": "Сунагакуре, северный водоём, берег под скальным выступом",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.119"
       ]
     },
     "place:fcd327ae808eead8": {
@@ -23533,5 +23547,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1753
+  "source_turns_indexed": 1754
 }
