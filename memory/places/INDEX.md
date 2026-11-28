@@ -64,6 +64,7 @@
 - Мьёбоку, сад у дома Фукасаку и Симы · `places/meboku-sad-u-doma-fukasaku-i-simy` · 7 ход(ов), s16–s16
 - Полигон №44, Центральная башня · `places/poligon-n44-tsentralnaya-bashnya` · 7 ход(ов), s01–s01
 - Страна Огня, западные провинции · `places/strana-ognya-zapadnye-provintsii` · 7 ход(ов), s16–s17
+- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 7 ход(ов), s12–s18
 - Амэгакурэ, внутренняя галерея центральной башни · `places/amegakure-vnutrennyaya-galereya-tsentralnoy-bashni` · 6 ход(ов), s17–s17
 - Конохагакуре, квартира Наруто · `places/konokhagakure-kvartira-naruto` · 6 ход(ов), s15–s15
 - Кусагакуре, Архив техник и печатей · `places/kusagakure-arkhiv-tekhnik-i-pechatey` · 6 ход(ов), s03–s03
@@ -77,7 +78,6 @@
 - Страна Огня, старая лесная дорога к центральным провинциям · `places/strana-ognya-staraya-lesnaya-doroga-k-tsentralnym-provintsiy` · 6 ход(ов), s15–s15
 - Страна Рек, каменный уступ над рекой · `places/strana-rek-kamennyy-ustup-nad-rekoy` · 6 ход(ов), s11–s12
 - Страна Травы, восточный торговый тракт к Стране Огня · `places/strana-travy-vostochnyy-torgovyy-trakt-k-strane-ognya` · 6 ход(ов), s15–s15
-- Сунагакуре, резиденция Пятого Кадзекагэ · `places/sunagakure-rezidentsiya-pyatogo-kadzekage` · 6 ход(ов), s12–s18
 - Южная граница Страны Дождя, сухое возвышение у реки · `places/yuzhnaya-granitsa-strany-dozhdya-sukhoe-vozvyshenie-u-reki` · 6 ход(ов), s17–s17
 - Конохагакуре, закрытый тренировочный полигон · `places/konokhagakure-zakrytyy-trenirovochnyy-poligon` · 5 ход(ов), s15–s15
 - Кусагакуре, личный кабинет Кирисавы Сэйны · `places/kusagakure-lichnyy-kabinet-kirisavy-seyny` · 5 ход(ов), s05–s05

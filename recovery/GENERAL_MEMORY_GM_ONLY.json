@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.085",
+  "cursor": "s18.text.086",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -525,6 +525,22 @@
       ],
       "sources": [
         "s09.text.067"
+      ]
+    },
+    "canon:s18.text.086:0": {
+      "aliases": [
+        "canon:s18.text.086:0",
+        "s18.text.086: 16.05.1287 в 07:46 заключено бессрочное соглашение Мугами Шики и Сунагакуре по шести пунктам s18.text.085: независимость, несодействие преследованию Кири, невыдача и "
+      ],
+      "facts": [],
+      "id": "canon:s18.text.086:0",
+      "kind": "canon",
+      "label": "s18.text.086: 16.05.1287 в 07:46 заключено бессрочное соглашение Мугами Шики и Сунагакуре по шести пунктам s18.text.085: независимость, несодействие преследованию Кири, невыдача и ",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.086"
       ]
     },
     "captive_guard": {
@@ -1888,7 +1904,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 77,
+      "mention_count": 78,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1896,13 +1912,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:32:00",
-          "excerpt": "ередал документ дежурному возле кабинета. Тот постучал в дверь и, получив разрешение, пропустил посетителя внутрь. Гаара находился за письменным столом. Перед ним лежали раскрытые документы, несколько свитков и небольшая карта Страны Ветра. Увидев Шики, он отл",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.083"
         },
         {
           "at": "0010-05-16T07:37:00",
@@ -1917,11 +1926,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.085"
+        },
+        {
+          "at": "0010-05-16T07:46:00",
+          "excerpt": "Нет гаара, #подписываю# <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:46</text> ### Сунагакуре. Кабинет Пятого Кадзекагэ **Мугами Шики:** — Нет, Гаара. Шики п",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.086"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.085",
+          "seen": "s18.text.086",
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         },
         {
@@ -1931,7 +1947,7 @@
       "sources": [
         "recovery/cast/gaara.json",
         "recovery/HOT.json",
-        "s18.text.085"
+        "s18.text.086"
       ]
     },
     "gaara_private_letter": {
@@ -10341,12 +10357,13 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.085",
+        "s18.text.086",
         "s12.text.035",
         "s12.text.036",
         "s12.text.037",
         "s18.text.083",
-        "s18.text.084"
+        "s18.text.084",
+        "s18.text.085"
       ]
     },
     "place:523b6a4a1e145a5f": {
@@ -21918,6 +21935,28 @@
         "recovery/cast/suna_night_gate_guard.json"
       ]
     },
+    "suna_shiki_nonaggression_copy": {
+      "aliases": [
+        "suna shiki nonaggression copy",
+        "Экземпляр соглашения Сунагакуре и Мугами Шики"
+      ],
+      "facts": [],
+      "id": "suna_shiki_nonaggression_copy",
+      "kind": "item",
+      "label": "Экземпляр соглашения Сунагакуре и Мугами Шики",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [
+        {
+          "holder": "shiki",
+          "since": "s18.text.086",
+          "turn": "s18.text.086"
+        }
+      ],
+      "sources": [
+        "s18.text.086"
+      ]
+    },
     "suna_wounded_scout": {
       "aliases": [
         "suna wounded scout",
@@ -22810,7 +22849,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 145,
+      "mention_count": 146,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22818,13 +22857,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-16T07:32:00",
-          "excerpt": "Если нам разрешат Коюки. #шиноби# хорошо #поход до резиденции кадзекагэ# <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:15</text> ### Страна Ветра. Ворота Сунагакуре **Мугами",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.083"
         },
         {
           "at": "0010-05-16T07:37:00",
@@ -22839,11 +22871,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.085"
+        },
+        {
+          "at": "0010-05-16T07:46:00",
+          "excerpt": "ыхал на бумаге рядом с именем человека, которого ещё недавно требовала выдать одна из великих деревень. Коюки вытянула голову над краем стола, внимательно наблюдая за движениями кисти. **Гаара:** — Теперь это обязательство Сунагакуре, а не только моё личное об",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.086"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.085",
+          "seen": "s18.text.086",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22853,7 +22892,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.085"
+        "s18.text.086"
       ]
     },
     "white_snake_sage": {
@@ -23406,8 +23445,15 @@
       "status": "projected",
       "to": "asuma",
       "type": "held_by"
+    },
+    {
+      "from": "suna_shiki_nonaggression_copy",
+      "source": "s18.text.086",
+      "status": "projected",
+      "to": "shiki",
+      "type": "held_by"
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1722
+  "source_turns_indexed": 1723
 }
