@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.093",
+  "cursor": "s18.text.094",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1888,7 +1888,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 84,
+      "mention_count": 85,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1896,13 +1896,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:57:00",
-          "excerpt": "отростки. Их тонкие окончания разделились на несколько ветвей, опустившихся к металлической пластине. Гаара медленно убрал руки со стола. По светлой поверхности металла начали расходиться тончайшие линии фуиндзюцу. Несколько контуров формировались одновременно",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.091"
         },
         {
           "at": "0010-05-16T07:59:00",
@@ -1917,21 +1910,23 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.093"
+        },
+        {
+          "at": "0010-05-16T08:12:00",
+          "excerpt": "гда пойду туда. Шики обратился к охраннику. **Мугами Шики:** — Проводите? **Шиноби Суны:** — Конечно. Гаара коротко кивнул на прощание и вернулся к письменному столу. Уже выходя из кабинета, Шики мог услышать, как Кадзекагэ пригласил ожидавшего в коридоре сове",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.094"
         }
       ],
       "projections": [
         {
           "seen": "s18.text.093",
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
-        },
-        {
-          "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         }
       ],
       "sources": [
-        "recovery/cast/gaara.json",
-        "recovery/HOT.json",
-        "s18.text.093"
+        "recovery/cast/gaara.json"
       ]
     },
     "gaara_private_letter": {
@@ -3321,12 +3316,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.092",
+          "seen": "s18.text.094",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         }
       ],
       "sources": [
-        "recovery/cast/kankuro.json"
+        "recovery/cast/kankuro.json",
+        "s18.text.094"
       ]
     },
     "kase": {
@@ -6011,50 +6007,6 @@
       ],
       "sources": [
         "recovery/cast/orochimaru_scout_snake.json"
-      ]
-    },
-    "orochimaru_senjutsu_early_notes_s17": {
-      "aliases": [
-        "orochimaru senjutsu early notes s17",
-        "Тетрадь ранних наблюдений Орочимару по сендзюцу"
-      ],
-      "facts": [],
-      "id": "orochimaru_senjutsu_early_notes_s17",
-      "kind": "item",
-      "label": "Тетрадь ранних наблюдений Орочимару по сендзюцу",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "orochimaru",
-          "since": "s17.text.093",
-          "turn": "s17.text.094"
-        }
-      ],
-      "sources": [
-        "s17.text.094"
-      ]
-    },
-    "orochimaru_senjutsu_later_records_s17": {
-      "aliases": [
-        "orochimaru senjutsu later records s17",
-        "Папка последующих обследований при попытках сендзюцу"
-      ],
-      "facts": [],
-      "id": "orochimaru_senjutsu_later_records_s17",
-      "kind": "item",
-      "label": "Папка последующих обследований при попытках сендзюцу",
-      "mention_count": 0,
-      "mentions": [],
-      "projections": [
-        {
-          "holder": "kabuto",
-          "since": "s17.text.093",
-          "turn": "s17.text.094"
-        }
-      ],
-      "sources": [
-        "s17.text.094"
       ]
     },
     "osawa_gensei": {
@@ -10341,7 +10293,6 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.093",
         "s12.text.035",
         "s12.text.036",
         "s12.text.037",
@@ -10353,7 +10304,8 @@
         "s18.text.089",
         "s18.text.090",
         "s18.text.091",
-        "s18.text.092"
+        "s18.text.092",
+        "s18.text.093"
       ]
     },
     "place:523b6a4a1e145a5f": {
@@ -16447,6 +16399,25 @@
         "s08.text.069"
       ]
     },
+    "place:c991c4b3d581bd09": {
+      "aliases": [
+        "place:c991c4b3d581bd09",
+        "Сунагакуре, западный квартал, караульный двор возле внутренней стены",
+        "Сунагакуре",
+        "западный квартал",
+        "караульный двор возле внутренней стены"
+      ],
+      "facts": [],
+      "id": "place:c991c4b3d581bd09",
+      "kind": "place",
+      "label": "Сунагакуре, западный квартал, караульный двор возле внутренней стены",
+      "mention_count": 0,
+      "mentions": [],
+      "projections": [],
+      "sources": [
+        "s18.text.094"
+      ]
+    },
     "place:c9e7d62d5d92c00c": {
       "aliases": [
         "place:c9e7d62d5d92c00c",
@@ -21898,6 +21869,50 @@
         "recovery/cast/suna_advance_tracker.json"
       ]
     },
+    "suna_mark_courtyard_guard_chief": {
+      "aliases": [
+        "suna mark courtyard guard chief",
+        "Начальник караула"
+      ],
+      "facts": [],
+      "id": "suna_mark_courtyard_guard_chief",
+      "kind": "npc",
+      "label": "Начальник караула",
+      "mention_count": 3,
+      "mentions": [
+        {
+          "at": "0010-05-14T12:39:00",
+          "excerpt": "**Шизунэ:** — Двое шиноби предъявили распоряжение о передаче Хидана для отдельного допроса. Подписано Данзо. Начальник караула отказался открывать камеру без вашего подтверждения. Цунадэ резко протянула руку. Бумага хрустнула в её пальцах. Почти три недели про",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.007"
+        },
+        {
+          "at": "0010-05-16T08:00:00",
+          "excerpt": "ик, которому ранее поручили подготовить место для пространственной печати. Он доложил, что двор свободен и начальник караула уведомлён о предстоящем посещении. Заметив спускающуюся с кресла белую змею, шиноби остановился. **Коюки:** — Простите, в какую сторону",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.093"
+        },
+        {
+          "at": "0010-05-16T08:12:00",
+          "excerpt": "чу вышел мужчина лет сорока с короткой бородой и обветренным лицом. Сопровождающий передал ему распоряжение Гаары. Начальник караула прочёл его, после чего жестом указал на свободную стену. **Начальник караула:** — Кадзекагэ-сама распорядился выделить вам это ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.094"
+        }
+      ],
+      "projections": [
+        {
+          "seen": "s18.text.094"
+        }
+      ],
+      "sources": [
+        "recovery/cast/suna_mark_courtyard_guard_chief.json",
+        "recovery/HOT.json",
+        "s18.text.094"
+      ]
+    },
     "suna_night_gate_guard": {
       "aliases": [
         "suna night gate guard",
@@ -22854,8 +22869,7 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки",
-        "western_nest_young_courier"
+        "Коюки"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
@@ -22899,8 +22913,7 @@
         }
       ],
       "sources": [
-        "recovery/cast/western_nest_young_courier.json",
-        "s18.text.093"
+        "recovery/cast/western_nest_young_courier.json"
       ]
     },
     "white_snake_sage": {
@@ -23406,20 +23419,6 @@
       "type": "held_by"
     },
     {
-      "from": "orochimaru_senjutsu_early_notes_s17",
-      "source": "s17.text.094",
-      "status": "projected",
-      "to": "orochimaru",
-      "type": "held_by"
-    },
-    {
-      "from": "orochimaru_senjutsu_later_records_s17",
-      "source": "s17.text.094",
-      "status": "projected",
-      "to": "kabuto",
-      "type": "held_by"
-    },
-    {
       "from": "hiraishin_mark_orochimaru_lab_s17",
       "source": "s17.text.101",
       "status": "projected",
@@ -23470,5 +23469,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1729
+  "source_turns_indexed": 1730
 }

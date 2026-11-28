@@ -339,6 +339,7 @@
 - Сунагакуре, старый торговый квартал · `places/sunagakure-staryy-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11
 - Сунагакуре, выход из старых водяных садов · `places/sunagakure-vykhod-iz-starykh-vodyanykh-sadov` · 1 ход(ов), s12–s12
+- Сунагакуре, западный квартал · `places/sunagakure-zapadnyy-kvartal` · 1 ход(ов), s18–s18
 - Тайная лаборатория Шики, известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-galereya-severo-z` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, известняковая водосборная галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovaya-vodosbornaya-gale` · 1 ход(ов), s04–s04
 - Тайная лаборатория Шики, известняковые галереи северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-izvestnyakovye-galerei-severo-zap` · 1 ход(ов), s04–s04
