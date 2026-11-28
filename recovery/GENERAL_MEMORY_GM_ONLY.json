@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.099",
+  "cursor": "s18.text.100",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -444,7 +444,7 @@
       "id": "baki",
       "kind": "npc",
       "label": "Баки",
-      "mention_count": 28,
+      "mention_count": 29,
       "mentions": [
         {
           "at": "0010-03-12T21:47:00",
@@ -452,13 +452,6 @@
           "source": "archive/session-011-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s11.text.025"
-        },
-        {
-          "at": "0010-03-17T08:39:00",
-          "excerpt": "мотрела на Шики, затем на двух шиноби за входной дверью. **Управляющая:** — Думаю, это разумно. Господин Баки разрешил вам свободно передвигаться по деревне. Я попрошу охрану сопровождать вас, а не ограничивать. Она вышла к караульным. Старший из них выслушал ",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.027"
         },
         {
           "at": "0010-03-17T11:00:00",
@@ -473,6 +466,13 @@
           "source": "archive/session-012-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s12.text.037"
+        },
+        {
+          "at": "0010-05-16T08:32:00",
+          "excerpt": "преследованию Шики со стороны Киригакуре. **Канкуро:** — Помнишь, как в марте мне пришлось давать показания Баки? Совет тогда ещё обсуждал, не следует ли тебя задержать. Он постучал ногтем по третьему документу. **Канкуро:** — А теперь пусть попробуют. На этот",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.100"
         }
       ],
       "projections": [
@@ -3305,7 +3305,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 59,
+      "mention_count": 60,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3313,13 +3313,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T08:23:00",
-          "excerpt": "Мастеру: в каноне Канкуро по итогу начал использовать куклу сасори. По игре: #иду к канкуро# <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 08:23</text> ### Сунагакуре. Мастерска",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.097"
         },
         {
           "at": "0010-05-16T08:24:00",
@@ -3334,11 +3327,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.099"
+        },
+        {
+          "at": "0010-05-16T08:32:00",
+          "excerpt": "вам… Хм. Лучше покажу. Шики достал три соглашения о ненападении и разложил их на свободном верстаке. Канкуро поставил чайник. Первый документ он взял почти небрежно, однако, увидев печать Кусагакуре, придвинул табуретку и сел. Второе соглашение прочитал уже вн",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.100"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.099",
+          "seen": "s18.text.100",
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         },
         {
@@ -3348,7 +3348,7 @@
       "sources": [
         "recovery/cast/kankuro.json",
         "recovery/HOT.json",
-        "s18.text.099"
+        "s18.text.100"
       ]
     },
     "kase": {
@@ -14863,9 +14863,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.099",
+        "s18.text.100",
         "s18.text.097",
-        "s18.text.098"
+        "s18.text.098",
+        "s18.text.099"
       ]
     },
     "place:ab7d74f5f67d2537": {
@@ -23560,5 +23561,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1735
+  "source_turns_indexed": 1736
 }
