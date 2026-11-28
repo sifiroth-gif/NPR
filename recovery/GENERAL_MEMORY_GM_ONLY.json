@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.114",
+  "cursor": "s18.text.115",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -733,7 +733,7 @@
       "mentions": [],
       "projections": [
         {
-          "seen": "s18.text.114",
+          "seen": "s18.text.115",
           "state": "Говорила с Шики у ворот о собственной вине и невозможности поговорить с умершим Сасори; потребовала полные материалы о проникновении Акацуки. Ушла к описи останков."
         },
         {
@@ -743,7 +743,7 @@
       "sources": [
         "recovery/cast/chiyo.json",
         "recovery/HOT.json",
-        "s18.text.114"
+        "s18.text.115"
       ]
     },
     "chiyo_caravan": {
@@ -1893,7 +1893,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 85,
+      "mention_count": 86,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1901,13 +1901,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:59:00",
-          "excerpt": "Хорошо. Тогда все хорошо По игре: да Гаара, теперь у тебя есть прямая связь со мной. А ещё скажи, как Канкуро? Хотел бы его проведать <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:59</text> ###",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.092"
         },
         {
           "at": "0010-05-16T08:00:00",
@@ -1922,6 +1915,13 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.094"
+        },
+        {
+          "at": "0010-05-16T09:16:00",
+          "excerpt": "рыбалки. Из неё выглядывала сложенная салфетка, поверх которой лежали две небольшие деревянные чашки. **Чиё:** — А Гаара молодец. Иногда мне даже кажется, что из него выйдет лучший Кадзекагэ, чем из всех тех, кого я знала. Закончив с леской, она убрала снасти ",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.115"
         }
       ],
       "projections": [
@@ -18876,6 +18876,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
+        "s18.text.115",
         "s18.text.114"
       ]
     },
@@ -23535,5 +23536,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1749
+  "source_turns_indexed": 1750
 }

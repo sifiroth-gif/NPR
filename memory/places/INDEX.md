@@ -184,6 +184,7 @@
 - Страна Травы, заброшенный сушильный двор возле подпольных складов · `places/strana-travy-zabroshennyy-sushilnyy-dvor-vozle-podpolnykh-sk` · 2 ход(ов), s12–s12
 - Страна Ветра, безлюдная дорога у старого водосборника · `places/strana-vetra-bezlyudnaya-doroga-u-starogo-vodosbornika` · 2 ход(ов), s09–s09
 - Страна Звука, почтовая станция «Три сосны» · `places/strana-zvuka-pochtovaya-stantsiya-tri-sosny` · 2 ход(ов), s09–s09
+- Сунагакуре, северный жилой квартал · `places/sunagakure-severnyy-zhiloy-kvartal` · 2 ход(ов), s18–s18
 - Сунагакуре, торговый квартал · `places/sunagakure-torgovyy-kvartal` · 2 ход(ов), s12–s12
 - Тайная лаборатория Шики, бывшая водосборная известняковая галерея северо-западнее Кусагакуре · `places/taynaya-laboratoriya-shiki-byvshaya-vodosbornaya-izvestnyako` · 2 ход(ов), s04–s04
 - Тайная лаборатория Шики, северо-западные известняковые холмы · `places/taynaya-laboratoriya-shiki-severo-zapadnye-izvestnyakovye-kh` · 2 ход(ов), s04–s04
@@ -336,7 +337,6 @@
 - Сунагакуре, мост через канал · `places/sunagakure-most-cherez-kanal` · 1 ход(ов), s12–s12
 - Сунагакуре, развилка перед административным кварталом · `places/sunagakure-razvilka-pered-administrativnym-kvartalom` · 1 ход(ов), s12–s12
 - Сунагакуре, резиденция Кадзекагэ · `places/sunagakure-rezidentsiya-kadzekage` · 1 ход(ов), s12–s12
-- Сунагакуре, северный жилой квартал · `places/sunagakure-severnyy-zhiloy-kvartal` · 1 ход(ов), s18–s18
 - Сунагакуре, старые водяные сады · `places/sunagakure-starye-vodyanye-sady` · 1 ход(ов), s12–s12
 - Сунагакуре, старый торговый квартал · `places/sunagakure-staryy-torgovyy-kvartal` · 1 ход(ов), s12–s12
 - Сунагакуре, внешняя галерея центрального госпиталя · `places/sunagakure-vneshnyaya-galereya-tsentralnogo-gospitalya` · 1 ход(ов), s11–s11
