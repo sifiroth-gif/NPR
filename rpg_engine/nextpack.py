@@ -272,8 +272,7 @@ def build(hot, brief, checks, entries, always_present=(), rules=None, happened=N
     people = {}
     cognitive = cognition.enabled(pack["next_id"])
     if cognitive:
-        pack["cognition"] = {"for": pack["next_id"], "new_roll": cognition.draw(pack["next_id"]),
-                             "rule": cognition.RULE}
+        pack["cognition"] = cognition.newcomer_packet(pack["next_id"])
     for key in present:
         if key in always_present:
             continue
