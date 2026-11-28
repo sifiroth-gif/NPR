@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.091",
+  "cursor": "s18.text.092",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1888,7 +1888,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 82,
+      "mention_count": 83,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1896,13 +1896,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-05-16T07:50:00",
-          "excerpt": "да · 07:50</text> ### Сунагакуре. Кабинет Пятого Кадзекагэ **Мугами Шики:** — Выполнит обе функции. Гаара задумчиво провёл пальцем по краю карты. Затем развернул её так, чтобы Шики мог рассмотреть обозначенные на ней внутренние укрепления деревни. **Гаара:** —",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.089"
         },
         {
           "at": "0010-05-16T07:54:00",
@@ -1917,11 +1910,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.091"
+        },
+        {
+          "at": "0010-05-16T07:59:00",
+          "excerpt": "Хорошо. Тогда все хорошо По игре: да Гаара, теперь у тебя есть прямая связь со мной. А ещё скажи, как Канкуро? Хотел бы его проведать <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:59</text> ###",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.092"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.091",
+          "seen": "s18.text.092",
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         },
         {
@@ -1931,7 +1931,7 @@
       "sources": [
         "recovery/cast/gaara.json",
         "recovery/HOT.json",
-        "s18.text.091"
+        "s18.text.092"
       ]
     },
     "gaara_private_letter": {
@@ -3288,7 +3288,7 @@
       "id": "kankuro",
       "kind": "npc",
       "label": "Канкуро",
-      "mention_count": 54,
+      "mention_count": 55,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -3296,13 +3296,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-03-25T12:02:11",
-          "excerpt": ", затем на Наруто. **Ямато:** — Сакура. Кто он? **Сакура Харуно:** — Мугами Шики. Медик, который помог спасти Канкуро и Гаару. **Ямато:** — Это я понял. Он подчиняется кому-нибудь? **Сакура Харуно:** — Нет. Ответ заставил Ямато изменить стойку. **Ямато:** — То",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.042"
         },
         {
           "at": "0010-04-23T12:23:00",
@@ -3317,16 +3310,28 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.087"
+        },
+        {
+          "at": "0010-05-16T07:59:00",
+          "excerpt": "рошо. Тогда все хорошо По игре: да Гаара, теперь у тебя есть прямая связь со мной. А ещё скажи, как Канкуро? Хотел бы его проведать <text color=\"secondary\" size=\"xs\">Воскресенье, 16 мая 1287 года · 07:59</text> ### Сунагакуре. Кабинет Пятого Кадзекагэ **Мугами",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.092"
         }
       ],
       "projections": [
         {
-          "seen": "s12.text.042",
+          "seen": "s18.text.092",
+          "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
+        },
+        {
           "state": "До 11 утра исполнил собственный план: предоставил Баки подписанные письменные показания об официальном допуске Шики и обстоятельствах спасения, Баки удостоверил и внёс их в официальный архив Суны."
         }
       ],
       "sources": [
-        "recovery/cast/kankuro.json"
+        "recovery/cast/kankuro.json",
+        "recovery/HOT.json",
+        "s18.text.092"
       ]
     },
     "kase": {
@@ -10341,7 +10346,7 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.091",
+        "s18.text.092",
         "s12.text.035",
         "s12.text.036",
         "s12.text.037",
@@ -10351,7 +10356,8 @@
         "s18.text.086",
         "s18.text.087",
         "s18.text.089",
-        "s18.text.090"
+        "s18.text.090",
+        "s18.text.091"
       ]
     },
     "place:523b6a4a1e145a5f": {
@@ -22852,13 +22858,14 @@
     "western_nest_young_courier": {
       "aliases": [
         "western nest young courier",
-        "Коюки"
+        "Коюки",
+        "western_nest_young_courier"
       ],
       "facts": [],
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 150,
+      "mention_count": 151,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22866,13 +22873,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-16T07:50:00",
-          "excerpt": "ительный ответ, он вышел, осторожно прикрыв за собой дверь. **Гаара:** — А средство связи я оставлю у себя. Коюки, до сих пор наблюдавшая за движениями кисти, перебралась на край стола. Её заинтересовало изображение деревни, особенно небольшие зелёные участки ",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.089"
         },
         {
           "at": "0010-05-16T07:54:00",
@@ -22887,11 +22887,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.091"
+        },
+        {
+          "at": "0010-05-16T07:59:00",
+          "excerpt": "бирался работать в мастерской кукловодов. Она находится в западном квартале. Думаю, он будет рад тебя увидеть. Коюки неожиданно направилась к открытому окну. Она спустилась на наружный каменный выступ и некоторое время рассматривала крыши соседних домов. Затем",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.092"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.091",
+          "seen": "s18.text.092",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22900,7 +22907,8 @@
       ],
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
-        "recovery/HOT.json"
+        "recovery/HOT.json",
+        "s18.text.092"
       ]
     },
     "white_snake_sage": {
@@ -23470,5 +23478,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1727
+  "source_turns_indexed": 1728
 }
