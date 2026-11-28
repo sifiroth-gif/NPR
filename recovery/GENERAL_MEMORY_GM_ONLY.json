@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.080",
+  "cursor": "s18.text.081",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -12704,8 +12704,9 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.080",
-        "s12.text.010"
+        "s18.text.081",
+        "s12.text.010",
+        "s18.text.080"
       ]
     },
     "place:7c86de7f4ad7899c": {
@@ -21862,13 +21863,14 @@
     "suna_night_gate_guard": {
       "aliases": [
         "suna night gate guard",
-        "Шиноби Песка"
+        "Шиноби Песка",
+        "suna_night_gate_guard"
       ],
       "facts": [],
       "id": "suna_night_gate_guard",
       "kind": "npc",
       "label": "Шиноби Песка",
-      "mention_count": 11,
+      "mention_count": 12,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -21876,13 +21878,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-03-15T08:40:23",
-          "excerpt": "неизвестное искусство. Шики направился к открытому входу. На каменном уступе позади него лежал мёртвый шиноби Песка. Ветер шевелил край его одежды. Кровь медленно проникала между камнями, встречая тонкие струйки воды. Шики снял капюшон. На плечи упали длинные ",
-          "source": "archive/session-011-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s11.text.052"
         },
         {
           "at": "0010-04-21T20:27:00",
@@ -21897,17 +21892,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.080"
+        },
+        {
+          "at": "0010-05-15T23:27:00",
+          "excerpt": "на столе папку и принялся перелистывать документы. Шелест бумаги отчётливо слышался в ночной тишине. **Шиноби Песка:** — Соглашения между вами лично и Сунагакуре? Второй охранник остановился на одной из страниц. Он подозвал старшего и указал на несколько строк",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.081"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.080"
+          "seen": "s18.text.081"
         }
       ],
       "sources": [
         "recovery/cast/suna_night_gate_guard.json",
         "recovery/HOT.json",
-        "s18.text.080"
+        "s18.text.081"
       ]
     },
     "suna_wounded_scout": {
@@ -22802,7 +22804,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 140,
+      "mention_count": 141,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22810,13 +22812,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T09:22:05",
-          "excerpt": "цы. Один из них медленно перемещался вдоль стены, останавливаясь возле выступающих камней. Вскоре показалась Коюки. Белая змейка подняла голову, несколько раз высунула раздвоенный язык и поползла навстречу Шики. **Коюки:** — Уже вернулся? Позади неё из углубле",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.078"
         },
         {
           "at": "0010-05-15T09:26:00",
@@ -22831,11 +22826,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.080"
+        },
+        {
+          "at": "0010-05-15T23:27:00",
+          "excerpt": "еды ремонта на каменных стенах прохода. Некоторые участки кладки заметно отличались по цвету от остальных. Коюки высунула голову из-за воротника Шики. Мотылёк, привлечённый светом, несколько раз пролетел возле её морды. Она проследила за ним, совершенно не обр",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.081"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.080",
+          "seen": "s18.text.081",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22845,7 +22847,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.080"
+        "s18.text.081"
       ]
     },
     "white_snake_sage": {
@@ -23401,5 +23403,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1717
+  "source_turns_indexed": 1718
 }
