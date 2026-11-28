@@ -2,6 +2,7 @@
 
 Какие страницы изменил каждый ход. Полные изменения — `archive/deltas/`.
 
+- s18.text.082: Шиноби Песка (`npc/suna_night_gate_guard`), Коюки (`npc/western_nest_young_courier`), Гаара (`npc/gaara`), Шиноби корабельной охраны (`npc/kiri_ship_security_officer`)
 - s18.text.081: Шиноби Песка (`npc/suna_night_gate_guard`), Коюки (`npc/western_nest_young_courier`)
 - s18.text.080: Коюки (`npc/western_nest_young_courier`), Шиноби Песка (`npc/suna_night_gate_guard`)
 - s18.text.079: Коюки (`npc/western_nest_young_courier`)
@@ -59,4 +60,3 @@
 - s18.text.025: Асума Сарутоби (`npc/asuma`)
 - s18.text.024: Асума Сарутоби (`npc/asuma`)
 - s18.text.023: Асума Сарутоби (`npc/asuma`)
-- s18.text.022: Асума Сарутоби (`npc/asuma`)

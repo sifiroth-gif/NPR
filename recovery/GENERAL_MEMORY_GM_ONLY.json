@@ -1,7 +1,7 @@
 {
   "conflicts": [],
   "contract": "Verified facts only from source-bound ledger; cards and source mentions remain projections/candidates.",
-  "cursor": "s18.text.081",
+  "cursor": "s18.text.082",
   "entities": {
     "akatsuki": {
       "aliases": [
@@ -1888,7 +1888,7 @@
       "id": "gaara",
       "kind": "npc",
       "label": "Гаара",
-      "mention_count": 73,
+      "mention_count": 74,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -1896,13 +1896,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-03-17T11:12:00",
-          "excerpt": "щё Акацуки теперь в курсе того с кем я был и что делал, так что выйти на меня они попытаются. Ладно Гаара рад был видеть, ты сильно изменился. #беру пропуск#. Киригакуре может искать меня потому что в мне есть линия генов их кланов. Либо сильно хочет их назад,",
-          "source": "archive/session-012-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s12.text.038"
         },
         {
           "at": "0010-04-21T20:26:00",
@@ -1917,16 +1910,24 @@
           "source": "archive/session-015-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s15.text.130"
+        },
+        {
+          "at": "0010-05-16T07:15:00",
+          "excerpt": "Да, Коюки. #к шиноби# если гаара закончил работу, то не дергайте его время позднее, я просто побуду тут до утра <text color=\"secondary\" size=\"xs\">Суббота, 15 мая 1287 года · 23:28</text> ### Страна Ветра. В",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s12.text.045",
+          "seen": "s18.text.082",
           "state": "Шики сообщил о своей неопределённости относительно мотивов помощи Наруто, предположении об охоте Акацуки, двух гипотезах о преследовании Кири ради интегрированных генов; Гаара не принял версии за факты, не стал задерживать Шики, попрощался, оставив в силе прик"
         }
       ],
       "sources": [
-        "recovery/cast/gaara.json"
+        "recovery/cast/gaara.json",
+        "s18.text.082"
       ]
     },
     "gaara_private_letter": {
@@ -3840,7 +3841,8 @@
     "kiri_ship_security_officer": {
       "aliases": [
         "kiri ship security officer",
-        "Шиноби корабельной охраны"
+        "Шиноби корабельной охраны",
+        "kiri_ship_security_officer"
       ],
       "facts": [],
       "id": "kiri_ship_security_officer",
@@ -3879,12 +3881,13 @@
       ],
       "projections": [
         {
-          "seen": "s18.text.044",
+          "seen": "s18.text.082",
           "state": "Оставил вопросы Шики по Кири для ответа командованию через предоставленный прямой канал; передал личную пластину Шики специалисту фуин-связи без активации, возобновил погрузку."
         }
       ],
       "sources": [
-        "recovery/cast/kiri_ship_security_officer.json"
+        "recovery/cast/kiri_ship_security_officer.json",
+        "s18.text.082"
       ]
     },
     "kiri_transfer_carrier": {
@@ -12704,9 +12707,10 @@
       "mentions": [],
       "projections": [],
       "sources": [
-        "s18.text.081",
+        "s18.text.082",
         "s12.text.010",
-        "s18.text.080"
+        "s18.text.080",
+        "s18.text.081"
       ]
     },
     "place:7c86de7f4ad7899c": {
@@ -21870,7 +21874,7 @@
       "id": "suna_night_gate_guard",
       "kind": "npc",
       "label": "Шиноби Песка",
-      "mention_count": 12,
+      "mention_count": 13,
       "mentions": [
         {
           "at": "0001-07-02T13:52:00",
@@ -21878,13 +21882,6 @@
           "source": "archive/session-001-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s01.text.060"
-        },
-        {
-          "at": "0010-04-21T20:27:00",
-          "excerpt": "ко секунд оставался над ней, хотя вода уже достигла края. **Мидзухара Аки:** — А кто были остальные двое? Шиноби Песка? Нао посмотрела на семейный альбом, лежавший возле Шики. Из-под обложки выступал уголок фотографии мальчика в одежде начинающего ирьёнина. Он",
-          "source": "archive/session-015-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s15.text.078"
         },
         {
           "at": "0010-05-15T23:25:00",
@@ -21899,17 +21896,24 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.081"
+        },
+        {
+          "at": "0010-05-16T07:15:00",
+          "excerpt": "зднее. Я просто побуду здесь до утра. Шиноби посмотрел на тёмные окна караульного помещения и кивнул. **Шиноби Песка:** — Передам ваше пожелание дежурному офицеру. Он оставил возле скамьи глиняный кувшин с питьевой водой и вернулся к своим обязанностям. Второй",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.081"
+          "seen": "s18.text.082"
         }
       ],
       "sources": [
         "recovery/cast/suna_night_gate_guard.json",
         "recovery/HOT.json",
-        "s18.text.081"
+        "s18.text.082"
       ]
     },
     "suna_wounded_scout": {
@@ -22804,7 +22808,7 @@
       "id": "western_nest_young_courier",
       "kind": "npc",
       "label": "Коюки",
-      "mention_count": 141,
+      "mention_count": 142,
       "mentions": [
         {
           "at": "0010-04-12T16:22:00",
@@ -22812,13 +22816,6 @@
           "source": "archive/session-014-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s14.text.053"
-        },
-        {
-          "at": "0010-05-15T09:26:00",
-          "excerpt": "Страна Рек. Убежище Шики **Мугами Шики:** — Хорошо. Не хочешь прогуляться со мной до деревни Песка? Коюки высоко подняла голову. **Коюки:** — В пустыню? Хочу! Белая змейка уже направилась к Шики, но внезапно остановилась. Она повернулась к лестнице, возле кото",
-          "source": "archive/session-018-turns.jsonl",
-          "status": "source_candidate_only",
-          "turn": "s18.text.079"
         },
         {
           "at": "0010-05-15T23:25:00",
@@ -22833,11 +22830,18 @@
           "source": "archive/session-018-turns.jsonl",
           "status": "source_candidate_only",
           "turn": "s18.text.081"
+        },
+        {
+          "at": "0010-05-16T07:15:00",
+          "excerpt": "Да, Коюки. #к шиноби# если гаара закончил работу, то не дергайте его время позднее, я просто побуду тут до утра <text color=\"secondary\" size=\"xs\">Суббота, 15 мая 1287 года · 23:28</tex",
+          "source": "archive/session-018-turns.jsonl",
+          "status": "source_candidate_only",
+          "turn": "s18.text.082"
         }
       ],
       "projections": [
         {
-          "seen": "s18.text.081",
+          "seen": "s18.text.082",
           "state": "Наблюдала лечение, передала благодарность и вопрос тёмной змеи."
         },
         {
@@ -22847,7 +22851,7 @@
       "sources": [
         "recovery/cast/western_nest_young_courier.json",
         "recovery/HOT.json",
-        "s18.text.081"
+        "s18.text.082"
       ]
     },
     "white_snake_sage": {
@@ -23403,5 +23407,5 @@
     }
   ],
   "schema": "npr-general-memory/1",
-  "source_turns_indexed": 1718
+  "source_turns_indexed": 1719
 }
