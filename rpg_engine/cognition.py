@@ -101,7 +101,7 @@ def validate(turn):
             raise ValueError("d.cognition.topic: stable ASCII identifier")
         for field, choices in (("domain", DOMAINS), ("novelty", NOVELTY), ("evidence", EVIDENCE),
                                ("outcome", LEVELS), ("affect", AFFECT)):
-            if row.get(field) not in choices:
+            if not isinstance(row.get(field), str) or row[field] not in choices:
                 raise ValueError(f"d.cognition.{actor}.{field}: invalid value")
         for field in ("interpretation", "visible", "basis"):
             if field in row and (not isinstance(row[field], str) or len(row[field]) > 240):
@@ -119,6 +119,34 @@ def view(hot, actor, turn_id):
     return {**profile(actor), "roll": draw(turn_id, actor),
             "topics": {k: v for k, v in past[:3]},
             "last_read": (((hot.get("_psyche") or {}).get(actor) or {}).get("dread") or {}).get("reads", "")}
+
+
+def evidence_id(stimulus):
+    return hashlib.sha256(norm(stimulus).casefold().encode()).hexdigest()
+
+
+# Independent lexical backstop, not a semantic classifier. Questions are
+# deliberately exempt; the source still has to support any actual inference.
+INFERENCE = re.compile(r"^(?:так\s+вот|значит|стало\s+быть|выходит|получается|следовательно|теперь\s+я\s+понимаю)\b", re.I)
+
+
+def spoken_inferences(hot, turn, local):
+    from .acquaint import lines
+    d = turn.get("d") or {}
+    names = {}
+    for key in local - {"shiki"}:
+        card = (hot.get("cast") or {}).get(key) or {}
+        patch = (d.get("cast") or {}).get(key) or {}
+        name = patch.get("name") or card.get("name")
+        if isinstance(name, str):
+            names.setdefault(norm(name).casefold(), []).append(key)
+    found = set()
+    for label, speech in lines(turn.get("gm")):
+        speech = norm(speech).lstrip("—–- ")
+        candidates = names.get(norm(label).casefold(), [])
+        if len(candidates) == 1 and "?" not in speech and INFERENCE.match(speech):
+            found.add(candidates[0])
+    return found
 
 
 def _local(hot, turn):
@@ -147,14 +175,15 @@ def triggers(hot, turn, local):
     for event in d.get("knowledge_events") or []:
         if event.get("actor") in local and event.get("actor") != "shiki":
             needed.add(event["actor"])
-    return needed
+    return needed | spoken_inferences(hot, turn, local)
 
 
 def assess(row, actor, roll, previous, gm):
     """Return effective ceiling and errors without mutating state."""
     problems = []
     limit = ceiling(roll, actor, row["domain"], row["novelty"], row["evidence"])
-    if previous and norm(previous.get("stimulus")) == norm(row["stimulus"]):
+    if previous and (evidence_id(row["stimulus"]) in (previous.get("evidence_ids") or [])
+                     or norm(previous.get("stimulus")) == norm(row["stimulus"])):
         # Same evidence is not a new die; no improvement without new source.
         limit = LEVELS.index(previous["outcome"])
     if LEVELS.index(row["outcome"]) > limit:
@@ -196,11 +225,12 @@ def review(hot, turn, *, packet=None):
             p = ((packet.get("present") or {}).get(actor) or {}).get("cognition") or {}
             roll = p.get("roll", (packet.get("cognition") or {}).get("new_roll"))
             prev = (p.get("topics") or {}).get(row["topic"])
-            if type(roll) is not int or not 1 <= roll <= 20:
-                # Unknown/stale packet: don't pretend it can certify a conclusion.
+            if ((packet.get("cognition") or {}).get("for") != turn["id"]
+                    or type(roll) is not int or not 1 <= roll <= 20):
+                # Unknown/stale packet: only factual reception is safe to project.
                 if row["outcome"] != "received":
                     errors.append(f"{actor}: нет свежего когнитивного броска")
-                continue
+                roll = 1
         limit, problems = assess(row, actor, roll, prev, gm)
         if row["outcome"] == "hypothesis":
             claim = norm(row.get("interpretation"))
@@ -214,7 +244,9 @@ def review(hot, turn, *, packet=None):
             data[actor] = {"topic": row["topic"], "turn": turn["id"],
                            "stimulus": row["stimulus"], "outcome": row["outcome"],
                            "interpretation": row.get("interpretation", ""),
-                           "affect": row["affect"], "limit": LEVELS[limit]}
+                           "affect": row["affect"], "limit": LEVELS[limit],
+                           "evidence_ids": list(dict.fromkeys(
+                               list((prev or {}).get("evidence_ids") or []) + [evidence_id(row["stimulus"])]))}
     return errors, data
 
 
@@ -230,10 +262,11 @@ def apply(hot, turn, prior_hot):
 
 def inspect(packet, turn):
     """Use only the already supplied NEXT (no connector round-trip)."""
-    if not packet.get("cognition"):
+    if not packet.get("cognition") and not rows(turn):
         return []
     present = packet.get("present") or {}
     pseudo = {"scene": {"present": list(present)},
+              "cast": {k: {"name": v.get("name")} for k, v in present.items()},
               "_psyche": {k: {"cognition": (v.get("cognition") or {}).get("topics", {}),
                               "dread": {"reads": (v.get("cognition") or {}).get("last_read", "")}}
                           for k, v in present.items()}}
